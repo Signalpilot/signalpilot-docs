@@ -4,3 +4,22 @@ cd signalpilot-docs
 
 # create docs folder
 mkdir -p docs
+docs/
+  index.md
+  sp-obv-pro.md
+  spp-macd-plus.md
+  sp-rsi-triad-confirm.md
+  sp-pva-volume.md
+  sp-pva-overlay.md
+  sp-srsi-plus.md
+  sp-ec-pro.md
+  sp-key-levels-suite.md
+  sp-sml-structure-liquidity.md
+  sp-regime-vol-filter.md
+  sp-ema-trio-pro.md
+  sp-rcs-reversal-structure.md
+  sp-sdzones-pro.md
+  sp-ltf.md
+  sp-oscillator-matrix.md
+  sp-screener-sfx.md
+  _product-cards.md
