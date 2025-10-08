@@ -1,0 +1,6 @@
+signalpilot-docs
+git clone https://github.com/<Signalpilot>/signalpilot-docs
+cd signalpilot-docs
+
+# create docs folder
+mkdir -p docs
