@@ -1,0 +1,13 @@
+site_name: SignalPilot Docs
+site_url: https://signalpilot.github.io/signalpilot-docs/
+repo_url: https://github.com/Signalpilot/signalpilot-docs
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      primary: teal
+      accent: cyan
+plugins:
+  - search
+nav:
+  - Home: index.md
