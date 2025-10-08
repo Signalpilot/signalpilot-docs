@@ -8,7 +8,7 @@ See the bias, read the pressure, time the move—without the noise.
 
 ## Modules
 - [SP — OBV Pro](sp-obv-pro.md)
-- [Signal Pilot Pro — MACD+](spp-macd-plus.md)
+- [SP — MACD+](spp-macd-plus.md)
 - [SP — RSI Triad Confirm](sp-rsi-triad-confirm.md)
 - [SP — PVA Volume](sp-pva-volume.md)
 - [SP — PVA Overlay](sp-pva-overlay.md)
