@@ -1,3 +1,15 @@
+---
+title: "SP — Momentum Regime (MACD+)"
+short_title: "Momentum Regime (MACD+)"
+permalink: /spp-macd-plus/
+module_id: spp-macd-plus
+category: "Bias / Momentum"
+category_emoji: "🧭"
+summary: "Directional bias and momentum strength visualized with adaptive regime logic."
+tags: [bias, momentum, macd, trend, regime]
+---
+
+
 > **Category:** 🧭 Bias / Momentum  
 > Defines directional bias and strength. Reveals who’s in control — bulls or bears.
 
