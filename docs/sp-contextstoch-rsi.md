@@ -1,4 +1,4 @@
-# SP — Context Stoch (SRSI+) — Signal Pilot
+# SP — Context Stoch (SRSI+) — by Signal Pilot
 
 **Time the move, skip the noise.**  
 Context Stoch (SRSI+) is a smarter Stochastic RSI. It only prints a **Bull** (long) or **Bear** (short) tag when the bigger picture agrees.  
