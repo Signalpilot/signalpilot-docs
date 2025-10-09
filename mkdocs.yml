@@ -4,11 +4,6 @@ site_url: https://signalpilot.github.io/signalpilot-docs/
 repo_url: https://github.com/Signalpilot/signalpilot-docs
 repo_name: signalpilot-docs
 
-extra:
-  analytics:
-    provider: google
-    property: G-NZ05GV72K0
-
 theme:
   name: material
   features:
@@ -22,9 +17,12 @@ theme:
     - scheme: slate
       primary: teal
       accent: cyan
+  logo: assets/logo.png     # (optional – add later)
+  favicon: assets/logo.png  # (optional – add later)
 
 plugins:
   - search
+  - sitemap
 
 markdown_extensions:
   - admonition
@@ -37,9 +35,16 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+
+  - Start Here:
+    - Quick Start: start-quickstart.md
+    - Set TradingView Alerts: how-to-alerts.md
+    - Screener Table (On‑chart): how-to-screener.md
+    - Webhooks (TradingView → Bot): how-to-webhooks.md
+
   - Modules:
     - SP — OBV Pro: sp-obv-pro.md
-    - SP — MACD+: spp-macd-plus.md
+    - Signal Pilot Pro — MACD+: spp-macd-plus.md
     - SP — RSI Triad Confirm: sp-rsi-triad-confirm.md
     - SP — PVA Volume: sp-pva-volume.md
     - SP — PVA Overlay: sp-pva-overlay.md
@@ -54,5 +59,23 @@ nav:
     - SP — LTF: sp-ltf.md
     - SP — Oscillator Matrix: sp-oscillator-matrix.md
     - SP — Screener (SFX Table): sp-screener-sfx.md
+
+  - Reference:
+    - Suite Workflow (Bias → Timing): ref-workflow.md
+    - Non‑Repainting Policy: ref-non-repaint.md
+    - Glossary: ref-glossary.md
+
+  - About:
+    - FAQ: about-faq.md
+    - Support & Access: about-support.md
+    - Changelog (high level): about-changelog.md
+
   - Website Tiles:
     - Product Cards: _product-cards.md
+
+extra:
+  analytics:
+    provider: google
+    property: G-NZ05GV72K0      # your GA4 ID (already provided)
+
+# Optional: if you’re adding many images later, keep them in docs/assets/
