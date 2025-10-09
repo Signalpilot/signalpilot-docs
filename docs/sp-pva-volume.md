@@ -1,3 +1,15 @@
+---
+title: "SP — Volume Pulse (PVA Volume)"
+short_title: "Volume Pulse (PVA)"
+permalink: /sp-pva-volume/
+module_id: sp-pva-volume
+category: "Participation (Volume / Flow)"
+category_emoji: "💧"
+summary: "Relative-volume and spike detection to spot bursts in participation."
+tags: [volume, rvol, spikes, participation]
+---
+
+
 > **Category:** 💧 Participation (Volume / Flow)  
 > Measures market participation and conviction behind price movement.
 
