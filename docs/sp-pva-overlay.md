@@ -1,4 +1,4 @@
-# SP: Participation & Volume Pulse (SP-PVA Suite)
+# SP — Participation & Volume Pulse (SP-PVA Suite) by Signal Pilot
 **Modules:**  
 - **Participation (PVA Overlay)** — on-chart signals  
 - **Volume Pulse (PVA Volume)** — volume-pane companion  
