@@ -1,3 +1,7 @@
+> **Category:** ⏱️ Timing  
+> Focuses on exhaustion, reversals, and the rhythm of market cycles.
+
+
 # SP — Context Stoch (SRSI+) — by Signal Pilot
 
 **Time the move, skip the noise.**  
