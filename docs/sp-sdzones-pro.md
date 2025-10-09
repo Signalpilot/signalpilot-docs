@@ -1,183 +1,143 @@
-# SP‑SDZones Pro v6 — Anchored Compact Mode (No Ribbon)
+# SD Zones (SDZones Pro) v6 — Simple Guide
 
-Non‑repainting supply/demand zones with compact anchored patches, declutter, flip detection, and confluence badges (VWAP, PDH/PDL, EMAs, round numbers). Built for alerts and for clean intraday/swing structure.
-
-> Part of the SignalPilot Trading Suite — non‑repainting, alert‑ready indicators for **any market, any timeframe**. Educational only; not financial advice.  
-> Website: https://www.signalpilot.io  
-> Support: support@signalpilot.io  
-> © SignalPilot Labs, Inc. All rights reserved.  :contentReference[oaicite:2]{index=2}
-
----
-
-## Contents
-- [Overview](#overview)
-- [Key features](#key-features)
-- [How it works (non‑repaint)](#how-it-works-non-repaint)
-- [Inputs & defaults](#inputs--defaults)
-- [Visualization modes](#visualization-modes)
-- [Declutter logic](#declutter-logic)
-- [Confluence badges](#confluence-badges)
-- [Alerts](#alerts)
-- [Recommended workflow](#recommended-workflow)
-- [Performance & limits](#performance--limits)
-- [FAQ](#faq)
-- [Changelog](#changelog)
-- [License](#license)
+Clean, easy supply/demand zones for TradingView. Green = areas where buyers showed up before (demand). Red = areas where sellers showed up before (supply). It stays tidy, scores stronger areas, and can alert you when price touches or breaks a zone.
+  
+> **Platform:** TradingView • **Website:** https://www.signalpilot.io  
+> **Use case:** Any market, any timeframe.  
+> **Note:** Educational tool. Not financial advice.
 
 ---
 
-## Overview
+## Quick Start (60 seconds)
 
-`SP-SDZ+` builds zones from confirmed pivots (left/right lookback), scales geometry with ATR, and draws **compact, anchored** patches so levels stay visible without flooding the screen. A **Quiet Mode** and **Smart Declutter** engine reduce overlap and prioritize proximity and strength. Optional **Flip Zones** mark role reversals on breaks + retests. **Confluence badges** score each zone vs VWAP, PDH/PDL, EMAs, and round numbers to surface high‑quality locations.
+1. **Add to chart** in TradingView (Indicators → Invite‑only scripts → **SD Zones (SDZones Pro)**).
+2. **Keep the defaults.** It’s already clean.
+3. If it still looks busy:
+   - Turn **Quiet Mode** ON (default).
+   - Set **Max visible per side** to **3–4**.
+   - Keep **Compact view** ON (shows only the last ~40 bars).
 
----
-
-## Key features
-
-- **Confirmed-pivot SD zones** — ATR‑scaled padding + min height; immutable top/bottom once created.  
-- **Anchored Compact Mode** — visible patch only (last *N* bars), anchored midline & pin to the pivot time; “No Ribbon” for maximal clarity.  
-- **Quiet Mode + Smart Declutter** — overlap pruning, nearest‑to‑price selection, flip‑keep boost, age fade, per‑side caps.  
-- **Flip Zones** — detect break + retest and reclassify with accent shading.  
-- **Confluence badges (0–10)** — single score from VWAP / PDH‑PDL / EMAs / Round numbers; optional tags (`VW`, `PDH/PDL`, `EMA`, `RN`) and touch count.  
-- **Alert‑ready** — “First Touch” (opt‑in) and “Broken” conditions for automation.  
-- **Themes** — Night Ops / Neon Pulse / Monochrome Pro / Ocean Glass; outline‑only option for ultra‑clean charts.  
-- **Any market · timeframe** on TradingView; educational only. :contentReference[oaicite:3]{index=3}
+You’re done. Treat zones as **areas** (not exact lines).
 
 ---
 
-## How it works (non‑repaint)
+## How to read the chart
 
-- Zones form only when a `ta.pivothigh/low(left, right)` is **confirmed**; geometry is frozen from that bar (`top/bot` snapshot + ATR pad).  
-- Daily references use `request.security(..., "D", ...)` with `lookahead_off`; prior‑day values are indexed to avoid future bars.  
-- All styling passes operate on stored, immutable zone bounds; intrabar visuals may update, but **decisions/alerts are intended for bar close** via TradingView’s alert scheduler.
+- **Green box = Demand**  
+  Where price bounced up before (possible support).
 
----
+- **Red box = Supply**  
+  Where price turned down before (possible resistance).
 
-## Inputs & defaults
+- **Flip shading**  
+  If price breaks through a box and later trades back into it, that box may “switch sides.”  
+  (Example: broken red → can act like green.)
 
-**Detection**
-- `Pivot Left/Right`: `8 / 8`
-- `Pad` / `Min zone height`: `0.0` (disabled when ATR on)
-- `Use ATR for Pad/Min Height`: `true` with `ATR Length=14`, `Pad ATR Mult=0.20`, `Min Height ATR Mult=0.10`
+- **Small badge with a number (0–10)**  
+  Quick strength score. Higher ≈ more “reasons” that area matters:
+  - Near average price (**VWAP**)
+  - Near **yesterday’s high/low**
+  - Near common **moving averages**
+  - Near a **round number** (e.g., 100, 1000)
 
-**Display & Behavior**
-- `Outline only`: `false`
-- `Max zones stored per side`: `12`
-- Invalidation: `Close` (alt: `Wick`)
-- `Fade when invalidated`: `true`
-- `Hide broken zones`: `true`
-- `Enable flip zones`: `true`
-- `Mark first touch once`: `false`
-
-**Visuals**
-- Theme: `Night Ops`; `Age fade speed=0.25`; `Show midline/pin=true`
-- `Strength pop factor=3.0`; `Focus Mode=false`
-- `FLIP shade/border alpha`: `92 / 85`
-- `Compact view=true`; `Compact width=40 bars`
-
-**Quiet Mode**
-- `Quiet Mode=true`
-- `Max visible per side=4`; `Max flipped per side=2`
-- `Max age bars=600`
-- `Soften overlaps=true` at `>= 0.33`
-
-**Smart Declutter**
-- `Enable Smart Declutter=true`
-- `Hide weaker overlaps if ≥ 0.50`
-- `Keep nearest N per side=4`
-- `Flip keep boost=2.0`
-
-**Confluence**
-- `Enable Confluence=true`; `Show badges=true`; `Min badge score=4.0`
-- Tags: `Show touch count=true`
-- Round step: `Auto` (else `ticks=50`)
-- EMAs: `Fast=20`, `Slow=50`
-- Weights: `VWAP=0.30`, `PDH/PDL=0.30`, `EMA=0.20`, `RN=0.20`
-
-**Alerts**
-- `Alert: first touch=false`
-- `Alert: zone broken=false`
+**Tip:** Use zones to plan **where** you’ll look for trades. Use your own entry trigger to decide **when**.
 
 ---
 
-## Visualization modes
+## Alerts (optional but handy)
 
-- **Compact patches** — visible only over the last `compactBars` bars; midline and left‑time pin are anchored (xloc=bar_time).  
-- **Focus Mode** — hides badges/pins/midlines and tightens visible caps.  
-- **Outline‑only** — draw borders without fill (maximal cleanliness).  
-- **Theme palette** — softer fills by default; strength and age modulate transparency.
+- **First Touch** — Notifies the first time price re‑enters a box.  
+- **Broken** — Notifies when price breaks a box.
 
----
-
-## Declutter logic
-
-1) **Score‑first selection** (strength + flip bonus)  
-2) **Overlap pruning** by vertical overlap fraction  
-3) **Proximity filter** — keep nearest to price on each side  
-4) **Flip cap** — limit flipped zones per side (closest kept)  
-5) **Age & visibility** — optional fade/hide beyond `maxAgeBars`
+> In TradingView, set alert timing to **“Once per bar close”** for reliability.
 
 ---
 
-## Confluence badges
+## Settings you’ll actually use
 
-- **Score (0–10)** blends proximity to **VWAP**, **PDH/PDL**, **EMA fast/slow**, and **Round numbers** using user weights.  
-- Badges anchor to the pivot’s left time; text can include confluence tags, touch count (`xN`), and `FLIP` when applicable.
+- **Quiet Mode** (ON): Keeps only the most useful boxes near current price.  
+- **Max visible per side**: Lower number = cleaner chart (try **3–4**).  
+- **Compact view**: Shows boxes only across recent bars (default ~40). Increase if you want more history.  
+- **Outline only**: Borders without fill for a super‑clean look.  
+- **Flip zones**: Leave ON. It flags role changes (very useful).  
 
----
-
-## Alerts
-
-Two built‑in `alertcondition()`s:
-
-- **SP‑SDZ+: First Touch** — fires on first touch when both `Mark first touch once` **and** `Alert: first touch` are enabled.  
-- **SP‑SDZ+: Broken** — fires when any zone is broken based on `Invalidate with` (Close/Wick) and `Alert: zone broken` is enabled.
-
-**Recommended Alert setting in TradingView:** “Once per bar close” to match non‑repainting policy.
+**Break rule (simple choice):**
+- **Close (stricter)** — A box is “broken” only if the candle **closes** through it.  
+- **Wick (looser)** — Even a quick spike counts as broken.
 
 ---
 
-## Recommended workflow
+## Simple workflows
 
-Use SDZones for **structure** within the SignalPilot flow:  
-**Bias** (EC Pro/MACD+) → **Participation** (PVA/OBV) → **Structure** (SDZ + Levels) → **Timing** (RSI Triad/SRSI+) → **Automate** (Screener & alerts). :contentReference[oaicite:4]{index=4}
+**Day trading**
+1. Quiet Mode ON • Max per side = 3–4 • Compact width ~40.  
+2. Turn on **First Touch** and **Broken** alerts for key boxes.  
+3. Use your own entry trigger (e.g., a candle pattern or momentum tick) at/near the zone.
+
+**Swing trading**
+1. Increase Compact width (e.g., **80–120**) to see more history.  
+2. Use **Close** as the break rule (stricter).  
+3. Prefer zones with **higher badge scores**.
 
 ---
 
-## Performance & limits
+## Why boxes appear or disappear
 
-- Script guards: `max_boxes_count=600`, `max_labels_count=200`, `max_lines_count=400`.  
-- Arrays are pruned continuously; visuals are capped per side via Quiet/Declutter.
+- **Appear** when price clearly turned at a spot in the past.  
+- **Fade/Hide** when broken, overlapped by a stronger area, or too old.  
+- **Good thing:** The chart stays readable. Only the relevant stuff remains.
+
+---
+
+## Cheat sheet (what labels mean)
+
+- **Badge like “C 6.4 VW EMA RN x2”**
+  - **C 6.4** = score (0–10). Higher = stronger.  
+  - **VW** = near VWAP  
+  - **EMA** = near common moving averages  
+  - **RN** = near a round number  
+  - **x2** = touched twice  
+  - **FLIP** = role changed after a break/retest
+
+---
+
+## Good habits
+
+- Treat zones as **areas**, not hard lines.  
+- Give entries some breathing room; don’t put stops exactly on the edge.  
+- Combine with your plan (trend, risk, trigger).  
+- Alerts help you **wait** for price to come to you.
 
 ---
 
 ## FAQ
 
-**Q: Why didn’t a pivot produce a zone?**  
-A: The candidate may be thinner than `Min height` (ATR or fixed), or declutter removed it due to overlap/priority.
+**Does this predict the future?**  
+No. It highlights areas where price reacted before. You still need your plan and risk rules.
 
-**Q: Why did a zone fade or disappear?**  
-A: `Fade when invalidated` and/or `Hide broken zones` is on; Quiet Mode caps visible zones and hides those older than `Max age bars`.
+**Why did a box vanish?**  
+It was broken, overlapped by a stronger one, or got too old. This is on purpose to keep charts clean.
 
-**Q: How do Flip Zones work?**  
-A: After a break, the first re‑entry from the other side flags a flip and shades with the accent alpha.
+**Do I need to change many settings?**  
+No. Defaults are solid. If it feels busy, reduce **Max visible per side**.
 
-**Q: Do zones repaint?**  
-A: Pivots confirm before use; daily refs use `lookahead_off`; decisions should be alerted **on bar close**. The website and suite are built around non‑repainting, alert‑ready logic. :contentReference[oaicite:5]{index=5}
-
----
-
-## Changelog
-
-**v6 — Anchored Compact Mode**
-- New compact patches (no anchor ribbon) + anchored midline/pin  
-- Quiet Mode + Smart Declutter (overlap pruning, nearest‑N, age fade, flip caps)  
-- Flip Zones with accent shading and per‑side cap  
-- Confluence badges (VWAP / PDH‑PDL / EMAs / RN) with 0–10 score + tags  
-- Theme refresh (Night Ops / Neon Pulse / Monochrome Pro / Ocean Glass)
+**What markets/timeframes work?**  
+Any. Crypto, stocks, FX, futures; 1‑minute to weekly.
 
 ---
 
-## License
+## Changelog (plain English)
 
-Proprietary; invite‑only use granted to active customers of the SignalPilot Trading Suite. Educational only — nothing here is financial advice. :contentReference[oaicite:6]{index=6}
+**v6**  
+- New compact boxes (no ribbon), anchored to where they came from.  
+- Quiet Mode + smart declutter to avoid overlap and clutter.  
+- Flip shading for role changes after breaks.  
+- Simple strength badges (0–10) with easy tags (VW, yesterday’s H/L, moving averages, round numbers).  
+- Clean themes and optional outline‑only mode.
+
+---
+
+## Legal
+
+Educational tool. **Not financial advice.** Markets are risky—use position sizing and stops.  
+© SignalPilot. All rights reserved.
