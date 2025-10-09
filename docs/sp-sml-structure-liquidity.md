@@ -1,187 +1,136 @@
-# SP:SML • Smart Structure & Liquidity (Clean Anchored) v8.0
+# Structure Map (SML) — TradingView Indicator
+*A clean, anchored map of trend changes and high‑interest zones. No repaint.*
 
-Maps the market’s structural beats—**BOS/CHOCH**, **EQH/EQL**, **Liquidity Sweeps**, **FVG v2**, and **OB v2 + Breakers**—with anchored drawings that **do not repaint** and are **alert/scan ready**. Designed to pair with EC Pro (bias) and PVA/OBV (participation) within the SignalPilot Suite.
-
-> SignalPilot is an educational toolset. No financial advice. See the website for the current suite overview and policies.
-
-**Website:** https://www.signalpilot.io  
-**Platform:** TradingView (Pine v6)  
-**Ticker scope:** Any symbol on TradingView; any timeframe (scalps→swings)
+Website: https://www.signalpilot.io  
+Platform: TradingView (Pine v6)  
+Markets: Crypto • Forex • Stocks • Futures (any symbol, any timeframe)
 
 ---
 
-## Features
+## What it does (in plain English)
 
-- **Structure Engine**
-  - Close‑confirmed **BOS/CHOCH** with configurable start point (**Break** or **Swing**).
-  - Extendable lines + age/quantity pruning to prevent clutter.
-- **Equal Highs/Lows**
-  - EQH/EQL with tolerance by % or ticks; optional labels; extend‑right.
-- **Liquidity Sweeps**
-  - Up/down sweeps gated by **cooldown** + **min ticks**.
-- **FVG v2**
-  - Fixed boxes + optional mid‑line & labels; **ATR% volatility filter**; mitigation handling (auto‑hide or faint footprint).
-- **Order Blocks v2 (+ Breakers)**
-  - Body‑ or wick‑based OBs; overlap hiding; mitigation handling; optional **volumetric meter**; automatic **breaker** conversion on invalidation.
-- **Display Profiles**
-  - `Clean Ultra`, `Standard`, `Verbose` control draw budgets and visibility (zones, labels, sweeps).
+Structure Map (SML) draws the key things most traders try to draw by hand:
 
-**Determinism / Non‑Repaint**
-- Signals finalize on `barstate.isconfirmed`. Pivot‑based elements are only accepted once confirmed by `rightBars`.
-- All visuals are **anchored** (`x = bar_index`, `yloc.price`) to prevent wobble.
-- No lookahead; no `request.security(..., lookahead_on)`.
+- **Trend breaks & flips** – when structure continues or changes (BOS / CHOCH).
+- **Equal Highs / Equal Lows** – flat areas price often tags.
+- **Sweeps** – quick “stop‑runs” that poke above/below a swing and snap back.
+- **Gaps** (FVGs) – holes left by fast moves that price often refills.
+- **Order Blocks** – strong launch zones.  
+  - If one fails, SML marks it as a **Breaker** (it flips role).
+
+It’s designed to be **clean, anchored, and non‑repainting** so what you saw at candle close stays that way.  
+Use SML as a **map** of likely reaction areas—not as a buy/sell button.
 
 ---
 
-## Quickstart
+## TL;DR Setup (2 minutes)
 
-1. **Add to chart** (invite‑only script).
-2. **Choose mode** under **SP:Display → SP:Mode**:
-   - `Clean Ultra` (minimal), `Standard`, or `Verbose` (max detail).
-3. **Tune the modules**:
-   - **Structure:** left/right swing bars, start from Break/Swing, line extension, close‑through setting.
-   - **EQH/EQL:** tolerance (% or ticks), min bars between swings, extend‑right.
-   - **Sweeps:** cooldown + min‑distance (ticks).
-   - **FVG:** min gap (ticks), mitigation (Close/Wick), zone/mid‑line extension, ATR% filter.
-   - **OB:** body vs wick, mitigation (Close/Wick), pre‑impulse lookback, overlap hiding, breakers, volumetric meter.
-4. (Optional) **Enable alerts** (see below).
-5. Use SML for the **structure map**. Pair with EC Pro + PVA/OBV/Levels per the suite’s bias→participation→structure→timing workflow.
+1. **Add SML to your chart.**  
+2. Open **Settings → SP:Display → SP:Mode** and choose **Clean Ultra** (least clutter).  
+3. Trade your plan with this guide:
+   - **Green/Teal** = bullish, **Red/Maroon** = bearish, **Gray** = neutral reference.
+   - “**BOS**” = trend continuation; “**CHOCH**” = possible trend flip.
+   - **Gray flat line** = Equal High/Low (common target/magnet).
+   - **Triangle** above/below a bar = a **Sweep** just happened.
+   - **Boxes** = zones where price may react:
+     - **FVG** box = gap likely to be revisited.
+     - **OB** box = launch zone; can act as support/resistance.
+     - **BRK** label on a box = breaker (a failed OB that flipped).
 
----
-
-## Inputs (by group)
-
-### SP:Display
-- **SP:Mode:** `Clean Ultra` / `Standard` / `Verbose` (controls budgets and visibility)
-- **SP:Max Draw Age (bars):** Age pruning for lines/boxes/labels
-
-### SP:Structure
-- **Swing Left/Right Bars:** Pivot window sizes
-- **Start From:** `Break` or `Swing`
-- **Line Extend Bars**
-- **Break must close through level**
-- **Struct Bull/Bear colors**
-- **Label Size**
-
-### SP:Equal Highs / Lows
-- **Show EQH/EQL**, **Show EQ labels**
-- **Tolerance in % (else ticks)** + **Tolerance value**
-- **Min bars between swings**
-- **Extend right**, **EQ color**
-
-### SP:Sweeps
-- **Show Liquidity Sweeps**
-- **Cooldown (bars)**
-- **Min distance (ticks)**
-
-### SP:FVG v2
-- **Show FVG**
-- **Min gap (ticks)**
-- **Mitigation:** `Close` or `Wick`
-- **Show Mid-line** + **Mid-line Extend Bars**
-- **Zone Extend Bars**
-- **ATR% Volatility Filter**
-- **Keep faint footprint after mitigation**
-- **Colors:** Bull/Bear fill, mid-line, labels
-
-### SP:Order Blocks v2
-- **Show OB**
-- **OB = candle body (else high/low)**
-- **Mitigation:** `Close` or `Wick`
-- **Pre-impulse search (bars)**
-- **Show Mid-line**
-- **Hide older overlapped OBs**
-- **Volumetric Meter (up/down closes)**
-- **Zone Extend Bars**
-- **Show breakers** + breaker colors
-- **Colors:** Bull/Bear fill, mid-line, labels
+> **Pro tip:** Learn on **15m or 1h**. Keep **Clean Ultra** until you’re comfortable.
 
 ---
 
-## Signals & Screener Outputs (hidden booleans)
+## Quick Playbook (examples, not signals)
 
-These emit `1` on the bar they occur (otherwise `na`), ready for TradingView alerts/scans/screeners.
+- **Pullback to a Gap (FVG):**  
+  See **BOS up** → a **bull FVG** forms below → if price returns into it and stabilizes, buyers often defend.
 
-- **Structure**
-  - `SP:SML | BOS_UP (bool)`
-  - `SP:SML | BOS_DN (bool)`
-  - `SP:SML | CHOCH_UP (bool)`
-  - `SP:SML | CHOCH_DN (bool)`
-- **Equal Highs/Lows**
-  - `SP:SML | EQH_NEW (bool)`
-  - `SP:SML | EQL_NEW (bool)`
-- **Sweeps**
-  - `SP:SML | SWEEP_UP (bool)`
-  - `SP:SML | SWEEP_DN (bool)`
-- **FVG**
-  - `SP:SML | FVG_BULL_NEW (bool)`
-  - `SP:SML | FVG_BEAR_NEW (bool)`
-- **Order Blocks**
-  - `SP:SML | OB_BULL_NEW (bool)`
-  - `SP:SML | OB_BEAR_NEW (bool)`
+- **Retest the Block (OB):**  
+  See **CHOCH up** → a **bull OB** appears → a calm retest can bounce.
+
+- **Fade a Sweep:**  
+  A **sweep up** (triangle above a recent high) that closes back below can invite short attempts *if your plan allows*.
+
+Always follow your own rules for entries, exits, and risk.
 
 ---
 
-## Alerts
+## Alerts (simple and useful)
 
-Two close‑confirmed presets are included:
+Built‑in alert presets:
+- **Bullish OB Created**
+- **Bearish OB Created**
 
-- **SP:SML | Bullish OB Created** — fires when a bullish OB is created.
-- **SP:SML | Bearish OB Created** — fires when a bearish OB is created.
-
-> Tip: You can also base custom alerts on the hidden boolean plots above for BOS/CHOCH, EQH/EQL, Sweeps, FVG creation, etc.
-
----
-
-## Reading the chart
-
-- **Structure lines** (`BOS`, `CHOCH`) extend for *N* bars; colors differentiate bull vs bear.
-- **EQH/EQL** mark equal swing zones; optional labels; extend‑right if enabled.
-- **Sweeps** print tiny triangles above/below the bar with cooldown + min‑distance gating.
-- **FVG** boxes appear when a 3‑bar displacement leaves a gap; boxes auto‑fade or persist as a footprint after mitigation.
-- **OB** boxes derive from the opposing pre‑impulse candle; they auto‑hide on mitigation (or dim), can convert into **breakers** if invalidated; optional right‑edge **volumetric meter** shows buy/sell close participation while price trades inside the box.
+You can also make alerts from SML’s hidden “boolean” signals (e.g., new BOS/CHOCH, new FVG, new EQH/EQL, sweep up/down).  
+**Tip:** Fire alerts **on candle close** and on the timeframe you trade.
 
 ---
 
-## Non‑repainting & Anchoring
+## Settings — start here, ignore the rest (for now)
 
-- All events confirm on bar close (`barstate.isconfirmed`).
-- Pivot‑based detections (e.g., swings) only register after `rightBars`.
-- No lookahead or future bars. All labels/lines/boxes are anchored at `x = bar_index` with `yloc.price`.
+- **Mode:**  
+  - **Clean Ultra** → minimal and beginner‑friendly (recommended)  
+  - **Standard / Verbose** → show more lines/boxes and labels
 
----
+- **Structure (BOS/CHOCH):** Defaults are fine.
+- **Equal Highs/Lows:** Keep on; default tolerance is fine.
+- **Sweeps:** Optional. Want fewer triangles? Increase **Cooldown** or **Min ticks**.
+- **FVG:** Keep on; default **Min gap** is fine. “Mitigation = Close” is beginner‑friendly.
+- **Order Blocks:** Keep on; **Body‑based OB** is simple. “Breakers on” is fine.
 
-## Performance & Hygiene
-
-- **Display profiles** limit how many structures/zones remain on‑chart.
-- **Age pruning** removes older drawings after `SP:Max Draw Age`.
-- OB/FVG arrays are capacity‑capped and pruned to control plot/label/box counts.
-
----
-
-## Known trade‑offs
-
-- **Swing confirmation delay:** Pivots require `rightBars` to confirm; structure signals are therefore delayed by design (safety over speed).
-- **Mitigation criteria:** Choose `Close` vs `Wick` for FVG/OB according to your tolerance for touch vs close‑through.
-- **Sweeps:** Require a reclaim back through the level and respect cooldown/min‑tick gating.
+You can tweak later; the defaults keep charts clean.
 
 ---
 
-## Changelog (v8.0)
+## Reading the Colors
 
-- FVG/OB engines rewritten (fixed zones, labels, mitigation handling, breakers).
-- Added **volumetric meter** for OBs (optional).
-- Added **ATR% filter** for FVG creation.
-- Introduced **Display profiles** (Clean Ultra/Standard/Verbose) + global age pruning.
-- Hidden boolean outputs for all key events; close‑confirmed alerts for OB creation.
-- Numerous performance and stability improvements.
+- **Green/Teal** = bullish things (upside structure/zones)  
+- **Red/Maroon** = bearish things (downside structure/zones)  
+- **Gray** = neutral references (equal highs/lows, mid‑lines)
 
 ---
 
-## License & Use
+## What NOT to expect
 
-Proprietary, invite‑only indicator distributed as part of the **SignalPilot Trading Suite**. Educational use only; **not financial advice**. See the website for current plans, activation, and suite scope.
+- Not a “buy/sell” machine.  
+- Not a crystal ball.  
+- It’s a **map** that highlights **where** decisions often happen; **you** decide **if/when** to trade.
 
-- Website: https://www.signalpilot.io
-- Support: support@signalpilot.io
+---
 
+## FAQ
+
+**Does it repaint?**  
+No. Signals lock at candle close. What you saw at close remains.
+
+**Which timeframe should I learn on?**  
+The one you actually trade. Many start with **15m** or **1h** to learn the patterns.
+
+**Why did a box disappear?**  
+It was **mitigated** (price touched it as defined in settings) or it **aged out** (auto clean‑up).
+
+**Can I use it on crypto/forex/stocks/futures?**  
+Yes—anything available on TradingView.
+
+**Too many signals?**  
+Use **Clean Ultra** and tighten filters: increase Sweep **Cooldown**, FVG **Min gap**, keep “**hide mitigated**” on.
+
+---
+
+## Troubleshooting
+
+- **I can’t see much:** Try **Verbose** mode briefly to learn, then go back to **Clean Ultra**.  
+- **Cluttered chart:** Increase **Max Draw Age** or lower the “cap” settings (how many zones to keep).  
+- **Alerts firing too often:** Raise thresholds (e.g., Sweep min ticks) or use higher timeframes.
+
+---
+
+## Safety & Use
+
+SignalPilot tools are for **education only**. **Not financial advice.**  
+You are responsible for your decisions and risk management.
+
+For the most current info, updates, and contact, visit **https://www.signalpilot.io**.
+
+---
