@@ -1,4 +1,4 @@
-# SP-Flow Balance (OBV Pro)
+# SP:Flow Balance (OBV Pro)
 
 **Plain‑English guide — no jargon.**
 
