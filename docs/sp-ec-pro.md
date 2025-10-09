@@ -1,3 +1,7 @@
+> **Category:** ⏱️ Timing  
+> Focuses on exhaustion, reversals, and the rhythm of market cycles.
+
+
 # SP — Reversal Engine (EC Pro) — by Signal Pilot
 **Spot likely tops & bottoms. Act on clean, close‑confirmed signals.**  
 Works on any market & timeframe in TradingView. Signals **lock on candle close** (no repaint).  
