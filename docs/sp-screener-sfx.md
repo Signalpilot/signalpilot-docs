@@ -1,4 +1,4 @@
-# SP — Screener (Screener Table) by Signal Pilot
+# SP — Screener (Screener Table) — by Signal Pilot
 
 **What it is (one line):**  
 A simple on‑chart **table** that watches up to **8 markets** (any symbols, any timeframes) and tells you when a fresh **bullish (↑)** or **bearish (↓)** signal just happened — plus a quick “how strong is it?” **Score**.
