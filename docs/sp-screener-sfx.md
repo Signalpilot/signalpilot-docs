@@ -1,3 +1,15 @@
+---
+title: "SP — Screener (Screener Table)"
+short_title: "Screener"
+permalink: /sp-screener-sfx/
+module_id: sp-screener-sfx
+category: "Meta / Tools"
+category_emoji: "🧩"
+summary: "One-glance market scan that surfaces clean, screener-safe signals."
+tags: [screener, scan, dashboard, signals]
+---
+
+
 > **Category:** 🧩 Meta / Tools  
 > Filters, regimes, and screeners that unify and contextualize all modules.
 
