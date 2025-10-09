@@ -1,182 +1,145 @@
-# SP: Key Levels Suite (v6, no MA)
+# SP: Key Anchors (Key Levels Suite) — v6 (no MA)
 
-Daily/weekly/monthly anchors, three exchange sessions, and D/W/M VWAP centers—non‑repainting, alert‑ready, and screener‑friendly.
+**Plain English:** Key Anchors draws the price levels traders actually watch:
+- High/Low for the **Day, Week, Month, Quarter**
+- Your own **Session** Open/High/Low/Mid (up to 3 sessions you choose)
+- **VWAP** (the “fair price” line) for **Day / Week / Month**
 
-> Part of the SignalPilot Trading Suite. Signals finalize on close; educational use only. See plans and onboarding at SignalPilot.io. [Non‑repainting + any market/timeframe claims per site; educational only per Terms.]¹
-
----
-
-## Table of contents
-- [Highlights](#highlights)
-- [Determinism / Non‑repaint](#determinism--non-repaint)
-- [Inputs & defaults](#inputs--defaults)
-- [How it works](#how-it-works)
-- [Visuals & anchoring](#visuals--anchoring)
-- [Screener outputs](#screener-outputs)
-- [Alerts](#alerts)
-- [Performance notes](#performance-notes)
-- [Install](#install)
-- [Known limitations](#known-limitations)
-- [Changelog](#changelog)
-- [License & disclaimer](#license--disclaimer)
-- [Support](#support)
+It’s clean and once a candle closes, the past doesn’t change (**no repaint**).
+Educational use only — not financial advice.
 
 ---
 
-## Highlights
-- **HTF Levels:** D/W/M/Q Open, High, Low, Mid (individually toggleable).
-- **Sessions ×3:** Configurable exchange sessions; per‑session O/H/L/Mid resets at each session start.
-- **VWAP centers:** Daily, Weekly, Monthly central VWAP from `hlc3 × volume` (no bands).
-- **Clean UI:** Short tags (`dH`, `wL`, `mMid`, `qO`, etc.), right‑aligned labels, line style/width controls and left/right offsets.
-- **Screener‑ready:** Hidden boolean series for key touches; alert conditions fire only on confirmed bars.
+## TL;DR — Quick Start (60 seconds)
+
+1. Add the script to your TradingView chart.  
+2. Open settings → **Turn ON**:  
+   - **Daily High (dH)** and **Daily Low (dL)**  
+   - **Daily VWAP** (optional but great for intraday)  
+3. Zoom out a bit. You’ll see simple horizontal lines with short labels like `dH`, `wL`, `mVWAP`.
+4. If it looks crowded, turn OFF what you don’t need. Less is more.
+
+**Optional alerts (2 mins):**  
+Right‑click chart → **Add alert…** → Condition = this script → pick
+“**SP: dH touch**” or “**SP: dL touch**” → Create.
 
 ---
 
-## Determinism / Non‑repaint
-This script follows the suite’s safety rules:
-- **HTF data:** `request.security(..., lookahead=barmerge.lookahead_off, gaps=barmerge.gaps_off)` for D/W/M/Q OHLC.
-- **Intrabar freezing:** A `freeze()` helper locks values on the active bar (`barstate.isconfirmed`), preventing wobble.
-- **Anchoring:** All lines/labels are anchored by `x=bar_index` with `xloc.bar_index, yloc.price`.
-- **No future data:** No pivots or forward‑looking helpers.
+## What the lines mean (no jargon)
 
-> Result: objects update only when the *current* bar confirms; HTF levels evolve through the day/week/month without repainting past bars.
+- **High (H):** Highest price of the period (day/week/month/quarter).  
+- **Low (L):** Lowest price of the period.  
+- **Mid:** Halfway between that period’s High and Low.  
+- **Session O/H/L/Mid:** Levels inside *your* trading hours (you set the times).  
+- **VWAP (D/W/M):** “Average price paid,” weighted by volume — a fair‑value line many pros watch.
+
+> Think of **High/Low** as **ceilings/floors** and **VWAP** as the **fair price** magnet.
 
 ---
 
-## Inputs & defaults
+## Why you’ll care
 
-### Controls
-| Group | Input | Default |
-|---|---|---|
-| SP:Controls | Price Source | `hlc3` |
-|  | HTF Levels | `true` |
-|  | Session Levels | `true` |
-|  | VWAP Levels (centers) | `false` |
+- **Fast context:** Instantly see if price is near today’s high, last week’s low, or the monthly VWAP.  
+- **Better timing:** Price often **reacts** at these lines (stall, bounce, or break).  
+- **Clean alerts:** Get pinged when price **touches** big levels (daily/weekly/monthly highs or lows).
 
-### HTF Levels (per timeframe)
-| TF | O | H | L | Mid | Color (default) |
-|---|---:|---:|---:|---:|---|
-| Day (D) | `false` | `true` | `true` | `false` | rgb(186,201,231) |
-| Week (W) | `false` | `false` | `false` | `false` | rgb(233,191,148) |
-| Month (M) | `false` | `false` | `false` | `false` | rgb(169,214,190) |
-| Quarter (Q) | `false` | `false` | `false` | `false` | rgb(198,168,234) |
+---
 
-### Sessions (exchange timezone)
-You get three sessions with independent times, toggles, and colors.
+## Simple ways to use it (ideas, not signals)
 
-| Session | Hours (default) | O | H | L | Mid | Color |
-|---|---|---:|---:|---:|---:|---|
-| S1 | `0900-1500` | `false` | `false` | `false` | `false` | rgb(237,182,185) |
-| S2 | `0800-1700` | `false` | `false` | `false` | `false` | rgb(186,201,231) |
-| S3 | `0930-1600` | `false` | `false` | `false` | `false` | rgb(169,214,190) |
+- **Bounce idea:** Price tests **dL** (daily low) and slows → look for a bounce back toward **VWAP**.  
+- **Breakout idea:** Price **pushes through** **wH** (weekly high) and holds → momentum may continue.  
+- **Mean‑revert idea:** Far above/below **VWAP** → price often re‑checks VWAP.
 
-### VWAP Levels (centers only)
-| Level | Toggle | Color |
-|---|---:|---|
-| Daily VWAP | `false` | rgb(183,208,255) |
-| Weekly VWAP | `false` | rgb(207,183,255) |
-| Monthly VWAP | `false` | rgb(183,255,210) |
+Always use your own plan and risk controls. These are just ideas.
+
+---
+
+## Buttons you’ll see (in plain words)
+
+### Main switches
+- **HTF Levels:** Show big‑picture lines (Day/Week/Month/Quarter).
+- **Session Levels:** Show lines for your trading hours (Open/High/Low/Mid).
+- **VWAP Levels (centers):** Show VWAP for Day/Week/Month (no bands = cleaner chart).
+
+### HTF toggles (per timeframe)
+- Turn **O / H / L / Mid** on/off.  
+  **Start with H & L only** — they’re the most useful.
+
+### Sessions (up to 3)
+- Set your local session hours (e.g., `0930-1600` for US cash).  
+- Turn on **O/H/L/Mid** if you want those session‑specific lines.  
+- **Note:** Session lines show *during* that session and reset next session.
+
+### VWAP
+- **Daily VWAP:** Great for intraday.  
+- **Weekly/Monthly VWAP:** Nice for swing context.
 
 ### Appearance
-| Input | Default | Notes |
-|---|---|---|
-| Title | `true` | Show short tags on right labels |
-| Level Type | `Regular` | `Dashed` / `Dotted` available |
-| Width | `1` | 1–4 |
-| Offset Right | `35` | Label/line right padding |
-| Offset Left | `5` | Line left padding |
-| Label Size | `Normal` | `Tiny` / `Small` |
+- **Line type:** Regular / Dashed / Dotted  
+- **Width:** Make lines thicker if you want  
+- **Offsets:** How far lines/labels extend left/right  
+- **Label size:** Tiny / Small / Normal
 
 ---
 
-## How it works
-- **HTF anchors (D/W/M/Q):** Pulls OHLC with `lookahead_off`. Mid = `(High + Low) / 2`. Each enabled level draws one horizontal line extended to the right and a right‑side label.
-- **Sessions (×3):** Each session detects start (`stSx`) and tracks `O/H/L` while `inSx`. Mid = `(H + L) / 2`. Lines/labels are shown only while the session is active (they reset at the next session start).
-- **VWAP centers (D/W/M):** Uses cumulative `pv = ta.cum(hlc3 * volume)` and `v = ta.cum(volume)` with day/week/month bases captured on timeframe change; center = `(pv - pvBase) / max(v - vBase, 0)`.
+## Alerts you can use (ready to go)
+
+- **SP: dH touch** — Price touched **Daily High**  
+- **SP: dL touch** — Price touched **Daily Low**  
+- **SP: wH touch** — Price touched **Weekly High**  
+- **SP: wL touch** — Price touched **Weekly Low**  
+- **SP: mH touch** — Price touched **Monthly High**  
+- **SP: mL touch** — Price touched **Monthly Low**
+
+These only fire once the candle closes (no repaint surprises).
 
 ---
 
-## Visuals & anchoring
-- Lines: `line.new(..., extend=extend.right, xloc=xloc.bar_index)`
-- Labels: `label.new(..., x=bar_index + OffsetRight, style=label.style_label_right)`
-- Tag text uses fixed short codes (`"dH"`, `"wL"`, `"mVWAP"`, etc.). No runtime concatenation.
+## FAQs (really simple)
+
+**Q: What does “no repaint” mean?**  
+A: Once a candle closes, the past stays put. Yesterday’s lines won’t rewrite tomorrow.
+
+**Q: Which lines should I start with?**  
+A: **Daily High/Low** + **Daily VWAP**. Add weekly/monthly later if you want.
+
+**Q: My chart is messy — help!**  
+A: Turn OFF what you don’t need. Keep it to a few key lines.
+
+**Q: Why did today’s high move intraday?**  
+A: The **day isn’t over**. Today’s high/low update as new highs/lows happen. After the day ends, they lock.
+
+**Q: Is this buy/sell signals?**  
+A: No. It’s a **map** to important prices — not a signal generator.
 
 ---
 
-## Screener outputs
-Hidden booleans (one plot per state), all `display=display.none`:
+## Troubleshooting
 
-- `SP:LEVEL | dH touch (bool)` — price crossed Daily High  
-- `SP:LEVEL | dL touch (bool)` — price crossed Daily Low  
-- `SP:LEVEL | wH touch (bool)` — price crossed Weekly High  
-- `SP:LEVEL | wL touch (bool)` — price crossed Weekly Low  
-- `SP:LEVEL | mH touch (bool)` — price crossed Monthly High  
-- `SP:LEVEL | mL touch (bool)` — price crossed Monthly Low
-
-Use these in the TradingView Screener or for watchlist/global alerts.
+- **No lines?** Make sure the toggles (H/L/VWAP) are ON.  
+- **Wrong session times?** Adjust the session hours to match your market.  
+- **Too many objects?** Turn off unused timeframes or sessions.
 
 ---
 
-## Alerts
-Close‑confirmed alert conditions included:
+## What’s new in v6
 
-- **SP: dH touch** — “Price touched Daily High”  
-- **SP: dL touch** — “Price touched Daily Low”  
-- **SP: wH touch** — “Price touched Weekly High”  
-- **SP: wL touch** — “Price touched Weekly Low”  
-- **SP: mH touch** — “Price touched Monthly High”  
-- **SP: mL touch** — “Price touched Monthly Low”
-
-> All alerts fire only on `barstate.isconfirmed`.
+- Added **Quarterly** levels  
+- Up to **3 custom sessions**  
+- **Daily/Weekly/Monthly VWAP** centers  
+- Cleaner right‑side labels + style controls  
+- Built‑in **touch alerts** (daily/weekly/monthly highs/lows)
 
 ---
 
-## Performance notes
-- Designed to be light: one set of HTF pulls, incremental session tracking, and three VWAP bases updated only on D/W/M change.
-- Watch TradingView limits: `max_lines_count=500`, `max_labels_count=500`.
-- To reduce objects, disable unused HTF toggles and sessions or hide labels.
+## Install (TradingView)
 
----
+1. Open **TradingView → Pine Editor**.  
+2. Paste the script code → **Save** → **Add to chart**.  
+3. Open settings and turn on the lines you want (start with Daily **H/L**).  
+4. Optional: set alerts for “dH touch” and “dL touch”.
 
-## Install
-1. Open TradingView → **Pine Editor**.  
-2. Paste the code from `sp_key_levels_suite_v6.pine`.  
-3. **Save** → **Add to chart**.  
-4. Configure toggles (start with D: `H` + `L` only).  
-5. Optional: add alerts for daily/weekly/monthly touches.
-
-If you’re using the full SignalPilot Suite, access is invite‑only via your TradingView username after purchase. Activation is typically within hours.¹
-
----
-
-## Known limitations
-- **Session visibility:** Session lines/labels are only shown while that session is active; they reset at the next session start.  
-- **VWAP bands:** This module plots centers only (no ±σ bands).  
-- **Intraday HTF drift:** Daily/weekly/monthly highs/lows evolve until the HTF closes; past bars are not repainted.
-
----
-
-## Changelog
-- **v6 (current)**  
-  - Added Quarter (Q) OHLC + Mid toggles  
-  - 3 independent sessions with O/H/L/Mid and per‑session colors  
-  - D/W/M VWAP centers with base resets on TF change  
-  - Right‑anchored labels, style/width/offset controls  
-  - Screener booleans for d/w/m touches + close‑confirmed alerts
-
----
-
-## License & disclaimer
-Choose a license appropriate for your repo (e.g., proprietary for subscribers).  
-**Disclaimer:** SignalPilot provides tools and educational materials only. No financial, investment, or trading advice. Past performance (including backtests) is not indicative of future results.¹
-
----
-
-## Support
-- Site & plans: SignalPilot.io  
-- Email: support@signalpilot.io  
-- Issues: open a GitHub issue on this repo
-
----
-
-¹ References: Non‑repainting + any‑market/timeframe claims and access model; educational‑only language are taken from the public site and Terms.
+**If you want the script’s on‑chart title to match the new name**, change the first line to:  
+```pine
+indicator("SP: Key Anchors (Key Levels Suite) (v6, no MA)", overlay=true, max_lines_count=500, max_labels_count=500)
