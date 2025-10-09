@@ -1,4 +1,4 @@
-# SP — Key Anchors (Key Levels Suite) by Signal Pilot
+# SP — Key Anchors (Key Levels Suite) — by Signal Pilot
 
 **Plain English:** Key Anchors draws the price levels traders actually watch:
 - High/Low for the **Day, Week, Month, Quarter**
