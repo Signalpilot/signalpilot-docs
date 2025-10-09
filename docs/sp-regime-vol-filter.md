@@ -1,3 +1,15 @@
+---
+title: "SP — Regime Box (Regime & Volatility Filter)"
+short_title: "Regime Box"
+permalink: /sp-regime-vol-filter/
+module_id: sp-regime-vol-filter
+category: "Meta / Tools"
+category_emoji: "🧩"
+summary: "Trend/volatility gate that keeps signals honest across regimes."
+tags: [regime, volatility, filter, risk]
+---
+
+
 > **Category:** 🧩 Meta / Tools  
 > Filters, regimes, and screeners that unify and contextualize all modules.
 
