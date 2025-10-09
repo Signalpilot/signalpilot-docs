@@ -1,3 +1,15 @@
+---
+title: "SP — Participation (PVA Overlay)"
+short_title: "Participation (PVA)"
+permalink: /sp-pva-overlay/
+module_id: sp-pva-overlay
+category: "Participation (Volume / Flow)"
+category_emoji: "💧"
+summary: "Volume-aware candle overlay that reveals conviction behind price."
+tags: [volume, participation, overlay, conviction]
+---
+
+
 > **Category:** 💧 Participation (Volume / Flow)  
 > Measures market participation and conviction behind price movement.
 
