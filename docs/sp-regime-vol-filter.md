@@ -1,167 +1,112 @@
-# SP: Regime & Volatility Filter (v6)
-**Anchored markers + non‑shrinking boxes · Pine v6 · TradingView overlay**
+# Regime Box (Regime & Volatility Filter)
+**Plain‑English guide · Non‑repainting · Works on any market/timeframe**
 
-A production‑grade, non‑repainting gate that blends trend regime (ADX/DI + EMA) with volatility state (BB‑in‑KC squeeze and normalized width expansion). It paints anchored trend boxes and emits close‑confirmed pulses for Squeeze, Expansion, and Long/Short‑OK.
+Regime Box makes your chart easier to read by showing two simple things:
 
-> Built for any market and timeframe. All signals confirm on candle close; alert‑ready out of the box. Educational only.  
-> — SignalPilot Trading Suite. See [signalpilot.io](https://www.signalpilot.io) for the broader workflow. [Non‑repainting · Any market/timeframe] :contentReference[oaicite:4]{index=4}
+1) **Direction** — green = uptrend, red = downtrend  
+2) **Energy** — gray dot = market got quiet, teal triangle = market is waking up
 
----
-
-## Contents
-- [Features](#features)
-- [How it works](#how-it-works)
-- [Inputs](#inputs)
-- [Signals & Markers](#signals--markers)
-- [Alerts](#alerts)
-- [Quick start](#quick-start)
-- [Best practices](#best-practices)
-- [Non‑repainting notes](#non-repainting-notes)
-- [Performance considerations](#performance-considerations)
-- [FAQ](#faq)
-- [License](#license)
+Everything appears **after the candle closes**, so signals don’t change later (no repaint).
 
 ---
 
-## Features
-- **Trend regime boxes (green/red)** driven by `ADX ≥ threshold`, `DI+ vs DI−`, and `price vs EMA`. Boxes extend to the current bar and only update on close. Closed boxes are not modified later (“non‑shrinking” segments).
-- **Volatility states**
-  - **Squeeze (SQZ):** Bollinger Bands fully inside Keltner Channel (coiled state).
-  - **Expansion (EXP):** First bar out of squeeze _or_ BB‑width rising with normalized width above a gate.
-- **Tradeability flags**
-  - **LOK (Long OK):** Up‑trend & not in squeeze.
-  - **SOK (Short OK):** Down‑trend & not in squeeze.
-- **Close‑confirmed pulses** with an **event cool‑down** to suppress spam.
-- **Alert‑ready**: four alertconditions configured (SQZ ON, EXP ON, LONG OK, SHORT OK).
-- **Overlay, anchored visuals**: markers on the bottom rail; boxes anchored to `bar_index`.
+## What you’ll see (legend)
+
+- 🟩 **Green Box** = Uptrend  
+- 🟥 **Red Box** = Downtrend  
+- ● **SQZ (gray dot)** = Quiet/squeeze started  
+- ▲ **EXP (teal triangle)** = Expansion started (move beginning)  
+- ■ **LOK (green square)** = Long ideas are OK (uptrend + not quiet)  
+- ♦ **SOK (red diamond)** = Short ideas are OK (downtrend + not quiet)
+
+> Tip: A **gray dot** often comes **before** the **teal triangle**. Think “spring coils → spring releases”.
 
 ---
 
-## How it works
+## Quick start (1 minute)
 
-### Trend regime
-- **ADX/DI (Wilder)** with user‑set `adxLen` and `adxThresh`.
-- **EMA filter:** `close > EMA` for up regime; `close < EMA` for down.
-- **Final state:** `+1` (Up), `−1` (Down), `0` (Range). Trend boxes use green/red only when strict Up/Down is present.
-
-### Volatility model
-- **Squeeze (SQZ):** `BB upper ≤ KC upper` **and** `BB lower ≥ KC lower`.
-- **Expansion (EXP):** `not SQZ` and (`just exited SQZ` **or** `ΔBB width > 0` **and** `BB width normalized > expansionGate`).
-- **Normalization:** BB width rescaled to `[0,1]` over a lookback window (default `252`) to adapt the expansion gate across symbols/TFs.
-
-### Pulses (non‑repainting)
-A pulse prints **only once** on the bar where the condition **starts** (confirmed on close):
-- `sqzPulse` when SQZ turns true.
-- `expPulse` when EXP turns true.
-- `lonPulse` when Long‑OK turns true.
-- `shoPulse` when Short‑OK turns true.
-
-A per‑event `cool‑down` (bars) throttles repeats.
+1. **Add Regime Box to your chart** (it’s an overlay).
+2. **Keep defaults** for your first run.
+3. Use **box color** for bias: 🟩 think long; 🟥 think short.
+4. Watch for **SQZ → EXP** on your timeframe to time the move.
+5. Prefer trades when **LOK/SOK** agrees with the box color.
+6. (Optional) **Create alerts** for **EXP** and **LOK/SOK** on **bar close**.
 
 ---
 
-## Inputs
+## Two simple playbooks
 
-| Group      | Input                                  | Default | Notes |
-|------------|----------------------------------------|---------|-------|
-| **Trend**  | `ADX Length (adxLen)`                  | 14      | Wilder smoothing for TR, +DI, −DI. |
-|            | `ADX Trend Threshold (adxThresh)`      | 25.0    | Minimum ADX to qualify a trend. |
-|            | `Trend EMA Length (emaLen)`            | 50      | Price vs EMA gate. |
-| **Vol**    | `BB Length (bbLen)`                    | 20      | Basis: `SMA`. Deviation: `StdDev`. |
-|            | `BB StdDev (bbStd)`                    | 2.0     | Bollinger band width. |
-|            | `KC Length (kcLen)`                    | 20      | Basis: `EMA(hlc3)`. Envelope: `ATR * kcMult`. |
-|            | `KC Multiplier (kcMult)`               | 1.5     | Keltner envelope size. |
-|            | `BB Width Normalization Window`        | 252     | Range for width min/max. |
-|            | `Expansion Gate (0–1)`                 | 0.60    | Threshold on normalized BB width when widening. |
-| **Visuals**| `Show Trend Regime Boxes`              | true    | Green/red boxes for strict regimes. |
-|            | `Box transparency (70–100=subtle)`     | 90      | Higher = more subtle. |
-|            | `Box Height Lookback (bars)`           | 300     | Envelope for box top/bottom. |
-|            | `Show SQUEEZE markers`                 | true    | Bottom‑rail gray dots. |
-|            | `Show EXPANSION markers`               | true    | Bottom‑rail teal triangles. |
-|            | `Show LONG/SHORT OK markers`           | false   | Bottom‑rail green squares / red diamonds. |
-|            | `Event cool‑down (bars)`               | 10      | Debounce pulse repeats. |
+### 1) Quiet → Move
+- Wait for **● SQZ**, then **▲ EXP**.  
+- Go with the **box color** (🟩 look up / 🟥 look down).
+
+### 2) Ride the Trend
+- Box is 🟩 and you see **■ LOK** → look for longs.  
+- Box is 🟥 and you see **♦ SOK** → look for shorts.
 
 ---
 
-## Signals & Markers
+## Settings you’ll actually touch (in plain English)
 
-| Code | Meaning                         | Shape       | Color  | When it prints |
-|------|---------------------------------|-------------|--------|----------------|
-| SQZ  | Squeeze started                 | circle      | gray   | First bar where BB sits inside KC. |
-| EXP  | Volatility expansion started    | triangleup  | teal   | First bar out of squeeze **or** width rising above gate. |
-| LOK  | Long OK (trend‑qualified long)  | square      | green  | Up‑trend with no squeeze. |
-| SOK  | Short OK (trend‑qualified short)| diamond     | red    | Down‑trend with no squeeze. |
+- **Event cool‑down (default 10 bars):**  
+  Stops the same marker from repeating too fast.
 
-> Multiple markers can print on the same bar (cool‑down permitting). Markers are placed on the bottom rail and are **close‑confirmed**.
+- **Expansion gate (0–1, default 0.60):**  
+  Higher = pickier about what counts as “waking up”; lower = more EXP signals.
 
----
+- **Show LOK/SOK (off by default):**  
+  Turn on if you want the green/red “OK to look” tags on the bottom rail.
 
-## Alerts
-
-The script exposes four alertconditions (fire **on bar close**):
-
-- **SP: SQZ ON** — “SQUEEZE started (confirmed on close)”
-- **SP: EXP ON** — “Volatility expansion (confirmed on close)”
-- **SP: LONG OK** — “Trend Up & not in squeeze (confirmed on close)”
-- **SP: SHORT OK** — “Trend Down & not in squeeze (confirmed on close)”
-
-Create alerts in TradingView → *Create Alert* → *Condition*: this indicator → choose the event.
+> Everything else can stay on defaults until you’re comfortable.
 
 ---
 
-## Quick start
-1. Add the indicator to a chart (overlay).
-2. Keep defaults: `ADX 14 / 25`, `EMA 50`, `BB 20/2`, `KC 20 × 1.5`, `Gate 0.60`, `Cool‑down 10`.
-3. Watch **green/red regime boxes** for directional context.
-4. Use **SQZ** → **EXP** sequence to time transitions from coil to move.
-5. Take trades only when **LOK/SOK** aligns with your broader plan (bias/participation/levels).
-6. Add alerts for **EXP** and **LOK/SOK** on your trading timeframes.
+## Alerts (recommended)
+
+TradingView → **Create Alert** → Condition: **Regime Box** → Event → **Once per bar close**
+
+- **SP: SQZ ON** — Gray dot (squeeze started)  
+- **SP: EXP ON** — Teal triangle (expansion started)  
+- **SP: LONG OK** — Green square  
+- **SP: SHORT OK** — Red diamond
 
 ---
 
-## Best practices
-- Treat **SQZ** as a *setup*, **EXP** as *go/no‑go*. Avoid fighting the active regime.
-- Tighten entries after large gaps; consider raising `expansionGate` on choppy symbols.
-- For higher‑noise intraday, increase `adxThresh` and `eventCooldown`.
+## When things look weird
 
----
+- **“I’m not getting many signals.”**  
+  That’s normal—Regime Box avoids noise. If you want more:  
+  *lower* the **Expansion gate** a bit or *lower* **Event cool‑down**.
 
-## Non‑repainting notes
-- All pulses and box updates are gated by `barstate.isconfirmed`; nothing finalizes intrabar.
-- No `request.security()` or lookahead is used; conditions compute deterministically bar‑by‑bar.
-- “Non‑shrinking boxes”: once a regime segment ends, its box is closed and no longer updated.
+- **“Too many EXP markers.”**  
+  *Raise* the **Expansion gate** or *increase* **Event cool‑down**.
 
-*(Your site positions the suite as non‑repainting and alert‑ready across markets/timeframes; this module adheres to that contract.)* :contentReference[oaicite:5]{index=5}
-
----
-
-## Performance considerations
-- Moderate compute (SMA/STDDEV/EMA/ATR/RMA). Defaults are safe for 1m–1W.
-- `max_boxes_count=200` guards memory; old segments will recycle on extremely long sessions.
-- Avoid enabling all markers with a very low `eventCooldown` on 1m charts.
+- **“No boxes?”**  
+  You might be in a range. Boxes show only when trend conditions are strong enough.
 
 ---
 
 ## FAQ
 
 **Does this repaint?**  
-No. Signals finalize on candle close; alerts fire only on confirmed bars. :contentReference[oaicite:6]{index=6}
+No. Everything confirms at candle close and stays put.
 
-**Which markets/timeframes?**  
-Anything on TradingView: crypto, FX, indices, equities, commodities—scalps to swings. :contentReference[oaicite:7]{index=7}
+**Which markets/timeframes does it work on?**  
+Anything on TradingView: crypto, stocks, FX, indices; 1‑minute to weekly.
 
-**How do I use it with the rest of SignalPilot?**  
-Follow the suite flow: set bias → verify participation → map structure → time entry → automate alerts. This module covers regime/vol; pair with your bias and participation tools. :contentReference[oaicite:8]{index=8}
-
----
-
-## License
-See the repository’s `LICENSE`. SignalPilot tools are provided for **educational purposes only**—not financial advice. :contentReference[oaicite:9]{index=9}
+**How do I fit this into my workflow?**  
+Use **box color** for bias, **SQZ → EXP** to time momentum, and **LOK/SOK** as a simple green/red “OK” tag.
 
 ---
 
-## Indicator header (for reference)
+## Safety & Notes
 
-```pinescript
-//@version=6
-indicator("SP: Regime & Volatility Filter (v6, Anchored Markers + Non‑shrinking Boxes)", overlay=true, max_boxes_count=200)
+- For **education only**. Not financial advice. Manage your own risk.  
+- Name change: previously called **“Regime & Volatility Filter”** — it’s the same tool, now named **Regime Box (Regime & Volatility Filter)**.
+
+---
+
+## About
+
+Part of the SignalPilot approach to making charts calmer and clearer.  
+Learn more: **signalpilot.io**
