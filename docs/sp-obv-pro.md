@@ -1,3 +1,7 @@
+> **Category:** 💧 Participation (Volume / Flow)  
+> Measures market participation and conviction behind price movement.
+
+
 # SP — Flow Balance (OBV Pro) — by Signal Pilot
 
 **Plain‑English guide — no jargon.**
