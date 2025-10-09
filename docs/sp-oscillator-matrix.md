@@ -1,111 +1,173 @@
-This reduces micro‑flips when Composite hovers near its EMA.
+# SP: Momentum Matrix (Panel Pro) — Simple Guide
 
-### 4) HTF Assist (opt‑in)
-HTF versions of the same oscillators are fetched with
-`request.security(..., lookahead = barmerge.lookahead_off)`, normalized, averaged, and **frozen on close**.  
-The **Confluence** row lights up when **LTF>50 & HTF>50** (up) or **LTF<50 & HTF<50** (down).
+**What this is**  
+A simple panel that tells you if momentum is mostly **up**, **down**, or **mixed**.  
+Think of it like a weather report for your chart.
 
-### 5) Heat‑Matrix (Visual States)
-State mapping per row:  
-`≥ OB → Strong Up`, `≥ UpperThresh → Mild Up`, `Neutral`, `≤ LowerThresh → Mild Down`, `≤ OS → Strong Down`.
+- **Green = pressure up** (buyers in control)
+- **Red = pressure down** (sellers in control)
+- **Gray = mixed/neutral**
 
----
+Works on **any market** and **any timeframe** (crypto, stocks, FX, indices).
 
-## Non‑Repaint Guarantees
-
-- **Close‑confirmation:** All signals use `barstate.isconfirmed` → **alerts only at close**.  
-- **HTF safety:** Every `request.security` uses `lookahead_off`; no future bars are read.  
-- **Intrabar stability:** Values are **frozen** with a close‑aware helper (previous bar value during the forming bar).  
-- **Anchored drawings:** Boxes/labels anchored by `x=bar_index` and `yloc.price`; no wobble on zoom.
+> ⚠️ Education only. Not financial advice.  
+> ✔️ Non‑repainting: signals confirm **after the candle closes** (no “ghost” signals).
 
 ---
 
-## Performance
+## 60‑second setup
 
-- **Objects:** `Blocks` style uses anchored `box` objects and can approach `max_boxes_count` on hyper‑noisy feeds.  
-  - If you hit limits, switch to **Stripes**, reduce rows, widen row spacing, or lengthen normalization.  
-- **Security calls:** HTF Assist adds a handful of `request.security`; keep it **off unless needed**.  
-- **Plots budget:** Under TradingView’s 64‑plot limit (hidden booleans included).
+1) **Add to chart**  
+   TradingView → *Pine Editor* → paste the script → **Add to chart** (it shows in its own panel).
 
----
+2) **Leave defaults alone**  
+   They’re fine for most charts.
 
-## TF Profiles (suggested defaults)
+3) **Pick a timeframe**  
+   - 15–30m or 1H are great places to start.  
+   - 1–5m is noisy (expect more flips).
 
-> Profiles are conservative; tune up selectivity for faster charts.
-
-| TF | OB / OS | Normalize N | EMA | Votes | FlipGuard (cooldown / buffer / decay) | Notes |
-|---|---|---:|---:|---:|---|---|
-| **1–5m** | 85 / 15 | 300 | 13 | ≥3 | 4 / 5.0 / 0.90 | Consider **HTF=60m** gate |
-| **15–30m** | 80 / 20 | 250 | 11 | ≥2 | 3 / 4.0 / 0.85 | Default profile |
-| **1–4H** | 80 / 20 | 220 | 9 | ≥2 | 3 / 3.5 / 0.85 | Optional **HTF=1D** gate |
-| **1D+** | 75 / 25 | 200 | 7 | ≥1 | 2 / 3.0 / 0.85 | HTF optional |
+Done.
 
 ---
 
-## Recipes
+## What you’re looking at (no jargon)
 
-### A) Intraday momentum (15–30m)
-- **On:** RSI, Stoch, MFI, CCI, MACD (AO off)  
-- **Votes ≥ 2**, **50‑Gate ON**, **FlipGuard** `3 / 4.0 / 0.85`  
-- **Optional:** HTF Assist `240` with **Require HTF confluence ON**  
-- **Entry bias:** XUP when Composite already >50 and Consensus ≥2
+The panel has three parts:
 
-### B) Swing (4H–1D)
-- **Weights:** keep equal or slightly up‑weight MACD/RSI  
-- **Votes ≥ 1**, **50‑Gate ON**, **FlipGuard** `3 / 3.5 / 0.85`  
-- **Optional:** HTF Assist `D` (for 4H) or `W` (for D)
+1) **Composite line** (the main line)  
+   - Blends several momentum tools into one score from **0–100**.  
+   - **Above 50 = bullish bias**, **below 50 = bearish bias**.
 
-### C) Mean‑revert scout (scalps)
-- **Focus:** OB/OS context + `50DN/50UP` flips back through 50  
-- **Votes ≥ 3**, **HTF Assist ON** (strict)  
-- Use **Stripes** ribbon to reduce object churn
+2) **Signal line** (a smoother guide)  
+   - **Composite crossing above** it → **possible turn up**.  
+   - **Composite crossing below** it → **possible turn down**.
 
----
+3) **Momentum matrix (colored ribbon)**  
+   - Rows show what each underlying indicator “thinks.”  
+   - **Lots of green rows** = broad agreement up. **Lots of red** = broad agreement down.  
+   - You can show **Blocks** (tiles) or **Stripes** (continuous band).
 
-## Troubleshooting
-
-- **“Matrix isn’t visible”** → Enable **Show heat‑matrix**; confirm **Matrix style**; check Row spacing & Base Y.  
-- **“Too many drawings”** → Switch to **Stripes**; hide unused rows; increase row spacing; lengthen Normalize N.  
-- **“Why didn’t XUP fire?”** → Check **FlipGuard** (cooldown/buffer), **50‑Gate**, **Votes**, and **HTF** gates.  
-- **“Repainting?”** → Ensure alerts are **Once Per Bar Close**; verify HTF Assist is enabled only if you need it.
+> Tip: If your chart feels slow, switch the matrix style to **Stripes**.
 
 ---
 
-## Contributing
+## How to use it (quick rules)
 
-- Keep **determinism**: no future bars, no pivot lookahead, no intermittent helpers trapped in branches.  
-- All `request.security` calls must use `barmerge.lookahead_off`.  
-- Preserve **anchoring**: labels/boxes created with explicit `x=bar_index`, `yloc.price`.  
-- Respect the **plot budget** and avoid local‑scope plotting/fill.  
-- Add/update **hidden booleans** when introducing new signals.
+**For possible LONG bias (up):**
+- Composite **already above 50** ✅  
+- Composite **crosses up** through the signal line ✅  
+- Matrix shows **more green than red** ✅
 
-> PRs should include: (1) Before/After screenshots, (2) Param diffs, (3) Bar‑by‑bar verification notes, (4) Plot count.
+**For possible SHORT bias (down):**
+- Composite **already below 50** ✅  
+- Composite **crosses down** through the signal line ✅  
+- Matrix shows **more red than green** ✅
 
----
-
-## FAQ
-
-**Does it repaint?**  
-No. Signals finalize at **bar close**; HTF uses `lookahead_off`; intrabar values are frozen until the candle confirms.
-
-**Can I scan on the signals?**  
-Yes — use the **hidden boolean** plots listed above.
-
-**Blocks vs Stripes?**  
-**Blocks** are change‑aware and easier to read historically but use more objects. **Stripes** are lighter and continuous.
-
-**Which oscillators should I enable?**  
-Defaults are balanced. For trend/momentum, many prefer **RSI + MACD** slightly up‑weighted.
+**When to ignore:**
+- Colors are mostly gray/mixed and the composite hovers around 50 ❌  
+- It flips up/down every few candles (very choppy session) ❌  
+- You’re trading straight into major news or against a strong higher‑timeframe move ❌
 
 ---
 
-## Changelog
+## Alerts (set it and forget it)
 
-- **v1.0.0** — Initial public docs for `SP: Oscillator Matrix (Panel Pro)`.
+1) Right‑click chart → **Add alert**.  
+2) Choose a built‑in condition and set **Once Per Bar Close**:
+
+- **XUP** — composite crossed **above** the signal line (possible up turn)  
+- **XDN** — composite crossed **below** the signal line (possible down turn)  
+- **OB** — composite entered **Overbought** (very hot)  
+- **OS** — composite entered **Oversold** (very cold)  
+- **50UP** — composite crossed **above 50** (bullish bias)  
+- **50DN** — composite crossed **below 50** (bearish bias)
+
+You’ll be alerted **after** the candle closes.
 
 ---
 
-## License / Notice
+## Two optional helpers (nice, not required)
 
-© SignalPilot Labs, Inc. Tools are **educational** and provided “as‑is.” No investment advice.  
-See `/LICENSE` and your jurisdiction’s regulations before using for live decision‑making.
+- **FlipGuard** — a built‑in **seatbelt** that ignores flimsy flips in chop.  
+  Translation: **fewer false starts**.
+
+- **HTF Assist** — lets a **higher timeframe** (like 1H or 1D) “vote” with you.  
+  Example: Trading the 15m chart? Ask the 1H to agree first for stricter entries.
+
+> New to this? Leave both at defaults for a while. Turn on **HTF Assist** later if you want fewer, cleaner signals.
+
+---
+
+## Easy presets (start here)
+
+**Intraday (15–30m)**  
+- Defaults are fine.  
+- Want fewer but cleaner signals? Turn on **HTF Assist = 60m**.
+
+**Swing (4H–1D)**  
+- Defaults are fine.  
+- Extra safety: **HTF Assist = 1D** (for 4H) or **W** (for 1D).
+
+**Scalp (1–5m)**  
+- Expect more noise. Use **Stripes** ribbon.  
+- Strongly consider **HTF Assist = 60m** to filter junk.
+
+---
+
+## Quick fixes (common questions)
+
+**“It changed after I added it—repainting?!”**  
+No. Signals confirm at **bar close**. Mid‑candle movement is normal on every indicator.
+
+**“Where’s the colored ribbon?”**  
+Turn on **Show heat‑matrix** in settings. If it’s cramped, increase **Row spacing** or switch to **Stripes**.
+
+**“Too many alerts/whipsaws.”**  
+Use a slightly higher timeframe (e.g., 30m instead of 5m), or turn on **HTF Assist**,  
+or wait for **>50 (for longs) / <50 (for shorts)** **and** clear color agreement.
+
+**“Can I scan for signals?”**  
+Yes (advanced). The script includes hidden true/false outputs for scanners. Beginners can skip this.
+
+---
+
+## What the settings mean (plain English)
+
+- **Overbought / Oversold** — “really hot” / “really cold.” Use as **context**, not auto buy/sell.  
+- **Normalization lookback** — how far back we score 0–100. Bigger = smoother.  
+- **Composite smoothing** — makes the main line less jittery.  
+- **Matrix style** — **Blocks** (easy to spot changes) or **Stripes** (lighter).  
+- **HTF Assist** — a bigger timeframe gets a vote (e.g., 1H or 1D).  
+- **Require >50 for longs / <50 for shorts** — don’t fight the tide.  
+- **Minimum consensus** — how many “yes” votes you want before you act (higher = pickier).
+
+If that felt like a lot—leave defaults on. You’ll be fine.
+
+---
+
+## Safety checklist
+
+- Wait for the candle to **close** before acting.  
+- Prefer trades **with the current bias** (above 50 for longs, below 50 for shorts).  
+- Want extra safety? **Ask a higher timeframe to agree** (turn on HTF Assist).  
+- No indicator replaces a plan. Use stops and sensible position sizing.
+
+---
+
+## Need help?
+
+- Updates & info: **signalpilot.io**  
+- GitHub **Issues** tab for questions/bugs (include screenshot + timeframe + settings)
+
+---
+
+## Credits & License
+
+© SignalPilot Labs, Inc.  
+For education only. No financial advice. See repository license for details.
+
+---
+
+### Heads‑up for returning users
+Previously called **Oscillator Matrix**. Same idea, new name: **Momentum Matrix**.
