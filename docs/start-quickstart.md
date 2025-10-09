@@ -65,7 +65,8 @@ Stay consistent; the suite adapts across TFs.
   → [sp-rsi-triad-confirm.md](sp-rsi-triad-confirm.md)  
 **or**  
 - **SP: Context Stoch (SRSI+)** — context‑aware Stoch RSI.  
-  → [sp-srsi-plus.md](sp-srsi-plus.md)
+  → [sp-srsi-plus.md](sp-contextstoch-rsi.md)
+
 
 *(Optional power timing)*  
 - **SP: Leg Timer — TD9 + Clean Squeeze**  
