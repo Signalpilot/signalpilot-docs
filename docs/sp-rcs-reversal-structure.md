@@ -1,4 +1,4 @@
-# SP — Reversal Candlestick Structure (RCS) by Signal Pilot
+# SP — Reversal Candlestick Structure (RCS) — by Signal Pilot
 
 A friendly TradingView helper that **marks well‑known candlestick reversal patterns** right on your chart.  
 Labels appear **only after the candle closes** (so they don’t disappear later). To keep charts clean, the tool shows **at most one bullish and one bearish label per bar**.
