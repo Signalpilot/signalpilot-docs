@@ -1,3 +1,7 @@
+> **Category:** 💧 Participation (Volume / Flow)  
+> Measures market participation and conviction behind price movement.
+
+
 # SP — Participation & Volume Pulse (SP-PVA Suite) — by Signal Pilot
 **Modules:**  
 - **Participation (PVA Overlay)** — on-chart signals  
