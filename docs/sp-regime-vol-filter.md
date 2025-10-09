@@ -1,3 +1,7 @@
+> **Category:** 🧩 Meta / Tools  
+> Filters, regimes, and screeners that unify and contextualize all modules.
+
+
 # SP — Regime Box (Regime & Volatility Filter) — by Signal Pilot
 **Plain‑English guide · Non‑repainting · Works on any market/timeframe**
 
