@@ -1,4 +1,4 @@
-# SP — Reversal Engine (EC Pro) by Signal Pilot
+# SP — Reversal Engine (EC Pro) — by Signal Pilot
 **Spot likely tops & bottoms. Act on clean, close‑confirmed signals.**  
 Works on any market & timeframe in TradingView. Signals **lock on candle close** (no repaint).  
 Profiles are **locked**—you don’t have to tune anything.
