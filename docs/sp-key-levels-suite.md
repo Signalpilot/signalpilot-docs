@@ -1,3 +1,15 @@
+---
+title: "SP — Key Anchors (Key Levels Suite)"
+short_title: "Key Anchors"
+permalink: /sp-key-levels-suite/
+module_id: sp-key-levels-suite
+category: "Structure / Levels"
+category_emoji: "🏗️"
+summary: "HTF, session, and VWAP anchors to orient every trade."
+tags: [levels, anchors, htf, vwap, sessions]
+---
+
+
 > **Category:** 🏗️ Structure / Levels  
 > Maps the invisible architecture of price — zones, liquidity, and anchor points.
 
