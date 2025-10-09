@@ -1,3 +1,7 @@
+> **Category:** 🧭 Bias / Momentum  
+> Defines directional bias and strength. Reveals who’s in control — bulls or bears.
+
+
 # SP — Momentum Matrix (Panel Pro) — by Signal Pilot
 
 **What this is**  
