@@ -1,3 +1,7 @@
+> **Category:** 🏗️ Structure / Levels  
+> Maps the invisible architecture of price — zones, liquidity, and anchor points.
+
+
 # SP — Key Anchors (Key Levels Suite) — by Signal Pilot
 
 **Plain English:** Key Anchors draws the price levels traders actually watch:
