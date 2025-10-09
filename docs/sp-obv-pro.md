@@ -1,3 +1,15 @@
+---
+title: "SP — Flow Balance (OBV Pro)"
+short_title: "Flow Balance (OBV)"
+permalink: /sp-obv-pro/
+module_id: sp-obv-pro
+category: "Participation (Volume / Flow)"
+category_emoji: "💧"
+summary: "Smoothed OBV with noise control to track net pressure cleanly."
+tags: [obv, flow, accumulation, distribution, participation]
+---
+
+
 > **Category:** 💧 Participation (Volume / Flow)  
 > Measures market participation and conviction behind price movement.
 
