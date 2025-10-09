@@ -1,3 +1,15 @@
+---
+title: "SP — SD Zones (SDZones Pro)"
+short_title: "SD Zones"
+permalink: /sp-sdzones-pro/
+module_id: sp-sdzones-pro
+category: "Structure / Levels"
+category_emoji: "🏗️"
+summary: "Supply/Demand zones that hold still—no wobble, no clutter."
+tags: [supply, demand, zones, structure]
+---
+
+
 > **Category:** 🏗️ Structure / Levels  
 > Maps the invisible architecture of price — zones, liquidity, and anchor points.
 
