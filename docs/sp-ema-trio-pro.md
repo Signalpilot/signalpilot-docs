@@ -1,4 +1,4 @@
-# SP — Trend Stack (EMA 50/100/200 Pro) — GC/DC + PB1 by Signal Pilot
+# SP — Trend Stack (EMA 50/100/200 Pro) GC/DC + PB —  by Signal Pilot
 
 A simple, reliable way to **see the trend** and **spot key moments** on your chart.
 
