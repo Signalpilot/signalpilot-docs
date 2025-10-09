@@ -1,3 +1,15 @@
+---
+title: "SP — Context Stoch (SRSI+)"
+short_title: "Context Stoch (SRSI+)"
+permalink: /sp-contextstoch-rsi/
+module_id: sp-contextstoch-rsi
+category: "Timing"
+category_emoji: "⏱️"
+summary: "Context-aware Stochastic RSI to time rotations without noise."
+tags: [stochrsi, timing, rotation, context]
+---
+
+
 > **Category:** ⏱️ Timing  
 > Focuses on exhaustion, reversals, and the rhythm of market cycles.
 
