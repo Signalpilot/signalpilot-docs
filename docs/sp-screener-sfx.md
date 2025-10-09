@@ -1,74 +1,160 @@
+# SP‑Screener (SFX Screener Table — Accuracy+ v6.1)
 
-Key series:
-- **Trend**: `EMA21` vs `EMA55` (row TF)
-- **MACD histogram**: `(EMA12 − EMA26) − Signal(9)` (row TF)
-- **RSI**: `RSI(14)` (row TF)
-- **Gauss baseline**: `gma(close, 50)` where `gma` = EMA(EMA(EMA(EMA(close,50),50),50),50)
-- **Band**: `stdev(close,20) × 0.75` (row TF)
-- **Outside**: `close > max(g1,g2)+band` or `< min(g1,g2)-band`
-- **Wilder ADX**: custom implementation, length = `adxLen`
-- **OBV slope**: `sma(change(OBV), obvLen)`, with `OBV = cum(sign(change(close)) * volume)` (row TF)
-- **Distance gate**:  
-  - Long OK if `close >= gBasis + minDist × ATR(14)`  
-  - Short OK if `close <= gBasis − minDist × ATR(14)`
-
-**TP1**: `lastEntry ± 1×ATR(14)` (row TF).  
-**P&L**: long = `close/lastEntry - 1`; short = `lastEntry/close - 1`.  
-**Age**: `now − lastEventTimestamp`.
+**What it is (one line):**  
+A simple on‑chart **table** that watches up to **8 markets** (any symbols, any timeframes) and tells you when a fresh **bullish (↑)** or **bearish (↓)** signal just happened — plus a quick “how strong is it?” **Score**.
 
 ---
 
-## 6) Quick start
+## TL;DR — How to use it
 
-1. Add the script (overlay) to any chart.  
-2. Set **up to 8 rows** with symbol + timeframe (mix intraday and HTF as needed).  
-3. Pick a **Table Size** and corner. Enable **Score** if using Normal/Large.  
-4. Leave Accuracy+ defaults for stricter, cleaner signals; loosen as needed.  
-5. Trade your plan—**the table is an at‑a‑glance router**, not a strategy.
+1) **Add to chart** (it’s an overlay).  
+2) In settings, pick up to **8 rows** (each row = one *symbol + timeframe*).  
+3) Choose a **table size** and screen corner.  
+4) Trade your own plan. This is a **dashboard**, not a “buy/sell” robot.
 
-**Suggested presets**
-- **Intraday (scalps)**: Smaller TF rows (`3–15m`), keep defaults; consider `minScore 65–70`.
-- **Swing**: Rows `1H–4H–1D`, keep defaults; consider `minScore 55–60`.
+> This file shows info on the chart. It does **not** place trades and does **not** send alerts by itself.
 
 ---
 
-## 7) Behavior, determinism & repaint notes (read this)
+## What you’ll see (each row)
 
-- All higher‑TF data uses `lookahead_off` → **no future data** is pulled.  
-- **Events are computed on the row’s TF.** When your **chart TF < row TF**, you may see **intrabar previews** while the row‑TF bar is still building. The signal is only considered **final** at the **row‑TF bar close**.  
-- The table always reflects the **latest confirmed** event per row; use the **Age** column to sanity‑check recency.
+- **Ticker** — e.g., `BTCUSDT · 5` (symbol + timeframe).
+- **Signal** — `↑ Bullish` / `↓ Bearish` / `—` (none yet).
+- **Status (Age)** — how long since that signal fired (e.g., `12m`, `2h`, `1d`).
+- **TP1** — a simple first target based on recent volatility. Think: “reasonable first stoplight.”
+- **Gauss Ribbon** — quick read of trend & stretch:
+  - **Inside** = normal zone  
+  - **Outside** = stretched/extended  
+  - **Bullish / Bearish** = trend direction
+- **Score (0–100)** — higher = more green lights behind the scenes.
+- **P&L** — how the **last signal** has done since it fired (not your account P&L).
 
-> Practical tip: Keep **Accuracy+** gates ON and use a **higher `minScore`** to avoid chasing provisional flips on thin/volatile symbols.
-
----
-
-## 8) Performance & limits
-
-- Lightweight: table redraws only on layout changes (size/position/columns).  
-- Up to **8 rows** visible.  
-- Overlay only; no plots/labels created by this file.  
-- **No alerts** in this file (by design).
+> **Fresh & nearby** often means: Signal arrow is new, **Age** is small, **Score** is decent, **Inside** is preferred.
 
 ---
 
-## 9) Troubleshooting
+## “I don’t want to learn settings.” Cool — use these.
 
-- **Blank/“—” signal**: No qualified event yet (or filters/score are too strict). Loosen `minScore` slightly.  
-- **Score looks low despite cross**: One or more gates failing (check ADX/OBV/HTF/Distance/RSI rows).  
-- **Frequent flips on very low TFs**: Raise `minScore`, ensure ADX gate is ON, consider using slightly higher TF.  
-- **TP1 looks far**: It’s `±1×ATR(14)`—volatility drives distance; that’s by design.
+- Leave everything **ON** under “Accuracy Filters.” They keep junk signals out.
+- Start with **Default Score = 60**.
+- **Intraday (fast)**: mostly 3m–15m timeframes; if it’s noisy, bump Score to **65–70**.  
+- **Swing (slower)**: 1H–4H–1D rows; Score around **55–60** is fine.
 
----
-
-## 10) Changelog (v6.1)
-
-- **Accuracy+** gates (ADX rising/min, HTF hist agreement, OBV slope, hist z‑score, ATR distance, RSI regime).  
-- **Confluence Score** (0–100) with small **Outside** penalty.  
-- Four **table sizes** with optional **Score** column.  
-- Robust table lifecycle (rebuild only on layout changes).
+You can always add/remove rows later.
 
 ---
 
-## 11) License & disclaimer
+## Reading a row (3 quick examples)
 
-Proprietary © SignalPilot. Educational use only. Not financial advice. Markets are risky; do your own research and manage risk.
+**Example A — Fresh bullish idea**
+- `↑ Bullish` • **Age:** `9m` • **Score:** `72` • **Gauss:** `Inside | Bullish`
+- Plain English: “A new up signal just fired, not old, strong backing, and not stretched.”
+
+**Example B — Caution on a chase**
+- `↑ Bullish` • **Age:** `3h` • **Score:** `61` • **Gauss:** `Outside | Bullish`
+- Plain English: “Up signal, but it’s older and price looks stretched. Don’t assume it continues.”
+
+**Example C — Nothing to do**
+- `—` • **Age:** `—` • **Score:** `—`
+- Plain English: “No qualified signal yet. Move along.”
+
+---
+
+## Setup (step‑by‑step)
+
+1) **Rows**  
+   - For each row, pick a **Symbol** (e.g., `BINANCE:BTCUSDT`) and a **Timeframe** (e.g., `15` for 15‑minute).
+2) **Table Options**
+   - **Show Table**: keep ON.
+   - **Position**: pick a corner you like.
+   - **Size**: Tiny / Small / Normal / Large.
+   - **Show Score**: ON if using Normal/Large (recommended).
+3) **Accuracy Filters** (leave ON unless you know why you’re changing them)
+   - These are simple “green lights” that aim to avoid weak signals.
+
+---
+
+## What makes a signal appear? (no jargon)
+
+A signal shows only when **several checks agree**:
+- Momentum flips up/down (the script checks this for you).
+- Trend, higher timeframe, volume push, and “not too stretched” checks look OK.
+- The **Score** (0–100) meets your **Min Score** (default 60).
+
+If any of those don’t pass, you’ll just see `—` (no signal). That’s normal.
+
+**Good to know:**  
+Signals **lock in at candle close** on the timeframe for that row.  
+Until the candle closes, things can wobble; once it closes, it’s final.
+
+---
+
+## Cheat sheet (keep it simple)
+
+- **Score**  
+  - 70+ = strong agreement  
+  - 60–69 = decent  
+  - <60 = filtered out (by default)
+- **Age**  
+  - Minutes = fresh  
+  - Hours/Days = getting old
+- **Gauss: Inside vs Outside**  
+  - **Inside** = normal zone (healthier)  
+  - **Outside** = stretched; be careful chasing
+- **P&L**  
+  - How the last signal has performed so far. Not your personal P&L.
+
+---
+
+## Common questions
+
+**Q: Can I just buy every ↑ and sell every ↓?**  
+A: No. Treat this as a **radar**, not a rulebook. Always use your own plan and risk controls.
+
+**Q: Why do some rows never signal?**  
+A: The **filters** are doing their job. Either no good setup yet or your **Min Score** is too high.
+
+**Q: Why is TP1 far/close?**  
+A: It adjusts to recent volatility. Wild markets → bigger TP1.
+
+**Q: Does this repaint?**  
+A: No. Signals finalize on candle close and don’t disappear later.
+
+**Q: Does this send alerts?**  
+A: This table doesn’t. It’s for **visual scanning**. Use other parts of your workflow for alerts.
+
+---
+
+## When to change settings (only if needed)
+
+- Too many signals? **Increase Min Score** (e.g., from 60 → 65).  
+- Still too chatty on tiny timeframes? Keep filters ON and use **slightly higher TF**.  
+- Too few signals on higher TFs? **Lower Min Score** a little (e.g., 60 → 55).
+
+---
+
+## What this is NOT
+
+- Not a trade copier.  
+- Not financial advice.  
+- Not a full market scanner across thousands of tickers (it shows **8 rows you choose**).
+
+---
+
+## Safety
+
+- Use stops and position sizing.  
+- One signal isn’t certainty.  
+- News, liquidity, and time of day still matter.
+
+---
+
+## Changelog (v6.1 — the “Accuracy+” update)
+
+- Cleaner signals by default (more agreement under the hood).
+- Simple **Score** so you don’t have to read indicators.
+- Four table sizes so it fits any chart layout.
+
+---
+
+**Made for humans. If you can read green/red arrows, you can use this.**
