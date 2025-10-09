@@ -1,4 +1,4 @@
-# SP-Regime Box (Regime & Volatility Filter)
+# SP:Regime Box (Regime & Volatility Filter)
 **Plain‑English guide · Non‑repainting · Works on any market/timeframe**
 
 Regime Box makes your chart easier to read by showing two simple things:
