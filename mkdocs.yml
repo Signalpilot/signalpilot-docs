@@ -57,7 +57,7 @@ nav:
     - SP — Regime Box (Regime & Volatility Filter): sp-regime-vol-filter.md
     - SP — Reversal Engine (EC Pro): sp-ec-pro.md
     - SP — Screener (Screener Table): sp-screener-sfx.md
-    
+
   - Reference:
     - Suite Workflow (Bias → Timing): ref-workflow.md
     - Non‑Repainting Policy: ref-non-repaint.md
