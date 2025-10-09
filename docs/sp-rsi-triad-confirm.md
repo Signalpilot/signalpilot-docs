@@ -1,3 +1,18 @@
+---
+title: "SP — RSI Triad Confirm"
+short_title: "RSI Triad Confirm"
+permalink: /sp-rsi-triad-confirm/
+module_id: sp-rsi-triad-confirm
+category: "Timing"
+category_emoji: "⏱️"
+summary: "Fast/base/slow RSI triad for clean confirmation and exhaustion."
+tags: [rsi, confirmation, timing, exhaustion]
+---
+
+> **Category:** ⏱️ Timing  
+> Focuses on exhaustion, reversals, and the rhythm of market cycles.
+
+
 # SP — RSI Triad Confirm (SPRSI‑U) — by Signal Pilot
 **Beginner‑friendly guide (GitHub README)**  
 *TradingView · Pine v6 · Non‑repainting on candle close*
