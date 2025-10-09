@@ -1,4 +1,4 @@
-# SP — Flow Balance (OBV Pro) by Signal Pilot
+# SP — Flow Balance (OBV Pro) — by Signal Pilot
 
 **Plain‑English guide — no jargon.**
 
