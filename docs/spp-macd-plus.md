@@ -1,8 +1,11 @@
+> **Category:** 🧭 Bias / Momentum  
+> Defines directional bias and strength. Reveals who’s in control — bulls or bears.
+
+
 # SP — Momentum Regime (MACD+) — by Signal Pilot
 **Tagline:** Trend entries made simple. See momentum flip, skip chop, and get three clear entries: **Prime**, **Pullback**, **Retest**.
 
 > Works on any market/timeframe in TradingView. Signals finalize on candle close (no repaint).
-
 ---
 
 ## TL;DR — Use in 60 seconds
