@@ -1,3 +1,15 @@
+---
+title: "SP — Reversal Engine (EC Pro)"
+short_title: "Reversal Engine"
+permalink: /sp-ec-pro/
+module_id: sp-ec-pro
+category: "Timing"
+category_emoji: "⏱️"
+summary: "Event-centric reversal detection with PilotLine, NanoFlows, and regime context."
+tags: [reversal, events, regime, pilotline, nanoflow]
+---
+
+
 > **Category:** ⏱️ Timing  
 > Focuses on exhaustion, reversals, and the rhythm of market cycles.
 
