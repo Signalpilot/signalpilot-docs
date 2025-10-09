@@ -1,4 +1,4 @@
-# SP: RSI Triad Confirm (SPRSI‑U) — Premium
+# SP: RSI Triad Confirm (SPRSI‑U)
 **Beginner‑friendly guide (GitHub README)**  
 *TradingView · Pine v6 · Non‑repainting on candle close*
 
