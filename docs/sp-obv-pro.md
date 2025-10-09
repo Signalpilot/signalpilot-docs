@@ -1,182 +1,179 @@
-# SP: OBV Pro (SP‑OBV)
+# Flow Balance (OBV Pro)
 
-**Money flow, de‑noised.**  
-Spike‑clipped OBV with a Bollinger‑style channel, basis crosses, ±2σ extremes, and confirmed regular/hidden divergences. Optional HTF compute. Non‑repainting, alert‑ready, screener‑friendly.
+**Plain‑English guide — no jargon.**
 
-> Part of the [SignalPilot Trading Suite](https://www.signalpilot.io/) — clean, non‑repainting signals for any market/timeframe. Educational only. :contentReference[oaicite:3]{index=3}
+Flow Balance reads **buying vs. selling pressure** from volume and shows you:
+- when pressure **flips** (buyers take over or sellers take over),
+- when a move looks **overstretched** (often tired),
+- when **price and volume disagree** (a heads‑up that a turn may be near).
 
----
+It works on any market and timeframe, does **not repaint** after the candle closes, and includes ready‑made **alerts** and **scanner outputs**.
 
-## Features
-
-- **Spike‑clipped OBV:** Caps volume to `3×` a rolling average (`len = 50`) before accumulation to reduce outlier whipsaws.
-- **Channel context:** SMA basis (`L = 20`) with ±`2σ` envelope for exhaustion reads.
-- **Cross signals:** Basis `crossover/crossunder` gated by **FlipGuard** (cooldown in bars).
-- **Extremes:** Residual Z‑score `≥ +2σ` or `≤ −2σ`.
-- **Divergences:** Regular & hidden, confirmed with anchored `3/3` pivots and a sync tolerance of `5` bars.
-- **HTF assist:** Compute OBV on a higher timeframe while plotting on the chart; non‑repaint via `request.security(..., lookahead_off)`.
-- **Alerts & screeners:** Close‑confirmed alerts and hidden boolean plots for scanners.
-- **Deterministic:** Values freeze at bar close; no lookahead, no wobble.
+> Part of the SignalPilot suite — learn more at **signalpilot.io**. Educational use only.
 
 ---
 
-## How it works
+## What you’ll see on the chart
 
-1. **Spike‑clipped OBV**
-   - Volume is clipped: `vEff = min(volume, 3 × RMA(volume, 50))`.
-   - OBV is accumulated with direction of `close` vs `close[1]`.
+Flow Balance sits in its **own panel** under price.
 
-2. **Basis + Bands**
-   - `basis = SMA(OBV, 20)`, `σ = stdev(OBV - basis, 20)`, `upper/lower = basis ± 2σ`.
-   - Crosses of `OBV` vs `basis` mark control flips; band pushes flag extremes.
+- **Blue line** → the money‑flow line (based on volume).
+- **Yellow line** → a smooth “middle line” for context.
+- **Light green rails + fill** → a guide zone around that middle line.
 
-3. **FlipGuard (crosses only)**
-   - Cooldown (bars) before a new cross can register.
+**Dots (your signals):**
+- **Green dot** → pressure **flipped up** (buyers in control).
+- **Red dot** → pressure **flipped down** (sellers in control).
+- **Pink dot** → the line is **stretched high** (up move may be tired).
+- **Purple dot** → the line is **stretched low** (down move may be tired).
+- **Divergence dots** → price and flow disagree:
+  - **Bullish divergence**: **Lime** or **Teal** (down move may be weakening).
+  - **Bearish divergence**: **Red** or **Orange** (up move may be weakening).
 
-4. **Divergences**
-   - Regular/Hidden on highs/lows using `3/3` pivots, confirmed and anchored at `bar_index - 3`.
-
-5. **HTF compute (optional)**
-   - OBV calculated on `calcTf`; series is frozen and sampled down with `lookahead_off` for non‑repaint integrity.
-
----
-
-## Inputs (Tuning Knobs)
-
-- **HTF timeframe (blank = chart)**: `calcTf`  
-  Compute OBV on a higher TF (e.g., `60`, `240`, `D`) while trading on lower TFs.
-
-- **FlipGuard bars**: `flipBars` (default `3`)  
-  Minimum bars between successive cross signals.
-
-### Advanced (opinionated constants)
-Hard‑coded for quality/consistency; edit in source if you must.
-
-| Param        | Value | Purpose                          |
-|--------------|------:|----------------------------------|
-| `L`          | 20    | Basis & residual window          |
-| `K`          | 2.0   | Band width (±2σ)                 |
-| `PIV_LEFT`   | 3     | Divergence pivot left            |
-| `PIV_RIGHT`  | 3     | Divergence pivot right           |
-| `SYNC_TOL`   | 5     | Max pivot index desync           |
-| `CLIP_LEN`   | 50    | Volume clip lookback (RMA)       |
-| `CLIP_MULT`  | 3.0   | Volume cap multiple               |
+> Quick read: **Green/Red = flips**, **Pink/Purple = overcooked**, **Divergence = disagreement**.
 
 ---
 
-## Signals & Events
+## How to use it (3 steps)
 
-**Crosses (FlipGuard‑gated)**
-- `CrossUp` — OBV crosses above basis
-- `CrossDown` — OBV crosses below basis
+1) **Find direction with a flip**  
+   - **Green dot** → look for longs.  
+   - **Red dot** → look for shorts.
 
-**Extremes**
-- `Z>=+2σ` — Residual Z‑score ≥ +2
-- `Z<=-2σ` — Residual Z‑score ≤ –2
+2) **Check heat**  
+   - Pink or Purple means the move is **tired**. Be picky with entries right after these.
 
-**Divergences** (anchored, confirmed)
-- `BullReg` — Price LL, OBV HL
-- `BearReg` — Price HH, OBV LH
-- `BullHid` — Price HL, OBV LL
-- `BearHid` — Price LH, OBV HH
+3) **Use divergences as a heads‑up**  
+   - Bullish divergence near support → possible **bounce**.  
+   - Bearish divergence near resistance → possible **pullback**.
 
-> Note: Divergence dots are offset by `-PIV_RIGHT` so they print where they occurred (no repaint after confirmation).
+> Keep it simple: **Flip for direction**, **Stretch for caution**, **Divergence for timing**.
 
 ---
 
-## Alerts (bar‑close only)
+## Quick start (60 seconds)
 
-All alerts fire only on `barstate.isconfirmed`.
-
-- **SP:OBV | CrossUp** — OBV crossed ABOVE basis  
-- **SP:OBV | CrossDown** — OBV crossed BELOW basis  
-- **SP:OBV | Z>=+2σ** — Residual Z‑score ≥ +2σ  
-- **SP:OBV | Z<=-2σ** — Residual Z‑score ≤ −2σ  
-- **SP:OBV | DivBull** — Regular Bullish Divergence  
-- **SP:OBV | DivBear** — Regular Bearish Divergence  
-- **SP:OBV | DivHidBull** — Hidden Bullish Divergence  
-- **SP:OBV | DivHidBear** — Hidden Bearish Divergence
-
-**Set up:** Right‑click chart → *Add alert…* → *Condition:* `SP: OBV Pro` → choose alert.
+1. Add **Flow Balance (OBV Pro)** to your chart.  
+2. Don’t touch settings yet — defaults are safe.  
+3. Wait for a **Green** or **Red** flip dot.  
+4. Prefer entries on the **first pullback** after the flip (not the exact dot).  
+5. If you also see **Pink/Purple**, reduce size or wait — the move might be tired.
 
 ---
 
-## Screener outputs (hidden booleans)
+## Best practices
 
-Each prints `1` on the bar it confirms (else `na`). Use in screeners or with the SP‑Screener module.
-
-- `SP:OBV | CrossUp (bool)`
-- `SP:OBV | CrossDown (bool)`
-- `SP:OBV | Z>=+2σ (bool)`
-- `SP:OBV | Z<=-2σ (bool)`
-- `SP:OBV | BullReg (bool)`
-- `SP:OBV | BearReg (bool)`
-- `SP:OBV | BullHid (bool)`
-- `SP:OBV | BearHid (bool)`
+- Pair Flow Balance with your **trend tool** or key **levels** (e.g., moving average, previous highs/lows).
+- **Confluence wins:** Flip + level + your setup > any one signal alone.
+- **Divergences** are most helpful at **important areas** (support/resistance).
+- Quiet charts are fine — **no signal** is better than a **bad signal**.
 
 ---
 
-## Quick start
+## Settings (explained like a human)
 
-1. Add **SP: OBV Pro** to your chart (separate pane).
-2. (Optional) Set **HTF timeframe** to align with your bias TF.
-3. Keep **FlipGuard bars** at `3` for intraday; increase if you want stricter crosses.
-4. Use crosses for **control shifts**, ±2σ for **exhaustion**, and divergences for **inflection**—ideally within the SignalPilot bias→participation→structure→timing plan. :contentReference[oaicite:4]{index=4}
+- **HTF timeframe (blank = chart)**  
+  Want the money‑flow line calculated on a bigger timeframe while you trade a smaller one?  
+  Example: Trade on 15m, **set HTF to 1H** for a steadier read.  
+  Leave blank to keep it the same as your chart.
 
----
+- **FlipGuard bars (default 3)**  
+  Prevents flip spam. After a flip, Flow Balance **waits this many candles** before allowing another flip.  
+  - Want **fewer** flips? Increase it (e.g., 5–8).  
+  - Want **more** flips? Decrease it (e.g., 1–2, but expect more noise).
 
-## Non‑repaint & determinism
-
-- All calculations **freeze at bar close** (deterministic `freeze()` pattern).
-- All `request.security` calls use **`lookahead_off`**.
-- Divergences are **confirmed** pivots (require future bars), then **anchored** back to the pivot bar (no repaint after print).
-
----
-
-## Performance notes
-
-- One HTF `security()` call; minimal rolling stats.
-- Divergence checks use light pivot buffers; no labels; modest plot count.
-- Suitable for multi‑symbol screeners.
+> You can ignore everything else — the script handles the heavy lifting.
 
 ---
 
-## Recommended pairing
+## Alerts (set‑and‑forget)
 
-- **Bias:** EC Pro or MACD+  
-- **Participation:** PVA + OBV  
-- **Structure:** SDZ & Levels  
-- **Timing:** RSI Triad / SRSI+  
-This mirrors the suite’s workflow and reduces false positives. :contentReference[oaicite:5]{index=5}
+All alerts trigger **after the candle closes** (so they don’t change later).
+
+**How to set:**
+1. Right‑click the chart → **Add alert…**  
+2. **Condition:** `Flow Balance (OBV Pro)`  
+3. Choose one of:
+   - **CrossUp** — buyers took control (green flip)
+   - **CrossDown** — sellers took control (red flip)
+   - **Z>=+2σ** — stretched up (pink)
+   - **Z<=-2σ** — stretched down (purple)
+   - **DivBull** — bullish divergence (lime/teal)
+   - **DivBear** — bearish divergence (red/orange)
+   - **DivHidBull** — hidden bullish divergence
+   - **DivHidBear** — hidden bearish divergence
+
+Tip: Create one alert per signal you care about and select **Only Once Per Bar Close**.
 
 ---
 
-## FAQ
+## Scanning / screeners
+
+Flow Balance also outputs **hidden 1/0 series** (for screeners) — one for each signal above.  
+Look for names like:
+
+- `Flow Balance | CrossUp (bool)`  
+- `Flow Balance | CrossDown (bool)`  
+- `Flow Balance | Z>=+2σ (bool)`  
+- `Flow Balance | Z<=-2σ (bool)`  
+- `Flow Balance | BullReg (bool)`  
+- `Flow Balance | BearReg (bool)`  
+- `Flow Balance | BullHid (bool)`  
+- `Flow Balance | BearHid (bool)`
+
+> If your current script still shows older names (e.g., starting with `SP:OBV`), that’s OK — they’re the **same signals**. Names will align as versions update.
+
+---
+
+## Simple playbooks (examples)
+
+- **Trend pullback long**  
+  1) Green flip.  
+  2) Price pulls back to a level (MA, prior high, support).  
+  3) No fresh Purple dot → enter long.  
+  4) Exit into Pink or on a Red flip.
+
+- **Mean‑revert short**  
+  1) Pink dot (stretched up).  
+  2) Bearish divergence or Red flip near resistance.  
+  3) Enter short with a tight stop above the level.  
+  4) Cover on Purple or Green flip.
+
+Adjust size and stops to your plan.
+
+---
+
+## FAQs
 
 **Does it repaint?**  
-No. Signals finalize on bar close; divergences print only after pivot confirmation (then anchor back).
+No. Dots print on bar close and stay put. Divergence dots appear **after** the swing is confirmed (so they’re reliable) and are placed back on the bar where the swing happened.
 
 **Which markets/timeframes?**  
-Anything on TradingView; scalps to swings. :contentReference[oaicite:6]{index=6}
+Anything on TradingView — stocks, futures, crypto, FX. From scalps to swings.
 
-**Can I screen for signals?**  
-Yes—use the hidden boolean plots listed above or the SP‑Screener module.
+**Why did a divergence dot show up “late”?**  
+Because we wait for confirmation before printing it. That keeps your chart honest.
+
+**I see few signals. Is that bad?**  
+Not at all. Fewer, cleaner signals usually mean **less noise**. If you want more, use a **lower timeframe** or reduce **FlipGuard** slightly.
+
+---
+
+## Troubleshooting
+
+- **Lots of flip dots?** Increase **FlipGuard**.  
+- **Choppy reads on low timeframes?** Try setting **HTF** to a larger TF (e.g., 1H or 4H).  
+- **Too many “tired” (Pink/Purple) dots?** That market might be hot. Zoom out (higher TF) or wait for a pullback.
+
+---
+
+## Safety first
+
+Flow Balance is a **tool**, not a promise. Always use stops, size responsibly, and combine signals with your own plan.
 
 ---
 
 ## License & access
 
-Invite‑only as part of the SignalPilot Trading Suite. See plans and activation times on the website. :contentReference[oaicite:7]{index=7}
-
----
-
-## Changelog
-
-- **v1.0.0** — Initial release  
-  - Spike‑clipped OBV, SMA basis ±2σ  
-  - Crosses with FlipGuard  
-  - Z‑extremes  
-  - Regular/Hidden divergences  
-  - HTF compute  
-  - Alerts + screener booleans
-
+Part of the SignalPilot suite. **Educational use only.**  
+For access and updates, visit **signalpilot.io**.
