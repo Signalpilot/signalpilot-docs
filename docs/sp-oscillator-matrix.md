@@ -1,4 +1,4 @@
-# SP: Momentum Matrix (Panel Pro) — Simple Guide
+# SP — Momentum Matrix (Panel Pro) — Simple Guide
 
 **What this is**  
 A simple panel that tells you if momentum is mostly **up**, **down**, or **mixed**.  
