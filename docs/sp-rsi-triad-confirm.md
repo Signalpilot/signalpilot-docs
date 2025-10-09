@@ -1,4 +1,4 @@
-# SP: RSI Triad Confirm (SPRSI‑U)
+# SP — RSI Triad Confirm (SPRSI‑U) — by Signal Pilot
 **Beginner‑friendly guide (GitHub README)**  
 *TradingView · Pine v6 · Non‑repainting on candle close*
 
