@@ -1,3 +1,15 @@
+---
+title: "SP — Trend Stack (EMA 50/100/200 Pro)"
+short_title: "Trend Stack (EMA 50/100/200)"
+permalink: /sp-ema-trio-pro/
+module_id: sp-ema-trio-pro
+category: "Bias / Momentum"
+category_emoji: "🧭"
+summary: "Clear stacked-EMA trend map with GC/DC context and disciplined pullback logic."
+tags: [trend, ema, bias, momentum]
+---
+
+
 > **Category:** 🧭 Bias / Momentum  
 > Defines directional bias and strength. Reveals who’s in control — bulls or bears.
 
