@@ -1,194 +1,135 @@
-# SP‑LTF — TD8/9 + Clean Squeeze + Smart Warnings (v3.10.0)
+# SP - Leg Timer — TD9 + Clean Squeeze 
 
-**Coiled or cooked—know before you chase.**  
-LTF marks TD‑style 8/9s, paints a clean Bollinger‑in‑Keltner squeeze, and raises **Caution/Danger** X’s when a leg stretches, decelerates, or fails context—so you time entries/exits without repaint risk. Part of the **SignalPilot Trading Suite** (any market · any timeframe, alert‑ready). *Educational only.*  
-Learn more: SignalPilot site (suite overview, pricing, quick‑start).  
-> Non‑repainting & alert‑ready claims align with the suite’s positioning. Any‑market/timeframe coverage matches the site.  
-> Source: SignalPilot website.  
-> (© SignalPilot Labs, Inc.)  
- 
----
-
-## Highlights
-
-- **TD 8/9 (with 9 “perfection”)** — Classic, close‑confirmed prints with anchored placement (ATR‑padded inside/outside).  
-- **Clean Squeeze** — Bollinger Bands inside Keltner Channel, with optional adaptive width, dynamic z‑tightness, and contraction slope gates.  
-- **Smart Warnings (X)** — One exclusive X per bar: **Danger** > **Caution**. Scores momentum/structure/RSI/volume to avoid low‑quality chases. Per‑leg cooldown prevents spam.  
-- **Leg engine** — Starts only on releases/impulses when filters pass (HTF EMA confluence, ADX up & ≥ threshold, swing‑break, volume RVOL).  
-- **Non‑repainting architecture** — All `request.security(..., lookahead=barmerge.lookahead_off)`; signals finalize on **close**; visuals **anchored** by `bar_index` & price.  
-- **Alert‑ready & screener‑ready** — Boolean outputs for scanners; named alerts fire on closed bars.
-
-> The above mirrors current site voice (clarity, actionable, non‑repainting, any market/timeframe). :contentReference[oaicite:3]{index=3}
+**In one sentence:**  
+Leg Timer shows when a move is getting **tired** (TD **9** counts), when price is **coiling** (Clean Squeeze cloud), and when to be **extra careful** (optional yellow/red **X** warnings). It only prints after the bar closes (non‑repainting) and comes with ready‑made alerts.  
+Learn more and get access: **https://www.signalpilot.io**  
+*Educational use only.*
 
 ---
 
-## Quick start
+## What you’ll see on the chart
 
-1. **Access** — Get the SignalPilot Suite and provide your TradingView username for invite‑only access (activation typically within hours).  
-2. **Add to chart** — Search *Invite‑only scripts* → “SP: LTF Suite — TD8/9 + Clean Squeeze + Smart Warnings”.  
-3. **(Optional) Signal TF** — Set **Signal timeframe** if you want LTF to compute on an HTF while viewing a lower chart.  
-4. **Add alerts** — Use the built‑in alert presets (close‑confirmed).  
-5. **Workflow** — Follow the suite path: bias (EC Pro/MACD+) → participation (PVA/OBV) → structure (SDZ/Levels) → **timing** (RSI/SRSI+/LTF). :contentReference[oaicite:4]{index=4}
+- **TD “9” numbers**  
+  A “9” prints near candles when a push looks **tired**.  
+  *(You can also show “8”s if you want. Think “start taking profits / tighten risk,” not “instant reversal.”)*
 
----
+- **Blue “Clean Squeeze” cloud**  
+  Price is **coiling** (quiet, tight range). Coils often **release** into bigger moves.
 
-## Signals & events
+- **X warnings (optional)**  
+  - **Yellow X = Caution** → the move looks stretched or slowing.  
+  - **Red X = Danger** → the move may be failing or flipping.  
+  Only one X per bar; red has priority.
 
-**TD counts**
-- `TD8B`, `TD9B`, `TD8S`, `TD9S`
-- `TD9B_PERF`, `TD9S_PERF` (9 perfection on close)
-
-**Squeeze**
-- `SQZ_ACTIVE` — BB inside KC and gates satisfied (see **Gates**)
-
-**Leg engine**
-- `LEG_START_UP`, `LEG_START_DN` — release/impulse + filters pass
-
-**Smart X (exclusive)**
-- `WRN` (Caution) — stretch/deceleration/OB‑OS/divergence composite
-- `DNG` (Danger) — failure streak, wick‑exhaustion, EMA flip, minor structure break
-- **Exclusivity:** on any bar, only one X can print; `Danger` has priority.
+> These are **traffic lights**, not buy/sell commands.
 
 ---
 
-## Gates & logic (abridged)
+## Quick start (60 seconds)
 
-- **TD 8/9:** Classic compare vs 4 bars back; gated on the **closed** signal bar. “Perfection” checks lows/highs around the 9 count on closed data.
-- **Squeeze:** BB within KC + *optional* gating:
-  - **Adaptive** classic gate via normalized width quartile (25th pct over `autoWin`).
-  - **Dynamic tightness** by z‑score ≤ threshold.
-  - **Contraction slope** by EMA of dWidth ≤ –threshold.
-- **Leg start:** Releases (close outside KC with EMA alignment) or impulse breaks (ATR‑sized bodies beyond prior H/L) **and** filters:
-  - HTF EMA confluence (opt‑in),
-  - ADX rising & ≥ threshold,
-  - Swing‑break (pivot window),
-  - Volume ≥ SMA × multiplier.
-- **X scoring:**
-  - *Caution:* stretch from KC mid, momentum deceleration, RSI OB/OS, divergence.
-  - *Danger:* failure streak, wick‑exhaustion with RVOL, EMA cross against leg, minor structure break.
+1. **Add the script** in TradingView: *Invite‑only* → **Leg Timer — TD9 + Clean Squeeze**.  
+2. **Do nothing** to start — defaults are sensible.  
+3. **Wait for bar close** — prints and alerts are final only at close (no flicker).  
+4. **Turn on alerts** (recommended): choose an alert like *Squeeze Active* or *Leg Start*, set **Once per bar close**.  
+5. Follow the **Simple playbook** below.
 
 ---
 
-## Inputs (with defaults)
+## Simple playbook (how most people use it)
 
-### SP:General
-- **Signal timeframe (blank = chart)**: `""` (compute on chart TF; set HTF to downsample).
-
-### SP:TD
-- Show TD 8/9 markers: `true`
-- Hide 8 (show 9 only): `false`
-- Marker style: `"Text - White"` (also `"Text - Teal/Red"`, `"Boxes (Teal/Red)"`)
-- Text size: `"normal"` (`"tiny"|"small"|"normal"|"large"`)
-- Anchor mode: `"Outside (ATR pad)"` (`"Inside (ATR pad)"`)
-- TD text padding (×ATR): `0.70`
-- TD horizontal shift (± bars): `0`
-
-### SP:Squeeze
-- Show Squeeze cloud: `true`
-- BB length/mult: `20`, `2.0`
-- Keltner length/mult: `20`, `1.5`
-- Auto‑adapt classic gate: `true` (25th percentile over lookback)
-- Auto‑adapt lookback (bars): `300`
-- **Min bars inside before ON:** `3` *(reserved in this build)*
-- Dynamic tightness (z ≤ thr): `false` (thr `-0.60`)
-- Require width contraction: `false` (EMA len `5`, slope thr `0.002`)
-- Cloud color/transparency: rgb(40,120,255) / `40%`
-
-### SP:Warnings (X)
-- Show X: `true`
-- Cooldown bars: `15`
-- Leg must be ≥ this age: `4`
-- Caution score ≥: `3`
-- Danger score ≥: `4`
-- Danger confirm streak (bars): `2`
-- Min body/ATR: `0.22`
-- Min |Close−KCmid|/ATR: `0.35`
-- Stretch (|Close−KCmid|/ATR ≥): `1.30`
-- Momentum decel bars ≥: `2`
-- Minor structure window: `5`
-- RSI OB/OS: `70 / 30`
-- X text size: `"small"`
-
-### SP:Leg Start Filters
-- Require HTF EMA confluence: `true` (HTF `60`)
-- Require ADX rising & ≥ thr: `true` (`18`)
-- Require swing‑break: `true` (left/right `2/2`)
-- Require volume ≥ SMA × mult: `true` (len `20`, mult `1.10`)
+- **During the blue cloud (squeeze):** Plan. Don’t force entries.  
+- **When price breaks out of the cloud:** Look for entries **with** the break direction.  
+- **When a “9” prints:** Consider **taking profits / tightening risk**, especially if you also see a yellow or red X.  
+- **Yellow X:** Be picky with new entries; consider smaller size.  
+- **Red X:** Respect it — many users reduce or exit here.
 
 ---
 
-## Alerts (close‑confirmed)
+## Cheat sheet
 
-- `SP:TD8B` — “SP: TD8 Buy”  
-- `SP:TD9B` — “SP: TD9 Buy”  
-- `SP:TD8S` — “SP: TD8 Sell”  
-- `SP:TD9S` — “SP: TD9 Sell”  
-- `SP:SQZ`  — “SP: Squeeze Active”  
-- `SP:LEGUP` — “SP: Leg Start Up”  
-- `SP:LEGDN` — “SP: Leg Start Down”  
-- `SP:WRN` — “SP: Caution (X)”  
-- `SP:DNG` — “SP: Danger (X)”
-
-> All alerts are emitted only when the signal bar is confirmed.
+| You see…             | Plain meaning                      | Typical reaction                          |
+|----------------------|------------------------------------|-------------------------------------------|
+| Blue cloud on        | Market is **coiling**              | Plan the trade; wait for the break        |
+| Break **out** of cloud | **Move may be starting**          | Look for entries with the break           |
+| TD **9** (or 8)      | Push looks **tired**               | Take profit / tighten risk                |
+| **Yellow X**         | **Caution** — stretched/slowing    | Be picky; smaller size                    |
+| **Red X**            | **Danger** — failing/flip risk     | Reduce/exit; avoid fresh entries          |
 
 ---
 
-## Screener outputs (hidden booleans)
+## Alerts (in human words)
 
-The script exposes one hidden boolean plot per state for easy scanning:
+Add any of these with **Once per bar close**:
 
-SP:LTF | TD8B (bool)
-SP:LTF | TD9B (bool)
-SP:LTF | TD8S (bool)
-SP:LTF | TD9S (bool)
-SP:LTF | TD9B_PERF (bool)
-SP:LTF | TD9S_PERF (bool)
-SP:LTF | SQZ_ACTIVE (bool)
-SP:LTF | LEG_START_UP (bool)
-SP:LTF | LEG_START_DN (bool)
-SP:LTF | WRN (bool)
-SP:LTF | DNG (bool)
+- **Squeeze Active (SP:SQZ)** — “We’re coiling.”  
+- **Leg Start Up / Down (SP:LEGUP / SP:LEGDN)** — “A new push may be starting.”  
+- **TD9 Buy / TD9 Sell (SP:TD9B / SP:TD9S)** — “This push looks tired (9).”  
+- **Caution (SP:WRN)** — “Heads up.”  
+- **Danger (SP:DNG)** — “Respect this.”
+
+*(Advanced users can also alert on TD8.)*
 
 ---
 
-## Non‑repainting & anchoring
+## Settings you might actually touch (optional)
 
-- All higher‑timeframe data uses `request.security(..., barmerge.gaps_off, barmerge.lookahead_off)`.  
-- Signals compute on each **closed** signal bar (`newSig`) and freeze until the next.  
-- All labels use hard anchors: `x = bar_index` (or `bar_index - 1` when Signal TF is HTF), `y = price`, `xloc.bar_index`, `yloc.price`.  
-- Exclusive event printing (Danger > Caution) prevents double‑marks per bar and reduces noise.
+- **Show TD numbers** — On/Off. Leave on.  
+- **Squeeze cloud** — On/Off. Leave on; defaults are conservative.  
+- **Warnings (X)** — On/Off. If you want fewer X’s, raise:
+  - **Caution score ≥** (default **3**)  
+  - **Danger score ≥** (default **4**)  
+- **Signal timeframe** — Leave blank unless you know you want signals calculated on a higher timeframe than your chart.
 
----
-
-## Performance & limits
-
-- Plot budget: **13** total (incl. hidden plots).  
-- Labels are gated to closed bars and throttled via cooldowns to minimize clutter.  
-- Designed for 1m → 1W. Defaults are conservative on intraday.
+> If a setting confuses you, **leave it at default**.
 
 ---
 
-## Notes & gotchas
+## Good habits
 
-- **Signal TF vs Chart TF:** When you choose an HTF in *Signal timeframe*, all logic/prints follow the **HTF close**, while labels are anchored on the correct prior LTF bar to prevent wobble.  
-- **Squeeze “Min bars inside”:** The control is present for forward compatibility; the current build activates `SQZ_ACTIVE` as soon as the gates are met.  
-- **Educational only:** No signals are financial advice. Use risk controls.
-
----
-
-## Versioning
-
-**v3.10.0**
-- Close‑confirmed TD 8/9 with “perfection” checks.
-- Clean Squeeze with adaptive width, dynamic z‑tightness (opt‑in), and slope contract (opt‑in).
-- Leg engine with release/impulse starts + HTF/ADX/volume/swing filters.
-- Smart X warnings (Danger > Caution), per‑leg cooldown, fully anchored labels.
-- Screener booleans + named alerts.
+- Trade **with** the break out of the cloud, not against it.  
+- Treat **TD9** and **X’s** as risk tools (scale out, tighten stops), not as “instant reverse” buttons.  
+- Always wait for the **bar to close** before acting on a print or alert.
 
 ---
 
-## License & attribution
+## FAQ
 
-© SignalPilot Labs, Inc. All rights reserved. Invite‑only TradingView script; redistribution is not permitted. Branding and suite language aligned with the SignalPilot website (non‑repainting, alert‑ready, any market/timeframe). :contentReference[oaicite:5]{index=5}
+**Does it repaint?**  
+No. It only prints and alerts **after** the bar closes.
 
+**Is TD9 a reversal signal?**  
+No. It means **fatigue**. Some fatigued moves reverse; some just pause.
 
+**What is a squeeze?**  
+A quiet, tight range (“coiled spring”). Markets don’t stay quiet forever.
+
+**Which markets and timeframes?**  
+Any liquid market, 1‑minute to weekly.
+
+**Is this financial advice?**  
+No. This is an educational study. Manage your own risk.
+
+---
+
+## Troubleshooting
+
+- **Too many X’s** → Raise **Caution score ≥** and **Danger score ≥** in settings.  
+- **Nothing shows** → Ensure “Show TD” and “Show Squeeze” are on; wait for bar close.  
+- **Alerts ping mid‑bar** → Set alert to **Once per bar close**.
+
+---
+
+## Version & notes
+
+**v3.10.0**  
+- TD9 counts (optionally show 8s).  
+- Clean Squeeze cloud.  
+- Optional Smart Warnings (yellow/red X).  
+- Close‑confirmed alerts; non‑repainting prints.
+
+---
+
+## Legal
+
+© SignalPilot. All rights reserved. Invite‑only TradingView study. **Educational use only.**  
+More info & updates: **https://www.signalpilot.io**
