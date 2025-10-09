@@ -1,3 +1,7 @@
+> **Category:** 🏗️ Structure / Levels  
+> Maps the invisible architecture of price — zones, liquidity, and anchor points.
+
+
 # SP — SD Zones (SDZones Pro) — by Signal Pilot
 
 Clean, easy supply/demand zones for TradingView. Green = areas where buyers showed up before (demand). Red = areas where sellers showed up before (supply). It stays tidy, scores stronger areas, and can alert you when price touches or breaks a zone.
