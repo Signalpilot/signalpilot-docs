@@ -1,194 +1,155 @@
-# SP: PVA — Volume + Overlay
-**Versions**  
-- PVA Volume: `v3.0.5-V` (separate volume pane)  
-- PVA Overlay: `v3.0.6-O` (on-chart prints + barcolor + alerts)
+# Participation & Volume Pulse (SP-PVA Suite)
+**Modules:**  
+- **Participation (PVA Overlay)** — on-chart signals  
+- **Volume Pulse (PVA Volume)** — volume-pane companion  
 
-**Part of:** SignalPilot Trading Suite — non‑repainting TradingView indicators designed for clarity, context, and action. (See site for suite overview and workflow.)
-
----
-
-## Overview
-
-SP‑PVA quantifies **participation** and expresses it two ways:
-
-1) **PVA Volume (pane):**  
-   - Normalized volume (`log` Z‑Vol + RVOL)  
-   - CVD (z‑normalized) with **regular + hidden divergences** (vs price)  
-   - **EVR** events: **Climax (CLX)** and **Absorption (ABS)**  
-   - Smart spike markers and a minimal status table  
-   - Hidden booleans for screeners
-
-2) **PVA Overlay (on chart):**  
-   - A single, decisive **Bull** or **Bear** print when participation + context align  
-   - Exclusive **EVR** spikes (**CLX / ABS**)  
-   - Regime & FlipGuard gates, optional HTF confirm, and breakout/breakdown confirmation  
-   - Close‑confirmed **alerts** (BULL / BEAR / CLX / ABS)  
-   - Hidden booleans for screeners
-
-**Non‑repainting:** Signals finalize on bar close. HTF reads use `request.security(..., lookahead=barmerge.lookahead_off)`. All markers/labels are anchored with `x=bar_index` and const text.
+Built to show when real money is moving.  
+Clean, color-coded, and **non-repainting** — signals only lock at candle close.
 
 ---
 
-## Quick start
+## 🧭 What These Do
 
-1. Add **SP: PVA Volume** (pane) and **SP: PVA Overlay** (overlay) to the same chart.  
-2. Keep defaults. Turn **Use HTF confirm** on only after you’re comfortable.  
-3. Trade the plan:
-   - **Bias:** from EC Pro / MACD+  
-   - **Participation:** **BULL/BEAR** print and/or **CLX/ABS** spike  
-   - **Structure:** prior D/W anchors or your SDZ/Levels  
-   - **Timing:** RSI Triad / SRSI+  
-4. Set close‑confirmed alerts (see below).
+### 🟢 Participation (PVA Overlay)
+Think of it as a **crowd-meter on your price chart.**  
+It prints one clear nudge:
+- **BULL** → buyers are in control  
+- **BEAR** → sellers are in control  
+Plus two special spike tags:
+- **CLX (Climax):** a heavy surge — often the last big push  
+- **ABS (Absorption):** price hit resistance/support and got soaked up
 
----
-
-## Signals & alerts
-
-### Overlay prints
-- **BULL:** Participation score ≥ threshold, dominance margin met, body/ATR check, regime bull (EMA34≥EMA55 + price vs Pilot Line), optional VWAP align, optional HTF confirm, optional breakout confirm, FlipGuard/cooldown OK.  
-- **BEAR:** Symmetric conditions for the downside.
-
-### EVR (both modules)
-- **CLX (Climax):** Large range (rangeZ ≥ `clxZ`), range ≥ `minRangeATR × ATR14`, strong body fraction, position near high (bull) or near low (bear).  
-- **ABS (Absorption):** Quiet range (`rangeZ ≤ absorbZMax` *or* small body), **opposite wick** large (`wickFracMin`), direction by candle color.
-
-**Alert names (Overlay):**
-- `SP:PVA BULL`
-- `SP:PVA BEAR`
-- `SP:PVA CLX`
-- `SP:PVA ABS`
-
-> Alerts fire **only** when `barstate.isconfirmed` is true (close‑confirmed).
+Each print means something actually happened in volume and pressure — not just noise.
 
 ---
 
-## Screener booleans (hidden plots)
+### 🔵 Volume Pulse (PVA Volume)
+Goes in a **separate pane under your chart.**  
+Shows:
+- **Colored volume bars** — green/red = intensity of participation  
+- **Blue CVD line** — who’s winning (buyers vs sellers)  
+- **Divergence tags** — “Bull Div” or “Bear Div” = early heads-up for a possible pause or reversal  
+- **CLX / ABS spikes** — same logic as the overlay, shown near key daily/weekly levels  
 
-**PVA Volume**
-- `SP:PVA | SPIKE_HTF (bool)`  
-- `SP:PVA | EVR_CLX (bool)`  
-- `SP:PVA | EVR_ABS (bool)`  
-- `SP:PVA | DIV_BEAR_REG (bool)`  
-- `SP:PVA | DIV_BEAR_HID (bool)`  
-- `SP:PVA | DIV_BULL_REG (bool)`  
-- `SP:PVA | DIV_BULL_HID (bool)`
-
-**PVA Overlay**
-- `SP:PVA | BULL (bool)`  
-- `SP:PVA | BEAR (bool)`  
-- `SP:PVA | CLX (bool)`  
-- `SP:PVA | ABS (bool)`  
-- `SP:PVA | REGIME_BULL (bool)`  
-- `SP:PVA | REGIME_BEAR (bool)`  
-- `SP:PVA | SPIKE (bool)`  
-- `SP:PVA | HTF_OK (bool)`
-
-**Examples (watchlist / global screener filters)**
-- Find fresh participation flips: `SP:PVA | BULL (bool) == 1 or SP:PVA | BEAR (bool) == 1`
-- Scan only EVR: `SP:PVA | CLX (bool) == 1 or SP:PVA | ABS (bool) == 1`
-- Divergence watch: `SP:PVA | DIV_BULL_REG (bool) == 1 or SP:PVA | DIV_BEAR_REG (bool) == 1`
+It’s the “heartbeat” behind the on-chart signals.
 
 ---
 
-## Inputs (key knobs & defaults)
+## 🚀 Quick Start (60-Second Setup)
 
-### Normalization (both)
-- `RVOL lookback` (50) — baseline window for RVOL  
-- `Z-Score lookback` (100) — used for Z‑Vol and slope z‑scores  
-- `Z‑Vol spike ≥` (1.9), `RVOL spike ≥ (x)` (2.2) — spike gates  
-- `Pre‑smoothing EMA on volume` (1)
+1. Add **Participation (PVA Overlay)** to your main chart.  
+2. Add **Volume Pulse (PVA Volume)** to a new lower pane.  
+3. Leave defaults. They’re already tuned.  
+4. Trade flow:
+   - Wait for a **BULL** or **BEAR** print (overlay).  
+   - Check for **CLX/ABS** spikes (Overlay or Volume Pulse).  
+   - Use your normal strategy or structure levels to confirm entries/exits.
 
-### MTF
-- `Use HTF confirm` (off) — require HTF Z‑Vol > spike threshold  
-- `HTF timeframe` ("60")
-
-### Overlay — Polarity & Guards
-- `Base score trigger (≥)` (70), `Dominance margin (pts)` (12)  
-- Weights: `Z‑Vol` (0.45), `RVOL` (0.35), `CVD slope` (0.20)  
-- `Min |CVD slope z|` (0.40), `Require body align` (on)  
-- **Regime gate:** `Pilot length` (45), `EMA34/55`, `Bull above / Bear below VWAP` (on), `Min body/ATR14` (0.20)  
-- `Adaptive score on quiet bars` (on), `adaptK` (6)  
-- **FlipGuard:** `base` (6.0), `decay/bar` (0.5), `Cross‑side cooldown` (10 bars)  
-- Ops: `Event clustering window` (12 bars), `Confirm breakout/breakdown` (on), `Confirm lookback` (5)
-
-### EVR (both)
-- `Enable EVR` (on)  
-- `EVR near PDH/PDL/PWH/PWL only` (on)  
-- `EVR proximity (× ATR14)` — **Overlay uses this directly**; see note below for Volume.  
-- CLX: `CLX min range Z` (1.6), `CLX min body fraction` (0.65), `min range/ATR14` (1.20)  
-- ABS: `ABS max range Z` (0.30) or `max body fraction` (0.35), `min opposite‑wick fraction` (0.40)  
-- `EVR cooldown (bars)` (20)
-
-### Divergences (Volume)
-- `Show regular / hidden` (both on)  
-- `Pivot left/right` (3/3)  
-- `Max bars between price & CVD pivot` (8) + `Auto widen on higher TF` (on)  
-- Spacing: `Min bars between divergence labels` (20)  
-- `Min |CVD z| at pivot` (0.20)
-
-### Session & Visuals
-- `Limit to session` (off by default), `Session (exchange local)` (“0930‑1600”)  
-- Volume pane: `Show CVD (z)`, `Show status table`  
-- Spike markers: mode (`Smart/Dot/Text`), `Marker location`, spacing
+**No repainting:** Every signal locks after the candle closes.
 
 ---
 
-## Method notes
+## 🧩 How to Read the Signals
 
-- **Normalization:** `zVol = zscore(log(max(volume,1)), zLen)`, `rVol = volume / SMA(volume, lenRVOL)`; spike requires both.  
-- **CVD:** Signed by candle direction; z‑normalized for pivot gating and slope scoring.  
-- **Divergences (Volume):** Uses `ta.pivothigh/low` (confirmed with `right` bars) and anchors labels to `bar_index - right`. Sync window widens automatically on higher TFs.  
-- **Structure proximity:** Previous Day/Week H/L from `request.security` (lookahead off).  
-- **Exclusivity:** On Overlay, EVR prints (CLX/ABS) suppress the Bull/Bear text marker on that bar for visual clarity.
+| Signal | Meaning | Tip |
+|:--|:--|:--|
+| **BULL** | Buyers took control | Stay with longs until a BEAR or CLX/ABS shows |
+| **BEAR** | Sellers took control | Stay with shorts until a BULL or CLX/ABS shows |
+| **CLX** | “Climax” — huge burst | Often the end of a push or start of fast continuation |
+| **ABS** | “Absorption” — move soaked up | Often exhaustion or turning area |
+| **Bull Div / Bear Div** | Volume & price disagree | Watch for early reversals |
 
----
-
-## Determinism / non‑repaint
-
-- Signals freeze on `barstate.isconfirmed`.  
-- No `lookahead_on`. All HTF reads use `request.security(..., ..., barmerge.gaps_off, barmerge.lookahead_off)`.  
-- Labels/markers use const text and anchored coordinates (`x=bar_index, y=<price>`).
+> One event per bar — if there’s a spike (CLX/ABS), you won’t see a BULL/BEAR on that same candle. Clean chart, clear story.
 
 ---
 
-## Performance
+## ⚙️ Best Starter Settings
 
-- Single‑pass calculations, shared series reuse, compact booleans for screeners.  
-- Spacing/cooldown parameters keep intraday noise manageable.
+You don’t need to tweak much:
+- **Use HTF confirm:** OFF (default) → ON for stricter, fewer signals  
+- **Enable EVR (CLX/ABS):** ON (default)  
+- **Limit to Session:** OFF (default) → ON for stocks (09:30–16:00)  
 
----
-
-## Known quirks
-
-- **PVA Volume proximity input:** The `EVR proximity (× ATR14)` input exists, but `v3.0.5‑V` currently compares distance to a **fixed `0.7 × ATR14`** internally. This does not affect correctness, but the knob doesn’t drive that threshold in this version. (Overlay uses the input as intended.) Consider aligning this in a minor patch.
-
----
-
-## Changelog (high level)
-
-- **v3.0.6‑O (Overlay)**
-  - Added FlipGuard with decay + cross‑side cooldown and clustering window
-  - Regime gate (EMA34/55 + Pilot Line + optional VWAP)
-  - Optional breakout/breakdown confirmation
-  - EVR CLX/ABS (structure‑aware), exclusive with Bull/Bear marker
-  - Close‑confirmed alerts and hidden screener booleans
-
-- **v3.0.5‑V (Volume)**
-  - CVD (z) with regular + hidden divergences and pivot sync window (auto TF widening)
-  - EVR CLX/ABS with session/HTF/structure gating and cooldown
-  - Smart spike markers (text/dot, top/bottom auto), status table
-  - Hidden screener booleans for SPIKE/EVR/DIV states
+**Best timeframes:** 15m, 30m, 1h (clean and balanced)  
+**For faster scalping:** 1–5m (noisier, consider HTF confirm ON)  
+**For swing:** 4h–1D (quieter, but strong context)
 
 ---
 
-## License & disclaimer
+## 🧠 Simple Game Plan
 
-Educational use only — **not** financial advice. Signals do not guarantee profit; past performance (incl. backtests) is not indicative of future results.
+1. **See a BULL print?** Favor long bias.  
+2. **See a BEAR print?** Favor short bias.  
+3. **See CLX or ABS?** Wait — the crowd just shouted. Let the next candle confirm.  
+4. **See Divergence in Volume Pulse?** Momentum may be shifting; watch closely.
+
+Pair it with your normal support/resistance or structure tools.
 
 ---
 
-## Resources
+## 🔔 Built-in Alerts (close-confirmed)
 
-- Website: https://www.signalpilot.io  
-- Terms / Privacy available on the site.
+| Alert Name | When it Fires |
+|:--|:--|
+| **SP:Participation BULL** | Buyers dominate participation |
+| **SP:Participation BEAR** | Sellers dominate participation |
+| **SP:Participation CLX** | Climax spike |
+| **SP:Participation ABS** | Absorption spike |
 
+They only trigger **after** the candle closes — zero repaint risk.
+
+---
+
+## 🧾 Screener Flags (hidden booleans)
+
+You can use these for your watchlists or screeners.
+
+**Participation (Overlay):**  
+`BULL`, `BEAR`, `CLX`, `ABS`, `REGIME_BULL`, `REGIME_BEAR`, `SPIKE`, `HTF_OK`
+
+**Volume Pulse (Volume):**  
+`SPIKE_HTF`, `EVR_CLX`, `EVR_ABS`, `DIV_BULL_REG/HID`, `DIV_BEAR_REG/HID`
+
+**Example filters:**
+- New participation flips → `BULL == 1 OR BEAR == 1`  
+- Spike-only scan → `CLX == 1 OR ABS == 1`  
+- Divergences → `DIV_BULL_REG == 1 OR DIV_BEAR_REG == 1`
+
+---
+
+## 🧩 Versions
+
+- **Participation (Overlay)** — v3.0.6-O  
+  - Clean BULL/BEAR prints  
+  - FlipGuard and regime logic (EMA34/55 + Pilot Line + VWAP)  
+  - Optional HTF confirm and breakout checks  
+  - CLX/ABS spike markers and alerts  
+
+- **Volume Pulse (Volume)** — v3.0.5-V  
+  - Normalized volume (Z-Vol + RVOL)  
+  - CVD line with hidden/regular divergences  
+  - CLX/ABS spikes near key levels  
+  - Smart spike markers and compact info table  
+
+---
+
+## 🧰 Troubleshooting
+
+| Issue | Fix |
+|:--|:--|
+| Too many signals | Turn **HTF confirm = ON** or move up a timeframe |
+| Too quiet | Turn **HTF confirm = OFF** or drop timeframe |
+| Premarket noise | Use **Limit to Session = ON (09:30–16:00)** |
+| Chasing spikes | Wait one extra bar after a CLX/ABS spike |
+
+---
+
+## ⚖️ Disclaimer
+
+For **educational purposes only.**  
+Not financial advice. Always test first and manage your own risk.
+
+---
+
+**SignalPilot — clear, non-repainting trading tools.**  
+Learn more → [https://www.signalpilot.io](https://www.signalpilot.io)
