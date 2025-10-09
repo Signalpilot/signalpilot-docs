@@ -1,4 +1,4 @@
-# SP:Momentum Regime (MACD+) — by Signal Pilot
+# SP — Momentum Regime (MACD+) — by Signal Pilot
 **Tagline:** Trend entries made simple. See momentum flip, skip chop, and get three clear entries: **Prime**, **Pullback**, **Retest**.
 
 > Works on any market/timeframe in TradingView. Signals finalize on candle close (no repaint).
