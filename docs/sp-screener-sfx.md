@@ -1,3 +1,7 @@
+> **Category:** 🧩 Meta / Tools  
+> Filters, regimes, and screeners that unify and contextualize all modules.
+
+
 # SP — Screener (Screener Table) — by Signal Pilot
 
 **What it is (one line):**  
