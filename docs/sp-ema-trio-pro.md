@@ -1,3 +1,7 @@
+> **Category:** 🧭 Bias / Momentum  
+> Defines directional bias and strength. Reveals who’s in control — bulls or bears.
+
+
 # SP — Trend Stack (EMA 50/100/200 Pro) GC/DC + PB —  by Signal Pilot
 
 A simple, reliable way to **see the trend** and **spot key moments** on your chart.
