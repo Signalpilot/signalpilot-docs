@@ -1,3 +1,15 @@
+---
+title: "SP — Structure Map (SML)"
+short_title: "Structure Map (SML)"
+permalink: /sp-sml-structure-liquidity/
+module_id: sp-sml-structure-liquidity
+category: "Structure / Levels"
+category_emoji: "🏗️"
+summary: "Clean structural map with liquidity cues and anchored visuals."
+tags: [structure, swing, liquidity, anchored]
+---
+
+
 > **Category:** 🏗️ Structure / Levels  
 > Maps the invisible architecture of price — zones, liquidity, and anchor points.
 
