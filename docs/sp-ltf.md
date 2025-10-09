@@ -1,3 +1,15 @@
+---
+title: "SP — Leg Timer (TD9 + Clean Squeeze)"
+short_title: "Leg Timer (TD9)"
+permalink: /sp-ltf/
+module_id: sp-ltf
+category: "Timing"
+category_emoji: "⏱️"
+summary: "TD9 counts plus squeeze logic to spot leg exhaustion."
+tags: [td9, squeeze, timing, exhaustion]
+---
+
+
 > **Category:** ⏱️ Timing  
 > Focuses on exhaustion, reversals, and the rhythm of market cycles.
 
