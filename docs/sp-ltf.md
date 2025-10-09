@@ -1,4 +1,4 @@
-# SP - Leg Timer — TD9 + Clean Squeeze 
+# SP:Leg Timer — TD9 + Clean Squeeze 
 
 **In one sentence:**  
 Leg Timer shows when a move is getting **tired** (TD **9** counts), when price is **coiling** (Clean Squeeze cloud), and when to be **extra careful** (optional yellow/red **X** warnings). It only prints after the bar closes (non‑repainting) and comes with ready‑made alerts.  
