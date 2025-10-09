@@ -1,72 +1,146 @@
 # SP: Reversal Candlestick Structure (SP:RCS)
 
-Deterministic, non‑repainting reversal prints you can scan and alert across any market and timeframe. Scores 16 classic patterns by context, gates with FlipGuard, and emits at most one bull and one bear per bar.
-
-> SignalPilot tools are educational only — not financial advice. See Terms. 
-
----
-
-## Quick start
-
-1. **TradingView → Pine v6**: Copy `SP_RCS.pine` into the Pine Editor and click **Add to chart**.  
-2. **Inputs**: Leave defaults, or start with `Threshold=80`, `Cooldown=20`, `FlipGuard Decay=5`.  
-3. **Alerts**: Choose any `SP:RCS | <TAG>` condition and set **Once per bar close**.  
-4. **Workflow**: Use RCS for timing around your existing bias (e.g., EC Pro / MACD+) and levels.
+A friendly TradingView helper that **marks well‑known candlestick reversal patterns** right on your chart.  
+Labels appear **only after the candle closes** (so they don’t disappear later). To keep charts clean, the tool shows **at most one bullish and one bearish label per bar**.
 
 ---
 
-## What it does
+## ✨ What you’ll see
 
-- **Detects** 16 reversal structures (bull & bear):
-  - Bullish: Hammer (`HM`), Inverted Hammer (`IH`), Bullish Engulfing (`BuE`), Rising 3 (`R3`), Three White Soldiers (`3WS`), Morning Star (`MS`), Bullish Harami (`BuH`), Tweezer Bottom (`TB`).
-  - Bearish: Hanging Man (`HMN`), Shooting Star (`SS`), Bearish Engulfing (`BE`), Falling 3 (`F3`), Three Black Crows (`3BC`), Evening Star (`ES`), Bearish Harami (`BeH`), Tweezer Top (`TT`).
-- **Scores** each candidate to 0–100:
-  - Base weight per pattern  
-  - EMA distance normalized by ATR  
-  - RSI tilt relative to 50  
-  - Trend side check vs EMA
-- **Gates & selects**:
-  - `Threshold` must be met (default 80)  
-  - **FlipGuard**: `Cooldown` (same‑side) + `Flip Decay` (opposite‑side)  
-  - **Exclusivity**: priority list with score tiebreak ⇒ max one bull + one bear per bar
-- **Emits** anchored, wobble‑free labels at price with a dynamic ATR% or tick offset.
-- **Alerts**: 16 close‑confirmed alert conditions (one per tag).
+- Short **labels under/over candles** like `BuE`, `BE`, `MS`, `ES`.  
+- **Teal/green = bullish idea**, **red = bearish idea**.  
+- Labels sit a little away from price so they’re easy to read.
+
+> Treat every label as a **heads‑up**, not a must‑trade. Always use your own confirmation and risk rules.
 
 ---
 
-## Inputs (with defaults)
+## 🚀 Quick start (60 seconds)
 
-**Bullish toggles**  
-`Hammer` `Inverted Hammer` `Bullish Engulfing` `Rising 3` `3 White Soldiers` `Morning Star` `Bullish Harami` `Tweezer Bottom` *(all ON)*
-
-**Bearish toggles**  
-`Hanging Man` `Shooting Star` `Bearish Engulfing` `Falling 3` `3 Black Crows` `Evening Star` `Bearish Harami` `Tweezer Top` *(all ON)*
-
-**Reversal logic**  
-- `Trend Length` *(14)* — EMA/RSI length used for context  
-- `Threshold (0–100)` *(80)* — minimum score to print  
-- `Same‑side Cooldown (bars)` *(20)* — dwell time after a bull/bear print  
-- `FlipGuard Decay (bars)` *(5)* — minimum bars after an opposite‑side flip
-
-**Style**  
-- `Bull Text Color` *(teal)*, `Bear Text Color` *(red)*  
-- `Label background transparency` *(100)*  
-- `Text Size` *Tiny/Small/Normal/Large* *(Tiny)*  
-- `Offset Mode` *Dynamic ATR% / Ticks* *(Dynamic ATR%)*  
-- `ATR Offset (%)` *(0.8%)*  
-- `Tick Offset (fallback/min)` *(4)*  
-- `Marker Size` *None/Tiny/Small/Normal* *(Small)*
+1. Open **TradingView → Pine Editor**.  
+2. Paste the script → **Save** → **Add to chart**.  
+3. That’s it. Labels show up when each candle **closes**.
 
 ---
 
-## Visuals & alerts
+## 🧭 Read the labels (cheat‑sheet)
 
-- **Labels** (const text at price): `HM`, `IH`, `BuE`, `R3`, `3WS`, `MS`, `BuH`, `TB`, `HMN`, `SS`, `BE`, `F3`, `3BC`, `ES`, `BeH`, `TT`
-- **Dot markers** (optional): below bar for bull, above bar for bear
-- **Alert conditions** (close‑confirmed):
-  - `SP:RCS | HM`, `SP:RCS | IH`, `SP:RCS | BuE`, `SP:RCS | R3`, `SP:RCS | 3WS`, `SP:RCS | MS`, `SP:RCS | BuH`, `SP:RCS | TB`
-  - `SP:RCS | HMN`, `SP:RCS | SS`, `SP:RCS | BE`, `SP:RCS | F3`, `SP:RCS | 3BC`, `SP:RCS | ES`, `SP:RCS | BeH`, `SP:RCS | TT`
+**Bullish**
+| Code | Pattern |
+|---|---|
+| `HM`  | Hammer |
+| `IH`  | Inverted Hammer |
+| `BuE` | Bullish Engulfing |
+| `R3`  | Rising Three Methods |
+| `3WS` | Three White Soldiers |
+| `MS`  | Morning Star |
+| `BuH` | Bullish Harami |
+| `TB`  | Tweezer Bottom |
 
-**Webhook tip (JSON)**: In TradingView’s alert UI, set message to a JSON envelope, e.g.
-```json
-{"tool":"SP:RCS","tag":"{{alert_message}}","ticker":"{{ticker}}","tf":"{{interval}}","time":"{{time}}","close":{{close}}}
+**Bearish**
+| Code | Pattern |
+|---|---|
+| `HMN` | Hanging Man |
+| `SS`  | Shooting Star |
+| `BE`  | Bearish Engulfing |
+| `F3`  | Falling Three Methods |
+| `3BC` | Three Black Crows |
+| `ES`  | Evening Star |
+| `BeH` | Bearish Harami |
+| `TT`  | Tweezer Top |
+
+> Hover a label to inspect the exact bar it references.
+
+---
+
+## 🕹️ Use it in practice
+
+1. **Wait for a label** at candle close.  
+2. A **bullish label below** a candle hints at a possible bounce.  
+3. A **bearish label above** a candle hints at a possible turn down.  
+4. Add your own tools (support/resistance, trendlines, volume) before acting.
+
+---
+
+## 🔧 The only 3 settings most people need
+
+You’ll find these in the **Reversal Logic** panel.
+
+- **Threshold** — *How picky it is*  
+  Higher = fewer, stronger labels.  
+  Start at **80**.  
+  - Want **fewer** labels? Try 85–90.  
+  - Want **more** labels? Try 70–75.
+
+- **Same‑side Cooldown** — *Spacing between similar signals*  
+  Minimum bars between two bullish (or two bearish) labels.  
+  Start at **20**. Increase to reduce clutter.
+
+- **FlipGuard Decay** — *Brake after a flip*  
+  Bars to wait before allowing a new **opposite‑side** label.  
+  Start at **5**. Raise if you see whipsaws.
+
+That’s it. Everything else is optional style or per‑pattern toggles.
+
+---
+
+## 🎨 Make it look how you like
+
+- Change **text size**, **colors**, and **background** in **Style**.  
+- “Offset” keeps labels comfortably away from candles. The default works for most charts.
+
+---
+
+## ⏰ Alerts (so you don’t miss anything)
+
+1. Click the **alarm clock** → **Create Alert…**  
+2. **Condition:** pick a specific pattern, e.g. **“SP:RCS | BE”** for Bearish Engulfing.  
+3. Choose your preferred delivery (app, email, webhook).  
+4. Save.
+
+Create multiple alerts—one per pattern you care about.
+
+---
+
+## 🧪 Starter presets (pick one row and go)
+
+| Timeframe | Threshold | Cooldown | FlipGuard |
+|---|---:|---:|---:|
+| 5–15m | 85–90 | 30–50 | 8–12 |
+| 30–60m | 80–85 | 20–30 | 6–10 |
+| 4H–1D | 75–80 | 10–20 | 5–8 |
+
+---
+
+## 🛠️ Troubleshooting
+
+- **Too many labels?** Raise **Threshold**, raise **Cooldown**, or turn off lower‑priority patterns (Harami, Tweezers).  
+- **Too few labels?** Lower **Threshold** a bit (‑5 to ‑10) and/or reduce **Cooldown**.  
+- **Labels on top of price?** Increase label **Offset** or pick a larger **Text Size**.  
+- **Do labels repaint?** No. Labels appear **after candle close** and stay.
+
+---
+
+## ❓ FAQ
+
+**Do I need all patterns on?**  
+No. Many traders begin with **Engulfing** and **Morning/Evening Star**, then add more.
+
+**Which markets/timeframes work?**  
+Anything with candles. Intraday usually needs stricter settings; higher timeframes can be looser.
+
+**Why didn’t a label print when I expected one?**  
+It likely didn’t meet the shape rules or your **Threshold/Cooldown/FlipGuard** filtered it. Lower the Threshold slightly to test.
+
+---
+
+## 🔒 Safety
+
+This is a **heads‑up tool**, not financial advice. Always manage risk and confirm with your own plan.
+
+---
+
+## 📷 Optional screenshots
+
+You can add images to your repo later:
+
