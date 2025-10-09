@@ -1,3 +1,7 @@
+> **Category:** ⏱️ Timing  
+> Focuses on exhaustion, reversals, and the rhythm of market cycles.
+
+
 # SP — Leg Timer (TD9 + Clean Squeeze) — by Signal Pilot
  
 **In one sentence:**  
