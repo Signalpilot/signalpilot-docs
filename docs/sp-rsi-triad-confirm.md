@@ -1,247 +1,164 @@
-# SP: RSI Triad Confirm (SPRSI‑U+) — Premium
-
-**TradingView · Pine v6 · Non‑repainting**  
-Layered RSI (Fast/Base/Slow) that confirms turns with divergence quality + context (OBV, Stoch RSI, ATR, HTF/Weekly). FlipGuard prevents flip spam. Alert‑ready across any market/timeframe.  
-Part of the [SignalPilot Trading Suite](https://www.signalpilot.io/) — *educational only; not financial advice*.  
+# SP: RSI Triad Confirm (SPRSI‑U) — Premium
+**Beginner‑friendly guide (GitHub README)**  
+*TradingView · Pine v6 · Non‑repainting on candle close*
 
 ---
 
-## Changelog
-- **v1.0.0**
-  - Triad regime detection (Base vs Fast/Slow envelope + slope).
-  - Anchored divergence engine with graded strength (0–20).
-  - Confluence gates: OBV trend, Stoch RSI timing, ATR% floor, optional HTF/Weekly midlines.
-  - FlipGuard (min‑hold + opposite override).
-  - Strength Pulse columns, optional pane shading after new divergences.
-  - Screener‑ready hidden series + close‑confirmed alerts.
+## What it does (one sentence)
+**Helps you catch momentum turns with fewer fakeouts** by watching three RSI lines, spotting divergence, and only showing **BUY/SELL** when extra “green lights” agree.
 
 ---
 
-## Overview
+## What you’ll see on the chart
+- **Three RSI lines** (Fast, Base, Slow) in one pane.
+- **Green/Red divergence lines** with small labels like “Bull 10” or “Bear 12” (that number is the strength out of 20).
+- A **BUY ▲** marker (bullish) and a **SELL ▼** marker (bearish) when everything lines up.
+- A grey band around RSI **30–70** to show normal vs stretched zones.
 
-**What it does**  
-SPRSI‑U+ blends three RSIs (Fast/Slow/Base). A *Triad Bull* occurs when Base crosses above the Fast/Slow envelope and slopes up; *Triad Bear* is the opposite. Divergences are detected via pivot‑confirmed highs/lows on price and RSI, then graded 0–20 using:
-- **S1 (0–10):** half‑range RSI gain/loss between pivots  
-- **S2 (0–4):** depth vs OB/OS bands  
-- **S3 (0–4):** spacing between RSI pivots (normalized to max gap)  
-- **S4 (0–2):** price move between pivots relative to ATR
-
-**When a setup is promoted**  
-A signal becomes **Confluence Long/Short** only if:
-1) Triad Bull/Bear is present, **and**  
-2) it occurs within `divWindow` bars after the most recent valid divergence, **and**  
-3) divergence strength ≥ `minStrength`, **and**  
-4) regime score ≥ `minRegime`, **and** optional filters pass: OBV trend, Stoch RSI cross/timing, ATR% floor, HTF/Weekly midline.
-
-Everything is computed and frozen on bar close; HTF data is fetched with `lookahead_off` and gated by the HTF/Weekly candle’s confirmation.
+> **No repainting:** Signals lock in at **candle close** and won’t jump or vanish later.  
+> (Higher‑timeframe filters also wait for their candle to close.)
 
 ---
 
-## Installation
+## How it decides (simple 3‑step logic)
+1) **Divergence:** Price pushes one way, RSI disagrees → early heads‑up.  
+2) **Triad check:** The **Base** RSI steps out of the “rails” made by the Fast/Slow lines in the same direction → follow‑through.  
+3) **Confluence:** Optional extra green lights: **OBV** trend, **Stoch RSI** timing, **ATR** (enough movement), and **HTF/Weekly** trend bias.
 
-1. Add the invite‑only script to your chart (after your SignalPilot invite is activated).  
-2. Open Settings → **SP:Smoothing** and **SP:Confluence Strategy** to match your market and timeframe.  
-3. (Optional) Enable **HTF Filter** or **Weekly Assist** to gate signals by higher‑timeframe RSI midline.  
-4. Add alerts (see below).
-
-> Access, suite scope, and “non‑repainting on close” follow the SignalPilot site details.  
-> See: https://www.signalpilot.io/  *(reference: Trading Suite, non‑repainting, any market/timeframe)*
+If steps 1–3 happen within a short window, you’ll see **BUY** (bullish) or **SELL** (bearish).
 
 ---
 
-## Signals & Alerts
-
-**On‑chart markers**
-- ▲ **Confluence Long** (triangle up, top of pane)
-- ▼ **Confluence Short** (triangle down, bottom of pane)
-
-**Alerts (close‑confirmed)**
-- `SP:Confluence Long` — message: `SP:SPRSI-U Confluence Long (confirmed)`
-- `SP:Confluence Short` — message: `SP:SPRSI-U Confluence Short (confirmed)`
-- `SP:Div Bull` — message: `SP:SPRSI-U Bullish Divergence (confirmed)`
-- `SP:Div Bear` — message: `SP:SPRSI-U Bearish Divergence (confirmed)`
-
-> Create alerts from *Add alert… → Condition: SP: RSI Triad Confirm (SPRSI‑U+)* and choose the event above.
-
-**Hidden screener outputs** (series = 1 when true; else `na`)
-- `SP:SPRSI-U | BullDiv (bool)`  
-- `SP:SPRSI-U | BearDiv (bool)`  
-- `SP:SPRSI-U | TriadBull (bool)`  
-- `SP:SPRSI-U | TriadBear (bool)`  
-- `SP:SPRSI-U | ConfluenceLong (bool)`  
-- `SP:SPRSI-U | ConfluenceShort (bool)`  
-- `SP:SPRSI-U | SpreadOK (bool)`  
-- `SP:SPRSI-U | FlipGuardActive (bool)`  
-- `SP:SPRSI-U | BullStrength DIV (0-20)`  
-- `SP:SPRSI-U | BearStrength DIV (0-20)`  
-- `SP:SPRSI-U | BullStrength CONF (0-20)`  
-- `SP:SPRSI-U | BearStrength CONF (0-20)`  
-- `SP:SPRSI-U | RegimeScoreBull (0-100)`  
-- `SP:SPRSI-U | RegimeScoreBear (0-100)`
-
-These enable programmatic checks and work seamlessly with the SignalPilot Screener module.
+## Quick start (2 minutes)
+1) Add the script to your TradingView chart (after your SignalPilot invite is active).  
+2) **Leave defaults as‑is** for your first session.  
+3) Choose a timeframe:
+   - **Scalp:** 1–5m
+   - **Intraday:** 15–60m
+   - **Swing:** 4H–1D
+4) Wait for a fresh **divergence** line; if a **BUY/SELL** prints soon after, study that example in replay.
+5) Practice first; add alerts when you’re comfortable.
 
 ---
 
-## Inputs (tuning knobs)
+## Beginner presets (copy & use)
 
-### SP:Calculation
-| Name | Key | Default | Notes |
-|---|---|---:|---|
-| Source | `src` | `close` | RSI input. |
-| Base RSI Length | `lenBase` | 14 | Core RSI. |
-| Fast RSI Length | `lenFast` | 7 | Faster RSI for envelope. |
-| Slow RSI Length | `lenSlow` | 28 | Slower RSI for envelope. |
+### Intraday (15–60m)
+- **FlipGuard:** ON (5 bars)
+- **Min Divergence Strength:** **8**
+- **Min Regime Score:** **40**
+- **Min Fast–Slow Spread:** **3.0**
+- Optional: **OBV = ON** for cleaner signals
 
-### SP:Smoothing
-| Name | Default | Notes |
-|---|---:|---|
-| Smooth Base RSI | `true` | Smooths Base via selected MA. |
-| Smooth Length | 5 | Window for Base smoothing. |
-| Smooth Type | `RMA` | Options: `RMA`, `SMA`, `EMA`, `WMA`. |
+### Swing (4H–1D)
+- **FlipGuard:** ON (**5–8** bars)
+- **Min Divergence Strength:** **9–11**
+- **Min Regime Score:** **45–55**
+- Optional: **HTF Filter = ON** and **Weekly Assist = ON** to align with bigger trend
 
-### SP:Bands / Filters
-| Name | Default | Notes |
-|---|---:|---|
-| Overbought | 70 | OB line; fixed 70 line also drawn. |
-| Oversold | 30 | OS line; fixed 30 line also drawn. |
-| Min Fast–Slow Spread | 3.0 | Enforce envelope separation. |
-| Enforce Min Spread | `true` | Gate Triad until spread is wide enough. |
-
-### SP:HTF Filter (optional)
-| Name | Default | Notes |
-|---|---:|---|
-| Use HTF Filter | `false` | Gates by HTF RSI midline. |
-| HTF Resolution | `60` | e.g., 60 = 1H. |
-| HTF Midline | 50 | Above = bull gate; below = bear gate. |
-| Plot HTF RSI | `false` | Visual reference. |
-
-### SP:Weekly Assist (optional)
-| Name | Default | Notes |
-|---|---:|---|
-| Use Weekly RSI Assist | `false` | Additional gating by weekly RSI midline. |
-| Weekly Resolution | `W` | |
-| Weekly Midline | 50 | |
-| Plot Weekly RSI | `false` | Visual reference. |
-
-### SP:Divergences
-| Name | Default | Notes |
-|---|---:|---|
-| Detect Divergences | `true` | Enables divergence engine. |
-| Pivot Left/Right Bars | 3 / 3 | Pivots confirm after `rightBars`. |
-| Max Bars Between RSI & Price Pivots | 50 | Gap limit for pairing. |
-| Min RSI Δ between pivots | 2.0 | Minimum strength filter. |
-| Cooldown between same‑side divs | 10 | Bars to wait before another same‑side div. |
-| Keep last N divergences | 12 | Drawing retention. |
-| Shade N bars after divergence | 0 | Pane shading; 0 = off. |
-
-### SP:Strength Visuals
-| Name | Default | Notes |
-|---|---:|---|
-| Strength‑aware color | `true` | Fades lines/labels by score. |
-| Show Strength Pulse (cols) | `false` | Column pulse on new divs. |
-| Score on labels | `DIV` | `DIV`(0–20) or `CONF`(0–20). |
-| Label Softness | 12 | Extra fade for label color. |
-
-### SP:Confluence Strategy
-| Name | Default | Notes |
-|---|---:|---|
-| Min divergence strength | 8 | 0–20 scale. |
-| Max bars from divergence | 20 | `divWindow`. |
-| Min regime score | 40 | 0–100. |
-| Require OBV trend | `false` | Uses `obv > SMA(obv, L)`. |
-| OBV lookback (bars) | 20 | |
-| Require Stoch RSI timing | `false` | `K>D` & `K<20` (bull) / `K<D` & `K>80` (bear). |
-| Stoch RSI K / D | 14 / 3 | |
-| Require min ATR% of price | `false` | |
-| Min ATR% of price | 0.20 | ATR(14)/close * 100. |
-
-### SP:FlipGuard
-| Name | Default | Notes |
-|---|---:|---|
-| Enable FlipGuard | `true` | Min‑hold on the last side. |
-| FlipGuard Bars | 5 | Dwell time. |
-| Opposite override +Strength | 4 | Allow strong opposite to break hold. |
-
-### SP:Colors & Styles
-Presets: Okabe‑Ito, Nordic, Mono, or fully Custom (Base/Fast/Slow/Bull/Bear). `Div Line Width`, `Div Line Style`, `Div Label Y‑Offset`.
-
-### SP:Visuals
-Mid‑band fill (30–70), ribbons above OB / below OS, toggle Fast/Slow lines, transparency controls.
+### Scalp (1–5m)
+- Keep defaults; **do not lower** filters at first.
+- Too many signals? **Raise**:
+  - **Min Divergence Strength:** **10–12**
+  - **Min Regime Score:** **50–60**
+  - Keep **FlipGuard ON**
 
 ---
 
-## How it works (logic sketch)
-
-1. **RSI Triad Envelope**  
-   - `rsiF = RSI(src, lenFast)`  
-   - `rsiS = RSI(src, lenSlow)`  
-   - `rsi = RSI(src, lenBase)` then optionally smoothed  
-   - *Triad Bull* = Base crosses above `max(Fast,Slow)` with positive slope, spread OK, HTF/Weekly gates OK, and `rsi > OS`.  
-   - *Triad Bear* = symmetric below envelope with negative slope and `rsi < OB`.
-
-2. **Divergence Engine (anchored & confirmed)**  
-   - Uses `ta.pivothigh/ta.pivotlow(leftBars, rightBars)` on price and RSI.  
-   - Pairs price/RSI pivots within `maxDivGap` bars.  
-   - New divergence only if cooldown satisfied and score > 0.  
-   - Lines & labels anchored at `x=bar_index` (confirmed on the bar after `rightBars`).
-
-3. **Strength Score (0–20)**  
-   - `S1` half‑range improvement (0–10)  
-   - `S2` depth vs OB/OS (0–4)  
-   - `S3` spacing vs `maxDivGap` (0–4)  
-   - `S4` price Δ vs ATR(14) (0–2)
-
-4. **Confluence**  
-   - Within `divWindow` bars of last same‑side div  
-   - `strength >= minStrength` and `regimeScore >= minRegime`  
-   - Optional filters: OBV trend, Stoch RSI timing, ATR%, HTF/Weekly.
-
-5. **FlipGuard**  
-   - Enforces `fgBars` dwell; allows opposite override if strength ≥ `minStrength + oppBoost`.
+## What the strength number means (0–20)
+- **0–5:** weak (often noise)  
+- **6–10:** okay  
+- **11–15:** good  
+- **16–20:** great  
+If you want **fewer but better** setups, raise **Min Divergence Strength**.
 
 ---
 
-## Non‑repainting design
-
-- All HTF/Weekly `request.security()` calls use `lookahead_off` and are applied only once the higher‑timeframe bar closes.  
-- Intrabar values are frozen until close; signals and alerts only fire on `barstate.isconfirmed`.  
-- Divergences are drawn only after pivot confirmation (`rightBars`) and are anchored to `bar_index`.
-
----
-
-## Performance & limits
-
-- Plot budget ≈ 27 (including hidden series) — well below 64.  
-- Avoid extreme `keepLast` or very large `divWindow` on very small timeframes if chart performance degrades.
+## When to skip a signal
+- No recent divergence? **Skip.**
+- Very low volatility (ATR tiny)? **Skip** or turn on the **ATR gate**.
+- Fighting a strong higher‑timeframe trend? Consider skipping unless **HTF/Weekly** agree.
 
 ---
 
-## Tips
+## Alerts (simple and safe)
+Create alert in TradingView → **Condition:** this indicator → choose one:
+- **SP:Confluence Long** → sends on confirmed **BUY**
+- **SP:Confluence Short** → sends on confirmed **SELL**
+- **SP:Div Bull** / **SP:Div Bear** → divergence heads‑up only
 
-- Intraday: raise `minSpread` slightly (e.g., 3.5–4.5) and keep FlipGuard on.  
-- Swing: widen `divWindow` and consider enabling HTF + Weekly assists.  
-- Want fewer but stronger: raise `minStrength` and `minRegime`, enable ATR gating.
+> Alerts only fire **after candle close**, matching what you see on the chart.
 
 ---
 
-## FAQ
+## Simple recipes
+
+**Clean‑up mode (fewer trades)**
+- Turn **OBV = ON** and **Stoch RSI = ON**
+- Set **Min Regime Score = 50+**
+- Keep **FlipGuard = ON**
+
+**Trend‑friendly**
+- **HTF Filter = ON** (use 1H if you’re on 5–15m, 4H if you’re on 1H)
+- **Weekly Assist = ON** for swing charts
+
+**Volatility guard**
+- **ATR gate = ON**
+- **Min ATR%** around **0.25–0.35** in slow markets
+
+---
+
+## FAQ (really short)
 
 **Does it repaint?**  
-No—signals finalize on candle close; HTF data is confirmed first. (See the SignalPilot FAQ.)  
+No. Signals finalize at candle close. HTF/Weekly checks also wait for their candle to close.
 
 **Which markets/timeframes?**  
-Anything supported by TradingView, from scalps to swings.  
+Any symbol on TradingView (crypto, stocks, FX, indices), from scalps to swings.
 
-**Is this financial advice?**  
-No. This is an educational tool. Manage your own risk.
+**Too many signals?**  
+Raise **Min Divergence Strength** and **Min Regime Score**; keep **FlipGuard ON**. Consider **OBV** and **ATR** gates.
+
+**Too few signals?**  
+Lower **Min Regime Score** slightly (e.g., 40 → 35) or raise the **divergence window** (20 → 25–30). Keep **FlipGuard** (reduce, don’t disable).
+
+**What do 70/30 mean?**  
+They’re the RSI “overbought/oversold” guide rails—price *can* still run beyond them.
+
+---
+
+## Glossary (one‑liners)
+- **RSI:** Momentum gauge; high = up push, low = down push.  
+- **Divergence:** Price vs RSI disagreement (often hints at a turn).  
+- **OBV:** Volume trend helper.  
+- **Stoch RSI:** Timing helper to avoid chasing late moves.  
+- **ATR:** Volatility measure (how much price moves).  
+- **FlipGuard:** Cooldown to avoid flipping sides too fast.  
+- **HTF / Weekly:** Higher‑timeframe/weekly bias checks.  
+- **Regime Score:** Backdrop quality (0–100). Higher = better.
+
+---
+
+## Alerts & names (for reference)
+- Indicator name: **SP: RSI Triad Confirm (SPRSI‑U) — Premium**  
+- Short title in TradingView: **SP:SPRSI‑U+**  
+- Alert names (close‑confirmed):
+  - `SP:Confluence Long` — message: `SP:SPRSI-U Confluence Long (confirmed)`
+  - `SP:Confluence Short` — message: `SP:SPRSI-U Confluence Short (confirmed)`
+  - `SP:Div Bull` — message: `SP:SPRSI-U Bullish Divergence (confirmed)`
+  - `SP:Div Bear` — message: `SP:SPRSI-U Bearish Divergence (confirmed)`
+
+---
+
+## Notes for new users
+- Start on **replay or paper trading**.
+- Always use a **stop loss** and size risk.
+- No indicator removes risk; this is a **decision aid**, not a guarantee.
 
 ---
 
 ## Support
+- **Website:** https://www.signalpilot.io/  
+- **Email:** support@signalpilot.io
 
-- Email: support@signalpilot.io  
-- Site: https://www.signalpilot.io/
-
-© SignalPilot Labs, Inc. All rights reserved. Educational use only.
-
+© SignalPilot Labs, Inc. All rights reserved. Educational use only — not financial advice.
