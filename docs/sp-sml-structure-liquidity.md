@@ -1,4 +1,4 @@
-# Structure Map (SML) — TradingView Indicator
+#SP-Structure Map (SML) — TradingView Indicator
 *A clean, anchored map of trend changes and high‑interest zones. No repaint.*
 
 Website: https://www.signalpilot.io  
