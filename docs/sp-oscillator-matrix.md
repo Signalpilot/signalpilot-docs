@@ -1,3 +1,15 @@
+---
+title: "SP — Momentum Matrix (Panel Pro)"
+short_title: "Momentum Matrix"
+permalink: /sp-oscillator-matrix/
+module_id: sp-oscillator-matrix
+category: "Bias / Momentum"
+category_emoji: "🧭"
+summary: "Multi-oscillator dashboard that normalizes signals into one easy read."
+tags: [momentum, oscillators, normalization, dashboard]
+---
+
+
 > **Category:** 🧭 Bias / Momentum  
 > Defines directional bias and strength. Reveals who’s in control — bulls or bears.
 
