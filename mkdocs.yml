@@ -42,23 +42,22 @@ nav:
     - Webhooks (TradingView → Bot): how-to-webhooks.md
 
   - Modules:
-    - SP — Flow Balance (OBV Pro): sp-obv-pro.md
     - SP — Momentum Regime (MACD+): spp-macd-plus.md
-    - SP — RSI Triad Confirm: sp-rsi-triad-confirm.md
-    - SP — Volume Pulse (PVA Volume): sp-pva-volume.md
-    - SP — Participation (PVA Overlay): sp-pva-overlay.md
-    - SP — Context Stoch (SRSI+): sp-contextstoch-rsi.md
-    - SP — Reversal Engine (EC Pro): sp-ec-pro.md
-    - SP — Key Anchors (Key Levels Suite): sp-key-levels-suite.md
-    - SP — Structure Map (SML): sp-sml-structure-liquidity.md
-    - SP — Regime Box (Regime & Volatility Filter): sp-regime-vol-filter.md
     - SP — Trend Stack (EMA 50/100/200 Pro): sp-ema-trio-pro.md
-    - SP — Reversal Candlestick Structure (RCS): sp-rcs-reversal-structure.md
-    - SP — SD Zones (SDZones Pro): sp-sdzones-pro.md
-    - SP — Leg Timer (TD9+ Clean Squeeze): sp-ltf.md
     - SP — Momentum Matrix (Panel Pro): sp-oscillator-matrix.md
+    - SP — Participation (PVA Overlay): sp-pva-overlay.md
+    - SP — Volume Pulse (PVA Volume): sp-pva-volume.md
+    - SP — Flow Balance (OBV Pro): sp-obv-pro.md
+    - SP — Structure Map (SML): sp-sml-structure-liquidity.md
+    - SP — SD Zones (SDZones Pro): sp-sdzones-pro.md
+    - SP — Key Anchors (Key Levels Suite): sp-key-levels-suite.md
+    - SP — RSI Triad Confirm: sp-rsi-triad-confirm.md
+    - SP — Context Stoch (SRSI+): sp-contextstoch-rsi.md
+    - SP — Leg Timer (TD9+ Clean Squeeze): sp-ltf.md
+    - SP — Regime Box (Regime & Volatility Filter): sp-regime-vol-filter.md
+    - SP — Reversal Engine (EC Pro): sp-ec-pro.md
     - SP — Screener (Screener Table): sp-screener-sfx.md
-
+    
   - Reference:
     - Suite Workflow (Bias → Timing): ref-workflow.md
     - Non‑Repainting Policy: ref-non-repaint.md
