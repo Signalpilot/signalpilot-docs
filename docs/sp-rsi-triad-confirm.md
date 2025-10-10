@@ -12,6 +12,7 @@ tags: [rsi, confirmation, timing, exhaustion]
 > **Category:** ⏱️ Timing  
 > Focuses on exhaustion, reversals, and the rhythm of market cycles.
 
+--8<-- "_includes/meta-badge.html"
 
 # SP — RSI Triad Confirm (SPRSI‑U) — by Signal Pilot
 **Beginner‑friendly guide (GitHub README) 👶**  
