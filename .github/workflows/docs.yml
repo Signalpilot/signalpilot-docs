@@ -31,15 +31,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-
-      - name: Guarantee macros plugin is present
-        run: |
-          pip install mkdocs-macros-plugin
-          python - <<'PY'
-          import importlib, sys
-          assert importlib.util.find_spec("mkdocs_macros_plugin"), "mkdocs-macros-plugin not importable"
-          print("mkdocs-macros-plugin OK")
-          PY
+          pip show mkdocs mkdocs-material mkdocs-macros-plugin
 
       - name: Build (strict)
         run: mkdocs build --strict
