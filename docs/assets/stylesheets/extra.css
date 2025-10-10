@@ -1,0 +1,40 @@
+:root {
+  --sp-card-bg: var(--md-default-bg-color);
+  --sp-card-border: rgba(255,255,255,0.08);
+  --sp-card-radius: 0.75rem;
+  --sp-card-gap: 1rem;
+}
+
+/* grid density + responsive columns */
+.md-typeset .grid.cards {
+  gap: var(--sp-card-gap);
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+/* card styling */
+.md-typeset .grid.cards > * {
+  background: var(--sp-card-bg);
+  border: 1px solid var(--sp-card-border);
+  border-radius: var(--sp-card-radius);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  padding: 1rem 1.2rem;
+  transition: transform .2s ease-in-out, box-shadow .2s ease-in-out, border-color .2s;
+}
+
+.md-typeset .grid.cards > *:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.35);
+  border-color: var(--md-primary-fg-color);
+}
+
+/* tidy text inside cards */
+.md-typeset .grid.cards strong { color: var(--md-primary-fg-color); }
+.md-typeset .grid.cards p { margin: 0.25rem 0; }
+.md-typeset .grid.cards em { opacity: .85; }
+
+/* icon sizing in cards */
+.md-typeset .grid.cards .material-icons,
+.md-typeset .grid.cards .twemoji {
+  font-size: 1.05rem;
+  vertical-align: text-bottom;
+}
