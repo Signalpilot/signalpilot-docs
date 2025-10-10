@@ -13,6 +13,7 @@ tags: [structure, swing, liquidity, anchored]
 > **Category:** 🏗️ Structure / Levels  
 > Maps the invisible architecture of price — zones, liquidity, and anchor points.
 
+--8<-- "_includes/meta-badge.html"
 
 # SP — Structure Map (SML) — by Signal Pilot
 *A clean, anchored map of trend changes and high‑interest zones. No repaint.*  
