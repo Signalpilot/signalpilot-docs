@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block hero %}
+<section class="sp-hero">
+  <div class="md-content">
+    <h1>SignalPilot Docs</h1>
+    <p class="sp-tagline">
+      See the bias, read the pressure, time the move — without the noise.
+    </p>
+  </div>
+</section>
+{% endblock %}
+
+{% block styles %}
+{{ super() }}
+<style>
+.sp-hero {
+  background: linear-gradient(90deg, rgba(0,150,136,0.1) 0%, rgba(0,188,212,0.05) 100%);
+  padding: 3rem 1rem 2rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.sp-tagline {
+  font-size: 1.2rem;
+  opacity: 0.8;
+  margin-top: .5rem;
+}
+</style>
+{% endblock %}
