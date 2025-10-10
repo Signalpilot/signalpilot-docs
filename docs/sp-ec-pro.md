@@ -9,6 +9,8 @@ summary: "Event-centric reversal detection with PilotLine, NanoFlows, and regime
 tags: [reversal, events, regime, pilotline, nanoflow]
 ---
 
+--8<-- "_includes/meta-badge.html"
+
 
 > **Category:** ⏱️ Timing  
 > Focuses on exhaustion, reversals, and the rhythm of market cycles.
