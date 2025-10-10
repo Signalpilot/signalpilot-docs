@@ -13,6 +13,7 @@ tags: [supply, demand, zones, structure]
 > **Category:** 🏗️ Structure / Levels  
 > Maps the invisible architecture of price — zones, liquidity, and anchor points.
 
+--8<-- "_includes/meta-badge.html"
 
 # 🗺️ SP — SD Zones (SDZones Pro) — by Signal Pilot
 
