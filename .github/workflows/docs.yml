@@ -21,6 +21,7 @@ jobs:
         with:
           python-version: '3.11'
 
+      # ✅ NEW: cache pip downloads across runs
       - name: Cache pip
         uses: actions/cache@v4
         with:
@@ -29,13 +30,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-${{ steps.py.outputs.python-version }}-
             ${{ runner.os }}-pip-
-
-      - name: Show repo root contents (debug)
-        run: ls -la
-
-      - name: Show requirements.txt (debug)
-        run: |
-          test -f requirements.txt && cat requirements.txt || (echo "requirements.txt NOT FOUND" && exit 1)
 
       - name: Install MkDocs toolchain (from requirements.txt)
         run: |
