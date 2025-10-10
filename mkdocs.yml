@@ -26,20 +26,11 @@ theme:
   favicon: assets/logo.png
   icon:
     repo: fontawesome/brands/github
-  custom_dir: overrides     
+  custom_dir: overrides
 
 plugins:
   - search
-  # Uncomment when ready for production extras
-  # - sitemap:
-  #     changefreq: weekly
-  #     priority: 0.6
-  # - redirects:
-  #     redirect_maps:
-  #       sp-ema-trio.md: sp-ema-trio-pro.md
-  # - git-revision-date-localized:
-  #     fallback_to_build_date: true
-  #     type: date
+  - macros    # enables Jinja variables inside Markdown
 
 markdown_extensions:
   - admonition
@@ -51,12 +42,13 @@ markdown_extensions:
       permalink: true
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.snippets   # enables --8<-- includes
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
 
 extra_css:
-  - assets/stylesheets/extra.css   # your card-grid polish CSS
+  - assets/stylesheets/extra.css
 
 nav:
   - Home: index.md
@@ -100,9 +92,9 @@ nav:
       - "SP — Screener (Screener Table)": sp-screener-sfx.md
 
   - Reference:
-    - "Suite Workflow (Bias → Timing)": ref-workflow.md
-    - "Non-Repainting Policy": ref-non-repaint.md
-    - "Glossary": ref-glossary.md
+      - "Suite Workflow (Bias → Timing)": ref-workflow.md
+      - "Non-Repainting Policy": ref-non-repaint.md
+      - "Glossary": ref-glossary.md
 
   - About:
     - "FAQ": about-faq.md
@@ -116,3 +108,9 @@ extra:
   analytics:
     provider: google
     property: G-NZ05GV72K0
+  social:
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/signalpilot
+    - icon: fontawesome/brands/github
+      link: https://github.com/Signalpilot
+  copyright: "© SignalPilot Labs, Inc. All rights reserved."
