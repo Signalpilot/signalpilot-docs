@@ -13,6 +13,7 @@ tags: [momentum, oscillators, normalization, dashboard]
 > **Category:** 🧭 Bias / Momentum  
 > Defines directional bias and strength. Reveals who’s in control — bulls or bears.
 
+--8<-- "_includes/meta-badge.html"
 
 # ⚡️ SP: Momentum Matrix (Panel Pro) — Simple Guide
 
