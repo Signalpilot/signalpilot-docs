@@ -13,6 +13,7 @@ tags: [screener, scan, dashboard, signals]
 > **Category:** 🧩 Meta / Tools  
 > Filters, regimes, and screeners that unify and contextualize all modules.
 
+--8<-- "_includes/meta-badge.html"
 
 # SP — Screener (Screener Table) 🎯 — by Signal Pilot  
 
