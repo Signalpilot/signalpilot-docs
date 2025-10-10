@@ -3,6 +3,7 @@ site_description: Non-repainting, alert-ready TradingView indicators for any mar
 site_url: https://docs.signalpilot.io/
 repo_url: https://github.com/Signalpilot/signalpilot-docs
 repo_name: signalpilot-docs
+edit_uri: edit/main/docs/
 
 theme:
   name: material
@@ -16,9 +17,22 @@ theme:
     - content.tabs.link
     - content.tooltips
   palette:
+    # Light mode (auto when user prefers light)
+    - scheme: default
+      primary: teal
+      accent: cyan
+      media: "(prefers-color-scheme: light)"
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    # Dark mode (auto when user prefers dark)
     - scheme: slate
       primary: teal
       accent: cyan
+      media: "(prefers-color-scheme: dark)"
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
   font:
     text: Roboto
     code: Roboto Mono
