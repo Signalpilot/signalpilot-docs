@@ -117,9 +117,8 @@
 </div>
 
 ---
-
 ## ✈️ New Here?
 
-- **[Suite Workflow](/ref-workflow/)** — how the modules connect  
-- **[TradingView Alerts](/how-to-alerts/)** — setup in 90 seconds  
-- **[Glossary](/ref-glossary/)** — quick terms reference
+- **[Suite Workflow](ref-workflow.md)** — how the modules connect  
+- **[TradingView Alerts](how-to-alerts.md)** — setup in 90 seconds  
+- **[Glossary](ref-glossary.md)** — quick terms reference
