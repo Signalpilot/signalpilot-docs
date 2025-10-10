@@ -13,6 +13,7 @@ tags: [regime, volatility, filter, risk]
 > **Category:** 🧩 Meta / Tools  
 > Filters, regimes, and screeners that unify and contextualize all modules.
 
+--8<-- "_includes/meta-badge.html"
 
 # 📦 SP — Regime Box (Regime & Volatility Filter) — by Signal Pilot
 **Plain‑English guide · ✅ Non‑repainting · 🌍 Any market/timeframe**
