@@ -13,6 +13,7 @@ tags: [obv, flow, accumulation, distribution, participation]
 > **Category:** 💧 Participation (Volume / Flow)  
 > Measures market participation and conviction behind price movement.
 
+--8<-- "_includes/meta-badge.html"
 
 # SP — Flow Balance (OBV Pro) — by Signal Pilot
 
