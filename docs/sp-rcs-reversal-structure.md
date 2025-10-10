@@ -9,6 +9,7 @@ summary: "Clean, non-repainting candlestick pattern map to spot reversal pressur
 tags: [reversal, candlestick, patterns, timing, confirmation]
 ---
 
+--8<-- "_includes/meta-badge.html"
 
 # SP — Reversal Candlestick Structure (SP:RCS) ✨📈 — by Signal Pilot
 
