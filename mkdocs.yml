@@ -22,12 +22,12 @@ theme:
 
 plugins:
   - search
-  # - sitemap:         # optional: enable if installed
-  #     changefreq: weekly
-  #     priority: 0.6
-  # - redirects:       # optional: enable if installed
-  #     redirect_maps:
-  #       sp-ema-trio.md: sp-ema-trio-pro.md
+   - sitemap:
+       changefreq: weekly
+       priority: 0.6
+   - redirects:
+       redirect_maps:
+         sp-ema-trio.md: sp-ema-trio-pro.md
 
 markdown_extensions:
   - admonition
@@ -51,21 +51,25 @@ nav:
 
   - Modules:
       - "🧭 Bias / Momentum":
+          - "Overview": bias-momentum/index.md
           - "SP — Momentum Regime (MACD+)": spp-macd-plus.md
           - "SP — Trend Stack (EMA 50/100/200 Pro)": sp-ema-trio-pro.md
           - "SP — Momentum Matrix (Panel Pro)": sp-oscillator-matrix.md
 
       - "💧 Participation (Volume / Flow)":
+          - "Overview": participation/index.md
           - "SP — Participation (PVA Overlay)": sp-pva-overlay.md
           - "SP — Volume Pulse (PVA Volume)": sp-pva-volume.md
           - "SP — Flow Balance (OBV Pro)": sp-obv-pro.md
 
       - "🏗️ Structure / Levels":
+          - "Overview": structure-levels/index.md
           - "SP — Structure Map (SML)": sp-sml-structure-liquidity.md
           - "SP — SD Zones (SDZones Pro)": sp-sdzones-pro.md
           - "SP — Key Anchors (Key Levels Suite)": sp-key-levels-suite.md
 
       - "⏱️ Timing":
+          - "Overview": timing/index.md
           - "SP — RSI Triad Confirm": sp-rsi-triad-confirm.md
           - "SP — Context Stoch (SRSI+)": sp-contextstoch-rsi.md
           - "SP — Leg Timer (TD9+ Clean Squeeze)": sp-ltf.md
@@ -73,13 +77,14 @@ nav:
           # - "SP — Reversal Candlestick Structure (RCS)": sp-rcs.md   # uncomment if present
 
       - "🧩 Meta / Tools":
+          - "Overview": meta-tools/index.md
           - "SP — Regime Box (Regime & Volatility Filter)": sp-regime-vol-filter.md
           - "SP — Screener (Screener Table)": sp-screener-sfx.md
 
   - Reference:
       - Suite Workflow (Bias → Timing): ref-workflow.md
       - Non-Repainting Policy: ref-non-repaint.md
-      - Glossary: ref-glossary.md                    
+      - Glossary: ref-glossary.md
 
   - About:
     - FAQ: about-faq.md
@@ -93,4 +98,3 @@ extra:
   analytics:
     provider: google
     property: G-NZ05GV72K0
-
