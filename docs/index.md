@@ -24,15 +24,15 @@
 
 - :material-compass: **Momentum Regime (MACD+)**  
   Directional bias & momentum shifts with regime coloring.  
-  [Read :material-arrow-right:]{.md-button .md-button--primary href="spp-macd-plus.md"}
+  [Read :material-arrow-right:](spp-macd-plus.md){ .md-button .md-button--primary }
 
 - :material-chart-line: **Trend Stack (EMA 50/100/200 Pro)**  
   Stacked-EMA clarity + GC/DC context and disciplined PB logic.  
-  [Read :material-arrow-right:]{.md-button .md-button--primary href="sp-ema-trio-pro.md"}
+  [Read :material-arrow-right:](sp-ema-trio-pro.md){ .md-button .md-button--primary }
 
 - :material-view-dashboard: **Momentum Matrix (Panel Pro)**  
   Normalized multi-oscillator dashboard for one-glance momentum.  
-  [Read :material-arrow-right:]{.md-button .md-button--primary href="sp-oscillator-matrix.md"}
+  [Read :material-arrow-right:](sp-oscillator-matrix.md){ .md-button .md-button--primary }
 
 </div>
 
@@ -43,15 +43,15 @@
 
 - :material-water: **Participation (PVA Overlay)**  
   Volume-aware candles showing conviction inside price.  
-  [Read :material-arrow-right:]{.md-button .md-button--primary href="sp-pva-overlay.md"}
+  [Read :material-arrow-right:](sp-pva-overlay.md){ .md-button .md-button--primary }
 
 - :material-waveform: **Volume Pulse (PVA Volume)**  
   RVOL & spike detection to spot bursts in participation.  
-  [Read :material-arrow-right:]{.md-button .md-button--primary href="sp-pva-volume.md"}
+  [Read :material-arrow-right:](sp-pva-volume.md){ .md-button .md-button--primary }
 
 - :material-swap-vertical: **Flow Balance (OBV Pro)**  
   Smoothed OBV tracking net buying/selling pressure.  
-  [Read :material-arrow-right:]{.md-button .md-button--primary href="sp-obv-pro.md"}
+  [Read :material-arrow-right:](sp-obv-pro.md){ .md-button .md-button--primary }
 
 </div>
 
@@ -62,15 +62,15 @@
 
 - :material-layers-triple-outline: **Structure Map (SML)**  
   Clean structure with liquidity cues and anchored visuals.  
-  [Read :material-arrow-right:]{.md-button .md-button--primary href="sp-sml-structure-liquidity.md"}
+  [Read :material-arrow-right:](sp-sml-structure-liquidity.md){ .md-button .md-button--primary }
 
 - :material-vector-square: **SD Zones (SDZones Pro)**  
   Non-wobbly supply/demand zones for reaction planning.  
-  [Read :material-arrow-right:]{.md-button .md-button--primary href="sp-sdzones-pro.md"}
+  [Read :material-arrow-right:](sp-sdzones-pro.md){ .md-button .md-button--primary }
 
 - :material-anchor: **Key Anchors (Key Levels Suite)**  
   HTF/session/VWAP anchors that orient every trade.  
-  [Read :material-arrow-right:]{.md-button .md-button--primary href="sp-key-levels-suite.md"}
+  [Read :material-arrow-right:](sp-key-levels-suite.md){ .md-button .md-button--primary }
 
 </div>
 
@@ -81,23 +81,23 @@
 
 - :material-chart-bell-curve: **RSI Triad Confirm**  
   Fast/base/slow RSI for clean confirmation & exhaustion.  
-  [Read :material-arrow-right:]{.md-button .md-button--primary href="sp-rsi-triad-confirm.md"}
+  [Read :material-arrow-right:](sp-rsi-triad-confirm.md){ .md-button .md-button--primary }
 
 - :material-rotate-right: **Context Stoch (SRSI+)**  
   Context-aware Stoch RSI to time rotations with less noise.  
-  [Read :material-arrow-right:]{.md-button .md-button--primary href="sp-contextstoch-rsi.md"}
+  [Read :material-arrow-right:](sp-contextstoch-rsi.md){ .md-button .md-button--primary }
 
 - :material-timer: **Leg Timer (TD9 + Clean Squeeze)**  
   TD9 counts plus squeeze logic to spot leg exhaustion.  
-  [Read :material-arrow-right:]{.md-button .md-button--primary href="sp-ltf.md"}
+  [Read :material-arrow-right:](sp-ltf.md){ .md-button .md-button--primary }
 
 - :material-axis-arrow-info: **Reversal Engine (EC Pro)**  
   Event-centric tops/bottoms with PilotLine & NanoFlows.  
-  [Read :material-arrow-right:]{.md-button .md-button--primary href="sp-ec-pro.md"}
+  [Read :material-arrow-right:](sp-ec-pro.md){ .md-button .md-button--primary }
 
 - :material-candle-outline: **Reversal Candlestick Structure (RCS)**  
   Clean, non-repainting candlestick reversal map.  
-  [Read :material-arrow-right:]{.md-button .md-button--primary href="sp-rcs-reversal-structure.md"}
+  [Read :material-arrow-right:](sp-rcs-reversal-structure.md){ .md-button .md-button--primary }
 
 </div>
 
@@ -108,11 +108,11 @@
 
 - :material-puzzle-outline: **Regime Box (Regime & Volatility Filter)**  
   Trend/volatility gate with SQZ/EXP and LONG/SHORT OK markers.  
-  [Read :material-arrow-right:]{.md-button .md-button--primary href="sp-regime-vol-filter.md"}
+  [Read :material-arrow-right:](sp-regime-vol-filter.md){ .md-button .md-button--primary }
 
 - :material-table: **Screener (Screener Table)**  
   One-glance market scan surfacing clean, screener-safe signals.  
-  [Read :material-arrow-right:]{.md-button .md-button--primary href="sp-screener-sfx.md"}
+  [Read :material-arrow-right:](sp-screener-sfx.md){ .md-button .md-button--primary }
 
 </div>
 
