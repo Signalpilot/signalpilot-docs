@@ -13,6 +13,7 @@ tags: [bias, momentum, macd, trend, regime]
 > **Category:** 🧭 Bias / Momentum  
 > Defines directional bias and strength. Reveals who’s in control — bulls or bears.
 
+--8<-- "_includes/meta-badge.html"
 
 # SP — Momentum Regime (MACD+) — by Signal Pilot 🚀
 **Trend entries made simple.** See momentum flip, skip chop, and use three clear entries: **Prime**, **Pullback**, **Retest**.  
