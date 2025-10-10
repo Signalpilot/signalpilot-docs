@@ -78,8 +78,8 @@ nav:
 
   - Reference:
       - Suite Workflow (Bias → Timing): ref-workflow.md
-      # - Non-Repainting Policy: ref-non-repaint.md    # uncomment if file exists
-      # - Glossary: ref-glossary.md                    # uncomment if file exists
+      - Non-Repainting Policy: ref-non-repaint.md
+      - Glossary: ref-glossary.md                    
 
   - About:
     - FAQ: about-faq.md
