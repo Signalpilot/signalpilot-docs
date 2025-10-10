@@ -13,6 +13,7 @@ tags: [td9, squeeze, timing, exhaustion]
 > **Category:** ⏱️ Timing  
 > Focuses on exhaustion, reversals, and the rhythm of market cycles.
 
+--8<-- "_includes/meta-badge.html"
 
 # ⏱️SP — Leg Timer — (TD9 + Clean Squeeze) — by Signal Pilot 
 
