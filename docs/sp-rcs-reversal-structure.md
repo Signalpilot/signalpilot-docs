@@ -1,4 +1,16 @@
-# SP — Reversal Candlestick Structure (RCS) — by Signal Pilot
+---
+title: "SP — Reversal Candlestick Structure (SP:RCS)"
+short_title: "Reversal Candlestick Structure (RCS)"
+permalink: /sp-rcs/
+module_id: sp-rcs
+category: "Timing"
+category_emoji: "⏱️"
+summary: "Clean, non-repainting candlestick pattern map to spot reversal pressure fast."
+tags: [reversal, candlestick, patterns, timing, confirmation]
+---
+
+
+# SP — Reversal Candlestick Structure (SP:RCS) ✨📈 — by Signal Pilot
 
 A friendly TradingView helper that **marks well‑known candlestick reversal patterns** right on your chart.  
 Labels appear **only after the candle closes** (so they don’t disappear later). To keep charts clean, the tool shows **at most one bullish and one bearish label per bar**.
@@ -7,25 +19,25 @@ Labels appear **only after the candle closes** (so they don’t disappear later)
 
 ## ✨ What you’ll see
 
-- Short **labels under/over candles** like `BuE`, `BE`, `MS`, `ES`.  
-- **Teal/green = bullish idea**, **red = bearish idea**.  
-- Labels sit a little away from price so they’re easy to read.
+- 🏷️ Short **labels under/over candles** like `BuE`, `BE`, `MS`, `ES`.  
+- 🟩 **Teal/green = bullish idea**, 🟥 **red = bearish idea**.  
+- ↕️ Labels sit a little away from price so they’re easy to read.
 
-> Treat every label as a **heads‑up**, not a must‑trade. Always use your own confirmation and risk rules.
+> 🔎 Treat every label as a **heads‑up**, not a must‑trade. Always use your own confirmation and risk rules.
 
 ---
 
 ## 🚀 Quick start (60 seconds)
 
-1. Open **TradingView → Pine Editor**.  
-2. Paste the script → **Save** → **Add to chart**.  
-3. That’s it. Labels show up when each candle **closes**.
+1. 🧭 Open **TradingView → Pine Editor**.  
+2. 📋 Paste the script → 💾 **Save** → ➕ **Add to chart**.  
+3. ✅ Done. Labels show up when each candle **closes**.
 
 ---
 
 ## 🧭 Read the labels (cheat‑sheet)
 
-**Bullish**
+**🟢 Bullish**
 | Code | Pattern |
 |---|---|
 | `HM`  | Hammer |
@@ -37,7 +49,7 @@ Labels appear **only after the candle closes** (so they don’t disappear later)
 | `BuH` | Bullish Harami |
 | `TB`  | Tweezer Bottom |
 
-**Bearish**
+**🔴 Bearish**
 | Code | Pattern |
 |---|---|
 | `HMN` | Hanging Man |
@@ -49,16 +61,16 @@ Labels appear **only after the candle closes** (so they don’t disappear later)
 | `BeH` | Bearish Harami |
 | `TT`  | Tweezer Top |
 
-> Hover a label to inspect the exact bar it references.
+> 💡 Hover a label to inspect the exact bar it references.
 
 ---
 
 ## 🕹️ Use it in practice
 
-1. **Wait for a label** at candle close.  
-2. A **bullish label below** a candle hints at a possible bounce.  
-3. A **bearish label above** a candle hints at a possible turn down.  
-4. Add your own tools (support/resistance, trendlines, volume) before acting.
+1. ⏱️ **Wait for a label** at candle **close**.  
+2. ⬇️ A **bullish label below** a candle hints at a possible bounce.  
+3. ⬆️ A **bearish label above** a candle hints at a possible turn down.  
+4. 🧰 Add your own tools (support/resistance, trendlines, volume) before acting.
 
 ---
 
@@ -66,37 +78,36 @@ Labels appear **only after the candle closes** (so they don’t disappear later)
 
 You’ll find these in the **Reversal Logic** panel.
 
-- **Threshold** — *How picky it is*  
-  Higher = fewer, stronger labels.  
-  Start at **80**.  
-  - Want **fewer** labels? Try 85–90.  
-  - Want **more** labels? Try 70–75.
+- 🎚️ **Threshold** — *How picky it is*  
+  Higher = fewer, stronger labels. Start at **80**.  
+  - Want **fewer** labels? Try **85–90**.  
+  - Want **more** labels? Try **70–75**.
 
-- **Same‑side Cooldown** — *Spacing between similar signals*  
-  Minimum bars between two bullish (or two bearish) labels.  
-  Start at **20**. Increase to reduce clutter.
+- 🧊 **Same‑side Cooldown** — *Spacing between similar signals*  
+  Minimum bars between two bullish (or two bearish) labels. Start at **20**.  
+  Raise it to reduce clutter.
 
-- **FlipGuard Decay** — *Brake after a flip*  
-  Bars to wait before allowing a new **opposite‑side** label.  
-  Start at **5**. Raise if you see whipsaws.
+- 🔄 **FlipGuard Decay** — *Brake after a flip*  
+  Bars to wait before allowing a new **opposite‑side** label. Start at **5**.  
+  Increase if you see whipsaws.
 
-That’s it. Everything else is optional style or per‑pattern toggles.
+> ✳️ That’s it. Everything else is optional style or per‑pattern toggles.
 
 ---
 
 ## 🎨 Make it look how you like
 
-- Change **text size**, **colors**, and **background** in **Style**.  
-- “Offset” keeps labels comfortably away from candles. The default works for most charts.
+- 🔤 Change **text size**, 🎨 **colors**, and 🧱 **background** in **Style**.  
+- ↔️ “Offset” keeps labels comfortably away from candles. The default works for most charts.
 
 ---
 
 ## ⏰ Alerts (so you don’t miss anything)
 
-1. Click the **alarm clock** → **Create Alert…**  
-2. **Condition:** pick a specific pattern, e.g. **“SP:RCS | BE”** for Bearish Engulfing.  
-3. Choose your preferred delivery (app, email, webhook).  
-4. Save.
+1. ⏰ Click the **alarm clock** → **Create Alert…**  
+2. 🧩 **Condition:** pick a specific pattern, e.g. **“SP:RCS | BE”** for Bearish Engulfing.  
+3. 📣 Choose your preferred delivery (app, email, webhook).  
+4. 💾 Save.
 
 Create multiple alerts—one per pattern you care about.
 
@@ -114,29 +125,30 @@ Create multiple alerts—one per pattern you care about.
 
 ## 🛠️ Troubleshooting
 
-- **Too many labels?** Raise **Threshold**, raise **Cooldown**, or turn off lower‑priority patterns (Harami, Tweezers).  
-- **Too few labels?** Lower **Threshold** a bit (‑5 to ‑10) and/or reduce **Cooldown**.  
-- **Labels on top of price?** Increase label **Offset** or pick a larger **Text Size**.  
-- **Do labels repaint?** No. Labels appear **after candle close** and stay.
+- 🧹 **Too many labels?** Raise **Threshold**, raise **Cooldown**, or turn off lower‑priority patterns (Harami, Tweezers).  
+- 🔍 **Too few labels?** Lower **Threshold** a bit (‑5 to ‑10) and/or reduce **Cooldown**.  
+- 🧱 **Labels on top of price?** Increase label **Offset** or pick a larger **Text Size**.  
+- 🔒 **Do labels repaint?** No. Labels appear **after candle close** and stay.
 
 ---
 
 ## ❓ FAQ
 
 **Do I need all patterns on?**  
-No. Many traders begin with **Engulfing** and **Morning/Evening Star**, then add more.
+🙅 No. Many traders begin with **Engulfing** and **Morning/Evening Star**, then add more.
 
 **Which markets/timeframes work?**  
-Anything with candles. Intraday usually needs stricter settings; higher timeframes can be looser.
+🌍 Anything with candles. Intraday usually needs stricter settings; higher timeframes can be looser.
 
 **Why didn’t a label print when I expected one?**  
-It likely didn’t meet the shape rules or your **Threshold/Cooldown/FlipGuard** filtered it. Lower the Threshold slightly to test.
+🧪 It likely didn’t meet the shape rules or your **Threshold/Cooldown/FlipGuard** filtered it.  
+Try lowering the Threshold slightly to test.
 
 ---
 
 ## 🔒 Safety
 
-This is a **heads‑up tool**, not financial advice. Always manage risk and confirm with your own plan.
+This is a **heads‑up tool**, not financial advice. 🧠 Manage risk and confirm with your own plan.
 
 ---
 
