@@ -13,6 +13,7 @@ tags: [volume, participation, overlay, conviction]
 > **Category:** 💧 Participation (Volume / Flow)  
 > Measures market participation and conviction behind price movement.
 
+--8<-- "_includes/meta-badge.html"
 
 # 🚀 SP — Participation & Volume Pulse (SP-PVA Suite) — by Signal Pilot
 
