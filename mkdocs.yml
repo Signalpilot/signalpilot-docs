@@ -26,7 +26,7 @@ theme:
   favicon: assets/logo.png
   icon:
     repo: fontawesome/brands/github
-  custom_dir: overrides        # allows custom CSS overrides in /overrides/assets/
+  custom_dir: overrides     
 
 plugins:
   - search
