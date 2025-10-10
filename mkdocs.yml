@@ -13,15 +13,33 @@ theme:
     - content.code.copy
     - search.suggest
     - search.highlight
+    - content.tabs.link
+    - content.tooltips
   palette:
     - scheme: slate
       primary: teal
       accent: cyan
+  font:
+    text: Roboto
+    code: Roboto Mono
   logo: assets/logo.png
   favicon: assets/logo.png
+  icon:
+    repo: fontawesome/brands/github
+  custom_dir: overrides        # allows custom CSS overrides in /overrides/assets/
 
 plugins:
   - search
+  # Uncomment when ready for production extras
+  # - sitemap:
+  #     changefreq: weekly
+  #     priority: 0.6
+  # - redirects:
+  #     redirect_maps:
+  #       sp-ema-trio.md: sp-ema-trio-pro.md
+  # - git-revision-date-localized:
+  #     fallback_to_build_date: true
+  #     type: date
 
 markdown_extensions:
   - admonition
@@ -36,6 +54,9 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+
+extra_css:
+  - assets/stylesheets/extra.css   # your card-grid polish CSS
 
 nav:
   - Home: index.md
@@ -69,7 +90,7 @@ nav:
       - "Overview": timing/index.md
       - "SP — RSI Triad Confirm": sp-rsi-triad-confirm.md
       - "SP — Context Stoch (SRSI+)": sp-contextstoch-rsi.md
-      - "SP — Leg Timer (TD9+ Clean Squeeze)": sp-ltf.md
+      - "SP — Leg Timer (TD9 + Clean Squeeze)": sp-ltf.md
       - "SP — Reversal Engine (EC Pro)": sp-ec-pro.md
       - "SP — Reversal Candlestick Structure (RCS)": sp-rcs-reversal-structure.md
 
