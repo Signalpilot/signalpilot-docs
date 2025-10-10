@@ -13,6 +13,7 @@ tags: [trend, ema, bias, momentum]
 > **Category:** 🧭 Bias / Momentum  
 > Defines directional bias and strength. Reveals who’s in control — bulls or bears.
 
+--8<-- "_includes/meta-badge.html"
 
 # SP — Trend Stack (EMA 50/100/200 Pro) GC/DC + PB —  by Signal Pilot
 
