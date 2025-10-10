@@ -96,4 +96,4 @@
 ### New here?
 - Read the **[Suite Workflow](/ref-workflow/)** overview  
 - Set **[TradingView Alerts](/how-to-alerts/)** in 90 seconds  
-- Skim **[Glossary](/ref-glossary/)** for quick terms  <!-- keep if you add the file -->
+- Skim **[Glossary](/ref-glossary.md/)** for quick terms  <!-- keep if you add the file -->
