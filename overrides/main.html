@@ -1,29 +1,28 @@
+{# FILE: overrides/main.html #}
 {% extends "base.html" %}
 
-{% block hero %}
-<section class="sp-hero">
-  <div class="md-content">
-    <h1>SignalPilot Docs</h1>
-    <p class="sp-tagline">
-      See the bias, read the pressure, time the move — without the noise.
-    </p>
+{% block header %}
+  <!-- SignalPilot brand bar (keeps Material header & search intact) -->
+  <div class="sp-topnav">
+    <div class="sp-topnav__inner">
+      <a class="sp-brand" href="https://signalpilot.io/">
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 17l6-6 4 4 7-7" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M21 10V4h-6" fill="none" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <span>SignalPilot</span>
+      </a>
+      <nav class="sp-links" aria-label="SignalPilot">
+        <a href="https://signalpilot.io/#why">Why</a>
+        <a href="https://signalpilot.io/#inside">What’s inside</a>
+        <a href="https://education.signalpilot.io/">Education</a>
+        <a aria-current="page" href="https://docs.signalpilot.io/">Docs</a>
+        <a href="https://signalpilot.io/#pricing">Pricing</a>
+        <a href="https://signalpilot.io/#faq">FAQ</a>
+      </nav>
+      <a class="sp-cta" href="https://signalpilot.io/#pricing">Get the Suite</a>
+    </div>
   </div>
-</section>
-{% endblock %}
 
-{% block styles %}
-{{ super() }}
-<style>
-.sp-hero {
-  background: linear-gradient(90deg, rgba(0,150,136,0.1) 0%, rgba(0,188,212,0.05) 100%);
-  padding: 3rem 1rem 2rem 1rem;
-  text-align: center;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-}
-.sp-tagline {
-  font-size: 1.2rem;
-  opacity: 0.8;
-  margin-top: .5rem;
-}
-</style>
+  {{ super() }}
 {% endblock %}
