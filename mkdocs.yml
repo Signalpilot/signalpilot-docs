@@ -61,8 +61,14 @@ markdown_extensions:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
+# Keep your existing extra.css, then add brand.css AFTER it so brand wins
 extra_css:
   - assets/stylesheets/extra.css
+  - assets/brand.css
+
+# New: brand.js injects the 6‑link brand nav (if you choose) and syncs ?t=dark|light
+extra_javascript:
+  - assets/brand.js
 
 nav:
   - Home: index.md
