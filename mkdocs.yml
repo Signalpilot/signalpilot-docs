@@ -72,7 +72,9 @@ extra_css:
 extra_javascript:
   - assets/brand.js
   - assets/aurora.js
-  = assets/constellations.js
+  - assets/constellations.js
+  - assets/sp-bg.js
+  
 
 nav:
   - Home: index.md
