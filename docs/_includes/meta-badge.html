@@ -1,0 +1,7 @@
+{% if page and page.meta %}
+<div class="admonition tip" markdown="1" style="margin-top:.25rem">
+  {% if page.meta.category_emoji %}{{ page.meta.category_emoji }} {% endif %}
+  **{{ page.meta.category or "Uncategorized" }}**
+  {% if page.meta.version %} • v{{ page.meta.version }}{% endif %}
+</div>
+{% endif %}
