@@ -17,22 +17,16 @@ theme:
     - content.tabs.link
     - content.tooltips
   palette:
-    # Light mode (auto when user prefers light)
+    # Light mode
     - scheme: default
       primary: teal
       accent: cyan
       media: "(prefers-color-scheme: light)"
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
-    # Dark mode (auto when user prefers dark)
+    # Dark mode
     - scheme: slate
       primary: teal
       accent: cyan
       media: "(prefers-color-scheme: dark)"
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
   font:
     text: Roboto
     code: Roboto Mono
@@ -79,7 +73,7 @@ nav:
   - Home: index.md
 
   - "🚀 v6 Suite (Latest)":
-    - "📚 Suite Overview": v6-suite-index.md
+    - "📚 Suite Overview": v6-suite-index/
     - "Pentarch v8.9 — Reversal Events": pentarch-v89.md
     - "Janus Atlas v3.12.2 — Levels System": janus-atlas-v3122.md
     - "Omnideck v1.7.0 — Everything Indicator": omnideck-v170.md

@@ -312,7 +312,7 @@ Both are valuable in different contexts.
 ## Support
 
 Need help? Check out:
-- [v6 Suite Overview](v6-suite-index.md) - How to combine with other indicators
+- [v6 Suite Overview](v6-suite-index/) - How to combine with other indicators
 - [Suite Workflow](ref-workflow.md) - Complete trading system
 - [Support](about-support.md) - Get help
 
