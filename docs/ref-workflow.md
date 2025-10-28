@@ -403,7 +403,7 @@ If you only want to load indicators on a single chart:
 
 ## Resources
 
-- **Full Indicator Guides:** [v6 Suite Index](v6-suite-index.md)
+- **Full Indicator Guides:** [v6 Suite Index](v6-suite-index/)
 - **Non-Repaint Policy:** [ref-non-repaint.md](ref-non-repaint.md)
 - **Support:** [about-support.md](about-support.md)
 

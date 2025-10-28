@@ -73,7 +73,7 @@ nav:
   - Home: index.md
 
   - "🚀 v6 Suite (Latest)":
-    - "📚 Suite Overview": v6-suite-index.md
+    - "📚 Suite Overview": v6-suite-index/
     - "Pentarch v8.9 — Reversal Events": pentarch-v89.md
     - "Janus Atlas v3.12.2 — Levels System": janus-atlas-v3122.md
     - "Omnideck v1.7.0 — Everything Indicator": omnideck-v170.md
