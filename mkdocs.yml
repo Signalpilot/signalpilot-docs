@@ -36,8 +36,8 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  # logo: assets/logo.png  # TODO: Add SignalPilot logo
-  # favicon: assets/logo.png
+  logo: assets/watermark-monogram-color-transparent.png
+  favicon: assets/watermark-monogram-color-transparent.png
   icon:
     repo: fontawesome/brands/github
   custom_dir: overrides
