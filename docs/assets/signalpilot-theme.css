@@ -124,12 +124,20 @@ html[data-theme="light"] {
    LIGHT MODE TEXT FIXES - FORCE DARK TEXT ON LIGHT BG
    ================================================================ */
 
+html[data-theme="light"],
+html[data-theme="light"] *:not(.md-button):not(.btn):not([class*="btn-"]) {
+  color: #0f172a !important;
+}
+
 html[data-theme="light"] body,
 html[data-theme="light"] .md-typeset,
 html[data-theme="light"] p,
 html[data-theme="light"] li,
 html[data-theme="light"] td,
-html[data-theme="light"] span {
+html[data-theme="light"] span,
+html[data-theme="light"] div,
+html[data-theme="light"] article,
+html[data-theme="light"] section {
   color: #0f172a !important;
 }
 
@@ -148,12 +156,24 @@ html[data-theme="light"] .sp-brand-text {
 }
 
 /* Fix main content area background */
+html[data-theme="light"] body {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+
 html[data-theme="light"] .md-main {
   background-color: #ffffff !important;
+  color: #0f172a !important;
 }
 
 html[data-theme="light"] .md-content {
   background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+
+html[data-theme="light"] .md-content__inner {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
 }
 
 /* Fix inline white text in light mode */
