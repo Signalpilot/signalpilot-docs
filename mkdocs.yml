@@ -17,16 +17,20 @@ theme:
     - content.tabs.link
     - content.tooltips
   palette:
-    # Light mode (auto when user prefers light)
+    # Light mode
     - scheme: default
       primary: teal
       accent: cyan
-      media: "(prefers-color-scheme: light)"
-    # Dark mode (auto when user prefers dark)
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
     - scheme: slate
       primary: teal
       accent: cyan
-      media: "(prefers-color-scheme: dark)"
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
   font:
     text: Roboto
     code: Roboto Mono
@@ -55,16 +59,14 @@ markdown_extensions:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
-# SignalPilot unified theme system (load first to establish base)
+# Material-compatible styles (brand.css has all theme rules for Material)
 extra_css:
-  - assets/signalpilot-theme.css
   - assets/stylesheets/extra.css
   - assets/brand.css
   - assets/aurora.css
 
-# Theme JS loads first, then other scripts
+# Background effects and utilities
 extra_javascript:
-  - assets/signalpilot-theme.js
   - assets/brand.js
   - assets/sp-bg.js
   

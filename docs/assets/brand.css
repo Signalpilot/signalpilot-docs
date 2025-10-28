@@ -115,25 +115,19 @@ body {
   backdrop-filter: blur(10px);
 }
 
-/* LIGHT MODE - Override for light theme */
-html[data-theme="light"] .sp-brand-text,
-html[data-theme="light"] .sp-links a {
+/* LIGHT MODE - Clean white background, no aurora */
+[data-md-color-scheme="default"] body {
+  background: #ffffff !important;
+}
+
+[data-md-color-scheme="default"] .sp-topnav {
+  background: color-mix(in srgb, #ffffff 95%, transparent) !important;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.12) !important;
+}
+
+[data-md-color-scheme="default"] .sp-brand-text,
+[data-md-color-scheme="default"] .sp-links a {
   color: #0f172a !important;
-}
-
-html[data-theme="light"] .sp-topnav {
-  background: color-mix(in srgb, #ffffff 90%, transparent) !important;
-  border-bottom: 1px solid rgba(15, 23, 42, 0.15) !important;
-}
-
-html[data-theme="light"] #themeToggle {
-  border-color: rgba(15, 23, 42, 0.2) !important;
-  background: rgba(15, 23, 42, 0.05) !important;
-  color: #0f172a !important;
-}
-
-html[data-theme="light"] #themeToggle:hover {
-  background: rgba(15, 23, 42, 0.1) !important;
 }
 
 /* Headings → Space Grotesk for most, GUGI for major headings */
