@@ -36,8 +36,8 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  logo: assets/logo.png
-  favicon: assets/logo.png
+  # logo: assets/logo.png  # TODO: Add SignalPilot logo
+  # favicon: assets/logo.png
   icon:
     repo: fontawesome/brands/github
   custom_dir: overrides
@@ -78,12 +78,6 @@ extra_javascript:
 
 nav:
   - Home: index.md
-
-  - Start Here:
-    - "Quick Start": start-quickstart.md
-    - "Set TradingView Alerts": how-to-alerts.md
-    - "Screener Table (On-chart)": how-to-screener.md
-    - "Webhooks (TradingView → Bot)": how-to-webhooks.md
 
   - "🚀 v6 Suite (Latest)":
     - "📚 Suite Overview": v6-suite-index.md
