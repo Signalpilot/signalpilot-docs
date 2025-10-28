@@ -17,12 +17,12 @@ theme:
     - content.tabs.link
     - content.tooltips
   palette:
-    # Light mode
+    # Light mode (auto when user prefers light)
     - scheme: default
       primary: teal
       accent: cyan
       media: "(prefers-color-scheme: light)"
-    # Dark mode
+    # Dark mode (auto when user prefers dark)
     - scheme: slate
       primary: teal
       accent: cyan

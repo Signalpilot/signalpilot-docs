@@ -109,11 +109,37 @@ html[data-theme="light"] {
   /* UI adjustments */
   --border: rgba(30, 41, 59, 0.2);
   --grid-line: rgba(30, 41, 59, 0.06);
+
+  /* ===== MATERIAL THEME OVERRIDES FOR LIGHT MODE ===== */
+  --md-default-bg-color: #ffffff;
+  --md-default-fg-color: #0f172a;
+  --md-code-bg-color: #f1f5f9;
+  --md-code-fg-color: #0f172a;
+  --md-primary-fg-color: #3b82f6;
+  --md-accent-fg-color: #0ea5e9;
+  --md-typeset-a-color: #0ea5e9;
 }
 
 /* ================================================================
-   LIGHT MODE TEXT FIXES
+   LIGHT MODE TEXT FIXES - FORCE DARK TEXT ON LIGHT BG
    ================================================================ */
+
+html[data-theme="light"],
+html[data-theme="light"] *:not(.md-button):not(.btn):not([class*="btn-"]) {
+  color: #0f172a !important;
+}
+
+html[data-theme="light"] body,
+html[data-theme="light"] .md-typeset,
+html[data-theme="light"] p,
+html[data-theme="light"] li,
+html[data-theme="light"] td,
+html[data-theme="light"] span,
+html[data-theme="light"] div,
+html[data-theme="light"] article,
+html[data-theme="light"] section {
+  color: #0f172a !important;
+}
 
 html[data-theme="light"] h1,
 html[data-theme="light"] h2,
@@ -124,7 +150,29 @@ html[data-theme="light"] h6 {
   color: #0f172a !important;
 }
 
-html[data-theme="light"] .brand {
+html[data-theme="light"] .brand,
+html[data-theme="light"] .sp-brand-text {
+  color: #0f172a !important;
+}
+
+/* Fix main content area background */
+html[data-theme="light"] body {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+
+html[data-theme="light"] .md-main {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+
+html[data-theme="light"] .md-content {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+
+html[data-theme="light"] .md-content__inner {
+  background-color: #ffffff !important;
   color: #0f172a !important;
 }
 
