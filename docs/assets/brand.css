@@ -11,27 +11,38 @@
 
   /* GUGI for SignalPilot branding */
   --sp-brand-font: "Gugi", "Space Grotesk", system-ui, sans-serif;
+
+  /* Aurora background gradient (for dark mode) */
+  --sp-bg: #05070d;
+  --sp-grad: radial-gradient(1200px 700px at -6% -8%, rgba(130,185,255,.18), transparent 60%),
+             radial-gradient(1100px 660px at 108% -10%, rgba(155,140,255,.18), transparent 62%),
+             radial-gradient(1200px 700px at 52% 118%, rgba(118,221,255,.12), transparent 64%);
 }
 
 /* LIGHT scheme (Material = data-md-color-scheme="default") */
 [data-md-color-scheme="default"] {
-  --md-default-bg-color: #f6f8fc;
-  --md-default-fg-color: #0f1524;
+  --md-default-bg-color: #ffffff !important;
+  --md-default-fg-color: #0f1524 !important;
 
   /* Brand colors */
-  --md-primary-fg-color: #345CFF;          /* brand blue */
+  --md-primary-fg-color: #345CFF;
   --md-primary-fg-color--light: #5B8AFF;
   --md-primary-fg-color--dark: #203057;
-  --md-accent-fg-color: #0aa1d5;           /* cyan accent */
+  --md-accent-fg-color: #0aa1d5;
 
   /* Link & subtle tints */
   --md-typeset-a-color: #0aa1d5;
+
+  /* SignalPilot theme compatibility */
+  --bg: #ffffff;
+  --text: #0f1524;
+  --muted: #475569;
 }
 
 /* DARK scheme (Material = data-md-color-scheme="slate") */
 [data-md-color-scheme="slate"] {
-  --md-default-bg-color: #05070d;
-  --md-default-fg-color: #ecf1ff;
+  --md-default-bg-color: transparent !important;  /* Make transparent for aurora */
+  --md-default-fg-color: #ecf1ff !important;
 
   --md-primary-fg-color: #5b8aff;
   --md-primary-fg-color--light: #7b9bff;
@@ -39,6 +50,69 @@
   --md-accent-fg-color: #76ddff;
 
   --md-typeset-a-color: #9fdcff;
+
+  /* SignalPilot theme compatibility */
+  --bg: #05070d;
+  --text: #ecf1ff;
+  --muted: #b7c2d9;
+}
+
+/* Ensure body background shows aurora in dark mode */
+body {
+  background: var(--sp-bg);
+}
+
+/* Make Material main container transparent to show aurora */
+[data-md-color-scheme="slate"] .md-main {
+  background: transparent !important;
+}
+
+[data-md-color-scheme="slate"] .md-main__inner {
+  background: transparent !important;
+}
+
+/* Make sure all text is readable in dark mode */
+[data-md-color-scheme="slate"] .md-typeset {
+  color: #ecf1ff !important;
+}
+
+[data-md-color-scheme="slate"] .md-typeset p,
+[data-md-color-scheme="slate"] .md-typeset li,
+[data-md-color-scheme="slate"] .md-typeset td,
+[data-md-color-scheme="slate"] .md-typeset th,
+[data-md-color-scheme="slate"] .md-typeset h1,
+[data-md-color-scheme="slate"] .md-typeset h2,
+[data-md-color-scheme="slate"] .md-typeset h3,
+[data-md-color-scheme="slate"] .md-typeset h4,
+[data-md-color-scheme="slate"] .md-typeset h5,
+[data-md-color-scheme="slate"] .md-typeset h6 {
+  color: #ecf1ff !important;
+}
+
+/* Give cards a semi-transparent background so text is readable over aurora */
+[data-md-color-scheme="slate"] .md-typeset .grid.cards > * {
+  background: rgba(12, 17, 28, 0.85) !important;
+  backdrop-filter: blur(10px);
+}
+
+/* Content sections need subtle background */
+[data-md-color-scheme="slate"] .md-typeset .admonition,
+[data-md-color-scheme="slate"] .md-typeset details {
+  background: rgba(12, 17, 28, 0.75) !important;
+  backdrop-filter: blur(10px);
+}
+
+/* Code blocks */
+[data-md-color-scheme="slate"] .md-typeset pre,
+[data-md-color-scheme="slate"] .md-typeset code {
+  background: rgba(16, 22, 38, 0.85) !important;
+  color: #ecf1ff !important;
+}
+
+/* Tables */
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) {
+  background: rgba(12, 17, 28, 0.75);
+  backdrop-filter: blur(10px);
 }
 
 /* LIGHT MODE - Override for light theme */

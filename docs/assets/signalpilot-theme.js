@@ -1,9 +1,10 @@
 /**
- * SignalPilot Theme Switcher
- * Unified theme switching for all SignalPilot properties
+ * SignalPilot Theme Switcher - MkDocs Material Compatible
+ * Syncs SignalPilot theme with Material for MkDocs color scheme
  *
  * Features:
  * - Light/Dark mode toggle
+ * - Syncs with Material theme (data-md-color-scheme)
  * - Respects system preference
  * - Persists user choice
  * - Updates meta theme-color
@@ -13,12 +14,7 @@
  * - Button with id="themeToggle"
  * - Optional: span with id="theme-icon" for emoji toggle
  *
- * Usage:
- * <button id="themeToggle" aria-label="Toggle theme">
- *   <span id="theme-icon">🌙</span>
- * </button>
- *
- * Version: 1.0.0
+ * Version: 1.1.0 (Material Compatible)
  * Updated: 2025-10-28
  */
 
@@ -29,11 +25,12 @@
   const CONFIG = {
     storageKey: 'sp_theme',
     attribute: 'data-theme',
+    materialAttribute: 'data-md-color-scheme',  // Material theme attribute
     toggleButtonId: 'themeToggle',
     iconElementId: 'theme-icon',
     lightIcon: '☀️',
     darkIcon: '🌙',
-    lightMetaColor: '#eef1f6',
+    lightMetaColor: '#ffffff',
     darkMetaColor: '#05070d'
   };
 
@@ -67,8 +64,12 @@
       theme = 'dark';
     }
 
-    // Apply to document
+    // Apply to document (SignalPilot attribute)
     document.documentElement.setAttribute(CONFIG.attribute, theme);
+
+    // SYNC WITH MATERIAL: Set Material's color scheme
+    const materialScheme = theme === 'light' ? 'default' : 'slate';
+    document.documentElement.setAttribute(CONFIG.materialAttribute, materialScheme);
 
     // Save to localStorage
     localStorage.setItem(CONFIG.storageKey, theme);
@@ -81,10 +82,10 @@
 
     // Dispatch custom event for other scripts
     window.dispatchEvent(new CustomEvent('themechange', {
-      detail: { theme }
+      detail: { theme, materialScheme }
     }));
 
-    console.log(`Theme changed to: ${theme}`);
+    console.log(`Theme changed to: ${theme} (Material: ${materialScheme})`);
   }
 
   /**
@@ -224,7 +225,7 @@
   };
 
   // Debug info
-  console.log('SignalPilot Theme System loaded', {
+  console.log('SignalPilot Theme System loaded (Material Compatible)', {
     initialTheme: getSavedTheme(),
     systemPreference: getSystemPreference()
   });
