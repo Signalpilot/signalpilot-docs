@@ -7,7 +7,7 @@ Crystal-clear indicators that tell you <strong>WHEN</strong> to enter, <strong>W
 <div style="text-align: center; padding: 3rem 1.5rem; background: linear-gradient(135deg, #345CFF, #0aa1d5); border-radius: 20px; margin-bottom: 3rem; box-shadow: 0 8px 24px rgba(52, 92, 255, 0.3);">
   <h2 style="color: white; font-size: 2.2rem; margin-bottom: 1rem; font-family: var(--sp-brand-font);">7 Production-Ready Indicators</h2>
   <p style="color: rgba(255,255,255,0.95); font-size: 1.2rem; margin-bottom: 1.5rem;">Non-repainting. Alert-ready. Battle-tested.</p>
-  <a href="v6-suite-index.md" style="display: inline-block; padding: 0.85rem 2.5rem; background: white; color: #345CFF; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: all 0.2s;">Explore the Suite →</a>
+  <a href="v6-suite-index/" style="display: inline-block; padding: 0.85rem 2.5rem; background: white; color: #345CFF; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: all 0.2s;">Explore the Suite →</a>
 </div>
 
 <div class="grid cards" markdown>
@@ -83,7 +83,7 @@ Crystal-clear indicators that tell you <strong>WHEN</strong> to enter, <strong>W
 
 Want to see how all 7 indicators work together?
 
-**[→ v6 Suite Overview](v6-suite-index.md)** - Quick selector, recommended combinations, learning path
+**[→ v6 Suite Overview](v6-suite-index/)** - Quick selector, recommended combinations, learning path
 
 ---
 
@@ -162,9 +162,9 @@ Want to see how all 7 indicators work together?
 
 <div style="text-align: center; padding: 3rem 2rem; background: linear-gradient(135deg, color-mix(in srgb, var(--md-primary-fg-color) 12%, transparent), color-mix(in srgb, var(--md-accent-fg-color) 12%, transparent)); border-radius: 20px; margin-top: 3rem; border: 2px solid color-mix(in srgb, var(--md-primary-fg-color) 30%, transparent);">
   <h2 style="font-size: 2rem; margin-bottom: 1rem; color: var(--md-primary-fg-color); font-family: var(--sp-brand-font);">Ready to Trade with Confidence?</h2>
-  <p style="font-size: 1.1rem; margin-bottom: 2rem; color: var(--md-default-fg-color); max-width: 600px; margin-left: auto; margin-right: auto;">Join traders using SignalPilot's battle-tested indicators. Non-repainting signals, crystal-clear documentation, and rock-solid alerts.</p>
+  <p style="font-size: 1.1rem; margin-bottom: 2rem; color: var(--md-default-fg-color); max-width: 600px; margin-left: auto; margin-right: auto;">Join traders using Signal Pilot's battle-tested indicators. Non-repainting signals, crystal-clear documentation, and rock-solid alerts.</p>
   <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
     <a href="https://signalpilot.io/#pricing" style="display: inline-block; padding: 0.85rem 2.5rem; background: linear-gradient(115deg, var(--md-primary-fg-color), var(--md-accent-fg-color)); color: white; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 1.1rem; box-shadow: 0 4px 16px rgba(52, 92, 255, 0.4); transition: all 0.2s;">Get the Suite</a>
-    <a href="v6-suite-index.md" style="display: inline-block; padding: 0.85rem 2.5rem; background: transparent; color: var(--md-primary-fg-color); border: 2px solid var(--md-primary-fg-color); border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 1.1rem; transition: all 0.2s;">Explore Indicators</a>
+    <a href="v6-suite-index/" style="display: inline-block; padding: 0.85rem 2.5rem; background: transparent; color: var(--md-primary-fg-color); border: 2px solid var(--md-primary-fg-color); border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 1.1rem; transition: all 0.2s;">Explore Indicators</a>
   </div>
 </div>
