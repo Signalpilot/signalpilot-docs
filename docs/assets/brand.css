@@ -41,14 +41,34 @@
   --md-typeset-a-color: #9fdcff;
 }
 
-/* Headings → Space Grotesk, matching site & hub */
-.md-typeset h1,
+/* Headings → Space Grotesk for most, GUGI for major headings */
+.md-typeset h1 {
+  font-family: var(--sp-brand-font);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-wrap: balance;
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, var(--md-primary-fg-color), var(--md-accent-fg-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1.5rem;
+}
+
 .md-typeset h2,
 .md-typeset h3,
 .md-typeset h4 {
   font-family: var(--sp-heading-font);
   letter-spacing: -0.02em;
   text-wrap: balance;
+}
+
+/* Make h2 headings more prominent */
+.md-typeset h2 {
+  color: var(--md-primary-fg-color);
+  border-bottom: 2px solid color-mix(in srgb, var(--md-primary-fg-color) 30%, transparent);
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
 }
 
 /* Slim top brand bar we inject with an override */
@@ -63,8 +83,10 @@
   padding: .55rem clamp(14px, 4vw, 22px);
   display: flex; align-items: center; gap: .6rem;
 }
-.sp-brand { display:flex; align-items:center; gap:.55rem; text-decoration:none; color: var(--md-default-fg-color); }
-.sp-brand-text { font-family: var(--sp-brand-font); font-weight: 400; font-size: 1.25rem; letter-spacing: 0.02em; }
+.sp-brand { display:flex; align-items:center; gap:.55rem; text-decoration:none; color: var(--md-default-fg-color); transition: opacity 0.2s; }
+.sp-brand:hover { opacity: 0.8; }
+.sp-logo { width: 32px; height: 32px; display: block; }
+.sp-brand-text { font-family: var(--sp-brand-font); font-weight: 400; font-size: 1.35rem; letter-spacing: 0.02em; }
 .sp-links { margin-left: .4rem; display:flex; gap:.35rem; flex-wrap: wrap; }
 .sp-links a { display:inline-flex; padding:.38rem .7rem; border-radius:999px; text-decoration:none; font-weight:700; color: color-mix(in srgb, var(--md-default-fg-color) 70%, transparent); }
 .sp-links a:hover { background: color-mix(in srgb, var(--md-primary-fg-color) 18%, transparent); color: var(--md-default-fg-color); }
@@ -80,10 +102,81 @@
   overflow: hidden;
 }
 
-/* Optional: rounder admonitions/buttons to match site feel */
+/* Enhanced cards and buttons with branded styling */
 .md-typeset .admonition, .md-typeset details {
   border-radius: 12px;
+  border-left: 4px solid var(--md-primary-fg-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
 .md-button, .md-typeset .md-button {
   border-radius: 999px;
+  transition: all 0.2s ease;
+}
+
+.md-typeset .md-button--primary {
+  background: linear-gradient(115deg, var(--md-primary-fg-color), var(--md-accent-fg-color));
+  border: none;
+  box-shadow: 0 4px 12px rgba(52, 92, 255, 0.3);
+}
+
+.md-typeset .md-button--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(52, 92, 255, 0.4);
+}
+
+/* Enhanced grid cards for v6 Suite */
+.md-typeset .grid.cards > * {
+  border-radius: 16px;
+  border: 1px solid color-mix(in srgb, var(--md-primary-fg-color) 20%, transparent);
+  background: linear-gradient(135deg,
+    color-mix(in srgb, var(--md-primary-fg-color) 5%, transparent) 0%,
+    transparent 100%);
+  transition: all 0.3s ease;
+  padding: 1.5rem;
+}
+
+.md-typeset .grid.cards > *:hover {
+  transform: translateY(-4px);
+  border-color: var(--md-primary-fg-color);
+  box-shadow: 0 8px 24px rgba(52, 92, 255, 0.2);
+}
+
+/* Make emoji icons larger in cards */
+.md-typeset .grid.cards .twemoji {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Code blocks with brand accent */
+.md-typeset code {
+  background: color-mix(in srgb, var(--md-accent-fg-color) 10%, transparent);
+  border-radius: 4px;
+  padding: 0.15em 0.4em;
+}
+
+/* Blockquotes with brand styling */
+.md-typeset blockquote {
+  border-left: 4px solid var(--md-accent-fg-color);
+  background: color-mix(in srgb, var(--md-accent-fg-color) 5%, transparent);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+}
+
+/* Tables with alternating branded rows */
+.md-typeset table:not([class]) tbody tr:hover {
+  background: color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent);
+}
+
+/* Enhance the hero section on homepage */
+.md-typeset > blockquote:first-of-type {
+  font-size: 1.2rem;
+  text-align: center;
+  border: none;
+  background: linear-gradient(135deg,
+    color-mix(in srgb, var(--md-primary-fg-color) 10%, transparent),
+    color-mix(in srgb, var(--md-accent-fg-color) 10%, transparent));
+  padding: 2rem;
+  border-radius: 16px;
+  margin-bottom: 3rem;
 }
