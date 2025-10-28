@@ -25,19 +25,27 @@ Crystal-clear indicators that tell you <strong>WHEN</strong> to enter, <strong>W
   _From 1-minute scalps to weekly swings._
 </div>
 
-<div class="grid cards" style="text-align: center; margin-top: 2rem; margin-bottom: 3rem;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center; margin: 3rem 0;">
 
-- <div style="font-size: 3rem; font-weight: 700; color: var(--md-primary-fg-color); font-family: var(--sp-brand-font);">7</div>
-  **Production Indicators**
+  <div>
+    <div style="font-size: 3rem; font-weight: 700; color: var(--md-primary-fg-color); font-family: var(--sp-brand-font); line-height: 1; margin-bottom: 0.5rem;">7</div>
+    <div style="font-weight: 700; font-size: 1rem; color: var(--md-default-fg-color);">Production Indicators</div>
+  </div>
 
-- <div style="font-size: 3rem; font-weight: 700; color: var(--md-primary-fg-color); font-family: var(--sp-brand-font);">10+</div>
-  **Trading Systems**
+  <div>
+    <div style="font-size: 3rem; font-weight: 700; color: var(--md-primary-fg-color); font-family: var(--sp-brand-font); line-height: 1; margin-bottom: 0.5rem;">10+</div>
+    <div style="font-weight: 700; font-size: 1rem; color: var(--md-default-fg-color);">Trading Systems</div>
+  </div>
 
-- <div style="font-size: 3rem; font-weight: 700; color: var(--md-primary-fg-color); font-family: var(--sp-brand-font);">100%</div>
-  **Non-Repainting**
+  <div>
+    <div style="font-size: 3rem; font-weight: 700; color: var(--md-primary-fg-color); font-family: var(--sp-brand-font); line-height: 1; margin-bottom: 0.5rem;">100%</div>
+    <div style="font-weight: 700; font-size: 1rem; color: var(--md-default-fg-color);">Non-Repainting</div>
+  </div>
 
-- <div style="font-size: 3rem; font-weight: 700; color: var(--md-accent-fg-color); font-family: var(--sp-brand-font);">∞</div>
-  **Markets Supported**
+  <div>
+    <div style="font-size: 3rem; font-weight: 700; color: var(--md-accent-fg-color); font-family: var(--sp-brand-font); line-height: 1; margin-bottom: 0.5rem;">∞</div>
+    <div style="font-weight: 700; font-size: 1rem; color: var(--md-default-fg-color);">Markets Supported</div>
+  </div>
 
 </div>
 

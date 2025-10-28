@@ -39,6 +39,47 @@
   --muted: #475569;
 }
 
+/* FORCE all text to be dark in light mode */
+[data-md-color-scheme="default"] .md-typeset,
+[data-md-color-scheme="default"] .md-typeset p,
+[data-md-color-scheme="default"] .md-typeset li,
+[data-md-color-scheme="default"] .md-typeset td,
+[data-md-color-scheme="default"] .md-typeset th,
+[data-md-color-scheme="default"] .md-typeset h1,
+[data-md-color-scheme="default"] .md-typeset h2,
+[data-md-color-scheme="default"] .md-typeset h3,
+[data-md-color-scheme="default"] .md-typeset h4,
+[data-md-color-scheme="default"] .md-typeset h5,
+[data-md-color-scheme="default"] .md-typeset h6,
+[data-md-color-scheme="default"] .md-typeset strong,
+[data-md-color-scheme="default"] .md-typeset span {
+  color: #0f1524 !important;
+}
+
+/* Light mode - cards with white/light backgrounds */
+[data-md-color-scheme="default"] .md-typeset .grid.cards > * {
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+/* Light mode - code blocks */
+[data-md-color-scheme="default"] .md-typeset pre,
+[data-md-color-scheme="default"] .md-typeset code {
+  background: #f1f5f9 !important;
+  color: #0f1524 !important;
+}
+
+/* Light mode - admonitions */
+[data-md-color-scheme="default"] .md-typeset .admonition,
+[data-md-color-scheme="default"] .md-typeset details {
+  background: #f8fafc !important;
+}
+
+/* Light mode - tables */
+[data-md-color-scheme="default"] .md-typeset table:not([class]) {
+  background: #ffffff;
+}
+
 /* DARK scheme (Material = data-md-color-scheme="slate") */
 [data-md-color-scheme="slate"] {
   --md-default-bg-color: transparent !important;  /* Make transparent for aurora */
@@ -137,11 +178,22 @@ body {
   letter-spacing: 0.02em;
   text-wrap: balance;
   font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* H1 gradient effect - ONLY in dark mode */
+[data-md-color-scheme="slate"] .md-typeset h1 {
   background: linear-gradient(135deg, var(--md-primary-fg-color), var(--md-accent-fg-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-bottom: 1.5rem;
+}
+
+/* H1 in light mode - solid dark text, no gradient */
+[data-md-color-scheme="default"] .md-typeset h1 {
+  color: #0f1524 !important;
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
 }
 
 .md-typeset h2,
