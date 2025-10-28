@@ -1,13 +1,16 @@
-/* Import both site fonts (Option B) */
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap");
+/* Import both site fonts (Option B) + GUGI for SignalPilot branding */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&family=Gugi&display=swap");
 
 :root {
   /* Body and code fonts that Material respects */
   --md-text-font: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   --md-code-font: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", "Courier New", monospace;
 
-  /* Headings (Material doesn’t expose a var for headings, so override) */
+  /* Headings (Material doesn't expose a var for headings, so override) */
   --sp-heading-font: "Space Grotesk", "DM Sans", system-ui, sans-serif;
+
+  /* GUGI for SignalPilot branding */
+  --sp-brand-font: "Gugi", "Space Grotesk", system-ui, sans-serif;
 }
 
 /* LIGHT scheme (Material = data-md-color-scheme="default") */
@@ -60,7 +63,7 @@
   padding: .55rem clamp(14px, 4vw, 22px);
   display: flex; align-items: center; gap: .6rem;
 }
-.sp-brand { display:flex; align-items:center; gap:.55rem; text-decoration:none; color: var(--md-default-fg-color); font-weight: 800; }
+.sp-brand { display:flex; align-items:center; gap:.55rem; text-decoration:none; color: var(--md-default-fg-color); font-weight: 800; font-family: var(--sp-brand-font); }
 .sp-links { margin-left: .4rem; display:flex; gap:.35rem; flex-wrap: wrap; }
 .sp-links a { display:inline-flex; padding:.38rem .7rem; border-radius:999px; text-decoration:none; font-weight:700; color: color-mix(in srgb, var(--md-default-fg-color) 70%, transparent); }
 .sp-links a:hover { background: color-mix(in srgb, var(--md-primary-fg-color) 18%, transparent); color: var(--md-default-fg-color); }
@@ -68,6 +71,19 @@
 
 /* Keep Material header nicely spaced below our top bar */
 .md-header { top: 0; }
+
+/* Apply GUGI font to site title/name in header */
+.md-header__title,
+.md-header__topic {
+  font-family: var(--sp-brand-font) !important;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+/* Also apply to site name in navigation */
+.md-nav__title {
+  font-family: var(--sp-brand-font);
+}
 
 /* Optional: rounder admonitions/buttons to match site feel */
 .md-typeset .admonition, .md-typeset details {
