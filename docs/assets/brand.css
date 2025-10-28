@@ -40,7 +40,12 @@
 }
 
 /* FORCE all text to be dark in light mode */
+[data-md-color-scheme="default"] *:not(.md-button):not(.sp-cta) {
+  color: #0f1524 !important;
+}
+
 [data-md-color-scheme="default"] .md-typeset,
+[data-md-color-scheme="default"] .md-typeset *,
 [data-md-color-scheme="default"] .md-typeset p,
 [data-md-color-scheme="default"] .md-typeset li,
 [data-md-color-scheme="default"] .md-typeset td,
@@ -52,14 +57,47 @@
 [data-md-color-scheme="default"] .md-typeset h5,
 [data-md-color-scheme="default"] .md-typeset h6,
 [data-md-color-scheme="default"] .md-typeset strong,
-[data-md-color-scheme="default"] .md-typeset span {
+[data-md-color-scheme="default"] .md-typeset em,
+[data-md-color-scheme="default"] .md-typeset span,
+[data-md-color-scheme="default"] .md-typeset div,
+[data-md-color-scheme="default"] .md-content,
+[data-md-color-scheme="default"] .md-content *,
+[data-md-color-scheme="default"] body,
+[data-md-color-scheme="default"] body * {
   color: #0f1524 !important;
+}
+
+/* Exception for links - keep them blue */
+[data-md-color-scheme="default"] a,
+[data-md-color-scheme="default"] .md-typeset a {
+  color: #0aa1d5 !important;
+}
+
+/* Exception for primary colored elements */
+[data-md-color-scheme="default"] [style*="color: var(--md-primary-fg-color)"],
+[data-md-color-scheme="default"] [style*="color:var(--md-primary-fg-color)"] {
+  color: #345CFF !important;
+}
+
+/* Exception for accent colored elements */
+[data-md-color-scheme="default"] [style*="color: var(--md-accent-fg-color)"],
+[data-md-color-scheme="default"] [style*="color:var(--md-accent-fg-color)"] {
+  color: #0aa1d5 !important;
+}
+
+/* Light mode - ensure main content area is white */
+[data-md-color-scheme="default"] .md-main,
+[data-md-color-scheme="default"] .md-main__inner,
+[data-md-color-scheme="default"] .md-content,
+[data-md-color-scheme="default"] .md-content__inner {
+  background: #ffffff !important;
 }
 
 /* Light mode - cards with white/light backgrounds */
 [data-md-color-scheme="default"] .md-typeset .grid.cards > * {
-  background: #f8fafc !important;
+  background: #ffffff !important;
   border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
 }
 
 /* Light mode - code blocks */
@@ -69,15 +107,38 @@
   color: #0f1524 !important;
 }
 
+/* Light mode - inline code */
+[data-md-color-scheme="default"] .md-typeset code:not(pre code) {
+  background: #e2e8f0 !important;
+  color: #0f1524 !important;
+  padding: 0.1em 0.4em !important;
+}
+
 /* Light mode - admonitions */
 [data-md-color-scheme="default"] .md-typeset .admonition,
 [data-md-color-scheme="default"] .md-typeset details {
   background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
 }
 
 /* Light mode - tables */
 [data-md-color-scheme="default"] .md-typeset table:not([class]) {
-  background: #ffffff;
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+[data-md-color-scheme="default"] .md-typeset table:not([class]) th {
+  background: #f8fafc !important;
+  border-bottom: 2px solid #e2e8f0 !important;
+}
+
+/* Light mode - hero sections and styled divs */
+[data-md-color-scheme="default"] div[style*="background: linear-gradient"] {
+  color: white !important;
+}
+
+[data-md-color-scheme="default"] div[style*="background: linear-gradient"] * {
+  color: white !important;
 }
 
 /* DARK scheme (Material = data-md-color-scheme="slate") */
