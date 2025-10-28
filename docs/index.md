@@ -1,4 +1,4 @@
-# SignalPilot Documentation
+# Signal Pilot Documentation
 
 <p style="font-size: 1.3rem; color: var(--md-primary-fg-color); font-weight: 500; margin-bottom: 2rem;">
 Crystal-clear indicators that tell you <strong>WHEN</strong> to enter, <strong>WHERE</strong> the levels are, and <strong>HOW</strong> to manage risk.

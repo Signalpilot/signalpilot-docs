@@ -1,4 +1,4 @@
-site_name: SignalPilot Docs
+site_name: Signal Pilot Docs
 site_description: Non-repainting, alert-ready TradingView indicators for any market/timeframe.
 site_url: https://docs.signalpilot.io/
 repo_url: https://github.com/Signalpilot/signalpilot-docs
@@ -110,4 +110,4 @@ extra:
       link: https://x.com/signalpilot
     - icon: fontawesome/brands/github
       link: https://github.com/Signalpilot
-  copyright: "© SignalPilot Labs, Inc. All rights reserved."
+  copyright: "© Signal Pilot Labs, Inc. All rights reserved."
