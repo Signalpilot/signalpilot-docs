@@ -22,17 +22,11 @@ theme:
       primary: teal
       accent: cyan
       media: "(prefers-color-scheme: light)"
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
     # Dark mode (auto when user prefers dark)
     - scheme: slate
       primary: teal
       accent: cyan
       media: "(prefers-color-scheme: dark)"
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
   font:
     text: Roboto
     code: Roboto Mono
