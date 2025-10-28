@@ -90,6 +90,27 @@
 .sp-links { margin-left: .4rem; display:flex; gap:.35rem; flex-wrap: wrap; }
 .sp-links a { display:inline-flex; padding:.38rem .7rem; border-radius:999px; text-decoration:none; font-weight:700; color: color-mix(in srgb, var(--md-default-fg-color) 70%, transparent); }
 .sp-links a:hover { background: color-mix(in srgb, var(--md-primary-fg-color) 18%, transparent); color: var(--md-default-fg-color); }
+#themeToggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.8rem;
+  border-radius: 999px;
+  font-size: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--md-default-fg-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+#themeToggle:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: scale(1.05);
+}
+#theme-icon {
+  display: block;
+  line-height: 1;
+}
 .sp-cta { margin-left: auto; display:inline-flex; padding:.5rem .9rem; border-radius:999px; font-weight:800; text-decoration:none; color:#fff; background: linear-gradient(115deg, var(--md-primary-fg-color), var(--md-accent-fg-color)); }
 
 /* Keep Material header nicely spaced below our top bar */

@@ -61,18 +61,17 @@ markdown_extensions:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
-# Keep your existing extra.css, then add brand.css AFTER it so brand wins
+# SignalPilot unified theme system (load first to establish base)
 extra_css:
+  - assets/signalpilot-theme.css
   - assets/stylesheets/extra.css
   - assets/brand.css
   - assets/aurora.css
-  - assets/constellations.css
 
-# New: brand.js injects the 6‑link brand nav (if you choose) and syncs ?t=dark|light
+# Theme JS loads first, then other scripts
 extra_javascript:
+  - assets/signalpilot-theme.js
   - assets/brand.js
-  - assets/aurora.js
-  - assets/constellations.js
   - assets/sp-bg.js
   
 
