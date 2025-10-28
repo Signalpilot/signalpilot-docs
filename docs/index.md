@@ -1,124 +1,125 @@
 # SignalPilot Docs
 
-> Trade with clarity: set bias, confirm participation, map structure, time entries—then filter with regime logic.
+> Crystal-clear indicators that tell you WHEN to enter, WHERE the levels are, and HOW to manage risk.
 
 <div class="grid cards" markdown>
 
-- :material-shield-check: **Non-repainting**  
-  Signals finalize on candle close; HTF fetches use `lookahead_off`.  
-  _Deterministic, screen-ready._
+- :material-shield-check: **Non-repainting**
+  Signals lock at bar close; HTF data uses `lookahead_off`.
+  _What you see is what you get._
 
-- :material-bell-outline: **Alert-ready**  
-  Consistent, close-confirmed alert names across the suite.  
+- :material-bell-outline: **Alert-ready**
+  Consistent, bar-close-confirmed alerts across all indicators.
   _Hook to webhooks or bots._
 
-- :material-timer-sand: **Any market / timeframe**  
-  Crypto, FX, indices, equities, commodities.  
+- :material-timer-sand: **Any market / timeframe**
+  Crypto, FX, indices, equities, commodities.
   _From 1-minute scalps to weekly swings._
 </div>
 
 ---
 
-## 🧭 Bias / Momentum
+## 🚀 v6 Suite (Latest Production Indicators)
+
 <div class="grid cards" markdown>
 
-- :material-compass: **Momentum Regime (MACD+)**  
-  Directional bias & momentum shifts with regime coloring.  
-  [Read :material-arrow-right:](spp-macd-plus.md){ .md-button .md-button--primary }
+- :material-chart-timeline-variant: **Pentarch v8.9 — Reversal Events**
+  5 simple signals that tell you when price is reversing. TD/IGN/WRN/CAP/OUT labels.
+  [Read Guide :material-arrow-right:](pentarch-v89.md){ .md-button .md-button--primary }
 
-- :material-chart-line: **Trend Stack (EMA 50/100/200 Pro)**  
-  Stacked-EMA clarity + GC/DC context and disciplined PB logic.  
-  [Read :material-arrow-right:](sp-ema-trio-pro.md){ .md-button .md-button--primary }
+- :material-crosshairs-gps: **Janus Atlas v3.12.2 — Levels System**
+  All your key levels in one place: HTF, session, VWAP, volume profile, structure.
+  [Read Guide :material-arrow-right:](janus-atlas-v3122.md){ .md-button .md-button--primary }
 
-- :material-view-dashboard: **Momentum Matrix (Panel Pro)**  
-  Normalized multi-oscillator dashboard for one-glance momentum.  
-  [Read :material-arrow-right:](sp-oscillator-matrix.md){ .md-button .md-button--primary }
+- :material-view-dashboard-variant: **Omnideck v1.7.0 — Everything Indicator**
+  10 systems in one: TD Sequential, Squeeze, Sweeps, EMAs, SuperTrend, BMSB, Regime, Zones, Patterns.
+  [Read Guide :material-arrow-right:](omnideck-v170.md){ .md-button .md-button--primary }
+
+- :material-table-search: **Augury Grid v1.0 — Multi-Symbol Screener**
+  Scan 8 symbols simultaneously with quality scores. On-chart table shows the best setups.
+  [Read Guide :material-arrow-right:](augury-grid-v10.md){ .md-button .md-button--primary }
+
+- :material-water-plus: **Minimal Flow v4.0 — Volume Strategy**
+  Volume spike detection + complete position management. Entry, stops, partials, trailing - all automatic.
+  [Read Guide :material-arrow-right:](minimal-flow-v40-ultimate.md){ .md-button .md-button--primary }
+
+- :material-sine-wave: **Harmonic Oscillator v3.4 — Composite Momentum**
+  MACD + RSI + StochRSI voting system. 3 indicators combined into one 0-100 oscillator.
+  [Read Guide :material-arrow-right:](harmonic-oscillator-v34-adaptive.md){ .md-button .md-button--primary }
+
+- :material-chart-line-variant: **Plutus Flow v2.3 — Advanced OBV**
+  Spike-clipped OBV with divergence detection. See where smart money is accumulating/distributing.
+  [Read Guide :material-arrow-right:](plutus-flow-v23.md){ .md-button .md-button--primary }
 
 </div>
 
 ---
 
-## 💧 Participation (Volume / Flow)
-<div class="grid cards" markdown>
+## 📚 Suite Overview
 
-- :material-water: **Participation (PVA Overlay)**  
-  Volume-aware candles showing conviction inside price.  
-  [Read :material-arrow-right:](sp-pva-overlay.md){ .md-button .md-button--primary }
+Want to see how all 7 indicators work together?
 
-- :material-waveform: **Volume Pulse (PVA Volume)**  
-  RVOL & spike detection to spot bursts in participation.  
-  [Read :material-arrow-right:](sp-pva-volume.md){ .md-button .md-button--primary }
-
-- :material-swap-vertical: **Flow Balance (OBV Pro)**  
-  Smoothed OBV tracking net buying/selling pressure.  
-  [Read :material-arrow-right:](sp-obv-pro.md){ .md-button .md-button--primary }
-
-</div>
+**[→ v6 Suite Overview](v6-suite-index.md)** - Quick selector, recommended combinations, learning path
 
 ---
 
-## 🏗️ Structure / Levels
-<div class="grid cards" markdown>
-
-- :material-layers-triple-outline: **Structure Map (SML)**  
-  Clean structure with liquidity cues and anchored visuals.  
-  [Read :material-arrow-right:](sp-sml-structure-liquidity.md){ .md-button .md-button--primary }
-
-- :material-vector-square: **SD Zones (SDZones Pro)**  
-  Non-wobbly supply/demand zones for reaction planning.  
-  [Read :material-arrow-right:](sp-sdzones-pro.md){ .md-button .md-button--primary }
-
-- :material-anchor: **Key Anchors (Key Levels Suite)**  
-  HTF/session/VWAP anchors that orient every trade.  
-  [Read :material-arrow-right:](sp-key-levels-suite.md){ .md-button .md-button--primary }
-
-</div>
-
----
-
-## ⏱️ Timing
-<div class="grid cards" markdown>
-
-- :material-chart-bell-curve: **RSI Triad Confirm**  
-  Fast/base/slow RSI for clean confirmation & exhaustion.  
-  [Read :material-arrow-right:](sp-rsi-triad-confirm.md){ .md-button .md-button--primary }
-
-- :material-rotate-right: **Context Stoch (SRSI+)**  
-  Context-aware Stoch RSI to time rotations with less noise.  
-  [Read :material-arrow-right:](sp-contextstoch-rsi.md){ .md-button .md-button--primary }
-
-- :material-timer: **Leg Timer (TD9 + Clean Squeeze)**  
-  TD9 counts plus squeeze logic to spot leg exhaustion.  
-  [Read :material-arrow-right:](sp-ltf.md){ .md-button .md-button--primary }
-
-- :material-axis-arrow-info: **Reversal Engine (EC Pro)**  
-  Event-centric tops/bottoms with PilotLine & NanoFlows.  
-  [Read :material-arrow-right:](sp-ec-pro.md){ .md-button .md-button--primary }
-
-- :material-candle-outline: **Reversal Candlestick Structure (RCS)**  
-  Clean, non-repainting candlestick reversal map.  
-  [Read :material-arrow-right:](sp-rcs-reversal-structure.md){ .md-button .md-button--primary }
-
-</div>
-
----
-
-## 🧩 Meta / Tools
-<div class="grid cards" markdown>
-
-- :material-puzzle-outline: **Regime Box (Regime & Volatility Filter)**  
-  Trend/volatility gate with SQZ/EXP and LONG/SHORT OK markers.  
-  [Read :material-arrow-right:](sp-regime-vol-filter.md){ .md-button .md-button--primary }
-
-- :material-table: **Screener (Screener Table)**  
-  One-glance market scan surfacing clean, screener-safe signals.  
-  [Read :material-arrow-right:](sp-screener-sfx.md){ .md-button .md-button--primary }
-
-</div>
-
----
 ## ✈️ New Here?
 
-- **[Suite Workflow](ref-workflow.md)** — how the modules connect  
-- **[TradingView Alerts](how-to-alerts.md)** — setup in 90 seconds  
-- **[Glossary](ref-glossary.md)** — quick terms reference
+- **[Suite Workflow](ref-workflow.md)** — How the indicators connect
+- **[TradingView Alerts](how-to-alerts.md)** — Setup in 90 seconds
+- **[Glossary](ref-glossary.md)** — Quick terms reference
+
+---
+
+## 🎯 Quick Selector
+
+**Not sure which indicator to start with?**
+
+### I want to catch reversals
+→ **[Pentarch v8.9](pentarch-v89.md)** - 5 simple reversal signals (TD/IGN/WRN/CAP/OUT)
+
+### I want to see key levels
+→ **[Janus Atlas v3.12.2](janus-atlas-v3122.md)** - Daily/Weekly/Monthly highs/lows, VWAP, session levels, structure
+
+### I want everything in one indicator
+→ **[Omnideck v1.7.0](omnideck-v170.md)** - 10 systems combined (TD, Squeeze, EMAs, Zones, Patterns, etc.)
+
+### I want to scan multiple symbols
+→ **[Augury Grid v1.0](augury-grid-v10.md)** - Watch 8 symbols at once with quality scores
+
+### I want volume-based signals
+→ **[Minimal Flow v4.0](minimal-flow-v40-ultimate.md)** - Volume spikes + position management system
+
+### I want momentum/oscillator signals
+→ **[Harmonic Oscillator v3.4](harmonic-oscillator-v34-adaptive.md)** - 3-in-1 composite (MACD+RSI+StochRSI)
+
+### I want to see money flow (OBV)
+→ **[Plutus Flow v2.3](plutus-flow-v23.md)** - Advanced OBV with divergence detection
+
+---
+
+## 💡 Recommended Combinations
+
+**Reversal + Levels:**
+[Pentarch v8.9](pentarch-v89.md) + [Janus Atlas v3.12.2](janus-atlas-v3122.md)
+→ Pentarch tells you WHEN, Janus tells you WHERE
+
+**Complete System:**
+[Omnideck v1.7.0](omnideck-v170.md) + [Janus Atlas v3.12.2](janus-atlas-v3122.md)
+→ Everything you need: signals, levels, structure, regime
+
+**Volume Traders:**
+[Minimal Flow v4.0](minimal-flow-v40-ultimate.md) + [Plutus Flow v2.3](plutus-flow-v23.md)
+→ Volume spikes + OBV flow = Complete volume analysis
+
+**Divergence Hunters:**
+[Harmonic Oscillator v3.4](harmonic-oscillator-v34-adaptive.md) + [Plutus Flow v2.3](plutus-flow-v23.md)
+→ Price/momentum + Price/volume divergences
+
+**Multi-Asset Scanners:**
+[Augury Grid v1.0](augury-grid-v10.md) + Any indicator for confirmation
+→ Grid finds opportunities, you verify and execute
+
+---
+
+**Ready to trade? Pick an indicator above and dive in!** 🚀
