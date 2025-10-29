@@ -130,11 +130,11 @@ Omnideck is the **ultimate all-in-one indicator** - 10 professional trading syst
 
 **What you see:** Labels like "HAM" (Hammer), "BE" (Bullish Engulfing), "SS" (Shooting Star)
 
-**What they are:** 16 classic reversal patterns detected automatically
+**What they are:** 16 classic potential reversal patterns detected automatically
 
-**What to do:** Pattern + other confirmations = High-probability trade
+**What to do:** Pattern + other confirmations = Potential high-probability trade
 
-**Example:** Shooting Star at supply zone + TD 9 red = Major top, go short
+**Example:** Shooting Star at supply zone + TD 9 red = Potential major top, example short setup
 
 ---
 

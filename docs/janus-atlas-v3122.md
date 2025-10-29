@@ -299,6 +299,6 @@ Need help? Check out:
 
 ---
 
-**Remember:** Janus Atlas tells you WHERE price will react. Combine it with Pentarch (WHEN reversals happen) or other indicators for best results.
+**Remember:** Janus Atlas tells you WHERE price may potentially react. Combine it with Pentarch (WHEN potential reversals may happen) or other indicators for best results.
 
 **Trade the levels, respect the structure!** 🎯

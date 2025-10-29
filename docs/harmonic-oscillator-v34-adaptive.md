@@ -157,8 +157,8 @@ When price and oscillator disagree = Reversal coming
 - Price: $1,800, falling for days
 - **Composite:** Drops to 15 (extreme oversold)
 - **Divergence:** Price makes lower low at $1,750, but composite makes higher low (BULL DIV label)
-- **Signal:** Bullish signal fires at composite 32 (crossing above 30)
-- **Votes:** All 3 components vote bullish (Conservative = elite)
+- **Signal:** Potential bullish signal fires at composite 32 (crossing above 30)
+- **Votes:** All 3 components vote bullish (Conservative = potential elite signal)
 
 **The Trade:**
 1. Example entry long at $1,760
@@ -318,6 +318,6 @@ Need help? Check out:
 
 ---
 
-**Remember:** Harmonic Oscillator shows you when MACD, RSI, and StochRSI agree. When 2 or 3 vote the same way = High probability. Add divergence = Elite probability.
+**Remember:** Harmonic Oscillator shows you when MACD, RSI, and StochRSI agree. When 2 or 3 vote the same way = Potential high probability signal. Add divergence = Potential elite probability signal.
 
 **Trust the votes, trade the extremes!** 🎯

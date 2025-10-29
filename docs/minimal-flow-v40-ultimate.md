@@ -2,7 +2,7 @@
 
 ## What Does It Do?
 
-Minimal Flow is your **volume spike detector with built-in position management**. It tells you when smart money is moving (volume spikes), confirms the direction is real (flow consistency), and manages your entire trade from entry to exit.
+Minimal Flow is your **potential volume spike detector with built-in position management**. It tells you when smart money may be moving (potential volume spikes), confirms the direction is real (flow consistency), and manages your entire trade from entry to exit.
 
 **Best for:** Volume traders, systematic traders, anyone serious about risk management
 
@@ -13,13 +13,13 @@ Minimal Flow is your **volume spike detector with built-in position management**
 Price can lie. Volume cannot.
 
 **The System:**
-1. **Detects volume spikes** (Z-score method - statistically significant)
+1. **Detects potential volume spikes** (Z-score method - statistically significant)
 2. **Confirms direction** (volume + price must agree)
 3. **Checks market regime** (trending or ranging?)
 4. **Verifies higher timeframe** (HTF confirms direction?)
 5. **Manages your position** (entry, partials, stops, exits)
 
-**Result:** High-probability signals with automatic risk management
+**Result:** Potential high-probability signals with automatic risk management
 
 ---
 
@@ -41,17 +41,17 @@ Price can lie. Volume cannot.
 ### Buy/Sell Signals
 
 **BUY Signal** (green label + arrow)
-- Volume spike detected
-- Buyers dominating (positive flow)
+- Potential volume spike detected
+- Buyers potentially dominating (positive flow)
 - Bullish price bar
-- Regime confirms (or neutral)
+- Regime potentially confirms (or neutral)
 - Optional: HTF aligned
 
 **SELL Signal** (red label + arrow)
-- Volume spike detected
-- Sellers dominating (negative flow)
+- Potential volume spike detected
+- Sellers potentially dominating (negative flow)
 - Bearish price bar
-- Regime confirms (or neutral)
+- Regime potentially confirms (or neutral)
 - Optional: HTF aligned
 
 ---
@@ -340,6 +340,6 @@ Need help? Check out:
 
 ---
 
-**Remember:** Minimal Flow detects when smart money moves, confirms direction is real, and manages your entire trade. You just need to execute what it tells you.
+**Remember:** Minimal Flow detects when smart money may be moving, confirms direction is real, and manages your entire trade. You just need to execute what it tells you.
 
 **Follow the volume, manage the risk!** 🎯
