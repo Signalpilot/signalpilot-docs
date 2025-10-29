@@ -321,7 +321,7 @@ All 7 indicators are **SP Protocol v6** compliant:
 - Most indicators have quality scoring/tiers
 - Potential Elite/Premium signals = Take these
 - Standard/Weak = Skip unless perfect confluence
-- Quality over quantity always wins
+- Quality over quantity is key
 
 ### Track Your Performance
 - After 20 trades, calculate win rate by:
