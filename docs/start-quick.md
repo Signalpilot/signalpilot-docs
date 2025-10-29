@@ -133,16 +133,16 @@ Price: $35,000, falling for 2 weeks
 ### Mistake #1: Entering on TD (Blue Signal)
 
 **❌ Wrong:** "TD appeared, I'm buying now!"
-**✅ Right:** "TD appeared, I'm watching for IGN confirmation"
+**✅ Right:** "TD appeared, I'm watching for IGN signal"
 
-**Why:** TD is a warning, not an entry. Wait for IGN to confirm the reversal.
+**Why:** TD is a warning, not an entry. Wait for IGN to indicate the reversal.
 
 ---
 
 ### Mistake #2: Not Using "Once Per Bar Close" for Alerts
 
 **❌ Wrong:** Alert fires mid-bar, you enter, signal disappears
-**✅ Right:** Alert set to "Once Per Bar Close", only confirmed signals notify you
+**✅ Right:** Alert set to "Once Per Bar Close", only closed-bar signals notify you
 
 **Fix:**
 - Delete incorrect alerts
@@ -282,7 +282,7 @@ Price: $35,000, falling for 2 weeks
 
 ### Add Levels:
 → **[Janus Atlas Guide](janus-atlas-v3122.md)** - Know WHERE the key levels are
-**Why:** Pentarch tells you WHEN, Janus tells you WHERE
+**Why:** Pentarch shows you WHEN, Janus shows you WHERE
 
 ### Complete System:
 → **[Suite Workflow](ref-workflow.md)** - How all 7 indicators work together

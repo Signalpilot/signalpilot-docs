@@ -294,7 +294,7 @@ BTC  │ BUY │ 78 ⭐⭐ │ $64,250 │ $65,800 │ 5 │ +0.8%
 
 ### With Augury Grid:
 - See all 8 symbols in one glance (10 seconds)
-- Quality scores tell you what's worth investigating
+- Quality scores show you what's worth investigating
 - Track performance in real-time
 - Focus on your best opportunities
 
