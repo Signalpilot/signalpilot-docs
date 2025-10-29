@@ -407,7 +407,7 @@ Trading involves substantial risk of loss. Past performance ≠ future results.
 
 ### HIGH PRIORITY (Update Next - Day 3-4)
 - [ ] **Tutorial videos and transcripts** (YouTube, education.signalpilot.io)
-- [ ] **v6 Suite Overview** documentation page
+- [ ] **Signal Pilot Suite Overview** documentation page
 - [ ] **All 7 indicator documentation pages**
 - [ ] **Email sequences** (drip campaigns, newsletters)
 - [ ] **Support articles** (help center, FAQ)
@@ -466,7 +466,7 @@ This is critical for payment processor relationships and legal compliance.
 ---
 - [ ] TradingView indicator descriptions (all 7 indicators)
 - [ ] Homepage (docs.signalpilot.io)
-- [ ] v6 Suite Overview
+- [ ] Signal Pilot Suite Overview
 - [ ] All 7 indicator documentation pages
 - [ ] Quick Start guide
 - [ ] Suite Workflow guide
