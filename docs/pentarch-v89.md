@@ -248,6 +248,6 @@ Need help? Check out:
 
 ---
 
-**Remember:** Pentarch indicates WHEN potential reversals may be forming. Combine it with Janus Atlas (tells you WHERE - at which levels) for best results.
+**Remember:** Pentarch indicates WHEN potential reversals may be forming. Combine it with Janus Atlas (shows you WHERE - at which levels) for best results.
 
 **Trade smart, use stops, and let the signals guide you!** 🎯

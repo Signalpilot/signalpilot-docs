@@ -134,7 +134,7 @@ Omnideck is the **ultimate all-in-one indicator** - 10 professional trading syst
 
 **What to do:** Pattern + other confirmations = Potential high-probability trade
 
-**Example:** Shooting Star at supply zone + TD 9 red = Potential major top, example short setup
+**Example:** Shooting Star at supply zone + TD 9 red = Potential late-cycle exhaustion, example short setup
 
 ---
 

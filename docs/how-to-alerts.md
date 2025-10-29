@@ -49,8 +49,8 @@ Examples:
 - `IGN Event` - Potential long entry
 - `CAP Event` - Potential exit long
 - `BDN Event` - Potential short entry / exit long
-- `TD Event` - Bottom warning
-- `WRN Event` - Top warning
+- `TD Event` - Early-cycle warning
+- `WRN Event` - Late-cycle warning
 
 **Common Janus events:**
 - `New Support Level`
