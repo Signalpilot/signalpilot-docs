@@ -42,15 +42,15 @@ Not sure which indicator to start with? This table shows how all 7 indicators co
 ### 1. [Pentarch v1.0](pentarch-v89.md) - Potential Reversal Event Detection
 **Type:** Overlay | **Complexity:** Intermediate
 
-The ultimate potential reversal detector with 5 critical event types:
-- **TD** (Touchdown) - Oversold base formation
-- **IGN** (Ignition) - Potential bull reversal signal
-- **WRN** (Warning) - Early late-cycle detection
-- **CAP** (Climax) - Final thrust exhaustion
-- **BDN** (Breakdown) - Potential bear reversal signal
+Potential reversal detector with 5 distinct event types:
+- **TD** (Touchdown) - Early warning signal
+- **IGN** (Ignition) - Potential bullish signal
+- **WRN** (Warning) - Late-cycle warning
+- **CAP** (Climax) - Exhaustion signal
+- **BDN** (Breakdown) - Potential bearish signal
 
 **Best for:** Swing traders, potential reversal identification, multi-timeframe analysis
-**Key Features:** Regime awareness, volume burst detection, timeframe-adaptive thresholds
+**Key Features:** Market regime awareness, event detection, adaptive analysis
 
 [📖 Read Full Guide →](pentarch-v89.md)
 
@@ -59,15 +59,15 @@ The ultimate potential reversal detector with 5 critical event types:
 ### 2. [Janus Atlas v1.0](janus-atlas-v3122.md) - Comprehensive Levels System
 **Type:** Overlay | **Complexity:** Beginner-Friendly
 
-Your complete market infrastructure overlay with 39 possible level types:
-- HTF Levels (Monday/Daily/Weekly/Monthly/Quarterly)
-- Session Levels (Asian/European/North American)
-- VWAP Anchors (Current + Previous D/W/M/Q)
-- Volume Profile (POC/VAH/VAL)
-- Market Structure (HH/HL/LH/LL + BOS/CHoCH)
+Comprehensive market infrastructure overlay with multiple level types:
+- Higher timeframe levels
+- Session-based levels
+- Volume-weighted levels
+- Volume profile zones
+- Market structure tracking
 
 **Best for:** All trading styles - scalping to position trading
-**Key Features:** Smart label overlap detection, DataWindow visibility, auto-adapt pivots
+**Key Features:** Clean visual display, organized level management, adaptive features
 
 [📖 Read Full Guide →](janus-atlas-v3122.md)
 
@@ -76,20 +76,20 @@ Your complete market infrastructure overlay with 39 possible level types:
 ### 3. [Omnideck v1.0](omnideck-v170.md) - The Everything Indicator
 **Type:** Overlay (Multi-System) | **Complexity:** Beginner to Advanced
 
-10 professional indicators integrated into one optimized system:
-1. TD Sequential (DeMark exhaustion)
-2. Squeeze Detector (Bollinger/Keltner compression)
-3. Liquidity Sweeps (stop hunt detection)
-4. EMA Trio (50/100/200 with 8 event types)
-5. SuperTrend Consensus (multi-timeframe trend)
-6. BMSB (Bull Market Support Band)
-7. Regime Box (4-vote majority background)
-8. Supply/Demand Zones (automatic with quality badges)
-9. Reversal Candlesticks (16 classic patterns)
-10. Meta Tools (additional confluence features)
+Multiple professional indicators integrated into one system:
+1. Sequential exhaustion detection
+2. Volatility compression detector
+3. Liquidity sweep identification
+4. Moving average analysis
+5. Multi-timeframe trend detection
+6. Support band tracking
+7. Market regime identification
+8. Supply/demand zone mapping
+9. Candlestick pattern recognition
+10. Additional confluence tools
 
 **Best for:** Traders wanting comprehensive analysis without clutter
-**Key Features:** Individual system toggles, regime box zero gaps, BMSB fix
+**Key Features:** Individual system toggles, clean visual display, integrated features
 
 [📖 Read Full Guide →](omnideck-v170.md)
 
@@ -98,15 +98,15 @@ Your complete market infrastructure overlay with 39 possible level types:
 ### 4. [Augury Grid v1.0](augury-grid-v10.md) - Multi-Symbol Screener
 **Type:** Table-Based Screener | **Complexity:** Intermediate
 
-On-chart 8-symbol screener with intelligent confluence scoring:
-- MACD histogram zero-cross detection
-- 7-factor confluence scoring (0-100)
-- Quality tiers (Elite/Premium/Standard/Weak)
-- TP1 auto-calculation and P&L tracking
-- Signal age monitoring
+On-chart 8-symbol screener with intelligent quality scoring:
+- Momentum shift detection
+- Multi-factor quality scoring
+- Quality tier classification
+- Target calculation and P&L tracking
+- Signal freshness monitoring
 
 **Best for:** Multi-asset traders, swing traders, watchlist management
-**Key Features:** 168 security calls optimized, table-only (no chart plots), zero repaint
+**Key Features:** Efficient data handling, table-only display, zero repaint
 
 [📖 Read Full Guide →](augury-grid-v10.md)
 
@@ -116,17 +116,17 @@ On-chart 8-symbol screener with intelligent confluence scoring:
 **Type:** Separate Pane | **Complexity:** Intermediate to Advanced
 
 Complete volume-based trading system with full position management:
-- Elite spike detection (Z-score method)
-- Flow consistency analysis (directional agreement)
-- 4-vote regime detection (optimized weights)
-- Dual HTF confirmation
-- Volatility adaptation (HIGH/NORMAL/LOW)
-- Complete position management (entry/stop/T1/trailing/breakeven)
-- Risk calculator (automatic position sizing)
-- Strategy modes (Trend Following/Mean Reversion/Hybrid)
+- Significant volume spike detection
+- Directional flow analysis
+- Market regime identification
+- Higher timeframe confirmation
+- Volatility-adaptive features
+- Complete position management tools
+- Risk calculation features
+- Multiple strategy modes
 
 **Best for:** Volume traders, systematic traders, position management
-**Key Features:** Quality scoring 0-100 with stars, 5 alert types, adaptive thresholds
+**Key Features:** Quality scoring with visual indicators, multiple alert types, adaptive analysis
 
 [📖 Read Full Guide →](minimal-flow-v40-ultimate.md)
 
@@ -135,17 +135,17 @@ Complete volume-based trading system with full position management:
 ### 6. [Harmonic Oscillator v1.0 ADAPTIVE](harmonic-oscillator-v34-adaptive.md) - Composite Momentum System
 **Type:** Separate Pane | **Complexity:** Intermediate to Advanced
 
-Sophisticated voting-system composite of MACD, RSI, and StochRSI:
-- 3-component democratic voting (1, 2, or 3 vote consensus)
-- 0-100 normalized scale (robust winsorized Z-scores)
-- FlipGuard anti-whipsaw (cooldown + buffer + decay)
-- Divergence detection (regular + hidden, bull + bear)
-- HTF filter (optional alignment check)
-- Timeframe adaptation (Scalping/Intraday/Swing/Position modes)
-- Component status labels (real-time actionable intel)
+Composite momentum system combining multiple oscillators:
+- Multi-component voting consensus
+- Normalized scoring scale
+- Anti-whipsaw protection
+- Divergence detection (multiple types)
+- Higher timeframe filtering
+- Timeframe adaptation modes
+- Component status display
 
 **Best for:** Momentum traders, divergence traders, multi-indicator users
-**Key Features:** Conservative/Balanced/Aggressive modes, quality stars, 6 alert types
+**Key Features:** Multiple sensitivity modes, quality indicators, multiple alert types
 
 [📖 Read Full Guide →](harmonic-oscillator-v34-adaptive.md)
 
@@ -154,18 +154,18 @@ Sophisticated voting-system composite of MACD, RSI, and StochRSI:
 ### 7. [Plutus Flow v1.0](plutus-flow-v23.md) - Advanced OBV Analysis
 **Type:** Separate Pane | **Complexity:** Beginner to Advanced
 
-Sophisticated spike-clipped OBV with advanced divergence detection:
-- Spike-clipped OBV (3× cap prevents volume distortion)
-- Bollinger-style bands (±2σ around 20-SMA)
-- Z-score extremes (standard + robust MAD option)
-- Cross signals with FlipGuard Z-Gate 2.0
-- Extreme breach detection (discrete, on crossing into zone)
-- Pivot-based divergences (regular + hidden, bull + bear)
-- HTF alignment filter
-- Sequence gate (require recent extreme before cross)
+Advanced volume flow analysis with divergence detection:
+- Enhanced on-balance volume calculation
+- Dynamic volatility bands
+- Extreme condition detection
+- Cross signals with anti-whipsaw protection
+- Threshold breach identification
+- Pivot-based divergence analysis
+- Higher timeframe filtering
+- Sequential condition requirements
 
 **Best for:** Volume analysts, divergence traders, flow confirmation
-**Key Features:** Exclusive dots mode (hierarchical signals), divergence beams, 8 alert types
+**Key Features:** Clean signal hierarchy, divergence visualization, multiple alert types
 
 [📖 Read Full Guide →](plutus-flow-v23.md)
 
