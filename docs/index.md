@@ -54,7 +54,7 @@ Crystal-clear indicators that tell you <strong>WHEN</strong> to enter, <strong>W
 
 ---
 
-## 🚀 v6 Suite (Latest Production Indicators)
+## 🚀 Signal Pilot Suite (Latest Production Indicators)
 
 <div class="grid cards" markdown>
 
@@ -94,7 +94,7 @@ Crystal-clear indicators that tell you <strong>WHEN</strong> to enter, <strong>W
 
 Want to see how all 7 indicators work together?
 
-**[→ v6 Suite Overview](v6-suite-index/)** - Quick selector, recommended combinations, learning path
+**[→ Signal Pilot Suite Overview](v6-suite-index/)** - Quick selector, recommended combinations, learning path
 
 ---
 

@@ -1,8 +1,8 @@
 # Changelog (High Level)
 
-## 2025‑Q1 - Signal Pilot v6 Suite
+## 2025‑Q1 - Signal Pilot Signal Pilot Suite
 
-The v6 Suite represents a complete rebrand and modernization of the Signal Pilot indicator collection:
+The Signal Pilot Suite represents a complete rebrand and modernization of the Signal Pilot indicator collection:
 
 ### Core Indicators
 

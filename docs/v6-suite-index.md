@@ -1,6 +1,6 @@
-# Signal Pilot v6 Suite - Complete Indicator Collection
+# Signal Pilot Signal Pilot Suite - Complete Indicator Collection
 
-Welcome to the **Signal Pilot v6 Suite** - 7 production-ready, non-repainting indicators designed for serious traders. Each indicator is built on the SP Protocol: zero repaint, complete transparency, and institutional-grade analysis.
+Welcome to the **Signal Pilot Signal Pilot Suite** - 7 production-ready, non-repainting indicators designed for serious traders. Each indicator is built on the SP Protocol: zero repaint, complete transparency, and institutional-grade analysis.
 
 ---
 
@@ -379,4 +379,4 @@ Choose your path:
 
 ---
 
-*Last Updated: October 2025 | v6 Suite Complete*
+*Last Updated: October 2025 | Signal Pilot Suite Complete*
