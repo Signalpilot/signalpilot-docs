@@ -98,12 +98,81 @@ Want to see how all 7 indicators work together?
 
 ---
 
-## ✈️ New Here?
+## 👋 New User? Start Here!
 
-- **[⚡ Quick Start Guide](start-quick.md)** — Get your first signal in 5 minutes
-- **[Suite Workflow](ref-workflow.md)** — How the indicators connect
-- **[TradingView Alerts](how-to-alerts.md)** — Setup in 90 seconds
-- **[Glossary](ref-glossary.md)** — Quick terms reference
+<div style="background: linear-gradient(135deg, #345CFF15, #0aa1d515); border-radius: 16px; padding: 2.5rem; margin-bottom: 2rem; border-left: 4px solid var(--md-primary-fg-color);">
+
+### 🚀 Complete Beginner
+
+**Never used Signal Pilot before?** Follow this path:
+
+1. **[Prerequisites](start-prerequisites.md)** - Make sure you have everything you need (5 min)
+2. **[⚡ Quick Start Guide](start-quick.md)** - Get your first signal in 5 minutes
+3. **[Onboarding Checklist](start-onboarding.md)** - Your first 7 days step-by-step
+4. **[How to Set Alerts](how-to-alerts.md)** - Never miss a signal (3 min setup)
+
+### 📊 Already Have Indicators
+
+**Just need to learn how to use them?**
+
+- **[Quick Start Guide](start-quick.md)** - Master Pentarch in 5 minutes
+- **[Comparison Guide](ref-comparison.md)** - Which indicators should you use?
+- **[Trading Workflow](ref-workflow.md)** - Complete trading process
+- **[Best Practices](ref-best-practices.md)** - Pro tips and guidelines
+
+### 🆘 Having Issues?
+
+- **[Troubleshooting Guide](ref-troubleshooting.md)** - Fix common problems
+- **[FAQ](about-faq.md)** - 20+ frequently asked questions
+- **[Support](about-support.md)** - Contact us
+
+</div>
+
+---
+
+## 📌 Most Common Tasks
+
+**Quick links to what traders do most:**
+
+<div class="grid cards" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));" markdown>
+
+- **🔔 Set Up Alerts**
+
+  Get notified when signals fire
+
+  [Alert Guide →](how-to-alerts.md)
+
+- **📖 Understand Signals**
+
+  Learn what TD, IGN, CAP, BDN mean
+
+  [Glossary →](ref-glossary.md)
+
+- **🎯 Choose Indicators**
+
+  Which indicators match your style?
+
+  [Comparison Guide →](ref-comparison.md)
+
+- **❓ Get Quick Answers**
+
+  Common questions answered
+
+  [FAQ →](about-faq.md)
+
+- **📈 Learn the Workflow**
+
+  Complete trading process
+
+  [Trading Workflow →](ref-workflow.md)
+
+- **🔧 Fix Problems**
+
+  Troubleshoot common issues
+
+  [Troubleshooting →](ref-troubleshooting.md)
+
+</div>
 
 ---
 

@@ -128,6 +128,153 @@ Price: $35,000, falling for 2 weeks
 
 ---
 
+## 🚫 Common Mistakes to Avoid
+
+### Mistake #1: Entering on TD (Blue Signal)
+
+**❌ Wrong:** "TD appeared, I'm buying now!"
+**✅ Right:** "TD appeared, I'm watching for IGN confirmation"
+
+**Why:** TD is a warning, not an entry. Wait for IGN to confirm the reversal.
+
+---
+
+### Mistake #2: Not Using "Once Per Bar Close" for Alerts
+
+**❌ Wrong:** Alert fires mid-bar, you enter, signal disappears
+**✅ Right:** Alert set to "Once Per Bar Close", only confirmed signals notify you
+
+**Fix:**
+- Delete incorrect alerts
+- Create new ones with "Once Per Bar Close"
+- See [Alert Setup Guide](how-to-alerts.md)
+
+---
+
+### Mistake #3: Trading Without Stop Losses
+
+**❌ Wrong:** "I'll just watch it and exit if it goes against me"
+**✅ Right:** Set stop loss IMMEDIATELY when entering
+
+**Where to place stop:**
+- **Longs:** Below IGN candle low or below TD low
+- **Shorts:** Above BDN candle high or above CAP high
+
+**Rule:** Never enter without knowing your exit price if wrong.
+
+---
+
+### Mistake #4: Ignoring Key Levels
+
+**❌ Wrong:** Taking every IGN signal anywhere on the chart
+**✅ Right:** Only taking IGN signals at major support levels
+
+**Why:**
+- IGN at support = 70%+ success
+- IGN in middle of nowhere = 40% success
+- Use Janus Atlas to find key levels
+
+**Example:**
+- ❌ IGN appears randomly at $50,000 → Skip
+- ✅ IGN appears at major support $48,500 → Strong setup
+
+---
+
+### Mistake #5: Using Too Low Timeframe Initially
+
+**❌ Wrong:** Starting on 5m or 15m charts as a beginner
+**✅ Right:** Start with Daily or 4H charts
+
+**Why:**
+- Lower timeframes = more noise
+- More signals = harder to learn which are good
+- Higher timeframes = clearer, higher quality signals
+
+**Beginner progression:**
+1. Start: Daily chart (cleanest)
+2. Then: 4H chart (still clean)
+3. Then: 1H chart (moderate)
+4. Finally: 15m-30m (only when experienced)
+
+---
+
+### Mistake #6: Revenge Trading After a Loss
+
+**❌ Wrong:** Signal failed, immediately taking next signal to "make it back"
+**✅ Right:** Take a break after 2 losses, review what went wrong
+
+**Why:**
+- Emotional trading = poor decisions
+- Not all signals win (even good ones)
+- Need clear head for next trade
+
+**Rule:** If you lose 2 trades in a day, stop trading until tomorrow.
+
+---
+
+### Mistake #7: Risking Too Much Per Trade
+
+**❌ Wrong:** Risking 10-20% of account on one trade
+**✅ Right:** Risk maximum 1-2% per trade
+
+**Example:**
+- $10,000 account
+- Risk 2% = $200 maximum risk per trade
+- Entry: $50, Stop: $48, Risk per share: $2
+- Position: $200 / $2 = 100 shares maximum
+
+**Why:** Proper position sizing protects you from blowing up your account.
+
+---
+
+### Mistake #8: Expecting 100% Win Rate
+
+**❌ Wrong:** "This signal should work every time!"
+**✅ Right:** "Even with 50-60% win rate, I'm profitable with good R/R"
+
+**Reality:**
+- No indicator is perfect
+- 50-60% win rate is excellent
+- Profitable trading = win rate × average R/R
+- 50% win rate + 3:1 R/R = very profitable
+
+**Mindset:** Focus on process, not individual trade outcomes.
+
+---
+
+### Mistake #9: Not Paper Trading First
+
+**❌ Wrong:** Reading guide, immediately trading live with real money
+**✅ Right:** Paper trade for 2-4 weeks until consistently profitable
+
+**Paper trading checklist:**
+- [ ] Execute 20+ paper trades
+- [ ] Track win rate and R/R
+- [ ] Follow rules consistently
+- [ ] Understand why trades win/lose
+- [ ] Profitable over 2-4 weeks
+
+**Only then:** Start live with MINIMUM position sizes.
+
+---
+
+### Mistake #10: Overcomplicating with Too Many Indicators
+
+**❌ Wrong:** Loading all 7 Signal Pilot indicators + 10 other indicators on one chart
+**✅ Right:** Start with Pentarch ONLY, add Janus later, keep it simple
+
+**Why:**
+- More indicators = analysis paralysis
+- Conflicting signals = confusion
+- Simple = clarity
+
+**Beginner setup:**
+- Week 1-4: Pentarch only
+- Week 5-8: Pentarch + Janus Atlas
+- Week 9+: Add ONE more if needed (Minimal Flow OR Harmonic)
+
+---
+
 ## ✅ What's Next?
 
 ### Master Pentarch:

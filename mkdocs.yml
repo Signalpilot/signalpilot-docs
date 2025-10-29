@@ -73,7 +73,16 @@ extra_javascript:
 
 nav:
   - Home: index.md
-  - "⚡ Quick Start": start-quick.md
+
+  - "🚀 Getting Started":
+    - "⚡ Quick Start (5 min)": start-quick.md
+    - "Prerequisites": start-prerequisites.md
+    - "Onboarding Checklist (7 days)": start-onboarding.md
+
+  - "📖 How-To Guides":
+    - "Set Up Alerts": how-to-alerts.md
+    - "Use Webhooks": how-to-webhooks.md
+    - "Use Screener": how-to-screener.md
 
   - "🚀 v6 Suite (Latest)":
     - "📚 Suite Overview": v6-suite-index/
@@ -85,12 +94,15 @@ nav:
     - "Harmonic Oscillator v3.4 — Composite Momentum": harmonic-oscillator-v34-adaptive.md
     - "Plutus Flow v2.3 — Advanced OBV": plutus-flow-v23.md
 
-  - Reference:
-      - "Suite Workflow (Bias → Timing)": ref-workflow.md
-      - "Non-Repainting Policy": ref-non-repaint.md
-      - "Glossary": ref-glossary.md
+  - "📚 Reference":
+    - "Trading Workflow (Bias → Timing)": ref-workflow.md
+    - "Indicator Comparison Guide": ref-comparison.md
+    - "Best Practices & Pro Tips": ref-best-practices.md
+    - "Non-Repainting Policy": ref-non-repaint.md
+    - "Glossary": ref-glossary.md
+    - "Troubleshooting Guide": ref-troubleshooting.md
 
-  - About:
+  - "ℹ️ About":
     - "FAQ": about-faq.md
     - "Support & Access": about-support.md
     - "Changelog (high level)": about-changelog.md
