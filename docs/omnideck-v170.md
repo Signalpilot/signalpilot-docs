@@ -15,10 +15,10 @@ Omnideck is the **ultimate all-in-one indicator** - 10 professional trading syst
 **What you see:** Green numbers 1-9 below bars, Red numbers 1-9 above bars
 
 **What it means:**
-- **Green 9** = Price has been falling too long, reversal UP likely
-- **Red 9** = Price has been rising too long, reversal DOWN likely
+- **Green 9** = Price has been falling too long, potential reversal UP likely
+- **Red 9** = Price has been rising too long, potential reversal DOWN likely
 
-**What to do:** Wait for 9, look for reversal confirmation, then enter opposite direction
+**What to do:** Wait for 9, look for potential reversal confirmation, then enter opposite direction
 
 **Example:** Price falling for 9 bars (shows green 9 at $100) → Look for long entry, potential bottom forming
 

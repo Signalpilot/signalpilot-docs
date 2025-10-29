@@ -91,7 +91,7 @@ Each indicator in the v6 Suite serves a specific purpose. Combine 2-3 indicators
 
 **Workflow:**
 1. **Run Augury Grid** on your watchlist
-2. **Filter for Elite/Premium signals** (⭐⭐⭐ or ⭐⭐)
+2. **Filter for potential Elite/Premium signals** (⭐⭐⭐ or ⭐⭐)
 3. **Switch to that symbol's chart**
 4. **Check Pentarch** - Recent IGN or setup forming?
 5. **Check Janus Atlas** - Key level nearby?
@@ -189,14 +189,14 @@ Each indicator in the v6 Suite serves a specific purpose. Combine 2-3 indicators
 **Setup:** 1H charts, crypto watchlist
 
 **Step 1: Augury Grid Scan**
-- Grid shows ETH/USD with **Elite signal** (87 score, ⭐⭐⭐)
+- Grid shows ETH/USD with **potential Elite signal** (87 score, ⭐⭐⭐)
 - Signal age: 2 bars (fresh)
 - P&L: +0.5% (working)
 
 **Step 2: Switch to ETH Chart**
 - Load Pentarch on ETH/USD 1H
-- Pentarch shows **TD** event 3 bars ago (base formed)
-- Now seeing bullish regime flip (green background)
+- Pentarch shows **TD** event 3 bars ago (potential base formed)
+- Now seeing potential bullish regime flip (green background)
 
 **Step 3: Janus Atlas Levels**
 - Current price: $2,340

@@ -145,11 +145,11 @@ One huge volume bar (earnings, news) can permanently skew OBV, hiding subtle cha
 ### Step 3: Trade Divergences (Highest Probability)
 
 **The setup:**
-1. Wait for divergence label (BULL DIV or BEAR DIV)
-2. Confirm divergence is at key level (use Janus Atlas for levels)
-3. Wait for price reversal confirmation (candle pattern, cross signal)
-4. Enter in divergence direction
-5. Stop beyond the divergence pivot
+1. Wait for potential divergence label (BULL DIV or BEAR DIV)
+2. Confirm potential divergence is at key level (use Janus Atlas for levels)
+3. Wait for potential price reversal confirmation (candle pattern, cross signal)
+4. Example entry in divergence direction
+5. Example stop beyond the divergence pivot
 
 **Win rate:** 70-80% when at key levels
 

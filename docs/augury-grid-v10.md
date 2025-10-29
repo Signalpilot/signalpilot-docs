@@ -116,9 +116,9 @@ Symbol 7-8: Daily (futures position)
 ### Step 3: Set Quality Filter
 
 **Minimum Confluence Score** (default: 40)
-- Set to 60+ = Only see Premium/Elite signals
-- Set to 40+ = See all decent signals
-- Higher = Fewer but better signals
+- Set to 60+ = Only see potential Premium/Elite signals
+- Set to 40+ = See all decent potential signals
+- Higher = Fewer but potentially better signals
 
 **ADX Threshold** (default: 20)
 - Minimum trend strength required
@@ -130,7 +130,7 @@ Symbol 7-8: Daily (futures position)
 
 ### Workflow: Active Scanning
 
-1. **Glance at Grid** - Look for ⭐⭐⭐ Elite or ⭐⭐ Premium signals
+1. **Glance at Grid** - Look for ⭐⭐⭐ potential Elite or ⭐⭐ potential Premium signals
 2. **Check AGE** - Prefer fresh signals (0-10 bars)
 3. **Click Symbol** - Load that chart to verify
 4. **Confirm Setup** - Check levels, structure, context
@@ -149,9 +149,9 @@ Symbol 7-8: Daily (futures position)
 - Price: $64,200, TP1: $65,800
 
 **You:**
-1. See the Elite signal (91 score, fresh age)
+1. See the potential Elite signal (91 score, fresh age)
 2. Click to load BTC chart
-3. Verify: Price at support + volume spike + no major resistance nearby
+3. Verify: Price at support + potential volume spike + no major resistance nearby
 4. Enter long at $64,300
 5. Set TP1 at $65,800 (from Grid)
 6. Grid shows P&L updating in real-time
@@ -241,8 +241,8 @@ Symbol 7-8: Daily (futures position)
 - 40-59 = Okay
 - <40 = Skip
 
-**Q: Should I trade every Elite signal?**
-**A:** Not necessarily. Elite = high quality, but still check:
+**Q: Should I trade every potential Elite signal?**
+**A:** Not necessarily. Elite = potentially high quality, but still check:
 - Market context
 - Your trading plan
 - Risk management
@@ -252,7 +252,7 @@ No system is 100%.
 **A:** Every time a bar closes on the configured timeframes. If Symbol 1 is set to 15m, it updates every 15 minutes.
 
 **Q: Can I get alerts?**
-**A:** No (table-based indicators can't create alerts). Workaround: When you see Elite signal, set manual alert on that symbol's chart.
+**A:** No (table-based indicators can't create alerts). Workaround: When you see potential Elite signal, set manual alert on that symbol's chart.
 
 **Q: Can I scan different timeframes for same symbol?**
 **A:** Yes! Example:

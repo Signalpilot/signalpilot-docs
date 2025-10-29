@@ -286,7 +286,7 @@ All 7 indicators are **SP Protocol v6** compliant:
 
 ### Use Quality Filters
 - Most indicators have quality scoring/tiers
-- Elite/Premium signals = Take these
+- Potential Elite/Premium signals = Take these
 - Standard/Weak = Skip unless perfect confluence
 - Quality over quantity always wins
 

@@ -264,7 +264,7 @@ Enable HTF filter to only take signals aligned with higher timeframe:
 - **Hidden divergences** = Best continuation signals
 Both are valuable in different contexts.
 
-**Q: How often do Elite signals appear?**
+**Q: How often do potential Elite signals appear?**
 **A:** Rare! Elite needs 3 votes + HTF + divergence. Expect:
 - 1H chart: 1-2 per week
 - Daily chart: 1-2 per month

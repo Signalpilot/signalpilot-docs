@@ -289,7 +289,7 @@ Each signal gets rated 0-100:
 - Day traders: 2.5 (balanced)
 - Swing traders: 3.0 (fewer, stronger)
 
-**Q: How often do Elite signals appear?**
+**Q: How often do potential Elite signals appear?**
 **A:**
 - 15m chart: 1-2 per day
 - 1H chart: 2-4 per week
