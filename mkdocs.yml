@@ -73,6 +73,7 @@ extra_javascript:
 
 nav:
   - Home: index.md
+  - "⚡ Quick Start": start-quick.md
 
   - "🚀 v6 Suite (Latest)":
     - "📚 Suite Overview": v6-suite-index/

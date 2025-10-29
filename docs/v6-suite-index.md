@@ -4,6 +4,39 @@ Welcome to the **Signal Pilot v6 Suite** - 7 production-ready, non-repainting in
 
 ---
 
+## 📊 Quick Comparison - Choose Your Indicators
+
+Not sure which indicator to start with? This table shows how all 7 indicators compare:
+
+| Indicator | Type | Complexity | Best For | Key Signals | Learn Time |
+|-----------|------|------------|----------|-------------|------------|
+| **[Pentarch v8.9](pentarch-v89.md)** | Overlay | ⭐⭐ Medium | Swing traders, potential reversals | 5 events (TD/IGN/WRN/CAP/BDN) | 15 min |
+| **[Janus Atlas v3.12.2](janus-atlas-v3122.md)** | Overlay | ⭐ Easy | All styles, key levels | 39 level types (HTF/Session/VWAP/Structure) | 10 min |
+| **[Omnideck v1.7.0](omnideck-v170.md)** | Overlay | ⭐⭐⭐ Advanced | All-in-one users | 10 systems combined (TD/Squeeze/EMAs/etc.) | 30 min |
+| **[Augury Grid v1.0](augury-grid-v10.md)** | Table | ⭐⭐ Medium | Multi-asset scanners | 8-symbol screener with quality scores | 20 min |
+| **[Minimal Flow v4.0](minimal-flow-v40-ultimate.md)** | Overlay | ⭐⭐ Medium | Volume traders, scalpers | Volume spikes + position management | 15 min |
+| **[Harmonic Oscillator v3.4](harmonic-oscillator-v34-adaptive.md)** | Oscillator | ⭐⭐ Medium | Momentum traders | 3-in-1 composite (MACD+RSI+StochRSI) | 20 min |
+| **[Plutus Flow v2.3](plutus-flow-v23.md)** | Oscillator | ⭐⭐ Medium | Volume analysts | Advanced OBV + divergence detection | 15 min |
+
+### 🎯 Decision Guide
+
+**Just Starting?**
+→ **[Janus Atlas](janus-atlas-v3122.md)** (easiest) or **[Pentarch](pentarch-v89.md)** (most impactful)
+
+**Want Everything?**
+→ **[Omnideck](omnideck-v170.md)** (10 systems in one)
+
+**Scan Multiple Symbols?**
+→ **[Augury Grid](augury-grid-v10.md)** (8-symbol screener)
+
+**Volume-Focused?**
+→ **[Minimal Flow](minimal-flow-v40-ultimate.md)** + **[Plutus Flow](plutus-flow-v23.md)** (complete volume analysis)
+
+**Oscillator Fan?**
+→ **[Harmonic Oscillator](harmonic-oscillator-v34-adaptive.md)** (3 oscillators combined)
+
+---
+
 ## 🎯 The Complete Suite
 
 ### 1. [Pentarch v8.9](pentarch-v89.md) - Potential Reversal Event Detection

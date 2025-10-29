@@ -7,7 +7,10 @@ Crystal-clear indicators that tell you <strong>WHEN</strong> to enter, <strong>W
 <div style="text-align: center; padding: 3rem 1.5rem; background: linear-gradient(135deg, #345CFF, #0aa1d5); border-radius: 20px; margin-bottom: 3rem; box-shadow: 0 8px 24px rgba(52, 92, 255, 0.3);">
   <h2 style="color: white; font-size: 2.2rem; margin-bottom: 1rem; font-family: var(--sp-brand-font);">7 Production-Ready Indicators</h2>
   <p style="color: rgba(255,255,255,0.95); font-size: 1.2rem; margin-bottom: 1.5rem;">Non-repainting. Alert-ready. Battle-tested.</p>
-  <a href="v6-suite-index/" style="display: inline-block; padding: 0.85rem 2.5rem; background: white; color: #345CFF; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: all 0.2s;">Explore the Suite →</a>
+  <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+    <a href="start-quick/" style="display: inline-block; padding: 0.85rem 2.5rem; background: white; color: #345CFF; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: all 0.2s;">⚡ Quick Start (5 min)</a>
+    <a href="v6-suite-index/" style="display: inline-block; padding: 0.85rem 2.5rem; background: rgba(255,255,255,0.15); color: white; border: 2px solid white; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 1.1rem; transition: all 0.2s;">Explore the Suite →</a>
+  </div>
 </div>
 
 <div class="grid cards" markdown>
@@ -97,6 +100,7 @@ Want to see how all 7 indicators work together?
 
 ## ✈️ New Here?
 
+- **[⚡ Quick Start Guide](start-quick.md)** — Get your first signal in 5 minutes
 - **[Suite Workflow](ref-workflow.md)** — How the indicators connect
 - **[TradingView Alerts](how-to-alerts.md)** — Setup in 90 seconds
 - **[Glossary](ref-glossary.md)** — Quick terms reference
