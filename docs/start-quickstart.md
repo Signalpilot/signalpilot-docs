@@ -17,7 +17,7 @@ Think of it as your market compass.
 
 | Module | Purpose | Typical Use |
 |:--|:--|:--|
-| **[Momentum Regime (MACD+)](spp-macd-plus.md)** | Detects regime flips and momentum phases using adaptive color zones. | Confirm whether the current leg is impulsive or corrective. |
+| **[Momentum Regime (MACD+)](spp-macd-plus.md)** | Detects potential regime flips and momentum phases using adaptive color zones. | Confirm whether the current leg is impulsive or corrective. |
 | **[Trend Stack (EMA 50/100/200 Pro)](sp-ema-trio-pro.md)** | Tracks medium- and long-term trend alignment with GC/DC and pullback logic. | Identify “stacked” trending conditions and disciplined re-entries. |
 | **[Momentum Matrix (Panel Pro)](sp-oscillator-matrix.md)** | Aggregates multiple oscillators into a single normalized panel. | Quick visual scan of momentum strength across timeframes. |
 

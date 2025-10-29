@@ -129,15 +129,15 @@ When price and oscillator disagree = Reversal coming
 
 **For longs:**
 1. Wait for composite to drop below 20 (extreme oversold)
-2. Watch for bullish signal (cross above 30)
+2. Watch for potential bullish signal (cross above 30)
 3. Verify 2-3 votes (check component status if shown)
-4. Enter long
+4. Example entry long
 
 **For shorts:**
 1. Wait for composite above 80 (extreme overbought)
-2. Watch for bearish signal (cross below 70)
+2. Watch for potential bearish signal (cross below 70)
 3. Verify 2-3 votes
-4. Enter short
+4. Example entry short
 
 ---
 
@@ -278,11 +278,11 @@ Both are valuable in different contexts.
 
 | Composite Level | Meaning | Action |
 |----------------|---------|--------|
-| 0-20 | Extreme oversold | Watch for bullish signal |
-| 20-30 | Oversold | Bullish signals here are good |
+| 0-20 | Extreme oversold | Watch for potential bullish signal |
+| 20-30 | Oversold | Potential bullish signals here are good |
 | 30-70 | Neutral | Wait for extremes |
-| 70-80 | Overbought | Bearish signals here are good |
-| 80-100 | Extreme overbought | Watch for bearish signal |
+| 70-80 | Overbought | Potential bearish signals here are good |
+| 80-100 | Extreme overbought | Watch for potential bearish signal |
 
 | Signal Type | Votes | Win Rate | Action |
 |------------|-------|----------|--------|

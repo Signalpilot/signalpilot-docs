@@ -208,7 +208,7 @@ Sophisticated spike-clipped OBV with advanced divergence detection:
 
 ### The Position Trader Setup
 **Pentarch (Weekly) + Janus Atlas (Monthly/Quarterly) + Harmonic Oscillator (Conservative mode)**
-- Major trend changes only, institutional levels, ultra-filtered momentum
+- Major potential trend changes only, institutional levels, ultra-filtered momentum
 - **Timeframe:** Weekly/Monthly
 
 ---
