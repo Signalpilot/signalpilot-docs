@@ -1,4 +1,4 @@
-# Omnideck v1.7.0 - 10 Indicators in One
+# Omnideck v1.0 - 10 Indicators in One
 
 ## What Does It Do?
 

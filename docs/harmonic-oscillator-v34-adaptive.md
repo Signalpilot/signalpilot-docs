@@ -1,4 +1,4 @@
-# Harmonic Oscillator v3.4 ADAPTIVE - 3-in-1 Momentum Indicator
+# Harmonic Oscillator v1.0 ADAPTIVE - 3-in-1 Momentum Indicator
 
 ## What Does It Do?
 

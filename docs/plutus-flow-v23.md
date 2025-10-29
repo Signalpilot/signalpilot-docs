@@ -1,4 +1,4 @@
-# Plutus Flow v2.3 - Smart OBV Analysis
+# Plutus Flow v1.0 - Smart OBV Analysis
 
 ## What Does It Do?
 

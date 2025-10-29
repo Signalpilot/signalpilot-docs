@@ -1,4 +1,4 @@
-# Janus Atlas v3.12.2 - Your Market Map
+# Janus Atlas v1.0 - Your Market Map
 
 ## What Does It Do?
 

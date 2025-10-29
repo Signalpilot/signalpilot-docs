@@ -1,4 +1,4 @@
-# Pentarch v8.9 - Potential Reversal Signals Made Simple
+# Pentarch v1.0 - Potential Reversal Signals Made Simple
 
 ## What Does It Do?
 

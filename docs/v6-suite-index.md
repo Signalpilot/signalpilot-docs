@@ -10,13 +10,13 @@ Not sure which indicator to start with? This table shows how all 7 indicators co
 
 | Indicator | Type | Complexity | Best For | Key Signals | Learn Time |
 |-----------|------|------------|----------|-------------|------------|
-| **[Pentarch v8.9](pentarch-v89.md)** | Overlay | ⭐⭐ Medium | Swing traders, potential reversals | 5 events (TD/IGN/WRN/CAP/BDN) | 15 min |
-| **[Janus Atlas v3.12.2](janus-atlas-v3122.md)** | Overlay | ⭐ Easy | All styles, key levels | 39 level types (HTF/Session/VWAP/Structure) | 10 min |
-| **[Omnideck v1.7.0](omnideck-v170.md)** | Overlay | ⭐⭐⭐ Advanced | All-in-one users | 10 systems combined (TD/Squeeze/EMAs/etc.) | 30 min |
+| **[Pentarch v1.0](pentarch-v89.md)** | Overlay | ⭐⭐ Medium | Swing traders, potential reversals | 5 events (TD/IGN/WRN/CAP/BDN) | 15 min |
+| **[Janus Atlas v1.0](janus-atlas-v3122.md)** | Overlay | ⭐ Easy | All styles, key levels | 39 level types (HTF/Session/VWAP/Structure) | 10 min |
+| **[Omnideck v1.0](omnideck-v170.md)** | Overlay | ⭐⭐⭐ Advanced | All-in-one users | 10 systems combined (TD/Squeeze/EMAs/etc.) | 30 min |
 | **[Augury Grid v1.0](augury-grid-v10.md)** | Table | ⭐⭐ Medium | Multi-asset scanners | 8-symbol screener with quality scores | 20 min |
-| **[Minimal Flow v4.0](minimal-flow-v40-ultimate.md)** | Overlay | ⭐⭐ Medium | Volume traders, scalpers | Volume spikes + position management | 15 min |
-| **[Harmonic Oscillator v3.4](harmonic-oscillator-v34-adaptive.md)** | Oscillator | ⭐⭐ Medium | Momentum traders | 3-in-1 composite (MACD+RSI+StochRSI) | 20 min |
-| **[Plutus Flow v2.3](plutus-flow-v23.md)** | Oscillator | ⭐⭐ Medium | Volume analysts | Advanced OBV + divergence detection | 15 min |
+| **[Minimal Flow v1.0](minimal-flow-v40-ultimate.md)** | Overlay | ⭐⭐ Medium | Volume traders, scalpers | Volume spikes + position management | 15 min |
+| **[Harmonic Oscillator v1.0](harmonic-oscillator-v34-adaptive.md)** | Oscillator | ⭐⭐ Medium | Momentum traders | 3-in-1 composite (MACD+RSI+StochRSI) | 20 min |
+| **[Plutus Flow v1.0](plutus-flow-v23.md)** | Oscillator | ⭐⭐ Medium | Volume analysts | Advanced OBV + divergence detection | 15 min |
 
 ### 🎯 Decision Guide
 
@@ -39,7 +39,7 @@ Not sure which indicator to start with? This table shows how all 7 indicators co
 
 ## 🎯 The Complete Suite
 
-### 1. [Pentarch v8.9](pentarch-v89.md) - Potential Reversal Event Detection
+### 1. [Pentarch v1.0](pentarch-v89.md) - Potential Reversal Event Detection
 **Type:** Overlay | **Complexity:** Intermediate
 
 The ultimate potential reversal detector with 5 critical event types:
@@ -56,7 +56,7 @@ The ultimate potential reversal detector with 5 critical event types:
 
 ---
 
-### 2. [Janus Atlas v3.12.2](janus-atlas-v3122.md) - Comprehensive Levels System
+### 2. [Janus Atlas v1.0](janus-atlas-v3122.md) - Comprehensive Levels System
 **Type:** Overlay | **Complexity:** Beginner-Friendly
 
 Your complete market infrastructure overlay with 39 possible level types:
@@ -73,7 +73,7 @@ Your complete market infrastructure overlay with 39 possible level types:
 
 ---
 
-### 3. [Omnideck v1.7.0](omnideck-v170.md) - The Everything Indicator
+### 3. [Omnideck v1.0](omnideck-v170.md) - The Everything Indicator
 **Type:** Overlay (Multi-System) | **Complexity:** Beginner to Advanced
 
 10 professional indicators integrated into one optimized system:
@@ -89,7 +89,7 @@ Your complete market infrastructure overlay with 39 possible level types:
 10. Meta Tools (additional confluence features)
 
 **Best for:** Traders wanting comprehensive analysis without clutter
-**Key Features:** Individual system toggles, regime box zero gaps (v1.7.0), BMSB fix (v1.7.0)
+**Key Features:** Individual system toggles, regime box zero gaps, BMSB fix
 
 [📖 Read Full Guide →](omnideck-v170.md)
 
@@ -112,7 +112,7 @@ On-chart 8-symbol screener with intelligent confluence scoring:
 
 ---
 
-### 5. [Minimal Flow v4.0 Ultimate](minimal-flow-v40-ultimate.md) - Advanced Volume Flow Strategy
+### 5. [Minimal Flow v1.0 Ultimate](minimal-flow-v40-ultimate.md) - Advanced Volume Flow Strategy
 **Type:** Separate Pane | **Complexity:** Intermediate to Advanced
 
 Complete volume-based trading system with full position management:
@@ -132,7 +132,7 @@ Complete volume-based trading system with full position management:
 
 ---
 
-### 6. [Harmonic Oscillator v3.4 ADAPTIVE](harmonic-oscillator-v34-adaptive.md) - Composite Momentum System
+### 6. [Harmonic Oscillator v1.0 ADAPTIVE](harmonic-oscillator-v34-adaptive.md) - Composite Momentum System
 **Type:** Separate Pane | **Complexity:** Intermediate to Advanced
 
 Sophisticated voting-system composite of MACD, RSI, and StochRSI:
@@ -151,7 +151,7 @@ Sophisticated voting-system composite of MACD, RSI, and StochRSI:
 
 ---
 
-### 7. [Plutus Flow v2.3](plutus-flow-v23.md) - Advanced OBV Analysis
+### 7. [Plutus Flow v1.0](plutus-flow-v23.md) - Advanced OBV Analysis
 **Type:** Separate Pane | **Complexity:** Beginner to Advanced
 
 Sophisticated spike-clipped OBV with advanced divergence detection:
