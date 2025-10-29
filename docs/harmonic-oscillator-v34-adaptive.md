@@ -222,7 +222,7 @@ Enable HTF filter to only take signals aligned with higher timeframe:
 
 **How to set:**
 1. Click alarm icon
-2. Select "Harmonic Oscillator v3.4"
+2. Select "Harmonic Oscillator v1.0"
 3. Choose alert
 4. Set to "Once Per Bar Close"
 

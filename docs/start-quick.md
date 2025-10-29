@@ -171,7 +171,7 @@ Price: $35,000, falling for 2 weeks
 **Common Questions:**
 - **"Signals appearing then disappearing?"** → Make sure alerts are set to "Once Per Bar Close"
 - **"Too many signals?"** → Try higher timeframes (4H, Daily)
-- **"Not enough signals?"** → Check you have correct indicator version (v8.9)
+- **"Not enough signals?"** → Check you have correct indicator version (v1.0)
 
 **Resources:**
 - **[FAQ](about-faq.md)** - Common questions answered

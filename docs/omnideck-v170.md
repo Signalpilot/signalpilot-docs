@@ -248,7 +248,7 @@ Customize to your preference, but keep it clean
 
 **How to set:**
 1. Click alarm icon
-2. Select "Omnideck v1.7.0"
+2. Select "Omnideck v1.0"
 3. Choose which signal
 4. Set to "Once Per Bar Close"
 

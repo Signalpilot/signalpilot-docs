@@ -203,7 +203,7 @@ You don't need to change much. Just show/hide what you use:
 
 **How to set:**
 1. Click alarm icon on TradingView
-2. Select "Janus Atlas v3.12.2"
+2. Select "Janus Atlas v1.0"
 3. Choose the level (Daily High or Daily Low)
 4. Set to "Once Per Bar Close"
 

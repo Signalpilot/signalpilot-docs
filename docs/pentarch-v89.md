@@ -155,7 +155,7 @@ Most traders just use the default settings.
 
 **How to set:**
 1. Click the alarm icon on TradingView
-2. Select "Pentarch v8.9"
+2. Select "Pentarch v1.0"
 3. Choose which event
 4. Set it to "Once Per Bar Close"
 

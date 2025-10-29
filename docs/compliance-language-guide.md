@@ -396,10 +396,10 @@ Trading involves substantial risk of loss. Past performance ≠ future results.
 ### ⚠️ CRITICAL PRIORITY (Update First - Day 1-2)
 - [ ] **TradingView indicator descriptions** (ALL 7 indicators)
   - Pentarch v1.0
-  - Janus Atlas v3.12.2
-  - Omnideck v1.7.0
+  - Janus Atlas v1.0
+  - Omnideck v1.0
   - Augury Grid v1.0
-  - Minimal Flow v4.0
+  - Minimal Flow v1.0
   - Harmonic Oscillator v1.0
   - Plutus Flow v1.0
 - [ ] **User onboarding materials** (welcome emails, getting started guides)
