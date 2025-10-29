@@ -96,7 +96,7 @@ Master Signal Pilot indicators with these proven strategies from experienced tra
 
 ### Pentarch Reversal Signals
 
-#### TD (Touchdown) - Blue
+#### TD (Touchdown)
 
 **Best practice:**
 - ⚠️ DO NOT ENTER on TD
@@ -109,7 +109,7 @@ Entering on TD thinking it's same as IGN. It's not—TD is warning, IGN is entry
 
 ---
 
-#### IGN (Ignition) - Green
+#### IGN (Ignition)
 
 **Best practice:**
 - ✅ Primary long entry signal
@@ -138,7 +138,7 @@ Entering on TD thinking it's same as IGN. It's not—TD is warning, IGN is entry
 
 ---
 
-#### WRN (Warning) - Yellow
+#### WRN (Warning)
 
 **Best practice:**
 - Tighten stops (don't exit yet)
@@ -151,7 +151,7 @@ WRN can appear multiple times in strong uptrend. Wait for CAP or BDN.
 
 ---
 
-#### CAP (Climax) - Red
+#### CAP (Climax)
 
 **Best practice:**
 - ✅ Exit or dramatically tighten stops on longs
@@ -172,7 +172,7 @@ WRN can appear multiple times in strong uptrend. Wait for CAP or BDN.
 
 ---
 
-#### BDN (Breakdown) - Black
+#### BDN (Breakdown)
 
 **Best practice:**
 - ✅ Primary short entry signal
