@@ -207,7 +207,7 @@ You don't need to change much. Just show/hide what you use:
 3. Choose the level (Daily High or Daily Low)
 4. Set to "Once Per Bar Close"
 
-**Tip:** Combine with other indicator alerts for confluence. Example: "Daily High touch + Pentarch WRN" = potential top
+**Tip:** Combine with other indicator alerts for confluence. Example: "Daily High touch + Pentarch WRN" = late-cycle exhaustion watch
 
 ---
 

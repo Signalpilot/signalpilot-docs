@@ -12,18 +12,18 @@ Pentarch shows you **5 simple signals** that indicate when price may potentially
 
 ## The 5 Signals (Easy to Understand)
 
-### 🔵 TD - "Get Ready, Potential Bottom Coming"
+### 🔵 TD - Touchdown (Early-Cycle Warning)
 
 **What you see:** Blue "TD" label below the candle
 
-**What it means:** Price has pulled back hard and is getting oversold. A potential reversal UP might be starting soon.
+**What it means:** Price has pulled back hard and is getting oversold. Early-cycle reversal conditions may be developing.
 
 **What to do:**
 - Start watching for a long entry
 - Wait for IGN to confirm (next signal)
 - Don't jump in yet - this is just the warning
 
-**Example:** Stock drops from $100 to $85, TD appears → potential bottom might be forming
+**Example:** Stock drops from $100 to $85, TD appears → early-cycle conditions may be developing
 
 ---
 
@@ -42,11 +42,11 @@ Pentarch shows you **5 simple signals** that indicate when price may potentially
 
 ---
 
-### 🟡 WRN - "Warning, Potential Top Ahead"
+### 🟡 WRN - Warning (Late-Cycle Alert)
 
 **What you see:** Yellow "WRN" label above the candle
 
-**What it means:** Price is getting extended. A potential top might be forming soon.
+**What it means:** Price is getting extended. Late-cycle conditions may be developing.
 
 **Example response:**
 - Example risk management: tighten stops if long
@@ -57,18 +57,18 @@ Pentarch shows you **5 simple signals** that indicate when price may potentially
 
 ---
 
-### 🔴 CAP - "Potential TOP! Potential Exit Signal"
+### 🔴 CAP - Climax (Late-Cycle Exhaustion)
 
 **What you see:** Red "CAP" label above the candle
 
-**What it means:** Final exhaustion. This often indicates a potential top before a drop.
+**What it means:** Final exhaustion. This often indicates late-cycle exhaustion conditions.
 
 **What to do:**
 - Consider exiting your longs
-- This is a potential "sell" signal
+- This is a potential exit signal
 - Advanced traders can consider shorts here
 
-**Example:** After WRN at $115, CAP fires at $120 → Exit, potential top is indicated
+**Example:** After WRN at $115, CAP fires at $120 → Exit, late-cycle exhaustion is indicated
 
 ---
 
@@ -119,7 +119,7 @@ Always set a stop loss:
 
 **The Setup:**
 - Price: $35,000, falling for weeks
-- **TD** appears at $32,500 → "Potential bottom might be coming"
+- **TD** appears at $32,500 → "Early-cycle conditions developing"
 - **IGN** fires at $33,800 → "Enter long NOW" ✅
 - Example entry at $33,900
 
@@ -231,10 +231,10 @@ Most traders just use the default settings.
 
 | Signal | Meaning | Action |
 |--------|---------|--------|
-| TD 🔵 | Potential bottom warning | Get ready, don't enter yet |
+| TD 🔵 | Early-cycle warning | Get ready, don't enter yet |
 | IGN 🟢 | Potential reversal up indicated | **Enter long** |
-| WRN 🟡 | Potential top warning | Start watching, tighten stops |
-| CAP 🔴 | Potential top exhaustion | **Exit longs** |
+| WRN 🟡 | Late-cycle warning | Start watching, tighten stops |
+| CAP 🔴 | Late-cycle exhaustion | **Exit longs** |
 | BDN ⚫ | Potential breakdown | Exit all longs (or short) |
 
 ---

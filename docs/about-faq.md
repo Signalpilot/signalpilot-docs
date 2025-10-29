@@ -206,7 +206,7 @@ See guides:
 ### What's the difference between TD and IGN signals?
 
 **TD (Touchdown)** = Early warning
-- "Potential bottom forming"
+- "Early-cycle reversal conditions developing"
 - Don't enter yet—just watch
 - Often appears first in a reversal sequence
 

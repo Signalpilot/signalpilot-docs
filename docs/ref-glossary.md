@@ -7,9 +7,9 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 ## 🎯 Pentarch Signals (Core Reversal Events)
 
 ### TD (Touchdown)
-**Type:** Bottom warning signal
+**Type:** Early-cycle warning signal
 **Color:** Blue 🔵
-**Meaning:** Potential bottom forming—early warning
+**Meaning:** Early-cycle reversal conditions developing—early warning
 **Action:** Start watching, don't enter yet
 **Typical Context:** Appears during downtrends when momentum starts exhausting
 **Next Signal:** Usually followed by IGN if reversal confirms
@@ -31,23 +31,23 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 ---
 
 ### WRN (Warning)
-**Type:** Top warning signal
+**Type:** Late-cycle warning signal
 **Color:** Yellow 🟡
-**Meaning:** Potential top forming—caution advised
+**Meaning:** Late-cycle conditions developing—caution advised
 **Action:** Start tightening stops, watch for exit
 **Typical Context:** Appears during uptrends when momentum begins fading
-**Next Signal:** May be followed by CAP if top confirms
+**Next Signal:** May be followed by CAP if exhaustion confirms
 
-**Trading Note:** Don't automatically exit on WRN—use it to prepare for potential top.
+**Trading Note:** Don't automatically exit on WRN—use it to prepare for potential late-cycle exhaustion.
 
 ---
 
-### CAP (Capitulation)
+### CAP (Climax)
 **Type:** Bearish reversal warning
 **Color:** Red 🔴
-**Meaning:** Potential top exhaustion
+**Meaning:** Late-cycle exhaustion conditions
 **Action:** Exit longs, tighten stops dramatically
-**Typical Context:** Appears at potential tops after extended uptrends
+**Typical Context:** Appears during late-cycle exhaustion after extended uptrends
 **Risk Management:** Major red flag for long positions
 
 **Trading Note:** Strong exit signal for longs. Consider taking profits or moving stop to breakeven.
