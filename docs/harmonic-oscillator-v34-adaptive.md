@@ -35,11 +35,11 @@ No single indicator is perfect. But when multiple agree? That's high probability
 
 **One line, 0-100 scale:**
 
-**80-100** = Extreme overbought (reversal down likely)
+**80-100** = Extreme overbought (potential reversal down likely)
 **60-80** = Bullish momentum
 **40-60** = Neutral (no clear direction)
 **20-40** = Bearish momentum
-**0-20** = Extreme oversold (reversal up likely)
+**0-20** = Extreme oversold (potential reversal up likely)
 
 **Two key zones:**
 - Above 70 = Overbought zone (watch for shorts)
@@ -92,13 +92,13 @@ When price and oscillator disagree = Reversal coming
 ### Regular Bullish Divergence
 - Price makes lower low
 - Oscillator makes higher low
-- **Signal:** Downtrend weakening, reversal up likely
+- **Signal:** Downtrend weakening, potential reversal up likely
 - Label: "BULL DIV" (green)
 
 ### Regular Bearish Divergence
 - Price makes higher high
 - Oscillator makes lower high
-- **Signal:** Uptrend weakening, reversal down likely
+- **Signal:** Uptrend weakening, potential reversal down likely
 - Label: "BEAR DIV" (red)
 
 ### Hidden Divergences
@@ -129,15 +129,15 @@ When price and oscillator disagree = Reversal coming
 
 **For longs:**
 1. Wait for composite to drop below 20 (extreme oversold)
-2. Watch for bullish signal (cross above 30)
+2. Watch for potential bullish signal (cross above 30)
 3. Verify 2-3 votes (check component status if shown)
-4. Enter long
+4. Example entry long
 
 **For shorts:**
 1. Wait for composite above 80 (extreme overbought)
-2. Watch for bearish signal (cross below 70)
+2. Watch for potential bearish signal (cross below 70)
 3. Verify 2-3 votes
-4. Enter short
+4. Example entry short
 
 ---
 
@@ -157,15 +157,15 @@ When price and oscillator disagree = Reversal coming
 - Price: $1,800, falling for days
 - **Composite:** Drops to 15 (extreme oversold)
 - **Divergence:** Price makes lower low at $1,750, but composite makes higher low (BULL DIV label)
-- **Signal:** Bullish signal fires at composite 32 (crossing above 30)
-- **Votes:** All 3 components vote bullish (Conservative = elite)
+- **Signal:** Potential bullish signal fires at composite 32 (crossing above 30)
+- **Votes:** All 3 components vote bullish (Conservative = potential elite signal)
 
 **The Trade:**
-1. You enter long at $1,760
-2. Stop below recent low at $1,720
-3. Target: Composite 70 (overbought, exit zone)
+1. Example entry long at $1,760
+2. Example stop below recent low at $1,720
+3. Example target: Composite 70 (overbought, exit zone)
 4. Price rallies to $2,100
-5. Composite hits 72, you exit
+5. Composite hits 72, example exit
 
 **Result:** $340 profit per ETH (19% gain)
 
@@ -260,11 +260,11 @@ Enable HTF filter to only take signals aligned with higher timeframe:
 
 **Q: Which divergence is strongest?**
 **A:**
-- **Regular divergences** = Best reversal signals
+- **Regular divergences** = Best potential reversal signals
 - **Hidden divergences** = Best continuation signals
 Both are valuable in different contexts.
 
-**Q: How often do Elite signals appear?**
+**Q: How often do potential Elite signals appear?**
 **A:** Rare! Elite needs 3 votes + HTF + divergence. Expect:
 - 1H chart: 1-2 per week
 - Daily chart: 1-2 per month
@@ -278,11 +278,11 @@ Both are valuable in different contexts.
 
 | Composite Level | Meaning | Action |
 |----------------|---------|--------|
-| 0-20 | Extreme oversold | Watch for bullish signal |
-| 20-30 | Oversold | Bullish signals here are good |
+| 0-20 | Extreme oversold | Watch for potential bullish signal |
+| 20-30 | Oversold | Potential bullish signals here are good |
 | 30-70 | Neutral | Wait for extremes |
-| 70-80 | Overbought | Bearish signals here are good |
-| 80-100 | Extreme overbought | Watch for bearish signal |
+| 70-80 | Overbought | Potential bearish signals here are good |
+| 80-100 | Extreme overbought | Watch for potential bearish signal |
 
 | Signal Type | Votes | Win Rate | Action |
 |------------|-------|----------|--------|
@@ -318,6 +318,6 @@ Need help? Check out:
 
 ---
 
-**Remember:** Harmonic Oscillator shows you when MACD, RSI, and StochRSI agree. When 2 or 3 vote the same way = High probability. Add divergence = Elite probability.
+**Remember:** Harmonic Oscillator shows you when MACD, RSI, and StochRSI agree. When 2 or 3 vote the same way = Potential high probability signal. Add divergence = Potential elite probability signal.
 
 **Trust the votes, trade the extremes!** 🎯

@@ -2,7 +2,7 @@
 
 ## What Does It Do?
 
-Plutus Flow is an **advanced On-Balance Volume (OBV) indicator** that shows you when smart money is accumulating (buying) or distributing (selling). Unlike standard OBV, it prevents volume spike distortion and detects powerful divergences.
+Plutus Flow is an **advanced On-Balance Volume (OBV) indicator** that shows you when smart money may be accumulating (buying) or distributing (selling). Unlike standard OBV, it prevents volume spike distortion and detects potential powerful divergences.
 
 **Best for:** Volume analysis, divergence trading, flow confirmation
 
@@ -58,13 +58,13 @@ One huge volume bar (earnings, news) can permanently skew OBV, hiding subtle cha
 
 **Bullish Cross** (green circle)
 - OBV crosses above the middle line (20-SMA basis)
-- Flow shifting from distribution to accumulation
-- Entry signal for longs
+- Potential flow shift from distribution to accumulation
+- Potential entry signal for longs
 
 **Bearish Cross** (red circle)
 - OBV crosses below the middle line
-- Flow shifting from accumulation to distribution
-- Entry signal for shorts
+- Potential flow shift from accumulation to distribution
+- Potential entry signal for shorts
 
 **FlipGuard protection:** Prevents whipsaw with cooldown period
 
@@ -145,11 +145,11 @@ One huge volume bar (earnings, news) can permanently skew OBV, hiding subtle cha
 ### Step 3: Trade Divergences (Highest Probability)
 
 **The setup:**
-1. Wait for divergence label (BULL DIV or BEAR DIV)
-2. Confirm divergence is at key level (use Janus Atlas for levels)
-3. Wait for price reversal confirmation (candle pattern, cross signal)
-4. Enter in divergence direction
-5. Stop beyond the divergence pivot
+1. Wait for potential divergence label (BULL DIV or BEAR DIV)
+2. Confirm potential divergence is at key level (use Janus Atlas for levels)
+3. Wait for potential price reversal confirmation (candle pattern, cross signal)
+4. Example entry in divergence direction
+5. Example stop beyond the divergence pivot
 
 **Win rate:** 70-80% when at key levels
 
@@ -164,11 +164,11 @@ One huge volume bar (earnings, news) can permanently skew OBV, hiding subtle cha
 - Label appears: "BEAR DIV" (red)
 
 **The Trade:**
-1. Divergence detected at resistance level (Weekly High from Janus Atlas)
+1. Potential divergence detected at resistance level (Weekly High from Janus Atlas)
 2. Wait for price reversal candle (shooting star forms)
-3. OBV crosses below basis line (bearish cross signal)
-4. Enter short at 4,440
-5. Stop above divergence high at 4,460
+3. OBV crosses below basis line (potential bearish cross signal)
+4. Example entry short at 4,440
+5. Example stop above divergence high at 4,460
 6. Target: Previous support at 4,350
 
 **Result:**
@@ -240,7 +240,7 @@ One huge volume bar (earnings, news) can permanently skew OBV, hiding subtle cha
 ## Frequently Asked Questions
 
 **Q: What's the difference from standard OBV?**
-**A:** Plutus Flow uses spike-clipped OBV (immune to extreme volume spikes), adds bands for extremes, detects divergences automatically, and has FlipGuard anti-whipsaw.
+**A:** Plutus Flow uses spike-clipped OBV (immune to extreme volume spikes), adds bands for extremes, detects potential divergences automatically, and has FlipGuard anti-whipsaw.
 
 **Q: Which is more reliable - crosses or divergences?**
 **A:**
@@ -304,6 +304,6 @@ Need help? Check out:
 
 ---
 
-**Remember:** Plutus Flow shows you where smart money is accumulating or distributing. When OBV and price disagree (divergence) = Major move coming. Combine with levels for highest probability.
+**Remember:** Plutus Flow shows you where smart money may be accumulating or distributing. When OBV and price disagree (potential divergence) = Potential major move coming. Combine with levels for highest probability.
 
 **Follow the money flow!** 🎯

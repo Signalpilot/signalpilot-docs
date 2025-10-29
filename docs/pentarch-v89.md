@@ -1,87 +1,87 @@
-# Pentarch v8.9 - Reversal Signals Made Simple
+# Pentarch v8.9 - Potential Reversal Signals Made Simple
 
 ## What Does It Do?
 
-Pentarch shows you **5 simple signals** that tell you when price is about to reverse. Think of it like traffic lights for reversals - it shows you when to get ready, when to go, and when to exit.
+Pentarch shows you **5 simple signals** that indicate when price may potentially reverse. Think of it like traffic lights for potential reversals - it shows you when to get ready, when to go, and when to exit.
 
-**Best for:** Anyone who wants to catch reversals without guessing
+**Best for:** Anyone who wants to identify potential reversals without guessing
 
 ---
 
 ## The 5 Signals (Easy to Understand)
 
-### 🔵 TD - "Get Ready, Bottom Coming"
+### 🔵 TD - "Get Ready, Potential Bottom Coming"
 
 **What you see:** Blue "TD" label below the candle
 
-**What it means:** Price has pulled back hard and is getting oversold. A reversal UP might be starting soon.
+**What it means:** Price has pulled back hard and is getting oversold. A potential reversal UP might be starting soon.
 
 **What to do:**
 - Start watching for a long entry
 - Wait for IGN to confirm (next signal)
 - Don't jump in yet - this is just the warning
 
-**Example:** Stock drops from $100 to $85, TD appears → bottom might be forming
+**Example:** Stock drops from $100 to $85, TD appears → potential bottom might be forming
 
 ---
 
-### 🟢 IGN - "GO! Reversal Confirmed"
+### 🟢 IGN - "GO! Potential Reversal Signal"
 
 **What you see:** Green "IGN" label below the candle
 
-**What it means:** The reversal is CONFIRMED. Bulls are taking over.
+**What it means:** Potential reversal indication. Bulls may be taking over.
 
-**What to do:**
-- This is your entry signal for longs
-- Enter on this bar or next bar
-- Set your stop below the recent low
+**Example usage:**
+- This is a potential entry signal for longs
+- Example entry timing: this bar or next bar
+- Example stop placement: below the recent low
 
-**Example:** After TD at $85, IGN fires at $87 → Enter long, reversal confirmed
+**Example:** After TD at $85, IGN fires at $87 → Enter long, potential reversal indicated
 
 ---
 
-### 🟡 WRN - "Warning, Top Ahead"
+### 🟡 WRN - "Warning, Potential Top Ahead"
 
 **What you see:** Yellow "WRN" label above the candle
 
-**What it means:** Price is getting extended. A top might be forming soon.
+**What it means:** Price is getting extended. A potential top might be forming soon.
 
-**What to do:**
-- Start tightening your stops if you're in a long
-- Get ready to exit
-- Don't buy here - it's too late
+**Example response:**
+- Example risk management: tighten stops if long
+- Prepare for potential exit
+- Educational note: Late entry reduces favorable risk/reward
 
 **Example:** Stock rallied to $115, WRN appears → start preparing to exit
 
 ---
 
-### 🔴 CAP - "TOP! Exit Now"
+### 🔴 CAP - "Potential TOP! Potential Exit Signal"
 
 **What you see:** Red "CAP" label above the candle
 
-**What it means:** Final exhaustion. This is often the top before a drop.
+**What it means:** Final exhaustion. This often indicates a potential top before a drop.
 
 **What to do:**
-- Exit your longs immediately
-- This is the "sell" signal
-- Advanced traders can short here
+- Consider exiting your longs
+- This is a potential "sell" signal
+- Advanced traders can consider shorts here
 
-**Example:** After WRN at $115, CAP fires at $120 → Exit, top is in
+**Example:** After WRN at $115, CAP fires at $120 → Exit, potential top is indicated
 
 ---
 
-### ⚫ OUT - "Reversal Down Confirmed"
+### ⚫ OUT - "Potential Reversal Down Signal"
 
 **What you see:** Dark "OUT" label above the candle
 
-**What it means:** The breakdown is CONFIRMED. Bears are taking over.
+**What it means:** Potential breakdown indication. Bears may be taking over.
 
-**What to do:**
-- Exit any remaining longs
-- For short sellers: This is your entry signal
-- Reversal down is confirmed
+**Example response:**
+- Consider exiting any remaining longs
+- For short sellers: This is a potential entry signal
+- Potential reversal down is indicated
 
-**Example:** After CAP at $120, OUT fires at $113 → Downtrend confirmed
+**Example:** After CAP at $120, OUT fires at $113 → Potential downtrend indicated
 
 ---
 
@@ -117,15 +117,15 @@ Always set a stop loss:
 
 **The Setup:**
 - Price: $35,000, falling for weeks
-- **TD** appears at $32,500 → "Bottom might be coming"
+- **TD** appears at $32,500 → "Potential bottom might be coming"
 - **IGN** fires at $33,800 → "Enter long NOW" ✅
-- You enter at $33,900
+- Example entry at $33,900
 
 **The Trade:**
 - Price rallies to $42,000
 - **WRN** appears at $41,500 → "Start watching"
-- **CAP** fires at $42,800 → "Exit NOW" ✅
-- You exit at $42,500
+- **CAP** fires at $42,800 → "Potential exit signal" ✅
+- Example exit at $42,500
 
 **Result:** $8,600 profit per coin (25% gain)
 
@@ -147,9 +147,9 @@ Most traders just use the default settings.
 ## Alerts (Set These!)
 
 **Must-have alerts:**
-1. **IGN Event** → Your buy signal
-2. **CAP Event** → Your sell signal
-3. **OUT Event** → Your exit signal
+1. **IGN Event** → Potential buy signal
+2. **CAP Event** → Potential sell signal
+3. **OUT Event** → Potential exit signal
 
 **How to set:**
 1. Click the alarm icon on TradingView
@@ -246,6 +246,6 @@ Need help? Check out:
 
 ---
 
-**Remember:** Pentarch tells you WHEN reversals are happening. Combine it with Janus Atlas (TELLS you WHERE - at which levels) for best results.
+**Remember:** Pentarch indicates WHEN potential reversals may be forming. Combine it with Janus Atlas (tells you WHERE - at which levels) for best results.
 
 **Trade smart, use stops, and let the signals guide you!** 🎯

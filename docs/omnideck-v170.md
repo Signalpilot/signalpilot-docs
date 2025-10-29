@@ -15,12 +15,12 @@ Omnideck is the **ultimate all-in-one indicator** - 10 professional trading syst
 **What you see:** Green numbers 1-9 below bars, Red numbers 1-9 above bars
 
 **What it means:**
-- **Green 9** = Price has been falling too long, reversal UP likely
-- **Red 9** = Price has been rising too long, reversal DOWN likely
+- **Green 9** = Price has been falling too long, potential reversal UP likely
+- **Red 9** = Price has been rising too long, potential reversal DOWN likely
 
-**What to do:** Wait for 9, look for reversal confirmation, then enter opposite direction
+**What to do:** Wait for 9, look for potential reversal confirmation, then enter opposite direction
 
-**Example:** Price falling for 9 bars (shows green 9 at $100) → Look for long entry, bottom forming
+**Example:** Price falling for 9 bars (shows green 9 at $100) → Look for long entry, potential bottom forming
 
 ---
 
@@ -130,11 +130,11 @@ Omnideck is the **ultimate all-in-one indicator** - 10 professional trading syst
 
 **What you see:** Labels like "HAM" (Hammer), "BE" (Bullish Engulfing), "SS" (Shooting Star)
 
-**What they are:** 16 classic reversal patterns detected automatically
+**What they are:** 16 classic potential reversal patterns detected automatically
 
-**What to do:** Pattern + other confirmations = High-probability trade
+**What to do:** Pattern + other confirmations = Potential high-probability trade
 
-**Example:** Shooting Star at supply zone + TD 9 red = Major top, go short
+**Example:** Shooting Star at supply zone + TD 9 red = Potential major top, example short setup
 
 ---
 
@@ -204,7 +204,7 @@ Always prefer signals that happen at key zones.
 1. Price sweeps $63,200 (LL liquidity sweep)
 2. Bounces into demand zone
 3. TD shows green 9 (exhaustion)
-4. Hammer confirms reversal
+4. Hammer indicates potential reversal
 5. You enter long at $63,800
 6. Stop below zone at $63,000
 
