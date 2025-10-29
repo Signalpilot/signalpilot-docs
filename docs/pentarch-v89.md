@@ -4,6 +4,8 @@
 
 Pentarch shows you **5 simple signals** that indicate when price may potentially reverse. Think of it like traffic lights for potential reversals - it shows you when to get ready, when to go, and when to exit.
 
+**The 5-Phase System:** TD → IGN → WRN → CAP → BDN
+
 **Best for:** Anyone who wants to identify potential reversals without guessing
 
 ---
@@ -70,18 +72,18 @@ Pentarch shows you **5 simple signals** that indicate when price may potentially
 
 ---
 
-### ⚫ OUT - "Potential Reversal Down Signal"
+### ⚫ BDN - "Potential Breakdown Signal"
 
-**What you see:** Dark "OUT" label above the candle
+**What you see:** Dark "BDN" label above the candle
 
-**What it means:** Potential breakdown indication. Bears may be taking over.
+**What it means:** Potential breakdown indication. Bears may be taking over. Signals a potential bearish structure break.
 
 **Example response:**
 - Consider exiting any remaining longs
 - For short sellers: This is a potential entry signal
-- Potential reversal down is indicated
+- Potential breakdown and reversal down is indicated
 
-**Example:** After CAP at $120, OUT fires at $113 → Potential downtrend indicated
+**Example:** After CAP at $120, BDN fires at $113 → Potential breakdown and downtrend indicated
 
 ---
 
@@ -97,12 +99,12 @@ Just add Pentarch to your chart. The labels will appear automatically when event
 1. TD appears → Get ready
 2. IGN appears → Enter long
 3. WRN appears → Start watching exit
-4. CAP or OUT appears → Exit
+4. CAP or BDN appears → Exit
 
 **For Selling (Shorts):**
 1. WRN appears → Get ready
 2. CAP appears → Prepare to short
-3. OUT appears → Enter short
+3. BDN appears → Enter short
 4. TD or IGN appears → Exit
 
 ### Step 3: Use Stops!
@@ -149,7 +151,7 @@ Most traders just use the default settings.
 **Must-have alerts:**
 1. **IGN Event** → Potential buy signal
 2. **CAP Event** → Potential sell signal
-3. **OUT Event** → Potential exit signal
+3. **BDN Event** → Potential breakdown/exit signal
 
 **How to set:**
 1. Click the alarm icon on TradingView
@@ -221,7 +223,7 @@ Most traders just use the default settings.
 
 5. **Keep a journal** - Track which signals work best for you
 
-6. **Be patient** - Don't force trades. Best setups have TD→IGN or WRN→CAP→OUT sequences
+6. **Be patient** - Don't force trades. Best setups have TD→IGN or WRN→CAP→BDN sequences
 
 ---
 
@@ -233,7 +235,7 @@ Most traders just use the default settings.
 | IGN 🟢 | Reversal up confirmed | **Enter long** |
 | WRN 🟡 | Top warning | Start watching, tighten stops |
 | CAP 🔴 | Top exhaustion | **Exit longs** |
-| OUT ⚫ | Reversal down confirmed | Exit all longs (or short) |
+| BDN ⚫ | Potential breakdown | Exit all longs (or short) |
 
 ---
 

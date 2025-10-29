@@ -56,7 +56,7 @@ Crystal-clear indicators that tell you <strong>WHEN</strong> to enter, <strong>W
 <div class="grid cards" markdown>
 
 - :material-chart-timeline-variant: **Pentarch v8.9 — Reversal Events**
-  5 simple signals that tell you when price is reversing. TD/IGN/WRN/CAP/OUT labels.
+  5 simple signals that tell you when price is reversing. TD/IGN/WRN/CAP/BDN labels.
   [Read Guide :material-arrow-right:](pentarch-v89.md){ .md-button .md-button--primary }
 
 - :material-crosshairs-gps: **Janus Atlas v3.12.2 — Levels System**
@@ -108,7 +108,7 @@ Want to see how all 7 indicators work together?
 **Not sure which indicator to start with?**
 
 ### I want to identify potential reversals
-→ **[Pentarch v8.9](pentarch-v89.md)** - 5 simple potential reversal signals (TD/IGN/WRN/CAP/OUT)
+→ **[Pentarch v8.9](pentarch-v89.md)** - 5 simple potential reversal signals (TD/IGN/WRN/CAP/BDN)
 
 ### I want to see key levels
 → **[Janus Atlas v3.12.2](janus-atlas-v3122.md)** - Daily/Weekly/Monthly highs/lows, VWAP, session levels, structure

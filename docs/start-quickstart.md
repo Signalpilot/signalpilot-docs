@@ -90,7 +90,7 @@ Meta modules are your *air-traffic control*: they keep signals honest and scalab
 2. **Save workspace** for reuse across pairs or markets.
 3. **Enable alerts** only on *close-confirmed* events:
    - Regime Box → `EXP ON`, `SQZ ON`, `LONG OK`, `SHORT OK`
-   - Reversal Engine → `OUT`, `CAP`, `WRN`
+   - Reversal Engine → `BDN`, `CAP`, `WRN`
    - Leg Timer → `TD9`, `Squeeze`
 4. **Optional:** Use the **[Screener](sp-screener-sfx.md)** for multi-symbol scanning.
 
