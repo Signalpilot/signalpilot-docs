@@ -24,7 +24,7 @@ Each indicator in the v6 Suite serves a specific purpose. Combine 2-3 indicators
 **Pentarch + Janus Atlas + Minimal Flow**
 
 **Why it works:**
-- **Pentarch** = Event detection (IGN, CAP, WRN, OUT, TD)
+- **Pentarch** = Event detection (IGN, CAP, WRN, BDN, TD)
 - **Janus Atlas** = Key levels (HTF, session, VWAP, structure)
 - **Minimal Flow** = Volume confirmation + position management
 
@@ -220,7 +220,7 @@ Each indicator in the v6 Suite serves a specific purpose. Combine 2-3 indicators
 1. **Pentarch:**
    - IGN Event (bull reversal)
    - CAP Event (top exhaustion)
-   - OUT Event (bear reversal)
+   - BDN Event (potential breakdown/bear reversal)
 
 2. **Minimal Flow:**
    - Bull Signal (Elite only, score > 80)
@@ -313,7 +313,7 @@ Use Minimal Flow's built-in risk calculator:
 3. **Trail:** Use Minimal Flow trailing stop
 
 **Potential Exit Signals:**
-- Opposite Pentarch event (IGN → exit longs on CAP/OUT)
+- Opposite Pentarch event (IGN → exit longs on CAP/BDN)
 - Minimal Flow opposite signal
 - Stop loss hit
 

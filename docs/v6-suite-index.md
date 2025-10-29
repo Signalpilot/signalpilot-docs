@@ -14,7 +14,7 @@ The ultimate potential reversal detector with 5 critical event types:
 - **IGN** (Ignition) - Potential bull reversal signal
 - **WRN** (Warning) - Early potential top detection
 - **CAP** (Capitulation) - Final thrust exhaustion
-- **OUT** (Breakdown) - Potential bear reversal signal
+- **BDN** (Breakdown) - Potential bear reversal signal
 
 **Best for:** Swing traders, potential reversal identification, multi-timeframe analysis
 **Key Features:** Regime awareness, volume burst detection, timeframe-adaptive thresholds
@@ -151,7 +151,7 @@ Sophisticated spike-clipped OBV with advanced divergence detection:
 - **Harmonic Oscillator** (Composite signals)
 
 ### For Potential Reversal Detection
-- **Pentarch** (CAP/WRN/OUT events - potential reversals)
+- **Pentarch** (CAP/WRN/BDN events - potential reversals)
 - **Omnideck** (TD 9, Liquidity sweeps)
 - **Harmonic Oscillator** (Divergences)
 - **Plutus Flow** (OBV divergences)

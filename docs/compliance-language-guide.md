@@ -35,7 +35,7 @@ All materials must:
 **These phrases are being flagged by payment processors:**
 
 - "TOUCHDOWN is a bottom signal"
-- "OUT is a reversal signal"
+- "BDN is a reversal signal"
 - "CAP signals top"
 - "IGN confirms breakout"
 - "bottom forming"
@@ -53,7 +53,7 @@ All materials must:
 **All signal descriptions MUST include "potential":**
 
 - "TOUCHDOWN is a **potential bottom** signal"
-- "OUT is a **potential reversal** signal"
+- "BDN is a **potential breakdown/reversal** signal"
 - "CAP signals **potential top**"
 - "IGN signals **potential breakout**"
 - "**potential bottom** forming"
@@ -149,8 +149,8 @@ REPLACE: "WRN signals potential top"
 FIND: "CAP marks"
 REPLACE: "CAP indicates potential"
 
-FIND: "OUT is a reversal"
-REPLACE: "OUT is a potential reversal"
+FIND: "BDN is a reversal"
+REPLACE: "BDN is a potential breakdown/reversal"
 ```
 
 ```
@@ -209,7 +209,7 @@ Traders can use this signal to consider whether a reversal might be developing."
 ```
 "The Pentarch system maps potential market cycles through 5 phases.
 When you see TD → IGN, you're observing a potential bottom development.
-When you see WRN → CAP → OUT, you're watching a potential top formation."
+When you see WRN → CAP → BDN, you're watching a potential top formation."
 ```
 
 ### Warning Language to Include
