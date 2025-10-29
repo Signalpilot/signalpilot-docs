@@ -6,17 +6,17 @@ Welcome to the **Signal Pilot v6 Suite** - 7 production-ready, non-repainting in
 
 ## 🎯 The Complete Suite
 
-### 1. [Pentarch v8.9](pentarch-v89.md) - Reversal Event Detection
+### 1. [Pentarch v8.9](pentarch-v89.md) - Potential Reversal Event Detection
 **Type:** Overlay | **Complexity:** Intermediate
 
-The ultimate reversal detector with 5 critical event types:
+The ultimate potential reversal detector with 5 critical event types:
 - **TD** (Touchdown) - Oversold base formation
-- **IGN** (Ignition) - Bull reversal confirmation
-- **WRN** (Warning) - Early top detection
+- **IGN** (Ignition) - Potential bull reversal signal
+- **WRN** (Warning) - Early potential top detection
 - **CAP** (Capitulation) - Final thrust exhaustion
-- **OUT** (Breakdown) - Bear reversal confirmation
+- **OUT** (Breakdown) - Potential bear reversal signal
 
-**Best for:** Swing traders, reversal traders, multi-timeframe analysis
+**Best for:** Swing traders, potential reversal identification, multi-timeframe analysis
 **Key Features:** Regime awareness, volume burst detection, timeframe-adaptive thresholds
 
 [📖 Read Full Guide →](pentarch-v89.md)
@@ -150,8 +150,8 @@ Sophisticated spike-clipped OBV with advanced divergence detection:
 - **Omnideck** (TD Sequential, Squeeze breaks)
 - **Harmonic Oscillator** (Composite signals)
 
-### For Reversal Detection
-- **Pentarch** (CAP/WRN/OUT events)
+### For Potential Reversal Detection
+- **Pentarch** (CAP/WRN/OUT events - potential reversals)
 - **Omnideck** (TD 9, Liquidity sweeps)
 - **Harmonic Oscillator** (Divergences)
 - **Plutus Flow** (OBV divergences)
@@ -183,14 +183,14 @@ Sophisticated spike-clipped OBV with advanced divergence detection:
 
 ### The Pro Setup (3 indicators)
 **Pentarch + Janus Atlas + Minimal Flow**
-- Pentarch: Reversal events and regime
+- Pentarch: Potential reversal events and regime
 - Janus Atlas: Key levels and structure
 - Minimal Flow: Volume confirmation and position management
 - **Result:** The "Trinity" - event + level + volume confluence
 
 ### The Master Setup (4 indicators)
 **Pentarch + Janus Atlas + Harmonic Oscillator + Plutus Flow**
-- Pentarch: Price reversal events
+- Pentarch: Potential price reversal events
 - Janus Atlas: Structural levels
 - Harmonic: Momentum consensus
 - Plutus: Volume flow divergences
@@ -203,7 +203,7 @@ Sophisticated spike-clipped OBV with advanced divergence detection:
 
 ### The Swing Trader Setup
 **Pentarch (Daily) + Janus Atlas (Weekly/Monthly levels) + Augury Grid (scan multiple symbols)**
-- High-quality reversals, major levels, multi-asset screening
+- High-quality potential reversals, major levels, multi-asset screening
 - **Timeframe:** Daily/4H
 
 ### The Position Trader Setup
@@ -240,8 +240,8 @@ All 7 indicators are **SP Protocol v6** compliant:
 
 ### Week 1: Foundation
 1. Start with **Janus Atlas** (learn key levels)
-2. Add **Pentarch** (learn reversal events)
-3. Practice: Identify Pentarch events AT Janus levels
+2. Add **Pentarch** (learn potential reversal events)
+3. Practice: Identify Pentarch potential reversal events AT Janus levels
 
 ### Week 2: Volume Confirmation
 4. Add **Minimal Flow** (learn volume analysis)

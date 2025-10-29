@@ -107,8 +107,8 @@ Want to see how all 7 indicators work together?
 
 **Not sure which indicator to start with?**
 
-### I want to catch reversals
-→ **[Pentarch v8.9](pentarch-v89.md)** - 5 simple reversal signals (TD/IGN/WRN/CAP/OUT)
+### I want to identify potential reversals
+→ **[Pentarch v8.9](pentarch-v89.md)** - 5 simple potential reversal signals (TD/IGN/WRN/CAP/OUT)
 
 ### I want to see key levels
 → **[Janus Atlas v3.12.2](janus-atlas-v3122.md)** - Daily/Weekly/Monthly highs/lows, VWAP, session levels, structure
