@@ -1,8 +1,18 @@
 # Signal Pilot Documentation - Compliance Language Guide
 
-**Purpose:** Ensure all Signal Pilot materials use appropriate educational language and avoid implications of financial advice.
+**⚠️ CRITICAL UPDATE - IMMEDIATE ACTION REQUIRED**
 
-**Audience:** Documentation team, education team, content creators, video producers
+**Deadline: 7 days from receipt**
+
+---
+
+## 🚨 Critical Notice from Leadership
+
+**Subject:** Critical Update - Signal Language Must Include "Potential" Qualifiers
+
+**Background:** We've received feedback from payment processors (LemonSqueezy) that our signal descriptions are being misinterpreted as definitive predictions rather than educational indicators. To ensure compliance and accurately represent our product, we need to update ALL educational and documentation materials.
+
+**This language update is critical for our payment processor relationships and legal compliance.**
 
 ---
 
@@ -18,9 +28,47 @@ All materials must:
 
 ---
 
-## 🔍 Before/After Examples
+## 🔍 Signal Descriptions - Before & After
 
-### ❌ NON-COMPLIANT → ✅ COMPLIANT
+### ❌ INCORRECT (Remove These Immediately)
+
+**These phrases are being flagged by payment processors:**
+
+- "TOUCHDOWN is a bottom signal"
+- "OUT is a reversal signal"
+- "CAP signals top"
+- "IGN confirms breakout"
+- "bottom forming"
+- "top approaching"
+- "exit now"
+- "reversal confirmed"
+- "This is a bottom"
+- "TD 9 marks the top"
+- "Bottom confirmed"
+- "The signal confirms..."
+- "This means the bottom is in"
+
+### ✅ CORRECT (Use These)
+
+**All signal descriptions MUST include "potential":**
+
+- "TOUCHDOWN is a **potential bottom** signal"
+- "OUT is a **potential reversal** signal"
+- "CAP signals **potential top**"
+- "IGN signals **potential breakout**"
+- "**potential bottom** forming"
+- "**potential top** approaching"
+- "**potential exit** signal"
+- "**potential reversal**"
+- "This indicates a **potential** bottom"
+- "TD 9 suggests a **possible** top"
+- "**Potential** bottom signal detected"
+- "The signal **suggests a potential**..."
+- "This **indicates a potential** bottoming formation"
+
+---
+
+## 🔍 Additional Before/After Examples
 
 | **Category** | **Avoid (Non-Compliant)** | **Use Instead (Compliant)** |
 |--------------|---------------------------|----------------------------|
@@ -45,11 +93,65 @@ All materials must:
 
 ---
 
-## 📋 Search & Replace Terms
+## 📋 Specific Terms to Update - SEARCH & REPLACE
 
-Use your editor's find/replace feature to update these phrases:
+**Use your editor's find/replace feature. Add "potential" to ALL these terms:**
 
-### High Priority Replacements
+### Critical Replacements (Payment Processor Priority)
+
+```
+FIND: "bottom signal"
+REPLACE: "potential bottom signal"
+
+FIND: "top signal"
+REPLACE: "potential top signal"
+
+FIND: "reversal signal"
+REPLACE: "potential reversal signal"
+
+FIND: "breakout"
+REPLACE: "potential breakout"
+
+FIND: "breakdown"
+REPLACE: "potential breakdown"
+
+FIND: "bottom forming"
+REPLACE: "potential bottom forming"
+
+FIND: "top forming"
+REPLACE: "potential top forming"
+
+FIND: "structure break"
+REPLACE: "potential structure break"
+
+FIND: "topping completion"
+REPLACE: "potential topping completion"
+
+FIND: "exit now"
+REPLACE: "potential exit signal"
+
+FIND: "reversal confirmed"
+REPLACE: "potential reversal indicated"
+```
+
+### Pentarch-Specific Updates
+
+```
+FIND: "TOUCHDOWN is a bottom"
+REPLACE: "TOUCHDOWN is a potential bottom"
+
+FIND: "IGN confirms"
+REPLACE: "IGN signals potential"
+
+FIND: "WRN signals top"
+REPLACE: "WRN signals potential top"
+
+FIND: "CAP marks"
+REPLACE: "CAP indicates potential"
+
+FIND: "OUT is a reversal"
+REPLACE: "OUT is a potential reversal"
+```
 
 ```
 Find: "bottom"
@@ -94,9 +196,51 @@ These technical terms don't need "potential":
 
 ---
 
-## 🎯 Key Principles
+## 📖 Examples of Compliant Language
 
-### 1. **Educational Framing**
+### Educational Content Example
+```
+"When TD (Touchdown) fires, it detects a potential bottoming formation.
+This means selling pressure may be showing exhaustion after a downtrend.
+Traders can use this signal to consider whether a reversal might be developing."
+```
+
+### Signal Explanation Example
+```
+"The Pentarch system maps potential market cycles through 5 phases.
+When you see TD → IGN, you're observing a potential bottom development.
+When you see WRN → CAP → OUT, you're watching a potential top formation."
+```
+
+### Warning Language to Include
+```
+"Remember: All signals are educational tools showing possibilities, not certainties.
+These indicators help you analyze market conditions, but they don't guarantee outcomes.
+Always conduct your own research and manage your risk appropriately."
+```
+
+---
+
+## 🎯 Key Principles (Critical for Compliance)
+
+### 1. **Always Prefix Predictions with "Potential"**
+✅ "**Potential** reversal signal"
+❌ "Reversal signal"
+
+**Any reference to market direction, tops, bottoms, reversals, breakouts MUST include "potential"**
+
+### 2. **Emphasize Educational Nature**
+✅ "These are indicators to aid analysis, not trading directives"
+✅ "Users should use these as part of their research, not as standalone decisions"
+
+### 3. **Avoid Definitive Language**
+❌ "The signal confirms..."
+✅ "The signal suggests a potential..."
+
+❌ "This means the bottom is in"
+✅ "This indicates a potential bottoming formation"
+
+### 4. **Focus on Possibilities, Not Certainties**
 ✅ "This tool helps you identify potential market patterns"
 ❌ "This tool tells you when to buy and sell"
 
@@ -247,9 +391,79 @@ Trading involves substantial risk of loss. Past performance ≠ future results.
 
 ---
 
-## 🔧 Documentation Pages to Review
+## 🔧 Priority Materials to Update (7-Day Deadline)
 
-### Priority 1 (Update Immediately)
+### ⚠️ CRITICAL PRIORITY (Update First - Day 1-2)
+- [ ] **TradingView indicator descriptions** (ALL 7 indicators)
+  - Pentarch v8.9
+  - Janus Atlas v3.12.2
+  - Omnideck v1.7.0
+  - Augury Grid v1.0
+  - Minimal Flow v4.0
+  - Harmonic Oscillator v3.4
+  - Plutus Flow v2.3
+- [ ] **User onboarding materials** (welcome emails, getting started guides)
+- [ ] **Homepage** (docs.signalpilot.io and signalpilot.io)
+
+### HIGH PRIORITY (Update Next - Day 3-4)
+- [ ] **Tutorial videos and transcripts** (YouTube, education.signalpilot.io)
+- [ ] **v6 Suite Overview** documentation page
+- [ ] **All 7 indicator documentation pages**
+- [ ] **Email sequences** (drip campaigns, newsletters)
+- [ ] **Support articles** (help center, FAQ)
+
+### MEDIUM PRIORITY (Complete by Day 5-6)
+- [ ] **Social media templates** (Twitter/X, LinkedIn, Discord)
+- [ ] **Course materials** (education.signalpilot.io full courses)
+- [ ] **Quick Start guide**
+- [ ] **Suite Workflow guide**
+- [ ] **Video descriptions** (all YouTube videos)
+
+### FINAL SWEEP (Day 7)
+- [ ] **Blog posts** (recent and popular)
+- [ ] **Newsletter archives**
+- [ ] **Community guidelines**
+- [ ] **Any remaining materials**
+
+---
+
+## ✅ Review Checklist (Complete for EVERY Material)
+
+**Before publishing or updating ANY material, verify ALL of these:**
+
+- [ ] ✅ Used "potential" before: bottom, top, reversal, breakout, breakdown
+- [ ] ✅ No language suggests signals are definitive predictions
+- [ ] ✅ Used conditional language: may, might, could, suggests, indicates
+- [ ] ✅ Avoided directional predictions: "will go up", "will reverse"
+- [ ] ✅ Avoided action recommendations: "buy here", "sell now", "exit now"
+- [ ] ✅ Educational disclaimers are prominent
+- [ ] ✅ Materials emphasize these are analysis tools, not trading advice
+- [ ] ✅ Language focuses on "possibilities" and "indicators" not "confirmations"
+- [ ] ✅ No guarantees of accuracy or profitability
+- [ ] ✅ Emphasized risk and user responsibility
+- [ ] ✅ Included appropriate disclaimer for content type
+- [ ] ✅ Used "example" or "for illustration" in trade setups
+- [ ] ✅ Framed as educational/analysis tool, not trading advice
+
+---
+
+## 📞 Questions & Completion
+
+**If you're unsure about any specific language:**
+- Contact Aldi immediately
+- When in doubt, use MORE conservative language
+- Over-disclose rather than under-disclose
+
+**When Complete:**
+- [ ] Confirm completion to Aldi
+- [ ] Provide list of updated materials
+- [ ] Note any challenges or questions encountered
+
+**Deadline: 7 days from receipt**
+
+This is critical for payment processor relationships and legal compliance.
+
+---
 - [ ] TradingView indicator descriptions (all 7 indicators)
 - [ ] Homepage (docs.signalpilot.io)
 - [ ] v6 Suite Overview
