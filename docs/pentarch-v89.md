@@ -55,7 +55,7 @@ Pentarch shows you **5 simple signals** that indicate when price may potentially
 
 ---
 
-### 🔴 CAP - "Potential TOP! Exit Signal"
+### 🔴 CAP - "Potential TOP! Potential Exit Signal"
 
 **What you see:** Red "CAP" label above the candle
 
@@ -76,12 +76,12 @@ Pentarch shows you **5 simple signals** that indicate when price may potentially
 
 **What it means:** Potential breakdown indication. Bears may be taking over.
 
-**What to do:**
+**Example response:**
 - Consider exiting any remaining longs
-- For short sellers: This is your entry signal
-- Reversal down is confirmed
+- For short sellers: This is a potential entry signal
+- Potential reversal down is indicated
 
-**Example:** After CAP at $120, OUT fires at $113 → Downtrend confirmed
+**Example:** After CAP at $120, OUT fires at $113 → Potential downtrend indicated
 
 ---
 
@@ -117,15 +117,15 @@ Always set a stop loss:
 
 **The Setup:**
 - Price: $35,000, falling for weeks
-- **TD** appears at $32,500 → "Bottom might be coming"
+- **TD** appears at $32,500 → "Potential bottom might be coming"
 - **IGN** fires at $33,800 → "Enter long NOW" ✅
-- You enter at $33,900
+- Example entry at $33,900
 
 **The Trade:**
 - Price rallies to $42,000
 - **WRN** appears at $41,500 → "Start watching"
-- **CAP** fires at $42,800 → "Exit signal" ✅
-- You exit at $42,500
+- **CAP** fires at $42,800 → "Potential exit signal" ✅
+- Example exit at $42,500
 
 **Result:** $8,600 profit per coin (25% gain)
 
@@ -147,9 +147,9 @@ Most traders just use the default settings.
 ## Alerts (Set These!)
 
 **Must-have alerts:**
-1. **IGN Event** → Your buy signal
-2. **CAP Event** → Your sell signal
-3. **OUT Event** → Your exit signal
+1. **IGN Event** → Potential buy signal
+2. **CAP Event** → Potential sell signal
+3. **OUT Event** → Potential exit signal
 
 **How to set:**
 1. Click the alarm icon on TradingView

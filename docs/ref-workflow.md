@@ -312,7 +312,7 @@ Use Minimal Flow's built-in risk calculator:
 2. **T2:** Major Janus level (let 50% run)
 3. **Trail:** Use Minimal Flow trailing stop
 
-**Exit Signals:**
+**Potential Exit Signals:**
 - Opposite Pentarch event (IGN → exit longs on CAP/OUT)
 - Minimal Flow opposite signal
 - Stop loss hit

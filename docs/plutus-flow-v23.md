@@ -59,12 +59,12 @@ One huge volume bar (earnings, news) can permanently skew OBV, hiding subtle cha
 **Bullish Cross** (green circle)
 - OBV crosses above the middle line (20-SMA basis)
 - Flow shifting from distribution to accumulation
-- Entry signal for longs
+- Potential entry signal for longs
 
 **Bearish Cross** (red circle)
 - OBV crosses below the middle line
 - Flow shifting from accumulation to distribution
-- Entry signal for shorts
+- Potential entry signal for shorts
 
 **FlipGuard protection:** Prevents whipsaw with cooldown period
 
