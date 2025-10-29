@@ -287,8 +287,13 @@ body {
 }
 .sp-brand { display:flex; align-items:center; gap:.55rem; text-decoration:none; color: var(--md-default-fg-color); transition: opacity 0.2s; }
 .sp-brand:hover { opacity: 0.8; }
-.sp-logo { width: 32px; height: 32px; display: block; }
-.sp-brand-text { font-family: var(--sp-brand-font); font-weight: 400; font-size: 1.35rem; letter-spacing: 0.02em; }
+.sp-brand-text {
+  font-family: "Gugi", cursive !important;
+  font-weight: 400;
+  font-size: 1.75rem;
+  letter-spacing: 0.05em;
+  text-transform: none;
+}
 .sp-links { margin-left: .4rem; display:flex; gap:.35rem; flex-wrap: wrap; }
 .sp-links a { display:inline-flex; padding:.38rem .7rem; border-radius:999px; text-decoration:none; font-weight:700; color: color-mix(in srgb, var(--md-default-fg-color) 70%, transparent); }
 .sp-links a:hover { background: color-mix(in srgb, var(--md-primary-fg-color) 18%, transparent); color: var(--md-default-fg-color); }
