@@ -167,9 +167,9 @@ Start watching for shorts
 **The Trade:**
 1. Price pulls back to Daily VWAP at 4,500
 2. Holds above VWAP (bounce)
-3. You enter long at 4,502
-4. Target: Weekly High at 4,550 or POC at 4,510
-5. Stop: Below VWAP at 4,495
+3. Example entry long at 4,502
+4. Example target: Weekly High at 4,550 or POC at 4,510
+5. Example stop: Below VWAP at 4,495
 
 **Result:** Price rallies to 4,545 (near Weekly High) = +40 points profit
 
@@ -198,7 +198,7 @@ You don't need to change much. Just show/hide what you use:
 ## Alerts (Set These!)
 
 **Available alerts:**
-1. **Daily High Touch** - Price reaches today's high (breakout watch)
+1. **Daily High Touch** - Price reaches today's high (potential breakout watch)
 2. **Daily Low Touch** - Price reaches today's low (support test)
 
 **How to set:**

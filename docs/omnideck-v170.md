@@ -20,7 +20,7 @@ Omnideck is the **ultimate all-in-one indicator** - 10 professional trading syst
 
 **What to do:** Wait for 9, look for reversal confirmation, then enter opposite direction
 
-**Example:** Price falling for 9 bars (shows green 9 at $100) → Look for long entry, bottom forming
+**Example:** Price falling for 9 bars (shows green 9 at $100) → Look for long entry, potential bottom forming
 
 ---
 
@@ -204,7 +204,7 @@ Always prefer signals that happen at key zones.
 1. Price sweeps $63,200 (LL liquidity sweep)
 2. Bounces into demand zone
 3. TD shows green 9 (exhaustion)
-4. Hammer confirms reversal
+4. Hammer indicates potential reversal
 5. You enter long at $63,800
 6. Stop below zone at $63,000
 

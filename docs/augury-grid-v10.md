@@ -134,8 +134,8 @@ Symbol 7-8: Daily (futures position)
 2. **Check AGE** - Prefer fresh signals (0-10 bars)
 3. **Click Symbol** - Load that chart to verify
 4. **Confirm Setup** - Check levels, structure, context
-5. **Execute** - Enter trade
-6. **Use TP1** - Take profit at calculated target
+5. **Execute** - Enter trade (for educational example)
+6. **Example TP1** - Potential profit target at calculated level
 7. **Monitor P&L** - Watch the Grid track your trade
 
 **Repeat every hour/day** depending on your timeframes

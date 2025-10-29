@@ -31,10 +31,10 @@ Pentarch shows you **5 simple signals** that indicate when price may potentially
 
 **What it means:** Potential reversal indication. Bulls may be taking over.
 
-**What to do:**
+**Example usage:**
 - This is a potential entry signal for longs
-- Enter on this bar or next bar
-- Set your stop below the recent low
+- Example entry timing: this bar or next bar
+- Example stop placement: below the recent low
 
 **Example:** After TD at $85, IGN fires at $87 → Enter long, potential reversal indicated
 
@@ -46,10 +46,10 @@ Pentarch shows you **5 simple signals** that indicate when price may potentially
 
 **What it means:** Price is getting extended. A potential top might be forming soon.
 
-**What to do:**
-- Start tightening your stops if you're in a long
-- Get ready to exit
-- Don't buy here - it's too late
+**Example response:**
+- Example risk management: tighten stops if long
+- Prepare for potential exit
+- Educational note: Late entry reduces favorable risk/reward
 
 **Example:** Stock rallied to $115, WRN appears → start preparing to exit
 
@@ -124,7 +124,7 @@ Always set a stop loss:
 **The Trade:**
 - Price rallies to $42,000
 - **WRN** appears at $41,500 → "Start watching"
-- **CAP** fires at $42,800 → "Exit NOW" ✅
+- **CAP** fires at $42,800 → "Exit signal" ✅
 - You exit at $42,500
 
 **Result:** $8,600 profit per coin (25% gain)

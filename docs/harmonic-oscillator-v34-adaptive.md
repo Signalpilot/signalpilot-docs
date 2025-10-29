@@ -35,11 +35,11 @@ No single indicator is perfect. But when multiple agree? That's high probability
 
 **One line, 0-100 scale:**
 
-**80-100** = Extreme overbought (reversal down likely)
+**80-100** = Extreme overbought (potential reversal down likely)
 **60-80** = Bullish momentum
 **40-60** = Neutral (no clear direction)
 **20-40** = Bearish momentum
-**0-20** = Extreme oversold (reversal up likely)
+**0-20** = Extreme oversold (potential reversal up likely)
 
 **Two key zones:**
 - Above 70 = Overbought zone (watch for shorts)
@@ -92,13 +92,13 @@ When price and oscillator disagree = Reversal coming
 ### Regular Bullish Divergence
 - Price makes lower low
 - Oscillator makes higher low
-- **Signal:** Downtrend weakening, reversal up likely
+- **Signal:** Downtrend weakening, potential reversal up likely
 - Label: "BULL DIV" (green)
 
 ### Regular Bearish Divergence
 - Price makes higher high
 - Oscillator makes lower high
-- **Signal:** Uptrend weakening, reversal down likely
+- **Signal:** Uptrend weakening, potential reversal down likely
 - Label: "BEAR DIV" (red)
 
 ### Hidden Divergences
@@ -161,11 +161,11 @@ When price and oscillator disagree = Reversal coming
 - **Votes:** All 3 components vote bullish (Conservative = elite)
 
 **The Trade:**
-1. You enter long at $1,760
-2. Stop below recent low at $1,720
-3. Target: Composite 70 (overbought, exit zone)
+1. Example entry long at $1,760
+2. Example stop below recent low at $1,720
+3. Example target: Composite 70 (overbought, exit zone)
 4. Price rallies to $2,100
-5. Composite hits 72, you exit
+5. Composite hits 72, example exit
 
 **Result:** $340 profit per ETH (19% gain)
 
@@ -260,7 +260,7 @@ Enable HTF filter to only take signals aligned with higher timeframe:
 
 **Q: Which divergence is strongest?**
 **A:**
-- **Regular divergences** = Best reversal signals
+- **Regular divergences** = Best potential reversal signals
 - **Hidden divergences** = Best continuation signals
 Both are valuable in different contexts.
 

@@ -1,11 +1,11 @@
 # Glossary (SignalPilot)
 
-**TD / IGN / OUT / CAP / WRN** — EC Pro event language  
-- **TD**: Touchdown (provisional bottom)  
-- **IGN**: Ignition (bull reversal)  
-- **OUT**: Bear reversal (top confirmed)  
-- **CAP**: High‑sensitivity top (warning)  
-- **WRN**: Early top (caution)
+**TD / IGN / OUT / CAP / WRN** — EC Pro event language
+- **TD**: Touchdown (potential provisional bottom)
+- **IGN**: Ignition (potential bull reversal)
+- **OUT**: Potential bear reversal (potential top indicated)
+- **CAP**: High‑sensitivity potential top (warning)
+- **WRN**: Early potential top (caution)
 
 **CLX / ABS** — EVR events  
 - **CLX**: Climax (large range + strong body)  

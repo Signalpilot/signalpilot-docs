@@ -153,12 +153,12 @@ Each signal gets rated 0-100:
 - Dashed line = TP1 target
 - Label shows current P&L
 
-**What you do:**
-1. Enter at entry price
-2. Set your stop at the dotted line
-3. Take 50% profit at TP1 (dashed line)
-4. Trail remaining 50% with 2% trailing stop
-5. Exit on opposite signal or stop hit
+**Example trade setup:**
+1. Example entry at entry price
+2. Example stop placement at the dotted line
+3. Example profit target: 50% at TP1 (dashed line)
+4. Example trailing stop: remaining 50% with 2% trail
+5. Example exit: opposite signal or stop hit
 
 **The system calculates, you execute.**
 

@@ -129,7 +129,7 @@ Each indicator in the v6 Suite serves a specific purpose. Combine 2-3 indicators
 **Setup:** Daily chart, BTC/USD
 
 **Step 1: Pentarch IGN Event**
-- Pentarch fires **IGN** at $42,150 (bull reversal confirmed)
+- Pentarch fires **IGN** at $42,150 (potential bull reversal indicated)
 
 **Step 2: Janus Atlas Check**
 - IGN occurs at **Weekly Low** ($42,100)
