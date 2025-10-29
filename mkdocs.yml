@@ -17,10 +17,20 @@ theme:
     - content.tabs.link
     - content.tooltips
   palette:
-    # Dark mode only - with aurora background
-    scheme: slate
-    primary: teal
-    accent: cyan
+    # Light mode
+    - scheme: default
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode (with aurora)
+    - scheme: slate
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
   font:
     text: Roboto
     code: Roboto Mono

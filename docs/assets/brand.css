@@ -403,3 +403,44 @@ body {
   border-radius: 16px;
   margin-bottom: 3rem;
 }
+
+/* ============================================================================
+   FINAL LIGHT MODE OVERRIDES - LOADED LAST TO ENSURE PRIORITY
+   ============================================================================ */
+
+/* Hide aurora background in light mode */
+[data-md-color-scheme="default"] .sp-aurora,
+[data-md-color-scheme="default"] .bg-aurora,
+[data-md-color-scheme="default"] .bg-aurora-video,
+[data-md-color-scheme="default"] .bg-stars,
+[data-md-color-scheme="default"] .sp-constellations {
+  display: none !important;
+  opacity: 0 !important;
+}
+
+/* Force pure white body background in light mode */
+[data-md-color-scheme="default"] body {
+  background: #ffffff !important;
+}
+
+[data-md-color-scheme="default"] body::before {
+  display: none !important;
+}
+
+/* FINAL TEXT COLOR OVERRIDE - This catches absolutely everything */
+html[data-md-color-scheme="default"] body,
+html[data-md-color-scheme="default"] body *:not(a):not(.md-button):not([class*="btn"]) {
+  color: #0f1524 !important;
+}
+
+/* Links remain blue in light mode */
+html[data-md-color-scheme="default"] a {
+  color: #0aa1d5 !important;
+}
+
+/* Buttons and CTAs keep their intended colors */
+html[data-md-color-scheme="default"] .md-button,
+html[data-md-color-scheme="default"] .sp-cta,
+html[data-md-color-scheme="default"] [class*="btn"] {
+  color: inherit !important;
+}
