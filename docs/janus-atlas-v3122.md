@@ -135,7 +135,7 @@ When price approaches a level:
 
 ### Step 3: Use Structure for Trend
 
-The structure labels (HH/HL/LH/LL) tell you the current trend:
+The structure labels (HH/HL/LH/LL) show you the current trend:
 
 **Healthy Uptrend:**
 ```
@@ -207,7 +207,7 @@ You don't need to change much. Just show/hide what you use:
 3. Choose the level (Daily High or Daily Low)
 4. Set to "Once Per Bar Close"
 
-**Tip:** Combine with other indicator alerts for confluence. Example: "Daily High touch + Pentarch WRN" = potential top
+**Tip:** Combine with other indicator alerts for confluence. Example: "Daily High touch + Pentarch WRN" = late-cycle exhaustion watch
 
 ---
 
@@ -260,7 +260,7 @@ You don't need to change much. Just show/hide what you use:
 **A:** No. Once a level is drawn, it stays. What you see is what you get.
 
 **Q: Can I use this with other indicators?**
-**A:** Absolutely! Janus Atlas shows WHERE to trade. Use other indicators (like Pentarch) to tell you WHEN to trade.
+**A:** Absolutely! Janus Atlas shows WHERE to trade. Use other indicators (like Pentarch) to show you WHEN to trade.
 
 ---
 
@@ -299,6 +299,6 @@ Need help? Check out:
 
 ---
 
-**Remember:** Janus Atlas tells you WHERE price may potentially react. Combine it with Pentarch (WHEN potential reversals may happen) or other indicators for best results.
+**Remember:** Janus Atlas shows you WHERE price may potentially react. Combine it with Pentarch (WHEN potential reversals may happen) or other indicators for best results.
 
 **Trade the levels, respect the structure!** 🎯

@@ -20,7 +20,7 @@ Omnideck is the **ultimate all-in-one indicator** - 10 professional trading syst
 
 **What to do:** Wait for 9, look for potential reversal confirmation, then enter opposite direction
 
-**Example:** Price falling for 9 bars (shows green 9 at $100) → Look for long entry, potential bottom forming
+**Example:** Price falling for 9 bars (shows green 9 at $100) → Look for long entry, early-cycle conditions may be developing
 
 ---
 
@@ -134,7 +134,7 @@ Omnideck is the **ultimate all-in-one indicator** - 10 professional trading syst
 
 **What to do:** Pattern + other confirmations = Potential high-probability trade
 
-**Example:** Shooting Star at supply zone + TD 9 red = Potential major top, example short setup
+**Example:** Shooting Star at supply zone + TD 9 red = Potential late-cycle exhaustion, example short setup
 
 ---
 

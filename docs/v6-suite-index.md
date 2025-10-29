@@ -45,8 +45,8 @@ Not sure which indicator to start with? This table shows how all 7 indicators co
 The ultimate potential reversal detector with 5 critical event types:
 - **TD** (Touchdown) - Oversold base formation
 - **IGN** (Ignition) - Potential bull reversal signal
-- **WRN** (Warning) - Early potential top detection
-- **CAP** (Capitulation) - Final thrust exhaustion
+- **WRN** (Warning) - Early late-cycle detection
+- **CAP** (Climax) - Final thrust exhaustion
 - **BDN** (Breakdown) - Potential bear reversal signal
 
 **Best for:** Swing traders, potential reversal identification, multi-timeframe analysis
@@ -321,7 +321,7 @@ All 7 indicators are **SP Protocol v6** compliant:
 - Most indicators have quality scoring/tiers
 - Potential Elite/Premium signals = Take these
 - Standard/Weak = Skip unless perfect confluence
-- Quality over quantity always wins
+- Quality over quantity is key
 
 ### Track Your Performance
 - After 20 trades, calculate win rate by:

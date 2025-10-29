@@ -7,21 +7,21 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 ## 🎯 Pentarch Signals (Core Reversal Events)
 
 ### TD (Touchdown)
-**Type:** Bottom warning signal
+**Type:** Early-cycle warning signal
 **Color:** Blue 🔵
-**Meaning:** Potential bottom forming—early warning
+**Meaning:** Indicates early-cycle reversal conditions
 **Action:** Start watching, don't enter yet
 **Typical Context:** Appears during downtrends when momentum starts exhausting
-**Next Signal:** Usually followed by IGN if reversal confirms
+**Next Signal:** Usually followed by IGN if reversal develops
 
-**Trading Note:** TD is your "heads up"—not an entry. Wait for IGN confirmation.
+**Trading Note:** TD is your "heads up"—not an entry. Wait for IGN signal.
 
 ---
 
 ### IGN (Ignition)
-**Type:** Bullish reversal confirmation
+**Type:** Bullish reversal indication
 **Color:** Green 🟢
-**Meaning:** Potential reversal up indicated
+**Meaning:** Indicates momentum breakout conditions
 **Action:** Consider long entry
 **Typical Context:** Appears after TD or standalone at strong support
 **Risk Management:** Set stop loss below IGN candle low
@@ -31,23 +31,23 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 ---
 
 ### WRN (Warning)
-**Type:** Top warning signal
+**Type:** Late-cycle warning signal
 **Color:** Yellow 🟡
-**Meaning:** Potential top forming—caution advised
+**Meaning:** Indicates weakening momentum
 **Action:** Start tightening stops, watch for exit
 **Typical Context:** Appears during uptrends when momentum begins fading
-**Next Signal:** May be followed by CAP if top confirms
+**Next Signal:** May be followed by CAP if exhaustion develops
 
-**Trading Note:** Don't automatically exit on WRN—use it to prepare for potential top.
+**Trading Note:** Don't automatically exit on WRN—use it to prepare for potential late-cycle exhaustion.
 
 ---
 
-### CAP (Capitulation)
+### CAP (Climax)
 **Type:** Bearish reversal warning
 **Color:** Red 🔴
-**Meaning:** Potential top exhaustion
+**Meaning:** Indicates late-cycle exhaustion conditions
 **Action:** Exit longs, tighten stops dramatically
-**Typical Context:** Appears at potential tops after extended uptrends
+**Typical Context:** Appears during late-cycle exhaustion after extended uptrends
 **Risk Management:** Major red flag for long positions
 
 **Trading Note:** Strong exit signal for longs. Consider taking profits or moving stop to breakeven.
@@ -55,11 +55,11 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 ---
 
 ### BDN (Breakdown)
-**Type:** Bearish reversal confirmation
+**Type:** Bearish reversal indication
 **Color:** Black ⚫
-**Meaning:** Potential downtrend beginning
+**Meaning:** Indicates bearish breakdown conditions
 **Action:** Exit all longs, consider shorts
-**Typical Context:** Confirms bearish reversal after CAP or standalone at resistance
+**Typical Context:** Indicates bearish reversal after CAP or standalone at resistance
 **Risk Management:** Set stop loss above BDN candle high for shorts
 
 **Trading Note:** Primary short entry or definitive long exit signal.
@@ -122,10 +122,10 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 
 ### BOS (Break of Structure)
 **Definition:** Price breaks previous swing high (uptrend) or low (downtrend)
-**Meaning:** Trend continuation confirmed
+**Meaning:** Trend continuation indicated
 **Bullish BOS:** Break above previous swing high
 **Bearish BOS:** Break below previous swing low
-**Trading:** Confirms trend strength, anticipate pullback entry
+**Trading:** Indicates trend strength, anticipate pullback entry
 
 ---
 
@@ -134,7 +134,7 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 **Meaning:** Market character shifting from bull to bear or vice versa
 **Bullish CHOCH:** Low holds, breaks previous high
 **Bearish CHOCH:** High holds, breaks previous low
-**Trading:** Early reversal warning, wait for confirmation
+**Trading:** Early reversal warning, wait for signal development
 
 ---
 
@@ -199,7 +199,7 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 ### OBV (On-Balance Volume)
 **Definition:** Cumulative volume indicator
 **Calculation:** Add volume on up days, subtract on down days
-**Usage:** Confirms price trends
+**Usage:** Indicates price trends
 **Divergence:** OBV trending opposite to price = warning
 **Indicator:** Plutus Flow is enhanced OBV
 
@@ -210,7 +210,7 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 **Bullish Divergence:** Price making lower lows, indicator making higher lows
 **Bearish Divergence:** Price making higher highs, indicator making lower highs
 **Significance:** Potential reversal warning
-**Confirmation:** Wait for price confirmation (IGN, BDN)
+**Signal:** Wait for price signal (IGN, BDN)
 
 ---
 
@@ -219,14 +219,14 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 **Triad Bull:** RSI crosses up through envelope with bullish slope
 **Triad Bear:** RSI crosses down through envelope with bearish slope
 **Components:** Base RSI + Fast/Slow envelopes + slope checks
-**Usage:** Momentum confirmation for entries
+**Usage:** Momentum indication for entries
 
 ---
 
 ## 🎛️ Filter & Regime Concepts
 
 ### LOK (Long OK)
-**Definition:** Regime filter confirming long trades are favorable
+**Definition:** Regime filter indicating long trades are favorable
 **Criteria:** Trend-qualified AND not in squeeze
 **Visual:** Green background or indicator state
 **Usage:** Only take IGN signals when LOK active
@@ -235,7 +235,7 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 ---
 
 ### SOK (Short OK)
-**Definition:** Regime filter confirming short trades are favorable
+**Definition:** Regime filter indicating short trades are favorable
 **Criteria:** Trend-qualified AND not in squeeze
 **Visual:** Red background or indicator state
 **Usage:** Only take BDN signals when SOK active
@@ -307,7 +307,7 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 - Pentarch IGN signal
 - At major Janus support level
 - In bullish FVG zone
-- Triad Bull confirmation
+- Triad Bull signal
 - LOK active
 
 **Benefit:** Much higher win rate
@@ -336,7 +336,7 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 ### Minimal Flow
 **Definition:** Volume-based strategy indicator
 **Focus:** Order flow and volume patterns
-**Signals:** Volume-confirmed moves
+**Signals:** Volume-based moves
 **Use With:** Pentarch for confluence
 
 ---
@@ -352,7 +352,7 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 ### Plutus Flow
 **Definition:** Advanced On-Balance Volume indicator
 **Enhancement:** Traditional OBV with improvements
-**Usage:** Volume trend confirmation
+**Usage:** Volume trend indication
 **Divergence:** Key feature for reversals
 
 ---

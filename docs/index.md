@@ -1,7 +1,7 @@
 # Signal Pilot Documentation
 
 <p style="font-size: 1.3rem; color: var(--md-primary-fg-color); font-weight: 500; margin-bottom: 2rem;">
-Crystal-clear indicators that tell you <strong>WHEN</strong> to enter, <strong>WHERE</strong> the levels are, and <strong>HOW</strong> to manage risk.
+Crystal-clear indicators that show you <strong>WHEN</strong> to enter, <strong>WHERE</strong> the levels are, and <strong>HOW</strong> to manage risk.
 </p>
 
 <div style="text-align: center; padding: 3rem 1.5rem; background: linear-gradient(135deg, #345CFF, #0aa1d5); border-radius: 20px; margin-bottom: 3rem; box-shadow: 0 8px 24px rgba(52, 92, 255, 0.3);">
@@ -59,7 +59,7 @@ Crystal-clear indicators that tell you <strong>WHEN</strong> to enter, <strong>W
 <div class="grid cards" markdown>
 
 - :material-chart-timeline-variant: **Pentarch v1.0 — Reversal Events**
-  5 simple signals that tell you when price is reversing. TD/IGN/WRN/CAP/BDN labels.
+  5 simple signals that show you when price is reversing. TD/IGN/WRN/CAP/BDN labels.
   [Read Guide :material-arrow-right:](pentarch-v89.md){ .md-button .md-button--primary }
 
 - :material-crosshairs-gps: **Janus Atlas v1.0 — Levels System**
@@ -221,7 +221,7 @@ Want to see how all 7 indicators work together?
 
 **Reversal + Levels:**
 [Pentarch v1.0](pentarch-v89.md) + [Janus Atlas v1.0](janus-atlas-v3122.md)
-→ Pentarch tells you WHEN, Janus tells you WHERE
+→ Pentarch shows you WHEN, Janus shows you WHERE
 
 **Complete System:**
 [Omnideck v1.0](omnideck-v170.md) + [Janus Atlas v1.0](janus-atlas-v3122.md)

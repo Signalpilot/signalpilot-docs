@@ -219,7 +219,7 @@ Each indicator in the Signal Pilot Suite serves a specific purpose. Combine 2-3 
 
 1. **Pentarch:**
    - IGN Event (bull reversal)
-   - CAP Event (top exhaustion)
+   - CAP Event (late-cycle exhaustion)
    - BDN Event (potential breakdown/bear reversal)
 
 2. **Minimal Flow:**

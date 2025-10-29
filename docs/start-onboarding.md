@@ -75,9 +75,9 @@ Your complete 7-day guide to mastering Signal Pilot indicators. Follow this step
 - [ ] **Find signals on your chart**
   - Open your saved layout from Day 1
   - Find example of each signal type:
-    - [ ] TD (blue) - Bottom warning
+    - [ ] TD (blue) - Early-cycle warning
     - [ ] IGN (green) - Long entry
-    - [ ] WRN (yellow) - Top warning
+    - [ ] WRN (yellow) - Late-cycle warning
     - [ ] CAP (red) - Exit longs
     - [ ] BDN (black) - Short entry
 

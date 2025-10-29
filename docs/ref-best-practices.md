@@ -151,7 +151,7 @@ WRN can appear multiple times in strong uptrend. Wait for CAP or BDN.
 
 ---
 
-#### CAP (Capitulation) - Red
+#### CAP (Climax) - Red
 
 **Best practice:**
 - ✅ Exit or dramatically tighten stops on longs

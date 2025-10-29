@@ -2,7 +2,7 @@
 
 ## What Does It Do?
 
-Minimal Flow is your **potential volume spike detector with built-in position management**. It tells you when smart money may be moving (potential volume spikes), confirms the direction is real (flow consistency), and manages your entire trade from entry to exit.
+Minimal Flow is your **potential volume spike detector with built-in position management**. It shows you when smart money may be moving (potential volume spikes), indicates the direction is real (flow consistency), and manages your entire trade from entry to exit.
 
 **Best for:** Volume traders, systematic traders, anyone serious about risk management
 
@@ -340,6 +340,6 @@ Need help? Check out:
 
 ---
 
-**Remember:** Minimal Flow detects when smart money may be moving, confirms direction is real, and manages your entire trade. You just need to execute what it tells you.
+**Remember:** Minimal Flow detects when smart money may be moving, indicates direction is real, and manages your entire trade. You just need to execute what it shows you.
 
 **Follow the volume, manage the risk!** 🎯

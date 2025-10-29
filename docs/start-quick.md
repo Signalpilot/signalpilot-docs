@@ -36,24 +36,24 @@ By the end of this guide, you'll:
 
 Pentarch shows you **5 simple signals** that indicate when price may potentially reverse. Think of it like **traffic lights for reversals:**
 
-### The Bottom Signals (Green Light - GO!)
+### The Early-Cycle Signals (Green Light - GO!)
 
 **🔵 TD (Touchdown)** = "Get Ready"
-- Potential bottom forming
+- Early-cycle conditions developing
 - Don't enter yet, just watch
 
 **🟢 IGN (Ignition)** = "GO! Enter Long"
 - Potential reversal up indicated
 - This is your long entry signal
 
-### The Top Signals (Red Light - STOP!)
+### The Late-Cycle Signals (Red Light - STOP!)
 
 **🟡 WRN (Warning)** = "Watch Out"
-- Potential top forming
+- Late-cycle conditions developing
 - Start tightening stops
 
-**🔴 CAP (Capitulation)** = "Exit Now"
-- Potential top exhaustion
+**🔴 CAP (Climax)** = "Exit Now"
+- Late-cycle exhaustion
 - Exit your longs
 
 **⚫ BDN (Breakdown)** = "Potential Downtrend"
@@ -95,7 +95,7 @@ Price: $35,000, falling for 2 weeks
 
 **The Signals:**
 1. **TD appears at $32,500** 🔵
-   - "Potential bottom might be coming"
+   - "Early-cycle conditions developing"
    - You: Start watching, don't enter yet
 
 2. **IGN fires at $33,800** 🟢
@@ -105,7 +105,7 @@ Price: $35,000, falling for 2 weeks
 
 **The Trade:**
 3. **WRN appears at $41,500** 🟡
-   - "Potential top warning"
+   - "Late-cycle warning"
    - You: Start watching exit
 
 4. **CAP fires at $42,800** 🔴
@@ -120,10 +120,10 @@ Price: $35,000, falling for 2 weeks
 
 | Signal | Color | Meaning | Action |
 |--------|-------|---------|--------|
-| TD 🔵 | Blue | Potential bottom warning | Watch - don't enter yet |
+| TD 🔵 | Blue | Early-cycle warning | Watch - don't enter yet |
 | IGN 🟢 | Green | Potential reversal up | **Enter long** |
-| WRN 🟡 | Yellow | Potential top warning | Start watching exit |
-| CAP 🔴 | Red | Potential top exhaustion | **Exit longs** |
+| WRN 🟡 | Yellow | Late-cycle warning | Start watching exit |
+| CAP 🔴 | Red | Late-cycle exhaustion | **Exit longs** |
 | BDN ⚫ | Black | Potential breakdown | Exit all longs (or short) |
 
 ---
@@ -133,16 +133,16 @@ Price: $35,000, falling for 2 weeks
 ### Mistake #1: Entering on TD (Blue Signal)
 
 **❌ Wrong:** "TD appeared, I'm buying now!"
-**✅ Right:** "TD appeared, I'm watching for IGN confirmation"
+**✅ Right:** "TD appeared, I'm watching for IGN signal"
 
-**Why:** TD is a warning, not an entry. Wait for IGN to confirm the reversal.
+**Why:** TD is a warning, not an entry. Wait for IGN to indicate the reversal.
 
 ---
 
 ### Mistake #2: Not Using "Once Per Bar Close" for Alerts
 
 **❌ Wrong:** Alert fires mid-bar, you enter, signal disappears
-**✅ Right:** Alert set to "Once Per Bar Close", only confirmed signals notify you
+**✅ Right:** Alert set to "Once Per Bar Close", only closed-bar signals notify you
 
 **Fix:**
 - Delete incorrect alerts
@@ -282,7 +282,7 @@ Price: $35,000, falling for 2 weeks
 
 ### Add Levels:
 → **[Janus Atlas Guide](janus-atlas-v3122.md)** - Know WHERE the key levels are
-**Why:** Pentarch tells you WHEN, Janus tells you WHERE
+**Why:** Pentarch shows you WHEN, Janus shows you WHERE
 
 ### Complete System:
 → **[Suite Workflow](ref-workflow.md)** - How all 7 indicators work together
