@@ -1,4 +1,4 @@
-# Plutus Flow v2.3 - Smart OBV Analysis
+# Plutus Flow v1.0 - Smart OBV Analysis
 
 ## What Does It Do?
 
@@ -212,7 +212,7 @@ One huge volume bar (earnings, news) can permanently skew OBV, hiding subtle cha
 
 **How to set:**
 1. Click alarm icon
-2. Select "Plutus Flow v2.3"
+2. Select "Plutus Flow v1.0"
 3. Choose alert
 4. Set to "Once Per Bar Close"
 

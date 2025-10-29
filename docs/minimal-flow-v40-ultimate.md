@@ -1,4 +1,4 @@
-# Minimal Flow v4.0 Ultimate - Volume Intelligence System
+# Minimal Flow v1.0 Ultimate - Volume Intelligence System
 
 ## What Does It Do?
 

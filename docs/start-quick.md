@@ -1,6 +1,6 @@
 # Quick Start - Get Your First Signal in 5 Minutes
 
-Get from zero to your first potential reversal signal in 5 minutes. We'll use **Pentarch v8.9** - the simplest and most impactful indicator in the suite.
+Get from zero to your first potential reversal signal in 5 minutes. We'll use **Pentarch v1.0** - the simplest and most impactful indicator in the suite.
 
 ---
 
@@ -23,7 +23,7 @@ By the end of this guide, you'll:
 
 1. **Open any chart** (Bitcoin, stocks, forex - any market works)
 2. **Click "Indicators"** at the top of the chart
-3. **Search for:** `"Pentarch v8.9"` or `"Signal Pilot"`
+3. **Search for:** `"Pentarch v1.0"` or `"Signal Pilot"`
 4. **Click to add** the indicator to your chart
 
 **You should now see:**
@@ -67,7 +67,7 @@ Pentarch shows you **5 simple signals** that indicate when price may potentially
 Let's set up an alert for **IGN** (your buy signal):
 
 1. **Right-click your chart** → "Add Alert"
-2. **Condition:** Select "Pentarch v8.9"
+2. **Condition:** Select "Pentarch v1.0"
 3. **Event:** Choose `"IGN Event"`
 4. **Options:** Set to **"Once Per Bar Close"** (important!)
 5. **Name it:** "Pentarch IGN - Potential Buy Signal"
@@ -171,7 +171,7 @@ Price: $35,000, falling for 2 weeks
 **Common Questions:**
 - **"Signals appearing then disappearing?"** → Make sure alerts are set to "Once Per Bar Close"
 - **"Too many signals?"** → Try higher timeframes (4H, Daily)
-- **"Not enough signals?"** → Check you have correct indicator version (v8.9)
+- **"Not enough signals?"** → Check you have correct indicator version (v1.0)
 
 **Resources:**
 - **[FAQ](about-faq.md)** - Common questions answered

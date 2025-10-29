@@ -348,13 +348,13 @@ Use Minimal Flow's built-in risk calculator:
 
 | Indicator | Primary Use | Best For |
 |-----------|-------------|----------|
-| **Pentarch v8.9** | Reversal events, regime | Event-driven trading |
-| **Janus Atlas v3.12.2** | Levels, structure | Entry/exit precision |
-| **Omnideck v1.7.0** | Complete analysis | All-in-one traders |
+| **Pentarch v1.0** | Reversal events, regime | Event-driven trading |
+| **Janus Atlas v1.0** | Levels, structure | Entry/exit precision |
+| **Omnideck v1.0** | Complete analysis | All-in-one traders |
 | **Augury Grid v1.0** | Multi-symbol scan | Watchlist management |
-| **Minimal Flow v4.0** | Volume + position mgmt | Systematic trading |
-| **Harmonic Oscillator v3.4** | Momentum divergence | Reversal confirmation |
-| **Plutus Flow v2.3** | OBV divergence | Volume divergence |
+| **Minimal Flow v1.0** | Volume + position mgmt | Systematic trading |
+| **Harmonic Oscillator v1.0** | Momentum divergence | Reversal confirmation |
+| **Plutus Flow v1.0** | OBV divergence | Volume divergence |
 
 ---
 
