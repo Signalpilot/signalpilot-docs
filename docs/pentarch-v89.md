@@ -231,10 +231,10 @@ Most traders just use the default settings.
 
 | Signal | Meaning | Action |
 |--------|---------|--------|
-| TD 🔵 | Bottom warning | Get ready, don't enter yet |
-| IGN 🟢 | Reversal up confirmed | **Enter long** |
-| WRN 🟡 | Top warning | Start watching, tighten stops |
-| CAP 🔴 | Top exhaustion | **Exit longs** |
+| TD 🔵 | Potential bottom warning | Get ready, don't enter yet |
+| IGN 🟢 | Potential reversal up indicated | **Enter long** |
+| WRN 🟡 | Potential top warning | Start watching, tighten stops |
+| CAP 🔴 | Potential top exhaustion | **Exit longs** |
 | BDN ⚫ | Potential breakdown | Exit all longs (or short) |
 
 ---
