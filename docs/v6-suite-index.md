@@ -46,7 +46,7 @@ The ultimate potential reversal detector with 5 critical event types:
 - **TD** (Touchdown) - Oversold base formation
 - **IGN** (Ignition) - Potential bull reversal signal
 - **WRN** (Warning) - Early late-cycle detection
-- **CAP** (Capitulation) - Final thrust exhaustion
+- **CAP** (Climax) - Final thrust exhaustion
 - **BDN** (Breakdown) - Potential bear reversal signal
 
 **Best for:** Swing traders, potential reversal identification, multi-timeframe analysis

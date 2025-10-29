@@ -9,7 +9,7 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 ### TD (Touchdown)
 **Type:** Early-cycle warning signal
 **Color:** Blue 🔵
-**Meaning:** Early-cycle reversal conditions developing—early warning
+**Meaning:** Indicates early-cycle reversal conditions
 **Action:** Start watching, don't enter yet
 **Typical Context:** Appears during downtrends when momentum starts exhausting
 **Next Signal:** Usually followed by IGN if reversal develops
@@ -21,7 +21,7 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 ### IGN (Ignition)
 **Type:** Bullish reversal indication
 **Color:** Green 🟢
-**Meaning:** Potential reversal up indicated
+**Meaning:** Indicates momentum breakout conditions
 **Action:** Consider long entry
 **Typical Context:** Appears after TD or standalone at strong support
 **Risk Management:** Set stop loss below IGN candle low
@@ -33,7 +33,7 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 ### WRN (Warning)
 **Type:** Late-cycle warning signal
 **Color:** Yellow 🟡
-**Meaning:** Late-cycle conditions developing—caution advised
+**Meaning:** Indicates weakening momentum
 **Action:** Start tightening stops, watch for exit
 **Typical Context:** Appears during uptrends when momentum begins fading
 **Next Signal:** May be followed by CAP if exhaustion develops
@@ -45,7 +45,7 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 ### CAP (Climax)
 **Type:** Bearish reversal warning
 **Color:** Red 🔴
-**Meaning:** Late-cycle exhaustion conditions
+**Meaning:** Indicates late-cycle exhaustion conditions
 **Action:** Exit longs, tighten stops dramatically
 **Typical Context:** Appears during late-cycle exhaustion after extended uptrends
 **Risk Management:** Major red flag for long positions
@@ -57,7 +57,7 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 ### BDN (Breakdown)
 **Type:** Bearish reversal indication
 **Color:** Black ⚫
-**Meaning:** Potential downtrend beginning
+**Meaning:** Indicates bearish breakdown conditions
 **Action:** Exit all longs, consider shorts
 **Typical Context:** Indicates bearish reversal after CAP or standalone at resistance
 **Risk Management:** Set stop loss above BDN candle high for shorts
