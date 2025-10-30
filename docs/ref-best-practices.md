@@ -8,10 +8,10 @@ Master Signal Pilot indicators with these proven strategies from experienced tra
 
 ### 1. Quality Over Quantity
 
-**Don't take every signal**
+**Selective signal evaluation**
 
-❌ Bad: Trading all IGN signals
-✅ Good: Trading only IGN at major support with volume confirmation
+❌ Lower quality approach: Trading all IGN signals regardless of context
+✅ Higher quality approach: Focusing on IGN at major support with volume confirmation
 
 **Why:**
 - Not all signals are equal
@@ -41,31 +41,31 @@ Master Signal Pilot indicators with these proven strategies from experienced tra
 - Lower timeframes are noisier
 - HTF context prevents counter-trend traps
 
-**Pro tip:** Never trade against Daily trend unless CHOCH confirmed.
+**Common guideline:** Trading against Daily trend is generally avoided unless CHOCH is confirmed, as it's associated with lower probability setups.
 
 ---
 
-### 3. Always Use Stop Losses
+### 3. Stop Loss Usage
 
-**NO EXCEPTIONS. EVER.**
+**Standard risk management practice in trading**
 
-**Stop loss placement:**
+**Common stop loss placement patterns:**
 
-**For longs (IGN entry):**
-- Below the IGN candle low
-- OR below nearest Janus support
-- Whichever is closer/tighter
+**For long positions (IGN-based entries):**
+- Typical placement: Below the IGN candle low
+- Alternative placement: Below nearest Janus support
+- Often using whichever level is closer/tighter
 
-**For shorts (BDN entry):**
-- Above the BDN candle high
-- OR above nearest Janus resistance
-- Whichever is closer/tighter
+**For short positions (BDN-based entries):**
+- Typical placement: Above the BDN candle high
+- Alternative placement: Above nearest Janus resistance
+- Often using whichever level is closer/tighter
 
-**Stop loss rules:**
-- Set BEFORE entering trade
-- Never move stop closer to entry
-- Can trail stop in your favor (never toward entry)
-- If stop would risk more than 2% of account, skip trade
+**Common stop management guidelines:**
+- Stops are typically set before position entry
+- Moving stops closer to entry increases original risk assessment
+- Trailing stops in favorable direction is common practice
+- Positions risking more than 2% of account are generally filtered out
 
 ---
 

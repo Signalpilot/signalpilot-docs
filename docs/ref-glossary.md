@@ -207,7 +207,7 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 **Meaning:** Market character shifting from bull to bear or vice versa
 **Bullish CHOCH:** Low holds, breaks previous high
 **Bearish CHOCH:** High holds, breaks previous low
-**Trading:** Early reversal warning, wait for signal development
+**Common Usage:** Often viewed as early reversal warning where traders await signal development
 
 ---
 
@@ -283,7 +283,7 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 **Bullish Divergence:** Price making lower lows, indicator making higher lows
 **Bearish Divergence:** Price making higher highs, indicator making lower highs
 **Significance:** Potential reversal warning
-**Signal:** Wait for price signal (IGN, BDN)
+**Common Practice:** Often combined with price signals (IGN, BDN) for confirmation
 
 ---
 
@@ -320,7 +320,7 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 **Definition:** Low volatility period (tight Bollinger Bands)
 **Visual:** Narrowing bands, special indicator marking
 **Meaning:** Consolidation before potential breakout
-**Trading:** Avoid trading during squeeze, wait for expansion
+**Common Approach:** Trading during squeezes is often avoided; expansion phases are typically preferred
 **After Squeeze:** Often produces strong directional move
 
 ---
@@ -349,8 +349,8 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 - Long: Below IGN candle or TD low
 - Short: Above BDN candle or CAP high
 
-**Movement:** Can trail up (longs) or down (shorts), never toward entry
-**Importance:** Non-negotiable risk management tool
+**Movement:** Commonly trailed up (longs) or down (shorts); moving toward entry increases risk
+**Importance:** Standard risk management practice in trading
 
 ---
 
@@ -465,7 +465,7 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 **Definition:** Temporary price retracement within larger trend
 **Appearance:** Small counter-trend move
 **Opportunity:** Entry point in direction of larger trend
-**Strategy:** Wait for pullback to key level, then enter on reversal signal
+**Common Approach:** Often involves awaiting pullback to key level combined with reversal signal
 
 ---
 
@@ -474,7 +474,7 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 **Types:** Support breakout (bearish), resistance breakout (bullish)
 **Volume:** Should increase on breakouts
 **False Breakout:** Returns inside range quickly
-**Confirmation:** Wait for close beyond level
+**Confirmation:** Many traders look for close beyond level to confirm breakout validity
 
 ---
 

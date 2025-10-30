@@ -38,7 +38,7 @@ Pentarch shows you **5 simple signals** that indicate when price may potentially
 - Example entry timing: this bar or next bar
 - Example stop placement: below the recent low
 
-**Example:** After TD at $85, IGN fires at $87 → Enter long, potential reversal indicated
+**Example:** After TD at $85, IGN fires at $87 → Potential reversal indicated, commonly interpreted as long entry signal
 
 ---
 
@@ -320,8 +320,8 @@ NanoFlow helps you evaluate the quality and health of main event signals:
 - IGN fires → No green NanoFlow for 5+ bars = Weak signal, exercise caution
 
 **3. Chop Detection:**
-- NanoFlow flipping green/red/green/red rapidly = Choppy conditions, avoid trading
-- NanoFlow absent entirely = Low volatility zone, wait for clearer setup
+- NanoFlow flipping green/red/green/red rapidly = Choppy conditions where trading is often avoided
+- NanoFlow absent entirely = Low volatility zone where traders typically await clearer setups
 
 **4. Continuation Monitoring:**
 - Many NanoFlow crosses in same direction = Strong trend, momentum sustained
@@ -513,7 +513,7 @@ Most traders just use the default settings.
 **A:** No. Once a signal appears, it stays. What you see is what you get.
 
 **Q: What if I miss the IGN entry?**
-**A:** Chasing missed entries is generally associated with poor risk/reward. Many traders wait for the next TD→IGN setup as opportunities are continuous.
+**A:** Chasing missed entries is generally associated with poor risk/reward. Many traders look for the next TD→IGN setup as opportunities are continuous.
 
 ---
 
