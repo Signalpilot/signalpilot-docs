@@ -90,7 +90,8 @@ You can use any timeframe, but start higher and work your way down as you gain c
 
 See [Troubleshooting Guide](ref-troubleshooting.md) for more detailed solutions.
 
-### How do I know if alerts are working?
+### 🔔 How do I know if alerts are working?
+<span style="color: #10b981; font-weight: 600;">Alert Testing</span>
 
 **Test your alerts:**
 
@@ -101,7 +102,8 @@ See [Troubleshooting Guide](ref-troubleshooting.md) for more detailed solutions.
 
 **Key setting:** Always use "Once Per Bar Close" for alerts to avoid repainting.
 
-### Can I use these on multiple devices?
+### 📱 Can I use these on multiple devices?
+<span style="color: #10b981; font-weight: 600;">Device Compatibility</span>
 
 Yes! Your TradingView account and indicator access work on:
 - Desktop browsers
@@ -128,7 +130,8 @@ Our indicators follow a strict non-repainting policy:
 
 See our [Non-Repainting Policy](ref-non-repaint.md) for technical details.
 
-### Which markets and timeframes work?
+### 🌍 Which markets and timeframes work?
+<span style="color: #10b981; font-weight: 600;">Universal Compatibility</span>
 
 **Markets:** Any market available on TradingView
 - Crypto (Bitcoin, Ethereum, altcoins)
@@ -162,7 +165,8 @@ This is intentional and prevents repainting:
 
 **Best practice:** Set alerts to "Once Per Bar Close" to only receive confirmed signals.
 
-### Can I automate trading with these indicators?
+### 🤖 Can I automate trading with these indicators?
+<span style="color: #8b5cf6; font-weight: 600;">Automation Support</span>
 
 **Yes!** Automation is fully supported.
 
@@ -233,7 +237,8 @@ See guides:
 
 See [Quick Start Guide](start-quick.md) for all 5 signal types explained.
 
-### Can I customize indicator settings?
+### 🎨 Can I customize indicator settings?
+<span style="color: #f59e0b; font-weight: 600;">Advanced Settings</span>
 
 **Yes, but carefully.**
 
@@ -249,7 +254,8 @@ Most indicators have customizable settings:
 
 **Warning:** Changing core calculation parameters may affect signal quality. Default settings have been optimized through extensive testing.
 
-### How often do signals appear?
+### 📊 How often do signals appear?
+<span style="color: #10b981; font-weight: 600;">Signal Frequency</span>
 
 **It depends on market conditions and timeframe.**
 
@@ -270,7 +276,8 @@ Most indicators have customizable settings:
 
 This is normal! Quality over quantity—Pentarch waits for high-probability setups.
 
-### Do I need Janus Atlas if I have Omnideck?
+### 🔄 Do I need Janus Atlas if I have Omnideck?
+<span style="color: #0aa1d5; font-weight: 600;">Indicator Overlap</span>
 
 **No, Omnideck includes Janus Atlas levels.**
 
@@ -293,7 +300,8 @@ Most users choose either Omnideck (everything) OR individual indicators (custom 
 
 ## 🆘 Common Issues
 
-### Signals appearing then disappearing?
+### ⚠️ Signals appearing then disappearing?
+<span style="color: #dc2626; font-weight: 600;">Critical Fix Required</span>
 
 **This means alerts are NOT set to "Once Per Bar Close".**
 
@@ -305,7 +313,8 @@ Most users choose either Omnideck (everything) OR individual indicators (custom 
 
 Signals that appear mid-bar can change before close. This is normal and why we use close-confirmed alerts.
 
-### Too many alerts?
+### 🔊 Too many alerts?
+<span style="color: #f59e0b; font-weight: 600;">Alert Filtering</span>
 
 **Solutions:**
 1. **Use higher timeframes** (switch from 1H to 4H or Daily)
@@ -313,7 +322,8 @@ Signals that appear mid-bar can change before close. This is normal and why we u
 3. **Filter by market conditions** (only trade during trending markets)
 4. **Use confluence** (only take signals at key Janus levels)
 
-### Not enough signals?
+### 🔇 Not enough signals?
+<span style="color: #f59e0b; font-weight: 600;">Increasing Signal Frequency</span>
 
 **Check:**
 1. **Timeframe**: Lower timeframes = more signals
@@ -323,7 +333,8 @@ Signals that appear mid-bar can change before close. This is normal and why we u
 
 **Remember:** Fewer signals is often better—quality over quantity.
 
-### Indicator disappeared from TradingView?
+### ❌ Indicator disappeared from TradingView?
+<span style="color: #dc2626; font-weight: 600;">Access Issue</span>
 
 **Possible reasons:**
 
@@ -358,7 +369,8 @@ Signals that appear mid-bar can change before close. This is normal and why we u
 
 **Avoid:** Putting all 7 indicators on one chart—it's overwhelming and unnecessary.
 
-### What's your recommended workflow?
+### 📋 What's your recommended workflow?
+<span style="color: #10b981; font-weight: 600;">Trading Process</span>
 
 See our complete [Trading Workflow Guide](ref-workflow.md) for the step-by-step process.
 
