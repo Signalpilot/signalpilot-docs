@@ -5,6 +5,7 @@ Welcome to the **Signal Pilot Signal Pilot Suite** - 7 production-ready, non-rep
 ---
 
 ## 📊 Quick Comparison - Choose Your Indicators
+<span style="color: #0aa1d5; font-weight: 600; font-size: 1.1em;">⭐ Start Here - Find Your Perfect Match</span>
 
 Not sure which indicator to start with? This table shows how all 7 indicators compare:
 
@@ -207,6 +208,7 @@ Advanced volume flow analysis with divergence detection:
 ---
 
 ## 🏆 Recommended Combinations
+<span style="color: #f59e0b; font-weight: 600; font-size: 1.1em;">💡 Proven Setups - What Works Together</span>
 
 ### The Minimalist Setup (2 indicators)
 **Omnideck + Janus Atlas**
@@ -270,6 +272,7 @@ All 7 indicators are **SP Protocol v6** compliant:
 ---
 
 ## 🎓 Learning Path
+<span style="color: #10b981; font-weight: 600; font-size: 1.1em;">📚 Beginner Roadmap - Step by Step</span>
 
 ### Week 1: Foundation
 1. Start with **Janus Atlas** (learn key levels)
