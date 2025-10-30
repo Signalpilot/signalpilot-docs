@@ -220,7 +220,7 @@ Minimal configuration changes are typically required. Level visibility is the pr
 3. The desired level (Daily High or Daily Low) is chosen
 4. "Once Per Bar Close" is set
 
-**Tip:** Combining with other indicator alerts for confluence is common. Example: "Daily High touch + Pentarch WRN" = late-cycle exhaustion observation point
+**Common practice:** Combining with other indicator alerts for confluence is common. Example: "Daily High touch + Pentarch WRN" = late-cycle exhaustion observation point
 
 ---
 
@@ -261,7 +261,7 @@ Minimal configuration changes are typically required. Level visibility is the pr
 - Swing traders: Weekly/Monthly levels
 
 **Q: Do levels work on all instruments?**
-**A:** Yes! Crypto, stocks, futures, forex - they all respect key levels.
+**A:** Yes. Crypto, stocks, futures, forex - they all respect key levels.
 
 **Q: What if price is between levels?**
 **A:** Wait. Best trades happen AT levels, not between them. Patience = profits.
@@ -275,7 +275,7 @@ Minimal configuration changes are typically required. Level visibility is the pr
 **A:** No. Once a level is drawn, it stays. What you see is what you get.
 
 **Q: Can I use this with other indicators?**
-**A:** Absolutely! Janus Atlas shows WHERE to trade. Use other indicators (like Pentarch) to show you WHEN to trade.
+**A:** Yes. Janus Atlas shows WHERE to trade. Use other indicators (like Pentarch) to show you WHEN to trade.
 
 ---
 

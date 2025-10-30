@@ -16,7 +16,7 @@ Price can lie. Volume cannot.
 
 **The System:**
 1. **Detects potential volume spikes** (Z-score method - statistically significant)
-2. **Confirms direction** (volume + price must agree)
+2. **Confirms direction** (volume + price are required to agree)
 3. **Checks market regime** (trending or ranging?)
 4. **Verifies higher timeframe** (HTF confirms direction?)
 5. **Manages your position** (entry, partials, stops, exits)
@@ -283,7 +283,7 @@ Each signal gets rated 0-100:
 → ✅ ⭐⭐⭐ Elite and ⭐⭐ Premium signal focus is recommended during learning phase
 
 ❌ **Risk % misalignment with personal comfort**
-→ ✅ Risk % should match personal tolerance levels (0.5% to 1.5% range adjustment based on comfort)
+→ ✅ Risk % commonly matches personal tolerance levels (0.5% to 1.5% range adjustment based on comfort)
 
 ---
 
@@ -296,7 +296,7 @@ Each signal gets rated 0-100:
 **Q: Does this work on Forex?**
 **A:** Only Forex futures (CME) or CFDs with volume. Spot Forex (OANDA, etc.) has NO volume → won't work.
 
-**Q: What Z-threshold should I use?**
+**Q: What Z-threshold is commonly used?**
 **A:**
 - Scalpers: 2.0 (more signals)
 - Day traders: 2.5 (balanced)
@@ -309,7 +309,7 @@ Each signal gets rated 0-100:
 - 4H chart: 1-2 per week
 
 **Q: What if I miss the entry?**
-**A:** Skip it. Don't chase. Wait for next signal. Chasing = worse entry = worse R:R.
+**A:** Skip it. Chasing is typically not recommended. Wait for next signal. Chasing = worse entry = worse R:R.
 
 **Q: Does it repaint?**
 **A:** No. All signals lock at bar close. What you see is what you get.

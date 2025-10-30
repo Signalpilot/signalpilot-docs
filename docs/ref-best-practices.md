@@ -395,7 +395,7 @@ Example Lower R/R:
 
 4. **Position monitoring**
    - Many traders check positions 2-3x per session
-   - Avoiding tick-by-tick watching
+   - Typically avoiding tick-by-tick watching
    - Relying on predetermined stop levels
 
 ---
@@ -590,7 +590,7 @@ Example Lower R/R:
 
 ---
 
-## 🚫 Common Mistakes to Avoid
+## 🚫 Commonly Observed Mistakes
 
 **Patterns associated with poor trading outcomes:**
 

@@ -48,7 +48,7 @@ summary: "How to scan 8 symbols at once with Augury Grid to find fresh opportuni
 
 1. The indicator name can be clicked → **Settings (gear icon)**
 2. Scrolling to **Symbol Configuration** is available
-3. 8 tickers can be entered (exact TradingView format should be used):
+3. 8 tickers can be entered (the exact TradingView format is commonly used):
 
 **Example multi-asset watchlist:**
 ```
@@ -63,8 +63,8 @@ Symbol 8: CME_MINI:NQ1!
 ```
 
 **Format requirements:**
-- Exchange prefix should be included: `BINANCE:`, `NASDAQ:`, `NYSE:`, etc.
-- Exact TradingView ticker format should be used
+- The exchange prefix is commonly included: `BINANCE:`, `NASDAQ:`, `NYSE:`, etc.
+- The exact TradingView ticker format is commonly used
 - Each ticker can be tested on a chart first to verify it works
 
 ---
@@ -151,8 +151,8 @@ The chart can be clicked to load **BTC/USD** and the following can be checked:
 **❌ Problem:** Symbols show no data or "N/A"
 
 **✅ Fix:**
-- Exact TradingView format should be used: `BINANCE:BTCUSDT` not `BTC` or `BTCUSD`
-- Exchange prefix should be included
+- The exact TradingView format is commonly used: `BINANCE:BTCUSDT` not `BTC` or `BTCUSD`
+- The exchange prefix is commonly included
 - Ticker can be tested on chart first before adding to Grid
 
 ---
@@ -163,7 +163,7 @@ The chart can be clicked to load **BTC/USD** and the following can be checked:
 **✅ Fix:**
 - Focus can be placed on ⭐⭐⭐ Elite and ⭐⭐ Premium signals only
 - Min Score can be set to 60+ in settings
-- Chart verification should always occur before entering
+- Chart verification commonly occurs before entering
 
 ---
 
@@ -191,9 +191,9 @@ The chart can be clicked to load **BTC/USD** and the following can be checked:
 **❌ Problem:** Blindly trading Grid signals without chart confirmation
 
 **✅ Fix:**
-- The chart should always be loaded
-- Support/resistance levels should be checked
-- Volume and structure should be verified
+- The chart is typically loaded
+- Support/resistance levels are commonly checked
+- Volume and structure are commonly verified
 - Grid finds opportunities, context confirmation is needed
 
 ---
@@ -311,7 +311,7 @@ BTC  │ BUY │ 78 ⭐⭐ │ $64,250 │ $65,800 │ 5 │ +0.8%
 **A:** The following can be checked: (1) Ticker format correct? (2) Exchange prefix included? (3) Available on TradingView plan?
 
 **Q: Should I trade every Elite signal?**
-**A:** No. Elite = high quality potential, but context, levels, and trading plan should still be verified. No system is 100%.
+**A:** No. Elite = high quality potential, but context, levels, and trading plan can be verified. No system is 100%.
 
 **Q: Can I get alerts from the Grid?**
 **A:** No (table indicators can't create alerts). Workaround: When Elite signal is seen, manual alert can be set on that symbol's chart.
@@ -333,4 +333,4 @@ BTC  │ BUY │ 78 ⭐⭐ │ $64,250 │ $65,800 │ 5 │ +0.8%
 
 ---
 
-**Remember:** Augury Grid is an opportunity scanner across multiple symbols. It highlights what to investigate—context verification and execution decisions remain with the trader. Scan smart, trade better. 🎯
+**Important consideration:** Augury Grid is an opportunity scanner across multiple symbols. It highlights what to investigate—context verification and execution decisions remain with the trader. Scan smart, trade better.

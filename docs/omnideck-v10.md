@@ -294,7 +294,7 @@ Customization available, clean visual presentation recommended
 <span style="color: #10b981; font-weight: 600;">Common Questions</span>
 
 **Q: Do I need all 10 systems?**
-**A:** No! Most traders use 4-6 systems. Start small, add gradually. All 10 at once = overwhelming.
+**A:** No. Most traders use 4-6 systems. Start small, add gradually. All 10 at once = overwhelming.
 
 **Q: What's the most important system?**
 **A:** **Regime Box** - it provides directional bias context. Other components provide timing signals within that context.
@@ -309,13 +309,13 @@ Customization available, clean visual presentation recommended
 - Daily chart: 1-2 per month
 
 **Q: Does it work on all markets?**
-**A:** Yes! Crypto, stocks, futures, forex, indices - all work great.
+**A:** Yes. Crypto, stocks, futures, forex, indices - all work great.
 
 **Q: Does it repaint?**
 **A:** No. All signals lock in at bar close. What you see is what you get.
 
 **Q: Can this replace multiple indicators?**
-**A:** Yes - that's the point! One Omnideck = 10+ separate indicators combined.
+**A:** Yes - that's the point. One Omnideck = 10+ separate indicators combined.
 
 ---
 

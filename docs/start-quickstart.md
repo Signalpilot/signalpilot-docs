@@ -21,7 +21,7 @@ It can be thought of as a market compass.
 | **[Trend Stack (EMA 50/100/200 Pro)](sp-ema-trio-pro.md)** | Tracks medium- and long-term trend alignment with GC/DC and pullback logic. | "Stacked" trending conditions and disciplined re-entries can be identified. |
 | **[Momentum Matrix (Panel Pro)](sp-oscillator-matrix.md)** | Aggregates multiple oscillators into a single normalized panel. | Quick visual scan of momentum strength across timeframes can be performed. |
 
-> **Tip:** If Bias modules disagree, lighter trading or waiting for alignment can be considered.
+> **Common practice:** If Bias modules disagree, lighter trading or waiting for alignment can be considered.
 
 ---
 
@@ -50,7 +50,7 @@ This layer identifies *reaction zones* — areas where price tends to pause, rev
 | **[SD Zones (Pro)](sp-sdzones-pro.md)** | Detects and maintains Supply/Demand zones with anchored precision. | High-probability reaction zones for entries can be marked. |
 | **[Key Anchors (Key Levels Suite)](sp-key-levels-suite.md)** | Combines HTF, session, and VWAP anchors. | Confluence between intraday and higher-timeframe levels can be identified. |
 
-> **Tip:** Structure defines the *map* — not the signal. Can be combined with Bias + Participation for context.
+> **Common practice:** Structure defines the *map* — not the signal. Can be combined with Bias + Participation for context.
 
 ---
 
@@ -66,7 +66,7 @@ Timing modules zoom in to catch turns, continuations, and exhaustion points — 
 | **[Reversal Engine (EC Pro)](sp-ec-pro.md)** | Event-centric detection of tops/bottoms with PilotLine + NanoFlows. | Potential reversal events can be identified and alerted on. |
 | **[Reversal Candlestick Structure (RCS)](sp-rcs-reversal-structure.md)** | Highlights high-quality reversal candle patterns. | Visual confirmation that a turn is forming can be observed. |
 
-> Timing signals should be combined only when **Bias + Participation** agree. The regime shouldn't be counter-traded unless exhaustion is being faded with confirmation.
+> Timing signals are commonly combined only when **Bias + Participation** agree. Counter-trading the regime typically occurs only when exhaustion is being faded with confirmation.
 
 ---
 

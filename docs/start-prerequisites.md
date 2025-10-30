@@ -133,10 +133,10 @@ Before starting with <span class="signal-pilot-brand">Signal Pilot</span> indica
 - Below these amounts, position sizing becomes difficult
 
 **IMPORTANT:**
-- Only money that can be afforded to lose should be traded
+- Only money that can be afforded to lose is commonly traded
 - Paper trading can be started with first
 - Transition to live only after consistent paper profits
-- Rent money, savings, or borrowed funds should never be traded
+- Rent money, savings, or borrowed funds are typically not traded
 
 **✅ Action:** Appropriate capital can be ensured (or paper trading can be started)
 
@@ -190,9 +190,9 @@ Before starting with <span class="signal-pilot-brand">Signal Pilot</span> indica
 
 **Browser requirements:**
 - Modern browser (updated within last year)
-- JavaScript must be enabled
-- Cookies must be enabled
-- Pop-ups must be allowed for TradingView
+- JavaScript is required to be enabled
+- Cookies are required to be enabled
+- Pop-ups are required to be allowed for TradingView
 
 **Mobile trading:**
 - TradingView mobile app (iOS/Android)

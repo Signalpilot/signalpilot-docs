@@ -68,7 +68,7 @@ No single indicator is perfect. But when multiple agree? That's high probability
 ## Signal Modes (Pick Your Style)
 
 ### Conservative (3 votes required)
-- ALL three must agree
+- All three are required to agree
 - **Fewest signals**
 - **Win rate: 75-80%**
 - **Best for:** Swing trading
@@ -107,7 +107,7 @@ When price and oscillator disagree = Reversal coming
 - **Hidden Bull:** Price higher low, oscillator lower low = Continuation up
 - **Hidden Bear:** Price lower high, oscillator higher high = Continuation down
 
-**These are your highest-probability setups!**
+**These are commonly the highest-probability setups.**
 
 ---
 
@@ -270,7 +270,7 @@ Enable HTF filter to only take signals aligned with higher timeframe:
 Both are valuable in different contexts.
 
 **Q: How often do potential Elite signals appear?**
-**A:** Rare! Elite needs 3 votes + HTF + divergence. Expect:
+**A:** Rarely. Elite needs 3 votes + HTF + divergence. Expect:
 - 1H chart: 1-2 per week
 - Daily chart: 1-2 per month
 

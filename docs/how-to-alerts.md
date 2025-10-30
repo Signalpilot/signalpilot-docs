@@ -38,7 +38,7 @@ Examples:
 - "Omnideck v1.0"
 - "Janus Atlas v1.0"
 
-**Note:** The indicator must already be added to the chart before creating the alert.
+**Note:** The indicator is typically already added to the chart before creating the alert.
 
 ---
 
@@ -63,10 +63,10 @@ Examples:
 
 ---
 
-### 4️⃣ Step 4: Configure Options (CRITICAL!)
+### 4️⃣ Step 4: Configure Options (CRITICAL)
 <span style="color: #dc2626; font-weight: 600;">⚠️ Most Important Step</span>
 
-**Options** → The setting **"Once Per Bar Close"** should be selected.
+**Options** → The setting **"Once Per Bar Close"** is commonly selected.
 
 This is the **most important setting**:
 - ✅ Alerts only fire when the signal is CONFIRMED (bar closed)
@@ -203,7 +203,7 @@ Price: 67,500
 
 ---
 
-### Don't Over-Alert
+### Considerations for Alert Volume
 
 **Maximum recommended:** 10-15 active alerts
 
@@ -225,7 +225,7 @@ Price: 67,500
 **Before relying on alerts:**
 
 1. A test alert can be created on a low timeframe (5m or 15m)
-2. The next signal should arrive soon
+2. The next signal typically arrives quickly
 3. Notification receipt can be verified
 4. Phone notification can be checked
 5. Email arrival can be confirmed (if enabled)
@@ -247,7 +247,7 @@ Price: 67,500
 **Resolution:**
 1. Incorrect alerts can be deleted
 2. New alerts can be created
-3. The **"Once Per Bar Close"** setting should be selected
+3. The **"Once Per Bar Close"** setting is commonly selected
 4. Settings can be saved
 
 **Why this matters:** Intrabar signals are preliminary and can change. Only closed-bar signals are final.
@@ -350,7 +350,7 @@ See [Troubleshooting: Alerts Not Working](ref-troubleshooting.md#alerts-not-firi
 }
 ```
 
-**Important:** Automated trading should always be tested on paper/demo accounts first.
+**Important:** Automated trading is commonly tested on paper/demo accounts first.
 
 ---
 

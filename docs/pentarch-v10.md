@@ -259,7 +259,7 @@ Most event signals require the "correct" regime to fire:
   - Example: IGN in red regime (standard reversal) vs IGN in green regime (pullback long entry)
   - Example: CAP in green regime (standard top) vs CAP in red regime (bear rally exhaustion)
 
-**Avoiding Whipsaw:**
+**Whipsaw Considerations:**
 - Regime doesn't flip on every bar - it requires sustained evidence
 - This prevents false structural changes during normal noise
 - Adjustable via settings if you want more/less sensitivity
@@ -511,7 +511,7 @@ Most traders maintain default settings.
 **A:** When you follow the signals properly and use stops, most traders see 60-70% win rate. Higher when combined with key levels.
 
 **Q: Can I use this for day trading?**
-**A:** Yes! Works on any timeframe. Just know that lower timeframes (1m-15m) have more signals but also more noise.
+**A:** Yes. Works on any timeframe. Lower timeframes (1m-15m) have more signals but also more noise.
 
 **Q: What timeframe is best?**
 **A:**

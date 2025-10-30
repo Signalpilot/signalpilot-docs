@@ -18,7 +18,7 @@ A complete 7-day guide to mastering <span class="signal-pilot-brand">Signal Pilo
 
 - [ ] **TradingView subscription can be verified as active**
   - TradingView can be logged into
-  - Account status can be checked (should be Essential, Pro, or Pro+)
+  - Account status can be checked (is commonly Essential, Pro, or Pro+)
   - If not upgraded: [can be upgraded now](https://www.tradingview.com/pricing/)
 
 - [ ] **<span class="signal-pilot-brand">Signal Pilot</span> access can be confirmed as granted**
@@ -30,7 +30,7 @@ A complete 7-day guide to mastering <span class="signal-pilot-brand">Signal Pilo
   - TradingView can be opened
   - "Indicators" button can be clicked
   - "<span class="signal-pilot-brand">Signal Pilot</span>" or "Pentarch" can be searched
-  - Pentarch v8.9 (or latest version) should be visible
+  - Pentarch v8.9 (or latest version) is typically visible
   - If not visible: Access status can be checked
 
 ---
@@ -59,7 +59,7 @@ A complete 7-day guide to mastering <span class="signal-pilot-brand">Signal Pilo
   - Top menu → "Layouts" can be navigated to
   - "Save as..." → Can be named "BTC Pentarch Daily"
 
-**✅ Day 1 Complete!** First indicator has been successfully installed.
+**✅ Day 1 Complete** First indicator has been successfully installed.
 
 ---
 
@@ -102,7 +102,7 @@ A complete 7-day guide to mastering <span class="signal-pilot-brand">Signal Pilo
     - CAP = Exit long
     - BDN = Exit all longs / enter short
 
-**✅ Day 2 Complete!** All 5 signal types can be identified.
+**✅ Day 2 Complete** All 5 signal types can be identified.
 
 ---
 
@@ -137,7 +137,7 @@ A complete 7-day guide to mastering <span class="signal-pilot-brand">Signal Pilo
   - Preferred timeframe can be selected (recommend starting with Daily or 4H)
   - Layouts for each can be set up
 
-**✅ Day 3 Complete!** How indicators adapt to different markets is understood.
+**✅ Day 3 Complete** How indicators adapt to different markets is understood.
 
 ---
 
@@ -173,7 +173,7 @@ A complete 7-day guide to mastering <span class="signal-pilot-brand">Signal Pilo
 - [ ] **Alerts can be tested**
   - 15m chart can be switched to (signals fire more often)
   - Test alert on 15m can be created
-  - Signal can be waited for (shouldn't take long)
+  - Signal can be waited for (typically occurs quickly)
   - Notification receipt can be verified
 
 - [ ] **Alerts for watchlist can be created**
@@ -181,7 +181,7 @@ A complete 7-day guide to mastering <span class="signal-pilot-brand">Signal Pilo
   - IGN alerts for longs can be set
   - CAP/BDN alerts for exits can be set
 
-**✅ Day 4 Complete!** Signal notifications will now be received automatically.
+**✅ Day 4 Complete** Signal notifications will now be received automatically.
 
 ---
 
@@ -219,7 +219,7 @@ A complete 7-day guide to mastering <span class="signal-pilot-brand">Signal Pilo
     - "Only trade CAP/BDN at major resistance"
     - "Skip signals far from levels"
 
-**✅ Day 5 Complete!** The power of confluence is understood.
+**✅ Day 5 Complete** The power of confluence is understood.
 
 ---
 
@@ -272,7 +272,7 @@ A complete 7-day guide to mastering <span class="signal-pilot-brand">Signal Pilo
   - Template: Account Size × 1% ÷ (Entry - Stop)
   - Can be kept handy for every trade
 
-**✅ Day 6 Complete!** Risk management framework is ready.
+**✅ Day 6 Complete** Risk management framework is ready.
 
 ---
 
@@ -324,7 +324,7 @@ A complete 7-day guide to mastering <span class="signal-pilot-brand">Signal Pilo
   - QUALITY can be focused on, not quantity
   - One good trade > five mediocre trades
 
-**✅ Day 7 Complete!** First paper trades have been executed!
+**✅ Day 7 Complete** First paper trades have been executed.
 
 ---
 
@@ -403,6 +403,6 @@ A complete 7-day guide to mastering <span class="signal-pilot-brand">Signal Pilo
 - [Troubleshooting](ref-troubleshooting.md) can be visited
 - [Support](about-support.md) can be contacted
 
-**It should be remembered:** There's no rush. Time can be taken with each day. Mastery comes from practice and repetition.
+**Important consideration:** There's no rush. Time can be taken with each day. Mastery comes from practice and repetition.
 
-**Congratulations on starting the <span class="signal-pilot-brand">Signal Pilot</span> journey!** 🎉
+**Congratulations on starting the <span class="signal-pilot-brand">Signal Pilot</span> journey.**

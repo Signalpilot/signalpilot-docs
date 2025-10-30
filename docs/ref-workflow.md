@@ -263,7 +263,7 @@ Example: "Pentarch IGN + Minimal Flow Elite Bull + Janus Daily Low Touch" conflu
 - Minimal Flow (volume spikes)
 - Pentarch (NanoFlow crosses)
 
-**Avoid:**
+**Less commonly used:**
 - Harmonic/Plutus divergences (too slow)
 - Augury Grid (too slow signals)
 
@@ -298,7 +298,7 @@ Example: "Pentarch IGN + Minimal Flow Elite Bull + Janus Daily Low Touch" conflu
 - Harmonic Oscillator (Conservative mode)
 - Augury Grid (monthly scans)
 
-**Avoid:**
+**Less commonly used:**
 - Minimal Flow (too active)
 - Intraday features
 
@@ -330,7 +330,7 @@ Minimal Flow's built-in risk calculator commonly used:
 
 ---
 
-## ⚠️ Common Mistakes to Avoid
+## ⚠️ Commonly Observed Mistakes
 <span style="color: #f59e0b; font-weight: 600;">Learn From Others</span>
 
 ❌ **Using single indicator in isolation**
