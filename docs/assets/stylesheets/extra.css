@@ -227,16 +227,12 @@
    TOUCH OPTIMIZATION
    ======================================== */
 
-/* Larger tap targets for mobile */
+/* Larger tap targets for mobile - ONLY for content, NOT navigation */
 @media (pointer: coarse) {
-  .md-typeset a {
+  .md-content a {
     min-height: 44px;
     display: inline-flex;
     align-items: center;
-  }
-
-  .md-nav__link {
-    padding: 0.75rem 1rem;
   }
 }
 
