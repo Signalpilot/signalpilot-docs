@@ -33,9 +33,9 @@ Before addressing specific issues, this quick checklist can be reviewed:
 
 **Solution:**
 ```
-1. Scroll left on your chart to load more history
-2. Aim for at least 500-1000 bars of data
-3. Wait a few seconds for indicator to recalculate
+1. Scrolling left on chart loads more history
+2. At least 500-1000 bars of data is recommended
+3. A few seconds can be waited for indicator to recalculate
 4. Signals should appear after recalculation
 ```
 
@@ -71,10 +71,10 @@ This is NORMAL behavior. Indicators don't force signals.
 
 **Solution:**
 ```
-1. Remove indicator from chart
-2. Refresh browser (Ctrl+F5 or Cmd+Shift+R)
-3. Re-add indicator from Indicators menu
-4. Wait 5-10 seconds for initial calculation
+1. The indicator can be removed from chart
+2. The browser can be refreshed (Ctrl+F5 or Cmd+Shift+R)
+3. The indicator can be re-added from Indicators menu
+4. 5-10 seconds can be waited for initial calculation
 ```
 
 **Still not working?** Check indicator version—you might have an outdated version that was deprecated.
@@ -99,11 +99,11 @@ This is NORMAL behavior. Indicators don't force signals.
 #### Fix Alert Settings:
 
 ```
-1. Right-click chart → Add Alert
-2. Condition: Select your indicator
-3. Event: Choose specific event (e.g., "IGN Event")
-4. Options: Set to "Once Per Bar Close" ← CRITICAL
-5. Create alert
+1. Chart can be right-clicked → Add Alert
+2. Condition: The indicator can be selected
+3. Event: Specific event can be chosen (e.g., "IGN Event")
+4. Options: Can be set to "Once Per Bar Close" ← CRITICAL
+5. The alert can be created
 ```
 
 **What "Once Per Bar Close" does:**
@@ -125,10 +125,10 @@ This is NORMAL behavior. Indicators don't force signals.
 
 #### Light/Dark Mode Mismatch
 ```
-1. Click indicator name on chart
-2. Go to "Style" tab
-3. Adjust colors manually
-4. Or switch TradingView theme (top-right)
+1. The indicator name on chart can be clicked
+2. The "Style" tab can be accessed
+3. Colors can be adjusted manually
+4. Or the TradingView theme (top-right) can be switched
 ```
 
 #### Overlapping Indicators
@@ -142,10 +142,10 @@ Solution:
 
 #### Tiny Signals / Can't See
 ```
-1. Click indicator settings
+1. Indicator settings can be accessed
 2. "Style" tab
-3. Increase "Size" setting
-4. Enable/disable labels as needed
+3. "Size" setting can be increased
+4. Labels can be enabled/disabled as needed
 ```
 
 ---
@@ -162,10 +162,10 @@ Solution:
 #### Step 1: Verify Alert Is Active
 
 ```
-1. Click "Alert" button (top toolbar)
-2. Check your alerts list
-3. Look for your <span class="signal-pilot-brand">Signal Pilot</span> alert
-4. Ensure it's not expired or paused
+1. The "Alert" button (top toolbar) can be clicked
+2. The alerts list can be checked
+3. The <span class="signal-pilot-brand">Signal Pilot</span> alert can be found
+4. It can be ensured it's not expired or paused
 ```
 
 #### Step 2: Check Alert Trigger Condition
@@ -181,31 +181,31 @@ RIGHT: Specific event selected (e.g., "IGN Event")
 #### Step 3: Test on Lower Timeframe
 
 ```
-1. Create test alert on 5m or 15m chart
-2. Wait for next signal (shouldn't take long)
-3. Verify you receive notification
-4. If working: Your original alert was set up wrong
-5. If not working: Notification settings issue
+1. A test alert can be created on 5m or 15m chart
+2. Next signal can be waited for (shouldn't take long)
+3. Notification receipt can be verified
+4. If working: Original alert was set up wrong
+5. If not working: Notification settings issue exists
 ```
 
 #### Step 4: Check Notification Settings
 
 **On Desktop:**
 ```
-1. TradingView → Profile Icon → Settings
-2. Notifications tab
-3. Ensure "Show pop-ups" enabled
-4. Check email address is correct
-5. Check email inbox AND spam folder
+1. TradingView → Profile Icon → Settings can be accessed
+2. Notifications tab can be opened
+3. "Show pop-ups" can be ensured enabled
+4. Email address can be checked for correctness
+5. Email inbox AND spam folder can be checked
 ```
 
 **On Mobile:**
 ```
-1. Phone Settings → Apps → TradingView
-2. Enable "Notifications"
-3. Enable "Sound"
-4. Enable "Banners/Alerts"
-5. Check "Do Not Disturb" is off
+1. Phone Settings → Apps → TradingView can be accessed
+2. "Notifications" can be enabled
+3. "Sound" can be enabled
+4. "Banners/Alerts" can be enabled
+5. "Do Not Disturb" can be checked is off
 ```
 
 ---
@@ -269,11 +269,11 @@ Example: Only take IGN signals within 2% of major support
 
 **Solution:**
 ```
-1. Delete the problematic alert
-2. Create new alert
-3. Set "Options" to "Once Per Bar Close"
-4. Ensure "Only Once" is NOT checked (unless you want one-time alert)
-5. Save alert
+1. The problematic alert can be deleted
+2. A new alert can be created
+3. "Options" can be set to "Once Per Bar Close"
+4. "Only Once" can be ensured NOT checked (unless one-time alert is wanted)
+5. The alert can be saved
 ```
 
 ---
@@ -295,19 +295,19 @@ Timeline:
 - Check email for confirmation
 
 Status check:
-1. Log into signalpilot.io account dashboard
-2. Check "Indicator Access" status
-3. If still pending: Contact support with order number
+1. signalpilot.io account dashboard can be logged into
+2. "Indicator Access" status can be checked
+3. If still pending: Support can be contacted with order number
 ```
 
 #### 2. Wrong TradingView Account
 ```
-Did you provide the correct username?
+Was the correct username provided?
 
 Check:
-1. Log out of TradingView
-2. Log in to the account you provided to <span class="signal-pilot-brand">Signal Pilot</span>
-3. Search again for indicators
+1. TradingView can be logged out of
+2. The account provided to <span class="signal-pilot-brand">Signal Pilot</span> can be logged into
+3. Indicators can be searched for again
 ```
 
 #### 3. Indicator Name Changed/Updated
@@ -340,11 +340,11 @@ Must appear in YOUR indicator list after invite.
 
 #### Quick Fix:
 ```
-1. Remove indicator
-2. Refresh browser (Ctrl+F5 / Cmd+Shift+R)
-3. Clear browser cache
-4. Add indicator again
-5. Wait 30 seconds
+1. The indicator can be removed
+2. The browser can be refreshed (Ctrl+F5 / Cmd+Shift+R)
+3. The browser cache can be cleared
+4. The indicator can be added again
+5. 30 seconds can be waited
 ```
 
 #### If Quick Fix Doesn't Work:
@@ -368,10 +368,10 @@ Some browsers have conflicts with specific scripts
 Ad blockers and privacy extensions can interfere.
 
 Test:
-1. Open incognito/private window
-2. Log in to TradingView
-3. Try loading indicator
-4. If works: Disable extensions one by one to find culprit
+1. An incognito/private window can be opened
+2. TradingView can be logged into
+3. The indicator can be tried loading
+4. If it works: Extensions can be disabled one by one to find culprit
 ```
 
 ---
@@ -387,20 +387,20 @@ Test:
 Old version deprecated → You need to add new version
 
 Solution:
-1. Check email for update notification
-2. Search for latest version (e.g., "Pentarch v8.9" → "Pentarch v9.0")
-3. Add new version to chart
-4. Remove old alerts
-5. Create new alerts with new version
+1. Email can be checked for update notification
+2. Latest version can be searched for (e.g., "Pentarch v8.9" → "Pentarch v9.0")
+3. The new version can be added to the chart
+4. Old alerts can be removed
+5. New alerts can be created with new version
 ```
 
 #### 2. Chart Template Issue
 ```
 If using chart templates/layouts:
 
-1. Don't save templates with private indicators
+1. Templates shouldn't be saved with private indicators
 2. Templates can't share invite-only scripts
-3. Add indicators manually to each chart
+3. Indicators can be added manually to each chart
 ```
 
 #### 3. Access Revoked
@@ -435,16 +435,16 @@ Switched TradingView accounts?
 **Solution:**
 
 ```
-TradingView requires you to SAVE the layout:
+TradingView requires layout SAVE:
 
-1. Make your indicator changes
-2. Click "Layouts" (top of chart)
-3. Click "Save" or "Save As..."
-4. Give it a name
-5. Click "Save layout"
+1. Indicator changes can be made
+2. "Layouts" (top of chart) can be clicked
+3. "Save" or "Save As..." can be clicked
+4. A name can be given
+5. "Save layout" can be clicked
 
 Alternative:
-- Changes save automatically per-symbol if you don't change layouts
+- Changes save automatically per-symbol if layouts aren't changed
 - But switching symbols may reset if not saved to layout
 ```
 
@@ -459,11 +459,11 @@ Alternative:
 **Solution:**
 
 ```
-1. Click each indicator name
-2. Check "Settings" → "About" for version number
-3. Ensure both are same version
-4. Check "Inputs" tab—ensure same settings
-5. If different: Remove one and re-add with correct settings
+1. Each indicator name can be clicked
+2. "Settings" → "About" can be checked for version number
+3. Both can be ensured are same version
+4. "Inputs" tab can be checked—same settings can be ensured
+5. If different: One can be removed and re-added with correct settings
 ```
 
 ---
@@ -488,11 +488,11 @@ Alternative:
 
 #### Workaround:
 ```
-1. Add indicators on desktop/web
-2. Save as layout (e.g., "BTC Pentarch")
-3. Open TradingView mobile app
-4. Load same symbol
-5. Load your saved layout
+1. Indicators can be added on desktop/web
+2. Can be saved as layout (e.g., "BTC Pentarch")
+3. The TradingView mobile app can be opened
+4. Same symbol can be loaded
+5. Saved layout can be loaded
 6. Indicators will appear
 ```
 
@@ -525,12 +525,12 @@ Alternative:
 
 **In TradingView App:**
 ```
-1. Open TradingView app
-2. Profile → Settings
-3. Notifications
-4. Enable "Push notifications"
-5. Enable sounds
-6. Test by triggering an alert
+1. TradingView app can be opened
+2. Profile → Settings can be accessed
+3. Notifications can be accessed
+4. "Push notifications" can be enabled
+5. Sounds can be enabled
+6. Can be tested by triggering an alert
 ```
 
 ---
@@ -627,11 +627,11 @@ OR
 
 #### Optimize Browser
 ```
-1. Close unused tabs
-2. Clear browser cache
-3. Disable unnecessary extensions
-4. Update browser to latest version
-5. Restart browser
+1. Unused tabs can be closed
+2. Browser cache can be cleared
+3. Unnecessary extensions can be disabled
+4. Browser can be updated to latest version
+5. Browser can be restarted
 ```
 
 #### Use Lower Timeframe on Clean Chart

@@ -30,9 +30,9 @@
 **Start analysis on higher timeframes**
 
 **Recommended workflow:**
-1. Check **Daily** for overall bias and major levels
-2. Drop to **4H** for intermediate structure
-3. Execute on **1H** or **4H** for swing trades
+1. **Daily** can be checked for overall bias and major levels
+2. **4H** can be dropped to for intermediate structure
+3. **1H** or **4H** can be executed on for swing trades
 4. Or **15m-1H** for day trades
 
 **Why:**
@@ -74,8 +74,8 @@
 **"Trend is your friend until the bend"**
 
 **How to identify trend:**
-1. Open Daily chart
-2. Look at last 20-50 candles
+1. The Daily chart can be opened
+2. Last 20-50 candles can be looked at
 3. Higher highs + higher lows = Uptrend
 4. Lower highs + lower lows = Downtrend
 5. Mixed = Range (avoid or range-trade)
@@ -229,9 +229,9 @@ When price closes above resistance:
 - Many traders combine FVGs with Pentarch signals
 
 **Typical FVG approach:**
-1. Identify FVG on chart
-2. Watch for price to return to FVG zone
-3. Look for Pentarch signal confirmation (e.g., IGN in bullish FVG)
+1. FVG can be identified on chart
+2. Price return to FVG zone can be watched for
+3. Pentarch signal confirmation can be looked for (e.g., IGN in bullish FVG)
 4. Common stop placement: beyond the FVG
 5. Common targets: Opposite FVG or next key level
 

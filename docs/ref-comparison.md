@@ -351,9 +351,9 @@ Stop: Based on Omnideck structure
 Why: Find setups fast, trade with full info
 Workflow:
 1. Augury finds signals across watchlist
-2. Open promising charts
-3. Verify setup on execution chart
-4. Trade
+2. Promising charts can be opened
+3. Setup can be verified on execution chart
+4. Trading can be executed
 ```
 
 ---
@@ -511,20 +511,20 @@ Other indicators not required
 - Goal: Understand all 5 signal types
 
 ### Week 3-4: Confirmation
-- Add Janus Atlas
-- Learn to identify key levels
-- Only trade Pentarch signals AT Janus levels
+- Janus Atlas can be added
+- Key levels can be learned to identify
+- Pentarch signals can be traded only AT Janus levels
 - Goal: Understand confluence
 
 ### Week 5-6: Refinement
-- Add ONE confirmation indicator:
-  - Minimal Flow (if you like volume)
-  - Harmonic Oscillator (if you like momentum)
+- ONE confirmation indicator can be added:
+  - Minimal Flow (if volume is liked)
+  - Harmonic Oscillator (if momentum is liked)
 - Goal: Filter for highest probability setups
 
 ### Week 7-8: Efficiency
-- Add Augury Grid if trading multiple symbols
-- Streamline workflow
+- Augury Grid can be added if trading multiple symbols
+- Workflow can be streamlined
 - Goal: Fast scanning, confident execution
 
 ### Week 9+: Mastery

@@ -192,10 +192,10 @@ Each signal gets rated 0-100:
 
 **The Trade:**
 1. You enter long at $64,200 (0.15 BTC)
-2. Set stop at $63,000
+2. Stop can be set at $63,000
 3. Price rallies to $67,800 → TP1 hit
 4. You take 50% off (0.075 BTC) = +$270 locked
-5. Move stop to breakeven ($64,200)
+5. Stop can be moved to breakeven ($64,200)
 6. Remaining 0.075 BTC trails
 7. Price continues to $70,000
 8. Trailing stop hits at $69,200 (2% trail)
