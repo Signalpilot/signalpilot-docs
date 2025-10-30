@@ -227,7 +227,7 @@ body {
   border-bottom: 1px solid rgba(15, 23, 42, 0.12) !important;
 }
 
-[data-md-color-scheme="default"] .sp-brand-text,
+/* Light mode: brand and nav links are dark */
 [data-md-color-scheme="default"] .sp-links a {
   color: #0f172a !important;
 }
@@ -285,14 +285,43 @@ body {
   padding: .55rem clamp(14px, 4vw, 22px);
   display: flex; align-items: center; gap: .6rem;
 }
-.sp-brand { display:flex; align-items:center; gap:.55rem; text-decoration:none; color: var(--md-default-fg-color); transition: opacity 0.2s; }
-.sp-brand:hover { opacity: 0.8; }
-.sp-brand-text {
-  font-family: "Gugi", cursive !important;
+/* Brand logo - MUST match main site exactly */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #fff;
+  text-decoration: none;
   font-weight: 400;
-  font-size: 1.75rem;
-  letter-spacing: 0.05em;
-  text-transform: none;
+  font-family: 'Gugi', system-ui, -apple-system, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 1600px) {
+  .brand {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  .brand {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .brand {
+    font-size: 1.2rem;
+    padding-left: 0.5rem;
+  }
+}
+
+[data-md-color-scheme="default"] .brand {
+  color: #0f172a;
 }
 .sp-links { margin-left: .4rem; display:flex; gap:.35rem; flex-wrap: wrap; }
 .sp-links a { display:inline-flex; padding:.38rem .7rem; border-radius:999px; text-decoration:none; font-weight:700; color: color-mix(in srgb, var(--md-default-fg-color) 70%, transparent); }

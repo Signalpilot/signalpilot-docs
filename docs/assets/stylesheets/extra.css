@@ -145,10 +145,6 @@
     font-weight: 600;
   }
 
-  .sp-brand-text {
-    font-size: 1.4rem !important;
-  }
-
   .sp-cta {
     padding: 0.5rem 0.75rem !important;
     font-size: 0.9rem !important;
@@ -157,10 +153,6 @@
 
 /* Very small mobile - ultra compact */
 @media screen and (max-width: 400px) {
-  .sp-brand-text {
-    font-size: 1.2rem !important;
-  }
-
   .sp-topnav__inner {
     padding: 0.4rem 0.75rem !important;
   }
