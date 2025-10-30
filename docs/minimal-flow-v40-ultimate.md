@@ -61,8 +61,8 @@ Price can lie. Volume cannot.
 Each signal gets rated 0-100:
 
 **⭐⭐⭐ Elite (80-100)**
-- All factors perfect
-- Multi-timeframe aligned
+- All factors aligned
+- Multi-timeframe confirmation
 - Strong volume spike
 - **Win Rate:** 70-75%
 

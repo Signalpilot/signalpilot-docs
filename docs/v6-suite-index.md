@@ -320,7 +320,7 @@ All 7 indicators are **SP Protocol v6** compliant:
 ### Use Quality Filters
 - Most indicators have quality scoring/tiers
 - Potential Elite/Premium signals = Take these
-- Standard/Weak = Skip unless perfect confluence
+- Standard/Weak = Typically filtered out unless exceptional confluence present
 - Quality over quantity is key
 
 ### Track Your Performance
@@ -375,7 +375,7 @@ Choose your path:
 - **Divergence trader?** Start with [Plutus Flow](plutus-flow-v23.md) or [Harmonic Oscillator](harmonic-oscillator-v34-adaptive.md)
 - **Multi-asset scanning?** Start with [Augury Grid](augury-grid-v10.md)
 
-**Welcome to Signal Pilot v6. Trade with precision. Trade with confidence.**
+**Welcome to Signal Pilot v6. Built for market analysis. Designed for informed decision-making.**
 
 ---
 

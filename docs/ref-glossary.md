@@ -10,11 +10,11 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 **Type:** Early-cycle warning signal
 **Color:** Blue 🔵
 **Meaning:** Indicates early-cycle reversal conditions
-**Action:** Start watching, don't enter yet
+**Common Usage:** Often viewed as preparation signal rather than entry trigger
 **Typical Context:** Appears during downtrends when momentum starts exhausting
 **Next Signal:** Usually followed by IGN if reversal develops
 
-**Trading Note:** TD is your "heads up"—not an entry. Wait for IGN signal.
+**Usage Note:** TD is typically interpreted as an advance warning signal. IGN often provides additional confirmation.
 
 ---
 
@@ -22,11 +22,11 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 **Type:** Bullish reversal indication
 **Color:** Green 🟢
 **Meaning:** Indicates momentum breakout conditions
-**Action:** Consider long entry
+**Common Usage:** Often used as potential long entry signal
 **Typical Context:** Appears after TD or standalone at strong support
-**Risk Management:** Set stop loss below IGN candle low
+**Risk Management:** Common stop placement is below IGN candle low
 
-**Trading Note:** This is your primary long entry signal. Strongest when appearing at key Janus levels.
+**Usage Note:** Frequently used as primary long entry signal. Associated with higher conviction when appearing at key Janus levels.
 
 ---
 
@@ -34,11 +34,11 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 **Type:** Late-cycle warning signal
 **Color:** Yellow 🟡
 **Meaning:** Indicates weakening momentum
-**Action:** Start tightening stops, watch for exit
+**Common Usage:** Many traders tighten stops and monitor for potential exits
 **Typical Context:** Appears during uptrends when momentum begins fading
 **Next Signal:** May be followed by CAP if exhaustion develops
 
-**Trading Note:** Don't automatically exit on WRN—use it to prepare for potential late-cycle exhaustion.
+**Usage Note:** Often interpreted as preparation signal rather than immediate exit trigger. Used to anticipate potential late-cycle exhaustion.
 
 ---
 
@@ -46,11 +46,11 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 **Type:** Bearish reversal warning
 **Color:** Red 🔴
 **Meaning:** Indicates late-cycle exhaustion conditions
-**Action:** Exit longs, tighten stops dramatically
+**Common Usage:** Often interpreted as exit signal for longs or stop tightening trigger
 **Typical Context:** Appears during late-cycle exhaustion after extended uptrends
-**Risk Management:** Major red flag for long positions
+**Risk Management:** Associated with elevated risk for long positions
 
-**Trading Note:** Strong exit signal for longs. Consider taking profits or moving stop to breakeven.
+**Usage Note:** Frequently used as exit signal for longs. Many traders take profits or move stops to protect gains.
 
 ---
 
@@ -58,11 +58,84 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 **Type:** Bearish reversal indication
 **Color:** Black ⚫
 **Meaning:** Indicates bearish breakdown conditions
-**Action:** Exit all longs, consider shorts
+**Common Usage:** Often interpreted as long exit signal; potential short entry for advanced traders
 **Typical Context:** Indicates bearish reversal after CAP or standalone at resistance
-**Risk Management:** Set stop loss above BDN candle high for shorts
+**Risk Management:** Common short stop placement is above BDN candle high
 
-**Trading Note:** Primary short entry or definitive long exit signal.
+**Usage Note:** Frequently used as short entry signal or definitive long exit indication.
+
+---
+
+### Pilot Line (PL)
+**Type:** Trend indicator / reference line
+**Visual:** Thick colored line (green/red/orange) with semi-transparent ribbon
+**Calculation:** Double-smoothed EMA (34-period EMA, then 3-period EMA of result)
+**Purpose:** Primary trend filter and reference point for all event signals
+
+**Colors:**
+- 🟢 **Green:** Strong uptrend (slope rising, momentum strong)
+- 🔴 **Red:** Strong downtrend (slope falling, momentum strong)
+- 🟠 **Orange:** Transitional phase (momentum easing or flat)
+
+**Function:**
+- **Distance Reference:** All event signals measure distance from Pilot Line
+- **Trend Filter:** Shows current trend direction and strength
+- **Dynamic Support/Resistance:** Price tends to react at or near the line
+- **Regime Component:** One of 3 factors in regime determination
+
+**Common Usage:** Price above green PL = bullish bias. Price below red PL = bearish bias. Orange PL = transitional/uncertain.
+
+**Non-Repainting:** Updates only on confirmed bars (locked after bar close).
+
+---
+
+### Regime (Bar Colors)
+**Type:** Market structure classification system
+**Visual:** Candle body colors (green for bull regime, red for bear regime)
+**Determination:** 3-factor voting system requiring 2 of 3 votes
+**Purpose:** Shows current market structural state (bull or bear)
+
+**Voting Factors:**
+1. **EMA Structure:** Is 34-period EMA above 55-period EMA? (+1 bull vote)
+2. **Price vs Pilot Line:** Is close above Pilot Line? (+1 bull vote)
+3. **Slope Direction:** Is Pilot Line sloping up? (+1 bull vote)
+
+**Regime States:**
+- **🟢 Bull Regime** (Green candles): 2+ bull votes, sustained for 2-4 bars
+- **🔴 Bear Regime** (Red candles): 2+ bear votes, sustained for 2-4 bars
+
+**Function:**
+- **Trading Bias:** Green regime → many traders look for longs; Red regime → many traders look for shorts
+- **Signal Filter:** Event signals are regime-aware (most require "correct" regime to fire)
+- **Trend Confirmation:** Long color streaks = strong trend; frequent changes = choppy market
+
+**Override:** When event candles fire (TD/IGN/WRN/CAP/BDN), that specific candle shows event color instead of regime color.
+
+**Common Usage:** Regime provides directional bias. Same price level has different implications depending on regime (support in green, resistance in red).
+
+---
+
+### NanoFlow
+**Type:** Micro-momentum indicator
+**Visual:** Small cross marks (green below lows, red above highs)
+**Frequency:** High (10-30 per day on 1H chart) vs main events (3-8 per day)
+**Purpose:** Shows micro-scale momentum shifts between main event signals
+
+**Conditions:**
+- **🟢 Bullish NanoFlow:** Fast EMA (9) > Slow EMA (21) + green candle + price > Pilot Line
+- **🔴 Bearish NanoFlow:** Fast EMA (9) < Slow EMA (21) + red candle + price < Pilot Line
+
+**Function:**
+- **Trend Health:** Many NanoFlow in same direction = healthy momentum
+- **Event Confirmation:** NanoFlow after event signal confirms momentum quality
+- **Chop Detection:** Rapidly flipping NanoFlow = choppy conditions
+- **Early Warning:** NanoFlow often shifts before main event signals
+
+**NOT a Trade Signal:** NanoFlow is context/confirmation tool, not standalone entry trigger. Too sensitive for direct trading.
+
+**Common Usage:** Use NanoFlow to validate quality of TD/IGN/WRN/CAP/BDN signals. Absence of expected NanoFlow suggests weak signal.
+
+**Non-Repainting:** Renders only on confirmed bars.
 
 ---
 
@@ -134,7 +207,7 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 **Meaning:** Market character shifting from bull to bear or vice versa
 **Bullish CHOCH:** Low holds, breaks previous high
 **Bearish CHOCH:** High holds, breaks previous low
-**Trading:** Early reversal warning, wait for signal development
+**Common Usage:** Often viewed as early reversal warning where traders await signal development
 
 ---
 
@@ -210,7 +283,7 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 **Bullish Divergence:** Price making lower lows, indicator making higher lows
 **Bearish Divergence:** Price making higher highs, indicator making lower highs
 **Significance:** Potential reversal warning
-**Signal:** Wait for price signal (IGN, BDN)
+**Common Practice:** Often combined with price signals (IGN, BDN) for confirmation
 
 ---
 
@@ -247,7 +320,7 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 **Definition:** Low volatility period (tight Bollinger Bands)
 **Visual:** Narrowing bands, special indicator marking
 **Meaning:** Consolidation before potential breakout
-**Trading:** Avoid trading during squeeze, wait for expansion
+**Common Approach:** Trading during squeezes is often avoided; expansion phases are typically preferred
 **After Squeeze:** Often produces strong directional move
 
 ---
@@ -257,7 +330,7 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 ### Bar Close / Close Confirmed
 **Definition:** Signal that has finalized after candle closes
 **Importance:** Only closed-bar signals are reliable
-**Alerts:** Must set to "Once Per Bar Close"
+**Alerts:** Typically configured to "Once Per Bar Close"
 **Intrabar vs Closed:** Intrabar = preliminary, closed = confirmed
 
 ---
@@ -276,8 +349,8 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 - Long: Below IGN candle or TD low
 - Short: Above BDN candle or CAP high
 
-**Movement:** Can trail up (longs) or down (shorts), never toward entry
-**Importance:** Non-negotiable risk management tool
+**Movement:** Commonly trailed up (longs) or down (shorts); moving toward entry increases risk
+**Importance:** Standard risk management practice in trading
 
 ---
 
@@ -371,20 +444,20 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 ---
 
 ### Long / Long Position
-**Definition:** Buying an asset expecting price to rise
-**Entry:** Buy low
-**Exit:** Sell high
-**Profit:** Price increase
-**Signal:** IGN (enter), CAP/BDN (exit)
+**Definition:** Position taken expecting price to rise
+**Typical Entry:** Lower price levels
+**Typical Exit:** Higher price levels
+**Profit Mechanism:** Price increase
+**Associated Signals:** IGN (potential entry), CAP/BDN (potential exit)
 
 ---
 
 ### Short / Short Position
-**Definition:** Selling an asset expecting price to fall
-**Entry:** Sell high
-**Exit:** Buy low
-**Profit:** Price decrease
-**Signal:** BDN (enter), IGN (exit)
+**Definition:** Position taken expecting price to fall
+**Typical Entry:** Higher price levels
+**Typical Exit:** Lower price levels
+**Profit Mechanism:** Price decrease
+**Associated Signals:** BDN (potential entry), IGN (potential exit)
 
 ---
 
@@ -392,25 +465,25 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 **Definition:** Temporary price retracement within larger trend
 **Appearance:** Small counter-trend move
 **Opportunity:** Entry point in direction of larger trend
-**Strategy:** Wait for pullback to key level, then enter on reversal signal
+**Common Approach:** Often involves awaiting pullback to key level combined with reversal signal
 
 ---
 
 ### Breakout
 **Definition:** Price moving beyond established support/resistance
 **Types:** Support breakout (bearish), resistance breakout (bullish)
-**Volume:** Should increase on breakouts
+**Volume:** Typically increases on valid breakouts
 **False Breakout:** Returns inside range quickly
-**Confirmation:** Wait for close beyond level
+**Confirmation:** Many traders look for close beyond level to confirm breakout validity
 
 ---
 
 ### Range / Ranging Market
 **Definition:** Price moving sideways between support and resistance
 **Characteristics:** No clear trend, oscillating
-**Trading:** Range strategies (buy support, sell resistance)
-**Pentarch Performance:** Fewer signals (waiting for reversal)
-**Wait For:** Breakout before trending strategies
+**Common Approaches:** Support/resistance-based range trading strategies
+**Pentarch Performance:** Fewer signals (awaiting reversal conditions)
+**Breakout Monitoring:** Traders commonly await breakout before applying trending strategies
 
 ---
 
