@@ -260,7 +260,7 @@ Each signal gets rated 0-100:
 
 **How to set:**
 1. Click alarm icon
-2. Select "Minimal Flow v4.0"
+2. Select "Minimal Flow v1.0"
 3. Choose alert type
 4. Set to "Once Per Bar Close"
 

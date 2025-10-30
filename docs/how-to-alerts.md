@@ -34,8 +34,8 @@ Or use keyboard shortcut: **Alt+A** (Windows) or **Cmd+A** (Mac)
 
 Examples:
 - "Pentarch v8.9"
-- "Omnideck v1.7.0"
-- "Janus Atlas v3.12.2"
+- "Omnideck v1.0"
+- "Janus Atlas v1.0"
 
 **Note:** Make sure the indicator is already added to your chart before creating the alert.
 

@@ -193,7 +193,7 @@ Your complete 7-day guide to mastering Signal Pilot indicators. Follow this step
   - Open your BTC Daily chart
   - Click "Indicators"
   - Search "Janus Atlas"
-  - Add "Janus Atlas v3.12.2"
+  - Add "Janus Atlas v1.0"
 
 - [ ] **Identify level types**
   - [ ] Support levels (horizontal lines below price)
