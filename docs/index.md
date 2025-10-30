@@ -134,43 +134,49 @@ Want to see how all 7 indicators work together?
 
 **Quick links to what traders do most:**
 
-<div class="grid cards" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));" markdown>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
 
-- **🔔 Set Up Alerts**
+<div style="background: linear-gradient(135deg, color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent), color-mix(in srgb, var(--md-accent-fg-color) 8%, transparent)); border-radius: 12px; padding: 1.5rem; border-left: 4px solid var(--md-primary-fg-color);">
+  <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🔔</div>
+  <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem;">Set Up Alerts</h3>
+  <p style="margin: 0 0 1rem 0; color: var(--md-default-fg-color--light);">Get notified when signals fire</p>
+  <a href="how-to-alerts/" style="display: inline-block; padding: 0.5rem 1.5rem; background: var(--md-primary-fg-color); color: white; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Alert Guide →</a>
+</div>
 
-  Get notified when signals fire
+<div style="background: linear-gradient(135deg, color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent), color-mix(in srgb, var(--md-accent-fg-color) 8%, transparent)); border-radius: 12px; padding: 1.5rem; border-left: 4px solid var(--md-primary-fg-color);">
+  <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">📖</div>
+  <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem;">Understand Signals</h3>
+  <p style="margin: 0 0 1rem 0; color: var(--md-default-fg-color--light);">Learn what TD, IGN, CAP, BDN mean</p>
+  <a href="ref-glossary/" style="display: inline-block; padding: 0.5rem 1.5rem; background: var(--md-primary-fg-color); color: white; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Glossary →</a>
+</div>
 
-  [Alert Guide →](how-to-alerts.md)
+<div style="background: linear-gradient(135deg, color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent), color-mix(in srgb, var(--md-accent-fg-color) 8%, transparent)); border-radius: 12px; padding: 1.5rem; border-left: 4px solid var(--md-primary-fg-color);">
+  <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🎯</div>
+  <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem;">Choose Indicators</h3>
+  <p style="margin: 0 0 1rem 0; color: var(--md-default-fg-color--light);">Which indicators match your style?</p>
+  <a href="ref-comparison/" style="display: inline-block; padding: 0.5rem 1.5rem; background: var(--md-primary-fg-color); color: white; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Comparison Guide →</a>
+</div>
 
-- **📖 Understand Signals**
+<div style="background: linear-gradient(135deg, color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent), color-mix(in srgb, var(--md-accent-fg-color) 8%, transparent)); border-radius: 12px; padding: 1.5rem; border-left: 4px solid var(--md-primary-fg-color);">
+  <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">❓</div>
+  <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem;">Get Quick Answers</h3>
+  <p style="margin: 0 0 1rem 0; color: var(--md-default-fg-color--light);">Common questions answered</p>
+  <a href="about-faq/" style="display: inline-block; padding: 0.5rem 1.5rem; background: var(--md-primary-fg-color); color: white; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">FAQ →</a>
+</div>
 
-  Learn what TD, IGN, CAP, BDN mean
+<div style="background: linear-gradient(135deg, color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent), color-mix(in srgb, var(--md-accent-fg-color) 8%, transparent)); border-radius: 12px; padding: 1.5rem; border-left: 4px solid var(--md-primary-fg-color);">
+  <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">📈</div>
+  <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem;">Learn the Workflow</h3>
+  <p style="margin: 0 0 1rem 0; color: var(--md-default-fg-color--light);">Complete trading process</p>
+  <a href="ref-workflow/" style="display: inline-block; padding: 0.5rem 1.5rem; background: var(--md-primary-fg-color); color: white; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Trading Workflow →</a>
+</div>
 
-  [Glossary →](ref-glossary.md)
-
-- **🎯 Choose Indicators**
-
-  Which indicators match your style?
-
-  [Comparison Guide →](ref-comparison.md)
-
-- **❓ Get Quick Answers**
-
-  Common questions answered
-
-  [FAQ →](about-faq.md)
-
-- **📈 Learn the Workflow**
-
-  Complete trading process
-
-  [Trading Workflow →](ref-workflow.md)
-
-- **🔧 Fix Problems**
-
-  Troubleshoot common issues
-
-  [Troubleshooting →](ref-troubleshooting.md)
+<div style="background: linear-gradient(135deg, color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent), color-mix(in srgb, var(--md-accent-fg-color) 8%, transparent)); border-radius: 12px; padding: 1.5rem; border-left: 4px solid var(--md-primary-fg-color);">
+  <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🔧</div>
+  <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem;">Fix Problems</h3>
+  <p style="margin: 0 0 1rem 0; color: var(--md-default-fg-color--light);">Troubleshoot common issues</p>
+  <a href="ref-troubleshooting/" style="display: inline-block; padding: 0.5rem 1.5rem; background: var(--md-primary-fg-color); color: white; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Troubleshooting →</a>
+</div>
 
 </div>
 
