@@ -422,31 +422,96 @@ body {
   position: sticky;
 }
 
-/* On mobile, ensure Material header is ABOVE custom nav so hamburger menu is accessible */
+/* ========================================
+   MOBILE NAVIGATION - COMPLETE FIX
+   ======================================== */
+
 @media screen and (max-width: 76.1875em) {
-  .md-header {
-    z-index: 1001 !important;
-    background: var(--md-default-bg-color);
-  }
-
-  /* Ensure hamburger button is clickable and visible */
-  .md-header__button.md-icon {
-    position: relative;
-    z-index: 1002;
-    color: var(--md-default-fg-color) !important;
-  }
-
-  /* Custom nav below header on mobile */
+  /* STEP 1: Hide custom nav on mobile to eliminate conflicts */
   .sp-topnav {
-    z-index: 1000;
+    display: none !important;
+  }
+
+  /* STEP 2: Make Material header work properly */
+  .md-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 10000 !important;
+    background: var(--md-default-bg-color) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+  }
+
+  /* STEP 3: Ensure hamburger is visible and clickable */
+  .md-header__button.md-icon {
+    z-index: 10001 !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    color: var(--md-default-fg-color) !important;
+    padding: 0.75rem !important;
+  }
+
+  /* STEP 4: Fix navigation drawer positioning */
+  .md-nav--primary {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 280px !important;
+    max-width: 80vw !important;
+    height: 100vh !important;
+    z-index: 9999 !important;
+    background: var(--md-default-bg-color) !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  /* STEP 5: Overlay styling */
+  .md-overlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 9998 !important;
+    background: rgba(0, 0, 0, 0.54) !important;
+  }
+
+  /* STEP 6: Adjust content for fixed header */
+  .md-main {
+    padding-top: 3.5rem !important;
+  }
+
+  /* STEP 7: Touch-friendly menu items */
+  .md-nav__link {
+    min-height: 48px !important;
+    padding: 0.75rem 1.25rem !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  /* STEP 8: Style menu sections */
+  .md-nav__title {
+    font-weight: 700 !important;
+    color: var(--md-primary-fg-color) !important;
+    padding: 1rem 1.25rem 0.5rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  /* STEP 9: Show Material header title on mobile (since custom nav is hidden) */
+  .md-header__title {
+    visibility: visible !important;
+    width: auto !important;
+    overflow: visible !important;
   }
 }
 
-/* Hide the duplicate "SignalPilot" text in Material header (we have it in top nav already) */
-.md-header__title {
-  visibility: hidden;
-  width: 0;
-  overflow: hidden;
+/* Hide the duplicate "SignalPilot" text in Material header on DESKTOP only */
+@media screen and (min-width: 76.1876em) {
+  .md-header__title {
+    visibility: hidden;
+    width: 0;
+    overflow: hidden;
+  }
 }
 
 /* Enhanced cards and buttons with branded styling */
