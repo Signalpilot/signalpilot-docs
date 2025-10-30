@@ -9,7 +9,7 @@ Technical indicators that identify <strong>TIMING</strong> patterns, <strong>PRI
   <p style="color: rgba(255,255,255,0.95); font-size: 1.2rem; margin-bottom: 1.5rem;">Non-repainting. Alert-ready. Battle-tested.</p>
   <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
     <a href="start-quick/" style="display: inline-block; padding: 0.85rem 2.5rem; background: white; color: #345CFF; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: all 0.2s;">⚡ Quick Start (5 min)</a>
-    <a href="v6-suite-index/" style="display: inline-block; padding: 0.85rem 2.5rem; background: rgba(255,255,255,0.15); color: white; border: 2px solid white; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 1.1rem; transition: all 0.2s;">Explore the Suite →</a>
+    <a href="suite-index/" style="display: inline-block; padding: 0.85rem 2.5rem; background: rgba(255,255,255,0.15); color: white; border: 2px solid white; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 1.1rem; transition: all 0.2s;">Explore the Suite →</a>
   </div>
 </div>
 
@@ -94,7 +94,7 @@ Technical indicators that identify <strong>TIMING</strong> patterns, <strong>PRI
 
 Want to see how all 7 indicators work together?
 
-**[→ <span class="signal-pilot-brand">Signal Pilot</span> Suite Overview](v6-suite-index/)** - Quick selector, recommended combinations, learning path
+**[→ <span class="signal-pilot-brand">Signal Pilot</span> Suite Overview](suite-index/)** - Quick selector, recommended combinations, learning path
 
 ---
 
@@ -246,6 +246,6 @@ Want to see how all 7 indicators work together?
   <p style="font-size: 1.1rem; margin-bottom: 2rem; color: var(--md-default-fg-color); max-width: 600px; margin-left: auto; margin-right: auto;">Join traders using <span class="signal-pilot-brand">Signal Pilot</span>'s battle-tested indicators. Non-repainting signals, crystal-clear documentation, and rock-solid alerts.</p>
   <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
     <a href="https://signalpilot.io/#pricing" style="display: inline-block; padding: 0.85rem 2.5rem; background: linear-gradient(115deg, var(--md-primary-fg-color), var(--md-accent-fg-color)); color: white; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 1.1rem; box-shadow: 0 4px 16px rgba(52, 92, 255, 0.4); transition: all 0.2s;">Get the Suite</a>
-    <a href="v6-suite-index/" style="display: inline-block; padding: 0.85rem 2.5rem; background: transparent; color: var(--md-primary-fg-color); border: 2px solid var(--md-primary-fg-color); border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 1.1rem; transition: all 0.2s;">Explore Indicators</a>
+    <a href="suite-index/" style="display: inline-block; padding: 0.85rem 2.5rem; background: transparent; color: var(--md-primary-fg-color); border: 2px solid var(--md-primary-fg-color); border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 1.1rem; transition: all 0.2s;">Explore Indicators</a>
   </div>
 </div>

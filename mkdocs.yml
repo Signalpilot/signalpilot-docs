@@ -84,8 +84,8 @@ nav:
     - "Use Webhooks": how-to-webhooks.md
     - "Use Screener": how-to-screener.md
 
-  - "🚀 v6 Suite (Latest)":
-    - "📚 Suite Overview": v6-suite-index/
+  - "🚀 Suite (Latest)":
+    - "📚 Suite Overview": suite-index/
     - "Pentarch v1.0 — Reversal Events": pentarch-v10.md
     - "Janus Atlas v1.0 — Levels System": janus-atlas-v10.md
     - "Omnideck v1.0 — Everything Indicator": omnideck-v10.md
