@@ -134,6 +134,7 @@ Stop loss usage is a standard risk management practice:
 ---
 
 ## 🎯 The Pilot Line - Your Trend Compass
+<span style="color: #0aa1d5; font-weight: 600; font-size: 1.1em;">⭐ Core Component - Primary Reference for All Signals</span>
 
 ### What Is It?
 
@@ -192,6 +193,7 @@ The Pilot Line is a double-smoothed EMA (34-period EMA, then 3-period EMA of tha
 ---
 
 ## 🎨 Regime Bar Colors - Know Your Market Structure
+<span style="color: #10b981; font-weight: 600; font-size: 1.1em;">📊 Visual Context - Instant Market Structure Feedback</span>
 
 ### What Is It?
 
@@ -262,6 +264,7 @@ Most event signals require the "correct" regime to fire:
 ---
 
 ## ⚡ NanoFlow - The Momentum Heartbeat
+<span style="color: #a855f7; font-weight: 600; font-size: 1.1em;">🔍 Context Tool - NOT a Primary Trade Signal</span>
 
 ### What Is It?
 
@@ -369,6 +372,7 @@ A: No. Like all Pentarch components, NanoFlow only renders on confirmed bars. Wh
 ---
 
 ## 🔄 How All Components Work Together
+<span style="color: #f59e0b; font-weight: 600; font-size: 1.1em;">🎓 Essential Understanding - How The 4 Layers Integrate</span>
 
 ### The Complete Visual Hierarchy
 

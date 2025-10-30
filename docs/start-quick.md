@@ -145,11 +145,12 @@ Price: $35,000, falling for 2 weeks
 ---
 
 ### Mistake #2: Not Using "Once Per Bar Close" for Alerts
+<span style="color: #ff6b35; font-weight: 600;">⚠️ Critical Setup Issue</span>
 
-**❌ Wrong:** Alert fires mid-bar, you enter, signal disappears
-**✅ Right:** Alert set to "Once Per Bar Close", only closed-bar signals notify you
+**❌ Common Error:** Alert fires mid-bar, entry occurs, signal disappears
+**✅ Better Approach:** Alert set to "Once Per Bar Close", only closed-bar signals trigger notifications
 
-**Fix:**
+**How to fix:**
 - Delete incorrect alerts
 - Create new ones with "Once Per Bar Close"
 - See [Alert Setup Guide](how-to-alerts.md)
@@ -157,6 +158,7 @@ Price: $35,000, falling for 2 weeks
 ---
 
 ### Mistake #3: Trading Without Stop Losses
+<span style="color: #dc2626; font-weight: 600;">🚨 Risk Management Essential</span>
 
 **❌ Common Error:** "Will watch and exit if it goes against me"
 **✅ Better Approach:** Stop loss determination before entry
@@ -248,6 +250,7 @@ Price: $35,000, falling for 2 weeks
 ---
 
 ### Mistake #9: Not Paper Trading First
+<span style="color: #0aa1d5; font-weight: 600;">💡 Important for Beginners</span>
 
 **❌ Higher Risk:** Reading guide, immediately trading live with real money
 **✅ Lower Risk:** Paper trading for 2-4 weeks until consistent results
