@@ -426,6 +426,26 @@ body {
   .sp-topnav {
     display: none;
   }
+
+  /* Force mobile menu components to work */
+  .md-header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 10 !important;
+  }
+
+  .md-header__button {
+    z-index: 10 !important;
+    pointer-events: auto !important;
+  }
+
+  .md-overlay {
+    z-index: 9 !important;
+  }
+
+  .md-sidebar--primary {
+    z-index: 10 !important;
+  }
 }
 
 /* DESKTOP: Hide duplicate title (we have custom nav) */
