@@ -1,6 +1,6 @@
 # Frequently Asked Questions
 
-Find answers to common questions about <span class="signal-pilot-brand">Signal Pilot</span> indicators. Can't find what you're looking for? Check our [Troubleshooting Guide](ref-troubleshooting.md) or [Contact Support](about-support.md).
+Answers to common questions about <span class="signal-pilot-brand">Signal Pilot</span> indicators can be found here. For additional information, the [Troubleshooting Guide](ref-troubleshooting.md) or [Contact Support](about-support.md) pages are available.
 
 ---
 
@@ -9,7 +9,7 @@ Find answers to common questions about <span class="signal-pilot-brand">Signal P
 ### ⭐ Do I need all 7 indicators?
 <span style="color: #0aa1d5; font-weight: 600;">Most Common Question</span>
 
-No! You can start with just **Pentarch** for reversal signals. Most traders begin with 1-2 indicators and add more as they gain experience. See our [Comparison Guide](ref-comparison.md) to choose which indicators match your trading style.
+Not necessarily. Starting with just **Pentarch** for reversal signals is a common approach. Most traders begin with 1-2 indicators and add more as they gain experience. The [Comparison Guide](ref-comparison.md) is available to help identify which indicators match different trading styles.
 
 ### ⭐ What's the difference between Pentarch and Omnideck?
 <span style="color: #0aa1d5; font-weight: 600;">Key Comparison</span>
@@ -17,10 +17,10 @@ No! You can start with just **Pentarch** for reversal signals. Most traders begi
 - **Pentarch**: Focused reversal detector with 5 distinct event types (TD, IGN, WRN, CAP, BDN). Best for catching turning points.
 - **Omnideck**: All-in-one dashboard combining multiple indicators. Shows Pentarch signals PLUS levels, momentum, volume, and bias—everything on one chart.
 
-**Use Pentarch if:** You want clean, focused reversal signals
-**Use Omnideck if:** You want all analysis tools in one place
+**Pentarch is commonly used when:** Clean, focused reversal signals are desired
+**Omnideck is commonly used when:** All analysis tools in one place are preferred
 
-See the [Indicator Comparison Guide](ref-comparison.md) for detailed differences.
+The [Indicator Comparison Guide](ref-comparison.md) provides detailed differences.
 
 ### ⚡ What timeframe should I start with?
 <span style="color: #ff6b35; font-weight: 600;">Important for Beginners</span>
@@ -39,14 +39,14 @@ See the [Indicator Comparison Guide](ref-comparison.md) for detailed differences
 - **Advanced**: 15m to 4H for scalping
 - **Swing traders**: Daily to Weekly
 
-You can use any timeframe, but start higher and work your way down as you gain confidence.
+Any timeframe can be used, but starting higher and working down as confidence increases is a common progression.
 
 ### 🔧 Do I need a specific TradingView subscription?
 <span style="color: #8b5cf6; font-weight: 600;">Required Setup</span>
 
 **Minimum:** TradingView Essential (paid plan)
 
-**Why?** The indicators use advanced features that require a paid TradingView subscription. Free accounts won't work.
+**Why?** The indicators use advanced features that require a paid TradingView subscription. Free accounts are not compatible.
 
 **Recommended:** Pro or Pro+ for alert automation and faster data.
 
@@ -57,61 +57,61 @@ You can use any timeframe, but start higher and work your way down as you gain c
 ### 🔧 How do I get access?
 <span style="color: #8b5cf6; font-weight: 600;">First Steps</span>
 
-1. **Purchase** the suite at [signalpilot.io](https://signalpilot.io/#pricing)
-2. **Receive email** with access instructions
-3. **Provide** your TradingView username
-4. **Get invited** to private indicators (usually within 24 hours)
-5. **Add indicators** from TradingView's Indicators menu
+1. The suite can be **purchased** at [signalpilot.io](https://signalpilot.io/#pricing)
+2. An **email** with access instructions will be received
+3. TradingView username is **provided** to the service
+4. Access to private indicators is **granted** (usually within 24 hours)
+5. Indicators can be **added** from TradingView's Indicators menu
 
 ### ⚡ Why am I not seeing signals on my chart?
 <span style="color: #ff6b35; font-weight: 600;">Common Issue</span>
 
-**Check these common issues:**
+**Common issues to check:**
 
 1. **Wrong indicator version**
-   - Make sure you're using the latest version (e.g., "Pentarch v8.9")
+   - The latest version should be confirmed (e.g., "Pentarch v8.9")
    - Old versions may have been removed
 
 2. **Timeframe too low**
-   - Try switching to 4H or Daily
+   - Switching to 4H or Daily can be tried
    - Lower timeframes may have fewer signals during range periods
 
 3. **Indicator not loaded properly**
-   - Remove and re-add the indicator
-   - Refresh your browser
+   - The indicator can be removed and re-added
+   - Browser refresh may be needed
 
 4. **Market conditions**
    - Pentarch signals reversals—if market is ranging, signals will be sparse
    - This is normal and by design
 
 5. **Chart data issues**
-   - Ensure you have enough historical data loaded
-   - Try a different symbol to test
+   - Sufficient historical data should be loaded
+   - A different symbol can be tried for testing
 
-See [Troubleshooting Guide](ref-troubleshooting.md) for more detailed solutions.
+The [Troubleshooting Guide](ref-troubleshooting.md) provides more detailed solutions.
 
 ### 🔔 How do I know if alerts are working?
 <span style="color: #10b981; font-weight: 600;">Alert Testing</span>
 
-**Test your alerts:**
+**Alert testing approach:**
 
-1. **Create a test alert** on a low timeframe (5m or 15m)
-2. **Wait for the next signal** (shouldn't take long on lower timeframes)
-3. **Verify you received notification** via phone/email
-4. **Check notification settings** in TradingView mobile app
+1. A test alert can be **created** on a low timeframe (5m or 15m)
+2. The next signal can be **awaited** (shouldn't take long on lower timeframes)
+3. Notification receipt can be **verified** via phone/email
+4. Notification settings in TradingView mobile app can be **checked**
 
-**Key setting:** Always use "Once Per Bar Close" for alerts to avoid repainting.
+**Key setting:** "Once Per Bar Close" is recommended for alerts to avoid repainting.
 
 ### 📱 Can I use these on multiple devices?
 <span style="color: #10b981; font-weight: 600;">Device Compatibility</span>
 
-Yes! Your TradingView account and indicator access work on:
+Yes. TradingView account and indicator access work on:
 - Desktop browsers
 - TradingView mobile app (iOS/Android)
 - Multiple computers
 - Tablet browsers
 
-Your indicators and settings sync automatically across all devices via TradingView.
+Indicators and settings sync automatically across all devices via TradingView.
 
 ---
 
@@ -122,13 +122,13 @@ Your indicators and settings sync automatically across all devices via TradingVi
 
 **No—signals are final on bar close.**
 
-Our indicators follow a strict non-repainting policy:
+The indicators follow a strict non-repainting policy:
 - Signals finalize when the candle closes
 - HTF (higher timeframe) data confirms first
-- What you see is what you get—no disappearing signals
+- What is seen is what remains—no disappearing signals
 - Alerts trigger only on confirmed, closed bars
 
-See our [Non-Repainting Policy](ref-non-repaint.md) for technical details.
+The [Non-Repainting Policy](ref-non-repaint.md) provides technical details.
 
 ### 🌍 Which markets and timeframes work?
 <span style="color: #10b981; font-weight: 600;">Universal Compatibility</span>
@@ -159,23 +159,23 @@ This is intentional and prevents repainting:
 - Only confirmed signals (after bar close) are displayed
 - This ensures reliability and prevents false signals
 
-**What you might see:**
+**What might be observed:**
 - ❌ Signal appears mid-bar but disappears → Normal, bar didn't close
 - ✅ Signal appears after bar close → Confirmed, this is real
 
-**Best practice:** Set alerts to "Once Per Bar Close" to only receive confirmed signals.
+**Best practice:** Alerts set to "Once Per Bar Close" will only receive confirmed signals.
 
 ### 🤖 Can I automate trading with these indicators?
 <span style="color: #8b5cf6; font-weight: 600;">Automation Support</span>
 
-**Yes!** Automation is fully supported.
+**Yes.** Automation is fully supported.
 
-**How to automate:**
-1. **Set up alerts** with "Once Per Bar Close"
-2. **Use webhooks** to send alerts to your trading platform
-3. **Configure your trading bot** to act on webhook signals
+**Automation approach:**
+1. Alerts can be **set up** with "Once Per Bar Close"
+2. Webhooks can be **used** to send alerts to trading platforms
+3. Trading bots can be **configured** to act on webhook signals
 
-See guides:
+Guides available:
 - [How to Set Alerts](how-to-alerts.md)
 - [Webhook Integration](how-to-webhooks.md)
 
@@ -185,7 +185,7 @@ See guides:
 - Alertatron
 - Custom bots via webhook
 
-**Important:** Always backtest and paper trade automated strategies before using real money.
+**Important:** Backtesting and paper trading automated strategies before using real money is strongly recommended.
 
 ### ⭐ How accurate are the signals?
 <span style="color: #0aa1d5; font-weight: 600;">Understanding Expectations</span>
@@ -196,7 +196,7 @@ See guides:
 - Identify high-probability reversal zones
 - Show key support/resistance levels
 - Display momentum shifts
-- Alert you to potential opportunities
+- Alert to potential opportunities
 
 **What they don't do:**
 - Guarantee profitable trades
@@ -204,7 +204,7 @@ See guides:
 - Replace proper risk management
 
 **Success depends on:**
-- Your trading plan
+- Trading plan
 - Risk management
 - Market selection
 - Position sizing
@@ -235,7 +235,7 @@ See guides:
 3. Price moves up → Position monitoring phase
 4. CAP/BDN appears → Often interpreted as exit consideration
 
-See [Quick Start Guide](start-quick.md) for all 5 signal types explained.
+The [Quick Start Guide](start-quick.md) explains all 5 signal types.
 
 ### 🎨 Can I customize indicator settings?
 <span style="color: #f59e0b; font-weight: 600;">Advanced Settings</span>
@@ -247,10 +247,10 @@ Most indicators have customizable settings:
 - Alert preferences
 - Display options
 
-**What we recommend:**
-- **Beginners**: Use default settings
-- **Advanced**: Adjust visual preferences only
-- **Very advanced**: Experiment with parameters on test charts first
+**Recommendations:**
+- **Beginners**: Default settings are recommended
+- **Advanced**: Visual preferences can be adjusted
+- **Very advanced**: Parameters can be experimented with on test charts first
 
 **Warning:** Changing core calculation parameters may affect signal quality. Default settings have been optimized through extensive testing.
 
@@ -264,17 +264,17 @@ Most indicators have customizable settings:
 - **4H chart**: 2-8 signals per month
 - **1H chart**: Multiple signals per week
 
-**More signals when:**
+**More signals occur when:**
 - Market is trending with pullbacks
 - Volatility is moderate to high
 - Clear support/resistance levels exist
 
-**Fewer signals when:**
+**Fewer signals occur when:**
 - Market is ranging/sideways
 - Very low volatility
 - No clear structure
 
-This is normal! Quality over quantity—Pentarch waits for high-probability setups.
+This is normal. Quality over quantity—Pentarch waits for high-probability setups.
 
 ### 🔄 Do I need Janus Atlas if I have Omnideck?
 <span style="color: #0aa1d5; font-weight: 600;">Indicator Overlap</span>
@@ -289,10 +289,10 @@ This is normal! Quality over quantity—Pentarch waits for high-probability setu
 - Bias indicators
 - Everything in one chart
 
-**When to use Janus separately:**
-- You want cleaner charts (just levels, no signals)
-- You're only trading levels-based strategies
-- You're building a custom multi-indicator setup
+**When Janus might be used separately:**
+- Cleaner charts are desired (just levels, no signals)
+- Only levels-based strategies are being traded
+- A custom multi-indicator setup is being built
 
 Most users choose either Omnideck (everything) OR individual indicators (custom setup).
 
@@ -306,30 +306,30 @@ Most users choose either Omnideck (everything) OR individual indicators (custom 
 **This means alerts are NOT set to "Once Per Bar Close".**
 
 **Fix:**
-1. Delete existing alerts
-2. Create new alert
-3. Set trigger to **"Once Per Bar Close"**
-4. Save alert
+1. Existing alerts can be deleted
+2. New alert can be created
+3. Trigger should be set to **"Once Per Bar Close"**
+4. Alert can be saved
 
-Signals that appear mid-bar can change before close. This is normal and why we use close-confirmed alerts.
+Signals that appear mid-bar can change before close. This is normal and why close-confirmed alerts are used.
 
 ### 🔊 Too many alerts?
 <span style="color: #f59e0b; font-weight: 600;">Alert Filtering</span>
 
 **Solutions:**
-1. **Use higher timeframes** (switch from 1H to 4H or Daily)
-2. **Be more selective** (only trade IGN and CAP, ignore others)
-3. **Filter by market conditions** (only trade during trending markets)
-4. **Use confluence** (only take signals at key Janus levels)
+1. **Higher timeframes can be used** (switch from 1H to 4H or Daily)
+2. **More selectivity can be applied** (only trade IGN and CAP, ignore others)
+3. **Market condition filtering can be implemented** (only trade during trending markets)
+4. **Confluence can be used** (only take signals at key Janus levels)
 
 ### 🔇 Not enough signals?
 <span style="color: #f59e0b; font-weight: 600;">Increasing Signal Frequency</span>
 
-**Check:**
+**Things to check:**
 1. **Timeframe**: Lower timeframes = more signals
 2. **Market state**: Ranging markets produce fewer reversal signals
-3. **Indicator settings**: Verify you're using default settings
-4. **Symbol**: Try a more volatile asset
+3. **Indicator settings**: Default settings should be verified
+4. **Symbol**: A more volatile asset can be tried
 
 **Remember:** Fewer signals is often better—quality over quantity.
 
@@ -338,11 +338,11 @@ Signals that appear mid-bar can change before close. This is normal and why we u
 
 **Possible reasons:**
 
-1. **Access expired** - Contact support to verify subscription
-2. **Indicator updated** - Look for new version number
-3. **TradingView glitch** - Refresh browser or clear cache
+1. **Access expired** - Support can be contacted to verify subscription
+2. **Indicator updated** - New version number can be looked for
+3. **TradingView glitch** - Browser refresh or cache clear may help
 
-**Solution:** Go to TradingView's Indicators menu → Search "<span class="signal-pilot-brand">Signal Pilot</span>" or specific indicator name
+**Solution:** TradingView's Indicators menu → Search "<span class="signal-pilot-brand">Signal Pilot</span>" or specific indicator name can be accessed
 
 ---
 
@@ -372,7 +372,7 @@ Signals that appear mid-bar can change before close. This is normal and why we u
 ### 📋 What's your recommended workflow?
 <span style="color: #10b981; font-weight: 600;">Trading Process</span>
 
-See our complete [Trading Workflow Guide](ref-workflow.md) for the step-by-step process.
+The complete [Trading Workflow Guide](ref-workflow.md) provides the step-by-step process.
 
 **Common workflow pattern:**
 1. **Higher timeframe analysis** (Daily) for bias and major levels
@@ -385,7 +385,7 @@ See our complete [Trading Workflow Guide](ref-workflow.md) for the step-by-step 
 ### ⭐ Should I take every signal?
 <span style="color: #0aa1d5; font-weight: 600;">Filtering Approach</span>
 
-**No! Be selective.**
+**No. Selectivity is recommended.**
 
 **Best signals have:**
 - Confluence with major support/resistance (Janus levels)
@@ -393,7 +393,7 @@ See our complete [Trading Workflow Guide](ref-workflow.md) for the step-by-step 
 - Good risk/reward ratio (2:1 minimum)
 - Clear invalidation point for stop loss
 
-**Skip signals when:**
+**Signals can be skipped when:**
 - Against major trend
 - In middle of nowhere (no key levels nearby)
 - Poor risk/reward
@@ -405,14 +405,14 @@ See our complete [Trading Workflow Guide](ref-workflow.md) for the step-by-step 
 
 ## 📚 Additional Resources
 
-**Still have questions?**
+**For additional questions:**
 
 - [Troubleshooting Guide](ref-troubleshooting.md) - Solutions to common problems
 - [Glossary](ref-glossary.md) - Definitions of all terms and signals
 - [Support & Access](about-support.md) - Contact information
 - [Quick Start Guide](start-quick.md) - 5-minute beginner tutorial
 
-**Want to learn more?**
+**For further learning:**
 
 - [Trading Workflow](ref-workflow.md) - Complete trading process
 - [Comparison Guide](ref-comparison.md) - Choose the right indicators
