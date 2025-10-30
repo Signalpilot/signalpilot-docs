@@ -324,10 +324,10 @@ Searching just "Pentarch" instead of "Pentarch v8.9" can be tried
 #### 4. Private/Invite-Only Script
 ```
 <span class="signal-pilot-brand">Signal Pilot</span> indicators are invite-only.
-You must be explicitly granted access.
+Explicit access grant is required.
 
-Cannot find in public indicator library.
-Must appear in YOUR indicator list after invite.
+Cannot be found in public indicator library.
+Will appear in the user's indicator list after invite.
 ```
 
 ---
@@ -384,7 +384,7 @@ Test:
 
 #### 1. Indicator Updated (New Version)
 ```
-Old version deprecated → You need to add new version
+Old version deprecated → The new version needs to be added
 
 Solution:
 1. Email can be checked for update notification

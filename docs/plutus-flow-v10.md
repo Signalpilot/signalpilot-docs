@@ -309,6 +309,4 @@ Help is available at:
 
 ---
 
-**Remember:** Plutus Flow shows where smart money may be accumulating or distributing. When OBV and price disagree (potential divergence) = Potential major move coming. Can be combined with levels for highest probability.
-
-**Follow the money flow!** 🎯
+**Important consideration:** Plutus Flow shows where smart money may be accumulating or distributing. When OBV and price disagree (potential divergence) = Potential major move coming. Can be combined with levels for highest probability.

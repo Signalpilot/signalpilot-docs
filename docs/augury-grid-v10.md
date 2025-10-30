@@ -304,6 +304,4 @@ Help is available at:
 
 ---
 
-**Remember:** Augury Grid finds the opportunities across multiple symbols. Context is verified and execution occurs by the trader. It's a scanner, not an auto-trader.
-
-**Scan smart, trade better!** 🎯
+**Important consideration:** Augury Grid finds the opportunities across multiple symbols. Context is verified and execution occurs by the trader. It's a scanner, not an auto-trader.

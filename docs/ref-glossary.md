@@ -223,7 +223,7 @@ Complete reference of <span class="signal-pilot-brand">Signal Pilot</span> terms
 **Definition:** Timeframe lower than your current chart
 **Example:** If on Daily, 4H is LTF
 **Usage:** Fine-tune entries within HTF structure
-**Warning:** Can be noisy—use for precision only
+**Consideration:** Can be noisy—commonly used for precision only
 
 ---
 

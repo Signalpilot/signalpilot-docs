@@ -331,7 +331,7 @@ Signals that appear mid-bar can change before close. This is normal and why clos
 3. **Indicator settings**: Default settings can be verified
 4. **Symbol**: A more volatile asset can be tried
 
-**Remember:** Fewer signals is often better—quality over quantity.
+**Important consideration:** Fewer signals is often better—quality over quantity.
 
 ### ❌ Indicator disappeared from TradingView?
 <span style="color: #dc2626; font-weight: 600;">Access Issue</span>
@@ -399,7 +399,7 @@ The complete [Trading Workflow Guide](ref-workflow.md) provides the step-by-step
 - Poor risk/reward
 - News events pending
 
-**Remember:** The best trade is sometimes no trade.
+**Important consideration:** The best trade is sometimes no trade.
 
 ---
 
