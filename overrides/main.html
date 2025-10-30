@@ -1,12 +1,19 @@
 {# FILE: overrides/main.html #}
 {% extends "base.html" %}
 
+{% block extrahead %}
+  <!-- Google Fonts: Gugi for brand consistency -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+{% endblock %}
+
 {% block header %}
   <!-- SignalPilot brand bar (keeps Material header & search intact) -->
   <div class="sp-topnav">
     <div class="sp-topnav__inner">
-      <a class="sp-brand" href="https://signalpilot.io/">
-        <span class="sp-brand-text">Signal Pilot</span>
+      <a href="https://signalpilot.io" class="brand">
+        <span>Signal Pilot</span>
       </a>
       <nav class="sp-links" aria-label="Signal Pilot">
         <a href="https://signalpilot.io/#why">Why</a>

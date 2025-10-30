@@ -150,8 +150,7 @@ html[data-theme="light"] h6 {
   color: #0f172a !important;
 }
 
-html[data-theme="light"] .brand,
-html[data-theme="light"] .sp-brand-text {
+html[data-theme="light"] .brand {
   color: #0f172a !important;
 }
 
