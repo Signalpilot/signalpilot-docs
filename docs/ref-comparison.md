@@ -124,7 +124,7 @@ Identifies key price levels: support, resistance, FVG, order blocks, structure b
 **Limitations:**
 - Doesn't provide timing signals (levels only)
 - Requires price action understanding
-- Can display many levels (important ones need filtering)
+- Can display many levels (important ones are commonly filtered)
 
 **Standalone usage:** Commonly used alone by experienced level-based traders
 
@@ -414,13 +414,13 @@ Other indicators not required
 
 ---
 
-## 💡 Common Mistakes to Avoid
+## 💡 Common Mistakes
 
 ### ❌ Using Too Many Indicators
 
 **Problem:** All 7 indicators on one chart
 **Issue:** Overwhelming, slow, analysis paralysis
-**Fix:** Maximum 3 indicators per chart
+**Fix:** Commonly recommended maximum of 3 indicators per chart
 
 ---
 
@@ -428,7 +428,7 @@ Other indicators not required
 
 **Problem:** Only using Minimal Flow or Harmonic Oscillator
 **Issue:** No entry triggers
-**Fix:** Must have signal indicator (Pentarch or Omnideck)
+**Fix:** A signal indicator (Pentarch or Omnideck) is required
 
 ---
 
@@ -436,15 +436,15 @@ Other indicators not required
 
 **Problem:** Taking Pentarch signals anywhere
 **Issue:** Many false signals away from levels
-**Fix:** Add Janus Atlas, only trade at key levels
+**Fix:** Janus Atlas can be added, trading at key levels is commonly practiced
 
 ---
 
 ### ❌ Switching Indicators Too Fast
 
 **Problem:** Changing setup every week
-**Issue:** Never master anything
-**Fix:** Stick with one setup for at least 3 months
+**Issue:** Mastery becomes difficult
+**Fix:** Sticking with one setup for at least 3 months is commonly recommended
 
 ---
 
@@ -452,7 +452,7 @@ Other indicators not required
 
 **Problem:** Omnideck + Pentarch + Janus all loaded
 **Issue:** Duplicate signals, redundant data
-**Fix:** Choose Omnideck OR individual indicators, not both
+**Fix:** Omnideck OR individual indicators can be chosen, but not both
 
 ---
 

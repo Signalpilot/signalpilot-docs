@@ -92,9 +92,9 @@ Symbol 8: NQ1! (E-mini Nasdaq)
 ```
 
 **Tips:**
-- Full TradingView format should be used (e.g., "BINANCE:BTCUSDT", "NASDAQ:AAPL")
+- Full TradingView format can be used (e.g., "BINANCE:BTCUSDT", "NASDAQ:AAPL")
 - Asset classes can be mixed for diversification
-- Tickers should be tested first (wrong format = no data)
+- Tickers can be tested first (wrong format = no data)
 
 ---
 
@@ -190,7 +190,7 @@ Symbol 7-8: Daily (futures position)
 
 ## Settings (Keep It Simple)
 
-**Symbols:** 8 tickers can be added (correct TradingView format should be used)
+**Symbols:** 8 tickers can be added (correct TradingView format can be used)
 
 **Timeframes:** Each symbol's timeframe can be set (or default = chart timeframe can be left)
 
@@ -206,11 +206,11 @@ Symbol 7-8: Daily (futures position)
 
 ---
 
-## Common Mistakes (Avoid These!)
-<span style="color: #dc2626; font-weight: 600; font-size: 1.1em;">🚨 Critical Errors to Avoid</span>
+## Common Mistakes
+<span style="color: #dc2626; font-weight: 600; font-size: 1.1em;">🚨 Critical Errors</span>
 
 ❌ **Wrong ticker format**
-→ ✅ Exact TradingView format should be used: "BINANCE:BTCUSDT" not "BTC" or "BTCUSD"
+→ ✅ Exact TradingView format can be used: "BINANCE:BTCUSDT" not "BTC" or "BTCUSD"
 
 ❌ **Trading every signal**
 → ✅ Focus on Elite ⭐⭐⭐ and Premium ⭐⭐ when learning
@@ -219,10 +219,10 @@ Symbol 7-8: Daily (futures position)
 → ✅ If AGE > 15 bars, signal is stale - can be skipped
 
 ❌ **Ignoring P&L column**
-→ ✅ If signal shows -5% P&L and age is high, it failed - entry should not occur
+→ ✅ If signal shows -5% P&L and age is high, it failed - entry is not recommended
 
 ❌ **Not verifying on chart**
-→ ✅ The chart should always be loaded to confirm context before trading
+→ ✅ The chart is commonly loaded to confirm context before trading
 
 ---
 

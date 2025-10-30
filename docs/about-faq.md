@@ -22,8 +22,8 @@ Not necessarily. Starting with just **Pentarch** for reversal signals is a commo
 
 The [Indicator Comparison Guide](ref-comparison.md) provides detailed differences.
 
-### ⚡ What timeframe should I start with?
-<span style="color: #ff6b35; font-weight: 600;">Important for Beginners</span>
+### ⚡ What timeframe is commonly recommended for starting?
+<span style="color: #ff6b35; font-weight: 600;">Key Information for Beginners</span>
 
 **Recommended starting timeframe:** Daily (1D)
 
@@ -69,7 +69,7 @@ Any timeframe can be used, but starting higher and working down as confidence in
 **Common issues to check:**
 
 1. **Wrong indicator version**
-   - The latest version should be confirmed (e.g., "Pentarch v8.9")
+   - The latest version can be confirmed (e.g., "Pentarch v8.9")
    - Old versions may have been removed
 
 2. **Timeframe too low**
@@ -85,7 +85,7 @@ Any timeframe can be used, but starting higher and working down as confidence in
    - This is normal and by design
 
 5. **Chart data issues**
-   - Sufficient historical data should be loaded
+   - Sufficient historical data can be loaded
    - A different symbol can be tried for testing
 
 The [Troubleshooting Guide](ref-troubleshooting.md) provides more detailed solutions.
@@ -100,7 +100,7 @@ The [Troubleshooting Guide](ref-troubleshooting.md) provides more detailed solut
 3. Notification receipt can be **verified** via phone/email
 4. Notification settings in TradingView mobile app can be **checked**
 
-**Key setting:** "Once Per Bar Close" is recommended for alerts to avoid repainting.
+**Key setting:** "Once Per Bar Close" is commonly used for alerts to avoid repainting.
 
 ### 📱 Can I use these on multiple devices?
 <span style="color: #10b981; font-weight: 600;">Device Compatibility</span>
@@ -149,7 +149,7 @@ The [Non-Repainting Policy](ref-non-repaint.md) provides technical details.
 
 Indicators adapt automatically to any market or timeframe.
 
-### ⚡ Why don't I see an event that happened intrabar?
+### ⚡ Why are events that happened intrabar not visible?
 <span style="color: #ff6b35; font-weight: 600;">Common Confusion</span>
 
 **Events only print on closed bars by design.**
@@ -163,7 +163,7 @@ This is intentional and prevents repainting:
 - ❌ Signal appears mid-bar but disappears → Normal, bar didn't close
 - ✅ Signal appears after bar close → Confirmed, this is real
 
-**Best practice:** Alerts set to "Once Per Bar Close" will only receive confirmed signals.
+**Common practice:** Alerts set to "Once Per Bar Close" will only receive confirmed signals.
 
 ### 🤖 Can I automate trading with these indicators?
 <span style="color: #8b5cf6; font-weight: 600;">Automation Support</span>
@@ -185,7 +185,7 @@ Guides available:
 - Alertatron
 - Custom bots via webhook
 
-**Important:** Backtesting and paper trading automated strategies before using real money is strongly recommended.
+**Key information:** Backtesting and paper trading automated strategies before using real money is strongly recommended.
 
 ### ⭐ How accurate are the signals?
 <span style="color: #0aa1d5; font-weight: 600;">Understanding Expectations</span>
@@ -252,7 +252,7 @@ Most indicators have customizable settings:
 - **Advanced**: Visual preferences can be adjusted
 - **Very advanced**: Parameters can be experimented with on test charts first
 
-**Warning:** Changing core calculation parameters may affect signal quality. Default settings have been optimized through extensive testing.
+**Consideration:** Changing core calculation parameters may affect signal quality. Default settings have been optimized through extensive testing.
 
 ### 📊 How often do signals appear?
 <span style="color: #10b981; font-weight: 600;">Signal Frequency</span>
@@ -308,7 +308,7 @@ Most users choose either Omnideck (everything) OR individual indicators (custom 
 **Fix:**
 1. Existing alerts can be deleted
 2. New alert can be created
-3. Trigger should be set to **"Once Per Bar Close"**
+3. Trigger can be set to **"Once Per Bar Close"**
 4. Alert can be saved
 
 Signals that appear mid-bar can change before close. This is normal and why close-confirmed alerts are used.
@@ -328,7 +328,7 @@ Signals that appear mid-bar can change before close. This is normal and why clos
 **Things to check:**
 1. **Timeframe**: Lower timeframes = more signals
 2. **Market state**: Ranging markets produce fewer reversal signals
-3. **Indicator settings**: Default settings should be verified
+3. **Indicator settings**: Default settings can be verified
 4. **Symbol**: A more volatile asset can be tried
 
 **Remember:** Fewer signals is often better—quality over quantity.

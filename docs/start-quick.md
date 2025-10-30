@@ -133,7 +133,7 @@ Price: $35,000, falling for 2 weeks
 
 ---
 
-## 🚫 Common Mistakes to Avoid
+## 🚫 Common Mistakes
 
 ### Mistake #1: Entering on TD (Blue Signal)
 

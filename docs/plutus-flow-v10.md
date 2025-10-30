@@ -19,7 +19,7 @@ Plutus Flow is an **advanced On-Balance Volume (OBV) indicator** that shows when
 **Why it matters:**
 - OBV rising = Accumulation (smart money buying)
 - OBV falling = Distribution (smart money selling)
-- OBV diverging from price = Warning signal
+- OBV diverging from price = Potential warning signal
 
 ---
 
@@ -83,7 +83,7 @@ One huge volume bar (earnings, news) can permanently skew OBV, hiding subtle cha
 - Distribution climax
 - Often precedes reversal OR breakdown continuation
 
-**Context should be used:** Price action can be checked to know if reversal or continuation
+**Context can be used:** Price action can be checked to identify reversal or continuation patterns
 
 ---
 
@@ -122,7 +122,7 @@ One huge volume bar (earnings, news) can permanently skew OBV, hiding subtle cha
 
 **Simple check:**
 - **Price up, OBV up** = Healthy (volume confirms)
-- **Price up, OBV flat/down** = Weak (divergence warning)
+- **Price up, OBV flat/down** = Weak (potential divergence warning)
 - **Price down, OBV down** = Healthy downtrend
 - **Price down, OBV flat/up** = Weak downtrend (divergence)
 
@@ -220,14 +220,14 @@ One huge volume bar (earnings, news) can permanently skew OBV, hiding subtle cha
 
 ---
 
-## Common Mistakes (Avoid These!)
-<span style="color: #dc2626; font-weight: 600; font-size: 1.1em;">🚨 Critical Errors to Avoid</span>
+## Common Mistakes
+<span style="color: #dc2626; font-weight: 600; font-size: 1.1em;">🚨 Critical Errors</span>
 
 ❌ **Trading divergences in isolation**
 → ✅ Divergence + key level (Janus Atlas can be used) = Much higher win rate
 
 ❌ **Chasing extreme breaches**
-→ ✅ Extreme breach = Warning, not entry. Price reaction should be awaited.
+→ ✅ Extreme breach = Warning, not entry. Price reaction can be awaited.
 
 ❌ **Ignoring the OBV trend**
 → ✅ OBV trending up + price pullback = Buy the dip. OBV flat + price up = Caution advised.
@@ -294,7 +294,7 @@ Crosses can be used for active trading, divergences for high-conviction setups.
 
 1. **Can be combined with price action** - Divergence alone is interesting, divergence + reversal candle = Entry
 2. **Divergences can be traded at key levels** - Can be used with Janus Atlas for support/resistance
-3. **Extreme breaches should be respected** - They're warnings, not entry signals - reaction should be awaited
+3. **Extreme breaches are commonly respected** - They're warnings, not entry signals - reaction can be awaited
 4. **Crosses shouldn't be chased** - Entry on signal bar or next bar, not 5 bars later
 5. **HTF can be enabled for swing trading** - Filters counter-trend signals
 

@@ -36,7 +36,7 @@ Before addressing specific issues, this quick checklist can be reviewed:
 1. Scrolling left on chart loads more history
 2. At least 500-1000 bars of data is recommended
 3. A few seconds can be waited for indicator to recalculate
-4. Signals should appear after recalculation
+4. Signals are expected to appear after recalculation
 ```
 
 #### 2. Wrong Timeframe for Current Market Conditions
@@ -50,7 +50,7 @@ Daily chart: Good for trending markets, sparse in ranges
 1H chart: More frequent signals
 15m chart: Very frequent, best for active markets
 
-Try switching timeframes to see if signals appear.
+Switching timeframes can be tried to see if signals appear.
 ```
 
 #### 3. Market in Tight Range
@@ -77,7 +77,7 @@ This is NORMAL behavior. Indicators don't force signals.
 4. 5-10 seconds can be waited for initial calculation
 ```
 
-**Still not working?** Check indicator version—you might have an outdated version that was deprecated.
+**If this approach is still not effective:** Indicator version can be checked—outdated versions may have been deprecated.
 
 ---
 
@@ -112,7 +112,7 @@ This is NORMAL behavior. Indicators don't force signals.
 - ✅ Reliable, actionable alerts
 - ❌ Won't notify you of intrabar preliminary signals
 
-**Important note:** Intrabar signals are "maybe" — closed bar signals are "confirmed."
+**Key information:** Intrabar signals are "maybe" — closed bar signals are "confirmed."
 
 ---
 
@@ -219,9 +219,9 @@ RIGHT: Specific event selected (e.g., "IGN Event")
 
 #### 1. Change to Higher Timeframe
 ```
-Currently on 15m? → Try 1H
-Currently on 1H? → Try 4H
-Currently on 4H? → Try Daily
+Currently on 15m? → 1H can be tried
+Currently on 1H? → 4H can be tried
+Currently on 4H? → Daily can be tried
 
 Higher timeframes = fewer, higher-quality signals
 ```
@@ -241,7 +241,7 @@ Shorts only:
 
 #### 3. Use Multiple Symbols Smart
 ```
-Don't create same alert on 20 symbols!
+Creating the same alert on 20 symbols is not recommended.
 
 Better approach:
 - Use Augury Grid to scan multiple symbols
@@ -318,7 +318,7 @@ Search terms that work:
 - "Janus Atlas"
 - "Omnideck"
 
-Try searching just "Pentarch" instead of "Pentarch v8.9"
+Searching just "Pentarch" instead of "Pentarch v8.9" can be tried
 ```
 
 #### 4. Private/Invite-Only Script
@@ -354,11 +354,11 @@ Must appear in YOUR indicator list after invite.
 - Look for ongoing incidents
 - Wait for resolution if servers are degraded
 
-**Try Different Browser:**
+**Different Browser Can Be Tried:**
 ```
-Chrome → Try Firefox
-Firefox → Try Edge
-Safari → Try Chrome
+Chrome → Firefox can be tried
+Firefox → Edge can be tried
+Safari → Chrome can be tried
 
 Some browsers have conflicts with specific scripts
 ```
@@ -398,7 +398,7 @@ Solution:
 ```
 If using chart templates/layouts:
 
-1. Templates shouldn't be saved with private indicators
+1. Saving templates with private indicators is not recommended
 2. Templates can't share invite-only scripts
 3. Indicators can be added manually to each chart
 ```
@@ -475,7 +475,7 @@ Alternative:
 
 **Symptoms:** Work on desktop, not on TradingView mobile app
 
-**Important:** TradingView mobile app has limitations
+**Key information:** TradingView mobile app has limitations
 
 #### Limitations:
 ```
@@ -541,7 +541,7 @@ Alternative:
 
 **Symptoms:** Signal fired but you disagree with it, or it seems wrong
 
-**Important note:** Indicators use mathematics, not discretion
+**Key information:** Indicators use mathematics, not discretion
 
 #### Common Misunderstandings:
 
@@ -615,9 +615,9 @@ Solution: Load at least 500-1000 bars before judging signals.
 
 #### Reduce Indicator Count
 ```
-Loading all 7 indicators on one chart is not recommended.
+Loading all 7 indicators on one chart is not a recommended practice.
 
-Maximum recommended: 3 indicators
+Commonly recommended maximum: 3 indicators
 
 High performance combo:
 - Just Omnideck (it includes everything)
