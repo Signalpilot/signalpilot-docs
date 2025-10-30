@@ -240,28 +240,7 @@
   }
 }
 
-/* ========================================
-   MOBILE NAVIGATION - ADDITIONAL STYLING
-   ======================================== */
-
-/* Extra mobile navigation improvements (brand.css handles core functionality) */
-@media screen and (max-width: 76.1875em) {
-  /* Nested navigation items */
-  .md-nav__item--nested > .md-nav__link {
-    font-weight: 600;
-  }
-
-  /* Better spacing for navigation items */
-  .md-nav__item {
-    padding: 0;
-  }
-
-  /* Smooth scrolling in drawer */
-  .md-nav--primary {
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-}
+/* Mobile navigation: Let MkDocs Material handle it natively - no custom CSS */
 
 /* ========================================
    HOMEPAGE H1 - "SIGNAL PILOT DOCUMENTATION"
