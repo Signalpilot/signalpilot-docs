@@ -286,10 +286,10 @@ Price: $35,000, falling for 2 weeks
 ## ✅ What's Next?
 
 ### Master Pentarch:
-→ **[Full Pentarch Guide](pentarch-v89.md)** - Deep dive into all 5 signals
+→ **[Full Pentarch Guide](pentarch-v10.md)** - Deep dive into all 5 signals
 
 ### Add Levels:
-→ **[Janus Atlas Guide](janus-atlas-v3122.md)** - Identifies key price levels
+→ **[Janus Atlas Guide](janus-atlas-v10.md)** - Identifies key price levels
 **Why:** Pentarch shows timing, Janus shows levels
 
 ### Complete System:

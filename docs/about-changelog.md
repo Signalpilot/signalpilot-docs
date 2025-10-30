@@ -6,23 +6,23 @@ The Signal Pilot Suite represents a complete rebrand and modernization of the Si
 
 ### Core Indicators
 
-- **[Pentarch v1.0](pentarch-v89.md)** — 5-phase potential reversal system (TD → IGN → WRN → CAP → BDN). Cleaner UI, enhanced 5m profile detection, Volume Assist integration.
+- **[Pentarch v1.0](pentarch-v10.md)** — 5-phase potential reversal system (TD → IGN → WRN → CAP → BDN). Cleaner UI, enhanced 5m profile detection, Volume Assist integration.
 
-- **[Janus Atlas v1.0](janus-atlas-v3122.md)** — 39 level types including FVG/OB v2, breakers, session levels, VWAP variants. Decluttered visuals, boolean outputs, comprehensive alerts.
+- **[Janus Atlas v1.0](janus-atlas-v10.md)** — 39 level types including FVG/OB v2, breakers, session levels, VWAP variants. Decluttered visuals, boolean outputs, comprehensive alerts.
 
-- **[Omnideck v1.0](omnideck-v170.md)** — All-in-one system combining 10 indicators. Regime detection with anchored boxes, Squeeze/Expansion pulses, unified dashboard.
+- **[Omnideck v1.0](omnideck-v10.md)** — All-in-one system combining 10 indicators. Regime detection with anchored boxes, Squeeze/Expansion pulses, unified dashboard.
 
 - **[Augury Grid v1.0](augury-grid-v10.md)** — 8-symbol screener with quality scores, potential TP1 projections, P&L tracking. Real-time multi-timeframe scanning.
 
 ### Volume & Flow Analysis
 
-- **[Minimal Flow v1.0](minimal-flow-v40-ultimate.md)** — Potential volume spike detection with Z-score filtering, HTF gating, session validation. Complete position management system.
+- **[Minimal Flow v1.0](minimal-flow-v10.md)** — Potential volume spike detection with Z-score filtering, HTF gating, session validation. Complete position management system.
 
-- **[Plutus Flow v1.0](plutus-flow-v23.md)** — Advanced OBV with CVD divergence detection, EVR (Extreme Volume Rejection), FlipGuard for potential breakout confirmation.
+- **[Plutus Flow v1.0](plutus-flow-v10.md)** — Advanced OBV with CVD divergence detection, EVR (Extreme Volume Rejection), FlipGuard for potential breakout confirmation.
 
 ### Oscillators
 
-- **[Harmonic Oscillator v1.0](harmonic-oscillator-v34-adaptive.md)** — 3-in-1 composite (MACD + RSI + StochRSI) with voting system, adaptive thresholds, FlipGuard integration.
+- **[Harmonic Oscillator v1.0](harmonic-oscillator-v10.md)** — 3-in-1 composite (MACD + RSI + StochRSI) with voting system, adaptive thresholds, FlipGuard integration.
 
 ---
 

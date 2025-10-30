@@ -60,15 +60,15 @@ Technical indicators that identify <strong>TIMING</strong> patterns, <strong>PRI
 
 - :material-chart-timeline-variant: **Pentarch v1.0 — Reversal Events**
   5 simple signals that show you when price is reversing. TD/IGN/WRN/CAP/BDN labels.
-  [Read Guide :material-arrow-right:](pentarch-v89.md){ .md-button .md-button--primary }
+  [Read Guide :material-arrow-right:](pentarch-v10.md){ .md-button .md-button--primary }
 
 - :material-crosshairs-gps: **Janus Atlas v1.0 — Levels System**
   All your key levels in one place: HTF, session, VWAP, volume profile, structure.
-  [Read Guide :material-arrow-right:](janus-atlas-v3122.md){ .md-button .md-button--primary }
+  [Read Guide :material-arrow-right:](janus-atlas-v10.md){ .md-button .md-button--primary }
 
 - :material-view-dashboard-variant: **Omnideck v1.0 — Everything Indicator**
   10 systems in one: TD Sequential, Squeeze, Sweeps, EMAs, SuperTrend, BMSB, Regime, Zones, Patterns.
-  [Read Guide :material-arrow-right:](omnideck-v170.md){ .md-button .md-button--primary }
+  [Read Guide :material-arrow-right:](omnideck-v10.md){ .md-button .md-button--primary }
 
 - :material-table-search: **Augury Grid v1.0 — Multi-Symbol Screener**
   Scan 8 symbols simultaneously with quality scores. On-chart table shows the best setups.
@@ -76,15 +76,15 @@ Technical indicators that identify <strong>TIMING</strong> patterns, <strong>PRI
 
 - :material-water-plus: **Minimal Flow v1.0 — Volume Strategy**
   Volume spike detection + complete position management. Entry, stops, partials, trailing - all automatic.
-  [Read Guide :material-arrow-right:](minimal-flow-v40-ultimate.md){ .md-button .md-button--primary }
+  [Read Guide :material-arrow-right:](minimal-flow-v10.md){ .md-button .md-button--primary }
 
 - :material-sine-wave: **Harmonic Oscillator v1.0 — Composite Momentum**
   MACD + RSI + StochRSI voting system. 3 indicators combined into one 0-100 oscillator.
-  [Read Guide :material-arrow-right:](harmonic-oscillator-v34-adaptive.md){ .md-button .md-button--primary }
+  [Read Guide :material-arrow-right:](harmonic-oscillator-v10.md){ .md-button .md-button--primary }
 
 - :material-chart-line-variant: **Plutus Flow v1.0 — Advanced OBV**
   Spike-clipped OBV with divergence detection. See where smart money is accumulating/distributing.
-  [Read Guide :material-arrow-right:](plutus-flow-v23.md){ .md-button .md-button--primary }
+  [Read Guide :material-arrow-right:](plutus-flow-v10.md){ .md-button .md-button--primary }
 
 </div>
 
@@ -181,25 +181,25 @@ Want to see how all 7 indicators work together?
 **Not sure which indicator to start with?**
 
 ### I want to identify potential reversals
-→ **[Pentarch v1.0](pentarch-v89.md)** - 5 simple potential reversal signals (TD/IGN/WRN/CAP/BDN)
+→ **[Pentarch v1.0](pentarch-v10.md)** - 5 simple potential reversal signals (TD/IGN/WRN/CAP/BDN)
 
 ### I want to see key levels
-→ **[Janus Atlas v1.0](janus-atlas-v3122.md)** - Daily/Weekly/Monthly highs/lows, VWAP, session levels, structure
+→ **[Janus Atlas v1.0](janus-atlas-v10.md)** - Daily/Weekly/Monthly highs/lows, VWAP, session levels, structure
 
 ### I want everything in one indicator
-→ **[Omnideck v1.0](omnideck-v170.md)** - 10 systems combined (TD, Squeeze, EMAs, Zones, Patterns, etc.)
+→ **[Omnideck v1.0](omnideck-v10.md)** - 10 systems combined (TD, Squeeze, EMAs, Zones, Patterns, etc.)
 
 ### I want to scan multiple symbols
 → **[Augury Grid v1.0](augury-grid-v10.md)** - Watch 8 symbols at once with quality scores
 
 ### I want volume-based signals
-→ **[Minimal Flow v1.0](minimal-flow-v40-ultimate.md)** - Volume spikes + position management system
+→ **[Minimal Flow v1.0](minimal-flow-v10.md)** - Volume spikes + position management system
 
 ### I want momentum/oscillator signals
-→ **[Harmonic Oscillator v1.0](harmonic-oscillator-v34-adaptive.md)** - 3-in-1 composite (MACD+RSI+StochRSI)
+→ **[Harmonic Oscillator v1.0](harmonic-oscillator-v10.md)** - 3-in-1 composite (MACD+RSI+StochRSI)
 
 ### I want to see money flow (OBV)
-→ **[Plutus Flow v1.0](plutus-flow-v23.md)** - Advanced OBV with divergence detection
+→ **[Plutus Flow v1.0](plutus-flow-v10.md)** - Advanced OBV with divergence detection
 
 ---
 
@@ -220,19 +220,19 @@ Want to see how all 7 indicators work together?
 ## 💡 Recommended Combinations
 
 **Reversal + Levels:**
-[Pentarch v1.0](pentarch-v89.md) + [Janus Atlas v1.0](janus-atlas-v3122.md)
+[Pentarch v1.0](pentarch-v10.md) + [Janus Atlas v1.0](janus-atlas-v10.md)
 → Pentarch shows you WHEN, Janus shows you WHERE
 
 **Complete System:**
-[Omnideck v1.0](omnideck-v170.md) + [Janus Atlas v1.0](janus-atlas-v3122.md)
+[Omnideck v1.0](omnideck-v10.md) + [Janus Atlas v1.0](janus-atlas-v10.md)
 → Everything you need: signals, levels, structure, regime
 
 **Volume Traders:**
-[Minimal Flow v1.0](minimal-flow-v40-ultimate.md) + [Plutus Flow v1.0](plutus-flow-v23.md)
+[Minimal Flow v1.0](minimal-flow-v10.md) + [Plutus Flow v1.0](plutus-flow-v10.md)
 → Volume spikes + OBV flow = Complete volume analysis
 
 **Divergence Hunters:**
-[Harmonic Oscillator v1.0](harmonic-oscillator-v34-adaptive.md) + [Plutus Flow v1.0](plutus-flow-v23.md)
+[Harmonic Oscillator v1.0](harmonic-oscillator-v10.md) + [Plutus Flow v1.0](plutus-flow-v10.md)
 → Price/momentum + Price/volume divergences
 
 **Multi-Asset Scanners:**
