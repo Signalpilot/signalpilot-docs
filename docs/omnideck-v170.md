@@ -9,136 +9,147 @@ Omnideck is the **ultimate all-in-one indicator** - 10 professional trading syst
 ---
 
 ## The 10 Systems (Choose What You Need)
+<span style="color: #0aa1d5; font-weight: 600; font-size: 1.1em;">⭐ 10 Systems Combined - Choose Your Mix</span>
 
 ### 1. 🔢 TD Sequential - Exhaustion Counter
+<span style="color: #10b981; font-weight: 600;">📊 Exhaustion Detection - 9-Count System</span>
 
 **What you see:** Green numbers 1-9 below bars, Red numbers 1-9 above bars
 
 **What it means:**
-- **Green 9** = Price has been falling too long, potential reversal UP likely
-- **Red 9** = Price has been rising too long, potential reversal DOWN likely
+- **Green 9** = Price has been falling for extended period, potential reversal UP
+- **Red 9** = Price has been rising for extended period, potential reversal DOWN
 
-**What to do:** Wait for 9, look for potential reversal confirmation, then enter opposite direction
+**Common interpretation:** At 9-count, many traders watch for potential reversal confirmation
 
-**Example:** Price falling for 9 bars (shows green 9 at $100) → Look for long entry, early-cycle conditions may be developing
+**Example:** Price falling for 9 bars (shows green 9 at $100) → Potential long entry signal, early-cycle conditions may be developing
 
 ---
 
 ### 2. 💥 Squeeze - Breakout Detector
+<span style="color: #f59e0b; font-weight: 600;">⚡ Volatility Breakout - Compression to Expansion</span>
 
 **What you see:**
-- **Red dots on price** = Volatility compressing (big move coming)
-- **Green arrow ↑** = Bullish breakout (go long)
-- **Red arrow ↓** = Bearish breakdown (go short)
+- **Red dots on price** = Volatility compressing (big move developing)
+- **Green arrow ↑** = Bullish breakout indication
+- **Red arrow ↓** = Bearish breakdown indication
 
-**What to do:**
-1. Wait for red dots (squeeze forming)
-2. Let 3-5 dots cluster (more = bigger move)
-3. Arrow fires → Enter in arrow direction
+**Common pattern observation:**
+1. Red dots appear (squeeze forming)
+2. Multiple dots cluster (3-5+ dots = larger move potential)
+3. Arrow fires → Directional breakout indicated
 
-**Example:** 5 red dots appear, then green arrow at $102 → Enter long, explosive move starting
+**Example:** 5 red dots appear, then green arrow at $102 → Potential long entry signal, explosive move indicated
 
 ---
 
 ### 3. 💧 Liquidity Sweeps - Stop Hunt Detector
+<span style="color: #a855f7; font-weight: 600;">🎯 Smart Money Detection - Liquidity Grabs</span>
 
 **What you see:**
-- **LL tag** = Lower Low sweep (fake breakdown)
-- **HH tag** = Higher High sweep (fake breakout)
+- **LL tag** = Lower Low sweep (potential fake breakdown)
+- **HH tag** = Higher High sweep (potential fake breakout)
 
 **What it means:**
 - Price spiked to grab stops, then immediately reversed
-- Classic "trap" move
+- Classic "trap" move pattern
 
-**What to do:**
-- **LL sweep** (bullish) → Enter long, stop hunt completed
-- **HH sweep** (bearish) → Enter short, fake breakout
+**Common interpretation:**
+- **LL sweep** → Potential bullish reversal signal (stop hunt completed)
+- **HH sweep** → Potential bearish reversal signal (fake breakout)
 
-**Example:** Price drops to $98 (LL tag), immediately bounces to $102 → Classic stop hunt, go long
+**Example:** Price drops to $98 (LL tag), immediately bounces to $102 → Classic stop hunt pattern, potential long signal
 
 ---
 
 ### 4. 📊 EMA Trio - The Big Three Moving Averages
+<span style="color: #10b981; font-weight: 600;">📈 Trend Foundation - Classic Moving Averages</span>
 
 **What you see:** Three lines - EMA 50 (fast), EMA 100 (medium), EMA 200 (slow)
 
 **Key signals:**
-- **Golden Cross (GC)** = Fast crosses above slow (bullish)
-- **Death Cross (DC)** = Fast crosses below slow (bearish)
-- **Pullback (PB)** = Price touches EMA then bounces (entry opportunity)
+- **Golden Cross (GC)** = Fast crosses above slow (bullish indication)
+- **Death Cross (DC)** = Fast crosses below slow (bearish indication)
+- **Pullback (PB)** = Price touches EMA then bounces (potential entry pattern)
 
-**Example:** Price above all 3 EMAs (50>100>200) = Strong uptrend, only take longs
+**Example:** Price above all 3 EMAs (50>100>200) = Strong uptrend structure, bullish bias common
 
 ---
 
 ### 5. 🎯 SuperTrend - Trend Confirmation
+<span style="color: #0aa1d5; font-weight: 600;">🎯 Trend Filter - Directional Bias</span>
 
 **What you see:**
-- **Green ribbon** = Bullish trend (only look for longs)
-- **Red ribbon** = Bearish trend (only look for shorts)
+- **Green ribbon** = Bullish trend (long bias typical)
+- **Red ribbon** = Bearish trend (short bias typical)
 
-**Why it helps:** Keeps you on the right side of the trend. Don't fight the ribbon color.
+**Why it helps:** Provides clear trend direction. Trading with the ribbon color is a common practice.
 
-**Example:** Green ribbon + TD 9 green = Oversold in uptrend → Strong buy
+**Example:** Green ribbon + TD 9 green = Oversold in uptrend → Potential strong buy signal
 
 ---
 
 ### 6. 📉 BMSB - Bull Market Support Band
+<span style="color: #10b981; font-weight: 600;">📉 Dynamic Support - Uptrend Bounce Zone</span>
 
 **What you see:** Two lines close together (20 SMA + 21 EMA)
 
-**What it is:** The "support zone" in uptrends
+**What it is:** The "support zone" commonly used in uptrends
 
-**What to do:**
-- In uptrend: Buy when price touches BMSB
-- Price breaks below BMSB = Trend weakening, be careful
+**Common pattern:**
+- In uptrend: Many traders watch for bounces when price touches BMSB
+- Price breaks below BMSB = Trend may be weakening
 
-**Example:** Stock in uptrend pulls back to BMSB at $105, bounces → Buy the dip
+**Example:** Stock in uptrend pulls back to BMSB at $105, bounces → Potential buy-the-dip signal
 
 ---
 
 ### 7. 🌈 Regime Box - Market Mood Background
+<span style="color: #dc2626; font-weight: 600;">🎯 MOST IMPORTANT - Your Bias Filter</span>
 
 **What you see:**
-- **Green background** = Bullish regime (take longs)
-- **Red background** = Bearish regime (take shorts)
-- **Gray background** = Neutral/choppy (be selective)
+- **Green background** = Bullish regime (long bias typical)
+- **Red background** = Bearish regime (short bias typical)
+- **Gray background** = Neutral/choppy (selectivity common)
 
-**Why it helps:** Your ultimate "bias filter." Only trade WITH the background color.
+**Why it helps:** Primary "bias filter." Trading with the background color is standard practice.
 
-**Example:** Regime green + Squeeze arrow up = Maximum conviction long
+**Example:** Regime green + Squeeze arrow up = Maximum conviction long signal
 
 ---
 
 ### 8. 📦 Supply/Demand Zones - Institutional Levels
+<span style="color: #f59e0b; font-weight: 600;">📦 Price Magnet Zones - High Reaction Areas</span>
 
 **What you see:**
-- **Green boxes** = Demand zones (support, price should bounce)
-- **Red boxes** = Supply zones (resistance, price should reject)
+- **Green boxes** = Demand zones (support, bounce potential)
+- **Red boxes** = Supply zones (resistance, rejection potential)
 - **Stars ⭐⭐⭐** = Quality rating (more stars = stronger zone)
 
-**What to do:**
-1. Wait for price to reach zone
-2. Watch for reaction (bounce or break)
-3. Enter in the direction of the reaction
+**Common approach:**
+1. Watch for price to reach zone
+2. Observe reaction (bounce or break)
+3. Entry consideration based on reaction direction
 
-**Example:** Price drops to ⭐⭐⭐ demand zone at $100, forms hammer → Enter long
+**Example:** Price drops to ⭐⭐⭐ demand zone at $100, forms hammer → Potential long entry signal
 
 ---
 
 ### 9. 🕯️ Candlestick Patterns - Classic Reversals
+<span style="color: #a855f7; font-weight: 600;">🕯️ Pattern Recognition - 16 Classic Patterns</span>
 
 **What you see:** Labels like "HAM" (Hammer), "BE" (Bullish Engulfing), "SS" (Shooting Star)
 
 **What they are:** 16 classic potential reversal patterns detected automatically
 
-**What to do:** Pattern + other confirmations = Potential high-probability trade
+**Common interpretation:** Pattern + other confirmations = Potential higher-probability setup
 
 **Example:** Shooting Star at supply zone + TD 9 red = Potential late-cycle exhaustion, example short setup
 
 ---
 
 ### 10. 🎛️ Meta Tools - Everything Working Together
+<span style="color: #10b981; font-weight: 600;">🎛️ System Integration - Harmony & Confluence</span>
 
 **What it is:** Behind-the-scenes integration that makes all systems work in harmony
 
@@ -147,8 +158,10 @@ Omnideck is the **ultimate all-in-one indicator** - 10 professional trading syst
 ---
 
 ## How to Use It (Don't Overwhelm Yourself!)
+<span style="color: #0aa1d5; font-weight: 600; font-size: 1.1em;">🎓 Essential Learning - Progressive Approach</span>
 
 ### Step 1: Start Simple (Beginner)
+<span style="color: #ff6b35; font-weight: 600;">⚠️ Critical - Don't Use All 10 At Once</span>
 
 Don't turn on all 10 systems at once! Start with 3-4:
 
@@ -162,10 +175,11 @@ Don't turn on all 10 systems at once! Start with 3-4:
 ---
 
 ### Step 2: Follow the Hierarchy
+<span style="color: #10b981; font-weight: 600;">📊 Analysis Order - Top-Down Approach</span>
 
-**Check in this order:**
+**Common evaluation order:**
 
-1. **Regime Box** (background color) = Your bias
+1. **Regime Box** (background color) = Directional bias
 2. **EMA Trio / BMSB** = Trend structure
 3. **TD / Squeeze / Sweeps** = Entry timing
 
@@ -174,19 +188,20 @@ Don't turn on all 10 systems at once! Start with 3-4:
 2. Price above BMSB (uptrend confirmed)
 3. TD 9 green (oversold)
 4. Squeeze arrow fires up
-5. = ENTER LONG (everything aligned)
+5. = Potential long entry (everything aligned)
 
 ---
 
 ### Step 3: Use Zones as Context
+<span style="color: #f59e0b; font-weight: 600;">💰 Quality Filter - Zones Increase Probability</span>
 
-Signals at Supply/Demand zones = Much higher probability
+Signals at Supply/Demand zones often show higher probability
 
 **Example:**
-- Regular signal (no zone) = 55% win rate
-- Signal at ⭐⭐⭐ zone = 75% win rate
+- Regular signal (no zone) = 55% win rate typical
+- Signal at ⭐⭐⭐ zone = 75% win rate typical
 
-Always prefer signals that happen at key zones.
+Signals at key zones are commonly preferred.
 
 ---
 
@@ -205,13 +220,13 @@ Always prefer signals that happen at key zones.
 2. Bounces into demand zone
 3. TD shows green 9 (exhaustion)
 4. Hammer indicates potential reversal
-5. You enter long at $63,800
-6. Stop below zone at $63,000
+5. Common entry consideration: Long at $63,800
+6. Typical stop placement: Below zone at $63,000
 
 **Result:**
 - Price rallies to $68,000
 - Regime flips to green at $65,000 (confirmation)
-- Exit at next supply zone = $4,200 profit per coin (6.6% gain)
+- Exit at next supply zone = $4,200 gain per coin (6.6% gain)
 
 ---
 
@@ -255,18 +270,19 @@ Customize to your preference, but keep it clean
 ---
 
 ## Common Mistakes (Avoid These!)
+<span style="color: #dc2626; font-weight: 600; font-size: 1.1em;">🚨 Critical Errors to Avoid</span>
 
 ❌ **Using all 10 systems at once as a beginner**
 → ✅ Start with 3-4 systems, add more as you learn each one
 
 ❌ **Ignoring the Regime Box**
-→ ✅ Regime = Your bias. Always check it first. Don't fight it.
+→ ✅ Regime = Directional bias. Checking it first is a common practice.
 
 ❌ **Trading every signal**
-→ ✅ Best signals have multiple confirmations (TD 9 + Sweep + Zone + Pattern)
+→ ✅ Best signals typically have multiple confirmations (TD 9 + Sweep + Zone + Pattern)
 
 ❌ **Taking signals against the trend**
-→ ✅ Regime green + bullish signals = Good. Regime green + bearish signals = Skip.
+→ ✅ Regime green + bullish signals = High quality. Regime green + bearish signals = Often skipped.
 
 ❌ **Forgetting about Supply/Demand zones**
 → ✅ Signals at zones = Much higher success rate
@@ -303,32 +319,33 @@ Customize to your preference, but keep it clean
 
 ## Quick Cheat Sheet
 
-| System | Signal | Action |
-|--------|--------|--------|
-| TD Sequential | Green 9 | **Look for long** (oversold) |
-| TD Sequential | Red 9 | **Look for short** (overbought) |
-| Squeeze | Green arrow ↑ | **Go long** (breakout up) |
-| Squeeze | Red arrow ↓ | **Go short** (breakdown) |
-| Liquidity Sweep | LL tag | **Go long** (fake breakdown) |
-| Liquidity Sweep | HH tag | **Go short** (fake breakout) |
-| EMA Trio | Golden Cross | **Bullish** (long bias) |
-| EMA Trio | Death Cross | **Bearish** (short bias) |
-| SuperTrend | Green ribbon | Only take longs |
-| SuperTrend | Red ribbon | Only take shorts |
-| Regime Box | Green background | Look for bullish setups |
-| Regime Box | Red background | Look for bearish setups |
-| SD Zones | Price at demand ⭐⭐⭐ | Strong support (buy opportunity) |
-| SD Zones | Price at supply ⭐⭐⭐ | Strong resistance (sell opportunity) |
+| System | Signal | Common Interpretation |
+|--------|--------|----------------------|
+| TD Sequential | Green 9 | Potential long signal (oversold) |
+| TD Sequential | Red 9 | Potential short signal (overbought) |
+| Squeeze | Green arrow ↑ | Potential long entry (breakout up) |
+| Squeeze | Red arrow ↓ | Potential short entry (breakdown) |
+| Liquidity Sweep | LL tag | Potential long signal (fake breakdown) |
+| Liquidity Sweep | HH tag | Potential short signal (fake breakout) |
+| EMA Trio | Golden Cross | Bullish bias typical |
+| EMA Trio | Death Cross | Bearish bias typical |
+| SuperTrend | Green ribbon | Long bias common |
+| SuperTrend | Red ribbon | Short bias common |
+| Regime Box | Green background | Bullish setup focus |
+| Regime Box | Red background | Bearish setup focus |
+| SD Zones | Price at demand ⭐⭐⭐ | Strong support (potential buy) |
+| SD Zones | Price at supply ⭐⭐⭐ | Strong resistance (potential sell) |
 
 ---
 
 ## Best Practices
+<span style="color: #10b981; font-weight: 600; font-size: 1.1em;">✅ Recommended Approach</span>
 
-1. **Start with 3-4 systems** - Don't overwhelm yourself with all 10
-2. **Always check Regime first** - It's your bias filter
-3. **Look for confluence** - One signal = interesting, 3+ signals = take it!
-4. **Trade at zones** - Signals at zones have much higher win rates
-5. **Be patient** - Wait for everything to align, don't force trades
+1. **Start with 3-4 systems** - Starting gradually is a common approach
+2. **Check Regime first** - It provides directional bias context
+3. **Watch for confluence** - One signal = interesting, 3+ signals = higher quality
+4. **Evaluate at zones** - Signals at zones often show higher win rates
+5. **Remain patient** - Waiting for alignment is standard practice
 
 ---
 

@@ -104,7 +104,7 @@ Detects potential reversal points with 5 distinct signal types (TD, IGN, WRN, CA
 
 ---
 
-### Janus Atlas v3.12.2 — Levels System
+### Janus Atlas v1.0 — Levels System
 
 **What it does:**
 Identifies key price levels: support, resistance, FVG, order blocks, structure breaks
@@ -134,7 +134,7 @@ Identifies key price levels: support, resistance, FVG, order blocks, structure b
 
 ---
 
-### Omnideck v1.7.0 — Everything Indicator
+### Omnideck v1.0 — Everything Indicator
 
 **What it does:**
 Combines ALL suite indicators into one comprehensive dashboard
@@ -204,7 +204,7 @@ Scans multiple symbols simultaneously, showing signals in a table format
 
 ---
 
-### Minimal Flow v4.0 — Volume Strategy
+### Minimal Flow v1.0 — Volume Strategy
 
 **What it does:**
 Analyzes order flow and volume patterns for confirmation
@@ -235,7 +235,7 @@ Analyzes order flow and volume patterns for confirmation
 
 ---
 
-### Harmonic Oscillator v3.4 — Composite Momentum
+### Harmonic Oscillator v1.0 — Composite Momentum
 
 **What it does:**
 Combines multiple oscillators into one momentum indicator
@@ -266,7 +266,7 @@ Combines multiple oscillators into one momentum indicator
 
 ---
 
-### Plutus Flow v2.3 — Advanced OBV
+### Plutus Flow v1.0 — Advanced OBV
 
 **What it does:**
 Enhanced On-Balance Volume indicator for volume trend analysis

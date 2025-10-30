@@ -9,6 +9,7 @@ Harmonic Oscillator combines **MACD, RSI, and StochRSI** into one smart oscillat
 ---
 
 ## Core Concept: Democratic Voting
+<span style="color: #0aa1d5; font-weight: 600; font-size: 1.1em;">💡 Core Philosophy - 3 Oscillators Vote Together</span>
 
 No single indicator is perfect. But when multiple agree? That's high probability.
 
@@ -110,6 +111,7 @@ When price and oscillator disagree = Reversal coming
 ---
 
 ## How to Use It (3 Simple Steps)
+<span style="color: #0aa1d5; font-weight: 600; font-size: 1.1em;">🎓 Essential Learning Guide</span>
 
 ### Step 1: Pick Your Mode
 
@@ -229,6 +231,7 @@ Enable HTF filter to only take signals aligned with higher timeframe:
 ---
 
 ## Common Mistakes (Avoid These!)
+<span style="color: #dc2626; font-weight: 600; font-size: 1.1em;">🚨 Critical Errors to Avoid</span>
 
 ❌ **Trading signals from neutral zone (40-60)**
 → ✅ Best signals come from extremes (< 20 or > 80)
@@ -300,6 +303,7 @@ Both are valuable in different contexts.
 ---
 
 ## Best Practices
+<span style="color: #10b981; font-weight: 600; font-size: 1.1em;">✅ Recommended Approach</span>
 
 1. **Wait for extremes** - Best signals come from < 20 or > 80
 2. **Trade divergences** - Divergence + signal = Elite setups

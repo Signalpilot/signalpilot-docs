@@ -9,8 +9,10 @@ Janus Atlas shows you **every important level on your chart** - all at once. Thi
 ---
 
 ## The Levels (What You Get)
+<span style="color: #0aa1d5; font-weight: 600; font-size: 1.1em;">⭐ Core Feature - 39 Level Types Available</span>
 
 ### 📅 Timeframe Levels
+<span style="color: #10b981; font-weight: 600;">📊 Foundation - Daily/Weekly/Monthly Ranges</span>
 
 **What you see:** Lines labeled dH, dL, WH, WL, MtH, etc.
 
@@ -27,6 +29,7 @@ Janus Atlas shows you **every important level on your chart** - all at once. Thi
 ---
 
 ### 🕐 Session Levels
+<span style="color: #a855f7; font-weight: 600;">⏰ Scalper Essential - Asian/Euro/NA Ranges</span>
 
 **What you see:** Lines labeled AH, AL (Asian), EH, EL (European), NAH, NAL (North American)
 
@@ -42,6 +45,7 @@ Janus Atlas shows you **every important level on your chart** - all at once. Thi
 ---
 
 ### 📊 VWAP Lines
+<span style="color: #f59e0b; font-weight: 600;">💰 Institutional Favorite - True Average Price</span>
 
 **What you see:** Lines labeled VWAP-D, VWAP-W (and previous ones like pVWAP-D)
 
@@ -57,6 +61,7 @@ Janus Atlas shows you **every important level on your chart** - all at once. Thi
 ---
 
 ### 🎯 Volume Profile (POC, VAH, VAL)
+<span style="color: #dc2626; font-weight: 600;">🎯 High Priority - Price Magnet Zones</span>
 
 **What you see:** Three key lines
 
@@ -74,6 +79,7 @@ Janus Atlas shows you **every important level on your chart** - all at once. Thi
 ---
 
 ### 📈 Market Structure (HH/HL/LH/LL, BOS/CHoCH)
+<span style="color: #10b981; font-weight: 600;">📈 Trend Context - Uptrend vs Downtrend</span>
 
 **What you see:** Labels at swing points
 
@@ -91,8 +97,10 @@ Price makes: HL → HH → HL → HH (with BOS labels)
 ---
 
 ## How to Use It (3 Simple Steps)
+<span style="color: #0aa1d5; font-weight: 600; font-size: 1.1em;">🎓 Essential Learning - Start Here</span>
 
 ### Step 1: Pick Your Levels
+<span style="color: #ff6b35; font-weight: 600;">⚠️ Critical - Don't Use All 39 At Once</span>
 
 Don't turn on all 39 levels at once! Start simple:
 
@@ -117,6 +125,7 @@ Don't turn on all 39 levels at once! Start simple:
 ---
 
 ### Step 2: Watch for Reactions
+<span style="color: #a855f7; font-weight: 600;">👀 Key Concept - Bounce vs Break</span>
 
 When price approaches a level:
 
@@ -134,6 +143,7 @@ When price approaches a level:
 ---
 
 ### Step 3: Use Structure for Trend
+<span style="color: #10b981; font-weight: 600;">📊 Trend Filter - Combine Levels + Structure</span>
 
 The structure labels (HH/HL/LH/LL) show you the current trend:
 
@@ -212,6 +222,7 @@ You don't need to change much. Just show/hide what you use:
 ---
 
 ## Common Mistakes (Avoid These!)
+<span style="color: #dc2626; font-weight: 600; font-size: 1.1em;">🚨 Critical Errors to Avoid</span>
 
 ❌ **Using ALL 39 levels at once**
 → ✅ Start with 5-7 levels. Add more as you learn.
@@ -281,6 +292,7 @@ You don't need to change much. Just show/hide what you use:
 ---
 
 ## Best Practices
+<span style="color: #10b981; font-weight: 600; font-size: 1.1em;">✅ Recommended Approach</span>
 
 1. **Start small** - Use 5-7 key levels, not all 39
 2. **Match to your timeframe** - Scalper vs swing trader needs different levels

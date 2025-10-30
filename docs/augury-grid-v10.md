@@ -127,6 +127,7 @@ Symbol 7-8: Daily (futures position)
 ---
 
 ## How to Use It
+<span style="color: #0aa1d5; font-weight: 600; font-size: 1.1em;">🎓 Essential Learning Guide</span>
 
 ### Workflow: Active Scanning
 
@@ -205,6 +206,7 @@ Symbol 7-8: Daily (futures position)
 ---
 
 ## Common Mistakes (Avoid These!)
+<span style="color: #dc2626; font-weight: 600; font-size: 1.1em;">🚨 Critical Errors to Avoid</span>
 
 ❌ **Wrong ticker format**
 → ✅ Use exact TradingView format: "BINANCE:BTCUSDT" not "BTC" or "BTCUSD"
@@ -280,6 +282,7 @@ No system is 100%.
 ---
 
 ## Best Practices
+<span style="color: #10b981; font-weight: 600; font-size: 1.1em;">✅ Recommended Approach</span>
 
 1. **Start with 3-5 symbols** - Don't use all 8 slots immediately
 2. **Set Min Score to 70** - Only see Premium/Elite as beginner
