@@ -98,100 +98,91 @@ Master Signal Pilot indicators with these proven strategies from experienced tra
 
 #### TD (Touchdown)
 
-**Best practice:**
-- ⚠️ DO NOT ENTER on TD
-- Use as advance warning only
-- Watch for follow-up IGN
-- If IGN doesn't follow, no trade
+**Common usage patterns:**
+- TD is typically used as an advance warning signal
+- Many traders watch for follow-up IGN before taking action
+- Often interpreted as "watch" rather than "entry"
 
-**Common mistake:**
-Entering on TD thinking it's same as IGN. It's not—TD is warning, IGN is entry.
+**Note:**
+TD and IGN serve different functions—TD indicates early-cycle conditions while IGN indicates momentum breakout conditions.
 
 ---
 
 #### IGN (Ignition)
 
-**Best practice:**
-- ✅ Primary long entry signal
-- Wait for candle close before entering
-- Check for Janus support nearby
-- Set stop below IGN or support
-- Target: Next Janus resistance or CAP signal
+**Common usage patterns:**
+- IGN is commonly used as a potential long entry signal
+- Many traders wait for candle close before evaluating
+- Often combined with nearby Janus support levels
+- Common stop placement: below IGN candle or support level
 
-**Entry timing:**
-- Wait for bar close (don't chase intrabar)
-- Can enter on next bar open
-- Or wait for small pullback
+**Higher-probability IGN scenarios:**
+- At major Janus support levels
+- Following TD warning signals
+- With regime filter alignment (LOK)
+- In higher timeframe uptrends
+- With volume confirmation
 
-**Strongest IGN setups:**
-- At major Janus support
-- After TD warning
-- With LOK (Long OK) filter active
-- In HTF uptrend
-- With volume confirmation (Minimal Flow)
-
-**Avoid IGN when:**
-- Far from any support level
-- Against HTF downtrend
-- During squeeze (low volatility)
-- At or near major resistance
+**Lower-probability IGN scenarios:**
+- Far from support levels
+- Against higher timeframe downtrends
+- During low volatility periods
+- Near major resistance levels
 
 ---
 
 #### WRN (Warning)
 
-**Best practice:**
-- Tighten stops (don't exit yet)
-- Start watching for CAP confirmation
-- Move stop to breakeven if in profit
-- Reduce position size if holding multiple positions
+**Common usage patterns:**
+- Often used to adjust risk management
+- Many traders watch for CAP confirmation before exiting
+- Commonly seen as preparation signal rather than immediate action
+- Can appear multiple times during strong trends
 
-**NOT an exit signal alone:**
-WRN can appear multiple times in strong uptrend. Wait for CAP or BDN.
+**Note:**
+WRN indicates late-cycle conditions developing, but strong trends can sustain multiple WRN signals before actual exhaustion.
 
 ---
 
 #### CAP (Climax)
 
-**Best practice:**
-- ✅ Exit or dramatically tighten stops on longs
-- Consider partial profit-taking
-- Move stop to protect profits
-- If short trading: Watch for BDN confirmation
+**Common usage patterns:**
+- Often used as exit consideration for long positions
+- Many traders adjust stops or take profits
+- Can be used to watch for BDN confirmation for shorts
 
-**Full exit when:**
-- CAP at major resistance
-- After extended run
-- Against HTF downtrend
-- Multiple WRN/CAP signals
+**Higher-conviction CAP scenarios:**
+- CAP at major resistance levels
+- Following extended price moves
+- Against higher timeframe downtrends
+- Multiple WRN/CAP signals in sequence
 
-**Partial exit when:**
-- CAP mid-trend
-- HTF still bullish
-- Major support far below
+**Lower-conviction CAP scenarios:**
+- CAP mid-trend with room to run
+- Higher timeframe remains bullish
+- Significant support levels below current price
 
 ---
 
 #### BDN (Breakdown)
 
-**Best practice:**
-- ✅ Primary short entry signal
-- Exit ALL longs immediately
-- Set stop above BDN or resistance
-- Target: Next Janus support or IGN signal
+**Common usage patterns:**
+- Commonly used as potential short entry signal
+- Often triggers long position exits
+- Common stop placement: above BDN candle or resistance
 
-**Strongest BDN setups:**
-- At major Janus resistance
-- After CAP/WRN warnings
-- With SOK (Short OK) filter active
-- In HTF downtrend
+**Higher-probability BDN scenarios:**
+- At major Janus resistance levels
+- Following CAP/WRN warning signals
+- With regime filter alignment (SOK)
+- In higher timeframe downtrends
 - With volume confirmation
 
-**Avoid BDN when:**
-- Far from any resistance level
-- Against HTF uptrend
-- During squeeze
-- At or near major support
+**Lower-probability BDN scenarios:**
+- Far from resistance levels
+- Against higher timeframe uptrends
+- During low volatility periods
+- Near major support levels
 
 ---
 
@@ -199,71 +190,68 @@ WRN can appear multiple times in strong uptrend. Wait for CAP or BDN.
 
 #### Support Levels
 
-**Best practice:**
-- Wait for price to REACH support
-- Don't predict—wait for touch
-- Look for Pentarch IGN at support
-- Enter with tight stop below
-- Multiple touches = stronger support
+**Common usage patterns:**
+- Support levels are often used as potential entry zones
+- Many traders wait for price to reach the level before evaluating
+- Commonly combined with Pentarch IGN signals at support
+- Multiple touches typically indicate stronger support
 
-**Support breaks:**
+**Support break scenarios:**
 When price closes below support:
-- Support becomes resistance
-- Look for BDN confirmation
-- Don't try to catch falling knife
+- Former support often becomes resistance
+- Traders commonly watch for BDN confirmation signals
+- Catching exact bottoms can be challenging
 
 ---
 
 #### Resistance Levels
 
-**Best practice:**
-- Wait for price to REACH resistance
-- Look for Pentarch CAP/BDN at resistance
-- Exit longs at or before resistance
-- Enter shorts at resistance (if downtrend)
-- Multiple rejections = stronger resistance
+**Common usage patterns:**
+- Resistance levels are often used as potential exit zones
+- Many traders watch for Pentarch CAP/BDN signals at resistance
+- Shorts are commonly considered at resistance in downtrends
+- Multiple rejections typically indicate stronger resistance
 
-**Resistance breaks:**
+**Resistance break scenarios:**
 When price closes above resistance:
-- Resistance becomes support
-- Look for IGN confirmation
-- Can enter long on pullback
+- Former resistance often becomes support
+- Traders commonly watch for IGN confirmation signals
+- Pullbacks to broken resistance can provide entry opportunities
 
 ---
 
 #### FVG (Fair Value Gaps)
 
-**Best practice:**
-- Price often returns to fill gaps
-- Bullish FVG = support zone
-- Bearish FVG = resistance zone
-- Look for Pentarch signals IN the FVG
-- Enter when price touches FVG + signal fires
+**Common usage patterns:**
+- FVGs are often treated as potential support/resistance zones
+- Bullish FVGs commonly viewed as support areas
+- Bearish FVGs commonly viewed as resistance areas
+- Many traders combine FVGs with Pentarch signals
 
-**FVG trading setup:**
+**Typical FVG approach:**
 1. Identify FVG on chart
-2. Wait for price to return to FVG
-3. Wait for Pentarch signal (IGN in bullish FVG)
-4. Enter with stop beyond FVG
-5. Target: Opposite FVG or next level
+2. Watch for price to return to FVG zone
+3. Look for Pentarch signal confirmation (e.g., IGN in bullish FVG)
+4. Common stop placement: beyond the FVG
+5. Common targets: Opposite FVG or next key level
 
 ---
 
 #### Order Blocks (OB)
 
-**Best practice:**
-- OBs are high-probability entry zones
-- Wait for price to revisit OB
-- Look for Pentarch signal at OB
-- Enter with tight stop beyond OB
-- OB invalidated when price closes through it
+**Common usage patterns:**
+- Order blocks are commonly used as potential entry zones
+- Many traders wait for price to revisit the OB before evaluating
+- Often combined with Pentarch signals at the OB
+- Common stop placement: beyond the OB boundary
+- OBs typically considered invalid after price closes through them
 
-**Bullish OB setup:**
-- Price drops to bullish OB
-- IGN fires in OB zone
-- Enter long
-- Stop below OB
-- Target: Next resistance
+**Typical bullish OB scenario:**
+- Price retraces to bullish OB zone
+- IGN signal appears in OB area
+- Potential long consideration
+- Common stop: below OB
+- Common target: Next resistance level
 
 ---
 
@@ -295,7 +283,7 @@ Example:
 Position Size = $100 ÷ $2 = 50 shares
 ```
 
-**Never exceed 2% risk per trade.**
+**Common practice:** Most risk management frameworks recommend not exceeding 2% risk per trade.
 
 ---
 
@@ -313,18 +301,18 @@ Example:
 - Target: $56 (reward $6)
 - R/R = $6 / $2 = 3:1 ✅ Good
 
-Example Bad:
+Example Lower R/R:
 - Entry: $50
 - Stop: $48 (risk $2)
 - Target: $52 (reward $2)
-- R/R = $2 / $2 = 1:1 ❌ Skip this trade
+- R/R = $2 / $2 = 1:1 ❌ Generally considered unfavorable
 ```
 
-**Rules:**
-- Minimum 2:1 R/R (risk $1 to make $2)
-- Prefer 3:1 or better
-- If R/R less than 2:1, skip the trade
-- Use Janus levels for target placement
+**Common guidelines:**
+- Many traders use minimum 2:1 R/R (risk $1 to potentially make $2)
+- 3:1 or better is often preferred
+- R/R less than 2:1 is typically filtered out
+- Janus levels are commonly used for target placement
 
 ---
 
@@ -333,27 +321,27 @@ Example Bad:
 **Scaling OUT (Taking Profits):**
 
 **Method 1: Thirds**
-- Take 1/3 profit at 2:1 R/R
-- Take 1/3 profit at 4:1 R/R
+- Common approach: Exit 1/3 at 2:1 R/R
+- Exit 1/3 at 4:1 R/R
 - Let 1/3 run to trail stop or opposite signal
 
 **Method 2: Half & Half**
-- Take 50% profit at 2:1 R/R
+- Common approach: Exit 50% at 2:1 R/R
 - Let 50% run to trail stop
 
 **Method 3: Full Exit**
-- Exit entire position at opposite signal
-- Simpler, less management
+- Some traders exit entire position at opposite signal
+- Simpler approach with less management
 
 **Scaling IN (Pyramiding):**
 
-⚠️ **Advanced traders only**
+⚠️ **Advanced technique - not recommended for beginners**
 
-**Rules if you pyramid:**
-- Only add to winning positions
-- Each new position smaller than previous
-- Never average down (add to losers)
-- Move all stops to breakeven after adding
+**Common guidelines for pyramiding:**
+- Typically only added to winning positions
+- Each new position often smaller than previous
+- Generally avoid averaging down (adding to losers)
+- Many traders move stops to breakeven after adding
 
 ---
 
@@ -361,89 +349,89 @@ Example Bad:
 
 ### Pre-Market Routine
 
-**Every day before trading:**
+**Common pre-market activities:**
 
-1. **Check higher timeframe bias** (Daily/Weekly)
-   - Mark major support/resistance
-   - Identify trend direction
-   - Note key levels
+1. **Higher timeframe analysis** (Daily/Weekly)
+   - Marking major support/resistance zones
+   - Identifying overall trend direction
+   - Noting key levels for the session
 
-2. **Scan for setups** (Augury Grid if you have it)
-   - Which symbols have signals?
-   - Which are at key levels?
-   - Which align with HTF trend?
+2. **Setup scanning** (Augury Grid or similar tools)
+   - Identifying which symbols have signals
+   - Finding symbols at key levels
+   - Checking alignment with HTF trend
 
-3. **Prioritize opportunities**
-   - Focus on 3-5 best setups max
-   - Require confluence (signal + level + trend)
-   - Set alerts for potential entries
+3. **Opportunity prioritization**
+   - Many traders focus on 3-5 best setups
+   - Confluence factors (signal + level + trend) commonly used
+   - Alert setting for potential entries
 
-4. **Review economic calendar**
-   - Note major news events
-   - Avoid trading 30min before/after major news
-   - Be cautious during high-impact data releases
+4. **Economic calendar review**
+   - Noting major news events
+   - Many traders avoid trading 30min before/after major news
+   - Increased caution during high-impact data releases
 
 ---
 
 ### During Trading Hours
 
-**Active monitoring:**
+**Common active monitoring patterns:**
 
-1. **Watch for alerts**
-   - Set to "Once Per Bar Close"
-   - Check chart when alert fires
-   - Verify setup still valid
+1. **Alert watching**
+   - Typically set to "Once Per Bar Close"
+   - Checking chart when alert fires
+   - Verifying setup remains valid
 
-2. **Confirm before entry**
-   - Is signal at key level?
-   - Does HTF support direction?
-   - Is R/R at least 2:1?
-   - Is position size calculated?
+2. **Pre-entry confirmation**
+   - Checking if signal is at key level
+   - Evaluating HTF support for direction
+   - Confirming R/R is at least 2:1
+   - Position size calculation
 
-3. **Execute with discipline**
-   - Set stop IMMEDIATELY after entry
-   - Set target order (optional)
-   - Log the trade
+3. **Execution practices**
+   - Stop loss typically set immediately after entry
+   - Target orders (optional depending on strategy)
+   - Trade logging for record-keeping
 
-4. **Monitor, don't micromanage**
-   - Check positions 2-3x per session
-   - Don't watch every tick
-   - Trust your stop loss
+4. **Position monitoring**
+   - Many traders check positions 2-3x per session
+   - Avoiding tick-by-tick watching
+   - Relying on predetermined stop levels
 
 ---
 
 ### Post-Market Routine
 
-**After trading day:**
+**Common post-market activities:**
 
-1. **Journal your trades**
-   - Entry price, stop, target
-   - Why you took it (signal + confluence)
-   - How you felt
-   - Screenshot of entry
+1. **Trade journaling**
+   - Recording entry price, stop, target
+   - Documenting rationale (signal + confluence)
+   - Noting emotional state
+   - Capturing entry screenshots
 
-2. **Review performance**
-   - Win rate
-   - Average R/R
-   - What worked?
-   - What didn't?
+2. **Performance review**
+   - Calculating win rate
+   - Analyzing average R/R
+   - Identifying what worked
+   - Identifying what didn't work
 
-3. **Plan tomorrow**
-   - Carry forward open positions
-   - Note upcoming levels
-   - Set alerts for potential setups
+3. **Next session planning**
+   - Tracking open positions
+   - Noting upcoming key levels
+   - Setting alerts for potential setups
 
 ---
 
 ## 🧠 Psychological Best Practices
 
-### Discipline Rules
+### Common Discipline Guidelines
 
-1. **Never trade without stop loss** - No exceptions
-2. **Never move stop toward entry** - Only trail in profit
-3. **Never increase position size after losses** - Revenge trading kills accounts
-4. **Take breaks after 2 losing trades in a day** - Clear your head
-5. **Don't trade if emotional** - Angry, stressed, tired = stay out
+1. **Stop loss usage** - Trading without stops is generally considered high-risk
+2. **Stop management** - Moving stops toward entry increases risk; trailing in profit is more common
+3. **Position sizing after losses** - Increasing size after losses (revenge trading) often leads to larger losses
+4. **Break patterns** - Many traders take breaks after 2 losing trades to maintain clarity
+5. **Emotional trading** - Trading while angry, stressed, or tired is associated with poor decision-making
 
 ---
 
@@ -451,45 +439,45 @@ Example Bad:
 
 #### FOMO (Fear of Missing Out)
 
-**Problem:** Chasing signals after they've moved
+**Pattern:** Chasing signals after they've moved
 
-**Solution:**
-- If you miss entry, miss the trade
-- There's always another opportunity
-- Don't chase—wait for pullback or next setup
+**Common approaches:**
+- Waiting for next setup rather than chasing missed entries
+- Recognizing that opportunities are continuous
+- Looking for pullbacks or new setups instead of chasing
 
 ---
 
 #### Overtrading
 
-**Problem:** Taking too many trades, low-quality setups
+**Pattern:** Taking too many trades, accepting low-quality setups
 
-**Solution:**
-- Set daily/weekly trade limit (e.g., 5 trades per week max)
-- Require minimum 2 confluence factors
-- Quality > quantity
+**Common approaches:**
+- Some traders use daily/weekly trade limits (e.g., 5 trades per week)
+- Requiring minimum confluence factors (typically 2+)
+- Focusing on quality over quantity
 
 ---
 
 #### Revenge Trading
 
-**Problem:** Trying to make back losses immediately
+**Pattern:** Attempting to recover losses immediately after losing trades
 
-**Solution:**
-- Stop trading after 2 losses in a day
-- Review what went wrong
-- Come back tomorrow with clear head
+**Common approaches:**
+- Taking breaks after consecutive losses (often 2 in a day)
+- Reviewing what went wrong before continuing
+- Returning to trading with clearer mindset
 
 ---
 
 #### Fear of Losing
 
-**Problem:** Exiting winners too early, letting losers run
+**Pattern:** Exiting winners too early while letting losers run
 
-**Solution:**
-- Set target at 2:1 R/R minimum
-- Use trailing stops on winners
-- Cut losers at predetermined stop
+**Common approaches:**
+- Using predetermined targets (often 2:1 R/R minimum)
+- Employing trailing stops on winning positions
+- Cutting losing positions at predetermined stop levels
 
 ---
 
@@ -497,60 +485,63 @@ Example Bad:
 
 ### Alert Management
 
-**Best practices:**
+**Common practices:**
 
-1. **Use "Once Per Bar Close"** - Always
-2. **Name alerts clearly** - "BTC 4H IGN Long"
-3. **Organize by timeframe** - Group similar TF alerts
-4. **Don't over-alert** - Max 5-10 active alerts
-5. **Test on lower TF first** - Verify alerts work
+1. **Alert frequency** - "Once Per Bar Close" is standard to avoid spam
+2. **Naming conventions** - Clear names like "BTC 4H IGN Long" for easy identification
+3. **Organization** - Grouping alerts by timeframe for easier management
+4. **Alert limits** - Many traders keep 5-10 active alerts to avoid overwhelm
+5. **Testing** - Verifying alerts on lower timeframes before live use
 
 ---
 
 ### Chart Organization
 
-**Clean chart setup:**
+**Common chart setup patterns:**
 
-1. **Maximum 3 indicators per chart**
-   - More = slower + overwhelming
-   - Omnideck = already everything
+1. **Indicator limits**
+   - Many traders use maximum 3 indicators per chart
+   - More indicators can slow performance and create visual clutter
+   - Omnideck already combines multiple indicators
 
-2. **Use layouts/templates**
-   - Save working setups
-   - Quick switching between symbols
+2. **Layout management**
+   - Saving successful setups as templates
+   - Enabling quick switching between symbols
 
-3. **Color code levels**
-   - Major levels: Bright colors
-   - Minor levels: Dim colors
-   - Or hide minor levels
+3. **Level visualization**
+   - Major levels: Often marked with bright colors
+   - Minor levels: Typically dimmer colors or hidden
+   - Reduces visual noise
 
-4. **Multiple timeframe views**
-   - Main chart: Your entry TF
-   - Second monitor/window: HTF bias
+4. **Multi-timeframe monitoring**
+   - Primary chart: Entry timeframe
+   - Secondary view: Higher timeframe for bias context
 
 ---
 
 ### Watchlist Management
 
-**Effective watchlist:**
+**Common watchlist practices:**
 
-1. **10-20 symbols maximum**
-   - More = analysis paralysis
-   - Focus on best movers
+1. **Size management**
+   - Many traders maintain 10-20 symbols
+   - Larger watchlists can lead to analysis paralysis
+   - Focusing on most active instruments
 
-2. **Organize by category**
+2. **Categorization**
    - Crypto majors
    - Forex pairs
    - Stock indices
    - Individual stocks
 
-3. **Rotate based on volatility**
-   - Remove dead/ranging symbols
-   - Add trending symbols
+3. **Dynamic rotation**
+   - Removing low-volatility/ranging symbols
+   - Adding trending instruments
+   - Adapting to market conditions
 
-4. **Use Augury Grid**
-   - Scan entire list quickly
-   - Focus deep analysis on signals
+4. **Augury Grid usage**
+   - Scanning entire watchlist efficiently
+   - Focusing detailed analysis on active signals
 
 ---
 
@@ -584,33 +575,35 @@ Example Bad:
 
 ---
 
-## ✅ Daily Checklist
+## ✅ Common Daily Preparation Elements
 
-**Print this and use it every day:**
+**Typical pre-trading preparation checklist:**
 
-- [ ] Checked Daily/Weekly trend and levels
-- [ ] Identified 3-5 best potential setups
-- [ ] Set alerts for potential entries
-- [ ] Confirmed no major news events during my trading hours
-- [ ] Calculated position sizes for planned trades
-- [ ] Mentally prepared and focused
-- [ ] Stop losses ready to set on entry
-- [ ] Trading journal open for logging
+- Daily/Weekly trend and level analysis
+- Identification of 3-5 potential setups
+- Alert configuration for potential entries
+- Economic calendar review for major news events
+- Position size calculations for planned trades
+- Mental preparation and focus assessment
+- Stop loss planning for entries
+- Trading journal setup for documentation
 
 ---
 
-## 🚫 What NOT To Do
+## 🚫 Common Mistakes to Avoid
 
-1. ❌ Trade without stops
-2. ❌ Move stops closer to entry
-3. ❌ Average down on losers
-4. ❌ Overtrade (quality > quantity)
-5. ❌ Trade against HTF trend as beginner
-6. ❌ Use all 7 indicators on one chart
-7. ❌ Take every signal without confluence
-8. ❌ Chase trades after they've moved
-9. ❌ Trade based on emotions
-10. ❌ Risk more than 2% per trade
+**Patterns associated with poor trading outcomes:**
+
+1. ❌ Trading without stops - significantly increases risk
+2. ❌ Moving stops closer to entry - reduces original risk assessment
+3. ❌ Averaging down on losing positions - compounds losses
+4. ❌ Overtrading - quality typically more important than quantity
+5. ❌ Trading against HTF trend (beginners) - lower probability setups
+6. ❌ Using all 7 indicators simultaneously - creates visual clutter and confusion
+7. ❌ Taking every signal without confluence - reduces win rate
+8. ❌ Chasing trades after initial move - often results in poor entries
+9. ❌ Emotion-based trading - associated with poor decision-making
+10. ❌ Risking more than 2% per trade - can lead to rapid account depletion
 
 ---
 
