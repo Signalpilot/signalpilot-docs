@@ -30,12 +30,13 @@ Each indicator in the <span class="signal-pilot-brand">Signal Pilot</span> Suite
 - **Janus Atlas** = Key levels (HTF, session, VWAP, structure)
 - **Minimal Flow** = Volume confirmation + position management
 
-**Workflow:**
-1. **Wait for Pentarch event** (IGN for longs, CAP for shorts)
-2. **Check Janus Atlas** - Is the event at a key level?
-3. **Confirm with Minimal Flow** - Is there a volume spike supporting the move?
-4. **Enter** using Minimal Flow's position management system
-5. **Exit** at next Janus level or opposite Pentarch event
+**Common workflow pattern:**
+
+- Traders observe Pentarch events (IGN for potential longs, CAP for potential shorts)
+- Event location is evaluated using Janus Atlas key levels
+- Volume confirmation is assessed via Minimal Flow spike detection
+- Position entries often use Minimal Flow's position management system
+- Exit targets commonly include next Janus level or opposite Pentarch event
 
 **Best for:** Swing traders, position traders
 
@@ -50,12 +51,13 @@ Each indicator in the <span class="signal-pilot-brand">Signal Pilot</span> Suite
 - **Plutus Flow** = OBV divergence detection
 - **Janus Atlas** = Key levels for divergence context
 
-**Workflow:**
-1. **Watch for divergences** on both Harmonic and Plutus simultaneously
-2. **Check Janus Atlas** - Divergence at major level? (Weekly high, Monthly VWAP, etc.)
-3. **Wait for price confirmation** - Reversal candle, break of structure
-4. **Enter** on confirmation
-5. **Target** opposite level from Janus
+**Common workflow pattern:**
+
+- Traders monitor both Harmonic Oscillator and Plutus Flow for simultaneous divergences
+- Divergence context is evaluated at Janus Atlas major levels (Weekly high, Monthly VWAP, etc.)
+- Price confirmation is observed (reversal candle, break of structure)
+- Entries commonly occur after confirmation appears
+- Targets often include opposite Janus level
 
 **Best for:** Reversal traders, divergence specialists
 
@@ -70,13 +72,14 @@ Each indicator in the <span class="signal-pilot-brand">Signal Pilot</span> Suite
 - **Minimal Flow** = Volume spike detection (scalping mode)
 - **Pentarch** = NanoFlow crosses for micro-trends
 
-**Workflow:**
-1. **Mark session levels** on Janus (Asian/Euro/NA ranges)
-2. **Wait for Minimal Flow spike** near session level
-3. **Confirm with Pentarch NanoFlow** cross in same direction
-4. **Enter** immediately
-5. **Target** Daily VWAP or opposite session level
-6. **Exit** fast (5-15 bars max hold time)
+**Common workflow pattern:**
+
+- Session levels are identified on Janus (Asian/Euro/NA ranges)
+- Minimal Flow spikes are observed near session levels
+- Pentarch NanoFlow crosses are monitored for directional confirmation
+- Entries often occur promptly when confluence appears
+- Targets commonly include Daily VWAP or opposite session level
+- Exits typically occur within 5-15 bars (quick scalping timeframe)
 
 **Best for:** Scalpers, day traders on 5m-15m charts
 
@@ -91,14 +94,15 @@ Each indicator in the <span class="signal-pilot-brand">Signal Pilot</span> Suite
 - **Pentarch** = Confirm events on selected symbol
 - **Janus Atlas** = Entry/exit levels
 
-**Workflow:**
-1. **Run Augury Grid** on your watchlist
-2. **Filter for potential Elite/Premium signals** (⭐⭐⭐ or ⭐⭐)
-3. **Switch to that symbol's chart**
-4. **Check Pentarch** - Recent IGN or setup forming?
-5. **Check Janus Atlas** - Key level nearby?
-6. **Enter** if all align
-7. **Monitor Grid** for other setups while in trade
+**Common workflow pattern:**
+
+- Augury Grid scans the watchlist continuously for opportunities
+- Traders filter for Elite/Premium quality signals (⭐⭐⭐ or ⭐⭐ ratings)
+- Individual symbol charts are reviewed when high-quality signals appear
+- Pentarch is evaluated for recent events (IGN) or developing setups
+- Janus Atlas levels are assessed for proximity and confluence
+- Entries commonly occur when multiple indicators align at key levels
+- Grid continues monitoring for additional opportunities during active trades
 
 **Best for:** Multi-asset traders, swing traders with large watchlists
 
@@ -112,13 +116,14 @@ Each indicator in the <span class="signal-pilot-brand">Signal Pilot</span> Suite
 - **Omnideck** = 10 systems in one (TD, Squeeze, EMA, ST, BMSB, Regime, SDZ, Patterns, etc.)
 - **Janus Atlas** = Precision levels
 
-**Workflow:**
-1. **Check Omnideck Regime Box** - What's the bias? (Green/Red/Gray)
-2. **Watch for confluence signals:**
-   - TD 9 + Squeeze break + EMA event + Liquidity sweep = Max confluence
-3. **Check Janus Atlas** - Signal at key level?
-4. **Enter** when 3+ Omnideck systems + level align
-5. **Exit** at Omnideck opposite signals or Janus target level
+**Common workflow pattern:**
+
+- Omnideck Regime Box displays current market bias (Green/Red/Gray)
+- Traders monitor for confluence signals across multiple systems:
+  - TD 9 + Squeeze break + EMA event + Liquidity sweep = Maximum confluence
+- Janus Atlas is evaluated to confirm signals occur at key levels
+- Entries often occur when 3+ Omnideck systems align with price levels
+- Exits commonly include Omnideck opposite signals or Janus target levels
 
 **Best for:** Traders who want everything in minimal screen space
 
@@ -145,15 +150,15 @@ Each indicator in the <span class="signal-pilot-brand">Signal Pilot</span> Suite
 - Regime: Bullish
 - = Volume confirms ✅
 
-**Step 4: Entry**
-- Enter long at $42,200 (next bar after IGN)
-- Use Minimal Flow position sizing (1% risk, ATR stop)
-- Stop: $41,500 (below Weekly Low)
+**Step 4: Entry Scenario**
+- Entry: Long at $42,200 (next bar after IGN)
+- Position sizing: Minimal Flow calculator (1% risk, ATR stop)
+- Stop placement: $41,500 (below Weekly Low)
 
-**Step 5: Management**
-- T1: $44,100 (Minimal Flow suggests, take 50%)
-- Monitor Pentarch for WRN/CAP
-- Target: $46,800 (Weekly High from Janus)
+**Step 5: Management Scenario**
+- T1 target: $44,100 (Minimal Flow suggestion, 50% partial exit)
+- Monitoring: Pentarch for WRN/CAP signals
+- Final target: $46,800 (Weekly High from Janus)
 
 **Result:** 11% gain, 3:1 R:R
 
@@ -173,15 +178,15 @@ Each indicator in the <span class="signal-pilot-brand">Signal Pilot</span> Suite
 - Also at **Weekly Resistance** zone
 - = Major level ✅
 
-**Step 3: Wait for Confirmation**
+**Step 3: Confirmation Observation**
 - Bearish engulfing candle forms
 - Pentarch fires **CAP** event (exhaustion)
 - = Price confirms ✅
 
-**Step 4: Entry**
-- Enter short at 4,515 (close of CAP candle)
-- Stop: 4,535 (above Daily High)
-- Target: 4,470 (Daily VWAP from Janus)
+**Step 4: Entry Scenario**
+- Entry: Short at 4,515 (close of CAP candle)
+- Stop placement: 4,535 (above Daily High)
+- Target level: 4,470 (Daily VWAP from Janus)
 
 **Result:** 45 points, 2.25:1 R:R
 
@@ -196,21 +201,21 @@ Each indicator in the <span class="signal-pilot-brand">Signal Pilot</span> Suite
 - Signal age: 2 bars (fresh)
 - P&L: +0.5% (working)
 
-**Step 2: Switch to ETH Chart**
-- Load Pentarch on ETH/USD 1H
+**Step 2: Individual Chart Review**
+- Pentarch loaded on ETH/USD 1H chart
 - Pentarch shows **TD** event 3 bars ago (potential base formed)
-- Now seeing potential bullish regime flip (green background)
+- Potential bullish regime flip visible (green background)
 
-**Step 3: Janus Atlas Levels**
+**Step 3: Janus Atlas Level Assessment**
 - Current price: $2,340
 - **4H Support** at $2,335
 - **Daily VWAP** at $2,355
-- = Between key levels, ready to break ✅
+- = Price between key levels, breakout potential ✅
 
-**Step 4: Entry**
-- Enter long at $2,342
-- Stop: $2,325 (below 4H support)
-- Target: $2,380 (Daily High from Janus)
+**Step 4: Entry Scenario**
+- Entry: Long at $2,342
+- Stop placement: $2,325 (below 4H support)
+- Target level: $2,380 (Daily High from Janus)
 
 **Result:** Quick 1.6% gain as Grid signal plays out
 
@@ -219,10 +224,10 @@ Each indicator in the <span class="signal-pilot-brand">Signal Pilot</span> Suite
 ## 🔔 Alert Strategy (Recommended Setup)
 <span style="color: #0aa1d5; font-weight: 600;">Notification Setup</span>
 
-**Priority Alerts (Set These First):**
+**Commonly Monitored Priority Alerts:**
 
 1. **Pentarch:**
-   - IGN Event (bull reversal)
+   - IGN Event (bull reversal indication)
    - CAP Event (late-cycle exhaustion)
    - BDN Event (potential breakdown/bear reversal)
 
@@ -242,10 +247,10 @@ Each indicator in the <span class="signal-pilot-brand">Signal Pilot</span> Suite
    - Daily High Touch
    - Daily Low Touch
 
-**Alert Logic:**
-When 2-3 alerts fire within 5 bars of each other → Check for trade setup.
+**Alert Confluence Pattern:**
+Traders often evaluate setups when 2-3 alerts fire within 5 bars of each other.
 
-Example: "Pentarch IGN + Minimal Flow Elite Bull + Janus Daily Low Touch" = Ultra high probability long.
+Example: "Pentarch IGN + Minimal Flow Elite Bull + Janus Daily Low Touch" confluence pattern is commonly associated with high-probability long setups.
 
 ---
 
@@ -303,20 +308,20 @@ Example: "Pentarch IGN + Minimal Flow Elite Bull + Janus Daily Low Touch" = Ultr
 <span style="color: #dc2626; font-weight: 600;">Protect Your Capital</span>
 
 **Position Sizing:**
-Use Minimal Flow's built-in risk calculator:
-- Input account size
-- Set risk % (1-2% recommended)
+Minimal Flow's built-in risk calculator commonly used:
+- Account size input
+- Risk % selection (1-2% commonly recommended)
 - System calculates position size automatically
 
-**Stop Placement:**
-1. **Below/above Janus level** (most common)
-2. **Below/above Pentarch event bar** (tighter)
-3. **ATR-based** (use Minimal Flow's ATR stop)
+**Stop Placement Patterns:**
+1. **Below/above Janus level** (most common approach)
+2. **Below/above Pentarch event bar** (tighter stops)
+3. **ATR-based** (Minimal Flow's ATR stop option)
 
-**Profit Targets:**
-1. **T1:** Next Janus level (take 30-50%)
-2. **T2:** Major Janus level (let 50% run)
-3. **Trail:** Use Minimal Flow trailing stop
+**Profit Target Approaches:**
+1. **T1:** Next Janus level (30-50% partial exits common)
+2. **T2:** Major Janus level (50% runner position)
+3. **Trailing:** Minimal Flow trailing stop feature
 
 **Potential Exit Signals:**
 - Opposite Pentarch event (IGN → exit longs on CAP/BDN)
@@ -329,25 +334,25 @@ Use Minimal Flow's built-in risk calculator:
 <span style="color: #f59e0b; font-weight: 600;">Learn From Others</span>
 
 ❌ **Using single indicator in isolation**
-→ ✅ Combine 2-3 for confluence
+→ ✅ Traders commonly combine 2-3 indicators for confluence
 
 ❌ **Trading every signal**
-→ ✅ Filter for Elite/Premium quality only
+→ ✅ Filtering for Elite/Premium quality signals is common practice
 
 ❌ **Ignoring Janus levels**
-→ ✅ Always check if signal is at key level
+→ ✅ Signal evaluation at key levels is widely practiced
 
 ❌ **No volume confirmation**
-→ ✅ Use Minimal Flow or Plutus to confirm
+→ ✅ Volume confirmation via Minimal Flow or Plutus commonly used
 
 ❌ **Wrong timeframe for your style**
-→ ✅ Match indicators to your trading timeframe
+→ ✅ Matching indicators to trading timeframe improves results
 
 ❌ **No position management**
-→ ✅ Use Minimal Flow's system or manual T1/T2
+→ ✅ Position management (Minimal Flow's system or manual T1/T2) commonly employed
 
 ❌ **Chasing stale signals**
-→ ✅ Only trade fresh signals (age < 5 bars)
+→ ✅ Fresh signals (age < 5 bars) generally preferred by traders
 
 ---
 
@@ -383,26 +388,26 @@ If you only want to load indicators on a single chart:
 4. Plutus Flow (volume)
 
 **Power Setup (all 7 indicators):**
-- Use Augury Grid on main chart (scan mode)
-- When Grid shows setup, open that symbol in new window
-- Load Pentarch, Janus, Minimal Flow, Harmonic, Plutus on it
-- Use Omnideck as backup/confirmation
+- Augury Grid on main chart (scan mode)
+- When Grid displays setup, symbol opened in new window
+- Pentarch, Janus, Minimal Flow, Harmonic, Plutus loaded on new window
+- Omnideck used as backup/confirmation
 
 ---
 
 ## 💭 Final Thoughts
 <span style="color: #0aa1d5; font-weight: 600;">Getting Started</span>
 
-**Start simple:**
-- Week 1-2: Pentarch + Janus only
-- Week 3-4: Add Minimal Flow
-- Week 5+: Add divergence tools (Harmonic, Plutus)
-- Advanced: Add Augury Grid for scanning
+**Common progression path:**
+- Week 1-2: Pentarch + Janus only (foundation)
+- Week 3-4: Minimal Flow added (volume confirmation)
+- Week 5+: Divergence tools added (Harmonic, Plutus)
+- Advanced: Augury Grid incorporated (scanning)
 
-**Track your stats:**
+**Performance tracking commonly includes:**
 - Win rate by indicator combination
-- Best setups (3+ indicator confluence)
-- Your edge (which combos work for YOU)
+- Best setup identification (3+ indicator confluence)
+- Personal edge discovery (which combinations work best)
 
 **Quality over quantity:**
 - 1 Elite setup per day > 10 Standard setups
