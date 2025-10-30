@@ -24,3 +24,34 @@
   }
   document.querySelectorAll('.sp-links a, .sp-cta').forEach(decorate);
 })();
+
+/* MOBILE DRAWER FIX: Close drawer when clicking page links or overlay */
+(function() {
+  // Wait for DOM to be fully loaded
+  document.addEventListener('DOMContentLoaded', function() {
+    const drawerToggle = document.querySelector('[data-md-toggle="drawer"]');
+    const overlay = document.querySelector('.md-overlay');
+
+    if (drawerToggle) {
+      // Close drawer when clicking navigation links
+      const navLinks = document.querySelectorAll('.md-nav__link:not(.md-nav__link--active)');
+
+      navLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          // Check if this is a page link (not a section toggle)
+          if (link.href && !link.classList.contains('md-nav__link--index')) {
+            // Close the drawer by unchecking the toggle
+            drawerToggle.checked = false;
+          }
+        });
+      });
+
+      // Close drawer when clicking overlay
+      if (overlay) {
+        overlay.addEventListener('click', function() {
+          drawerToggle.checked = false;
+        });
+      }
+    }
+  });
+})();
