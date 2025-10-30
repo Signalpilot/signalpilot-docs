@@ -121,8 +121,8 @@ BTC/USD │ BUY │ 87 ⭐⭐⭐ │ $64,250 │ $65,800 │ 2 │ +0.3%
 
 ### 3. Verify on Chart (2 minutes)
 Click on the chart to load **BTC/USD** and check:
-- [ ] At support level or key zone? (use [Janus Atlas](janus-atlas-v3122.md))
-- [ ] Volume confirming? (use [Minimal Flow](minimal-flow-v40-ultimate.md))
+- [ ] At support level or key zone? (use [Janus Atlas](janus-atlas-v10.md))
+- [ ] Volume confirming? (use [Minimal Flow](minimal-flow-v10.md))
 - [ ] No major resistance overhead?
 - [ ] Aligns with your trading bias?
 
@@ -327,7 +327,7 @@ BTC  │ BUY │ 78 ⭐⭐ │ $64,250 │ $65,800 │ 5 │ +0.8%
 
 **Continue learning:**
 - 📖 [Full Augury Grid Documentation](augury-grid-v10.md) - Advanced settings, scoring system details
-- 📊 [Janus Atlas (Support/Resistance)](janus-atlas-v3122.md) - Verify key levels for Grid signals
+- 📊 [Janus Atlas (Support/Resistance)](janus-atlas-v10.md) - Verify key levels for Grid signals
 - 🔔 [Set Up Alerts](how-to-alerts.md) - Alert on individual symbols when Grid shows Elite signals
 - 📈 [Best Practices Guide](ref-best-practices.md) - Risk management, workflow optimization
 

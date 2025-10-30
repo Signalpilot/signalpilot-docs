@@ -8,7 +8,7 @@ Which Signal Pilot indicators should you use? This guide helps you choose the ri
 
 ### 👶 Complete Beginner
 
-**Start with:** [Pentarch](pentarch-v89.md) only
+**Start with:** [Pentarch](pentarch-v10.md) only
 
 **Why:**
 - Simplest to understand (5 clear signals)
@@ -22,7 +22,7 @@ Which Signal Pilot indicators should you use? This guide helps you choose the ri
 
 ### 📈 Beginner with Some Experience
 
-**Start with:** [Omnideck](omnideck-v170.md)
+**Start with:** [Omnideck](omnideck-v10.md)
 
 **Why:**
 - All-in-one solution (includes Pentarch + more)
@@ -30,16 +30,16 @@ Which Signal Pilot indicators should you use? This guide helps you choose the ri
 - No need to manage multiple indicators
 - Complete trading system
 
-**Alternative:** Pentarch + [Janus Atlas](janus-atlas-v3122.md) (signals + levels)
+**Alternative:** Pentarch + [Janus Atlas](janus-atlas-v10.md) (signals + levels)
 
 ---
 
 ### 💼 Intermediate Trader
 
 **Recommended setup:**
-- [Pentarch](pentarch-v89.md) - Core signals
-- [Janus Atlas](janus-atlas-v3122.md) - Key levels
-- [Minimal Flow](minimal-flow-v40-ultimate.md) OR [Harmonic Oscillator](harmonic-oscillator-v34-adaptive.md) - Confirmation
+- [Pentarch](pentarch-v10.md) - Core signals
+- [Janus Atlas](janus-atlas-v10.md) - Key levels
+- [Minimal Flow](minimal-flow-v10.md) OR [Harmonic Oscillator](harmonic-oscillator-v10.md) - Confirmation
 
 **Why:**
 - Confluence between signals and levels

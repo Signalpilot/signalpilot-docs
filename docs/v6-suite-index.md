@@ -11,36 +11,36 @@ Not sure which indicator to start with? This table shows how all 7 indicators co
 
 | Indicator | Type | Complexity | Best For | Key Signals | Learn Time |
 |-----------|------|------------|----------|-------------|------------|
-| **[Pentarch v1.0](pentarch-v89.md)** | Overlay | ⭐⭐ Medium | Swing traders, potential reversals | 5 events (TD/IGN/WRN/CAP/BDN) | 15 min |
-| **[Janus Atlas v1.0](janus-atlas-v3122.md)** | Overlay | ⭐ Easy | All styles, key levels | 39 level types (HTF/Session/VWAP/Structure) | 10 min |
-| **[Omnideck v1.0](omnideck-v170.md)** | Overlay | ⭐⭐⭐ Advanced | All-in-one users | 10 systems combined (TD/Squeeze/EMAs/etc.) | 30 min |
+| **[Pentarch v1.0](pentarch-v10.md)** | Overlay | ⭐⭐ Medium | Swing traders, potential reversals | 5 events (TD/IGN/WRN/CAP/BDN) | 15 min |
+| **[Janus Atlas v1.0](janus-atlas-v10.md)** | Overlay | ⭐ Easy | All styles, key levels | 39 level types (HTF/Session/VWAP/Structure) | 10 min |
+| **[Omnideck v1.0](omnideck-v10.md)** | Overlay | ⭐⭐⭐ Advanced | All-in-one users | 10 systems combined (TD/Squeeze/EMAs/etc.) | 30 min |
 | **[Augury Grid v1.0](augury-grid-v10.md)** | Table | ⭐⭐ Medium | Multi-asset scanners | 8-symbol screener with quality scores | 20 min |
-| **[Minimal Flow v1.0](minimal-flow-v40-ultimate.md)** | Overlay | ⭐⭐ Medium | Volume traders, scalpers | Volume spikes + position management | 15 min |
-| **[Harmonic Oscillator v1.0](harmonic-oscillator-v34-adaptive.md)** | Oscillator | ⭐⭐ Medium | Momentum traders | 3-in-1 composite (MACD+RSI+StochRSI) | 20 min |
-| **[Plutus Flow v1.0](plutus-flow-v23.md)** | Oscillator | ⭐⭐ Medium | Volume analysts | Advanced OBV + divergence detection | 15 min |
+| **[Minimal Flow v1.0](minimal-flow-v10.md)** | Overlay | ⭐⭐ Medium | Volume traders, scalpers | Volume spikes + position management | 15 min |
+| **[Harmonic Oscillator v1.0](harmonic-oscillator-v10.md)** | Oscillator | ⭐⭐ Medium | Momentum traders | 3-in-1 composite (MACD+RSI+StochRSI) | 20 min |
+| **[Plutus Flow v1.0](plutus-flow-v10.md)** | Oscillator | ⭐⭐ Medium | Volume analysts | Advanced OBV + divergence detection | 15 min |
 
 ### 🎯 Decision Guide
 
 **Just Starting?**
-→ **[Janus Atlas](janus-atlas-v3122.md)** (easiest) or **[Pentarch](pentarch-v89.md)** (most impactful)
+→ **[Janus Atlas](janus-atlas-v10.md)** (easiest) or **[Pentarch](pentarch-v10.md)** (most impactful)
 
 **Want Everything?**
-→ **[Omnideck](omnideck-v170.md)** (10 systems in one)
+→ **[Omnideck](omnideck-v10.md)** (10 systems in one)
 
 **Scan Multiple Symbols?**
 → **[Augury Grid](augury-grid-v10.md)** (8-symbol screener)
 
 **Volume-Focused?**
-→ **[Minimal Flow](minimal-flow-v40-ultimate.md)** + **[Plutus Flow](plutus-flow-v23.md)** (complete volume analysis)
+→ **[Minimal Flow](minimal-flow-v10.md)** + **[Plutus Flow](plutus-flow-v10.md)** (complete volume analysis)
 
 **Oscillator Fan?**
-→ **[Harmonic Oscillator](harmonic-oscillator-v34-adaptive.md)** (3 oscillators combined)
+→ **[Harmonic Oscillator](harmonic-oscillator-v10.md)** (3 oscillators combined)
 
 ---
 
 ## 🎯 The Complete Suite
 
-### 1. [Pentarch v1.0](pentarch-v89.md) - Potential Reversal Event Detection
+### 1. [Pentarch v1.0](pentarch-v10.md) - Potential Reversal Event Detection
 **Type:** Overlay | **Complexity:** Intermediate
 
 Potential reversal detector with 5 distinct event types:
@@ -53,11 +53,11 @@ Potential reversal detector with 5 distinct event types:
 **Best for:** Swing traders, potential reversal identification, multi-timeframe analysis
 **Key Features:** Market regime awareness, event detection, adaptive analysis
 
-[📖 Read Full Guide →](pentarch-v89.md)
+[📖 Read Full Guide →](pentarch-v10.md)
 
 ---
 
-### 2. [Janus Atlas v1.0](janus-atlas-v3122.md) - Comprehensive Levels System
+### 2. [Janus Atlas v1.0](janus-atlas-v10.md) - Comprehensive Levels System
 **Type:** Overlay | **Complexity:** Beginner-Friendly
 
 Comprehensive market infrastructure overlay with multiple level types:
@@ -70,11 +70,11 @@ Comprehensive market infrastructure overlay with multiple level types:
 **Best for:** All trading styles - scalping to position trading
 **Key Features:** Clean visual display, organized level management, adaptive features
 
-[📖 Read Full Guide →](janus-atlas-v3122.md)
+[📖 Read Full Guide →](janus-atlas-v10.md)
 
 ---
 
-### 3. [Omnideck v1.0](omnideck-v170.md) - The Everything Indicator
+### 3. [Omnideck v1.0](omnideck-v10.md) - The Everything Indicator
 **Type:** Overlay (Multi-System) | **Complexity:** Beginner to Advanced
 
 Multiple professional indicators integrated into one system:
@@ -92,7 +92,7 @@ Multiple professional indicators integrated into one system:
 **Best for:** Traders wanting comprehensive analysis without clutter
 **Key Features:** Individual system toggles, clean visual display, integrated features
 
-[📖 Read Full Guide →](omnideck-v170.md)
+[📖 Read Full Guide →](omnideck-v10.md)
 
 ---
 
@@ -113,7 +113,7 @@ On-chart 8-symbol screener with intelligent quality scoring:
 
 ---
 
-### 5. [Minimal Flow v1.0 Ultimate](minimal-flow-v40-ultimate.md) - Advanced Volume Flow Strategy
+### 5. [Minimal Flow v1.0 Ultimate](minimal-flow-v10.md) - Advanced Volume Flow Strategy
 **Type:** Separate Pane | **Complexity:** Intermediate to Advanced
 
 Complete volume-based trading system with full position management:
@@ -129,11 +129,11 @@ Complete volume-based trading system with full position management:
 **Best for:** Volume traders, systematic traders, position management
 **Key Features:** Quality scoring with visual indicators, multiple alert types, adaptive analysis
 
-[📖 Read Full Guide →](minimal-flow-v40-ultimate.md)
+[📖 Read Full Guide →](minimal-flow-v10.md)
 
 ---
 
-### 6. [Harmonic Oscillator v1.0 ADAPTIVE](harmonic-oscillator-v34-adaptive.md) - Composite Momentum System
+### 6. [Harmonic Oscillator v1.0 ADAPTIVE](harmonic-oscillator-v10.md) - Composite Momentum System
 **Type:** Separate Pane | **Complexity:** Intermediate to Advanced
 
 Composite momentum system combining multiple oscillators:
@@ -148,11 +148,11 @@ Composite momentum system combining multiple oscillators:
 **Best for:** Momentum traders, divergence traders, multi-indicator users
 **Key Features:** Multiple sensitivity modes, quality indicators, multiple alert types
 
-[📖 Read Full Guide →](harmonic-oscillator-v34-adaptive.md)
+[📖 Read Full Guide →](harmonic-oscillator-v10.md)
 
 ---
 
-### 7. [Plutus Flow v1.0](plutus-flow-v23.md) - Advanced OBV Analysis
+### 7. [Plutus Flow v1.0](plutus-flow-v10.md) - Advanced OBV Analysis
 **Type:** Separate Pane | **Complexity:** Beginner to Advanced
 
 Advanced volume flow analysis with divergence detection:
@@ -168,7 +168,7 @@ Advanced volume flow analysis with divergence detection:
 **Best for:** Volume analysts, divergence traders, flow confirmation
 **Key Features:** Clean signal hierarchy, divergence visualization, multiple alert types
 
-[📖 Read Full Guide →](plutus-flow-v23.md)
+[📖 Read Full Guide →](plutus-flow-v10.md)
 
 ---
 
@@ -372,10 +372,10 @@ Each indicator guide includes:
 
 Choose your path:
 
-- **New to trading?** Start with [Janus Atlas](janus-atlas-v3122.md) (levels) + [Pentarch](pentarch-v89.md) (signals)
-- **Experienced with indicators?** Jump to [Omnideck](omnideck-v170.md) (all-in-one)
-- **Volume-focused?** Start with [Minimal Flow](minimal-flow-v40-ultimate.md)
-- **Divergence trader?** Start with [Plutus Flow](plutus-flow-v23.md) or [Harmonic Oscillator](harmonic-oscillator-v34-adaptive.md)
+- **New to trading?** Start with [Janus Atlas](janus-atlas-v10.md) (levels) + [Pentarch](pentarch-v10.md) (signals)
+- **Experienced with indicators?** Jump to [Omnideck](omnideck-v10.md) (all-in-one)
+- **Volume-focused?** Start with [Minimal Flow](minimal-flow-v10.md)
+- **Divergence trader?** Start with [Plutus Flow](plutus-flow-v10.md) or [Harmonic Oscillator](harmonic-oscillator-v10.md)
 - **Multi-asset scanning?** Start with [Augury Grid](augury-grid-v10.md)
 
 **Welcome to Signal Pilot v6. Built for market analysis. Designed for informed decision-making.**
