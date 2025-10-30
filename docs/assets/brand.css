@@ -421,21 +421,10 @@ body {
   z-index: 4;
 }
 
-/* MOBILE: Just hide our custom nav, nothing else */
+/* MOBILE: Just hide our custom nav, let Material handle 100% */
 @media screen and (max-width: 76.1875em) {
   .sp-topnav {
     display: none;
-  }
-
-  /* Restore overlay but ensure it doesn't block drawer clicks */
-  .md-overlay {
-    pointer-events: auto !important;
-  }
-
-  /* Drawer must be above overlay and capture all clicks */
-  .md-nav--primary {
-    position: relative !important;
-    z-index: 1 !important;
   }
 }
 

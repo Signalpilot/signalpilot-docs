@@ -4,7 +4,8 @@ Learn how to set up reliable, close-confirmed alerts for <span class="signal-pil
 
 ---
 
-## Why Alerts Matter
+## 🎯 Why Alerts Matter
+<span style="color: #0aa1d5; font-weight: 600;">Critical Setup</span>
 
 **Alerts let you:**
 - Get notified instantly when signals fire
@@ -20,7 +21,7 @@ Learn how to set up reliable, close-confirmed alerts for <span class="signal-pil
 
 These steps work for **any <span class="signal-pilot-brand">Signal Pilot</span> indicator** (Pentarch, Omnideck, Janus, etc.).
 
-### Step 1: Open Alert Dialog
+### 1️⃣ Step 1: Open Alert Dialog
 
 **Right-click your chart** → Click **"Add alert..."**
 
@@ -28,7 +29,7 @@ Or use keyboard shortcut: **Alt+A** (Windows) or **Cmd+A** (Mac)
 
 ---
 
-### Step 2: Select Indicator
+### 2️⃣ Step 2: Select Indicator
 
 **Condition dropdown** → Choose your <span class="signal-pilot-brand">Signal Pilot</span> indicator
 
@@ -41,7 +42,7 @@ Examples:
 
 ---
 
-### Step 3: Choose Event
+### 3️⃣ Step 3: Choose Event
 
 **Event dropdown** → Select specific signal
 
@@ -62,7 +63,8 @@ Examples:
 
 ---
 
-### Step 4: Configure Options (CRITICAL!)
+### 4️⃣ Step 4: Configure Options (CRITICAL!)
+<span style="color: #dc2626; font-weight: 600;">⚠️ Most Important Step</span>
 
 **Options** → Set **"Once Per Bar Close"**
 
@@ -84,7 +86,7 @@ This is the **most important setting**:
 
 ---
 
-### Step 5: Name Your Alert
+### 5️⃣ Step 5: Name Your Alert
 
 **Alert name field** → Give it a clear, descriptive name
 

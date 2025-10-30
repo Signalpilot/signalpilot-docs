@@ -6,7 +6,8 @@ Before you start using <span class="signal-pilot-brand">Signal Pilot</span> indi
 
 ## ✅ Requirements Checklist
 
-### 1. TradingView Account (Required)
+### 💻 1. TradingView Account (Required)
+<span style="color: #dc2626; font-weight: 600;">Essential Requirement</span>
 
 **Minimum:** TradingView Essential (paid plan)
 
@@ -31,7 +32,8 @@ Before you start using <span class="signal-pilot-brand">Signal Pilot</span> indi
 
 ---
 
-### 2. <span class="signal-pilot-brand">Signal Pilot</span> Subscription (Required)
+### 🔑 2. <span class="signal-pilot-brand">Signal Pilot</span> Subscription (Required)
+<span style="color: #dc2626; font-weight: 600;">Essential Requirement</span>
 
 **Purchase & Access:**
 
@@ -58,7 +60,8 @@ Before you start using <span class="signal-pilot-brand">Signal Pilot</span> indi
 
 ---
 
-### 3. Basic Trading Knowledge (Recommended)
+### 📚 3. Basic Trading Knowledge (Recommended)
+<span style="color: #f59e0b; font-weight: 600;">Highly Recommended</span>
 
 **You should understand:**
 
@@ -90,7 +93,8 @@ Before you start using <span class="signal-pilot-brand">Signal Pilot</span> indi
 
 ---
 
-### 4. Trading Platform/Broker (If Trading Live)
+### 🏦 4. Trading Platform/Broker (If Trading Live)
+<span style="color: #10b981; font-weight: 600;">For Live Trading</span>
 
 **For paper trading:** Just TradingView is fine
 
@@ -111,7 +115,8 @@ Before you start using <span class="signal-pilot-brand">Signal Pilot</span> indi
 
 ---
 
-### 5. Trading Capital (If Trading Live)
+### 💰 5. Trading Capital (If Trading Live)
+<span style="color: #10b981; font-weight: 600;">For Live Trading</span>
 
 **Recommended minimum capital:**
 
@@ -137,7 +142,8 @@ Before you start using <span class="signal-pilot-brand">Signal Pilot</span> indi
 
 ---
 
-### 6. Time Commitment
+### ⏰ 6. Time Commitment
+<span style="color: #0aa1d5; font-weight: 600;">Plan Your Schedule</span>
 
 **How much time do you need?**
 
