@@ -433,6 +433,29 @@ body {
     visibility: visible;
     width: auto;
   }
+
+  /* FIX: Ensure drawer is ABOVE overlay and clickable */
+  .md-nav--primary {
+    z-index: 200 !important;
+    background: var(--md-default-bg-color) !important;
+    opacity: 1 !important;
+  }
+
+  /* FIX: Overlay BELOW drawer */
+  .md-overlay {
+    z-index: 199 !important;
+  }
+
+  /* FIX: Make all nav items clickable */
+  .md-nav__link {
+    pointer-events: auto !important;
+    opacity: 1 !important;
+  }
+
+  /* FIX: Ensure proper header z-index */
+  .md-header {
+    z-index: 201 !important;
+  }
 }
 
 /* DESKTOP: Hide duplicate title (we have custom nav) */
