@@ -27,18 +27,18 @@ Pentarch displays **5 simple signals** that indicate when price may potentially 
 
 ---
 
-### 🟢 IGN - "GO! Potential Reversal Signal"
+### 🟢 IGN - Ignition (Momentum Breakout)
 
 **What you see:** Green "IGN" label below the candle
 
-**What it means:** Potential reversal indication. Bulls may be taking over.
+**What it means:** Indicates momentum breakout conditions. Potential bullish structure development.
 
-**Example usage:**
-- This is a potential entry signal for longs
-- Example entry timing: this bar or next bar
-- Example stop placement: below the recent low
+**Common interpretation:**
+- Often interpreted as a potential long entry signal
+- Typical evaluation timing: at bar close or subsequent bar
+- Common stop placement patterns: below the recent low
 
-**Example:** After TD at $85, IGN fires at $87 → Potential reversal indicated, commonly interpreted as long entry signal
+**Example:** After TD at $85, IGN fires at $87 → Momentum breakout indicated, commonly interpreted as potential long entry signal
 
 ---
 

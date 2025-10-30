@@ -34,59 +34,64 @@ By the end of this guide, you'll:
 
 ## Step 2: Learn the 5 Signals (2 minutes)
 
-Pentarch shows you **5 simple signals** that indicate when price may potentially reverse. Think of it like **traffic lights for reversals:**
+Pentarch displays **5 simple signals** that indicate potential reversal conditions. Each signal represents a different phase in the potential trend cycle.
 
-### The Early-Cycle Signals (Green Light - GO!)
+### The Early-Cycle Signals
 
-**🔵 TD (Touchdown)** = "Get Ready"
-- Early-cycle conditions developing
-- Don't enter yet, just watch
+**🔵 TD (Touchdown)** = Early Warning
+- Indicates early-cycle reversal conditions
+- Often interpreted as preparation phase
+- Many traders watch for potential setups
 
-**🟢 IGN (Ignition)** = "GO! Enter Long"
-- Potential reversal up indicated
-- This is your long entry signal
+**🟢 IGN (Ignition)** = Momentum Breakout
+- Indicates momentum breakout conditions
+- Commonly interpreted as potential long entry signal
+- Often used as bullish reversal indication
 
-### The Late-Cycle Signals (Red Light - STOP!)
+### The Late-Cycle Signals
 
-**🟡 WRN (Warning)** = "Watch Out"
-- Late-cycle conditions developing
-- Start tightening stops
+**🟡 WRN (Warning)** = Weakening Momentum
+- Indicates weakening momentum
+- Often triggers risk management review
+- Many traders prepare for potential exits
 
-**🔴 CAP (Climax)** = "Exit Now"
-- Late-cycle exhaustion
-- Exit your longs
+**🔴 CAP (Climax)** = Late-Cycle Exhaustion
+- Indicates late-cycle exhaustion conditions
+- Commonly interpreted as potential exit signal for longs
+- Often used as reversal preparation
 
-**⚫ BDN (Breakdown)** = "Potential Downtrend"
-- Potential bearish reversal
-- Consider shorts (or stay out)
+**⚫ BDN (Breakdown)** = Bearish Breakdown
+- Indicates bearish breakdown conditions
+- Often triggers long position exits
+- Commonly interpreted as potential short entry signal
 
 ---
 
 ## Step 3: Set Up Your First Alert (1 minute)
 
-Let's set up an alert for **IGN** (your buy signal):
+Setting up an alert for **IGN** (potential long entry signal):
 
 1. **Right-click your chart** → "Add Alert"
 2. **Condition:** Select "Pentarch v1.0"
 3. **Event:** Choose `"IGN Event"`
 4. **Options:** Set to **"Once Per Bar Close"** (important!)
-5. **Name it:** "Pentarch IGN - Potential Buy Signal"
+5. **Name it:** "Pentarch IGN - Potential Long Entry Signal"
 6. **Click "Create"**
 
 **That's it!** You'll now get notified every time a potential reversal up is indicated.
 
-### Recommended Alerts:
-- ✅ IGN Event (potential long entry)
-- ✅ CAP Event (potential exit longs)
-- ✅ BDN Event (potential exit/short entry)
+### Commonly Monitored Alerts:
+- ✅ IGN Event (potential long entry signal)
+- ✅ CAP Event (potential long exit signal)
+- ✅ BDN Event (potential short entry signal)
 
 ---
 
-## Step 4: Your First Example Trade (1 minute)
+## Step 4: Example Trade Illustration (1 minute)
 
-Here's how to use Pentarch in a real trade:
+Example showing common Pentarch signal interpretation:
 
-### Example: Bitcoin Long Trade
+### Example: Bitcoin Long Trade Scenario
 
 **The Setup:**
 ```
@@ -95,36 +100,36 @@ Price: $35,000, falling for 2 weeks
 
 **The Signals:**
 1. **TD appears at $32,500** 🔵
-   - "Early-cycle conditions developing"
-   - You: Start watching, don't enter yet
+   - Signal interpretation: "Early-cycle conditions developing"
+   - Common response: Observation phase begins, no entry yet
 
 2. **IGN fires at $33,800** 🟢
-   - "Potential reversal up indicated"
-   - You: Enter long at $33,900
-   - Example stop: Below recent low at $32,000
+   - Signal interpretation: "Potential reversal up indicated"
+   - Common response: Long entry at $33,900
+   - Typical stop placement: Below recent low at $32,000
 
-**The Trade:**
+**The Trade Progression:**
 3. **WRN appears at $41,500** 🟡
-   - "Late-cycle warning"
-   - You: Start watching exit
+   - Signal interpretation: "Late-cycle warning"
+   - Common response: Exit preparation and monitoring
 
 4. **CAP fires at $42,800** 🔴
-   - "Potential exit signal"
-   - You: Exit at $42,500
+   - Signal interpretation: "Potential exit signal"
+   - Common response: Long exit at $42,500
 
-**Result:** $8,600 profit per coin (25% gain)
+**Result:** $8,600 gain per coin (25% gain)
 
 ---
 
 ## 📋 Quick Reference Cheat Sheet
 
-| Signal | Color | Meaning | Action |
-|--------|-------|---------|--------|
-| TD 🔵 | Blue | Early-cycle warning | Watch - don't enter yet |
-| IGN 🟢 | Green | Potential reversal up | **Enter long** |
-| WRN 🟡 | Yellow | Late-cycle warning | Start watching exit |
-| CAP 🔴 | Red | Late-cycle exhaustion | **Exit longs** |
-| BDN ⚫ | Black | Potential breakdown | Exit all longs (or short) |
+| Signal | Color | Meaning | Common Interpretation |
+|--------|-------|---------|----------------------|
+| TD 🔵 | Blue | Early-cycle warning | Observation phase - preparation only |
+| IGN 🟢 | Green | Momentum breakout | Potential long entry signal |
+| WRN 🟡 | Yellow | Weakening momentum | Exit preparation monitoring |
+| CAP 🔴 | Red | Late-cycle exhaustion | Potential long exit signal |
+| BDN ⚫ | Black | Bearish breakdown | Long exit / potential short signal |
 
 ---
 
@@ -132,10 +137,10 @@ Price: $35,000, falling for 2 weeks
 
 ### Mistake #1: Entering on TD (Blue Signal)
 
-**❌ Wrong:** "TD appeared, I'm buying now!"
-**✅ Right:** "TD appeared, I'm watching for IGN signal"
+**❌ Common Error:** "TD appeared, buying now!"
+**✅ Better Approach:** "TD appeared, watching for IGN signal"
 
-**Why:** TD is a warning, not an entry. Wait for IGN to indicate the reversal.
+**Why:** TD indicates early-cycle conditions, not entry. IGN typically provides momentum breakout confirmation.
 
 ---
 
@@ -153,30 +158,30 @@ Price: $35,000, falling for 2 weeks
 
 ### Mistake #3: Trading Without Stop Losses
 
-**❌ Wrong:** "I'll just watch it and exit if it goes against me"
-**✅ Right:** Set stop loss IMMEDIATELY when entering
+**❌ Common Error:** "Will watch and exit if it goes against me"
+**✅ Better Approach:** Stop loss determination before entry
 
-**Where to place stop:**
+**Common stop placement patterns:**
 - **Longs:** Below IGN candle low or below TD low
 - **Shorts:** Above BDN candle high or above CAP high
 
-**Rule:** Never enter without knowing your exit price if wrong.
+**Note:** Trading without predetermined stop levels is generally considered high-risk.
 
 ---
 
 ### Mistake #4: Ignoring Key Levels
 
-**❌ Wrong:** Taking every IGN signal anywhere on the chart
-**✅ Right:** Only taking IGN signals at major support levels
+**❌ Lower Quality:** Evaluating all IGN signals regardless of level context
+**✅ Higher Quality:** Focusing on IGN signals at major support levels
 
 **Why:**
-- IGN at support = 70%+ success
-- IGN in middle of nowhere = 40% success
-- Use Janus Atlas to find key levels
+- IGN at support often shows higher probability
+- IGN without level confluence typically shows lower probability
+- Janus Atlas can identify key levels
 
 **Example:**
-- ❌ IGN appears randomly at $50,000 → Skip
-- ✅ IGN appears at major support $48,500 → Strong setup
+- ❌ IGN appears at $50,000 (no level) → Lower probability
+- ✅ IGN appears at major support $48,500 → Higher confluence
 
 ---
 
@@ -200,30 +205,30 @@ Price: $35,000, falling for 2 weeks
 
 ### Mistake #6: Revenge Trading After a Loss
 
-**❌ Wrong:** Signal failed, immediately taking next signal to "make it back"
-**✅ Right:** Take a break after 2 losses, review what went wrong
+**❌ Common Pattern:** Signal failed, immediately taking next signal to "make it back"
+**✅ Better Approach:** Break after losses, review what occurred
 
 **Why:**
-- Emotional trading = poor decisions
-- Not all signals win (even good ones)
-- Need clear head for next trade
+- Emotional trading is associated with poor decisions
+- Not all signals result in profitable trades
+- Clear mindset is important for analysis
 
-**Rule:** If you lose 2 trades in a day, stop trading until tomorrow.
+**Common practice:** Many traders pause after 2 losing trades to reassess.
 
 ---
 
 ### Mistake #7: Risking Too Much Per Trade
 
-**❌ Wrong:** Risking 10-20% of account on one trade
-**✅ Right:** Risk maximum 1-2% per trade
+**❌ Higher Risk:** Risking 10-20% of account on one trade
+**✅ Standard Practice:** Risk of 1-2% per trade
 
-**Example:**
+**Example calculation:**
 - $10,000 account
 - Risk 2% = $200 maximum risk per trade
 - Entry: $50, Stop: $48, Risk per share: $2
 - Position: $200 / $2 = 100 shares maximum
 
-**Why:** Proper position sizing protects you from blowing up your account.
+**Why:** Position sizing within 1-2% is a common risk management practice.
 
 ---
 
@@ -244,34 +249,34 @@ Price: $35,000, falling for 2 weeks
 
 ### Mistake #9: Not Paper Trading First
 
-**❌ Wrong:** Reading guide, immediately trading live with real money
-**✅ Right:** Paper trade for 2-4 weeks until consistently profitable
+**❌ Higher Risk:** Reading guide, immediately trading live with real money
+**✅ Lower Risk:** Paper trading for 2-4 weeks until consistent results
 
-**Paper trading checklist:**
+**Common paper trading approach:**
 - [ ] Execute 20+ paper trades
 - [ ] Track win rate and R/R
-- [ ] Follow rules consistently
-- [ ] Understand why trades win/lose
-- [ ] Profitable over 2-4 weeks
+- [ ] Maintain rule consistency
+- [ ] Analyze winning and losing trades
+- [ ] Achieve profitability over 2-4 weeks
 
-**Only then:** Start live with MINIMUM position sizes.
+**Progression:** Many traders start live with minimum position sizes after paper trading success.
 
 ---
 
 ### Mistake #10: Overcomplicating with Too Many Indicators
 
-**❌ Wrong:** Loading all 7 Signal Pilot indicators + 10 other indicators on one chart
-**✅ Right:** Start with Pentarch ONLY, add Janus later, keep it simple
+**❌ Common Error:** Loading all 7 Signal Pilot indicators + 10 other indicators on one chart
+**✅ Simpler Approach:** Starting with Pentarch, gradually adding Janus
 
 **Why:**
-- More indicators = analysis paralysis
-- Conflicting signals = confusion
-- Simple = clarity
+- More indicators can lead to analysis paralysis
+- Conflicting signals create confusion
+- Simplicity often provides clarity
 
-**Beginner setup:**
+**Common progression for beginners:**
 - Week 1-4: Pentarch only
 - Week 5-8: Pentarch + Janus Atlas
-- Week 9+: Add ONE more if needed (Minimal Flow OR Harmonic)
+- Week 9+: Consider adding one more if needed (Minimal Flow or Harmonic)
 
 ---
 
@@ -281,44 +286,44 @@ Price: $35,000, falling for 2 weeks
 → **[Full Pentarch Guide](pentarch-v89.md)** - Deep dive into all 5 signals
 
 ### Add Levels:
-→ **[Janus Atlas Guide](janus-atlas-v3122.md)** - Know WHERE the key levels are
-**Why:** Pentarch shows you WHEN, Janus shows you WHERE
+→ **[Janus Atlas Guide](janus-atlas-v3122.md)** - Identifies key price levels
+**Why:** Pentarch shows timing, Janus shows levels
 
 ### Complete System:
 → **[Suite Workflow](ref-workflow.md)** - How all 7 indicators work together
 
 ---
 
-## 💡 Pro Tips
+## 💡 Common Best Practices
 
-**1. Wait for Bar Close**
+**1. Bar Close Evaluation**
 - Signals appear during the bar but only finalize at close
-- Set alerts to "Once Per Bar Close" to avoid repaints
+- "Once Per Bar Close" alerts help avoid repaints
 
-**2. Combine with Levels**
-- IGN at a key support level = Higher probability
-- Use Janus Atlas to see the levels
+**2. Level Confluence**
+- IGN at a key support level often shows higher probability
+- Janus Atlas identifies key price levels
 
-**3. Use Stops Always**
-- Example stop for longs: Below the TD/IGN candle low
-- Never trade without a stop loss
+**3. Stop Loss Planning**
+- Common stop for longs: Below the TD/IGN candle low
+- Trading without predetermined stops is generally considered high-risk
 
-**4. Start with Higher Timeframes**
-- Daily chart = cleaner signals, less noise
-- Work your way down to lower timeframes as you gain experience
+**4. Timeframe Selection**
+- Daily chart typically shows cleaner signals with less noise
+- Many traders start with higher timeframes, then progress to lower ones
 
-**5. Practice on One Market First**
-- Master Bitcoin or one stock before expanding
-- Each market has different personality
+**5. Single Market Focus**
+- Learning one market (e.g., Bitcoin or one stock) before expanding is common
+- Each market has different behavioral characteristics
 
 ---
 
 ## 🆘 Need Help?
 
 **Common Questions:**
-- **"Signals appearing then disappearing?"** → Make sure alerts are set to "Once Per Bar Close"
-- **"Too many signals?"** → Try higher timeframes (4H, Daily)
-- **"Not enough signals?"** → Check you have correct indicator version (v1.0)
+- **"Signals appearing then disappearing?"** → Alerts set to "Once Per Bar Close" can help
+- **"Too many signals?"** → Higher timeframes (4H, Daily) often show fewer, clearer signals
+- **"Not enough signals?"** → Verify indicator version (v1.0)
 
 **Resources:**
 - **[FAQ](about-faq.md)** - Common questions answered
@@ -327,15 +332,14 @@ Price: $35,000, falling for 2 weeks
 
 ---
 
-## 🎉 Congratulations!
+## 🎉 You've Learned:
 
-You now know how to:
-- ✅ Install and read Pentarch signals
-- ✅ Set up alerts
-- ✅ Use signals in real trades
-- ✅ Manage risk with stops
+- ✅ How to install and read Pentarch signals
+- ✅ How to set up alerts
+- ✅ Common signal interpretation patterns
+- ✅ Risk management concepts
 
-**You're ready to trade with Signal Pilot!**
+**Next:** Explore the full Pentarch guide for deeper understanding.
 
 ---
 
