@@ -1,6 +1,6 @@
 # Onboarding Checklist
 
-Your complete 7-day guide to mastering <span class="signal-pilot-brand">Signal Pilot</span> indicators. Follow this step-by-step checklist to go from setup to your first confident trades.
+A complete 7-day guide to mastering <span class="signal-pilot-brand">Signal Pilot</span> indicators. This step-by-step checklist can be followed to progress from setup to confident trading.
 
 ---
 
@@ -8,7 +8,7 @@ Your complete 7-day guide to mastering <span class="signal-pilot-brand">Signal P
 
 **Daily time commitment:** 30-60 minutes
 **By end of week:** Ready to trade confidently
-**Recommended pace:** Don't rush—master each day before moving on
+**Recommended pace:** Each day can be mastered before moving on
 
 ---
 
@@ -16,50 +16,50 @@ Your complete 7-day guide to mastering <span class="signal-pilot-brand">Signal P
 
 ### Morning: Account Setup (30 minutes)
 
-- [ ] **Verify TradingView subscription is active**
-  - Log in to TradingView
-  - Check account status (should be Essential, Pro, or Pro+)
-  - If not upgraded: [Upgrade now](https://www.tradingview.com/pricing/)
+- [ ] **TradingView subscription can be verified as active**
+  - TradingView can be logged into
+  - Account status can be checked (should be Essential, Pro, or Pro+)
+  - If not upgraded: [can be upgraded now](https://www.tradingview.com/pricing/)
 
-- [ ] **Confirm <span class="signal-pilot-brand">Signal Pilot</span> access granted**
-  - Check email for confirmation
-  - If no email after 24h: Contact [support](about-support.md)
-  - Verify your TradingView username was correct
+- [ ] **<span class="signal-pilot-brand">Signal Pilot</span> access can be confirmed as granted**
+  - Email can be checked for confirmation
+  - If no email after 24h: [support can be contacted](about-support.md)
+  - TradingView username correctness can be verified
 
-- [ ] **Test indicator access**
-  - Open TradingView
-  - Click "Indicators" button
-  - Search "<span class="signal-pilot-brand">Signal Pilot</span>" or "Pentarch"
-  - Should see Pentarch v8.9 (or latest version)
-  - If not visible: Check access status
+- [ ] **Indicator access can be tested**
+  - TradingView can be opened
+  - "Indicators" button can be clicked
+  - "<span class="signal-pilot-brand">Signal Pilot</span>" or "Pentarch" can be searched
+  - Pentarch v8.9 (or latest version) should be visible
+  - If not visible: Access status can be checked
 
 ---
 
 ### Afternoon: First Indicator Install (30 minutes)
 
-- [ ] **Add Pentarch to a chart**
-  - Open Bitcoin (BTCUSD) chart
-  - Set to Daily timeframe
-  - Click "Indicators"
-  - Search "Pentarch"
-  - Click to add "Pentarch v8.9"
+- [ ] **Pentarch can be added to a chart**
+  - Bitcoin (BTCUSD) chart can be opened
+  - Daily timeframe can be set
+  - "Indicators" can be clicked
+  - "Pentarch" can be searched
+  - "Pentarch v8.9" can be clicked to add
 
-- [ ] **Explore the interface**
-  - See the 5 signal types on chart
-  - Identify TD, IGN, WRN, CAP, BDN labels
-  - Scroll back in history
-  - Observe signal patterns
+- [ ] **The interface can be explored**
+  - The 5 signal types can be seen on chart
+  - TD, IGN, WRN, CAP, BDN labels can be identified
+  - History can be scrolled back through
+  - Signal patterns can be observed
 
-- [ ] **Customize visual settings (optional)**
-  - Click indicator name → Settings
-  - "Style" tab → Adjust colors if needed
-  - Keep calculations on default
+- [ ] **Visual settings can be customized (optional)**
+  - Indicator name → Settings can be clicked
+  - "Style" tab → Colors can be adjusted if needed
+  - Calculations can be kept on default
 
-- [ ] **Save your setup**
-  - Top menu → "Layouts"
-  - "Save as..." → Name it "BTC Pentarch Daily"
+- [ ] **Setup can be saved**
+  - Top menu → "Layouts" can be navigated to
+  - "Save as..." → Can be named "BTC Pentarch Daily"
 
-**✅ Day 1 Complete!** You've successfully installed your first indicator.
+**✅ Day 1 Complete!** First indicator has been successfully installed.
 
 ---
 
@@ -67,42 +67,42 @@ Your complete 7-day guide to mastering <span class="signal-pilot-brand">Signal P
 
 ### Goal: Understand what each signal means
 
-- [ ] **Read the Quick Start guide**
-  - Go to [Quick Start Guide](start-quick.md)
-  - Read the "5 Signals" section carefully
-  - Bookmark for reference
+- [ ] **The Quick Start guide can be read**
+  - [Quick Start Guide](start-quick.md) can be navigated to
+  - The "5 Signals" section can be read carefully
+  - Can be bookmarked for reference
 
-- [ ] **Find signals on your chart**
-  - Open your saved layout from Day 1
-  - Find example of each signal type:
+- [ ] **Signals can be found on the chart**
+  - Saved layout from Day 1 can be opened
+  - Example of each signal type can be found:
     - [ ] TD (blue) - Early-cycle warning
     - [ ] IGN (green) - Long entry
     - [ ] WRN (yellow) - Late-cycle warning
     - [ ] CAP (red) - Exit longs
     - [ ] BDN (black) - Short entry
 
-- [ ] **Trace a complete trade**
-  - Find a TD signal on your chart
-  - See if IGN followed
-  - Track price action after IGN
-  - Find the exit (CAP or BDN)
-  - Calculate profit/loss (mentally)
+- [ ] **A complete trade can be traced**
+  - A TD signal can be found on the chart
+  - Whether IGN followed can be observed
+  - Price action after IGN can be tracked
+  - The exit (CAP or BDN) can be found
+  - Profit/loss can be calculated (mentally)
 
-- [ ] **Practice identification**
-  - Scroll through chart history
-  - Call out each signal type
-  - Say what you'd do at each signal
-  - Do this for 10-15 historical signals
+- [ ] **Identification can be practiced**
+  - Chart history can be scrolled through
+  - Each signal type can be called out
+  - What would be done at each signal can be stated
+  - This can be done for 10-15 historical signals
 
-- [ ] **Write down signal rules**
-  - Create your own cheat sheet:
+- [ ] **Signal rules can be written down**
+  - Personal cheat sheet can be created:
     - TD = Watch, don't enter
     - IGN = Enter long
     - WRN = Tighten stop
     - CAP = Exit long
     - BDN = Exit all longs / enter short
 
-**✅ Day 2 Complete!** You can identify all 5 signal types.
+**✅ Day 2 Complete!** All 5 signal types can be identified.
 
 ---
 
@@ -110,34 +110,34 @@ Your complete 7-day guide to mastering <span class="signal-pilot-brand">Signal P
 
 ### Goal: See how signals work across different contexts
 
-- [ ] **Compare timeframes**
-  - Open Bitcoin on Daily (your existing chart)
-  - Open new chart: Bitcoin on 4H
-  - Add Pentarch to 4H chart
-  - Open third chart: Bitcoin on 1H
-  - Add Pentarch to 1H chart
-  - Compare: Notice more signals on lower timeframes
+- [ ] **Timeframes can be compared**
+  - Bitcoin on Daily can be opened (existing chart)
+  - New chart can be opened: Bitcoin on 4H
+  - Pentarch can be added to 4H chart
+  - Third chart can be opened: Bitcoin on 1H
+  - Pentarch can be added to 1H chart
+  - Comparison can be made: More signals can be noticed on lower timeframes
 
-- [ ] **Try different markets**
-  - Open Ethereum (ETHUSD) - Daily
-  - Add Pentarch
-  - Open S&P 500 (SPX or SPY) - Daily
-  - Add Pentarch
-  - Open EUR/USD - Daily
-  - Add Pentarch
+- [ ] **Different markets can be tried**
+  - Ethereum (ETHUSD) can be opened - Daily
+  - Pentarch can be added
+  - S&P 500 (SPX or SPY) can be opened - Daily
+  - Pentarch can be added
+  - EUR/USD can be opened - Daily
+  - Pentarch can be added
 
-- [ ] **Observe differences**
-  - Which markets have more signals?
-  - Which are cleaner/clearer?
-  - Which timeframes do you prefer?
-  - Write down observations
+- [ ] **Differences can be observed**
+  - Which markets have more signals can be noted
+  - Which are cleaner/clearer can be identified
+  - Preferred timeframes can be determined
+  - Observations can be written down
 
-- [ ] **Choose your focus**
-  - Select 1-2 markets to trade
-  - Select your preferred timeframe (recommend starting with Daily or 4H)
-  - Set up layouts for each
+- [ ] **Focus can be chosen**
+  - 1-2 markets to trade can be selected
+  - Preferred timeframe can be selected (recommend starting with Daily or 4H)
+  - Layouts for each can be set up
 
-**✅ Day 3 Complete!** You understand how indicators adapt to different markets.
+**✅ Day 3 Complete!** How indicators adapt to different markets is understood.
 
 ---
 
@@ -145,43 +145,43 @@ Your complete 7-day guide to mastering <span class="signal-pilot-brand">Signal P
 
 ### Goal: Automate signal notifications
 
-- [ ] **Create your first alert**
-  - Open your main chart (BTC Daily)
-  - Right-click chart → "Add Alert"
-  - Condition: "Pentarch v8.9"
-  - Event: "IGN Event"
-  - Options: **"Once Per Bar Close"** (critical!)
-  - Name: "BTC Daily IGN - Potential Long"
-  - Expiration: 1 month (or "Don't expire")
-  - Actions: Notification checked
-  - Click "Create"
+- [ ] **First alert can be created**
+  - Main chart (BTC Daily) can be opened
+  - Chart can be right-clicked → "Add Alert"
+  - Condition: "Pentarch v8.9" can be selected
+  - Event: "IGN Event" can be chosen
+  - Options: **"Once Per Bar Close"** can be set (critical!)
+  - Name: "BTC Daily IGN - Potential Long" can be entered
+  - Expiration: 1 month (or "Don't expire") can be set
+  - Actions: Notification can be checked
+  - "Create" can be clicked
 
-- [ ] **Create exit alert**
-  - Right-click chart → "Add Alert"
-  - Condition: "Pentarch v8.9"
-  - Event: "CAP Event"
-  - Options: "Once Per Bar Close"
-  - Name: "BTC Daily CAP - Exit Long"
-  - Create alert
+- [ ] **Exit alert can be created**
+  - Chart can be right-clicked → "Add Alert"
+  - Condition: "Pentarch v8.9" can be selected
+  - Event: "CAP Event" can be chosen
+  - Options: "Once Per Bar Close" can be set
+  - Name: "BTC Daily CAP - Exit Long" can be entered
+  - Alert can be created
 
-- [ ] **Set up mobile notifications**
-  - Download TradingView app (if not already)
-  - Log in with same account
-  - Settings → Notifications → Enable all
-  - Phone Settings → Apps → TradingView → Allow notifications
+- [ ] **Mobile notifications can be set up**
+  - TradingView app can be downloaded (if not already)
+  - Same account can be logged into
+  - Settings → Notifications → All can be enabled
+  - Phone Settings → Apps → TradingView → Notifications can be allowed
 
-- [ ] **Test your alerts**
-  - Switch to 15m chart (signals fire more often)
-  - Create test alert on 15m
-  - Wait for signal (shouldn't take long)
-  - Verify you receive notification
+- [ ] **Alerts can be tested**
+  - 15m chart can be switched to (signals fire more often)
+  - Test alert on 15m can be created
+  - Signal can be waited for (shouldn't take long)
+  - Notification receipt can be verified
 
-- [ ] **Create alerts for your watchlist**
-  - Add alerts for 2-3 markets you chose
-  - IGN alerts for longs
-  - CAP/BDN alerts for exits
+- [ ] **Alerts for watchlist can be created**
+  - Alerts for 2-3 chosen markets can be added
+  - IGN alerts for longs can be set
+  - CAP/BDN alerts for exits can be set
 
-**✅ Day 4 Complete!** You'll now be notified of signals automatically.
+**✅ Day 4 Complete!** Signal notifications will now be received automatically.
 
 ---
 
@@ -189,37 +189,37 @@ Your complete 7-day guide to mastering <span class="signal-pilot-brand">Signal P
 
 ### Goal: Understand where signals are strongest
 
-- [ ] **Add Janus Atlas to chart**
-  - Open your BTC Daily chart
-  - Click "Indicators"
-  - Search "Janus Atlas"
-  - Add "Janus Atlas v1.0"
+- [ ] **Janus Atlas can be added to chart**
+  - BTC Daily chart can be opened
+  - "Indicators" can be clicked
+  - "Janus Atlas" can be searched
+  - "Janus Atlas v1.0" can be added
 
-- [ ] **Identify level types**
+- [ ] **Level types can be identified**
   - [ ] Support levels (horizontal lines below price)
   - [ ] Resistance levels (horizontal lines above price)
   - [ ] FVG zones (shaded rectangles)
   - [ ] Order blocks (highlighted candles/zones)
 
-- [ ] **Find confluence setups**
-  - Scroll through chart
-  - Find IGN signal AT support level
-  - Mark 3-5 examples
-  - Find CAP signal AT resistance level
-  - Mark 3-5 examples
+- [ ] **Confluence setups can be found**
+  - Chart can be scrolled through
+  - IGN signal AT support level can be found
+  - 3-5 examples can be marked
+  - CAP signal AT resistance level can be found
+  - 3-5 examples can be marked
 
-- [ ] **Compare signal quality**
-  - IGN at major support vs IGN in middle of nowhere
-  - Which worked better historically?
-  - Notice: Confluence = higher success rate
+- [ ] **Signal quality can be compared**
+  - IGN at major support vs IGN in middle of nowhere can be compared
+  - Which worked better historically can be observed
+  - It can be noticed: Confluence = higher success rate
 
-- [ ] **Update your rules**
-  - Add to your trading rules:
+- [ ] **Trading rules can be updated**
+  - Can be added to trading rules:
     - "Only trade IGN at major support"
     - "Only trade CAP/BDN at major resistance"
     - "Skip signals far from levels"
 
-**✅ Day 5 Complete!** You understand the power of confluence.
+**✅ Day 5 Complete!** The power of confluence is understood.
 
 ---
 
@@ -227,18 +227,18 @@ Your complete 7-day guide to mastering <span class="signal-pilot-brand">Signal P
 
 ### Goal: Prepare for safe trading
 
-- [ ] **Learn stop loss placement**
+- [ ] **Stop loss placement can be learned**
   - For long entries (IGN):
-    - Stop goes below IGN candle low
+    - Stop can be placed below IGN candle low
     - OR below support level
-    - Whichever is tighter/closer
+    - Whichever is tighter/closer can be used
 
   - For short entries (BDN):
-    - Stop goes above BDN candle high
+    - Stop can be placed above BDN candle high
     - OR above resistance level
-    - Whichever is tighter/closer
+    - Whichever is tighter/closer can be used
 
-- [ ] **Practice calculating position size**
+- [ ] **Position size calculation can be practiced**
   - Example calculation:
     - Account: $10,000
     - Risk: 1% = $100
@@ -247,32 +247,32 @@ Your complete 7-day guide to mastering <span class="signal-pilot-brand">Signal P
     - Risk per unit: $1,000
     - Position size: $100 / $1,000 = 0.1 BTC
 
-  - Practice with your account size:
+  - Practice with personal account size:
     - My account: $______
     - My risk (1%): $______
-    - Calculate position sizes for 3 different setups
+    - Position sizes for 3 different setups can be calculated
 
-- [ ] **Set risk rules**
-  - Write down these rules:
-    - "I will risk maximum 1-2% per trade"
-    - "I will ALWAYS use a stop loss"
-    - "I will NEVER move stop closer to entry"
-    - "I will take breaks after 2 losses in a day"
+- [ ] **Risk rules can be set**
+  - These rules can be written down:
+    - "Maximum 1-2% will be risked per trade"
+    - "A stop loss will ALWAYS be used"
+    - "Stop will NEVER be moved closer to entry"
+    - "Breaks will be taken after 2 losses in a day"
 
-- [ ] **Calculate risk/reward**
-  - Find a historical IGN setup
+- [ ] **Risk/reward can be calculated**
+  - A historical IGN setup can be found
   - Entry: IGN price
   - Stop: Below support
   - Target: Next resistance
-  - Calculate R/R: (Target - Entry) / (Entry - Stop)
+  - R/R can be calculated: (Target - Entry) / (Entry - Stop)
   - Should be at least 2:1
 
-- [ ] **Create position size calculator**
-  - Use spreadsheet or notes app
+- [ ] **Position size calculator can be created**
+  - Spreadsheet or notes app can be used
   - Template: Account Size × 1% ÷ (Entry - Stop)
-  - Keep it handy for every trade
+  - Can be kept handy for every trade
 
-**✅ Day 6 Complete!** You have risk management framework ready.
+**✅ Day 6 Complete!** Risk management framework is ready.
 
 ---
 
@@ -280,72 +280,72 @@ Your complete 7-day guide to mastering <span class="signal-pilot-brand">Signal P
 
 ### Goal: Execute your first practice trades
 
-- [ ] **Enable paper trading**
-  - TradingView → Paper Trading tab (bottom of chart)
-  - Set starting capital
-  - Or use external paper trading account
+- [ ] **Paper trading can be enabled**
+  - TradingView → Paper Trading tab (bottom of chart) can be navigated to
+  - Starting capital can be set
+  - Or external paper trading account can be used
 
-- [ ] **Wait for setup**
-  - Wait for your alerts to fire
-  - OR find current setup on chart
-  - Requires:
+- [ ] **Setup can be waited for**
+  - Alerts can be waited for to fire
+  - OR current setup can be found on chart
+  - Requirements:
     - [ ] Pentarch signal (IGN or BDN)
     - [ ] At key Janus level
     - [ ] Minimum 2:1 R/R to target
 
-- [ ] **Execute paper trade #1**
-  - Signal fires (or you find setup)
-  - Calculate position size
-  - Enter position
-  - Set stop loss IMMEDIATELY
-  - Set target (optional)
-  - Log the trade
+- [ ] **Paper trade #1 can be executed**
+  - Signal fires (or setup is found)
+  - Position size can be calculated
+  - Position can be entered
+  - Stop loss can be set IMMEDIATELY
+  - Target can be set (optional)
+  - Trade can be logged
 
-- [ ] **Document your trade**
-  - Screenshot of entry
-  - Write down:
+- [ ] **Trade can be documented**
+  - Screenshot of entry can be taken
+  - These can be written down:
     - Date & time
     - Entry price
     - Stop price
     - Target price
     - Position size
-    - Why you took it (signal + level)
-    - How you feel
+    - Why it was taken (signal + level)
+    - How it feels
 
-- [ ] **Monitor & manage**
-  - Check 2-3 times per day
-  - Don't micromanage
-  - Trust your stop
-  - Exit on opposite signal OR target hit
+- [ ] **Trade can be monitored & managed**
+  - Charts can be checked 2-3 times per day
+  - Micromanagement can be avoided
+  - Stop can be trusted
+  - Exit can be made on opposite signal OR target hit
 
-- [ ] **Complete 3-5 paper trades**
-  - Don't rush
+- [ ] **3-5 paper trades can be completed**
+  - Rushing can be avoided
   - Can take 1-2 weeks to find setups
-  - Focus on QUALITY, not quantity
+  - QUALITY can be focused on, not quantity
   - One good trade > five mediocre trades
 
-**✅ Day 7 Complete!** You've executed your first paper trades!
+**✅ Day 7 Complete!** First paper trades have been executed!
 
 ---
 
 ## ✅ Week 1 Graduation Checklist
 
-**Before moving to live trading, verify you can answer YES to all:**
+**Before moving to live trading, YES can be verified to all:**
 
-- [ ] I can identify all 5 Pentarch signal types
-- [ ] I understand what action to take at each signal
-- [ ] I can identify key support/resistance levels
-- [ ] I understand confluence (signal + level = better)
-- [ ] I have working alerts set up
-- [ ] I know how to calculate position size
-- [ ] I know where to place stop losses
-- [ ] I completed at least 3 paper trades
-- [ ] I have a trading journal/log
-- [ ] I feel comfortable with the process
+- [ ] All 5 Pentarch signal types can be identified
+- [ ] What action to take at each signal is understood
+- [ ] Key support/resistance levels can be identified
+- [ ] Confluence (signal + level = better) is understood
+- [ ] Working alerts have been set up
+- [ ] Position size calculation is known
+- [ ] Where to place stop losses is known
+- [ ] At least 3 paper trades have been completed
+- [ ] A trading journal/log is maintained
+- [ ] Comfort with the process is felt
 
-**All YES?** → Consider progressing to live trading (start very small)
+**All YES?** → Progression to live trading can be considered (start very small)
 
-**Any NO?** → Spend another week on paper trading and reviewing
+**Any NO?** → Another week on paper trading and reviewing can be spent
 
 ---
 
@@ -353,11 +353,11 @@ Your complete 7-day guide to mastering <span class="signal-pilot-brand">Signal P
 
 ### Week 2-3: Consistency
 
-- [ ] Execute 10-20 paper trades
-- [ ] Track win rate
-- [ ] Track average R/R
-- [ ] Refine your process
-- [ ] Identify what works best for you
+- [ ] 10-20 paper trades can be executed
+- [ ] Win rate can be tracked
+- [ ] Average R/R can be tracked
+- [ ] Process can be refined
+- [ ] What works best can be identified
 
 ### Week 4: Transition Decision
 
@@ -365,18 +365,18 @@ Your complete 7-day guide to mastering <span class="signal-pilot-brand">Signal P
 - ✅ Win rate 50%+
 - ✅ Average R/R 2:1+
 - ✅ Consistent profitability
-- ✅ Following rules consistently
+- ✅ Rules being followed consistently
 
-**Then consider:**
-- Start live trading with MINIMUM size
+**Then can be considered:**
+- Live trading with MINIMUM size can be started
 - 10-25% of intended position size
-- Scale up slowly as confidence grows
+- Slow scaling up as confidence grows
 
 **If NOT meeting criteria:**
-- Continue paper trading
-- Review [Best Practices](ref-best-practices.md)
-- Identify issues
-- Get help if needed
+- Paper trading can be continued
+- [Best Practices](ref-best-practices.md) can be reviewed
+- Issues can be identified
+- Help can be sought if needed
 
 ---
 
@@ -397,12 +397,12 @@ Your complete 7-day guide to mastering <span class="signal-pilot-brand">Signal P
 
 ## 🆘 Need Help?
 
-**Stuck on any day?**
-- Review the [Quick Start Guide](start-quick.md)
-- Check [FAQ](about-faq.md)
-- Visit [Troubleshooting](ref-troubleshooting.md)
-- Contact [Support](about-support.md)
+**If stuck on any day:**
+- The [Quick Start Guide](start-quick.md) can be reviewed
+- [FAQ](about-faq.md) can be checked
+- [Troubleshooting](ref-troubleshooting.md) can be visited
+- [Support](about-support.md) can be contacted
 
-**Remember:** There's no rush. Take your time with each day. Mastery comes from practice and repetition.
+**It should be remembered:** There's no rush. Time can be taken with each day. Mastery comes from practice and repetition.
 
-**Congratulations on starting your <span class="signal-pilot-brand">Signal Pilot</span> journey!** 🎉
+**Congratulations on starting the <span class="signal-pilot-brand">Signal Pilot</span> journey!** 🎉
