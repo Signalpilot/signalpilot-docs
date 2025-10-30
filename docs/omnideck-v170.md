@@ -279,7 +279,7 @@ Customize to your preference, but keep it clean
 **A:** No! Most traders use 4-6 systems. Start small, add gradually. All 10 at once = overwhelming.
 
 **Q: What's the most important system?**
-**A:** **Regime Box** - it's your bias filter. Everything else gives timing within that bias.
+**A:** **Regime Box** - it provides directional bias context. Other components provide timing signals within that context.
 
 **Q: Which combo works best?**
 **A:** Personal favorite: Regime + TD + Squeeze + Zones. Simple, powerful, high win rate.

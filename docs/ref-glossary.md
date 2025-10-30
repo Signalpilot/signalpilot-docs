@@ -330,7 +330,7 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 ### Bar Close / Close Confirmed
 **Definition:** Signal that has finalized after candle closes
 **Importance:** Only closed-bar signals are reliable
-**Alerts:** Must set to "Once Per Bar Close"
+**Alerts:** Typically configured to "Once Per Bar Close"
 **Intrabar vs Closed:** Intrabar = preliminary, closed = confirmed
 
 ---
@@ -444,20 +444,20 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 ---
 
 ### Long / Long Position
-**Definition:** Buying an asset expecting price to rise
-**Entry:** Buy low
-**Exit:** Sell high
-**Profit:** Price increase
-**Signal:** IGN (enter), CAP/BDN (exit)
+**Definition:** Position taken expecting price to rise
+**Typical Entry:** Lower price levels
+**Typical Exit:** Higher price levels
+**Profit Mechanism:** Price increase
+**Associated Signals:** IGN (potential entry), CAP/BDN (potential exit)
 
 ---
 
 ### Short / Short Position
-**Definition:** Selling an asset expecting price to fall
-**Entry:** Sell high
-**Exit:** Buy low
-**Profit:** Price decrease
-**Signal:** BDN (enter), IGN (exit)
+**Definition:** Position taken expecting price to fall
+**Typical Entry:** Higher price levels
+**Typical Exit:** Lower price levels
+**Profit Mechanism:** Price decrease
+**Associated Signals:** BDN (potential entry), IGN (potential exit)
 
 ---
 
@@ -472,7 +472,7 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 ### Breakout
 **Definition:** Price moving beyond established support/resistance
 **Types:** Support breakout (bearish), resistance breakout (bullish)
-**Volume:** Should increase on breakouts
+**Volume:** Typically increases on valid breakouts
 **False Breakout:** Returns inside range quickly
 **Confirmation:** Many traders look for close beyond level to confirm breakout validity
 
@@ -481,9 +481,9 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 ### Range / Ranging Market
 **Definition:** Price moving sideways between support and resistance
 **Characteristics:** No clear trend, oscillating
-**Trading:** Range strategies (buy support, sell resistance)
-**Pentarch Performance:** Fewer signals (waiting for reversal)
-**Wait For:** Breakout before trending strategies
+**Common Approaches:** Support/resistance-based range trading strategies
+**Pentarch Performance:** Fewer signals (awaiting reversal conditions)
+**Breakout Monitoring:** Traders commonly await breakout before applying trending strategies
 
 ---
 

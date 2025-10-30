@@ -159,8 +159,8 @@ The Pilot Line serves multiple purposes:
 
 | Pilot Line Color | Market State | What Traders Often Look For |
 |------------------|--------------|------------------------------|
-| 🟢 **Green** | Strong uptrend | Dips to buy (TD/IGN signals) |
-| 🔴 **Red** | Strong downtrend | Rallies to fade (WRN/CAP/BDN signals) |
+| 🟢 **Green** | Strong uptrend | Pullback opportunities (TD/IGN signals) |
+| 🔴 **Red** | Strong downtrend | Rally reversals (WRN/CAP/BDN signals) |
 | 🟠 **Orange** | Transitional/Uncertain | Trend weakening, exercise caution |
 
 **Key Insight:** The Pilot Line doesn't give direct entry signals. Instead, it provides context for the 5 event candles. An IGN signal above a green Pilot Line has different implications than an IGN signal below a red Pilot Line.
@@ -221,8 +221,8 @@ Regime uses a **3-factor voting system**:
 - **Red regime** → Many traders look for short opportunities (WRN/CAP/BDN)
 
 **Signal Context:** The same price level can have different implications depending on regime:
-- $50,000 BTC in green regime = Potential support (dip buy)
-- $50,000 BTC in red regime = Potential resistance (fade the bounce)
+- $50,000 BTC in green regime = Potential support (pullback opportunity)
+- $50,000 BTC in red regime = Potential resistance (rally reversal area)
 
 **Trend Strength:**
 - Long streaks of same color = Strong, sustained trend
@@ -251,7 +251,7 @@ Most event signals require the "correct" regime to fire:
 
 **Regime Confirmation:**
 - Event signal + matching regime = Higher conviction
-  - Example: IGN in red regime (standard reversal) vs IGN in green regime (pullback buy)
+  - Example: IGN in red regime (standard reversal) vs IGN in green regime (pullback long entry)
   - Example: CAP in green regime (standard top) vs CAP in red regime (bear rally exhaustion)
 
 **Avoiding Whipsaw:**
@@ -387,7 +387,7 @@ When you look at a Pentarch chart, you see four layers working together:
 **Layer 3: NanoFlow Crosses (Micro Momentum)**
 - Small crosses below/above candles
 - High-frequency momentum feedback
-- Confirms or questions trend health
+- Validates or challenges trend health
 
 **Layer 4: Event Candles (Reversal Signals)**
 - TD/IGN/WRN/CAP/BDN colored labels
@@ -452,12 +452,12 @@ Most traders just use the default settings.
 
 ---
 
-## Alerts (Set These!)
+## Alert Configuration
 
-**Must-have alerts:**
-1. **IGN Event** → Potential buy signal
-2. **CAP Event** → Potential sell signal
-3. **BDN Event** → Potential breakdown/exit signal
+**Commonly monitored alerts:**
+1. **IGN Event** → Indicates potential long entry conditions
+2. **CAP Event** → Indicates potential exit conditions
+3. **BDN Event** → Indicates potential breakdown/exit conditions
 
 **How to set:**
 1. Click the alarm icon on TradingView
