@@ -239,3 +239,295 @@
     padding: 0.75rem 1rem;
   }
 }
+
+/* ========================================
+   HOMEPAGE - MOST COMMON TASKS CARDS
+   ======================================== */
+
+/* Desktop: 3 columns */
+@media screen and (min-width: 1024px) {
+  .md-typeset div[style*="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))"] {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+/* Tablet: 2 columns */
+@media screen and (max-width: 1023px) and (min-width: 640px) {
+  .md-typeset div[style*="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.25rem !important;
+  }
+}
+
+/* Mobile: 1 column, compact spacing */
+@media screen and (max-width: 639px) {
+  .md-typeset div[style*="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))"] {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    margin: 1.5rem 0 !important;
+  }
+
+  /* Compact card padding */
+  .md-typeset div[style*="border-radius: 12px"] {
+    padding: 1.25rem !important;
+  }
+
+  /* Slightly smaller headings in cards */
+  .md-typeset div[style*="border-radius: 12px"] h3 {
+    font-size: 1rem !important;
+  }
+
+  /* Smaller button text */
+  .md-typeset div[style*="border-radius: 12px"] a[style*="border-radius: 6px"] {
+    padding: 0.4rem 1.25rem !important;
+    font-size: 0.85rem !important;
+  }
+}
+
+/* Small mobile: Even more compact */
+@media screen and (max-width: 400px) {
+  .md-typeset div[style*="border-radius: 12px"] {
+    padding: 1rem !important;
+  }
+
+  .md-typeset div[style*="border-radius: 12px"] h3 {
+    font-size: 0.95rem !important;
+  }
+}
+
+/* ========================================
+   HOMEPAGE - HERO BUTTONS & CTA
+   ======================================== */
+
+/* Hero section buttons */
+@media screen and (max-width: 640px) {
+  /* Stack buttons vertically on mobile */
+  div[style*="display: flex"][style*="flex-wrap: wrap"] {
+    flex-direction: column !important;
+  }
+
+  div[style*="display: flex"][style*="flex-wrap: wrap"] a {
+    width: 100% !important;
+    text-align: center !important;
+    padding: 0.75rem 2rem !important;
+    font-size: 1rem !important;
+  }
+}
+
+/* Hero heading text */
+@media screen and (max-width: 768px) {
+  div[style*="background: linear-gradient(135deg, #345CFF"] h2 {
+    font-size: 1.6rem !important;
+  }
+
+  div[style*="background: linear-gradient(135deg, #345CFF"] p {
+    font-size: 1rem !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  div[style*="background: linear-gradient(135deg, #345CFF"] h2 {
+    font-size: 1.4rem !important;
+  }
+
+  div[style*="background: linear-gradient(135deg, #345CFF"] p {
+    font-size: 0.95rem !important;
+  }
+
+  div[style*="background: linear-gradient(135deg, #345CFF"] {
+    padding: 2rem 1rem !important;
+  }
+}
+
+/* ========================================
+   HOMEPAGE - STATS GRID
+   ======================================== */
+
+/* Stats number grid */
+@media screen and (max-width: 640px) {
+  div[style*="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+
+  div[style*="font-size: 3rem"] {
+    font-size: 2.5rem !important;
+  }
+
+  div[style*="font-weight: 700; font-size: 1rem"] {
+    font-size: 0.9rem !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  div[style*="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))"] {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+}
+
+/* ========================================
+   HOMEPAGE - SUITE CARDS (Material Icons)
+   ======================================== */
+
+/* MkDocs Material grid cards - mobile optimization */
+@media screen and (max-width: 640px) {
+  .md-typeset .grid.cards > * {
+    min-height: auto;
+  }
+
+  /* Ensure buttons in cards are touch-friendly */
+  .md-typeset .grid.cards .md-button {
+    min-height: 44px;
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* ========================================
+   RECOMMENDED COMBINATIONS - COMPACT MOBILE
+   ======================================== */
+
+/* Recommended combinations section */
+@media screen and (max-width: 640px) {
+  .md-typeset div[style*="background: linear-gradient(135deg, color-mix"] {
+    padding: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .md-typeset div[style*="background: linear-gradient(135deg, color-mix"] p {
+    font-size: 1rem !important;
+  }
+}
+
+/* ========================================
+   TESTIMONIALS - MOBILE SPACING
+   ======================================== */
+
+@media screen and (max-width: 640px) {
+  div[style*="font-size: 1.2rem; font-style: italic"] {
+    font-size: 1rem !important;
+  }
+
+  div[style*="font-weight: 600; color: var(--md-primary-fg-color)"] {
+    font-size: 0.9rem !important;
+  }
+}
+
+/* ========================================
+   FINAL CTA SECTION - RESPONSIVE
+   ======================================== */
+
+@media screen and (max-width: 768px) {
+  div[style*="text-align: center"][style*="padding: 3rem 2rem"] h2 {
+    font-size: 1.6rem !important;
+  }
+
+  div[style*="text-align: center"][style*="padding: 3rem 2rem"] p {
+    font-size: 1rem !important;
+  }
+
+  div[style*="text-align: center"][style*="padding: 3rem 2rem"] {
+    padding: 2rem 1.5rem !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  div[style*="text-align: center"][style*="padding: 3rem 2rem"] h2 {
+    font-size: 1.4rem !important;
+  }
+}
+
+/* ========================================
+   SUITE INDEX - COMPARISON TABLE
+   ======================================== */
+
+/* Make comparison table extra mobile-friendly */
+@media screen and (max-width: 768px) {
+  /* Force table to be scrollable */
+  .md-typeset table {
+    font-size: 0.85rem;
+  }
+
+  /* Ensure table columns don't get too squished */
+  .md-typeset table th,
+  .md-typeset table td {
+    min-width: 80px;
+    padding: 0.4rem 0.3rem;
+  }
+
+  /* First column (indicator name) - make sticky on mobile */
+  .md-typeset table td:first-child,
+  .md-typeset table th:first-child {
+    position: sticky;
+    left: 0;
+    background: var(--md-default-bg-color);
+    z-index: 1;
+    min-width: 120px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .md-typeset table {
+    font-size: 0.75rem;
+  }
+
+  .md-typeset table th,
+  .md-typeset table td {
+    min-width: 60px;
+    padding: 0.3rem 0.2rem;
+  }
+}
+
+/* ========================================
+   SUITE INDEX - DECISION GUIDE ARROWS
+   ======================================== */
+
+/* Decision guide with arrows - better mobile formatting */
+@media screen and (max-width: 640px) {
+  /* Make arrow symbols more visible on mobile */
+  .md-typeset p:has(strong):has(a[href$=".md"]) {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    line-height: 1.6;
+  }
+}
+
+/* ========================================
+   LEARNING PATH - WEEK SECTIONS
+   ======================================== */
+
+/* Week-by-week learning sections */
+@media screen and (max-width: 640px) {
+  .md-typeset h3[id^="week-"] {
+    font-size: 1.1rem;
+  }
+
+  .md-typeset ol li,
+  .md-typeset ul li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+  }
+}
+
+/* ========================================
+   RECOMMENDED COMBINATIONS - MOBILE
+   ======================================== */
+
+/* Combination setup sections */
+@media screen and (max-width: 640px) {
+  .md-typeset h3:contains("Setup"),
+  .md-typeset h3:contains("Minimalist"),
+  .md-typeset h3:contains("Pro Setup") {
+    font-size: 1.05rem;
+    margin-top: 1.5rem;
+  }
+
+  /* Indicator lists in combinations */
+  .md-typeset ul:has(li:contains("Pentarch")),
+  .md-typeset ul:has(li:contains("Janus")) {
+    padding-left: 1.25rem;
+  }
+}
+
