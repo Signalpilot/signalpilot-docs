@@ -38,3 +38,199 @@
   font-size: 1.05rem;
   vertical-align: text-bottom;
 }
+
+/* ========================================
+   VISUAL HIERARCHY MARKERS - RESPONSIVE
+   ======================================== */
+
+/* Base styles for section markers */
+.md-typeset h2 > span,
+.md-typeset h3 > span {
+  display: inline-block;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+  line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+/* Desktop: Full size (default from inline styles) */
+.md-typeset h2 > span {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.md-typeset h3 > span {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+/* Tablet: Slightly smaller */
+@media screen and (max-width: 768px) {
+  .md-typeset h2 > span {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+
+  .md-typeset h3 > span {
+    font-size: 0.95em;
+    line-height: 1.5;
+  }
+}
+
+/* Mobile: More compact, ensure readability */
+@media screen and (max-width: 480px) {
+  .md-typeset h2 > span {
+    font-size: 0.9em;
+    line-height: 1.6;
+    display: block;
+    margin-top: 0.75rem;
+  }
+
+  .md-typeset h3 > span {
+    font-size: 0.85em;
+    line-height: 1.6;
+    display: block;
+    margin-top: 0.5rem;
+  }
+
+  /* Ensure emojis don't break layout on mobile */
+  .md-typeset h2 > span::before,
+  .md-typeset h3 > span::before {
+    display: inline;
+    margin-right: 0.25rem;
+  }
+}
+
+/* Small mobile: Even more compact */
+@media screen and (max-width: 360px) {
+  .md-typeset h2 > span {
+    font-size: 0.85em;
+    padding: 0.25rem 0;
+  }
+
+  .md-typeset h3 > span {
+    font-size: 0.8em;
+    padding: 0.25rem 0;
+  }
+}
+
+/* High contrast for accessibility */
+@media (prefers-contrast: high) {
+  .md-typeset h2 > span,
+  .md-typeset h3 > span {
+    font-weight: 700;
+    text-shadow: 0 0 1px currentColor;
+  }
+}
+
+/* Ensure proper spacing after markers */
+.md-typeset h2:has(> span) + *,
+.md-typeset h3:has(> span) + * {
+  margin-top: 1rem;
+}
+
+/* ========================================
+   MOBILE OPTIMIZATION - NAVIGATION
+   ======================================== */
+
+/* Hide less important nav links on small mobile */
+@media screen and (max-width: 640px) {
+  .sp-links a:not([aria-current]) {
+    display: none;
+  }
+
+  .sp-links a[aria-current] {
+    font-weight: 600;
+  }
+
+  .sp-brand-text {
+    font-size: 1.4rem !important;
+  }
+
+  .sp-cta {
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+/* Very small mobile - ultra compact */
+@media screen and (max-width: 400px) {
+  .sp-brand-text {
+    font-size: 1.2rem !important;
+  }
+
+  .sp-topnav__inner {
+    padding: 0.4rem 0.75rem !important;
+  }
+}
+
+/* ========================================
+   MOBILE OPTIMIZATION - CARDS
+   ======================================== */
+
+/* Smaller card padding on mobile */
+@media screen and (max-width: 640px) {
+  .md-typeset .grid.cards {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .md-typeset .grid.cards > * {
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* ========================================
+   MOBILE OPTIMIZATION - TABLES
+   ======================================== */
+
+/* Make tables scrollable on mobile */
+@media screen and (max-width: 768px) {
+  .md-typeset table:not([class]) {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .md-typeset table:not([class]) th,
+  .md-typeset table:not([class]) td {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+}
+
+/* ========================================
+   MOBILE OPTIMIZATION - CODE BLOCKS
+   ======================================== */
+
+/* Better code block handling on mobile */
+@media screen and (max-width: 640px) {
+  .md-typeset pre {
+    font-size: 0.8rem;
+    padding: 0.75rem;
+  }
+
+  .md-typeset code {
+    word-break: break-word;
+  }
+}
+
+/* ========================================
+   TOUCH OPTIMIZATION
+   ======================================== */
+
+/* Larger tap targets for mobile */
+@media (pointer: coarse) {
+  .md-typeset a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .md-nav__link {
+    padding: 0.75rem 1rem;
+  }
+}
