@@ -1,6 +1,6 @@
 # Best Practices & Pro Tips
 
-Master Signal Pilot indicators with these proven strategies from experienced traders. Follow these guidelines to maximize your trading success.
+Master <span class="signal-pilot-brand">Signal Pilot</span> indicators with these proven strategies from experienced traders. Follow these guidelines to maximize your trading success.
 
 ---
 

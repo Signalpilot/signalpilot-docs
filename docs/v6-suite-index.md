@@ -1,6 +1,6 @@
-# Signal Pilot Signal Pilot Suite - Complete Indicator Collection
+# <span class="signal-pilot-brand">Signal Pilot</span> Suite - Complete Indicator Collection
 
-Welcome to the **Signal Pilot Signal Pilot Suite** - 7 production-ready, non-repainting indicators designed for serious traders. Each indicator is built on the SP Protocol: zero repaint, complete transparency, and institutional-grade analysis.
+Welcome to the **<span class="signal-pilot-brand">Signal Pilot</span> Suite** - 7 production-ready, non-repainting indicators designed for serious traders. Each indicator is built on the SP Protocol: zero repaint, complete transparency, and institutional-grade analysis.
 
 ---
 
@@ -362,7 +362,7 @@ Each indicator guide includes:
 ## 🆘 Support & Resources
 
 - **Main Docs:** [docs.signalpilot.io](https://docs.signalpilot.io)
-- **Discord Community:** [Signal Pilot Discord](https://discord.gg/signalpilot)
+- **Discord Community:** [<span class="signal-pilot-brand">Signal Pilot</span> Discord](https://discord.gg/signalpilot)
 - **Video Guides:** [YouTube Channel](https://youtube.com/@signalpilot)
 - **GitHub:** [Signalpilot/signalpilot-docs](https://github.com/Signalpilot/signalpilot-docs)
 
@@ -378,8 +378,8 @@ Choose your path:
 - **Divergence trader?** Start with [Plutus Flow](plutus-flow-v10.md) or [Harmonic Oscillator](harmonic-oscillator-v10.md)
 - **Multi-asset scanning?** Start with [Augury Grid](augury-grid-v10.md)
 
-**Welcome to Signal Pilot v6. Built for market analysis. Designed for informed decision-making.**
+**Welcome to <span class="signal-pilot-brand">Signal Pilot</span> v6. Built for market analysis. Designed for informed decision-making.**
 
 ---
 
-*Last Updated: October 2025 | Signal Pilot Suite Complete*
+*Last Updated: October 2025 | <span class="signal-pilot-brand">Signal Pilot</span> Suite Complete*

@@ -1,6 +1,6 @@
 # Indicator Comparison Guide
 
-Which Signal Pilot indicators should you use? This guide helps you choose the right tools for your trading style and experience level.
+Which <span class="signal-pilot-brand">Signal Pilot</span> indicators should you use? This guide helps you choose the right tools for your trading style and experience level.
 
 ---
 

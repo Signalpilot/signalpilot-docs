@@ -1,11 +1,11 @@
 ---
-title: "Signal Pilot Suite Trading Workflow"
+title: "<span class="signal-pilot-brand">Signal Pilot</span> Suite Trading Workflow"
 summary: "How to combine the 7 v6 indicators into a complete trading system."
 ---
 
-# 🚦 Signal Pilot Suite Trading Workflow
+# 🚦 <span class="signal-pilot-brand">Signal Pilot</span> Suite Trading Workflow
 
-The Signal Pilot Suite gives you everything you need: **event detection**, **levels**, **volume confirmation**, **momentum**, and **multi-symbol scanning**. Here's how to combine them into a clean, systematic workflow.
+The <span class="signal-pilot-brand">Signal Pilot</span> Suite gives you everything you need: **event detection**, **levels**, **volume confirmation**, **momentum**, and **multi-symbol scanning**. Here's how to combine them into a clean, systematic workflow.
 
 ---
 
@@ -13,7 +13,7 @@ The Signal Pilot Suite gives you everything you need: **event detection**, **lev
 
 **Trade with confluence, not single signals.**
 
-Each indicator in the Signal Pilot Suite serves a specific purpose. Combine 2-3 indicators for any trade setup, and your win rate will dramatically improve.
+Each indicator in the <span class="signal-pilot-brand">Signal Pilot</span> Suite serves a specific purpose. Combine 2-3 indicators for any trade setup, and your win rate will dramatically improve.
 
 ---
 
@@ -403,7 +403,7 @@ If you only want to load indicators on a single chart:
 
 ## Resources
 
-- **Full Indicator Guides:** [Signal Pilot Suite Index](v6-suite-index/)
+- **Full Indicator Guides:** [<span class="signal-pilot-brand">Signal Pilot</span> Suite Index](v6-suite-index/)
 - **Non-Repaint Policy:** [ref-non-repaint.md](ref-non-repaint.md)
 - **Support:** [about-support.md](about-support.md)
 

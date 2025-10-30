@@ -1,6 +1,6 @@
 # Getting Started Prerequisites
 
-Before you start using Signal Pilot indicators, make sure you have everything you need. This checklist ensures a smooth setup and successful trading experience.
+Before you start using <span class="signal-pilot-brand">Signal Pilot</span> indicators, make sure you have everything you need. This checklist ensures a smooth setup and successful trading experience.
 
 ---
 
@@ -11,7 +11,7 @@ Before you start using Signal Pilot indicators, make sure you have everything yo
 **Minimum:** TradingView Essential (paid plan)
 
 **Why paid subscription required:**
-- Signal Pilot indicators use advanced Pine Script features
+- <span class="signal-pilot-brand">Signal Pilot</span> indicators use advanced Pine Script features
 - Free TradingView accounts have limited functionality
 - Private/invite-only scripts require paid subscription
 
@@ -31,11 +31,11 @@ Before you start using Signal Pilot indicators, make sure you have everything yo
 
 ---
 
-### 2. Signal Pilot Subscription (Required)
+### 2. <span class="signal-pilot-brand">Signal Pilot</span> Subscription (Required)
 
 **Purchase & Access:**
 
-1. **Purchase** the Signal Pilot Suite
+1. **Purchase** the <span class="signal-pilot-brand">Signal Pilot</span> Suite
    - Visit [signalpilot.io/#pricing](https://signalpilot.io/#pricing)
    - Choose your plan
    - Complete payment
@@ -84,7 +84,7 @@ Before you start using Signal Pilot indicators, make sure you have everything yo
 **Resources for beginners:**
 - [TradingView Education](https://www.tradingview.com/education/)
 - [Investopedia Trading Basics](https://www.investopedia.com/trading-4427765)
-- Signal Pilot [Education Portal](https://education.signalpilot.io/)
+- <span class="signal-pilot-brand">Signal Pilot</span> [Education Portal](https://education.signalpilot.io/)
 
 **✅ Action:** Assess your knowledge, fill gaps if needed
 
@@ -202,7 +202,7 @@ Before you start using Signal Pilot indicators, make sure you have everything yo
 
 **Choose your markets:**
 
-**Signal Pilot works on ALL markets:**
+**<span class="signal-pilot-brand">Signal Pilot</span> works on ALL markets:**
 - Cryptocurrency (24/7 trading)
 - Forex (24/5 trading)
 - Stock indices (market hours)
@@ -234,7 +234,7 @@ Before you start using Signal Pilot indicators, make sure you have everything yo
 Complete this before starting:
 
 - [ ] TradingView paid subscription active
-- [ ] Signal Pilot Suite purchased
+- [ ] <span class="signal-pilot-brand">Signal Pilot</span> Suite purchased
 - [ ] TradingView username provided for access
 - [ ] Confirmation email received (access granted)
 - [ ] Basic trading knowledge acquired
@@ -259,7 +259,7 @@ Complete this before starting:
 - [Investopedia Trading Basics](https://www.investopedia.com/trading-4427765)
 - [Babypips Forex Education](https://www.babypips.com/learn) (good for beginners, applies beyond forex)
 
-**Signal Pilot resources:**
+**<span class="signal-pilot-brand">Signal Pilot</span> resources:**
 - [Quick Start Guide](start-quick.md) - 5-minute tutorial
 - [FAQ](about-faq.md) - Common questions
 - [Glossary](ref-glossary.md) - Term definitions
@@ -278,7 +278,7 @@ Complete this before starting:
 ✅ **Reality:** Start with manual trading, automate later if desired
 
 ❌ **Don't need:** Expensive courses or "gurus"
-✅ **Reality:** Signal Pilot docs and practice are sufficient
+✅ **Reality:** <span class="signal-pilot-brand">Signal Pilot</span> docs and practice are sufficient
 
 ❌ **Don't need:** All 7 indicators from day one
 ✅ **Reality:** Start with Pentarch, add others as you learn
@@ -297,7 +297,7 @@ Complete this before starting:
 
 1. **Next:** [Onboarding Checklist](start-onboarding.md)
    - Step-by-step setup guide
-   - Your first 7 days with Signal Pilot
+   - Your first 7 days with <span class="signal-pilot-brand">Signal Pilot</span>
    - From installation to first trade
 
 2. **Then:** [Quick Start Guide](start-quick.md)

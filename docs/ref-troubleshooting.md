@@ -1,6 +1,6 @@
 # Troubleshooting Guide
 
-Having issues with Signal Pilot indicators? This guide covers common problems and their solutions. Can't find your issue? [Contact Support](about-support.md).
+Having issues with <span class="signal-pilot-brand">Signal Pilot</span> indicators? This guide covers common problems and their solutions. Can't find your issue? [Contact Support](about-support.md).
 
 ---
 
@@ -9,7 +9,7 @@ Having issues with Signal Pilot indicators? This guide covers common problems an
 Before diving into specific issues, run through this quick checklist:
 
 - [ ] TradingView paid subscription active (Essential, Pro, or Pro+)
-- [ ] Signal Pilot subscription active and access granted
+- [ ] <span class="signal-pilot-brand">Signal Pilot</span> subscription active and access granted
 - [ ] Using latest indicator version (check version number)
 - [ ] Browser cache cleared recently
 - [ ] Sufficient chart history loaded (at least 500 bars)
@@ -160,7 +160,7 @@ Solution:
 ```
 1. Click "Alert" button (top toolbar)
 2. Check your alerts list
-3. Look for your Signal Pilot alert
+3. Look for your <span class="signal-pilot-brand">Signal Pilot</span> alert
 4. Ensure it's not expired or paused
 ```
 
@@ -277,7 +277,7 @@ Example: Only take IGN signals within 2% of major support
 
 ### "Indicator Not Found" in Search
 
-**Symptoms:** Can't find Signal Pilot indicators in TradingView search
+**Symptoms:** Can't find <span class="signal-pilot-brand">Signal Pilot</span> indicators in TradingView search
 
 **Possible Causes:**
 
@@ -300,14 +300,14 @@ Did you provide the correct username?
 
 Check:
 1. Log out of TradingView
-2. Log in to the account you provided to Signal Pilot
+2. Log in to the account you provided to <span class="signal-pilot-brand">Signal Pilot</span>
 3. Search again for indicators
 ```
 
 #### 3. Indicator Name Changed/Updated
 ```
 Search terms that work:
-- "Signal Pilot"
+- "<span class="signal-pilot-brand">Signal Pilot</span>"
 - "Pentarch"
 - "Janus Atlas"
 - "Omnideck"
@@ -317,7 +317,7 @@ Try searching just "Pentarch" instead of "Pentarch v8.9"
 
 #### 4. Private/Invite-Only Script
 ```
-Signal Pilot indicators are invite-only.
+<span class="signal-pilot-brand">Signal Pilot</span> indicators are invite-only.
 You must be explicitly granted access.
 
 Cannot find in public indicator library.

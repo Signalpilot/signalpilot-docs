@@ -1,6 +1,6 @@
 # How to Set TradingView Alerts
 
-Learn how to set up reliable, close-confirmed alerts for Signal Pilot indicators. Proper alert configuration ensures you never miss a signal and never get false intrabar notifications.
+Learn how to set up reliable, close-confirmed alerts for <span class="signal-pilot-brand">Signal Pilot</span> indicators. Proper alert configuration ensures you never miss a signal and never get false intrabar notifications.
 
 ---
 
@@ -18,7 +18,7 @@ Learn how to set up reliable, close-confirmed alerts for Signal Pilot indicators
 
 ## 🔔 Quick Setup (Step-by-Step)
 
-These steps work for **any Signal Pilot indicator** (Pentarch, Omnideck, Janus, etc.).
+These steps work for **any <span class="signal-pilot-brand">Signal Pilot</span> indicator** (Pentarch, Omnideck, Janus, etc.).
 
 ### Step 1: Open Alert Dialog
 
@@ -30,7 +30,7 @@ Or use keyboard shortcut: **Alt+A** (Windows) or **Cmd+A** (Mac)
 
 ### Step 2: Select Indicator
 
-**Condition dropdown** → Choose your Signal Pilot indicator
+**Condition dropdown** → Choose your <span class="signal-pilot-brand">Signal Pilot</span> indicator
 
 Examples:
 - "Pentarch v8.9"
@@ -404,7 +404,7 @@ See [Troubleshooting: Alerts Not Working](ref-troubleshooting.md#alerts-not-firi
 
 ## 📚 Related Guides
 
-**New to Signal Pilot?**
+**New to <span class="signal-pilot-brand">Signal Pilot</span>?**
 - [Quick Start](start-quick.md) - Learn Pentarch in 5 minutes
 - [Onboarding Checklist](start-onboarding.md) - Your first 7 days
 

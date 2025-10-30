@@ -1,4 +1,4 @@
-# Signal Pilot Documentation - Compliance Language Guide
+# <span class="signal-pilot-brand">Signal Pilot</span> Documentation - Compliance Language Guide
 
 **⚠️ CRITICAL UPDATE - IMMEDIATE ACTION REQUIRED**
 
@@ -18,7 +18,7 @@
 
 ## ⚠️ Core Principle
 
-**Signal Pilot provides analysis tools for educational purposes, not trading advice or guaranteed outcomes.**
+**<span class="signal-pilot-brand">Signal Pilot</span> provides analysis tools for educational purposes, not trading advice or guaranteed outcomes.**
 
 All materials must:
 - Emphasize **possibilities** not **certainties**
@@ -407,7 +407,7 @@ Trading involves substantial risk of loss. Past performance ≠ future results.
 
 ### HIGH PRIORITY (Update Next - Day 3-4)
 - [ ] **Tutorial videos and transcripts** (YouTube, education.signalpilot.io)
-- [ ] **Signal Pilot Suite Overview** documentation page
+- [ ] **<span class="signal-pilot-brand">Signal Pilot</span> Suite Overview** documentation page
 - [ ] **All 7 indicator documentation pages**
 - [ ] **Email sequences** (drip campaigns, newsletters)
 - [ ] **Support articles** (help center, FAQ)
@@ -466,7 +466,7 @@ This is critical for payment processor relationships and legal compliance.
 ---
 - [ ] TradingView indicator descriptions (all 7 indicators)
 - [ ] Homepage (docs.signalpilot.io)
-- [ ] Signal Pilot Suite Overview
+- [ ] <span class="signal-pilot-brand">Signal Pilot</span> Suite Overview
 - [ ] All 7 indicator documentation pages
 - [ ] Quick Start guide
 - [ ] Suite Workflow guide
