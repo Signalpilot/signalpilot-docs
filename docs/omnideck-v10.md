@@ -1,6 +1,7 @@
 # Omnideck v1.0 - 10 Indicators in One
 
-## What Does It Do?
+## 🎯 What Does It Do?
+<span style="color: #0aa1d5; font-weight: 600;">Core Functionality</span>
 
 Omnideck is the **ultimate all-in-one indicator** - 10 professional trading systems combined into a single, optimized tool. Instead of loading 10 separate indicators and slowing down your chart, you get everything in one place.
 
@@ -289,7 +290,8 @@ Customize to your preference, but keep it clean
 
 ---
 
-## Frequently Asked Questions
+## ❓ Frequently Asked Questions
+<span style="color: #10b981; font-weight: 600;">Common Questions</span>
 
 **Q: Do I need all 10 systems?**
 **A:** No! Most traders use 4-6 systems. Start small, add gradually. All 10 at once = overwhelming.

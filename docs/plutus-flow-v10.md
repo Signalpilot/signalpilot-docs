@@ -1,6 +1,7 @@
 # Plutus Flow v1.0 - Smart OBV Analysis
 
-## What Does It Do?
+## 🎯 What Does It Do?
+<span style="color: #0aa1d5; font-weight: 600;">Core Functionality</span>
 
 Plutus Flow is an **advanced On-Balance Volume (OBV) indicator** that shows you when smart money may be accumulating (buying) or distributing (selling). Unlike standard OBV, it prevents volume spike distortion and detects potential powerful divergences.
 
@@ -239,7 +240,8 @@ One huge volume bar (earnings, news) can permanently skew OBV, hiding subtle cha
 
 ---
 
-## Frequently Asked Questions
+## ❓ Frequently Asked Questions
+<span style="color: #10b981; font-weight: 600;">Common Questions</span>
 
 **Q: What's the difference from standard OBV?**
 **A:** Plutus Flow uses spike-clipped OBV (immune to extreme volume spikes), adds bands for extremes, detects potential divergences automatically, and has FlipGuard anti-whipsaw.

@@ -1,6 +1,7 @@
 # Harmonic Oscillator v1.0 ADAPTIVE - 3-in-1 Momentum Indicator
 
-## What Does It Do?
+## 🎯 What Does It Do?
+<span style="color: #0aa1d5; font-weight: 600;">Core Functionality</span>
 
 Harmonic Oscillator combines **MACD, RSI, and StochRSI** into one smart oscillator (0-100 scale). Think of it as "three expert traders voting" - when 2 or 3 agree, the probability skyrockets.
 
@@ -250,7 +251,8 @@ Enable HTF filter to only take signals aligned with higher timeframe:
 
 ---
 
-## Frequently Asked Questions
+## ❓ Frequently Asked Questions
+<span style="color: #10b981; font-weight: 600;">Common Questions</span>
 
 **Q: What's better - Conservative or Aggressive?**
 **A:**

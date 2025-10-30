@@ -1,6 +1,7 @@
 # Augury Grid v1.0 - Scan 8 Symbols at Once
 
-## What Does It Do?
+## 🎯 What Does It Do?
+<span style="color: #0aa1d5; font-weight: 600;">Core Functionality</span>
 
 Augury Grid is your **multi-symbol screener table** that sits on your chart and monitors 8 different instruments simultaneously. Instead of flipping between charts, you get all the signals in one clean table.
 
@@ -225,7 +226,8 @@ Symbol 7-8: Daily (futures position)
 
 ---
 
-## Frequently Asked Questions
+## ❓ Frequently Asked Questions
+<span style="color: #10b981; font-weight: 600;">Common Questions</span>
 
 **Q: Can I add more than 8 symbols?**
 **A:** Not in one Grid (performance limit). But you can run 2 Grid instances = 16 symbols total.
