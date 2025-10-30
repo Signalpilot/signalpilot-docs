@@ -1,6 +1,6 @@
 # Glossary
 
-Complete reference of Signal Pilot terms, signals, and trading concepts. Terms are organized alphabetically within categories.
+Complete reference of <span class="signal-pilot-brand">Signal Pilot</span> terms, signals, and trading concepts. Terms are organized alphabetically within categories.
 
 ---
 
@@ -337,9 +337,9 @@ Complete reference of Signal Pilot terms, signals, and trading concepts. Terms a
 
 ### Repainting
 **Definition:** Indicator changing historical signals
-**Signal Pilot Policy:** NO repainting—signals are final on close
+**<span class="signal-pilot-brand">Signal Pilot</span> Policy:** NO repainting—signals are final on close
 **Intrabar Changes:** Normal and expected (not repainting)
-**Historical Changes:** Would be repainting (Signal Pilot doesn't do this)
+**Historical Changes:** Would be repainting (<span class="signal-pilot-brand">Signal Pilot</span> doesn't do this)
 
 ---
 

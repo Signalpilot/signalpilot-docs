@@ -23,7 +23,7 @@ By the end of this guide, you'll:
 
 1. **Open any chart** (Bitcoin, stocks, forex - any market works)
 2. **Click "Indicators"** at the top of the chart
-3. **Search for:** `"Pentarch v1.0"` or `"Signal Pilot"`
+3. **Search for:** `"Pentarch v1.0"` or `"<span class="signal-pilot-brand">Signal Pilot</span>"`
 4. **Click to add** the indicator to your chart
 
 **You should now see:**
@@ -268,7 +268,7 @@ Price: $35,000, falling for 2 weeks
 
 ### Mistake #10: Overcomplicating with Too Many Indicators
 
-**❌ Common Error:** Loading all 7 Signal Pilot indicators + 10 other indicators on one chart
+**❌ Common Error:** Loading all 7 <span class="signal-pilot-brand">Signal Pilot</span> indicators + 10 other indicators on one chart
 **✅ Simpler Approach:** Starting with Pentarch, gradually adding Janus
 
 **Why:**

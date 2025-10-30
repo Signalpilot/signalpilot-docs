@@ -1,6 +1,6 @@
 # Frequently Asked Questions
 
-Find answers to common questions about Signal Pilot indicators. Can't find what you're looking for? Check our [Troubleshooting Guide](ref-troubleshooting.md) or [Contact Support](about-support.md).
+Find answers to common questions about <span class="signal-pilot-brand">Signal Pilot</span> indicators. Can't find what you're looking for? Check our [Troubleshooting Guide](ref-troubleshooting.md) or [Contact Support](about-support.md).
 
 ---
 
@@ -186,7 +186,7 @@ See guides:
 ### ⭐ How accurate are the signals?
 <span style="color: #0aa1d5; font-weight: 600;">Understanding Expectations</span>
 
-**Signal Pilot indicators are tools, not crystal balls.**
+**<span class="signal-pilot-brand">Signal Pilot</span> indicators are tools, not crystal balls.**
 
 **What they do:**
 - Identify high-probability reversal zones
@@ -331,7 +331,7 @@ Signals that appear mid-bar can change before close. This is normal and why we u
 2. **Indicator updated** - Look for new version number
 3. **TradingView glitch** - Refresh browser or clear cache
 
-**Solution:** Go to TradingView's Indicators menu → Search "Signal Pilot" or specific indicator name
+**Solution:** Go to TradingView's Indicators menu → Search "<span class="signal-pilot-brand">Signal Pilot</span>" or specific indicator name
 
 ---
 

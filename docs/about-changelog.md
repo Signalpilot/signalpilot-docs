@@ -1,8 +1,8 @@
 # Changelog (High Level)
 
-## 2025‑Q1 - Signal Pilot Signal Pilot Suite
+## 2025‑Q1 - <span class="signal-pilot-brand">Signal Pilot</span> Suite
 
-The Signal Pilot Suite represents a complete rebrand and modernization of the Signal Pilot indicator collection:
+The <span class="signal-pilot-brand">Signal Pilot</span> Suite represents a complete rebrand and modernization of the <span class="signal-pilot-brand">Signal Pilot</span> indicator collection:
 
 ### Core Indicators
 

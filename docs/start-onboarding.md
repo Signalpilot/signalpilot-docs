@@ -1,6 +1,6 @@
 # Onboarding Checklist
 
-Your complete 7-day guide to mastering Signal Pilot indicators. Follow this step-by-step checklist to go from setup to your first confident trades.
+Your complete 7-day guide to mastering <span class="signal-pilot-brand">Signal Pilot</span> indicators. Follow this step-by-step checklist to go from setup to your first confident trades.
 
 ---
 
@@ -21,7 +21,7 @@ Your complete 7-day guide to mastering Signal Pilot indicators. Follow this step
   - Check account status (should be Essential, Pro, or Pro+)
   - If not upgraded: [Upgrade now](https://www.tradingview.com/pricing/)
 
-- [ ] **Confirm Signal Pilot access granted**
+- [ ] **Confirm <span class="signal-pilot-brand">Signal Pilot</span> access granted**
   - Check email for confirmation
   - If no email after 24h: Contact [support](about-support.md)
   - Verify your TradingView username was correct
@@ -29,7 +29,7 @@ Your complete 7-day guide to mastering Signal Pilot indicators. Follow this step
 - [ ] **Test indicator access**
   - Open TradingView
   - Click "Indicators" button
-  - Search "Signal Pilot" or "Pentarch"
+  - Search "<span class="signal-pilot-brand">Signal Pilot</span>" or "Pentarch"
   - Should see Pentarch v8.9 (or latest version)
   - If not visible: Check access status
 
@@ -405,4 +405,4 @@ Your complete 7-day guide to mastering Signal Pilot indicators. Follow this step
 
 **Remember:** There's no rush. Take your time with each day. Mastery comes from practice and repetition.
 
-**Congratulations on starting your Signal Pilot journey!** 🎉
+**Congratulations on starting your <span class="signal-pilot-brand">Signal Pilot</span> journey!** 🎉

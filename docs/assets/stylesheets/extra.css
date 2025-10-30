@@ -40,6 +40,19 @@
 }
 
 /* ========================================
+   SIGNAL PILOT BRAND STYLING
+   ======================================== */
+
+/* Apply Gugi font to all Signal Pilot brand text */
+.signal-pilot-brand,
+.sp-brand-text {
+  font-family: 'Gugi', system-ui, -apple-system, sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+}
+
+/* ========================================
    VISUAL HIERARCHY MARKERS - RESPONSIVE
    ======================================== */
 
