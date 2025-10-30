@@ -9,6 +9,7 @@ Minimal Flow is your **potential volume spike detector with built-in position ma
 ---
 
 ## Core Concept: Volume = Truth
+<span style="color: #0aa1d5; font-weight: 600; font-size: 1.1em;">💡 Core Philosophy - Volume Shows Intent</span>
 
 Price can lie. Volume cannot.
 
@@ -24,8 +25,10 @@ Price can lie. Volume cannot.
 ---
 
 ## The Main Signals (What You See)
+<span style="color: #10b981; font-weight: 600; font-size: 1.1em;">📊 Signal Components</span>
 
 ### Volume Histogram (Bottom Pane)
+<span style="color: #f59e0b; font-weight: 600;">📊 Volume Visualization - Spot the Spikes</span>
 
 **What you see:** Bars showing volume
 
@@ -39,6 +42,7 @@ Price can lie. Volume cannot.
 ---
 
 ### Buy/Sell Signals
+<span style="color: #10b981; font-weight: 600;">🎯 Entry Signals - Volume-Confirmed Direction</span>
 
 **BUY Signal** (green label + arrow)
 - Potential volume spike detected
@@ -57,6 +61,7 @@ Price can lie. Volume cannot.
 ---
 
 ### Quality Scores ⭐⭐⭐
+<span style="color: #a855f7; font-weight: 600;">⭐ Signal Quality Ratings - 0-100 Score</span>
 
 Each signal gets rated 0-100:
 
@@ -77,6 +82,7 @@ Each signal gets rated 0-100:
 ---
 
 ## Position Management (The Power Feature)
+<span style="color: #dc2626; font-weight: 600; font-size: 1.1em;">🔥 Automated Risk Management - Entry to Exit</span>
 
 ### Entry
 - Signal fires → System calculates position size
@@ -110,8 +116,10 @@ Each signal gets rated 0-100:
 ---
 
 ## How to Use It (3 Simple Steps)
+<span style="color: #0aa1d5; font-weight: 600; font-size: 1.1em;">🎓 Essential Setup Guide</span>
 
 ### Step 1: Configure Settings
+<span style="color: #ff6b35; font-weight: 600;">⚙️ Configuration - Set Your Parameters</span>
 
 **Account Settings:**
 - **Account Size:** Your capital (e.g., $10,000)
@@ -131,36 +139,38 @@ Each signal gets rated 0-100:
 ---
 
 ### Step 2: Wait for Signals
+<span style="color: #10b981; font-weight: 600;">👀 Signal Recognition - What to Watch</span>
 
 **Watch for:**
 1. Volume histogram lights up (bright green/red spike)
 2. Signal label appears (BUY or SELL)
-3. Quality score shows (aim for ⭐⭐ or ⭐⭐⭐)
+3. Quality score shows (⭐⭐ or ⭐⭐⭐ preferred)
 4. Entry price line draws on chart
 
-**Then:**
-- Enter on signal bar close or next bar open
-- System shows you exact position size
-- Stop and TP1 already marked
+**Signal information provided:**
+- Entry timing: signal bar close or next bar open
+- System displays position size calculation
+- Stop and TP1 levels marked on chart
 
 ---
 
 ### Step 3: Manage the Trade
+<span style="color: #a855f7; font-weight: 600;">📈 Trade Management - Visual Guidance</span>
 
-**The system shows you everything:**
+**The system displays:**
 - Green/Red line = Entry price
 - Dotted line = Stop loss
 - Dashed line = TP1 target
 - Label shows current P&L
 
-**Example trade setup:**
-1. Example entry at entry price
-2. Example stop placement at the dotted line
-3. Example profit target: 50% at TP1 (dashed line)
-4. Example trailing stop: remaining 50% with 2% trail
-5. Example exit: opposite signal or stop hit
+**Example trade structure:**
+1. Entry consideration at entry price level
+2. Stop placement at the dotted line level
+3. Partial profit target: 50% at TP1 (dashed line)
+4. Trailing stop approach: remaining 50% with 2% trail
+5. Exit considerations: opposite signal or stop hit
 
-**The system calculates, you execute.**
+**The system provides calculations for evaluation.**
 
 ---
 
@@ -257,6 +267,7 @@ Each signal gets rated 0-100:
 ---
 
 ## Common Mistakes (Avoid These!)
+<span style="color: #dc2626; font-weight: 600; font-size: 1.1em;">🚨 Critical Errors to Avoid</span>
 
 ❌ **Not honoring stops**
 → ✅ System calculates stops for a reason. Moving stops = emotional trading = losses
@@ -321,12 +332,13 @@ Each signal gets rated 0-100:
 ---
 
 ## Best Practices
+<span style="color: #10b981; font-weight: 600; font-size: 1.1em;">✅ Recommended Approach</span>
 
-1. **Honor your stops** - No exceptions, ever
-2. **Take T1 partials** - Every single time (locks in profit)
-3. **Match risk to comfort** - 1% default, adjust to your emotion
-4. **Use appropriate timeframe** - Scalper 5m-15m, Day trader 1H, Swing 4H-Daily
-5. **Track your stats** - Win rate by quality tier
+1. **Honor stops** - Following calculated stops is a key practice
+2. **Take TP1 partials** - Taking partials locks in profit (common practice)
+3. **Match risk to comfort** - 1% default, adjust to personal comfort level
+4. **Use appropriate timeframe** - Scalpers: 5m-15m, Day traders: 1H, Swing: 4H-Daily
+5. **Track statistics** - Win rate by quality tier provides valuable feedback
 6. **Trust the system** - Position sizing is calculated for you, just execute
 
 ---
