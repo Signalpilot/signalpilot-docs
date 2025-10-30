@@ -20,7 +20,8 @@ Before diving into specific issues, run through this quick checklist:
 
 ## 📊 Signal & Display Issues
 
-### Signals Not Appearing on Chart
+### 🔍 Signals Not Appearing on Chart
+<span style="color: #dc2626; font-weight: 600;">Critical Issue</span>
 
 **Symptoms:** Indicator loaded but no signals showing
 
@@ -80,7 +81,8 @@ This is NORMAL behavior. Indicators don't force signals.
 
 ---
 
-### Signals Appearing Then Disappearing
+### ⚠️ Signals Appearing Then Disappearing
+<span style="color: #f59e0b; font-weight: 600;">Common Confusion</span>
 
 **Symptoms:** Signals show up during bar, vanish before you can act
 
@@ -114,7 +116,8 @@ This is NORMAL behavior. Indicators don't force signals.
 
 ---
 
-### Wrong Signal Colors / Visual Issues
+### 🎨 Wrong Signal Colors / Visual Issues
+<span style="color: #10b981; font-weight: 600;">Display Fix</span>
 
 **Symptoms:** Signals showing but colors are off or hard to see
 
@@ -149,7 +152,8 @@ Solution:
 
 ## 🔔 Alert Issues
 
-### Alerts Not Firing
+### 🔕 Alerts Not Firing
+<span style="color: #dc2626; font-weight: 600;">Critical Issue</span>
 
 **Symptoms:** Alert created but no notifications received
 
@@ -206,7 +210,8 @@ RIGHT: Specific event selected (e.g., "IGN Event")
 
 ---
 
-### Too Many Alerts / Alert Spam
+### 🔊 Too Many Alerts / Alert Spam
+<span style="color: #f59e0b; font-weight: 600;">Alert Management</span>
 
 **Symptoms:** Constant notifications, overwhelming
 
@@ -275,7 +280,8 @@ Example: Only take IGN signals within 2% of major support
 
 ## 🔑 Access & Loading Issues
 
-### "Indicator Not Found" in Search
+### ❌ "Indicator Not Found" in Search
+<span style="color: #dc2626; font-weight: 600;">Access Issue</span>
 
 **Symptoms:** Can't find <span class="signal-pilot-brand">Signal Pilot</span> indicators in TradingView search
 
@@ -464,7 +470,8 @@ Alternative:
 
 ## 📱 Mobile App Issues
 
-### Indicators Not Showing on Mobile
+### 📱 Indicators Not Showing on Mobile
+<span style="color: #10b981; font-weight: 600;">Mobile Setup</span>
 
 **Symptoms:** Work on desktop, not on TradingView mobile app
 
