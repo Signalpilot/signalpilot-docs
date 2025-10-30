@@ -1,4 +1,4 @@
-# Signal Pilot Documentation
+# <span style="font-family: 'Gugi', system-ui, -apple-system, sans-serif; text-transform: uppercase; letter-spacing: 0.05em;">Signal Pilot Documentation</span>
 
 <p style="font-size: 1.3rem; color: var(--md-primary-fg-color); font-weight: 500; margin-bottom: 2rem;">
 Technical indicators that identify <strong>TIMING</strong> patterns, <strong>PRICE LEVELS</strong>, and <strong>MARKET CONTEXT</strong> for analysis.
