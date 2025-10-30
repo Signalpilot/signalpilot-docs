@@ -421,47 +421,15 @@ body {
   z-index: 4;
 }
 
-/* MOBILE ONLY: Hide custom nav, let Material handle everything */
+/* MOBILE: Just hide our custom nav, nothing else */
 @media screen and (max-width: 76.1875em) {
-  /* Hide custom nav on mobile - it conflicts with Material's drawer */
   .sp-topnav {
     display: none;
   }
 
-  /* Show the site title in Material header on mobile */
-  .md-header__title {
-    visibility: visible;
-    width: auto;
-  }
-
-  /* Ensure drawer has solid background and is fully visible */
-  .md-nav--primary {
-    background: var(--md-default-bg-color) !important;
-    opacity: 1 !important;
-  }
-
-  /* Ensure all drawer links are fully interactive and visible */
-  .md-nav__link {
-    pointer-events: auto !important;
-    cursor: pointer !important;
-    opacity: 1 !important;
-  }
-
-  /* Prevent overlay from blocking drawer interactions */
+  /* CRITICAL FIX: Hide the overlay completely - it's blocking drawer clicks */
   .md-overlay {
-    pointer-events: none !important;
-  }
-
-  /* Only let overlay catch clicks OUTSIDE the drawer */
-  [data-md-toggle="drawer"]:checked ~ .md-overlay {
-    pointer-events: auto !important;
-  }
-
-  /* But drawer itself must always capture clicks */
-  [data-md-toggle="drawer"]:checked ~ .md-container .md-nav--primary {
-    pointer-events: auto !important;
-    position: relative !important;
-    z-index: 1 !important;
+    display: none !important;
   }
 }
 
