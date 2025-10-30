@@ -1,13 +1,26 @@
 /* Automatic Keyword Highlighting System
  * Scans for important keywords in bold text and adds color-coded styling
+ * EXCLUDES indicator names - only highlights technical terms in context
  */
 
 (function() {
   'use strict';
 
+  // Indicator names to EXCLUDE (never highlight these)
+  const indicatorNames = [
+    'Pentarch',
+    'Janus Atlas',
+    'Omnideck',
+    'Augury Grid',
+    'Minimal Flow',
+    'Harmonic Oscillator',
+    'Plutus Flow',
+    'Signal Pilot'
+  ];
+
   // Keyword categories and their patterns
   const keywordPatterns = {
-    // Pentarch Signals
+    // Pentarch Signals (most specific)
     signal: {
       td: /\b(TD|Touchdown)\b/gi,
       ign: /\b(IGN|Ignition)\b/gi,
@@ -20,10 +33,10 @@
     tech: /\b(VWAP|ATR|OBV|MACD|RSI|Stoch|StochRSI|EMA|SMA|SuperTrend|Bollinger|Fibonacci)\b/gi,
 
     // Levels/Structure
-    level: /\b(Support|Resistance|Daily High|Daily Low|Weekly High|Weekly Low|Monthly High|Monthly Low|Session High|Session Low|VWAP|POC|VAH|VAL)\b/gi,
+    level: /\b(Support|Resistance|Daily High|Daily Low|Weekly High|Weekly Low|Monthly High|Monthly Low|Session High|Session Low|POC|VAH|VAL)\b/gi,
 
     // Action terms
-    action: /\b(Entry|Exit|Stop Loss|Take Profit|Stop|Target|Position|Risk)\b/gi,
+    action: /\b(Entry|Exit|Stop Loss|Take Profit|Target|Position)\b/gi,
 
     // Quality terms
     quality: /\b(Elite|Premium|Standard|⭐⭐⭐|⭐⭐)\b/gi,
@@ -31,9 +44,16 @@
     // Divergence
     divergence: /\b(Divergence|Bullish Divergence|Bearish Divergence|Hidden Divergence|Regular Divergence)\b/gi,
 
-    // Volume
-    volume: /\b(Volume Spike|Volume|Flow|Liquidity|Sweep)\b/gi
+    // Volume (specific terms only - NOT generic "Flow" or "Volume")
+    volume: /\b(Volume Spike|Liquidity Sweep)\b/gi
   };
+
+  function isIndicatorName(text) {
+    // Check if the text is an indicator name or contains an indicator name
+    return indicatorNames.some(name =>
+      text.includes(name) || text.trim() === name
+    );
+  }
 
   function highlightKeywords() {
     // Find all strong/bold elements in the content
@@ -44,6 +64,13 @@
       if (element.dataset.kwProcessed) return;
 
       const text = element.textContent;
+
+      // SKIP if this is an indicator name
+      if (isIndicatorName(text)) {
+        element.dataset.kwProcessed = 'true';
+        return;
+      }
+
       let matched = false;
 
       // Check Pentarch signals first (they're most specific)
