@@ -2,7 +2,7 @@
 
 ## What Does It Do?
 
-Pentarch shows you **5 simple signals** that indicate when price may potentially reverse. Think of it like traffic lights for potential reversals - it shows you when to get ready, when to go, and when to exit.
+Pentarch displays **5 simple signals** that indicate when price may potentially reverse. Think of it like traffic lights for potential reversals - visual indicators showing different phases of potential trend changes.
 
 **The 5-Phase System:** TD → IGN → WRN → CAP → BDN
 
