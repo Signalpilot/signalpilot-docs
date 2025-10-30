@@ -1,20 +1,20 @@
 ---
 title: "<span class="signal-pilot-brand">Signal Pilot</span> Suite Trading Workflow"
-summary: "How to combine the 7 indicators into a complete trading system."
+summary: "How the 7 indicators can be combined into a complete trading system."
 ---
 
 # 🚦 <span class="signal-pilot-brand">Signal Pilot</span> Suite Trading Workflow
 
-The <span class="signal-pilot-brand">Signal Pilot</span> Suite gives you everything you need: **event detection**, **levels**, **volume confirmation**, **momentum**, and **multi-symbol scanning**. Here's how to combine them into a clean, systematic workflow.
+The <span class="signal-pilot-brand">Signal Pilot</span> Suite provides comprehensive functionality: **event detection**, **levels**, **volume confirmation**, **momentum**, and **multi-symbol scanning**. These components can be combined into a clean, systematic workflow.
 
 ---
 
 ## 💡 The Core Philosophy
 <span style="color: #0aa1d5; font-weight: 600;">Key Principle</span>
 
-**Trade with confluence, not single signals.**
+**Trading with confluence, not single signals.**
 
-Each indicator in the <span class="signal-pilot-brand">Signal Pilot</span> Suite serves a specific purpose. Combine 2-3 indicators for any trade setup, and your win rate will dramatically improve.
+Each indicator in the <span class="signal-pilot-brand">Signal Pilot</span> Suite serves a specific purpose. Combining 2-3 indicators for trade setups is associated with improved win rates.
 
 ---
 
@@ -125,7 +125,7 @@ Each indicator in the <span class="signal-pilot-brand">Signal Pilot</span> Suite
 - Entries often occur when 3+ Omnideck systems align with price levels
 - Exits commonly include Omnideck opposite signals or Janus target levels
 
-**Best for:** Traders who want everything in minimal screen space
+**Best for:** Traders wanting comprehensive analysis in minimal screen space
 
 ---
 
@@ -263,7 +263,7 @@ Example: "Pentarch IGN + Minimal Flow Elite Bull + Janus Daily Low Touch" conflu
 - Minimal Flow (volume spikes)
 - Pentarch (NanoFlow crosses)
 
-**Avoid:**
+**Less commonly used:**
 - Harmonic/Plutus divergences (too slow)
 - Augury Grid (too slow signals)
 
@@ -298,7 +298,7 @@ Example: "Pentarch IGN + Minimal Flow Elite Bull + Janus Daily Low Touch" conflu
 - Harmonic Oscillator (Conservative mode)
 - Augury Grid (monthly scans)
 
-**Avoid:**
+**Less commonly used:**
 - Minimal Flow (too active)
 - Intraday features
 
@@ -330,7 +330,7 @@ Minimal Flow's built-in risk calculator commonly used:
 
 ---
 
-## ⚠️ Common Mistakes to Avoid
+## ⚠️ Commonly Observed Mistakes
 <span style="color: #f59e0b; font-weight: 600;">Learn From Others</span>
 
 ❌ **Using single indicator in isolation**
@@ -411,8 +411,8 @@ If you only want to load indicators on a single chart:
 
 **Quality over quantity:**
 - 1 Elite setup per day > 10 Standard setups
-- Patience wins in systematic trading
-- The suite gives you an edge - use it wisely
+- Patience is valued in systematic trading
+- The suite provides analytical edge - use is optimized through discipline
 
 ---
 

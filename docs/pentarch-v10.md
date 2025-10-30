@@ -259,7 +259,7 @@ Most event signals require the "correct" regime to fire:
   - Example: IGN in red regime (standard reversal) vs IGN in green regime (pullback long entry)
   - Example: CAP in green regime (standard top) vs CAP in red regime (bear rally exhaustion)
 
-**Avoiding Whipsaw:**
+**Whipsaw Considerations:**
 - Regime doesn't flip on every bar - it requires sustained evidence
 - This prevents false structural changes during normal noise
 - Adjustable via settings if you want more/less sensitivity
@@ -446,51 +446,51 @@ When you look at a Pentarch chart, you see four layers working together:
 
 ---
 
-## ⚙️ Settings (Keep It Simple)
+## ⚙️ Settings (Configuration Approach)
 <span style="color: #10b981; font-weight: 600;">Configuration Options</span>
 
-You don't need to change much. The defaults work great.
+Minimal configuration changes are typically required. Default settings perform well.
 
-**Optional tweaks:**
-- **Show/Hide Events:** Turn off events you don't use
-- **Colors:** Pick your favorite color scheme
-- **Pilot Line:** The blue trend line (turn on/off as you like)
+**Available adjustments:**
+- **Show/Hide Events:** Individual event types can be toggled
+- **Colors:** Color schemes are customizable
+- **Pilot Line:** Trend line visibility can be adjusted
 
-Most traders just use the default settings.
+Most traders maintain default settings.
 
 ---
 
 ## 🔔 Alert Configuration
-<span style="color: #0aa1d5; font-weight: 600;">Get Notified</span>
+<span style="color: #0aa1d5; font-weight: 600;">Notification Setup</span>
 
 **Commonly monitored alerts:**
 1. **IGN Event** → Indicates potential long entry conditions
 2. **CAP Event** → Indicates potential exit conditions
 3. **BDN Event** → Indicates potential breakdown/exit conditions
 
-**How to set:**
-1. Click the alarm icon on TradingView
-2. Select "Pentarch v1.0"
-3. Choose which event
-4. Set it to "Once Per Bar Close"
+**Configuration steps:**
+1. Alarm icon on TradingView is clicked
+2. "Pentarch v1.0" is selected
+3. Event type is chosen
+4. "Once Per Bar Close" is set
 
 ---
 
 ## Common Learning Points
 
-❌ **Entering on TD alone**
-→ ✅ TD is typically viewed as a warning signal. IGN often provides additional confirmation.
+❌ **Entering on TD signal alone**
+→ ✅ TD typically functions as a warning signal. IGN often provides additional confirmation.
 
 ❌ **Overlooking CAP signals**
-→ ✅ CAP indicates late-cycle exhaustion. Many traders use this as an exit consideration signal.
+→ ✅ CAP indicates late-cycle exhaustion. Exit consideration is common at CAP signals.
 
-❌ **Taking every signal without context**
-→ ✅ Higher-quality signals often occur at key support/resistance levels (combining with Janus Atlas can improve signal quality)
+❌ **Trading signals without context**
+→ ✅ Higher-quality signals often occur at key support/resistance levels (Janus Atlas combination can enhance signal quality)
 
-❌ **Trading without stops**
-→ ✅ Stop loss usage is standard risk management practice. Not every signal results in the expected move.
+❌ **Trading without stop losses**
+→ ✅ Stop loss usage is standard risk management practice. Signal outcomes are not guaranteed.
 
-❌ **Starting on 1-minute charts**
+❌ **Beginning analysis on 1-minute charts**
 → ✅ Higher timeframes (1H or Daily) are associated with more reliable signals for learning purposes.
 
 ---
@@ -511,7 +511,7 @@ Most traders just use the default settings.
 **A:** When you follow the signals properly and use stops, most traders see 60-70% win rate. Higher when combined with key levels.
 
 **Q: Can I use this for day trading?**
-**A:** Yes! Works on any timeframe. Just know that lower timeframes (1m-15m) have more signals but also more noise.
+**A:** Yes. Works on any timeframe. Lower timeframes (1m-15m) have more signals but also more noise.
 
 **Q: What timeframe is best?**
 **A:**
@@ -529,15 +529,15 @@ Most traders just use the default settings.
 
 ## Common Practices
 
-1. **Higher timeframe learning** - Daily or 4H charts are often recommended for learning signal patterns
+1. **Higher timeframe learning** - Daily or 4H charts are often recommended for initial signal pattern learning
 
-2. **Combination with Janus Atlas** - Signals occurring at key levels are associated with improved success rates
+2. **Janus Atlas combination** - Signals occurring at key levels are associated with improved success rates
 
-3. **Alert configuration** - Setting alerts helps ensure signals aren't missed
+3. **Alert configuration** - Alert setup helps ensure signal observation opportunities aren't missed
 
-4. **Partial position management** - Some traders exit portions at WRN while letting remainder run to CAP
+4. **Partial position management** - Some traders implement partial exits at WRN while maintaining remainder through CAP
 
-5. **Trade journaling** - Recording which signals perform best can inform future decisions
+5. **Trade journaling** - Recording signal performance patterns can inform future analytical decisions
 
 6. **Pattern recognition** - Complete sequences like TD→IGN or WRN→CAP→BDN are often associated with higher-quality setups
 
@@ -549,7 +549,7 @@ Most traders just use the default settings.
 |--------|---------|----------------------|
 | TD 🔵 | Early-cycle warning | Often viewed as preparation signal (not entry) |
 | IGN 🟢 | Potential reversal up indicated | Commonly used as potential long entry signal |
-| WRN 🟡 | Late-cycle warning | Many traders begin monitoring, consider tightening stops |
+| WRN 🟡 | Late-cycle warning | Monitoring typically begins, stop tightening is considered |
 | CAP 🔴 | Late-cycle exhaustion | Often interpreted as long exit signal |
 | BDN ⚫ | Potential breakdown | Often interpreted as exit signal (or potential short entry) |
 
@@ -557,13 +557,13 @@ Most traders just use the default settings.
 
 ## Support
 
-Need help? Check out:
-- [<span class="signal-pilot-brand">Signal Pilot</span> Suite Overview](https://docs.signalpilot.io/suite-index/) - How to combine with other indicators
+Additional resources available:
+- [<span class="signal-pilot-brand">Signal Pilot</span> Suite Overview](https://docs.signalpilot.io/suite-index/) - Indicator combination strategies
 - [Suite Workflow](ref-workflow.md) - Complete trading system
-- [Support](about-support.md) - Get help
+- [Support](about-support.md) - Support resources
 
 ---
 
-**Remember:** Pentarch indicates WHEN potential reversals may be forming. Combine it with Janus Atlas (shows you WHERE - at which levels) for best results.
+**Summary:** Pentarch indicates WHEN potential reversals may be forming. Combining it with Janus Atlas (indicating WHERE - at which levels) often enhances analysis.
 
-**Trade smart, use stops, and let the signals guide you!** 🎯
+**Analytical discipline with risk management and signal-guided analysis** 🎯

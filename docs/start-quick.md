@@ -1,16 +1,16 @@
-# Quick Start - Get Your First Signal in 5 Minutes
+# Quick Start - Getting Your First Signal in 5 Minutes
 
-Get from zero to your first potential reversal signal in 5 minutes. We'll use **Pentarch v1.0** - the simplest and most impactful indicator in the suite.
+The path from zero to first potential reversal signal in 5 minutes. **Pentarch v1.0** will be used - the simplest and most impactful indicator in the suite.
 
 ---
 
-## 🎯 What You'll Learn
+## 🎯 What Can Be Learned
 
-By the end of this guide, you'll:
-1. ✅ Have Pentarch installed on TradingView
-2. ✅ Understand the 5 signal types
-3. ✅ Set up your first alert
-4. ✅ Know how to use the signals
+By the end of this guide:
+1. ✅ Pentarch can be installed on TradingView
+2. ✅ The 5 signal types can be understood
+3. ✅ First alert can be set up
+4. ✅ How to use the signals can be known
 
 **Time required:** 5 minutes
 **Difficulty:** Beginner-friendly
@@ -21,13 +21,13 @@ By the end of this guide, you'll:
 
 ### On TradingView:
 
-1. **Open any chart** (Bitcoin, stocks, forex - any market works)
-2. **Click "Indicators"** at the top of the chart
-3. **Search for:** `"Pentarch v1.0"` or `"<span class="signal-pilot-brand">Signal Pilot</span>"`
-4. **Click to add** the indicator to your chart
+1. **Any chart can be opened** (Bitcoin, stocks, forex - any market works)
+2. **"Indicators" can be clicked** at the top of the chart
+3. **Can be searched for:** `"Pentarch v1.0"` or `"<span class="signal-pilot-brand">Signal Pilot</span>"`
+4. **The indicator can be clicked to add** to the chart
 
-**You should now see:**
-- 5-phase system labels (TD, IGN, WRN, CAP, BDN) appearing on your chart
+**What can now be seen:**
+- 5-phase system labels (TD, IGN, WRN, CAP, BDN) appearing on the chart
 - Colored dots below/above candles when signals fire
 
 ---
@@ -41,7 +41,7 @@ Pentarch displays **5 simple signals** that indicate potential reversal conditio
 **🔵 TD (Touchdown)** = Early Warning
 - Indicates early-cycle reversal conditions
 - Often interpreted as preparation phase
-- Many traders watch for potential setups
+- Potential setups can be watched for by many traders
 
 **🟢 IGN (Ignition)** = Momentum Breakout
 - Indicates momentum breakout conditions
@@ -53,7 +53,7 @@ Pentarch displays **5 simple signals** that indicate potential reversal conditio
 **🟡 WRN (Warning)** = Weakening Momentum
 - Indicates weakening momentum
 - Often triggers risk management review
-- Many traders prepare for potential exits
+- Potential exits can be prepared for by many traders
 
 **🔴 CAP (Climax)** = Late-Cycle Exhaustion
 - Indicates late-cycle exhaustion conditions
@@ -69,16 +69,16 @@ Pentarch displays **5 simple signals** that indicate potential reversal conditio
 
 ## Step 3: Set Up Your First Alert (1 minute)
 
-Setting up an alert for **IGN** (potential long entry signal):
+An alert for **IGN** (potential long entry signal) can be set up:
 
-1. **Right-click your chart** → "Add Alert"
-2. **Condition:** Select "Pentarch v1.0"
-3. **Event:** Choose `"IGN Event"`
-4. **Options:** Set to **"Once Per Bar Close"** (important!)
-5. **Name it:** "Pentarch IGN - Potential Long Entry Signal"
-6. **Click "Create"**
+1. **Chart can be right-clicked** → "Add Alert"
+2. **Condition:** "Pentarch v1.0" can be selected
+3. **Event:** `"IGN Event"` can be chosen
+4. **Options:** **"Once Per Bar Close"** can be set (important!)
+5. **Can be named:** "Pentarch IGN - Potential Long Entry Signal"
+6. **"Create" can be clicked**
 
-**That's it!** You'll now get notified every time a potential reversal up is indicated.
+**Complete!** Notification will now be received every time a potential reversal up is indicated.
 
 ### Commonly Monitored Alerts:
 - ✅ IGN Event (potential long entry signal)
@@ -133,7 +133,7 @@ Price: $35,000, falling for 2 weeks
 
 ---
 
-## 🚫 Common Mistakes to Avoid
+## 🚫 Common Mistakes
 
 ### Mistake #1: Entering on TD (Blue Signal)
 
@@ -150,10 +150,10 @@ Price: $35,000, falling for 2 weeks
 **❌ Common Error:** Alert fires mid-bar, entry occurs, signal disappears
 **✅ Better Approach:** Alert set to "Once Per Bar Close", only closed-bar signals trigger notifications
 
-**How to fix:**
-- Delete incorrect alerts
-- Create new ones with "Once Per Bar Close"
-- See [Alert Setup Guide](how-to-alerts.md)
+**How this can be fixed:**
+- Incorrect alerts can be deleted
+- New ones with "Once Per Bar Close" can be created
+- [Alert Setup Guide](how-to-alerts.md) can be reviewed
 
 ---
 
@@ -161,7 +161,7 @@ Price: $35,000, falling for 2 weeks
 <span style="color: #dc2626; font-weight: 600;">🚨 Risk Management Essential</span>
 
 **❌ Common Error:** "Will watch and exit if it goes against me"
-**✅ Better Approach:** Stop loss determination before entry
+**✅ Better Approach:** Stop loss can be determined before entry
 
 **Common stop placement patterns:**
 - **Longs:** Below IGN candle low or below TD low
@@ -173,13 +173,13 @@ Price: $35,000, falling for 2 weeks
 
 ### Mistake #4: Ignoring Key Levels
 
-**❌ Lower Quality:** Evaluating all IGN signals regardless of level context
-**✅ Higher Quality:** Focusing on IGN signals at major support levels
+**❌ Lower Quality:** All IGN signals can be evaluated regardless of level context
+**✅ Higher Quality:** IGN signals at major support levels can be focused on
 
 **Why:**
 - IGN at support often shows higher probability
 - IGN without level confluence typically shows lower probability
-- Janus Atlas can identify key levels
+- Key levels can be identified by Janus Atlas
 
 **Example:**
 - ❌ IGN appears at $50,000 (no level) → Lower probability
@@ -189,8 +189,8 @@ Price: $35,000, falling for 2 weeks
 
 ### Mistake #5: Using Too Low Timeframe Initially
 
-**❌ Wrong:** Starting on 5m or 15m charts as a beginner
-**✅ Right:** Start with Daily or 4H charts
+**❌ Wrong:** 5m or 15m charts can be started on as a beginner
+**✅ Right:** Daily or 4H charts can be started with
 
 **Why:**
 - Lower timeframes = more noise
@@ -207,8 +207,8 @@ Price: $35,000, falling for 2 weeks
 
 ### Mistake #6: Revenge Trading After a Loss
 
-**❌ Common Pattern:** Signal failed, immediately taking next signal to "make it back"
-**✅ Better Approach:** Break after losses, review what occurred
+**❌ Common Pattern:** Signal failed, next signal can be immediately taken to "make it back"
+**✅ Better Approach:** Break can be taken after losses, what occurred can be reviewed
 
 **Why:**
 - Emotional trading is associated with poor decisions
@@ -221,7 +221,7 @@ Price: $35,000, falling for 2 weeks
 
 ### Mistake #7: Risking Too Much Per Trade
 
-**❌ Higher Risk:** Risking 10-20% of account on one trade
+**❌ Higher Risk:** 10-20% of account can be risked on one trade
 **✅ Standard Practice:** Risk of 1-2% per trade
 
 **Example calculation:**
@@ -237,7 +237,7 @@ Price: $35,000, falling for 2 weeks
 ### Mistake #8: Expecting 100% Win Rate
 
 **❌ Wrong:** "This signal should work every time!"
-**✅ Right:** "Even with 50-60% win rate, I'm profitable with good R/R"
+**✅ Right:** "Even with 50-60% win rate, profitability exists with good R/R"
 
 **Reality:**
 - No indicator is perfect
@@ -245,22 +245,22 @@ Price: $35,000, falling for 2 weeks
 - Profitable trading = win rate × average R/R
 - 50% win rate + 3:1 R/R = very profitable
 
-**Mindset:** Focus on process, not individual trade outcomes.
+**Mindset:** Process can be focused on, not individual trade outcomes.
 
 ---
 
 ### Mistake #9: Not Paper Trading First
 <span style="color: #0aa1d5; font-weight: 600;">💡 Important for Beginners</span>
 
-**❌ Higher Risk:** Reading guide, immediately trading live with real money
+**❌ Higher Risk:** Guide can be read, live trading can be immediately started with real money
 **✅ Lower Risk:** Paper trading for 2-4 weeks until consistent results
 
 **Common paper trading approach:**
-- [ ] Execute 20+ paper trades
-- [ ] Track win rate and R/R
-- [ ] Maintain rule consistency
-- [ ] Analyze winning and losing trades
-- [ ] Achieve profitability over 2-4 weeks
+- [ ] 20+ paper trades can be executed
+- [ ] Win rate and R/R can be tracked
+- [ ] Rule consistency can be maintained
+- [ ] Winning and losing trades can be analyzed
+- [ ] Profitability over 2-4 weeks can be achieved
 
 **Progression:** Many traders start live with minimum position sizes after paper trading success.
 
@@ -268,8 +268,8 @@ Price: $35,000, falling for 2 weeks
 
 ### Mistake #10: Overcomplicating with Too Many Indicators
 
-**❌ Common Error:** Loading all 7 <span class="signal-pilot-brand">Signal Pilot</span> indicators + 10 other indicators on one chart
-**✅ Simpler Approach:** Starting with Pentarch, gradually adding Janus
+**❌ Common Error:** All 7 <span class="signal-pilot-brand">Signal Pilot</span> indicators + 10 other indicators can be loaded on one chart
+**✅ Simpler Approach:** Pentarch can be started with, Janus can be gradually added
 
 **Why:**
 - More indicators can lead to analysis paralysis
@@ -279,7 +279,7 @@ Price: $35,000, falling for 2 weeks
 **Common progression for beginners:**
 - Week 1-4: Pentarch only
 - Week 5-8: Pentarch + Janus Atlas
-- Week 9+: Consider adding one more if needed (Minimal Flow or Harmonic)
+- Week 9+: One more can be considered if needed (Minimal Flow or Harmonic)
 
 ---
 
@@ -289,7 +289,7 @@ Price: $35,000, falling for 2 weeks
 → **[Full Pentarch Guide](pentarch-v10.md)** - Deep dive into all 5 signals
 
 ### Add Levels:
-→ **[Janus Atlas Guide](janus-atlas-v10.md)** - Identifies key price levels
+→ **[Janus Atlas Guide](janus-atlas-v10.md)** - Key price levels can be identified
 **Why:** Pentarch shows timing, Janus shows levels
 
 ### Complete System:
@@ -305,7 +305,7 @@ Price: $35,000, falling for 2 weeks
 
 **2. Level Confluence**
 - IGN at a key support level often shows higher probability
-- Janus Atlas identifies key price levels
+- Key price levels can be identified by Janus Atlas
 
 **3. Stop Loss Planning**
 - Common stop for longs: Below the TD/IGN candle low
@@ -326,28 +326,28 @@ Price: $35,000, falling for 2 weeks
 **Common Questions:**
 - **"Signals appearing then disappearing?"** → Alerts set to "Once Per Bar Close" can help
 - **"Too many signals?"** → Higher timeframes (4H, Daily) often show fewer, clearer signals
-- **"Not enough signals?"** → Verify indicator version (v1.0)
+- **"Not enough signals?"** → Indicator version (v1.0) can be verified
 
 **Resources:**
 - **[FAQ](about-faq.md)** - Common questions answered
 - **[Glossary](ref-glossary.md)** - Terms and definitions
-- **[Support](about-support.md)** - Get help from the team
+- **[Support](about-support.md)** - Help from the team can be obtained
 
 ---
 
-## 🎉 You've Learned:
+## 🎉 What Has Been Learned:
 
-- ✅ How to install and read Pentarch signals
-- ✅ How to set up alerts
+- ✅ How Pentarch signals can be installed and read
+- ✅ How alerts can be set up
 - ✅ Common signal interpretation patterns
 - ✅ Risk management concepts
 
-**Next:** Explore the full Pentarch guide for deeper understanding.
+**Next:** The full Pentarch guide for deeper understanding can be explored.
 
 ---
 
 <div style="text-align: center; padding: 2rem; background: linear-gradient(135deg, color-mix(in srgb, var(--md-primary-fg-color) 12%, transparent), color-mix(in srgb, var(--md-accent-fg-color) 12%, transparent)); border-radius: 16px; margin-top: 2rem;">
-  <h3 style="color: var(--md-primary-fg-color); margin-bottom: 1rem;">Ready to Explore More Indicators?</h3>
+  <h3 style="color: var(--md-primary-fg-color); margin-bottom: 1rem;">More Indicators Can Be Explored</h3>
   <p style="margin-bottom: 1.5rem;">Pentarch is just one of 7 professional indicators in the suite.</p>
-  <a href="../suite-index/" style="display: inline-block; padding: 0.75rem 2rem; background: linear-gradient(115deg, var(--md-primary-fg-color), var(--md-accent-fg-color)); color: white; border-radius: 999px; text-decoration: none; font-weight: 700;">Explore All 7 Indicators →</a>
+  <a href="../suite-index/" style="display: inline-block; padding: 0.75rem 2rem; background: linear-gradient(115deg, var(--md-primary-fg-color), var(--md-accent-fg-color)); color: white; border-radius: 999px; text-decoration: none; font-weight: 700;">All 7 Indicators Can Be Explored →</a>
 </div>

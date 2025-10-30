@@ -68,7 +68,7 @@ No single indicator is perfect. But when multiple agree? That's high probability
 ## Signal Modes (Pick Your Style)
 
 ### Conservative (3 votes required)
-- ALL three must agree
+- All three are required to agree
 - **Fewest signals**
 - **Win rate: 75-80%**
 - **Best for:** Swing trading
@@ -107,50 +107,50 @@ When price and oscillator disagree = Reversal coming
 - **Hidden Bull:** Price higher low, oscillator lower low = Continuation up
 - **Hidden Bear:** Price lower high, oscillator higher high = Continuation down
 
-**These are your highest-probability setups!**
+**These are commonly the highest-probability setups.**
 
 ---
 
-## How to Use It (3 Simple Steps)
+## Usage Patterns (3 Core Components)
 <span style="color: #0aa1d5; font-weight: 600; font-size: 1.1em;">🎓 Essential Learning Guide</span>
 
-### Step 1: Pick Your Mode
+### Component 1: Mode Selection
 
-**Beginner:** Start with Balanced mode (2 votes)
+**Beginner configuration:** Balanced mode (2 votes) is the standard starting point
 
-**Settings:**
+**Typical settings:**
 - Signal Mode: Balanced
-- HTF Filter: Enabled (check 4× your chart timeframe)
+- HTF Filter: Enabled (4× chart timeframe is common)
 - Divergence: Enabled
 - Min Votes: 2
 
 ---
 
-### Step 2: Wait for Extremes
+### Component 2: Extreme Zone Recognition
 
-**Best signals come from extremes:**
+**Signals from extreme zones are typically prioritized:**
 
-**For longs:**
-1. Wait for composite to drop below 20 (extreme oversold)
-2. Watch for potential bullish signal (cross above 30)
-3. Verify 2-3 votes (check component status if shown)
-4. Example entry long
+**For long positions:**
+1. Composite dropping below 20 (extreme oversold) is observed
+2. Potential bullish signal (cross above 30) is monitored
+3. 2-3 votes are verified (component status can be checked)
+4. Long entries are evaluated
 
-**For shorts:**
-1. Wait for composite above 80 (extreme overbought)
-2. Watch for potential bearish signal (cross below 70)
-3. Verify 2-3 votes
-4. Example entry short
+**For short positions:**
+1. Composite above 80 (extreme overbought) is observed
+2. Potential bearish signal (cross below 70) is monitored
+3. 2-3 votes are verified
+4. Short entries are evaluated
 
 ---
 
-### Step 3: Add Divergence Confirmation
+### Component 3: Divergence Confirmation
 
-**Ultimate setup:**
+**Elite probability setup characteristics:**
 - Composite at extreme (< 20 or > 80)
-- Divergence label appears (BULL DIV or BEAR DIV)
+- Divergence label present (BULL DIV or BEAR DIV)
 - Signal fires
-- = ELITE probability trade
+- = Elite-tier probability classification
 
 ---
 
@@ -193,28 +193,28 @@ Enable HTF filter to only take signals aligned with higher timeframe:
 
 ---
 
-## Settings (Keep It Simple)
+## Settings (Configuration Approach)
 
 **Signal Mode:**
 - Conservative (3 votes) / Balanced (2 votes) / Aggressive (1 vote)
 
 **HTF Filter:**
-- Enable for swing trading
-- Disable for scalping
-- Set to 4× your chart timeframe (e.g., 1H chart → 4H HTF)
+- Typically enabled for swing trading
+- Often disabled for scalping
+- 4× chart timeframe is the standard setting (e.g., 1H chart → 4H HTF)
 
 **Divergence:**
-- Enable all types (Regular + Hidden)
-- Show divergence beams (visual lines)
+- All types (Regular + Hidden) can be enabled
+- Divergence beams (visual lines) are available
 
-**Most traders use:**
+**Most common configuration:**
 - Mode: Balanced
 - HTF: Enabled (4× chart TF)
 - Divergence: Enabled
 
 ---
 
-## Alerts (Set These!)
+## Alert Configuration
 
 1. **Elite Bull Signal** - 3 votes + HTF + divergence
 2. **Elite Bear Signal** - 3 votes + HTF + divergence
@@ -223,31 +223,31 @@ Enable HTF filter to only take signals aligned with higher timeframe:
 5. **Bullish Divergence** - BULL DIV detected
 6. **Bearish Divergence** - BEAR DIV detected
 
-**How to set:**
-1. Click alarm icon
-2. Select "Harmonic Oscillator v1.0"
-3. Choose alert
-4. Set to "Once Per Bar Close"
+**Configuration steps:**
+1. Alarm icon is clicked
+2. "Harmonic Oscillator v1.0" is selected
+3. Alert type is chosen
+4. "Once Per Bar Close" is set
 
 ---
 
-## Common Mistakes (Avoid These!)
-<span style="color: #dc2626; font-weight: 600; font-size: 1.1em;">🚨 Critical Errors to Avoid</span>
+## Common Pitfalls
+<span style="color: #dc2626; font-weight: 600; font-size: 1.1em;">🚨 Critical Learning Points</span>
 
 ❌ **Trading signals from neutral zone (40-60)**
-→ ✅ Best signals come from extremes (< 20 or > 80)
+→ ✅ Signals from extremes (< 20 or > 80) are typically prioritized
 
-❌ **Ignoring divergences**
-→ ✅ Divergence + signal = Highest probability setups
+❌ **Overlooking divergences**
+→ ✅ Divergence + signal combinations = Highest probability classifications
 
-❌ **Using Aggressive mode without filters**
-→ ✅ Aggressive mode needs manual filtering (check all 3 components agree)
+❌ **Using Aggressive mode without additional filters**
+→ ✅ Aggressive mode typically requires manual filtering (all 3 component agreement verification)
 
-❌ **Fighting HTF when enabled**
-→ ✅ If HTF blocks signal, there's a reason - trust it
+❌ **Trading against HTF filter when enabled**
+→ ✅ HTF blocking indicates multi-timeframe misalignment - respecting it is standard practice
 
-❌ **Not waiting for confirmation**
-→ ✅ Wait for composite to CROSS the level (30 or 70), not just touch
+❌ **Reacting to level touches without crossover**
+→ ✅ Awaiting composite CROSS of the level (30 or 70), not just touch, is the confirmation requirement
 
 ---
 
@@ -270,7 +270,7 @@ Enable HTF filter to only take signals aligned with higher timeframe:
 Both are valuable in different contexts.
 
 **Q: How often do potential Elite signals appear?**
-**A:** Rare! Elite needs 3 votes + HTF + divergence. Expect:
+**A:** Rarely. Elite needs 3 votes + HTF + divergence. Expect:
 - 1H chart: 1-2 per week
 - Daily chart: 1-2 per month
 
@@ -307,23 +307,23 @@ Both are valuable in different contexts.
 ## Best Practices
 <span style="color: #10b981; font-weight: 600; font-size: 1.1em;">✅ Recommended Approach</span>
 
-1. **Wait for extremes** - Best signals come from < 20 or > 80
-2. **Trade divergences** - Divergence + signal = Elite setups
-3. **Match mode to style** - Swing = Conservative, Day trade = Balanced, Scalp = Aggressive
-4. **Enable HTF for swings** - Mandatory for swing trading
-5. **Combine with levels** - Use with Janus Atlas (levels) for highest probability
+1. **Extreme zone focus** - Signals from < 20 or > 80 are typically prioritized
+2. **Divergence integration** - Divergence + signal combinations = Elite classifications
+3. **Mode-style alignment** - Swing = Conservative, Day trade = Balanced, Scalp = Aggressive
+4. **HTF enablement for swings** - HTF filter is standard for swing trading contexts
+5. **Level combination** - Combining with Janus Atlas (levels) is associated with highest probability
 
 ---
 
 ## Support
 
-Need help? Check out:
-- [<span class="signal-pilot-brand">Signal Pilot</span> Suite Overview](https://docs.signalpilot.io/suite-index/) - How to combine with other indicators
+Additional resources available:
+- [<span class="signal-pilot-brand">Signal Pilot</span> Suite Overview](https://docs.signalpilot.io/suite-index/) - Indicator combination strategies
 - [Suite Workflow](ref-workflow.md) - Complete trading system
-- [Support](about-support.md) - Get help
+- [Support](about-support.md) - Support resources
 
 ---
 
-**Remember:** Harmonic Oscillator shows you when MACD, RSI, and StochRSI agree. When 2 or 3 vote the same way = Potential high probability signal. Add divergence = Potential elite probability signal.
+**Summary:** Harmonic Oscillator displays when MACD, RSI, and StochRSI achieve consensus. 2 or 3 component agreement = Potential high probability signal. Divergence addition = Potential elite probability signal.
 
-**Trust the votes, trade the extremes!** 🎯
+**Vote consensus with extreme zone focus** 🎯

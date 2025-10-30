@@ -98,13 +98,13 @@ Price makes: HL → HH → HL → HH (with BOS labels)
 
 ---
 
-## How to Use It (3 Simple Steps)
+## Usage Patterns (3 Core Components)
 <span style="color: #0aa1d5; font-weight: 600; font-size: 1.1em;">🎓 Essential Learning - Start Here</span>
 
-### Step 1: Pick Your Levels
-<span style="color: #ff6b35; font-weight: 600;">⚠️ Critical - Don't Use All 39 At Once</span>
+### Component 1: Level Selection
+<span style="color: #ff6b35; font-weight: 600;">⚠️ Critical - Progressive Level Addition Recommended</span>
 
-Don't turn on all 39 levels at once! Start simple:
+Starting with a subset of levels is recommended rather than enabling all 39 simultaneously:
 
 **For scalping (5m-15m charts):**
 - ✅ Session levels (Asian/Euro/NA)
@@ -122,47 +122,47 @@ Don't turn on all 39 levels at once! Start simple:
 - ✅ Weekly + Monthly levels
 - ✅ Weekly + Monthly VWAP
 - ✅ Market structure
-- ❌ Skip session levels (too granular)
+- ❌ Session levels (too granular for this timeframe)
 
 ---
 
-### Step 2: Watch for Reactions
+### Component 2: Reaction Patterns
 <span style="color: #a855f7; font-weight: 600;">👀 Key Concept - Bounce vs Break</span>
 
-When price approaches a level:
+When price approaches a level, several patterns are commonly observed:
 
-**Bounce = Support/Resistance working**
-→ Enter trades in the direction of the bounce
+**Bounce = Support/Resistance pattern observed**
+→ Trades in the direction of the bounce are common
 
-**Break = Level broken**
-→ Enter trades in the direction of the break (but wait for retest!)
+**Break = Level penetration observed**
+→ Trades in the direction of the break are common (retest patterns often awaited)
 
-**Cluster = Multiple levels together**
-→ These are HIGH PRIORITY zones (strongest reactions)
+**Cluster = Multiple levels converging**
+→ These zones are typically associated with stronger reactions
 
-**Example:** Weekly Low + Monthly VWAP + POC all at $65,000 → MAJOR support level
+**Example:** Weekly Low + Monthly VWAP + POC all at $65,000 → Zone often interpreted as major support
 
 ---
 
-### Step 3: Use Structure for Trend
-<span style="color: #10b981; font-weight: 600;">📊 Trend Filter - Combine Levels + Structure</span>
+### Component 3: Structure-Based Trend Analysis
+<span style="color: #10b981; font-weight: 600;">📊 Trend Filter - Combining Levels + Structure</span>
 
-The structure labels (HH/HL/LH/LL) show you the current trend:
+The structure labels (HH/HL/LH/LL) provide current trend context:
 
-**Healthy Uptrend:**
+**Healthy Uptrend Pattern:**
 ```
 HH → HL → HH → HL
      ↑        ↑
    (BOS)   (BOS)
-Keep buying dips at HL
+Dip buying at HL is common
 ```
 
-**Trend Exhaustion:**
+**Trend Exhaustion Pattern:**
 ```
 HH → HL → HH → LH
               ↑
-          (CHoCH) ← Warning!
-Start watching for shorts
+          (CHoCH) ← Warning indication
+Short opportunities often evaluated
 ```
 
 ---
@@ -187,60 +187,60 @@ Start watching for shorts
 
 ---
 
-## ⚙️ Settings (Keep It Simple)
+## ⚙️ Settings (Configuration Approach)
 <span style="color: #10b981; font-weight: 600;">Configuration Options</span>
 
-You don't need to change much. Just show/hide what you use:
+Minimal configuration changes are typically required. Level visibility is the primary adjustment:
 
 **Show/Hide Levels:**
-- Turn off timeframes you don't watch
-- Example: If swing trading, hide Daily levels (too fast)
+- Unused timeframes can be disabled
+- Example: Swing trading contexts often have Daily levels disabled (timeframe mismatch)
 
 **Colors:**
-- Pick your favorite color scheme
-- Keep it simple - too many colors = confusing
+- Color schemes are customizable
+- Simpler color palettes are associated with clearer interpretation
 
 **Market Structure:**
-- **Auto mode** works great (detects swing size automatically)
-- Only use Manual mode if you want specific pivot lookback
+- **Auto mode** (detects swing size automatically) is the standard configuration
+- Manual mode is available for specific pivot lookback requirements
 
-**Most traders use default settings and just toggle which levels display.**
+**Most traders use default settings and adjust level visibility based on their analysis needs.**
 
 ---
 
-## Alerts (Set These!)
+## Alert Configuration
 
 **Available alerts:**
-1. **Daily High Touch** - Price reaches today's high (potential breakout watch)
-2. **Daily Low Touch** - Price reaches today's low (support test)
+1. **Daily High Touch** - Price reaches today's high (potential breakout observation point)
+2. **Daily Low Touch** - Price reaches today's low (support test observation point)
 
-**How to set:**
-1. Click alarm icon on TradingView
-2. Select "Janus Atlas v1.0"
-3. Choose the level (Daily High or Daily Low)
-4. Set to "Once Per Bar Close"
+**Configuration steps:**
+1. Alarm icon on TradingView is clicked
+2. "Janus Atlas v1.0" is selected
+3. The desired level (Daily High or Daily Low) is chosen
+4. "Once Per Bar Close" is set
 
-**Tip:** Combine with other indicator alerts for confluence. Example: "Daily High touch + Pentarch WRN" = late-cycle exhaustion watch
+**Common practice:** Combining with other indicator alerts for confluence is common. Example: "Daily High touch + Pentarch WRN" = late-cycle exhaustion observation point
 
 ---
 
-## Common Mistakes (Avoid These!)
-<span style="color: #dc2626; font-weight: 600; font-size: 1.1em;">🚨 Critical Errors to Avoid</span>
+## Common Pitfalls
+<span style="color: #dc2626; font-weight: 600; font-size: 1.1em;">🚨 Critical Learning Points</span>
 
-❌ **Using ALL 39 levels at once**
-→ ✅ Start with 5-7 levels. Add more as you learn.
+❌ **Enabling all 39 levels simultaneously**
+→ ✅ Starting with 5-7 levels and adding progressively is the recommended approach.
 
-❌ **Ignoring level clusters**
-→ ✅ When multiple levels overlap = MOST important zones.
+❌ **Overlooking level clusters**
+→ ✅ Overlapping levels typically indicate the most significant zones.
 
-❌ **Trading without confirmation**
-→ ✅ Wait for price to actually react at the level (bounce or break).
+❌ **Trading without confirmation patterns**
+→ ✅ Awaiting actual price reaction at levels (bounce or break) is standard practice.
 
-❌ **Wrong timeframe levels**
-→ ✅ Scalpers use session/daily. Swing traders use weekly/monthly.
+❌ **Timeframe mismatch**
+→ ✅ Scalpers typically use session/daily levels. Swing traders typically use weekly/monthly.
 
-❌ **Forgetting about VWAP**
-→ ✅ VWAP is your friend. Above = bullish bias, Below = bearish bias.
+❌ **Neglecting VWAP context**
+→ ✅ VWAP positioning provides directional context. Above = bullish territory, Below = bearish territory.
 
 ---
 
@@ -261,7 +261,7 @@ You don't need to change much. Just show/hide what you use:
 - Swing traders: Weekly/Monthly levels
 
 **Q: Do levels work on all instruments?**
-**A:** Yes! Crypto, stocks, futures, forex - they all respect key levels.
+**A:** Yes. Crypto, stocks, futures, forex - they all respect key levels.
 
 **Q: What if price is between levels?**
 **A:** Wait. Best trades happen AT levels, not between them. Patience = profits.
@@ -275,7 +275,7 @@ You don't need to change much. Just show/hide what you use:
 **A:** No. Once a level is drawn, it stays. What you see is what you get.
 
 **Q: Can I use this with other indicators?**
-**A:** Absolutely! Janus Atlas shows WHERE to trade. Use other indicators (like Pentarch) to show you WHEN to trade.
+**A:** Yes. Janus Atlas shows WHERE to trade. Use other indicators (like Pentarch) to show you WHEN to trade.
 
 ---
 
@@ -298,23 +298,23 @@ You don't need to change much. Just show/hide what you use:
 ## Best Practices
 <span style="color: #10b981; font-weight: 600; font-size: 1.1em;">✅ Recommended Approach</span>
 
-1. **Start small** - Use 5-7 key levels, not all 39
-2. **Match to your timeframe** - Scalper vs swing trader needs different levels
-3. **Watch clusters** - Multiple levels together = strongest zones
-4. **Use with structure** - Levels show WHERE, structure shows trend direction
-5. **Be patient** - Wait for price to actually reach the level before trading
+1. **Progressive addition** - Starting with 5-7 key levels rather than all 39
+2. **Timeframe alignment** - Scalper vs swing trader contexts require different level sets
+3. **Cluster observation** - Multiple converging levels typically indicate strongest zones
+4. **Structure integration** - Levels indicate WHERE, structure indicates trend direction
+5. **Patient observation** - Awaiting price arrival at levels before trade evaluation
 
 ---
 
 ## Support
 
-Need help? Check out:
-- [<span class="signal-pilot-brand">Signal Pilot</span> Suite Overview](https://docs.signalpilot.io/suite-index/) - How to combine with other indicators
+Additional resources available:
+- [<span class="signal-pilot-brand">Signal Pilot</span> Suite Overview](https://docs.signalpilot.io/suite-index/) - Indicator combination strategies
 - [Suite Workflow](ref-workflow.md) - Complete trading system
-- [Support](about-support.md) - Get help
+- [Support](about-support.md) - Support resources
 
 ---
 
-**Remember:** Janus Atlas shows you WHERE price may potentially react. Combine it with Pentarch (WHEN potential reversals may happen) or other indicators for best results.
+**Summary:** Janus Atlas displays WHERE price may potentially react. Combining it with Pentarch (WHEN potential reversals may occur) or other indicators often enhances analysis.
 
-**Trade the levels, respect the structure!** 🎯
+**Level trading with structural awareness** 🎯

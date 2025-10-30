@@ -1,19 +1,19 @@
 # How to Set TradingView Alerts
 
-Learn how to set up reliable, close-confirmed alerts for <span class="signal-pilot-brand">Signal Pilot</span> indicators. Proper alert configuration ensures you never miss a signal and never get false intrabar notifications.
+This guide explains the process of setting up reliable, close-confirmed alerts for <span class="signal-pilot-brand">Signal Pilot</span> indicators. Proper alert configuration ensures signals are never missed and false intrabar notifications are avoided.
 
 ---
 
 ## 🎯 Why Alerts Matter
 <span style="color: #0aa1d5; font-weight: 600;">Critical Setup</span>
 
-**Alerts let you:**
-- Get notified instantly when signals fire
-- Trade without watching charts 24/7
-- Automate signal notifications via webhooks
-- Stay on top of multiple markets simultaneously
+**Alerts provide:**
+- Instant notifications when signals fire
+- The ability to trade without watching charts 24/7
+- Automated signal notifications via webhooks
+- Coverage of multiple markets simultaneously
 
-**Key principle:** Always use "Once Per Bar Close" to avoid repainting and false signals.
+**Key principle:** The "Once Per Bar Close" setting avoids repainting and false signals.
 
 ---
 
@@ -23,28 +23,28 @@ These steps work for **any <span class="signal-pilot-brand">Signal Pilot</span> 
 
 ### 1️⃣ Step 1: Open Alert Dialog
 
-**Right-click your chart** → Click **"Add alert..."**
+**The alert dialog can be opened** by right-clicking the chart and selecting **"Add alert..."**
 
-Or use keyboard shortcut: **Alt+A** (Windows) or **Cmd+A** (Mac)
+The keyboard shortcut **Alt+A** (Windows) or **Cmd+A** (Mac) also opens the alert dialog.
 
 ---
 
 ### 2️⃣ Step 2: Select Indicator
 
-**Condition dropdown** → Choose your <span class="signal-pilot-brand">Signal Pilot</span> indicator
+**The Condition dropdown** displays available <span class="signal-pilot-brand">Signal Pilot</span> indicators.
 
 Examples:
 - "Pentarch v8.9"
 - "Omnideck v1.0"
 - "Janus Atlas v1.0"
 
-**Note:** Make sure the indicator is already added to your chart before creating the alert.
+**Note:** The indicator is typically already added to the chart before creating the alert.
 
 ---
 
 ### 3️⃣ Step 3: Choose Event
 
-**Event dropdown** → Select specific signal
+**The Event dropdown** displays available signals for the selected indicator.
 
 **Common Pentarch events:**
 - `IGN Event` - Potential long entry
@@ -63,32 +63,32 @@ Examples:
 
 ---
 
-### 4️⃣ Step 4: Configure Options (CRITICAL!)
+### 4️⃣ Step 4: Configure Options (CRITICAL)
 <span style="color: #dc2626; font-weight: 600;">⚠️ Most Important Step</span>
 
-**Options** → Set **"Once Per Bar Close"**
+**Options** → The setting **"Once Per Bar Close"** is commonly selected.
 
 This is the **most important setting**:
-- ✅ Only alerts when signal is CONFIRMED (bar closed)
+- ✅ Alerts only fire when the signal is CONFIRMED (bar closed)
 - ✅ No disappearing signals
 - ✅ No repainting
-- ❌ WITHOUT this: You'll get false intrabar alerts
+- ❌ WITHOUT this: False intrabar alerts will occur
 
 **Expiration:**
-- Set to "Don't expire" for permanent alerts
-- Or set expiration date if you want temporary alerts
+- "Don't expire" creates permanent alerts
+- An expiration date can be set for temporary alerts
 
 **Actions:**
-- ✅ Check "Notify on App" (mobile notifications)
-- ✅ Check "Show Popup" (desktop notifications)
-- ✅ Check "Send Email" (optional, email notifications)
-- ✅ Check "Webhook URL" (optional, for automation)
+- ✅ "Notify on App" enables mobile notifications
+- ✅ "Show Popup" enables desktop notifications
+- ✅ "Send Email" enables email notifications (optional)
+- ✅ "Webhook URL" enables automation (optional)
 
 ---
 
 ### 5️⃣ Step 5: Name Your Alert
 
-**Alert name field** → Give it a clear, descriptive name
+**The alert name field** allows for clear, descriptive identification.
 
 **Good alert names:**
 - "BTC Daily IGN - Long Entry"
@@ -101,15 +101,15 @@ This is the **most important setting**:
 - "Signal"
 
 **Why naming matters:**
-- You'll have many alerts
-- Clear names help you act quickly
-- Easier to organize and manage
+- Multiple alerts can accumulate
+- Clear names enable quick action
+- Organization and management become easier
 
 ---
 
 ### Step 6: (Optional) Customize Message
 
-**Message field** → Add custom text or use placeholders
+**The Message field** accepts custom text or placeholders.
 
 **Simple message:**
 ```
@@ -145,27 +145,27 @@ Price: {{close}}
 
 ### Step 7: Create Alert
 
-**Click "Create" button**
+**The "Create" button** finalizes and activates the alert.
 
-Your alert is now active!
+The alert becomes active immediately.
 
 ---
 
 ## ✅ What Success Looks Like
 
-**When properly set up, you'll:**
+**When properly configured:**
 
-1. **See alert in your alerts list**
-   - Click "Alerts" button (top toolbar)
-   - Your alert appears in the list
+1. **The alert appears in the alerts list**
+   - The "Alerts" button is located in the top toolbar
+   - Active alerts display in the list
    - Status shows as "Active"
 
-2. **Receive notifications only on bar close**
-   - No mid-bar spam
-   - Only confirmed signals
-   - Reliable, actionable alerts
+2. **Notifications arrive only on bar close**
+   - No mid-bar spam occurs
+   - Only confirmed signals trigger notifications
+   - Alerts remain reliable and actionable
 
-3. **Get notified via your chosen methods**
+3. **Notifications are delivered via chosen methods**
    - Phone notification (if enabled)
    - Email (if enabled)
    - Pop-up on screen (if enabled)
@@ -203,20 +203,20 @@ Price: 67,500
 
 ---
 
-### Don't Over-Alert
+### Considerations for Alert Volume
 
 **Maximum recommended:** 10-15 active alerts
 
 **Why:**
-- Too many = alert fatigue
-- You'll start ignoring them
-- Harder to manage
+- Too many alerts can lead to alert fatigue
+- Alerts may start being ignored
+- Management becomes harder
 
 **Better approach:**
 - Focus on 3-5 main symbols
-- Only alert on key signals (IGN, CAP, BDN)
-- Skip TD and WRN (unless you specifically want them)
-- Use Augury Grid for scanning instead of alerting 20+ symbols
+- Alert only on key signals (IGN, CAP, BDN)
+- TD and WRN can be skipped (unless specifically wanted)
+- Augury Grid provides scanning instead of alerting 20+ symbols
 
 ---
 
@@ -224,17 +224,17 @@ Price: 67,500
 
 **Before relying on alerts:**
 
-1. Create test alert on low timeframe (5m or 15m)
-2. Wait for signal (shouldn't take long)
-3. Verify you receive notification
-4. Check notification on phone
-5. Confirm email arrives (if enabled)
+1. A test alert can be created on a low timeframe (5m or 15m)
+2. The next signal typically arrives quickly
+3. Notification receipt can be verified
+4. Phone notification can be checked
+5. Email arrival can be confirmed (if enabled)
 
 **If not working:**
-- Check TradingView notification settings
-- Check phone app permissions
-- Check email spam folder
-- See [Troubleshooting Guide](ref-troubleshooting.md)
+- TradingView notification settings can be checked
+- Phone app permissions can be verified
+- Email spam folder can be reviewed
+- The [Troubleshooting Guide](ref-troubleshooting.md) provides additional help
 
 ---
 
@@ -242,13 +242,13 @@ Price: 67,500
 
 ### Mistake #1: Not Using "Once Per Bar Close"
 
-**Problem:** Alerts firing intrabar, then signals disappearing
+**Problem:** Alerts fire intrabar, then signals disappear
 
-**Fix:**
-1. Delete incorrect alerts
-2. Create new alerts
-3. Set to **"Once Per Bar Close"**
-4. Save
+**Resolution:**
+1. Incorrect alerts can be deleted
+2. New alerts can be created
+3. The **"Once Per Bar Close"** setting is commonly selected
+4. Settings can be saved
 
 **Why this matters:** Intrabar signals are preliminary and can change. Only closed-bar signals are final.
 
@@ -256,59 +256,59 @@ Price: 67,500
 
 ### Mistake #2: Vague Alert Names
 
-**Problem:** Getting alert "Signal 1" and not knowing what it means
+**Problem:** An alert labeled "Signal 1" provides no context
 
-**Fix:**
-- Include symbol: BTC, ETH, SPY
-- Include timeframe: Daily, 4H, 1H
-- Include event: IGN, CAP, BDN
+**Resolution:**
+- The symbol can be included: BTC, ETH, SPY
+- The timeframe can be specified: Daily, 4H, 1H
+- The event can be noted: IGN, CAP, BDN
 - Example: "BTC 4H IGN Long"
 
 ---
 
 ### Mistake #3: Too Many Alerts
 
-**Problem:** Alert spam, overwhelming notifications
+**Problem:** Alert spam creates overwhelming notifications
 
-**Fix:**
-- Delete low-priority alerts
-- Focus on best 3-5 markets
-- Only alert on entry/exit signals
-- Use Augury Grid for scanning
+**Resolution:**
+- Low-priority alerts can be deleted
+- Focus can be narrowed to the best 3-5 markets
+- Alerts can be limited to entry/exit signals
+- Augury Grid can be used for scanning
 
 ---
 
 ### Mistake #4: Wrong Indicator Selected
 
-**Problem:** Alert not firing or firing on wrong signals
+**Problem:** Alerts don't fire or fire on wrong signals
 
-**Fix:**
-- Ensure indicator is on chart
-- Check indicator version matches alert
-- Confirm event name is correct
-- Test with recent historical signal
+**Resolution:**
+- The indicator's presence on the chart can be verified
+- Indicator version can be matched with alert settings
+- Event name correctness can be confirmed
+- Testing with a recent historical signal can be performed
 
 ---
 
 ### Mistake #5: Mobile Notifications Not Working
 
-**Problem:** Alerts firing but not receiving phone notifications
+**Problem:** Alerts fire but phone notifications aren't received
 
-**Fix:**
+**Resolution:**
 
 **TradingView App:**
-- App → Profile → Settings → Notifications → Enable all
+- App → Profile → Settings → Notifications → All options can be enabled
 
 **iPhone:**
-- Settings → Notifications → TradingView → Allow Notifications
+- Settings → Notifications → TradingView → Notifications can be allowed
 
 **Android:**
-- Settings → Apps → TradingView → Notifications → Enable
+- Settings → Apps → TradingView → Notifications → Notifications can be enabled
 
-**Also check:**
-- Do Not Disturb mode is off
-- Phone has internet connection
-- TradingView app is updated
+**Also worth checking:**
+- Do Not Disturb mode status
+- Phone internet connection
+- TradingView app update status
 
 See [Troubleshooting: Alerts Not Working](ref-troubleshooting.md#alerts-not-firing)
 
@@ -320,20 +320,20 @@ See [Troubleshooting: Alerts Not Working](ref-troubleshooting.md#alerts-not-firi
 
 ### Webhook URL Setup
 
-1. Get webhook URL from your automation platform:
+1. A webhook URL can be obtained from your automation platform:
    - 3Commas
    - Alertatron
    - Custom trading bot
 
 2. In alert settings:
-   - Check "Webhook URL"
-   - Paste your webhook URL
-   - Configure message in JSON format
+   - "Webhook URL" can be checked
+   - The webhook URL can be pasted
+   - The message can be configured in JSON format
 
-3. Test webhook:
-   - Trigger alert (use low timeframe for quick test)
-   - Verify webhook received
-   - Check bot response
+3. Webhook testing process:
+   - An alert can be triggered (low timeframe provides quick testing)
+   - Webhook receipt can be verified
+   - Bot response can be checked
 
 ### Example Webhook Message
 
@@ -350,7 +350,7 @@ See [Troubleshooting: Alerts Not Working](ref-troubleshooting.md#alerts-not-firi
 }
 ```
 
-**Important:** Always test automated trading on paper/demo account first!
+**Important:** Automated trading is commonly tested on paper/demo accounts first.
 
 ---
 
@@ -358,34 +358,34 @@ See [Troubleshooting: Alerts Not Working](ref-troubleshooting.md#alerts-not-firi
 
 ### iOS (iPhone/iPad)
 
-1. Download TradingView app from App Store
-2. Log in with same account
-3. Tap Profile → Settings → Notifications
-4. Enable "Push Notifications"
-5. Enable sound
-6. Enable "Important Alerts First"
+1. The TradingView app can be downloaded from the App Store
+2. The same account credentials can be used to log in
+3. Profile → Settings → Notifications can be accessed
+4. "Push Notifications" can be enabled
+5. Sound can be enabled
+6. "Important Alerts First" can be enabled
 
 **iPhone System Settings:**
 - Settings → Notifications → TradingView
-- Allow Notifications: ON
-- Sounds: ON
-- Badges: ON
-- Show on Lock Screen: ON
+- Allow Notifications: can be turned ON
+- Sounds: can be turned ON
+- Badges: can be turned ON
+- Show on Lock Screen: can be turned ON
 
 ---
 
 ### Android
 
-1. Download TradingView app from Play Store
-2. Log in with same account
-3. Tap Profile → Settings → Notifications
-4. Enable "Push Notifications"
-5. Enable sound
+1. The TradingView app can be downloaded from the Play Store
+2. The same account credentials can be used to log in
+3. Profile → Settings → Notifications can be accessed
+4. "Push Notifications" can be enabled
+5. Sound can be enabled
 
 **Android System Settings:**
 - Settings → Apps → TradingView → Notifications
-- Allow notifications: ON
-- Override Do Not Disturb: ON (optional)
+- Allow notifications: can be turned ON
+- Override Do Not Disturb: can be turned ON (optional)
 
 ---
 
@@ -393,14 +393,14 @@ See [Troubleshooting: Alerts Not Working](ref-troubleshooting.md#alerts-not-firi
 
 **Before considering your alert setup complete:**
 
-- [ ] Alerts set to "Once Per Bar Close"
+- [ ] Alerts are set to "Once Per Bar Close"
 - [ ] Alerts have clear, descriptive names
-- [ ] Tested and confirmed receiving notifications
-- [ ] Mobile app notifications working
-- [ ] Email notifications working (if enabled)
-- [ ] Not overwhelmed with too many alerts (10-15 max)
-- [ ] Organized alerts by symbol/timeframe/type
-- [ ] Webhook configured and tested (if automating)
+- [ ] Notification receipt has been tested and confirmed
+- [ ] Mobile app notifications are working
+- [ ] Email notifications are working (if enabled)
+- [ ] Alert count remains manageable (10-15 max)
+- [ ] Alerts are organized by symbol/timeframe/type
+- [ ] Webhook has been configured and tested (if automating)
 
 ---
 
@@ -425,14 +425,14 @@ See [Troubleshooting: Alerts Not Working](ref-troubleshooting.md#alerts-not-firi
 
 ## 🎓 Pro Tips
 
-1. **Create alerts on higher timeframes first** (Daily, 4H) - cleaner, more reliable
-2. **Test alerts on 15m chart** before trusting them - quick feedback
-3. **Use descriptive names** - you'll thank yourself later
-4. **Don't alert on every signal type** - just IGN, CAP, BDN is usually enough
-5. **Set expiration reminders** - refresh monthly to stay current
-6. **Screenshot your alert settings** - easy to recreate if needed
-7. **Keep a backup list** - document your alert strategy
+1. **Higher timeframe alerts** (Daily, 4H) tend to be cleaner and more reliable
+2. **Testing alerts on a 15m chart** provides quick feedback before trusting them
+3. **Descriptive names** make future management easier
+4. **Selective alerting** - IGN, CAP, BDN is usually sufficient
+5. **Monthly expiration reminders** help keep alerts current
+6. **Screenshot documentation** of alert settings makes recreation easier
+7. **Backup list maintenance** documents the alert strategy
 
 ---
 
-**Ready to receive signals automatically?** Set up your first alert now!
+**Alerts enable automated signal reception.** The setup process can begin now.

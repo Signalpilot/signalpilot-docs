@@ -7,11 +7,11 @@ summary: "How to scan 8 symbols at once with Augury Grid to find fresh opportuni
 
 **Goal:** Monitor 8 different instruments simultaneously on one chart instead of flipping between watchlists.
 
-**What You'll Learn:**
-- Set up your 8-symbol watchlist
-- Read the screener table
-- Filter for high-quality signals
-- Act on fresh opportunities
+**What Can Be Learned:**
+- Setting up an 8-symbol watchlist
+- Reading the screener table
+- Filtering for high-quality signals
+- Acting on fresh opportunities
 
 **Time:** 5-10 minutes
 
@@ -19,14 +19,14 @@ summary: "How to scan 8 symbols at once with Augury Grid to find fresh opportuni
 
 ## What Is Augury Grid?
 
-**Augury Grid v1.0** is your on-chart multi-symbol screener table. It monitors 8 tickers simultaneously and displays:
+**Augury Grid v1.0** is an on-chart multi-symbol screener table. It monitors 8 tickers simultaneously and displays:
 
 - **Live signals** (BUY/SELL) with quality scores (0-100)
 - **Real-time prices** and profit targets
 - **Signal age** (how fresh it is)
 - **P&L tracking** (how the signal is performing)
 
-**Best for:** Multi-asset traders, portfolio management, finding setups across your watchlist
+**Best for:** Multi-asset traders, portfolio management, finding setups across watchlists
 
 📖 **Full documentation:** [Augury Grid v1.0 — Multi-Symbol Screener](augury-grid-v10.md)
 
@@ -34,21 +34,21 @@ summary: "How to scan 8 symbols at once with Augury Grid to find fresh opportuni
 
 ## Quick Setup (3 Steps)
 
-### Step 1: Add Augury Grid to Your Chart
+### Step 1: Add Augury Grid to Chart
 
-1. Open any chart in TradingView
-2. Click **Indicators** → Search "**Augury Grid**"
-3. Add **"SP — Augury Grid v1.0"**
+1. Any chart in TradingView can be opened
+2. **Indicators** can be clicked → "**Augury Grid**" can be searched
+3. **"SP — Augury Grid v1.0"** can be added
 
-**What you'll see:** A table appears showing 8 symbol slots (initially empty or with default symbols)
+**What will be seen:** A table appears showing 8 symbol slots (initially empty or with default symbols)
 
 ---
 
-### Step 2: Configure Your 8 Symbols
+### Step 2: Configure 8 Symbols
 
-1. Click the indicator name → **Settings (gear icon)**
-2. Scroll to **Symbol Configuration**
-3. Enter your 8 tickers (use exact TradingView format):
+1. The indicator name can be clicked → **Settings (gear icon)**
+2. Scrolling to **Symbol Configuration** is available
+3. 8 tickers can be entered (the exact TradingView format is commonly used):
 
 **Example multi-asset watchlist:**
 ```
@@ -63,9 +63,9 @@ Symbol 8: CME_MINI:NQ1!
 ```
 
 **Format requirements:**
-- Include exchange prefix: `BINANCE:`, `NASDAQ:`, `NYSE:`, etc.
-- Use exact TradingView ticker format
-- Test each ticker on a chart first to verify it works
+- The exchange prefix is commonly included: `BINANCE:`, `NASDAQ:`, `NYSE:`, etc.
+- The exact TradingView ticker format is commonly used
+- Each ticker can be tested on a chart first to verify it works
 
 ---
 
@@ -81,7 +81,7 @@ Symbol 8: CME_MINI:NQ1!
 - **Higher (25-30):** Only strong trends
 - **Lower (15):** More signals, lower quality
 
-Click **OK** to save.
+**OK** can be clicked to save.
 
 ---
 
@@ -104,7 +104,7 @@ The table displays 7 columns for each symbol:
 ## Workflow: Finding Opportunities
 
 ### 1. Glance at Grid (10 seconds)
-Scan for:
+Signals can be scanned for:
 - ⭐⭐⭐ **Elite** (80-100) or ⭐⭐ **Premium** (60-79) signals
 - **AGE 0-10 bars** (fresh signals)
 - **Green P&L** (if signal already triggered, it's working)
@@ -117,31 +117,31 @@ BTC/USD │ BUY │ 87 ⭐⭐⭐ │ $64,250 │ $65,800 │ 2 │ +0.3%
 - Elite signal (87)
 - Fresh (2 bars old)
 - Already showing profit (+0.3%)
-- **Action:** Investigate this setup
+- **Action:** This setup can be investigated
 
 ### 3. Verify on Chart (2 minutes)
-Click on the chart to load **BTC/USD** and check:
-- [ ] At support level or key zone? (use [Janus Atlas](janus-atlas-v10.md))
-- [ ] Volume confirming? (use [Minimal Flow](minimal-flow-v10.md))
+The chart can be clicked to load **BTC/USD** and the following can be checked:
+- [ ] At support level or key zone? ([Janus Atlas](janus-atlas-v10.md) can be used)
+- [ ] Volume confirming? ([Minimal Flow](minimal-flow-v10.md) can be used)
 - [ ] No major resistance overhead?
-- [ ] Aligns with your trading bias?
+- [ ] Aligns with trading bias?
 
 ### 4. Enter Trade (if confirmed)
-- Entry: Current price or limit order
-- Stop loss: Below recent low (for BUY) or above recent high (for SELL)
-- Target: Use TP1 from Grid as first target
-- Monitor P&L column to track performance
+- Entry: Current price or limit order can be considered
+- Stop loss: Below recent low (for BUY) or above recent high (for SELL) can be placed
+- Target: TP1 from Grid can be used as first target
+- P&L column can be monitored to track performance
 
 ---
 
-## Quality Tiers (Know These!)
+## Quality Tiers (Reference Guide)
 
-| Score | Quality | Symbol | Typical Win Rate | Action |
-|-------|---------|--------|-----------------|--------|
-| **80-100** | ⭐⭐⭐ Elite | Multiple factors aligned | ~70-80% | Take immediately (after verification) |
-| **60-79** | ⭐⭐ Premium | Strong setup | ~60-70% | Take with normal risk |
-| **40-59** | ⭐ Standard | Basic setup | ~50-60% | Be selective (only if matches your bias) |
-| **0-39** | Weak | Poor confluence | <50% | Skip |
+| Score | Quality | Symbol | Typical Win Rate | Common Approach |
+|-------|---------|--------|-----------------|-----------------|
+| **80-100** | ⭐⭐⭐ Elite | Multiple factors aligned | ~70-80% | Taken immediately (after verification) |
+| **60-79** | ⭐⭐ Premium | Strong setup | ~60-70% | Taken with normal risk |
+| **40-59** | ⭐ Standard | Basic setup | ~50-60% | Selective (only if matches bias) |
+| **0-39** | Weak | Poor confluence | <50% | Typically skipped |
 
 ---
 
@@ -151,9 +151,9 @@ Click on the chart to load **BTC/USD** and check:
 **❌ Problem:** Symbols show no data or "N/A"
 
 **✅ Fix:**
-- Use exact TradingView format: `BINANCE:BTCUSDT` not `BTC` or `BTCUSD`
-- Include exchange prefix
-- Test ticker on chart first before adding to Grid
+- The exact TradingView format is commonly used: `BINANCE:BTCUSDT` not `BTC` or `BTCUSD`
+- The exchange prefix is commonly included
+- Ticker can be tested on chart first before adding to Grid
 
 ---
 
@@ -161,9 +161,9 @@ Click on the chart to load **BTC/USD** and check:
 **❌ Problem:** Taking too many trades, overtrading
 
 **✅ Fix:**
-- Focus on ⭐⭐⭐ Elite and ⭐⭐ Premium signals only
-- Set Min Score to 60+ in settings
-- Always verify on chart before entering
+- Focus can be placed on ⭐⭐⭐ Elite and ⭐⭐ Premium signals only
+- Min Score can be set to 60+ in settings
+- Chart verification commonly occurs before entering
 
 ---
 
@@ -171,9 +171,9 @@ Click on the chart to load **BTC/USD** and check:
 **❌ Problem:** Entering when AGE > 15 bars
 
 **✅ Fix:**
-- Check AGE column
+- AGE column can be checked
 - If >15 bars, signal is likely stale
-- Look for fresh signals (0-10 bars) instead
+- Fresh signals (0-10 bars) can be looked for instead
 
 ---
 
@@ -181,9 +181,9 @@ Click on the chart to load **BTC/USD** and check:
 **❌ Problem:** Not checking if signal is working
 
 **✅ Fix:**
-- If P&L shows -5% and age is high, signal failed — skip it
-- If P&L is green and signal is fresh, it's confirming — good sign
-- Use P&L to validate signal quality
+- If P&L shows -5% and age is high, signal failed—it can be skipped
+- If P&L is green and signal is fresh, it's confirming—good sign
+- P&L can be used to validate signal quality
 
 ---
 
@@ -191,24 +191,24 @@ Click on the chart to load **BTC/USD** and check:
 **❌ Problem:** Blindly trading Grid signals without chart confirmation
 
 **✅ Fix:**
-- Always load the chart
-- Check support/resistance levels
-- Verify volume and structure
-- Grid finds opportunities, YOU confirm quality
+- The chart is typically loaded
+- Support/resistance levels are commonly checked
+- Volume and structure are commonly verified
+- Grid finds opportunities, context confirmation is needed
 
 ---
 
 ## Advanced Tips
 
 ### Tip #1: Mix Timeframes
-You can set different timeframes for each symbol:
+Different timeframes can be set for each symbol:
 ```
 Symbol 1-2 (crypto): 1H
 Symbol 3-4 (stocks): 4H
 Symbol 5-6 (scalp): 15m
 Symbol 7-8 (swing): Daily
 ```
-**Why:** Scan multiple horizons simultaneously
+**Why:** Multiple horizons can be scanned simultaneously
 
 ---
 
@@ -218,7 +218,7 @@ Symbol 1: SPY 15m (scalps)
 Symbol 2: SPY 1H (day trades)
 Symbol 3: SPY 4H (swings)
 ```
-**Why:** See multi-timeframe confluence for one asset
+**Why:** Multi-timeframe confluence can be seen for one asset
 
 ---
 
@@ -227,21 +227,21 @@ Symbol 3: SPY 4H (swings)
 - **Grid 2:** 8 stock tickers (4H)
 - **Total:** 16 symbols monitored
 
-**How:** Add Augury Grid twice to same chart
+**How:** Augury Grid can be added twice to same chart
 
 ---
 
 ### Tip #4: Track Performance by Tier
-After 20+ trades, calculate your win rate:
+After 20+ trades, win rate can be calculated:
 - How many Elite signals won?
 - How many Premium signals won?
-- Adjust Min Score filter based on YOUR results
+- Min Score filter can be adjusted based on results
 
 ---
 
 ## Workflow Example (Real Scenario)
 
-**8:00 AM:** Check Grid
+**8:00 AM:** Grid can be checked
 
 Grid shows:
 ```
@@ -252,69 +252,69 @@ BTC  │ BUY │ 78 ⭐⭐ │ $64,250 │ $65,800 │ 5 │ +0.8%
 
 **Analysis:**
 - **AAPL:** Elite signal (91), fresh (1 bar), already working (+0.1%) ✅
-- **TSLA:** Standard signal (43), stale (18 bars), losing (-2.3%) ❌ Skip
+- **TSLA:** Standard signal (43), stale (18 bars), losing (-2.3%) ❌ Can be skipped
 - **BTC:** Premium signal (78), moderate age (5 bars), working (+0.8%) ✅
 
-**Action:** Focus on **AAPL** and **BTC**
+**Action:** Focus can be placed on **AAPL** and **BTC**
 
 ---
 
-**8:05 AM:** Load AAPL Chart
+**8:05 AM:** AAPL Chart can be loaded
 - At Janus support: ✅
 - Volume spike visible: ✅
 - No resistance overhead: ✅
-- **Decision:** Enter long AAPL at $175.50
+- **Decision:** Long AAPL consideration at $175.50
 
 ---
 
-**8:10 AM:** Load BTC Chart
+**8:10 AM:** BTC Chart can be loaded
 - Breaking out of consolidation: ✅
 - Higher timeframe aligned: ✅
-- **Decision:** Enter long BTC at $64,300
+- **Decision:** Long BTC consideration at $64,300
 
 ---
 
-**Throughout day:** Monitor P&L column to track trades
+**Throughout day:** P&L column can be monitored to track trades
 
 ---
 
 **4:00 PM:** Results
 - AAPL hit TP1 at $177.80 (+1.3%)
-- BTC still running, moved stop to breakeven
+- BTC still running, stop moved to breakeven
 
 ---
 
 ## Why This Matters
 
 ### Without Augury Grid:
-- Manually flip through 8-20 charts
-- Miss signals while looking at other symbols
-- No systematic quality scoring
-- Hard to track multiple setups
+- Manual flipping through 8-20 charts is required
+- Signals can be missed while looking at other symbols
+- No systematic quality scoring available
+- Multiple setups are hard to track
 
 ### With Augury Grid:
-- See all 8 symbols in one glance (10 seconds)
-- Quality scores show you what's worth investigating
-- Track performance in real-time
-- Focus on your best opportunities
+- All 8 symbols can be seen in one glance (10 seconds)
+- Quality scores show what's worth investigating
+- Performance can be tracked in real-time
+- Focus can be placed on best opportunities
 
-**Bottom line:** Save 30+ minutes per scan, catch more opportunities, trade only the best setups.
+**Bottom line:** 30+ minutes per scan can be saved, more opportunities can be caught, only the best setups are traded.
 
 ---
 
 ## Common Questions
 
 **Q: Can I add more than 8 symbols?**
-**A:** Not in one Grid (performance limit). But you can add 2 Grid instances = 16 symbols total.
+**A:** Not in one Grid (performance limit). But 2 Grid instances can be added = 16 symbols total.
 
 **Q: What if a symbol shows no data?**
-**A:** Check: (1) Ticker format correct? (2) Exchange prefix included? (3) Available on your TradingView plan?
+**A:** The following can be checked: (1) Ticker format correct? (2) Exchange prefix included? (3) Available on TradingView plan?
 
 **Q: Should I trade every Elite signal?**
-**A:** No. Elite = high quality potential, but still verify context, levels, and your trading plan. No system is 100%.
+**A:** No. Elite = high quality potential, but context, levels, and trading plan can be verified. No system is 100%.
 
 **Q: Can I get alerts from the Grid?**
-**A:** No (table indicators can't create alerts). Workaround: When you see Elite signal, set manual alert on that symbol's chart.
+**A:** No (table indicators can't create alerts). Workaround: When Elite signal is seen, manual alert can be set on that symbol's chart.
 
 **Q: How often does it update?**
 **A:** Every bar close on configured timeframes. If Symbol 1 is set to 15m, it updates every 15 minutes.
@@ -323,9 +323,9 @@ BTC  │ BUY │ 78 ⭐⭐ │ $64,250 │ $65,800 │ 5 │ +0.8%
 
 ## Next Steps
 
-✅ **You've learned:** How to scan 8 symbols simultaneously with Augury Grid
+✅ **Learning achieved:** How to scan 8 symbols simultaneously with Augury Grid
 
-**Continue learning:**
+**Continued learning available:**
 - 📖 [Full Augury Grid Documentation](augury-grid-v10.md) - Advanced settings, scoring system details
 - 📊 [Janus Atlas (Support/Resistance)](janus-atlas-v10.md) - Verify key levels for Grid signals
 - 🔔 [Set Up Alerts](how-to-alerts.md) - Alert on individual symbols when Grid shows Elite signals
@@ -333,4 +333,4 @@ BTC  │ BUY │ 78 ⭐⭐ │ $64,250 │ $65,800 │ 5 │ +0.8%
 
 ---
 
-**Remember:** Augury Grid is your opportunity scanner across multiple symbols. It highlights what to investigate — YOU verify and execute. Scan smart, trade better! 🎯
+**Important consideration:** Augury Grid is an opportunity scanner across multiple symbols. It highlights what to investigate—context verification and execution decisions remain with the trader. Scan smart, trade better.

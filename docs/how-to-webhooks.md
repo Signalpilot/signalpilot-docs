@@ -1,6 +1,6 @@
 # Webhooks (TradingView → Bot)
 
-Send alerts to your bot/API using TradingView webhooks.
+Alerts can be sent to a bot/API using TradingView webhooks.
 
-## 1) Create the alert
-- In the alert dialog, check **“Webhook URL”** and paste your endpoint, e.g.:
+## 1) Creating the alert
+- In the alert dialog, **"Webhook URL"** can be checked and the endpoint can be pasted, e.g.:

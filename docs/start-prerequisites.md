@@ -1,6 +1,6 @@
 # Getting Started Prerequisites
 
-Before you start using <span class="signal-pilot-brand">Signal Pilot</span> indicators, make sure you have everything you need. This checklist ensures a smooth setup and successful trading experience.
+Before starting with <span class="signal-pilot-brand">Signal Pilot</span> indicators, all necessary components can be verified. This checklist ensures a smooth setup and successful trading experience.
 
 ---
 
@@ -11,7 +11,7 @@ Before you start using <span class="signal-pilot-brand">Signal Pilot</span> indi
 
 **Minimum:** TradingView Essential (paid plan)
 
-**Why paid subscription required:**
+**Why paid subscription is required:**
 - <span class="signal-pilot-brand">Signal Pilot</span> indicators use advanced Pine Script features
 - Free TradingView accounts have limited functionality
 - Private/invite-only scripts require paid subscription
@@ -21,14 +21,14 @@ Before you start using <span class="signal-pilot-brand">Signal Pilot</span> indi
 - **Pro** ($29.95/month) - Better for active traders (more alerts, faster data)
 - **Pro+** ($59.95/month) - Best for serious traders (even more features)
 
-**What you get with paid:**
+**What can be accessed with paid:**
 - Access to private indicators
 - More simultaneous alerts
 - Faster data feeds
 - Multiple charts per tab
 - Priority customer support
 
-**✅ Action:** [Upgrade your TradingView account](https://www.tradingview.com/pricing/)
+**✅ Action:** [TradingView account can be upgraded](https://www.tradingview.com/pricing/)
 
 ---
 
@@ -37,33 +37,33 @@ Before you start using <span class="signal-pilot-brand">Signal Pilot</span> indi
 
 **Purchase & Access:**
 
-1. **Purchase** the <span class="signal-pilot-brand">Signal Pilot</span> Suite
-   - Visit [signalpilot.io/#pricing](https://signalpilot.io/#pricing)
-   - Choose your plan
-   - Complete payment
+1. **The <span class="signal-pilot-brand">Signal Pilot</span> Suite can be purchased**
+   - [signalpilot.io/#pricing](https://signalpilot.io/#pricing) can be visited
+   - Plan can be chosen
+   - Payment can be completed
 
-2. **Receive confirmation email**
-   - Check inbox and spam folder
+2. **Confirmation email can be received**
+   - Inbox and spam folder can be checked
    - Contains access instructions
 
-3. **Provide TradingView username**
-   - Reply to email or use provided form
-   - **Important:** Give the EXACT TradingView username
-   - Check your username: TradingView → Profile → Settings
+3. **TradingView username can be provided**
+   - Email can be replied to or provided form can be used
+   - **Important:** The EXACT TradingView username can be provided
+   - Username can be checked: TradingView → Profile → Settings
 
-4. **Wait for access grant**
-   - Usually within 24 hours
-   - Check for confirmation email
-   - Indicators will appear in your TradingView account
+4. **Access grant can be awaited**
+   - Usually occurs within 24 hours
+   - Confirmation email can be checked for
+   - Indicators will appear in TradingView account
 
-**✅ Action:** Complete purchase and access request
+**✅ Action:** Purchase and access request can be completed
 
 ---
 
 ### 📚 3. Basic Trading Knowledge (Recommended)
 <span style="color: #f59e0b; font-weight: 600;">Highly Recommended</span>
 
-**You should understand:**
+**These concepts can be understood:**
 
 **Essential concepts:**
 - Support and resistance levels
@@ -78,30 +78,30 @@ Before you start using <span class="signal-pilot-brand">Signal Pilot</span> indi
 - Common chart patterns
 - Risk/reward ratios
 
-**If you're completely new:**
-- Take a basic trading course first
-- Paper trade for 1-2 months
-- Learn candlestick basics
-- Understand risk management
+**If completely new:**
+- A basic trading course can be taken first
+- Paper trading for 1-2 months can be practiced
+- Candlestick basics can be learned
+- Risk management can be understood
 
 **Resources for beginners:**
 - [TradingView Education](https://www.tradingview.com/education/)
 - [Investopedia Trading Basics](https://www.investopedia.com/trading-4427765)
 - <span class="signal-pilot-brand">Signal Pilot</span> [Education Portal](https://education.signalpilot.io/)
 
-**✅ Action:** Assess your knowledge, fill gaps if needed
+**✅ Action:** Knowledge can be assessed, gaps can be filled if needed
 
 ---
 
 ### 🏦 4. Trading Platform/Broker (If Trading Live)
 <span style="color: #10b981; font-weight: 600;">For Live Trading</span>
 
-**For paper trading:** Just TradingView is fine
+**For paper trading:** Just TradingView is sufficient
 
-**For live trading:** You need a broker
+**For live trading:** A broker is needed
 
 **Compatible brokers:**
-- Any broker that supports your markets
+- Any broker that supports the desired markets
 - Crypto: Binance, Coinbase, Kraken, etc.
 - Forex: OANDA, FXCM, Interactive Brokers
 - Stocks: TD Ameritrade, Interactive Brokers, Fidelity
@@ -109,9 +109,9 @@ Before you start using <span class="signal-pilot-brand">Signal Pilot</span> indi
 
 **TradingView broker integration:**
 - Some brokers allow trading directly from TradingView
-- Check [TradingView Brokers page](https://www.tradingview.com/brokers/)
+- [TradingView Brokers page](https://www.tradingview.com/brokers/) can be checked
 
-**✅ Action:** Have broker account ready (if trading live)
+**✅ Action:** Broker account can be prepared (if trading live)
 
 ---
 
@@ -127,31 +127,31 @@ Before you start using <span class="signal-pilot-brand">Signal Pilot</span> indi
 - **Forex:** $500-$1,000 minimum
 - **Stocks:** $2,000-$5,000 minimum (depends on broker/regulations)
 
-**Why these minimums:**
+**Why these minimums exist:**
 - Proper position sizing with 1-2% risk per trade
 - Example: $500 account × 1% = $5 risk per trade
 - Below these amounts, position sizing becomes difficult
 
 **IMPORTANT:**
-- Only trade with money you can afford to lose
-- Start with paper trading first
+- Only money that can be afforded to lose is commonly traded
+- Paper trading can be started with first
 - Transition to live only after consistent paper profits
-- Never trade with rent money, savings, or borrowed funds
+- Rent money, savings, or borrowed funds are typically not traded
 
-**✅ Action:** Ensure you have appropriate capital (or start with paper trading)
+**✅ Action:** Appropriate capital can be ensured (or paper trading can be started)
 
 ---
 
 ### ⏰ 6. Time Commitment
 <span style="color: #0aa1d5; font-weight: 600;">Plan Your Schedule</span>
 
-**How much time do you need?**
+**How much time is needed?**
 
 **Initial learning phase (first 2-4 weeks):**
 - 1-2 hours daily to learn indicators
-- Study signal types
-- Practice identification
-- Paper trade
+- Signal types can be studied
+- Identification can be practiced
+- Paper trading can be performed
 
 **Ongoing trading time:**
 
@@ -162,7 +162,7 @@ Before you start using <span class="signal-pilot-brand">Signal Pilot</span> indi
 - Total: 5-7 hours/day
 
 **Swing trading:**
-- Check charts 2-3 times daily (30 min each)
+- Charts can be checked 2-3 times daily (30 min each)
 - Weekend analysis: 1-2 hours
 - Total: 3-5 hours/week
 
@@ -171,7 +171,7 @@ Before you start using <span class="signal-pilot-brand">Signal Pilot</span> indi
 - Weekly analysis: 1-2 hours
 - Total: 2-3 hours/week
 
-**✅ Action:** Choose style matching your available time
+**✅ Action:** Style matching available time can be chosen
 
 ---
 
@@ -190,9 +190,9 @@ Before you start using <span class="signal-pilot-brand">Signal Pilot</span> indi
 
 **Browser requirements:**
 - Modern browser (updated within last year)
-- JavaScript enabled
-- Cookies enabled
-- Pop-ups allowed for TradingView
+- JavaScript is required to be enabled
+- Cookies are required to be enabled
+- Pop-ups are required to be allowed for TradingView
 
 **Mobile trading:**
 - TradingView mobile app (iOS/Android)
@@ -200,13 +200,13 @@ Before you start using <span class="signal-pilot-brand">Signal Pilot</span> indi
 - Not ideal for full analysis
 - Better for swing/position trading
 
-**✅ Action:** Ensure your setup meets requirements
+**✅ Action:** Setup meeting requirements can be ensured
 
 ---
 
 ### 8. Market Selection
 
-**Choose your markets:**
+**Markets can be chosen:**
 
 **<span class="signal-pilot-brand">Signal Pilot</span> works on ALL markets:**
 - Cryptocurrency (24/7 trading)
@@ -231,34 +231,34 @@ Before you start using <span class="signal-pilot-brand">Signal Pilot</span> indi
 - Any liquid market
 - Multiple markets simultaneously
 
-**✅ Action:** Choose 1-3 markets to focus on initially
+**✅ Action:** 1-3 markets to focus on initially can be chosen
 
 ---
 
 ## 📋 Pre-Setup Checklist
 
-Complete this before starting:
+This can be completed before starting:
 
-- [ ] TradingView paid subscription active
-- [ ] <span class="signal-pilot-brand">Signal Pilot</span> Suite purchased
-- [ ] TradingView username provided for access
-- [ ] Confirmation email received (access granted)
-- [ ] Basic trading knowledge acquired
-- [ ] Broker account set up (if trading live)
-- [ ] Trading capital ready (or paper trading planned)
-- [ ] Time commitment understood
-- [ ] Computer/equipment ready
-- [ ] Markets selected
+- [ ] TradingView paid subscription is active
+- [ ] <span class="signal-pilot-brand">Signal Pilot</span> Suite has been purchased
+- [ ] TradingView username has been provided for access
+- [ ] Confirmation email has been received (access granted)
+- [ ] Basic trading knowledge has been acquired
+- [ ] Broker account has been set up (if trading live)
+- [ ] Trading capital is ready (or paper trading planned)
+- [ ] Time commitment is understood
+- [ ] Computer/equipment is ready
+- [ ] Markets have been selected
 
-**All checked?** → Proceed to [Onboarding Checklist](start-onboarding.md)
+**All checked?** → [Onboarding Checklist](start-onboarding.md) can be proceeded to
 
-**Missing items?** → Complete prerequisites first
+**Missing items?** → Prerequisites can be completed first
 
 ---
 
 ## 🎓 Learning Resources
 
-### Before You Start Trading
+### Before Trading Begins
 
 **Free resources:**
 - [TradingView Education Center](https://www.tradingview.com/education/)
@@ -277,23 +277,23 @@ Complete this before starting:
 
 **Common misconceptions:**
 
-❌ **Don't need:** Programming knowledge
+❌ **Not needed:** Programming knowledge
 ✅ **Reality:** Indicators are ready to use, no coding required
 
-❌ **Don't need:** Trading bots or automation (initially)
-✅ **Reality:** Start with manual trading, automate later if desired
+❌ **Not needed:** Trading bots or automation (initially)
+✅ **Reality:** Manual trading can be started with, automation can be added later if desired
 
-❌ **Don't need:** Expensive courses or "gurus"
+❌ **Not needed:** Expensive courses or "gurus"
 ✅ **Reality:** <span class="signal-pilot-brand">Signal Pilot</span> docs and practice are sufficient
 
-❌ **Don't need:** All 7 indicators from day one
-✅ **Reality:** Start with Pentarch, add others as you learn
+❌ **Not needed:** All 7 indicators from day one
+✅ **Reality:** Pentarch can be started with, others can be added as learning progresses
 
-❌ **Don't need:** Huge capital to start
-✅ **Reality:** Paper trading is free, live can start with $500-$1000
+❌ **Not needed:** Huge capital to start
+✅ **Reality:** Paper trading is free, live can be started with $500-$1000
 
-❌ **Don't need:** To quit your job
-✅ **Reality:** Start part-time, swing trading works with 9-5 job
+❌ **Not needed:** Quitting job
+✅ **Reality:** Part-time can be started, swing trading works with 9-5 job
 
 ---
 
@@ -303,12 +303,12 @@ Complete this before starting:
 
 1. **Next:** [Onboarding Checklist](start-onboarding.md)
    - Step-by-step setup guide
-   - Your first 7 days with <span class="signal-pilot-brand">Signal Pilot</span>
+   - First 7 days with <span class="signal-pilot-brand">Signal Pilot</span>
    - From installation to first trade
 
 2. **Then:** [Quick Start Guide](start-quick.md)
-   - Learn Pentarch in 5 minutes
-   - Understand the 5 signal types
+   - Pentarch can be learned in 5 minutes
+   - The 5 signal types can be understood
    - Example trade walkthrough
 
 3. **Finally:** [Trading Workflow](ref-workflow.md)
@@ -325,6 +325,6 @@ Complete this before starting:
 - [FAQ](about-faq.md) - Frequently asked questions
 - [Support](about-support.md) - Contact information
 
-**Not ready yet?** That's okay! Come back when you've completed the prerequisites. Trading requires preparation—take your time.
+**Not ready yet?** That's acceptable. Prerequisites can be completed and then return. Trading requires preparation—time can be taken.
 
-**Ready to proceed?** Great! Let's get you set up: [Onboarding Checklist](start-onboarding.md) →
+**Ready to proceed?** Excellent. Setup can begin: [Onboarding Checklist](start-onboarding.md) →

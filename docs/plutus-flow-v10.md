@@ -3,7 +3,7 @@
 ## 🎯 What Does It Do?
 <span style="color: #0aa1d5; font-weight: 600;">Core Functionality</span>
 
-Plutus Flow is an **advanced On-Balance Volume (OBV) indicator** that shows you when smart money may be accumulating (buying) or distributing (selling). Unlike standard OBV, it prevents volume spike distortion and detects potential powerful divergences.
+Plutus Flow is an **advanced On-Balance Volume (OBV) indicator** that shows when smart money may be accumulating (buying) or distributing (selling). Unlike standard OBV, it prevents volume spike distortion and detects potential powerful divergences.
 
 **Best for:** Volume analysis, divergence trading, flow confirmation
 
@@ -19,7 +19,7 @@ Plutus Flow is an **advanced On-Balance Volume (OBV) indicator** that shows you 
 **Why it matters:**
 - OBV rising = Accumulation (smart money buying)
 - OBV falling = Distribution (smart money selling)
-- OBV diverging from price = Warning signal
+- OBV diverging from price = Potential warning signal
 
 ---
 
@@ -31,14 +31,14 @@ One huge volume bar (earnings, news) can permanently skew OBV, hiding subtle cha
 
 **Plutus Solution: Spike-Clipping**
 
-- Caps extreme volume at 3× average
-- Preserves direction (buy vs sell)
-- Prevents permanent distortion
+- Extreme volume is capped at 3× average
+- Direction is preserved (buy vs sell)
+- Permanent distortion is prevented
 - Result: Smooth, reliable OBV line
 
 ---
 
-## What You See (Bottom Pane)
+## What Can Be Seen (Bottom Pane)
 
 ### The OBV Line
 
@@ -67,7 +67,7 @@ One huge volume bar (earnings, news) can permanently skew OBV, hiding subtle cha
 - Potential flow shift from accumulation to distribution
 - Potential entry signal for shorts
 
-**FlipGuard protection:** Prevents whipsaw with cooldown period
+**FlipGuard protection:** Whipsaw is prevented with cooldown period
 
 ---
 
@@ -83,7 +83,7 @@ One huge volume bar (earnings, news) can permanently skew OBV, hiding subtle cha
 - Distribution climax
 - Often precedes reversal OR breakdown continuation
 
-**Use with context:** Check price action to know if reversal or continuation
+**Context can be used:** Price action can be checked to identify reversal or continuation patterns
 
 ---
 
@@ -122,7 +122,7 @@ One huge volume bar (earnings, news) can permanently skew OBV, hiding subtle cha
 
 **Simple check:**
 - **Price up, OBV up** = Healthy (volume confirms)
-- **Price up, OBV flat/down** = Weak (divergence warning)
+- **Price up, OBV flat/down** = Weak (potential divergence warning)
 - **Price down, OBV down** = Healthy downtrend
 - **Price down, OBV flat/up** = Weak downtrend (divergence)
 
@@ -131,25 +131,25 @@ One huge volume bar (earnings, news) can permanently skew OBV, hiding subtle cha
 ### Step 2: Use Cross Signals for Entry
 
 **Bullish cross:**
-1. OBV crosses above basis line (green circle)
-2. Verify price action (bullish candle, support nearby?)
-3. Enter long
-4. Stop below recent low
+1. OBV crosses above basis line (green circle) can be observed
+2. Price action can be verified (bullish candle, support nearby?)
+3. Long entry can be considered
+4. Stop below recent low can be placed
 
 **Bearish cross:**
-1. OBV crosses below basis line (red circle)
-2. Verify price action (bearish candle, resistance nearby?)
-3. Enter short
-4. Stop above recent high
+1. OBV crosses below basis line (red circle) can be observed
+2. Price action can be verified (bearish candle, resistance nearby?)
+3. Short entry can be considered
+4. Stop above recent high can be placed
 
 ---
 
 ### Step 3: Trade Divergences (Highest Probability)
 
 **The setup:**
-1. Wait for potential divergence label (BULL DIV or BEAR DIV)
-2. Confirm potential divergence is at key level (use Janus Atlas for levels)
-3. Wait for potential price reversal confirmation (candle pattern, cross signal)
+1. Potential divergence label (BULL DIV or BEAR DIV) can be awaited
+2. Potential divergence at key level can be confirmed (Janus Atlas can be used for levels)
+3. Potential price reversal confirmation can be awaited (candle pattern, cross signal)
 4. Example entry in divergence direction
 5. Example stop beyond the divergence pivot
 
@@ -167,7 +167,7 @@ One huge volume bar (earnings, news) can permanently skew OBV, hiding subtle cha
 
 **The Trade:**
 1. Potential divergence detected at resistance level (Weekly High from Janus Atlas)
-2. Wait for price reversal candle (shooting star forms)
+2. Price reversal candle can be awaited (shooting star forms)
 3. OBV crosses below basis line (potential bearish cross signal)
 4. Example entry short at 4,440
 5. Example stop above divergence high at 4,460
@@ -188,7 +188,7 @@ One huge volume bar (earnings, news) can permanently skew OBV, hiding subtle cha
 
 **FlipGuard:**
 - **Cooldown:** 5 bars (prevents whipsaw)
-- Keep enabled (default)
+- Enabled is kept (default)
 
 **Divergence:**
 - **Show All Types:** Enabled (Regular + Hidden)
@@ -196,14 +196,14 @@ One huge volume bar (earnings, news) can permanently skew OBV, hiding subtle cha
 - **Min Swing:** 1.5× ATR (filters tiny divergences)
 
 **HTF Alignment:**
-- Enable for swing trading (check 4× your timeframe)
-- Disable for scalping
+- Can be enabled for swing trading (check 4× timeframe)
+- Can be disabled for scalping
 
-**Most traders use default settings**
+**Default settings are used by most traders**
 
 ---
 
-## Alerts (Set These!)
+## Alerts (Can Be Set)
 
 1. **OBV Cross Up** - Bullish cross
 2. **OBV Cross Down** - Bearish cross
@@ -213,30 +213,30 @@ One huge volume bar (earnings, news) can permanently skew OBV, hiding subtle cha
 6. **Regular Bearish Divergence** - BEAR DIV
 
 **How to set:**
-1. Click alarm icon
-2. Select "Plutus Flow v1.0"
-3. Choose alert
-4. Set to "Once Per Bar Close"
+1. Alarm icon can be clicked
+2. "Plutus Flow v1.0" can be selected
+3. Alert can be chosen
+4. Can be set to "Once Per Bar Close"
 
 ---
 
-## Common Mistakes (Avoid These!)
-<span style="color: #dc2626; font-weight: 600; font-size: 1.1em;">🚨 Critical Errors to Avoid</span>
+## Common Mistakes
+<span style="color: #dc2626; font-weight: 600; font-size: 1.1em;">🚨 Critical Errors</span>
 
 ❌ **Trading divergences in isolation**
-→ ✅ Divergence + key level (use Janus Atlas) = Much higher win rate
+→ ✅ Divergence + key level (Janus Atlas can be used) = Much higher win rate
 
 ❌ **Chasing extreme breaches**
-→ ✅ Extreme breach = Warning, not entry. Wait for price reaction.
+→ ✅ Extreme breach = Warning, not entry. Price reaction can be awaited.
 
 ❌ **Ignoring the OBV trend**
-→ ✅ OBV trending up + price pullback = Buy the dip. OBV flat + price up = Be careful.
+→ ✅ OBV trending up + price pullback = Buy the dip. OBV flat + price up = Caution advised.
 
 ❌ **Using on Forex spot**
-→ ✅ Needs volume data! Use futures, stocks, crypto. Forex spot has NO volume.
+→ ✅ Volume data is needed. Futures, stocks, crypto can be used. Forex spot has NO volume.
 
 ❌ **Not waiting for confirmation**
-→ ✅ See divergence label → Wait for price reversal candle → Then enter
+→ ✅ Divergence label can be observed → Price reversal candle can be awaited → Then entry
 
 ---
 
@@ -251,7 +251,7 @@ One huge volume bar (earnings, news) can permanently skew OBV, hiding subtle cha
 - **Divergences:** 70-80% win rate (but rarer)
 - **Crosses:** 60-65% win rate (more frequent)
 
-Use crosses for active trading, divergences for high-conviction setups.
+Crosses can be used for active trading, divergences for high-conviction setups.
 
 **Q: Why did divergence appear 10 bars after the pivot?**
 **A:** Divergence detection requires confirmed pivot (bars on both sides). Lag is intentional to prevent repaint. Once it appears, it's real.
@@ -263,7 +263,7 @@ Use crosses for active trading, divergences for high-conviction setups.
 **A:** Only the first bar crossing INTO the zone fires a signal. While it stays in zone = No new signals (prevents spam).
 
 **Q: Does it repaint?**
-**A:** No. All signals lock at bar close. What you see is what you get.
+**A:** No. All signals lock at bar close. What is seen is final.
 
 ---
 
@@ -271,10 +271,10 @@ Use crosses for active trading, divergences for high-conviction setups.
 
 | Signal | Meaning | Action |
 |--------|---------|--------|
-| OBV Cross Up (green circle) | Flow shift to buying | **Enter long** |
-| OBV Cross Down (red circle) | Flow shift to selling | **Enter short** |
-| Extreme Bullish Breach (orange) | Accumulation climax | Watch for reaction |
-| Extreme Bearish Breach (purple) | Distribution climax | Watch for reaction |
+| OBV Cross Up (green circle) | Flow shift to buying | **Long entry can be considered** |
+| OBV Cross Down (red circle) | Flow shift to selling | **Short entry can be considered** |
+| Extreme Bullish Breach (orange) | Accumulation climax | Reaction can be watched |
+| Extreme Bearish Breach (purple) | Distribution climax | Reaction can be watched |
 | BULL DIV (green label) | Price/OBV disagree | **Reversal up** likely |
 | BEAR DIV (red label) | Price/OBV disagree | **Reversal down** likely |
 | H-BULL (light green) | Hidden divergence | **Continuation up** |
@@ -282,33 +282,31 @@ Use crosses for active trading, divergences for high-conviction setups.
 
 | OBV vs Price | Interpretation | Action |
 |--------------|---------------|--------|
-| Both rising | Healthy uptrend | Take longs |
-| Price up, OBV flat/down | Weak uptrend | Be cautious, watch for divergence |
-| Both falling | Healthy downtrend | Take shorts |
-| Price down, OBV flat/up | Weak downtrend | Be cautious, watch for divergence |
+| Both rising | Healthy uptrend | Longs can be taken |
+| Price up, OBV flat/down | Weak uptrend | Caution advised, divergence can be watched |
+| Both falling | Healthy downtrend | Shorts can be taken |
+| Price down, OBV flat/up | Weak downtrend | Caution advised, divergence can be watched |
 
 ---
 
 ## Best Practices
 <span style="color: #10b981; font-weight: 600; font-size: 1.1em;">✅ Recommended Approach</span>
 
-1. **Combine with price action** - Divergence alone is interesting, divergence + reversal candle = Entry
-2. **Trade divergences at key levels** - Use with Janus Atlas for support/resistance
-3. **Respect extreme breaches** - They're warnings, not entry signals - wait for reaction
-4. **Don't chase crosses** - Enter on signal bar or next bar, not 5 bars later
-5. **Enable HTF for swing trading** - Filters counter-trend signals
+1. **Can be combined with price action** - Divergence alone is interesting, divergence + reversal candle = Entry
+2. **Divergences can be traded at key levels** - Can be used with Janus Atlas for support/resistance
+3. **Extreme breaches are commonly respected** - They're warnings, not entry signals - reaction can be awaited
+4. **Crosses shouldn't be chased** - Entry on signal bar or next bar, not 5 bars later
+5. **HTF can be enabled for swing trading** - Filters counter-trend signals
 
 ---
 
 ## Support
 
-Need help? Check out:
+Help is available at:
 - [<span class="signal-pilot-brand">Signal Pilot</span> Suite Overview](https://docs.signalpilot.io/suite-index/) - How to combine with other indicators
 - [Suite Workflow](ref-workflow.md) - Complete trading system
 - [Support](about-support.md) - Get help
 
 ---
 
-**Remember:** Plutus Flow shows you where smart money may be accumulating or distributing. When OBV and price disagree (potential divergence) = Potential major move coming. Combine with levels for highest probability.
-
-**Follow the money flow!** 🎯
+**Important consideration:** Plutus Flow shows where smart money may be accumulating or distributing. When OBV and price disagree (potential divergence) = Potential major move coming. Can be combined with levels for highest probability.

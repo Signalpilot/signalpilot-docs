@@ -98,39 +98,39 @@ Want to see how all 7 indicators work together?
 
 ---
 
-## 👋 New User? Start Here!
+## 👋 New User Resources
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
 
 <div style="background: linear-gradient(135deg, color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent), color-mix(in srgb, var(--md-accent-fg-color) 8%, transparent)); border-radius: 12px; padding: 2rem; border-left: 4px solid var(--md-primary-fg-color);">
 <h3 style="margin-top: 0; color: var(--md-primary-fg-color);">🚀 Complete Beginner</h3>
-<p style="font-weight: 600; margin-bottom: 1.5rem;">Never used <span class="signal-pilot-brand">Signal Pilot</span> before?</p>
+<p style="font-weight: 600; margin-bottom: 1.5rem;">New to <span class="signal-pilot-brand">Signal Pilot</span>?</p>
 <ol style="line-height: 1.8; margin: 0; padding-left: 1.25rem;">
-<li><a href="start-prerequisites/"><strong>Prerequisites</strong></a> - Get ready (5 min)</li>
-<li><a href="start-quick/"><strong>⚡ Quick Start</strong></a> - First signal in 5 min</li>
-<li><a href="start-onboarding/"><strong>Onboarding</strong></a> - Your first 7 days</li>
-<li><a href="how-to-alerts/"><strong>Set Alerts</strong></a> - Never miss signals</li>
+<li><a href="start-prerequisites/"><strong>Prerequisites</strong></a> - Preparation guide (5 min)</li>
+<li><a href="start-quick/"><strong>⚡ Quick Start</strong></a> - Initial setup walkthrough</li>
+<li><a href="start-onboarding/"><strong>Onboarding</strong></a> - First 7 days guide</li>
+<li><a href="how-to-alerts/"><strong>Alert Setup</strong></a> - Notification configuration</li>
 </ol>
 </div>
 
 <div style="background: linear-gradient(135deg, color-mix(in srgb, var(--md-accent-fg-color) 8%, transparent), color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent)); border-radius: 12px; padding: 2rem; border-left: 4px solid var(--md-accent-fg-color);">
-<h3 style="margin-top: 0; color: var(--md-accent-fg-color);">📊 Already Have Indicators</h3>
-<p style="font-weight: 600; margin-bottom: 1.5rem;">Need to learn how to use them?</p>
+<h3 style="margin-top: 0; color: var(--md-accent-fg-color);">📊 Indicator Usage Guides</h3>
+<p style="font-weight: 600; margin-bottom: 1.5rem;">Learning how indicators are used:</p>
 <ul style="line-height: 1.8; margin: 0; padding-left: 1.25rem; list-style: none;">
-<li>→ <a href="start-quick/"><strong>Quick Start</strong></a> - Master Pentarch</li>
-<li>→ <a href="ref-comparison/"><strong>Comparison</strong></a> - Which indicators?</li>
-<li>→ <a href="ref-workflow/"><strong>Workflow</strong></a> - Complete process</li>
-<li>→ <a href="ref-best-practices/"><strong>Best Practices</strong></a> - Pro tips</li>
+<li>→ <a href="start-quick/"><strong>Quick Start</strong></a> - Pentarch introduction</li>
+<li>→ <a href="ref-comparison/"><strong>Comparison</strong></a> - Indicator selection guide</li>
+<li>→ <a href="ref-workflow/"><strong>Workflow</strong></a> - Process overview</li>
+<li>→ <a href="ref-best-practices/"><strong>Best Practices</strong></a> - Professional tips</li>
 </ul>
 </div>
 
 <div style="background: linear-gradient(135deg, color-mix(in srgb, #dc2626 8%, transparent), color-mix(in srgb, #f59e0b 8%, transparent)); border-radius: 12px; padding: 2rem; border-left: 4px solid #dc2626;">
-<h3 style="margin-top: 0; color: #dc2626;">🆘 Having Issues?</h3>
-<p style="font-weight: 600; margin-bottom: 1.5rem;">Get help quickly:</p>
+<h3 style="margin-top: 0; color: #dc2626;">🆘 Issue Resolution</h3>
+<p style="font-weight: 600; margin-bottom: 1.5rem;">Help resources available:</p>
 <ul style="line-height: 1.8; margin: 0; padding-left: 1.25rem; list-style: none;">
-<li>→ <a href="ref-troubleshooting/"><strong>Troubleshooting</strong></a> - Fix problems</li>
+<li>→ <a href="ref-troubleshooting/"><strong>Troubleshooting</strong></a> - Problem resolution</li>
 <li>→ <a href="about-faq/"><strong>FAQ</strong></a> - 20+ answered questions</li>
-<li>→ <a href="about-support/"><strong>Support</strong></a> - Contact us</li>
+<li>→ <a href="about-support/"><strong>Support</strong></a> - Contact information</li>
 </ul>
 </div>
 
@@ -192,27 +192,27 @@ Want to see how all 7 indicators work together?
 
 ## 🎯 Quick Selector
 
-**Not sure which indicator to start with?**
+**Indicator selection by focus area:**
 
-### I want to identify potential reversals
+### Potential reversal identification
 → **[Pentarch v1.0](pentarch-v10.md)** - 5 simple potential reversal signals (TD/IGN/WRN/CAP/BDN)
 
-### I want to see key levels
+### Key level visualization
 → **[Janus Atlas v1.0](janus-atlas-v10.md)** - Daily/Weekly/Monthly highs/lows, VWAP, session levels, structure
 
-### I want everything in one indicator
+### Comprehensive analysis
 → **[Omnideck v1.0](omnideck-v10.md)** - 10 systems combined (TD, Squeeze, EMAs, Zones, Patterns, etc.)
 
-### I want to scan multiple symbols
-→ **[Augury Grid v1.0](augury-grid-v10.md)** - Watch 8 symbols at once with quality scores
+### Multi-symbol scanning
+→ **[Augury Grid v1.0](augury-grid-v10.md)** - 8-symbol monitoring with quality scores
 
-### I want volume-based signals
+### Volume-based analysis
 → **[Minimal Flow v1.0](minimal-flow-v10.md)** - Volume spikes + position management system
 
-### I want momentum/oscillator signals
+### Momentum/oscillator analysis
 → **[Harmonic Oscillator v1.0](harmonic-oscillator-v10.md)** - 3-in-1 composite (MACD+RSI+StochRSI)
 
-### I want to see money flow (OBV)
+### Money flow (OBV) analysis
 → **[Plutus Flow v1.0](plutus-flow-v10.md)** - Advanced OBV with divergence detection
 
 ---
@@ -256,10 +256,10 @@ Want to see how all 7 indicators work together?
 ---
 
 <div style="text-align: center; padding: 3rem 2rem; background: linear-gradient(135deg, color-mix(in srgb, var(--md-primary-fg-color) 12%, transparent), color-mix(in srgb, var(--md-accent-fg-color) 12%, transparent)); border-radius: 20px; margin-top: 3rem; border: 2px solid color-mix(in srgb, var(--md-primary-fg-color) 30%, transparent);">
-  <h2 style="font-size: 2rem; margin-bottom: 1rem; color: var(--md-primary-fg-color); font-family: var(--sp-brand-font);">Ready to Trade with Confidence?</h2>
-  <p style="font-size: 1.1rem; margin-bottom: 2rem; color: var(--md-default-fg-color); max-width: 600px; margin-left: auto; margin-right: auto;">Join traders using <span class="signal-pilot-brand">Signal Pilot</span>'s battle-tested indicators. Non-repainting signals, crystal-clear documentation, and rock-solid alerts.</p>
+  <h2 style="font-size: 2rem; margin-bottom: 1rem; color: var(--md-primary-fg-color); font-family: var(--sp-brand-font);">Trading with Confidence</h2>
+  <p style="font-size: 1.1rem; margin-bottom: 2rem; color: var(--md-default-fg-color); max-width: 600px; margin-left: auto; margin-right: auto;">Traders use <span class="signal-pilot-brand">Signal Pilot</span>'s battle-tested indicators. Non-repainting signals, crystal-clear documentation, and rock-solid alerts.</p>
   <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-    <a href="https://signalpilot.io/#pricing" style="display: inline-block; padding: 0.85rem 2.5rem; background: linear-gradient(115deg, var(--md-primary-fg-color), var(--md-accent-fg-color)); color: white; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 1.1rem; box-shadow: 0 4px 16px rgba(52, 92, 255, 0.4); transition: all 0.2s;">Get the Suite</a>
-    <a href="suite-index/" style="display: inline-block; padding: 0.85rem 2.5rem; background: transparent; color: var(--md-primary-fg-color); border: 2px solid var(--md-primary-fg-color); border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 1.1rem; transition: all 0.2s;">Explore Indicators</a>
+    <a href="https://signalpilot.io/#pricing" style="display: inline-block; padding: 0.85rem 2.5rem; background: linear-gradient(115deg, var(--md-primary-fg-color), var(--md-accent-fg-color)); color: white; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 1.1rem; box-shadow: 0 4px 16px rgba(52, 92, 255, 0.4); transition: all 0.2s;">Suite Pricing</a>
+    <a href="suite-index/" style="display: inline-block; padding: 0.85rem 2.5rem; background: transparent; color: var(--md-primary-fg-color); border: 2px solid var(--md-primary-fg-color); border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 1.1rem; transition: all 0.2s;">Indicator Overview</a>
   </div>
 </div>

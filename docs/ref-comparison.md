@@ -1,6 +1,6 @@
 # Indicator Comparison Guide
 
-Which <span class="signal-pilot-brand">Signal Pilot</span> indicators should you use? This guide helps you choose the right tools for your trading style and experience level.
+<span class="signal-pilot-brand">Signal Pilot</span> indicator selection can be matched to trading style and experience level. This guide presents the comparison framework.
 
 ---
 
@@ -96,11 +96,11 @@ Detects potential reversal points with 5 distinct signal types (TD, IGN, WRN, CA
 - No volume or momentum context
 - Can produce signals at poor levels
 
-**Use alone if:** You're a beginner or only trade reversals
+**Standalone usage:** Commonly used alone by beginners or reversal-focused traders
 
-**Pair with:** Janus Atlas (for level confirmation)
+**Common pairing:** Janus Atlas (for level confirmation)
 
-**Skip if:** You only trade breakouts or continuations
+**May be skipped:** By traders focused exclusively on breakouts or continuations
 
 ---
 
@@ -124,13 +124,13 @@ Identifies key price levels: support, resistance, FVG, order blocks, structure b
 **Limitations:**
 - Doesn't provide timing signals (levels only)
 - Requires price action understanding
-- Can display many levels (important ones need filtering)
+- Can display many levels (important ones are commonly filtered)
 
-**Use alone if:** You're experienced with level-based trading
+**Standalone usage:** Commonly used alone by experienced level-based traders
 
-**Pair with:** Pentarch (for entry timing at levels)
+**Common pairing:** Pentarch (for entry timing at levels)
 
-**Skip if:** You don't use levels in your strategy
+**May be skipped:** By traders who don't incorporate levels in their strategy
 
 ---
 
@@ -165,11 +165,11 @@ Combines ALL suite indicators into one comprehensive dashboard
 - Busy on smaller screens
 - Requires understanding all components
 
-**Use alone if:** You want complete, all-in-one solution
+**Standalone usage:** Designed as complete, all-in-one solution
 
-**Pair with:** Nothing—it includes everything
+**Common pairing:** None—includes all functionality
 
-**Skip if:** You prefer simple, focused indicators
+**May be skipped:** By traders preferring simple, focused indicators
 
 ---
 
@@ -196,11 +196,11 @@ Scans multiple symbols simultaneously, showing signals in a table format
 - Limited to TradingView symbol limits
 - Table can be large with many symbols
 
-**Use alone if:** You're scanning for opportunities
+**Standalone usage:** Designed for scanning opportunities
 
-**Pair with:** Pentarch or Omnideck on individual charts
+**Common pairing:** Pentarch or Omnideck on individual charts
 
-**Skip if:** You only trade 1-2 symbols
+**May be skipped:** By traders focusing on 1-2 symbols
 
 ---
 
@@ -227,11 +227,11 @@ Analyzes order flow and volume patterns for confirmation
 - Best as confirmation tool
 - Crypto volumes can be misleading
 
-**Use alone if:** Never—needs Pentarch or other signals
+**Standalone usage:** Not designed for standalone use—requires price signals
 
-**Pair with:** Pentarch + Janus (signal + level + volume)
+**Common pairing:** Pentarch + Janus (signal + level + volume)
 
-**Skip if:** You don't use volume in strategy
+**May be skipped:** By traders who don't incorporate volume in strategy
 
 ---
 
@@ -258,11 +258,11 @@ Combines multiple oscillators into one momentum indicator
 - Requires interpretation
 - Best as confirmation
 
-**Use alone if:** Never—needs price signals
+**Standalone usage:** Not designed for standalone use—requires price signals
 
-**Pair with:** Pentarch (signal + momentum confirmation)
+**Common pairing:** Pentarch (signal + momentum confirmation)
 
-**Skip if:** You don't use momentum indicators
+**May be skipped:** By traders who don't use momentum indicators
 
 ---
 
@@ -289,11 +289,11 @@ Enhanced On-Balance Volume indicator for volume trend analysis
 - Best as confirmation
 - Requires volume understanding
 
-**Use alone if:** Never—needs price signals
+**Standalone usage:** Not designed for standalone use—requires price signals
 
-**Pair with:** Pentarch + Janus
+**Common pairing:** Pentarch + Janus
 
-**Skip if:** Volume isn't part of your strategy
+**May be skipped:** By traders who don't incorporate volume in strategy
 
 ---
 
@@ -351,76 +351,76 @@ Stop: Based on Omnideck structure
 Why: Find setups fast, trade with full info
 Workflow:
 1. Augury finds signals across watchlist
-2. Open promising charts
-3. Verify setup on execution chart
-4. Trade
+2. Promising charts can be opened
+3. Setup can be verified on execution chart
+4. Trading can be executed
 ```
 
 ---
 
 ## 🤔 Decision Tree: Which Indicators Do I Need?
 
-### Question 1: Are you brand new to trading?
+### Question 1: Trading experience level?
 
-**→ Yes:** Start with **Pentarch only**
-Master it for 2-4 weeks, then revisit this guide
+**→ Brand new to trading:** **Pentarch only** commonly recommended
+Initial mastery period: 2-4 weeks, then guide revisitation
 
-**→ No, I have some experience:** Continue to Question 2
-
----
-
-### Question 2: Do you want everything in one indicator?
-
-**→ Yes:** Use **Omnideck**
-You're done—no need for others
-
-**→ No, I prefer custom setups:** Continue to Question 3
+**→ Some experience present:** Question 2 applies
 
 ---
 
-### Question 3: Do you trade reversals or breakouts?
+### Question 2: All-in-one preference?
 
-**→ Reversals:** **Pentarch** is essential
+**→ Single comprehensive indicator preferred:** **Omnideck** is appropriate
+Other indicators not required
 
-**→ Breakouts:** **Janus Atlas** is essential
-
-**→ Both:** Need both Pentarch + Janus
-
----
-
-### Question 4: Do you use volume in your trading?
-
-**→ Yes:** Add **Minimal Flow**
-
-**→ Yes, especially divergence:** Add **Plutus Flow**
-
-**→ No:** Skip volume indicators
+**→ Custom setup preferred:** Question 3 applies
 
 ---
 
-### Question 5: Do you use momentum/oscillators?
+### Question 3: Reversal or breakout focus?
 
-**→ Yes:** Add **Harmonic Oscillator**
+**→ Reversal focus:** **Pentarch** commonly essential
 
-**→ No:** Skip
+**→ Breakout focus:** **Janus Atlas** commonly essential
 
----
-
-### Question 6: Do you trade multiple symbols?
-
-**→ Yes, 5+ symbols:** Add **Augury Grid** for scanning
-
-**→ No, 1-3 symbols:** Skip, just check each chart
+**→ Both approaches:** Both Pentarch + Janus typically used
 
 ---
 
-## 💡 Common Mistakes to Avoid
+### Question 4: Volume incorporation?
+
+**→ Volume used:** **Minimal Flow** commonly added
+
+**→ Volume divergence focus:** **Plutus Flow** commonly added
+
+**→ Volume not used:** Volume indicators typically skipped
+
+---
+
+### Question 5: Momentum/oscillator usage?
+
+**→ Momentum used:** **Harmonic Oscillator** commonly added
+
+**→ Momentum not used:** Typically skipped
+
+---
+
+### Question 6: Multi-symbol trading?
+
+**→ 5+ symbols:** **Augury Grid** commonly added for scanning
+
+**→ 1-3 symbols:** Grid typically skipped, charts checked individually
+
+---
+
+## 💡 Common Mistakes
 
 ### ❌ Using Too Many Indicators
 
 **Problem:** All 7 indicators on one chart
 **Issue:** Overwhelming, slow, analysis paralysis
-**Fix:** Maximum 3 indicators per chart
+**Fix:** Commonly recommended maximum of 3 indicators per chart
 
 ---
 
@@ -428,7 +428,7 @@ You're done—no need for others
 
 **Problem:** Only using Minimal Flow or Harmonic Oscillator
 **Issue:** No entry triggers
-**Fix:** Must have signal indicator (Pentarch or Omnideck)
+**Fix:** A signal indicator (Pentarch or Omnideck) is required
 
 ---
 
@@ -436,15 +436,15 @@ You're done—no need for others
 
 **Problem:** Taking Pentarch signals anywhere
 **Issue:** Many false signals away from levels
-**Fix:** Add Janus Atlas, only trade at key levels
+**Fix:** Janus Atlas can be added, trading at key levels is commonly practiced
 
 ---
 
 ### ❌ Switching Indicators Too Fast
 
 **Problem:** Changing setup every week
-**Issue:** Never master anything
-**Fix:** Stick with one setup for at least 3 months
+**Issue:** Mastery becomes difficult
+**Fix:** Sticking with one setup for at least 3 months is commonly recommended
 
 ---
 
@@ -452,7 +452,7 @@ You're done—no need for others
 
 **Problem:** Omnideck + Pentarch + Janus all loaded
 **Issue:** Duplicate signals, redundant data
-**Fix:** Choose Omnideck OR individual indicators, not both
+**Fix:** Omnideck OR individual indicators can be chosen, but not both
 
 ---
 
@@ -511,20 +511,20 @@ You're done—no need for others
 - Goal: Understand all 5 signal types
 
 ### Week 3-4: Confirmation
-- Add Janus Atlas
-- Learn to identify key levels
-- Only trade Pentarch signals AT Janus levels
+- Janus Atlas can be added
+- Key levels can be learned to identify
+- Pentarch signals can be traded only AT Janus levels
 - Goal: Understand confluence
 
 ### Week 5-6: Refinement
-- Add ONE confirmation indicator:
-  - Minimal Flow (if you like volume)
-  - Harmonic Oscillator (if you like momentum)
+- ONE confirmation indicator can be added:
+  - Minimal Flow (if volume is liked)
+  - Harmonic Oscillator (if momentum is liked)
 - Goal: Filter for highest probability setups
 
 ### Week 7-8: Efficiency
-- Add Augury Grid if trading multiple symbols
-- Streamline workflow
+- Augury Grid can be added if trading multiple symbols
+- Workflow can be streamlined
 - Goal: Fast scanning, confident execution
 
 ### Week 9+: Mastery
@@ -542,4 +542,4 @@ You're done—no need for others
 - [Trading Workflow](ref-workflow.md) - Complete process
 - [Best Practices](ref-best-practices.md) - Pro tips
 
-**Still unsure?** Start with **Pentarch only** for 2 weeks. You can always add more later.
+**Selection uncertainty:** **Pentarch only** for 2 weeks is a common starting approach. Additional indicators can be added later.
