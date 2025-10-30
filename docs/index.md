@@ -100,31 +100,39 @@ Want to see how all 7 indicators work together?
 
 ## 👋 New User? Start Here!
 
-<div style="background: linear-gradient(135deg, #345CFF15, #0aa1d515); border-radius: 16px; padding: 2.5rem; margin-bottom: 2rem; border-left: 4px solid var(--md-primary-fg-color);">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
 
-### 🚀 Complete Beginner
+<div style="background: linear-gradient(135deg, color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent), color-mix(in srgb, var(--md-accent-fg-color) 8%, transparent)); border-radius: 12px; padding: 2rem; border-left: 4px solid var(--md-primary-fg-color);">
+<h3 style="margin-top: 0; color: var(--md-primary-fg-color);">🚀 Complete Beginner</h3>
+<p style="font-weight: 600; margin-bottom: 1.5rem;">Never used <span class="signal-pilot-brand">Signal Pilot</span> before?</p>
+<ol style="line-height: 1.8; margin: 0; padding-left: 1.25rem;">
+<li><a href="start-prerequisites/"><strong>Prerequisites</strong></a> - Get ready (5 min)</li>
+<li><a href="start-quick/"><strong>⚡ Quick Start</strong></a> - First signal in 5 min</li>
+<li><a href="start-onboarding/"><strong>Onboarding</strong></a> - Your first 7 days</li>
+<li><a href="how-to-alerts/"><strong>Set Alerts</strong></a> - Never miss signals</li>
+</ol>
+</div>
 
-**Never used <span class="signal-pilot-brand">Signal Pilot</span> before?** Follow this path:
+<div style="background: linear-gradient(135deg, color-mix(in srgb, var(--md-accent-fg-color) 8%, transparent), color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent)); border-radius: 12px; padding: 2rem; border-left: 4px solid var(--md-accent-fg-color);">
+<h3 style="margin-top: 0; color: var(--md-accent-fg-color);">📊 Already Have Indicators</h3>
+<p style="font-weight: 600; margin-bottom: 1.5rem;">Need to learn how to use them?</p>
+<ul style="line-height: 1.8; margin: 0; padding-left: 1.25rem; list-style: none;">
+<li>→ <a href="start-quick/"><strong>Quick Start</strong></a> - Master Pentarch</li>
+<li>→ <a href="ref-comparison/"><strong>Comparison</strong></a> - Which indicators?</li>
+<li>→ <a href="ref-workflow/"><strong>Workflow</strong></a> - Complete process</li>
+<li>→ <a href="ref-best-practices/"><strong>Best Practices</strong></a> - Pro tips</li>
+</ul>
+</div>
 
-1. **[Prerequisites](start-prerequisites.md)** - Make sure you have everything you need (5 min)
-2. **[⚡ Quick Start Guide](start-quick.md)** - Get your first signal in 5 minutes
-3. **[Onboarding Checklist](start-onboarding.md)** - Your first 7 days step-by-step
-4. **[How to Set Alerts](how-to-alerts.md)** - Never miss a signal (3 min setup)
-
-### 📊 Already Have Indicators
-
-**Just need to learn how to use them?**
-
-- **[Quick Start Guide](start-quick.md)** - Master Pentarch in 5 minutes
-- **[Comparison Guide](ref-comparison.md)** - Which indicators should you use?
-- **[Trading Workflow](ref-workflow.md)** - Complete trading process
-- **[Best Practices](ref-best-practices.md)** - Pro tips and guidelines
-
-### 🆘 Having Issues?
-
-- **[Troubleshooting Guide](ref-troubleshooting.md)** - Fix common problems
-- **[FAQ](about-faq.md)** - 20+ frequently asked questions
-- **[Support](about-support.md)** - Contact us
+<div style="background: linear-gradient(135deg, color-mix(in srgb, #dc2626 8%, transparent), color-mix(in srgb, #f59e0b 8%, transparent)); border-radius: 12px; padding: 2rem; border-left: 4px solid #dc2626;">
+<h3 style="margin-top: 0; color: #dc2626;">🆘 Having Issues?</h3>
+<p style="font-weight: 600; margin-bottom: 1.5rem;">Get help quickly:</p>
+<ul style="line-height: 1.8; margin: 0; padding-left: 1.25rem; list-style: none;">
+<li>→ <a href="ref-troubleshooting/"><strong>Troubleshooting</strong></a> - Fix problems</li>
+<li>→ <a href="about-faq/"><strong>FAQ</strong></a> - 20+ answered questions</li>
+<li>→ <a href="about-support/"><strong>Support</strong></a> - Contact us</li>
+</ul>
+</div>
 
 </div>
 

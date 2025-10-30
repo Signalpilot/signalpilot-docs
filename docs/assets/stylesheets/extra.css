@@ -243,6 +243,52 @@
 /* Mobile navigation: Let MkDocs Material handle it natively - no custom CSS */
 
 /* ========================================
+   NEW USER CARDS - START HERE SECTION
+   ======================================== */
+
+/* Make links in cards more obvious */
+.md-typeset div[style*="border-left: 4px solid"] a {
+  color: var(--md-primary-fg-color) !important;
+  text-decoration: underline !important;
+  font-weight: 600 !important;
+}
+
+.md-typeset div[style*="border-left: 4px solid"] a:hover {
+  color: var(--md-accent-fg-color) !important;
+}
+
+/* Mobile: Stack cards vertically */
+@media screen and (max-width: 768px) {
+  div[style*="grid-template-columns: repeat(auto-fit, minmax(300px"] {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  div[style*="border-left: 4px solid"] {
+    padding: 1.5rem !important;
+  }
+
+  div[style*="border-left: 4px solid"] h3 {
+    font-size: 1.2rem !important;
+  }
+
+  div[style*="border-left: 4px solid"] ol,
+  div[style*="border-left: 4px solid"] ul {
+    font-size: 0.95rem !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  div[style*="border-left: 4px solid"] {
+    padding: 1.25rem !important;
+  }
+
+  div[style*="border-left: 4px solid"] h3 {
+    font-size: 1.1rem !important;
+  }
+}
+
+/* ========================================
    HOMEPAGE H1 - "SIGNAL PILOT DOCUMENTATION"
    ======================================== */
 
