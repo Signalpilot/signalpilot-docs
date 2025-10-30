@@ -275,7 +275,7 @@ body {
 
 /* Slim top brand bar we inject with an override */
 .sp-topnav {
-  position: sticky; top: 0; z-index: 1000;
+  position: sticky; top: 0; z-index: 3;
   backdrop-filter: blur(14px);
   background: color-mix(in srgb, var(--md-default-bg-color) 82%, transparent);
   border-bottom: 1px solid rgba(127, 151, 195, .22);
@@ -416,7 +416,31 @@ body {
 .sp-cta { margin-left: auto; display:inline-flex; padding:.5rem .9rem; border-radius:999px; font-weight:800; text-decoration:none; color:#fff; background: linear-gradient(115deg, var(--md-primary-fg-color), var(--md-accent-fg-color)); }
 
 /* Keep Material header nicely spaced below our top bar */
-.md-header { top: 0; }
+.md-header {
+  top: 0;
+  z-index: 4;
+  position: sticky;
+}
+
+/* On mobile, ensure Material header is ABOVE custom nav so hamburger menu is accessible */
+@media screen and (max-width: 76.1875em) {
+  .md-header {
+    z-index: 1001 !important;
+    background: var(--md-default-bg-color);
+  }
+
+  /* Ensure hamburger button is clickable and visible */
+  .md-header__button.md-icon {
+    position: relative;
+    z-index: 1002;
+    color: var(--md-default-fg-color) !important;
+  }
+
+  /* Custom nav below header on mobile */
+  .sp-topnav {
+    z-index: 1000;
+  }
+}
 
 /* Hide the duplicate "SignalPilot" text in Material header (we have it in top nav already) */
 .md-header__title {

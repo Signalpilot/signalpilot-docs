@@ -244,29 +244,11 @@
    MOBILE NAVIGATION MENU FIX
    ======================================== */
 
-/* Ensure navigation drawer works on mobile */
+/* Ensure navigation drawer works on mobile with proper z-index */
 @media screen and (max-width: 76.1875em) {
-  /* Make hamburger menu more visible */
-  .md-header__button.md-icon {
-    color: var(--md-default-fg-color);
-  }
-
-  /* Ensure navigation drawer is accessible */
+  /* Navigation drawer - below header but above content */
   .md-nav--primary {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    max-width: 320px;
-    height: 100%;
-    z-index: 200;
-    overflow-y: auto;
-  }
-
-  /* Navigation drawer background */
-  .md-nav--primary .md-nav__inner {
-    background: var(--md-default-bg-color);
-    height: 100%;
+    z-index: 999;
   }
 
   /* Better touch targets in mobile menu */
@@ -295,28 +277,10 @@
     font-weight: 600;
   }
 
-  /* Ensure menu overlay works */
-  [data-md-toggle="drawer"]:checked ~ .md-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.54);
-    z-index: 199;
-  }
-}
-
-/* Mobile: Make menu icon more prominent */
-@media screen and (max-width: 640px) {
-  .md-header__button.md-icon {
-    padding: 0.5rem;
-  }
-
-  /* Adjust for custom top nav bar */
-  .md-nav--primary {
-    top: 3.5rem;
-    height: calc(100% - 3.5rem);
+  /* Ensure menu overlay works - below drawer and header */
+  .md-overlay {
+    z-index: 998 !important;
+    background: rgba(0, 0, 0, 0.54) !important;
   }
 }
 
