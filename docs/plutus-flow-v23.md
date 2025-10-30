@@ -115,6 +115,7 @@ One huge volume bar (earnings, news) can permanently skew OBV, hiding subtle cha
 ---
 
 ## How to Use It (3 Simple Steps)
+<span style="color: #0aa1d5; font-weight: 600; font-size: 1.1em;">🎓 Essential Learning Guide</span>
 
 ### Step 1: Watch the OBV Line
 
@@ -219,6 +220,7 @@ One huge volume bar (earnings, news) can permanently skew OBV, hiding subtle cha
 ---
 
 ## Common Mistakes (Avoid These!)
+<span style="color: #dc2626; font-weight: 600; font-size: 1.1em;">🚨 Critical Errors to Avoid</span>
 
 ❌ **Trading divergences in isolation**
 → ✅ Divergence + key level (use Janus Atlas) = Much higher win rate
@@ -286,6 +288,7 @@ Use crosses for active trading, divergences for high-conviction setups.
 ---
 
 ## Best Practices
+<span style="color: #10b981; font-weight: 600; font-size: 1.1em;">✅ Recommended Approach</span>
 
 1. **Combine with price action** - Divergence alone is interesting, divergence + reversal candle = Entry
 2. **Trade divergences at key levels** - Use with Janus Atlas for support/resistance
