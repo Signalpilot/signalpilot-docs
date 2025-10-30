@@ -1,6 +1,7 @@
 # Janus Atlas v1.0 - Your Market Map
 
-## What Does It Do?
+## 🎯 What Does It Do?
+<span style="color: #0aa1d5; font-weight: 600;">Core Functionality</span>
 
 Janus Atlas shows you **every important level on your chart** - all at once. Think of it like having a professional trading floor's price levels marked for you automatically.
 
@@ -8,7 +9,8 @@ Janus Atlas shows you **every important level on your chart** - all at once. Thi
 
 ---
 
-## The Levels (What You Get)
+## 📍 The Levels (What You Get)
+<span style="color: #10b981; font-weight: 600;">Level Types</span>
 <span style="color: #0aa1d5; font-weight: 600; font-size: 1.1em;">⭐ Core Feature - 39 Level Types Available</span>
 
 ### 📅 Timeframe Levels
@@ -185,7 +187,8 @@ Start watching for shorts
 
 ---
 
-## Settings (Keep It Simple)
+## ⚙️ Settings (Keep It Simple)
+<span style="color: #10b981; font-weight: 600;">Configuration Options</span>
 
 You don't need to change much. Just show/hide what you use:
 
@@ -241,7 +244,8 @@ You don't need to change much. Just show/hide what you use:
 
 ---
 
-## Frequently Asked Questions
+## ❓ Frequently Asked Questions
+<span style="color: #10b981; font-weight: 600;">Common Questions</span>
 
 **Q: How often do these levels change?**
 **A:**

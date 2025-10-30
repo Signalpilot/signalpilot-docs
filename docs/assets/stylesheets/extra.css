@@ -53,6 +53,98 @@
 }
 
 /* ========================================
+   KEYWORD STYLING - COLOR-CODED TERMS
+   ======================================== */
+
+/* Base keyword styling */
+.md-typeset .kw-signal,
+.md-typeset .kw-tech,
+.md-typeset .kw-level,
+.md-typeset .kw-action,
+.md-typeset .kw-quality,
+.md-typeset .kw-divergence,
+.md-typeset .kw-volume {
+  font-weight: 700;
+  padding: 0.15em 0.5em;
+  border-radius: 4px;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+/* Pentarch Signals - Colored badges with left border */
+.md-typeset .kw-signal.td {
+  color: #60a5fa !important;
+  background: rgba(96, 165, 250, 0.15);
+  border-left: 3px solid #60a5fa;
+}
+
+.md-typeset .kw-signal.ign {
+  color: #34d399 !important;
+  background: rgba(52, 211, 153, 0.15);
+  border-left: 3px solid #34d399;
+}
+
+.md-typeset .kw-signal.wrn {
+  color: #fbbf24 !important;
+  background: rgba(251, 191, 36, 0.15);
+  border-left: 3px solid #fbbf24;
+}
+
+.md-typeset .kw-signal.cap {
+  color: #f87171 !important;
+  background: rgba(248, 113, 113, 0.15);
+  border-left: 3px solid #f87171;
+}
+
+.md-typeset .kw-signal.bdn {
+  color: #dc2626 !important;
+  background: rgba(220, 38, 38, 0.15);
+  border-left: 3px solid #dc2626;
+}
+
+/* Technical Indicators - Purple */
+.md-typeset .kw-tech {
+  color: #a78bfa !important;
+  background: rgba(167, 139, 250, 0.15);
+  border-left: 3px solid #a78bfa;
+}
+
+/* Levels/Structure - Cyan */
+.md-typeset .kw-level {
+  color: #22d3ee !important;
+  background: rgba(34, 211, 238, 0.15);
+  border-left: 3px solid #22d3ee;
+}
+
+/* Actions - Orange */
+.md-typeset .kw-action {
+  color: #fb923c !important;
+  background: rgba(251, 146, 60, 0.15);
+  border-left: 3px solid #fb923c;
+}
+
+/* Quality - Gold */
+.md-typeset .kw-quality {
+  color: #fbbf24 !important;
+  background: rgba(251, 191, 36, 0.15);
+  border-left: 3px solid #fbbf24;
+}
+
+/* Divergence - Pink */
+.md-typeset .kw-divergence {
+  color: #f472b6 !important;
+  background: rgba(244, 114, 182, 0.15);
+  border-left: 3px solid #f472b6;
+}
+
+/* Volume - Lime */
+.md-typeset .kw-volume {
+  color: #84cc16 !important;
+  background: rgba(132, 204, 22, 0.15);
+  border-left: 3px solid #84cc16;
+}
+
+/* ========================================
    VISUAL HIERARCHY MARKERS - RESPONSIVE
    ======================================== */
 

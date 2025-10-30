@@ -1,6 +1,7 @@
 # Minimal Flow v1.0 Ultimate - Volume Intelligence System
 
-## What Does It Do?
+## 🎯 What Does It Do?
+<span style="color: #0aa1d5; font-weight: 600;">Core Functionality</span>
 
 Minimal Flow is your **potential volume spike detector with built-in position management**. It shows you when smart money may be moving (potential volume spikes), indicates the direction is real (flow consistency), and manages your entire trade from entry to exit.
 
@@ -286,7 +287,8 @@ Each signal gets rated 0-100:
 
 ---
 
-## Frequently Asked Questions
+## ❓ Frequently Asked Questions
+<span style="color: #10b981; font-weight: 600;">Common Questions</span>
 
 **Q: Do I need to enable position management?**
 **A:** No. You can use signals only and manage manually. But position management is the power feature - highly recommended.

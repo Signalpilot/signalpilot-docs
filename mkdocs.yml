@@ -69,6 +69,7 @@ extra_css:
 extra_javascript:
   - assets/brand.js
   - assets/sp-bg.js
+  - assets/keyword-highlighter.js
   
 
 nav:

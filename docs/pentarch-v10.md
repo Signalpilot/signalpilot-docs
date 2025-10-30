@@ -1,6 +1,7 @@
 # Pentarch v1.0 - Potential Reversal Signals Made Simple
 
-## What Does It Do?
+## 🎯 What Does It Do?
+<span style="color: #0aa1d5; font-weight: 600;">Core Functionality</span>
 
 Pentarch displays **5 simple signals** that indicate when price may potentially reverse. Think of it like traffic lights for potential reversals - visual indicators showing different phases of potential trend changes.
 
@@ -10,7 +11,8 @@ Pentarch displays **5 simple signals** that indicate when price may potentially 
 
 ---
 
-## The 5 Signals (Easy to Understand)
+## 🔢 The 5 Signals (Easy to Understand)
+<span style="color: #10b981; font-weight: 600;">Signal Types</span>
 
 ### 🔵 TD - Touchdown (Early-Cycle Warning)
 
@@ -87,7 +89,8 @@ Pentarch displays **5 simple signals** that indicate when price may potentially 
 
 ---
 
-## Common Usage Patterns
+## 📚 Common Usage Patterns
+<span style="color: #8b5cf6; font-weight: 600;">How Traders Use It</span>
 
 ### Signal Observation
 
@@ -443,7 +446,8 @@ When you look at a Pentarch chart, you see four layers working together:
 
 ---
 
-## Settings (Keep It Simple)
+## ⚙️ Settings (Keep It Simple)
+<span style="color: #10b981; font-weight: 600;">Configuration Options</span>
 
 You don't need to change much. The defaults work great.
 
@@ -456,7 +460,8 @@ Most traders just use the default settings.
 
 ---
 
-## Alert Configuration
+## 🔔 Alert Configuration
+<span style="color: #0aa1d5; font-weight: 600;">Get Notified</span>
 
 **Commonly monitored alerts:**
 1. **IGN Event** → Indicates potential long entry conditions
@@ -490,7 +495,8 @@ Most traders just use the default settings.
 
 ---
 
-## Frequently Asked Questions
+## ❓ Frequently Asked Questions
+<span style="color: #10b981; font-weight: 600;">Common Questions</span>
 
 **Q: How often do signals appear?**
 **A:** Depends on timeframe:
