@@ -434,27 +434,33 @@ body {
     width: auto;
   }
 
-  /* FIX: Ensure drawer is ABOVE overlay and clickable */
+  /* FIX: Ensure drawer is in its own stacking context and ABOVE everything */
   .md-nav--primary {
-    z-index: 200 !important;
+    z-index: 9999 !important;
+    position: fixed !important;
     background: var(--md-default-bg-color) !important;
-    opacity: 1 !important;
+    isolation: isolate !important;
   }
 
-  /* FIX: Overlay BELOW drawer */
+  /* FIX: Overlay BELOW drawer and NOT catching clicks on drawer */
   .md-overlay {
-    z-index: 199 !important;
+    z-index: 9998 !important;
+    pointer-events: none !important;
   }
 
-  /* FIX: Make all nav items clickable */
-  .md-nav__link {
+  /* FIX: Allow overlay to catch clicks only when menu is open */
+  [data-md-toggle="drawer"]:checked ~ .md-overlay {
     pointer-events: auto !important;
-    opacity: 1 !important;
   }
 
-  /* FIX: Ensure proper header z-index */
+  /* FIX: Make drawer contents fully interactive */
+  .md-nav--primary * {
+    pointer-events: auto !important;
+  }
+
+  /* FIX: Ensure header stays on top */
   .md-header {
-    z-index: 201 !important;
+    z-index: 10000 !important;
   }
 }
 
