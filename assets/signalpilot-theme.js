@@ -46,11 +46,11 @@
   }
 
   /**
-   * Get saved theme or system preference
+   * Get saved theme or default to dark mode
    * @returns {string} 'light' or 'dark'
    */
   function getSavedTheme() {
-    return localStorage.getItem(CONFIG.storageKey) || getSystemPreference();
+    return localStorage.getItem(CONFIG.storageKey) || 'dark';
   }
 
   /**
@@ -145,28 +145,7 @@
       console.warn(`Theme toggle button not found. Expected id="${CONFIG.toggleButtonId}"`);
     }
 
-    // Listen for system theme changes
-    if (window.matchMedia) {
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: light)');
-
-      // Modern browsers
-      if (mediaQuery.addEventListener) {
-        mediaQuery.addEventListener('change', (e) => {
-          // Only auto-switch if user hasn't manually set a preference
-          if (!localStorage.getItem(CONFIG.storageKey)) {
-            setTheme(e.matches ? 'light' : 'dark');
-          }
-        });
-      }
-      // Older browsers
-      else if (mediaQuery.addListener) {
-        mediaQuery.addListener((e) => {
-          if (!localStorage.getItem(CONFIG.storageKey)) {
-            setTheme(e.matches ? 'light' : 'dark');
-          }
-        });
-      }
-    }
+    // System theme changes disabled - always default to dark mode
 
     // Keyboard shortcut: Ctrl+Shift+L to toggle theme
     document.addEventListener('keydown', (e) => {
@@ -204,11 +183,11 @@
     toggle: toggleTheme,
 
     /**
-     * Reset to system preference
+     * Reset to default (dark mode)
      */
     reset: () => {
       localStorage.removeItem(CONFIG.storageKey);
-      setTheme(getSystemPreference());
+      setTheme('dark');
     },
 
     /**
