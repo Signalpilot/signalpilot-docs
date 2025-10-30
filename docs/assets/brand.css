@@ -421,9 +421,9 @@ body {
   z-index: 4;
 }
 
-/* MOBILE ONLY: Let Material navigation work naturally, just fix z-index */
+/* MOBILE ONLY: Hide custom nav, let Material handle everything */
 @media screen and (max-width: 76.1875em) {
-  /* Hide custom nav on mobile - it conflicts */
+  /* Hide custom nav on mobile - it conflicts with Material's drawer */
   .sp-topnav {
     display: none;
   }
@@ -432,35 +432,6 @@ body {
   .md-header__title {
     visibility: visible;
     width: auto;
-  }
-
-  /* FIX: Ensure drawer is in its own stacking context and ABOVE everything */
-  .md-nav--primary {
-    z-index: 9999 !important;
-    position: fixed !important;
-    background: var(--md-default-bg-color) !important;
-    isolation: isolate !important;
-  }
-
-  /* FIX: Overlay BELOW drawer and NOT catching clicks on drawer */
-  .md-overlay {
-    z-index: 9998 !important;
-    pointer-events: none !important;
-  }
-
-  /* FIX: Allow overlay to catch clicks only when menu is open */
-  [data-md-toggle="drawer"]:checked ~ .md-overlay {
-    pointer-events: auto !important;
-  }
-
-  /* FIX: Make drawer contents fully interactive */
-  .md-nav--primary * {
-    pointer-events: auto !important;
-  }
-
-  /* FIX: Ensure header stays on top */
-  .md-header {
-    z-index: 10000 !important;
   }
 }
 
