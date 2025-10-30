@@ -9,7 +9,8 @@ The <span class="signal-pilot-brand">Signal Pilot</span> Suite gives you everyth
 
 ---
 
-## The Core Philosophy
+## 💡 The Core Philosophy
+<span style="color: #0aa1d5; font-weight: 600;">Key Principle</span>
 
 **Trade with confluence, not single signals.**
 
@@ -17,7 +18,8 @@ Each indicator in the <span class="signal-pilot-brand">Signal Pilot</span> Suite
 
 ---
 
-## Recommended Combinations
+## 🎯 Recommended Combinations
+<span style="color: #10b981; font-weight: 600;">Indicator Setups</span>
 
 ### 🏆 The Trinity (Best All-Around)
 
@@ -122,7 +124,8 @@ Each indicator in the <span class="signal-pilot-brand">Signal Pilot</span> Suite
 
 ---
 
-## Step-by-Step Trade Examples
+## 📝 Step-by-Step Trade Examples
+<span style="color: #8b5cf6; font-weight: 600;">Real Trade Scenarios</span>
 
 ### Example 1: Swing Long with The Trinity
 
@@ -213,7 +216,8 @@ Each indicator in the <span class="signal-pilot-brand">Signal Pilot</span> Suite
 
 ---
 
-## Alert Strategy (Recommended Setup)
+## 🔔 Alert Strategy (Recommended Setup)
+<span style="color: #0aa1d5; font-weight: 600;">Notification Setup</span>
 
 **Priority Alerts (Set These First):**
 
@@ -245,7 +249,8 @@ Example: "Pentarch IGN + Minimal Flow Elite Bull + Janus Daily Low Touch" = Ultr
 
 ---
 
-## Timeframe Selection Guide
+## ⏱️ Timeframe Selection Guide
+<span style="color: #10b981; font-weight: 600;">Choose Your Trading Style</span>
 
 ### Scalping (5m - 15m)
 **Use:**
@@ -294,7 +299,8 @@ Example: "Pentarch IGN + Minimal Flow Elite Bull + Janus Daily Low Touch" = Ultr
 
 ---
 
-## Risk Management with the Suite
+## 🛡️ Risk Management with the Suite
+<span style="color: #dc2626; font-weight: 600;">Protect Your Capital</span>
 
 **Position Sizing:**
 Use Minimal Flow's built-in risk calculator:
@@ -319,7 +325,8 @@ Use Minimal Flow's built-in risk calculator:
 
 ---
 
-## Common Mistakes to Avoid
+## ⚠️ Common Mistakes to Avoid
+<span style="color: #f59e0b; font-weight: 600;">Learn From Others</span>
 
 ❌ **Using single indicator in isolation**
 → ✅ Combine 2-3 for confluence
@@ -344,7 +351,8 @@ Use Minimal Flow's built-in risk calculator:
 
 ---
 
-## Quick Reference: Indicator Purposes
+## 📊 Quick Reference: Indicator Purposes
+<span style="color: #8b5cf6; font-weight: 600;">Indicator Cheat Sheet</span>
 
 | Indicator | Primary Use | Best For |
 |-----------|-------------|----------|
@@ -358,7 +366,8 @@ Use Minimal Flow's built-in risk calculator:
 
 ---
 
-## The "One Chart" Setup
+## 📈 The "One Chart" Setup
+<span style="color: #10b981; font-weight: 600;">Minimalist Approach</span>
 
 If you only want to load indicators on a single chart:
 
@@ -381,7 +390,8 @@ If you only want to load indicators on a single chart:
 
 ---
 
-## Final Thoughts
+## 💭 Final Thoughts
+<span style="color: #0aa1d5; font-weight: 600;">Getting Started</span>
 
 **Start simple:**
 - Week 1-2: Pentarch + Janus only
