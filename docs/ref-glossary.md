@@ -531,4 +531,4 @@ Complete reference of <span class="signal-pilot-brand">Signal Pilot</span> terms
 - [Workflow](ref-workflow.md) - Complete trading process
 - [Best Practices](ref-best-practices.md) - Pro tips
 
-**Need more help?** [Contact Support](about-support.md)
+**Additional assistance:** [Contact Support](about-support.md) is available

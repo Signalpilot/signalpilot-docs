@@ -1,6 +1,6 @@
 # Best Practices & Pro Tips
 
-Master <span class="signal-pilot-brand">Signal Pilot</span> indicators with these proven strategies from experienced traders. Follow these guidelines to maximize your trading success.
+<span class="signal-pilot-brand">Signal Pilot</span> indicators are used with these proven strategies from experienced traders. These guidelines are commonly followed for trading effectiveness.
 
 ---
 
@@ -615,4 +615,4 @@ Example Lower R/R:
 - [Glossary](ref-glossary.md) - Term definitions
 - [Quick Start](start-quick.md) - Beginner guide
 
-**Ready to trade?** Follow these practices consistently for best results.
+**Trading readiness:** These practices are commonly followed consistently for optimal results.

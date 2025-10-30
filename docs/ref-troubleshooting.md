@@ -1,12 +1,12 @@
 # Troubleshooting Guide
 
-Having issues with <span class="signal-pilot-brand">Signal Pilot</span> indicators? This guide covers common problems and their solutions. Can't find your issue? [Contact Support](about-support.md).
+<span class="signal-pilot-brand">Signal Pilot</span> indicator issues are addressed in this guide. Common problems and their solutions are covered. Issue not found: [Contact Support](about-support.md) is available.
 
 ---
 
 ## 🚨 Quick Diagnostic Checklist
 
-Before diving into specific issues, run through this quick checklist:
+Before addressing specific issues, this quick checklist can be reviewed:
 
 - [ ] TradingView paid subscription active (Essential, Pro, or Pro+)
 - [ ] <span class="signal-pilot-brand">Signal Pilot</span> subscription active and access granted
@@ -112,7 +112,7 @@ This is NORMAL behavior. Indicators don't force signals.
 - ✅ Reliable, actionable alerts
 - ❌ Won't notify you of intrabar preliminary signals
 
-**Remember:** Intrabar signals are "maybe" — closed bar signals are "confirmed."
+**Important note:** Intrabar signals are "maybe" — closed bar signals are "confirmed."
 
 ---
 
@@ -541,7 +541,7 @@ Alternative:
 
 **Symptoms:** Signal fired but you disagree with it, or it seems wrong
 
-**Remember:** Indicators use mathematics, not discretion
+**Important note:** Indicators use mathematics, not discretion
 
 #### Common Misunderstandings:
 
@@ -562,7 +562,7 @@ Indicators calculate on multiple factors you may not see:
 - Volume patterns
 - Mathematical conditions
 
-Trust the indicator or don't use it—picking and choosing defeats the purpose.
+Indicator consistency is typically valued—selective signal acceptance can reduce systematic effectiveness.
 ```
 
 **"Signal seems late"**
@@ -615,7 +615,7 @@ Solution: Load at least 500-1000 bars before judging signals.
 
 #### Reduce Indicator Count
 ```
-Don't load all 7 indicators on one chart!
+Loading all 7 indicators on one chart is not recommended.
 
 Maximum recommended: 3 indicators
 
@@ -680,4 +680,4 @@ Contact support if:
 - [Non-Repainting Policy](ref-non-repaint.md) - How signals work
 - [Best Practices](ref-best-practices.md) - Pro tips
 
-**Still stuck?** [Contact Support](about-support.md) - We're here to help!
+**Unresolved issues:** [Contact Support](about-support.md) - Assistance is available.
