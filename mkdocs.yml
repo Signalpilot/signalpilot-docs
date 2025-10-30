@@ -9,7 +9,7 @@ theme:
   name: material
   features:
     - navigation.top
-    - navigation.instant
+    # - navigation.instant  # DISABLED: Causes caching issues - content not updating immediately
     - navigation.sections
     - content.code.copy
     - search.suggest
@@ -86,13 +86,13 @@ nav:
 
   - "🚀 v6 Suite (Latest)":
     - "📚 Suite Overview": v6-suite-index/
-    - "Pentarch v8.9 — Reversal Events": pentarch-v89.md
-    - "Janus Atlas v3.12.2 — Levels System": janus-atlas-v3122.md
-    - "Omnideck v1.7.0 — Everything Indicator": omnideck-v170.md
+    - "Pentarch v1.0 — Reversal Events": pentarch-v89.md
+    - "Janus Atlas v1.0 — Levels System": janus-atlas-v3122.md
+    - "Omnideck v1.0 — Everything Indicator": omnideck-v170.md
     - "Augury Grid v1.0 — Multi-Symbol Screener": augury-grid-v10.md
-    - "Minimal Flow v4.0 — Volume Strategy": minimal-flow-v40-ultimate.md
-    - "Harmonic Oscillator v3.4 — Composite Momentum": harmonic-oscillator-v34-adaptive.md
-    - "Plutus Flow v2.3 — Advanced OBV": plutus-flow-v23.md
+    - "Minimal Flow v1.0 — Volume Strategy": minimal-flow-v40-ultimate.md
+    - "Harmonic Oscillator v1.0 — Composite Momentum": harmonic-oscillator-v34-adaptive.md
+    - "Plutus Flow v1.0 — Advanced OBV": plutus-flow-v23.md
 
   - "📚 Reference":
     - "Trading Workflow (Bias → Timing)": ref-workflow.md

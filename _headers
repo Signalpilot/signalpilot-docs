@@ -1,0 +1,43 @@
+# Cache Control for Netlify/Cloudflare Pages
+# Ensures documentation updates are immediately visible
+
+# HTML pages - no caching, always check for updates
+/*.html
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+
+# Root and index files
+/
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+
+/index.html
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+
+# Search index - no caching
+/search/*
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+
+# Assets can be cached longer (they have hashed filenames)
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# JavaScript and CSS with versioning can be cached
+/assets/javascripts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/stylesheets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Images and fonts
+/assets/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
