@@ -349,5 +349,5 @@ Price: $35,000, falling for 2 weeks
 <div style="text-align: center; padding: 2rem; background: linear-gradient(135deg, color-mix(in srgb, var(--md-primary-fg-color) 12%, transparent), color-mix(in srgb, var(--md-accent-fg-color) 12%, transparent)); border-radius: 16px; margin-top: 2rem;">
   <h3 style="color: var(--md-primary-fg-color); margin-bottom: 1rem;">Ready to Explore More Indicators?</h3>
   <p style="margin-bottom: 1.5rem;">Pentarch is just one of 7 professional indicators in the suite.</p>
-  <a href="../v6-suite-index/" style="display: inline-block; padding: 0.75rem 2rem; background: linear-gradient(115deg, var(--md-primary-fg-color), var(--md-accent-fg-color)); color: white; border-radius: 999px; text-decoration: none; font-weight: 700;">Explore All 7 Indicators →</a>
+  <a href="../suite-index/" style="display: inline-block; padding: 0.75rem 2rem; background: linear-gradient(115deg, var(--md-primary-fg-color), var(--md-accent-fg-color)); color: white; border-radius: 999px; text-decoration: none; font-weight: 700;">Explore All 7 Indicators →</a>
 </div>

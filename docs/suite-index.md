@@ -250,7 +250,7 @@ Advanced volume flow analysis with divergence detection:
 
 ## 📊 SP Protocol Compliance
 
-All 7 indicators are **SP Protocol v6** compliant:
+All 7 indicators are **SP Protocol** compliant:
 
 ### ✅ Zero Repaint
 - All signals gated by `barstate.isconfirmed`
@@ -378,7 +378,7 @@ Choose your path:
 - **Divergence trader?** Start with [Plutus Flow](plutus-flow-v10.md) or [Harmonic Oscillator](harmonic-oscillator-v10.md)
 - **Multi-asset scanning?** Start with [Augury Grid](augury-grid-v10.md)
 
-**Welcome to <span class="signal-pilot-brand">Signal Pilot</span> v6. Built for market analysis. Designed for informed decision-making.**
+**Welcome to <span class="signal-pilot-brand">Signal Pilot</span>. Built for market analysis. Designed for informed decision-making.**
 
 ---
 

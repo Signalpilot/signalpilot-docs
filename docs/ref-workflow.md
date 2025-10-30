@@ -1,6 +1,6 @@
 ---
 title: "<span class="signal-pilot-brand">Signal Pilot</span> Suite Trading Workflow"
-summary: "How to combine the 7 v6 indicators into a complete trading system."
+summary: "How to combine the 7 indicators into a complete trading system."
 ---
 
 # 🚦 <span class="signal-pilot-brand">Signal Pilot</span> Suite Trading Workflow
@@ -403,7 +403,7 @@ If you only want to load indicators on a single chart:
 
 ## Resources
 
-- **Full Indicator Guides:** [<span class="signal-pilot-brand">Signal Pilot</span> Suite Index](v6-suite-index/)
+- **Full Indicator Guides:** [<span class="signal-pilot-brand">Signal Pilot</span> Suite Index](suite-index/)
 - **Non-Repaint Policy:** [ref-non-repaint.md](ref-non-repaint.md)
 - **Support:** [about-support.md](about-support.md)
 

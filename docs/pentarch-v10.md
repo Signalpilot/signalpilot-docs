@@ -552,7 +552,7 @@ Most traders just use the default settings.
 ## Support
 
 Need help? Check out:
-- [<span class="signal-pilot-brand">Signal Pilot</span> Suite Overview](v6-suite-index/) - How to combine with other indicators
+- [<span class="signal-pilot-brand">Signal Pilot</span> Suite Overview](suite-index/) - How to combine with other indicators
 - [Suite Workflow](ref-workflow.md) - Complete trading system
 - [Support](about-support.md) - Get help
 
