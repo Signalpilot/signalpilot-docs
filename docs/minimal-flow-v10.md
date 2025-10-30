@@ -116,62 +116,62 @@ Each signal gets rated 0-100:
 
 ---
 
-## How to Use It (3 Simple Steps)
+## Usage Patterns (3 Core Components)
 <span style="color: #0aa1d5; font-weight: 600; font-size: 1.1em;">🎓 Essential Setup Guide</span>
 
-### Step 1: Configure Settings
-<span style="color: #ff6b35; font-weight: 600;">⚙️ Configuration - Set Your Parameters</span>
+### Component 1: Configuration Settings
+<span style="color: #ff6b35; font-weight: 600;">⚙️ Configuration - Parameter Selection</span>
 
 **Account Settings:**
-- **Account Size:** Your capital (e.g., $10,000)
+- **Account Size:** Capital allocation (e.g., $10,000)
 - **Risk Per Trade:** 1.0% (conservative) to 2.0% (moderate)
 
 **Signal Settings:**
-- **Z-Threshold:** 2.5 (default, works for most)
-  - Lower = More signals (2.0 for scalping)
-  - Higher = Fewer signals (3.0 for swing)
+- **Z-Threshold:** 2.5 (default, works for most contexts)
+  - Lower values = More signals (2.0 for scalping)
+  - Higher values = Fewer signals (3.0 for swing)
 - **Minimum Quality:** 60 (Premium+ only for beginners)
 
 **Strategy Mode:**
-- **Trend Following** (default) = Only trade WITH the trend
-- **Mean Reversion** = Fade extremes (advanced)
-- **Hybrid** = Adapts automatically
+- **Trend Following** (default) = Trading WITH the trend
+- **Mean Reversion** = Fading extremes (advanced)
+- **Hybrid** = Automatic adaptation
 
 ---
 
-### Step 2: Wait for Signals
-<span style="color: #10b981; font-weight: 600;">👀 Signal Recognition - What to Watch</span>
+### Component 2: Signal Recognition
+<span style="color: #10b981; font-weight: 600;">👀 Signal Observation - Key Indicators</span>
 
-**Watch for:**
-1. Volume histogram lights up (bright green/red spike)
+**Observable elements:**
+1. Volume histogram brightness increases (bright green/red spike)
 2. Signal label appears (BUY or SELL)
-3. Quality score shows (⭐⭐ or ⭐⭐⭐ preferred)
-4. Entry price line draws on chart
+3. Quality score displays (⭐⭐ or ⭐⭐⭐ preferred)
+4. Entry price line renders on chart
 
 **Signal information provided:**
 - Entry timing: signal bar close or next bar open
-- System displays position size calculation
-- Stop and TP1 levels marked on chart
+- Position size calculation is displayed
+- Stop and TP1 levels are marked on chart
 
 ---
 
-### Step 3: Manage the Trade
+### Component 3: Trade Management Patterns
 <span style="color: #a855f7; font-weight: 600;">📈 Trade Management - Visual Guidance</span>
 
-**The system displays:**
+**System display elements:**
 - Green/Red line = Entry price
 - Dotted line = Stop loss
 - Dashed line = TP1 target
-- Label shows current P&L
+- Label displays current P&L
 
-**Example trade structure:**
-1. Entry consideration at entry price level
-2. Stop placement at the dotted line level
+**Common trade structure:**
+1. Entry considerations occur at entry price level
+2. Stop placement occurs at the dotted line level
 3. Partial profit target: 50% at TP1 (dashed line)
 4. Trailing stop approach: remaining 50% with 2% trail
 5. Exit considerations: opposite signal or stop hit
 
-**The system provides calculations for evaluation.**
+**The system provides calculations for evaluation purposes.**
 
 ---
 
@@ -227,7 +227,7 @@ Each signal gets rated 0-100:
 
 ---
 
-## Settings (Keep It Simple)
+## Settings (Configuration Approach)
 
 **Core Settings:**
 - **Z-Threshold:** 2.5 (default)
@@ -235,7 +235,7 @@ Each signal gets rated 0-100:
 - **Min Quality Score:** 60 (Premium+)
 
 **Risk Management:**
-- **Account Size:** Your capital
+- **Account Size:** Capital allocation
 - **Risk %:** 1.0% (default)
 - **ATR Stop:** 2.0× (default)
 - **ATR Target:** 3.0× (default)
@@ -245,45 +245,45 @@ Each signal gets rated 0-100:
 **Advanced:**
 - **Strategy Mode:** Trend Following
 - **Regime Mode:** Balanced
-- **HTF Alignment:** Optional (enable for swing trading)
+- **HTF Alignment:** Optional (typically enabled for swing trading)
 
-**Most traders use defaults and only adjust Account Size + Risk %**
+**Most traders use default settings and adjust Account Size + Risk % to personal parameters**
 
 ---
 
-## Alerts (Set These!)
+## Alert Configuration
 
 1. **Bull Signal** - Entry alert for longs
 2. **Bear Signal** - Entry alert for shorts
-3. **T1 Hit** - Reminder to take partial profit
-4. **Exit Warning** - Opposite signal or stop approaching
-5. **Regime Weakening** - Trend losing steam
+3. **T1 Hit** - Partial profit reminder
+4. **Exit Warning** - Opposite signal or stop approach notification
+5. **Regime Weakening** - Trend momentum loss indication
 
-**How to set:**
-1. Click alarm icon
-2. Select "Minimal Flow v1.0"
-3. Choose alert type
-4. Set to "Once Per Bar Close"
+**Configuration steps:**
+1. Alarm icon is clicked
+2. "Minimal Flow v1.0" is selected
+3. Alert type is chosen
+4. "Once Per Bar Close" is set
 
 ---
 
-## Common Mistakes (Avoid These!)
-<span style="color: #dc2626; font-weight: 600; font-size: 1.1em;">🚨 Critical Errors to Avoid</span>
+## Common Pitfalls
+<span style="color: #dc2626; font-weight: 600; font-size: 1.1em;">🚨 Critical Learning Points</span>
 
-❌ **Not honoring stops**
-→ ✅ System calculates stops for a reason. Moving stops = emotional trading = losses
+❌ **Disregarding calculated stops**
+→ ✅ Stop calculations have algorithmic basis. Stop adjustment = emotion-based trading pattern
 
-❌ **Skipping T1 partials**
-→ ✅ Always take 50% at TP1. Locks in profit, reduces stress
+❌ **Omitting T1 partial exits**
+→ ✅ 50% exit at TP1 is the standard profit-locking approach
 
-❌ **Using on Forex spot**
-→ ✅ Need volume data! Use futures, stocks, crypto. Forex spot has no volume.
+❌ **Using on Forex spot markets**
+→ ✅ Volume data requirement exists. Futures, stocks, crypto are suitable. Forex spot lacks volume data.
 
-❌ **Trading every signal**
-→ ✅ Focus on ⭐⭐⭐ Elite and ⭐⭐ Premium when learning
+❌ **Trading all signals indiscriminately**
+→ ✅ ⭐⭐⭐ Elite and ⭐⭐ Premium signal focus is recommended during learning phase
 
-❌ **Wrong risk % for your comfort**
-→ ✅ If 1% feels too much, use 0.5%. If too conservative, use 1.5%. Match to your emotion.
+❌ **Risk % misalignment with personal comfort**
+→ ✅ Risk % should match personal tolerance levels (0.5% to 1.5% range adjustment based on comfort)
 
 ---
 
@@ -336,24 +336,24 @@ Each signal gets rated 0-100:
 ## Best Practices
 <span style="color: #10b981; font-weight: 600; font-size: 1.1em;">✅ Recommended Approach</span>
 
-1. **Honor stops** - Following calculated stops is a key practice
-2. **Take TP1 partials** - Taking partials locks in profit (common practice)
-3. **Match risk to comfort** - 1% default, adjust to personal comfort level
-4. **Use appropriate timeframe** - Scalpers: 5m-15m, Day traders: 1H, Swing: 4H-Daily
-5. **Track statistics** - Win rate by quality tier provides valuable feedback
-6. **Trust the system** - Position sizing is calculated for you, just execute
+1. **Stop adherence** - Calculated stop levels are designed to be respected
+2. **TP1 partial execution** - Partial exits at TP1 serve the profit-locking function
+3. **Risk-comfort alignment** - 1% default, with adjustments to personal tolerance levels
+4. **Timeframe appropriateness** - Scalpers: 5m-15m, Day traders: 1H, Swing: 4H-Daily
+5. **Statistical tracking** - Win rate by quality tier analysis provides performance feedback
+6. **System-calculated reliance** - Position sizing calculations are provided for execution
 
 ---
 
 ## Support
 
-Need help? Check out:
-- [<span class="signal-pilot-brand">Signal Pilot</span> Suite Overview](https://docs.signalpilot.io/suite-index/) - How to combine with other indicators
+Additional resources available:
+- [<span class="signal-pilot-brand">Signal Pilot</span> Suite Overview](https://docs.signalpilot.io/suite-index/) - Indicator combination strategies
 - [Suite Workflow](ref-workflow.md) - Complete trading system
-- [Support](about-support.md) - Get help
+- [Support](about-support.md) - Support resources
 
 ---
 
-**Remember:** Minimal Flow detects when smart money may be moving, indicates direction is real, and manages your entire trade. You just need to execute what it shows you.
+**Summary:** Minimal Flow detects when smart money may be moving, indicates directional validity, and provides complete trade management framework. Execution of displayed parameters is the implementation approach.
 
-**Follow the volume, manage the risk!** 🎯
+**Volume-based analysis with systematic risk management** 🎯

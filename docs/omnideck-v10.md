@@ -158,24 +158,24 @@ Omnideck is the **ultimate all-in-one indicator** - 10 professional trading syst
 
 ---
 
-## How to Use It (Don't Overwhelm Yourself!)
+## Usage Patterns (Progressive Approach)
 <span style="color: #0aa1d5; font-weight: 600; font-size: 1.1em;">🎓 Essential Learning - Progressive Approach</span>
 
-### Step 1: Start Simple (Beginner)
-<span style="color: #ff6b35; font-weight: 600;">⚠️ Critical - Don't Use All 10 At Once</span>
+### Component 1: Initial System Selection
+<span style="color: #ff6b35; font-weight: 600;">⚠️ Critical - Progressive System Addition Recommended</span>
 
-Don't turn on all 10 systems at once! Start with 3-4:
+Starting with 3-4 systems rather than enabling all 10 simultaneously is recommended:
 
-**Recommended starter combo:**
+**Recommended starter combination:**
 - ✅ TD Sequential (exhaustion signals)
 - ✅ Squeeze Detector (breakout arrows)
 - ✅ EMA Trio (trend context)
 - ✅ Regime Box (bias filter)
-- ❌ Other systems (add later)
+- ❌ Other systems (can be added progressively)
 
 ---
 
-### Step 2: Follow the Hierarchy
+### Component 2: Hierarchical Analysis
 <span style="color: #10b981; font-weight: 600;">📊 Analysis Order - Top-Down Approach</span>
 
 **Common evaluation order:**
@@ -184,25 +184,25 @@ Don't turn on all 10 systems at once! Start with 3-4:
 2. **EMA Trio / BMSB** = Trend structure
 3. **TD / Squeeze / Sweeps** = Entry timing
 
-**Example:**
+**Example sequence:**
 1. Regime = Green (bullish)
 2. Price above BMSB (uptrend confirmed)
 3. TD 9 green (oversold)
 4. Squeeze arrow fires up
-5. = Potential long entry (everything aligned)
+5. = Potential long entry (alignment observed)
 
 ---
 
-### Step 3: Use Zones as Context
-<span style="color: #f59e0b; font-weight: 600;">💰 Quality Filter - Zones Increase Probability</span>
+### Component 3: Zone-Based Context
+<span style="color: #f59e0b; font-weight: 600;">💰 Quality Filter - Zone Enhancement Effect</span>
 
-Signals at Supply/Demand zones often show higher probability
+Signals occurring at Supply/Demand zones are associated with higher probability
 
-**Example:**
+**Observed pattern:**
 - Regular signal (no zone) = 55% win rate typical
 - Signal at ⭐⭐⭐ zone = 75% win rate typical
 
-Signals at key zones are commonly preferred.
+Signals at key zones are commonly prioritized.
 
 ---
 
@@ -231,30 +231,30 @@ Signals at key zones are commonly preferred.
 
 ---
 
-## Settings (Keep It Simple)
+## Settings (Configuration Approach)
 
 **System Toggles:**
-Each of the 10 systems can be turned on/off independently
+Each of the 10 systems can be toggled on/off independently
 
-**My recommendation:**
+**Progressive learning path:**
 - Week 1: TD + Squeeze + EMA + Regime
-- Week 2: Add BMSB + SuperTrend
-- Week 3: Add Zones + Patterns
-- Week 4: Use all 10 once you understand each
+- Week 2: BMSB + SuperTrend addition
+- Week 3: Zones + Patterns addition
+- Week 4: Full 10-system integration after individual comprehension
 
 **Colors:**
-Customize to your preference, but keep it clean
+Customization available, clean visual presentation recommended
 
 **Regime Mode:**
 - Conservative = Fewer but stronger signals
 - Balanced = Default (recommended)
-- Aggressive = More signals, requires more filtering
+- Aggressive = More signals, requires additional filtering
 
 ---
 
-## Alerts (Set These!)
+## Alert Configuration
 
-**Must-have alerts:**
+**Commonly monitored alerts:**
 1. **TD Buy 9** = Oversold exhaustion
 2. **TD Sell 9** = Overbought exhaustion
 3. **Squeeze Break Up** = Bullish explosion
@@ -262,31 +262,31 @@ Customize to your preference, but keep it clean
 5. **Golden Cross** = Major bullish signal
 6. **Death Cross** = Major bearish signal
 
-**How to set:**
-1. Click alarm icon
-2. Select "Omnideck v1.0"
-3. Choose which signal
-4. Set to "Once Per Bar Close"
+**Configuration steps:**
+1. Alarm icon is clicked
+2. "Omnideck v1.0" is selected
+3. Signal type is chosen
+4. "Once Per Bar Close" is set
 
 ---
 
-## Common Mistakes (Avoid These!)
-<span style="color: #dc2626; font-weight: 600; font-size: 1.1em;">🚨 Critical Errors to Avoid</span>
+## Common Pitfalls
+<span style="color: #dc2626; font-weight: 600; font-size: 1.1em;">🚨 Critical Learning Points</span>
 
-❌ **Using all 10 systems at once as a beginner**
-→ ✅ Start with 3-4 systems, add more as you learn each one
+❌ **Enabling all 10 systems simultaneously as a beginner**
+→ ✅ Starting with 3-4 systems and adding progressively is the recommended learning path
 
-❌ **Ignoring the Regime Box**
-→ ✅ Regime = Directional bias. Checking it first is a common practice.
+❌ **Overlooking the Regime Box**
+→ ✅ Regime = Directional bias context. Initial regime checking is standard practice.
 
-❌ **Trading every signal**
-→ ✅ Best signals typically have multiple confirmations (TD 9 + Sweep + Zone + Pattern)
+❌ **Trading every signal indiscriminately**
+→ ✅ Highest-quality signals typically have multiple confirmations (TD 9 + Sweep + Zone + Pattern)
 
-❌ **Taking signals against the trend**
-→ ✅ Regime green + bullish signals = High quality. Regime green + bearish signals = Often skipped.
+❌ **Trading counter-trend signals**
+→ ✅ Regime green + bullish signals = High quality. Regime green + bearish signals = Often filtered out.
 
-❌ **Forgetting about Supply/Demand zones**
-→ ✅ Signals at zones = Much higher success rate
+❌ **Neglecting Supply/Demand zones**
+→ ✅ Signals at zones = Associated with higher success rates
 
 ---
 
@@ -343,23 +343,23 @@ Customize to your preference, but keep it clean
 ## Best Practices
 <span style="color: #10b981; font-weight: 600; font-size: 1.1em;">✅ Recommended Approach</span>
 
-1. **Start with 3-4 systems** - Starting gradually is a common approach
-2. **Check Regime first** - It provides directional bias context
-3. **Watch for confluence** - One signal = interesting, 3+ signals = higher quality
-4. **Evaluate at zones** - Signals at zones often show higher win rates
-5. **Remain patient** - Waiting for alignment is standard practice
+1. **Progressive system addition** - Starting with 3-4 systems is the common approach
+2. **Regime-first evaluation** - Directional bias context is established first
+3. **Confluence observation** - One signal = observation point, 3+ signals = higher quality classification
+4. **Zone-based evaluation** - Signals at zones are associated with higher win rates
+5. **Patient alignment** - Awaiting multi-system alignment is standard practice
 
 ---
 
 ## Support
 
-Need help? Check out:
-- [<span class="signal-pilot-brand">Signal Pilot</span> Suite Overview](https://docs.signalpilot.io/suite-index/) - How to combine with other indicators
+Additional resources available:
+- [<span class="signal-pilot-brand">Signal Pilot</span> Suite Overview](https://docs.signalpilot.io/suite-index/) - Indicator combination strategies
 - [Suite Workflow](ref-workflow.md) - Complete trading system
-- [Support](about-support.md) - Get help
+- [Support](about-support.md) - Support resources
 
 ---
 
-**Remember:** Omnideck gives you 10 tools. You don't need to use all 10 on every trade. Pick the systems that match your style, let them confirm each other, and trade with confidence.
+**Summary:** Omnideck provides 10 analytical tools. Full utilization on every trade is not required. System selection matching trading style, mutual confirmation patterns, and methodical analysis are key.
 
-**Less is more - master a few systems before adding more!** 🎯
+**Progressive mastery approach - individual system comprehension before expansion** 🎯
