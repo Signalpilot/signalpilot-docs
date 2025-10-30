@@ -1,7 +1,7 @@
 # Signal Pilot Documentation
 
 <p style="font-size: 1.3rem; color: var(--md-primary-fg-color); font-weight: 500; margin-bottom: 2rem;">
-Crystal-clear indicators that show you <strong>WHEN</strong> to enter, <strong>WHERE</strong> the levels are, and <strong>HOW</strong> to manage risk.
+Technical indicators that identify <strong>TIMING</strong> patterns, <strong>PRICE LEVELS</strong>, and <strong>MARKET CONTEXT</strong> for analysis.
 </p>
 
 <div style="text-align: center; padding: 3rem 1.5rem; background: linear-gradient(135deg, #345CFF, #0aa1d5); border-radius: 20px; margin-bottom: 3rem; box-shadow: 0 8px 24px rgba(52, 92, 255, 0.3);">

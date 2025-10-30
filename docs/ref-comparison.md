@@ -122,9 +122,9 @@ Identifies key price levels: support, resistance, FVG, order blocks, structure b
 - Great for confluence with other indicators
 
 **Limitations:**
-- Doesn't show you WHEN to enter
+- Doesn't provide timing signals (levels only)
 - Requires price action understanding
-- Can show many levels (need to filter important ones)
+- Can display many levels (important ones need filtering)
 
 **Use alone if:** You're experienced with level-based trading
 

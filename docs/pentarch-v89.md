@@ -2,7 +2,7 @@
 
 ## What Does It Do?
 
-Pentarch shows you **5 simple signals** that indicate when price may potentially reverse. Think of it like traffic lights for potential reversals - it shows you when to get ready, when to go, and when to exit.
+Pentarch displays **5 simple signals** that indicate when price may potentially reverse. Think of it like traffic lights for potential reversals - visual indicators showing different phases of potential trend changes.
 
 **The 5-Phase System:** TD → IGN → WRN → CAP → BDN
 
@@ -27,18 +27,18 @@ Pentarch shows you **5 simple signals** that indicate when price may potentially
 
 ---
 
-### 🟢 IGN - "GO! Potential Reversal Signal"
+### 🟢 IGN - Ignition (Momentum Breakout)
 
 **What you see:** Green "IGN" label below the candle
 
-**What it means:** Potential reversal indication. Bulls may be taking over.
+**What it means:** Indicates momentum breakout conditions. Potential bullish structure development.
 
-**Example usage:**
-- This is a potential entry signal for longs
-- Example entry timing: this bar or next bar
-- Example stop placement: below the recent low
+**Common interpretation:**
+- Often interpreted as a potential long entry signal
+- Typical evaluation timing: at bar close or subsequent bar
+- Common stop placement patterns: below the recent low
 
-**Example:** After TD at $85, IGN fires at $87 → Potential reversal indicated, commonly interpreted as long entry signal
+**Example:** After TD at $85, IGN fires at $87 → Momentum breakout indicated, commonly interpreted as potential long entry signal
 
 ---
 
@@ -134,6 +134,7 @@ Stop loss usage is a standard risk management practice:
 ---
 
 ## 🎯 The Pilot Line - Your Trend Compass
+<span style="color: #0aa1d5; font-weight: 600; font-size: 1.1em;">⭐ Core Component - Primary Reference for All Signals</span>
 
 ### What Is It?
 
@@ -192,6 +193,7 @@ The Pilot Line is a double-smoothed EMA (34-period EMA, then 3-period EMA of tha
 ---
 
 ## 🎨 Regime Bar Colors - Know Your Market Structure
+<span style="color: #10b981; font-weight: 600; font-size: 1.1em;">📊 Visual Context - Instant Market Structure Feedback</span>
 
 ### What Is It?
 
@@ -262,6 +264,7 @@ Most event signals require the "correct" regime to fire:
 ---
 
 ## ⚡ NanoFlow - The Momentum Heartbeat
+<span style="color: #a855f7; font-weight: 600; font-size: 1.1em;">🔍 Context Tool - NOT a Primary Trade Signal</span>
 
 ### What Is It?
 
@@ -369,6 +372,7 @@ A: No. Like all Pentarch components, NanoFlow only renders on confirmed bars. Wh
 ---
 
 ## 🔄 How All Components Work Together
+<span style="color: #f59e0b; font-weight: 600; font-size: 1.1em;">🎓 Essential Understanding - How The 4 Layers Integrate</span>
 
 ### The Complete Visual Hierarchy
 

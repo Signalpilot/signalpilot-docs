@@ -6,11 +6,13 @@ Find answers to common questions about Signal Pilot indicators. Can't find what 
 
 ## 🚀 Getting Started
 
-### Do I need all 7 indicators?
+### ⭐ Do I need all 7 indicators?
+<span style="color: #0aa1d5; font-weight: 600;">Most Common Question</span>
 
 No! You can start with just **Pentarch** for reversal signals. Most traders begin with 1-2 indicators and add more as they gain experience. See our [Comparison Guide](ref-comparison.md) to choose which indicators match your trading style.
 
-### What's the difference between Pentarch and Omnideck?
+### ⭐ What's the difference between Pentarch and Omnideck?
+<span style="color: #0aa1d5; font-weight: 600;">Key Comparison</span>
 
 - **Pentarch**: Focused reversal detector with 5 distinct event types (TD, IGN, WRN, CAP, BDN). Best for catching turning points.
 - **Omnideck**: All-in-one dashboard combining multiple indicators. Shows Pentarch signals PLUS levels, momentum, volume, and bias—everything on one chart.
@@ -20,7 +22,8 @@ No! You can start with just **Pentarch** for reversal signals. Most traders begi
 
 See the [Indicator Comparison Guide](ref-comparison.md) for detailed differences.
 
-### What timeframe should I start with?
+### ⚡ What timeframe should I start with?
+<span style="color: #ff6b35; font-weight: 600;">Important for Beginners</span>
 
 **Recommended starting timeframe:** Daily (1D)
 
@@ -38,7 +41,8 @@ See the [Indicator Comparison Guide](ref-comparison.md) for detailed differences
 
 You can use any timeframe, but start higher and work your way down as you gain confidence.
 
-### Do I need a specific TradingView subscription?
+### 🔧 Do I need a specific TradingView subscription?
+<span style="color: #8b5cf6; font-weight: 600;">Required Setup</span>
 
 **Minimum:** TradingView Essential (paid plan)
 
@@ -50,7 +54,8 @@ You can use any timeframe, but start higher and work your way down as you gain c
 
 ## ⚙️ Setup & Configuration
 
-### How do I get access?
+### 🔧 How do I get access?
+<span style="color: #8b5cf6; font-weight: 600;">First Steps</span>
 
 1. **Purchase** the suite at [signalpilot.io](https://signalpilot.io/#pricing)
 2. **Receive email** with access instructions
@@ -58,7 +63,8 @@ You can use any timeframe, but start higher and work your way down as you gain c
 4. **Get invited** to private indicators (usually within 24 hours)
 5. **Add indicators** from TradingView's Indicators menu
 
-### Why am I not seeing signals on my chart?
+### ⚡ Why am I not seeing signals on my chart?
+<span style="color: #ff6b35; font-weight: 600;">Common Issue</span>
 
 **Check these common issues:**
 
@@ -109,7 +115,8 @@ Your indicators and settings sync automatically across all devices via TradingVi
 
 ## 📊 Usage & Trading
 
-### Does it repaint?
+### ⭐ Does it repaint?
+<span style="color: #0aa1d5; font-weight: 600;">Critical Question</span>
 
 **No—signals are final on bar close.**
 
@@ -139,7 +146,8 @@ See our [Non-Repainting Policy](ref-non-repaint.md) for technical details.
 
 Indicators adapt automatically to any market or timeframe.
 
-### Why don't I see an event that happened intrabar?
+### ⚡ Why don't I see an event that happened intrabar?
+<span style="color: #ff6b35; font-weight: 600;">Common Confusion</span>
 
 **Events only print on closed bars by design.**
 
@@ -175,7 +183,8 @@ See guides:
 
 **Important:** Always backtest and paper trade automated strategies before using real money.
 
-### How accurate are the signals?
+### ⭐ How accurate are the signals?
+<span style="color: #0aa1d5; font-weight: 600;">Understanding Expectations</span>
 
 **Signal Pilot indicators are tools, not crystal balls.**
 
@@ -197,29 +206,30 @@ See guides:
 - Position sizing
 - Entry/exit discipline
 
-**Best practice:** Use signals as confirmation within your overall trading strategy, not as standalone buy/sell commands.
+**Common approach:** Signals are often used as confirmation within an overall trading strategy, not as standalone decision triggers.
 
 ---
 
 ## 🔧 Technical Questions
 
-### What's the difference between TD and IGN signals?
+### ⭐ What's the difference between TD and IGN signals?
+<span style="color: #0aa1d5; font-weight: 600;">Signal Understanding</span>
 
 **TD (Touchdown)** = Early warning
-- "Early-cycle reversal conditions developing"
-- Don't enter yet—just watch
+- Indicates early-cycle reversal conditions
+- Typically viewed as observation signal, not entry trigger
 - Often appears first in a reversal sequence
 
-**IGN (Ignition)** = Entry signal
-- "Potential reversal up confirmed"
-- This is your long entry trigger
-- Comes after TD in most cases
+**IGN (Ignition)** = Momentum indication
+- Indicates momentum breakout conditions
+- Commonly interpreted as potential long entry signal
+- Often follows TD signals
 
-**Trading flow:**
-1. TD appears → Start watching
-2. IGN fires → Consider entry
-3. Price moves up → Hold position
-4. CAP/BDN appears → Consider exit
+**Common pattern sequence:**
+1. TD appears → Many traders begin observation
+2. IGN appears → Often interpreted as entry consideration
+3. Price moves up → Position monitoring phase
+4. CAP/BDN appears → Often interpreted as exit consideration
 
 See [Quick Start Guide](start-quick.md) for all 5 signal types explained.
 
@@ -327,7 +337,8 @@ Signals that appear mid-bar can change before close. This is normal and why we u
 
 ## 💡 Best Practices
 
-### Should I use all indicators at once?
+### ⚡ Should I use all indicators at once?
+<span style="color: #ff6b35; font-weight: 600;">Setup Advice</span>
 
 **Most traders use 1-3 indicators maximum.**
 
@@ -351,15 +362,16 @@ Signals that appear mid-bar can change before close. This is normal and why we u
 
 See our complete [Trading Workflow Guide](ref-workflow.md) for the step-by-step process.
 
-**Quick version:**
-1. **Check higher timeframe** (Daily) for bias and major levels
-2. **Drop to entry timeframe** (4H or 1H)
-3. **Wait for signal** at key level
-4. **Enter with proper stop loss**
-5. **Manage trade** using warning signals
-6. **Exit** on opposite signals
+**Common workflow pattern:**
+1. **Higher timeframe analysis** (Daily) for bias and major levels
+2. **Entry timeframe selection** (4H or 1H)
+3. **Signal observation** at key levels
+4. **Position entry considerations** with stop loss planning
+5. **Trade monitoring** using warning signals
+6. **Exit considerations** based on opposite signals
 
-### Should I take every signal?
+### ⭐ Should I take every signal?
+<span style="color: #0aa1d5; font-weight: 600;">Filtering Approach</span>
 
 **No! Be selective.**
 
