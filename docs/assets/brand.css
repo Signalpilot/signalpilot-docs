@@ -433,6 +433,36 @@ body {
     visibility: visible;
     width: auto;
   }
+
+  /* Ensure drawer has solid background and is fully visible */
+  .md-nav--primary {
+    background: var(--md-default-bg-color) !important;
+    opacity: 1 !important;
+  }
+
+  /* Ensure all drawer links are fully interactive and visible */
+  .md-nav__link {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    opacity: 1 !important;
+  }
+
+  /* Prevent overlay from blocking drawer interactions */
+  .md-overlay {
+    pointer-events: none !important;
+  }
+
+  /* Only let overlay catch clicks OUTSIDE the drawer */
+  [data-md-toggle="drawer"]:checked ~ .md-overlay {
+    pointer-events: auto !important;
+  }
+
+  /* But drawer itself must always capture clicks */
+  [data-md-toggle="drawer"]:checked ~ .md-container .md-nav--primary {
+    pointer-events: auto !important;
+    position: relative !important;
+    z-index: 1 !important;
+  }
 }
 
 /* DESKTOP: Hide duplicate title (we have custom nav) */
