@@ -427,9 +427,15 @@ body {
     display: none;
   }
 
-  /* CRITICAL FIX: Hide the overlay completely - it's blocking drawer clicks */
+  /* Restore overlay but ensure it doesn't block drawer clicks */
   .md-overlay {
-    display: none !important;
+    pointer-events: auto !important;
+  }
+
+  /* Drawer must be above overlay and capture all clicks */
+  .md-nav--primary {
+    position: relative !important;
+    z-index: 1 !important;
   }
 }
 
