@@ -1,0 +1,2198 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Non-repainting, alert-ready TradingView indicators for any market/timeframe.">
+      
+      
+      
+        <link rel="canonical" href="https://docs.signalpilot.io/how-to-alerts/">
+      
+      
+        <link rel="prev" href="../start-onboarding/">
+      
+      
+        <link rel="next" href="../how-to-webhooks/">
+      
+      
+      <link rel="icon" href="../assets/watermark-monogram-color-transparent.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
+    
+    
+      
+        <title>Set Up Alerts - Signal Pilot Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../assets/brand.css">
+    
+      <link rel="stylesheet" href="../assets/aurora.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-NZ05GV72K0"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-NZ05GV72K0",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-NZ05GV72K0",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  <!-- Google Fonts: Gugi for brand consistency -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#how-to-set-tradingview-alerts" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+  <!-- SignalPilot brand bar (keeps Material header & search intact) -->
+  <div class="sp-topnav">
+    <div class="sp-topnav__inner">
+      <a href="https://signalpilot.io" class="brand">
+        <span>Signal Pilot</span>
+      </a>
+      <nav class="sp-links" aria-label="Signal Pilot">
+        <a href="https://signalpilot.io/#why">Why</a>
+        <a href="https://signalpilot.io/#inside">What's inside</a>
+        <a href="https://education.signalpilot.io/">Education</a>
+        <a aria-current="page" href="https://docs.signalpilot.io/">Docs</a>
+        <a href="https://signalpilot.io/#pricing">Pricing</a>
+        <a href="https://signalpilot.io/#faq">FAQ</a>
+      </nav>
+      <a class="sp-cta" href="https://signalpilot.io/#pricing">Get the Suite</a>
+    </div>
+  </div>
+
+  
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Signal Pilot Docs" class="md-header__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
+      
+  <img src="../assets/watermark-monogram-color-transparent.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Signal Pilot Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Set Up Alerts
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Signalpilot/signalpilot-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    signalpilot-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Signal Pilot Docs" class="md-nav__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
+      
+  <img src="../assets/watermark-monogram-color-transparent.png" alt="logo">
+
+    </a>
+    Signal Pilot Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Signalpilot/signalpilot-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    signalpilot-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    🚀 Getting Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            🚀 Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../start-quick/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ⚡ Quick Start (5 min)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../start-prerequisites/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prerequisites
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../start-onboarding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Onboarding Checklist (7 days)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    📖 How-To Guides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            📖 How-To Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Set Up Alerts
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Set Up Alerts
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-alerts-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Why Alerts Matter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-setup-step-by-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔔 Quick Setup (Step-by-Step)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔔 Quick Setup (Step-by-Step)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-step-1-open-alert-dialog" class="md-nav__link">
+    <span class="md-ellipsis">
+      1️⃣ Step 1: Open Alert Dialog
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-step-2-select-indicator" class="md-nav__link">
+    <span class="md-ellipsis">
+      2️⃣ Step 2: Select Indicator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-step-3-choose-event" class="md-nav__link">
+    <span class="md-ellipsis">
+      3️⃣ Step 3: Choose Event
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-step-4-configure-options-critical" class="md-nav__link">
+    <span class="md-ellipsis">
+      4️⃣ Step 4: Configure Options (CRITICAL)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-step-5-name-your-alert" class="md-nav__link">
+    <span class="md-ellipsis">
+      5️⃣ Step 5: Name Your Alert
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-optional-customize-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6: (Optional) Customize Message
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-7-create-alert" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 7: Create Alert
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-success-looks-like" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ What Success Looks Like
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alert-management-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 Alert Management Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎨 Alert Management Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#organize-your-alerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organize Your Alerts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#considerations-for-alert-volume" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerations for Alert Volume
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-your-alerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Your Alerts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-mistakes-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚨 Common Mistakes &amp; Fixes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚨 Common Mistakes & Fixes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mistake-1-not-using-once-per-bar-close" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #1: Not Using "Once Per Bar Close"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-2-vague-alert-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #2: Vague Alert Names
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-3-too-many-alerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #3: Too Many Alerts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-4-wrong-indicator-selected" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #4: Wrong Indicator Selected
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-5-mobile-notifications-not-working" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #5: Mobile Notifications Not Working
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#webhook-automation-advanced" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Webhook Automation (Advanced)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔗 Webhook Automation (Advanced)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#webhook-url-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Webhook URL Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-webhook-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Webhook Message
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobile-app-alert-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      📱 Mobile App Alert Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📱 Mobile App Alert Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ios-iphoneipad" class="md-nav__link">
+    <span class="md-ellipsis">
+      iOS (iPhone/iPad)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#android" class="md-nav__link">
+    <span class="md-ellipsis">
+      Android
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alert-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Alert Checklist
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-guides" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Related Guides
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pro-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎓 Pro Tips
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-webhooks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use Webhooks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-screener/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use Screener
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    🚀 Suite (Latest)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            🚀 Suite (Latest)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../suite-index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📚 Suite Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pentarch-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pentarch v1.0 — Reversal Events
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../janus-atlas-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Janus Atlas v1.0 — Levels System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../omnideck-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Omnideck v1.0 — Everything Indicator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../augury-grid-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Augury Grid v1.0 — Multi-Symbol Screener
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../minimal-flow-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Minimal Flow v1.0 — Volume Strategy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../harmonic-oscillator-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Harmonic Oscillator v1.0 — Composite Momentum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plutus-flow-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plutus Flow v1.0 — Advanced OBV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    📚 Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            📚 Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-workflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trading Workflow (Bias → Timing)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-comparison/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Indicator Comparison Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-best-practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Best Practices & Pro Tips
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-non-repaint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Non-Repainting Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-troubleshooting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshooting Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    ℹ️ About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            ℹ️ About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Support & Access
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-changelog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Changelog (high level)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Website Tiles
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Website Tiles
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_product-cards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Product Cards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-alerts-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Why Alerts Matter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-setup-step-by-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔔 Quick Setup (Step-by-Step)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔔 Quick Setup (Step-by-Step)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-step-1-open-alert-dialog" class="md-nav__link">
+    <span class="md-ellipsis">
+      1️⃣ Step 1: Open Alert Dialog
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-step-2-select-indicator" class="md-nav__link">
+    <span class="md-ellipsis">
+      2️⃣ Step 2: Select Indicator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-step-3-choose-event" class="md-nav__link">
+    <span class="md-ellipsis">
+      3️⃣ Step 3: Choose Event
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-step-4-configure-options-critical" class="md-nav__link">
+    <span class="md-ellipsis">
+      4️⃣ Step 4: Configure Options (CRITICAL)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-step-5-name-your-alert" class="md-nav__link">
+    <span class="md-ellipsis">
+      5️⃣ Step 5: Name Your Alert
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-optional-customize-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6: (Optional) Customize Message
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-7-create-alert" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 7: Create Alert
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-success-looks-like" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ What Success Looks Like
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alert-management-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 Alert Management Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎨 Alert Management Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#organize-your-alerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organize Your Alerts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#considerations-for-alert-volume" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerations for Alert Volume
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-your-alerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Your Alerts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-mistakes-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚨 Common Mistakes &amp; Fixes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚨 Common Mistakes & Fixes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mistake-1-not-using-once-per-bar-close" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #1: Not Using "Once Per Bar Close"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-2-vague-alert-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #2: Vague Alert Names
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-3-too-many-alerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #3: Too Many Alerts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-4-wrong-indicator-selected" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #4: Wrong Indicator Selected
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-5-mobile-notifications-not-working" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #5: Mobile Notifications Not Working
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#webhook-automation-advanced" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Webhook Automation (Advanced)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔗 Webhook Automation (Advanced)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#webhook-url-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Webhook URL Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-webhook-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Webhook Message
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobile-app-alert-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      📱 Mobile App Alert Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📱 Mobile App Alert Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ios-iphoneipad" class="md-nav__link">
+    <span class="md-ellipsis">
+      iOS (iPhone/iPad)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#android" class="md-nav__link">
+    <span class="md-ellipsis">
+      Android
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alert-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Alert Checklist
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-guides" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Related Guides
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pro-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎓 Pro Tips
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="how-to-set-tradingview-alerts">How to Set TradingView Alerts<a class="headerlink" href="#how-to-set-tradingview-alerts" title="Permanent link">&para;</a></h1>
+<p>This guide explains the process of setting up reliable, close-confirmed alerts for <span class="signal-pilot-brand">Signal Pilot</span> indicators. Proper alert configuration ensures signals are never missed and false intrabar notifications are avoided.</p>
+<hr />
+<h2 id="why-alerts-matter">🎯 Why Alerts Matter<a class="headerlink" href="#why-alerts-matter" title="Permanent link">&para;</a></h2>
+<p><span style="color: #0aa1d5; font-weight: 600;">Critical Setup</span></p>
+<p><strong>Alerts provide:</strong>
+- Instant notifications when signals fire
+- The ability to trade without watching charts 24/7
+- Automated signal notifications via webhooks
+- Coverage of multiple markets simultaneously</p>
+<p><strong>Key principle:</strong> The "Once Per Bar Close" setting avoids repainting and false signals.</p>
+<hr />
+<h2 id="quick-setup-step-by-step">🔔 Quick Setup (Step-by-Step)<a class="headerlink" href="#quick-setup-step-by-step" title="Permanent link">&para;</a></h2>
+<p>These steps work for <strong>any <span class="signal-pilot-brand">Signal Pilot</span> indicator</strong> (Pentarch, Omnideck, Janus, etc.).</p>
+<h3 id="1-step-1-open-alert-dialog">1️⃣ Step 1: Open Alert Dialog<a class="headerlink" href="#1-step-1-open-alert-dialog" title="Permanent link">&para;</a></h3>
+<p><strong>The alert dialog can be opened</strong> by right-clicking the chart and selecting <strong>"Add alert..."</strong></p>
+<p>The keyboard shortcut <strong>Alt+A</strong> (Windows) or <strong>Cmd+A</strong> (Mac) also opens the alert dialog.</p>
+<hr />
+<h3 id="2-step-2-select-indicator">2️⃣ Step 2: Select Indicator<a class="headerlink" href="#2-step-2-select-indicator" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition dropdown</strong> displays available <span class="signal-pilot-brand">Signal Pilot</span> indicators.</p>
+<p>Examples:
+- "Pentarch v8.9"
+- "Omnideck v1.0"
+- "Janus Atlas v1.0"</p>
+<p><strong>Note:</strong> The indicator is typically already added to the chart before creating the alert.</p>
+<hr />
+<h3 id="3-step-3-choose-event">3️⃣ Step 3: Choose Event<a class="headerlink" href="#3-step-3-choose-event" title="Permanent link">&para;</a></h3>
+<p><strong>The Event dropdown</strong> displays available signals for the selected indicator.</p>
+<p><strong>Common Pentarch events:</strong>
+- <code>IGN Event</code> - Potential long entry
+- <code>CAP Event</code> - Potential exit long
+- <code>BDN Event</code> - Potential short entry / exit long
+- <code>TD Event</code> - Early-cycle warning
+- <code>WRN Event</code> - Late-cycle warning</p>
+<p><strong>Common Janus events:</strong>
+- <code>New Support Level</code>
+- <code>New Resistance Level</code>
+- <code>FVG Created</code></p>
+<p><strong>Common Omnideck events:</strong>
+- (Includes all Pentarch events plus more)</p>
+<hr />
+<h3 id="4-step-4-configure-options-critical">4️⃣ Step 4: Configure Options (CRITICAL)<a class="headerlink" href="#4-step-4-configure-options-critical" title="Permanent link">&para;</a></h3>
+<p><span style="color: #dc2626; font-weight: 600;">⚠️ Most Important Step</span></p>
+<p><strong>Options</strong> → The setting <strong>"Once Per Bar Close"</strong> is commonly selected.</p>
+<p>This is the <strong>most important setting</strong>:
+- ✅ Alerts only fire when the signal is CONFIRMED (bar closed)
+- ✅ No disappearing signals
+- ✅ No repainting
+- ❌ WITHOUT this: False intrabar alerts will occur</p>
+<p><strong>Expiration:</strong>
+- "Don't expire" creates permanent alerts
+- An expiration date can be set for temporary alerts</p>
+<p><strong>Actions:</strong>
+- ✅ "Notify on App" enables mobile notifications
+- ✅ "Show Popup" enables desktop notifications
+- ✅ "Send Email" enables email notifications (optional)
+- ✅ "Webhook URL" enables automation (optional)</p>
+<hr />
+<h3 id="5-step-5-name-your-alert">5️⃣ Step 5: Name Your Alert<a class="headerlink" href="#5-step-5-name-your-alert" title="Permanent link">&para;</a></h3>
+<p><strong>The alert name field</strong> allows for clear, descriptive identification.</p>
+<p><strong>Good alert names:</strong>
+- "BTC Daily IGN - Long Entry"
+- "ETH 4H CAP - Exit Signal"
+- "SPY 1H BDN - Short Entry"</p>
+<p><strong>Bad alert names:</strong>
+- "Alert 1"
+- "Test"
+- "Signal"</p>
+<p><strong>Why naming matters:</strong>
+- Multiple alerts can accumulate
+- Clear names enable quick action
+- Organization and management become easier</p>
+<hr />
+<h3 id="step-6-optional-customize-message">Step 6: (Optional) Customize Message<a class="headerlink" href="#step-6-optional-customize-message" title="Permanent link">&para;</a></h3>
+<p><strong>The Message field</strong> accepts custom text or placeholders.</p>
+<p><strong>Simple message:</strong>
+<div class="highlight"><pre><span></span><code>Pentarch IGN signal fired on {{ ticker }} {{ interval }}
+Time: {{ timenow }}
+Price: {{ close }}
+</code></pre></div></p>
+<p><strong>JSON format (for webhooks/automation):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;ticker&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{ ticker }}&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;interval&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{ interval }}&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{ timenow }}&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;event&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{ alert_name }}&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;price&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{{</span><span class="w"> </span><span class="err">close</span><span class="w"> </span><span class="p">}},</span>
+<span class="w">  </span><span class="nt">&quot;high&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{{</span><span class="w"> </span><span class="err">high</span><span class="w"> </span><span class="p">}},</span>
+<span class="w">  </span><span class="nt">&quot;low&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{{</span><span class="w"> </span><span class="err">low</span><span class="w"> </span><span class="p">}}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Available placeholders:</strong>
+- <code>{{ ticker }}</code> - Symbol name (e.g., BTCUSD)
+- <code>{{ interval }}</code> - Timeframe (e.g., 1D, 4H)
+- <code>{{ timenow }}</code> - Timestamp
+- <code>{{ alert_name }}</code> - Your alert name
+- <code>{{ close }}</code> - Close price
+- <code>{{ high }}</code> - High price
+- <code>{{ low }}</code> - Low price
+- <code>{{ volume }}</code> - Volume</p>
+<hr />
+<h3 id="step-7-create-alert">Step 7: Create Alert<a class="headerlink" href="#step-7-create-alert" title="Permanent link">&para;</a></h3>
+<p><strong>The "Create" button</strong> finalizes and activates the alert.</p>
+<p>The alert becomes active immediately.</p>
+<hr />
+<h2 id="what-success-looks-like">✅ What Success Looks Like<a class="headerlink" href="#what-success-looks-like" title="Permanent link">&para;</a></h2>
+<p><strong>When properly configured:</strong></p>
+<ol>
+<li><strong>The alert appears in the alerts list</strong></li>
+<li>The "Alerts" button is located in the top toolbar</li>
+<li>Active alerts display in the list</li>
+<li>
+<p>Status shows as "Active"</p>
+</li>
+<li>
+<p><strong>Notifications arrive only on bar close</strong></p>
+</li>
+<li>No mid-bar spam occurs</li>
+<li>Only confirmed signals trigger notifications</li>
+<li>
+<p>Alerts remain reliable and actionable</p>
+</li>
+<li>
+<p><strong>Notifications are delivered via chosen methods</strong></p>
+</li>
+<li>Phone notification (if enabled)</li>
+<li>Email (if enabled)</li>
+<li>Pop-up on screen (if enabled)</li>
+<li>Webhook sent (if configured)</li>
+</ol>
+<p><strong>Example notification:</strong>
+<div class="highlight"><pre><span></span><code>BTC Daily IGN - Long Entry
+
+Pentarch IGN signal fired on BTCUSD 1D
+Time: 2025-10-29 16:00:00
+Price: 67,500
+</code></pre></div></p>
+<hr />
+<h2 id="alert-management-best-practices">🎨 Alert Management Best Practices<a class="headerlink" href="#alert-management-best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="organize-your-alerts">Organize Your Alerts<a class="headerlink" href="#organize-your-alerts" title="Permanent link">&para;</a></h3>
+<p><strong>By symbol:</strong>
+- BTC alerts
+- ETH alerts
+- Stock alerts</p>
+<p><strong>By timeframe:</strong>
+- Daily alerts
+- 4H alerts
+- 1H alerts</p>
+<p><strong>By signal type:</strong>
+- Entry alerts (IGN, BDN)
+- Exit alerts (CAP, WRN)
+- Level alerts (Support, Resistance)</p>
+<hr />
+<h3 id="considerations-for-alert-volume">Considerations for Alert Volume<a class="headerlink" href="#considerations-for-alert-volume" title="Permanent link">&para;</a></h3>
+<p><strong>Maximum recommended:</strong> 10-15 active alerts</p>
+<p><strong>Why:</strong>
+- Too many alerts can lead to alert fatigue
+- Alerts may start being ignored
+- Management becomes harder</p>
+<p><strong>Better approach:</strong>
+- Focus on 3-5 main symbols
+- Alert only on key signals (IGN, CAP, BDN)
+- TD and WRN can be skipped (unless specifically wanted)
+- Augury Grid provides scanning instead of alerting 20+ symbols</p>
+<hr />
+<h3 id="test-your-alerts">Test Your Alerts<a class="headerlink" href="#test-your-alerts" title="Permanent link">&para;</a></h3>
+<p><strong>Before relying on alerts:</strong></p>
+<ol>
+<li>A test alert can be created on a low timeframe (5m or 15m)</li>
+<li>The next signal typically arrives quickly</li>
+<li>Notification receipt can be verified</li>
+<li>Phone notification can be checked</li>
+<li>Email arrival can be confirmed (if enabled)</li>
+</ol>
+<p><strong>If not working:</strong>
+- TradingView notification settings can be checked
+- Phone app permissions can be verified
+- Email spam folder can be reviewed
+- The <a href="../ref-troubleshooting/">Troubleshooting Guide</a> provides additional help</p>
+<hr />
+<h2 id="common-mistakes-fixes">🚨 Common Mistakes &amp; Fixes<a class="headerlink" href="#common-mistakes-fixes" title="Permanent link">&para;</a></h2>
+<h3 id="mistake-1-not-using-once-per-bar-close">Mistake #1: Not Using "Once Per Bar Close"<a class="headerlink" href="#mistake-1-not-using-once-per-bar-close" title="Permanent link">&para;</a></h3>
+<p><strong>Problem:</strong> Alerts fire intrabar, then signals disappear</p>
+<p><strong>Resolution:</strong>
+1. Incorrect alerts can be deleted
+2. New alerts can be created
+3. The <strong>"Once Per Bar Close"</strong> setting is commonly selected
+4. Settings can be saved</p>
+<p><strong>Why this matters:</strong> Intrabar signals are preliminary and can change. Only closed-bar signals are final.</p>
+<hr />
+<h3 id="mistake-2-vague-alert-names">Mistake #2: Vague Alert Names<a class="headerlink" href="#mistake-2-vague-alert-names" title="Permanent link">&para;</a></h3>
+<p><strong>Problem:</strong> An alert labeled "Signal 1" provides no context</p>
+<p><strong>Resolution:</strong>
+- The symbol can be included: BTC, ETH, SPY
+- The timeframe can be specified: Daily, 4H, 1H
+- The event can be noted: IGN, CAP, BDN
+- Example: "BTC 4H IGN Long"</p>
+<hr />
+<h3 id="mistake-3-too-many-alerts">Mistake #3: Too Many Alerts<a class="headerlink" href="#mistake-3-too-many-alerts" title="Permanent link">&para;</a></h3>
+<p><strong>Problem:</strong> Alert spam creates overwhelming notifications</p>
+<p><strong>Resolution:</strong>
+- Low-priority alerts can be deleted
+- Focus can be narrowed to the best 3-5 markets
+- Alerts can be limited to entry/exit signals
+- Augury Grid can be used for scanning</p>
+<hr />
+<h3 id="mistake-4-wrong-indicator-selected">Mistake #4: Wrong Indicator Selected<a class="headerlink" href="#mistake-4-wrong-indicator-selected" title="Permanent link">&para;</a></h3>
+<p><strong>Problem:</strong> Alerts don't fire or fire on wrong signals</p>
+<p><strong>Resolution:</strong>
+- The indicator's presence on the chart can be verified
+- Indicator version can be matched with alert settings
+- Event name correctness can be confirmed
+- Testing with a recent historical signal can be performed</p>
+<hr />
+<h3 id="mistake-5-mobile-notifications-not-working">Mistake #5: Mobile Notifications Not Working<a class="headerlink" href="#mistake-5-mobile-notifications-not-working" title="Permanent link">&para;</a></h3>
+<p><strong>Problem:</strong> Alerts fire but phone notifications aren't received</p>
+<p><strong>Resolution:</strong></p>
+<p><strong>TradingView App:</strong>
+- App → Profile → Settings → Notifications → All options can be enabled</p>
+<p><strong>iPhone:</strong>
+- Settings → Notifications → TradingView → Notifications can be allowed</p>
+<p><strong>Android:</strong>
+- Settings → Apps → TradingView → Notifications → Notifications can be enabled</p>
+<p><strong>Also worth checking:</strong>
+- Do Not Disturb mode status
+- Phone internet connection
+- TradingView app update status</p>
+<p>See <a href="../ref-troubleshooting/#alerts-not-firing">Troubleshooting: Alerts Not Working</a></p>
+<hr />
+<h2 id="webhook-automation-advanced">🔗 Webhook Automation (Advanced)<a class="headerlink" href="#webhook-automation-advanced" title="Permanent link">&para;</a></h2>
+<p><strong>For automating trades with bots:</strong></p>
+<h3 id="webhook-url-setup">Webhook URL Setup<a class="headerlink" href="#webhook-url-setup" title="Permanent link">&para;</a></h3>
+<ol>
+<li>A webhook URL can be obtained from your automation platform:</li>
+<li>3Commas</li>
+<li>Alertatron</li>
+<li>
+<p>Custom trading bot</p>
+</li>
+<li>
+<p>In alert settings:</p>
+</li>
+<li>"Webhook URL" can be checked</li>
+<li>The webhook URL can be pasted</li>
+<li>
+<p>The message can be configured in JSON format</p>
+</li>
+<li>
+<p>Webhook testing process:</p>
+</li>
+<li>An alert can be triggered (low timeframe provides quick testing)</li>
+<li>Webhook receipt can be verified</li>
+<li>Bot response can be checked</li>
+</ol>
+<h3 id="example-webhook-message">Example Webhook Message<a class="headerlink" href="#example-webhook-message" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;signal&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{ alert_name }}&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;ticker&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{ ticker }}&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;interval&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{ interval }}&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;price&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{{</span><span class="w"> </span><span class="err">close</span><span class="w"> </span><span class="p">}},</span>
+<span class="w">  </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{ timenow }}&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;action&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;enter_long&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;stop_loss&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{{</span><span class="w"> </span><span class="err">low</span><span class="w"> </span><span class="p">}},</span>
+<span class="w">  </span><span class="nt">&quot;take_profit&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{{</span><span class="w"> </span><span class="err">high</span><span class="w"> </span><span class="p">}}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Important:</strong> Automated trading is commonly tested on paper/demo accounts first.</p>
+<hr />
+<h2 id="mobile-app-alert-setup">📱 Mobile App Alert Setup<a class="headerlink" href="#mobile-app-alert-setup" title="Permanent link">&para;</a></h2>
+<h3 id="ios-iphoneipad">iOS (iPhone/iPad)<a class="headerlink" href="#ios-iphoneipad" title="Permanent link">&para;</a></h3>
+<ol>
+<li>The TradingView app can be downloaded from the App Store</li>
+<li>The same account credentials can be used to log in</li>
+<li>Profile → Settings → Notifications can be accessed</li>
+<li>"Push Notifications" can be enabled</li>
+<li>Sound can be enabled</li>
+<li>"Important Alerts First" can be enabled</li>
+</ol>
+<p><strong>iPhone System Settings:</strong>
+- Settings → Notifications → TradingView
+- Allow Notifications: can be turned ON
+- Sounds: can be turned ON
+- Badges: can be turned ON
+- Show on Lock Screen: can be turned ON</p>
+<hr />
+<h3 id="android">Android<a class="headerlink" href="#android" title="Permanent link">&para;</a></h3>
+<ol>
+<li>The TradingView app can be downloaded from the Play Store</li>
+<li>The same account credentials can be used to log in</li>
+<li>Profile → Settings → Notifications can be accessed</li>
+<li>"Push Notifications" can be enabled</li>
+<li>Sound can be enabled</li>
+</ol>
+<p><strong>Android System Settings:</strong>
+- Settings → Apps → TradingView → Notifications
+- Allow notifications: can be turned ON
+- Override Do Not Disturb: can be turned ON (optional)</p>
+<hr />
+<h2 id="alert-checklist">✅ Alert Checklist<a class="headerlink" href="#alert-checklist" title="Permanent link">&para;</a></h2>
+<p><strong>Before considering your alert setup complete:</strong></p>
+<ul>
+<li>[ ] Alerts are set to "Once Per Bar Close"</li>
+<li>[ ] Alerts have clear, descriptive names</li>
+<li>[ ] Notification receipt has been tested and confirmed</li>
+<li>[ ] Mobile app notifications are working</li>
+<li>[ ] Email notifications are working (if enabled)</li>
+<li>[ ] Alert count remains manageable (10-15 max)</li>
+<li>[ ] Alerts are organized by symbol/timeframe/type</li>
+<li>[ ] Webhook has been configured and tested (if automating)</li>
+</ul>
+<hr />
+<h2 id="related-guides">📚 Related Guides<a class="headerlink" href="#related-guides" title="Permanent link">&para;</a></h2>
+<p><strong>New to <span class="signal-pilot-brand">Signal Pilot</span>?</strong>
+- <a href="../start-quick/">Quick Start</a> - Learn Pentarch in 5 minutes
+- <a href="../start-onboarding/">Onboarding Checklist</a> - Your first 7 days</p>
+<p><strong>Having issues?</strong>
+- <a href="../ref-troubleshooting/#alert-issues">Troubleshooting: Alerts</a>
+- <a href="../about-faq/#how-do-i-know-if-alerts-are-working">FAQ: Alerts</a></p>
+<p><strong>Want to automate?</strong>
+- <a href="../how-to-webhooks/">Webhook Guide</a> - Automation setup
+- <a href="../about-faq/#can-i-automate-trading-with-these-indicators">FAQ: Automation</a></p>
+<p><strong>Need help?</strong>
+- <a href="../about-support/">Support</a> - Contact information</p>
+<hr />
+<h2 id="pro-tips">🎓 Pro Tips<a class="headerlink" href="#pro-tips" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Higher timeframe alerts</strong> (Daily, 4H) tend to be cleaner and more reliable</li>
+<li><strong>Testing alerts on a 15m chart</strong> provides quick feedback before trusting them</li>
+<li><strong>Descriptive names</strong> make future management easier</li>
+<li><strong>Selective alerting</strong> - IGN, CAP, BDN is usually sufficient</li>
+<li><strong>Monthly expiration reminders</strong> help keep alerts current</li>
+<li><strong>Screenshot documentation</strong> of alert settings makes recreation easier</li>
+<li><strong>Backup list maintenance</strong> documents the alert strategy</li>
+</ol>
+<hr />
+<p><strong>Alerts enable automated signal reception.</strong> The setup process can begin now.</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://x.com/signalpilot" target="_blank" rel="noopener" title="x.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Signalpilot" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.sections", "content.code.copy", "search.suggest", "search.highlight", "content.tabs.link", "content.tooltips"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="../assets/brand.js"></script>
+      
+        <script src="../assets/sp-bg.js"></script>
+      
+        <script src="../assets/keyword-highlighter.js"></script>
+      
+    
+  </body>
+</html>

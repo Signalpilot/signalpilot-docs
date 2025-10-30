@@ -1,0 +1,3098 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Non-repainting, alert-ready TradingView indicators for any market/timeframe.">
+      
+      
+      
+        <link rel="canonical" href="https://docs.signalpilot.io/ref-troubleshooting/">
+      
+      
+        <link rel="prev" href="../ref-glossary/">
+      
+      
+        <link rel="next" href="../about-faq/">
+      
+      
+      <link rel="icon" href="../assets/watermark-monogram-color-transparent.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
+    
+    
+      
+        <title>Troubleshooting Guide - Signal Pilot Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../assets/brand.css">
+    
+      <link rel="stylesheet" href="../assets/aurora.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-NZ05GV72K0"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-NZ05GV72K0",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-NZ05GV72K0",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  <!-- Google Fonts: Gugi for brand consistency -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#troubleshooting-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+  <!-- SignalPilot brand bar (keeps Material header & search intact) -->
+  <div class="sp-topnav">
+    <div class="sp-topnav__inner">
+      <a href="https://signalpilot.io" class="brand">
+        <span>Signal Pilot</span>
+      </a>
+      <nav class="sp-links" aria-label="Signal Pilot">
+        <a href="https://signalpilot.io/#why">Why</a>
+        <a href="https://signalpilot.io/#inside">What's inside</a>
+        <a href="https://education.signalpilot.io/">Education</a>
+        <a aria-current="page" href="https://docs.signalpilot.io/">Docs</a>
+        <a href="https://signalpilot.io/#pricing">Pricing</a>
+        <a href="https://signalpilot.io/#faq">FAQ</a>
+      </nav>
+      <a class="sp-cta" href="https://signalpilot.io/#pricing">Get the Suite</a>
+    </div>
+  </div>
+
+  
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Signal Pilot Docs" class="md-header__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
+      
+  <img src="../assets/watermark-monogram-color-transparent.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Signal Pilot Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Troubleshooting Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Signalpilot/signalpilot-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    signalpilot-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Signal Pilot Docs" class="md-nav__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
+      
+  <img src="../assets/watermark-monogram-color-transparent.png" alt="logo">
+
+    </a>
+    Signal Pilot Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Signalpilot/signalpilot-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    signalpilot-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    🚀 Getting Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            🚀 Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../start-quick/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ⚡ Quick Start (5 min)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../start-prerequisites/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prerequisites
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../start-onboarding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Onboarding Checklist (7 days)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    📖 How-To Guides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            📖 How-To Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-alerts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Set Up Alerts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-webhooks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use Webhooks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-screener/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use Screener
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    🚀 Suite (Latest)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            🚀 Suite (Latest)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../suite-index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📚 Suite Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pentarch-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pentarch v1.0 — Reversal Events
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../janus-atlas-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Janus Atlas v1.0 — Levels System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../omnideck-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Omnideck v1.0 — Everything Indicator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../augury-grid-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Augury Grid v1.0 — Multi-Symbol Screener
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../minimal-flow-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Minimal Flow v1.0 — Volume Strategy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../harmonic-oscillator-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Harmonic Oscillator v1.0 — Composite Momentum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plutus-flow-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plutus Flow v1.0 — Advanced OBV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    📚 Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            📚 Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-workflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trading Workflow (Bias → Timing)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-comparison/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Indicator Comparison Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-best-practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Best Practices & Pro Tips
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-non-repaint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Non-Repainting Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Troubleshooting Guide
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshooting Guide
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quick-diagnostic-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚨 Quick Diagnostic Checklist
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signal-display-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Signal &amp; Display Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Signal & Display Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signals-not-appearing-on-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Signals Not Appearing on Chart
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔍 Signals Not Appearing on Chart">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-insufficient-chart-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Insufficient Chart History
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-wrong-timeframe-for-current-market-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Wrong Timeframe for Current Market Conditions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-market-in-tight-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Market in Tight Range
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-indicator-not-fully-loaded" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Indicator Not Fully Loaded
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signals-appearing-then-disappearing" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Signals Appearing Then Disappearing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚠️ Signals Appearing Then Disappearing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fix-alert-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fix Alert Settings:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wrong-signal-colors-visual-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 Wrong Signal Colors / Visual Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎨 Wrong Signal Colors / Visual Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lightdark-mode-mismatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Light/Dark Mode Mismatch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overlapping-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overlapping Indicators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tiny-signals-cant-see" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tiny Signals / Can't See
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alert-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔔 Alert Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔔 Alert Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alerts-not-firing" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔕 Alerts Not Firing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔕 Alerts Not Firing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-verify-alert-is-active" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Verify Alert Is Active
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-check-alert-trigger-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Check Alert Trigger Condition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-test-on-lower-timeframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Test on Lower Timeframe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-check-notification-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Check Notification Settings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#too-many-alerts-alert-spam" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔊 Too Many Alerts / Alert Spam
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔊 Too Many Alerts / Alert Spam">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-change-to-higher-timeframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Change to Higher Timeframe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-be-more-selective-with-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Be More Selective with Events
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-use-multiple-symbols-smart" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Use Multiple Symbols Smart
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-add-level-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Add Level Filters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alerts-triggering-on-old-bars" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alerts Triggering on Old Bars
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-loading-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔑 Access &amp; Loading Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔑 Access & Loading Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#indicator-not-found-in-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ "Indicator Not Found" in Search
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="❌ "Indicator Not Found" in Search">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-access-not-yet-granted" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Access Not Yet Granted
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-wrong-tradingview-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Wrong TradingView Account
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-indicator-name-changedupdated" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Indicator Name Changed/Updated
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-privateinvite-only-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Private/Invite-Only Script
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indicator-shows-loading-forever" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indicator Shows "Loading..." Forever
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Indicator Shows "Loading..." Forever">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Fix:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if-quick-fix-doesnt-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      If Quick Fix Doesn't Work:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indicator-suddenly-disappeared-from-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indicator Suddenly Disappeared from Chart
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Indicator Suddenly Disappeared from Chart">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-indicator-updated-new-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Indicator Updated (New Version)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-chart-template-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Chart Template Issue
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-access-revoked" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Access Revoked
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-tradingview-account-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. TradingView Account Change
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Configuration Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚙️ Configuration Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#settings-not-saving" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings Not Saving
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-indicator-instances-showing-different-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Indicator Instances Showing Different Signals
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobile-app-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      📱 Mobile App Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📱 Mobile App Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#indicators-not-showing-on-mobile" class="md-nav__link">
+    <span class="md-ellipsis">
+      📱 Indicators Not Showing on Mobile
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📱 Indicators Not Showing on Mobile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitations:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workaround" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workaround:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alerts-not-working-on-mobile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alerts Not Working on Mobile
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-calculation-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Data &amp; Calculation Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 Data & Calculation Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signals-different-than-expected" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signals Different Than Expected
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Signals Different Than Expected">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-misunderstandings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Misunderstandings:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#historical-signals-different-than-real-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Historical Signals Different Than Real-Time
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Historical Signals Different Than Real-Time">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-indicator-updated" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Indicator Updated
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-not-enough-historical-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Not Enough Historical Data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#browser-performance-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌐 Browser &amp; Performance Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌐 Browser & Performance Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chart-laggingslow-with-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chart Lagging/Slow with Indicators
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chart Lagging/Slow with Indicators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reduce-indicator-count" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reduce Indicator Count
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimize-browser" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimize Browser
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-lower-timeframe-on-clean-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Lower Timeframe on Clean Chart
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upgrade-tradingview-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upgrade TradingView Plan
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-contact-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      📞 When to Contact Support
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Additional Resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    ℹ️ About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            ℹ️ About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Support & Access
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-changelog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Changelog (high level)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Website Tiles
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Website Tiles
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_product-cards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Product Cards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quick-diagnostic-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚨 Quick Diagnostic Checklist
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signal-display-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Signal &amp; Display Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Signal & Display Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signals-not-appearing-on-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Signals Not Appearing on Chart
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔍 Signals Not Appearing on Chart">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-insufficient-chart-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Insufficient Chart History
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-wrong-timeframe-for-current-market-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Wrong Timeframe for Current Market Conditions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-market-in-tight-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Market in Tight Range
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-indicator-not-fully-loaded" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Indicator Not Fully Loaded
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signals-appearing-then-disappearing" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Signals Appearing Then Disappearing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚠️ Signals Appearing Then Disappearing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fix-alert-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fix Alert Settings:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wrong-signal-colors-visual-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 Wrong Signal Colors / Visual Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎨 Wrong Signal Colors / Visual Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lightdark-mode-mismatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Light/Dark Mode Mismatch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overlapping-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overlapping Indicators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tiny-signals-cant-see" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tiny Signals / Can't See
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alert-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔔 Alert Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔔 Alert Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alerts-not-firing" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔕 Alerts Not Firing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔕 Alerts Not Firing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-verify-alert-is-active" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Verify Alert Is Active
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-check-alert-trigger-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Check Alert Trigger Condition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-test-on-lower-timeframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Test on Lower Timeframe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-check-notification-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Check Notification Settings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#too-many-alerts-alert-spam" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔊 Too Many Alerts / Alert Spam
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔊 Too Many Alerts / Alert Spam">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-change-to-higher-timeframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Change to Higher Timeframe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-be-more-selective-with-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Be More Selective with Events
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-use-multiple-symbols-smart" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Use Multiple Symbols Smart
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-add-level-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Add Level Filters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alerts-triggering-on-old-bars" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alerts Triggering on Old Bars
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-loading-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔑 Access &amp; Loading Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔑 Access & Loading Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#indicator-not-found-in-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ "Indicator Not Found" in Search
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="❌ "Indicator Not Found" in Search">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-access-not-yet-granted" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Access Not Yet Granted
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-wrong-tradingview-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Wrong TradingView Account
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-indicator-name-changedupdated" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Indicator Name Changed/Updated
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-privateinvite-only-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Private/Invite-Only Script
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indicator-shows-loading-forever" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indicator Shows "Loading..." Forever
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Indicator Shows "Loading..." Forever">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Fix:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if-quick-fix-doesnt-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      If Quick Fix Doesn't Work:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indicator-suddenly-disappeared-from-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indicator Suddenly Disappeared from Chart
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Indicator Suddenly Disappeared from Chart">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-indicator-updated-new-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Indicator Updated (New Version)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-chart-template-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Chart Template Issue
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-access-revoked" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Access Revoked
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-tradingview-account-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. TradingView Account Change
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Configuration Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚙️ Configuration Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#settings-not-saving" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings Not Saving
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-indicator-instances-showing-different-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Indicator Instances Showing Different Signals
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobile-app-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      📱 Mobile App Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📱 Mobile App Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#indicators-not-showing-on-mobile" class="md-nav__link">
+    <span class="md-ellipsis">
+      📱 Indicators Not Showing on Mobile
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📱 Indicators Not Showing on Mobile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitations:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workaround" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workaround:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alerts-not-working-on-mobile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alerts Not Working on Mobile
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-calculation-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Data &amp; Calculation Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 Data & Calculation Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signals-different-than-expected" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signals Different Than Expected
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Signals Different Than Expected">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-misunderstandings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Misunderstandings:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#historical-signals-different-than-real-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Historical Signals Different Than Real-Time
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Historical Signals Different Than Real-Time">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-indicator-updated" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Indicator Updated
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-not-enough-historical-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Not Enough Historical Data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#browser-performance-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌐 Browser &amp; Performance Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌐 Browser & Performance Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chart-laggingslow-with-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chart Lagging/Slow with Indicators
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chart Lagging/Slow with Indicators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reduce-indicator-count" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reduce Indicator Count
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimize-browser" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimize Browser
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-lower-timeframe-on-clean-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Lower Timeframe on Clean Chart
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upgrade-tradingview-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upgrade TradingView Plan
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-contact-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      📞 When to Contact Support
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Additional Resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="troubleshooting-guide">Troubleshooting Guide<a class="headerlink" href="#troubleshooting-guide" title="Permanent link">&para;</a></h1>
+<p><span class="signal-pilot-brand">Signal Pilot</span> indicator issues are addressed in this guide. Common problems and their solutions are covered. Issue not found: <a href="../about-support/">Contact Support</a> is available.</p>
+<hr />
+<h2 id="quick-diagnostic-checklist">🚨 Quick Diagnostic Checklist<a class="headerlink" href="#quick-diagnostic-checklist" title="Permanent link">&para;</a></h2>
+<p>Before addressing specific issues, this quick checklist can be reviewed:</p>
+<ul>
+<li>[ ] TradingView paid subscription active (Essential, Pro, or Pro+)</li>
+<li>[ ] <span class="signal-pilot-brand">Signal Pilot</span> subscription active and access granted</li>
+<li>[ ] Using latest indicator version (check version number)</li>
+<li>[ ] Browser cache cleared recently</li>
+<li>[ ] Sufficient chart history loaded (at least 500 bars)</li>
+<li>[ ] Internet connection stable</li>
+<li>[ ] TradingView servers operational (check status.tradingview.com)</li>
+</ul>
+<hr />
+<h2 id="signal-display-issues">📊 Signal &amp; Display Issues<a class="headerlink" href="#signal-display-issues" title="Permanent link">&para;</a></h2>
+<h3 id="signals-not-appearing-on-chart">🔍 Signals Not Appearing on Chart<a class="headerlink" href="#signals-not-appearing-on-chart" title="Permanent link">&para;</a></h3>
+<p><span style="color: #dc2626; font-weight: 600;">Critical Issue</span></p>
+<p><strong>Symptoms:</strong> Indicator loaded but no signals showing</p>
+<p><strong>Common Causes &amp; Solutions:</strong></p>
+<h4 id="1-insufficient-chart-history">1. Insufficient Chart History<a class="headerlink" href="#1-insufficient-chart-history" title="Permanent link">&para;</a></h4>
+<p><strong>Problem:</strong> Not enough historical data loaded for indicator calculations</p>
+<p><strong>Solution:</strong>
+<div class="highlight"><pre><span></span><code>1. Scrolling left on chart loads more history
+2. At least 500-1000 bars of data is recommended
+3. A few seconds can be waited for indicator to recalculate
+4. Signals are expected to appear after recalculation
+</code></pre></div></p>
+<h4 id="2-wrong-timeframe-for-current-market-conditions">2. Wrong Timeframe for Current Market Conditions<a class="headerlink" href="#2-wrong-timeframe-for-current-market-conditions" title="Permanent link">&para;</a></h4>
+<p><strong>Problem:</strong> Timeframe too high/low for current volatility</p>
+<p><strong>Solution:</strong>
+<div class="highlight"><pre><span></span><code>Daily chart: Good for trending markets, sparse in ranges
+4H chart: Balanced signal frequency
+1H chart: More frequent signals
+15m chart: Very frequent, best for active markets
+
+Switching timeframes can be tried to see if signals appear.
+</code></pre></div></p>
+<h4 id="3-market-in-tight-range">3. Market in Tight Range<a class="headerlink" href="#3-market-in-tight-range" title="Permanent link">&para;</a></h4>
+<p><strong>Problem:</strong> Pentarch detects reversals—no reversals in tight ranges</p>
+<p><strong>Solution:</strong>
+<div class="highlight"><pre><span></span><code>This is NORMAL behavior. Indicators don&#39;t force signals.
+- Check a different, more volatile symbol
+- Wait for breakout or increased volatility
+- Or use Janus Atlas for range-based level trading
+</code></pre></div></p>
+<h4 id="4-indicator-not-fully-loaded">4. Indicator Not Fully Loaded<a class="headerlink" href="#4-indicator-not-fully-loaded" title="Permanent link">&para;</a></h4>
+<p><strong>Problem:</strong> Indicator loaded but not calculating</p>
+<p><strong>Solution:</strong>
+<div class="highlight"><pre><span></span><code>1. The indicator can be removed from chart
+2. The browser can be refreshed (Ctrl+F5 or Cmd+Shift+R)
+3. The indicator can be re-added from Indicators menu
+4. 5-10 seconds can be waited for initial calculation
+</code></pre></div></p>
+<p><strong>If this approach is still not effective:</strong> Indicator version can be checked—outdated versions may have been deprecated.</p>
+<hr />
+<h3 id="signals-appearing-then-disappearing">⚠️ Signals Appearing Then Disappearing<a class="headerlink" href="#signals-appearing-then-disappearing" title="Permanent link">&para;</a></h3>
+<p><span style="color: #f59e0b; font-weight: 600;">Common Confusion</span></p>
+<p><strong>Symptoms:</strong> Signals show up during bar, vanish before you can act</p>
+<p><strong>Root Cause:</strong> This is NORMAL intrabar behavior—not a bug!</p>
+<p><strong>Why It Happens:</strong>
+- Indicators calculate on every price tick
+- Preliminary signals can appear mid-bar
+- Only CLOSED bar signals are final
+- This prevents repainting</p>
+<p><strong>Solution:</strong> Use proper alert settings</p>
+<h4 id="fix-alert-settings">Fix Alert Settings:<a class="headerlink" href="#fix-alert-settings" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>1. Chart can be right-clicked → Add Alert
+2. Condition: The indicator can be selected
+3. Event: Specific event can be chosen (e.g., &quot;IGN Event&quot;)
+4. Options: Can be set to &quot;Once Per Bar Close&quot; ← CRITICAL
+5. The alert can be created
+</code></pre></div>
+<p><strong>What "Once Per Bar Close" does:</strong>
+- ✅ Only triggers on confirmed, closed bars
+- ✅ No disappearing signals
+- ✅ Reliable, actionable alerts
+- ❌ Won't notify you of intrabar preliminary signals</p>
+<p><strong>Key information:</strong> Intrabar signals are "maybe" — closed bar signals are "confirmed."</p>
+<hr />
+<h3 id="wrong-signal-colors-visual-issues">🎨 Wrong Signal Colors / Visual Issues<a class="headerlink" href="#wrong-signal-colors-visual-issues" title="Permanent link">&para;</a></h3>
+<p><span style="color: #10b981; font-weight: 600;">Display Fix</span></p>
+<p><strong>Symptoms:</strong> Signals showing but colors are off or hard to see</p>
+<p><strong>Solutions:</strong></p>
+<h4 id="lightdark-mode-mismatch">Light/Dark Mode Mismatch<a class="headerlink" href="#lightdark-mode-mismatch" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>1. The indicator name on chart can be clicked
+2. The &quot;Style&quot; tab can be accessed
+3. Colors can be adjusted manually
+4. Or the TradingView theme (top-right) can be switched
+</code></pre></div>
+<h4 id="overlapping-indicators">Overlapping Indicators<a class="headerlink" href="#overlapping-indicators" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>Problem: Multiple indicators using same colors
+Solution:
+- Change one indicator&#39;s color scheme
+- Use different visual styles (shapes vs. text)
+- Load fewer indicators on same chart
+</code></pre></div>
+<h4 id="tiny-signals-cant-see">Tiny Signals / Can't See<a class="headerlink" href="#tiny-signals-cant-see" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>1. Indicator settings can be accessed
+2. &quot;Style&quot; tab
+3. &quot;Size&quot; setting can be increased
+4. Labels can be enabled/disabled as needed
+</code></pre></div>
+<hr />
+<h2 id="alert-issues">🔔 Alert Issues<a class="headerlink" href="#alert-issues" title="Permanent link">&para;</a></h2>
+<h3 id="alerts-not-firing">🔕 Alerts Not Firing<a class="headerlink" href="#alerts-not-firing" title="Permanent link">&para;</a></h3>
+<p><span style="color: #dc2626; font-weight: 600;">Critical Issue</span></p>
+<p><strong>Symptoms:</strong> Alert created but no notifications received</p>
+<p><strong>Diagnostic Steps:</strong></p>
+<h4 id="step-1-verify-alert-is-active">Step 1: Verify Alert Is Active<a class="headerlink" href="#step-1-verify-alert-is-active" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>1. The &quot;Alert&quot; button (top toolbar) can be clicked
+2. The alerts list can be checked
+3. The &lt;span class=&quot;signal-pilot-brand&quot;&gt;Signal Pilot&lt;/span&gt; alert can be found
+4. It can be ensured it&#39;s not expired or paused
+</code></pre></div>
+<h4 id="step-2-check-alert-trigger-condition">Step 2: Check Alert Trigger Condition<a class="headerlink" href="#step-2-check-alert-trigger-condition" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>WRONG: &quot;Any alert() function call&quot;
+WRONG: &quot;Every time indicator plots&quot;
+
+RIGHT: &quot;Once Per Bar Close&quot;
+RIGHT: Specific event selected (e.g., &quot;IGN Event&quot;)
+</code></pre></div>
+<h4 id="step-3-test-on-lower-timeframe">Step 3: Test on Lower Timeframe<a class="headerlink" href="#step-3-test-on-lower-timeframe" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>1. A test alert can be created on 5m or 15m chart
+2. Next signal can be waited for (shouldn&#39;t take long)
+3. Notification receipt can be verified
+4. If working: Original alert was set up wrong
+5. If not working: Notification settings issue exists
+</code></pre></div>
+<h4 id="step-4-check-notification-settings">Step 4: Check Notification Settings<a class="headerlink" href="#step-4-check-notification-settings" title="Permanent link">&para;</a></h4>
+<p><strong>On Desktop:</strong>
+<div class="highlight"><pre><span></span><code>1. TradingView → Profile Icon → Settings can be accessed
+2. Notifications tab can be opened
+3. &quot;Show pop-ups&quot; can be ensured enabled
+4. Email address can be checked for correctness
+5. Email inbox AND spam folder can be checked
+</code></pre></div></p>
+<p><strong>On Mobile:</strong>
+<div class="highlight"><pre><span></span><code>1. Phone Settings → Apps → TradingView can be accessed
+2. &quot;Notifications&quot; can be enabled
+3. &quot;Sound&quot; can be enabled
+4. &quot;Banners/Alerts&quot; can be enabled
+5. &quot;Do Not Disturb&quot; can be checked is off
+</code></pre></div></p>
+<hr />
+<h3 id="too-many-alerts-alert-spam">🔊 Too Many Alerts / Alert Spam<a class="headerlink" href="#too-many-alerts-alert-spam" title="Permanent link">&para;</a></h3>
+<p><span style="color: #f59e0b; font-weight: 600;">Alert Management</span></p>
+<p><strong>Symptoms:</strong> Constant notifications, overwhelming</p>
+<p><strong>Solutions:</strong></p>
+<h4 id="1-change-to-higher-timeframe">1. Change to Higher Timeframe<a class="headerlink" href="#1-change-to-higher-timeframe" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>Currently on 15m? → 1H can be tried
+Currently on 1H? → 4H can be tried
+Currently on 4H? → Daily can be tried
+
+Higher timeframes = fewer, higher-quality signals
+</code></pre></div>
+<h4 id="2-be-more-selective-with-events">2. Be More Selective with Events<a class="headerlink" href="#2-be-more-selective-with-events" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>Instead of alerting on ALL events:
+
+Longs only:
+- Alert only on IGN (entry)
+- Alert only on CAP (exit warning)
+
+Shorts only:
+- Alert only on WRN (exit warning)
+- Alert only on BDN (short entry)
+</code></pre></div>
+<h4 id="3-use-multiple-symbols-smart">3. Use Multiple Symbols Smart<a class="headerlink" href="#3-use-multiple-symbols-smart" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>Creating the same alert on 20 symbols is not recommended.
+
+Better approach:
+- Use Augury Grid to scan multiple symbols
+- Create alerts only for top 3-5 watchlist symbols
+- Rotate symbols weekly based on volatility
+</code></pre></div>
+<h4 id="4-add-level-filters">4. Add Level Filters<a class="headerlink" href="#4-add-level-filters" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>Combine Pentarch + Janus Atlas:
+- Wait for signal AT key level
+- Reduces false signals
+- Improves quality
+
+Example: Only take IGN signals within 2% of major support
+</code></pre></div>
+<hr />
+<h3 id="alerts-triggering-on-old-bars">Alerts Triggering on Old Bars<a class="headerlink" href="#alerts-triggering-on-old-bars" title="Permanent link">&para;</a></h3>
+<p><strong>Symptoms:</strong> Getting alerts for historical bars when indicator first loads</p>
+<p><strong>Cause:</strong> Alert condition set to "All" bars instead of "Once Per Bar Close"</p>
+<p><strong>Solution:</strong>
+<div class="highlight"><pre><span></span><code>1. The problematic alert can be deleted
+2. A new alert can be created
+3. &quot;Options&quot; can be set to &quot;Once Per Bar Close&quot;
+4. &quot;Only Once&quot; can be ensured NOT checked (unless one-time alert is wanted)
+5. The alert can be saved
+</code></pre></div></p>
+<hr />
+<h2 id="access-loading-issues">🔑 Access &amp; Loading Issues<a class="headerlink" href="#access-loading-issues" title="Permanent link">&para;</a></h2>
+<h3 id="indicator-not-found-in-search">❌ "Indicator Not Found" in Search<a class="headerlink" href="#indicator-not-found-in-search" title="Permanent link">&para;</a></h3>
+<p><span style="color: #dc2626; font-weight: 600;">Access Issue</span></p>
+<p><strong>Symptoms:</strong> Can't find <span class="signal-pilot-brand">Signal Pilot</span> indicators in TradingView search</p>
+<p><strong>Possible Causes:</strong></p>
+<h4 id="1-access-not-yet-granted">1. Access Not Yet Granted<a class="headerlink" href="#1-access-not-yet-granted" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>Timeline:
+- Purchase → Receive email → Provide TradingView username
+- Access granted within 24 hours (usually faster)
+- Check email for confirmation
+
+Status check:
+1. signalpilot.io account dashboard can be logged into
+2. &quot;Indicator Access&quot; status can be checked
+3. If still pending: Support can be contacted with order number
+</code></pre></div>
+<h4 id="2-wrong-tradingview-account">2. Wrong TradingView Account<a class="headerlink" href="#2-wrong-tradingview-account" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>Was the correct username provided?
+
+Check:
+1. TradingView can be logged out of
+2. The account provided to &lt;span class=&quot;signal-pilot-brand&quot;&gt;Signal Pilot&lt;/span&gt; can be logged into
+3. Indicators can be searched for again
+</code></pre></div>
+<h4 id="3-indicator-name-changedupdated">3. Indicator Name Changed/Updated<a class="headerlink" href="#3-indicator-name-changedupdated" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>Search terms that work:
+- &quot;&lt;span class=&quot;signal-pilot-brand&quot;&gt;Signal Pilot&lt;/span&gt;&quot;
+- &quot;Pentarch&quot;
+- &quot;Janus Atlas&quot;
+- &quot;Omnideck&quot;
+
+Searching just &quot;Pentarch&quot; instead of &quot;Pentarch v8.9&quot; can be tried
+</code></pre></div>
+<h4 id="4-privateinvite-only-script">4. Private/Invite-Only Script<a class="headerlink" href="#4-privateinvite-only-script" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>&lt;span class=&quot;signal-pilot-brand&quot;&gt;Signal Pilot&lt;/span&gt; indicators are invite-only.
+Explicit access grant is required.
+
+Cannot be found in public indicator library.
+Will appear in the user&#39;s indicator list after invite.
+</code></pre></div>
+<hr />
+<h3 id="indicator-shows-loading-forever">Indicator Shows "Loading..." Forever<a class="headerlink" href="#indicator-shows-loading-forever" title="Permanent link">&para;</a></h3>
+<p><strong>Symptoms:</strong> Indicator added but stuck on "Loading..." or "Calculating..."</p>
+<p><strong>Solutions:</strong></p>
+<h4 id="quick-fix">Quick Fix:<a class="headerlink" href="#quick-fix" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>1. The indicator can be removed
+2. The browser can be refreshed (Ctrl+F5 / Cmd+Shift+R)
+3. The browser cache can be cleared
+4. The indicator can be added again
+5. 30 seconds can be waited
+</code></pre></div>
+<h4 id="if-quick-fix-doesnt-work">If Quick Fix Doesn't Work:<a class="headerlink" href="#if-quick-fix-doesnt-work" title="Permanent link">&para;</a></h4>
+<p><strong>Check TradingView Server Status:</strong>
+- Visit status.tradingview.com
+- Look for ongoing incidents
+- Wait for resolution if servers are degraded</p>
+<p><strong>Different Browser Can Be Tried:</strong>
+<div class="highlight"><pre><span></span><code>Chrome → Firefox can be tried
+Firefox → Edge can be tried
+Safari → Chrome can be tried
+
+Some browsers have conflicts with specific scripts
+</code></pre></div></p>
+<p><strong>Check Browser Extensions:</strong>
+<div class="highlight"><pre><span></span><code>Ad blockers and privacy extensions can interfere.
+
+Test:
+1. An incognito/private window can be opened
+2. TradingView can be logged into
+3. The indicator can be tried loading
+4. If it works: Extensions can be disabled one by one to find culprit
+</code></pre></div></p>
+<hr />
+<h3 id="indicator-suddenly-disappeared-from-chart">Indicator Suddenly Disappeared from Chart<a class="headerlink" href="#indicator-suddenly-disappeared-from-chart" title="Permanent link">&para;</a></h3>
+<p><strong>Symptoms:</strong> Indicator was working, now it's gone</p>
+<p><strong>Common Causes:</strong></p>
+<h4 id="1-indicator-updated-new-version">1. Indicator Updated (New Version)<a class="headerlink" href="#1-indicator-updated-new-version" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>Old version deprecated → The new version needs to be added
+
+Solution:
+1. Email can be checked for update notification
+2. Latest version can be searched for (e.g., &quot;Pentarch v8.9&quot; → &quot;Pentarch v9.0&quot;)
+3. The new version can be added to the chart
+4. Old alerts can be removed
+5. New alerts can be created with new version
+</code></pre></div>
+<h4 id="2-chart-template-issue">2. Chart Template Issue<a class="headerlink" href="#2-chart-template-issue" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>If using chart templates/layouts:
+
+1. Saving templates with private indicators is not recommended
+2. Templates can&#39;t share invite-only scripts
+3. Indicators can be added manually to each chart
+</code></pre></div>
+<h4 id="3-access-revoked">3. Access Revoked<a class="headerlink" href="#3-access-revoked" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>Rare, but happens if:
+- Subscription expired
+- Payment failed
+- Refund processed
+
+Check:
+1. Subscription status at signalpilot.io
+2. Email for expiration notices
+3. Payment method is current
+</code></pre></div>
+<h4 id="4-tradingview-account-change">4. TradingView Account Change<a class="headerlink" href="#4-tradingview-account-change" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>Switched TradingView accounts?
+- Access is per-account
+- Need to request access for new account
+- Contact support with new username
+</code></pre></div>
+<hr />
+<h2 id="configuration-issues">⚙️ Configuration Issues<a class="headerlink" href="#configuration-issues" title="Permanent link">&para;</a></h2>
+<h3 id="settings-not-saving">Settings Not Saving<a class="headerlink" href="#settings-not-saving" title="Permanent link">&para;</a></h3>
+<p><strong>Symptoms:</strong> Change indicator settings, they revert when you reload</p>
+<p><strong>Solution:</strong></p>
+<div class="highlight"><pre><span></span><code>TradingView requires layout SAVE:
+
+1. Indicator changes can be made
+2. &quot;Layouts&quot; (top of chart) can be clicked
+3. &quot;Save&quot; or &quot;Save As...&quot; can be clicked
+4. A name can be given
+5. &quot;Save layout&quot; can be clicked
+
+Alternative:
+- Changes save automatically per-symbol if layouts aren&#39;t changed
+- But switching symbols may reset if not saved to layout
+</code></pre></div>
+<hr />
+<h3 id="multiple-indicator-instances-showing-different-signals">Multiple Indicator Instances Showing Different Signals<a class="headerlink" href="#multiple-indicator-instances-showing-different-signals" title="Permanent link">&para;</a></h3>
+<p><strong>Symptoms:</strong> Two instances of Pentarch showing different signals</p>
+<p><strong>Cause:</strong> Different settings or versions</p>
+<p><strong>Solution:</strong></p>
+<div class="highlight"><pre><span></span><code>1. Each indicator name can be clicked
+2. &quot;Settings&quot; → &quot;About&quot; can be checked for version number
+3. Both can be ensured are same version
+4. &quot;Inputs&quot; tab can be checked—same settings can be ensured
+5. If different: One can be removed and re-added with correct settings
+</code></pre></div>
+<hr />
+<h2 id="mobile-app-issues">📱 Mobile App Issues<a class="headerlink" href="#mobile-app-issues" title="Permanent link">&para;</a></h2>
+<h3 id="indicators-not-showing-on-mobile">📱 Indicators Not Showing on Mobile<a class="headerlink" href="#indicators-not-showing-on-mobile" title="Permanent link">&para;</a></h3>
+<p><span style="color: #10b981; font-weight: 600;">Mobile Setup</span></p>
+<p><strong>Symptoms:</strong> Work on desktop, not on TradingView mobile app</p>
+<p><strong>Key information:</strong> TradingView mobile app has limitations</p>
+<h4 id="limitations">Limitations:<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>❌ Cannot ADD new indicators on mobile
+❌ Cannot configure indicator settings on mobile
+✅ CAN view indicators added on desktop
+✅ CAN receive alerts
+✅ CAN view charts with indicators
+</code></pre></div>
+<h4 id="workaround">Workaround:<a class="headerlink" href="#workaround" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>1. Indicators can be added on desktop/web
+2. Can be saved as layout (e.g., &quot;BTC Pentarch&quot;)
+3. The TradingView mobile app can be opened
+4. Same symbol can be loaded
+5. Saved layout can be loaded
+6. Indicators will appear
+</code></pre></div>
+<hr />
+<h3 id="alerts-not-working-on-mobile">Alerts Not Working on Mobile<a class="headerlink" href="#alerts-not-working-on-mobile" title="Permanent link">&para;</a></h3>
+<p><strong>Symptoms:</strong> Receive alerts on desktop, not on phone</p>
+<p><strong>Fix Mobile Notifications:</strong></p>
+<p><strong>iPhone:</strong>
+<div class="highlight"><pre><span></span><code>1. Settings → Notifications → TradingView
+2. Allow Notifications: ON
+3. Sounds: ON
+4. Badges: ON
+5. Show in Notification Center: ON
+6. Show on Lock Screen: ON
+</code></pre></div></p>
+<p><strong>Android:</strong>
+<div class="highlight"><pre><span></span><code>1. Settings → Apps → TradingView
+2. Notifications: ON
+3. Allow sound: ON
+4. Pop on screen: ON
+5. Override Do Not Disturb: ON (optional)
+</code></pre></div></p>
+<p><strong>In TradingView App:</strong>
+<div class="highlight"><pre><span></span><code>1. TradingView app can be opened
+2. Profile → Settings can be accessed
+3. Notifications can be accessed
+4. &quot;Push notifications&quot; can be enabled
+5. Sounds can be enabled
+6. Can be tested by triggering an alert
+</code></pre></div></p>
+<hr />
+<h2 id="data-calculation-issues">🔄 Data &amp; Calculation Issues<a class="headerlink" href="#data-calculation-issues" title="Permanent link">&para;</a></h2>
+<h3 id="signals-different-than-expected">Signals Different Than Expected<a class="headerlink" href="#signals-different-than-expected" title="Permanent link">&para;</a></h3>
+<p><strong>Symptoms:</strong> Signal fired but you disagree with it, or it seems wrong</p>
+<p><strong>Key information:</strong> Indicators use mathematics, not discretion</p>
+<h4 id="common-misunderstandings">Common Misunderstandings:<a class="headerlink" href="#common-misunderstandings" title="Permanent link">&para;</a></h4>
+<p><strong>"IGN fired but price didn't go up"</strong>
+<div class="highlight"><pre><span></span><code>Indicators show POTENTIAL reversals, not guarantees.
+- Some signals fail (normal in trading)
+- Use risk management
+- No indicator is 100% accurate
+- Confluence improves odds (add Janus levels)
+</code></pre></div></p>
+<p><strong>"Signal happened but I don't see the pattern"</strong>
+<div class="highlight"><pre><span></span><code>Indicators calculate on multiple factors you may not see:
+- Multi-timeframe confluence
+- Momentum shifts
+- Volume patterns
+- Mathematical conditions
+
+Indicator consistency is typically valued—selective signal acceptance can reduce systematic effectiveness.
+</code></pre></div></p>
+<p><strong>"Signal seems late"</strong>
+<div class="highlight"><pre><span></span><code>By design! Wait for bar close = confirmation.
+- Early signals = repainting
+- Late signals = reliable
+- Trade-off for accuracy
+</code></pre></div></p>
+<hr />
+<h3 id="historical-signals-different-than-real-time">Historical Signals Different Than Real-Time<a class="headerlink" href="#historical-signals-different-than-real-time" title="Permanent link">&para;</a></h3>
+<p><strong>Symptoms:</strong> Back-testing shows different signals than you remember</p>
+<p><strong>Causes:</strong></p>
+<h4 id="1-indicator-updated">1. Indicator Updated<a class="headerlink" href="#1-indicator-updated" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>Newer versions may have improved calculations.
+Historical recalculation with new logic = different signals.
+
+This is IMPROVEMENT, not repainting.
+- Repainting = changing past final signals
+- Update = better algorithm applied to history
+</code></pre></div>
+<h4 id="2-not-enough-historical-data">2. Not Enough Historical Data<a class="headerlink" href="#2-not-enough-historical-data" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>Indicator needs sufficient data to calculate properly.
+
+Example:
+- Indicator needs 100 bars
+- You only load 50 bars
+- First signals will be unreliable
+
+Solution: Load at least 500-1000 bars before judging signals.
+</code></pre></div>
+<hr />
+<h2 id="browser-performance-issues">🌐 Browser &amp; Performance Issues<a class="headerlink" href="#browser-performance-issues" title="Permanent link">&para;</a></h2>
+<h3 id="chart-laggingslow-with-indicators">Chart Lagging/Slow with Indicators<a class="headerlink" href="#chart-laggingslow-with-indicators" title="Permanent link">&para;</a></h3>
+<p><strong>Symptoms:</strong> Chart freezes, slow to respond when indicators loaded</p>
+<p><strong>Solutions:</strong></p>
+<h4 id="reduce-indicator-count">Reduce Indicator Count<a class="headerlink" href="#reduce-indicator-count" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>Loading all 7 indicators on one chart is not a recommended practice.
+
+Commonly recommended maximum: 3 indicators
+
+High performance combo:
+- Just Omnideck (it includes everything)
+OR
+- Pentarch + Janus + one other
+</code></pre></div>
+<h4 id="optimize-browser">Optimize Browser<a class="headerlink" href="#optimize-browser" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>1. Unused tabs can be closed
+2. Browser cache can be cleared
+3. Unnecessary extensions can be disabled
+4. Browser can be updated to latest version
+5. Browser can be restarted
+</code></pre></div>
+<h4 id="use-lower-timeframe-on-clean-chart">Use Lower Timeframe on Clean Chart<a class="headerlink" href="#use-lower-timeframe-on-clean-chart" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>If 15m chart lags with indicators:
+- Move to 1H (fewer bars to calculate)
+- Or remove visual indicators
+- Keep only alerting indicators
+</code></pre></div>
+<h4 id="upgrade-tradingview-plan">Upgrade TradingView Plan<a class="headerlink" href="#upgrade-tradingview-plan" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>Free/Basic: Limited resources
+Pro/Pro+: Better performance, faster data
+Premium: Best performance
+</code></pre></div>
+<hr />
+<h2 id="when-to-contact-support">📞 When to Contact Support<a class="headerlink" href="#when-to-contact-support" title="Permanent link">&para;</a></h2>
+<p>Contact support if:</p>
+<ul>
+<li>✅ None of these solutions worked</li>
+<li>✅ Indicator showing clear calculation error</li>
+<li>✅ Access issues persisting 48+ hours after purchase</li>
+<li>✅ Alerts not working after all troubleshooting</li>
+<li>✅ Billing/subscription questions</li>
+</ul>
+<p><strong>How to Contact:</strong>
+- Visit <a href="../about-support/">Support &amp; Access</a> page
+- Include in your message:
+  - Indicator name and version
+  - Screenshot of issue
+  - What you've tried already
+  - TradingView username
+  - Order number (if access issue)</p>
+<hr />
+<h2 id="additional-resources">📚 Additional Resources<a class="headerlink" href="#additional-resources" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../about-faq/">FAQ</a> - Frequently Asked Questions</li>
+<li><a href="../start-quick/">Quick Start Guide</a> - Getting started tutorial</li>
+<li><a href="../ref-glossary/">Glossary</a> - Terms and definitions</li>
+<li><a href="../ref-non-repaint/">Non-Repainting Policy</a> - How signals work</li>
+<li><a href="../ref-best-practices/">Best Practices</a> - Pro tips</li>
+</ul>
+<p><strong>Unresolved issues:</strong> <a href="../about-support/">Contact Support</a> - Assistance is available.</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://x.com/signalpilot" target="_blank" rel="noopener" title="x.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Signalpilot" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.sections", "content.code.copy", "search.suggest", "search.highlight", "content.tabs.link", "content.tooltips"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="../assets/brand.js"></script>
+      
+        <script src="../assets/sp-bg.js"></script>
+      
+        <script src="../assets/keyword-highlighter.js"></script>
+      
+    
+  </body>
+</html>

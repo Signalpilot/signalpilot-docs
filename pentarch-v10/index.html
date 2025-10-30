@@ -1,0 +1,2646 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Non-repainting, alert-ready TradingView indicators for any market/timeframe.">
+      
+      
+      
+        <link rel="canonical" href="https://docs.signalpilot.io/pentarch-v10/">
+      
+      
+        <link rel="prev" href="../how-to-screener/">
+      
+      
+        <link rel="next" href="../janus-atlas-v10/">
+      
+      
+      <link rel="icon" href="../assets/watermark-monogram-color-transparent.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
+    
+    
+      
+        <title>Pentarch v1.0 — Reversal Events - Signal Pilot Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../assets/brand.css">
+    
+      <link rel="stylesheet" href="../assets/aurora.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-NZ05GV72K0"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-NZ05GV72K0",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-NZ05GV72K0",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  <!-- Google Fonts: Gugi for brand consistency -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pentarch-v10-potential-reversal-signals-made-simple" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+  <!-- SignalPilot brand bar (keeps Material header & search intact) -->
+  <div class="sp-topnav">
+    <div class="sp-topnav__inner">
+      <a href="https://signalpilot.io" class="brand">
+        <span>Signal Pilot</span>
+      </a>
+      <nav class="sp-links" aria-label="Signal Pilot">
+        <a href="https://signalpilot.io/#why">Why</a>
+        <a href="https://signalpilot.io/#inside">What's inside</a>
+        <a href="https://education.signalpilot.io/">Education</a>
+        <a aria-current="page" href="https://docs.signalpilot.io/">Docs</a>
+        <a href="https://signalpilot.io/#pricing">Pricing</a>
+        <a href="https://signalpilot.io/#faq">FAQ</a>
+      </nav>
+      <a class="sp-cta" href="https://signalpilot.io/#pricing">Get the Suite</a>
+    </div>
+  </div>
+
+  
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Signal Pilot Docs" class="md-header__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
+      
+  <img src="../assets/watermark-monogram-color-transparent.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Signal Pilot Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Pentarch v1.0 — Reversal Events
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Signalpilot/signalpilot-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    signalpilot-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Signal Pilot Docs" class="md-nav__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
+      
+  <img src="../assets/watermark-monogram-color-transparent.png" alt="logo">
+
+    </a>
+    Signal Pilot Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Signalpilot/signalpilot-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    signalpilot-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    🚀 Getting Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            🚀 Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../start-quick/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ⚡ Quick Start (5 min)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../start-prerequisites/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prerequisites
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../start-onboarding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Onboarding Checklist (7 days)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    📖 How-To Guides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            📖 How-To Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-alerts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Set Up Alerts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-webhooks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use Webhooks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-screener/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use Screener
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    🚀 Suite (Latest)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            🚀 Suite (Latest)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../suite-index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📚 Suite Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Pentarch v1.0 — Reversal Events
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Pentarch v1.0 — Reversal Events
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-does-it-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 What Does It Do?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-5-signals-easy-to-understand" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔢 The 5 Signals (Easy to Understand)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔢 The 5 Signals (Easy to Understand)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#td-touchdown-early-cycle-warning" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔵 TD - Touchdown (Early-Cycle Warning)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ign-ignition-momentum-breakout" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟢 IGN - Ignition (Momentum Breakout)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wrn-warning-late-cycle-alert" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟡 WRN - Warning (Late-Cycle Alert)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cap-climax-late-cycle-exhaustion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔴 CAP - Climax (Late-Cycle Exhaustion)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bdn-potential-breakdown-signal" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚫ BDN - "Potential Breakdown Signal"
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-usage-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Common Usage Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Common Usage Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signal-observation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signal Observation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typical-signal-flow-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Typical Signal Flow Patterns
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-management-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Management Considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#educational-example-bitcoin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Educational Example (Bitcoin)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-pilot-line-your-trend-compass" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 The Pilot Line - Your Trend Compass
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 The Pilot Line - Your Trend Compass">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is It?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-it-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why It Matters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-read-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Read It
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-usage-patterns_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Usage Patterns
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-note" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Note
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regime-bar-colors-know-your-market-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 Regime Bar Colors - Know Your Market Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎨 Regime Bar Colors - Know Your Market Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-it_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is It?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-regime-is-determined" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Regime Is Determined
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-it-matters_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why It Matters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-event-signals-relate-to-regime" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Event Signals Relate to Regime
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-usage-patterns_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Usage Patterns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nanoflow-the-momentum-heartbeat" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚡ NanoFlow - The Momentum Heartbeat
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚡ NanoFlow - The Momentum Heartbeat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-it_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is It?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-it-shows" class="md-nav__link">
+    <span class="md-ellipsis">
+      What It Shows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-differences-from-main-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Differences from Main Signals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-traders-use-nanoflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Traders Use NanoFlow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Scenario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Questions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-all-components-work-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 How All Components Work Together
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 How All Components Work Together">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-complete-visual-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Complete Visual Hierarchy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-reading-a-full-signal-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Reading a Full Signal Sequence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decision-flow-what-each-layer-tells-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision Flow: What Each Layer Tells You
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings-configuration-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Settings (Configuration Approach)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alert-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔔 Alert Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-learning-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Learning Points
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frequently-asked-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❓ Frequently Asked Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Reference Guide
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Support
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../janus-atlas-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Janus Atlas v1.0 — Levels System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../omnideck-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Omnideck v1.0 — Everything Indicator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../augury-grid-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Augury Grid v1.0 — Multi-Symbol Screener
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../minimal-flow-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Minimal Flow v1.0 — Volume Strategy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../harmonic-oscillator-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Harmonic Oscillator v1.0 — Composite Momentum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plutus-flow-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plutus Flow v1.0 — Advanced OBV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    📚 Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            📚 Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-workflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trading Workflow (Bias → Timing)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-comparison/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Indicator Comparison Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-best-practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Best Practices & Pro Tips
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-non-repaint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Non-Repainting Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-troubleshooting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshooting Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    ℹ️ About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            ℹ️ About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Support & Access
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-changelog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Changelog (high level)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Website Tiles
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Website Tiles
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_product-cards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Product Cards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-does-it-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 What Does It Do?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-5-signals-easy-to-understand" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔢 The 5 Signals (Easy to Understand)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔢 The 5 Signals (Easy to Understand)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#td-touchdown-early-cycle-warning" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔵 TD - Touchdown (Early-Cycle Warning)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ign-ignition-momentum-breakout" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟢 IGN - Ignition (Momentum Breakout)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wrn-warning-late-cycle-alert" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟡 WRN - Warning (Late-Cycle Alert)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cap-climax-late-cycle-exhaustion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔴 CAP - Climax (Late-Cycle Exhaustion)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bdn-potential-breakdown-signal" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚫ BDN - "Potential Breakdown Signal"
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-usage-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Common Usage Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Common Usage Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signal-observation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signal Observation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typical-signal-flow-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Typical Signal Flow Patterns
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-management-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Management Considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#educational-example-bitcoin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Educational Example (Bitcoin)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-pilot-line-your-trend-compass" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 The Pilot Line - Your Trend Compass
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 The Pilot Line - Your Trend Compass">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is It?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-it-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why It Matters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-read-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Read It
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-usage-patterns_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Usage Patterns
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-note" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Note
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regime-bar-colors-know-your-market-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 Regime Bar Colors - Know Your Market Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎨 Regime Bar Colors - Know Your Market Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-it_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is It?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-regime-is-determined" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Regime Is Determined
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-it-matters_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why It Matters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-event-signals-relate-to-regime" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Event Signals Relate to Regime
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-usage-patterns_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Usage Patterns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nanoflow-the-momentum-heartbeat" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚡ NanoFlow - The Momentum Heartbeat
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚡ NanoFlow - The Momentum Heartbeat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-it_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is It?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-it-shows" class="md-nav__link">
+    <span class="md-ellipsis">
+      What It Shows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-differences-from-main-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Differences from Main Signals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-traders-use-nanoflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Traders Use NanoFlow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Scenario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Questions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-all-components-work-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 How All Components Work Together
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 How All Components Work Together">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-complete-visual-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Complete Visual Hierarchy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-reading-a-full-signal-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Reading a Full Signal Sequence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decision-flow-what-each-layer-tells-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision Flow: What Each Layer Tells You
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings-configuration-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Settings (Configuration Approach)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alert-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔔 Alert Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-learning-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Learning Points
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frequently-asked-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❓ Frequently Asked Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Reference Guide
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Support
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="pentarch-v10-potential-reversal-signals-made-simple">Pentarch v1.0 - Potential Reversal Signals Made Simple<a class="headerlink" href="#pentarch-v10-potential-reversal-signals-made-simple" title="Permanent link">&para;</a></h1>
+<h2 id="what-does-it-do">🎯 What Does It Do?<a class="headerlink" href="#what-does-it-do" title="Permanent link">&para;</a></h2>
+<p><span style="color: #0aa1d5; font-weight: 600;">Core Functionality</span></p>
+<p>Pentarch displays <strong>5 simple signals</strong> that indicate when price may potentially reverse. Think of it like traffic lights for potential reversals - visual indicators showing different phases of potential trend changes.</p>
+<p><strong>The 5-Phase System:</strong> TD → IGN → WRN → CAP → BDN</p>
+<p><strong>Best for:</strong> Anyone who wants to identify potential reversals without guessing</p>
+<hr />
+<h2 id="the-5-signals-easy-to-understand">🔢 The 5 Signals (Easy to Understand)<a class="headerlink" href="#the-5-signals-easy-to-understand" title="Permanent link">&para;</a></h2>
+<p><span style="color: #10b981; font-weight: 600;">Signal Types</span></p>
+<h3 id="td-touchdown-early-cycle-warning">🔵 TD - Touchdown (Early-Cycle Warning)<a class="headerlink" href="#td-touchdown-early-cycle-warning" title="Permanent link">&para;</a></h3>
+<p><strong>What you see:</strong> Blue "TD" label below the candle</p>
+<p><strong>What it means:</strong> Price has pulled back hard and is getting oversold. Early-cycle reversal conditions may be developing.</p>
+<p><strong>Common interpretation:</strong>
+- Many traders watch for potential long entry setups
+- IGN signal often provides additional confirmation
+- TD is typically viewed as an early warning rather than an entry trigger</p>
+<p><strong>Example:</strong> Stock drops from $100 to $85, TD appears → early-cycle conditions may be developing</p>
+<hr />
+<h3 id="ign-ignition-momentum-breakout">🟢 IGN - Ignition (Momentum Breakout)<a class="headerlink" href="#ign-ignition-momentum-breakout" title="Permanent link">&para;</a></h3>
+<p><strong>What you see:</strong> Green "IGN" label below the candle</p>
+<p><strong>What it means:</strong> Indicates momentum breakout conditions. Potential bullish structure development.</p>
+<p><strong>Common interpretation:</strong>
+- Often interpreted as a potential long entry signal
+- Typical evaluation timing: at bar close or subsequent bar
+- Common stop placement patterns: below the recent low</p>
+<p><strong>Example:</strong> After TD at $85, IGN fires at $87 → Momentum breakout indicated, commonly interpreted as potential long entry signal</p>
+<hr />
+<h3 id="wrn-warning-late-cycle-alert">🟡 WRN - Warning (Late-Cycle Alert)<a class="headerlink" href="#wrn-warning-late-cycle-alert" title="Permanent link">&para;</a></h3>
+<p><strong>What you see:</strong> Yellow "WRN" label above the candle</p>
+<p><strong>What it means:</strong> Price is getting extended. Late-cycle conditions may be developing.</p>
+<p><strong>Common interpretation:</strong>
+- Many traders consider risk management adjustments (tightening stops if long)
+- Often viewed as preparation for potential exits
+- Educational note: Late entry typically reduces favorable risk/reward ratios</p>
+<p><strong>Example:</strong> Stock rallied to $115, WRN appears → often interpreted as exit preparation signal</p>
+<hr />
+<h3 id="cap-climax-late-cycle-exhaustion">🔴 CAP - Climax (Late-Cycle Exhaustion)<a class="headerlink" href="#cap-climax-late-cycle-exhaustion" title="Permanent link">&para;</a></h3>
+<p><strong>What you see:</strong> Red "CAP" label above the candle</p>
+<p><strong>What it means:</strong> Final exhaustion. This often indicates late-cycle exhaustion conditions.</p>
+<p><strong>Common interpretation:</strong>
+- Many traders consider exiting long positions
+- Often viewed as a potential exit signal
+- Advanced traders may evaluate short opportunities</p>
+<p><strong>Example:</strong> After WRN at $115, CAP fires at $120 → late-cycle exhaustion indicated, commonly used as exit signal</p>
+<hr />
+<h3 id="bdn-potential-breakdown-signal">⚫ BDN - "Potential Breakdown Signal"<a class="headerlink" href="#bdn-potential-breakdown-signal" title="Permanent link">&para;</a></h3>
+<p><strong>What you see:</strong> Dark "BDN" label above the candle</p>
+<p><strong>What it means:</strong> Potential breakdown indication. Bears may be taking over. Indicates a potential bearish structure break.</p>
+<p><strong>Common interpretation:</strong>
+- Many traders consider exiting any remaining long positions
+- Short sellers often view this as a potential entry signal
+- Typically interpreted as potential breakdown and reversal down</p>
+<p><strong>Example:</strong> After CAP at $120, BDN fires at $113 → Potential breakdown and downtrend indicated</p>
+<hr />
+<h2 id="common-usage-patterns">📚 Common Usage Patterns<a class="headerlink" href="#common-usage-patterns" title="Permanent link">&para;</a></h2>
+<p><span style="color: #8b5cf6; font-weight: 600;">How Traders Use It</span></p>
+<h3 id="signal-observation">Signal Observation<a class="headerlink" href="#signal-observation" title="Permanent link">&para;</a></h3>
+<p>Adding Pentarch to your chart displays labels automatically when events occur.</p>
+<h3 id="typical-signal-flow-patterns">Typical Signal Flow Patterns<a class="headerlink" href="#typical-signal-flow-patterns" title="Permanent link">&para;</a></h3>
+<p><strong>For Long Positions:</strong>
+1. TD appears → Often interpreted as preparation signal
+2. IGN appears → Commonly used as potential long entry signal
+3. WRN appears → Many traders begin monitoring for exits
+4. CAP or BDN appears → Often interpreted as exit signal</p>
+<p><strong>For Short Positions:</strong>
+1. WRN appears → Often interpreted as preparation signal
+2. CAP appears → Many traders prepare for potential short opportunities
+3. BDN appears → Commonly used as potential short entry signal
+4. TD or IGN appears → Often interpreted as exit signal for shorts</p>
+<h3 id="risk-management-considerations">Risk Management Considerations<a class="headerlink" href="#risk-management-considerations" title="Permanent link">&para;</a></h3>
+<p>Stop loss usage is a standard risk management practice:
+- For long positions: Common stop placement is below the TD low
+- For short positions: Common stop placement is above the CAP high</p>
+<hr />
+<h2 id="educational-example-bitcoin">Educational Example (Bitcoin)<a class="headerlink" href="#educational-example-bitcoin" title="Permanent link">&para;</a></h2>
+<p><strong>The Setup:</strong>
+- Price: $35,000, falling for weeks
+- <strong>TD</strong> appears at $32,500 → "Early-cycle conditions developing"
+- <strong>IGN</strong> fires at $33,800 → "Potential reversal indicated" ✅
+- Hypothetical entry at $33,900</p>
+<p><strong>The Trade:</strong>
+- Price rallies to $42,000
+- <strong>WRN</strong> appears at $41,500 → "Monitoring phase begins"
+- <strong>CAP</strong> fires at $42,800 → "Late-cycle exhaustion indicated" ✅
+- Hypothetical exit at $42,500</p>
+<p><strong>Educational Result:</strong> $8,600 potential gain per coin (25%) in this theoretical scenario</p>
+<hr />
+<h2 id="the-pilot-line-your-trend-compass">🎯 The Pilot Line - Your Trend Compass<a class="headerlink" href="#the-pilot-line-your-trend-compass" title="Permanent link">&para;</a></h2>
+<p><span style="color: #0aa1d5; font-weight: 600; font-size: 1.1em;">⭐ Core Component - Primary Reference for All Signals</span></p>
+<h3 id="what-is-it">What Is It?<a class="headerlink" href="#what-is-it" title="Permanent link">&para;</a></h3>
+<p>The <strong>Pilot Line</strong> is a smooth trend line that acts as your primary reference point. Think of it as the "center of gravity" for price action. Every one of the 5 event signals is positioned relative to this line.</p>
+<p><strong>Visual:</strong> A thick line on your chart that changes color:
+- <strong>🟢 Green</strong> = Strong uptrend (slope rising, momentum strong)
+- <strong>🔴 Red</strong> = Strong downtrend (slope falling, momentum strong)
+- <strong>🟠 Orange</strong> = Transitional phase (momentum easing or flat)</p>
+<p><strong>The Ribbon:</strong> You'll also see two semi-transparent bands above and below the line. This is the "influence zone" (±0.25 ATR). Price within the ribbon = balanced. Price outside the ribbon = extended.</p>
+<h3 id="why-it-matters">Why It Matters<a class="headerlink" href="#why-it-matters" title="Permanent link">&para;</a></h3>
+<p>The Pilot Line serves multiple purposes:</p>
+<ol>
+<li><strong>Trend Filter</strong> - Shows you the current trend direction at a glance</li>
+<li><strong>Reference Point</strong> - All event signals measure their distance FROM the Pilot Line</li>
+<li><strong>Dynamic Support/Resistance</strong> - Price tends to react when approaching or crossing the line</li>
+<li><strong>Regime Component</strong> - One of 3 factors that determine regime state (more below)</li>
+</ol>
+<h3 id="how-to-read-it">How to Read It<a class="headerlink" href="#how-to-read-it" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Pilot Line Color</th>
+<th>Market State</th>
+<th>What Traders Often Look For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🟢 <strong>Green</strong></td>
+<td>Strong uptrend</td>
+<td>Pullback opportunities (TD/IGN signals)</td>
+</tr>
+<tr>
+<td>🔴 <strong>Red</strong></td>
+<td>Strong downtrend</td>
+<td>Rally reversals (WRN/CAP/BDN signals)</td>
+</tr>
+<tr>
+<td>🟠 <strong>Orange</strong></td>
+<td>Transitional/Uncertain</td>
+<td>Trend weakening, exercise caution</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key Insight:</strong> The Pilot Line doesn't give direct entry signals. Instead, it provides context for the 5 event candles. An IGN signal above a green Pilot Line has different implications than an IGN signal below a red Pilot Line.</p>
+<h3 id="common-usage-patterns_1">Common Usage Patterns<a class="headerlink" href="#common-usage-patterns_1" title="Permanent link">&para;</a></h3>
+<p><strong>Distance Context:</strong>
+- TD signals typically appear near or below the Pilot Line (potential bottoms)
+- WRN/CAP signals typically appear above the Pilot Line (potential tops)
+- Distance from PL measured in ATR units (normalized for volatility)</p>
+<p><strong>Pilot Line Crosses:</strong>
+- Price crossing above PL = Potential bullish structural shift
+- Price crossing below PL = Potential bearish structural shift
+- You can set alerts for PL crosses if desired</p>
+<p><strong>Color Transitions:</strong>
+- Green → Orange = Uptrend losing momentum
+- Orange → Red = Downtrend establishing
+- Watching for color changes can provide early warning of trend shifts</p>
+<h3 id="technical-note">Technical Note<a class="headerlink" href="#technical-note" title="Permanent link">&para;</a></h3>
+<p>The Pilot Line is a double-smoothed EMA (34-period EMA, then 3-period EMA of that result). This makes it:
+- Fast enough to catch reversals early
+- Smooth enough to filter out noise
+- Non-repainting (locked in after bar close)</p>
+<hr />
+<h2 id="regime-bar-colors-know-your-market-structure">🎨 Regime Bar Colors - Know Your Market Structure<a class="headerlink" href="#regime-bar-colors-know-your-market-structure" title="Permanent link">&para;</a></h2>
+<p><span style="color: #10b981; font-weight: 600; font-size: 1.1em;">📊 Visual Context - Instant Market Structure Feedback</span></p>
+<h3 id="what-is-it_1">What Is It?<a class="headerlink" href="#what-is-it_1" title="Permanent link">&para;</a></h3>
+<p>Pentarch automatically <strong>colors every candle</strong> on your chart to show the current market regime. This provides instant visual feedback about trend structure without reading any indicator values.</p>
+<p><strong>You'll see:</strong>
+- <strong>🟢 Green Candles</strong> = Bull regime active (uptrend structure)
+- <strong>🔴 Red Candles</strong> = Bear regime active (downtrend structure)
+- <strong>Colored Event Candles</strong> = When TD/IGN/WRN/CAP/BDN fires, that specific candle shows the event color instead</p>
+<h3 id="how-regime-is-determined">How Regime Is Determined<a class="headerlink" href="#how-regime-is-determined" title="Permanent link">&para;</a></h3>
+<p>Regime uses a <strong>3-factor voting system</strong>:</p>
+<ol>
+<li><strong>EMA Structure:</strong> Is the 34-period EMA above the 55-period EMA? (+1 vote for bull)</li>
+<li><strong>Price vs Pilot Line:</strong> Is price above the Pilot Line? (+1 vote for bull)</li>
+<li><strong>Slope Direction:</strong> Is the Pilot Line sloping up? (+1 vote for bull)</li>
+</ol>
+<p><strong>Regime Changes When:</strong>
+- 2 out of 3 factors vote for the opposite direction
+- AND this condition holds for 2-4 bars (prevents whipsaw on single spikes)</p>
+<h3 id="why-it-matters_1">Why It Matters<a class="headerlink" href="#why-it-matters_1" title="Permanent link">&para;</a></h3>
+<p><strong>Trading Bias:</strong> The regime colors guide your directional bias:
+- <strong>Green regime</strong> → Many traders look for long opportunities (TD/IGN)
+- <strong>Red regime</strong> → Many traders look for short opportunities (WRN/CAP/BDN)</p>
+<p><strong>Signal Context:</strong> The same price level can have different implications depending on regime:
+- $50,000 BTC in green regime = Potential support (pullback opportunity)
+- $50,000 BTC in red regime = Potential resistance (rally reversal area)</p>
+<p><strong>Trend Strength:</strong>
+- Long streaks of same color = Strong, sustained trend
+- Frequent color changes = Choppy market, low conviction</p>
+<h3 id="how-event-signals-relate-to-regime">How Event Signals Relate to Regime<a class="headerlink" href="#how-event-signals-relate-to-regime" title="Permanent link">&para;</a></h3>
+<p>Most event signals require the "correct" regime to fire:</p>
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Typical Regime Required</th>
+<th>Exception Cases</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TD</strong></td>
+<td>Bear regime (red)</td>
+<td>Can fire in bull regime if conditions are extreme</td>
+</tr>
+<tr>
+<td><strong>IGN</strong></td>
+<td>Bear regime (red)</td>
+<td>Can fire in bull regime during pullbacks</td>
+</tr>
+<tr>
+<td><strong>WRN</strong></td>
+<td>Bull regime (green)</td>
+<td>Can fire in bear regime if rally is strong enough</td>
+</tr>
+<tr>
+<td><strong>CAP</strong></td>
+<td>Bull regime (green)</td>
+<td>Can fire in bear regime if conditions are extreme</td>
+</tr>
+<tr>
+<td><strong>BDN</strong></td>
+<td>Follows WRN/CAP</td>
+<td>Regime-dependent on prior signal</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key Concept:</strong> Regime acts as a filter. The indicator is "pickier" about firing counter-regime signals, requiring more extreme conditions to confirm them.</p>
+<h3 id="common-usage-patterns_2">Common Usage Patterns<a class="headerlink" href="#common-usage-patterns_2" title="Permanent link">&para;</a></h3>
+<p><strong>Regime Flips as Signals:</strong>
+- First green candle after red streak = Potential trend change to bullish
+- First red candle after green streak = Potential trend change to bearish
+- You can set alerts for regime flips</p>
+<p><strong>Regime Confirmation:</strong>
+- Event signal + matching regime = Higher conviction
+  - Example: IGN in red regime (standard reversal) vs IGN in green regime (pullback long entry)
+  - Example: CAP in green regime (standard top) vs CAP in red regime (bear rally exhaustion)</p>
+<p><strong>Whipsaw Considerations:</strong>
+- Regime doesn't flip on every bar - it requires sustained evidence
+- This prevents false structural changes during normal noise
+- Adjustable via settings if you want more/less sensitivity</p>
+<hr />
+<h2 id="nanoflow-the-momentum-heartbeat">⚡ NanoFlow - The Momentum Heartbeat<a class="headerlink" href="#nanoflow-the-momentum-heartbeat" title="Permanent link">&para;</a></h2>
+<p><span style="color: #a855f7; font-weight: 600; font-size: 1.1em;">🔍 Context Tool - NOT a Primary Trade Signal</span></p>
+<h3 id="what-is-it_2">What Is It?<a class="headerlink" href="#what-is-it_2" title="Permanent link">&para;</a></h3>
+<p><strong>NanoFlow</strong> is a high-frequency micro-momentum indicator that shows small-scale trend shifts between the main event signals. While TD/IGN/WRN/CAP/BDN fire 3-8 times per day (on 1H charts), NanoFlow can fire 10-30 times per day.</p>
+<p><strong>Visual:</strong> Small cross marks on your chart:
+- <strong>🟢 Green cross BELOW the candle low</strong> = Micro bullish momentum detected
+- <strong>🔴 Red cross ABOVE the candle high</strong> = Micro bearish momentum detected</p>
+<p><strong>Style:</strong> Subtle and semi-transparent (90% transparent) so they don't overwhelm the chart</p>
+<h3 id="what-it-shows">What It Shows<a class="headerlink" href="#what-it-shows" title="Permanent link">&para;</a></h3>
+<p>NanoFlow fires when ALL these conditions align:</p>
+<p><strong>Bullish NanoFlow (Green Cross):</strong>
+- Fast EMA (9) is above Slow EMA (21) = Micro uptrend
+- Current candle is green (close ≥ open)
+- Price is above the Pilot Line
+- → <strong>Interpretation:</strong> Bulls have micro-level control right now</p>
+<p><strong>Bearish NanoFlow (Red Cross):</strong>
+- Fast EMA (9) is below Slow EMA (21) = Micro downtrend
+- Current candle is red (close ≤ open)
+- Price is below the Pilot Line
+- → <strong>Interpretation:</strong> Bears have micro-level control right now</p>
+<h3 id="key-differences-from-main-signals">Key Differences from Main Signals<a class="headerlink" href="#key-differences-from-main-signals" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>NanoFlow</th>
+<th>Main Events (TD/IGN/WRN/CAP/BDN)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Frequency</strong></td>
+<td>High (10-30/day on 1H)</td>
+<td>Low (3-8/day on 1H)</td>
+</tr>
+<tr>
+<td><strong>Sensitivity</strong></td>
+<td>Very sensitive (9 vs 21 EMA)</td>
+<td>Multi-factor confirmation required</td>
+</tr>
+<tr>
+<td><strong>Purpose</strong></td>
+<td>Micro momentum tracking</td>
+<td>Major reversal/continuation detection</td>
+</tr>
+<tr>
+<td><strong>Visual</strong></td>
+<td>Small subtle crosses</td>
+<td>Large colored labels</td>
+</tr>
+<tr>
+<td><strong>Actionability</strong></td>
+<td>Context/confirmation tool</td>
+<td>Primary trade signals</td>
+</tr>
+<tr>
+<td><strong>Regime Dependent?</strong></td>
+<td>No (can fire anytime)</td>
+<td>Yes (mostly regime-specific)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="how-traders-use-nanoflow">How Traders Use NanoFlow<a class="headerlink" href="#how-traders-use-nanoflow" title="Permanent link">&para;</a></h3>
+<p><strong>❌ NOT a Trade Signal</strong>
+NanoFlow is NOT designed to be traded directly. It's too sensitive and fires too often.</p>
+<p><strong>✅ Context &amp; Confirmation Tool</strong>
+NanoFlow helps you evaluate the quality and health of main event signals:</p>
+<p><strong>1. Trend Health Check:</strong>
+- During uptrend: Lots of green NanoFlow = Healthy momentum
+- During uptrend: No green NanoFlow = Momentum dying, trend weakening
+- During downtrend: Lots of red NanoFlow = Healthy downside momentum
+- During downtrend: No red NanoFlow = Weakness, potential reversal coming</p>
+<p><strong>2. Event Signal Confirmation:</strong>
+- TD fires → Green NanoFlow appears next bar = Good confirmation
+- WRN fires → Red NanoFlow appears next bar = Good confirmation
+- IGN fires → No green NanoFlow for 5+ bars = Weak signal, exercise caution</p>
+<p><strong>3. Chop Detection:</strong>
+- NanoFlow flipping green/red/green/red rapidly = Choppy conditions where trading is often avoided
+- NanoFlow absent entirely = Low volatility zone where traders typically await clearer setups</p>
+<p><strong>4. Continuation Monitoring:</strong>
+- Many NanoFlow crosses in same direction = Strong trend, momentum sustained
+- NanoFlow crosses stopping = Potential exhaustion, prepare for reversal</p>
+<h3 id="example-scenario">Example Scenario<a class="headerlink" href="#example-scenario" title="Permanent link">&para;</a></h3>
+<p><strong>Bitcoin 1H Chart:</strong></p>
+<p><strong>Bars 1-10:</strong> Green regime, green Pilot Line, green NanoFlow crosses every 2-3 bars
+- <strong>Interpretation:</strong> Healthy uptrend with strong micro momentum</p>
+<p><strong>Bar 11:</strong> WRN fires (yellow label above candle), no green NanoFlow cross
+- <strong>Interpretation:</strong> Warning signal + no bullish micro momentum = Top may be forming</p>
+<p><strong>Bars 12-14:</strong> Pilot Line turns orange, red NanoFlow crosses appear
+- <strong>Interpretation:</strong> Momentum shifting bearish, transition phase</p>
+<p><strong>Bar 15:</strong> BDN fires (breakdown signal), red regime, red NanoFlow
+- <strong>Interpretation:</strong> Full bearish structure confirmed</p>
+<p><strong>Result:</strong> NanoFlow helped confirm the quality of the WRN→BDN sequence by showing momentum dying (green crosses stopped) then shifting (red crosses appeared).</p>
+<h3 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h3>
+<p>NanoFlow can be toggled on/off in TradingView settings:
+- <strong>Show NanoFlow Crosses</strong> - Check to display, uncheck to hide
+- <strong>Useful for:</strong> 5m, 15m, 1H charts (shows micro structure clearly)
+- <strong>Less useful for:</strong> Daily+ charts (too many crosses, can add visual noise)</p>
+<h3 id="common-questions">Common Questions<a class="headerlink" href="#common-questions" title="Permanent link">&para;</a></h3>
+<p><strong>Q: Should I trade every NanoFlow cross?</strong>
+A: No. NanoFlow is confirmation for the main event signals, not a standalone entry trigger.</p>
+<p><strong>Q: Why don't I see NanoFlow sometimes?</strong>
+A: NanoFlow only appears when ALL conditions are met (micro trend + candle color + correct side of Pilot Line). If any condition fails, no cross renders.</p>
+<p><strong>Q: Can I use NanoFlow alone without the main signals?</strong>
+A: Not recommended. NanoFlow is designed to work WITH the 5 event signals, providing momentum context for them.</p>
+<p><strong>Q: Does NanoFlow repaint?</strong>
+A: No. Like all Pentarch components, NanoFlow only renders on confirmed bars. What you see is locked in.</p>
+<hr />
+<h2 id="how-all-components-work-together">🔄 How All Components Work Together<a class="headerlink" href="#how-all-components-work-together" title="Permanent link">&para;</a></h2>
+<p><span style="color: #f59e0b; font-weight: 600; font-size: 1.1em;">🎓 Essential Understanding - How The 4 Layers Integrate</span></p>
+<h3 id="the-complete-visual-hierarchy">The Complete Visual Hierarchy<a class="headerlink" href="#the-complete-visual-hierarchy" title="Permanent link">&para;</a></h3>
+<p>When you look at a Pentarch chart, you see four layers working together:</p>
+<p><strong>Layer 1: Regime Bar Colors (Structural Foundation)</strong>
+- Every candle colored green (bull) or red (bear)
+- Shows the current market structure/bias
+- Overridden by event colors when signals fire</p>
+<p><strong>Layer 2: Pilot Line (Trend Reference)</strong>
+- Thick colored line (green/red/orange)
+- Central reference point for all measurements
+- Shows trend direction and strength</p>
+<p><strong>Layer 3: NanoFlow Crosses (Micro Momentum)</strong>
+- Small crosses below/above candles
+- High-frequency momentum feedback
+- Validates or challenges trend health</p>
+<p><strong>Layer 4: Event Candles (Reversal Signals)</strong>
+- TD/IGN/WRN/CAP/BDN colored labels
+- The actual trade signals
+- Lowest frequency, highest conviction</p>
+<h3 id="example-reading-a-full-signal-sequence">Example: Reading a Full Signal Sequence<a class="headerlink" href="#example-reading-a-full-signal-sequence" title="Permanent link">&para;</a></h3>
+<p><strong>Setup Phase (Green Regime):</strong>
+- Candles: 🟢🟢🟢🟢🟢🟢🟢 (all green - bull regime)
+- Pilot Line: Green, sloping up
+- NanoFlow: Green crosses every 2-3 bars (healthy momentum)
+- Events: None yet
+- <strong>Interpretation:</strong> Strong uptrend, look for pullback opportunities (TD/IGN)</p>
+<p><strong>Warning Phase:</strong>
+- Candles: 🟢🟢🟢🟢🟢🟢🟡 (WRN fires, yellow candle)
+- Pilot Line: Still green but starting to ease (losing momentum)
+- NanoFlow: No green crosses (bullish momentum died)
+- Events: WRN signal (potential early top)
+- <strong>Interpretation:</strong> Top warning, momentum fading, prepare for exit consideration</p>
+<p><strong>Transition Phase:</strong>
+- Candles: 🟠🟠 (orange - regime transitioning)
+- Pilot Line: Orange (easing slope)
+- NanoFlow: Red cross appears (bearish micro momentum)
+- Events: None
+- <strong>Interpretation:</strong> Trend weakening, bearish pressure building</p>
+<p><strong>Breakdown Phase:</strong>
+- Candles: 🔴 (first red candle - regime flipped to bear)
+- Pilot Line: Now red
+- NanoFlow: Red crosses
+- Events: BDN fires (breakdown confirmed)
+- <strong>Interpretation:</strong> Full structural breakdown, bearish regime active</p>
+<p><strong>Result:</strong> All four layers worked together to identify and confirm the top-to-breakdown sequence.</p>
+<h3 id="decision-flow-what-each-layer-tells-you">Decision Flow: What Each Layer Tells You<a class="headerlink" href="#decision-flow-what-each-layer-tells-you" title="Permanent link">&para;</a></h3>
+<p><strong>When analyzing a bar:</strong></p>
+<ol>
+<li><strong>Check candle color</strong> → What's the current regime/bias?</li>
+<li><strong>Check Pilot Line</strong> → What's the trend direction and strength?</li>
+<li><strong>Check NanoFlow</strong> → Is there micro momentum aligned with trend?</li>
+<li><strong>Check for event labels</strong> → Is there a trade signal this bar?</li>
+</ol>
+<p><strong>Action:</strong> Only take action on event labels. Everything else is context to evaluate signal quality.</p>
+<hr />
+<h2 id="settings-configuration-approach">⚙️ Settings (Configuration Approach)<a class="headerlink" href="#settings-configuration-approach" title="Permanent link">&para;</a></h2>
+<p><span style="color: #10b981; font-weight: 600;">Configuration Options</span></p>
+<p>Minimal configuration changes are typically required. Default settings perform well.</p>
+<p><strong>Available adjustments:</strong>
+- <strong>Show/Hide Events:</strong> Individual event types can be toggled
+- <strong>Colors:</strong> Color schemes are customizable
+- <strong>Pilot Line:</strong> Trend line visibility can be adjusted</p>
+<p>Most traders maintain default settings.</p>
+<hr />
+<h2 id="alert-configuration">🔔 Alert Configuration<a class="headerlink" href="#alert-configuration" title="Permanent link">&para;</a></h2>
+<p><span style="color: #0aa1d5; font-weight: 600;">Notification Setup</span></p>
+<p><strong>Commonly monitored alerts:</strong>
+1. <strong>IGN Event</strong> → Indicates potential long entry conditions
+2. <strong>CAP Event</strong> → Indicates potential exit conditions
+3. <strong>BDN Event</strong> → Indicates potential breakdown/exit conditions</p>
+<p><strong>Configuration steps:</strong>
+1. Alarm icon on TradingView is clicked
+2. "Pentarch v1.0" is selected
+3. Event type is chosen
+4. "Once Per Bar Close" is set</p>
+<hr />
+<h2 id="common-learning-points">Common Learning Points<a class="headerlink" href="#common-learning-points" title="Permanent link">&para;</a></h2>
+<p>❌ <strong>Entering on TD signal alone</strong>
+→ ✅ TD typically functions as a warning signal. IGN often provides additional confirmation.</p>
+<p>❌ <strong>Overlooking CAP signals</strong>
+→ ✅ CAP indicates late-cycle exhaustion. Exit consideration is common at CAP signals.</p>
+<p>❌ <strong>Trading signals without context</strong>
+→ ✅ Higher-quality signals often occur at key support/resistance levels (Janus Atlas combination can enhance signal quality)</p>
+<p>❌ <strong>Trading without stop losses</strong>
+→ ✅ Stop loss usage is standard risk management practice. Signal outcomes are not guaranteed.</p>
+<p>❌ <strong>Beginning analysis on 1-minute charts</strong>
+→ ✅ Higher timeframes (1H or Daily) are associated with more reliable signals for learning purposes.</p>
+<hr />
+<h2 id="frequently-asked-questions">❓ Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permanent link">&para;</a></h2>
+<p><span style="color: #10b981; font-weight: 600;">Common Questions</span></p>
+<p><strong>Q: How often do signals appear?</strong>
+<strong>A:</strong> Depends on timeframe:
+- Daily chart: 2-4 complete cycles per month
+- 1H chart: 1-2 cycles per week
+- 15m chart: Multiple per day</p>
+<p><strong>Q: Do I need other indicators?</strong>
+<strong>A:</strong> Pentarch works standalone, but combining with Janus Atlas (for levels) or Minimal Flow (for volume) increases win rate significantly.</p>
+<p><strong>Q: What's the win rate?</strong>
+<strong>A:</strong> When you follow the signals properly and use stops, most traders see 60-70% win rate. Higher when combined with key levels.</p>
+<p><strong>Q: Can I use this for day trading?</strong>
+<strong>A:</strong> Yes. Works on any timeframe. Lower timeframes (1m-15m) have more signals but also more noise.</p>
+<p><strong>Q: What timeframe is best?</strong>
+<strong>A:</strong>
+- Beginners: Daily or 4H
+- Day traders: 1H or 15m
+- Scalpers: 5m or 15m</p>
+<p><strong>Q: Does it repaint?</strong>
+<strong>A:</strong> No. Once a signal appears, it stays. What you see is what you get.</p>
+<p><strong>Q: What if I miss the IGN entry?</strong>
+<strong>A:</strong> Chasing missed entries is generally associated with poor risk/reward. Many traders look for the next TD→IGN setup as opportunities are continuous.</p>
+<hr />
+<h2 id="common-practices">Common Practices<a class="headerlink" href="#common-practices" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Higher timeframe learning</strong> - Daily or 4H charts are often recommended for initial signal pattern learning</p>
+</li>
+<li>
+<p><strong>Janus Atlas combination</strong> - Signals occurring at key levels are associated with improved success rates</p>
+</li>
+<li>
+<p><strong>Alert configuration</strong> - Alert setup helps ensure signal observation opportunities aren't missed</p>
+</li>
+<li>
+<p><strong>Partial position management</strong> - Some traders implement partial exits at WRN while maintaining remainder through CAP</p>
+</li>
+<li>
+<p><strong>Trade journaling</strong> - Recording signal performance patterns can inform future analytical decisions</p>
+</li>
+<li>
+<p><strong>Pattern recognition</strong> - Complete sequences like TD→IGN or WRN→CAP→BDN are often associated with higher-quality setups</p>
+</li>
+</ol>
+<hr />
+<h2 id="quick-reference-guide">Quick Reference Guide<a class="headerlink" href="#quick-reference-guide" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Meaning</th>
+<th>Common Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TD 🔵</td>
+<td>Early-cycle warning</td>
+<td>Often viewed as preparation signal (not entry)</td>
+</tr>
+<tr>
+<td>IGN 🟢</td>
+<td>Potential reversal up indicated</td>
+<td>Commonly used as potential long entry signal</td>
+</tr>
+<tr>
+<td>WRN 🟡</td>
+<td>Late-cycle warning</td>
+<td>Monitoring typically begins, stop tightening is considered</td>
+</tr>
+<tr>
+<td>CAP 🔴</td>
+<td>Late-cycle exhaustion</td>
+<td>Often interpreted as long exit signal</td>
+</tr>
+<tr>
+<td>BDN ⚫</td>
+<td>Potential breakdown</td>
+<td>Often interpreted as exit signal (or potential short entry)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="support">Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
+<p>Additional resources available:
+- <a href="https://docs.signalpilot.io/suite-index/"><span class="signal-pilot-brand">Signal Pilot</span> Suite Overview</a> - Indicator combination strategies
+- <a href="../ref-workflow/">Suite Workflow</a> - Complete trading system
+- <a href="../about-support/">Support</a> - Support resources</p>
+<hr />
+<p><strong>Summary:</strong> Pentarch indicates WHEN potential reversals may be forming. Combining it with Janus Atlas (indicating WHERE - at which levels) often enhances analysis.</p>
+<p><strong>Analytical discipline with risk management and signal-guided analysis</strong> 🎯</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://x.com/signalpilot" target="_blank" rel="noopener" title="x.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Signalpilot" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.sections", "content.code.copy", "search.suggest", "search.highlight", "content.tabs.link", "content.tooltips"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="../assets/brand.js"></script>
+      
+        <script src="../assets/sp-bg.js"></script>
+      
+        <script src="../assets/keyword-highlighter.js"></script>
+      
+    
+  </body>
+</html>
