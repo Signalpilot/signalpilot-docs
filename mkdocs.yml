@@ -45,9 +45,7 @@ theme:
 plugins:
   - search:
       lang: en
-      separator: '[\s\-\.,!?\(\)\[\]\{\}\/]+'  # Better tokenization for compound words
-      prebuild_index: true     # Faster search - builds index at build time
-      min_search_length: 2     # Allow 2-character searches (e.g., "TD", "v1")
+      separator: '[\s\-\.,!?\(\)\[\]\{\}\/]+'  # Better tokenization (TD, non-repainting, etc.)
   - macros
   - git-revision-date-localized:
       enable_creation_date: true
@@ -77,7 +75,6 @@ markdown_extensions:
       anchor_linenums: true      # Linkable line numbers
       line_spans: __span         # Enable line highlighting
       pygments_lang_class: true  # Better syntax highlighting
-      linenums: true            # Show line numbers by default
   - pymdownx.inlinehilite        # Inline code highlighting
   - pymdownx.tabbed:
       alternate_style: true      # Tabbed content blocks
