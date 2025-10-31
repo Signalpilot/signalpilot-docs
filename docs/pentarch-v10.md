@@ -1,3 +1,8 @@
+---
+title: Pentarch v1.0 - Reversal Event Signals
+description: Simple 5-phase reversal detection system (TD, IGN, WRN, CAP, BDN). Non-repainting, alert-ready indicator for identifying potential price reversals on TradingView.
+---
+
 # Pentarch v1.0 - Potential Reversal Signals Made Simple
 
 ## 🎯 What Does It Do?

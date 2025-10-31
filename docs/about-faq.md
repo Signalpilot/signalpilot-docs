@@ -1,3 +1,8 @@
+---
+title: Frequently Asked Questions
+description: Common questions about Signal Pilot indicators answered. Learn about pricing, compatibility, repainting, alerts, market support, and more.
+---
+
 # Frequently Asked Questions
 
 Answers to common questions about <span class="signal-pilot-brand">Signal Pilot</span> indicators can be found here. For additional information, the [Troubleshooting Guide](ref-troubleshooting.md) or [Contact Support](about-support.md) pages are available.

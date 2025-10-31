@@ -1,3 +1,8 @@
+---
+title: How to Set TradingView Alerts
+description: Step-by-step guide to configuring reliable, bar-close-confirmed alerts for Signal Pilot indicators. Avoid false signals and never miss important notifications.
+---
+
 # How to Set TradingView Alerts
 
 This guide explains the process of setting up reliable, close-confirmed alerts for <span class="signal-pilot-brand">Signal Pilot</span> indicators. Proper alert configuration ensures signals are never missed and false intrabar notifications are avoided.

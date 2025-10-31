@@ -1,3 +1,8 @@
+---
+title: Quick Start - Get Your First Signal in 5 Minutes
+description: Install Pentarch v1.0 and see your first reversal signal in 5 minutes. Step-by-step guide to installing and using Signal Pilot indicators on TradingView.
+---
+
 # Quick Start - Getting Your First Signal in 5 Minutes
 
 The path from zero to first potential reversal signal in 5 minutes. **Pentarch v1.0** will be used - the simplest and most impactful indicator in the suite.

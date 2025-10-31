@@ -11,11 +11,13 @@ theme:
     - navigation.top
     # - navigation.instant  # DISABLED: Causes caching issues - content not updating immediately
     - navigation.sections
+    - navigation.path  # Enable breadcrumbs navigation
     - content.code.copy
     - search.suggest
     - search.highlight
     - content.tabs.link
     - content.tooltips
+    - content.action.edit  # Enable edit button on pages
   palette:
     # Dark mode (with aurora) - DEFAULT on first visit
     - scheme: slate
@@ -86,7 +88,7 @@ nav:
     - "Use Screener": how-to-screener.md
 
   - "🚀 Suite (Latest)":
-    - "📚 Suite Overview": suite-index/
+    - "📚 Suite Overview": suite-index.md
     - "Pentarch v1.0 — Reversal Events": pentarch-v10.md
     - "Janus Atlas v1.0 — Levels System": janus-atlas-v10.md
     - "Omnideck v1.0 — Everything Indicator": omnideck-v10.md
@@ -115,6 +117,20 @@ extra:
   analytics:
     provider: google
     property: G-NZ05GV72K0
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback! Help us improve by
+            <a href="https://github.com/Signalpilot/signalpilot-docs/issues/new" target="_blank" rel="noopener">reporting an issue</a>.
   social:
     - icon: fontawesome/brands/x-twitter
       link: https://x.com/signalpilot

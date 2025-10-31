@@ -33,8 +33,20 @@ body::before{ content:""; position:fixed; inset:0; z-index:-1; pointer-events:no
   from{ transform:translate3d(-2%,-1%,0) scale(1.02) }
   to  { transform:translate3d( 2%, 1%,0) scale(1.05) }
 }
+
+/* Accessibility: Respect reduced motion preference */
 @media (prefers-reduced-motion: reduce){
-  .sp-aurora .layer{ animation:none }
+  .sp-aurora .layer{
+    animation:none;
+  }
+  /* Simplify aurora effect for users with motion sensitivities */
+  .sp-aurora{
+    opacity: 0.5;
+  }
+  body::before{
+    /* Reduce gradient complexity */
+    background: radial-gradient(1200px 700px at 50% 50%, rgba(130,185,255,.12), transparent 70%);
+  }
 }
 
 /* Ensure docs UI stays above the background */

@@ -386,6 +386,74 @@ body {
   }
 }
 
+/* ============================================================================
+   RESPONSIVE TYPOGRAPHY & HERO SECTIONS FOR ALL DEVICES
+   ============================================================================ */
+
+/* H1 responsive sizing */
+@media (max-width: 768px) {
+  .md-typeset h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .md-typeset h1 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .md-typeset h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Hero section responsive improvements (inline-styled divs on homepage) */
+@media (max-width: 768px) {
+  /* Target hero sections with inline styles */
+  div[style*="font-size: 2.2rem"] {
+    font-size: 1.8rem !important;
+  }
+
+  div[style*="font-size: 1.2rem"] {
+    font-size: 1.1rem !important;
+  }
+
+  div[style*="font-size: 1.1rem"] {
+    font-size: 1rem !important;
+  }
+
+  /* Adjust padding for hero containers */
+  div[style*="padding: 3rem"] {
+    padding: 2rem 1rem !important;
+  }
+}
+
+@media (max-width: 640px) {
+  div[style*="font-size: 2.2rem"] {
+    font-size: 1.5rem !important;
+  }
+
+  div[style*="font-size: 3rem"] {
+    font-size: 2rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  div[style*="font-size: 2.2rem"] {
+    font-size: 1.3rem !important;
+  }
+
+  div[style*="font-size: 3rem"] {
+    font-size: 1.75rem !important;
+  }
+
+  div[style*="font-size: 1.2rem"] {
+    font-size: 1rem !important;
+  }
+}
+
 [data-md-color-scheme="default"] .brand {
   color: #0f172a;
 }
