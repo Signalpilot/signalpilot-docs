@@ -556,3 +556,49 @@ html[data-md-color-scheme="default"] .sp-cta,
 html[data-md-color-scheme="default"] [class*="btn"] {
   color: inherit !important;
 }
+
+/* ============================================================================
+   MOBILE MENU FIX - Ensure clickable navigation
+   ============================================================================ */
+
+/* Fix mobile drawer z-index and interaction */
+@media screen and (max-width: 76.1875em) {
+  /* Ensure backdrop doesn't block the drawer */
+  .md-overlay {
+    z-index: 5 !important;
+  }
+
+  /* Ensure drawer is above backdrop */
+  .md-sidebar--primary {
+    z-index: 6 !important;
+  }
+
+  /* Ensure all drawer content is clickable */
+  .md-sidebar__inner {
+    z-index: 7 !important;
+    pointer-events: auto !important;
+  }
+
+  /* Ensure navigation links are clickable */
+  .md-nav {
+    z-index: 8 !important;
+    pointer-events: auto !important;
+  }
+
+  .md-nav__link {
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 9 !important;
+  }
+
+  /* Fix header hamburger button */
+  .md-header__button {
+    z-index: 10 !important;
+    pointer-events: auto !important;
+  }
+
+  /* Ensure the header stays above everything */
+  .md-header {
+    z-index: 11 !important;
+  }
+}
