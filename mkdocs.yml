@@ -43,7 +43,9 @@ theme:
   custom_dir: overrides
 
 plugins:
-  - search
+  - search:
+      lang: en
+      separator: '[\s\-\.,!?\(\)\[\]\{\}\/]+'  # Better tokenization (TD, non-repainting, etc.)
   - macros
   - git-revision-date-localized:
       enable_creation_date: true
@@ -59,11 +61,25 @@ markdown_extensions:
   - toc:
       permalink: true
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.snippets
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  # Interactive code features
+  - pymdownx.highlight:
+      anchor_linenums: true      # Linkable line numbers
+      line_spans: __span         # Enable line highlighting
+      pygments_lang_class: true  # Better syntax highlighting
+  - pymdownx.inlinehilite        # Inline code highlighting
+  - pymdownx.tabbed:
+      alternate_style: true      # Tabbed content blocks
+  - pymdownx.tasklist:
+      custom_checkbox: true      # Interactive checkboxes
 
 # Material-compatible styles (brand.css has all theme rules for Material)
 extra_css:
@@ -71,6 +87,7 @@ extra_css:
   - assets/brand.css
   - assets/aurora.css
   - assets/print.css
+  - assets/interactive-code.css
 
 # Background effects and utilities
 extra_javascript:
