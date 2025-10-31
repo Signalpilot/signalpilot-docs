@@ -79,7 +79,7 @@ Technical indicators that identify <strong>TIMING</strong> patterns, <strong>PRI
   Scan 8 symbols simultaneously with quality scores. On-chart table shows the best setups.
   [Read Guide :material-arrow-right:](augury-grid-v10.md){ .md-button .md-button--primary }
 
-- :material-water-plus: **Minimal Flow v1.0 — Volume Strategy**
+- :material-water-plus: **Volume Oracle v1.0 — Volume Strategy**
   Volume spike detection + complete position management. Entry, stops, partials, trailing - all automatic.
   [Read Guide :material-arrow-right:](minimal-flow-v10.md){ .md-button .md-button--primary }
 
@@ -212,7 +212,7 @@ Want to see how all 7 indicators work together?
 → **[Augury Grid v1.0](augury-grid-v10.md)** - 8-symbol monitoring with quality scores
 
 ### Volume-based analysis
-→ **[Minimal Flow v1.0](minimal-flow-v10.md)** - Volume spikes + position management system
+→ **[Volume Oracle v1.0](minimal-flow-v10.md)** - Volume spikes + position management system
 
 ### Momentum/oscillator analysis
 → **[Harmonic Oscillator v1.0](harmonic-oscillator-v10.md)** - 3-in-1 composite (MACD+RSI+StochRSI)
@@ -247,7 +247,7 @@ Want to see how all 7 indicators work together?
 → Everything you need: signals, levels, structure, regime
 
 **Volume Traders:**
-[Minimal Flow v1.0](minimal-flow-v10.md) + [Plutus Flow v1.0](plutus-flow-v10.md)
+[Volume Oracle v1.0](minimal-flow-v10.md) + [Plutus Flow v1.0](plutus-flow-v10.md)
 → Volume spikes + OBV flow = Complete volume analysis
 
 **Divergence Hunters:**

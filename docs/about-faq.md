@@ -289,7 +289,7 @@ This is normal. Quality over quantity—Pentarch waits for high-probability setu
 **What's included in Omnideck:**
 - All Pentarch signals
 - All Janus Atlas levels
-- Minimal Flow volume analysis
+- Volume Oracle volume analysis
 - Harmonic Oscillator momentum
 - Bias indicators
 - Everything in one chart
@@ -366,7 +366,7 @@ Signals that appear mid-bar can change before close. This is normal and why clos
 
 **Intermediate:** Add confluence
 - Pentarch + Janus Atlas
-- Pentarch + Minimal Flow
+- Pentarch + Volume Oracle
 
 **Advanced:** Custom setups
 - Pentarch + Janus + Harmonic Oscillator

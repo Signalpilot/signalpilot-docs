@@ -1,9 +1,14 @@
-# Minimal Flow v1.0 Ultimate - Volume Intelligence System
+---
+title: Volume Oracle v1.0 - Volume Intelligence System
+description: Advanced volume spike detection with built-in position management. Identify smart money movement with flow consistency analysis and complete trade management framework.
+---
+
+# Volume Oracle v1.0 Ultimate - Volume Intelligence System
 
 ## 🎯 What Does It Do?
 <span style="color: #0aa1d5; font-weight: 600;">Core Functionality</span>
 
-Minimal Flow is your **potential volume spike detector with built-in position management**. It shows you when smart money may be moving (potential volume spikes), indicates the direction is real (flow consistency), and manages your entire trade from entry to exit.
+Volume Oracle is your **potential volume spike detector with built-in position management**. It shows you when smart money may be moving (potential volume spikes), indicates the direction is real (flow consistency), and manages your entire trade from entry to exit.
 
 **Best for:** Volume traders, systematic traders, anyone serious about risk management
 
@@ -261,7 +266,7 @@ Each signal gets rated 0-100:
 
 **Configuration steps:**
 1. Alarm icon is clicked
-2. "Minimal Flow v1.0" is selected
+2. "Volume Oracle v1.0" is selected
 3. Alert type is chosen
 4. "Once Per Bar Close" is set
 
@@ -354,6 +359,6 @@ Additional resources available:
 
 ---
 
-**Summary:** Minimal Flow detects when smart money may be moving, indicates directional validity, and provides complete trade management framework. Execution of displayed parameters is the implementation approach.
+**Summary:** Volume Oracle detects when smart money may be moving, indicates directional validity, and provides complete trade management framework. Execution of displayed parameters is the implementation approach.
 
 **Volume-based analysis with systematic risk management** 🎯

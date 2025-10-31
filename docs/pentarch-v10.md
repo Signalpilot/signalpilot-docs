@@ -510,7 +510,7 @@ Most traders maintain default settings.
 - 15m chart: Multiple per day
 
 **Q: Do I need other indicators?**
-**A:** Pentarch works standalone, but combining with Janus Atlas (for levels) or Minimal Flow (for volume) increases win rate significantly.
+**A:** Pentarch works standalone, but combining with Janus Atlas (for levels) or Volume Oracle (for volume) increases win rate significantly.
 
 **Q: What's the win rate?**
 **A:** When you follow the signals properly and use stops, most traders see 60-70% win rate. Higher when combined with key levels.

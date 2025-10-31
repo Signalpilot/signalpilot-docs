@@ -39,7 +39,7 @@
 **Recommended setup:**
 - [Pentarch](pentarch-v10.md) - Core signals
 - [Janus Atlas](janus-atlas-v10.md) - Key levels
-- [Minimal Flow](minimal-flow-v10.md) OR [Harmonic Oscillator](harmonic-oscillator-v10.md) - Confirmation
+- [Volume Oracle](minimal-flow-v10.md) OR [Harmonic Oscillator](harmonic-oscillator-v10.md) - Confirmation
 
 **Why:**
 - Confluence between signals and levels
@@ -66,7 +66,7 @@
 | **Janus Atlas** | Finding key levels | ⭐⭐ Medium | Support/Resistance/FVG/OB | ✅ Yes |
 | **Omnideck** | Complete analysis | ⭐⭐⭐ Complex | Everything combined | ✅ Yes |
 | **Augury Grid** | Multi-symbol scanning | ⭐⭐ Medium | Watchlist screening | ✅ Yes |
-| **Minimal Flow** | Volume confirmation | ⭐⭐ Medium | Order flow analysis | ❌ Best with others |
+| **Volume Oracle** | Volume confirmation | ⭐⭐ Medium | Order flow analysis | ❌ Best with others |
 | **Harmonic Oscillator** | Momentum/Divergence | ⭐⭐ Medium | Momentum confirmation | ❌ Best with others |
 | **Plutus Flow** | Volume trends | ⭐⭐ Medium | Advanced OBV | ❌ Best with others |
 
@@ -142,7 +142,7 @@ Combines ALL suite indicators into one comprehensive dashboard
 **Includes:**
 - Pentarch reversal signals
 - Janus Atlas levels
-- Minimal Flow volume
+- Volume Oracle volume
 - Harmonic Oscillator momentum
 - Bias indicators
 - Market regime filters
@@ -204,7 +204,7 @@ Scans multiple symbols simultaneously, showing signals in a table format
 
 ---
 
-### Minimal Flow v1.0 — Volume Strategy
+### Volume Oracle v1.0 — Volume Strategy
 
 **What it does:**
 Analyzes order flow and volume patterns for confirmation
@@ -324,7 +324,7 @@ Stop: Below support level
 ```
 ✅ Pentarch (timing)
 ✅ Janus Atlas (levels)
-✅ Minimal Flow (volume)
+✅ Volume Oracle (volume)
 ✅ Harmonic Oscillator (momentum)
 
 Why: Maximum confluence
@@ -390,7 +390,7 @@ Other indicators not required
 
 ### Question 4: Volume incorporation?
 
-**→ Volume used:** **Minimal Flow** commonly added
+**→ Volume used:** **Volume Oracle** commonly added
 
 **→ Volume divergence focus:** **Plutus Flow** commonly added
 
@@ -426,7 +426,7 @@ Other indicators not required
 
 ### ❌ Using Confirmation Without Signals
 
-**Problem:** Only using Minimal Flow or Harmonic Oscillator
+**Problem:** Only using Volume Oracle or Harmonic Oscillator
 **Issue:** No entry triggers
 **Fix:** A signal indicator (Pentarch or Omnideck) is required
 
@@ -461,7 +461,7 @@ Other indicators not required
 ### Day Traders
 **Primary:** Pentarch
 **Add:** Janus Atlas
-**Optional:** Minimal Flow
+**Optional:** Volume Oracle
 **Timeframes:** 15m, 1H
 
 ---
@@ -497,7 +497,7 @@ Other indicators not required
 
 ### Breakout Traders
 **Primary:** Janus Atlas (for levels to break)
-**Add:** Minimal Flow (volume confirmation)
+**Add:** Volume Oracle (volume confirmation)
 **Note:** Wait for volume on breaks
 
 ---
@@ -518,7 +518,7 @@ Other indicators not required
 
 ### Week 5-6: Refinement
 - ONE confirmation indicator can be added:
-  - Minimal Flow (if volume is liked)
+  - Volume Oracle (if volume is liked)
   - Harmonic Oscillator (if momentum is liked)
 - Goal: Filter for highest probability setups
 

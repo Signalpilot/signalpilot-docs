@@ -16,7 +16,7 @@ The <span class="signal-pilot-brand">Signal Pilot</span> Suite represents a comp
 
 ### Volume & Flow Analysis
 
-- **[Minimal Flow v1.0](minimal-flow-v10.md)** — Potential volume spike detection with Z-score filtering, HTF gating, session validation. Complete position management system.
+- **[Volume Oracle v1.0](minimal-flow-v10.md)** — Potential volume spike detection with Z-score filtering, HTF gating, session validation. Complete position management system.
 
 - **[Plutus Flow v1.0](plutus-flow-v10.md)** — Advanced OBV with CVD divergence detection, EVR (Extreme Volume Rejection), FlipGuard for potential breakout confirmation.
 

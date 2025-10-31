@@ -122,7 +122,7 @@ BTC/USD │ BUY │ 87 ⭐⭐⭐ │ $64,250 │ $65,800 │ 2 │ +0.3%
 ### 3. Verify on Chart (2 minutes)
 The chart can be clicked to load **BTC/USD** and the following can be checked:
 - [ ] At support level or key zone? ([Janus Atlas](janus-atlas-v10.md) can be used)
-- [ ] Volume confirming? ([Minimal Flow](minimal-flow-v10.md) can be used)
+- [ ] Volume confirming? ([Volume Oracle](minimal-flow-v10.md) can be used)
 - [ ] No major resistance overhead?
 - [ ] Aligns with trading bias?
 
