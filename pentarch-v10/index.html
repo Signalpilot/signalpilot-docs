@@ -2172,11 +2172,14 @@
 <h2 id="the-pilot-line-your-trend-compass">🎯 The Pilot Line - Your Trend Compass<a class="headerlink" href="#the-pilot-line-your-trend-compass" title="Permanent link">&para;</a></h2>
 <p><span style="color: #0aa1d5; font-weight: 600; font-size: 1.1em;">⭐ Core Component - Primary Reference for All Signals</span></p>
 <h3 id="what-is-it">What Is It?<a class="headerlink" href="#what-is-it" title="Permanent link">&para;</a></h3>
+<div style="padding: 1rem 1.5rem; background: rgba(var(--md-primary-fg-color), 0.1); border-left: 4px solid var(--md-primary-fg-color); border-radius: 4px; margin: 1.5rem 0;">
+<p style="margin: 0;"><strong>📌 Note About Colors:</strong> Pentarch includes multiple customizable color palettes. You can adjust colors to match your preferences in the indicator settings. Throughout this guide, we reference the default color scheme (green for bullish, red for bearish, orange for transitional) as examples.</p>
+</div>
 <p>The <strong>Pilot Line</strong> is a smooth trend line that acts as your primary reference point. Think of it as the "center of gravity" for price action. Every one of the 5 event signals is positioned relative to this line.</p>
 <p><strong>Visual:</strong> A thick line on your chart that changes color:
-- <strong>🟢 Green</strong> = Strong uptrend (slope rising, momentum strong)
-- <strong>🔴 Red</strong> = Strong downtrend (slope falling, momentum strong)
-- <strong>🟠 Orange</strong> = Transitional phase (momentum easing or flat)</p>
+- <strong>🟢 Green (default)</strong> = Strong uptrend (slope rising, momentum strong)
+- <strong>🔴 Red (default)</strong> = Strong downtrend (slope falling, momentum strong)
+- <strong>🟠 Orange (default)</strong> = Transitional phase (momentum easing or flat)</p>
 <p><strong>The Ribbon:</strong> You'll also see two semi-transparent bands above and below the line. This is the "influence zone" (±0.25 ATR). Price within the ribbon = balanced. Price outside the ribbon = extended.</p>
 <h3 id="why-it-matters">Why It Matters<a class="headerlink" href="#why-it-matters" title="Permanent link">&para;</a></h3>
 <p>The Pilot Line serves multiple purposes:</p>
@@ -2190,30 +2193,30 @@
 <table>
 <thead>
 <tr>
-<th>Pilot Line Color</th>
+<th>Pilot Line Color (Default)</th>
 <th>Market State</th>
 <th>What Traders Often Look For</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>🟢 <strong>Green</strong></td>
+<td>🟢 <strong>Bullish (Green)</strong></td>
 <td>Strong uptrend</td>
 <td>Pullback opportunities (TD/IGN signals)</td>
 </tr>
 <tr>
-<td>🔴 <strong>Red</strong></td>
+<td>🔴 <strong>Bearish (Red)</strong></td>
 <td>Strong downtrend</td>
 <td>Rally reversals (WRN/CAP/BDN signals)</td>
 </tr>
 <tr>
-<td>🟠 <strong>Orange</strong></td>
+<td>🟠 <strong>Neutral (Orange)</strong></td>
 <td>Transitional/Uncertain</td>
 <td>Trend weakening, exercise caution</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Key Insight:</strong> The Pilot Line doesn't give direct entry signals. Instead, it provides context for the 5 event candles. An IGN signal above a green Pilot Line has different implications than an IGN signal below a red Pilot Line.</p>
+<p><strong>Key Insight:</strong> The Pilot Line doesn't give direct entry signals. Instead, it provides context for the 5 event candles. An IGN signal above a bullish Pilot Line has different implications than an IGN signal below a bearish Pilot Line.</p>
 <h3 id="common-usage-patterns_1">Common Usage Patterns<a class="headerlink" href="#common-usage-patterns_1" title="Permanent link">&para;</a></h3>
 <p><strong>Distance Context:</strong>
 - TD signals typically appear near or below the Pilot Line (potential bottoms)
@@ -2224,8 +2227,8 @@
 - Price crossing below PL = Potential bearish structural shift
 - You can set alerts for PL crosses if desired</p>
 <p><strong>Color Transitions:</strong>
-- Green → Orange = Uptrend losing momentum
-- Orange → Red = Downtrend establishing
+- Bullish → Neutral = Uptrend losing momentum
+- Neutral → Bearish = Downtrend establishing
 - Watching for color changes can provide early warning of trend shifts</p>
 <h3 id="technical-note">Technical Note<a class="headerlink" href="#technical-note" title="Permanent link">&para;</a></h3>
 <p>The Pilot Line is a double-smoothed EMA (34-period EMA, then 3-period EMA of that result). This makes it:
@@ -2274,22 +2277,22 @@
 <tbody>
 <tr>
 <td><strong>TD</strong></td>
-<td>Bear regime (red)</td>
+<td>Bear regime</td>
 <td>Can fire in bull regime if conditions are extreme</td>
 </tr>
 <tr>
 <td><strong>IGN</strong></td>
-<td>Bear regime (red)</td>
+<td>Bear regime</td>
 <td>Can fire in bull regime during pullbacks</td>
 </tr>
 <tr>
 <td><strong>WRN</strong></td>
-<td>Bull regime (green)</td>
+<td>Bull regime</td>
 <td>Can fire in bear regime if rally is strong enough</td>
 </tr>
 <tr>
 <td><strong>CAP</strong></td>
-<td>Bull regime (green)</td>
+<td>Bull regime</td>
 <td>Can fire in bear regime if conditions are extreme</td>
 </tr>
 <tr>
@@ -2302,13 +2305,13 @@
 <p><strong>Key Concept:</strong> Regime acts as a filter. The indicator is "pickier" about firing counter-regime signals, requiring more extreme conditions to confirm them.</p>
 <h3 id="common-usage-patterns_2">Common Usage Patterns<a class="headerlink" href="#common-usage-patterns_2" title="Permanent link">&para;</a></h3>
 <p><strong>Regime Flips as Signals:</strong>
-- First green candle after red streak = Potential trend change to bullish
-- First red candle after green streak = Potential trend change to bearish
+- First bullish candle after bearish streak = Potential trend change to bullish
+- First bearish candle after bullish streak = Potential trend change to bearish
 - You can set alerts for regime flips</p>
 <p><strong>Regime Confirmation:</strong>
 - Event signal + matching regime = Higher conviction
-  - Example: IGN in red regime (standard reversal) vs IGN in green regime (pullback long entry)
-  - Example: CAP in green regime (standard top) vs CAP in red regime (bear rally exhaustion)</p>
+  - Example: IGN in bear regime (standard reversal) vs IGN in bull regime (pullback long entry)
+  - Example: CAP in bull regime (standard top) vs CAP in bear regime (bear rally exhaustion)</p>
 <p><strong>Whipsaw Considerations:</strong>
 - Regime doesn't flip on every bar - it requires sustained evidence
 - This prevents false structural changes during normal noise
@@ -2487,7 +2490,7 @@ A: No. Like all Pentarch components, NanoFlow only renders on confirmed bars. Wh
 <p>Minimal configuration changes are typically required. Default settings perform well.</p>
 <p><strong>Available adjustments:</strong>
 - <strong>Show/Hide Events:</strong> Individual event types can be toggled
-- <strong>Colors:</strong> Color schemes are customizable
+- <strong>Colors:</strong> Multiple color palettes available - customize to match your preferences
 - <strong>Pilot Line:</strong> Trend line visibility can be adjusted</p>
 <p>Most traders maintain default settings.</p>
 <hr />
