@@ -1,96 +1,123 @@
 ---
-title: Pentarch v1.0 - Reversal Event Signals
-description: Simple 5-phase reversal detection system (TD, IGN, WRN, CAP, BDN). Non-repainting, alert-ready indicator for identifying potential price reversals on TradingView.
+title: Pentarch v1.0 - Five Cycle Events
+description: Close-confirmed cycle detection across accumulation, markup, distribution, climax, and decline phases. Four-layer detection system tracks market structure through TD, IGN, WRN, CAP, and BDN events.
 ---
 
-# Pentarch v1.0 - Potential Reversal Signals Made Simple
+# Pentarch v1.0 - Five Cycle Events
 
-## 🎯 What Does It Do?
+## 🎯 Cycle-Aware Detection
 <span style="color: #0aa1d5; font-weight: 600;">Core Functionality</span>
 
-Pentarch displays **5 simple signals** that indicate when price may potentially reverse. Think of it like traffic lights for potential reversals - visual indicators showing different phases of potential trend changes.
+Most indicators show signals. Pentarch shows cycles.
 
-**The 5-Phase System:** TD → IGN → WRN → CAP → BDN
+Markets move in cycles. Every asset. Every timeframe. Pentarch identifies cycle position across five distinct events: accumulation, markup, distribution, climax, and decline.
 
-**Best for:** Anyone who wants to identify potential reversals without guessing
+**The Five Cycle Events:** TD → IGN → WRN → CAP → BDN
 
----
-
-## 🔢 The 5 Signals (Easy to Understand)
-<span style="color: #10b981; font-weight: 600;">Signal Types</span>
-
-### 🔵 TD - Touchdown (Early-Cycle Warning)
-
-**What you see:** Blue "TD" label below the candle
-
-**What it means:** Price has pulled back hard and is getting oversold. Early-cycle reversal conditions may be developing.
-
-**Common interpretation:**
-- Many traders watch for potential long entry setups
-- IGN signal often provides additional confirmation
-- TD is typically viewed as an early warning rather than an entry trigger
-
-**Example:** Stock drops from $100 to $85, TD appears → early-cycle conditions may be developing
+**Four-layer detection system:** Regime classification → Pilot Line filter → NanoFlow momentum → Event signals. All layers confirm at bar close before signals fire.
 
 ---
 
-### 🟢 IGN - Ignition (Momentum Breakout)
+## 🔢 The Five Cycle Events
+<span style="color: #10b981; font-weight: 600;">Complete Cycle Framework</span>
 
-**What you see:** Green "IGN" label below the candle
+### 🔵 TD - Touchdown (Accumulation Phase)
 
-**What it means:** Indicates momentum breakout conditions. Potential bullish structure development.
+**Visual:** Blue "TD" label below the candle
 
-**Common interpretation:**
-- Often interpreted as a potential long entry signal
-- Typical evaluation timing: at bar close or subsequent bar
-- Common stop placement patterns: below the recent low
+**Cycle Position:** Early-cycle accumulation. Identifies potential reversal from decline into accumulation phase.
 
-**Example:** After TD at $85, IGN fires at $87 → Momentum breakout indicated, commonly interpreted as potential long entry signal
+**What Pentarch Detects:**
+- Price extended below Pilot Line (oversold conditions)
+- Multi-factor confirmation across regime, distance, and momentum
+- Close-confirmed signal at bar close
 
----
+**Common Usage:**
+- Accumulation phase marker
+- IGN signal often follows for markup confirmation
+- TD functions as cycle awareness rather than immediate entry trigger
 
-### 🟡 WRN - Warning (Late-Cycle Alert)
-
-**What you see:** Yellow "WRN" label above the candle
-
-**What it means:** Price is getting extended. Late-cycle conditions may be developing.
-
-**Common interpretation:**
-- Many traders consider risk management adjustments (tightening stops if long)
-- Often viewed as preparation for potential exits
-- Educational note: Late entry typically reduces favorable risk/reward ratios
-
-**Example:** Stock rallied to $115, WRN appears → often interpreted as exit preparation signal
+**Example:** Stock declines from $100 to $85, TD fires → Accumulation phase identified
 
 ---
 
-### 🔴 CAP - Climax (Late-Cycle Exhaustion)
+### 🟢 IGN - Ignition (Markup Phase)
 
-**What you see:** Red "CAP" label above the candle
+**Visual:** Green "IGN" label below the candle
 
-**What it means:** Final exhaustion. This often indicates late-cycle exhaustion conditions.
+**Cycle Position:** Markup phase beginning. Identifies transition from accumulation into bullish momentum expansion.
 
-**Common interpretation:**
-- Many traders consider exiting long positions
-- Often viewed as a potential exit signal
-- Advanced traders may evaluate short opportunities
+**What Pentarch Detects:**
+- Momentum breakout conditions confirmed
+- Price structure shifting bullish
+- All four layers aligned at bar close
 
-**Example:** After WRN at $115, CAP fires at $120 → late-cycle exhaustion indicated, commonly used as exit signal
+**Common Usage:**
+- Markup phase entry marker
+- Evaluated at bar close or following bar
+- Stop placement typically below recent structural low
+
+**Example:** After TD at $85, IGN fires at $87 → Markup phase identified, commonly used for long entry
 
 ---
 
-### ⚫ BDN - "Potential Breakdown Signal"
+### 🟡 WRN - Warning (Distribution Phase)
 
-**What you see:** Dark "BDN" label above the candle
+**Visual:** Yellow "WRN" label above the candle
 
-**What it means:** Potential breakdown indication. Bears may be taking over. Indicates a potential bearish structure break.
+**Cycle Position:** Distribution phase. Identifies potential transition from markup into distribution.
 
-**Common interpretation:**
-- Many traders consider exiting any remaining long positions
-- Short sellers often view this as a potential entry signal
-- Typically interpreted as potential breakdown and reversal down
+**What Pentarch Detects:**
+- Price extended above Pilot Line
+- Weakening momentum conditions
+- Distribution characteristics emerging
 
-**Example:** After CAP at $120, BDN fires at $113 → Potential breakdown and downtrend indicated
+**Common Usage:**
+- Distribution phase warning
+- Risk management adjustments (stop tightening)
+- Position sizing consideration for new entries
+
+**Example:** Stock rallies to $115, WRN fires → Distribution phase identified
+
+---
+
+### 🔴 CAP - Climax (Climax Phase)
+
+**Visual:** Red "CAP" label above the candle
+
+**Cycle Position:** Climax exhaustion. Identifies late-cycle peak before potential decline.
+
+**What Pentarch Detects:**
+- Extreme extension from Pilot Line
+- Exhaustion characteristics across all layers
+- Climax conditions confirmed at close
+
+**Common Usage:**
+- Climax phase marker
+- Long position exit consideration
+- Short position preparation for experienced traders
+
+**Example:** After WRN at $115, CAP fires at $120 → Climax phase identified
+
+---
+
+### ⚫ BDN - Breakdown (Decline Phase)
+
+**Visual:** Dark "BDN" label above the candle
+
+**Cycle Position:** Decline phase initiation. Identifies structural breakdown into bearish cycle.
+
+**What Pentarch Detects:**
+- Bearish structure break confirmed
+- Transition from climax into decline phase
+- Four-layer bearish alignment at close
+
+**Common Usage:**
+- Decline phase confirmation
+- Long position exit if not already completed
+- Short position entry for directional traders
+
+**Example:** After CAP at $120, BDN fires at $113 → Decline phase confirmed
 
 ---
 
@@ -379,32 +406,36 @@ A: No. Like all Pentarch components, NanoFlow only renders on confirmed bars. Wh
 
 ---
 
-## 🔄 How All Components Work Together
-<span style="color: #f59e0b; font-weight: 600; font-size: 1.1em;">🎓 Essential Understanding - How The 4 Layers Integrate</span>
+## 🔄 Four-Layer Detection System
+<span style="color: #f59e0b; font-weight: 600; font-size: 1.1em;">🎓 Transparency - How Pentarch Identifies Cycle Events</span>
 
-### The Complete Visual Hierarchy
+### The Complete Detection Hierarchy
 
-When you look at a Pentarch chart, you see four layers working together:
+Pentarch uses a four-layer detection system to identify cycle events. All layers confirm at bar close before signals fire.
 
-**Layer 1: Regime Bar Colors (Structural Foundation)**
-- Every candle colored green (bull) or red (bear)
-- Shows the current market structure/bias
-- Overridden by event colors when signals fire
+**Layer 1: Regime Bar Colors (Bull/Bear Classification)**
+- Classifies every candle as bull regime (green) or bear regime (red)
+- Three-factor voting system: EMA structure + Price vs Pilot + Pilot slope
+- Provides directional bias for event detection
+- Locks at bar close (non-repainting)
 
-**Layer 2: Pilot Line (Trend Reference)**
-- Thick colored line (green/red/orange)
-- Central reference point for all measurements
-- Shows trend direction and strength
+**Layer 2: Pilot Line (Momentum Trend Filter)**
+- Dynamic trend reference line (green/red/orange)
+- Measures price distance in ATR-normalized units
+- Acts as filter for event detection (overbought/oversold relative to trend)
+- Updates at bar close only
 
-**Layer 3: NanoFlow Crosses (Micro Momentum)**
-- Small crosses below/above candles
-- High-frequency momentum feedback
-- Validates or challenges trend health
+**Layer 3: NanoFlow Crosses (High-Frequency Momentum)**
+- Micro-level momentum tracking (9 EMA vs 21 EMA)
+- Provides momentum confirmation context
+- Fires 10-30x more frequently than main events
+- Validates trend health between events
 
-**Layer 4: Event Candles (Reversal Signals)**
-- TD/IGN/WRN/CAP/BDN colored labels
-- The actual trade signals
-- Lowest frequency, highest conviction
+**Layer 4: Event Signals (Five Cycle Markers)**
+- TD/IGN/WRN/CAP/BDN cycle event labels
+- Lowest frequency, highest conviction signals
+- Requires alignment across all previous layers
+- **Transparency guarantee:** All layers confirm at close = signal fires
 
 ### Example: Reading a Full Signal Sequence
 
@@ -509,26 +540,26 @@ Most traders maintain default settings.
 - 1H chart: 1-2 cycles per week
 - 15m chart: Multiple per day
 
-**Q: Do I need other indicators?**
-**A:** Pentarch works standalone, but combining with Janus Atlas (for levels) or Volume Oracle (for volume) increases win rate significantly.
+**Q: Does Pentarch work standalone?**
+**A:** Pentarch functions independently. Combining with Janus Atlas (structural levels) or Volume Oracle (institutional flow) often enhances cycle event quality.
 
-**Q: What's the win rate?**
-**A:** When you follow the signals properly and use stops, most traders see 60-70% win rate. Higher when combined with key levels.
+**Q: What performance characteristics are typical?**
+**A:** With disciplined risk management and proper signal evaluation, traders commonly report 60-70% win rates. Performance typically improves when cycle events align with key structural levels.
 
-**Q: Can I use this for day trading?**
-**A:** Yes. Works on any timeframe. Lower timeframes (1m-15m) have more signals but also more noise.
+**Q: Which timeframes work with Pentarch?**
+**A:** All timeframes display cycle events. Lower timeframes (1m-15m) show more frequent signals with increased noise. Higher timeframes (4H-Daily) show fewer signals with stronger structural significance.
 
-**Q: What timeframe is best?**
+**Q: What timeframe characteristics exist?**
 **A:**
-- Beginners: Daily or 4H
-- Day traders: 1H or 15m
-- Scalpers: 5m or 15m
+- Daily/4H: Lower frequency, stronger structural significance
+- 1H/15m: Moderate frequency, balanced for intraday
+- 5m/15m: Higher frequency, requires faster decision-making
 
 **Q: Does it repaint?**
 **A:** No. Once a signal appears, it stays. What you see is what you get.
 
-**Q: What if I miss the IGN entry?**
-**A:** Chasing missed entries is generally associated with poor risk/reward. Many traders look for the next TD→IGN setup as opportunities are continuous.
+**Q: What if IGN entry timing is missed?**
+**A:** Chasing entries after initial signal typically reduces favorable risk/reward ratios. Cycle events occur continuously across timeframes, creating recurring opportunities.
 
 ---
 
@@ -569,6 +600,6 @@ Additional resources available:
 
 ---
 
-**Summary:** Pentarch indicates WHEN potential reversals may be forming. Combining it with Janus Atlas (indicating WHERE - at which levels) often enhances analysis.
+**Summary:** Pentarch identifies cycle position across five events (TD → IGN → WRN → CAP → BDN). Four-layer detection system confirms at bar close before signals fire. When combined with Janus Atlas for structural levels, cycle event quality often improves.
 
-**Analytical discipline with risk management and signal-guided analysis** 🎯
+**When you see where you are in the cycle, timing becomes clearer. Risk becomes manageable. Noise becomes filterable.** 🎯
