@@ -1,0 +1,2602 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Explore all 7 non-repainting TradingView indicators in the Signal Pilot Suite. Compare features, find your perfect match, and access comprehensive guides for each indicator.">
+      
+      
+      
+        <link rel="canonical" href="https://docs.signalpilot.io/suite-index/">
+      
+      
+        <link rel="prev" href="../how-to-screener/">
+      
+      
+        <link rel="next" href="../pentarch-v10/">
+      
+      
+      <link rel="icon" href="../assets/watermark-monogram-color-transparent.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
+    
+    
+      
+        <title>Signal Pilot Suite - Complete Indicator Collection - Signal Pilot Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/timeago.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../assets/brand.css">
+    
+      <link rel="stylesheet" href="../assets/aurora.css">
+    
+      <link rel="stylesheet" href="../assets/print.css">
+    
+      <link rel="stylesheet" href="../assets/interactive-code.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-NZ05GV72K0"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-NZ05GV72K0",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-NZ05GV72K0",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  <!-- Google Fonts: Gugi for brand consistency -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#signal-pilot-suite-complete-indicator-collection" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+  <!-- SignalPilot brand bar (keeps Material header & search intact) -->
+  <div class="sp-topnav">
+    <div class="sp-topnav__inner">
+      <a href="https://signalpilot.io" class="brand">
+        <span>Signal Pilot</span>
+      </a>
+      <nav class="sp-links" aria-label="Signal Pilot">
+        <a href="https://signalpilot.io/#why">Why</a>
+        <a href="https://signalpilot.io/#inside">What's inside</a>
+        <a href="https://education.signalpilot.io/">Education</a>
+        <a aria-current="page" href="https://docs.signalpilot.io/">Docs</a>
+        <a href="https://signalpilot.io/#pricing">Pricing</a>
+        <a href="https://signalpilot.io/#faq">FAQ</a>
+      </nav>
+      <a class="sp-cta" href="https://signalpilot.io/#pricing">Get the Suite</a>
+    </div>
+  </div>
+
+  
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Signal Pilot Docs" class="md-header__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
+      
+  <img src="../assets/watermark-monogram-color-transparent.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Signal Pilot Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Signal Pilot Suite - Complete Indicator Collection
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Signalpilot/signalpilot-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    signalpilot-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Signal Pilot Docs" class="md-nav__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
+      
+  <img src="../assets/watermark-monogram-color-transparent.png" alt="logo">
+
+    </a>
+    Signal Pilot Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Signalpilot/signalpilot-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    signalpilot-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    🚀 Getting Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            🚀 Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../start-quick/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ⚡ Quick Start (5 min)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../start-prerequisites/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prerequisites
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../start-onboarding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Onboarding Checklist (7 days)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    📖 How-To Guides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            📖 How-To Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-alerts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Set Up Alerts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-webhooks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use Webhooks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-screener/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use Screener
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    🚀 Suite (Latest)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            🚀 Suite (Latest)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    📚 Suite Overview
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    📚 Suite Overview
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quick-comparison-choose-your-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Quick Comparison - Choose Your Indicators
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Quick Comparison - Choose Your Indicators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selection-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Selection Guide
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-complete-suite" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 The Complete Suite
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 The Complete Suite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-pentarch-v10-potential-reversal-event-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Pentarch v1.0 - Potential Reversal Event Detection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-janus-atlas-v10-comprehensive-levels-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Janus Atlas v1.0 - Comprehensive Levels System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-omnideck-v10-the-everything-indicator" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Omnideck v1.0 - The Everything Indicator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-augury-grid-v10-multi-symbol-screener" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Augury Grid v1.0 - Multi-Symbol Screener
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-volume-oracle-v10-ultimate-advanced-volume-flow-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Volume Oracle v1.0 Ultimate - Advanced Volume Flow Strategy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-harmonic-oscillator-v10-adaptive-composite-momentum-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Harmonic Oscillator v1.0 ADAPTIVE - Composite Momentum System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-plutus-flow-v10-advanced-obv-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Plutus Flow v1.0 - Advanced OBV Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-selector-analytical-function-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Quick Selector: Analytical Function Mapping
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Quick Selector: Analytical Function Mapping">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-trend-identification" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Trend Identification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-entry-timing" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Entry Timing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-potential-reversal-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Potential Reversal Detection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-key-level-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Key Level Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-volume-confirmation" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Volume Confirmation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-multi-symbol-screening" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Multi-Symbol Screening
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-comprehensive-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Comprehensive Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-combinations" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏆 Recommended Combinations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏆 Recommended Combinations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-minimalist-setup-2-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Minimalist Setup (2 indicators)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-pro-setup-3-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Pro Setup (3 indicators)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-master-setup-4-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Master Setup (4 indicators)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-scalper-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Scalper Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-swing-trader-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Swing Trader Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-position-trader-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Position Trader Setup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sp-protocol-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 SP Protocol Compliance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 SP Protocol Compliance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zero-repaint" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Zero Repaint
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complete-transparency" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Complete Transparency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#professional-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Professional Quality
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎓 Learning Path
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎓 Learning Path">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#week-1-foundation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 1: Foundation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week-2-volume-confirmation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 2: Volume Confirmation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week-3-momentum-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 3: Momentum Filtering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week-4-advanced-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 4: Advanced Techniques
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week-5-multi-asset-scanning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 5: Multi-Asset Scanning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week-6-complete-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 6: Complete Integration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#professional-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      💡 Professional Guidelines
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💡 Professional Guidelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#progressive-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Progressive Implementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confluence-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confluence Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regime-adherence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regime Adherence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quality-based-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality-Based Filtering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Tracking
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#style-specific-customization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Style-Specific Customization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Documentation Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      🆘 Support &amp; Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-pathways" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Implementation Pathways
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pentarch-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pentarch v1.0 — Reversal Events
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../janus-atlas-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Janus Atlas v1.0 — Levels System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../omnideck-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Omnideck v1.0 — Everything Indicator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../augury-grid-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Augury Grid v1.0 — Multi-Symbol Screener
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../minimal-flow-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volume Oracle v1.0 — Volume Strategy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../harmonic-oscillator-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Harmonic Oscillator v1.0 — Composite Momentum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plutus-flow-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plutus Flow v1.0 — Advanced OBV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    📚 Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            📚 Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-workflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trading Workflow (Bias → Timing)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-comparison/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Indicator Comparison Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-best-practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Best Practices & Pro Tips
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-non-repaint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Non-Repainting Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-troubleshooting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshooting Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    ℹ️ About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            ℹ️ About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Support & Access
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-changelog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Changelog (high level)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Website Tiles
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Website Tiles
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_product-cards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Product Cards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quick-comparison-choose-your-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Quick Comparison - Choose Your Indicators
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Quick Comparison - Choose Your Indicators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selection-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Selection Guide
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-complete-suite" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 The Complete Suite
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 The Complete Suite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-pentarch-v10-potential-reversal-event-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Pentarch v1.0 - Potential Reversal Event Detection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-janus-atlas-v10-comprehensive-levels-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Janus Atlas v1.0 - Comprehensive Levels System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-omnideck-v10-the-everything-indicator" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Omnideck v1.0 - The Everything Indicator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-augury-grid-v10-multi-symbol-screener" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Augury Grid v1.0 - Multi-Symbol Screener
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-volume-oracle-v10-ultimate-advanced-volume-flow-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Volume Oracle v1.0 Ultimate - Advanced Volume Flow Strategy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-harmonic-oscillator-v10-adaptive-composite-momentum-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Harmonic Oscillator v1.0 ADAPTIVE - Composite Momentum System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-plutus-flow-v10-advanced-obv-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Plutus Flow v1.0 - Advanced OBV Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-selector-analytical-function-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Quick Selector: Analytical Function Mapping
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Quick Selector: Analytical Function Mapping">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-trend-identification" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Trend Identification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-entry-timing" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Entry Timing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-potential-reversal-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Potential Reversal Detection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-key-level-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Key Level Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-volume-confirmation" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Volume Confirmation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-multi-symbol-screening" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Multi-Symbol Screening
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-comprehensive-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Comprehensive Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-combinations" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏆 Recommended Combinations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏆 Recommended Combinations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-minimalist-setup-2-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Minimalist Setup (2 indicators)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-pro-setup-3-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Pro Setup (3 indicators)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-master-setup-4-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Master Setup (4 indicators)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-scalper-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Scalper Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-swing-trader-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Swing Trader Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-position-trader-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Position Trader Setup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sp-protocol-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 SP Protocol Compliance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 SP Protocol Compliance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zero-repaint" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Zero Repaint
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complete-transparency" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Complete Transparency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#professional-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Professional Quality
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎓 Learning Path
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎓 Learning Path">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#week-1-foundation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 1: Foundation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week-2-volume-confirmation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 2: Volume Confirmation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week-3-momentum-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 3: Momentum Filtering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week-4-advanced-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 4: Advanced Techniques
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week-5-multi-asset-scanning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 5: Multi-Asset Scanning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week-6-complete-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 6: Complete Integration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#professional-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      💡 Professional Guidelines
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💡 Professional Guidelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#progressive-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Progressive Implementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confluence-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confluence Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regime-adherence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regime Adherence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quality-based-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality-Based Filtering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Tracking
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#style-specific-customization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Style-Specific Customization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Documentation Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      🆘 Support &amp; Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-pathways" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Implementation Pathways
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  <!-- Reading time and last updated info -->
+<div class="md-content-meta" style="display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 1.5rem; padding: 0.75rem 1rem; background: color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent); border-radius: 8px; font-size: 0.9rem; color: var(--md-default-fg-color);">
+  
+    <span style="display: flex; align-items: center; gap: 0.4rem;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1.1rem; height: 1.1rem; fill: currentColor; opacity: 0.7;">
+        <path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/>
+      </svg>
+      <span style="opacity: 0.85;">Updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="October 31, 2025 01:38:02 UTC"><span class="timeago" datetime="2025-10-31T01:38:02+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="October 31, 2025 01:38:02 UTC">2025-10-31</span></span>
+    </span>
+  
+
+  
+    
+    
+    <span style="display: flex; align-items: center; gap: 0.4rem;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1.1rem; height: 1.1rem; fill: currentColor; opacity: 0.7;">
+        <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M16.2,16.2L11,13V7H12.5V12.2L17,14.9L16.2,16.2Z"/>
+      </svg>
+      <span style="opacity: 0.85;">11 min read</span>
+    </span>
+  
+</div>
+
+<!-- Render the page content -->
+<h1 id="signal-pilot-suite-complete-indicator-collection"><span class="signal-pilot-brand">Signal Pilot</span> Suite - Complete Indicator Collection<a class="headerlink" href="#signal-pilot-suite-complete-indicator-collection" title="Permanent link">&para;</a></h1>
+<p>Welcome to the <strong><span class="signal-pilot-brand">Signal Pilot</span> Suite</strong> - 7 production-ready, non-repainting indicators designed for serious traders. Each indicator is built on the SP Protocol: zero repaint, complete transparency, and institutional-grade analysis.</p>
+<hr />
+<h2 id="quick-comparison-choose-your-indicators">📊 Quick Comparison - Choose Your Indicators<a class="headerlink" href="#quick-comparison-choose-your-indicators" title="Permanent link">&para;</a></h2>
+<p><span style="color: #0aa1d5; font-weight: 600; font-size: 1.1em;">⭐ Start Here - Find Your Perfect Match</span></p>
+<p>Not sure which indicator to start with? This table shows how all 7 indicators compare:</p>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Type</th>
+<th>Complexity</th>
+<th>Best For</th>
+<th>Key Signals</th>
+<th>Learn Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="../pentarch-v10/">Pentarch v1.0</a></strong></td>
+<td>Overlay</td>
+<td>⭐⭐ Medium</td>
+<td>Swing traders, potential reversals</td>
+<td>5 events (TD/IGN/WRN/CAP/BDN)</td>
+<td>15 min</td>
+</tr>
+<tr>
+<td><strong><a href="../janus-atlas-v10/">Janus Atlas v1.0</a></strong></td>
+<td>Overlay</td>
+<td>⭐ Easy</td>
+<td>All styles, key levels</td>
+<td>39 level types (HTF/Session/VWAP/Structure)</td>
+<td>10 min</td>
+</tr>
+<tr>
+<td><strong><a href="../omnideck-v10/">Omnideck v1.0</a></strong></td>
+<td>Overlay</td>
+<td>⭐⭐⭐ Advanced</td>
+<td>All-in-one users</td>
+<td>10 systems combined (TD/Squeeze/EMAs/etc.)</td>
+<td>30 min</td>
+</tr>
+<tr>
+<td><strong><a href="../augury-grid-v10/">Augury Grid v1.0</a></strong></td>
+<td>Table</td>
+<td>⭐⭐ Medium</td>
+<td>Multi-asset scanners</td>
+<td>8-symbol screener with quality scores</td>
+<td>20 min</td>
+</tr>
+<tr>
+<td><strong><a href="../minimal-flow-v10/">Volume Oracle v1.0</a></strong></td>
+<td>Overlay</td>
+<td>⭐⭐ Medium</td>
+<td>Volume traders, scalpers</td>
+<td>Volume spikes + position management</td>
+<td>15 min</td>
+</tr>
+<tr>
+<td><strong><a href="../harmonic-oscillator-v10/">Harmonic Oscillator v1.0</a></strong></td>
+<td>Oscillator</td>
+<td>⭐⭐ Medium</td>
+<td>Momentum traders</td>
+<td>3-in-1 composite (MACD+RSI+StochRSI)</td>
+<td>20 min</td>
+</tr>
+<tr>
+<td><strong><a href="../plutus-flow-v10/">Plutus Flow v1.0</a></strong></td>
+<td>Oscillator</td>
+<td>⭐⭐ Medium</td>
+<td>Volume analysts</td>
+<td>Advanced OBV + divergence detection</td>
+<td>15 min</td>
+</tr>
+</tbody>
+</table>
+<h3 id="selection-guide">🎯 Selection Guide<a class="headerlink" href="#selection-guide" title="Permanent link">&para;</a></h3>
+<p><strong>New to the suite?</strong>
+→ <strong><a href="../janus-atlas-v10/">Janus Atlas</a></strong> (simplest learning curve) or <strong><a href="../pentarch-v10/">Pentarch</a></strong> (high analytical impact)</p>
+<p><strong>Comprehensive analysis desired?</strong>
+→ <strong><a href="../omnideck-v10/">Omnideck</a></strong> (10 systems integrated)</p>
+<p><strong>Multi-symbol analysis needed?</strong>
+→ <strong><a href="../augury-grid-v10/">Augury Grid</a></strong> (8-symbol screener)</p>
+<p><strong>Volume analysis focus?</strong>
+→ <strong><a href="../minimal-flow-v10/">Volume Oracle</a></strong> + <strong><a href="../plutus-flow-v10/">Plutus Flow</a></strong> (complete volume analysis framework)</p>
+<p><strong>Oscillator preference?</strong>
+→ <strong><a href="../harmonic-oscillator-v10/">Harmonic Oscillator</a></strong> (3 oscillators synthesized)</p>
+<hr />
+<h2 id="the-complete-suite">🎯 The Complete Suite<a class="headerlink" href="#the-complete-suite" title="Permanent link">&para;</a></h2>
+<h3 id="1-pentarch-v10-potential-reversal-event-detection">1. <a href="../pentarch-v10/">Pentarch v1.0</a> - Potential Reversal Event Detection<a class="headerlink" href="#1-pentarch-v10-potential-reversal-event-detection" title="Permanent link">&para;</a></h3>
+<p><strong>Type:</strong> Overlay | <strong>Complexity:</strong> Intermediate</p>
+<p>Potential reversal detector with 5 distinct event types:
+- <strong>TD</strong> (Touchdown) - Early warning signal
+- <strong>IGN</strong> (Ignition) - Potential bullish signal
+- <strong>WRN</strong> (Warning) - Late-cycle warning
+- <strong>CAP</strong> (Climax) - Exhaustion signal
+- <strong>BDN</strong> (Breakdown) - Potential bearish signal</p>
+<p><strong>Best for:</strong> Swing traders, potential reversal identification, multi-timeframe analysis
+<strong>Key Features:</strong> Market regime awareness, event detection, adaptive analysis</p>
+<p><a href="../pentarch-v10/">📖 Read Full Guide →</a></p>
+<hr />
+<h3 id="2-janus-atlas-v10-comprehensive-levels-system">2. <a href="../janus-atlas-v10/">Janus Atlas v1.0</a> - Comprehensive Levels System<a class="headerlink" href="#2-janus-atlas-v10-comprehensive-levels-system" title="Permanent link">&para;</a></h3>
+<p><strong>Type:</strong> Overlay | <strong>Complexity:</strong> Beginner-Friendly</p>
+<p>Comprehensive market infrastructure overlay with multiple level types:
+- Higher timeframe levels
+- Session-based levels
+- Volume-weighted levels
+- Volume profile zones
+- Market structure tracking</p>
+<p><strong>Best for:</strong> All trading styles - scalping to position trading
+<strong>Key Features:</strong> Clean visual display, organized level management, adaptive features</p>
+<p><a href="../janus-atlas-v10/">📖 Read Full Guide →</a></p>
+<hr />
+<h3 id="3-omnideck-v10-the-everything-indicator">3. <a href="../omnideck-v10/">Omnideck v1.0</a> - The Everything Indicator<a class="headerlink" href="#3-omnideck-v10-the-everything-indicator" title="Permanent link">&para;</a></h3>
+<p><strong>Type:</strong> Overlay (Multi-System) | <strong>Complexity:</strong> Beginner to Advanced</p>
+<p>Multiple professional indicators integrated into one system:
+1. Sequential exhaustion detection
+2. Volatility compression detector
+3. Liquidity sweep identification
+4. Moving average analysis
+5. Multi-timeframe trend detection
+6. Support band tracking
+7. Market regime identification
+8. Supply/demand zone mapping
+9. Candlestick pattern recognition
+10. Additional confluence tools</p>
+<p><strong>Best for:</strong> Traders wanting comprehensive analysis without clutter
+<strong>Key Features:</strong> Individual system toggles, clean visual display, integrated features</p>
+<p><a href="../omnideck-v10/">📖 Read Full Guide →</a></p>
+<hr />
+<h3 id="4-augury-grid-v10-multi-symbol-screener">4. <a href="../augury-grid-v10/">Augury Grid v1.0</a> - Multi-Symbol Screener<a class="headerlink" href="#4-augury-grid-v10-multi-symbol-screener" title="Permanent link">&para;</a></h3>
+<p><strong>Type:</strong> Table-Based Screener | <strong>Complexity:</strong> Intermediate</p>
+<p>On-chart 8-symbol screener with intelligent quality scoring:
+- Momentum shift detection
+- Multi-factor quality scoring
+- Quality tier classification
+- Target calculation and P&amp;L tracking
+- Signal freshness monitoring</p>
+<p><strong>Best for:</strong> Multi-asset traders, swing traders, watchlist management
+<strong>Key Features:</strong> Efficient data handling, table-only display, zero repaint</p>
+<p><a href="../augury-grid-v10/">📖 Read Full Guide →</a></p>
+<hr />
+<h3 id="5-volume-oracle-v10-ultimate-advanced-volume-flow-strategy">5. <a href="../minimal-flow-v10/">Volume Oracle v1.0 Ultimate</a> - Advanced Volume Flow Strategy<a class="headerlink" href="#5-volume-oracle-v10-ultimate-advanced-volume-flow-strategy" title="Permanent link">&para;</a></h3>
+<p><strong>Type:</strong> Separate Pane | <strong>Complexity:</strong> Intermediate to Advanced</p>
+<p>Complete volume-based trading system with full position management:
+- Significant volume spike detection
+- Directional flow analysis
+- Market regime identification
+- Higher timeframe confirmation
+- Volatility-adaptive features
+- Complete position management tools
+- Risk calculation features
+- Multiple strategy modes</p>
+<p><strong>Best for:</strong> Volume traders, systematic traders, position management
+<strong>Key Features:</strong> Quality scoring with visual indicators, multiple alert types, adaptive analysis</p>
+<p><a href="../minimal-flow-v10/">📖 Read Full Guide →</a></p>
+<hr />
+<h3 id="6-harmonic-oscillator-v10-adaptive-composite-momentum-system">6. <a href="../harmonic-oscillator-v10/">Harmonic Oscillator v1.0 ADAPTIVE</a> - Composite Momentum System<a class="headerlink" href="#6-harmonic-oscillator-v10-adaptive-composite-momentum-system" title="Permanent link">&para;</a></h3>
+<p><strong>Type:</strong> Separate Pane | <strong>Complexity:</strong> Intermediate to Advanced</p>
+<p>Composite momentum system combining multiple oscillators:
+- Multi-component voting consensus
+- Normalized scoring scale
+- Anti-whipsaw protection
+- Divergence detection (multiple types)
+- Higher timeframe filtering
+- Timeframe adaptation modes
+- Component status display</p>
+<p><strong>Best for:</strong> Momentum traders, divergence traders, multi-indicator users
+<strong>Key Features:</strong> Multiple sensitivity modes, quality indicators, multiple alert types</p>
+<p><a href="../harmonic-oscillator-v10/">📖 Read Full Guide →</a></p>
+<hr />
+<h3 id="7-plutus-flow-v10-advanced-obv-analysis">7. <a href="../plutus-flow-v10/">Plutus Flow v1.0</a> - Advanced OBV Analysis<a class="headerlink" href="#7-plutus-flow-v10-advanced-obv-analysis" title="Permanent link">&para;</a></h3>
+<p><strong>Type:</strong> Separate Pane | <strong>Complexity:</strong> Beginner to Advanced</p>
+<p>Advanced volume flow analysis with divergence detection:
+- Enhanced on-balance volume calculation
+- Dynamic volatility bands
+- Extreme condition detection
+- Cross signals with anti-whipsaw protection
+- Threshold breach identification
+- Pivot-based divergence analysis
+- Higher timeframe filtering
+- Sequential condition requirements</p>
+<p><strong>Best for:</strong> Volume analysts, divergence traders, flow confirmation
+<strong>Key Features:</strong> Clean signal hierarchy, divergence visualization, multiple alert types</p>
+<p><a href="../plutus-flow-v10/">📖 Read Full Guide →</a></p>
+<hr />
+<h2 id="quick-selector-analytical-function-mapping">🎯 Quick Selector: Analytical Function Mapping<a class="headerlink" href="#quick-selector-analytical-function-mapping" title="Permanent link">&para;</a></h2>
+<h3 id="for-trend-identification">For Trend Identification<a class="headerlink" href="#for-trend-identification" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Omnideck</strong> (Regime Box + SuperTrend components)</li>
+<li><strong>Volume Oracle</strong> (4-vote regime system)</li>
+<li><strong>Pentarch</strong> (Regime detection + Pilot Line)</li>
+</ul>
+<h3 id="for-entry-timing">For Entry Timing<a class="headerlink" href="#for-entry-timing" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pentarch</strong> (IGN/TD event signals)</li>
+<li><strong>Omnideck</strong> (TD Sequential, Squeeze break signals)</li>
+<li><strong>Harmonic Oscillator</strong> (Composite consensus signals)</li>
+</ul>
+<h3 id="for-potential-reversal-detection">For Potential Reversal Detection<a class="headerlink" href="#for-potential-reversal-detection" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pentarch</strong> (CAP/WRN/BDN event indicators - potential reversals)</li>
+<li><strong>Omnideck</strong> (TD 9, Liquidity sweep patterns)</li>
+<li><strong>Harmonic Oscillator</strong> (Divergence patterns)</li>
+<li><strong>Plutus Flow</strong> (OBV divergence patterns)</li>
+</ul>
+<h3 id="for-key-level-analysis">For Key Level Analysis<a class="headerlink" href="#for-key-level-analysis" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Janus Atlas</strong> (Comprehensive levels: HTF, session, VWAP, volume profile, structure)</li>
+<li><strong>Omnideck</strong> (SD Zone mapping)</li>
+</ul>
+<h3 id="for-volume-confirmation">For Volume Confirmation<a class="headerlink" href="#for-volume-confirmation" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Volume Oracle</strong> (Volume spike detection + flow consistency analysis)</li>
+<li><strong>Plutus Flow</strong> (OBV analysis + divergence detection)</li>
+</ul>
+<h3 id="for-multi-symbol-screening">For Multi-Symbol Screening<a class="headerlink" href="#for-multi-symbol-screening" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Augury Grid</strong> (8-symbol table-based screener)</li>
+</ul>
+<h3 id="for-comprehensive-analysis">For Comprehensive Analysis<a class="headerlink" href="#for-comprehensive-analysis" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Omnideck</strong> (10 integrated systems)</li>
+<li><strong>Janus Atlas + Pentarch + Volume Oracle</strong> (The Trinity combination)</li>
+</ul>
+<hr />
+<h2 id="recommended-combinations">🏆 Recommended Combinations<a class="headerlink" href="#recommended-combinations" title="Permanent link">&para;</a></h2>
+<p><span style="color: #f59e0b; font-weight: 600; font-size: 1.1em;">💡 Proven Setups - What Works Together</span></p>
+<h3 id="the-minimalist-setup-2-indicators">The Minimalist Setup (2 indicators)<a class="headerlink" href="#the-minimalist-setup-2-indicators" title="Permanent link">&para;</a></h3>
+<p><strong>Omnideck + Janus Atlas</strong>
+- Omnideck: Signals, regime, patterns, zones
+- Janus Atlas: Levels for entry/exit precision
+- <strong>Result:</strong> Complete coverage, minimal clutter</p>
+<h3 id="the-pro-setup-3-indicators">The Pro Setup (3 indicators)<a class="headerlink" href="#the-pro-setup-3-indicators" title="Permanent link">&para;</a></h3>
+<p><strong>Pentarch + Janus Atlas + Volume Oracle</strong>
+- Pentarch: Potential reversal events and regime
+- Janus Atlas: Key levels and structure
+- Volume Oracle: Volume confirmation and position management
+- <strong>Result:</strong> The "Trinity" - event + level + volume confluence</p>
+<h3 id="the-master-setup-4-indicators">The Master Setup (4 indicators)<a class="headerlink" href="#the-master-setup-4-indicators" title="Permanent link">&para;</a></h3>
+<p><strong>Pentarch + Janus Atlas + Harmonic Oscillator + Plutus Flow</strong>
+- Pentarch: Potential price reversal events
+- Janus Atlas: Structural levels
+- Harmonic: Momentum consensus
+- Plutus: Volume flow divergences
+- <strong>Result:</strong> Four-pillar confirmation system</p>
+<h3 id="the-scalper-setup">The Scalper Setup<a class="headerlink" href="#the-scalper-setup" title="Permanent link">&para;</a></h3>
+<p><strong>Omnideck (Squeeze + ST + Regime) + Janus Atlas (Session Levels + VWAP) + Volume Oracle (Volume spikes)</strong>
+- Fast signals, tight levels, volume confirmation
+- <strong>Timeframe:</strong> 5m-15m</p>
+<h3 id="the-swing-trader-setup">The Swing Trader Setup<a class="headerlink" href="#the-swing-trader-setup" title="Permanent link">&para;</a></h3>
+<p><strong>Pentarch (Daily) + Janus Atlas (Weekly/Monthly levels) + Augury Grid (scan multiple symbols)</strong>
+- High-quality potential reversals, major levels, multi-asset screening
+- <strong>Timeframe:</strong> Daily/4H</p>
+<h3 id="the-position-trader-setup">The Position Trader Setup<a class="headerlink" href="#the-position-trader-setup" title="Permanent link">&para;</a></h3>
+<p><strong>Pentarch (Weekly) + Janus Atlas (Monthly/Quarterly) + Harmonic Oscillator (Conservative mode)</strong>
+- Major potential trend changes only, institutional levels, ultra-filtered momentum
+- <strong>Timeframe:</strong> Weekly/Monthly</p>
+<hr />
+<h2 id="sp-protocol-compliance">📊 SP Protocol Compliance<a class="headerlink" href="#sp-protocol-compliance" title="Permanent link">&para;</a></h2>
+<p>All 7 indicators are <strong>SP Protocol</strong> compliant:</p>
+<h3 id="zero-repaint">✅ Zero Repaint<a class="headerlink" href="#zero-repaint" title="Permanent link">&para;</a></h3>
+<ul>
+<li>All signals gated by <code>barstate.isconfirmed</code></li>
+<li>All HTF calls use <code>lookahead=barmerge.lookahead_off</code></li>
+<li>All pivots/labels use confirmed bar anchoring</li>
+</ul>
+<h3 id="complete-transparency">✅ Complete Transparency<a class="headerlink" href="#complete-transparency" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Repaint audit included in each guide (line numbers)</li>
+<li>Behavioral contract (unconfirmed vs confirmed behavior)</li>
+<li>Known limitations documented</li>
+<li>Reproducibility tests provided</li>
+</ul>
+<h3 id="professional-quality">✅ Professional Quality<a class="headerlink" href="#professional-quality" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Optimized performance (label budgets, zoom-aware rendering)</li>
+<li>Timeframe adaptation where appropriate</li>
+<li>Alert conditions (all confirmed-only)</li>
+<li>Version history tracking</li>
+</ul>
+<hr />
+<h2 id="learning-path">🎓 Learning Path<a class="headerlink" href="#learning-path" title="Permanent link">&para;</a></h2>
+<p><span style="color: #10b981; font-weight: 600; font-size: 1.1em;">📚 Beginner Roadmap - Progressive Structure</span></p>
+<h3 id="week-1-foundation">Week 1: Foundation<a class="headerlink" href="#week-1-foundation" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Janus Atlas</strong> introduction (key level concepts)</li>
+<li><strong>Pentarch</strong> addition (potential reversal event patterns)</li>
+<li>Practice focus: Pentarch event identification AT Janus levels</li>
+</ol>
+<h3 id="week-2-volume-confirmation">Week 2: Volume Confirmation<a class="headerlink" href="#week-2-volume-confirmation" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Volume Oracle</strong> addition (volume analysis framework)</li>
+<li>Practice focus: Pentarch signals WITH Volume Oracle confirmation</li>
+</ol>
+<h3 id="week-3-momentum-filtering">Week 3: Momentum Filtering<a class="headerlink" href="#week-3-momentum-filtering" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Harmonic Oscillator</strong> addition (momentum voting system)</li>
+<li>Practice focus: Pentarch signal filtering by Harmonic extremes</li>
+</ol>
+<h3 id="week-4-advanced-techniques">Week 4: Advanced Techniques<a class="headerlink" href="#week-4-advanced-techniques" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Plutus Flow</strong> addition (OBV divergence patterns)</li>
+<li>Practice focus: Divergence pattern recognition at key levels</li>
+</ol>
+<h3 id="week-5-multi-asset-scanning">Week 5: Multi-Asset Scanning<a class="headerlink" href="#week-5-multi-asset-scanning" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Augury Grid</strong> addition (watchlist screening)</li>
+<li>Practice focus: Optimal setup identification across 8 symbols</li>
+</ol>
+<h3 id="week-6-complete-integration">Week 6: Complete Integration<a class="headerlink" href="#week-6-complete-integration" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Omnideck</strong> addition (backup system integration)</li>
+<li>Practice focus: Multi-indicator confluence pattern analysis</li>
+</ol>
+<hr />
+<h2 id="professional-guidelines">💡 Professional Guidelines<a class="headerlink" href="#professional-guidelines" title="Permanent link">&para;</a></h2>
+<h3 id="progressive-implementation">Progressive Implementation<a class="headerlink" href="#progressive-implementation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Simultaneous loading of all 7 indicators is not recommended</li>
+<li>1-2 indicator mastery before progressive addition</li>
+<li>Complexity does not equal superior results</li>
+</ul>
+<h3 id="confluence-analysis">Confluence Analysis<a class="headerlink" href="#confluence-analysis" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Single signal = Observation point</li>
+<li>Two signals = Increased attention warranted</li>
+<li>Three+ signals = High probability classification</li>
+<li><strong>Example:</strong> Pentarch IGN + Janus Weekly Low + Volume Oracle spike = ELITE classification setup</li>
+</ul>
+<h3 id="regime-adherence">Regime Adherence<a class="headerlink" href="#regime-adherence" title="Permanent link">&para;</a></h3>
+<ul>
+<li>All indicators incorporate regime/trend components</li>
+<li><strong>Green regime = Long bias contexts</strong></li>
+<li><strong>Red regime = Short bias contexts</strong></li>
+<li>This principle is associated with 15-20% win rate improvement</li>
+</ul>
+<h3 id="quality-based-filtering">Quality-Based Filtering<a class="headerlink" href="#quality-based-filtering" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Most indicators feature quality scoring/tier systems</li>
+<li>Potential Elite/Premium signals = Typically prioritized</li>
+<li>Standard/Weak = Often filtered unless exceptional confluence present</li>
+<li>Quality prioritization over quantity is fundamental</li>
+</ul>
+<h3 id="performance-tracking">Performance Tracking<a class="headerlink" href="#performance-tracking" title="Permanent link">&para;</a></h3>
+<ul>
+<li>After 20 trades, win rate calculation by:</li>
+<li>Indicator performance (individual effectiveness assessment)</li>
+<li>Quality tier (Elite vs Standard)</li>
+<li>Market regime (bull vs bear vs neutral)</li>
+<li>Filter adjustment based on empirical results</li>
+</ul>
+<h3 id="style-specific-customization">Style-Specific Customization<a class="headerlink" href="#style-specific-customization" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Scalper: Tighter settings, lower timeframes</li>
+<li>Swing trader: Higher quality filters, higher timeframes</li>
+<li>Position trader: Conservative modes, Weekly/Monthly timeframes</li>
+<li><strong>Universal setup does not exist - customization required</strong></li>
+</ul>
+<hr />
+<h2 id="documentation-structure">📚 Documentation Structure<a class="headerlink" href="#documentation-structure" title="Permanent link">&para;</a></h2>
+<p>Each indicator guide includes:</p>
+<ol>
+<li><strong>Overview</strong> - What it does, who it's for</li>
+<li><strong>Core Concepts</strong> - The underlying logic</li>
+<li><strong>Signal Details</strong> - How to interpret each signal</li>
+<li><strong>Quick Start</strong> - Beginner setup</li>
+<li><strong>Strategy Examples</strong> - Proven playbooks</li>
+<li><strong>Parameters Reference</strong> - All settings explained</li>
+<li><strong>Technical Specifications</strong> - Performance stats</li>
+<li><strong>SP Protocol Compliance</strong> - Repaint audit, limitations, testing</li>
+<li><strong>FAQ</strong> - Common questions</li>
+<li><strong>Best Practices</strong> - Pro tips</li>
+<li><strong>Integration</strong> - How to combine with other indicators</li>
+</ol>
+<hr />
+<h2 id="support-resources">🆘 Support &amp; Resources<a class="headerlink" href="#support-resources" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Main Docs:</strong> <a href="https://docs.signalpilot.io">docs.signalpilot.io</a></li>
+<li><strong>Discord Community:</strong> <a href="https://discord.gg/signalpilot"><span class="signal-pilot-brand">Signal Pilot</span> Discord</a></li>
+<li><strong>Video Guides:</strong> <a href="https://youtube.com/@signalpilot">YouTube Channel</a></li>
+<li><strong>GitHub:</strong> <a href="https://github.com/Signalpilot/signalpilot-docs">Signalpilot/signalpilot-docs</a></li>
+</ul>
+<hr />
+<h2 id="implementation-pathways">🎯 Implementation Pathways<a class="headerlink" href="#implementation-pathways" title="Permanent link">&para;</a></h2>
+<p>Available starting points based on experience and focus:</p>
+<ul>
+<li><strong>New to technical analysis?</strong> <a href="../janus-atlas-v10/">Janus Atlas</a> (levels) + <a href="../pentarch-v10/">Pentarch</a> (signals) combination recommended</li>
+<li><strong>Experienced with indicator analysis?</strong> <a href="../omnideck-v10/">Omnideck</a> (all-in-one) provides comprehensive integration</li>
+<li><strong>Volume-focused analysis?</strong> <a href="../minimal-flow-v10/">Volume Oracle</a> offers volume-centric framework</li>
+<li><strong>Divergence analysis preference?</strong> <a href="../plutus-flow-v10/">Plutus Flow</a> or <a href="../harmonic-oscillator-v10/">Harmonic Oscillator</a> provide divergence detection</li>
+<li><strong>Multi-asset screening required?</strong> <a href="../augury-grid-v10/">Augury Grid</a> enables cross-symbol analysis</li>
+</ul>
+<p><strong><span class="signal-pilot-brand">Signal Pilot</span> Suite: Professional market analysis tools designed for systematic decision-making frameworks.</strong></p>
+<hr />
+<p><em>Last Updated: October 2025 | <span class="signal-pilot-brand">Signal Pilot</span> Suite Complete</em></p>
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://x.com/signalpilot" target="_blank" rel="noopener" title="x.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Signalpilot" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.sections", "navigation.path", "content.code.copy", "search.suggest", "search.highlight", "content.tabs.link", "content.tooltips", "content.action.edit"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="../js/timeago.min.js"></script>
+      
+        <script src="../js/timeago_mkdocs_material.js"></script>
+      
+        <script src="../assets/brand.js"></script>
+      
+        <script src="../assets/sp-bg.js"></script>
+      
+        <script src="../assets/keyword-highlighter.js"></script>
+      
+    
+  </body>
+</html>
