@@ -671,3 +671,72 @@ html[data-md-color-scheme="default"] [class*="btn"] {
     z-index: 11 !important;
   }
 }
+
+/* ============================================================================
+   RESPONSIVE TABLE FIX - Mobile-friendly tables
+   ============================================================================ */
+
+/* Make tables scrollable on mobile with visual cues */
+@media screen and (max-width: 768px) {
+  /* Wrap tables in scrollable container */
+  .md-typeset table:not([class]) {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    border: 2px solid var(--md-primary-fg-color);
+    border-radius: 8px;
+  }
+
+  /* Add scroll hint shadow on right edge */
+  .md-typeset table:not([class])::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 30px;
+    background: linear-gradient(to left,
+      rgba(52, 92, 255, 0.1),
+      transparent);
+    pointer-events: none;
+  }
+
+  /* Prevent cell content from wrapping too aggressively */
+  .md-typeset table:not([class]) th,
+  .md-typeset table:not([class]) td {
+    white-space: nowrap;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  /* Make first column sticky for context while scrolling */
+  .md-typeset table:not([class]) th:first-child,
+  .md-typeset table:not([class]) td:first-child {
+    position: sticky;
+    left: 0;
+    background: var(--md-default-bg-color);
+    z-index: 2;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Dark mode sticky column background */
+  [data-md-color-scheme="slate"] .md-typeset table:not([class]) th:first-child,
+  [data-md-color-scheme="slate"] .md-typeset table:not([class]) td:first-child {
+    background: rgba(12, 17, 28, 0.95);
+  }
+}
+
+/* Extra small mobile devices - even more compact */
+@media screen and (max-width: 480px) {
+  .md-typeset table:not([class]) th,
+  .md-typeset table:not([class]) td {
+    padding: 0.5rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  /* Slightly reduce header font size */
+  .md-typeset table:not([class]) th {
+    font-size: 0.75rem;
+  }
+}
