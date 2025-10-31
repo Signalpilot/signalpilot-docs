@@ -567,7 +567,31 @@
   }
 
   /* ========================================
-     6. INITIALIZATION
+     6. AUTO-CLOSE DRAWER ON NAVIGATION
+     ======================================== */
+
+  function autoCloseDrawer() {
+    // Close navigation drawer when user clicks a link
+    const navLinks = document.querySelectorAll('.md-nav__link');
+    const drawerToggle = document.getElementById('__drawer');
+
+    if (!drawerToggle) return;
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        // Only close drawer if it's actually open
+        if (drawerToggle.checked) {
+          // Small delay to allow click to register before closing
+          setTimeout(() => {
+            drawerToggle.checked = false;
+          }, 10);
+        }
+      });
+    });
+  }
+
+  /* ========================================
+     7. INITIALIZATION
      ======================================== */
 
   function init() {
@@ -576,6 +600,7 @@
     addAriaLandmarks();
     enhanceKeyboardNavigation();
     replaceEmojisWithIcons();
+    autoCloseDrawer();
 
     // Re-run on page navigation (for SPA-like behavior)
     if (typeof document$ !== 'undefined') {
@@ -585,6 +610,7 @@
           addTableScrollIndicators();
           addAriaLandmarks();
           replaceEmojisWithIcons();
+          autoCloseDrawer();
         }, 100);
       });
     }
