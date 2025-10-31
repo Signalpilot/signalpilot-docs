@@ -407,7 +407,162 @@
   }
 
   /* ========================================
-     5. INITIALIZATION
+     5. EMOJI TO ICON REPLACEMENT
+     ======================================== */
+
+  function replaceEmojisWithIcons() {
+    // Comprehensive emoji to Material Icon mapping
+    const emojiMap = {
+      // Common section markers
+      '📊': 'assessment',           // Charts/analytics
+      '🎯': 'gps_fixed',            // Target/goals
+      '⭐': 'star',                  // Featured/important
+      '📖': 'menu_book',            // Documentation
+      '📚': 'library_books',        // Multiple docs
+      '💡': 'lightbulb',            // Ideas/tips
+      '🚀': 'rocket_launch',        // Launch/start
+      '🔧': 'build',                // Tools/setup
+      '⚙️': 'settings',             // Configuration
+      '✨': 'auto_awesome',         // Special/magic
+      '📈': 'trending_up',          // Growth/bullish
+      '📉': 'trending_down',        // Decline/bearish
+      '🎨': 'palette',              // Design/styling
+      '⚡': 'flash_on',             // Fast/performance
+      '🔍': 'search',               // Search/find
+      '📝': 'edit_note',            // Notes/writing
+      '✅': 'check_circle',         // Success/completed
+      '❌': 'cancel',               // Error/remove
+      '⚠️': 'warning',              // Warning
+      '🔔': 'notifications',        // Alerts
+      '📱': 'smartphone',           // Mobile
+      '💻': 'computer',             // Desktop
+      '🌐': 'public',               // Web/global
+      '🔒': 'lock',                 // Security/private
+      '🔓': 'lock_open',            // Unlocked
+      '👤': 'person',               // User
+      '👥': 'group',                // Multiple users
+      '💰': 'attach_money',         // Money/pricing
+      '📦': 'inventory_2',          // Package/product
+      '🎁': 'card_giftcard',        // Gift/bonus
+      '🏆': 'emoji_events',         // Trophy/achievement
+      '❓': 'help',                 // Question/help
+      '❗': 'priority_high',        // Important/exclamation
+      '➡️': 'arrow_forward',        // Next/forward
+      '⬅️': 'arrow_back',           // Previous/back
+      '⬆️': 'arrow_upward',         // Up
+      '⬇️': 'arrow_downward',       // Down
+      '🔄': 'sync',                 // Refresh/sync
+      '📅': 'calendar_today',       // Calendar/date
+      '⏰': 'alarm',                // Time/deadline
+      '🎓': 'school',               // Education/learning
+      '🌟': 'grade',                // Featured/highlighted
+      '🔥': 'whatshot',             // Hot/trending
+      '💪': 'fitness_center',       // Strength/power
+      '🎭': 'theater_comedy',       // Entertainment
+      '🎮': 'sports_esports',       // Gaming/interactive
+      '📞': 'phone',                // Contact/call
+      '📧': 'email',                // Email
+      '🌙': 'nightlight',           // Night/dark mode
+      '☀️': 'wb_sunny',             // Day/light mode
+      '🎬': 'movie',                // Video/media
+      '🖼️': 'image',                // Picture/visual
+      '📂': 'folder',               // Directory/folder
+      '📄': 'description',          // Document/file
+      '🔗': 'link'                  // Hyperlink
+    };
+
+    // Find all text nodes containing emojis (headings, paragraphs, list items)
+    const selectors = 'h1, h2, h3, h4, h5, h6, p, li, td, th, span';
+    const elements = document.querySelectorAll(selectors);
+
+    elements.forEach(element => {
+      // Skip if already processed
+      if (element.dataset.emojisReplaced) return;
+
+      // Get all child nodes (text and elements)
+      const walker = document.createTreeWalker(
+        element,
+        NodeFilter.SHOW_TEXT,
+        null,
+        false
+      );
+
+      const textNodes = [];
+      let node;
+      while (node = walker.nextNode()) {
+        textNodes.push(node);
+      }
+
+      // Process each text node
+      textNodes.forEach(textNode => {
+        let text = textNode.textContent;
+        let modified = false;
+
+        // Replace each emoji with icon
+        Object.keys(emojiMap).forEach(emoji => {
+          if (text.includes(emoji)) {
+            const iconName = emojiMap[emoji];
+            const iconHTML = `<span class="material-icons sp-icon" aria-hidden="true" data-emoji="${emoji}">${iconName}</span>`;
+
+            // Create a placeholder that we can replace
+            text = text.replace(new RegExp(emoji, 'g'), `__ICON_${iconName}__`);
+            modified = true;
+          }
+        });
+
+        if (modified) {
+          // Create a new element with the replaced content
+          const span = document.createElement('span');
+          span.innerHTML = text;
+
+          // Replace placeholders with actual icon HTML
+          Object.keys(emojiMap).forEach(emoji => {
+            const iconName = emojiMap[emoji];
+            const placeholder = `__ICON_${iconName}__`;
+            if (span.innerHTML.includes(placeholder)) {
+              const iconHTML = `<span class="material-icons sp-icon" aria-hidden="true" data-emoji="${emoji}">${iconName}</span>`;
+              span.innerHTML = span.innerHTML.replace(new RegExp(placeholder, 'g'), iconHTML);
+            }
+          });
+
+          // Replace the text node with the new content
+          textNode.parentNode.replaceChild(span, textNode);
+        }
+      });
+
+      // Mark as processed
+      element.dataset.emojisReplaced = 'true';
+    });
+
+    // Add screen reader improvements
+    addIconScreenReaderSupport();
+  }
+
+  function addIconScreenReaderSupport() {
+    // Add descriptive labels for screen readers
+    const iconLabels = {
+      'assessment': 'Chart icon',
+      'gps_fixed': 'Target icon',
+      'star': 'Star icon',
+      'menu_book': 'Book icon',
+      'library_books': 'Library icon',
+      'lightbulb': 'Idea icon',
+      'rocket_launch': 'Rocket icon',
+      'trending_up': 'Trending up icon',
+      'trending_down': 'Trending down icon'
+      // Add more as needed
+    };
+
+    document.querySelectorAll('.sp-icon').forEach(icon => {
+      const iconName = icon.textContent.trim();
+      if (iconLabels[iconName]) {
+        icon.setAttribute('title', iconLabels[iconName]);
+      }
+    });
+  }
+
+  /* ========================================
+     6. INITIALIZATION
      ======================================== */
 
   function init() {
@@ -415,6 +570,7 @@
     addTableScrollIndicators();
     addAriaLandmarks();
     enhanceKeyboardNavigation();
+    replaceEmojisWithIcons();
 
     // Re-run on page navigation (for SPA-like behavior)
     if (typeof document$ !== 'undefined') {
@@ -423,6 +579,7 @@
           addBreadcrumbs();
           addTableScrollIndicators();
           addAriaLandmarks();
+          replaceEmojisWithIcons();
         }, 100);
       });
     }
