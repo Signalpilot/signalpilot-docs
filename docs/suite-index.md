@@ -1,3 +1,8 @@
+---
+title: Signal Pilot Suite - Complete Indicator Collection
+description: Explore all 7 non-repainting TradingView indicators in the Signal Pilot Suite. Compare features, find your perfect match, and access comprehensive guides for each indicator.
+---
+
 # <span class="signal-pilot-brand">Signal Pilot</span> Suite - Complete Indicator Collection
 
 Welcome to the **<span class="signal-pilot-brand">Signal Pilot</span> Suite** - 7 production-ready, non-repainting indicators designed for serious traders. Each indicator is built on the SP Protocol: zero repaint, complete transparency, and institutional-grade analysis.
