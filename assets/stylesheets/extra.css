@@ -328,6 +328,13 @@ body::before {
   border-color: var(--md-primary-fg-color);
 }
 
+/* Align "Read Guide" buttons uniformly on new line */
+.md-typeset .grid.cards > * p .md-button {
+  display: block;
+  margin-top: 1rem;
+  width: fit-content;
+}
+
 .md-typeset .grid.cards strong {
   color: var(--md-primary-fg-color);
 }
@@ -1781,10 +1788,21 @@ body::before {
   /* Larger tap targets for touch */
   .sp-button,
   .sp-tabs__tab,
+  .md-nav__link,
   .md-typeset a {
     min-height: 44px;
     min-width: 44px;
     padding: 0.75rem 1.5rem;
+  }
+
+  /* Ensure navigation links are always clickable */
+  .md-nav__link,
+  .md-nav__item,
+  .md-nav__toggle,
+  .md-header__button,
+  .md-search__input {
+    pointer-events: auto !important;
+    touch-action: manipulation;
   }
 
   /* Remove hover effects on touch devices */
@@ -1796,7 +1814,8 @@ body::before {
 
   /* Keep focus effects for accessibility */
   .sp-card:active,
-  .sp-button:active {
+  .sp-button:active,
+  .md-nav__link:active {
     transform: scale(0.98);
   }
 
@@ -1808,7 +1827,8 @@ body::before {
 
   /* Better touch scrolling */
   .sp-tabs__list,
-  .md-typeset table {
+  .md-typeset table,
+  .md-nav {
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
   }
