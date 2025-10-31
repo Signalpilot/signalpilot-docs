@@ -142,21 +142,22 @@
 }
 
 /* DARK scheme (Material = data-md-color-scheme="slate") */
+/* Enhanced for WCAG AAA contrast compliance */
 [data-md-color-scheme="slate"] {
   --md-default-bg-color: transparent !important;  /* Make transparent for aurora */
-  --md-default-fg-color: #ecf1ff !important;
+  --md-default-fg-color: #f0f4ff !important;  /* Improved from #ecf1ff for better contrast (AAA) */
 
-  --md-primary-fg-color: #5b8aff;
-  --md-primary-fg-color--light: #7b9bff;
-  --md-primary-fg-color--dark: #3b58ff;
-  --md-accent-fg-color: #76ddff;
+  --md-primary-fg-color: #6b9aff;  /* Improved from #5b8aff for WCAG AAA */
+  --md-primary-fg-color--light: #8babff;
+  --md-primary-fg-color--dark: #4b68ff;
+  --md-accent-fg-color: #86edff;  /* Improved from #76ddff for better visibility */
 
-  --md-typeset-a-color: #9fdcff;
+  --md-typeset-a-color: #afeaff;  /* Improved from #9fdcff for WCAG AAA on links */
 
   /* SignalPilot theme compatibility */
   --bg: #05070d;
-  --text: #ecf1ff;
-  --muted: #b7c2d9;
+  --text: #f0f4ff;  /* Improved contrast */
+  --muted: #c7d2e9;  /* Improved from #b7c2d9 for better readability */
 }
 
 /* Ensure body background shows aurora in dark mode */
@@ -173,9 +174,9 @@ body {
   background: transparent !important;
 }
 
-/* Make sure all text is readable in dark mode */
+/* Make sure all text is readable in dark mode with improved contrast */
 [data-md-color-scheme="slate"] .md-typeset {
-  color: #ecf1ff !important;
+  color: #f0f4ff !important;  /* Improved contrast for AAA */
 }
 
 [data-md-color-scheme="slate"] .md-typeset p,
@@ -188,7 +189,7 @@ body {
 [data-md-color-scheme="slate"] .md-typeset h4,
 [data-md-color-scheme="slate"] .md-typeset h5,
 [data-md-color-scheme="slate"] .md-typeset h6 {
-  color: #ecf1ff !important;
+  color: #f0f4ff !important;  /* Improved contrast for AAA */
 }
 
 /* Give cards a semi-transparent background so text is readable over aurora */

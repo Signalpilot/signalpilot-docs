@@ -45,6 +45,10 @@ theme:
 plugins:
   - search
   - macros
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+      fallback_to_build_date: true
 
 markdown_extensions:
   - admonition
@@ -66,6 +70,7 @@ extra_css:
   - assets/stylesheets/extra.css
   - assets/brand.css
   - assets/aurora.css
+  - assets/print.css
 
 # Background effects and utilities
 extra_javascript:
