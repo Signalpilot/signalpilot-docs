@@ -399,7 +399,7 @@ Trading involves substantial risk of loss. Past performance ≠ future results.
   - Janus Atlas v1.0
   - Omnideck v1.0
   - Augury Grid v1.0
-  - Minimal Flow v1.0
+  - Volume Oracle v1.0
   - Harmonic Oscillator v1.0
   - Plutus Flow v1.0
 - [ ] **User onboarding materials** (welcome emails, getting started guides)

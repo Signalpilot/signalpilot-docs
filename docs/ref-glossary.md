@@ -392,7 +392,7 @@ Complete reference of <span class="signal-pilot-brand">Signal Pilot</span> terms
 
 ### Omnideck
 **Definition:** All-in-one indicator combining all suite tools
-**Includes:** Pentarch + Janus + Minimal Flow + Harmonic + bias
+**Includes:** Pentarch + Janus + Volume Oracle + Harmonic + bias
 **Benefit:** Everything on one chart
 **Use Case:** Traders who want complete analysis
 
@@ -406,7 +406,7 @@ Complete reference of <span class="signal-pilot-brand">Signal Pilot</span> terms
 
 ---
 
-### Minimal Flow
+### Volume Oracle
 **Definition:** Volume-based strategy indicator
 **Focus:** Order flow and volume patterns
 **Signals:** Volume-based moves

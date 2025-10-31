@@ -284,7 +284,7 @@ Price: $35,000, falling for 2 weeks
 **Common progression for beginners:**
 - Week 1-4: Pentarch only
 - Week 5-8: Pentarch + Janus Atlas
-- Week 9+: One more can be considered if needed (Minimal Flow or Harmonic)
+- Week 9+: One more can be considered if needed (Volume Oracle or Harmonic)
 
 ---
 

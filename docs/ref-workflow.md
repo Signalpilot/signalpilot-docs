@@ -23,19 +23,19 @@ Each indicator in the <span class="signal-pilot-brand">Signal Pilot</span> Suite
 
 ### 🏆 The Trinity (Best All-Around)
 
-**Pentarch + Janus Atlas + Minimal Flow**
+**Pentarch + Janus Atlas + Volume Oracle**
 
 **Why it works:**
 - **Pentarch** = Event detection (IGN, CAP, WRN, BDN, TD)
 - **Janus Atlas** = Key levels (HTF, session, VWAP, structure)
-- **Minimal Flow** = Volume confirmation + position management
+- **Volume Oracle** = Volume confirmation + position management
 
 **Common workflow pattern:**
 
 - Traders observe Pentarch events (IGN for potential longs, CAP for potential shorts)
 - Event location is evaluated using Janus Atlas key levels
-- Volume confirmation is assessed via Minimal Flow spike detection
-- Position entries often use Minimal Flow's position management system
+- Volume confirmation is assessed via Volume Oracle spike detection
+- Position entries often use Volume Oracle's position management system
 - Exit targets commonly include next Janus level or opposite Pentarch event
 
 **Best for:** Swing traders, position traders
@@ -65,17 +65,17 @@ Each indicator in the <span class="signal-pilot-brand">Signal Pilot</span> Suite
 
 ### 🎯 The Scalper Setup
 
-**Janus Atlas (Session Levels + VWAP) + Minimal Flow + Pentarch (NanoFlow)**
+**Janus Atlas (Session Levels + VWAP) + Volume Oracle + Pentarch (NanoFlow)**
 
 **Why it works:**
 - **Janus Atlas** = Intraday levels (session highs/lows, VWAP)
-- **Minimal Flow** = Volume spike detection (scalping mode)
+- **Volume Oracle** = Volume spike detection (scalping mode)
 - **Pentarch** = NanoFlow crosses for micro-trends
 
 **Common workflow pattern:**
 
 - Session levels are identified on Janus (Asian/Euro/NA ranges)
-- Minimal Flow spikes are observed near session levels
+- Volume Oracle spikes are observed near session levels
 - Pentarch NanoFlow crosses are monitored for directional confirmation
 - Entries often occur promptly when confluence appears
 - Targets commonly include Daily VWAP or opposite session level
@@ -144,7 +144,7 @@ Each indicator in the <span class="signal-pilot-brand">Signal Pilot</span> Suite
 - Also near **Monthly VWAP** ($42,300)
 - = Key level confluence ✅
 
-**Step 3: Minimal Flow Confirmation**
+**Step 3: Volume Oracle Confirmation**
 - Volume spike (Z-score 3.2, Elite ⭐⭐⭐)
 - Flow consistency 0.82 (strong bullish)
 - Regime: Bullish
@@ -152,11 +152,11 @@ Each indicator in the <span class="signal-pilot-brand">Signal Pilot</span> Suite
 
 **Step 4: Entry Scenario**
 - Entry: Long at $42,200 (next bar after IGN)
-- Position sizing: Minimal Flow calculator (1% risk, ATR stop)
+- Position sizing: Volume Oracle calculator (1% risk, ATR stop)
 - Stop placement: $41,500 (below Weekly Low)
 
 **Step 5: Management Scenario**
-- T1 target: $44,100 (Minimal Flow suggestion, 50% partial exit)
+- T1 target: $44,100 (Volume Oracle suggestion, 50% partial exit)
 - Monitoring: Pentarch for WRN/CAP signals
 - Final target: $46,800 (Weekly High from Janus)
 
@@ -231,7 +231,7 @@ Each indicator in the <span class="signal-pilot-brand">Signal Pilot</span> Suite
    - CAP Event (late-cycle exhaustion)
    - BDN Event (potential breakdown/bear reversal)
 
-2. **Minimal Flow:**
+2. **Volume Oracle:**
    - Bull Signal (Elite only, score > 80)
    - Bear Signal (Elite only, score > 80)
 
@@ -250,7 +250,7 @@ Each indicator in the <span class="signal-pilot-brand">Signal Pilot</span> Suite
 **Alert Confluence Pattern:**
 Traders often evaluate setups when 2-3 alerts fire within 5 bars of each other.
 
-Example: "Pentarch IGN + Minimal Flow Elite Bull + Janus Daily Low Touch" confluence pattern is commonly associated with high-probability long setups.
+Example: "Pentarch IGN + Volume Oracle Elite Bull + Janus Daily Low Touch" confluence pattern is commonly associated with high-probability long setups.
 
 ---
 
@@ -260,7 +260,7 @@ Example: "Pentarch IGN + Minimal Flow Elite Bull + Janus Daily Low Touch" conflu
 ### Scalping (5m - 15m)
 **Use:**
 - Janus Atlas (Session levels, VWAP)
-- Minimal Flow (volume spikes)
+- Volume Oracle (volume spikes)
 - Pentarch (NanoFlow crosses)
 
 **Less commonly used:**
@@ -271,7 +271,7 @@ Example: "Pentarch IGN + Minimal Flow Elite Bull + Janus Daily Low Touch" conflu
 
 ### Day Trading (15m - 1H)
 **Use:**
-- The Trinity (Pentarch + Janus + Minimal Flow)
+- The Trinity (Pentarch + Janus + Volume Oracle)
 - Omnideck (full system)
 - Augury Grid (scan multiple symbols)
 
@@ -299,7 +299,7 @@ Example: "Pentarch IGN + Minimal Flow Elite Bull + Janus Daily Low Touch" conflu
 - Augury Grid (monthly scans)
 
 **Less commonly used:**
-- Minimal Flow (too active)
+- Volume Oracle (too active)
 - Intraday features
 
 ---
@@ -308,7 +308,7 @@ Example: "Pentarch IGN + Minimal Flow Elite Bull + Janus Daily Low Touch" conflu
 <span style="color: #dc2626; font-weight: 600;">Protect Your Capital</span>
 
 **Position Sizing:**
-Minimal Flow's built-in risk calculator commonly used:
+Volume Oracle's built-in risk calculator commonly used:
 - Account size input
 - Risk % selection (1-2% commonly recommended)
 - System calculates position size automatically
@@ -316,16 +316,16 @@ Minimal Flow's built-in risk calculator commonly used:
 **Stop Placement Patterns:**
 1. **Below/above Janus level** (most common approach)
 2. **Below/above Pentarch event bar** (tighter stops)
-3. **ATR-based** (Minimal Flow's ATR stop option)
+3. **ATR-based** (Volume Oracle's ATR stop option)
 
 **Profit Target Approaches:**
 1. **T1:** Next Janus level (30-50% partial exits common)
 2. **T2:** Major Janus level (50% runner position)
-3. **Trailing:** Minimal Flow trailing stop feature
+3. **Trailing:** Volume Oracle trailing stop feature
 
 **Potential Exit Signals:**
 - Opposite Pentarch event (IGN → exit longs on CAP/BDN)
-- Minimal Flow opposite signal
+- Volume Oracle opposite signal
 - Stop loss hit
 
 ---
@@ -343,13 +343,13 @@ Minimal Flow's built-in risk calculator commonly used:
 → ✅ Signal evaluation at key levels is widely practiced
 
 ❌ **No volume confirmation**
-→ ✅ Volume confirmation via Minimal Flow or Plutus commonly used
+→ ✅ Volume confirmation via Volume Oracle or Plutus commonly used
 
 ❌ **Wrong timeframe for your style**
 → ✅ Matching indicators to trading timeframe improves results
 
 ❌ **No position management**
-→ ✅ Position management (Minimal Flow's system or manual T1/T2) commonly employed
+→ ✅ Position management (Volume Oracle's system or manual T1/T2) commonly employed
 
 ❌ **Chasing stale signals**
 → ✅ Fresh signals (age < 5 bars) generally preferred by traders
@@ -365,7 +365,7 @@ Minimal Flow's built-in risk calculator commonly used:
 | **Janus Atlas v1.0** | Levels, structure | Entry/exit precision |
 | **Omnideck v1.0** | Complete analysis | All-in-one traders |
 | **Augury Grid v1.0** | Multi-symbol scan | Watchlist management |
-| **Minimal Flow v1.0** | Volume + position mgmt | Systematic trading |
+| **Volume Oracle v1.0** | Volume + position mgmt | Systematic trading |
 | **Harmonic Oscillator v1.0** | Momentum divergence | Reversal confirmation |
 | **Plutus Flow v1.0** | OBV divergence | Volume divergence |
 
@@ -379,7 +379,7 @@ If you only want to load indicators on a single chart:
 **Minimal Setup (3 indicators):**
 1. Pentarch (events)
 2. Janus Atlas (levels)
-3. Minimal Flow (volume + management)
+3. Volume Oracle (volume + management)
 
 **Balanced Setup (4 indicators):**
 1. Omnideck (replaces Pentarch, includes 10 systems)
@@ -390,7 +390,7 @@ If you only want to load indicators on a single chart:
 **Power Setup (all 7 indicators):**
 - Augury Grid on main chart (scan mode)
 - When Grid displays setup, symbol opened in new window
-- Pentarch, Janus, Minimal Flow, Harmonic, Plutus loaded on new window
+- Pentarch, Janus, Volume Oracle, Harmonic, Plutus loaded on new window
 - Omnideck used as backup/confirmation
 
 ---
@@ -400,7 +400,7 @@ If you only want to load indicators on a single chart:
 
 **Common progression path:**
 - Week 1-2: Pentarch + Janus only (foundation)
-- Week 3-4: Minimal Flow added (volume confirmation)
+- Week 3-4: Volume Oracle added (volume confirmation)
 - Week 5+: Divergence tools added (Harmonic, Plutus)
 - Advanced: Augury Grid incorporated (scanning)
 

@@ -20,7 +20,7 @@ Not sure which indicator to start with? This table shows how all 7 indicators co
 | **[Janus Atlas v1.0](janus-atlas-v10.md)** | Overlay | ⭐ Easy | All styles, key levels | 39 level types (HTF/Session/VWAP/Structure) | 10 min |
 | **[Omnideck v1.0](omnideck-v10.md)** | Overlay | ⭐⭐⭐ Advanced | All-in-one users | 10 systems combined (TD/Squeeze/EMAs/etc.) | 30 min |
 | **[Augury Grid v1.0](augury-grid-v10.md)** | Table | ⭐⭐ Medium | Multi-asset scanners | 8-symbol screener with quality scores | 20 min |
-| **[Minimal Flow v1.0](minimal-flow-v10.md)** | Overlay | ⭐⭐ Medium | Volume traders, scalpers | Volume spikes + position management | 15 min |
+| **[Volume Oracle v1.0](minimal-flow-v10.md)** | Overlay | ⭐⭐ Medium | Volume traders, scalpers | Volume spikes + position management | 15 min |
 | **[Harmonic Oscillator v1.0](harmonic-oscillator-v10.md)** | Oscillator | ⭐⭐ Medium | Momentum traders | 3-in-1 composite (MACD+RSI+StochRSI) | 20 min |
 | **[Plutus Flow v1.0](plutus-flow-v10.md)** | Oscillator | ⭐⭐ Medium | Volume analysts | Advanced OBV + divergence detection | 15 min |
 
@@ -36,7 +36,7 @@ Not sure which indicator to start with? This table shows how all 7 indicators co
 → **[Augury Grid](augury-grid-v10.md)** (8-symbol screener)
 
 **Volume analysis focus?**
-→ **[Minimal Flow](minimal-flow-v10.md)** + **[Plutus Flow](plutus-flow-v10.md)** (complete volume analysis framework)
+→ **[Volume Oracle](minimal-flow-v10.md)** + **[Plutus Flow](plutus-flow-v10.md)** (complete volume analysis framework)
 
 **Oscillator preference?**
 → **[Harmonic Oscillator](harmonic-oscillator-v10.md)** (3 oscillators synthesized)
@@ -118,7 +118,7 @@ On-chart 8-symbol screener with intelligent quality scoring:
 
 ---
 
-### 5. [Minimal Flow v1.0 Ultimate](minimal-flow-v10.md) - Advanced Volume Flow Strategy
+### 5. [Volume Oracle v1.0 Ultimate](minimal-flow-v10.md) - Advanced Volume Flow Strategy
 **Type:** Separate Pane | **Complexity:** Intermediate to Advanced
 
 Complete volume-based trading system with full position management:
@@ -181,7 +181,7 @@ Advanced volume flow analysis with divergence detection:
 
 ### For Trend Identification
 - **Omnideck** (Regime Box + SuperTrend components)
-- **Minimal Flow** (4-vote regime system)
+- **Volume Oracle** (4-vote regime system)
 - **Pentarch** (Regime detection + Pilot Line)
 
 ### For Entry Timing
@@ -200,7 +200,7 @@ Advanced volume flow analysis with divergence detection:
 - **Omnideck** (SD Zone mapping)
 
 ### For Volume Confirmation
-- **Minimal Flow** (Volume spike detection + flow consistency analysis)
+- **Volume Oracle** (Volume spike detection + flow consistency analysis)
 - **Plutus Flow** (OBV analysis + divergence detection)
 
 ### For Multi-Symbol Screening
@@ -208,7 +208,7 @@ Advanced volume flow analysis with divergence detection:
 
 ### For Comprehensive Analysis
 - **Omnideck** (10 integrated systems)
-- **Janus Atlas + Pentarch + Minimal Flow** (The Trinity combination)
+- **Janus Atlas + Pentarch + Volume Oracle** (The Trinity combination)
 
 ---
 
@@ -222,10 +222,10 @@ Advanced volume flow analysis with divergence detection:
 - **Result:** Complete coverage, minimal clutter
 
 ### The Pro Setup (3 indicators)
-**Pentarch + Janus Atlas + Minimal Flow**
+**Pentarch + Janus Atlas + Volume Oracle**
 - Pentarch: Potential reversal events and regime
 - Janus Atlas: Key levels and structure
-- Minimal Flow: Volume confirmation and position management
+- Volume Oracle: Volume confirmation and position management
 - **Result:** The "Trinity" - event + level + volume confluence
 
 ### The Master Setup (4 indicators)
@@ -237,7 +237,7 @@ Advanced volume flow analysis with divergence detection:
 - **Result:** Four-pillar confirmation system
 
 ### The Scalper Setup
-**Omnideck (Squeeze + ST + Regime) + Janus Atlas (Session Levels + VWAP) + Minimal Flow (Volume spikes)**
+**Omnideck (Squeeze + ST + Regime) + Janus Atlas (Session Levels + VWAP) + Volume Oracle (Volume spikes)**
 - Fast signals, tight levels, volume confirmation
 - **Timeframe:** 5m-15m
 
@@ -285,8 +285,8 @@ All 7 indicators are **SP Protocol** compliant:
 3. Practice focus: Pentarch event identification AT Janus levels
 
 ### Week 2: Volume Confirmation
-4. **Minimal Flow** addition (volume analysis framework)
-5. Practice focus: Pentarch signals WITH Minimal Flow confirmation
+4. **Volume Oracle** addition (volume analysis framework)
+5. Practice focus: Pentarch signals WITH Volume Oracle confirmation
 
 ### Week 3: Momentum Filtering
 6. **Harmonic Oscillator** addition (momentum voting system)
@@ -317,7 +317,7 @@ All 7 indicators are **SP Protocol** compliant:
 - Single signal = Observation point
 - Two signals = Increased attention warranted
 - Three+ signals = High probability classification
-- **Example:** Pentarch IGN + Janus Weekly Low + Minimal Flow spike = ELITE classification setup
+- **Example:** Pentarch IGN + Janus Weekly Low + Volume Oracle spike = ELITE classification setup
 
 ### Regime Adherence
 - All indicators incorporate regime/trend components
@@ -379,7 +379,7 @@ Available starting points based on experience and focus:
 
 - **New to technical analysis?** [Janus Atlas](janus-atlas-v10.md) (levels) + [Pentarch](pentarch-v10.md) (signals) combination recommended
 - **Experienced with indicator analysis?** [Omnideck](omnideck-v10.md) (all-in-one) provides comprehensive integration
-- **Volume-focused analysis?** [Minimal Flow](minimal-flow-v10.md) offers volume-centric framework
+- **Volume-focused analysis?** [Volume Oracle](minimal-flow-v10.md) offers volume-centric framework
 - **Divergence analysis preference?** [Plutus Flow](plutus-flow-v10.md) or [Harmonic Oscillator](harmonic-oscillator-v10.md) provide divergence detection
 - **Multi-asset screening required?** [Augury Grid](augury-grid-v10.md) enables cross-symbol analysis
 
