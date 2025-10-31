@@ -20,6 +20,11 @@
     const contentElement = document.querySelector('.md-content__inner');
     if (!contentElement) return;
 
+    // Check if breadcrumbs already exist - prevent duplicates
+    if (contentElement.querySelector('.sp-breadcrumb')) {
+      return;
+    }
+
     // Get page title from h1
     const h1 = contentElement.querySelector('h1');
     if (!h1) return;

@@ -2071,6 +2071,9 @@
 <hr />
 <h2 id="the-five-cycle-events">🔢 The Five Cycle Events<a class="headerlink" href="#the-five-cycle-events" title="Permanent link">&para;</a></h2>
 <p><span style="color: #10b981; font-weight: 600;">Complete Cycle Framework</span></p>
+<div style="padding: 1rem 1.5rem; background: rgba(var(--md-primary-fg-color), 0.1); border-left: 4px solid var(--md-primary-fg-color); border-radius: 4px; margin: 1.5rem 0;">
+<p style="margin: 0;"><strong>🎨 Customizable Event Colors:</strong> Pentarch includes multiple color palettes for the 5 event candles (TD, IGN, WRN, CAP, BDN). You can customize these colors to match your preferences in the indicator settings. The colors shown below (blue, green, yellow, red, purple) are the default palette used as examples throughout this guide.</p>
+</div>
 <h3 id="td-touchdown-accumulation-phase">🔵 TD - Touchdown (Accumulation Phase)<a class="headerlink" href="#td-touchdown-accumulation-phase" title="Permanent link">&para;</a></h3>
 <p><strong>Visual:</strong> Blue "TD" label below the candle</p>
 <p><strong>Cycle Position:</strong> Early-cycle accumulation. Identifies potential reversal from decline into accumulation phase.</p>
@@ -2274,22 +2277,22 @@
 <tbody>
 <tr>
 <td><strong>TD</strong></td>
-<td>Bear regime (red)</td>
+<td>Bear regime</td>
 <td>Can fire in bull regime if conditions are extreme</td>
 </tr>
 <tr>
 <td><strong>IGN</strong></td>
-<td>Bear regime (red)</td>
+<td>Bear regime</td>
 <td>Can fire in bull regime during pullbacks</td>
 </tr>
 <tr>
 <td><strong>WRN</strong></td>
-<td>Bull regime (green)</td>
+<td>Bull regime</td>
 <td>Can fire in bear regime if rally is strong enough</td>
 </tr>
 <tr>
 <td><strong>CAP</strong></td>
-<td>Bull regime (green)</td>
+<td>Bull regime</td>
 <td>Can fire in bear regime if conditions are extreme</td>
 </tr>
 <tr>
@@ -2302,13 +2305,13 @@
 <p><strong>Key Concept:</strong> Regime acts as a filter. The indicator is "pickier" about firing counter-regime signals, requiring more extreme conditions to confirm them.</p>
 <h3 id="common-usage-patterns_2">Common Usage Patterns<a class="headerlink" href="#common-usage-patterns_2" title="Permanent link">&para;</a></h3>
 <p><strong>Regime Flips as Signals:</strong>
-- First green candle after red streak = Potential trend change to bullish
-- First red candle after green streak = Potential trend change to bearish
+- First bullish candle after bearish streak = Potential trend change to bullish
+- First bearish candle after bullish streak = Potential trend change to bearish
 - You can set alerts for regime flips</p>
 <p><strong>Regime Confirmation:</strong>
 - Event signal + matching regime = Higher conviction
-  - Example: IGN in red regime (standard reversal) vs IGN in green regime (pullback long entry)
-  - Example: CAP in green regime (standard top) vs CAP in red regime (bear rally exhaustion)</p>
+  - Example: IGN in bear regime (standard reversal) vs IGN in bull regime (pullback long entry)
+  - Example: CAP in bull regime (standard top) vs CAP in bear regime (bear rally exhaustion)</p>
 <p><strong>Whipsaw Considerations:</strong>
 - Regime doesn't flip on every bar - it requires sustained evidence
 - This prevents false structural changes during normal noise
@@ -2487,7 +2490,7 @@ A: No. Like all Pentarch components, NanoFlow only renders on confirmed bars. Wh
 <p>Minimal configuration changes are typically required. Default settings perform well.</p>
 <p><strong>Available adjustments:</strong>
 - <strong>Show/Hide Events:</strong> Individual event types can be toggled
-- <strong>Colors:</strong> Color schemes are customizable
+- <strong>Event Colors:</strong> Multiple color palettes available for the 5 event candles (TD, IGN, WRN, CAP, BDN)
 - <strong>Pilot Line:</strong> Trend line visibility can be adjusted</p>
 <p>Most traders maintain default settings.</p>
 <hr />
