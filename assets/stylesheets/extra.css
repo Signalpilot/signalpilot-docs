@@ -1805,6 +1805,12 @@ body::before {
     touch-action: manipulation;
   }
 
+  /* Fix overlay blocking navigation drawer clicks */
+  /* Disable overlay pointer events so clicks pass through to nav menu */
+  .md-overlay {
+    pointer-events: none !important;
+  }
+
   /* Remove hover effects on touch devices */
   .sp-card:hover,
   .sp-button:hover,
