@@ -432,7 +432,161 @@ body::before {
 }
 
 /* ========================================
-   9. BREADCRUMB NAVIGATION (NEW!)
+   9. MATERIAL ICONS STYLING (NEW!)
+   ======================================== */
+
+/* Base icon styling */
+.sp-icon {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.2em;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  vertical-align: middle;
+  margin-right: 0.35rem;
+  color: var(--md-primary-fg-color);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Icon in headings */
+.md-typeset h1 .sp-icon {
+  font-size: 1.3em;
+  margin-right: 0.5rem;
+}
+
+.md-typeset h2 .sp-icon {
+  font-size: 1.25em;
+  margin-right: 0.4rem;
+}
+
+.md-typeset h3 .sp-icon {
+  font-size: 1.2em;
+  margin-right: 0.35rem;
+}
+
+.md-typeset h4 .sp-icon,
+.md-typeset h5 .sp-icon,
+.md-typeset h6 .sp-icon {
+  font-size: 1.1em;
+  margin-right: 0.3rem;
+}
+
+/* Icon hover effects in headings */
+.md-typeset h1:hover .sp-icon,
+.md-typeset h2:hover .sp-icon,
+.md-typeset h3:hover .sp-icon {
+  transform: scale(1.15) rotate(5deg);
+}
+
+/* Icon in lists */
+.md-typeset li .sp-icon {
+  font-size: 1.1em;
+  margin-right: 0.3rem;
+}
+
+/* Icon in tables */
+.md-typeset table .sp-icon {
+  font-size: 1em;
+  margin-right: 0.25rem;
+}
+
+/* Icon color variants based on context */
+.md-typeset .admonition .sp-icon {
+  color: inherit;
+}
+
+/* Specific icon colors for certain meanings */
+.sp-icon[data-emoji="📈"],
+.sp-icon[data-emoji="🚀"],
+.sp-icon[data-emoji="✅"] {
+  color: #22c55e; /* Green for positive/success */
+}
+
+.sp-icon[data-emoji="📉"],
+.sp-icon[data-emoji="❌"],
+.sp-icon[data-emoji="⚠️"] {
+  color: #ef4444; /* Red for warning/negative */
+}
+
+.sp-icon[data-emoji="⭐"],
+.sp-icon[data-emoji="🎯"],
+.sp-icon[data-emoji="🏆"] {
+  color: #f59e0b; /* Amber for featured/important */
+}
+
+.sp-icon[data-emoji="💡"],
+.sp-icon[data-emoji="🔔"] {
+  color: #eab308; /* Yellow for tips/alerts */
+}
+
+/* Pulsing animation for important icons */
+@keyframes iconPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.sp-icon[data-emoji="🔔"]:hover {
+  animation: iconPulse 0.6s ease-in-out;
+}
+
+/* Mobile responsiveness for icons */
+@media screen and (max-width: 768px) {
+  .sp-icon {
+    font-size: 1.1em;
+    margin-right: 0.3rem;
+  }
+
+  .md-typeset h1 .sp-icon {
+    font-size: 1.2em;
+  }
+
+  .md-typeset h2 .sp-icon {
+    font-size: 1.15em;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .sp-icon {
+    transition: none;
+  }
+
+  .md-typeset h1:hover .sp-icon,
+  .md-typeset h2:hover .sp-icon,
+  .md-typeset h3:hover .sp-icon {
+    transform: none;
+  }
+
+  .sp-icon[data-emoji="🔔"]:hover {
+    animation: none;
+  }
+}
+
+/* Dark mode adjustments */
+[data-md-color-scheme="slate"] .sp-icon {
+  color: var(--md-primary-fg-color);
+}
+
+/* Light mode adjustments */
+[data-md-color-scheme="default"] .sp-icon {
+  color: var(--md-primary-fg-color);
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .sp-icon {
+    font-weight: 500;
+  }
+}
+
+/* ========================================
+   10. BREADCRUMB NAVIGATION (NEW!)
    ======================================== */
 
 .sp-breadcrumb {
