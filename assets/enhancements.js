@@ -571,23 +571,34 @@
      ======================================== */
 
   function autoCloseDrawer() {
-    // Close navigation drawer when user clicks a link
-    const navLinks = document.querySelectorAll('.md-nav__link');
+    // Close navigation drawer when user clicks a link or navigates
     const drawerToggle = document.getElementById('__drawer');
 
     if (!drawerToggle) return;
 
+    // Method 1: Close on link click (for immediate feedback)
+    const navLinks = document.querySelectorAll('.md-nav__link[href]:not([href^="#"])');
     navLinks.forEach(link => {
       link.addEventListener('click', function(e) {
-        // Only close drawer if it's actually open
+        // Close drawer immediately when clicking navigation links (not anchor links)
         if (drawerToggle.checked) {
-          // Small delay to allow click to register before closing
-          setTimeout(() => {
-            drawerToggle.checked = false;
-          }, 10);
+          drawerToggle.checked = false;
         }
-      });
+      }, { capture: true }); // Use capture to run before other handlers
     });
+
+    // Method 2: Also close on any click inside the navigation that leads to a page
+    const navElement = document.querySelector('.md-nav');
+    if (navElement) {
+      navElement.addEventListener('click', function(e) {
+        // Check if clicked element or parent is a navigation link
+        const link = e.target.closest('a.md-nav__link[href]:not([href^="#"])');
+        if (link && drawerToggle.checked) {
+          // Close drawer immediately
+          drawerToggle.checked = false;
+        }
+      }, { capture: true });
+    }
   }
 
   /* ========================================
@@ -605,6 +616,12 @@
     // Re-run on page navigation (for SPA-like behavior)
     if (typeof document$ !== 'undefined') {
       document$.subscribe(() => {
+        // Close drawer immediately when content changes (instant navigation)
+        const drawerToggle = document.getElementById('__drawer');
+        if (drawerToggle && drawerToggle.checked) {
+          drawerToggle.checked = false;
+        }
+
         setTimeout(() => {
           addBreadcrumbs();
           addTableScrollIndicators();
