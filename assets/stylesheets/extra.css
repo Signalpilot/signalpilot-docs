@@ -15,15 +15,18 @@
   box-sizing: border-box;
 }
 
-/* CRITICAL FIX: Override Material's height: 100% that blocks mouse wheel scroll */
+/* CRITICAL FIX: Force scrolling to work with mouse wheel */
 html {
-  height: auto !important; /* Material sets height: 100% which can block scroll */
+  height: auto !important;
   min-height: 100% !important;
+  overflow: visible !important; /* Don't restrict overflow at all on html */
 }
 
 body {
-  min-height: 100vh !important; /* Use vh instead of % */
-  height: auto !important; /* Allow body to grow with content */
+  min-height: 100vh !important;
+  height: auto !important;
+  overflow-y: scroll !important; /* Force scroll bar to always show = forces scrollability */
+  overflow-x: visible !important; /* Don't clip horizontal - let content determine width */
 }
 
 /* Smooth scrolling for better UX */
