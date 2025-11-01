@@ -245,6 +245,20 @@ body::before {
   z-index: 100 !important; /* Drawer above header */
 }
 
+/* Make Table of Contents sticky and scroll with user */
+.md-sidebar--secondary {
+  position: sticky;
+  top: 4rem;
+  height: calc(100vh - 4rem);
+  overflow-y: auto;
+}
+
+.md-sidebar--secondary .md-sidebar__scrollwrap {
+  position: sticky;
+  top: 0;
+  height: 100%;
+}
+
 .md-overlay {
   z-index: 200 !important; /* Overlay above drawer */
 }
@@ -829,29 +843,13 @@ body::before {
 }
 
 /* ========================================
-   10. TABLE ENHANCEMENTS (Sticky First Column + Scroll Indicators)
+   10. TABLE ENHANCEMENTS - Vertical Dividers Only
    ======================================== */
 
-/* Make content area allow horizontal scroll */
-.md-typeset {
-  overflow-x: auto;
-}
-
-/* Table structure with minimum width to trigger scroll */
-.md-typeset table {
-  position: relative;
-  min-width: 100%;
-  width: max-content;
-  border-collapse: separate;
-  border-spacing: 0;
-}
-
-/* Cell padding and dividers */
+/* Add vertical dividers between table columns */
 .md-typeset table th,
 .md-typeset table td {
-  padding: 0.8rem 1rem;
   border-right: 1px solid var(--md-typeset-table-color, rgba(0, 0, 0, 0.12));
-  white-space: nowrap;
 }
 
 .md-typeset table th:last-child,
@@ -863,37 +861,6 @@ body::before {
 [data-md-color-scheme="slate"] .md-typeset table th,
 [data-md-color-scheme="slate"] .md-typeset table td {
   border-right: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-/* Make first column sticky on horizontal scroll - ALL SCREEN SIZES */
-.md-typeset table thead tr th:first-child,
-.md-typeset table tbody tr td:first-child {
-  position: sticky;
-  left: 0;
-  z-index: 2;
-  background: var(--md-default-bg-color);
-  /* Visual separation - shadow on right edge */
-  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
-  /* Ensure enough width */
-  min-width: 140px;
-  font-weight: 600;
-}
-
-/* Dark mode sticky column background */
-[data-md-color-scheme="slate"] .md-typeset table thead tr th:first-child,
-[data-md-color-scheme="slate"] .md-typeset table tbody tr td:first-child {
-  background: var(--md-default-bg-color, #0a0f1e);
-}
-
-/* Light mode sticky column background */
-[data-md-color-scheme="default"] .md-typeset table thead tr th:first-child,
-[data-md-color-scheme="default"] .md-typeset table tbody tr td:first-child {
-  background: var(--md-default-bg-color, #ffffff);
-}
-
-.md-typeset table thead tr th:first-child {
-  z-index: 3; /* Header above body cells */
-  font-weight: 700;
 }
 
 /* Scroll indicator on right edge */
@@ -2347,15 +2314,17 @@ body::before {
   z-index: 1;
 }
 
-/* Ensure drawer sidebar hides properly when unchecked */
-#__drawer:not(:checked) ~ .md-container .md-sidebar--primary {
-  transform: translateX(-100%);
-  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
+/* Ensure drawer sidebar hides properly when unchecked - MOBILE ONLY */
+@media screen and (max-width: 76.1875em) {
+  #__drawer:not(:checked) ~ .md-container .md-sidebar--primary {
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
-#__drawer:checked ~ .md-container .md-sidebar--primary {
-  transform: translateX(0);
-  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  #__drawer:checked ~ .md-container .md-sidebar--primary {
+    transform: translateX(0);
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 /* DUPLICATE TOUCH/LANDSCAPE SECTIONS REMOVED - Already covered in section 12.5 */
