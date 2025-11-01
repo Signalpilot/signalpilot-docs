@@ -263,7 +263,7 @@ body::before {
     top: 3.6rem !important;
     align-self: flex-start !important;
     height: auto !important;
-    max-height: none !important;
+    max-height: calc(100vh - 3.6rem) !important; /* Viewport height minus header */
     display: block !important;
   }
 
@@ -271,24 +271,27 @@ body::before {
     position: -webkit-sticky !important;
     position: sticky !important;
     top: 3.6rem !important;
+    max-height: calc(100vh - 3.6rem) !important;
   }
 
   .md-sidebar--secondary {
     position: -webkit-sticky !important;
     position: sticky !important;
     top: 3.6rem !important;
+    max-height: calc(100vh - 3.6rem) !important;
   }
 
-  /* Allow sidebar content to display fully without internal scroll */
+  /* Enable internal scrolling for sidebar content */
   .md-sidebar__scrollwrap {
-    height: auto !important;
-    max-height: none !important;
-    overflow: visible !important;
+    height: 100% !important;
+    max-height: 100% !important;
+    overflow-y: auto !important; /* Allow vertical scrolling */
+    overflow-x: hidden !important; /* Prevent horizontal scrolling */
   }
 
   .md-sidebar__inner {
     height: auto !important;
-    overflow: visible !important;
+    overflow: visible !important; /* Content can flow naturally inside scrollwrap */
   }
 }
 
