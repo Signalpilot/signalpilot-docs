@@ -15,8 +15,16 @@
   box-sizing: border-box;
 }
 
-/* Removed overflow-x: clip - was blocking scrolling */
-/* Will handle horizontal overflow more specifically if needed */
+/* CRITICAL FIX: Override Material's height: 100% that blocks mouse wheel scroll */
+html {
+  height: auto !important; /* Material sets height: 100% which can block scroll */
+  min-height: 100% !important;
+}
+
+body {
+  min-height: 100vh !important; /* Use vh instead of % */
+  height: auto !important; /* Allow body to grow with content */
+}
 
 /* Smooth scrolling for better UX */
 html {
