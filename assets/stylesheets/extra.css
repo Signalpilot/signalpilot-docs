@@ -249,10 +249,9 @@ body::before {
   z-index: 100 !important; /* Drawer above header */
 }
 
-/* TEMPORARILY DISABLED - Testing if this blocks scrolling */
-/* Will re-enable once scrolling works */
-/*
+/* CRITICAL: Sticky sidebars - stay visible while scrolling */
 @media screen and (min-width: 76.25em) {
+  /* Ensure parent containers don't block sticky */
   .md-grid {
     overflow: visible !important;
   }
@@ -261,6 +260,7 @@ body::before {
     overflow: visible !important;
   }
 
+  /* Make both sidebars sticky to viewport */
   .md-sidebar {
     position: -webkit-sticky !important;
     position: sticky !important;
@@ -281,11 +281,11 @@ body::before {
     top: 3.6rem !important;
   }
 
+  /* Constrain sidebar height for sticky behavior */
   .md-sidebar__scrollwrap {
     max-height: calc(100vh - 3.6rem) !important;
   }
 }
-*/
 
 .md-overlay {
   z-index: 200 !important; /* Overlay above drawer */
