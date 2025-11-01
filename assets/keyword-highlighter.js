@@ -56,7 +56,7 @@
     },
 
     // Product-Specific Core Elements (SignalPilot terminology)
-    core: /\b(Pilot Line|Event Signals?|Event Candles?|Regime|Close-Confirmed|Bar Close)\b/gi,
+    core: /\b(Pilot Line|Event Signals?|Event Candles?|Regime|Close-Confirmed|Bar Close|EMA Trio|BMSB|Bull Market Support Band|Squeeze|TD Sequential|Liquidity Sweeps?|SuperTrend|Regime Box|Supply Zones?|Demand Zones?|Supply\/Demand Zones?|Candlestick Patterns?|Meta Tools?|NanoFlow|Volume Assist|FlipGuard|OBV|On-Balance Volume|CVD|Cumulative Volume Delta|EVR|Extreme Volume Rejection|Quality Scores?|Z-Score)\b/gi,
 
     // Cycle Phases (Pentarch-specific market cycle terminology)
     phase: /\b(Accumulation Phases?|Markup Phases?|Distribution Phases?|Decline Phases?|Climax Phases?|Early-Cycle|Late-Cycle|Mid-Cycle)\b/gi,
