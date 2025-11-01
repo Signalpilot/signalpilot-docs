@@ -278,6 +278,29 @@ body::before {
   z-index: 200 !important; /* Drawer must be ABOVE overlay to be clickable */
 }
 
+/* MOBILE DRAWER FIX: Ensure drawer is above overlay on narrow screens */
+@media screen and (max-width: 76.24em) {
+  .md-sidebar--primary {
+    z-index: 250 !important; /* Higher than overlay (100) on mobile */
+    position: fixed !important;
+  }
+
+  /* Ensure drawer content is clickable when open */
+  #__drawer:checked ~ .md-container .md-sidebar--primary {
+    z-index: 250 !important;
+    pointer-events: auto !important;
+  }
+
+  /* All navigation elements inside drawer must be clickable */
+  .md-sidebar--primary .md-nav,
+  .md-sidebar--primary .md-nav__item,
+  .md-sidebar--primary .md-nav__link {
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 1;
+  }
+}
+
 /* CRITICAL: Sticky sidebars - stay visible while scrolling */
 @media screen and (min-width: 76.25em) {
   /* Ensure ALL parent containers have visible overflow - critical for sticky! */
@@ -327,6 +350,13 @@ body::before {
 
 .md-overlay {
   z-index: 100 !important; /* Overlay BEHIND drawer so drawer is clickable */
+}
+
+/* Ensure overlay stays below drawer on narrow screens */
+@media screen and (max-width: 76.24em) {
+  .md-overlay {
+    z-index: 100 !important; /* Below drawer (250) */
+  }
 }
 
 /* ========================================
