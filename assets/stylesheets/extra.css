@@ -829,32 +829,13 @@ body::before {
 }
 
 /* ========================================
-   10. TABLE ENHANCEMENTS (Sticky First Column + Scroll Indicators)
+   10. TABLE ENHANCEMENTS - Vertical Dividers Only
    ======================================== */
 
-/* Wrap tables in scrollable container */
-.md-typeset__table {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  margin: 1em 0;
-}
-
-/* Table structure with minimum width to trigger scroll */
-.md-typeset__table table,
-.md-typeset table {
-  position: relative;
-  min-width: 100%;
-  width: max-content;
-  border-collapse: separate;
-  border-spacing: 0;
-}
-
-/* Cell padding and dividers */
+/* Add vertical dividers between table columns */
 .md-typeset table th,
 .md-typeset table td {
-  padding: 0.8rem 1rem;
   border-right: 1px solid var(--md-typeset-table-color, rgba(0, 0, 0, 0.12));
-  white-space: nowrap;
 }
 
 .md-typeset table th:last-child,
@@ -866,37 +847,6 @@ body::before {
 [data-md-color-scheme="slate"] .md-typeset table th,
 [data-md-color-scheme="slate"] .md-typeset table td {
   border-right: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-/* Make first column sticky on horizontal scroll - ALL SCREEN SIZES */
-.md-typeset table thead tr th:first-child,
-.md-typeset table tbody tr td:first-child {
-  position: sticky;
-  left: 0;
-  z-index: 2;
-  background: var(--md-default-bg-color);
-  /* Visual separation - shadow on right edge */
-  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
-  /* Ensure enough width */
-  min-width: 140px;
-  font-weight: 600;
-}
-
-/* Dark mode sticky column background */
-[data-md-color-scheme="slate"] .md-typeset table thead tr th:first-child,
-[data-md-color-scheme="slate"] .md-typeset table tbody tr td:first-child {
-  background: var(--md-default-bg-color, #0a0f1e);
-}
-
-/* Light mode sticky column background */
-[data-md-color-scheme="default"] .md-typeset table thead tr th:first-child,
-[data-md-color-scheme="default"] .md-typeset table tbody tr td:first-child {
-  background: var(--md-default-bg-color, #ffffff);
-}
-
-.md-typeset table thead tr th:first-child {
-  z-index: 3; /* Header above body cells */
-  font-weight: 700;
 }
 
 /* Scroll indicator on right edge */
