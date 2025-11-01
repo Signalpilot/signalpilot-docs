@@ -248,7 +248,7 @@ body::before {
 /* Ensure proper layering of navigation components */
 .md-header {
   z-index: 50 !important; /* Material header above content */
-  top: 3.2rem !important; /* Position below topnav to prevent overlap */
+  margin-top: 0 !important; /* No gap between headers */
 }
 
 /* CRITICAL FIX: Prevent header ellipsis from blocking mouse wheel events */
@@ -481,6 +481,7 @@ body::before {
   /* Prevent content overlap */
   width: 100%;
   max-width: 100vw;
+  margin-bottom: 0 !important; /* No gap between headers */
 }
 
 .sp-topnav__inner {
