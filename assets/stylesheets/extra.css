@@ -840,6 +840,19 @@ body::before {
   box-sizing: border-box;
 }
 
+/* Make first column sticky on horizontal scroll */
+.md-typeset table thead tr th:first-child,
+.md-typeset table tbody tr td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background: var(--md-default-bg-color);
+}
+
+.md-typeset table thead tr th:first-child {
+  z-index: 3; /* Header above body cells */
+}
+
 .md-typeset table::after {
   content: "";
   position: absolute;
