@@ -249,6 +249,16 @@ body::before {
   top: 3.2rem !important; /* Position below topnav to prevent overlap */
 }
 
+/* CRITICAL FIX: Prevent header ellipsis from blocking mouse wheel events */
+.md-header__ellipsis {
+  pointer-events: none !important; /* Don't capture mouse events - was blocking scrolling! */
+}
+
+/* Allow child elements of header ellipsis to still be clickable */
+.md-header__ellipsis > * {
+  pointer-events: auto !important;
+}
+
 .md-sidebar {
   z-index: 200 !important; /* Drawer must be ABOVE overlay to be clickable */
 }
