@@ -265,6 +265,15 @@ body::before {
   pointer-events: auto !important;
 }
 
+/* Apply Gugi brand font to MkDocs header title */
+.md-header__title,
+.md-header__topic {
+  font-family: var(--sp-brand-font) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  font-weight: 400 !important;
+}
+
 .md-sidebar {
   z-index: 200 !important; /* Drawer must be ABOVE overlay to be clickable */
 }
