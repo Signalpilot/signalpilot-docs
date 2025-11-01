@@ -253,6 +253,10 @@ body::before {
 .md-header {
   z-index: 50 !important; /* Material header above content */
   margin-top: 0 !important; /* No gap between headers */
+  /* Match SignalPilot brand bar background */
+  background: linear-gradient(135deg, rgba(52, 92, 255, 0.95), rgba(10, 161, 213, 0.95)) !important;
+  backdrop-filter: blur(16px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* CRITICAL FIX: Prevent header ellipsis from blocking mouse wheel events */
@@ -302,10 +306,18 @@ body::before {
   /* All navigation elements inside drawer must be clickable */
   .md-sidebar--primary .md-nav,
   .md-sidebar--primary .md-nav__item,
-  .md-sidebar--primary .md-nav__link {
+  .md-sidebar--primary .md-nav__link,
+  .md-sidebar--primary .md-nav__toggle,
+  .md-sidebar--primary .md-nav__icon {
     pointer-events: auto !important;
     position: relative;
     z-index: 1;
+  }
+
+  /* CRITICAL: Ensure toggle labels (expand/collapse) are clickable */
+  .md-sidebar--primary label.md-nav__link {
+    pointer-events: auto !important;
+    cursor: pointer !important;
   }
 }
 
