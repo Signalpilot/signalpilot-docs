@@ -278,30 +278,9 @@ body::before {
     top: 3.6rem !important;
   }
 
-  /* Enable internal scrolling for sidebar content */
-  /* Material's JS scrolls .md-sidebar__scrollwrap, so that's where overflow must be */
+  /* Let Material handle scrollwrap - just constrain height for sticky behavior */
   .md-sidebar__scrollwrap {
-    height: calc(100vh - 3.6rem) !important; /* Fixed height from viewport */
-    max-height: calc(100vh - 3.6rem) !important; /* Ensure it doesn't exceed */
-    overflow-y: auto !important; /* CRITICAL: Allow vertical scrolling - Material's JS needs this */
-    overflow-x: hidden !important; /* Prevent horizontal scrolling */
-    -webkit-overflow-scrolling: touch !important; /* Smooth scrolling on iOS */
-    scroll-behavior: smooth !important; /* Smooth auto-scroll to active items */
-    scroll-padding-top: 3rem !important; /* Space for scrollIntoView */
-    scroll-padding-bottom: 3rem !important;
-  }
-
-  .md-sidebar__inner {
-    height: auto !important;
-    overflow: visible !important; /* Content flows naturally */
-    min-height: 100%; /* Ensure content fills container */
-  }
-
-  /* Ensure active TOC items use scrollIntoView properly */
-  .md-nav__link--active,
-  .md-nav__item--active > .md-nav__link {
-    scroll-margin-top: 3rem !important;
-    scroll-margin-bottom: 3rem !important;
+    max-height: calc(100vh - 3.6rem) !important;
   }
 }
 
