@@ -31,6 +31,19 @@
     'Q:'
   ];
 
+  // FAQ question patterns to EXCLUDE (questions containing keywords shouldn't be highlighted)
+  const faqQuestionPatterns = [
+    /^Q:/i,  // Starts with "Q:"
+    /^\?/,   // Starts with question mark
+    /how do i/i,
+    /what is/i,
+    /when should/i,
+    /can i/i,
+    /does it/i,
+    /is it/i,
+    /should i/i
+  ];
+
   // Keyword categories and their patterns
   const keywordPatterns = {
     // Pentarch Signals (most specific - highest priority)
@@ -79,6 +92,12 @@
     );
   }
 
+  function isFAQQuestion(text) {
+    // Check if the text is an FAQ question (should not be highlighted)
+    const trimmed = text.trim();
+    return faqQuestionPatterns.some(pattern => pattern.test(trimmed));
+  }
+
   function highlightKeywords() {
     // Find all strong/bold elements in the content
     const strongElements = document.querySelectorAll('.md-typeset strong, .md-typeset b');
@@ -97,6 +116,12 @@
 
       // SKIP if this is a structural label (section header)
       if (isStructuralLabel(text)) {
+        element.dataset.kwProcessed = 'true';
+        return;
+      }
+
+      // SKIP if this is an FAQ question (prevents entire questions from highlighting)
+      if (isFAQQuestion(text)) {
         element.dataset.kwProcessed = 'true';
         return;
       }

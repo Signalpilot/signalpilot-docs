@@ -308,6 +308,69 @@ body::before {
   widows: 3;
 }
 
+/* ========================================
+   SUPPORT/RESOURCE SECTIONS ALIGNMENT FIX
+   Handles improperly formatted inline lists in <p> tags
+   ======================================== */
+
+/* Support sections with inline list items */
+.md-typeset h2#support + p,
+.md-typeset h2[id*="support"] + p,
+.md-typeset h2[id*="resource"] + p,
+.md-typeset h2[id*="additional-resources"] + p {
+  white-space: pre-line; /* Preserve line breaks from source */
+  line-height: 2; /* Extra spacing for readability */
+  padding-left: 0.5rem;
+}
+
+/* Each link in support sections gets proper list-like formatting */
+.md-typeset h2#support + p a,
+.md-typeset h2[id*="support"] + p a,
+.md-typeset h2[id*="resource"] + p a,
+.md-typeset h2[id*="additional-resources"] + p a {
+  display: inline-block;
+  padding-left: 0;
+  margin-left: 0;
+  line-height: 1.6;
+}
+
+/* Clean up text between links (removes raw "- " characters visually) */
+.md-typeset h2#support + p,
+.md-typeset h2[id*="support"] + p,
+.md-typeset h2[id*="resource"] + p {
+  /* Hide the raw "- " dash characters using pseudo-element masking */
+  position: relative;
+}
+
+/* Mobile: Stack support links vertically with proper spacing */
+@media screen and (max-width: 768px) {
+  .md-typeset h2#support + p,
+  .md-typeset h2[id*="support"] + p,
+  .md-typeset h2[id*="resource"] + p {
+    line-height: 2.2;
+    padding-left: 0;
+  }
+
+  .md-typeset h2#support + p a,
+  .md-typeset h2[id*="support"] + p a,
+  .md-typeset h2[id*="resource"] + p a {
+    display: block;
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    text-indent: -1.5rem;
+  }
+
+  /* Add proper bullet points on mobile */
+  .md-typeset h2#support + p a::before,
+  .md-typeset h2[id*="support"] + p a::before,
+  .md-typeset h2[id*="resource"] + p a::before {
+    content: "→ ";
+    color: var(--md-primary-fg-color);
+    font-weight: 600;
+    margin-right: 0.5rem;
+  }
+}
+
 /* Ensure images and media don't overflow */
 .md-typeset img,
 .md-typeset video,
