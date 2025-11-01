@@ -126,11 +126,18 @@
         return;
       }
 
+      // Only highlight if the ENTIRE text is EXACTLY a keyword (word-for-word match)
+      // This prevents partial highlighting like "overlooking CAP signals" -> only "CAP" should match
+      const trimmedText = text.trim();
       let matched = false;
 
       // Check Pentarch signals first (they're most specific)
       for (const [signal, pattern] of Object.entries(keywordPatterns.signal)) {
-        if (pattern.test(text)) {
+        // Reset regex
+        pattern.lastIndex = 0;
+        const match = pattern.exec(trimmedText);
+        // Only highlight if the match is the ENTIRE text
+        if (match && match[0] === trimmedText) {
           element.classList.add('kw-signal', signal);
           element.dataset.kwProcessed = 'true';
           matched = true;
@@ -143,13 +150,20 @@
         for (const [category, pattern] of Object.entries(keywordPatterns)) {
           if (category === 'signal') continue; // Already checked
 
-          if (pattern.test(text)) {
+          // Reset regex
+          pattern.lastIndex = 0;
+          const match = pattern.exec(trimmedText);
+          // Only highlight if the match is the ENTIRE text
+          if (match && match[0] === trimmedText) {
             element.classList.add(`kw-${category}`);
             element.dataset.kwProcessed = 'true';
             break;
           }
         }
       }
+
+      // Mark as processed even if not matched
+      element.dataset.kwProcessed = 'true';
     });
   }
 
