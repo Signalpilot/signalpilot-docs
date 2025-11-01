@@ -1796,9 +1796,11 @@ body::before {
   transition: opacity 0.25s, visibility 0s 0.25s;
 }
 
-/* Ensure overlay doesn't block navigation clicks when drawer is open */
-.md-overlay {
-  pointer-events: none !important;
+/* Ensure overlay IS clickable when drawer is open (to close drawer) */
+#__drawer:checked ~ .md-overlay {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  visibility: visible !important;
 }
 
 /* Make sure navigation links inside drawer are always clickable */
