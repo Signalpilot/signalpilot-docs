@@ -31,6 +31,19 @@
     'Q:'
   ];
 
+  // FAQ question patterns to EXCLUDE (questions containing keywords shouldn't be highlighted)
+  const faqQuestionPatterns = [
+    /^Q:/i,  // Starts with "Q:"
+    /^\?/,   // Starts with question mark
+    /how do i/i,
+    /what is/i,
+    /when should/i,
+    /can i/i,
+    /does it/i,
+    /is it/i,
+    /should i/i
+  ];
+
   // Keyword categories and their patterns
   const keywordPatterns = {
     // Pentarch Signals (most specific - highest priority)
@@ -43,25 +56,25 @@
     },
 
     // Product-Specific Core Elements (SignalPilot terminology)
-    core: /\b(Pilot Line|Event Signal|Event Candle|Regime|Close-Confirmed|Bar Close)\b/gi,
+    core: /\b(Pilot Line|Event Signals?|Event Candles?|Regime|Close-Confirmed|Bar Close|EMA Trio|BMSB|Bull Market Support Band|Squeeze|TD Sequential|Liquidity Sweeps?|SuperTrend|Regime Box|Supply Zones?|Demand Zones?|Supply\/Demand Zones?|Candlestick Patterns?|Meta Tools?|NanoFlow|Volume Assist|FlipGuard|OBV|On-Balance Volume|CVD|Cumulative Volume Delta|EVR|Extreme Volume Rejection|Quality Scores?|Z-Score)\b/gi,
 
     // Cycle Phases (Pentarch-specific market cycle terminology)
-    phase: /\b(Accumulation Phase|Markup Phase|Distribution Phase|Decline Phase|Climax Phase|Early-Cycle|Late-Cycle|Mid-Cycle)\b/gi,
+    phase: /\b(Accumulation Phases?|Markup Phases?|Distribution Phases?|Decline Phases?|Climax Phases?|Early-Cycle|Late-Cycle|Mid-Cycle)\b/gi,
 
     // Levels/Structure
     level: /\b(Support|Resistance|Daily High|Daily Low|Weekly High|Weekly Low|Monthly High|Monthly Low|Session High|Session Low|POC|VAH|VAL)\b/gi,
 
     // Action terms (trading positions and actions - but NOT "Cycle Position")
-    action: /\b(Entry|Exit|Stop Loss|Take Profit|Target|Long Position|Short Position|Position Sizing)\b/gi,
+    action: /\b(Entry|Exit|Stop Loss|Take Profit|Targets?|Long Positions?|Short Positions?|Position Sizing)\b/gi,
 
     // Quality/Grade terms
     quality: /\b(Elite|Premium|Standard|High-Quality|Low-Quality)\b/gi,
 
     // Divergence terms
-    divergence: /\b(Divergence|Bullish Divergence|Bearish Divergence|Hidden Divergence|Regular Divergence)\b/gi,
+    divergence: /\b(Divergences?|Bullish Divergences?|Bearish Divergences?|Hidden Divergences?|Regular Divergences?)\b/gi,
 
     // Volume/Flow (specific institutional terms)
-    volume: /\b(Volume Spike|Liquidity Sweep|Institutional Flow|Smart Money)\b/gi
+    volume: /\b(Volume Spikes?|Liquidity Sweeps?|Institutional Flow|Smart Money)\b/gi
   };
 
   function isIndicatorName(text) {
@@ -77,6 +90,12 @@
     return structuralLabels.some(label =>
       trimmed === label || trimmed.endsWith(label)
     );
+  }
+
+  function isFAQQuestion(text) {
+    // Check if the text is an FAQ question (should not be highlighted)
+    const trimmed = text.trim();
+    return faqQuestionPatterns.some(pattern => pattern.test(trimmed));
   }
 
   function highlightKeywords() {
@@ -97,6 +116,12 @@
 
       // SKIP if this is a structural label (section header)
       if (isStructuralLabel(text)) {
+        element.dataset.kwProcessed = 'true';
+        return;
+      }
+
+      // SKIP if this is an FAQ question (prevents entire questions from highlighting)
+      if (isFAQQuestion(text)) {
         element.dataset.kwProcessed = 'true';
         return;
       }

@@ -308,6 +308,69 @@ body::before {
   widows: 3;
 }
 
+/* ========================================
+   SUPPORT/RESOURCE SECTIONS ALIGNMENT FIX
+   Handles improperly formatted inline lists in <p> tags
+   ======================================== */
+
+/* Support sections with inline list items */
+.md-typeset h2#support + p,
+.md-typeset h2[id*="support"] + p,
+.md-typeset h2[id*="resource"] + p,
+.md-typeset h2[id*="additional-resources"] + p {
+  white-space: pre-line; /* Preserve line breaks from source */
+  line-height: 2; /* Extra spacing for readability */
+  padding-left: 0.5rem;
+}
+
+/* Each link in support sections gets proper list-like formatting */
+.md-typeset h2#support + p a,
+.md-typeset h2[id*="support"] + p a,
+.md-typeset h2[id*="resource"] + p a,
+.md-typeset h2[id*="additional-resources"] + p a {
+  display: inline-block;
+  padding-left: 0;
+  margin-left: 0;
+  line-height: 1.6;
+}
+
+/* Clean up text between links (removes raw "- " characters visually) */
+.md-typeset h2#support + p,
+.md-typeset h2[id*="support"] + p,
+.md-typeset h2[id*="resource"] + p {
+  /* Hide the raw "- " dash characters using pseudo-element masking */
+  position: relative;
+}
+
+/* Mobile: Stack support links vertically with proper spacing */
+@media screen and (max-width: 768px) {
+  .md-typeset h2#support + p,
+  .md-typeset h2[id*="support"] + p,
+  .md-typeset h2[id*="resource"] + p {
+    line-height: 2.2;
+    padding-left: 0;
+  }
+
+  .md-typeset h2#support + p a,
+  .md-typeset h2[id*="support"] + p a,
+  .md-typeset h2[id*="resource"] + p a {
+    display: block;
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    text-indent: -1.5rem;
+  }
+
+  /* Add proper bullet points on mobile */
+  .md-typeset h2#support + p a::before,
+  .md-typeset h2[id*="support"] + p a::before,
+  .md-typeset h2[id*="resource"] + p a::before {
+    content: "→ ";
+    color: var(--md-primary-fg-color);
+    font-weight: 600;
+    margin-right: 0.5rem;
+  }
+}
+
 /* Ensure images and media don't overflow */
 .md-typeset img,
 .md-typeset video,
@@ -509,108 +572,65 @@ body::before {
 .md-typeset .kw-volume,
 .md-typeset .kw-core,
 .md-typeset .kw-phase {
-  font-weight: 700;
-  padding: 0.15em 0.5em;
-  border-radius: 4px;
-  white-space: nowrap;
-  display: inline-block;
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  vertical-align: baseline;
-  line-height: 1.4;
+  /* Clean text-only highlighting - no boxes */
+  font-weight: 600; /* Slightly bold for emphasis */
+  /* No padding, no background, no borders - just colored text */
 }
 
-/* Allow wrapping on mobile to prevent overflow */
-@media screen and (max-width: 640px) {
-  .md-typeset .kw-signal,
-  .md-typeset .kw-level,
-  .md-typeset .kw-action,
-  .md-typeset .kw-quality,
-  .md-typeset .kw-divergence,
-  .md-typeset .kw-volume,
-  .md-typeset .kw-core,
-  .md-typeset .kw-phase {
-    white-space: normal;
-    word-break: break-word;
-  }
-}
-
-/* Pentarch Signals */
+/* Pentarch Signals - Text color only */
 .md-typeset .kw-signal.td {
-  color: #60a5fa;
-  background: rgba(96, 165, 250, 0.15);
-  border-left: 3px solid #60a5fa;
+  color: #60a5fa; /* Blue */
 }
 
 .md-typeset .kw-signal.ign {
-  color: #34d399;
-  background: rgba(52, 211, 153, 0.15);
-  border-left: 3px solid #34d399;
+  color: #34d399; /* Green */
 }
 
 .md-typeset .kw-signal.wrn {
-  color: #fbbf24;
-  background: rgba(251, 191, 36, 0.15);
-  border-left: 3px solid #fbbf24;
+  color: #fbbf24; /* Yellow */
 }
 
 .md-typeset .kw-signal.cap {
-  color: #f87171;
-  background: rgba(248, 113, 113, 0.15);
-  border-left: 3px solid #f87171;
+  color: #f87171; /* Red */
 }
 
 .md-typeset .kw-signal.bdn {
-  color: #dc2626;
-  background: rgba(220, 38, 38, 0.15);
-  border-left: 3px solid #dc2626;
+  color: #dc2626; /* Dark red */
 }
 
+/* Level terms - Text color only */
 .md-typeset .kw-level {
-  color: #22d3ee;
-  background: rgba(34, 211, 238, 0.15);
-  border-left: 3px solid #22d3ee;
+  color: #22d3ee; /* Cyan */
 }
 
+/* Action terms - Text color only */
 .md-typeset .kw-action {
-  color: #fb923c;
-  background: rgba(251, 146, 60, 0.15);
-  border-left: 3px solid #fb923c;
+  color: #fb923c; /* Orange */
 }
 
+/* Quality terms - Text color only */
 .md-typeset .kw-quality {
-  color: #fbbf24;
-  background: rgba(251, 191, 36, 0.15);
-  border-left: 3px solid #fbbf24;
+  color: #fbbf24; /* Yellow */
 }
 
+/* Divergence terms - Text color only */
 .md-typeset .kw-divergence {
-  color: #f472b6;
-  background: rgba(244, 114, 182, 0.15);
-  border-left: 3px solid #f472b6;
+  color: #f472b6; /* Pink */
 }
 
+/* Volume terms - Text color only */
 .md-typeset .kw-volume {
-  color: #84cc16;
-  background: rgba(132, 204, 22, 0.15);
-  border-left: 3px solid #84cc16;
+  color: #84cc16; /* Lime */
 }
 
-/* Product-Specific Core Elements (new!) */
+/* Product-Specific Core Elements - Text color only */
 .md-typeset .kw-core {
-  color: #06b6d4;
-  background: rgba(6, 182, 212, 0.15);
-  border-left: 3px solid #06b6d4;
-  font-weight: 700;
+  color: #06b6d4; /* Cyan */
 }
 
-/* Cycle Phases (new!) */
+/* Cycle Phases - Text color only */
 .md-typeset .kw-phase {
-  color: #8b5cf6;
-  background: rgba(139, 92, 246, 0.15);
-  border-left: 3px solid #8b5cf6;
-  font-weight: 700;
+  color: #8b5cf6; /* Purple */
 }
 
 /* ========================================
@@ -818,6 +838,19 @@ body::before {
   max-width: 100%;
   width: 100%;
   box-sizing: border-box;
+}
+
+/* Make first column sticky on horizontal scroll */
+.md-typeset table thead tr th:first-child,
+.md-typeset table tbody tr td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background: var(--md-default-bg-color);
+}
+
+.md-typeset table thead tr th:first-child {
+  z-index: 3; /* Header above body cells */
 }
 
 .md-typeset table::after {
@@ -1094,6 +1127,420 @@ body::before {
 @media screen and (max-width: 400px) {
   .sp-topnav__inner {
     padding: 0.4rem 0.75rem;
+  }
+}
+
+/* ========================================
+   12.5. COMPREHENSIVE DEVICE OPTIMIZATIONS
+   ======================================== */
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   TINY MOBILE (320px - 374px) - iPhone SE 1st gen, small Android
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+@media screen and (max-width: 374px) {
+  /* Reduce font sizes slightly for tiny screens */
+  .md-typeset {
+    font-size: 0.9rem;
+  }
+
+  .md-typeset h1 {
+    font-size: 1.75rem;
+  }
+
+  .md-typeset h2 {
+    font-size: 1.4rem;
+  }
+
+  .md-typeset h3 {
+    font-size: 1.2rem;
+  }
+
+  /* Tighter card padding */
+  .md-typeset .grid.cards > * {
+    padding: 0.65rem 0.85rem;
+  }
+
+  /* Smaller buttons but still tappable */
+  .sp-button,
+  .md-button {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  /* Top nav adjustments */
+  .sp-topnav__inner {
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .sp-topnav .brand {
+    font-size: 1rem;
+  }
+
+  .sp-cta {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  /* Keyword highlights - smaller padding */
+  .md-typeset .kw-signal,
+  .md-typeset .kw-level,
+  .md-typeset .kw-action,
+  .md-typeset .kw-quality,
+  .md-typeset .kw-divergence,
+  .md-typeset .kw-volume,
+  .md-typeset .kw-core,
+  .md-typeset .kw-phase {
+    padding: 0.1em 0.4em;
+    font-size: 0.85em;
+  }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   STANDARD MOBILE (375px - 479px) - iPhone 12/13/14, Galaxy S
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+@media screen and (min-width: 375px) and (max-width: 479px) {
+  .md-typeset {
+    font-size: 0.95rem;
+  }
+
+  .md-typeset h1 {
+    font-size: 1.85rem;
+  }
+
+  .md-typeset h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Better card spacing on standard phones */
+  .md-typeset .grid.cards {
+    gap: 0.85rem;
+  }
+
+  .md-typeset .grid.cards > * {
+    padding: 0.8rem 1rem;
+  }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   LARGE MOBILE (480px - 767px) - Plus models, large Android
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .md-typeset {
+    font-size: 1rem;
+  }
+
+  .md-typeset h1 {
+    font-size: 2rem;
+  }
+
+  .md-typeset h2 {
+    font-size: 1.65rem;
+  }
+
+  /* 2-column card layout on large phones in landscape */
+  @media (orientation: landscape) {
+    .md-typeset .grid.cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Show more nav links on larger phones */
+  .sp-links a:not([aria-current]) {
+    display: inline-block;
+  }
+
+  .sp-topnav__inner {
+    gap: 1.25rem;
+  }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   SMALL TABLET (768px - 1023px) - iPad Mini, small tablets
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .md-typeset {
+    font-size: 1rem;
+  }
+
+  /* 2-column card grid */
+  .md-typeset .grid.cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  /* 3 columns in landscape */
+  @media (orientation: landscape) {
+    .md-typeset .grid.cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  /* Better table layout */
+  .md-typeset table {
+    font-size: 0.9rem;
+  }
+
+  /* Optimal content width */
+  .md-content__inner {
+    max-width: 95%;
+    padding: 0 1.5rem;
+  }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   TABLET / SMALL LAPTOP (1024px - 1365px) - iPad Pro, small laptops
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+@media screen and (min-width: 1024px) and (max-width: 1365px) {
+  .md-typeset {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  /* 3-column card grid */
+  .md-typeset .grid.cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .md-typeset h1 {
+    font-size: 2.25rem;
+  }
+
+  .md-typeset h2 {
+    font-size: 1.85rem;
+  }
+
+  /* Comfortable content width */
+  .md-content__inner {
+    max-width: 90%;
+    padding: 0 2rem;
+  }
+
+  /* Better code block sizing */
+  .md-typeset pre {
+    font-size: 0.9rem;
+    padding: 1.25rem;
+  }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   STANDARD LAPTOP (1366px - 1919px) - Most laptops, small monitors
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+@media screen and (min-width: 1366px) and (max-width: 1919px) {
+  .md-typeset {
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  /* 4-column card grid */
+  .md-typeset .grid.cards {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .md-typeset h1 {
+    font-size: 2.5rem;
+  }
+
+  .md-typeset h2 {
+    font-size: 2rem;
+  }
+
+  .md-typeset h3 {
+    font-size: 1.65rem;
+  }
+
+  /* Optimal reading width */
+  .md-content__inner {
+    max-width: 1200px;
+    padding: 0 2.5rem;
+  }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   LARGE DESKTOP (1920px - 2559px) - Full HD monitors, 1080p/1440p
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+@media screen and (min-width: 1920px) and (max-width: 2559px) {
+  .md-typeset {
+    font-size: 1.1rem;
+    line-height: 1.75;
+  }
+
+  /* 5-column card grid */
+  .md-typeset .grid.cards {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+
+  .md-typeset h1 {
+    font-size: 3rem;
+  }
+
+  .md-typeset h2 {
+    font-size: 2.25rem;
+  }
+
+  .md-typeset h3 {
+    font-size: 1.85rem;
+  }
+
+  /* Prevent overly wide content */
+  .md-content__inner {
+    max-width: 1400px;
+    padding: 0 3rem;
+  }
+
+  /* Larger code blocks */
+  .md-typeset pre {
+    font-size: 1rem;
+    padding: 1.5rem;
+  }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   ULTRA-WIDE (2560px+) - 4K monitors, ultra-wide displays
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+@media screen and (min-width: 2560px) {
+  .md-typeset {
+    font-size: 1.15rem;
+    line-height: 1.8;
+  }
+
+  /* 6-column card grid */
+  .md-typeset .grid.cards {
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 2.5rem;
+  }
+
+  .md-typeset h1 {
+    font-size: 3.5rem;
+  }
+
+  .md-typeset h2 {
+    font-size: 2.75rem;
+  }
+
+  .md-typeset h3 {
+    font-size: 2.25rem;
+  }
+
+  /* Maximum readable width */
+  .md-content__inner {
+    max-width: 1600px;
+    padding: 0 4rem;
+  }
+
+  /* Spacious component library elements */
+  .sp-card {
+    padding: 3rem;
+  }
+
+  .sp-metric {
+    padding: 3rem;
+  }
+
+  .sp-metric__value {
+    font-size: 4rem;
+  }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   SPECIAL: Landscape phones optimization
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+@media screen and (max-width: 896px) and (orientation: landscape) {
+  /* Reduce vertical spacing in landscape */
+  .md-typeset h1,
+  .md-typeset h2,
+  .md-typeset h3 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .md-typeset p,
+  .md-typeset ul,
+  .md-typeset ol {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Compact cards */
+  .md-typeset .grid.cards > * {
+    padding: 0.75rem 1rem;
+  }
+
+  /* Use horizontal space better */
+  .md-content__inner {
+    padding: 0 1rem;
+  }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   SPECIAL: Foldable devices (Galaxy Fold, Surface Duo)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+@media screen and (min-width: 280px) and (max-width: 653px) {
+  /* Optimize for narrow unfolded state */
+  .md-typeset .grid.cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Ensure touch targets remain large enough */
+  .sp-button,
+  .md-button,
+  .md-nav__link {
+    min-height: 48px;
+    padding: 0.7rem 1rem;
+  }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   SPECIAL: Touch device optimizations (all sizes)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+@media (hover: none) and (pointer: coarse) {
+  /* Ensure all interactive elements meet 44x44px minimum */
+  a,
+  button,
+  .md-nav__link,
+  .md-header__button,
+  .sp-button,
+  .md-button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Add padding to links for easier tapping */
+  .md-typeset a {
+    padding: 0.25rem 0;
+  }
+
+  /* Larger tap targets for navigation */
+  .md-nav__item {
+    padding: 0.1rem 0;
+  }
+
+  .md-nav__link {
+    padding: 0.75rem 1.25rem;
+  }
+
+  /* Remove hover effects, keep active/focus */
+  .md-typeset .grid.cards > *:hover {
+    transform: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  }
+
+  .md-typeset .grid.cards > *:active {
+    transform: scale(0.98);
   }
 }
 
@@ -1824,142 +2271,7 @@ body::before {
   }
 }
 
-/* ========================================
-   17. COMPREHENSIVE DEVICE OPTIMIZATIONS
-   ======================================== */
-
-/* Small tablets (600px - 768px) */
-@media screen and (min-width: 600px) and (max-width: 768px) {
-  .sp-grid--responsive {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .sp-card {
-    padding: 1.25rem;
-  }
-
-  .md-typeset .grid.cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .sp-tabs__list {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-}
-
-/* Tablet Landscape & Small Desktop (1024px+) */
-@media screen and (min-width: 1024px) {
-  /* Better grid layouts for larger screens */
-  .sp-grid--responsive {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .md-typeset .grid.cards {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  }
-
-  /* Optimize card spacing */
-  .sp-card {
-    padding: 2rem;
-  }
-
-  /* Better typography on larger screens */
-  .md-typeset {
-    font-size: 1rem;
-    line-height: 1.7;
-  }
-
-  .md-typeset h1 {
-    font-size: 2.5rem;
-  }
-
-  .md-typeset h2 {
-    font-size: 2rem;
-  }
-
-  /* Table improvements for desktop */
-  .md-typeset table {
-    font-size: 0.95rem;
-  }
-
-  /* Feature list - 2 columns */
-  .sp-feature-list {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2.5rem;
-  }
-}
-
-/* Desktop (1200px+) */
-@media screen and (min-width: 1200px) {
-  /* Maximum content width for readability */
-  .md-typeset {
-    font-size: 1.05rem;
-  }
-
-  /* 4-column grid for cards */
-  .sp-grid--responsive {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-  }
-
-  .md-typeset .grid.cards {
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 1.5rem;
-  }
-
-  /* Larger cards with more padding */
-  .sp-card {
-    padding: 2.5rem;
-  }
-
-  /* Better component spacing */
-  .sp-alert {
-    padding: 1.5rem 2rem;
-  }
-
-  .sp-metric {
-    padding: 2.5rem;
-  }
-}
-
-/* Large Desktop (1440px+) */
-@media screen and (min-width: 1440px) {
-  /* Optimal reading width */
-  .md-content__inner {
-    max-width: 1200px;
-  }
-
-  /* Even more spacious layouts */
-  .sp-grid--responsive {
-    gap: 2rem;
-  }
-
-  .md-typeset .grid.cards {
-    gap: 2rem;
-  }
-
-  /* Larger typography for comfortable reading */
-  .md-typeset h1 {
-    font-size: 3rem;
-  }
-
-  .md-typeset h2 {
-    font-size: 2.25rem;
-  }
-}
-
-/* Ultra-wide Desktop (1920px+) */
-@media screen and (min-width: 1920px) {
-  .sp-grid--responsive {
-    grid-template-columns: repeat(5, 1fr);
-  }
-
-  .md-typeset .grid.cards {
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  }
-}
+/* OLD SECTION 17 REMOVED - Replaced with comprehensive section 12.5 above */
 
 /* ========================================
    NAVIGATION DRAWER FIX - Critical!
@@ -2002,86 +2314,7 @@ body::before {
   transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Touch Device Optimizations */
-@media (hover: none) and (pointer: coarse) {
-  /* Larger tap targets for touch */
-  .sp-button,
-  .sp-tabs__tab,
-  .md-nav__link,
-  .md-typeset a {
-    min-height: 44px;
-    min-width: 44px;
-    padding: 0.75rem 1.5rem;
-  }
-
-  /* Ensure navigation links are always clickable */
-  .md-nav__link,
-  .md-nav__item,
-  .md-nav__toggle,
-  .md-header__button,
-  .md-search__input {
-    touch-action: manipulation;
-  }
-
-  /* Remove hover effects on touch devices */
-  .sp-card:hover,
-  .sp-button:hover,
-  .md-typeset .grid.cards > *:hover {
-    transform: none;
-  }
-
-  /* Keep focus effects for accessibility */
-  .sp-card:active,
-  .sp-button:active,
-  .md-nav__link:active {
-    transform: scale(0.98);
-  }
-
-  /* Larger scroll indicators */
-  .md-typeset table::after {
-    font-size: 0.9rem;
-    padding: 1rem;
-  }
-
-  /* Better touch scrolling */
-  .sp-tabs__list,
-  .md-typeset table,
-  .md-nav {
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
-  }
-}
-
-/* Landscape Orientation Optimizations */
-@media screen and (max-height: 600px) and (orientation: landscape) {
-  /* Reduce vertical spacing in landscape */
-  .sp-card {
-    padding: 1rem 1.5rem;
-  }
-
-  .sp-alert {
-    padding: 0.75rem 1rem;
-  }
-
-  .md-typeset h1 {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .md-typeset h2 {
-    margin-top: 0.75rem;
-    margin-bottom: 0.75rem;
-  }
-
-  /* Compact metrics in landscape */
-  .sp-metric {
-    padding: 1.25rem;
-  }
-
-  .sp-metric__value {
-    font-size: 2rem;
-  }
-}
+/* DUPLICATE TOUCH/LANDSCAPE SECTIONS REMOVED - Already covered in section 12.5 */
 
 /* High DPI / Retina Display Optimizations */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
