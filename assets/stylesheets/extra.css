@@ -15,8 +15,16 @@
   box-sizing: border-box;
 }
 
-/* Removed overflow-x: clip - was blocking scrolling */
-/* Will handle horizontal overflow more specifically if needed */
+/* CRITICAL FIX: Override Material's height: 100% that blocks mouse wheel scroll */
+html {
+  height: auto !important; /* Material sets height: 100% which can block scroll */
+  min-height: 100% !important;
+}
+
+body {
+  min-height: 100vh !important; /* Use vh instead of % */
+  height: auto !important; /* Allow body to grow with content */
+}
 
 /* Smooth scrolling for better UX */
 html {
@@ -213,8 +221,8 @@ body::before {
     3: Sticky table headers (higher than columns)
    10: Top navigation bar (always on top)
    50: Material header search/drawer overlays
-  100: Navigation drawer sidebar
-  200: Drawer overlay backdrop
+  100: Drawer overlay backdrop (behind drawer)
+  200: Navigation drawer sidebar (must be above overlay to be clickable!)
   300: Modals and dialogs
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 
@@ -238,13 +246,12 @@ body::before {
 }
 
 .md-sidebar {
-  z-index: 100 !important; /* Drawer above header */
+  z-index: 200 !important; /* Drawer must be ABOVE overlay to be clickable */
 }
 
-/* TEMPORARILY DISABLED - Testing if this blocks scrolling */
-/* Will re-enable once scrolling works */
-/*
+/* CRITICAL: Sticky sidebars - stay visible while scrolling */
 @media screen and (min-width: 76.25em) {
+  /* Ensure parent containers don't block sticky */
   .md-grid {
     overflow: visible !important;
   }
@@ -253,6 +260,7 @@ body::before {
     overflow: visible !important;
   }
 
+  /* Make both sidebars sticky to viewport */
   .md-sidebar {
     position: -webkit-sticky !important;
     position: sticky !important;
@@ -273,14 +281,14 @@ body::before {
     top: 3.6rem !important;
   }
 
+  /* Constrain sidebar height for sticky behavior */
   .md-sidebar__scrollwrap {
     max-height: calc(100vh - 3.6rem) !important;
   }
 }
-*/
 
 .md-overlay {
-  z-index: 200 !important; /* Overlay above drawer */
+  z-index: 100 !important; /* Overlay BEHIND drawer so drawer is clickable */
 }
 
 /* ========================================
