@@ -15,18 +15,16 @@
   box-sizing: border-box;
 }
 
-/* CRITICAL FIX: Force scrolling to work with mouse wheel */
+/* Prevent horizontal scroll without breaking sticky positioning */
+/* Using clip instead of hidden - clip doesn't create containing block for sticky */
 html {
-  height: auto !important;
-  min-height: 100% !important;
-  overflow: visible !important; /* Don't restrict overflow at all on html */
+  overflow-x: clip !important;
+  overflow-y: auto !important;
 }
 
 body {
-  min-height: 100vh !important;
-  height: auto !important;
-  overflow-y: scroll !important; /* Force scroll bar to always show = forces scrollability */
-  overflow-x: visible !important; /* Don't clip horizontal - let content determine width */
+  overflow-x: clip !important;
+  overflow-y: auto !important;
 }
 
 /* Smooth scrolling for better UX */
