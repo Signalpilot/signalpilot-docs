@@ -570,35 +570,57 @@
      6. AUTO-CLOSE DRAWER ON NAVIGATION
      ======================================== */
 
-  function autoCloseDrawer() {
-    // Close navigation drawer when user clicks a link or navigates
-    const drawerToggle = document.getElementById('__drawer');
+  // Flag to prevent duplicate event listeners
+  let drawerListenerAdded = false;
 
+  function forceCloseDrawer() {
+    const drawerToggle = document.getElementById('__drawer');
+    const overlay = document.querySelector('.md-overlay');
+
+    if (drawerToggle) {
+      drawerToggle.checked = false;
+    }
+
+    // Force hide overlay and sidebar with CSS
+    if (overlay) {
+      overlay.style.display = 'none';
+      // Reset after transition
+      setTimeout(() => {
+        overlay.style.display = '';
+      }, 300);
+    }
+
+    // Also ensure the sidebar itself is hidden
+    const sidebar = document.querySelector('.md-sidebar--primary');
+    if (sidebar) {
+      sidebar.style.transform = 'translateX(-100%)';
+      setTimeout(() => {
+        sidebar.style.transform = '';
+      }, 300);
+    }
+  }
+
+  function autoCloseDrawer() {
+    // Only add the event listener once to prevent duplicates
+    if (drawerListenerAdded) return;
+
+    const drawerToggle = document.getElementById('__drawer');
     if (!drawerToggle) return;
 
-    // Method 1: Close on link click (for immediate feedback)
-    const navLinks = document.querySelectorAll('.md-nav__link[href]:not([href^="#"])');
-    navLinks.forEach(link => {
-      link.addEventListener('click', function(e) {
-        // Close drawer immediately when clicking navigation links (not anchor links)
-        if (drawerToggle.checked) {
-          drawerToggle.checked = false;
-        }
-      }, { capture: true }); // Use capture to run before other handlers
-    });
+    // Use event delegation on the document body to catch all navigation clicks
+    // This prevents duplicate listeners and works for dynamically added content
+    document.body.addEventListener('click', function(e) {
+      // Check if the click target is or is within a navigation link
+      const navLink = e.target.closest('.md-nav a[href]:not([href^="#"])');
 
-    // Method 2: Also close on any click inside the navigation that leads to a page
-    const navElement = document.querySelector('.md-nav');
-    if (navElement) {
-      navElement.addEventListener('click', function(e) {
-        // Check if clicked element or parent is a navigation link
-        const link = e.target.closest('a.md-nav__link[href]:not([href^="#"])');
-        if (link && drawerToggle.checked) {
-          // Close drawer immediately
-          drawerToggle.checked = false;
-        }
-      }, { capture: true });
-    }
+      if (navLink && drawerToggle.checked) {
+        // Immediately close the drawer
+        forceCloseDrawer();
+      }
+    }, true); // Use capture phase
+
+    // Mark as initialized
+    drawerListenerAdded = true;
   }
 
   /* ========================================
@@ -616,18 +638,15 @@
     // Re-run on page navigation (for SPA-like behavior)
     if (typeof document$ !== 'undefined') {
       document$.subscribe(() => {
-        // Close drawer immediately when content changes (instant navigation)
-        const drawerToggle = document.getElementById('__drawer');
-        if (drawerToggle && drawerToggle.checked) {
-          drawerToggle.checked = false;
-        }
+        // Force close drawer immediately when content changes (instant navigation)
+        forceCloseDrawer();
 
         setTimeout(() => {
           addBreadcrumbs();
           addTableScrollIndicators();
           addAriaLandmarks();
           replaceEmojisWithIcons();
-          autoCloseDrawer();
+          // Don't call autoCloseDrawer() again - listener is already set
         }, 100);
       });
     }
