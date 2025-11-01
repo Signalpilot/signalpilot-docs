@@ -285,18 +285,29 @@ body::before {
     overflow-x: hidden !important; /* Prevent horizontal scrolling */
     -webkit-overflow-scrolling: touch !important; /* Smooth scrolling on iOS */
     scroll-behavior: smooth !important; /* Smooth auto-scroll to active items */
+    contain: layout !important; /* Optimize scroll performance */
   }
 
   .md-sidebar__inner {
     height: auto !important;
-    min-height: 100% !important; /* Ensure it takes full scrollwrap height minimum */
     overflow: visible !important; /* Content can flow naturally inside scrollwrap */
   }
 
+  /* CRITICAL: Ensure TOC auto-scrolls to active section */
+  .md-nav--secondary {
+    height: 100% !important;
+  }
+
   /* Ensure active TOC items scroll into view with proper spacing */
-  .md-nav__link--active {
-    scroll-margin-top: 2rem !important;
-    scroll-margin-bottom: 2rem !important;
+  .md-nav__link--active,
+  .md-nav__item--active > .md-nav__link {
+    scroll-margin-top: 3rem !important;
+    scroll-margin-bottom: 3rem !important;
+  }
+
+  /* Ensure smooth scrolling for TOC navigation */
+  .md-nav__list[data-md-scrollfix] {
+    scroll-behavior: smooth !important;
   }
 }
 
