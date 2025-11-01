@@ -245,34 +245,28 @@ body::before {
   z-index: 100 !important; /* Drawer above header */
 }
 
-/* Sticky sidebars on desktop - CRITICAL for non-empty page feel */
+/* Sticky sidebars - always visible while scrolling page */
 @media screen and (min-width: 76.25em) {
-  /* Force both sidebars to stick */
-  [data-md-component="sidebar"] {
+  /* Make both sidebars sticky to viewport */
+  .md-sidebar--primary,
+  .md-sidebar--secondary {
     position: sticky !important;
     top: 3.6rem !important;
-    max-height: calc(100vh - 3.6rem) !important;
     align-self: flex-start !important;
+    height: auto !important;
+    max-height: none !important;
   }
 
-  /* Make sidebar content scrollable */
-  [data-md-component="sidebar"] .md-sidebar__scrollwrap {
-    max-height: calc(100vh - 3.6rem) !important;
-    overflow-y: auto !important;
+  /* Allow sidebar content to display fully without internal scroll */
+  .md-sidebar__scrollwrap {
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
   }
 
-  /* Custom scrollbar styling */
-  [data-md-component="sidebar"] .md-sidebar__scrollwrap::-webkit-scrollbar {
-    width: 6px !important;
-  }
-
-  [data-md-component="sidebar"] .md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.2) !important;
-    border-radius: 3px !important;
-  }
-
-  [data-md-color-scheme="slate"] [data-md-component="sidebar"] .md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.2) !important;
+  .md-sidebar__inner {
+    height: auto !important;
+    overflow: visible !important;
   }
 }
 
