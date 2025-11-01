@@ -245,8 +245,8 @@ body::before {
   background: transparent;
   position: relative;
   z-index: 1;
-  max-width: 100vw !important; /* Prevent horizontal overflow */
-  overflow-x: hidden; /* Hide horizontal scroll at this level, not html/body */
+  max-width: 100vw !important;
+  /* NO overflow here - breaks sticky positioning for child sidebars! */
 }
 
 /* Ensure proper layering of navigation components */
@@ -280,9 +280,17 @@ body::before {
 
 /* CRITICAL: Sticky sidebars - stay visible while scrolling */
 @media screen and (min-width: 76.25em) {
-  /* Ensure parent containers don't block sticky */
+  /* Ensure ALL parent containers have visible overflow - critical for sticky! */
+  .md-container {
+    overflow: visible !important;
+  }
+
   .md-grid {
     overflow: visible !important;
+  }
+
+  .md-main {
+    overflow: visible !important; /* Critical: allows sticky children */
   }
 
   .md-main__inner {
@@ -329,6 +337,7 @@ body::before {
 .md-content__inner {
   max-width: 1400px;
   margin: 0 auto;
+  overflow-x: hidden; /* Prevent horizontal scroll on article content */
 }
 
 .md-typeset {
