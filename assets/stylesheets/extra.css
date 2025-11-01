@@ -245,6 +245,20 @@ body::before {
   z-index: 100 !important; /* Drawer above header */
 }
 
+/* Make Table of Contents sticky and scroll with user */
+.md-sidebar--secondary {
+  position: sticky;
+  top: 4rem;
+  height: calc(100vh - 4rem);
+  overflow-y: auto;
+}
+
+.md-sidebar--secondary .md-sidebar__scrollwrap {
+  position: sticky;
+  top: 0;
+  height: 100%;
+}
+
 .md-overlay {
   z-index: 200 !important; /* Overlay above drawer */
 }
