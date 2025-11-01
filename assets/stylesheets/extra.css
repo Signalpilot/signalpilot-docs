@@ -18,17 +18,17 @@
 /* Prevent horizontal scroll without breaking sticky positioning */
 /* Using clip instead of hidden - clip doesn't create containing block for sticky */
 html {
-  overflow-x: clip;
-  overflow-y: auto;
-  height: auto;
-  min-height: 100%;
+  overflow-x: clip !important;
+  overflow-y: auto !important;
+  height: auto !important;
+  min-height: 100% !important;
 }
 
 body {
-  overflow-x: clip;
-  overflow-y: auto;
-  height: auto;
-  min-height: 100vh;
+  overflow-x: clip !important;
+  overflow-y: auto !important;
+  height: auto !important;
+  min-height: 100vh !important;
 }
 
 /* Smooth scrolling for better UX */
