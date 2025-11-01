@@ -832,27 +832,26 @@ body::before {
    10. TABLE ENHANCEMENTS (Sticky First Column + Scroll Indicators)
    ======================================== */
 
-/* Table wrapper for horizontal scroll */
+/* Make content area allow horizontal scroll */
+.md-typeset {
+  overflow-x: auto;
+}
+
+/* Table structure with minimum width to trigger scroll */
 .md-typeset table {
   position: relative;
-  max-width: 100%;
-  width: 100%;
-  box-sizing: border-box;
-  display: block;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+  min-width: 100%;
+  width: max-content;
+  border-collapse: separate;
+  border-spacing: 0;
 }
 
-.md-typeset table thead,
-.md-typeset table tbody {
-  display: table;
-  width: 100%;
-}
-
-/* Clear vertical dividers for ALL table columns */
+/* Cell padding and dividers */
 .md-typeset table th,
 .md-typeset table td {
+  padding: 0.8rem 1rem;
   border-right: 1px solid var(--md-typeset-table-color, rgba(0, 0, 0, 0.12));
+  white-space: nowrap;
 }
 
 .md-typeset table th:last-child,
