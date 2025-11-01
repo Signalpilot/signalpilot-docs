@@ -279,13 +279,16 @@ body::before {
 
   /* Enable internal scrolling for sidebar content */
   .md-sidebar__scrollwrap {
-    max-height: calc(100vh - 3.6rem) !important; /* Direct constraint from viewport */
+    height: calc(100vh - 3.6rem) !important; /* Fixed height from viewport */
+    max-height: calc(100vh - 3.6rem) !important; /* Ensure it doesn't exceed */
     overflow-y: auto !important; /* Allow vertical scrolling */
     overflow-x: hidden !important; /* Prevent horizontal scrolling */
+    -webkit-overflow-scrolling: touch !important; /* Smooth scrolling on iOS */
   }
 
   .md-sidebar__inner {
     height: auto !important;
+    min-height: 100% !important; /* Ensure it takes full scrollwrap height minimum */
     overflow: visible !important; /* Content can flow naturally inside scrollwrap */
   }
 }
