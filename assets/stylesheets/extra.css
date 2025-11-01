@@ -280,6 +280,14 @@ body::before {
 
 /* MOBILE DRAWER FIX: Ensure drawer is above overlay on narrow screens */
 @media screen and (max-width: 76.24em) {
+  /* CRITICAL: When drawer opens, raise entire container above overlay! */
+  /* Container has z-index:1 and creates stacking context, isolating children */
+  /* Overlay has z-index:100 and is OUTSIDE container, so appears on top */
+  /* Solution: Raise container's z-index when drawer is checked */
+  #__drawer:checked ~ .md-container {
+    z-index: 150 !important; /* Above overlay (100), allows sidebar inside to show */
+  }
+
   .md-sidebar--primary {
     z-index: 250 !important; /* Higher than overlay (100) on mobile */
     position: fixed !important;
