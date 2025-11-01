@@ -245,18 +245,20 @@ body::before {
   z-index: 100 !important; /* Drawer above header */
 }
 
-/* Make Table of Contents sticky and scroll with user */
-.md-sidebar--secondary {
-  position: sticky;
-  top: 4rem;
-  height: calc(100vh - 4rem);
-  overflow-y: auto;
-}
+/* Make Table of Contents sticky and scroll with user - DESKTOP ONLY */
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--secondary {
+    position: sticky !important;
+    top: 4rem !important;
+    height: calc(100vh - 4rem) !important;
+    overflow-y: auto !important;
+  }
 
-.md-sidebar--secondary .md-sidebar__scrollwrap {
-  position: sticky;
-  top: 0;
-  height: 100%;
+  .md-sidebar--secondary .md-sidebar__scrollwrap {
+    position: sticky !important;
+    top: 0 !important;
+    height: 100% !important;
+  }
 }
 
 .md-overlay {
