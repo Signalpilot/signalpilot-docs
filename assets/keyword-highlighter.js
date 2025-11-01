@@ -6,7 +6,7 @@
 (function() {
   'use strict';
 
-  // Indicator names to EXCLUDE (never highlight these)
+  // Indicator names and structural terms to EXCLUDE (never highlight these)
   const indicatorNames = [
     'Pentarch',
     'Janus Atlas',
@@ -18,9 +18,22 @@
     'Signal Pilot'
   ];
 
+  // Structural labels to EXCLUDE (these are section headers, not keywords)
+  const structuralLabels = [
+    'Visual:',
+    'Cycle Position:',
+    'What Pentarch Detects:',
+    'Common Usage:',
+    'Example:',
+    'Interpretation:',
+    'Result:',
+    'A:',
+    'Q:'
+  ];
+
   // Keyword categories and their patterns
   const keywordPatterns = {
-    // Pentarch Signals (most specific)
+    // Pentarch Signals (most specific - highest priority)
     signal: {
       td: /\b(TD|Touchdown)\b/gi,
       ign: /\b(IGN|Ignition)\b/gi,
@@ -29,29 +42,40 @@
       bdn: /\b(BDN|Breakdown)\b/gi
     },
 
-    // Technical Indicators
-    tech: /\b(VWAP|ATR|OBV|MACD|RSI|Stoch|StochRSI|EMA|SMA|SuperTrend|Bollinger|Fibonacci)\b/gi,
+    // Product-Specific Core Elements (SignalPilot terminology)
+    core: /\b(Pilot Line|Event Signal|Event Candle|Regime|Close-Confirmed|Bar Close)\b/gi,
+
+    // Cycle Phases (Pentarch-specific market cycle terminology)
+    phase: /\b(Accumulation Phase|Markup Phase|Distribution Phase|Decline Phase|Climax Phase|Early-Cycle|Late-Cycle|Mid-Cycle)\b/gi,
 
     // Levels/Structure
     level: /\b(Support|Resistance|Daily High|Daily Low|Weekly High|Weekly Low|Monthly High|Monthly Low|Session High|Session Low|POC|VAH|VAL)\b/gi,
 
-    // Action terms
-    action: /\b(Entry|Exit|Stop Loss|Take Profit|Target|Position)\b/gi,
+    // Action terms (trading positions and actions - but NOT "Cycle Position")
+    action: /\b(Entry|Exit|Stop Loss|Take Profit|Target|Long Position|Short Position|Position Sizing)\b/gi,
 
-    // Quality terms
-    quality: /\b(Elite|Premium|Standard|⭐⭐⭐|⭐⭐)\b/gi,
+    // Quality/Grade terms
+    quality: /\b(Elite|Premium|Standard|High-Quality|Low-Quality)\b/gi,
 
-    // Divergence
+    // Divergence terms
     divergence: /\b(Divergence|Bullish Divergence|Bearish Divergence|Hidden Divergence|Regular Divergence)\b/gi,
 
-    // Volume (specific terms only - NOT generic "Flow" or "Volume")
-    volume: /\b(Volume Spike|Liquidity Sweep)\b/gi
+    // Volume/Flow (specific institutional terms)
+    volume: /\b(Volume Spike|Liquidity Sweep|Institutional Flow|Smart Money)\b/gi
   };
 
   function isIndicatorName(text) {
     // Check if the text is an indicator name or contains an indicator name
     return indicatorNames.some(name =>
       text.includes(name) || text.trim() === name
+    );
+  }
+
+  function isStructuralLabel(text) {
+    // Check if the text is a structural label (section header)
+    const trimmed = text.trim();
+    return structuralLabels.some(label =>
+      trimmed === label || trimmed.endsWith(label)
     );
   }
 
@@ -67,6 +91,12 @@
 
       // SKIP if this is an indicator name
       if (isIndicatorName(text)) {
+        element.dataset.kwProcessed = 'true';
+        return;
+      }
+
+      // SKIP if this is a structural label (section header)
+      if (isStructuralLabel(text)) {
         element.dataset.kwProcessed = 'true';
         return;
       }
