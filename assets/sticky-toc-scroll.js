@@ -6,7 +6,7 @@
   'use strict';
 
   function scrollActiveIntoView() {
-    // Find the TOC container
+    // Find the TOC container (the scrollable element)
     const tocContainer = document.querySelector('.md-sidebar--secondary .md-sidebar__scrollwrap');
     if (!tocContainer) return;
 
@@ -14,10 +14,20 @@
     const activeLink = tocContainer.querySelector('.md-nav__link--active');
     if (!activeLink) return;
 
-    // Scroll it into view with smooth behavior
-    activeLink.scrollIntoView({
-      behavior: 'smooth',
-      block: 'center'
+    // CRITICAL: Scroll ONLY the TOC container, NOT the page
+    // Calculate the active link's position relative to the container
+    const containerRect = tocContainer.getBoundingClientRect();
+    const linkRect = activeLink.getBoundingClientRect();
+
+    // Calculate how much to scroll to center the active link in the container
+    const containerCenter = containerRect.height / 2;
+    const linkCenter = linkRect.top - containerRect.top + (linkRect.height / 2);
+    const scrollOffset = linkCenter - containerCenter;
+
+    // Scroll the container smoothly (NOT the page!)
+    tocContainer.scrollBy({
+      top: scrollOffset,
+      behavior: 'smooth'
     });
   }
 
