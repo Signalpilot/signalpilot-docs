@@ -284,12 +284,19 @@ body::before {
     overflow-y: auto !important; /* Allow vertical scrolling */
     overflow-x: hidden !important; /* Prevent horizontal scrolling */
     -webkit-overflow-scrolling: touch !important; /* Smooth scrolling on iOS */
+    scroll-behavior: smooth !important; /* Smooth auto-scroll to active items */
   }
 
   .md-sidebar__inner {
     height: auto !important;
     min-height: 100% !important; /* Ensure it takes full scrollwrap height minimum */
     overflow: visible !important; /* Content can flow naturally inside scrollwrap */
+  }
+
+  /* Ensure active TOC items scroll into view with proper spacing */
+  .md-nav__link--active {
+    scroll-margin-top: 2rem !important;
+    scroll-margin-bottom: 2rem !important;
   }
 }
 
