@@ -832,12 +832,15 @@ body::before {
    10. TABLE ENHANCEMENTS (Sticky First Column + Scroll Indicators)
    ======================================== */
 
-/* Make content area allow horizontal scroll */
-.md-typeset {
+/* Wrap tables in scrollable container */
+.md-typeset__table {
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1em 0;
 }
 
 /* Table structure with minimum width to trigger scroll */
+.md-typeset__table table,
 .md-typeset table {
   position: relative;
   min-width: 100%;
