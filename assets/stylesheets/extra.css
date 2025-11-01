@@ -221,8 +221,8 @@ body::before {
     3: Sticky table headers (higher than columns)
    10: Top navigation bar (always on top)
    50: Material header search/drawer overlays
-  100: Navigation drawer sidebar
-  200: Drawer overlay backdrop
+  100: Drawer overlay backdrop (behind drawer)
+  200: Navigation drawer sidebar (must be above overlay to be clickable!)
   300: Modals and dialogs
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 
@@ -246,7 +246,7 @@ body::before {
 }
 
 .md-sidebar {
-  z-index: 100 !important; /* Drawer above header */
+  z-index: 200 !important; /* Drawer must be ABOVE overlay to be clickable */
 }
 
 /* CRITICAL: Sticky sidebars - stay visible while scrolling */
@@ -288,7 +288,7 @@ body::before {
 }
 
 .md-overlay {
-  z-index: 200 !important; /* Overlay above drawer */
+  z-index: 100 !important; /* Overlay BEHIND drawer so drawer is clickable */
 }
 
 /* ========================================
