@@ -1152,19 +1152,21 @@ body::before {
   background-color: transparent;
 }
 
-/* Hover state for table rows */
-.md-typeset table tbody tr:hover {
-  background-color: var(--md-typeset-table-color--light);
-  transition: background-color 0.2s ease;
+/* Hover state for table rows - only on devices with hover capability */
+@media (hover: hover) {
+  .md-typeset table tbody tr:hover {
+    background-color: var(--md-typeset-table-color--light);
+    transition: background-color 0.2s ease;
+  }
+
+  [data-md-color-scheme="slate"] .md-typeset table tbody tr:hover {
+    background-color: var(--md-typeset-table-color--light);
+  }
 }
 
 /* Dark mode alternating rows */
 [data-md-color-scheme="slate"] .md-typeset table tbody tr:nth-child(even) {
   background-color: rgba(255, 255, 255, 0.02);
-}
-
-[data-md-color-scheme="slate"] .md-typeset table tbody tr:hover {
-  background-color: var(--md-typeset-table-color--light);
 }
 
 .md-typeset table th:last-child,
@@ -1260,6 +1262,24 @@ body::before {
   .md-typeset table th:not(:first-child),
   .md-typeset table td:not(:first-child) {
     min-width: 120px;
+  }
+
+  /* Ensure sticky first column inherits alternating row colors on mobile */
+  .md-typeset table tbody tr:nth-child(even) td:first-child {
+    background: var(--md-default-fg-color--lightest);
+  }
+
+  .md-typeset table tbody tr:nth-child(odd) td:first-child {
+    background: var(--md-default-bg-color);
+  }
+
+  /* Dark mode sticky column alternating rows */
+  [data-md-color-scheme="slate"] .md-typeset table tbody tr:nth-child(even) td:first-child {
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  [data-md-color-scheme="slate"] .md-typeset table tbody tr:nth-child(odd) td:first-child {
+    background: var(--md-default-bg-color);
   }
 }
 
@@ -2882,6 +2902,17 @@ a:focus-visible {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
 }
 
+/* Mobile adjustments for skip link */
+@media screen and (max-width: 480px) {
+  .md-skip:focus {
+    left: 0.5rem !important;
+    right: 0.5rem !important;
+    padding: 0.75rem 1rem !important;
+    font-size: 0.9rem !important;
+    text-align: center !important;
+  }
+}
+
 /* ========================================
    MOBILE UX ENHANCEMENTS
    ======================================== */
@@ -3018,6 +3049,26 @@ img {
     right: 1.5rem !important;
     width: 44px !important;
     height: 44px !important;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+  .md-top {
+    bottom: 1rem !important;
+    right: 1rem !important;
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+
+/* Landscape mobile - position higher to avoid overlap */
+@media (max-height: 500px) and (orientation: landscape) {
+  .md-top {
+    bottom: 0.75rem !important;
+    right: 0.75rem !important;
+    width: 40px !important;
+    height: 40px !important;
   }
 }
 
