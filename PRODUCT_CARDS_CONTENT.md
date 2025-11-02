@@ -1,4 +1,4 @@
-# 📋 Quick Reference — All Products
+# ⚙️ Settings & Alerts — All Products
 
 Complete settings, alerts, and configuration tables for all Signal Pilot indicators.
 
