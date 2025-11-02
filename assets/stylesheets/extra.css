@@ -355,9 +355,9 @@ body::before {
 
   /* Reduce font size in primary sidebar to fit all items without scrolling */
   .md-sidebar--primary .md-nav__link {
-    font-size: 0.7rem !important; /* Smaller font */
-    line-height: 1.4 !important;
-    padding: 0.3rem 0.6rem !important; /* Much tighter spacing */
+    font-size: 0.6rem !important; /* Very small font */
+    line-height: 1.3 !important;
+    padding: 0.2rem 0.5rem !important; /* Minimal spacing */
     min-height: unset !important; /* Remove min-height constraints */
   }
 
@@ -365,22 +365,37 @@ body::before {
   .md-sidebar--primary .md-nav__item {
     margin: 0 !important;
     padding: 0 !important;
+    line-height: 1.3 !important;
   }
 
   /* Also reduce title/section font sizes in primary sidebar */
   .md-sidebar--primary .md-nav__title {
-    font-size: 0.7rem !important;
-    padding: 0.3rem 0.6rem !important;
+    font-size: 0.6rem !important;
+    padding: 0.2rem 0.5rem !important;
     min-height: unset !important;
+    line-height: 1.3 !important;
   }
 
   .md-sidebar--primary .md-ellipsis {
     font-size: inherit !important;
+    line-height: inherit !important;
   }
 
   /* Override touch device padding for primary sidebar on desktop */
   .md-sidebar--primary .md-nav {
-    font-size: 0.7rem !important;
+    font-size: 0.6rem !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Reduce icon sizes in sidebar as well */
+  .md-sidebar--primary .md-nav__icon {
+    width: 0.8rem !important;
+    height: 0.8rem !important;
+  }
+
+  /* Compact section labels */
+  .md-sidebar--primary label.md-nav__link {
+    padding: 0.2rem 0.5rem !important;
   }
 
   .md-sidebar--secondary {
