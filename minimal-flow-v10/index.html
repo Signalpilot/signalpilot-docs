@@ -1785,346 +1785,638 @@
 </div>
 
 <!-- Render the page content -->
-<h1 id="volume-oracle-v10-ultimate-volume-intelligence-system">Volume Oracle v1.0 Ultimate - Volume Intelligence System<a class="headerlink" href="#volume-oracle-v10-ultimate-volume-intelligence-system" title="Permanent link">&para;</a></h1>
-<h2 id="what-does-it-do">🎯 What Does It Do?<a class="headerlink" href="#what-does-it-do" title="Permanent link">&para;</a></h2>
-<p><span style="color: #0aa1d5; font-weight: 600;">Core Functionality</span></p>
-<p>Volume Oracle is your <strong>potential volume spike detector with built-in position management</strong>. It shows you when smart money may be moving (potential volume spikes), indicates the direction is real (flow consistency), and manages your entire trade from entry to exit.</p>
-<p><strong>Best for:</strong> Volume traders, systematic traders, anyone serious about risk management</p>
+<h1 id="volume-oracle-v10-volume-intelligence-position-tracking">Volume Oracle v1.0 — Volume Intelligence &amp; Position Tracking</h1>
+<p>Three-system volume analysis indicator. Combines Volume Flow analysis, Volume Zone detection, and Position Manager tracking in single integrated tool.</p>
 <hr />
-<h2 id="core-concept-volume-truth">Core Concept: Volume = Truth<a class="headerlink" href="#core-concept-volume-truth" title="Permanent link">&para;</a></h2>
-<p><span style="color: #0aa1d5; font-weight: 600; font-size: 1.1em;">💡 Core Philosophy - Volume Shows Intent</span></p>
-<p>Price can lie. Volume cannot.</p>
-<p><strong>The System:</strong>
-1. <strong>Detects potential volume spikes</strong> (Z-score method - statistically significant)
-2. <strong>Confirms direction</strong> (volume + price are required to agree)
-3. <strong>Checks market regime</strong> (trending or ranging?)
-4. <strong>Verifies higher timeframe</strong> (HTF confirms direction?)
-5. <strong>Manages your position</strong> (entry, partials, stops, exits)</p>
-<p><strong>Result:</strong> Potential high-probability signals with automatic risk management</p>
+<h2 id="core-functionality">🎯 Core Functionality</h2>
+<p>Volume Oracle provides three distinct systems working together:</p>
+<p><strong>System 1: Volume Flow</strong><br />
+- Analyzes buying vs selling pressure through volume<br />
+- Displays color-coded volume bars (green = buying, red = selling)<br />
+- Tracks cumulative volume momentum</p>
+<p><strong>System 2: Volume Zones</strong><br />
+- Identifies high-volume consolidation areas<br />
+- Marks zones where significant volume accumulated<br />
+- Displays as horizontal boxes on chart</p>
+<p><strong>System 3: Position Manager</strong><br />
+- Tracks entry price and current position P&amp;L<br />
+- Displays breakeven line and profit/loss metrics<br />
+- Updates in real-time with price movement</p>
+<p><strong>Unique Feature:</strong> Position Manager system provides live position tracking directly on chart, showing real-time profit/loss from marked entry.</p>
+<p><strong>Timeframe Compatibility:</strong> Works on all timeframes.</p>
 <hr />
-<h2 id="the-main-signals-what-you-see">The Main Signals (What You See)<a class="headerlink" href="#the-main-signals-what-you-see" title="Permanent link">&para;</a></h2>
-<p><span style="color: #10b981; font-weight: 600; font-size: 1.1em;">📊 Signal Components</span></p>
-<h3 id="volume-histogram-bottom-pane">Volume Histogram (Bottom Pane)<a class="headerlink" href="#volume-histogram-bottom-pane" title="Permanent link">&para;</a></h3>
-<p><span style="color: #f59e0b; font-weight: 600;">📊 Volume Visualization - Spot the Spikes</span></p>
-<p><strong>What you see:</strong> Bars showing volume</p>
-<p><strong>Colors:</strong>
-- <strong>Green</strong> = Buying pressure
-- <strong>Red</strong> = Selling pressure
-- <strong>Bright green/red</strong> = SPIKE detected (Z-score &gt; threshold)</p>
-<p><strong>What to watch:</strong> Bright colored spikes = Smart money moving</p>
-<hr />
-<h3 id="buysell-signals">Buy/Sell Signals<a class="headerlink" href="#buysell-signals" title="Permanent link">&para;</a></h3>
-<p><span style="color: #10b981; font-weight: 600;">🎯 Entry Signals - Volume-Confirmed Direction</span></p>
-<p><strong>BUY Signal</strong> (green label + arrow)
-- Potential volume spike detected
-- Buyers potentially dominating (positive flow)
-- Bullish price bar
-- Regime potentially confirms (or neutral)
-- Optional: HTF aligned</p>
-<p><strong>SELL Signal</strong> (red label + arrow)
-- Potential volume spike detected
-- Sellers potentially dominating (negative flow)
-- Bearish price bar
-- Regime potentially confirms (or neutral)
-- Optional: HTF aligned</p>
-<hr />
-<h3 id="quality-scores">Quality Scores ⭐⭐⭐<a class="headerlink" href="#quality-scores" title="Permanent link">&para;</a></h3>
-<p><span style="color: #a855f7; font-weight: 600;">⭐ Signal Quality Ratings - 0-100 Score</span></p>
-<p>Each signal gets rated 0-100:</p>
-<p><strong>⭐⭐⭐ Elite (80-100)</strong>
-- All factors aligned
-- Multi-timeframe confirmation
-- Strong volume spike
-- <strong>Quality:</strong> Highest confluence signals</p>
-<p><strong>⭐⭐ Premium (60-79)</strong>
-- Most factors good
-- <strong>Quality:</strong> Strong signals with good confluence</p>
-<p><strong>⭐ Standard (40-59)</strong>
-- Basic setup
-- <strong>Quality:</strong> Acceptable setups</p>
-<hr />
-<h2 id="position-management-the-power-feature">Position Management (The Power Feature)<a class="headerlink" href="#position-management-the-power-feature" title="Permanent link">&para;</a></h2>
-<p><span style="color: #dc2626; font-weight: 600; font-size: 1.1em;">🔥 Automated Risk Management - Entry to Exit</span></p>
-<h3 id="entry">Entry<a class="headerlink" href="#entry" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Signal fires → System calculates position size</li>
-<li>Based on your account size + risk % setting</li>
-<li>Shows entry price line on chart</li>
-</ul>
-<h3 id="stop-loss">Stop Loss<a class="headerlink" href="#stop-loss" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Automatically calculated (ATR-based)</li>
-<li>Default: 2.0× ATR</li>
-<li>Shown as dotted line</li>
-</ul>
-<h3 id="take-profit-1-tp1">Take Profit 1 (TP1)<a class="headerlink" href="#take-profit-1-tp1" title="Permanent link">&para;</a></h3>
-<ul>
-<li>First target (default: 3.0× ATR)</li>
-<li>Take 50% off here (locks in profit)</li>
-<li>Shown as dashed line</li>
-</ul>
-<h3 id="trailing-stop">Trailing Stop<a class="headerlink" href="#trailing-stop" title="Permanent link">&para;</a></h3>
-<ul>
-<li>After TP1 hit, remaining 50% trails</li>
-<li>Default: 2% trailing stop</li>
-<li>Protects profits, catches runners</li>
-</ul>
-<h3 id="breakeven">Breakeven<a class="headerlink" href="#breakeven" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Optional: After TP1, move stop to entry</li>
-<li>Eliminates risk on remaining position</li>
-</ul>
-<h3 id="exit">Exit<a class="headerlink" href="#exit" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Opposite signal fires = Full exit</li>
-<li>Stop hit = Full exit</li>
-<li>Manual override anytime</li>
-</ul>
-<hr />
-<h2 id="usage-patterns-3-core-components">Usage Patterns (3 Core Components)<a class="headerlink" href="#usage-patterns-3-core-components" title="Permanent link">&para;</a></h2>
-<p><span style="color: #0aa1d5; font-weight: 600; font-size: 1.1em;">🎓 Essential Setup Guide</span></p>
-<h3 id="component-1-configuration-settings">Component 1: Configuration Settings<a class="headerlink" href="#component-1-configuration-settings" title="Permanent link">&para;</a></h3>
-<p><span style="color: #ff6b35; font-weight: 600;">⚙️ Configuration - Parameter Selection</span></p>
-<p><strong>Account Settings:</strong>
-- <strong>Account Size:</strong> Capital allocation (e.g., $10,000)
-- <strong>Risk Per Trade:</strong> 1.0% (conservative) to 2.0% (moderate)</p>
-<p><strong>Signal Settings:</strong>
-- <strong>Z-Threshold:</strong> 2.5 (default, works for most contexts)
-  - Lower values = More signals (2.0 for scalping)
-  - Higher values = Fewer signals (3.0 for swing)
-- <strong>Minimum Quality:</strong> 60 (Premium+ only for beginners)</p>
-<p><strong>Strategy Mode:</strong>
-- <strong>Trend Following</strong> (default) = Trading WITH the trend
-- <strong>Mean Reversion</strong> = Fading extremes (advanced)
-- <strong>Hybrid</strong> = Automatic adaptation</p>
-<hr />
-<h3 id="component-2-signal-recognition">Component 2: Signal Recognition<a class="headerlink" href="#component-2-signal-recognition" title="Permanent link">&para;</a></h3>
-<p><span style="color: #10b981; font-weight: 600;">👀 Signal Observation - Key Indicators</span></p>
-<p><strong>Observable elements:</strong>
-1. Volume histogram brightness increases (bright green/red spike)
-2. Signal label appears (BUY or SELL)
-3. Quality score displays (⭐⭐ or ⭐⭐⭐ preferred)
-4. Entry price line renders on chart</p>
-<p><strong>Signal information provided:</strong>
-- Entry timing: signal bar close or next bar open
-- Position size calculation is displayed
-- Stop and TP1 levels are marked on chart</p>
-<hr />
-<h3 id="component-3-trade-management-patterns">Component 3: Trade Management Patterns<a class="headerlink" href="#component-3-trade-management-patterns" title="Permanent link">&para;</a></h3>
-<p><span style="color: #a855f7; font-weight: 600;">📈 Trade Management - Visual Guidance</span></p>
-<p><strong>System display elements:</strong>
-- Green/Red line = Entry price
-- Dotted line = Stop loss
-- Dashed line = TP1 target
-- Label displays current P&amp;L</p>
-<p><strong>Common trade structure:</strong>
-1. Entry considerations occur at entry price level
-2. Stop placement occurs at the dotted line level
-3. Partial profit target: 50% at TP1 (dashed line)
-4. Trailing stop approach: remaining 50% with 2% trail
-5. Exit considerations: opposite signal or stop hit</p>
-<p><strong>The system provides calculations for evaluation purposes.</strong></p>
-<hr />
-<h2 id="real-example-bitcoin">Real Example (Bitcoin)<a class="headerlink" href="#real-example-bitcoin" title="Permanent link">&para;</a></h2>
-<p><strong>Setup:</strong>
-- Price: $64,000
-- You're watching 15m chart
-- Account: $10,000, Risk: 1%</p>
-<p><strong>Signal Fires:</strong>
-- <strong>BUY</strong> signal at $64,200
-- Quality: 87 ⭐⭐⭐ (Elite)
-- Volume spike: Z = 3.4 (very strong)
-- Position size: 0.15 BTC (calculated by system)
-- Stop: $63,000 (1,200 below entry)
-- TP1: $67,800 (3,600 above entry, 3:1 R:R)</p>
-<p><strong>The Trade:</strong>
-1. You enter long at $64,200 (0.15 BTC)
-2. Stop can be set at $63,000
-3. Price rallies to $67,800 → TP1 hit
-4. You take 50% off (0.075 BTC) = +$270 locked
-5. Stop can be moved to breakeven ($64,200)
-6. Remaining 0.075 BTC trails
-7. Price continues to $70,000
-8. Trailing stop hits at $69,200 (2% trail)
-9. You exit remaining 0.075 BTC = +$375 more</p>
-<p><strong>Total:</strong> $270 + $375 = $645 profit (6.45% on account, 64.5:1 R:R on risk)</p>
-<hr />
-<h2 id="strategy-modes-pick-your-style">Strategy Modes (Pick Your Style)<a class="headerlink" href="#strategy-modes-pick-your-style" title="Permanent link">&para;</a></h2>
-<h3 id="trend-following-default">Trend Following (Default)<a class="headerlink" href="#trend-following-default" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Only trades WITH the regime</li>
-<li>Bullish regime → Long signals only</li>
-<li>Bearish regime → Short signals only</li>
-<li><strong>Best for:</strong> Breakout traders, momentum traders</li>
-</ul>
-<h3 id="mean-reversion">Mean Reversion<a class="headerlink" href="#mean-reversion" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Trades against temporary extremes</li>
-<li>Buy oversold spikes</li>
-<li>Sell overbought spikes</li>
-<li><strong>Best for:</strong> Range traders, contrarians</li>
-</ul>
-<h3 id="hybrid">Hybrid<a class="headerlink" href="#hybrid" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Adapts based on market state</li>
-<li>Strong regime → Trend following</li>
-<li>Weak regime → Mean reversion</li>
-<li><strong>Best for:</strong> Flexible traders</li>
-</ul>
-<hr />
-<h2 id="settings-configuration-approach">Settings (Configuration Approach)<a class="headerlink" href="#settings-configuration-approach" title="Permanent link">&para;</a></h2>
-<p><strong>Core Settings:</strong>
-- <strong>Z-Threshold:</strong> 2.5 (default)
-- <strong>Flow Ratio:</strong> 0.65 (default)
-- <strong>Min Quality Score:</strong> 60 (Premium+)</p>
-<p><strong>Risk Management:</strong>
-- <strong>Account Size:</strong> Capital allocation
-- <strong>Risk %:</strong> 1.0% (default)
-- <strong>ATR Stop:</strong> 2.0× (default)
-- <strong>ATR Target:</strong> 3.0× (default)
-- <strong>Partial Exit:</strong> 50% (default)
-- <strong>Trailing Stop:</strong> 2.0% (default)</p>
-<p><strong>Advanced:</strong>
-- <strong>Strategy Mode:</strong> Trend Following
-- <strong>Regime Mode:</strong> Balanced
-- <strong>HTF Alignment:</strong> Optional (typically enabled for swing trading)</p>
-<p><strong>Most traders use default settings and adjust Account Size + Risk % to personal parameters</strong></p>
-<hr />
-<h2 id="alert-configuration">Alert Configuration<a class="headerlink" href="#alert-configuration" title="Permanent link">&para;</a></h2>
-<ol>
-<li><strong>Bull Signal</strong> - Entry alert for longs</li>
-<li><strong>Bear Signal</strong> - Entry alert for shorts</li>
-<li><strong>T1 Hit</strong> - Partial profit reminder</li>
-<li><strong>Exit Warning</strong> - Opposite signal or stop approach notification</li>
-<li><strong>Regime Weakening</strong> - Trend momentum loss indication</li>
-</ol>
-<p><strong>Configuration steps:</strong>
-1. Alarm icon is clicked
-2. "Volume Oracle v1.0" is selected
-3. Alert type is chosen
-4. "Once Per Bar Close" is set</p>
-<hr />
-<h2 id="common-pitfalls">Common Pitfalls<a class="headerlink" href="#common-pitfalls" title="Permanent link">&para;</a></h2>
-<p><span style="color: #dc2626; font-weight: 600; font-size: 1.1em;">🚨 Critical Learning Points</span></p>
-<p>❌ <strong>Disregarding calculated stops</strong>
-→ ✅ Stop calculations have algorithmic basis. Stop adjustment = emotion-based trading pattern</p>
-<p>❌ <strong>Omitting T1 partial exits</strong>
-→ ✅ 50% exit at TP1 is the standard profit-locking approach</p>
-<p>❌ <strong>Using on Forex spot markets</strong>
-→ ✅ Volume data requirement exists. Futures, stocks, crypto are suitable. Forex spot lacks volume data.</p>
-<p>❌ <strong>Trading all signals indiscriminately</strong>
-→ ✅ ⭐⭐⭐ Elite and ⭐⭐ Premium signal focus is recommended during learning phase</p>
-<p>❌ <strong>Risk % misalignment with personal comfort</strong>
-→ ✅ Risk % commonly matches personal tolerance levels (0.5% to 1.5% range adjustment based on comfort)</p>
-<hr />
-<h2 id="frequently-asked-questions">❓ Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permanent link">&para;</a></h2>
-<p><span style="color: #10b981; font-weight: 600;">Common Questions</span></p>
-<p><strong>Q: Do I need to enable position management?</strong>
-<strong>A:</strong> No. You can use signals only and manage manually. But position management is the power feature - highly recommended.</p>
-<p><strong>Q: Does this work on Forex?</strong>
-<strong>A:</strong> Only Forex futures (CME) or CFDs with volume. Spot Forex (OANDA, etc.) has NO volume → won't work.</p>
-<p><strong>Q: What Z-threshold is commonly used?</strong>
-<strong>A:</strong>
-- Scalpers: 2.0 (more signals)
-- Day traders: 2.5 (balanced)
-- Swing traders: 3.0 (fewer, stronger)</p>
-<p><strong>Q: How often do potential Elite signals appear?</strong>
-<strong>A:</strong>
-- 15m chart: 1-2 per day
-- 1H chart: 2-4 per week
-- 4H chart: 1-2 per week</p>
-<p><strong>Q: What if I miss the entry?</strong>
-<strong>A:</strong> Skip it. Chasing is typically not recommended. Wait for next signal. Chasing = worse entry = worse R:R.</p>
-<p><strong>Q: Does it repaint?</strong>
-<strong>A:</strong> No. All signals lock at bar close. What you see is what you get.</p>
-<hr />
-<h2 id="quick-cheat-sheet">Quick Cheat Sheet<a class="headerlink" href="#quick-cheat-sheet" title="Permanent link">&para;</a></h2>
+<h2 id="educational-example-position-tracking-december-2024">📊 Educational Example: Position Tracking (December 2024)</h2>
+<p><em>(Historical observation for educational purposes only. Not financial advice. Past performance does not indicate future results.)</em></p>
+<p><strong>Scenario:</strong> Bitcoin position entry at $64,000</p>
+<p><strong>Position Manager Display:</strong></p>
 <table>
 <thead>
 <tr>
-<th>Quality</th>
-<th>Score</th>
-<th>Confluence</th>
-<th>Action</th>
+<th>Time</th>
+<th>Price</th>
+<th>P&amp;L</th>
+<th>Status</th>
+<th>Display</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>⭐⭐⭐ Elite</td>
-<td>80-100</td>
-<td>Highest</td>
-<td>Take every time</td>
+<td>Entry</td>
+<td>$64,000</td>
+<td>$0</td>
+<td>Breakeven</td>
+<td>Breakeven line at $64,000</td>
 </tr>
 <tr>
-<td>⭐⭐ Premium</td>
-<td>60-79</td>
-<td>Strong</td>
-<td>Take with confidence</td>
+<td>+2 hours</td>
+<td>$64,500</td>
+<td>+$500</td>
+<td>Profit</td>
+<td>Green P&amp;L: +0.78%</td>
 </tr>
 <tr>
-<td>⭐ Standard</td>
-<td>40-59</td>
-<td>Acceptable</td>
-<td>Be selective</td>
+<td>+6 hours</td>
+<td>$65,200</td>
+<td>+$1,200</td>
+<td>Profit</td>
+<td>Green P&amp;L: +1.88%</td>
 </tr>
 <tr>
-<td>Weak</td>
-<td>0-39</td>
-<td>Low</td>
-<td>Skip</td>
+<td>+12 hours</td>
+<td>$63,800</td>
+<td>-$200</td>
+<td>Loss</td>
+<td>Red P&amp;L: -0.31%</td>
+</tr>
+<tr>
+<td>+24 hours</td>
+<td>$66,100</td>
+<td>+$2,100</td>
+<td>Profit</td>
+<td>Green P&amp;L: +3.28%</td>
 </tr>
 </tbody>
 </table>
+<p><strong>Position Manager Benefit:</strong> Live tracking eliminates manual P&amp;L calculation. Breakeven line provides visual reference. Color-coded metrics show profit (green) or loss (red) instantly.</p>
+<p><em>This example demonstrates position tracking capability. Individual outcomes vary.</em></p>
+<hr />
+<h2 id="settings">⚙️ Settings</h2>
+<h3 id="system-toggle-options">System Toggle Options</h3>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>On/Off</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Volume Flow</strong></td>
+<td>✓</td>
+<td>Color-coded volume bars</td>
+</tr>
+<tr>
+<td><strong>Volume Zones</strong></td>
+<td>✓</td>
+<td>High-volume consolidation areas</td>
+</tr>
+<tr>
+<td><strong>Position Manager</strong></td>
+<td>✓</td>
+<td>Entry tracking and P&amp;L display</td>
+</tr>
+</tbody>
+</table>
+<p>Each system can be enabled/disabled independently.</p>
+<h3 id="volume-flow-configuration">Volume Flow Configuration</h3>
 <table>
 <thead>
 <tr>
 <th>Setting</th>
-<th>Conservative</th>
-<th>Moderate</th>
-<th>Aggressive</th>
+<th>Options</th>
+<th>Default</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Risk %</td>
-<td>0.5-1.0%</td>
-<td>1.0-1.5%</td>
-<td>2.0-3.0%</td>
+<td><strong>Calculation Method</strong></td>
+<td>Standard, Weighted, Tick</td>
+<td>Standard</td>
 </tr>
 <tr>
-<td>Z-Threshold</td>
-<td>3.0</td>
-<td>2.5</td>
-<td>2.0</td>
+<td><strong>Smoothing Period</strong></td>
+<td>1-50</td>
+<td>9</td>
 </tr>
 <tr>
-<td>Min Quality</td>
-<td>80 (Elite)</td>
-<td>60 (Premium+)</td>
-<td>40 (Standard+)</td>
+<td><strong>Color Scheme</strong></td>
+<td>Multiple palettes</td>
+<td>Green/Red</td>
+</tr>
+</tbody>
+</table>
+<h3 id="volume-zones-configuration">Volume Zones Configuration</h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Options</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Volume Threshold</strong></td>
+<td>Low, Medium, High, Custom</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td><strong>Zone Display</strong></td>
+<td>Boxes, Lines, Both</td>
+<td>Boxes</td>
+</tr>
+<tr>
+<td><strong>Historical Zones</strong></td>
+<td>5, 10, 20, All</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<h3 id="position-manager-configuration">Position Manager Configuration</h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Options</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Entry Method</strong></td>
+<td>Manual, Auto (at signal)</td>
+<td>Manual</td>
+</tr>
+<tr>
+<td><strong>Display Format</strong></td>
+<td>Percentage, Points, Both</td>
+<td>Both</td>
+</tr>
+<tr>
+<td><strong>Breakeven Line</strong></td>
+<td>Show/Hide</td>
+<td>Show</td>
+</tr>
+<tr>
+<td><strong>P&amp;L Updates</strong></td>
+<td>Real-time, Bar close</td>
+<td>Real-time</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
-<p><span style="color: #10b981; font-weight: 600; font-size: 1.1em;">✅ Recommended Approach</span></p>
-<ol>
-<li><strong>Stop adherence</strong> - Calculated stop levels are designed to be respected</li>
-<li><strong>TP1 partial execution</strong> - Partial exits at TP1 serve the profit-locking function</li>
-<li><strong>Risk-comfort alignment</strong> - 1% default, with adjustments to personal tolerance levels</li>
-<li><strong>Timeframe appropriateness</strong> - Scalpers: 5m-15m, Day traders: 1H, Swing: 4H-Daily</li>
-<li><strong>Statistical tracking</strong> - Win rate by quality tier analysis provides performance feedback</li>
-<li><strong>System-calculated reliance</strong> - Position sizing calculations are provided for execution</li>
-</ol>
+<h2 id="system-1-volume-flow">📊 System 1: Volume Flow</h2>
+<h3 id="visual-display">Visual Display</h3>
+<p><strong>Volume Histogram:</strong> Colored bars in panel below price chart</p>
+<p><strong>Color Coding:</strong><br />
+- <strong>Green bars:</strong> Buying pressure detected (volume + price up)<br />
+- <strong>Red bars:</strong> Selling pressure detected (volume + price down)<br />
+- <strong>Gray bars:</strong> Neutral volume (low conviction movement)</p>
+<p><strong>Height:</strong> Bar height represents volume magnitude</p>
+<h3 id="volume-flow-logic">Volume Flow Logic</h3>
+<p><strong>Buying Pressure (Green) Detected When:</strong><br />
+- Price closes higher than open<br />
+- Volume above average<br />
+- Positive price momentum</p>
+<p><strong>Selling Pressure (Red) Detected When:</strong><br />
+- Price closes lower than open<br />
+- Volume above average<br />
+- Negative price momentum</p>
+<p><strong>Neutral (Gray) When:</strong><br />
+- Volume below average, or<br />
+- Price movement small relative to volume, or<br />
+- Conflicting price/volume relationship</p>
+<h3 id="example-pattern">Example Pattern</h3>
+<pre><code>Price: $100 → $105 on 2M volume (average: 1M)
+Volume Flow: Large green bar
+Interpretation: Strong buying pressure detected
+</code></pre>
+<h3 id="divergence-detection">Divergence Detection</h3>
+<p><strong>Bullish Divergence Pattern:</strong><br />
+- Price makes lower low<br />
+- Volume Flow shows less red (or green) on second low<br />
+- Interpretation: Selling pressure weakening</p>
+<p><strong>Bearish Divergence Pattern:</strong><br />
+- Price makes higher high<br />
+- Volume Flow shows less green (or red) on second high<br />
+- Interpretation: Buying pressure weakening</p>
 <hr />
-<h2 id="support">Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
-<p>Additional resources available:
-- <a href="https://docs.signalpilot.io/suite-index/"><span class="signal-pilot-brand">Signal Pilot</span> Suite Overview</a> - Indicator combination strategies
-- <a href="../ref-workflow/">Suite Workflow</a> - Complete trading system
-- <a href="../about-support/">Support</a> - Support resources</p>
+<h2 id="system-2-volume-zones">📊 System 2: Volume Zones</h2>
+<h3 id="visual-display_1">Visual Display</h3>
+<p><strong>Zone Appearance:</strong> Horizontal shaded boxes on price chart</p>
+<p><strong>Color Coding:</strong><br />
+- <strong>Blue zones:</strong> High-volume accumulation areas<br />
+- <strong>Opacity:</strong> Darker = more volume, Lighter = less volume</p>
+<h3 id="zone-formation-logic">Zone Formation Logic</h3>
+<p><strong>Zones Form When:</strong><br />
+1. Price consolidates in narrow range<br />
+2. High volume trades in that range<br />
+3. Multiple bars cluster at similar price level<br />
+4. Volume threshold exceeded</p>
+<p><strong>Zone Characteristics:</strong><br />
+- Upper boundary: Highest price in consolidation<br />
+- Lower boundary: Lowest price in consolidation<br />
+- Strength: Determined by total volume in range</p>
+<h3 id="zone-interpretation-patterns">Zone Interpretation Patterns</h3>
+<p><strong>Pattern 1: Support at Zone</strong></p>
+<pre><code>Price declines → Reaches volume zone → Bounces
+Interpretation: Volume zone acting as support
+</code></pre>
+<p><strong>Pattern 2: Resistance at Zone</strong></p>
+<pre><code>Price rallies → Reaches volume zone → Reverses
+Interpretation: Volume zone acting as resistance
+</code></pre>
+<p><strong>Pattern 3: Breakout from Zone</strong></p>
+<pre><code>Price at zone → Breaks through → Continues direction
+Interpretation: Zone broken, level no longer relevant
+</code></pre>
+<p><strong>Pattern 4: Retest After Break</strong></p>
+<pre><code>Price breaks zone → Returns to test zone → Continues
+Interpretation: Successful retest of broken level
+</code></pre>
+<h3 id="example">Example</h3>
+<p><strong>Bitcoin Volume Zone:</strong><br />
+- Zone formed: $63,000 - $63,500 (high volume consolidation)<br />
+- Total volume: 15,000 BTC traded in range<br />
+- Price action: Declined to $63,100 (zone), bounced to $65,000<br />
+- Interpretation: Volume zone provided support characteristics</p>
 <hr />
-<p><strong>Summary:</strong> Volume Oracle detects when smart money may be moving, indicates directional validity, and provides complete trade management framework. Execution of displayed parameters is the implementation approach.</p>
-<p><strong>Volume-based analysis with systematic risk management</strong> 🎯</p>
+<h2 id="system-3-position-manager">📊 System 3: Position Manager</h2>
+<h3 id="visual-display_2">Visual Display</h3>
+<p><strong>On-Chart Elements:</strong><br />
+1. <strong>Entry Line:</strong> Horizontal line at entry price (blue dashed)<br />
+2. <strong>Breakeven Label:</strong> Shows entry price on price axis<br />
+3. <strong>P&amp;L Box:</strong> Displays current profit/loss in corner<br />
+4. <strong>Current Price Line:</strong> Updates in real-time</p>
+<h3 id="setting-entry-price">Setting Entry Price</h3>
+<p><strong>Method 1: Manual Entry</strong><br />
+1. Open indicator settings<br />
+2. Navigate to Position Manager section<br />
+3. Enter entry price manually<br />
+4. Click Apply</p>
+<p><strong>Method 2: Auto-Mark (with other Signal Pilot indicators)</strong><br />
+- Set to auto-mark entry when TD Sequential, Pentarch, or other signals fire<br />
+- Entry line appears automatically at signal price</p>
+<h3 id="pl-display-format">P&amp;L Display Format</h3>
+<p><strong>Metrics Shown:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Display Item</th>
+<th>Format</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Entry Price</strong></td>
+<td>Dollar amount</td>
+<td>Entry: $64,000</td>
+</tr>
+<tr>
+<td><strong>Current Price</strong></td>
+<td>Dollar amount</td>
+<td>Now: $65,200</td>
+</tr>
+<tr>
+<td><strong>P&amp;L (Points)</strong></td>
+<td>+/- points</td>
+<td>+1,200 points</td>
+</tr>
+<tr>
+<td><strong>P&amp;L (%)</strong></td>
+<td>Percentage</td>
+<td>+1.88%</td>
+</tr>
+<tr>
+<td><strong>Color</strong></td>
+<td>Green (profit) / Red (loss)</td>
+<td>Green</td>
+</tr>
+</tbody>
+</table>
+<h3 id="real-time-updates">Real-Time Updates</h3>
+<p><strong>Update Frequency:</strong><br />
+- Real-time mode: Updates every tick<br />
+- Bar close mode: Updates at bar close only</p>
+<p><strong>Visual Feedback:</strong><br />
+- Profit: Green text and metrics<br />
+- Loss: Red text and metrics<br />
+- Breakeven: Blue/gray neutral color</p>
+<h3 id="position-management-applications">Position Management Applications</h3>
+<p><strong>Use Case 1: Stop Loss Reference</strong><br />
+- Mark entry price<br />
+- Calculate stop loss distance<br />
+- Monitor drawdown in real-time<br />
+- Example: Entry $100, stop at $98, current P&amp;L shows -1.5% = near stop</p>
+<p><strong>Use Case 2: Profit Target Tracking</strong><br />
+- Mark entry price<br />
+- Set mental profit target (e.g., +5%)<br />
+- Watch P&amp;L percentage approach target<br />
+- Example: Entry $100, target +5%, P&amp;L shows +4.8% = near target</p>
+<p><strong>Use Case 3: Multiple Timeframe Monitoring</strong><br />
+- Open multiple charts (15m, 1H, 4H)<br />
+- Apply Position Manager to each<br />
+- Same entry price, different timeframe context<br />
+- Track position across multiple perspectives</p>
+<p><strong>Use Case 4: Session P&amp;L Tracking</strong><br />
+- Mark entry at session start<br />
+- Monitor P&amp;L throughout session<br />
+- Clear visual reference for session performance</p>
+<hr />
+<h2 id="educational-example-combined-three-system-analysis">📖 Educational Example: Combined Three-System Analysis</h2>
+<p><em>(Historical observation for educational purposes only. Not financial advice. Past performance does not indicate future results.)</em></p>
+<p><strong>Asset:</strong> S&amp;P 500 Futures (ES)<br />
+<strong>Timeframe:</strong> 5-Minute Chart<br />
+<strong>Date:</strong> January 10, 2025</p>
+<h3 id="setup-conditions-1030-am">Setup Conditions (10:30 AM)</h3>
+<p><strong>System 1 - Volume Flow:</strong><br />
+- Large green volume bar at 10:30 AM<br />
+- Previous 5 bars: mostly red/neutral<br />
+- Pattern: Buying pressure emerging after selling period</p>
+<p><strong>System 2 - Volume Zones:</strong><br />
+- Volume zone present: 4,710 - 4,720<br />
+- High volume consolidated in this range previous day<br />
+- Current price: 4,715 (inside zone)</p>
+<p><strong>System 3 - Position Manager:</strong><br />
+- Entry marked at 4,715<br />
+- Breakeven line displayed<br />
+- P&amp;L tracking activated</p>
+<h3 id="sequence-observed">Sequence Observed</h3>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Price</th>
+<th>Volume Flow</th>
+<th>P&amp;L</th>
+<th>Analysis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10:30</td>
+<td>4,715</td>
+<td>Large green</td>
+<td>Entry</td>
+<td>Buying pressure + inside volume zone</td>
+</tr>
+<tr>
+<td>10:45</td>
+<td>4,722</td>
+<td>Green</td>
+<td>+7 pts (+0.15%)</td>
+<td>Momentum continues</td>
+</tr>
+<tr>
+<td>11:15</td>
+<td>4,728</td>
+<td>Green</td>
+<td>+13 pts (+0.28%)</td>
+<td>Break above volume zone</td>
+</tr>
+<tr>
+<td>11:45</td>
+<td>4,735</td>
+<td>Green</td>
+<td>+20 pts (+0.42%)</td>
+<td>Continued buying</td>
+</tr>
+<tr>
+<td>12:30</td>
+<td>4,742</td>
+<td>Red</td>
+<td>+27 pts (+0.57%)</td>
+<td>Selling pressure appears</td>
+</tr>
+<tr>
+<td>1:00</td>
+<td>4,738</td>
+<td>Red/Gray</td>
+<td>+23 pts (+0.49%)</td>
+<td>P&amp;L tracking shows pullback</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Outcome:</strong> +27 point peak move from entry. Position Manager tracked real-time P&amp;L throughout sequence.</p>
+<p><strong>Three-System Integration:</strong><br />
+- Volume Flow identified entry timing (buying pressure)<br />
+- Volume Zone provided context (support area)<br />
+- Position Manager tracked performance (live P&amp;L)</p>
+<p><em>This example demonstrates integrated three-system analysis. Individual interpretation and outcomes vary.</em></p>
+<hr />
+<h2 id="alert-configuration">🔔 Alert Configuration</h2>
+<p><strong>Available Alerts:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Alert Type</th>
+<th>Trigger</th>
+<th>Notification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>High Buying Volume</strong></td>
+<td>Large green volume bar appears</td>
+<td>"Volume Oracle: Strong buying detected"</td>
+</tr>
+<tr>
+<td><strong>High Selling Volume</strong></td>
+<td>Large red volume bar appears</td>
+<td>"Volume Oracle: Strong selling detected"</td>
+</tr>
+<tr>
+<td><strong>Zone Touch</strong></td>
+<td>Price reaches volume zone</td>
+<td>"Volume Oracle: Price at volume zone"</td>
+</tr>
+<tr>
+<td><strong>Zone Break</strong></td>
+<td>Price breaks through zone</td>
+<td>"Volume Oracle: Volume zone broken"</td>
+</tr>
+<tr>
+<td><strong>P&amp;L Threshold</strong></td>
+<td>Position reaches % target</td>
+<td>"Volume Oracle: +5% profit target reached"</td>
+</tr>
+<tr>
+<td><strong>Breakeven Return</strong></td>
+<td>Price returns to entry</td>
+<td>"Volume Oracle: Back at breakeven"</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Alert Setup:</strong><br />
+1. Open indicator settings<br />
+2. Navigate to alert section<br />
+3. Enable desired alert types<br />
+4. Set thresholds (volume size, P&amp;L percentages)<br />
+5. Configure notification method</p>
+<hr />
+<h2 id="frequently-asked-questions">❓ Frequently Asked Questions</h2>
+<h3 id="q-can-position-manager-track-multiple-positions">Q: Can Position Manager track multiple positions?</h3>
+<p><strong>A:</strong> Current version tracks one position at a time. To track multiple positions, open multiple chart windows with Volume Oracle on each.</p>
+<h3 id="q-does-position-manager-work-for-both-long-and-short-positions">Q: Does Position Manager work for both long and short positions?</h3>
+<p><strong>A:</strong> Yes. Enter entry price for either direction. P&amp;L calculates correctly based on price movement relative to entry.</p>
+<h3 id="q-can-i-hide-position-manager-but-keep-volume-flow-and-zones">Q: Can I hide Position Manager but keep Volume Flow and Zones?</h3>
+<p><strong>A:</strong> Yes. Each system can be toggled independently in settings.</p>
+<h3 id="q-do-volume-zones-repaint">Q: Do Volume Zones repaint?</h3>
+<p><strong>A:</strong> No. Once zone formed and conditions confirmed, zone remains fixed. Does not change retroactively.</p>
+<h3 id="q-whats-the-difference-between-volume-flow-and-regular-volume">Q: What's the difference between Volume Flow and regular volume?</h3>
+<p><strong>A:</strong> Regular volume shows magnitude only. Volume Flow analyzes direction (buying vs selling pressure) through price-volume relationship and displays color-coded interpretation.</p>
+<h3 id="q-how-many-historical-volume-zones-display">Q: How many historical volume zones display?</h3>
+<p><strong>A:</strong> Configurable in settings. Default shows last 10 zones. Options: 5, 10, 20, or all historical zones.</p>
+<h3 id="q-can-volume-oracle-detect-institutional-activity">Q: Can Volume Oracle detect institutional activity?</h3>
+<p><strong>A:</strong> Volume zones identify areas where large volume accumulated, which may include institutional activity. However, specific participant identification not possible from volume data alone.</p>
+<h3 id="q-does-position-manager-account-for-feescommissions">Q: Does Position Manager account for fees/commissions?</h3>
+<p><strong>A:</strong> No. Displays gross P&amp;L based solely on price difference from entry. Fees, commissions, slippage not included in calculation.</p>
+<h3 id="q-can-i-export-position-pl-data">Q: Can I export position P&amp;L data?</h3>
+<p><strong>A:</strong> Position data can be captured via screenshots or alerts. CSV export not currently available.</p>
+<h3 id="q-how-is-buyingselling-pressure-calculated">Q: How is buying/selling pressure calculated?</h3>
+<p><strong>A:</strong> Analyzes relationship between price movement and volume. High volume + up-close = buying pressure. High volume + down-close = selling pressure. Multiple factors including momentum, candle characteristics, and volume deviation from average considered.</p>
+<hr />
+<h2 id="quick-reference-guide">📋 Quick Reference Guide</h2>
+<h3 id="system-quick-reference">System Quick Reference</h3>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Visual</th>
+<th>Key Feature</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Volume Flow</strong></td>
+<td>Color bars in panel</td>
+<td>Buying/selling pressure</td>
+<td>Entry timing</td>
+</tr>
+<tr>
+<td><strong>Volume Zones</strong></td>
+<td>Boxes on chart</td>
+<td>High-volume areas</td>
+<td>Support/resistance</td>
+</tr>
+<tr>
+<td><strong>Position Manager</strong></td>
+<td>Entry line + P&amp;L</td>
+<td>Real-time tracking</td>
+<td>Performance monitoring</td>
+</tr>
+</tbody>
+</table>
+<h3 id="volume-flow-color-meanings">Volume Flow Color Meanings</h3>
+<table>
+<thead>
+<tr>
+<th>Color</th>
+<th>Meaning</th>
+<th>Characteristics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Green</strong></td>
+<td>Buying pressure</td>
+<td>High volume + price up</td>
+</tr>
+<tr>
+<td><strong>Red</strong></td>
+<td>Selling pressure</td>
+<td>High volume + price down</td>
+</tr>
+<tr>
+<td><strong>Gray</strong></td>
+<td>Neutral</td>
+<td>Low volume or unclear</td>
+</tr>
+</tbody>
+</table>
+<h3 id="volume-zone-patterns">Volume Zone Patterns</h3>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Description</th>
+<th>Observation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Support</strong></td>
+<td>Price bounces at zone</td>
+<td>Support characteristics</td>
+</tr>
+<tr>
+<td><strong>Resistance</strong></td>
+<td>Price reverses at zone</td>
+<td>Resistance characteristics</td>
+</tr>
+<tr>
+<td><strong>Breakout</strong></td>
+<td>Price breaks through</td>
+<td>Level broken</td>
+</tr>
+<tr>
+<td><strong>Retest</strong></td>
+<td>Return after break</td>
+<td>Confirmation pattern</td>
+</tr>
+</tbody>
+</table>
+<h3 id="position-manager-display">Position Manager Display</h3>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Blue Entry Line</strong></td>
+<td>Shows entry price</td>
+</tr>
+<tr>
+<td><strong>Green P&amp;L</strong></td>
+<td>Profitable position</td>
+</tr>
+<tr>
+<td><strong>Red P&amp;L</strong></td>
+<td>Losing position</td>
+</tr>
+<tr>
+<td><strong>Percentage</strong></td>
+<td>Return % from entry</td>
+</tr>
+<tr>
+<td><strong>Points</strong></td>
+<td>Absolute price difference</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="support">📞 Support</h2>
+<p><strong>Technical Questions:</strong><br />
+support@signalpilot.io</p>
+<hr />
+<p><strong>Disclaimer:</strong> This indicator combines three volume analysis systems: Volume Flow (buying/selling pressure analysis), Volume Zones (high-volume consolidation detection), and Position Manager (entry tracking). All analyses represent historical volume data interpretation. Position Manager displays gross P&amp;L only, excluding fees, commissions, and slippage. Individual interpretation, application, and outcomes vary. Past volume patterns do not guarantee future results. This is not financial advice.</p>
+                
                 
               </article>
             </div>
