@@ -355,19 +355,32 @@ body::before {
 
   /* Reduce font size in primary sidebar to fit all items without scrolling */
   .md-sidebar--primary .md-nav__link {
-    font-size: 0.75rem !important; /* Reduced from ~1rem */
-    line-height: 1.5 !important;
-    padding: 0.4rem 0.8rem !important; /* Tighter spacing */
+    font-size: 0.7rem !important; /* Smaller font */
+    line-height: 1.4 !important;
+    padding: 0.3rem 0.6rem !important; /* Much tighter spacing */
+    min-height: unset !important; /* Remove min-height constraints */
+  }
+
+  /* Reduce spacing between navigation items */
+  .md-sidebar--primary .md-nav__item {
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   /* Also reduce title/section font sizes in primary sidebar */
   .md-sidebar--primary .md-nav__title {
-    font-size: 0.75rem !important;
-    padding: 0.4rem 0.8rem !important;
+    font-size: 0.7rem !important;
+    padding: 0.3rem 0.6rem !important;
+    min-height: unset !important;
   }
 
   .md-sidebar--primary .md-ellipsis {
     font-size: inherit !important;
+  }
+
+  /* Override touch device padding for primary sidebar on desktop */
+  .md-sidebar--primary .md-nav {
+    font-size: 0.7rem !important;
   }
 
   .md-sidebar--secondary {
