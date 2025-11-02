@@ -1575,282 +1575,490 @@
 </div>
 
 <!-- Render the page content -->
-<h1 id="augury-grid-v10-scan-8-symbols-at-once">Augury Grid v1.0 - Scan 8 Symbols at Once<a class="headerlink" href="#augury-grid-v10-scan-8-symbols-at-once" title="Permanent link">&para;</a></h1>
-<h2 id="what-does-it-do">🎯 What Does It Do?<a class="headerlink" href="#what-does-it-do" title="Permanent link">&para;</a></h2>
-<p><span style="color: #0aa1d5; font-weight: 600;">Core Functionality</span></p>
-<p>Augury Grid is a <strong>multi-symbol screener table</strong> that sits on charts and monitors 8 different instruments simultaneously. Instead of flipping between charts, all signals are displayed in one clean table.</p>
-<p><strong>Best for:</strong> Multi-asset traders, anyone managing watchlists</p>
+<h1 id="augury-grid-v10-multi-symbol-scanner">Augury Grid v1.0 — Multi-Symbol Scanner</h1>
+<p>Real-time scanner displaying TD Sequential signals across multiple assets simultaneously. Monitor up to 40 tickers from single dashboard view.</p>
 <hr />
-<h2 id="how-it-works-simple-version">How It Works (Simple Version)<a class="headerlink" href="#how-it-works-simple-version" title="Permanent link">&para;</a></h2>
-<p><strong>The Core Signal:</strong>
-Augury watches for MACD histogram crossing zero (momentum shift) on all 8 symbols</p>
-<p><strong>The Smart Part:</strong>
-Not all MACD crosses are equal. Each signal gets a <strong>quality score 0-100</strong> based on 7 factors:</p>
-<ol>
-<li><strong>ADX Strength</strong> - Is there a strong trend?</li>
-<li><strong>OBV Volume</strong> - Does volume confirm the move?</li>
-<li><strong>HTF Alignment</strong> - Does higher timeframe agree?</li>
-<li><strong>RSI Context</strong> - Are we oversold/overbought (good) or chasing (bad)?</li>
-<li><strong>Histogram Strength</strong> - How powerful is the cross?</li>
-<li><strong>Distance from Average</strong> - Are we buying value or chasing tops?</li>
-<li><strong>RSI Trend</strong> - Is momentum confirming?</li>
-</ol>
-<p><strong>Result:</strong> Signals rated 0-100 with quality tiers</p>
+<h2 id="core-functionality">🎯 Core Functionality</h2>
+<p>Augury Grid displays TD Sequential exhaustion signals for multiple symbols on one screen. Each symbol shows current count status and recent signals in grid format.</p>
+<p><strong>Display Format:</strong> Organized grid showing ticker symbols with their current TD counts and signal status.</p>
+<p><strong>Monitoring Capacity:</strong> Up to 40 symbols can be tracked simultaneously.</p>
+<p><strong>Signal Detection:</strong> Uses TD Sequential methodology (same as Omnideck System 1) to identify 9-count exhaustion patterns across all tracked symbols.</p>
+<p><strong>Timeframe Compatibility:</strong> Works on all timeframes. All tracked symbols use the same timeframe as the chart.</p>
 <hr />
-<h2 id="the-grid-display-what-can-be-seen">The Grid Display (What Can Be Seen)<a class="headerlink" href="#the-grid-display-what-can-be-seen" title="Permanent link">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>┌──────────┬────────┬───────┬────────┬─────────┬──────┬──────┐
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>│ SYMBOL   │ SIGNAL │ SCORE │ PRICE  │ TP1     │ AGE  │ P&amp;L  │
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├──────────┼────────┼───────┼────────┼─────────┼──────┼──────┤
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│ BTC/USD  │ BUY    │ 87 ⭐⭐⭐│ 43,250 │ 44,180  │ 3    │ +2.1%│
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│ ETH/USD  │ SELL   │ 72 ⭐⭐ │ 2,245  │ 2,190   │ 8    │ -1.2%│
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│ SPY      │ BUY    │ 58 ⭐  │ 445.20 │ 448.90  │ 15   │ +0.8%│
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│ QQQ      │ -      │ -     │ 375.40 │ -       │ -    │ -    │
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>└──────────┴────────┴───────┴────────┴─────────┴──────┴──────┘
-</span></code></pre></div>
-<h3 id="what-each-column-means">What Each Column Means:<a class="headerlink" href="#what-each-column-means" title="Permanent link">&para;</a></h3>
-<p><strong>SYMBOL</strong> - The ticker being watched (these are configured by the user)</p>
-<p><strong>SIGNAL</strong> - Current direction
-- <strong>BUY</strong> (green) = Bullish momentum shift
-- <strong>SELL</strong> (red) = Bearish momentum shift
-- <strong>-</strong> (gray) = No signal</p>
-<p><strong>SCORE</strong> - Quality rating 0-100
-- ⭐⭐⭐ <strong>Elite</strong> (80-100) = Can be taken immediately
-- ⭐⭐ <strong>Premium</strong> (60-79) = High quality
-- ⭐ <strong>Standard</strong> (40-59) = Acceptable
-- <strong>Weak</strong> (0-39) = Can be skipped</p>
-<p><strong>PRICE</strong> - Current price (real-time)</p>
-<p><strong>TP1</strong> - First target (calculated automatically from ATR)</p>
-<p><strong>AGE</strong> - Bars since signal fired
-- 0-5 bars = Fresh (best)
-- 6-15 bars = Moderate
-- 16+ bars = Stale (probably too late)</p>
-<p><strong>P&amp;L</strong> - How much profit/loss since signal
-- Green = Winning
-- Red = Losing
-- Performance can be tracked</p>
-<hr />
-<h2 id="setup-3-simple-steps">Setup (3 Simple Steps)<a class="headerlink" href="#setup-3-simple-steps" title="Permanent link">&para;</a></h2>
-<h3 id="step-1-configure-symbols">Step 1: Configure Symbols<a class="headerlink" href="#step-1-configure-symbols" title="Permanent link">&para;</a></h3>
-<p>In settings, 8 tickers can be added:</p>
-<p><strong>Example crypto/stocks mix:</strong>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Symbol 1: BTC/USD
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Symbol 2: ETH/USD
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Symbol 3: SPY
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Symbol 4: QQQ
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Symbol 5: AAPL
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>Symbol 6: TSLA
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>Symbol 7: ES1! (E-mini S&amp;P)
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>Symbol 8: NQ1! (E-mini Nasdaq)
-</span></code></pre></div></p>
-<p><strong>Tips:</strong>
-- Full TradingView format can be used (e.g., "BINANCE:BTCUSDT", "NASDAQ:AAPL")
-- Asset classes can be mixed for diversification
-- Tickers can be tested first (wrong format = no data)</p>
-<hr />
-<h3 id="step-2-set-timeframes-optional">Step 2: Set Timeframes (Optional)<a class="headerlink" href="#step-2-set-timeframes-optional" title="Permanent link">&para;</a></h3>
-<p>Each symbol can have its own timeframe.</p>
-<p><strong>Example:</strong>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Symbol 1-2: 1H (crypto)
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Symbol 3-4: 4H (stocks swing)
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Symbol 5-6: 15m (stocks scalp)
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>Symbol 7-8: Daily (futures position)
-</span></code></pre></div></p>
-<p><strong>Why?</strong> Multiple horizons can be scanned simultaneously</p>
-<hr />
-<h3 id="step-3-set-quality-filter">Step 3: Set Quality Filter<a class="headerlink" href="#step-3-set-quality-filter" title="Permanent link">&para;</a></h3>
-<p><strong>Minimum Confluence Score</strong> (default: 40)
-- Setting to 60+ = Only potential Premium/Elite signals are seen
-- Setting to 40+ = All decent potential signals are seen
-- Higher = Fewer but potentially better signals</p>
-<p><strong>ADX Threshold</strong> (default: 20)
-- Minimum trend strength required
-- Higher = Stronger trends only</p>
-<hr />
-<h2 id="how-to-use-it">How to Use It<a class="headerlink" href="#how-to-use-it" title="Permanent link">&para;</a></h2>
-<p><span style="color: #0aa1d5; font-weight: 600; font-size: 1.1em;">🎓 Essential Learning Guide</span></p>
-<h3 id="workflow-active-scanning">Workflow: Active Scanning<a class="headerlink" href="#workflow-active-scanning" title="Permanent link">&para;</a></h3>
-<ol>
-<li><strong>Grid can be glanced at</strong> - ⭐⭐⭐ potential Elite or ⭐⭐ potential Premium signals can be looked for</li>
-<li><strong>AGE can be checked</strong> - Fresh signals (0-10 bars) are preferred</li>
-<li><strong>Symbol can be clicked</strong> - That chart can be loaded to verify</li>
-<li><strong>Setup can be confirmed</strong> - Levels, structure, context can be checked</li>
-<li><strong>Execution can occur</strong> - Trade can be entered (for educational example)</li>
-<li><strong>Example TP1 consideration</strong> - Potential profit target at calculated level</li>
-<li><strong>P&amp;L can be monitored</strong> - The Grid tracks the trade</li>
-</ol>
-<p><strong>This can be repeated every hour/day</strong> depending on timeframes</p>
-<hr />
-<h2 id="real-example">Real Example<a class="headerlink" href="#real-example" title="Permanent link">&para;</a></h2>
-<p><strong>Grid showing:</strong>
-- <strong>BTC/USD</strong> = BUY, Score 91 ⭐⭐⭐, Age 2 bars
-- Price: $64,200, TP1: $65,800</p>
-<p><strong>What can be done:</strong>
-1. The potential Elite signal can be observed (91 score, fresh age)
-2. BTC chart can be clicked to load
-3. Verification can occur: Price at support + potential volume spike + no major resistance nearby
-4. Long entry consideration at $64,300
-5. TP1 at $65,800 can be set (from Grid)
-6. P&amp;L updating in real-time can be seen in Grid</p>
-<p><strong>Result:</strong> Price hits $65,800 = +$1,500 profit per coin (2.5%)</p>
-<hr />
-<h2 id="quality-tiers-reference-guide">Quality Tiers (Reference Guide)<a class="headerlink" href="#quality-tiers-reference-guide" title="Permanent link">&para;</a></h2>
-<p><strong>⭐⭐⭐ Elite (80-100)</strong>
-- All factors aligned
-- Multi-timeframe confirmation
-- <strong>Quality:</strong> Highest confluence signals
-- <strong>Action:</strong> Can be taken immediately</p>
-<p><strong>⭐⭐ Premium (60-79)</strong>
-- Most factors aligned
-- Strong core setup
-- <strong>Quality:</strong> Strong signals with good confluence
-- <strong>Action:</strong> Can be taken with normal stops</p>
-<p><strong>⭐ Standard (40-59)</strong>
-- Basic setup confirmed
-- <strong>Quality:</strong> Acceptable setups
-- <strong>Action:</strong> Selective (only if matches bias)</p>
-<p><strong>Weak (0-39)</strong>
-- Poor confluence
-- <strong>Quality:</strong> Low confidence signals
-- <strong>Action:</strong> Can be skipped</p>
-<hr />
-<h2 id="settings-keep-it-simple">Settings (Keep It Simple)<a class="headerlink" href="#settings-keep-it-simple" title="Permanent link">&para;</a></h2>
-<p><strong>Symbols:</strong> 8 tickers can be added (correct TradingView format can be used)</p>
-<p><strong>Timeframes:</strong> Each symbol's timeframe can be set (or default = chart timeframe can be left)</p>
-<p><strong>Filters:</strong>
-- <strong>ADX Threshold:</strong> 20 (default, works for most)
-- <strong>Min Score:</strong> 60 (recommended for beginners - Premium+ only)
-- <strong>HTF Alignment:</strong> Can be enabled for swing trading, disabled for scalping</p>
-<p><strong>Table Size:</strong>
-- Normal = Default (full info)
-- Small = Less space
-- Large = Bigger text</p>
-<hr />
-<h2 id="common-mistakes">Common Mistakes<a class="headerlink" href="#common-mistakes" title="Permanent link">&para;</a></h2>
-<p><span style="color: #dc2626; font-weight: 600; font-size: 1.1em;">🚨 Critical Errors</span></p>
-<p>❌ <strong>Wrong ticker format</strong>
-→ ✅ Exact TradingView format can be used: "BINANCE:BTCUSDT" not "BTC" or "BTCUSD"</p>
-<p>❌ <strong>Trading every signal</strong>
-→ ✅ Focus on Elite ⭐⭐⭐ and Premium ⭐⭐ when learning</p>
-<p>❌ <strong>Chasing old signals</strong>
-→ ✅ If AGE &gt; 15 bars, signal is stale - can be skipped</p>
-<p>❌ <strong>Ignoring P&amp;L column</strong>
-→ ✅ If signal shows -5% P&amp;L and age is high, it failed - entry is not recommended</p>
-<p>❌ <strong>Not verifying on chart</strong>
-→ ✅ The chart is commonly loaded to confirm context before trading</p>
-<hr />
-<h2 id="frequently-asked-questions">❓ Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permanent link">&para;</a></h2>
-<p><span style="color: #10b981; font-weight: 600;">Common Questions</span></p>
-<p><strong>Q: Can I add more than 8 symbols?</strong>
-<strong>A:</strong> Not in one Grid (performance limit). But 2 Grid instances can be run = 16 symbols total.</p>
-<p><strong>Q: Why doesn't my symbol show data?</strong>
-<strong>A:</strong> The following can be checked:
-1. Ticker format correct?
-2. Data available on TradingView plan?
-3. Exchange prefix included? (e.g., "BINANCE:" for crypto)</p>
-<p><strong>Q: What's a "good" score?</strong>
-<strong>A:</strong>
-- 80+ = Excellent
-- 60-79 = Good
-- 40-59 = Okay
-- &lt;40 = Can be skipped</p>
-<p><strong>Q: Should I trade every potential Elite signal?</strong>
-<strong>A:</strong> Not necessarily. Elite = potentially high quality, but the following should still be checked:
-- Market context
-- Trading plan
-- Risk management
-No system is 100%.</p>
-<p><strong>Q: How often does it update?</strong>
-<strong>A:</strong> Every time a bar closes on the configured timeframes. If Symbol 1 is set to 15m, it updates every 15 minutes.</p>
-<p><strong>Q: Can I get alerts?</strong>
-<strong>A:</strong> No (table-based indicators can't create alerts). Workaround: When potential Elite signal is seen, manual alert can be set on that symbol's chart.</p>
-<p><strong>Q: Can I scan different timeframes for same symbol?</strong>
-<strong>A:</strong> Yes. Example:
-- Symbol 1: SPY 15m (scalps)
-- Symbol 2: SPY 1H (day trades)
-- Symbol 3: SPY 4H (swings)</p>
-<hr />
-<h2 id="quick-cheat-sheet">Quick Cheat Sheet<a class="headerlink" href="#quick-cheat-sheet" title="Permanent link">&para;</a></h2>
+<h2 id="educational-example-grid-view-november-2024">📊 Educational Example: Grid View (November 2024)</h2>
+<p><em>(Historical observation for educational purposes only. Not financial advice. Past performance does not indicate future results.)</em></p>
+<p><strong>Example Dashboard Snapshot:</strong></p>
 <table>
 <thead>
 <tr>
-<th>Score</th>
-<th>Quality</th>
-<th>Confluence</th>
-<th>Action</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>80-100 ⭐⭐⭐</td>
-<td>Elite</td>
-<td>Highest</td>
-<td>Can be taken immediately</td>
-</tr>
-<tr>
-<td>60-79 ⭐⭐</td>
-<td>Premium</td>
-<td>Strong</td>
-<td>Can be taken with normal risk</td>
-</tr>
-<tr>
-<td>40-59 ⭐</td>
-<td>Standard</td>
-<td>Acceptable</td>
-<td>Selectivity recommended</td>
-</tr>
-<tr>
-<td>0-39</td>
-<td>Weak</td>
-<td>Low</td>
-<td>Can be skipped</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Age</th>
+<th>Symbol</th>
+<th>Current Count</th>
 <th>Status</th>
-<th>Action</th>
+<th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>0-5 bars</td>
-<td>Fresh</td>
-<td>Best entries</td>
+<td>BTC/USD</td>
+<td>Green 8</td>
+<td>Approaching</td>
+<td>One bar from Green 9</td>
 </tr>
 <tr>
-<td>6-15 bars</td>
-<td>Moderate</td>
-<td>Still acceptable if valid</td>
+<td>ETH/USD</td>
+<td>Green 9</td>
+<td>⚠️ Signal</td>
+<td>Exhaustion detected</td>
 </tr>
 <tr>
-<td>16+ bars</td>
-<td>Stale</td>
-<td>Probably too late, can be skipped</td>
+<td>SPY</td>
+<td>Red 5</td>
+<td>Counting</td>
+<td>Mid-sequence</td>
+</tr>
+<tr>
+<td>QQQ</td>
+<td>Neutral</td>
+<td>—</td>
+<td>No active sequence</td>
+</tr>
+<tr>
+<td>AAPL</td>
+<td>Red 9</td>
+<td>⚠️ Signal</td>
+<td>Exhaustion detected</td>
+</tr>
+<tr>
+<td>TSLA</td>
+<td>Green 3</td>
+<td>Counting</td>
+<td>Early decline sequence</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Pattern Observed:</strong> ETH/USD and AAPL both showed Green 9 and Red 9 signals respectively at same time, allowing simultaneous monitoring of multiple exhaustion conditions across different assets.</p>
+<p><em>This example demonstrates grid monitoring capability. Individual interpretation and outcomes vary.</em></p>
+<hr />
+<h2 id="settings">⚙️ Settings</h2>
+<h3 id="symbol-configuration">Symbol Configuration</h3>
+<p><strong>Watchlist Setup:</strong></p>
+<p>Add symbols to monitor in settings panel. Up to 40 symbols can be tracked.</p>
+<p><strong>Symbol Entry:</strong><br />
+- Enter ticker symbols separated by commas<br />
+- Example: <code>BTC/USD, ETH/USD, SPY, QQQ, AAPL, TSLA</code><br />
+- Symbols must be available on TradingView</p>
+<p><strong>Watchlist Presets:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Preset Type</th>
+<th>Example Symbols</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Crypto</strong></td>
+<td>BTC/USD, ETH/USD, SOL/USD, ADA/USD, XRP/USD</td>
+</tr>
+<tr>
+<td><strong>Major Indices</strong></td>
+<td>SPY, QQQ, DIA, IWM, VIX</td>
+</tr>
+<tr>
+<td><strong>Tech Stocks</strong></td>
+<td>AAPL, MSFT, GOOGL, AMZN, NVDA, TSLA</td>
+</tr>
+<tr>
+<td><strong>Forex Majors</strong></td>
+<td>EUR/USD, GBP/USD, USD/JPY, AUD/USD</td>
+</tr>
+</tbody>
+</table>
+<h3 id="display-configuration">Display Configuration</h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Options</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Grid Layout</strong></td>
+<td>4×10, 5×8, 8×5, 10×4</td>
+<td>5×8</td>
+</tr>
+<tr>
+<td><strong>Signal Alerts</strong></td>
+<td>Individual on/off per symbol</td>
+<td>All enabled</td>
+</tr>
+<tr>
+<td><strong>Count Display</strong></td>
+<td>Show numbers or icons</td>
+<td>Numbers</td>
+</tr>
+<tr>
+<td><strong>Color Scheme</strong></td>
+<td>Multiple palettes</td>
+<td>Scheme 1</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
-<p><span style="color: #10b981; font-weight: 600; font-size: 1.1em;">✅ Recommended Approach</span></p>
-<ol>
-<li><strong>Starting with 3-5 symbols</strong> - All 8 slots shouldn't be used immediately</li>
-<li><strong>Min Score can be set to 70</strong> - Only Premium/Elite seen as beginner</li>
-<li><strong>AGE should be checked before entering</strong> - Fresh signals (0-5 bars) have highest success</li>
-<li><strong>Chart verification is recommended</strong> - Grid signals shouldn't be blindly traded</li>
-<li><strong>Asset classes can be diversified</strong> - All 8 slots shouldn't be filled with correlated assets (e.g., all crypto)</li>
-<li><strong>Performance can be tracked</strong> - After 20 trades, win rate by tier can be calculated</li>
-</ol>
+<h2 id="td-sequential-in-grid-format">🔢 TD Sequential in Grid Format</h2>
+<h3 id="visual-display-elements">Visual Display Elements</h3>
+<p><strong>Count Display:</strong><br />
+- <strong>Green Numbers (1-9):</strong> Downtrend exhaustion counting<br />
+- <strong>Red Numbers (1-9):</strong> Uptrend exhaustion counting<br />
+- <strong>Neutral (—):</strong> No active sequence</p>
+<p><strong>Signal Indicators:</strong><br />
+- <strong>⚠️ Green 9:</strong> Oversold exhaustion detected<br />
+- <strong>⚠️ Red 9:</strong> Overbought exhaustion detected<br />
+- <strong>Approaching (8):</strong> One bar away from signal</p>
+<h3 id="grid-cell-information">Grid Cell Information</h3>
+<p>Each symbol cell displays:<br />
+1. <strong>Ticker Symbol</strong> - Asset identifier<br />
+2. <strong>Current Count</strong> - Active TD sequence position (1-9 or neutral)<br />
+3. <strong>Status Indicator</strong> - Signal present, approaching, counting, or neutral<br />
+4. <strong>Color Coding</strong> - Visual identification of bullish/bearish sequences</p>
+<p><strong>Example Cell:</strong></p>
+<pre><code>ETH/USD
+Green 9 ⚠️
+(Exhaustion detected)
+</code></pre>
 <hr />
-<h2 id="support">Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
-<p>Help is available at:
-- <a href="https://docs.signalpilot.io/suite-index/"><span class="signal-pilot-brand">Signal Pilot</span> Suite Overview</a> - How to combine with other indicators
-- <a href="../ref-workflow/">Suite Workflow</a> - Complete trading system
-- <a href="../about-support/">Support</a> - Get help</p>
+<h2 id="educational-example-crypto-market-scan-december-2024">📖 Educational Example: Crypto Market Scan (December 2024)</h2>
+<p><em>(Historical observation for educational purposes only. Not financial advice. Past performance does not indicate future results.)</em></p>
+<p><strong>Timeframe:</strong> 4-Hour Chart</p>
+<p><strong>Watchlist:</strong> Top 10 cryptocurrencies by market cap</p>
+<p><strong>Scan Results at 8:00 AM:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Rank</th>
+<th>Symbol</th>
+<th>Count</th>
+<th>Status</th>
+<th>Price</th>
+<th>Analysis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>BTC/USD</td>
+<td>Green 9</td>
+<td>⚠️ Signal</td>
+<td>$63,200</td>
+<td>Oversold conditions</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ETH/USD</td>
+<td>Green 8</td>
+<td>Approaching</td>
+<td>$3,420</td>
+<td>Near exhaustion</td>
+</tr>
+<tr>
+<td>3</td>
+<td>BNB/USD</td>
+<td>Neutral</td>
+<td>—</td>
+<td>$310</td>
+<td>No sequence</td>
+</tr>
+<tr>
+<td>4</td>
+<td>SOL/USD</td>
+<td>Green 9</td>
+<td>⚠️ Signal</td>
+<td>$98</td>
+<td>Oversold conditions</td>
+</tr>
+<tr>
+<td>5</td>
+<td>XRP/USD</td>
+<td>Red 3</td>
+<td>Counting</td>
+<td>$0.62</td>
+<td>Early uptrend count</td>
+</tr>
+<tr>
+<td>6</td>
+<td>ADA/USD</td>
+<td>Green 6</td>
+<td>Counting</td>
+<td>$0.58</td>
+<td>Mid-decline sequence</td>
+</tr>
+<tr>
+<td>7</td>
+<td>AVAX/USD</td>
+<td>Green 9</td>
+<td>⚠️ Signal</td>
+<td>$35</td>
+<td>Oversold conditions</td>
+</tr>
+<tr>
+<td>8</td>
+<td>DOT/USD</td>
+<td>Neutral</td>
+<td>—</td>
+<td>$7.20</td>
+<td>No sequence</td>
+</tr>
+<tr>
+<td>9</td>
+<td>MATIC/USD</td>
+<td>Red 9</td>
+<td>⚠️ Signal</td>
+<td>$0.89</td>
+<td>Overbought conditions</td>
+</tr>
+<tr>
+<td>10</td>
+<td>LINK/USD</td>
+<td>Green 4</td>
+<td>Counting</td>
+<td>$14.50</td>
+<td>Decline sequence</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Multi-Signal Detection:</strong> Three symbols (BTC, SOL, AVAX) showed Green 9 simultaneously, indicating broad oversold conditions across major cryptocurrencies. One symbol (MATIC) showed Red 9, indicating isolated strength.</p>
+<p><strong>Outcome Observed:</strong> All three Green 9 signals (BTC, SOL, AVAX) preceded price increases over following 24-48 hours.</p>
+<p><em>This example demonstrates simultaneous multi-symbol monitoring. Individual interpretation and outcomes vary.</em></p>
 <hr />
-<p><strong>Important consideration:</strong> Augury Grid finds the opportunities across multiple symbols. Context is verified and execution occurs by the trader. It's a scanner, not an auto-trader.</p>
+<h2 id="scanning-strategies">🎯 Scanning Strategies</h2>
+<h3 id="strategy-1-broad-market-scan">Strategy 1: Broad Market Scan</h3>
+<p><strong>Approach:</strong><br />
+- Monitor 20-40 symbols across multiple sectors<br />
+- Scan for any Green 9 or Red 9 signals appearing<br />
+- Focus attention on symbols showing exhaustion</p>
+<p><strong>Use Case:</strong> Opportunity discovery across diverse markets</p>
+<p><strong>Example Watchlist:</strong> Major indices, sector ETFs, top crypto, forex pairs, commodities</p>
+<h3 id="strategy-2-sector-rotation-scan">Strategy 2: Sector Rotation Scan</h3>
+<p><strong>Approach:</strong><br />
+- Monitor 10-15 symbols within specific sector<br />
+- Compare relative exhaustion levels<br />
+- Identify sector-wide patterns</p>
+<p><strong>Use Case:</strong> Sector-specific analysis and comparison</p>
+<p><strong>Example Watchlist:</strong> All semiconductor stocks (NVDA, AMD, INTC, TSM, AVGO, QCOM, MU, etc.)</p>
+<h3 id="strategy-3-correlation-scan">Strategy 3: Correlation Scan</h3>
+<p><strong>Approach:</strong><br />
+- Monitor related assets (e.g., BTC + major altcoins)<br />
+- Observe if signals appear simultaneously or in sequence<br />
+- Identify correlation patterns</p>
+<p><strong>Use Case:</strong> Understanding market leadership and correlation</p>
+<p><strong>Example Watchlist:</strong> BTC/USD + top 15 altcoins</p>
+<h3 id="strategy-4-portfolio-monitor">Strategy 4: Portfolio Monitor</h3>
+<p><strong>Approach:</strong><br />
+- Track symbols in current portfolio holdings<br />
+- Monitor for exhaustion signals on held positions<br />
+- Use as position management reference</p>
+<p><strong>Use Case:</strong> Portfolio-level awareness of exhaustion conditions</p>
+<p><strong>Example Watchlist:</strong> Personal holdings (stocks, crypto, etc.)</p>
+<hr />
+<h2 id="alert-configuration">🔔 Alert Configuration</h2>
+<p><strong>Multi-Symbol Alert System:</strong></p>
+<p>Augury Grid can trigger alerts when any tracked symbol reaches TD 9 conditions.</p>
+<p><strong>Available Alert Types:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Alert</th>
+<th>Trigger</th>
+<th>Notification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Any Green 9</strong></td>
+<td>Any tracked symbol reaches Green 9</td>
+<td>"Symbol XYZ: Green 9 detected"</td>
+</tr>
+<tr>
+<td><strong>Any Red 9</strong></td>
+<td>Any tracked symbol reaches Red 9</td>
+<td>"Symbol XYZ: Red 9 detected"</td>
+</tr>
+<tr>
+<td><strong>Specific Symbol</strong></td>
+<td>Individual symbol alerts</td>
+<td>"BTC/USD: Green 9 detected"</td>
+</tr>
+<tr>
+<td><strong>Multiple Simultaneous</strong></td>
+<td>3+ symbols signal at once</td>
+<td>"Multiple signals: BTC, ETH, SOL"</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Alert Setup:</strong><br />
+1. Open indicator settings<br />
+2. Navigate to alert section<br />
+3. Enable "Any Symbol Green 9" or "Any Symbol Red 9"<br />
+4. Optional: Enable specific symbol alerts<br />
+5. Configure notification preferences (popup, email, webhook)</p>
+<p><strong>Alert Advantages:</strong><br />
+- No need to watch grid constantly<br />
+- Immediate notification when opportunity appears<br />
+- Can monitor 40 symbols with single alert configuration</p>
+<hr />
+<h2 id="grid-update-behavior">🔄 Grid Update Behavior</h2>
+<p><strong>Real-Time Updates:</strong></p>
+<p>The grid updates at bar close for the active timeframe.</p>
+<p><strong>Update Frequency:</strong><br />
+- 5-minute chart: Updates every 5 minutes<br />
+- 1-hour chart: Updates every hour<br />
+- Daily chart: Updates at daily close</p>
+<p><strong>Count Progression:</strong></p>
+<p>Counts increment when close-to-close conditions met:<br />
+- Green counts: Current close &lt; close 4 bars ago<br />
+- Red counts: Current close &gt; close 4 bars ago</p>
+<p><strong>Signal Persistence:</strong></p>
+<p>Green 9 and Red 9 signals remain displayed until:<br />
+- Count resets (opposite direction movement)<br />
+- New count sequence begins</p>
+<hr />
+<h2 id="interpreting-grid-patterns">📚 Interpreting Grid Patterns</h2>
+<h3 id="pattern-1-broad-market-exhaustion">Pattern 1: Broad Market Exhaustion</h3>
+<p><strong>Observation:</strong><br />
+Multiple symbols (5+) show Green 9 or Red 9 simultaneously across same sector or asset class.</p>
+<p><strong>Interpretation:</strong><br />
+Sector-wide or market-wide exhaustion conditions present.</p>
+<p><strong>Example:</strong> 8 out of 10 tech stocks showing Red 9 → Broad tech sector exhaustion characteristics.</p>
+<h3 id="pattern-2-divergent-signals">Pattern 2: Divergent Signals</h3>
+<p><strong>Observation:</strong><br />
+Some symbols show Green 9 while related symbols show Red 9.</p>
+<p><strong>Interpretation:</strong><br />
+Divergence in relative strength within sector or asset class.</p>
+<p><strong>Example:</strong> BTC showing Green 9, ETH showing Red 9 → Divergent exhaustion levels between major crypto assets.</p>
+<h3 id="pattern-3-sequential-cascade">Pattern 3: Sequential Cascade</h3>
+<p><strong>Observation:</strong><br />
+Signals appear across related symbols in sequence over time rather than simultaneously.</p>
+<p><strong>Interpretation:</strong><br />
+Potential leadership or lagging pattern within sector.</p>
+<p><strong>Example:</strong> Tech mega-caps signal first (AAPL, MSFT), then mid-caps signal days later → Potential cascade pattern.</p>
+<h3 id="pattern-4-isolated-signal">Pattern 4: Isolated Signal</h3>
+<p><strong>Observation:</strong><br />
+One symbol shows signal while all others remain neutral or counting.</p>
+<p><strong>Interpretation:</strong><br />
+Asset-specific exhaustion rather than broad market pattern.</p>
+<p><strong>Example:</strong> Single stock shows Red 9 while entire sector neutral → Isolated strength characteristics.</p>
+<hr />
+<h2 id="frequently-asked-questions">❓ Frequently Asked Questions</h2>
+<h3 id="q-how-many-symbols-should-i-monitor">Q: How many symbols should I monitor?</h3>
+<p><strong>A:</strong> Depends on monitoring purpose. Focused scanning (10-15 symbols) allows detailed attention. Broad scanning (30-40 symbols) enables opportunity discovery. Individual preferences vary.</p>
+<h3 id="q-can-i-use-different-timeframes-for-different-symbols">Q: Can I use different timeframes for different symbols?</h3>
+<p><strong>A:</strong> No. All symbols in grid use the timeframe of the active chart. To scan multiple timeframes, open multiple chart windows with Augury Grid on each.</p>
+<h3 id="q-do-symbols-need-to-be-from-same-market">Q: Do symbols need to be from same market?</h3>
+<p><strong>A:</strong> No. Can mix any asset types available on TradingView (stocks, crypto, forex, futures, indices, commodities, etc.)</p>
+<h3 id="q-what-happens-if-a-symbol-has-no-data">Q: What happens if a symbol has no data?</h3>
+<p><strong>A:</strong> Cell displays "No Data" message. Symbol may be unavailable on current TradingView plan or exchange.</p>
+<h3 id="q-can-i-save-multiple-watchlists">Q: Can I save multiple watchlists?</h3>
+<p><strong>A:</strong> Yes. Save different indicator configurations with different symbol lists. Switch between saved templates as needed.</p>
+<h3 id="q-does-grid-slow-down-performance">Q: Does grid slow down performance?</h3>
+<p><strong>A:</strong> Minimal impact. Optimized to efficiently monitor up to 40 symbols without performance degradation.</p>
+<h3 id="q-can-other-users-see-my-watchlist">Q: Can other users see my watchlist?</h3>
+<p><strong>A:</strong> No. Symbol lists stored in personal indicator settings, not visible to others.</p>
+<h3 id="q-how-is-this-different-from-tradingviews-native-screener">Q: How is this different from TradingView's native screener?</h3>
+<p><strong>A:</strong> Augury Grid displays on chart with continuous real-time updates, while native screener requires manual refresh and opens separately. Grid format provides at-a-glance monitoring of specific exhaustion methodology.</p>
+<h3 id="q-can-i-export-grid-data">Q: Can I export grid data?</h3>
+<p><strong>A:</strong> Grid data can be captured via TradingView alert webhooks. Each alert includes symbol and signal type data.</p>
+<h3 id="q-does-it-work-on-mobile">Q: Does it work on mobile?</h3>
+<p><strong>A:</strong> Yes. Grid layout adapts to screen size. Mobile displays fewer symbols per row for readability.</p>
+<hr />
+<h2 id="quick-reference-guide">📋 Quick Reference Guide</h2>
+<h3 id="grid-display-legend">Grid Display Legend</h3>
+<table>
+<thead>
+<tr>
+<th>Display</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Green 1-8</strong></td>
+<td>Downtrend exhaustion counting (not yet complete)</td>
+</tr>
+<tr>
+<td><strong>Green 9 ⚠️</strong></td>
+<td>Oversold exhaustion detected</td>
+</tr>
+<tr>
+<td><strong>Red 1-8</strong></td>
+<td>Uptrend exhaustion counting (not yet complete)</td>
+</tr>
+<tr>
+<td><strong>Red 9 ⚠️</strong></td>
+<td>Overbought exhaustion detected</td>
+</tr>
+<tr>
+<td><strong>Neutral (—)</strong></td>
+<td>No active TD sequence</td>
+</tr>
+<tr>
+<td><strong>Approaching (8)</strong></td>
+<td>One bar from potential signal</td>
+</tr>
+</tbody>
+</table>
+<h3 id="recommended-watchlist-sizes">Recommended Watchlist Sizes</h3>
+<table>
+<thead>
+<tr>
+<th>Purpose</th>
+<th>Symbols</th>
+<th>Layout</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Focused Analysis</strong></td>
+<td>10-15</td>
+<td>5×3 or 4×4</td>
+</tr>
+<tr>
+<td><strong>Sector Scan</strong></td>
+<td>15-25</td>
+<td>5×5 or 8×3</td>
+</tr>
+<tr>
+<td><strong>Broad Market</strong></td>
+<td>25-40</td>
+<td>8×5 or 10×4</td>
+</tr>
+</tbody>
+</table>
+<h3 id="common-watchlist-templates">Common Watchlist Templates</h3>
+<p><strong>Crypto Major:</strong></p>
+<pre><code>BTC/USD, ETH/USD, BNB/USD, SOL/USD, XRP/USD,
+ADA/USD, AVAX/USD, DOT/USD, MATIC/USD, LINK/USD
+</code></pre>
+<p><strong>US Indices &amp; Sectors:</strong></p>
+<pre><code>SPY, QQQ, DIA, IWM, XLF, XLE, XLK, XLV,
+XLI, XLP, XLU, XLY, XLB, XLRE, XLC
+</code></pre>
+<p><strong>Tech Giants:</strong></p>
+<pre><code>AAPL, MSFT, GOOGL, AMZN, NVDA, TSLA,
+META, NFLX, AMD, INTC, CRM, ORCL
+</code></pre>
+<p><strong>Forex Majors:</strong></p>
+<pre><code>EUR/USD, GBP/USD, USD/JPY, AUD/USD,
+USD/CAD, USD/CHF, NZD/USD, EUR/GBP
+</code></pre>
+<hr />
+<h2 id="support">📞 Support</h2>
+<p><strong>Technical Questions:</strong><br />
+support@signalpilot.io</p>
+<hr />
+<p><strong>Disclaimer:</strong> This indicator displays TD Sequential exhaustion signals across multiple symbols simultaneously. All signals represent historical pattern detection based on close-to-close price counting methodology. Individual interpretation, application, and outcomes vary. Past signal patterns do not guarantee future results. This is not financial advice.</p>
+                
                 
               </article>
             </div>
