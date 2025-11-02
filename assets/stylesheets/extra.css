@@ -301,6 +301,39 @@ body::before {
   #__drawer:checked ~ .md-container .md-sidebar--primary {
     z-index: 250 !important;
     pointer-events: auto !important;
+    opacity: 1 !important; /* CRITICAL: Full brightness when open */
+    visibility: visible !important;
+  }
+
+  /* CRITICAL: Full brightness and clickability for all drawer items */
+  #__drawer:checked ~ .md-container .md-sidebar--primary .md-nav,
+  #__drawer:checked ~ .md-container .md-sidebar--primary .md-nav__item,
+  #__drawer:checked ~ .md-container .md-sidebar--primary .md-nav__link,
+  #__drawer:checked ~ .md-container .md-sidebar--primary .md-nav__toggle,
+  #__drawer:checked ~ .md-container .md-sidebar--primary .md-nav__icon,
+  #__drawer:checked ~ .md-container .md-sidebar--primary label.md-nav__link {
+    pointer-events: auto !important;
+    opacity: 1 !important; /* CRITICAL: Full brightness */
+    visibility: visible !important;
+    position: relative;
+    z-index: 1;
+    cursor: pointer !important;
+  }
+
+  /* Remove any transform that might interfere */
+  #__drawer:checked ~ .md-container .md-sidebar--primary {
+    transform: none !important;
+  }
+
+  /* Ensure text color is visible */
+  #__drawer:checked ~ .md-container .md-sidebar--primary .md-nav__link {
+    color: var(--md-default-fg-color) !important;
+  }
+
+  /* Ensure drawer background is solid */
+  #__drawer:checked ~ .md-container .md-sidebar--primary .md-sidebar__scrollwrap {
+    background: var(--md-default-bg-color) !important;
+    opacity: 1 !important;
   }
 
   /* All navigation elements inside drawer must be clickable */
@@ -318,6 +351,13 @@ body::before {
   .md-sidebar--primary label.md-nav__link {
     pointer-events: auto !important;
     cursor: pointer !important;
+  }
+
+  /* Ensure hamburger icon is above everything */
+  .md-header__button.md-icon {
+    z-index: 300 !important;
+    position: relative;
+    pointer-events: auto !important;
   }
 }
 
