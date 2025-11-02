@@ -394,6 +394,51 @@ body::before {
 }
 
 /* ========================================
+   4.5. TOC SCROLL SPY STYLES
+   ======================================== */
+
+/* Active TOC item (current section in view) */
+.md-nav--secondary .md-nav__link[data-md-state="blur"],
+.md-nav--secondary .md-nav__link:not(.md-nav__link--active) {
+  opacity: 0.5;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-nav--secondary .md-nav__link.md-nav__link--active {
+  opacity: 1;
+  color: var(--md-primary-fg-color);
+  font-weight: 600;
+}
+
+/* Sections you've scrolled past (blur state) */
+.md-nav--secondary .md-nav__link[data-md-state="blur"] {
+  opacity: 0.35;
+  color: var(--md-default-fg-color--lighter);
+}
+
+/* Hover states for TOC */
+.md-nav--secondary .md-nav__link:hover {
+  opacity: 1;
+  color: var(--md-primary-fg-color);
+}
+
+/* Dark mode adjustments */
+[data-md-color-scheme="slate"] .md-nav--secondary .md-nav__link:not(.md-nav__link--active) {
+  opacity: 0.5;
+  color: rgba(255, 255, 255, 0.54);
+}
+
+[data-md-color-scheme="slate"] .md-nav--secondary .md-nav__link[data-md-state="blur"] {
+  opacity: 0.25;
+  color: rgba(255, 255, 255, 0.38);
+}
+
+[data-md-color-scheme="slate"] .md-nav--secondary .md-nav__link.md-nav__link--active {
+  opacity: 1;
+  color: var(--md-primary-fg-color);
+}
+
+/* ========================================
    5. TYPOGRAPHY & HEADINGS
    ======================================== */
 
