@@ -27,7 +27,35 @@ def convert_markdown_to_html(md_content):
         'sane_lists',  # better list handling
         'toc',  # table of contents
     ])
-    return md.convert(md_content)
+    html_content = md.convert(md_content)
+
+    # Add headerlink anchors to all headers (h1-h6) for MkDocs navigation
+    html_content = add_headerlinks(html_content)
+
+    return html_content
+
+def add_headerlinks(html_content):
+    """
+    Add headerlink anchors to headers (h1-h6) to match MkDocs format.
+    MkDocs needs: <h2 id="foo">Title<a class="headerlink" href="#foo" title="Permanent link">¶</a></h2>
+    """
+    import re
+
+    def replace_header(match):
+        tag = match.group(1)  # h1, h2, etc.
+        header_id = match.group(2)
+        title = match.group(3)  # Everything between opening and closing tag
+
+        # Add headerlink anchor
+        headerlink = f'<a class="headerlink" href="#{header_id}" title="Permanent link">&para;</a>'
+
+        return f'<{tag} id="{header_id}">{title}{headerlink}</{tag}>'
+
+    # Pattern: <h1 id="some-id">Title (possibly with nested HTML)</h1>
+    # Use non-greedy match to capture content that may include HTML tags
+    pattern = r'<(h[1-6]) id="([^"]+)">(.+?)</(h[1-6])>'
+
+    return re.sub(pattern, replace_header, html_content, flags=re.DOTALL)
 
 def update_html_file(html_path, new_html_content):
     """
