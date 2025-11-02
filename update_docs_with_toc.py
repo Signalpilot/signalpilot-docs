@@ -146,7 +146,7 @@ def build_toc_html(headers):
                 h3_items = []
             elif current_h2:
                 # Close previous h2 without h3 items
-                html_parts.append('</li>\n')
+                html_parts.append('  \n</li>\n')
 
             # Start new h2
             current_h2 = header
@@ -215,9 +215,10 @@ def update_html_file(html_path, new_html_content, new_toc_html):
     toc_pattern = r'<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>.*?(?=\n    </ul>\n  \n</nav>)'
 
     if new_toc_html:
-        # Extract just the inner content (without the opening <ul> tag)
+        # Extract just the inner content (without the opening/closing <ul> tags)
+        # Use rsplit to split on the LAST </ul>, not the first
         toc_inner = new_toc_html.split('<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>')[1]
-        toc_inner = toc_inner.split('</ul>')[0]
+        toc_inner = toc_inner.rsplit('\n    </ul>\n', 1)[0]  # Split on LAST closing ul
         toc_replacement = f'<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>{toc_inner}\n    </ul>'
 
         updated_html = re.sub(toc_pattern, toc_replacement, updated_html, flags=re.DOTALL)
