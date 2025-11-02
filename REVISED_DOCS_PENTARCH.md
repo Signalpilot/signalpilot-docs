@@ -334,7 +334,7 @@ CAP → BDN → TD (Climax to accumulation)
 **A:** Signal frequency varies by asset, timeframe, and market conditions. Some periods show frequent signals, others show sparse signals.
 
 ### Q: Do all five signals always appear?
-**A:** No. Partial cycles occur frequently. Complete five-event cycles appear less frequently than partial sequences.
+**A:** No. Partial cycles occur more often than complete cycles. Complete five-event cycles appear less often than partial sequences.
 
 ### Q: What timeframes work?
 **A:** All timeframes supported. Signal characteristics may vary across different timeframe selections.

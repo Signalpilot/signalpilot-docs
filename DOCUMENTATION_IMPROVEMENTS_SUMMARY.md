@@ -119,7 +119,7 @@ Individual interpretation and outcomes vary.
 
 **Key Language Changes:**
 - ❌ "Price loves to return to VWAP"
-- ✅ "Price frequently shows reactions near VWAP"
+- ✅ "Price shows reactions near VWAP"
 - ❌ "Above VAH = Overbought territory"
 - ✅ "Above VAH = Extended from value area"
 - ❌ "Expect pullback to POC"
