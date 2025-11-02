@@ -340,25 +340,45 @@ body::before {
     top: 4.5rem !important; /* Reduced offset for more sidebar space */
     align-self: flex-start !important;
     display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 
   .md-sidebar--primary {
     position: -webkit-sticky !important;
     position: sticky !important;
     top: 4.5rem !important;
+    display: block !important;
+    visibility: visible !important;
+    width: 12.1rem !important; /* Ensure primary sidebar has width */
   }
 
   .md-sidebar--secondary {
     position: -webkit-sticky !important;
     position: sticky !important;
     top: 4.5rem !important;
+    display: block !important;
+    visibility: visible !important;
+    width: 12.1rem !important; /* Ensure TOC sidebar has width */
   }
 
   /* Constrain sidebar height for sticky behavior */
   .md-sidebar__scrollwrap {
-    max-height: calc(100vh - 5rem) !important; /* More space for TOC content */
+    height: auto !important;
+    max-height: 85vh !important; /* Give plenty of vertical space */
+    min-height: 500px !important; /* Ensure minimum usable height */
     overflow-y: auto !important; /* Allow TOC to scroll if content is long */
-    min-height: 300px !important; /* Ensure minimum usable height */
+  }
+
+  /* Ensure sidebar itself has proper height */
+  .md-sidebar {
+    height: auto !important;
+    max-height: none !important; /* Remove any max-height constraints */
+  }
+
+  .md-sidebar--secondary {
+    height: auto !important;
+    max-height: none !important;
   }
 }
 
