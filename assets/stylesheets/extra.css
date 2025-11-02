@@ -339,6 +339,7 @@ body::before {
     position: sticky !important;
     top: 7rem !important; /* topnav (~2.5rem) + header (~3.6rem) + buffer */
     align-self: flex-start !important;
+    display: block !important;
   }
 
   .md-sidebar--primary {
