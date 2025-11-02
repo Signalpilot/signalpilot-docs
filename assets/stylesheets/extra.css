@@ -2006,8 +2006,8 @@ body::before {
   .md-sidebar--secondary,
   .md-footer,
   .md-search,
-  .back-to-top,
-  .skip-to-content,
+  .md-top,
+  .md-skip,
   .md-header__button,
   .md-nav,
   button,
@@ -2977,87 +2977,47 @@ img {
 }
 
 /* ========================================
-   SKIP TO CONTENT LINK - Accessibility
+   BACK TO TOP BUTTON ENHANCEMENT
    ======================================== */
 
-/* Skip to content link - hidden until focused */
-.skip-to-content {
-  position: fixed;
-  top: -100px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 9999;
-  padding: 1rem 2rem;
-  background: var(--md-primary-fg-color);
-  color: white;
-  text-decoration: none;
-  border-radius: 0 0 8px 8px;
-  font-weight: 700;
-  font-size: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: top 0.3s ease;
+/* Enhanced styling for MkDocs Material's built-in back-to-top button */
+.md-top {
+  position: fixed !important;
+  bottom: 2rem !important;
+  right: 2rem !important;
+  z-index: 200 !important;
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 50% !important;
+  background: var(--md-primary-fg-color) !important;
+  color: white !important;
+  border: none !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.2s ease !important;
+  padding: 0.5rem !important;
 }
 
-.skip-to-content:focus {
-  top: 0;
-  outline: 3px solid var(--md-accent-fg-color);
-  outline-offset: 2px;
+.md-top:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3) !important;
+  background: color-mix(in srgb, var(--md-primary-fg-color) 90%, white) !important;
 }
 
-.skip-to-content:hover {
-  background: color-mix(in srgb, var(--md-primary-fg-color) 90%, black);
-}
-
-/* ========================================
-   BACK TO TOP BUTTON
-   ======================================== */
-
-/* Back to top button */
-.back-to-top {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  z-index: 200;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: var(--md-primary-fg-color);
-  color: white;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.2s ease;
-  font-size: 1.5rem;
-}
-
-.back-to-top.visible {
-  opacity: 1;
-  visibility: visible;
-}
-
-.back-to-top:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-  background: color-mix(in srgb, var(--md-primary-fg-color) 90%, white);
-}
-
-.back-to-top:active {
-  transform: translateY(-2px);
+.md-top:active {
+  transform: translateY(-2px) !important;
 }
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
-  .back-to-top {
-    bottom: 1.5rem;
-    right: 1.5rem;
-    width: 44px;
-    height: 44px;
-    font-size: 1.3rem;
+  .md-top {
+    bottom: 1.5rem !important;
+    right: 1.5rem !important;
+    width: 44px !important;
+    height: 44px !important;
   }
 }
 
