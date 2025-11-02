@@ -421,13 +421,10 @@ body::before {
   border-radius: 0 4px 4px 0;
 }
 
-/* Sections you've scrolled past (blur state) - greyed out with checkmark feel */
+/* Sections you've scrolled past (blur state) - greyed out */
 .md-nav--secondary .md-nav__link[data-md-state="blur"] {
   opacity: 0.38;
   color: var(--md-default-fg-color--light);
-  text-decoration: line-through;
-  text-decoration-thickness: 1px;
-  text-decoration-color: color-mix(in srgb, var(--md-default-fg-color) 30%, transparent);
 }
 
 /* Hover states for TOC - always responsive */
@@ -436,11 +433,6 @@ body::before {
   color: var(--md-primary-fg-color);
   background: color-mix(in srgb, var(--md-primary-fg-color) 5%, transparent);
   border-left-color: color-mix(in srgb, var(--md-primary-fg-color) 50%, transparent);
-}
-
-/* Remove strikethrough on hover for completed items */
-.md-nav--secondary .md-nav__link[data-md-state="blur"]:hover {
-  text-decoration: none;
 }
 
 /* Nested items (h3 under h2) - slightly indented with subtle styling */
@@ -459,7 +451,6 @@ body::before {
 [data-md-color-scheme="slate"] .md-nav--secondary .md-nav__link[data-md-state="blur"] {
   opacity: 0.3;
   color: rgba(255, 255, 255, 0.5);
-  text-decoration-color: rgba(255, 255, 255, 0.2);
 }
 
 [data-md-color-scheme="slate"] .md-nav--secondary .md-nav__link.md-nav__link--active {
