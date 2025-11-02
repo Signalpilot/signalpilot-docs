@@ -100,6 +100,61 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
 
+  <!-- Structured Data - JSON-LD for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://docs.signalpilot.io/#website",
+        "url": "https://docs.signalpilot.io/",
+        "name": "Signal Pilot Documentation",
+        "description": "The Complete Cycle System - Close-confirmed cycle detection across accumulation, markup, distribution, climax, and decline phases. Seven professional indicators. Audited for zero repaint. Guaranteed.",
+        "publisher": {
+          "@id": "https://signalpilot.io/#organization"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://docs.signalpilot.io/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://signalpilot.io/#organization",
+        "name": "Signal Pilot",
+        "url": "https://signalpilot.io/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://docs.signalpilot.io/assets/watermark-monogram-color-transparent.png",
+          "width": 512,
+          "height": 512
+        },
+        "sameAs": [
+          "https://x.com/signalpilot",
+          "https://github.com/Signalpilot"
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://docs.signalpilot.io/#webpage",
+        "url": "https://docs.signalpilot.io/",
+        "name": "Signal Pilot Documentation - Signal Pilot Docs",
+        "isPartOf": {
+          "@id": "https://docs.signalpilot.io/#website"
+        },
+        "about": {
+          "@id": "https://signalpilot.io/#organization"
+        },
+        "description": "The Complete Cycle System - Close-confirmed cycle detection across accumulation, markup, distribution, climax, and decline phases. Seven professional indicators. Audited for zero repaint. Guaranteed.",
+        "inLanguage": "en-US"
+      }
+    ]
+  }
+  </script>
+
   </head>
   
   
