@@ -340,7 +340,7 @@ Trigger: When price crosses above or below Daily VWAP line
 ## ❓ Frequently Asked Questions
 
 ### Q: How many levels should I enable?
-**A:** Starting with 5-7 key levels recommended to avoid visual overload. Additional levels can be added progressively. Most users report using 10-15 levels long-term.
+**A:** Starting with 5-7 key levels recommended to avoid visual overload. Additional levels can be added progressively based on individual approach.
 
 ### Q: Do all 39 levels appear at once?
 **A:** No. Each level can be toggled on/off individually. Display exactly the levels relevant to your approach.
