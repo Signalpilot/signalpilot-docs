@@ -7,7 +7,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Non-repainting, alert-ready TradingView indicators for any market/timeframe.">
+        <meta name="description" content="Complete quick reference guide with all settings, alerts, and configuration tables for Signal Pilot's 7 indicators.">
       
       
       
@@ -32,7 +32,7 @@
     
     
       
-        <title>Product Cards - Signal Pilot Docs</title>
+        <title>Quick Reference — All Products - Signal Pilot Docs</title>
       
     
     
@@ -1151,22 +1151,945 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-                  <!-- Reading time and last updated info -->
-<div class="md-content-meta" style="display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 1.5rem; padding: 0.75rem 1rem; background: color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent); border-radius: 8px; font-size: 0.9rem; color: var(--md-default-fg-color);">
-  
-    <span style="display: flex; align-items: center; gap: 0.4rem;">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1.1rem; height: 1.1rem; fill: currentColor; opacity: 0.7;">
-        <path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/>
-      </svg>
-      <span style="opacity: 0.85;">Updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="October 31, 2025 01:38:02 UTC"><span class="timeago" datetime="2025-10-31T01:38:02+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="October 31, 2025 01:38:02 UTC">2025-10-31</span></span>
-    </span>
-  
-
-  
-</div>
-
-<!-- Render the page content -->
-
+<h1 id="quick-reference-all-products">📋 Quick Reference — All Products<a class="headerlink" href="#quick-reference-all-products" title="Permanent link">&para;</a></h1>
+<p>Complete settings, alerts, and configuration tables for all Signal Pilot indicators.</p>
+<hr />
+<h2 id="navigation">📑 Navigation<a class="headerlink" href="#navigation" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#pentarch-v10">Pentarch v1.0</a> — Five Cycle Events</li>
+<li><a href="#janus-atlas-v10">Janus Atlas v1.0</a> — Levels System</li>
+<li><a href="#omnideck-v10">Omnideck v1.0</a> — 7-System Suite</li>
+<li><a href="#augury-grid-v10">Augury Grid v1.0</a> — 8-Symbol Monitor</li>
+<li><a href="#volume-oracle-v10">Volume Oracle v1.0</a> — Volume Analysis</li>
+<li><a href="#harmonic-oscillator-v10">Harmonic Oscillator v1.0</a> — Triple Composite</li>
+<li><a href="#plutus-flow-v10">Plutus Flow v1.0</a> — OBV Analysis</li>
+</ul>
+<hr />
+<h2 id="pentarch-v10">Pentarch v1.0<a class="headerlink" href="#pentarch-v10" title="Permanent link">&para;</a></h2>
+<p><strong>Five Cycle Events: TD (Accumulation), IGN (Markup), WRN (Distribution), CAP (Climax), BDN (Decline)</strong></p>
+<h3 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Options</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Alert Toggles</strong></td>
+<td>TD, IGN, WRN, CAP, BDN (individual on/off)</td>
+<td>All enabled</td>
+</tr>
+<tr>
+<td><strong>Color Palette</strong></td>
+<td>5 preset schemes available</td>
+<td>Scheme 1</td>
+</tr>
+<tr>
+<td><strong>Label Position</strong></td>
+<td>Above/Below candle</td>
+<td>Auto-positioned</td>
+</tr>
+<tr>
+<td><strong>Label Size</strong></td>
+<td>Small, Medium, Large</td>
+<td>Medium</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-five-cycle-events">The Five Cycle Events<a class="headerlink" href="#the-five-cycle-events" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Full Name</th>
+<th>Phase</th>
+<th>What It Detects</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TD</strong></td>
+<td>Touchdown</td>
+<td>Accumulation</td>
+<td>Oversold conditions, potential reversal zone</td>
+</tr>
+<tr>
+<td><strong>IGN</strong></td>
+<td>Ignition</td>
+<td>Markup</td>
+<td>Momentum breakout, trend acceleration</td>
+</tr>
+<tr>
+<td><strong>WRN</strong></td>
+<td>Warning</td>
+<td>Distribution</td>
+<td>Overbought conditions, potential exhaustion</td>
+</tr>
+<tr>
+<td><strong>CAP</strong></td>
+<td>Capitulation</td>
+<td>Climax</td>
+<td>Extreme selling pressure, panic conditions</td>
+</tr>
+<tr>
+<td><strong>BDN</strong></td>
+<td>Breakdown</td>
+<td>Decline</td>
+<td>Bearish momentum acceleration</td>
+</tr>
+</tbody>
+</table>
+<h3 id="alert-messages">Alert Messages<a class="headerlink" href="#alert-messages" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Alert Type</th>
+<th>Message Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TD Alert</td>
+<td>"Pentarch TD (Accumulation) detected at [price]"</td>
+</tr>
+<tr>
+<td>IGN Alert</td>
+<td>"Pentarch IGN (Markup) detected at [price]"</td>
+</tr>
+<tr>
+<td>WRN Alert</td>
+<td>"Pentarch WRN (Distribution) detected at [price]"</td>
+</tr>
+<tr>
+<td>CAP Alert</td>
+<td>"Pentarch CAP (Climax) detected at [price]"</td>
+</tr>
+<tr>
+<td>BDN Alert</td>
+<td>"Pentarch BDN (Decline) detected at [price]"</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="janus-atlas-v10">Janus Atlas v1.0<a class="headerlink" href="#janus-atlas-v10" title="Permanent link">&para;</a></h2>
+<p><strong>Multi-Timeframe Levels System</strong></p>
+<h3 id="settings_1">Settings<a class="headerlink" href="#settings_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Options</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>HTF Timeframe</strong></td>
+<td>1H, 4H, D, W, M</td>
+<td>Daily</td>
+</tr>
+<tr>
+<td><strong>Max Levels</strong></td>
+<td>1-20 per type</td>
+<td>10</td>
+</tr>
+<tr>
+<td><strong>Level Types</strong></td>
+<td>Pivots, VWAP, Volume Nodes, Session</td>
+<td>All enabled</td>
+</tr>
+<tr>
+<td><strong>Display Mode</strong></td>
+<td>Lines, Zones, Labels</td>
+<td>Lines + Labels</td>
+</tr>
+<tr>
+<td><strong>Line Width</strong></td>
+<td>1-5 pixels</td>
+<td>2px</td>
+</tr>
+</tbody>
+</table>
+<h3 id="level-types">Level Types<a class="headerlink" href="#level-types" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Level Type</th>
+<th>Description</th>
+<th>Color (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>HTF Pivots</strong></td>
+<td>Higher timeframe pivot points</td>
+<td>Teal</td>
+</tr>
+<tr>
+<td><strong>VWAP</strong></td>
+<td>Volume-weighted average price</td>
+<td>Purple</td>
+</tr>
+<tr>
+<td><strong>Volume Nodes</strong></td>
+<td>High volume profile areas</td>
+<td>Orange</td>
+</tr>
+<tr>
+<td><strong>Session Open</strong></td>
+<td>Daily/Weekly/Monthly open levels</td>
+<td>Blue</td>
+</tr>
+<tr>
+<td><strong>Swing Highs/Lows</strong></td>
+<td>Key structural turning points</td>
+<td>Cyan</td>
+</tr>
+</tbody>
+</table>
+<h3 id="alert-configuration">Alert Configuration<a class="headerlink" href="#alert-configuration" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Alert Type</th>
+<th>Trigger Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Level Touch</td>
+<td>Price touches any displayed level</td>
+</tr>
+<tr>
+<td>Level Break</td>
+<td>Price closes beyond level</td>
+</tr>
+<tr>
+<td>New Level Added</td>
+<td>HTF timeframe adds new level</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="omnideck-v10">Omnideck v1.0<a class="headerlink" href="#omnideck-v10" title="Permanent link">&para;</a></h2>
+<p><strong>7-System Integrated Suite</strong></p>
+<h3 id="core-systems">Core Systems<a class="headerlink" href="#core-systems" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Function</th>
+<th>Outputs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MFI Divergence</strong></td>
+<td>Money Flow Index divergence detection</td>
+<td>Bullish/Bearish divergence signals</td>
+</tr>
+<tr>
+<td><strong>Volume Spikes</strong></td>
+<td>Abnormal volume detection</td>
+<td>Volume spike alerts</td>
+</tr>
+<tr>
+<td><strong>Trend System</strong></td>
+<td>Multi-timeframe trend alignment</td>
+<td>Trend direction + strength</td>
+</tr>
+<tr>
+<td><strong>RSI Extremes</strong></td>
+<td>Overbought/Oversold detection</td>
+<td>RSI threshold alerts</td>
+</tr>
+<tr>
+<td><strong>MACD Crossovers</strong></td>
+<td>MACD signal line crosses</td>
+<td>Bullish/Bearish crosses</td>
+</tr>
+<tr>
+<td><strong>Support/Resistance</strong></td>
+<td>Auto-detected S/R zones</td>
+<td>Key level lines</td>
+</tr>
+<tr>
+<td><strong>Momentum Tracker</strong></td>
+<td>Price momentum strength</td>
+<td>Momentum score (0-100)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="settings_2">Settings<a class="headerlink" href="#settings_2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Range</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Systems Enabled</strong></td>
+<td>Toggle each of 7 systems</td>
+<td>All enabled</td>
+</tr>
+<tr>
+<td><strong>MFI Period</strong></td>
+<td>5-50</td>
+<td>14</td>
+</tr>
+<tr>
+<td><strong>Volume Threshold</strong></td>
+<td>1.5x - 5x</td>
+<td>2.5x</td>
+</tr>
+<tr>
+<td><strong>RSI Period</strong></td>
+<td>5-50</td>
+<td>14</td>
+</tr>
+<tr>
+<td><strong>RSI Overbought</strong></td>
+<td>60-90</td>
+<td>70</td>
+</tr>
+<tr>
+<td><strong>RSI Oversold</strong></td>
+<td>10-40</td>
+<td>30</td>
+</tr>
+<tr>
+<td><strong>MACD Fast</strong></td>
+<td>5-20</td>
+<td>12</td>
+</tr>
+<tr>
+<td><strong>MACD Slow</strong></td>
+<td>15-35</td>
+<td>26</td>
+</tr>
+<tr>
+<td><strong>MACD Signal</strong></td>
+<td>5-15</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+<h3 id="alert-types">Alert Types<a class="headerlink" href="#alert-types" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Alert</th>
+<th>Trigger</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MFI Divergence</td>
+<td>Bullish or bearish divergence confirmed</td>
+</tr>
+<tr>
+<td>Volume Spike</td>
+<td>Volume exceeds threshold</td>
+</tr>
+<tr>
+<td>Trend Change</td>
+<td>Multi-timeframe trend alignment shift</td>
+</tr>
+<tr>
+<td>RSI Extreme</td>
+<td>RSI enters overbought/oversold zone</td>
+</tr>
+<tr>
+<td>MACD Cross</td>
+<td>Signal line crossover</td>
+</tr>
+<tr>
+<td>Level Touch</td>
+<td>Price reaches S/R level</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="augury-grid-v10">Augury Grid v1.0<a class="headerlink" href="#augury-grid-v10" title="Permanent link">&para;</a></h2>
+<p><strong>8-Symbol Multi-Asset Monitor</strong></p>
+<h3 id="settings_3">Settings<a class="headerlink" href="#settings_3" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Options</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Grid Layout</strong></td>
+<td>2x4, 4x2, 8x1</td>
+<td>4x2</td>
+</tr>
+<tr>
+<td><strong>Symbols</strong></td>
+<td>Any 8 TradingView symbols</td>
+<td>User-defined</td>
+</tr>
+<tr>
+<td><strong>Quality Score</strong></td>
+<td>Show/Hide</td>
+<td>Enabled</td>
+</tr>
+<tr>
+<td><strong>Update Frequency</strong></td>
+<td>1min, 5min, 15min</td>
+<td>5min</td>
+</tr>
+<tr>
+<td><strong>Color Coding</strong></td>
+<td>Green/Red, Custom</td>
+<td>Green/Red</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quality-score-components">Quality Score Components<a class="headerlink" href="#quality-score-components" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Weight</th>
+<th>Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trend Strength</td>
+<td>25%</td>
+<td>0-100</td>
+</tr>
+<tr>
+<td>Volume Quality</td>
+<td>25%</td>
+<td>0-100</td>
+</tr>
+<tr>
+<td>Volatility Level</td>
+<td>20%</td>
+<td>0-100</td>
+</tr>
+<tr>
+<td>Momentum Score</td>
+<td>20%</td>
+<td>0-100</td>
+</tr>
+<tr>
+<td>Divergence Check</td>
+<td>10%</td>
+<td>0-100</td>
+</tr>
+<tr>
+<td><strong>Total Score</strong></td>
+<td>100%</td>
+<td><strong>0-100</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="score-interpretation">Score Interpretation<a class="headerlink" href="#score-interpretation" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Score Range</th>
+<th>Rating</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>80-100</td>
+<td>Excellent</td>
+<td>Strong setup quality</td>
+</tr>
+<tr>
+<td>60-79</td>
+<td>Good</td>
+<td>Acceptable conditions</td>
+</tr>
+<tr>
+<td>40-59</td>
+<td>Fair</td>
+<td>Mixed signals</td>
+</tr>
+<tr>
+<td>20-39</td>
+<td>Poor</td>
+<td>Weak setup</td>
+</tr>
+<tr>
+<td>0-19</td>
+<td>Very Poor</td>
+<td>Avoid</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="volume-oracle-v10">Volume Oracle v1.0<a class="headerlink" href="#volume-oracle-v10" title="Permanent link">&para;</a></h2>
+<p><strong>Volume Spike Detection + Position Management</strong></p>
+<h3 id="settings_4">Settings<a class="headerlink" href="#settings_4" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Range</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Spike Threshold</strong></td>
+<td>1.5x - 5x</td>
+<td>2.5x average</td>
+</tr>
+<tr>
+<td><strong>Lookback Period</strong></td>
+<td>10-100 bars</td>
+<td>20 bars</td>
+</tr>
+<tr>
+<td><strong>Position Levels</strong></td>
+<td>1-5 levels</td>
+<td>3 levels</td>
+</tr>
+<tr>
+<td><strong>Label Display</strong></td>
+<td>On/Off</td>
+<td>Enabled</td>
+</tr>
+<tr>
+<td><strong>Alert Mode</strong></td>
+<td>All, Major Only</td>
+<td>All</td>
+</tr>
+</tbody>
+</table>
+<h3 id="volume-spike-types">Volume Spike Types<a class="headerlink" href="#volume-spike-types" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Threshold</th>
+<th>Signal Strength</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Minor Spike</td>
+<td>1.5x - 2.0x</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Moderate Spike</td>
+<td>2.0x - 3.0x</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Major Spike</td>
+<td>3.0x - 4.0x</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Extreme Spike</td>
+<td>4.0x+</td>
+<td>Very High</td>
+</tr>
+</tbody>
+</table>
+<h3 id="position-management-levels">Position Management Levels<a class="headerlink" href="#position-management-levels" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Entry Condition</th>
+<th>Exit Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Level 1</strong></td>
+<td>Major volume spike + trend alignment</td>
+<td>First target or opposite signal</td>
+</tr>
+<tr>
+<td><strong>Level 2</strong></td>
+<td>Continued momentum + no divergence</td>
+<td>Second target or trend change</td>
+</tr>
+<tr>
+<td><strong>Level 3</strong></td>
+<td>Strong continuation + volume support</td>
+<td>Final target or reversal signal</td>
+</tr>
+</tbody>
+</table>
+<h3 id="alert-messages_1">Alert Messages<a class="headerlink" href="#alert-messages_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Alert Type</th>
+<th>Message</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Volume Spike</td>
+<td>"Volume spike detected: [multiplier]x average"</td>
+</tr>
+<tr>
+<td>Position Entry</td>
+<td>"Position level [1/2/3] triggered at [price]"</td>
+</tr>
+<tr>
+<td>Position Exit</td>
+<td>"Exit level [1/2/3] reached at [price]"</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="harmonic-oscillator-v10">Harmonic Oscillator v1.0<a class="headerlink" href="#harmonic-oscillator-v10" title="Permanent link">&para;</a></h2>
+<p><strong>3-in-1 Composite: MACD + RSI + Stochastic RSI</strong></p>
+<h3 id="settings_5">Settings<a class="headerlink" href="#settings_5" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Range</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MACD Fast</strong></td>
+<td>5-20</td>
+<td>12</td>
+</tr>
+<tr>
+<td><strong>MACD Slow</strong></td>
+<td>15-35</td>
+<td>26</td>
+</tr>
+<tr>
+<td><strong>MACD Signal</strong></td>
+<td>5-15</td>
+<td>9</td>
+</tr>
+<tr>
+<td><strong>RSI Period</strong></td>
+<td>5-50</td>
+<td>14</td>
+</tr>
+<tr>
+<td><strong>Stoch RSI Period</strong></td>
+<td>5-30</td>
+<td>14</td>
+</tr>
+<tr>
+<td><strong>Stoch RSI Smooth K</strong></td>
+<td>1-10</td>
+<td>3</td>
+</tr>
+<tr>
+<td><strong>Stoch RSI Smooth D</strong></td>
+<td>1-10</td>
+<td>3</td>
+</tr>
+<tr>
+<td><strong>Display Mode</strong></td>
+<td>All, MACD Only, RSI Only, Stoch Only</td>
+<td>All</td>
+</tr>
+</tbody>
+</table>
+<h3 id="composite-signal-matrix">Composite Signal Matrix<a class="headerlink" href="#composite-signal-matrix" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>MACD</th>
+<th>RSI</th>
+<th>Stoch RSI</th>
+<th>Composite Signal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bullish Cross</td>
+<td>&gt; 50</td>
+<td>&gt; 20</td>
+<td><strong>Strong Buy</strong></td>
+</tr>
+<tr>
+<td>Bullish Cross</td>
+<td>&gt; 50</td>
+<td>&lt; 20</td>
+<td>Moderate Buy</td>
+</tr>
+<tr>
+<td>Bullish Cross</td>
+<td>&lt; 50</td>
+<td>Any</td>
+<td>Weak Buy</td>
+</tr>
+<tr>
+<td>Bearish Cross</td>
+<td>&lt; 50</td>
+<td>&lt; 80</td>
+<td><strong>Strong Sell</strong></td>
+</tr>
+<tr>
+<td>Bearish Cross</td>
+<td>&lt; 50</td>
+<td>&gt; 80</td>
+<td>Moderate Sell</td>
+</tr>
+<tr>
+<td>Bearish Cross</td>
+<td>&gt; 50</td>
+<td>Any</td>
+<td>Weak Sell</td>
+</tr>
+</tbody>
+</table>
+<h3 id="threshold-zones">Threshold Zones<a class="headerlink" href="#threshold-zones" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Zone</th>
+<th>RSI Range</th>
+<th>Stoch RSI Range</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Extreme Overbought</td>
+<td>&gt; 80</td>
+<td>&gt; 90</td>
+<td>Strong reversal risk</td>
+</tr>
+<tr>
+<td>Overbought</td>
+<td>70-80</td>
+<td>80-90</td>
+<td>Reversal warning</td>
+</tr>
+<tr>
+<td>Neutral</td>
+<td>30-70</td>
+<td>20-80</td>
+<td>Balanced conditions</td>
+</tr>
+<tr>
+<td>Oversold</td>
+<td>20-30</td>
+<td>10-20</td>
+<td>Reversal opportunity</td>
+</tr>
+<tr>
+<td>Extreme Oversold</td>
+<td>&lt; 20</td>
+<td>&lt; 10</td>
+<td>Strong reversal potential</td>
+</tr>
+</tbody>
+</table>
+<h3 id="alert-types_1">Alert Types<a class="headerlink" href="#alert-types_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Alert</th>
+<th>Trigger</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MACD Bullish Cross</td>
+<td>Fast line crosses above signal</td>
+</tr>
+<tr>
+<td>MACD Bearish Cross</td>
+<td>Fast line crosses below signal</td>
+</tr>
+<tr>
+<td>RSI Overbought</td>
+<td>RSI &gt; 70</td>
+</tr>
+<tr>
+<td>RSI Oversold</td>
+<td>RSI &lt; 30</td>
+</tr>
+<tr>
+<td>Stoch Overbought</td>
+<td>Stoch RSI &gt; 80</td>
+</tr>
+<tr>
+<td>Stoch Oversold</td>
+<td>Stoch RSI &lt; 20</td>
+</tr>
+<tr>
+<td>Composite Extreme</td>
+<td>All 3 indicators aligned in extreme zone</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="plutus-flow-v10">Plutus Flow v1.0<a class="headerlink" href="#plutus-flow-v10" title="Permanent link">&para;</a></h2>
+<p><strong>Advanced OBV with Divergence Detection</strong></p>
+<h3 id="settings_6">Settings<a class="headerlink" href="#settings_6" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Range</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>OBV Smoothing</strong></td>
+<td>1-50</td>
+<td>1 (raw)</td>
+</tr>
+<tr>
+<td><strong>Divergence Lookback</strong></td>
+<td>10-100 bars</td>
+<td>50 bars</td>
+</tr>
+<tr>
+<td><strong>Sensitivity</strong></td>
+<td>Low, Medium, High</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td><strong>Display Mode</strong></td>
+<td>Line, Histogram, Both</td>
+<td>Line</td>
+</tr>
+<tr>
+<td><strong>Divergence Lines</strong></td>
+<td>Show/Hide</td>
+<td>Enabled</td>
+</tr>
+</tbody>
+</table>
+<h3 id="divergence-types">Divergence Types<a class="headerlink" href="#divergence-types" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Price Action</th>
+<th>OBV Action</th>
+<th>Signal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bullish Regular</strong></td>
+<td>Lower Low</td>
+<td>Higher Low</td>
+<td>Reversal up</td>
+</tr>
+<tr>
+<td><strong>Bullish Hidden</strong></td>
+<td>Higher Low</td>
+<td>Lower Low</td>
+<td>Continuation up</td>
+</tr>
+<tr>
+<td><strong>Bearish Regular</strong></td>
+<td>Higher High</td>
+<td>Lower High</td>
+<td>Reversal down</td>
+</tr>
+<tr>
+<td><strong>Bearish Hidden</strong></td>
+<td>Lower High</td>
+<td>Higher High</td>
+<td>Continuation down</td>
+</tr>
+</tbody>
+</table>
+<h3 id="divergence-strength">Divergence Strength<a class="headerlink" href="#divergence-strength" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Strength</th>
+<th>Criteria</th>
+<th>Reliability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Strong</strong></td>
+<td>Clear price/OBV divergence over 30+ bars</td>
+<td>High</td>
+</tr>
+<tr>
+<td><strong>Moderate</strong></td>
+<td>Visible divergence over 15-30 bars</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td><strong>Weak</strong></td>
+<td>Minor divergence over 10-15 bars</td>
+<td>Low</td>
+</tr>
+</tbody>
+</table>
+<h3 id="alert-configuration_1">Alert Configuration<a class="headerlink" href="#alert-configuration_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Alert Type</th>
+<th>Trigger Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bullish Regular Divergence</td>
+<td>Lower low in price, higher low in OBV</td>
+</tr>
+<tr>
+<td>Bearish Regular Divergence</td>
+<td>Higher high in price, lower high in OBV</td>
+</tr>
+<tr>
+<td>Bullish Hidden Divergence</td>
+<td>Higher low in price, lower low in OBV</td>
+</tr>
+<tr>
+<td>Bearish Hidden Divergence</td>
+<td>Lower high in price, higher high in OBV</td>
+</tr>
+<tr>
+<td>OBV Trend Change</td>
+<td>OBV crosses zero or changes slope significantly</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="quick-links">🔗 Quick Links<a class="headerlink" href="#quick-links" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../pentarch-v10/">Pentarch Guide</a> — Five Cycle Events</li>
+<li><a href="../janus-atlas-v10/">Janus Atlas Guide</a> — Levels System</li>
+<li><a href="../omnideck-v10/">Omnideck Guide</a> — 7-System Suite</li>
+<li><a href="../augury-grid-v10/">Augury Grid Guide</a> — 8-Symbol Monitor</li>
+<li><a href="../minimal-flow-v10/">Volume Oracle Guide</a> — Volume Analysis</li>
+<li><a href="../harmonic-oscillator-v10/">Harmonic Oscillator Guide</a> — Triple Composite</li>
+<li><a href="../plutus-flow-v10/">Plutus Flow Guide</a> — OBV Analysis</li>
+</ul>
+<hr />
+<p><strong>Note:</strong> This quick reference contains all configuration tables and alert types. Refer to individual product guides for detailed usage instructions, examples, and educational content.</p>
                 
               </article>
             </div>
