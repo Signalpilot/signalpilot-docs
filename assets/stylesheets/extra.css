@@ -2482,5 +2482,226 @@ body::before {
 }
 
 /* ========================================
+   ACCESSIBILITY ENHANCEMENTS
+   ======================================== */
+
+/* Enhanced focus indicators for keyboard navigation */
+:focus-visible {
+  outline: 3px solid var(--md-accent-fg-color) !important;
+  outline-offset: 2px !important;
+  border-radius: 2px;
+}
+
+/* Remove focus outline for mouse users */
+:focus:not(:focus-visible) {
+  outline: none !important;
+}
+
+/* Enhanced focus for navigation elements */
+.md-nav__link:focus-visible,
+.md-header__button:focus-visible,
+.sp-button:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--md-accent-fg-color) !important;
+  outline-offset: 2px !important;
+  background: rgba(var(--md-accent-fg-color), 0.1);
+}
+
+/* Skip to main content link (keyboard users) */
+.md-skip:focus {
+  position: fixed !important;
+  top: 1rem !important;
+  left: 1rem !important;
+  z-index: 1000 !important;
+  padding: 1rem 2rem !important;
+  background: var(--md-accent-fg-color) !important;
+  color: white !important;
+  text-decoration: none !important;
+  border-radius: 4px !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* ========================================
+   MOBILE UX ENHANCEMENTS
+   ======================================== */
+
+/* Optimize touch targets - minimum 44x44px for accessibility */
+@media (max-width: 76.24em) {
+  .md-nav__link,
+  .md-header__button,
+  .sp-button,
+  button,
+  a.md-button {
+    min-height: 44px !important;
+    min-width: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* Better tap highlight color */
+  * {
+    -webkit-tap-highlight-color: rgba(var(--md-accent-fg-color), 0.2);
+  }
+
+  /* Smoother scrolling on mobile */
+  html {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Very small screens (320px - old iPhone SE, etc.) */
+@media screen and (max-width: 374px) {
+  /* Reduce header heights to save screen space */
+  .sp-topnav__inner {
+    padding: 0.4rem 0.75rem !important;
+  }
+
+  .sp-topnav .brand {
+    font-size: 1.1rem !important;
+  }
+
+  .sp-links {
+    gap: 1rem !important;
+  }
+
+  .sp-links a {
+    font-size: 0.85rem !important;
+  }
+
+  .sp-cta {
+    padding: 0.4rem 0.75rem !important;
+    font-size: 0.85rem !important;
+  }
+
+  /* Smaller MkDocs header */
+  .md-header__title {
+    font-size: 0.9rem !important;
+  }
+
+  /* Adjust sticky sidebar top position for smaller headers */
+  .md-sidebar {
+    top: 6rem !important; /* Reduced from 7rem */
+  }
+
+  .md-sidebar__scrollwrap {
+    max-height: calc(100vh - 6rem) !important;
+  }
+}
+
+/* ========================================
+   PERFORMANCE OPTIMIZATIONS
+   ======================================== */
+
+/* GPU acceleration for animations */
+.md-sidebar,
+.md-header,
+.sp-topnav,
+.md-nav__link,
+.sp-button {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Optimize repaints */
+.md-sidebar,
+.md-header {
+  contain: layout style paint;
+}
+
+/* Lazy load images hint (for future image optimization) */
+img {
+  content-visibility: auto;
+}
+
+/* ========================================
+   SMOOTH TRANSITIONS & ANIMATIONS
+   ======================================== */
+
+/* Smooth transitions for interactive elements */
+.md-nav__link,
+.sp-button,
+.md-header__button,
+button,
+a {
+  transition: background-color 0.2s ease,
+              color 0.2s ease,
+              transform 0.1s ease,
+              box-shadow 0.2s ease !important;
+}
+
+/* Subtle hover effects */
+.md-nav__link:hover,
+.sp-button:hover {
+  transform: translateY(-1px);
+}
+
+.md-nav__link:active,
+.sp-button:active {
+  transform: translateY(0);
+}
+
+/* Enhanced reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Disable will-change for reduced motion */
+  .md-sidebar,
+  .md-header,
+  .sp-topnav,
+  .md-nav__link,
+  .sp-button {
+    will-change: auto !important;
+  }
+}
+
+/* ========================================
+   DARK MODE OPTIMIZATIONS
+   ======================================== */
+
+/* Better contrast in dark mode for accessibility */
+[data-md-color-scheme="slate"] {
+  /* Ensure text meets WCAG AA standards */
+  --md-typeset-color: #e8f0ff;
+}
+
+[data-md-color-scheme="slate"] .md-nav__link {
+  color: rgba(255, 255, 255, 0.87);
+}
+
+[data-md-color-scheme="slate"] .md-nav__link:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+/* ========================================
+   PERFORMANCE HINTS FOR PRODUCTION
+   ======================================== */
+
+/*
+  PRODUCTION OPTIMIZATION CHECKLIST:
+
+  1. Minify this CSS file (remove comments, whitespace)
+  2. Enable Brotli/Gzip compression on server
+  3. Add lazy loading to images in mkdocs.yml:
+     - Add 'attr_list' to markdown_extensions
+     - Use {loading=lazy} on img tags
+  4. Enable critical CSS extraction
+  5. Consider CSS purging for unused styles
+  6. Add resource hints in HTML:
+     - <link rel="preconnect" href="https://fonts.googleapis.com">
+     - <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+*/
+
+/* ========================================
    END OF CONSOLIDATED STYLES
    ======================================== */
