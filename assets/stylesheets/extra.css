@@ -337,7 +337,7 @@ body::before {
   .md-sidebar {
     position: -webkit-sticky !important;
     position: sticky !important;
-    top: 7rem !important; /* topnav (~2.5rem) + header (~3.6rem) + buffer */
+    top: 4.5rem !important; /* Reduced offset for more sidebar space */
     align-self: flex-start !important;
     display: block !important;
   }
@@ -345,19 +345,20 @@ body::before {
   .md-sidebar--primary {
     position: -webkit-sticky !important;
     position: sticky !important;
-    top: 7rem !important;
+    top: 4.5rem !important;
   }
 
   .md-sidebar--secondary {
     position: -webkit-sticky !important;
     position: sticky !important;
-    top: 7rem !important;
+    top: 4.5rem !important;
   }
 
   /* Constrain sidebar height for sticky behavior */
   .md-sidebar__scrollwrap {
-    max-height: calc(100vh - 7rem) !important; /* Account for topnav + header */
+    max-height: calc(100vh - 5rem) !important; /* More space for TOC content */
     overflow-y: auto !important; /* Allow TOC to scroll if content is long */
+    min-height: 300px !important; /* Ensure minimum usable height */
   }
 }
 

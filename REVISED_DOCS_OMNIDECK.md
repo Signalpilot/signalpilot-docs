@@ -56,7 +56,6 @@ Additional systems can be enabled progressively.
 **Month 2+: Customization (selective addition)**
 - Add Supply/Demand Zones if zone-based approach used
 - Add Candlestick Patterns if pattern recognition valued
-- Most users report using 3-5 systems long-term
 
 ### System Toggle Options
 
@@ -360,7 +359,7 @@ Additional systems can be enabled progressively.
 ## ❓ Frequently Asked Questions
 
 ### Q: Should I enable all 10 systems?
-**A:** Starting with 3-4 systems recommended to learn each properly. Most users report using 3-5 systems long-term based on individual approach.
+**A:** Starting with 3-4 systems recommended to learn each properly. Systems can be added progressively based on individual approach.
 
 ### Q: Does it slow down my charts?
 **A:** No. Omnideck optimized to run all systems efficiently. Minimal performance impact even with all 10 enabled.
