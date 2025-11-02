@@ -1143,6 +1143,30 @@ body::before {
   border-right: 1px solid var(--md-typeset-table-color, rgba(0, 0, 0, 0.12));
 }
 
+/* Alternating row colors for better scannability */
+.md-typeset table tbody tr:nth-child(even) {
+  background-color: rgba(var(--md-default-fg-color--lightest), 0.03);
+}
+
+.md-typeset table tbody tr:nth-child(odd) {
+  background-color: transparent;
+}
+
+/* Hover state for table rows */
+.md-typeset table tbody tr:hover {
+  background-color: rgba(var(--md-primary-fg-color), 0.05);
+  transition: background-color 0.2s ease;
+}
+
+/* Dark mode alternating rows */
+[data-md-color-scheme="slate"] .md-typeset table tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table tbody tr:hover {
+  background-color: rgba(var(--md-primary-fg-color), 0.08);
+}
+
 .md-typeset table th:last-child,
 .md-typeset table td:last-child {
   border-right: none;
@@ -1969,36 +1993,198 @@ body::before {
 }
 
 /* ========================================
-   15. PRINT STYLES
+   15. ENHANCED PRINT STYLES
    ======================================== */
 
 @media print {
+  /* Hide non-essential elements */
   .sp-aurora,
   .sp-topnav,
   .md-header,
   .md-sidebar,
-  .md-footer {
-    display: none;
+  .md-sidebar--primary,
+  .md-sidebar--secondary,
+  .md-footer,
+  .md-search,
+  .back-to-top,
+  .skip-to-content,
+  .md-header__button,
+  .md-nav,
+  button,
+  .sp-button {
+    display: none !important;
+  }
+
+  /* Reset to print-friendly colors */
+  * {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
   }
 
   body {
-    background: white;
-    color: black;
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+    line-height: 1.5;
   }
 
-  .md-typeset a {
-    color: #000;
+  /* Content area takes full width */
+  .md-content {
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .md-content__inner {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+    font-weight: bold;
+  }
+
+  h1 {
+    font-size: 24pt;
+    margin-top: 0;
+    border-bottom: 2pt solid black;
+    padding-bottom: 0.5em;
+  }
+
+  h2 {
+    font-size: 18pt;
+    margin-top: 1em;
+    border-bottom: 1pt solid black;
+    padding-bottom: 0.3em;
+  }
+
+  h3 {
+    font-size: 14pt;
+    margin-top: 0.8em;
+  }
+
+  /* Links - show URLs */
+  a {
+    color: #000 !important;
     text-decoration: underline;
   }
 
-  .md-typeset table {
-    border-collapse: collapse;
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+    font-style: italic;
   }
 
-  .md-typeset table th,
-  .md-typeset table td {
-    border: 1px solid #000;
-    padding: 0.5rem;
+  /* Don't show anchor links */
+  .headerlink {
+    display: none !important;
+  }
+
+  /* Tables */
+  table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    page-break-inside: avoid;
+    font-size: 10pt;
+  }
+
+  table th,
+  table td {
+    border: 1pt solid #000 !important;
+    padding: 0.3em 0.5em !important;
+    text-align: left;
+  }
+
+  table th {
+    font-weight: bold;
+    background: #f0f0f0 !important;
+  }
+
+  /* Remove alternating colors for print */
+  table tbody tr {
+    background: white !important;
+  }
+
+  /* Code blocks */
+  code,
+  pre {
+    border: 1pt solid #000 !important;
+    background: #f5f5f5 !important;
+    padding: 0.2em 0.4em !important;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 9pt;
+    page-break-inside: avoid;
+  }
+
+  pre {
+    padding: 0.5em !important;
+    overflow: visible !important;
+    white-space: pre-wrap !important;
+    word-wrap: break-word !important;
+  }
+
+  /* Lists */
+  ul, ol {
+    page-break-inside: avoid;
+  }
+
+  li {
+    page-break-inside: avoid;
+  }
+
+  /* Images */
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  /* Cards */
+  .sp-card,
+  .grid.cards > li {
+    break-inside: avoid;
+    border: 1pt solid #000 !important;
+    padding: 1em !important;
+    margin-bottom: 1em;
+  }
+
+  /* Avoid page breaks */
+  p,
+  blockquote {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* Page header for each printed page */
+  @page {
+    margin: 2cm;
+
+    @top-right {
+      content: "Signal Pilot Docs - Page " counter(page);
+      font-size: 9pt;
+      color: #666;
+    }
+  }
+
+  /* First page has no header */
+  @page :first {
+    @top-right {
+      content: "";
+    }
+  }
+
+  /* Optimize spacing */
+  .md-typeset {
+    font-size: 11pt;
+  }
+
+  /* Remove animations/transitions */
+  * {
+    animation: none !important;
+    transition: none !important;
   }
 }
 
@@ -2788,6 +2974,91 @@ a:focus-visible {
 /* Lazy load images hint (for future image optimization) */
 img {
   content-visibility: auto;
+}
+
+/* ========================================
+   SKIP TO CONTENT LINK - Accessibility
+   ======================================== */
+
+/* Skip to content link - hidden until focused */
+.skip-to-content {
+  position: fixed;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: var(--md-primary-fg-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 0 0 8px 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: top 0.3s ease;
+}
+
+.skip-to-content:focus {
+  top: 0;
+  outline: 3px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+}
+
+.skip-to-content:hover {
+  background: color-mix(in srgb, var(--md-primary-fg-color) 90%, black);
+}
+
+/* ========================================
+   BACK TO TOP BUTTON
+   ======================================== */
+
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 200;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--md-primary-fg-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.2s ease;
+  font-size: 1.5rem;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  background: color-mix(in srgb, var(--md-primary-fg-color) 90%, white);
+}
+
+.back-to-top:active {
+  transform: translateY(-2px);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 44px;
+    height: 44px;
+    font-size: 1.3rem;
+  }
 }
 
 /* ========================================
