@@ -323,15 +323,8 @@ body::before {
 
 /* CRITICAL: Sticky sidebars - stay visible while scrolling */
 @media screen and (min-width: 76.25em) {
-  /* Ensure ALL parent containers have visible overflow - critical for sticky! */
-  .md-container {
-    overflow: visible !important;
-  }
-
-  .md-grid {
-    overflow: visible !important;
-  }
-
+  /* Remove overflow constraints that break position: sticky */
+  /* Only target the specific containers in the parent chain */
   .md-main {
     overflow: visible !important; /* Critical: allows sticky children */
   }
@@ -346,7 +339,6 @@ body::before {
     position: sticky !important;
     top: 7rem !important; /* topnav (~2.5rem) + header (~3.6rem) + buffer */
     align-self: flex-start !important;
-    display: block !important;
   }
 
   .md-sidebar--primary {
