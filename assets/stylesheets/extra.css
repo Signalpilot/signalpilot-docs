@@ -463,6 +463,11 @@ body::before {
   }
 }
 
+/* Fix for sidebar navigation text truncation - ensure ellipsis works properly */
+.md-nav__link .md-ellipsis {
+  white-space: nowrap !important; /* Required for text-overflow: ellipsis to work */
+}
+
 /* ========================================
    4.5. TOC SCROLL SPY STYLES
    ======================================== */
