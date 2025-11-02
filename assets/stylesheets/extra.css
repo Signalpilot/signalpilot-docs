@@ -353,6 +353,23 @@ body::before {
     width: 12.1rem !important; /* Ensure primary sidebar has width */
   }
 
+  /* Reduce font size in primary sidebar to fit all items without scrolling */
+  .md-sidebar--primary .md-nav__link {
+    font-size: 0.75rem !important; /* Reduced from ~1rem */
+    line-height: 1.5 !important;
+    padding: 0.4rem 0.8rem !important; /* Tighter spacing */
+  }
+
+  /* Also reduce title/section font sizes in primary sidebar */
+  .md-sidebar--primary .md-nav__title {
+    font-size: 0.75rem !important;
+    padding: 0.4rem 0.8rem !important;
+  }
+
+  .md-sidebar--primary .md-ellipsis {
+    font-size: inherit !important;
+  }
+
   .md-sidebar--secondary {
     position: -webkit-sticky !important;
     position: sticky !important;
