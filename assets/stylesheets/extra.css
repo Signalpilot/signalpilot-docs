@@ -397,45 +397,98 @@ body::before {
    4.5. TOC SCROLL SPY STYLES
    ======================================== */
 
-/* Active TOC item (current section in view) */
-.md-nav--secondary .md-nav__link[data-md-state="blur"],
-.md-nav--secondary .md-nav__link:not(.md-nav__link--active) {
-  opacity: 0.5;
-  color: var(--md-default-fg-color--light);
+/* Base TOC link styling with smooth transitions */
+.md-nav--secondary .md-nav__link {
+  position: relative;
+  padding-left: 0.75rem;
+  border-left: 3px solid transparent;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Inactive sections (not yet reached) - dimmed */
+.md-nav--secondary .md-nav__link:not(.md-nav__link--active) {
+  opacity: 0.54;
+  color: var(--md-default-fg-color);
+}
+
+/* Active TOC item (current section in view) - highlighted with indicator */
 .md-nav--secondary .md-nav__link.md-nav__link--active {
   opacity: 1;
   color: var(--md-primary-fg-color);
   font-weight: 600;
+  background: color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent);
+  border-left-color: var(--md-primary-fg-color);
+  border-radius: 0 4px 4px 0;
 }
 
-/* Sections you've scrolled past (blur state) */
+/* Sections you've scrolled past (blur state) - greyed out with checkmark feel */
 .md-nav--secondary .md-nav__link[data-md-state="blur"] {
-  opacity: 0.35;
-  color: var(--md-default-fg-color--lighter);
+  opacity: 0.38;
+  color: var(--md-default-fg-color--light);
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in srgb, var(--md-default-fg-color) 30%, transparent);
 }
 
-/* Hover states for TOC */
+/* Hover states for TOC - always responsive */
 .md-nav--secondary .md-nav__link:hover {
   opacity: 1;
   color: var(--md-primary-fg-color);
+  background: color-mix(in srgb, var(--md-primary-fg-color) 5%, transparent);
+  border-left-color: color-mix(in srgb, var(--md-primary-fg-color) 50%, transparent);
+}
+
+/* Remove strikethrough on hover for completed items */
+.md-nav--secondary .md-nav__link[data-md-state="blur"]:hover {
+  text-decoration: none;
+}
+
+/* Nested items (h3 under h2) - slightly indented with subtle styling */
+.md-nav--secondary .md-nav .md-nav__link {
+  padding-left: 1rem;
+  font-size: 0.9em;
+  border-left-width: 2px;
 }
 
 /* Dark mode adjustments */
 [data-md-color-scheme="slate"] .md-nav--secondary .md-nav__link:not(.md-nav__link--active) {
   opacity: 0.5;
-  color: rgba(255, 255, 255, 0.54);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 [data-md-color-scheme="slate"] .md-nav--secondary .md-nav__link[data-md-state="blur"] {
-  opacity: 0.25;
-  color: rgba(255, 255, 255, 0.38);
+  opacity: 0.3;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration-color: rgba(255, 255, 255, 0.2);
 }
 
 [data-md-color-scheme="slate"] .md-nav--secondary .md-nav__link.md-nav__link--active {
   opacity: 1;
   color: var(--md-primary-fg-color);
+  background: color-mix(in srgb, var(--md-primary-fg-color) 12%, transparent);
+}
+
+/* Smooth scroll behavior for better UX */
+.md-nav--secondary {
+  scroll-behavior: smooth;
+}
+
+/* Add visual "reading line" effect */
+.md-nav--secondary .md-nav__link.md-nav__link--active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg,
+    transparent,
+    var(--md-primary-fg-color) 20%,
+    var(--md-primary-fg-color) 80%,
+    transparent
+  );
+  border-radius: 2px;
 }
 
 /* ========================================
