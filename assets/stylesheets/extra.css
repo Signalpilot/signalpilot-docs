@@ -284,6 +284,17 @@ body::before {
 
 /* MOBILE DRAWER FIX: Ensure drawer is above overlay on narrow screens */
 @media screen and (max-width: 76.24em) {
+  /* CRITICAL: HIDE drawer when closed - transform it off-screen */
+  #__drawer:not(:checked) ~ .md-container .md-sidebar--primary {
+    transform: translateX(-100%) !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.25s,
+                visibility 0s 0.25s;
+  }
+
   /* CRITICAL: When drawer opens, raise entire container above overlay! */
   /* Container has z-index:1 and creates stacking context, isolating children */
   /* Overlay has z-index:100 and is OUTSIDE container, so appears on top */
@@ -297,12 +308,16 @@ body::before {
     position: fixed !important;
   }
 
-  /* Ensure drawer content is clickable when open */
+  /* SHOW drawer when open - slide in from left */
   #__drawer:checked ~ .md-container .md-sidebar--primary {
+    transform: translateX(0) !important;
     z-index: 250 !important;
     pointer-events: auto !important;
     opacity: 1 !important; /* CRITICAL: Full brightness when open */
     visibility: visible !important;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.25s,
+                visibility 0s;
   }
 
   /* CRITICAL: Full brightness and clickability for all drawer items */
@@ -642,12 +657,6 @@ body::before {
     display: flex !important;
     align-items: center;
     width: 100%;
-  }
-
-  /* Smooth drawer animation */
-  .md-sidebar--primary {
-    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-                box-shadow 0.25s;
   }
 
   /* Add shadow to drawer when open */
