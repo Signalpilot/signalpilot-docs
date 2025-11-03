@@ -520,6 +520,42 @@ body::before {
   background: color-mix(in srgb, var(--md-primary-fg-color) 10%, transparent);
 }
 
+/* CRITICAL: Light mode navigation text - ensure ALL nav links are dark and readable */
+[data-md-color-scheme="default"] .md-nav__link,
+[data-md-color-scheme="default"] .md-nav__item,
+[data-md-color-scheme="default"] .md-nav__title,
+[data-md-color-scheme="default"] .md-sidebar {
+  color: #0f1524 !important;
+}
+
+/* Light mode header */
+[data-md-color-scheme="default"] .md-header,
+[data-md-color-scheme="default"] .md-header__title,
+[data-md-color-scheme="default"] .md-header__button {
+  color: #0f1524 !important;
+}
+
+/* Light mode sidebar backgrounds */
+[data-md-color-scheme="default"] .md-sidebar,
+[data-md-color-scheme="default"] .md-sidebar__scrollwrap {
+  background: #ffffff !important;
+}
+
+/* Light mode all body text */
+[data-md-color-scheme="default"] body,
+[data-md-color-scheme="default"] .md-typeset p,
+[data-md-color-scheme="default"] .md-typeset li,
+[data-md-color-scheme="default"] .md-typeset td,
+[data-md-color-scheme="default"] .md-typeset th,
+[data-md-color-scheme="default"] h1,
+[data-md-color-scheme="default"] h2,
+[data-md-color-scheme="default"] h3,
+[data-md-color-scheme="default"] h4,
+[data-md-color-scheme="default"] h5,
+[data-md-color-scheme="default"] h6 {
+  color: #0f1524 !important;
+}
+
 /* Active section (parent of active page) - subtle highlight */
 .md-nav--primary .md-nav__item--active > .md-nav__link:not(.md-nav__link--active) {
   color: var(--md-primary-fg-color);
