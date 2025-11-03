@@ -469,6 +469,64 @@ body::before {
 }
 
 /* ========================================
+   4.4. PRIMARY SIDEBAR ACTIVE LINK HIGHLIGHTING
+   ======================================== */
+
+/* Active page link in primary sidebar - highlighted to show current location */
+.md-nav--primary .md-nav__link.md-nav__link--active {
+  position: relative;
+  color: var(--md-primary-fg-color);
+  font-weight: 600;
+  background: color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent);
+  border-radius: 4px;
+  padding-left: 0.75rem;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Add left border indicator to active link */
+.md-nav--primary .md-nav__link.md-nav__link--active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 70%;
+  background: var(--md-primary-fg-color);
+  border-radius: 2px;
+}
+
+/* Hover effect for all primary sidebar links */
+.md-nav--primary .md-nav__link:hover {
+  background: color-mix(in srgb, var(--md-primary-fg-color) 5%, transparent);
+  border-radius: 4px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Prevent hover effect from conflicting with active state */
+.md-nav--primary .md-nav__link.md-nav__link--active:hover {
+  background: color-mix(in srgb, var(--md-primary-fg-color) 12%, transparent);
+}
+
+/* Dark mode adjustments for primary sidebar */
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__link.md-nav__link--active {
+  color: var(--md-primary-fg-color);
+  background: color-mix(in srgb, var(--md-primary-fg-color) 12%, transparent);
+}
+
+/* Light mode adjustments for primary sidebar */
+[data-md-color-scheme="default"] .md-nav--primary .md-nav__link.md-nav__link--active {
+  color: var(--md-primary-fg-color);
+  background: color-mix(in srgb, var(--md-primary-fg-color) 10%, transparent);
+}
+
+/* Active section (parent of active page) - subtle highlight */
+.md-nav--primary .md-nav__item--active > .md-nav__link:not(.md-nav__link--active) {
+  color: var(--md-primary-fg-color);
+  opacity: 0.9;
+}
+
+/* ========================================
    4.5. TOC SCROLL SPY STYLES
    ======================================== */
 
