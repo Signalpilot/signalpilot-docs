@@ -575,28 +575,14 @@
 
   function forceCloseDrawer() {
     const drawerToggle = document.getElementById('__drawer');
-    const overlay = document.querySelector('.md-overlay');
 
-    if (drawerToggle) {
+    if (drawerToggle && drawerToggle.checked) {
+      // Simply uncheck the drawer - let CSS handle the rest
       drawerToggle.checked = false;
-    }
 
-    // Force hide overlay and sidebar with CSS
-    if (overlay) {
-      overlay.style.display = 'none';
-      // Reset after transition
-      setTimeout(() => {
-        overlay.style.display = '';
-      }, 300);
-    }
-
-    // Also ensure the sidebar itself is hidden
-    const sidebar = document.querySelector('.md-sidebar--primary');
-    if (sidebar) {
-      sidebar.style.transform = 'translateX(-100%)';
-      setTimeout(() => {
-        sidebar.style.transform = '';
-      }, 300);
+      // Trigger change event in case other scripts are listening
+      const event = new Event('change', { bubbles: true });
+      drawerToggle.dispatchEvent(event);
     }
   }
 
@@ -607,20 +593,48 @@
     const drawerToggle = document.getElementById('__drawer');
     if (!drawerToggle) return;
 
-    // Use event delegation on the document body to catch all navigation clicks
-    // This prevents duplicate listeners and works for dynamically added content
-    document.body.addEventListener('click', function(e) {
-      // Check if the click target is or is within a navigation link
-      const navLink = e.target.closest('.md-nav a[href]:not([href^="#"])');
+    // Use event delegation on the primary sidebar to catch navigation clicks
+    // This is more reliable than body delegation for drawer-specific behavior
+    document.addEventListener('click', function(e) {
+      // Check if drawer is open
+      if (!drawerToggle.checked) return;
 
-      if (navLink && drawerToggle.checked) {
-        // Immediately close the drawer
-        forceCloseDrawer();
+      // Check if the click is on a navigation link (not a section toggle)
+      const clickedElement = e.target;
+
+      // Find if clicked element is or is within a link
+      const link = clickedElement.closest('a.md-nav__link');
+
+      // If we found a link and it's not just a toggle label
+      if (link && link.href) {
+        // Check if it's a real navigation link (has href and it's not just a hash)
+        const href = link.getAttribute('href');
+
+        // Close drawer for actual page links (not section toggles or hash links)
+        if (href && !href.startsWith('#') && !link.hasAttribute('for')) {
+          console.log('🔒 Auto-closing drawer after navigation click:', href);
+          forceCloseDrawer();
+
+          // Small delay to ensure the click registers before drawer closes
+          e.stopPropagation();
+        }
       }
-    }, true); // Use capture phase
+    }, true); // Use capture phase to catch clicks early
+
+    // Also ensure clicking the overlay closes the drawer
+    const overlay = document.querySelector('.md-overlay');
+    if (overlay) {
+      overlay.addEventListener('click', function() {
+        if (drawerToggle.checked) {
+          console.log('🔒 Closing drawer via overlay click');
+          forceCloseDrawer();
+        }
+      }, true);
+    }
 
     // Mark as initialized
     drawerListenerAdded = true;
+    console.log('✅ Drawer auto-close initialized');
   }
 
   /* ========================================
