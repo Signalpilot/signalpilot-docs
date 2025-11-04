@@ -1268,11 +1268,257 @@
 
 <!-- Render the page content -->
 <h1 id="webhooks-tradingview-bot">Webhooks (TradingView → Bot)<a class="headerlink" href="#webhooks-tradingview-bot" title="Permanent link">&para;</a></h1>
-<p>Alerts can be sent to a bot/API using TradingView webhooks.</p>
-<h2 id="1-creating-the-alert">1) Creating the alert<a class="headerlink" href="#1-creating-the-alert" title="Permanent link">&para;</a></h2>
+<p>Webhooks allow TradingView alerts to be sent to external services, bots, or APIs for automation. This guide covers how webhooks can be configured and used with Signal Pilot indicators.</p>
+<div class="admonition note">
+<p class="admonition-title">Educational Purpose</p>
+<p>This guide presents webhook integration for educational and automation purposes. Automated trading carries significant risks. This is not financial advice.</p>
+</div>
+
+<h2 id="what-are-webhooks">📡 What Are Webhooks?<a class="headerlink" href="#what-are-webhooks" title="Permanent link">&para;</a></h2>
+<p>Webhooks are automated HTTP POST requests sent from TradingView to a URL you specify when an alert triggers. Common uses include:</p>
 <ul>
-<li>In the alert dialog, <strong>"Webhook URL"</strong> can be checked and the endpoint can be pasted, e.g.:</li>
+<li><strong>Notifications</strong>: Send alerts to Discord, Telegram, or Slack</li>
+<li><strong>Logging</strong>: Record alerts in a database or spreadsheet</li>
+<li><strong>Automation</strong>: Trigger actions through custom APIs</li>
+<li><strong>Testing</strong>: Monitor alert frequency and conditions</li>
 </ul>
+
+<h2 id="prerequisites">✅ Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>Before configuring webhooks, the following items are typically needed:</p>
+<ul>
+<li><strong>TradingView Pro, Pro+, or Premium</strong>: Free accounts do not have webhook access</li>
+<li><strong>Webhook endpoint URL</strong>: A service that receives HTTP POST requests (e.g., Discord webhook, custom server, automation platform)</li>
+<li><strong>Signal Pilot indicator</strong>: Configured and added to your chart</li>
+<li><strong>Basic JSON knowledge</strong>: Helpful for customizing message payloads (optional)</li>
+</ul>
+
+<h2 id="step-by-step-setup">🔧 Step-by-Step Setup<a class="headerlink" href="#step-by-step-setup" title="Permanent link">&para;</a></h2>
+
+<h3 id="step-1-get-webhook-url">Step 1: Get Your Webhook URL<a class="headerlink" href="#step-1-get-webhook-url" title="Permanent link">&para;</a></h3>
+<p>The webhook URL depends on where alerts are being sent:</p>
+
+<h4 id="discord-webhook">Discord Webhook</h4>
+<ol>
+<li>In Discord, go to Server Settings → Integrations → Webhooks</li>
+<li>Click "New Webhook"</li>
+<li>Configure name and channel</li>
+<li>Copy the webhook URL (format: <code>https://discord.com/api/webhooks/...</code>)</li>
+</ol>
+
+<h4 id="telegram-bot">Telegram Bot</h4>
+<ol>
+<li>Search for "@BotFather" in Telegram</li>
+<li>Send <code>/newbot</code> and follow prompts</li>
+<li>Get bot token</li>
+<li>Use a webhook bridge service or custom server to forward TradingView webhooks to Telegram</li>
+</ol>
+
+<h4 id="custom-server">Custom Server/API</h4>
+<p>Custom endpoints can be created using platforms like:</p>
+<ul>
+<li><strong>Webhook.site</strong>: For testing (receives and displays webhook payloads)</li>
+<li><strong>Make.com (Integromat)</strong>: For connecting to multiple services</li>
+<li><strong>Zapier</strong>: For workflow automation</li>
+<li><strong>Custom server</strong>: Python Flask, Node.js Express, etc.</li>
+</ul>
+
+<h3 id="step-2-configure-tradingview-alert">Step 2: Configure TradingView Alert<a class="headerlink" href="#step-2-configure-tradingview-alert" title="Permanent link">&para;</a></h3>
+<ol>
+<li>On your chart with Signal Pilot indicator, click the <strong>Alert</strong> icon (clock with +)</li>
+<li>In the alert dialog:
+<ul>
+<li><strong>Condition</strong>: Select your Signal Pilot indicator and desired alert condition</li>
+<li><strong>Options</strong>: Set "Once Per Bar Close" to avoid intrabar repaints</li>
+<li><strong>Expiration</strong>: Set according to your needs (commonly "Open-ended")</li>
+</ul>
+</li>
+<li>Scroll down to <strong>"Notifications"</strong> tab</li>
+<li>Check the <strong>"Webhook URL"</strong> box</li>
+<li>Paste your webhook endpoint URL</li>
+</ol>
+
+<h3 id="step-3-customize-message">Step 3: Customize Alert Message (Optional)<a class="headerlink" href="#step-3-customize-message" title="Permanent link">&para;</a></h3>
+<p>In the <strong>"Message"</strong> field, you can customize what data is sent. TradingView supports placeholders:</p>
+
+<div class="highlight"><pre><code>{
+  "indicator": "{{ticker}}",
+  "price": "{{close}}",
+  "time": "{{time}}",
+  "signal": "Pentarch Reversal Detected",
+  "timeframe": "{{interval}}"
+}</code></pre></div>
+
+<p><strong>Common TradingView Placeholders:</strong></p>
+<ul>
+<li><code>{{ticker}}</code>: Symbol name (e.g., "BTCUSDT")</li>
+<li><code>{{close}}</code>: Current close price</li>
+<li><code>{{time}}</code>: Alert trigger time</li>
+<li><code>{{interval}}</code>: Timeframe (e.g., "15", "1D")</li>
+<li><code>{{exchange}}</code>: Exchange name</li>
+</ul>
+
+<h3 id="step-4-test-webhook">Step 4: Test the Webhook<a class="headerlink" href="#step-4-test-webhook" title="Permanent link">&para;</a></h3>
+<ol>
+<li>After creating the alert, click <strong>"Test"</strong> button in alert settings</li>
+<li>Check your webhook destination (Discord channel, webhook.site, etc.)</li>
+<li>Verify the message appears with correct formatting</li>
+<li>If nothing appears, check:
+<ul>
+<li>Webhook URL is correct</li>
+<li>TradingView account has webhook access (Pro+ or Premium)</li>
+<li>Endpoint is accessible (not blocked by firewall)</li>
+</ul>
+</li>
+</ol>
+
+<h2 id="message-format-examples">💬 Message Format Examples<a class="headerlink" href="#message-format-examples" title="Permanent link">&para;</a></h2>
+
+<h3 id="discord-formatted">Discord-Formatted Message</h3>
+<div class="highlight"><pre><code>{
+  "content": "🔔 **Signal Pilot Alert**",
+  "embeds": [{
+    "title": "Pentarch Reversal",
+    "description": "Reversal pattern detected on {{ticker}}",
+    "color": 65280,
+    "fields": [
+      {"name": "Price", "value": "{{close}}", "inline": true},
+      {"name": "Timeframe", "value": "{{interval}}", "inline": true},
+      {"name": "Time", "value": "{{time}}", "inline": false}
+    ]
+  }]
+}</code></pre></div>
+
+<h3 id="simple-text">Simple Text Message</h3>
+<div class="highlight"><pre><code>Signal Pilot: {{ticker}} - Harmonic Oscillator cross detected at {{close}} on {{interval}} timeframe</code></pre></div>
+
+<h3 id="structured-json">Structured JSON for Custom API</h3>
+<div class="highlight"><pre><code>{
+  "alert_type": "signal_pilot",
+  "indicator": "janus_atlas",
+  "symbol": "{{ticker}}",
+  "exchange": "{{exchange}}",
+  "timeframe": "{{interval}}",
+  "price": "{{close}}",
+  "timestamp": "{{time}}",
+  "condition": "Level Break Alert"
+}</code></pre></div>
+
+<h2 id="common-platforms">🌐 Common Webhook Platforms<a class="headerlink" href="#common-platforms" title="Permanent link">&para;</a></h2>
+
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>Use Case</th>
+<th>Setup Complexity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Discord</strong></td>
+<td>Team notifications, logging</td>
+<td>Very Easy</td>
+</tr>
+<tr>
+<td><strong>Telegram</strong></td>
+<td>Mobile notifications</td>
+<td>Moderate (requires bot + bridge)</td>
+</tr>
+<tr>
+<td><strong>Make.com</strong></td>
+<td>Multi-service integration</td>
+<td>Easy (visual workflow)</td>
+</tr>
+<tr>
+<td><strong>Zapier</strong></td>
+<td>Connect to 5000+ apps</td>
+<td>Easy (visual workflow)</td>
+</tr>
+<tr>
+<td><strong>Webhook.site</strong></td>
+<td>Testing and debugging</td>
+<td>Very Easy</td>
+</tr>
+<tr>
+<td><strong>Custom Server</strong></td>
+<td>Full control, custom logic</td>
+<td>Advanced (programming required)</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="troubleshooting">🔍 Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+
+<h3 id="webhook-not-received">Webhook Not Received</h3>
+<ul>
+<li><strong>Verify TradingView plan</strong>: Free accounts cannot use webhooks</li>
+<li><strong>Check URL</strong>: Ensure no extra spaces, correct protocol (https://)</li>
+<li><strong>Test endpoint</strong>: Use webhook.site to verify TradingView can reach your URL</li>
+<li><strong>Alert fired?</strong>: Check TradingView alert log to confirm alert actually triggered</li>
+</ul>
+
+<h3 id="wrong-data-in-message">Wrong Data in Message</h3>
+<ul>
+<li><strong>Placeholder syntax</strong>: Must use <code>{{ticker}}</code> not <code>{ticker}</code></li>
+<li><strong>JSON formatting</strong>: Validate JSON at jsonlint.com if using structured format</li>
+<li><strong>Quote escaping</strong>: Use <code>\"</code> for quotes inside JSON strings if needed</li>
+</ul>
+
+<h3 id="too-many-webhooks">Too Many Webhooks (Spam)</h3>
+<ul>
+<li><strong>Alert frequency</strong>: Change from "Once Per Bar" to "Once Per Bar Close"</li>
+<li><strong>Condition specificity</strong>: Use more specific alert conditions</li>
+<li><strong>Cooldown period</strong>: Some webhook services have rate limits</li>
+</ul>
+
+<h2 id="security-considerations">🔒 Security Considerations<a class="headerlink" href="#security-considerations" title="Permanent link">&para;</a></h2>
+
+<div class="admonition warning">
+<p class="admonition-title">Important Security Notes</p>
+<ul>
+<li><strong>Webhook URLs are sensitive</strong>: Anyone with the URL can send messages to your endpoint</li>
+<li><strong>Don't share webhook URLs publicly</strong>: Treat them like passwords</li>
+<li><strong>Rotate URLs periodically</strong>: Especially for critical automation</li>
+<li><strong>Validate incoming data</strong>: If using custom server, verify requests come from TradingView</li>
+<li><strong>Use HTTPS only</strong>: Never use unsecured HTTP endpoints</li>
+</ul>
+</div>
+
+<h2 id="example-workflow">📋 Example Workflow<a class="headerlink" href="#example-workflow" title="Permanent link">&para;</a></h2>
+
+<p><strong>Scenario:</strong> Receiving Pentarch reversal alerts in a Discord channel</p>
+
+<ol>
+<li><strong>Created</strong> Discord webhook in #trading-alerts channel</li>
+<li><strong>Configured</strong> Pentarch v1.0 on BTCUSDT 15m chart</li>
+<li><strong>Set alert</strong> on "Pentarch: Reversal Detected" condition</li>
+<li><strong>Set to fire</strong> "Once Per Bar Close"</li>
+<li><strong>Pasted</strong> Discord webhook URL in alert settings</li>
+<li><strong>Customized message</strong> with Discord embed format (shown above)</li>
+<li><strong>Tested</strong> alert - message appeared in Discord</li>
+<li><strong>Alert now active</strong> - team receives notifications when reversal patterns are detected</li>
+</ol>
+
+<p><em>(Historical workflow example for educational purposes only. Not financial advice. Individual results may vary.)</em></p>
+
+<h2 id="next-steps">🚀 Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+
+<ul>
+<li><strong>Multiple alerts</strong>: Create separate alerts for different conditions</li>
+<li><strong>Alert management</strong>: Use descriptive names to organize alerts</li>
+<li><strong>Logging</strong>: Consider logging all alerts to track performance over time</li>
+<li><strong>Documentation</strong>: Document your webhook setup and message formats</li>
+<li><strong>Testing</strong>: Always test with paper trading before live trading</li>
+</ul>
+
+<div class="admonition tip">
+<p class="admonition-title">Related Resources</p>
+<ul>
+<li><a href="../how-to-alerts/">How to Set Up Alerts</a> - Core alert configuration</li>
+<li><a href="../ref-best-practices/">Best Practices</a> - Alert management tips</li>
+<li><a href="../about-support/">Support</a> - Get help with webhook issues</li>
+</ul>
+</div>
                 
               </article>
             </div>
