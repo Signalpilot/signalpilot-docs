@@ -635,7 +635,46 @@
   }
 
   /* ========================================
-     7. BACK TO TOP BUTTON FIX
+     7. MOBILE TABLE LABELS
+     Add data-label attributes for responsive card layout
+     ======================================== */
+
+  function addMobileTableLabels() {
+    // Only add labels on mobile/tablet
+    if (!window.matchMedia('(max-width: 768px)').matches) {
+      return;
+    }
+
+    const tables = document.querySelectorAll('.md-typeset table');
+
+    tables.forEach(table => {
+      // Skip if already processed
+      if (table.dataset.labelsAdded) return;
+      table.dataset.labelsAdded = 'true';
+
+      // Get all header cells
+      const headers = Array.from(table.querySelectorAll('thead th')).map(th =>
+        th.textContent.trim()
+      );
+
+      // If no headers found, skip
+      if (headers.length === 0) return;
+
+      // Add data-label to each cell based on column position
+      const rows = table.querySelectorAll('tbody tr');
+      rows.forEach(row => {
+        const cells = row.querySelectorAll('td');
+        cells.forEach((cell, index) => {
+          if (headers[index]) {
+            cell.setAttribute('data-label', headers[index]);
+          }
+        });
+      });
+    });
+  }
+
+  /* ========================================
+     8. BACK TO TOP BUTTON FIX
      Ensure it works on first click
      ======================================== */
 
@@ -683,7 +722,7 @@
   }
 
   /* ========================================
-     8. MOBILE NAVIGATION FIX
+     9. MOBILE NAVIGATION FIX
      Make simplified menu labels clickable
      ======================================== */
 
@@ -753,7 +792,7 @@
   }
 
   /* ========================================
-     9. INITIALIZATION
+     10. INITIALIZATION
      ======================================== */
 
   function init() {
@@ -763,6 +802,7 @@
     enhanceKeyboardNavigation();
     replaceEmojisWithIcons();
     autoCloseDrawer();
+    addMobileTableLabels();
     fixBackToTopButton();
     setupMobileNavigation();
 
@@ -777,6 +817,7 @@
           addTableScrollIndicators();
           addAriaLandmarks();
           replaceEmojisWithIcons();
+          addMobileTableLabels(); // Re-add table labels after page change
           fixBackToTopButton(); // Re-fix back to top after page change
           setupMobileNavigation(); // Re-setup mobile nav after page change
           // Don't call autoCloseDrawer() again - listener is already set
@@ -792,11 +833,14 @@
     init();
   }
 
-  // Re-run mobile nav setup on window resize
+  // Re-run mobile functions on window resize
   let resizeTimer;
   window.addEventListener('resize', function() {
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(setupMobileNavigation, 250);
+    resizeTimer = setTimeout(function() {
+      setupMobileNavigation();
+      addMobileTableLabels();
+    }, 250);
   });
 
 })();

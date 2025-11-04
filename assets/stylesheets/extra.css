@@ -1507,140 +1507,110 @@ body::before {
   opacity: 1;
 }
 
-/* Mobile table responsiveness - COMPREHENSIVE FIX */
+/* Mobile table responsiveness - CARD LAYOUT (NO HORIZONTAL SCROLL) */
 @media screen and (max-width: 768px) {
-  /* Ensure content area doesn't restrict table scrolling */
-  .md-content__inner {
-    overflow-x: visible !important;
-  }
-
-  /* Wrap tables in a scroll container */
+  /* Make tables stack vertically like cards - NO horizontal scrolling! */
   .md-typeset table {
-    display: block !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-    border: 1px solid var(--md-typeset-table-color, rgba(0,0,0,0.12)) !important;
-    border-radius: 6px !important;
+    border: none !important;
     margin: 1rem 0 !important;
   }
 
-  /* Table structure preserved */
-  .md-typeset table thead,
-  .md-typeset table tbody {
-    display: table !important;
-    width: 100% !important;
-    table-layout: auto !important;
-  }
-
-  .md-typeset table tr {
-    display: table-row !important;
-  }
-
-  .md-typeset table th,
-  .md-typeset table td {
-    display: table-cell !important;
-    font-size: 0.8125rem !important; /* 13px */
-    padding: 0.625rem 0.75rem !important; /* 10px 12px */
-    white-space: nowrap !important;
-    vertical-align: middle !important;
-    min-width: 100px !important;
-  }
-
-  /* Header styling */
-  .md-typeset table th {
-    background: var(--md-code-bg-color) !important;
-    font-weight: 700 !important;
-    position: sticky !important;
-    top: 0 !important;
-    z-index: 2 !important;
-  }
-
-  /* Sticky first column for context */
-  .md-typeset table td:first-child,
-  .md-typeset table th:first-child {
-    position: sticky !important;
-    left: 0 !important;
-    z-index: 3 !important;
-    min-width: 120px !important;
-    max-width: 160px !important;
-    font-weight: 600 !important;
-    border-right: 2px solid var(--md-typeset-table-color, rgba(0,0,0,0.15)) !important;
-    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.08) !important;
-  }
-
-  /* First column header has highest z-index */
-  .md-typeset table th:first-child {
-    z-index: 4 !important;
-    background: var(--md-code-bg-color) !important;
-  }
-
-  /* First column cells inherit row background */
-  .md-typeset table tbody tr:nth-child(even) td:first-child {
-    background: var(--md-default-fg-color--lightest) !important;
-  }
-
-  .md-typeset table tbody tr:nth-child(odd) td:first-child {
-    background: var(--md-default-bg-color) !important;
-  }
-
-  /* Dark mode sticky column */
-  [data-md-color-scheme="slate"] .md-typeset table tbody tr:nth-child(even) td:first-child {
-    background: rgba(255, 255, 255, 0.025) !important;
-  }
-
-  [data-md-color-scheme="slate"] .md-typeset table tbody tr:nth-child(odd) td:first-child {
-    background: var(--md-default-bg-color) !important;
-  }
-
-  [data-md-color-scheme="slate"] .md-typeset table th:first-child {
-    background: var(--md-code-bg-color) !important;
-  }
-
-  /* Other columns sizing */
-  .md-typeset table th:not(:first-child),
-  .md-typeset table td:not(:first-child) {
-    min-width: 100px !important;
-  }
-
-  /* Add scroll indicator */
-  .md-typeset table::after {
-    content: "← Scroll horizontally to see more →" !important;
-    display: block !important;
-    text-align: center !important;
-    padding: 0.5rem !important;
-    font-size: 0.6875rem !important; /* 11px */
-    color: var(--md-default-fg-color--light) !important;
-    background: var(--md-code-bg-color) !important;
-    border-top: 1px solid var(--md-typeset-table-color, rgba(0,0,0,0.12)) !important;
-    font-style: italic !important;
-    white-space: normal !important;
-  }
-
-  /* Remove scroll indicator when table fits */
-  .md-typeset table[data-no-scroll]::after {
+  /* Hide the table header on mobile */
+  .md-typeset table thead {
     display: none !important;
+  }
+
+  /* Make table body a flex container */
+  .md-typeset table tbody {
+    display: block !important;
+  }
+
+  /* Each row becomes a card */
+  .md-typeset table tbody tr {
+    display: block !important;
+    margin-bottom: 1rem !important;
+    padding: 1rem !important;
+    border: 1px solid var(--md-typeset-table-color, rgba(0,0,0,0.12)) !important;
+    border-radius: 8px !important;
+    background: var(--md-default-bg-color) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+  }
+
+  /* Dark mode card styling */
+  [data-md-color-scheme="slate"] .md-typeset table tbody tr {
+    background: rgba(255, 255, 255, 0.02) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  /* Each cell becomes a row with label + value */
+  .md-typeset table tbody tr td {
+    display: block !important;
+    width: 100% !important;
+    padding: 0.5rem 0 !important;
+    border: none !important;
+    text-align: left !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    font-size: 0.875rem !important;
+  }
+
+  /* Add bottom border except for last cell */
+  .md-typeset table tbody tr td:not(:last-child) {
+    border-bottom: 1px solid var(--md-typeset-table-color, rgba(0,0,0,0.08)) !important;
+    padding-bottom: 0.75rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  /* Show column labels before each cell value using data-label */
+  .md-typeset table tbody tr td::before {
+    content: attr(data-label) !important;
+    display: block !important;
+    font-weight: 700 !important;
+    font-size: 0.75rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    color: var(--md-default-fg-color--light) !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  /* If no data-label, try to get header from position */
+  /* First column */
+  .md-typeset table tbody tr td:nth-child(1)::before {
+    content: attr(data-label) !important;
+  }
+
+  /* Style the cell content */
+  .md-typeset table tbody tr td {
+    color: var(--md-default-fg-color) !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Make links and buttons more prominent in cards */
+  .md-typeset table tbody tr td a {
+    font-weight: 600 !important;
+    text-decoration: underline !important;
+  }
+
+  /* Code in tables */
+  .md-typeset table tbody tr td code {
+    font-size: 0.8125rem !important;
+    padding: 0.125rem 0.375rem !important;
   }
 }
 
-/* Extra small mobile screens - more compact tables */
+/* Extra small mobile screens - even more compact cards */
 @media screen and (max-width: 480px) {
-  .md-typeset table th,
-  .md-typeset table td {
-    font-size: 0.75rem !important; /* 12px */
-    padding: 0.5rem 0.625rem !important; /* 8px 10px */
+  .md-typeset table tbody tr {
+    padding: 0.875rem !important;
+    margin-bottom: 0.875rem !important;
   }
 
-  .md-typeset table td:first-child,
-  .md-typeset table th:first-child {
-    min-width: 100px !important;
-    max-width: 140px !important;
+  .md-typeset table tbody tr td {
+    font-size: 0.8125rem !important;
   }
 
-  .md-typeset table th:not(:first-child),
-  .md-typeset table td:not(:first-child) {
-    min-width: 90px !important;
+  .md-typeset table tbody tr td::before {
+    font-size: 0.6875rem !important;
   }
 
   /* Slightly wider sidebar on very small screens for better usability */
