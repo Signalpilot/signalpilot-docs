@@ -2052,32 +2052,29 @@
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
   <div class="sp-callout__icon">📊</div>
   <div class="sp-callout__content">
-    <h4>Position Tracking Flow</h4>
-    <p style="margin-bottom: 1rem;">Simple visualization of how Volume Oracle tracks your positions:</p>
+    <h4>Position Tracking Display</h4>
+    <p style="margin-bottom: 1rem;">Visual overview of what the Position Manager system displays:</p>
     <div class="mermaid">
 graph TD
-    Start([No Position<br/>Waiting for Signal]) --> Signal{VBS Signal Fires}
+    Start([Monitoring Mode<br/>No Active Tracking]) --> Signal{VBS Signal Detected}
 
-    Signal -->|VBS+ Green| Long[🟢 LONG Entry]
-    Signal -->|VBS- Red| Short[🔴 SHORT Entry]
+    Signal -->|VBS+ Green| Track1[🟢 Tracking Active<br/>Entry Price Marked<br/>Real-time P/L Displayed<br/>Target Line Shown]
+    Signal -->|VBS- Red| Track2[🔴 Tracking Active<br/>Entry Price Marked<br/>Real-time P/L Displayed<br/>Target Line Shown]
 
-    Long --> LongTrack[Position Tracking:<br/>✅ Entry Price Marked<br/>📊 Real-time P/L Display<br/>🎯 Exit Target Shown]
-    Short --> ShortTrack[Position Tracking:<br/>✅ Entry Price Marked<br/>📊 Real-time P/L Display<br/>🎯 Exit Target Shown]
+    Track1 --> End1[Opposite VBS Signal<br/>Tracking Ends]
+    Track2 --> End2[Opposite VBS Signal<br/>Tracking Ends]
 
-    LongTrack --> LongExit[VBS- Signal → Exit Long]
-    ShortTrack --> ShortExit[VBS+ Signal → Exit Short]
+    End1 --> Start
+    End2 --> Start
 
-    LongExit --> Start
-    ShortExit --> Start
-
-    style Long fill:#4caf50,color:#fff
-    style Short fill:#f44336,color:#fff
-    style LongTrack fill:#4caf50,color:#fff
-    style ShortTrack fill:#f44336,color:#fff
+    style Track1 fill:#4caf50,color:#fff
+    style Track2 fill:#f44336,color:#fff
     style Start fill:#2196f3,color:#fff
+    style End1 fill:#757575,color:#fff
+    style End2 fill:#757575,color:#fff
     </div>
     <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
-      <strong>How to read:</strong> VBS+ opens LONG positions (green), VBS- opens SHORT positions (red). Opposite signal exits the position. Cycle repeats.
+      <strong>How to read:</strong> When VBS signals appear, the indicator begins displaying entry price reference, unrealized P/L metrics, and target lines. Display continues until opposite signal appears.
     </p>
   </div>
 </div>
