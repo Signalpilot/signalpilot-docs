@@ -101,6 +101,31 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
 
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - CSS
+       To disable: comment out this entire block
+       ======================================== -->
+  <link rel="stylesheet" href="css/feedback.css">
+  <link rel="stylesheet" href="css/visual-enhancements.css">
+
+  <!-- Mermaid.js for diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'dark',
+      themeVariables: {
+        primaryColor: '#00bcd4',
+        primaryTextColor: '#fff',
+        primaryBorderColor: '#0097a7',
+        lineColor: '#00bcd4',
+        secondaryColor: '#ff5722',
+        tertiaryColor: '#4caf50'
+      }
+    });
+  </script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - CSS -->
+
   </head>
   
   
@@ -1816,6 +1841,44 @@ This alert setup guide is for <strong>educational purposes only</strong>. This i
 <p>This guide explains the process of setting up reliable, close-confirmed alerts for <span class="signal-pilot-brand">Signal Pilot</span> indicators. Proper alert configuration ensures signals are never missed and false intrabar notifications are avoided.</p>
 <hr />
 <h2 id="why-alerts-matter">🎯 Why Alerts Matter<a class="headerlink" href="#why-alerts-matter" title="Permanent link">&para;</a></h2>
+
+<div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
+  <div class="sp-callout__title">📋 Alert Setup Process</div>
+  <div class="mermaid">
+sequenceDiagram
+    participant User
+    participant TV as TradingView
+    participant SP as Signal Pilot Indicator
+    participant Alert as Alert System
+
+    User->>TV: Open chart
+    User->>TV: Add Signal Pilot indicator
+    TV->>SP: Load indicator
+    SP->>TV: Display on chart
+
+    User->>TV: Right-click indicator name
+    TV->>User: Show "Add Alert" option
+    User->>TV: Click "Add Alert"
+
+    TV->>Alert: Open Alert Dialog
+    User->>Alert: Select condition (e.g. "Any alert() call")
+    User->>Alert: Set alert name
+    User->>Alert: Configure notifications
+
+    Alert->>TV: Save alert
+    TV->>User: ✅ Alert Created
+
+    Note over SP,Alert: Wait for signal...
+
+    SP->>Alert: 🔔 Signal Triggered!
+    Alert->>User: Send notification
+  </div>
+  <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+    <strong>How to read:</strong> Follow the sequence from top to bottom to set up your first alert.
+    Each step shows the interaction between you, TradingView, and the indicator.
+  </p>
+</div>
+
 <p><span style="color: #0aa1d5; font-weight: 600;">Critical Setup</span></p>
 <p><strong>Alerts provide:</strong>
 - Instant notifications when signals fire
@@ -2254,5 +2317,12 @@ This alert setup guide is for <strong>educational purposes only</strong>. This i
       <script src="../assets/enhancements.js"></script>
       <script src="../assets/sticky-toc-scroll.js"></script>
     <script src="../assets/components.js"></script>
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - JS
+       To disable: comment out this entire block
+       ======================================== -->
+  <script src="js/feedback-system.js"></script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - JS -->
+
   </body>
 </html>

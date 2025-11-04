@@ -157,6 +157,31 @@
   }
   </script>
 
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - CSS
+       To disable: comment out this entire block
+       ======================================== -->
+  <link rel="stylesheet" href="css/feedback.css">
+  <link rel="stylesheet" href="css/visual-enhancements.css">
+
+  <!-- Mermaid.js for diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'dark',
+      themeVariables: {
+        primaryColor: '#00bcd4',
+        primaryTextColor: '#fff',
+        primaryBorderColor: '#0097a7',
+        lineColor: '#00bcd4',
+        secondaryColor: '#ff5722',
+        tertiaryColor: '#4caf50'
+      }
+    });
+  </script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - CSS -->
+
   </head>
   
   
@@ -2224,6 +2249,40 @@ CAP → BDN → TD (Climax to accumulation)
 <p><em>NanoFlow contributes to detection system. Not intended as standalone analysis tool.</em></p>
 <hr />
 <h2 id="four-layer-detection-system">🔄 Four-Layer Detection System<a class="headerlink" href="#four-layer-detection-system" title="Permanent link">&para;</a></h2>
+
+<div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
+  <div class="sp-callout__title">📊 Visual Overview: Signal Detection Process</div>
+  <div class="mermaid">
+graph TD
+    A[Price Data] --> B[Four-Layer Detection System]
+
+    B --> C{Layer 1:<br/>Regime<br/>Classification}
+    B --> D{Layer 2:<br/>Pilot Line<br/>Distance}
+    B --> E{Layer 3:<br/>NanoFlow<br/>Momentum}
+    B --> F{Layer 4:<br/>Bar Close<br/>Confirmation}
+
+    C --> G[All Conditions Met]
+    D --> G
+    E --> G
+    F --> G
+
+    G --> H{Close<br/>Confirmed?}
+    H -->|Yes| I[🟢 Signal Fires]
+    H -->|No| J[⏳ Wait for Close]
+
+    I --> K[Alert Sent]
+
+    style I fill:#4caf50,color:#fff
+    style J fill:#ff9800,color:#fff
+    style K fill:#00bcd4,color:#fff
+    style B fill:#2196f3,color:#fff
+  </div>
+  <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+    <strong>How to read:</strong> Price data flows through four independent validation layers.
+    Only when all four layers confirm simultaneously at bar close does a signal appear.
+  </p>
+</div>
+
 <p><strong>Technical Methodology:</strong></p>
 <h3 id="layer-1-regime-classification">Layer 1: Regime Classification<a class="headerlink" href="#layer-1-regime-classification" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2523,5 +2582,12 @@ support@signalpilot.io</p>
       <script src="../assets/enhancements.js"></script>
       <script src="../assets/sticky-toc-scroll.js"></script>
     <script src="../assets/components.js"></script>
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - JS
+       To disable: comment out this entire block
+       ======================================== -->
+  <script src="js/feedback-system.js"></script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - JS -->
+
   </body>
 </html>
