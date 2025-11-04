@@ -866,7 +866,7 @@
           <li class="md-nav__item">
   <a href="#buy-signal" class="md-nav__link">
     <span class="md-ellipsis">
-      🟢 BUY Signal
+      🟢 Bull Signal
     </span>
   </a>
 
@@ -874,7 +874,7 @@
           <li class="md-nav__item">
   <a href="#sell-signal" class="md-nav__link">
     <span class="md-ellipsis">
-      🔴 SELL Signal
+      🔴 Bear Signal
     </span>
   </a>
 
@@ -951,7 +951,7 @@
           <li class="md-nav__item">
   <a href="#pattern-1-buy-strong-bullish-progression" class="md-nav__link">
     <span class="md-ellipsis">
-      Pattern 1: BUY → STRONG Bullish Progression
+      Pattern 1: Bull → STRONG Bullish Progression
     </span>
   </a>
 
@@ -967,7 +967,7 @@
           <li class="md-nav__item">
   <a href="#pattern-3-buysell-neut-transition" class="md-nav__link">
     <span class="md-ellipsis">
-      Pattern 3: BUY/SELL → NEUT Transition
+      Pattern 3: Bull/Bear → NEUT Transition
     </span>
   </a>
 
@@ -975,7 +975,7 @@
           <li class="md-nav__item">
   <a href="#pattern-4-neut-buysell-emergence" class="md-nav__link">
     <span class="md-ellipsis">
-      Pattern 4: NEUT → BUY/SELL Emergence
+      Pattern 4: NEUT → Bull/Bear Emergence
     </span>
   </a>
 
@@ -1062,7 +1062,7 @@
           <li class="md-nav__item">
   <a href="#q-do-strong-signals-perform-better-than-regular-buysell" class="md-nav__link">
     <span class="md-ellipsis">
-      Q: Do STRONG signals perform better than regular BUY/SELL?
+      Q: Do STRONG signals perform better than regular Bull/Bear?
     </span>
   </a>
 
@@ -1625,7 +1625,7 @@
           <li class="md-nav__item">
   <a href="#buy-signal" class="md-nav__link">
     <span class="md-ellipsis">
-      🟢 BUY Signal
+      🟢 Bull Signal
     </span>
   </a>
 
@@ -1633,7 +1633,7 @@
           <li class="md-nav__item">
   <a href="#sell-signal" class="md-nav__link">
     <span class="md-ellipsis">
-      🔴 SELL Signal
+      🔴 Bear Signal
     </span>
   </a>
 
@@ -1710,7 +1710,7 @@
           <li class="md-nav__item">
   <a href="#pattern-1-buy-strong-bullish-progression" class="md-nav__link">
     <span class="md-ellipsis">
-      Pattern 1: BUY → STRONG Bullish Progression
+      Pattern 1: Bull → STRONG Bullish Progression
     </span>
   </a>
 
@@ -1726,7 +1726,7 @@
           <li class="md-nav__item">
   <a href="#pattern-3-buysell-neut-transition" class="md-nav__link">
     <span class="md-ellipsis">
-      Pattern 3: BUY/SELL → NEUT Transition
+      Pattern 3: Bull/Bear → NEUT Transition
     </span>
   </a>
 
@@ -1734,7 +1734,7 @@
           <li class="md-nav__item">
   <a href="#pattern-4-neut-buysell-emergence" class="md-nav__link">
     <span class="md-ellipsis">
-      Pattern 4: NEUT → BUY/SELL Emergence
+      Pattern 4: NEUT → Bull/Bear Emergence
     </span>
   </a>
 
@@ -1821,7 +1821,7 @@
           <li class="md-nav__item">
   <a href="#q-do-strong-signals-perform-better-than-regular-buysell" class="md-nav__link">
     <span class="md-ellipsis">
-      Q: Do STRONG signals perform better than regular BUY/SELL?
+      Q: Do STRONG signals perform better than regular Bull/Bear?
     </span>
   </a>
 
@@ -1940,59 +1940,71 @@
 
 <!-- Render the page content -->
 <h1 id="harmonic-oscillator-v10-five-oscillator-consensus-system">Harmonic Oscillator v1.0 — Five-Oscillator Consensus System<a class="headerlink" href="#harmonic-oscillator-v10-five-oscillator-consensus-system" title="Permanent link">&para;</a></h1>
-<p>Momentum indicator combining five technical oscillators into unified signal system. Displays BUY, SELL, NEUT, and STRONG signals based on multi-oscillator agreement.</p>
+<p>Momentum indicator combining five technical oscillators into unified signal system. Displays Bull, Bear, NEUT, and STRONG signals based on multi-oscillator agreement.</p>
 <hr />
 <h2 id="core-functionality">🎯 Core Functionality<a class="headerlink" href="#core-functionality" title="Permanent link">&para;</a></h2>
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
   <div class="sp-callout__icon">📊</div>
   <div class="sp-callout__content">
-    <h4>How the Voting System Works</h4>
-    <p style="margin-bottom: 1rem;">Three oscillators vote democratically to generate consensus signals:</p>
+    <h4>Five-Component Voting System</h4>
+    <p style="margin-bottom: 1rem;">Five independent components analyze market conditions and vote. Maximum 5 votes total (displayed as "X/5" in signals):</p>
     <div class="mermaid">
-graph LR
-    A[Market Data] --> B[MACD]
-    A --> C[RSI]
-    A --> D[StochRSI]
+graph TD
+    Data[Market Data<br/>Price + Volume] --> Composite[Composite Oscillator<br/>3 Inputs Combined]
 
-    B --> E{MACD Vote}
-    C --> F{RSI Vote}
-    D --> G{StochRSI Vote}
+    Composite --> C1[MACD]
+    Composite --> C2[RSI<br/>Triple Envelope]
+    Composite --> C3[Stochastic RSI]
 
-    E --> H[Democratic<br/>Voting System]
-    F --> H
-    G --> H
+    Data --> V4[Volume Delta<br/>Patterns]
+    C1 --> V1[Vote 1:<br/>MACD Crosses]
+    C2 --> V2[Vote 2:<br/>RSI Zones]
+    C3 --> V3[Vote 3:<br/>Stoch Extremes]
+    V4 --> Vote4[Vote 4:<br/>Volume Pattern]
 
-    H --> I{Signal Mode?}
+    C1 & C2 & C3 --> Div[Divergence<br/>Detection]
+    Div --> Vote5[Vote 5:<br/>Divergence]
 
-    I -->|Conservative| J[Require 3 votes]
-    I -->|Balanced| K[Require 2 votes]
-    I -->|Aggressive| L[Require 1 vote]
+    V1 & V2 & V3 & Vote4 & Vote5 --> Counter[Vote Counter<br/>Max: 5]
 
-    J --> M[🟢 Signal Output]
-    K --> M
-    L --> M
+    Counter --> Result{Total Votes?}
 
-    style H fill:#ff9800,color:#fff
-    style M fill:#4caf50,color:#fff
+    Result -->|3+ votes| Signal[Bull/Bear Signal]
+    Result -->|4-5 votes| Strong[STRONG Signal]
+    Result -->|0-2 votes| Neutral[NEUT Signal]
+
+    style Composite fill:#ff9800,color:#fff
+    style Counter fill:#2196f3,color:#fff
+    style Signal fill:#4caf50,color:#fff
+    style Strong fill:#4caf50,color:#fff
+    style Neutral fill:#757575,color:#fff
+    style C1 fill:#9c27b0,color:#fff
+    style C2 fill:#9c27b0,color:#fff
+    style C3 fill:#9c27b0,color:#fff
+    style V4 fill:#2196f3,color:#fff
+    style Div fill:#ff5722,color:#fff
     </div>
+    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+      <strong>How to read:</strong> Composite oscillator (MACD, RSI, Stochastic RSI) generates 3 votes. Volume and Divergence add 2 more votes. Total possible: 5 votes. 3+ = signal, 4-5 = strong.
+    </p>
   </div>
 </div>
 
-<p>Harmonic Oscillator analyzes five separate momentum oscillators simultaneously and generates signals when multiple oscillators agree on direction.</p>
-<p><strong>The Five Oscillators:</strong><br />
-1. RSI (Relative Strength Index)<br />
-2. Stochastic Oscillator<br />
-3. CCI (Commodity Channel Index)<br />
-4. Williams %R<br />
-5. MFI (Money Flow Index)</p>
-<p><strong>Voting System:</strong> Each oscillator "votes" bullish, bearish, or neutral. Signals appear based on vote counts:</p>
+<p>Harmonic Oscillator combines multiple momentum components into a unified voting system. Five independent voters analyze market conditions and generate consensus signals.</p>
+<p><strong>The Five Voting Components:</strong><br />
+1. <strong>MACD Vote</strong> - Fires when MACD crosses signal line and passes ADX/momentum gating<br />
+2. <strong>RSI Vote</strong> - Fires when price enters triple RSI envelope zones (7/14/28 period trend-following)<br />
+3. <strong>Stochastic RSI Vote</strong> - Fires on K/D crossovers in extreme zones<br />
+4. <strong>Volume Vote</strong> - Fires based on volume delta patterns<br />
+5. <strong>Divergence Vote</strong> - Fires when price/oscillator divergences form</p>
+<p><strong>Voting System:</strong> Each component votes bullish, bearish, or neutral. Signals appear based on vote counts:</p>
 <ul>
-<li><strong>BUY Signal:</strong> 3+ oscillators vote bullish</li>
-<li><strong>SELL Signal:</strong> 3+ oscillators vote bearish  </li>
-<li><strong>STRONG Signal:</strong> 4-5 oscillators vote same direction (enhanced agreement)</li>
-<li><strong>NEUT Signal:</strong> No clear agreement (2 or fewer either direction)</li>
+<li><strong>Bull Signal:</strong> 3+ components vote bullish</li>
+<li><strong>Bear Signal:</strong> 3+ components vote bearish</li>
+<li><strong>STRONG Signal:</strong> 4-5 components vote same direction (enhanced agreement)</li>
+<li><strong>NEUT Signal:</strong> 0-2 votes (no clear agreement)</li>
 </ul>
-<p><strong>Visual Display:</strong> Signal labels appear below (BUY/STRONG bullish) or above (SELL/STRONG bearish) candles at bar close.</p>
+<p><strong>Visual Display:</strong> Signal labels appear below (Bull/STRONG bullish) or above (Bear/STRONG bearish) candles at bar close. Vote count shown as "X/5".</p>
 <p><strong>Timeframe Compatibility:</strong> Works on all timeframes.</p>
 <hr />
 <h2 id="educational-example-bitcoin-november-2024">📊 Educational Example: Bitcoin (November 2024)<a class="headerlink" href="#educational-example-bitcoin-november-2024" title="Permanent link">&para;</a></h2>
@@ -2003,7 +2015,7 @@ graph LR
 <tr>
 <th>Date/Time</th>
 <th>Price</th>
-<th>Oscillator Votes</th>
+<th>Component Votes</th>
 <th>Signal</th>
 <th>Analysis</th>
 </tr>
@@ -2012,22 +2024,22 @@ graph LR
 <tr>
 <td>Nov 5, 8pm</td>
 <td>$63,500</td>
-<td>RSI: Bullish, Stoch: Bullish, CCI: Bullish, Williams: Neutral, MFI: Bullish</td>
-<td><strong>BUY</strong></td>
+<td>MACD: Bullish, RSI: Bullish, StochRSI: Bullish, Volume: Neutral, Divergence: Bullish</td>
+<td><strong>Bull</strong></td>
 <td>4 of 5 vote bullish</td>
 </tr>
 <tr>
 <td>Nov 6, 4am</td>
 <td>$64,200</td>
-<td>All 5 oscillators: Bullish</td>
+<td>All 5 components: Bullish</td>
 <td><strong>STRONG</strong></td>
 <td>Unanimous agreement</td>
 </tr>
 <tr>
 <td>Nov 7, 12pm</td>
 <td>$67,800</td>
-<td>RSI: Bearish, Stoch: Bearish, CCI: Bearish, Williams: Neutral, MFI: Neutral</td>
-<td><strong>SELL</strong></td>
+<td>MACD: Bearish, RSI: Bearish, StochRSI: Bearish, Volume: Neutral, Divergence: Neutral</td>
+<td><strong>Bear</strong></td>
 <td>3 of 5 vote bearish</td>
 </tr>
 <tr>
@@ -2039,46 +2051,46 @@ graph LR
 </tr>
 </tbody>
 </table>
-<p><strong>Pattern Observed:</strong> BUY signal at $63,500 preceded +$4,300 rally to $67,800 where SELL signal appeared.</p>
-<p><strong>Outcome:</strong> +6.8% move from BUY to SELL signal.</p>
+<p><strong>Pattern Observed:</strong> Bull signal at $63,500 preceded +$4,300 rally to $67,800 where Bear signal appeared.</p>
+<p><strong>Outcome:</strong> +6.8% move from Bull to Bear signal.</p>
 <p><em>This example demonstrates signal sequence. Individual interpretation and outcomes vary.</em></p>
 <hr />
 <h2 id="settings">⚙️ Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h2>
-<h3 id="oscillator-configuration">Oscillator Configuration<a class="headerlink" href="#oscillator-configuration" title="Permanent link">&para;</a></h3>
-<p>Each of the five oscillators can be customized individually:</p>
+<h3 id="oscillator-configuration">Component Configuration<a class="headerlink" href="#oscillator-configuration" title="Permanent link">&para;</a></h3>
+<p>Each of the five voting components can be customized individually:</p>
 <table>
 <thead>
 <tr>
-<th>Oscillator</th>
+<th>Component</th>
 <th>Adjustable Parameters</th>
 <th>Default</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>RSI</strong></td>
-<td>Period, Overbought, Oversold</td>
-<td>14, 70, 30</td>
+<td><strong>MACD</strong></td>
+<td>Fast Period, Slow Period, Signal Period</td>
+<td>12, 26, 9</td>
 </tr>
 <tr>
-<td><strong>Stochastic</strong></td>
-<td>%K Period, %D Period, Smooth</td>
-<td>14, 3, 3</td>
+<td><strong>RSI Triple Envelope</strong></td>
+<td>Short Period, Medium Period, Long Period</td>
+<td>7, 14, 28</td>
 </tr>
 <tr>
-<td><strong>CCI</strong></td>
-<td>Period</td>
-<td>20</td>
+<td><strong>Stochastic RSI</strong></td>
+<td>%K Period, %D Period, RSI Length</td>
+<td>3, 3, 14</td>
 </tr>
 <tr>
-<td><strong>Williams %R</strong></td>
-<td>Period</td>
-<td>14</td>
+<td><strong>Volume Delta</strong></td>
+<td>Sensitivity, Threshold</td>
+<td>Auto, Auto</td>
 </tr>
 <tr>
-<td><strong>MFI</strong></td>
-<td>Period</td>
-<td>14</td>
+<td><strong>Divergence Detection</strong></td>
+<td>Lookback Periods, Min Pivot Distance</td>
+<td>5, 2</td>
 </tr>
 </tbody>
 </table>
@@ -2143,66 +2155,66 @@ graph LR
 </table>
 <hr />
 <h2 id="the-four-signal-types">🔢 The Four Signal Types<a class="headerlink" href="#the-four-signal-types" title="Permanent link">&para;</a></h2>
-<h3 id="buy-signal">🟢 BUY Signal<a class="headerlink" href="#buy-signal" title="Permanent link">&para;</a></h3>
-<p><strong>Visual Display:</strong> "BUY" label below candle (green)</p>
+<h3 id="buy-signal">🟢 Bull Signal<a class="headerlink" href="#buy-signal" title="Permanent link">&para;</a></h3>
+<p><strong>Visual Display:</strong> "Bull" label below candle (green)</p>
 <p><strong>Voting Conditions:</strong><br />
-- 3 or more oscillators indicate bullish momentum<br />
-- Maximum 2 oscillators vote bearish or neutral<br />
+- 3 or more components indicate bullish momentum<br />
+- Maximum 2 components vote bearish or neutral<br />
 - Confirms at bar close</p>
-<p><strong>Interpretation:</strong> Multiple momentum indicators show bullish characteristics simultaneously.</p>
-<p><strong>Example:</strong> RSI bullish (45), Stochastic bullish (K&gt;D), CCI bullish (&gt;0), Williams neutral, MFI neutral → 3 bullish votes = BUY signal</p>
+<p><strong>Interpretation:</strong> Multiple momentum components show bullish characteristics simultaneously.</p>
+<p><strong>Example:</strong> MACD bullish (crossed up), RSI bullish (in envelope), StochRSI bullish (K&gt;D), Volume neutral, Divergence neutral → 3 bullish votes = Bull signal</p>
 <hr />
-<h3 id="sell-signal">🔴 SELL Signal<a class="headerlink" href="#sell-signal" title="Permanent link">&para;</a></h3>
-<p><strong>Visual Display:</strong> "SELL" label above candle (red)</p>
+<h3 id="sell-signal">🔴 Bear Signal<a class="headerlink" href="#sell-signal" title="Permanent link">&para;</a></h3>
+<p><strong>Visual Display:</strong> "Bear" label above candle (red)</p>
 <p><strong>Voting Conditions:</strong><br />
-- 3 or more oscillators indicate bearish momentum<br />
-- Maximum 2 oscillators vote bullish or neutral<br />
+- 3 or more components indicate bearish momentum<br />
+- Maximum 2 components vote bullish or neutral<br />
 - Confirms at bar close</p>
-<p><strong>Interpretation:</strong> Multiple momentum indicators show bearish characteristics simultaneously.</p>
-<p><strong>Example:</strong> RSI bearish (55), Stochastic bearish (K&lt;D), CCI bearish (&lt;0), Williams bearish, MFI neutral → 4 bearish votes = SELL signal</p>
+<p><strong>Interpretation:</strong> Multiple momentum components show bearish characteristics simultaneously.</p>
+<p><strong>Example:</strong> MACD bearish (crossed down), RSI bearish (in envelope), StochRSI bearish (K&lt;D), Volume bearish (negative delta), Divergence neutral → 4 bearish votes = Bear signal</p>
 <hr />
 <h3 id="strong-signal">⚡ STRONG Signal<a class="headerlink" href="#strong-signal" title="Permanent link">&para;</a></h3>
 <p><strong>Visual Display:</strong> "STRONG" label below candle (bright green) or above candle (bright red)</p>
 <p><strong>Voting Conditions:</strong><br />
-- 4 or 5 oscillators agree on same direction<br />
+- 4 or 5 components agree on same direction<br />
 - Near-unanimous or unanimous consensus<br />
-- Enhanced agreement compared to regular BUY/SELL</p>
-<p><strong>Interpretation:</strong> Exceptional multi-oscillator alignment indicating strong momentum consensus.</p>
-<p><strong>Example Bullish:</strong> All 5 oscillators vote bullish → STRONG signal (green)</p>
-<p><strong>Example Bearish:</strong> 4 oscillators vote bearish, 1 neutral → STRONG signal (red)</p>
+- Enhanced agreement compared to regular Bull/Bear</p>
+<p><strong>Interpretation:</strong> Exceptional multi-component alignment indicating strong momentum consensus.</p>
+<p><strong>Example Bullish:</strong> All 5 components vote bullish → STRONG signal (green)</p>
+<p><strong>Example Bearish:</strong> 4 components vote bearish, 1 neutral → STRONG signal (red)</p>
 <hr />
 <h3 id="neut-signal">⚪ NEUT Signal<a class="headerlink" href="#neut-signal" title="Permanent link">&para;</a></h3>
 <p><strong>Visual Display:</strong> "NEUT" label on candle (gray)</p>
 <p><strong>Voting Conditions:</strong><br />
 - No clear majority (2 or fewer votes either direction)<br />
-- Oscillators show divergent or conflicting readings<br />
+- Components show divergent or conflicting readings<br />
 - Lack of momentum consensus</p>
-<p><strong>Interpretation:</strong> Oscillators disagree on direction, suggesting choppy or transitional conditions.</p>
-<p><strong>Example:</strong> RSI neutral, Stoch bullish, CCI bearish, Williams neutral, MFI bearish → 2 bearish, 1 bullish, 2 neutral = NEUT signal</p>
+<p><strong>Interpretation:</strong> Components disagree on direction, suggesting choppy or transitional conditions.</p>
+<p><strong>Example:</strong> MACD neutral, RSI neutral, StochRSI bullish, Volume bearish, Divergence bearish → 2 bearish, 1 bullish, 2 neutral = NEUT signal</p>
 <hr />
 <h2 id="understanding-the-voting-system">📚 Understanding the Voting System<a class="headerlink" href="#understanding-the-voting-system" title="Permanent link">&para;</a></h2>
 <h3 id="vote-assignment-logic">Vote Assignment Logic<a class="headerlink" href="#vote-assignment-logic" title="Permanent link">&para;</a></h3>
-<p>Each oscillator "votes" based on its current reading:</p>
-<p><strong>RSI (Relative Strength Index):</strong><br />
-- Bullish vote: RSI rising and below overbought (&lt; 70)<br />
-- Bearish vote: RSI falling and above oversold (&gt; 30)<br />
-- Neutral vote: RSI in middle range without clear direction</p>
-<p><strong>Stochastic Oscillator:</strong><br />
-- Bullish vote: %K crosses above %D<br />
-- Bearish vote: %K crosses below %D<br />
-- Neutral vote: No recent cross, lines parallel</p>
-<p><strong>CCI (Commodity Channel Index):</strong><br />
-- Bullish vote: CCI &gt; 0 (above average price)<br />
-- Bearish vote: CCI &lt; 0 (below average price)<br />
-- Neutral vote: CCI near zero (-20 to +20)</p>
-<p><strong>Williams %R:</strong><br />
-- Bullish vote: Williams &gt; -80 (above oversold)<br />
-- Bearish vote: Williams &lt; -20 (below overbought)<br />
-- Neutral vote: Williams in middle range</p>
-<p><strong>MFI (Money Flow Index):</strong><br />
-- Bullish vote: MFI rising with positive volume flow<br />
-- Bearish vote: MFI falling with negative volume flow<br />
-- Neutral vote: MFI range-bound without clear volume bias</p>
+<p>Each component "votes" based on its current reading:</p>
+<p><strong>RSI (Triple Envelope 7/14/28):</strong><br />
+- Bullish vote: Price enters bullish RSI envelope zone (trending above short-term RSI)<br />
+- Bearish vote: Price enters bearish RSI envelope zone (trending below short-term RSI)<br />
+- Neutral vote: RSI in middle range without clear trend-following signal</p>
+<p><strong>Stochastic RSI:</strong><br />
+- Bullish vote: %K crosses above %D in extreme oversold zone<br />
+- Bearish vote: %K crosses below %D in extreme overbought zone<br />
+- Neutral vote: No crossover in extreme zones</p>
+<p><strong>MACD:</strong><br />
+- Bullish vote: MACD crosses above signal line AND passes ADX/momentum gating<br />
+- Bearish vote: MACD crosses below signal line AND passes ADX/momentum gating<br />
+- Neutral vote: No cross or gates not satisfied</p>
+<p><strong>Volume Delta:</strong><br />
+- Bullish vote: Positive volume delta pattern (buying pressure exceeds selling)<br />
+- Bearish vote: Negative volume delta pattern (selling pressure exceeds buying)<br />
+- Neutral vote: Balanced volume flow without clear directional bias</p>
+<p><strong>Divergence Detection:</strong><br />
+- Bullish vote: Bullish divergence detected (price makes lower low, oscillator makes higher low)<br />
+- Bearish vote: Bearish divergence detected (price makes higher high, oscillator makes lower high)<br />
+- Neutral vote: No divergence detected in lookback period</p>
 <h3 id="agreement-threshold">Agreement Threshold<a class="headerlink" href="#agreement-threshold" title="Permanent link">&para;</a></h3>
 <p><strong>3-Vote Threshold (Default):</strong><br />
 - Most responsive setting<br />
@@ -2226,11 +2238,11 @@ graph LR
 <tr>
 <th>Time</th>
 <th>Price</th>
+<th>MACD</th>
 <th>RSI</th>
-<th>Stoch</th>
-<th>CCI</th>
-<th>Williams</th>
-<th>MFI</th>
+<th>StochRSI</th>
+<th>Volume</th>
+<th>Divergence</th>
 <th>Votes</th>
 <th>Signal</th>
 </tr>
@@ -2245,7 +2257,7 @@ graph LR
 <td>Bullish</td>
 <td>Bearish</td>
 <td>3 Bull</td>
-<td><strong>BUY</strong></td>
+<td><strong>Bull</strong></td>
 </tr>
 <tr>
 <td>10:45am</td>
@@ -2267,7 +2279,7 @@ graph LR
 <td>Bearish</td>
 <td>Neutral</td>
 <td>3 Bear</td>
-<td><strong>SELL</strong></td>
+<td><strong>Bear</strong></td>
 </tr>
 <tr>
 <td>2:30pm</td>
@@ -2296,13 +2308,13 @@ graph LR
 <p><strong>Sequence Analysis:</strong></p>
 <ol>
 <li>
-<p><strong>BUY at 4,720:</strong> Three oscillators agreed bullish (RSI, Stoch, Williams). Entry conditions identified.</p>
+<p><strong>Bull at 4,720:</strong> Three components agreed bullish (MACD, RSI, Volume). Entry conditions identified.</p>
 </li>
 <li>
-<p><strong>STRONG at 4,735:</strong> All five oscillators aligned bullish. Maximum confidence conditions (+15 points from BUY).</p>
+<p><strong>STRONG at 4,735:</strong> All five components aligned bullish. Maximum confidence conditions (+15 points from Bull).</p>
 </li>
 <li>
-<p><strong>SELL at 4,755:</strong> Three oscillators shifted bearish. Momentum reversal detected (+35 points from BUY, +20 from STRONG).</p>
+<p><strong>Bear at 4,755:</strong> Three oscillators shifted bearish. Momentum reversal detected (+35 points from Bull, +20 from STRONG).</p>
 </li>
 <li>
 <p><strong>NEUT at 4,748:</strong> Oscillators diverged, no clear consensus. Transitional period identified.</p>
@@ -2311,34 +2323,34 @@ graph LR
 <p><strong>STRONG bearish at 4,742:</strong> All five oscillators aligned bearish. Strong downside momentum conditions.</p>
 </li>
 </ol>
-<p><strong>Total Move:</strong> +35 points from BUY to SELL signal.</p>
+<p><strong>Total Move:</strong> +35 points from Bull to Bear signal.</p>
 <p><em>This example demonstrates complete signal cycle. Individual interpretation and outcomes vary.</em></p>
 <hr />
 <h2 id="signal-interpretation-patterns">🎯 Signal Interpretation Patterns<a class="headerlink" href="#signal-interpretation-patterns" title="Permanent link">&para;</a></h2>
-<h3 id="pattern-1-buy-strong-bullish-progression">Pattern 1: BUY → STRONG Bullish Progression<a class="headerlink" href="#pattern-1-buy-strong-bullish-progression" title="Permanent link">&para;</a></h3>
-<p><strong>Sequence:</strong> BUY signal followed by STRONG signal in same direction</p>
+<h3 id="pattern-1-buy-strong-bullish-progression">Pattern 1: Bull → STRONG Bullish Progression<a class="headerlink" href="#pattern-1-buy-strong-bullish-progression" title="Permanent link">&para;</a></h3>
+<p><strong>Sequence:</strong> Bull signal followed by STRONG signal in same direction</p>
 <p><strong>Interpretation:</strong> Momentum strengthening, more oscillators joining bullish consensus</p>
-<p><strong>Example:</strong> 3 oscillators bullish (BUY) → 5 oscillators bullish (STRONG) = Momentum acceleration pattern</p>
+<p><strong>Example:</strong> 3 oscillators bullish (Bull) → 5 oscillators bullish (STRONG) = Momentum acceleration pattern</p>
 <hr />
 <h3 id="pattern-2-direct-strong-signal">Pattern 2: Direct STRONG Signal<a class="headerlink" href="#pattern-2-direct-strong-signal" title="Permanent link">&para;</a></h3>
-<p><strong>Sequence:</strong> STRONG signal appears without preceding BUY/SELL</p>
+<p><strong>Sequence:</strong> STRONG signal appears without preceding Bull/Bear</p>
 <p><strong>Interpretation:</strong> Rapid multi-oscillator alignment, immediate high-conviction conditions</p>
 <p><strong>Example:</strong> Neutral conditions → All oscillators suddenly align → STRONG signal = Swift momentum shift pattern</p>
 <hr />
-<h3 id="pattern-3-buysell-neut-transition">Pattern 3: BUY/SELL → NEUT Transition<a class="headerlink" href="#pattern-3-buysell-neut-transition" title="Permanent link">&para;</a></h3>
+<h3 id="pattern-3-buysell-neut-transition">Pattern 3: Bull/Bear → NEUT Transition<a class="headerlink" href="#pattern-3-buysell-neut-transition" title="Permanent link">&para;</a></h3>
 <p><strong>Sequence:</strong> Directional signal followed by NEUT</p>
 <p><strong>Interpretation:</strong> Consensus breaking down, momentum diverging</p>
-<p><strong>Example:</strong> SELL (3 bearish) → NEUT (oscillators diverge) = Momentum loss or consolidation pattern</p>
+<p><strong>Example:</strong> Bear (3 bearish) → NEUT (oscillators diverge) = Momentum loss or consolidation pattern</p>
 <hr />
-<h3 id="pattern-4-neut-buysell-emergence">Pattern 4: NEUT → BUY/SELL Emergence<a class="headerlink" href="#pattern-4-neut-buysell-emergence" title="Permanent link">&para;</a></h3>
+<h3 id="pattern-4-neut-buysell-emergence">Pattern 4: NEUT → Bull/Bear Emergence<a class="headerlink" href="#pattern-4-neut-buysell-emergence" title="Permanent link">&para;</a></h3>
 <p><strong>Sequence:</strong> NEUT signal followed by directional signal</p>
 <p><strong>Interpretation:</strong> Consensus forming after period of disagreement</p>
-<p><strong>Example:</strong> NEUT (choppy) → BUY (3+ bullish) = Direction emerging from neutral conditions</p>
+<p><strong>Example:</strong> NEUT (choppy) → Bull (3+ bullish) = Direction emerging from neutral conditions</p>
 <hr />
 <h3 id="pattern-5-signal-clusters">Pattern 5: Signal Clusters<a class="headerlink" href="#pattern-5-signal-clusters" title="Permanent link">&para;</a></h3>
 <p><strong>Sequence:</strong> Multiple signals in short time period</p>
 <p><strong>Interpretation:</strong> High volatility, oscillators responding to rapid price changes</p>
-<p><strong>Example:</strong> BUY → SELL → BUY within 1 hour = Choppy volatile conditions, whipsaw characteristics</p>
+<p><strong>Example:</strong> Bull → Bear → Bull within 1 hour = Choppy volatile conditions, whipsaw characteristics</p>
 <hr />
 <h2 id="alert-configuration">🔔 Alert Configuration<a class="headerlink" href="#alert-configuration" title="Permanent link">&para;</a></h2>
 <p><strong>Available Alerts:</strong></p>
@@ -2352,14 +2364,14 @@ graph LR
 </thead>
 <tbody>
 <tr>
-<td><strong>BUY Signal</strong></td>
+<td><strong>Bull Signal</strong></td>
 <td>3+ oscillators vote bullish</td>
-<td>"Harmonic: BUY signal"</td>
+<td>"Harmonic: Bull signal"</td>
 </tr>
 <tr>
-<td><strong>SELL Signal</strong></td>
+<td><strong>Bear Signal</strong></td>
 <td>3+ oscillators vote bearish</td>
-<td>"Harmonic: SELL signal"</td>
+<td>"Harmonic: Bear signal"</td>
 </tr>
 <tr>
 <td><strong>STRONG Bullish</strong></td>
@@ -2402,7 +2414,7 @@ graph LR
 <p><strong>A:</strong> No. All signals confirm at bar close and do not change retroactively.</p>
 <h3 id="q-what-vote-threshold-should-i-use">Q: What vote threshold should I use?<a class="headerlink" href="#q-what-vote-threshold-should-i-use" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> Depends on individual preference. 3-vote threshold (default) provides more signals with simple majority. 4-vote threshold provides fewer, higher-confidence signals. 5-vote threshold provides rare unanimous signals only.</p>
-<h3 id="q-do-strong-signals-perform-better-than-regular-buysell">Q: Do STRONG signals perform better than regular BUY/SELL?<a class="headerlink" href="#q-do-strong-signals-perform-better-than-regular-buysell" title="Permanent link">&para;</a></h3>
+<h3 id="q-do-strong-signals-perform-better-than-regular-buysell">Q: Do STRONG signals perform better than regular Bull/Bear?<a class="headerlink" href="#q-do-strong-signals-perform-better-than-regular-buysell" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> STRONG signals indicate higher oscillator agreement (4-5 vs 3). Historical observation shows various outcomes. No signal type guarantees specific results.</p>
 <h3 id="q-can-i-see-individual-oscillator-readings">Q: Can I see individual oscillator readings?<a class="headerlink" href="#q-can-i-see-individual-oscillator-readings" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> Yes. Enable "Oscillator Panel" in settings to display all five oscillators in separate panel below chart.</p>
@@ -2424,13 +2436,13 @@ graph LR
 </thead>
 <tbody>
 <tr>
-<td><strong>BUY</strong></td>
+<td><strong>Bull</strong></td>
 <td>Green</td>
 <td>3+ bullish</td>
 <td>Simple majority</td>
 </tr>
 <tr>
-<td><strong>SELL</strong></td>
+<td><strong>Bear</strong></td>
 <td>Red</td>
 <td>3+ bearish</td>
 <td>Simple majority</td>
@@ -2449,11 +2461,11 @@ graph LR
 </tr>
 </tbody>
 </table>
-<h3 id="oscillator-quick-reference">Oscillator Quick Reference<a class="headerlink" href="#oscillator-quick-reference" title="Permanent link">&para;</a></h3>
+<h3 id="oscillator-quick-reference">Component Quick Reference<a class="headerlink" href="#oscillator-quick-reference" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Oscillator</th>
+<th>Component</th>
 <th>Measures</th>
 <th>Bullish When</th>
 <th>Bearish When</th>
@@ -2461,51 +2473,51 @@ graph LR
 </thead>
 <tbody>
 <tr>
-<td><strong>RSI</strong></td>
-<td>Price momentum</td>
-<td>Rising, &lt;70</td>
-<td>Falling, &gt;30</td>
+<td><strong>MACD</strong></td>
+<td>Momentum with trend gating</td>
+<td>Crosses above signal + gates pass</td>
+<td>Crosses below signal + gates pass</td>
 </tr>
 <tr>
-<td><strong>Stochastic</strong></td>
-<td>Price position in range</td>
-<td>%K crosses above %D</td>
-<td>%K crosses below %D</td>
+<td><strong>RSI Triple Envelope</strong></td>
+<td>Trend-following momentum</td>
+<td>In bullish envelope zone</td>
+<td>In bearish envelope zone</td>
 </tr>
 <tr>
-<td><strong>CCI</strong></td>
-<td>Deviation from average</td>
-<td>CCI &gt; 0</td>
-<td>CCI &lt; 0</td>
+<td><strong>Stochastic RSI</strong></td>
+<td>Extreme zone reversals</td>
+<td>%K crosses %D in oversold</td>
+<td>%K crosses %D in overbought</td>
 </tr>
 <tr>
-<td><strong>Williams %R</strong></td>
-<td>Overbought/oversold</td>
-<td>&gt; -80</td>
-<td>&lt; -20</td>
+<td><strong>Volume Delta</strong></td>
+<td>Buying vs selling pressure</td>
+<td>Positive delta pattern</td>
+<td>Negative delta pattern</td>
 </tr>
 <tr>
-<td><strong>MFI</strong></td>
-<td>Volume-weighted momentum</td>
-<td>Rising, positive flow</td>
-<td>Falling, negative flow</td>
+<td><strong>Divergence</strong></td>
+<td>Price/oscillator misalignment</td>
+<td>Bullish divergence detected</td>
+<td>Bearish divergence detected</td>
 </tr>
 </tbody>
 </table>
 <h3 id="common-signal-patterns">Common Signal Patterns<a class="headerlink" href="#common-signal-patterns" title="Permanent link">&para;</a></h3>
-<pre><code>Momentum Building:   BUY → STRONG (bullish)
-Momentum Fading:     BUY → NEUT
-Direction Emerging:  NEUT → BUY or SELL
-Momentum Reversal:   BUY → SELL (or vice versa)
+<pre><code>Momentum Building:   Bull → STRONG (bullish)
+Momentum Fading:     Bull → NEUT
+Direction Emerging:  NEUT → Bull or Bear
+Momentum Reversal:   Bull → Bear (or vice versa)
 High Conviction:     Direct STRONG signal
-Whipsaw Conditions:  Rapid BUY ↔ SELL alternation
+Whipsaw Conditions:  Rapid Bull ↔ Bear alternation
 </code></pre>
 <hr />
 <h2 id="support">📞 Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
 <p><strong>Technical Questions:</strong><br />
 support@signalpilot.io</p>
 <hr />
-<p><strong>Disclaimer:</strong> This indicator combines five technical oscillators (RSI, Stochastic, CCI, Williams %R, MFI) into a consensus-based signal system. All signals represent multi-oscillator agreement detection based on momentum and volume analysis methodologies. Individual interpretation, application, and outcomes vary. Past signal patterns do not guarantee future results. This is not financial advice.</p>
+<p><strong>Disclaimer:</strong> This indicator combines five voting components (MACD with ADX/momentum gating, RSI triple envelope, Stochastic RSI, Volume delta patterns, Divergence detection) into a consensus-based signal system. All signals represent multi-component agreement detection based on momentum and volume analysis methodologies. Individual interpretation, application, and outcomes vary. Past signal patterns do not guarantee future results. This is not financial advice.</p>
                 
                 
                 
