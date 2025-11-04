@@ -1929,6 +1929,45 @@
 <p>Real-time scanner displaying TD Sequential signals across multiple assets simultaneously. Monitor up to 40 tickers from single dashboard view.</p>
 <hr />
 <h2 id="core-functionality">🎯 Core Functionality<a class="headerlink" href="#core-functionality" title="Permanent link">&para;</a></h2>
+<div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
+  <div class="sp-callout__icon">📊</div>
+  <div class="sp-callout__content">
+    <h4>Grid Scanning Workflow</h4>
+    <p style="margin-bottom: 1rem;">Augury Grid scans 8 symbols simultaneously and displays cycle phase analysis:</p>
+    <div class="mermaid">
+graph TD
+    Start[Configure 8 Symbols] --> Scan[Augury Grid Scans All]
+
+    Scan --> A1[Symbol 1: BTC]
+    Scan --> A2[Symbol 2: ETH]
+    Scan --> A3[Symbol 3: SOL]
+    Scan --> A4[Symbol 4: ADA]
+    Scan --> A5[Symbol 5: XRP]
+    Scan --> A6[Symbol 6: DOT]
+    Scan --> A7[Symbol 7: AVAX]
+    Scan --> A8[Symbol 8: MATIC]
+
+    A1 & A2 & A3 & A4 & A5 & A6 & A7 & A8 --> Analysis[Cycle Phase Analysis]
+
+    Analysis --> Display{Grid Display}
+
+    Display --> Green[🟢 IGN Signal<br/>Strong Setup]
+    Display --> Yellow[🟡 WRN Signal<br/>Warning]
+    Display --> Red[🔴 CAP/BDN<br/>Exhaustion]
+    Display --> Gray[⚪ No Signal<br/>Neutral]
+
+    Green --> Priority[High Priority<br/>for Review]
+    Yellow --> Monitor[Monitor<br/>Closely]
+    Red --> Caution[Exercise<br/>Caution]
+
+    style Green fill:#4caf50,color:#fff
+    style Yellow fill:#ff9800,color:#fff
+    style Red fill:#f44336,color:#fff
+    style Priority fill:#00bcd4,color:#fff
+    </div>
+  </div>
+</div>
+
 <p>Augury Grid displays TD Sequential exhaustion signals for multiple symbols on one screen. Each symbol shows current count status and recent signals in grid format.</p>
 <p><strong>Display Format:</strong> Organized grid showing ticker symbols with their current TD counts and signal status.</p>
 <p><strong>Monitoring Capacity:</strong> Up to 40 symbols can be tracked simultaneously.</p>

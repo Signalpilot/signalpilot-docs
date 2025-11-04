@@ -1913,6 +1913,47 @@
 <p>All-in-one trading system. Combines 10 professional analysis tools into single optimized indicator.</p>
 <hr />
 <h2 id="core-functionality">🎯 Core Functionality<a class="headerlink" href="#core-functionality" title="Permanent link">&para;</a></h2>
+<div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
+  <div class="sp-callout__icon">📊</div>
+  <div class="sp-callout__content">
+    <h4>10 Systems in 4 Layers</h4>
+    <p style="margin-bottom: 1rem;">Omnideck integrates multiple detection systems into a unified framework:</p>
+    <div class="mermaid">
+graph TB
+    subgraph "Trend Layer"
+        T1[EMA Trio]
+        T2[SuperTrend]
+        T3[BMSB]
+    end
+
+    subgraph "Entry Layer"
+        E1[TD Sequential]
+        E2[Squeeze Detector]
+        E3[Candlestick Patterns]
+    end
+
+    subgraph "Management Layer"
+        M1[Regime Box]
+        M2[Supply/Demand Zones]
+        M3[Liquidity Sweeps]
+    end
+
+    subgraph "Meta Layer"
+        META[System Integration]
+    end
+
+    T1 & T2 & T3 --> META
+    E1 & E2 & E3 --> META
+    M1 & M2 & M3 --> META
+
+    META --> Output[Unified Signal Output]
+
+    style META fill:#ff5722,color:#fff
+    style Output fill:#00bcd4,color:#fff
+    </div>
+  </div>
+</div>
+
 <p>Omnideck integrates 10 separate trading systems into one indicator. Each system can be enabled/disabled individually.</p>
 <p><strong>The 10 Systems Available:</strong><br />
 1. TD Sequential - Exhaustion counter (9-count system)<br />

@@ -1704,6 +1704,48 @@
 summary: "How the 7 indicators can be combined into a complete trading system."</p>
 <hr />
 <h1 id="signal-pilot-suite-trading-workflow">🚦 <span class="signal-pilot-brand">Signal Pilot</span> Suite Trading Workflow<a class="headerlink" href="#signal-pilot-suite-trading-workflow" title="Permanent link">&para;</a></h1>
+<div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
+  <div class="sp-callout__icon">📊</div>
+  <div class="sp-callout__content">
+    <h4>Complete Trading Workflow</h4>
+    <p style="margin-bottom: 1rem;">From bias determination to position management—here's the complete flow:</p>
+    <div class="mermaid">
+graph TD
+    Start[Start Trading Session] --> HTF[1. Check Higher Timeframe]
+
+    HTF --> Bias{Determine Bias}
+    Bias -->|Bullish| Green[Green Regime ✅]
+    Bias -->|Bearish| Red[Red Regime ❌]
+    Bias -->|Neutral| Wait[⏸️ Wait for Clarity]
+
+    Green --> LookLong[2. Look for LONG Setups]
+    Red --> LookShort[2. Look for SHORT Setups]
+
+    LookLong --> Levels1[3. Check Janus Atlas Levels]
+    LookShort --> Levels2[3. Check Janus Atlas Levels]
+
+    Levels1 --> Signal1[4. Wait for Pentarch Signal]
+    Levels2 --> Signal2[4. Wait for Pentarch Signal]
+
+    Signal1 --> Confirm1[5. Confirm with Harmonic/Volume]
+    Signal2 --> Confirm2[5. Confirm with Harmonic/Volume]
+
+    Confirm1 --> Entry1[6. Enter Long]
+    Confirm2 --> Entry2[6. Enter Short]
+
+    Entry1 --> Manage[7. Manage Position]
+    Entry2 --> Manage
+
+    Manage --> Exit[8. Exit on Opposite Signal<br/>or Target Hit]
+
+    style Green fill:#4caf50,color:#fff
+    style Red fill:#f44336,color:#fff
+    style Entry1 fill:#4caf50,color:#fff
+    style Entry2 fill:#f44336,color:#fff
+    </div>
+  </div>
+</div>
+
 <p>The <span class="signal-pilot-brand">Signal Pilot</span> Suite provides comprehensive functionality: <strong>event detection</strong>, <strong>levels</strong>, <strong>volume confirmation</strong>, <strong>momentum</strong>, and <strong>multi-symbol scanning</strong>. These components can be combined into a clean, systematic workflow.</p>
 <hr />
 <h2 id="the-core-philosophy">💡 The Core Philosophy<a class="headerlink" href="#the-core-philosophy" title="Permanent link">&para;</a></h2>

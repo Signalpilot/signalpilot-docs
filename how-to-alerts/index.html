@@ -1843,40 +1843,46 @@ This alert setup guide is for <strong>educational purposes only</strong>. This i
 <h2 id="why-alerts-matter">🎯 Why Alerts Matter<a class="headerlink" href="#why-alerts-matter" title="Permanent link">&para;</a></h2>
 
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
-  <div class="sp-callout__title">📋 Alert Setup Process</div>
-  <div class="mermaid">
-sequenceDiagram
-    participant User
-    participant TV as TradingView
-    participant SP as Signal Pilot Indicator
-    participant Alert as Alert System
+  <div class="sp-callout__icon">📋</div>
+  <div class="sp-callout__content">
+    <h4>Alert Setup Process (Step-by-Step)</h4>
+    <p style="margin-bottom: 1.5rem;">Follow this simplified flow to create your first alert:</p>
+    <div class="mermaid">
+graph TD
+    Start([📊 You Have Chart Open]) --> Step1[1. Right-click Indicator Name]
 
-    User->>TV: Open chart
-    User->>TV: Add Signal Pilot indicator
-    TV->>SP: Load indicator
-    SP->>TV: Display on chart
+    Step1 --> Step2[2. Click 'Add Alert on...' ]
 
-    User->>TV: Right-click indicator name
-    TV->>User: Show "Add Alert" option
-    User->>TV: Click "Add Alert"
+    Step2 --> Step3[3. Alert Dialog Opens]
 
-    TV->>Alert: Open Alert Dialog
-    User->>Alert: Select condition (e.g. "Any alert() call")
-    User->>Alert: Set alert name
-    User->>Alert: Configure notifications
+    Step3 --> Choice{Choose Condition}
 
-    Alert->>TV: Save alert
-    TV->>User: ✅ Alert Created
+    Choice --> Opt1[✅ 'Any alert() function call'<br/>RECOMMENDED]
+    Choice --> Opt2['Pentarch: IGN Long'<br/>Individual Signals]
 
-    Note over SP,Alert: Wait for signal...
+    Opt1 --> Step4[4. Name Your Alert]
+    Opt2 --> Step4
 
-    SP->>Alert: 🔔 Signal Triggered!
-    Alert->>User: Send notification
+    Step4 --> Step5[5. Set Notifications<br/>Mobile / Email / Webhook]
+
+    Step5 --> Critical{⚠️ CRITICAL SETTING}
+
+    Critical --> Step6[Set to 'Once Per Bar Close'<br/>NOT 'Once Per Bar']
+
+    Step6 --> Done([✅ Alert Created!])
+
+    Done --> Wait[🕐 Wait for Signal...]
+    Wait --> Fire[🔔 Alert Fires When Signal Appears]
+
+    style Opt1 fill:#4caf50,color:#fff
+    style Critical fill:#ff5722,color:#fff
+    style Done fill:#00bcd4,color:#fff
+    style Fire fill:#4caf50,color:#fff
+    </div>
+    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+      <strong>How to read:</strong> Follow arrows from top to bottom. Green boxes = recommended options. Red box = critical setting you must not skip!
+    </p>
   </div>
-  <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
-    <strong>How to read:</strong> Follow the sequence from top to bottom to set up your first alert.
-    Each step shows the interaction between you, TradingView, and the indicator.
-  </p>
 </div>
 
 <p><span style="color: #0aa1d5; font-weight: 600;">Critical Setup</span></p>
