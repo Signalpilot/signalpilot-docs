@@ -2052,29 +2052,30 @@
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
   <div class="sp-callout__icon">📊</div>
   <div class="sp-callout__content">
-    <h4>Position Tracking Display</h4>
-    <p style="margin-bottom: 1rem;">Visual overview of what the Position Manager system displays:</p>
+    <h4>Three-System Architecture</h4>
+    <p style="margin-bottom: 1rem;">Volume Oracle combines three independent analysis systems:</p>
     <div class="mermaid">
-graph TD
-    Start([Monitoring Mode<br/>No Active Tracking]) --> Signal{VBS Signal Detected}
+graph LR
+    Data[Market Data<br/>Price + Volume] --> VF[System 1:<br/>Volume Flow]
+    Data --> VZ[System 2:<br/>Volume Zones]
+    Data --> PM[System 3:<br/>Position Manager]
 
-    Signal -->|VBS+ Green| Track1[🟢 Tracking Active<br/>Entry Price Marked<br/>Real-time P/L Displayed<br/>Target Line Shown]
-    Signal -->|VBS- Red| Track2[🔴 Tracking Active<br/>Entry Price Marked<br/>Real-time P/L Displayed<br/>Target Line Shown]
+    VF --> VF_Out[Color-Coded Bars<br/>🟢 Buying Pressure<br/>🔴 Selling Pressure]
+    VZ --> VZ_Out[Horizontal Boxes<br/>High-Volume Areas<br/>Consolidation Zones]
+    PM --> PM_Out[Reference Lines<br/>Entry Price Mark<br/>P/L Metrics Display]
 
-    Track1 --> End1[Opposite VBS Signal<br/>Tracking Ends]
-    Track2 --> End2[Opposite VBS Signal<br/>Tracking Ends]
+    VF_Out --> Chart[📊 Chart Display]
+    VZ_Out --> Chart
+    PM_Out --> Chart
 
-    End1 --> Start
-    End2 --> Start
-
-    style Track1 fill:#4caf50,color:#fff
-    style Track2 fill:#f44336,color:#fff
-    style Start fill:#2196f3,color:#fff
-    style End1 fill:#757575,color:#fff
-    style End2 fill:#757575,color:#fff
+    style VF fill:#4caf50,color:#fff
+    style VZ fill:#2196f3,color:#fff
+    style PM fill:#9c27b0,color:#fff
+    style Chart fill:#ff9800,color:#fff
+    style Data fill:#757575,color:#fff
     </div>
     <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
-      <strong>How to read:</strong> When VBS signals appear, the indicator begins displaying entry price reference, unrealized P/L metrics, and target lines. Display continues until opposite signal appears.
+      <strong>How to read:</strong> Three independent systems analyze the same market data. Each system displays different visual elements on the chart. All three can be used together or individually.
     </p>
   </div>
 </div>
