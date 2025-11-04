@@ -1946,62 +1946,65 @@
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
   <div class="sp-callout__icon">📊</div>
   <div class="sp-callout__content">
-    <h4>Five-Oscillator Voting System</h4>
-    <p style="margin-bottom: 1rem;">Each oscillator votes bullish, bearish, or neutral. Signals appear based on vote counts:</p>
+    <h4>Five-Component Voting System</h4>
+    <p style="margin-bottom: 1rem;">Five independent components analyze market conditions and vote. Maximum 5 votes total (displayed as "X/5" in signals):</p>
     <div class="mermaid">
 graph TD
-    Data[Market Data] --> OSC[5 Oscillators Analyze]
+    Data[Market Data<br/>Price + Volume] --> Composite[Composite Oscillator<br/>3 Inputs Combined]
 
-    OSC --> O1[1️⃣ RSI]
-    OSC --> O2[2️⃣ Stochastic]
-    OSC --> O3[3️⃣ CCI]
-    OSC --> O4[4️⃣ Williams %R]
-    OSC --> O5[5️⃣ MFI]
+    Composite --> C1[MACD]
+    Composite --> C2[RSI<br/>Triple Envelope]
+    Composite --> C3[Stochastic RSI]
 
-    O1 --> Vote[Vote Counter]
-    O2 --> Vote
-    O3 --> Vote
-    O4 --> Vote
-    O5 --> Vote
+    Data --> V4[Volume Delta<br/>Patterns]
+    C1 --> V1[Vote 1:<br/>MACD Crosses]
+    C2 --> V2[Vote 2:<br/>RSI Zones]
+    C3 --> V3[Vote 3:<br/>Stoch Extremes]
+    V4 --> Vote4[Vote 4:<br/>Volume Pattern]
 
-    Vote --> Result{How Many<br/>Agree?}
+    C1 & C2 & C3 --> Div[Divergence<br/>Detection]
+    Div --> Vote5[Vote 5:<br/>Divergence]
+
+    V1 & V2 & V3 & Vote4 & Vote5 --> Counter[Vote Counter<br/>Max: 5]
+
+    Counter --> Result{Total Votes?}
 
     Result -->|3+ votes| Signal[BUY/SELL Signal]
     Result -->|4-5 votes| Strong[STRONG Signal]
-    Result -->|2 or less| Neutral[NEUT Signal]
+    Result -->|0-2 votes| Neutral[NEUT Signal]
 
-    style OSC fill:#ff9800,color:#fff
-    style Vote fill:#2196f3,color:#fff
+    style Composite fill:#ff9800,color:#fff
+    style Counter fill:#2196f3,color:#fff
     style Signal fill:#4caf50,color:#fff
     style Strong fill:#4caf50,color:#fff
     style Neutral fill:#757575,color:#fff
-    style O1 fill:#9c27b0,color:#fff
-    style O2 fill:#9c27b0,color:#fff
-    style O3 fill:#9c27b0,color:#fff
-    style O4 fill:#9c27b0,color:#fff
-    style O5 fill:#9c27b0,color:#fff
+    style C1 fill:#9c27b0,color:#fff
+    style C2 fill:#9c27b0,color:#fff
+    style C3 fill:#9c27b0,color:#fff
+    style V4 fill:#2196f3,color:#fff
+    style Div fill:#ff5722,color:#fff
     </div>
     <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
-      <strong>How to read:</strong> All 5 oscillators vote simultaneously. 3+ votes = signal, 4-5 votes = strong signal, 2 or less = neutral (no clear agreement).
+      <strong>How to read:</strong> Composite oscillator (MACD, RSI, Stochastic RSI) generates 3 votes. Volume and Divergence add 2 more votes. Total possible: 5 votes. 3+ = signal, 4-5 = strong.
     </p>
   </div>
 </div>
 
-<p>Harmonic Oscillator analyzes five separate momentum oscillators simultaneously and generates signals when multiple oscillators agree on direction.</p>
-<p><strong>The Five Oscillators:</strong><br />
-1. RSI (Relative Strength Index)<br />
-2. Stochastic Oscillator<br />
-3. CCI (Commodity Channel Index)<br />
-4. Williams %R<br />
-5. MFI (Money Flow Index)</p>
-<p><strong>Voting System:</strong> Each oscillator "votes" bullish, bearish, or neutral. Signals appear based on vote counts:</p>
+<p>Harmonic Oscillator combines multiple momentum components into a unified voting system. Five independent voters analyze market conditions and generate consensus signals.</p>
+<p><strong>The Five Voting Components:</strong><br />
+1. <strong>MACD Vote</strong> - Fires when MACD crosses signal line and passes ADX/momentum gating<br />
+2. <strong>RSI Vote</strong> - Fires when price enters triple RSI envelope zones (7/14/28 period trend-following)<br />
+3. <strong>Stochastic RSI Vote</strong> - Fires on K/D crossovers in extreme zones<br />
+4. <strong>Volume Vote</strong> - Fires based on volume delta patterns<br />
+5. <strong>Divergence Vote</strong> - Fires when price/oscillator divergences form</p>
+<p><strong>Voting System:</strong> Each component votes bullish, bearish, or neutral. Signals appear based on vote counts:</p>
 <ul>
-<li><strong>BUY Signal:</strong> 3+ oscillators vote bullish</li>
-<li><strong>SELL Signal:</strong> 3+ oscillators vote bearish  </li>
-<li><strong>STRONG Signal:</strong> 4-5 oscillators vote same direction (enhanced agreement)</li>
-<li><strong>NEUT Signal:</strong> No clear agreement (2 or fewer either direction)</li>
+<li><strong>BUY Signal:</strong> 3+ components vote bullish</li>
+<li><strong>SELL Signal:</strong> 3+ components vote bearish</li>
+<li><strong>STRONG Signal:</strong> 4-5 components vote same direction (enhanced agreement)</li>
+<li><strong>NEUT Signal:</strong> 0-2 votes (no clear agreement)</li>
 </ul>
-<p><strong>Visual Display:</strong> Signal labels appear below (BUY/STRONG bullish) or above (SELL/STRONG bearish) candles at bar close.</p>
+<p><strong>Visual Display:</strong> Signal labels appear below (BUY/STRONG bullish) or above (SELL/STRONG bearish) candles at bar close. Vote count shown as "X/5".</p>
 <p><strong>Timeframe Compatibility:</strong> Works on all timeframes.</p>
 <hr />
 <h2 id="educational-example-bitcoin-november-2024">📊 Educational Example: Bitcoin (November 2024)<a class="headerlink" href="#educational-example-bitcoin-november-2024" title="Permanent link">&para;</a></h2>
