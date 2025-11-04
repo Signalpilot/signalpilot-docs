@@ -1,0 +1,106 @@
+<!-- IMPROVED VERSION OF "WHY ALERTS MATTER" SECTION -->
+<!-- Replace lines in how-to-alerts/index.html starting from <h2 id="why-alerts-matter"> -->
+
+<h2 id="why-alerts-matter">🎯 Why Alerts Matter<a class="headerlink" href="#why-alerts-matter" title="Permanent link">&para;</a></h2>
+
+<!-- NEW: Clear intro explaining the "why" first -->
+<div class="sp-callout sp-callout--tip" style="margin: 1.5rem 0;">
+  <div class="sp-callout__icon">💡</div>
+  <div class="sp-callout__content">
+    <h4>The Problem Alerts Solve</h4>
+    <p>You can't watch charts 24/7. Alerts notify you <strong>instantly</strong> when Signal Pilot indicators detect setups—no more missed opportunities or screen fatigue.</p>
+  </div>
+</div>
+
+<!-- Benefits in a visual grid -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 2rem 0;">
+
+  <div class="sp-callout sp-callout--success" style="margin: 0;">
+    <div class="sp-callout__icon">🔔</div>
+    <div class="sp-callout__content">
+      <h4>Instant Notifications</h4>
+      <p>Get mobile push, email, or webhook alerts the moment signals fire.</p>
+    </div>
+  </div>
+
+  <div class="sp-callout sp-callout--success" style="margin: 0;">
+    <div class="sp-callout__icon">⏰</div>
+    <div class="sp-callout__content">
+      <h4>24/7 Coverage</h4>
+      <p>Monitor multiple markets and timeframes without watching screens.</p>
+    </div>
+  </div>
+
+  <div class="sp-callout sp-callout--success" style="margin: 0;">
+    <div class="sp-callout__icon">🤖</div>
+    <div class="sp-callout__content">
+      <h4>Webhook Integration</h4>
+      <p>Automate trading via webhooks to execution platforms.</p>
+    </div>
+  </div>
+
+  <div class="sp-callout sp-callout--success" style="margin: 0;">
+    <div class="sp-callout__icon">✅</div>
+    <div class="sp-callout__content">
+      <h4>Bar-Close Confirmed</h4>
+      <p>Avoid false signals with "Once Per Bar Close" setting.</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- THEN show the technical diagram with better context -->
+<div style="margin: 3rem 0;">
+  <h3 style="margin-bottom: 1rem;">📋 How Alert Setup Works (Visual Flow)</h3>
+  <p style="margin-bottom: 1.5rem; opacity: 0.9;">
+    Here's the complete process from adding an indicator to receiving notifications:
+  </p>
+
+  <div class="sp-callout sp-callout--info" style="margin: 0;">
+    <div class="mermaid">
+sequenceDiagram
+    participant User
+    participant TV as TradingView
+    participant SP as Signal Pilot Indicator
+    participant Alert as Alert System
+
+    User->>TV: Open chart
+    User->>TV: Add Signal Pilot indicator
+    TV->>SP: Load indicator
+    SP->>TV: Display on chart
+
+    User->>TV: Right-click indicator name
+    TV->>User: Show "Add Alert" option
+    User->>TV: Click "Add Alert"
+
+    TV->>Alert: Open Alert Dialog
+    User->>Alert: Select condition (e.g. "Any alert() call")
+    User->>Alert: Set alert name
+    User->>Alert: Configure notifications
+
+    Alert->>TV: Save alert
+    TV->>User: ✅ Alert Created
+
+    Note over SP,Alert: Wait for signal...
+
+    SP->>Alert: 🔔 Signal Triggered!
+    Alert->>User: Send notification
+    </div>
+    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+      <strong>How to read this diagram:</strong> Follow arrows from top to bottom. This shows the exact sequence of steps when setting up your first alert.
+    </p>
+  </div>
+</div>
+
+<!-- Critical principle highlighted -->
+<div class="sp-callout sp-callout--warning" style="margin: 2rem 0;">
+  <div class="sp-callout__icon">⚠️</div>
+  <div class="sp-callout__content">
+    <h4>Critical Setting: "Once Per Bar Close"</h4>
+    <p>Always set alerts to fire <strong>"Once Per Bar Close"</strong> (not "Once Per Bar"). This ensures signals are confirmed and prevents repainting issues.</p>
+  </div>
+</div>
+
+<hr style="margin: 3rem 0;" />
+
+<!-- Continue with Quick Setup section... -->
