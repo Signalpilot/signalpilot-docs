@@ -2020,38 +2020,38 @@
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
   <div class="sp-callout__icon">📊</div>
   <div class="sp-callout__content">
-    <h4>OBV Analysis Flow</h4>
-    <p style="margin-bottom: 1rem;">Plutus Flow uses adaptive smoothing to analyze On-Balance Volume:</p>
+    <h4>How Plutus Flow Works</h4>
+    <p style="margin-bottom: 1rem;">Three-layer analysis of On-Balance Volume:</p>
     <div class="mermaid">
-graph TD
-    A[Price & Volume Data] --> B[OBV Calculation]
+graph LR
+    Input[Price &<br/>Volume Data] --> Layer1[Layer 1:<br/>OBV Line<br/>Calculation]
 
-    B --> C[Adaptive Smoothing]
+    Layer1 --> Layer2[Layer 2:<br/>Trend Ribbons<br/>Green/Red]
 
-    C --> D{Smoothing Level?}
-    D -->|Level 1-2| E[Fast Response<br/>More Signals]
-    D -->|Level 3| F[Balanced<br/>Default]
-    D -->|Level 4-5| G[Slow Response<br/>Clean Trends]
+    Layer2 --> Layer3[Layer 3:<br/>Divergence<br/>Detection]
 
-    E --> H[Trend Line Overlay]
-    F --> H
-    G --> H
+    Layer3 --> Output[📊 Visual Display]
 
-    H --> I{Analysis}
+    subgraph "Smoothing Settings"
+        S1[Level 1-2: Fast]
+        S2[Level 3: Balanced]
+        S3[Level 4-5: Slow]
+    end
 
-    I --> J[OBV Direction]
-    I --> K[Divergences]
-    I --> L[Trend Strength]
+    Layer1 -.-> S1
+    Layer1 -.-> S2
+    Layer1 -.-> S3
 
-    J --> M[Signal Generation]
-    K --> M
-    L --> M
-
-    M --> N[Entry/Exit Signals]
-
-    style M fill:#9c27b0,color:#fff
-    style N fill:#4caf50,color:#fff
+    style Input fill:#2196f3,color:#fff
+    style Layer1 fill:#9c27b0,color:#fff
+    style Layer2 fill:#9c27b0,color:#fff
+    style Layer3 fill:#9c27b0,color:#fff
+    style Output fill:#4caf50,color:#fff
+    style S2 fill:#ff9800,color:#fff
     </div>
+    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+      <strong>How to read:</strong> Data flows left to right through 3 layers. Smoothing level (1-5) adjusts sensitivity. Level 3 is default balanced setting.
+    </p>
   </div>
 </div>
 

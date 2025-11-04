@@ -2052,37 +2052,30 @@
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
   <div class="sp-callout__icon">📊</div>
   <div class="sp-callout__content">
-    <h4>Position Tracking State Machine</h4>
-    <p style="margin-bottom: 1rem;">Volume Oracle tracks positions from entry to exit with real-time P&L:</p>
+    <h4>Position Tracking Display</h4>
+    <p style="margin-bottom: 1rem;">Visual overview of what the Position Manager system displays:</p>
     <div class="mermaid">
-stateDiagram-v2
-    [*] --> NoPosition: Waiting
+graph TD
+    Start([Monitoring Mode<br/>No Active Tracking]) --> Signal{VBS Signal Detected}
 
-    NoPosition --> LongPosition: VBS+ Signal
-    NoPosition --> ShortPosition: VBS- Signal
+    Signal -->|VBS+ Green| Track1[🟢 Tracking Active<br/>Entry Price Marked<br/>Real-time P/L Displayed<br/>Target Line Shown]
+    Signal -->|VBS- Red| Track2[🔴 Tracking Active<br/>Entry Price Marked<br/>Real-time P/L Displayed<br/>Target Line Shown]
 
-    LongPosition --> Tracking: Position Opened
-    Tracking --> ProfitCalc: Real-time P&L
-    ProfitCalc --> ExitTarget: Show Target Line
+    Track1 --> End1[Opposite VBS Signal<br/>Tracking Ends]
+    Track2 --> End2[Opposite VBS Signal<br/>Tracking Ends]
 
-    ExitTarget --> NoPosition: VBS- Exit Signal
-    ExitTarget --> NoPosition: Manual Exit
+    End1 --> Start
+    End2 --> Start
 
-    ShortPosition --> Tracking2: Position Opened
-    Tracking2 --> ProfitCalc2: Real-time P&L
-    ProfitCalc2 --> ExitTarget2: Show Target Line
-
-    ExitTarget2 --> NoPosition: VBS+ Exit Signal
-    ExitTarget2 --> NoPosition: Manual Exit
-
-    note right of Tracking
-        Features:
-        - Entry price recorded
-        - Unrealized P&L displayed
-        - Risk/Reward calculated
-        - Exit target shown
-    end note
+    style Track1 fill:#4caf50,color:#fff
+    style Track2 fill:#f44336,color:#fff
+    style Start fill:#2196f3,color:#fff
+    style End1 fill:#757575,color:#fff
+    style End2 fill:#757575,color:#fff
     </div>
+    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+      <strong>How to read:</strong> When VBS signals appear, the indicator begins displaying entry price reference, unrealized P/L metrics, and target lines. Display continues until opposite signal appears.
+    </p>
   </div>
 </div>
 

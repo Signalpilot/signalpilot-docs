@@ -1916,41 +1916,42 @@
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
   <div class="sp-callout__icon">📊</div>
   <div class="sp-callout__content">
-    <h4>10 Systems in 4 Layers</h4>
-    <p style="margin-bottom: 1rem;">Omnideck integrates multiple detection systems into a unified framework:</p>
+    <h4>The 10 Systems Visualized</h4>
+    <p style="margin-bottom: 1rem;">All 10 detection systems working together in one indicator:</p>
     <div class="mermaid">
-graph TB
-    subgraph "Trend Layer"
-        T1[EMA Trio]
-        T2[SuperTrend]
-        T3[BMSB]
-    end
+graph LR
+    Input[Market Data] --> Systems{Omnideck<br/>10 Systems}
 
-    subgraph "Entry Layer"
-        E1[TD Sequential]
-        E2[Squeeze Detector]
-        E3[Candlestick Patterns]
-    end
+    Systems --> S1[1️⃣ TD Sequential<br/>Exhaustion]
+    Systems --> S2[2️⃣ Squeeze<br/>Breakouts]
+    Systems --> S3[3️⃣ Liquidity Sweeps<br/>Stop Hunts]
+    Systems --> S4[4️⃣ EMA Trio<br/>Moving Averages]
+    Systems --> S5[5️⃣ SuperTrend<br/>Trend Ribbon]
 
-    subgraph "Management Layer"
-        M1[Regime Box]
-        M2[Supply/Demand Zones]
-        M3[Liquidity Sweeps]
-    end
+    Systems --> S6[6️⃣ BMSB<br/>Support Band]
+    Systems --> S7[7️⃣ Regime Box<br/>Market Mood]
+    Systems --> S8[8️⃣ Supply/Demand<br/>Zones]
+    Systems --> S9[9️⃣ Candlesticks<br/>16 Patterns]
+    Systems --> S10[🔟 Meta Tools<br/>Integration]
 
-    subgraph "Meta Layer"
-        META[System Integration]
-    end
+    S1 & S2 & S3 & S4 & S5 & S6 & S7 & S8 & S9 & S10 --> Output[📈 Unified Chart Display]
 
-    T1 & T2 & T3 --> META
-    E1 & E2 & E3 --> META
-    M1 & M2 & M3 --> META
-
-    META --> Output[Unified Signal Output]
-
-    style META fill:#ff5722,color:#fff
+    style Systems fill:#ff5722,color:#fff
     style Output fill:#00bcd4,color:#fff
+    style S1 fill:#4caf50,color:#fff
+    style S2 fill:#4caf50,color:#fff
+    style S3 fill:#4caf50,color:#fff
+    style S4 fill:#4caf50,color:#fff
+    style S5 fill:#4caf50,color:#fff
+    style S6 fill:#2196f3,color:#fff
+    style S7 fill:#2196f3,color:#fff
+    style S8 fill:#2196f3,color:#fff
+    style S9 fill:#2196f3,color:#fff
+    style S10 fill:#9c27b0,color:#fff
     </div>
+    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+      <strong>How to read:</strong> All 10 systems numbered 1-10. Each can be enabled/disabled independently. All active systems display on one chart.
+    </p>
   </div>
 </div>
 
