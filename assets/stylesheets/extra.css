@@ -688,24 +688,8 @@ body::before {
 
 /* Mobile drawer adjustments for active link highlighting */
 @media screen and (max-width: 76.24em) {
-  /* Ensure drawer has proper width and positioning */
-  .md-sidebar--primary {
-    width: 280px !important;
-    max-width: 80vw !important;
-    height: 100vh !important;
-    max-height: none !important;
-    left: 0 !important;
-    top: 0 !important;
-  }
-
-  /* Ensure drawer scrollwrap fills the drawer */
-  .md-sidebar--primary .md-sidebar__scrollwrap {
-    height: 100% !important;
-    max-height: none !important;
-    overflow-y: auto !important;
-    -webkit-overflow-scrolling: touch;
-    padding: 1rem !important;
-  }
+  /* NOTE: width, positioning, and scrollwrap styles are defined in the main mobile block above (line 286)
+     to avoid conflicts. Only link highlighting styles are here. */
 
   /* Ensure active link highlighting works in mobile drawer */
   #__drawer:checked ~ .md-container .md-sidebar--primary .md-nav__link.md-nav__link--active {
