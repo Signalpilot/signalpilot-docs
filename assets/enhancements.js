@@ -635,8 +635,8 @@
   }
 
   /* ========================================
-     7. MOBILE TABLE LABELS
-     Add data-label attributes for responsive card layout
+     7. MOBILE TABLE ACCORDION
+     Add data-label attributes and accordion functionality
      ======================================== */
 
   function addMobileTableLabels() {
@@ -669,6 +669,20 @@
             cell.setAttribute('data-label', headers[index]);
           }
         });
+
+        // Add click handler for accordion functionality
+        row.addEventListener('click', function(e) {
+          // Don't toggle if clicking on a link
+          if (e.target.tagName === 'A' || e.target.closest('a')) {
+            return;
+          }
+
+          // Toggle expanded class
+          row.classList.toggle('expanded');
+        });
+
+        // Make it clear it's clickable
+        row.style.cursor = 'pointer';
       });
     });
   }

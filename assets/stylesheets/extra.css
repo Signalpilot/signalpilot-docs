@@ -1489,27 +1489,11 @@ body::before {
   border-right: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-/* Scroll indicator on right edge */
-.md-typeset table::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 30px;
-  background: linear-gradient(to left, rgba(0, 0, 0, 0.1), transparent);
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
+/* Old scroll indicators removed - now using accordion rows on mobile */
 
-.md-typeset table.has-scroll::after {
-  opacity: 1;
-}
-
-/* Mobile table responsiveness - TWO-COLUMN CARD LAYOUT */
+/* Mobile table responsiveness - ACCORDION ROWS (TAP TO EXPAND) */
 @media screen and (max-width: 768px) {
-  /* Make tables stack vertically like cards - NO horizontal scrolling! */
+  /* Make tables stack vertically - NO horizontal scrolling! */
   .md-typeset table {
     border: none !important;
     margin: 1rem 0 !important;
@@ -1525,15 +1509,22 @@ body::before {
     display: block !important;
   }
 
-  /* Each row becomes a card */
+  /* Each row becomes an accordion card */
   .md-typeset table tbody tr {
     display: block !important;
-    margin-bottom: 1rem !important;
-    padding: 0.875rem !important;
+    margin-bottom: 0.75rem !important;
     border: 1px solid var(--md-typeset-table-color, rgba(0,0,0,0.12)) !important;
     border-radius: 6px !important;
     background: var(--md-default-bg-color) !important;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06) !important;
+    overflow: hidden !important;
+    cursor: pointer !important;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease !important;
+  }
+
+  /* Hover/active state for accordion rows */
+  .md-typeset table tbody tr:hover {
+    border-color: var(--md-primary-fg-color) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
   }
 
   /* Dark mode card styling */
@@ -1542,44 +1533,74 @@ body::before {
     border-color: rgba(255, 255, 255, 0.1) !important;
   }
 
-  /* TWO-COLUMN LAYOUT: Label on left, value on right */
-  .md-typeset table tbody tr td {
+  /* Accordion header (first cell - always visible) */
+  .md-typeset table tbody tr td:first-child {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0.875rem 1rem !important;
+    font-weight: 600 !important;
+    font-size: 0.9375rem !important;
+    background: var(--md-code-bg-color) !important;
+    border-bottom: 1px solid var(--md-typeset-table-color, rgba(0,0,0,0.08)) !important;
+  }
+
+  /* Chevron icon in header */
+  .md-typeset table tbody tr td:first-child::after {
+    content: "▼" !important;
+    font-size: 0.75rem !important;
+    color: var(--md-default-fg-color--light) !important;
+    transition: transform 0.3s ease !important;
+    margin-left: auto !important;
+    padding-left: 0.75rem !important;
+  }
+
+  /* Rotate chevron when expanded */
+  .md-typeset table tbody tr.expanded td:first-child::after {
+    transform: rotate(180deg) !important;
+  }
+
+  /* Hide all other cells by default (collapsed state) */
+  .md-typeset table tbody tr:not(.expanded) td:not(:first-child) {
+    display: none !important;
+  }
+
+  /* Show other cells when expanded */
+  .md-typeset table tbody tr.expanded td:not(:first-child) {
     display: grid !important;
-    grid-template-columns: minmax(100px, 35%) 1fr !important; /* Label takes ~35%, value takes rest */
+    grid-template-columns: minmax(90px, 35%) 1fr !important;
     gap: 0.75rem !important;
-    align-items: start !important;
-    width: 100% !important;
-    padding: 0.625rem 0 !important;
-    border: none !important;
-    text-align: left !important;
-    white-space: normal !important;
-    word-wrap: break-word !important;
+    padding: 0.75rem 1rem !important;
     font-size: 0.875rem !important;
     line-height: 1.5 !important;
+    border-bottom: 1px solid var(--md-typeset-table-color, rgba(0,0,0,0.05)) !important;
   }
 
-  /* Add bottom border except for last cell */
-  .md-typeset table tbody tr td:not(:last-child) {
-    border-bottom: 1px solid var(--md-typeset-table-color, rgba(0,0,0,0.06)) !important;
-    padding-bottom: 0.625rem !important;
-    margin-bottom: 0.625rem !important;
+  /* Last cell no border */
+  .md-typeset table tbody tr.expanded td:last-child {
+    border-bottom: none !important;
   }
 
-  /* Column label on the LEFT (first column of grid) */
-  .md-typeset table tbody tr td::before {
+  /* Column labels for expanded cells */
+  .md-typeset table tbody tr td:not(:first-child)::before {
     content: attr(data-label) !important;
     font-weight: 600 !important;
     font-size: 0.8125rem !important;
     color: var(--md-default-fg-color--light) !important;
-    text-align: left !important;
   }
 
-  /* Make sure the value text aligns properly */
+  /* Hide data-label on first cell (it's the header) */
+  .md-typeset table tbody tr td:first-child::before {
+    display: none !important;
+  }
+
+  /* Style values in expanded cells */
   .md-typeset table tbody tr td {
     color: var(--md-default-fg-color) !important;
+    word-wrap: break-word !important;
   }
 
-  /* Make links visible in tables */
+  /* Links in tables */
   .md-typeset table tbody tr td a {
     font-weight: 600 !important;
     color: var(--md-typeset-a-color) !important;
@@ -1591,11 +1612,20 @@ body::before {
     padding: 0.125rem 0.375rem !important;
   }
 
-  /* Icons and badges in tables */
-  .md-typeset table tbody tr td .md-icon,
-  .md-typeset table tbody tr td svg {
-    vertical-align: middle !important;
-    margin-right: 0.25rem !important;
+  /* Add subtle animation when expanding */
+  .md-typeset table tbody tr.expanded td:not(:first-child) {
+    animation: slideDown 0.3s ease !important;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
 
@@ -3662,32 +3692,7 @@ a {
   }
 }
 
-/* Optimize horizontal scrolling areas on mobile */
-@media (max-width: 768px) {
-  /* Add scroll indicators for tables */
-  .md-typeset table {
-    position: relative;
-  }
-
-  .md-typeset table::after {
-    content: "→";
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.5rem;
-    color: var(--md-primary-fg-color);
-    opacity: 0.5;
-    pointer-events: none;
-    padding: 0 0.5rem;
-    animation: pulse-horizontal 2s ease-in-out infinite;
-  }
-
-  @keyframes pulse-horizontal {
-    0%, 100% { opacity: 0.3; transform: translateY(-50%) translateX(0); }
-    50% { opacity: 0.7; transform: translateY(-50%) translateX(-4px); }
-  }
-}
+/* Old horizontal scroll indicators removed - accordion rows don't need horizontal scrolling */
 
 /* Settings & Alerts page specific optimizations */
 @media screen and (max-width: 768px) {
