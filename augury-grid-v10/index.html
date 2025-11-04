@@ -1929,6 +1929,35 @@
 <p>Real-time scanner displaying TD Sequential signals across multiple assets simultaneously. Monitor up to 40 tickers from single dashboard view.</p>
 <hr />
 <h2 id="core-functionality">🎯 Core Functionality<a class="headerlink" href="#core-functionality" title="Permanent link">&para;</a></h2>
+
+<h3 id="how-it-works-visual">How It Works (Visual Overview)</h3>
+<div class="mermaid">
+graph TB
+    A[Current Price] --> B{Check All 8 Symbols}
+    B --> C1[Symbol 1: Fibonacci Grid]
+    B --> C2[Symbol 2: Fibonacci Grid]
+    B --> C3[Symbol 3: Fibonacci Grid]
+    B --> C8[... Symbol 8: Fibonacci Grid]
+
+    C1 --> D1[Level Touches & Breaks]
+    C2 --> D2[Level Touches & Breaks]
+    C3 --> D3[Level Touches & Breaks]
+    C8 --> D8[Level Touches & Breaks]
+
+    D1 --> E[Alert System]
+    D2 --> E
+    D3 --> E
+    D8 --> E
+
+    E --> F[Configurable Alerts]
+
+    style A fill:#00bcd4,stroke:#0097a7,color:#fff
+    style E fill:#ff5722,stroke:#d84315,color:#fff
+    style F fill:#4caf50,stroke:#388e3c,color:#fff
+</div>
+
+<p><em>The Augury Grid monitors up to 8 symbols simultaneously, calculating Fibonacci levels for each and detecting price interactions with those levels in real-time.</em></p>
+
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
   <div class="sp-callout__icon">📊</div>
   <div class="sp-callout__content">

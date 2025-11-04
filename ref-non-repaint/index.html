@@ -1212,6 +1212,40 @@
 
 <!-- Render the page content -->
 <h1 id="non-repainting-policy">Non-Repainting Policy<a class="headerlink" href="#non-repainting-policy" title="Permanent link">&para;</a></h1>
+
+<h2 id="why-this-matters">🎯 Why This Matters (For Traders)<a class="headerlink" href="#why-this-matters" title="Permanent link">&para;</a></h2>
+<p>Before diving into technical details, here's what non-repainting means in practical terms:</p>
+
+<div class="admonition info">
+<p class="admonition-title">What is Repainting?</p>
+<p>Some indicators change their past signals after new bars form. For example, an indicator might show a "buy" signal on an older candle when you look at it today, but that signal wasn't actually there yesterday when you were trading. This is called "repainting" and it creates misleading backtests.</p>
+</div>
+
+<div class="admonition success">
+<p class="admonition-title">Signal Pilot's Non-Repaint Guarantee</p>
+<p>Signal Pilot indicators are audited to ensure that once a signal appears on a closed candle, it stays there permanently. What you see on historical candles is exactly what appeared in real-time. This allows for:</p>
+<ul>
+<li>Accurate backtesting and performance evaluation</li>
+<li>Reliable alert configuration</li>
+<li>Confidence that historical signals represent actual market conditions</li>
+<li>No false backtesting results</li>
+</ul>
+</div>
+
+<h3 id="how-to-verify">How Can You Verify This?</h3>
+<p>Common methods traders use to verify non-repainting behavior:</p>
+<ol>
+<li><strong>Replay mode test</strong>: Use TradingView's bar replay feature and compare signals as bars form vs. after they're finished</li>
+<li><strong>Screenshot comparison</strong>: Take screenshots of signals as they form, then compare to the same candles days later</li>
+<li><strong>Alert logs</strong>: Compare alert timestamps to when signals actually appear on charts</li>
+<li><strong>Code audit</strong>: Review the technical implementation (see sections below)</li>
+</ol>
+
+<div class="admonition note">
+<p class="admonition-title">Educational Purpose</p>
+<p>The technical sections below provide code-level verification for developers and advanced users. This transparency allows independent verification of non-repainting claims.</p>
+</div>
+
 <p>SignalPilot is designed to be <strong>deterministic on candle close</strong>.</p>
 <ul>
 <li><strong>Close-confirmed signals</strong> — Alerts fire only when <code>barstate.isconfirmed</code>.</li>

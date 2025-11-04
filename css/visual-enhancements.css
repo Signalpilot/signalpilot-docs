@@ -342,6 +342,65 @@
     margin: 0.5rem 0;
     width: 100%;
   }
+
+  /* Homepage product cards - better button spacing */
+  .grid.cards li p {
+    padding-bottom: 0.5rem;
+  }
+
+  .grid.cards .md-button {
+    display: block;
+    margin-top: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* New User Resources cards - reduce min width on mobile */
+  div[style*="minmax(300px"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Reduce font size slightly for long text on mobile */
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  /* Better text wrapping for link descriptions */
+  ol li, ul li {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Reduce padding in New User Resource cards on mobile */
+  div[style*="padding: 2rem"] {
+    padding: 1.5rem !important;
+  }
+}
+
+/* Extra small screens (phones in portrait) */
+@media screen and (max-width: 480px) {
+  /* Further reduce grid card padding */
+  .grid.cards li {
+    padding: 1rem !important;
+  }
+
+  /* Stack buttons in their own row */
+  .grid.cards .md-button {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* Reduce h2 size for better fit */
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Compact link text */
+  a strong {
+    display: inline-block;
+    max-width: 100%;
+  }
 }
 
 /* ============================================
