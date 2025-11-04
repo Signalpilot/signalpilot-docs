@@ -635,7 +635,55 @@
   }
 
   /* ========================================
-     7. MOBILE NAVIGATION FIX
+     7. BACK TO TOP BUTTON FIX
+     Ensure it works on first click
+     ======================================== */
+
+  function fixBackToTopButton() {
+    // Find the back to top button
+    const backToTopBtn = document.querySelector('[data-md-component="top"]');
+
+    if (!backToTopBtn) return;
+
+    // Remove any existing click handlers and add our own
+    const newBtn = backToTopBtn.cloneNode(true);
+    backToTopBtn.parentNode.replaceChild(newBtn, backToTopBtn);
+
+    // Add direct click handler that always works
+    newBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      // Scroll to top smoothly
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+
+      // Also try the fallback for older browsers
+      if (window.scrollY > 0) {
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0; // For Safari
+      }
+    }, true); // Use capture phase
+
+    // Make sure button is visible when needed
+    function updateBackToTopVisibility() {
+      if (window.scrollY > 400) {
+        newBtn.removeAttribute('hidden');
+        newBtn.style.display = '';
+      } else {
+        newBtn.setAttribute('hidden', '');
+      }
+    }
+
+    // Update visibility on scroll
+    window.addEventListener('scroll', updateBackToTopVisibility, { passive: true });
+    updateBackToTopVisibility(); // Initial check
+  }
+
+  /* ========================================
+     8. MOBILE NAVIGATION FIX
      Make simplified menu labels clickable
      ======================================== */
 
@@ -705,7 +753,7 @@
   }
 
   /* ========================================
-     8. INITIALIZATION
+     9. INITIALIZATION
      ======================================== */
 
   function init() {
@@ -715,6 +763,7 @@
     enhanceKeyboardNavigation();
     replaceEmojisWithIcons();
     autoCloseDrawer();
+    fixBackToTopButton();
     setupMobileNavigation();
 
     // Re-run on page navigation (for SPA-like behavior)
@@ -728,6 +777,7 @@
           addTableScrollIndicators();
           addAriaLandmarks();
           replaceEmojisWithIcons();
+          fixBackToTopButton(); // Re-fix back to top after page change
           setupMobileNavigation(); // Re-setup mobile nav after page change
           // Don't call autoCloseDrawer() again - listener is already set
         }, 100);
