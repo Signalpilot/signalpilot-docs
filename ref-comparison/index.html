@@ -101,6 +101,31 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
 
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - CSS
+       To disable: comment out this entire block
+       ======================================== -->
+  <link rel="stylesheet" href="css/feedback.css">
+  <link rel="stylesheet" href="css/visual-enhancements.css">
+
+  <!-- Mermaid.js for diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'dark',
+      themeVariables: {
+        primaryColor: '#00bcd4',
+        primaryTextColor: '#fff',
+        primaryBorderColor: '#0097a7',
+        lineColor: '#00bcd4',
+        secondaryColor: '#ff5722',
+        tertiaryColor: '#4caf50'
+      }
+    });
+  </script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - CSS -->
+
   </head>
   
   
@@ -2155,6 +2180,37 @@
 
 <!-- Render the page content -->
 <h1 id="indicator-comparison-guide">Indicator Comparison Guide<a class="headerlink" href="#indicator-comparison-guide" title="Permanent link">&para;</a></h1>
+
+<div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
+  <div class="sp-callout__title">🎯 Quick Selection Guide</div>
+  <div class="mermaid">
+graph TD
+    Start[What do you need?] --> Q1{Primary Goal?}
+
+    Q1 -->|Reversal Detection| P1[Pentarch v1.0]
+    Q1 -->|Trend Following| P2[Omnideck v1.0]
+    Q1 -->|Volume Analysis| P3[Volume Oracle v1.0]
+    Q1 -->|Levels & Structure| P4[Janus Atlas v1.0]
+    Q1 -->|Momentum Consensus| P5[Harmonic Oscillator v1.0]
+
+    P1 --> D1[Exhaustion,<br/>Cycle Phases,<br/>TD Sequential]
+    P2 --> D2[Everything,<br/>10 Systems,<br/>All-in-One]
+    P3 --> D3[Money Flow,<br/>Position Tracking,<br/>Volume Signals]
+    P4 --> D4[39 Level Types,<br/>Support/Resistance,<br/>Market Structure]
+    P5 --> D5[3-Oscillator Voting,<br/>Divergences,<br/>Consensus Signals]
+
+    style P1 fill:#9c27b0,color:#fff
+    style P2 fill:#ff5722,color:#fff
+    style P3 fill:#4caf50,color:#fff
+    style P4 fill:#2196f3,color:#fff
+    style P5 fill:#ff9800,color:#fff
+  </div>
+  <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+    <strong>How to read:</strong> Start with your primary trading goal and follow the path to
+    find the indicator that best matches your needs.
+  </p>
+</div>
+
 <p>Match your <span class="signal-pilot-brand">Signal Pilot</span> indicator selection to your trading style and experience level. This guide presents the comparison framework.</p>
 <hr />
 <h2 id="quick-recommendations">🎯 Quick Recommendations<a class="headerlink" href="#quick-recommendations" title="Permanent link">&para;</a></h2>
@@ -2714,5 +2770,12 @@ Other indicators not required</p>
       <script src="../assets/enhancements.js"></script>
       <script src="../assets/sticky-toc-scroll.js"></script>
     <script src="../assets/components.js"></script>
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - JS
+       To disable: comment out this entire block
+       ======================================== -->
+  <script src="js/feedback-system.js"></script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - JS -->
+
   </body>
 </html>
