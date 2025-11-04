@@ -2052,37 +2052,33 @@
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
   <div class="sp-callout__icon">📊</div>
   <div class="sp-callout__content">
-    <h4>Position Tracking State Machine</h4>
-    <p style="margin-bottom: 1rem;">Volume Oracle tracks positions from entry to exit with real-time P&L:</p>
+    <h4>Position Tracking Flow</h4>
+    <p style="margin-bottom: 1rem;">Simple visualization of how Volume Oracle tracks your positions:</p>
     <div class="mermaid">
-stateDiagram-v2
-    [*] --> NoPosition: Waiting
+graph TD
+    Start([No Position<br/>Waiting for Signal]) --> Signal{VBS Signal Fires}
 
-    NoPosition --> LongPosition: VBS+ Signal
-    NoPosition --> ShortPosition: VBS- Signal
+    Signal -->|VBS+ Green| Long[🟢 LONG Entry]
+    Signal -->|VBS- Red| Short[🔴 SHORT Entry]
 
-    LongPosition --> Tracking: Position Opened
-    Tracking --> ProfitCalc: Real-time P&L
-    ProfitCalc --> ExitTarget: Show Target Line
+    Long --> LongTrack[Position Tracking:<br/>✅ Entry Price Marked<br/>📊 Real-time P/L Display<br/>🎯 Exit Target Shown]
+    Short --> ShortTrack[Position Tracking:<br/>✅ Entry Price Marked<br/>📊 Real-time P/L Display<br/>🎯 Exit Target Shown]
 
-    ExitTarget --> NoPosition: VBS- Exit Signal
-    ExitTarget --> NoPosition: Manual Exit
+    LongTrack --> LongExit[VBS- Signal → Exit Long]
+    ShortTrack --> ShortExit[VBS+ Signal → Exit Short]
 
-    ShortPosition --> Tracking2: Position Opened
-    Tracking2 --> ProfitCalc2: Real-time P&L
-    ProfitCalc2 --> ExitTarget2: Show Target Line
+    LongExit --> Start
+    ShortExit --> Start
 
-    ExitTarget2 --> NoPosition: VBS+ Exit Signal
-    ExitTarget2 --> NoPosition: Manual Exit
-
-    note right of Tracking
-        Features:
-        - Entry price recorded
-        - Unrealized P&L displayed
-        - Risk/Reward calculated
-        - Exit target shown
-    end note
+    style Long fill:#4caf50,color:#fff
+    style Short fill:#f44336,color:#fff
+    style LongTrack fill:#4caf50,color:#fff
+    style ShortTrack fill:#f44336,color:#fff
+    style Start fill:#2196f3,color:#fff
     </div>
+    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+      <strong>How to read:</strong> VBS+ opens LONG positions (green), VBS- opens SHORT positions (red). Opposite signal exits the position. Cycle repeats.
+    </p>
   </div>
 </div>
 
