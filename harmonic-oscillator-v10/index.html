@@ -1946,35 +1946,44 @@
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
   <div class="sp-callout__icon">📊</div>
   <div class="sp-callout__content">
-    <h4>How the Voting System Works</h4>
-    <p style="margin-bottom: 1rem;">Three oscillators vote democratically to generate consensus signals:</p>
+    <h4>Five-Oscillator Voting System</h4>
+    <p style="margin-bottom: 1rem;">Each oscillator votes bullish, bearish, or neutral. Signals appear based on vote counts:</p>
     <div class="mermaid">
-graph LR
-    A[Market Data] --> B[MACD]
-    A --> C[RSI]
-    A --> D[StochRSI]
+graph TD
+    Data[Market Data] --> OSC[5 Oscillators Analyze]
 
-    B --> E{MACD Vote}
-    C --> F{RSI Vote}
-    D --> G{StochRSI Vote}
+    OSC --> O1[1️⃣ RSI]
+    OSC --> O2[2️⃣ Stochastic]
+    OSC --> O3[3️⃣ CCI]
+    OSC --> O4[4️⃣ Williams %R]
+    OSC --> O5[5️⃣ MFI]
 
-    E --> H[Democratic<br/>Voting System]
-    F --> H
-    G --> H
+    O1 --> Vote[Vote Counter]
+    O2 --> Vote
+    O3 --> Vote
+    O4 --> Vote
+    O5 --> Vote
 
-    H --> I{Signal Mode?}
+    Vote --> Result{How Many<br/>Agree?}
 
-    I -->|Conservative| J[Require 3 votes]
-    I -->|Balanced| K[Require 2 votes]
-    I -->|Aggressive| L[Require 1 vote]
+    Result -->|3+ votes| Signal[BUY/SELL Signal]
+    Result -->|4-5 votes| Strong[STRONG Signal]
+    Result -->|2 or less| Neutral[NEUT Signal]
 
-    J --> M[🟢 Signal Output]
-    K --> M
-    L --> M
-
-    style H fill:#ff9800,color:#fff
-    style M fill:#4caf50,color:#fff
+    style OSC fill:#ff9800,color:#fff
+    style Vote fill:#2196f3,color:#fff
+    style Signal fill:#4caf50,color:#fff
+    style Strong fill:#4caf50,color:#fff
+    style Neutral fill:#757575,color:#fff
+    style O1 fill:#9c27b0,color:#fff
+    style O2 fill:#9c27b0,color:#fff
+    style O3 fill:#9c27b0,color:#fff
+    style O4 fill:#9c27b0,color:#fff
+    style O5 fill:#9c27b0,color:#fff
     </div>
+    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+      <strong>How to read:</strong> All 5 oscillators vote simultaneously. 3+ votes = signal, 4-5 votes = strong signal, 2 or less = neutral (no clear agreement).
+    </p>
   </div>
 </div>
 
