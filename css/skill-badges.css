@@ -1,24 +1,22 @@
 /*
  * Skill Progression Badges
  * Visual indicators for content difficulty level
- * CACHE BUSTER TEST: v2024-11-05-TINY
+ * CACHE BUSTER: v2024-11-05-FIXED
  */
 
 .skill-badge {
   display: inline-flex;
   align-items: center;
-  gap: 3px !important;
-  padding: 1px 6px !important;
-  border-radius: 6px !important;
-  font-size: 8px !important;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.2px !important;
-  margin-left: 8px !important;
+  letter-spacing: 0.5px;
+  margin-left: 8px;
   vertical-align: middle;
   transition: all 0.2s ease;
-  /* TEST: If you see this border, CSS is loading */
-  border: 2px solid #ff00ff !important;
 }
 
 .skill-badge:hover {
@@ -35,7 +33,7 @@
 
 .skill-badge--beginner::before {
   content: "🌱";
-  font-size: 9px !important;
+  font-size: 0.875rem;
 }
 
 /* Intermediate Badge */
@@ -47,7 +45,7 @@
 
 .skill-badge--intermediate::before {
   content: "🌿";
-  font-size: 9px !important;
+  font-size: 0.875rem;
 }
 
 /* Advanced Badge */
@@ -59,7 +57,7 @@
 
 .skill-badge--advanced::before {
   content: "🌳";
-  font-size: 9px !important;
+  font-size: 0.875rem;
 }
 
 /* Tooltip on hover */
@@ -98,32 +96,32 @@
 /* Section headers with badges */
 h2 .skill-badge,
 h3 .skill-badge {
-  font-size: 7px !important;
-  padding: 1px 5px !important;
-  margin-left: 10px !important;
+  font-size: 0.7rem;
+  padding: 3px 8px;
+  margin-left: 10px;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .skill-badge {
-    font-size: 9px;
-    padding: 2px 6px;
+    font-size: 0.7rem;
+    padding: 3px 8px;
     margin-left: 6px;
   }
 
   .skill-badge::before {
-    font-size: 10px;
+    font-size: 0.8rem;
   }
 
   h2 .skill-badge,
   h3 .skill-badge {
-    font-size: 8px;
-    padding: 1px 5px;
+    font-size: 0.65rem;
+    padding: 2px 6px;
     margin-left: 6px;
   }
 
   .skill-badge[data-tooltip]::after {
-    font-size: 10px;
+    font-size: 0.7rem;
     padding: 5px 8px;
   }
 }
