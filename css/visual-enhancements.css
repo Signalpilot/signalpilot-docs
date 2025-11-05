@@ -4,7 +4,7 @@
  * Version: 1.1 - Responsive Optimizations
  * Created: November 2025
  * Updated: November 2025 - Added responsive Mermaid diagram styles
- * CACHE BUSTER: v2024-11-05-RESPONSIVE-ALL-DEVICES
+ * CACHE BUSTER: v2024-11-05-TARGETED-LARGE-DIAGRAMS
  */
 
 /* ============================================
@@ -320,6 +320,54 @@
   overflow-x: auto;
   max-width: 100%;
   margin: 1rem 0;
+}
+
+/* Extra Large Diagrams - For complex diagrams that need bigger text */
+.mermaid-extra-large text,
+.mermaid-extra-large .nodeLabel,
+.mermaid-extra-large .edgeLabel,
+.mermaid-extra-large .label {
+  font-size: 28px !important;
+  font-weight: 500 !important;
+}
+
+.mermaid-extra-large .node rect,
+.mermaid-extra-large .node circle,
+.mermaid-extra-large .node ellipse,
+.mermaid-extra-large .node polygon {
+  stroke-width: 3px !important;
+}
+
+.mermaid-extra-large .cluster rect {
+  stroke-width: 2px !important;
+}
+
+/* Responsive sizing for extra large diagrams */
+@media screen and (max-width: 1199px) {
+  .mermaid-extra-large text,
+  .mermaid-extra-large .nodeLabel,
+  .mermaid-extra-large .edgeLabel,
+  .mermaid-extra-large .label {
+    font-size: 24px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mermaid-extra-large text,
+  .mermaid-extra-large .nodeLabel,
+  .mermaid-extra-large .edgeLabel,
+  .mermaid-extra-large .label {
+    font-size: 20px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .mermaid-extra-large text,
+  .mermaid-extra-large .nodeLabel,
+  .mermaid-extra-large .edgeLabel,
+  .mermaid-extra-large .label {
+    font-size: 18px !important;
+  }
 }
 
 /* Desktop - Large text for readability */
