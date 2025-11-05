@@ -7,14 +7,14 @@
 .skill-badge {
   display: inline-flex;
   align-items: center;
-  gap: 3px;
-  padding: 1px 6px;
-  border-radius: 6px;
-  font-size: 8px;
+  gap: 3px !important;
+  padding: 1px 6px !important;
+  border-radius: 6px !important;
+  font-size: 8px !important;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.2px;
-  margin-left: 8px;
+  letter-spacing: 0.2px !important;
+  margin-left: 8px !important;
   vertical-align: middle;
   transition: all 0.2s ease;
   /* TEST: If you see this border, CSS is loading */
@@ -35,7 +35,7 @@
 
 .skill-badge--beginner::before {
   content: "🌱";
-  font-size: 9px;
+  font-size: 9px !important;
 }
 
 /* Intermediate Badge */
@@ -47,7 +47,7 @@
 
 .skill-badge--intermediate::before {
   content: "🌿";
-  font-size: 9px;
+  font-size: 9px !important;
 }
 
 /* Advanced Badge */
@@ -59,7 +59,7 @@
 
 .skill-badge--advanced::before {
   content: "🌳";
-  font-size: 9px;
+  font-size: 9px !important;
 }
 
 /* Tooltip on hover */
@@ -98,9 +98,9 @@
 /* Section headers with badges */
 h2 .skill-badge,
 h3 .skill-badge {
-  font-size: 7px;
-  padding: 1px 5px;
-  margin-left: 10px;
+  font-size: 7px !important;
+  padding: 1px 5px !important;
+  margin-left: 10px !important;
 }
 
 /* Responsive adjustments */
