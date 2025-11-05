@@ -7,10 +7,11 @@
   'use strict';
 
   // Font size configuration
+  // Material theme default is 125% (20px), so we match that
   const FONT_SIZES = {
-    small: 14,
-    normal: 16,
-    large: 18
+    small: 16,    // 100% - smaller than default
+    normal: 20,   // 125% - matches Material theme default
+    large: 24     // 150% - larger than default
   };
 
   const STORAGE_KEY = 'sp-font-size';

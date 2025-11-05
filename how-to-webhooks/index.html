@@ -1346,7 +1346,7 @@
 <h3 id="step-3-customize-message">Step 3: Customize Alert Message (Optional)<a class="headerlink" href="#step-3-customize-message" title="Permanent link">&para;</a></h3>
 <p>In the <strong>"Message"</strong> field, you can customize what data is sent. TradingView supports placeholders:</p>
 
-<div class="highlight"><pre><code>{
+<div class="highlight"><pre><code class="language-json">{
   "indicator": "{{ticker}}",
   "price": "{{close}}",
   "time": "{{time}}",
@@ -1380,7 +1380,7 @@
 <h2 id="message-format-examples">💬 Message Format Examples<a class="headerlink" href="#message-format-examples" title="Permanent link">&para;</a></h2>
 
 <h3 id="discord-formatted">Discord-Formatted Message</h3>
-<div class="highlight"><pre><code>{
+<div class="highlight"><pre><code class="language-json">{
   "content": "🔔 **Signal Pilot Alert**",
   "embeds": [{
     "title": "Pentarch Reversal",
@@ -1395,10 +1395,10 @@
 }</code></pre></div>
 
 <h3 id="simple-text">Simple Text Message</h3>
-<div class="highlight"><pre><code>Signal Pilot: {{ticker}} - Harmonic Oscillator cross detected at {{close}} on {{interval}} timeframe</code></pre></div>
+<div class="highlight"><pre><code class="language-text">Signal Pilot: {{ticker}} - Harmonic Oscillator cross detected at {{close}} on {{interval}} timeframe</code></pre></div>
 
 <h3 id="structured-json">Structured JSON for Custom API</h3>
-<div class="highlight"><pre><code>{
+<div class="highlight"><pre><code class="language-json">{
   "alert_type": "signal_pilot",
   "indicator": "janus_atlas",
   "symbol": "{{ticker}}",
@@ -1655,6 +1655,9 @@
   <script src="../js/keyboard-navigation.js"></script>
   <script src="../js/text-sizing.js"></script>
   <script src="../js/knowledge-checks.js"></script>
+
+  <!-- Code Copy Enhancement -->
+  <script src="../js/simple-code-copy.js"></script>
 
       <!-- SignalPilot Chatbot -->
     <script src="/js/chatbot.js"></script>
