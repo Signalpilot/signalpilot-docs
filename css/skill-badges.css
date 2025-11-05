@@ -1,7 +1,7 @@
 /*
  * Skill Progression Badges
  * Visual indicators for content difficulty level
- * CACHE BUSTER: v2024-11-05-MEDIUM-SIZE-FINAL-XYZ789
+ * CACHE BUSTER: v2024-11-05-RESPONSIVE-ALL-DEVICES-ABC123
  */
 
 .skill-badge {
@@ -102,27 +102,91 @@ h3 .skill-badge {
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+
+/* Desktop (1200px+) - Optimal size for desktop viewing */
+@media (min-width: 1200px) {
   .skill-badge {
-    font-size: 0.7rem;
-    padding: 3px 8px;
-    margin-left: 6px;
+    font-size: 0.75rem !important;
+    padding: 4px 10px !important;
   }
 
   .skill-badge::before {
-    font-size: 0.8rem;
+    font-size: 0.8rem !important;
   }
 
   h2 .skill-badge,
   h3 .skill-badge {
-    font-size: 0.65rem;
-    padding: 2px 6px;
-    margin-left: 6px;
+    font-size: 0.7rem !important;
+    padding: 3px 8px !important;
+  }
+}
+
+/* Tablet (768px - 1199px) - Standard size */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .skill-badge {
+    font-size: 0.7rem !important;
+    padding: 3px 9px !important;
+  }
+
+  .skill-badge::before {
+    font-size: 0.75rem !important;
+  }
+
+  h2 .skill-badge,
+  h3 .skill-badge {
+    font-size: 0.65rem !important;
+    padding: 2px 7px !important;
+  }
+}
+
+/* Mobile (481px - 767px) - Slightly smaller */
+@media (max-width: 767px) and (min-width: 481px) {
+  .skill-badge {
+    font-size: 0.65rem !important;
+    padding: 3px 8px !important;
+    margin-left: 6px !important;
+  }
+
+  .skill-badge::before {
+    font-size: 0.7rem !important;
+  }
+
+  h2 .skill-badge,
+  h3 .skill-badge {
+    font-size: 0.6rem !important;
+    padding: 2px 6px !important;
+    margin-left: 6px !important;
   }
 
   .skill-badge[data-tooltip]::after {
-    font-size: 0.7rem;
-    padding: 5px 8px;
+    font-size: 0.65rem !important;
+    padding: 5px 8px !important;
+  }
+}
+
+/* Extra small (480px and below) - Compact but readable */
+@media (max-width: 480px) {
+  .skill-badge {
+    font-size: 0.6rem !important;
+    padding: 2px 6px !important;
+    margin-left: 5px !important;
+    gap: 4px !important;
+  }
+
+  .skill-badge::before {
+    font-size: 0.65rem !important;
+  }
+
+  h2 .skill-badge,
+  h3 .skill-badge {
+    font-size: 0.55rem !important;
+    padding: 2px 5px !important;
+    margin-left: 5px !important;
+  }
+
+  .skill-badge[data-tooltip]::after {
+    font-size: 0.6rem !important;
+    padding: 4px 6px !important;
   }
 }
 
