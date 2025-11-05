@@ -324,6 +324,117 @@ Visit **https://signalpilot.io/#pricing** for current pricing.
 
 📄 [Full Workflow Guide](../ref-workflow/)`,
 
+            screener: `**Using the Screener (Augury Grid):**
+
+**What is it?**
+Augury Grid v1.0 monitors up to 40 symbols simultaneously on your chart.
+
+**Quick Setup:**
+1. Add "SP — Augury Grid v1.0" to chart
+2. Click settings → Symbol Configuration
+3. Enter symbols (e.g., BINANCE:BTCUSDT, BINANCE:ETHUSDT...)
+4. Configure signal logic (Pentarch, custom, etc.)
+
+**What you see:**
+• Live BUY/SELL signals with quality scores (0-100)
+• Real-time prices and profit targets
+• Signal age (how fresh)
+• P&L tracking
+
+📄 [Full Screener Guide](../how-to-screener/)
+
+**Pro tip:** Start with 8-10 symbols max until you understand the signals.`,
+
+            onboarding: `**7-Day Onboarding Checklist:**
+
+Transform from beginner to confident user in one week:
+
+**Day 1:** Installation + first signal
+**Day 2:** Learn the 5 cycle events (TD, IGN, WRN, CAP, BDN)
+**Day 3:** Multiple timeframes & markets
+**Day 4:** Set up alerts + test automation
+**Day 5:** Combine with other indicators
+**Day 6:** Practice on paper trades
+**Day 7:** Review & create your strategy
+
+Each day: 15-30 minutes of focused learning.
+
+📄 [Full Onboarding Checklist](../start-onboarding/)
+
+**Why this works:** Progressive learning, hands-on practice, builds muscle memory.`,
+
+            prerequisites: `**Prerequisites:**
+
+Before you start, you need:
+
+**1. TradingView Account (Required)**
+• Free account: Can view charts, no alerts
+• Pro ($14.95/mo): Alerts, faster data
+• Pro+ ($29.95/mo): More alerts, even faster data (recommended)
+• Premium ($59.95/mo): Maximum alerts, real-time data
+
+**2. SignalPilot Access**
+• Purchase from https://signalpilot.io
+• Receive access link via email
+• Lifetime access to indicators
+
+**3. Basic Trading Knowledge (Recommended)**
+• Understand candlesticks
+• Know what support/resistance means
+• Familiar with trends
+• Understand risk management basics
+
+**Not required but helpful:** Experience with TradingView platform
+
+📄 [Full Prerequisites Guide](../start-prerequisites/)`,
+
+            suite: `**Suite Overview:**
+
+The SignalPilot Suite includes 7 professional indicators:
+
+**Overlay Indicators:**
+• **Pentarch** - 5 reversal events (TD, IGN, WRN, CAP, BDN)
+• **Omnideck** - Everything indicator (10+ systems in one)
+• **Janus Atlas** - 39 level types across timeframes
+• **Augury Grid** - Multi-symbol screener (up to 40 symbols)
+
+**Panel Indicators:**
+• **Volume Oracle** - Volume flow, zones, position manager
+• **Harmonic Oscillator** - Composite momentum (NanoFlow, KFlow, RSI)
+• **Plutus Flow** - Advanced OBV with divergences
+
+**Most popular combos:**
+• Pentarch + Janus Atlas (reversals + levels)
+• Omnideck (all-in-one solution)
+• Pentarch + Volume Oracle (reversals + volume confirmation)
+
+📄 [Full Suite Overview](../suite-index/)
+
+**Quick selector available** on the suite page to help choose!`,
+
+            changelog: `**Recent Updates:**
+
+SignalPilot indicators are continuously improved based on user feedback and market conditions.
+
+**Latest versions:**
+• Pentarch v1.0
+• Omnideck v1.0
+• Janus Atlas v1.0
+• Augury Grid v1.0
+• Volume Oracle v1.0 (formerly Minimal Flow)
+• Harmonic Oscillator v1.0
+• Plutus Flow v1.0
+
+**All updates include:**
+✅ Bug fixes
+✅ Performance improvements
+✅ New features
+✅ Enhanced documentation
+
+📄 [Full Changelog](../about-changelog/)
+
+**Note:** Lifetime access includes all future updates at no additional cost.`,
+
             help: `**I can help you with:**
 
 📊 **Indicators:** "Tell me about Pentarch" | "How does Janus work?"
@@ -373,8 +484,15 @@ Type **"help"** to see all available topics!
 
             // Getting started
             { regex: /(quick start|get started|beginner|new|how do i start|first time)/i, key: 'quickStart' },
+            { regex: /(onboarding|7.day|learning path|checklist)/i, key: 'onboarding' },
+            { regex: /(prerequisite|requirement|what do i need|before i start)/i, key: 'prerequisites' },
             { regex: /(alert|notification|how to set|alarm|how do i get notified)/i, key: 'alerts' },
             { regex: /(webhook|discord|telegram|automation|bot|3commas)/i, key: 'webhooks' },
+            { regex: /(screener|multi.symbol|watchlist|monitoring|augury.*use)/i, key: 'screener' },
+
+            // Suite/Overview
+            { regex: /(suite|all indicators|overview|which one|choose)/i, key: 'suite' },
+            { regex: /(changelog|update|version|what.*new|release)/i, key: 'changelog' },
 
             // Concepts
             { regex: /(non.repaint|repainting|repaint|historical|does it repaint)/i, key: 'nonRepaint' },
