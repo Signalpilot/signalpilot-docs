@@ -1505,7 +1505,21 @@
 </ol>
 
 <p><em>(Historical workflow example for educational purposes only. Not financial advice. Individual results may vary.)</em></p>
-
+<hr />
+<div class="sp-callout sp-callout--summary">
+  <div class="sp-callout__title">What You've Learned</div>
+  <ul>
+    <li><strong>Webhook Fundamentals:</strong> Webhooks send HTTP POST requests with custom JSON data from TradingView alerts to external services (Discord, Slack, custom automation systems, trading bots) for real-time notifications</li>
+    <li><strong>Setup Process:</strong> Create webhook URL in external service, configure TradingView alert with webhook URL, customize message format using JSON with placeholders like {{ticker}}, {{close}}, {{time}}, then test before going live</li>
+    <li><strong>Message Customization:</strong> Use JSON format to structure alert data - include ticker symbol, price levels, timeframe, signal type, timestamp, and any other relevant trading context for your workflow</li>
+    <li><strong>Popular Integration Examples:</strong> Send alerts to Discord channels (team coordination), Slack workspaces (trading desk communication), custom APIs (automated trade execution), or logging services (performance tracking)</li>
+    <li><strong>Placeholder Variables:</strong> TradingView provides {{ticker}}, {{exchange}}, {{close}}, {{open}}, {{high}}, {{low}}, {{volume}}, {{time}}, {{interval}} placeholders for dynamic alert content</li>
+    <li><strong>Testing Best Practices:</strong> Always test webhook with simple message first, verify JSON formatting with online validators, check webhook URL is correct, confirm messages appear in destination service before enabling for live trading</li>
+    <li><strong>Workflow Optimization:</strong> Create separate alerts for different conditions (entry signals vs exit signals), use descriptive names for organization, document webhook setups, log all alerts to track performance over time</li>
+  </ul>
+  <p><strong>Next Steps:</strong> Review <a href="../how-to-alerts/">Core Alert Configuration Guide</a> for basic TradingView alert setup, or explore your chosen integration service's documentation for advanced webhook customization options.</p>
+</div>
+<hr />
 <h2 id="next-steps">🚀 Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
 
 <ul>
