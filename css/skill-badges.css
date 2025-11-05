@@ -1,6 +1,7 @@
 /*
  * Skill Progression Badges
  * Visual indicators for content difficulty level
+ * CACHE BUSTER TEST: v2024-11-05-TINY
  */
 
 .skill-badge {
@@ -16,6 +17,8 @@
   margin-left: 8px;
   vertical-align: middle;
   transition: all 0.2s ease;
+  /* TEST: If you see this border, CSS is loading */
+  border: 2px solid #ff00ff !important;
 }
 
 .skill-badge:hover {
