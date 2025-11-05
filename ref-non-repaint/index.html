@@ -1260,7 +1260,21 @@
 <li><strong>Anchoring</strong> — Labels/markers use <code>x=bar_index</code> and <code>yloc.price</code> to avoid wobble.</li>
 </ul>
 <p>What this means: <strong>No future-bar lookahead.</strong> Backtests and alerts match live behavior.</p>
-                
+<hr />
+<div class="sp-callout sp-callout--summary">
+  <div class="sp-callout__title">What You've Learned</div>
+  <ul>
+    <li><strong>Non-Repainting Defined:</strong> Signals that confirm at bar close and never change retroactively - what you see on historical candles is exactly what appeared in real-time when those bars formed</li>
+    <li><strong>Why It Matters:</strong> Non-repainting ensures accurate backtesting, reliable alert configuration, and confidence that historical performance represents actual market conditions - prevents misleading backtest results from changing signals</li>
+    <li><strong>Signal Pilot Guarantee:</strong> All indicators are audited to ensure close-confirmed signals using <code>barstate.isconfirmed</code>, no future-bar lookahead, and anchored visual elements that remain fixed after confirmation</li>
+    <li><strong>Verification Methods:</strong> You can verify non-repainting behavior through TradingView bar replay testing, screenshot comparisons over time, alert log reviews, or technical code audits</li>
+    <li><strong>Technical Implementation:</strong> Signals use close-confirmed triggers, HTF data pulled with <code>lookahead_off</code> setting, pivots/divergences drawn only after right-side confirmation, and anchored labels using <code>bar_index</code> coordinates</li>
+    <li><strong>Practical Impact:</strong> Deterministic behavior on candle close means backtests accurately reflect live trading performance, alerts fire at predictable times, and historical analysis provides reliable strategy development data</li>
+    <li><strong>Transparency Commitment:</strong> Technical implementation details provided for independent verification by developers and advanced users who want to audit non-repainting claims</li>
+  </ul>
+  <p><strong>Next Steps:</strong> Review <a href="../ref-best-practices/">Best Practices Guide</a> for optimal indicator usage, or explore <a href="../ref-troubleshooting/">Troubleshooting Guide</a> if you encounter unexpected behavior.</p>
+</div>
+
               </article>
             </div>
           
