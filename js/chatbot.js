@@ -1,59 +1,403 @@
 /**
  * SignalPilot Documentation Chatbot
- * An AI-powered assistant that knows everything about SignalPilot docs
+ * Simple pattern-matching chatbot (no API required)
+ *
+ * This version uses the existing beautiful chatbot.css styling
  */
 
 class SignalPilotChatbot {
-    constructor(options = {}) {
-        this.config = {
-            apiProvider: options.apiProvider || 'openai', // 'openai' or 'anthropic'
-            apiKey: options.apiKey || '', // User can set via UI or config
-            apiEndpoint: options.apiEndpoint || null, // Custom backend endpoint
-            maxTokens: options.maxTokens || 1000,
-            temperature: options.temperature || 0.7,
-            model: options.model || 'gpt-4',
-            debug: options.debug || false
-        };
-
+    constructor() {
         this.isOpen = false;
         this.messageHistory = [];
-        this.searchIndex = null;
+        this.knowledgeBase = this.initKnowledgeBase();
+        this.patterns = this.initPatterns();
 
         this.init();
     }
 
-    async init() {
-        // Load search index for context retrieval
-        await this.loadSearchIndex();
+    initKnowledgeBase() {
+        return {
+            // Product documentation
+            pentarch: `**Pentarch v1.0** is a reversal event detector that displays 5 cycle events (TD, IGN, WRN, CAP, BDN) on your chart.
 
-        // Create chat widget UI
-        this.createChatWidget();
+📄 [Read Full Documentation](../pentarch-v10/)
 
-        // Bind events
-        this.bindEvents();
+**Key Features:**
+• 5 distinct cycle events
+• 4-layer detection system
+• Non-repainting (signals final at bar close)
+• Works on any timeframe
+• Customizable alerts
 
-        // Load previous conversation from localStorage
-        this.loadConversationHistory();
+**Signals:**
+- **TD** (Touchdown) - Early reversal
+- **IGN** (Ignition) - Momentum confirmation
+- **WRN** (Warning) - Distribution phase
+- **CAP** (Climax) - Peak conditions
+- **BDN** (Breakdown) - Completion phase`,
 
-        if (this.config.debug) {
-            console.log('SignalPilot Chatbot initialized', this.config);
-        }
+            omnideck: `**Omnideck v1.0** is the "everything indicator" that combines 10+ detection systems in one.
+
+📄 [Read Full Documentation](../omnideck-v10/)
+
+**Includes:**
+• Pentarch reversal signals
+• NanoFlow momentum
+• Regime classification bars
+• Pilot line trend reference
+• Fibonacci levels
+• Pattern detection
+• And more...
+
+Choose which systems to display based on your needs.`,
+
+            janus: `**Janus Atlas v1.0** displays 39 different level types across your chart.
+
+📄 [Read Full Documentation](../janus-atlas-v10/)
+
+**Level Categories:**
+• **VWAP** - Daily, weekly, monthly, custom
+• **Volume Profile** - POC, VAH, VAL
+• **Session Levels** - Asia, London, NY
+• **Market Structure** - BOS, CHoCH, swings
+• **Classic Levels** - Pivots, highs/lows
+
+**Best for:** Level traders, mean reversion, support/resistance`,
+
+            augury: `**Augury Grid v1.0** is a multi-symbol screener that monitors up to 40 symbols simultaneously.
+
+📄 [Read Full Documentation](../augury-grid-v10/)
+
+**Features:**
+• Monitor 40 symbols at once
+• See which assets show signals
+• Customizable watchlists
+• Grid or list view
+• Alert on any symbol signal
+
+**Best for:** Multi-asset traders, finding setups across watchlists`,
+
+            oracle: `**Volume Oracle v1.0** (formerly Minimal Flow) provides 3 volume analysis systems.
+
+📄 [Read Full Documentation](../minimal-flow-v10/)
+
+**Systems:**
+• **Volume Flow** - Buying/selling pressure bars
+• **Volume Zones** - High-volume areas
+• **Position Manager** - Track entries/exits
+
+**Best for:** Volume traders, institutional flow analysis`,
+
+            harmonic: `**Harmonic Oscillator v1.0** is a composite momentum indicator.
+
+📄 [Read Full Documentation](../harmonic-oscillator-v10/)
+
+**Components:**
+• NanoFlow momentum
+• KFlow composite
+• Enhanced RSI
+• Divergence detection
+• Overbought/oversold zones
+
+**Best for:** Momentum traders, divergence trading`,
+
+            plutus: `**Plutus Flow v1.0** is an advanced On-Balance Volume (OBV) indicator.
+
+📄 [Read Full Documentation](../plutus-flow-v10/)
+
+**Layers:**
+• OBV calculation
+• Trend ribbons (3-EMA system)
+• Divergence detection
+• Volume accumulation tracking
+
+**Best for:** Volume analysts, flow confirmation`,
+
+            quickStart: `**Quick Start (5 minutes):**
+
+1️⃣ **Get TradingView access** (Pro+ or Premium required for alerts)
+2️⃣ **Access indicators** from your purchase email link
+3️⃣ **Add to chart** via Indicators menu (search "SignalPilot")
+4️⃣ **See first signal** when conditions align
+5️⃣ **Set alerts** for automated notifications
+
+📄 [Full Quick Start Guide](../start-quick/)
+
+**Need help?** Check [Prerequisites](../start-prerequisites/) first!`,
+
+            alerts: `**Setting Up Alerts:**
+
+**Steps:**
+1. Click the **alarm clock icon** (⏰) on TradingView
+2. Select your SignalPilot indicator from dropdown
+3. Choose condition (e.g., "Pentarch: Reversal Detected")
+4. Set **"Once Per Bar Close"** to avoid repaints
+5. Configure notifications (app, email, SMS, webhook)
+
+📄 [Detailed Alert Guide](../how-to-alerts/)
+
+**Pro tip:** Use "Once Per Bar Close" to ensure signals don't disappear!
+
+**Webhook support:** All indicators support webhook automation for Discord, Telegram, custom bots.`,
+
+            webhooks: `**Webhook Setup:**
+
+Webhooks let you send alerts to external services automatically.
+
+**Steps:**
+1. Get webhook URL from your service (Discord, Telegram, etc)
+2. Create alert on TradingView
+3. Paste webhook URL in "Webhook URL" field
+4. Customize message payload (JSON supported)
+
+📄 [Full Webhook Guide](../how-to-webhooks/)
+
+**Supported Platforms:**
+• Discord
+• Telegram
+• Make.com / Zapier
+• Custom servers
+• 3Commas and other trading bots
+
+**Message formats:** Simple text, JSON, Discord embeds`,
+
+            nonRepaint: `**Non-Repainting Explained:**
+
+All SignalPilot indicators are **non-repainting** - signals finalize at bar close and never disappear.
+
+**What this means:**
+✅ Signals appear when bar closes (not during)
+✅ Once shown, signals stay permanently
+✅ Backtesting = live performance
+✅ No "magic disappearing signals"
+
+📄 [Full Non-Repaint Policy](../ref-non-repaint/)
+
+**Technical:** Indicators use \`request.security()\` with \`lookahead=barmerge.lookahead_off\`
+
+**Why it matters:** Many indicators repaint, making backtests worthless. Ours don't.`,
+
+            pricing: `**SignalPilot Pricing:**
+
+Visit **https://signalpilot.io/#pricing** for current pricing.
+
+**Options:**
+• Individual indicators
+• Full suite (all 7 indicators)
+• Lifetime access available
+
+**What's included:**
+✅ All indicator updates
+✅ Alert functionality
+✅ Discord community access
+✅ Email support
+✅ Non-repainting guarantee
+
+💳 Secure checkout via LemonSqueezy`,
+
+            support: `**Get Support:**
+
+📧 **Email:** support@signalpilot.io
+💬 **Discord:** Available to customers (link in purchase email)
+📚 **Docs:** https://docs.signalpilot.io
+📝 **FAQ:** [Read FAQ](../about-faq/)
+
+**Response time:** Usually within 24 hours
+
+📄 [Full Support Info](../about-support/)
+
+**Before contacting:**
+1. Check [Troubleshooting Guide](../ref-troubleshooting/)
+2. Review [FAQ](../about-faq/)
+3. Search these docs (search bar at top)`,
+
+            troubleshooting: `**Common Issues & Solutions:**
+
+**"Indicator not loading"**
+• Check TradingView plan (need Pro+ for private indicators)
+• Verify indicator access in TradingView settings
+• Try removing and re-adding indicator
+
+**"No signals appearing"**
+• Signals only appear when conditions align
+• Try different timeframe (1H, 4H, 1D)
+• Check indicator is enabled (eye icon visible)
+• Give it time - not every bar has a signal
+
+**"Alert not firing"**
+• Ensure "Once Per Bar Close" is selected
+• Check alert is active (not expired)
+• Verify notification settings
+• Test with "Test" button in alert dialog
+
+📄 [Full Troubleshooting Guide](../ref-troubleshooting/)`,
+
+            bestPractices: `**Best Practices:**
+
+**Timeframes:**
+✅ Start with daily (1D), then add 4H and 1H
+✅ Multiple timeframe confirmation improves accuracy
+
+**Alert Settings:**
+✅ Use "Once Per Bar Close" to avoid repaints
+✅ Set reasonable expiration dates
+✅ Test alerts before relying on them
+
+**Indicator Loading:**
+✅ Max 3-4 indicators per chart for performance
+✅ More indicators ≠ better results
+
+**Risk Management:**
+✅ Always use stop losses
+✅ Position size appropriately
+✅ Not every signal needs to be traded
+
+**Backtesting:**
+✅ Review historical signals before live trading
+✅ Understand signal frequency on your timeframe
+
+📄 [Full Best Practices](../ref-best-practices/)`,
+
+            comparison: `**Which Indicator Should I Use?**
+
+**For reversal signals:** → **Pentarch** (5 cycle events)
+**For everything:** → **Omnideck** (10+ systems in one)
+**For levels:** → **Janus Atlas** (39 level types)
+**For multi-symbol:** → **Augury Grid** (screener)
+**For volume:** → **Volume Oracle** (flow + zones)
+**For momentum:** → **Harmonic Oscillator** (composite)
+**For OBV:** → **Plutus Flow** (divergences)
+
+📄 [Full Comparison Guide](../ref-comparison/)
+📄 [Suite Overview](../suite-index/)
+
+**Most popular combo:** Pentarch + Janus Atlas
+
+**Can I use multiple?** Yes, but max 3-4 per chart for performance.`,
+
+            glossary: `**Common Terms:**
+
+**Pentarch Signals:**
+• **TD** (Touchdown) - Early cycle reversal
+• **IGN** (Ignition) - Momentum confirmation
+• **WRN** (Warning) - Distribution phase
+• **CAP** (Climax) - Peak conditions
+• **BDN** (Breakdown) - Completion phase
+
+**Components:**
+• **Pilot Line** - Trend reference line
+• **NanoFlow** - Momentum component
+• **Regime Bars** - Market phase classification
+
+**Volume Profile:**
+• **POC** - Point of Control
+• **VAH** - Value Area High
+• **VAL** - Value Area Low
+
+**Market Structure:**
+• **BOS** - Break of Structure
+• **CHoCH** - Change of Character
+
+📄 [Full Glossary](../ref-glossary/)`,
+
+            workflow: `**Trading Workflow:**
+
+**Phase 1: Bias** (What direction?)
+• Check higher timeframe trend
+• Identify key levels
+• Assess market regime
+
+**Phase 2: Timing** (When to enter?)
+• Wait for signal (Pentarch, etc)
+• Confirm with additional indicators
+• Check risk/reward ratio
+
+**Phase 3: Execution** (Take the trade)
+• Enter position at signal
+• Set stop loss
+• Define profit targets
+
+**Phase 4: Management** (Monitor & adjust)
+• Track position
+• Adjust stops as needed
+• Take profits systematically
+
+📄 [Full Workflow Guide](../ref-workflow/)`,
+
+            help: `**I can help you with:**
+
+📊 **Indicators:** "Tell me about Pentarch" | "How does Janus work?"
+🚀 **Getting Started:** "Quick start" | "How do I set up alerts?"
+🔧 **Setup:** "Webhook guide" | "Alert setup"
+🎓 **Learning:** "Best practices" | "Trading workflow"
+🔍 **Reference:** "Glossary" | "Compare indicators"
+❓ **Support:** "Troubleshooting" | "Get support"
+
+**Try asking:**
+• "What is the Pentarch indicator?"
+• "How do I set up alerts?"
+• "Explain non-repainting"
+• "Show me best practices"
+• "Compare all indicators"
+• "How do webhooks work?"
+
+Just type your question naturally! 💬`,
+
+            default: `I'm not sure about that specific question.
+
+Try asking about:
+📊 **Indicators:** Pentarch, Omnideck, Janus Atlas, Augury Grid, etc.
+🚀 **Getting Started:** Quick start, setup, alerts
+🔧 **How-To:** Alerts, webhooks, screener
+📚 **Reference:** Glossary, best practices, troubleshooting
+
+Type **"help"** to see all available topics!
+
+💡 **Tip:** You can also use the search bar at the top of the page to search all documentation.`
+        };
     }
 
-    async loadSearchIndex() {
-        try {
-            const response = await fetch('/search/search_index.json');
-            this.searchIndex = await response.json();
-            if (this.config.debug) {
-                console.log('Search index loaded:', this.searchIndex);
-            }
-        } catch (error) {
-            console.error('Failed to load search index:', error);
-        }
+    initPatterns() {
+        return [
+            // Help/Meta
+            { regex: /^(help|what can you do|commands|menu)$/i, key: 'help' },
+
+            // Products (specific patterns first)
+            { regex: /(pentarch|touchdown|ignition|td|ign|wrn|cap|bdn|reversal event)/i, key: 'pentarch' },
+            { regex: /(omnideck|everything indicator|all.in.one)/i, key: 'omnideck' },
+            { regex: /(janus|atlas|levels|vwap|poc|pivot|session)/i, key: 'janus' },
+            { regex: /(augury|grid|screener|multi.symbol|watchlist|40 symbols)/i, key: 'augury' },
+            { regex: /(volume oracle|minimal flow|volume flow|volume zone)/i, key: 'oracle' },
+            { regex: /(harmonic|oscillator|nanoflow|kflow|enhanced rsi)/i, key: 'harmonic' },
+            { regex: /(plutus|obv|on.balance.volume)/i, key: 'plutus' },
+
+            // Getting started
+            { regex: /(quick start|get started|beginner|new|how do i start|first time)/i, key: 'quickStart' },
+            { regex: /(alert|notification|how to set|alarm|how do i get notified)/i, key: 'alerts' },
+            { regex: /(webhook|discord|telegram|automation|bot|3commas)/i, key: 'webhooks' },
+
+            // Concepts
+            { regex: /(non.repaint|repainting|repaint|historical|does it repaint)/i, key: 'nonRepaint' },
+            { regex: /(price|pricing|cost|buy|purchase|payment|how much)/i, key: 'pricing' },
+            { regex: /(support|help|contact|email)/i, key: 'support' },
+            { regex: /(troubleshoot|problem|issue|not working|error|broken)/i, key: 'troubleshooting' },
+            { regex: /(best practice|tip|recommend|advice|how to use)/i, key: 'bestPractices' },
+            { regex: /(compare|comparison|which|difference|vs|versus|better)/i, key: 'comparison' },
+            { regex: /(glossary|term|definition|what does.*mean|what is)/i, key: 'glossary' },
+            { regex: /(workflow|process|how to trade|strategy|step by step)/i, key: 'workflow' },
+
+            // Fallback
+            { regex: /.*/, key: 'default' }
+        ];
+    }
+
+    init() {
+        this.createChatWidget();
+        this.bindEvents();
+        this.loadConversationHistory();
     }
 
     createChatWidget() {
-        // Create chatbot container
         const chatbotHTML = `
             <div id="sp-chatbot-container" class="sp-chatbot-container sp-chatbot-closed">
                 <!-- Chat Toggle Button -->
@@ -64,7 +408,6 @@ class SignalPilotChatbot {
                     <svg class="sp-chatbot-close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                     </svg>
-                    <span class="sp-chatbot-badge" id="sp-chatbot-badge" style="display: none;">1</span>
                 </button>
 
                 <!-- Chat Window -->
@@ -79,19 +422,13 @@ class SignalPilotChatbot {
                             </div>
                             <div class="sp-chatbot-title">
                                 <h3>SignalPilot Assistant</h3>
-                                <p class="sp-chatbot-status">Online</p>
+                                <p class="sp-chatbot-status">Online • Ready to help</p>
                             </div>
                         </div>
                         <div class="sp-chatbot-actions">
                             <button class="sp-chatbot-action-btn" id="sp-chatbot-clear" title="Clear conversation">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/>
-                                </svg>
-                            </button>
-                            <button class="sp-chatbot-action-btn" id="sp-chatbot-settings" title="Settings">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="3"/>
-                                    <path d="M12 1v6m0 6v6M4.22 4.22l4.24 4.24m7.08 7.08l4.24 4.24M1 12h6m6 0h6M4.22 19.78l4.24-4.24m7.08-7.08l4.24-4.24"/>
                                 </svg>
                             </button>
                         </div>
@@ -106,31 +443,26 @@ class SignalPilotChatbot {
                                 </svg>
                             </div>
                             <div class="sp-chatbot-message-content">
-                                <p>Hi! I'm your SignalPilot Documentation Assistant. I know everything about the SignalPilot suite, indicators, and how to use them.</p>
-                                <p>Ask me anything like:</p>
-                                <ul>
-                                    <li>"How do I set up alerts?"</li>
-                                    <li>"What is the Pentarch indicator?"</li>
-                                    <li>"How do non-repainting indicators work?"</li>
-                                    <li>"What are the best practices?"</li>
-                                </ul>
+                                <p><strong>Hi! 👋</strong> I'm your SignalPilot Documentation Assistant.</p>
+                                <p>I can help you with indicators, setup, alerts, and anything in the docs!</p>
+                                <p><em>Try: "What is Pentarch?" or "How do I set up alerts?"</em></p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Quick Actions -->
                     <div class="sp-chatbot-quick-actions" id="sp-chatbot-quick-actions">
-                        <button class="sp-chatbot-quick-btn" data-query="How do I get started with SignalPilot?">
-                            🚀 Getting Started
-                        </button>
-                        <button class="sp-chatbot-quick-btn" data-query="What indicators are available?">
-                            📊 Available Indicators
+                        <button class="sp-chatbot-quick-btn" data-query="What is Pentarch?">
+                            📊 Pentarch
                         </button>
                         <button class="sp-chatbot-quick-btn" data-query="How do I set up alerts?">
-                            🔔 Setting Up Alerts
+                            🔔 Alerts
                         </button>
-                        <button class="sp-chatbot-quick-btn" data-query="What are best practices?">
-                            ✨ Best Practices
+                        <button class="sp-chatbot-quick-btn" data-query="Quick start guide">
+                            🚀 Quick Start
+                        </button>
+                        <button class="sp-chatbot-quick-btn" data-query="Compare indicators">
+                            📈 Compare
                         </button>
                     </div>
 
@@ -140,7 +472,7 @@ class SignalPilotChatbot {
                             <textarea
                                 id="sp-chatbot-input"
                                 class="sp-chatbot-input"
-                                placeholder="Ask about SignalPilot documentation..."
+                                placeholder="Ask about SignalPilot..."
                                 rows="1"
                                 aria-label="Message input"
                             ></textarea>
@@ -151,45 +483,15 @@ class SignalPilotChatbot {
                             </button>
                         </div>
                         <div class="sp-chatbot-footer-text">
-                            Powered by AI • <span id="sp-chatbot-provider">OpenAI</span>
-                        </div>
-                    </div>
-
-                    <!-- Settings Panel -->
-                    <div id="sp-chatbot-settings-panel" class="sp-chatbot-settings-panel" style="display: none;">
-                        <div class="sp-chatbot-settings-header">
-                            <h4>Chatbot Settings</h4>
-                            <button class="sp-chatbot-close-settings">×</button>
-                        </div>
-                        <div class="sp-chatbot-settings-content">
-                            <div class="sp-chatbot-setting-group">
-                                <label for="sp-chatbot-api-provider">AI Provider</label>
-                                <select id="sp-chatbot-api-provider">
-                                    <option value="openai">OpenAI (GPT-4)</option>
-                                    <option value="anthropic">Anthropic (Claude)</option>
-                                    <option value="custom">Custom Backend</option>
-                                </select>
-                            </div>
-                            <div class="sp-chatbot-setting-group">
-                                <label for="sp-chatbot-api-key">API Key</label>
-                                <input type="password" id="sp-chatbot-api-key" placeholder="sk-..." />
-                                <small>Your API key is stored locally and never sent to our servers</small>
-                            </div>
-                            <div class="sp-chatbot-setting-group">
-                                <label for="sp-chatbot-custom-endpoint">Custom Endpoint (optional)</label>
-                                <input type="url" id="sp-chatbot-custom-endpoint" placeholder="https://api.example.com/chat" />
-                            </div>
-                            <button class="sp-chatbot-save-settings">Save Settings</button>
+                            Powered by pattern matching • No AI API required
                         </div>
                     </div>
                 </div>
             </div>
         `;
 
-        // Inject into page
         document.body.insertAdjacentHTML('beforeend', chatbotHTML);
 
-        // Get references to elements
         this.elements = {
             container: document.getElementById('sp-chatbot-container'),
             toggle: document.getElementById('sp-chatbot-toggle'),
@@ -198,10 +500,7 @@ class SignalPilotChatbot {
             input: document.getElementById('sp-chatbot-input'),
             sendBtn: document.getElementById('sp-chatbot-send'),
             clearBtn: document.getElementById('sp-chatbot-clear'),
-            settingsBtn: document.getElementById('sp-chatbot-settings'),
-            settingsPanel: document.getElementById('sp-chatbot-settings-panel'),
-            quickActions: document.getElementById('sp-chatbot-quick-actions'),
-            badge: document.getElementById('sp-chatbot-badge')
+            quickActions: document.getElementById('sp-chatbot-quick-actions')
         };
     }
 
@@ -237,17 +536,6 @@ class SignalPilotChatbot {
 
         // Clear conversation
         this.elements.clearBtn.addEventListener('click', () => this.clearConversation());
-
-        // Settings
-        this.elements.settingsBtn.addEventListener('click', () => this.openSettings());
-
-        document.querySelector('.sp-chatbot-close-settings').addEventListener('click', () => {
-            this.elements.settingsPanel.style.display = 'none';
-        });
-
-        document.querySelector('.sp-chatbot-save-settings').addEventListener('click', () => {
-            this.saveSettings();
-        });
     }
 
     toggleChat() {
@@ -257,7 +545,6 @@ class SignalPilotChatbot {
             this.elements.container.classList.remove('sp-chatbot-closed');
             this.elements.container.classList.add('sp-chatbot-open');
             this.elements.input.focus();
-            this.elements.badge.style.display = 'none';
         } else {
             this.elements.container.classList.remove('sp-chatbot-open');
             this.elements.container.classList.add('sp-chatbot-closed');
@@ -287,15 +574,12 @@ class SignalPilotChatbot {
         // Show typing indicator
         const typingId = this.showTypingIndicator();
 
-        try {
-            // Get relevant documentation context
-            const context = await this.getRelevantContext(userMessage);
-
-            // Call AI API
-            const response = await this.callAI(userMessage, context);
-
-            // Remove typing indicator
+        // Simulate typing delay (800ms)
+        setTimeout(() => {
             this.removeTypingIndicator(typingId);
+
+            // Get bot response
+            const response = this.getBotResponse(userMessage);
 
             // Add bot response
             this.addMessage(response, 'bot');
@@ -305,17 +589,25 @@ class SignalPilotChatbot {
 
             // Save to localStorage
             this.saveConversationHistory();
-
-        } catch (error) {
-            this.removeTypingIndicator(typingId);
-            this.addMessage('Sorry, I encountered an error. Please check your API settings or try again.', 'bot', true);
-            console.error('Chatbot error:', error);
-        }
+        }, 800);
     }
 
-    addMessage(content, sender, isError = false) {
+    getBotResponse(userMessage) {
+        const msg = userMessage.toLowerCase().trim();
+
+        // Find matching pattern
+        for (const pattern of this.patterns) {
+            if (pattern.regex.test(msg)) {
+                return this.knowledgeBase[pattern.key];
+            }
+        }
+
+        return this.knowledgeBase.default;
+    }
+
+    addMessage(content, sender) {
         const messageHTML = `
-            <div class="sp-chatbot-message sp-chatbot-${sender}-message ${isError ? 'sp-chatbot-error' : ''}">
+            <div class="sp-chatbot-message sp-chatbot-${sender}-message">
                 ${sender === 'bot' ? `
                     <div class="sp-chatbot-message-avatar">
                         <svg viewBox="0 0 24 24" fill="currentColor">
@@ -341,9 +633,15 @@ class SignalPilotChatbot {
             .replace(/`(.*?)`/g, '<code>$1</code>')
             .replace(/\n/g, '<br>');
 
-        // Convert URLs to links
+        // Convert [text](url) to links
         formatted = formatted.replace(
-            /(https?:\/\/[^\s]+)/g,
+            /\[([^\]]+)\]\(([^)]+)\)/g,
+            '<a href="$2" target="_blank" rel="noopener">$1</a>'
+        );
+
+        // Convert bare URLs to links
+        formatted = formatted.replace(
+            /(https?:\/\/[^\s<]+)/g,
             '<a href="$1" target="_blank" rel="noopener">$1</a>'
         );
 
@@ -384,160 +682,6 @@ class SignalPilotChatbot {
         this.elements.messages.scrollTop = this.elements.messages.scrollHeight;
     }
 
-    async getRelevantContext(query) {
-        if (!this.searchIndex) return '';
-
-        try {
-            // Search through documentation
-            const queryLower = query.toLowerCase();
-            const relevantDocs = [];
-
-            // Search through all docs
-            if (this.searchIndex.docs) {
-                this.searchIndex.docs.forEach(doc => {
-                    const text = (doc.text || '').toLowerCase();
-                    const title = (doc.title || '').toLowerCase();
-
-                    // Simple relevance scoring
-                    const queryWords = queryLower.split(' ').filter(w => w.length > 3);
-                    let score = 0;
-
-                    queryWords.forEach(word => {
-                        if (title.includes(word)) score += 10;
-                        if (text.includes(word)) score += 1;
-                    });
-
-                    if (score > 0) {
-                        relevantDocs.push({ ...doc, score });
-                    }
-                });
-            }
-
-            // Sort by relevance and take top 3
-            relevantDocs.sort((a, b) => b.score - a.score);
-            const topDocs = relevantDocs.slice(0, 3);
-
-            // Format context
-            let context = 'Relevant documentation:\n\n';
-            topDocs.forEach(doc => {
-                context += `**${doc.title}** (${doc.location})\n`;
-                context += `${doc.text.substring(0, 500)}...\n\n`;
-            });
-
-            return context;
-        } catch (error) {
-            console.error('Error getting context:', error);
-            return '';
-        }
-    }
-
-    async callAI(userMessage, context) {
-        const apiKey = this.config.apiKey || this.getStoredApiKey();
-
-        if (!apiKey && !this.config.apiEndpoint) {
-            throw new Error('No API key or custom endpoint configured. Please set up in settings.');
-        }
-
-        // Build system prompt
-        const systemPrompt = `You are the SignalPilot Documentation Assistant. You help users understand and use the SignalPilot trading indicator suite.
-
-Key information about SignalPilot:
-- SignalPilot is a suite of TradingView indicators for technical analysis
-- Main indicators: Pentarch, OmniDeck, Janus Atlas, Augury Grid, Harmonic Oscillator, Plutus Flow, Minimal Flow
-- All indicators are non-repainting and real-time
-- Available on TradingView platform
-- Supports alerts, screeners, and webhooks
-
-Answer questions clearly and concisely. If you reference specific indicators or features, mention the relevant documentation page when helpful. Be friendly and professional.
-
-${context}`;
-
-        if (this.config.apiProvider === 'openai') {
-            return await this.callOpenAI(systemPrompt, userMessage, apiKey);
-        } else if (this.config.apiProvider === 'anthropic') {
-            return await this.callAnthropic(systemPrompt, userMessage, apiKey);
-        } else if (this.config.apiEndpoint) {
-            return await this.callCustomEndpoint(systemPrompt, userMessage);
-        }
-
-        throw new Error('No valid API configuration');
-    }
-
-    async callOpenAI(systemPrompt, userMessage, apiKey) {
-        const response = await fetch('https://api.openai.com/v1/chat/completions', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${apiKey}`
-            },
-            body: JSON.stringify({
-                model: this.config.model || 'gpt-4',
-                messages: [
-                    { role: 'system', content: systemPrompt },
-                    ...this.messageHistory.slice(-10), // Last 10 messages for context
-                    { role: 'user', content: userMessage }
-                ],
-                max_tokens: this.config.maxTokens,
-                temperature: this.config.temperature
-            })
-        });
-
-        if (!response.ok) {
-            throw new Error(`OpenAI API error: ${response.status}`);
-        }
-
-        const data = await response.json();
-        return data.choices[0].message.content;
-    }
-
-    async callAnthropic(systemPrompt, userMessage, apiKey) {
-        const response = await fetch('https://api.anthropic.com/v1/messages', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'x-api-key': apiKey,
-                'anthropic-version': '2023-06-01'
-            },
-            body: JSON.stringify({
-                model: this.config.model || 'claude-3-sonnet-20240229',
-                max_tokens: this.config.maxTokens,
-                system: systemPrompt,
-                messages: [
-                    ...this.messageHistory.slice(-10),
-                    { role: 'user', content: userMessage }
-                ]
-            })
-        });
-
-        if (!response.ok) {
-            throw new Error(`Anthropic API error: ${response.status}`);
-        }
-
-        const data = await response.json();
-        return data.content[0].text;
-    }
-
-    async callCustomEndpoint(systemPrompt, userMessage) {
-        const response = await fetch(this.config.apiEndpoint, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                system: systemPrompt,
-                message: userMessage,
-                history: this.messageHistory.slice(-10)
-            })
-        });
-
-        if (!response.ok) {
-            throw new Error(`Custom API error: ${response.status}`);
-        }
-
-        const data = await response.json();
-        return data.response || data.message || data.content;
-    }
-
     clearConversation() {
         if (confirm('Clear conversation history?')) {
             this.messageHistory = [];
@@ -547,69 +691,28 @@ ${context}`;
 
             // Re-add welcome message
             this.addMessage(
-                `Hi! I'm your SignalPilot Documentation Assistant. Ask me anything about the SignalPilot suite!`,
+                `<strong>Hi! 👋</strong> I'm your SignalPilot Documentation Assistant.<br><br>I can help you with indicators, setup, alerts, and anything in the docs!<br><br><em>Try: "What is Pentarch?" or "How do I set up alerts?"</em>`,
                 'bot'
             );
         }
     }
 
-    openSettings() {
-        this.elements.settingsPanel.style.display = 'block';
-
-        // Load current settings
-        document.getElementById('sp-chatbot-api-provider').value = this.config.apiProvider;
-        document.getElementById('sp-chatbot-api-key').value = this.getStoredApiKey() || '';
-        document.getElementById('sp-chatbot-custom-endpoint').value = this.config.apiEndpoint || '';
-    }
-
-    saveSettings() {
-        const provider = document.getElementById('sp-chatbot-api-provider').value;
-        const apiKey = document.getElementById('sp-chatbot-api-key').value;
-        const customEndpoint = document.getElementById('sp-chatbot-custom-endpoint').value;
-
-        this.config.apiProvider = provider;
-        this.config.apiKey = apiKey;
-        this.config.apiEndpoint = customEndpoint;
-
-        // Save to localStorage
-        localStorage.setItem('sp-chatbot-config', JSON.stringify({
-            apiProvider: provider,
-            apiKey: apiKey,
-            apiEndpoint: customEndpoint
-        }));
-
-        // Update provider display
-        const providerName = provider === 'openai' ? 'OpenAI' :
-                           provider === 'anthropic' ? 'Anthropic Claude' :
-                           'Custom';
-        document.getElementById('sp-chatbot-provider').textContent = providerName;
-
-        this.elements.settingsPanel.style.display = 'none';
-
-        alert('Settings saved!');
-    }
-
-    getStoredApiKey() {
-        const config = localStorage.getItem('sp-chatbot-config');
-        if (config) {
-            return JSON.parse(config).apiKey || '';
-        }
-        return '';
-    }
-
     saveConversationHistory() {
-        localStorage.setItem('sp-chatbot-history', JSON.stringify(this.messageHistory));
+        try {
+            localStorage.setItem('sp-chatbot-history', JSON.stringify(this.messageHistory.slice(-20)));
+        } catch (e) {
+            console.error('Failed to save conversation history:', e);
+        }
     }
 
     loadConversationHistory() {
-        const saved = localStorage.getItem('sp-chatbot-history');
-        if (saved) {
-            try {
+        try {
+            const saved = localStorage.getItem('sp-chatbot-history');
+            if (saved) {
                 this.messageHistory = JSON.parse(saved);
-                // Optionally restore messages in UI
-            } catch (e) {
-                console.error('Failed to load conversation history:', e);
             }
+        } catch (e) {
+            console.error('Failed to load conversation history:', e);
         }
     }
 }
