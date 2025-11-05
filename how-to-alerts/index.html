@@ -1846,7 +1846,7 @@ This alert setup guide is for <strong>educational purposes only</strong>. This i
 </div>
 <p>This guide explains the process of setting up reliable, close-confirmed alerts for <span class="signal-pilot-brand">Signal Pilot</span> indicators. Proper alert configuration ensures signals are never missed and false intrabar notifications are avoided.</p>
 <hr />
-<h2 id="why-alerts-matter">🎯 Why Alerts Matter<a class="headerlink" href="#why-alerts-matter" title="Permanent link">&para;</a></h2>
+<h2 id="why-alerts-matter">🎯 Why Alerts Matter <span class="skill-badge skill-badge--beginner" data-tooltip="No prior experience required">Beginner Friendly</span><a class="headerlink" href="#why-alerts-matter" title="Permanent link">&para;</a></h2>
 
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
   <div class="sp-callout__icon">📋</div>
@@ -1899,7 +1899,7 @@ graph TD
 - Coverage of multiple markets simultaneously</p>
 <p><strong>Key principle:</strong> The "Once Per Bar Close" setting avoids repainting and false signals.</p>
 <hr />
-<h2 id="quick-setup-step-by-step">🔔 Quick Setup (Step-by-Step)<a class="headerlink" href="#quick-setup-step-by-step" title="Permanent link">&para;</a></h2>
+<h2 id="quick-setup-step-by-step">🔔 Quick Setup (Step-by-Step) <span class="skill-badge skill-badge--beginner" data-tooltip="Easy step-by-step process">Beginner Friendly</span><a class="headerlink" href="#quick-setup-step-by-step" title="Permanent link">&para;</a></h2>
 <p>These steps work for <strong>any <span class="signal-pilot-brand">Signal Pilot</span> indicator</strong> (Pentarch, Omnideck, Janus, etc.).</p>
 <h3 id="1-step-1-open-alert-dialog">1️⃣ Step 1: Open Alert Dialog<a class="headerlink" href="#1-step-1-open-alert-dialog" title="Permanent link">&para;</a></h3>
 <p><strong>The alert dialog Open</strong> by right-clicking the chart and selecting <strong>"Add alert..."</strong></p>
@@ -2025,6 +2025,27 @@ graph TD
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>Price: 67,500
 </span></code></pre></div></p>
 <hr />
+
+<div class="knowledge-check"
+     data-quiz-id="alerts-bar-close"
+     data-correct-answer="b"
+     data-correct-feedback="✓ Correct! The most critical alert setting is 'Once Per Bar Close'. This ensures alerts only fire when conditions are fully confirmed at bar close, preventing false signals from mid-bar fluctuations. Without this setting, you'll receive unreliable alerts that may disappear when the bar closes."
+     data-incorrect-feedback="Not quite. While the condition and notification method are important, there's one setting that prevents repainting and false signals. Review the 'Quick Setup' section and look for the dropdown setting that ensures bar-close confirmation. Try again!">
+  <h4>✅ Knowledge Check</h4>
+  <p><strong>Question:</strong> What is the MOST critical alert setting to prevent false signals?</p>
+
+  <form class="quiz-form">
+    <label><input type="radio" name="q1" value="a"> Selecting the correct indicator from the dropdown</label>
+    <label><input type="radio" name="q1" value="b"> Setting the frequency to "Once Per Bar Close"</label>
+    <label><input type="radio" name="q1" value="c"> Choosing between email, SMS, or push notifications</label>
+    <label><input type="radio" name="q1" value="d"> Writing a descriptive alert message</label>
+  </form>
+
+  <button class="check-answer-btn">Check Answer</button>
+  <div class="quiz-feedback" style="display:none;"></div>
+</div>
+
+<hr />
 <h2 id="alert-management-best-practices">🎨 Alert Management Best Practices<a class="headerlink" href="#alert-management-best-practices" title="Permanent link">&para;</a></h2>
 <h3 id="organize-your-alerts">Organize Your Alerts<a class="headerlink" href="#organize-your-alerts" title="Permanent link">&para;</a></h3>
 <p><strong>By symbol:</strong>
@@ -2116,7 +2137,7 @@ graph TD
 - TradingView app update status</p>
 <p>See <a href="../ref-troubleshooting/#alerts-not-firing">Troubleshooting: Alerts Not Working</a></p>
 <hr />
-<h2 id="webhook-automation-advanced">🔗 Webhook Automation (Advanced)<a class="headerlink" href="#webhook-automation-advanced" title="Permanent link">&para;</a></h2>
+<h2 id="webhook-automation-advanced">🔗 Webhook Automation (Advanced) <span class="skill-badge skill-badge--advanced" data-tooltip="Requires programming knowledge">Advanced</span><a class="headerlink" href="#webhook-automation-advanced" title="Permanent link">&para;</a></h2>
 <p><strong>For automating trades with bots:</strong></p>
 <h3 id="webhook-url-setup">Webhook URL Setup<a class="headerlink" href="#webhook-url-setup" title="Permanent link">&para;</a></h3>
 <ol>
@@ -2210,6 +2231,21 @@ graph TD
 - <a href="../about-faq/#can-i-automate-trading-with-these-indicators">FAQ: Automation</a></p>
 <p><strong>Need help?</strong>
 - <a href="../about-support/">Support</a> - Contact information</p>
+<hr />
+
+<div class="sp-callout sp-callout--reflection">
+  <div class="sp-callout__title">Reflection Check</div>
+  <p>Before relying on your alerts, ask yourself:</p>
+  <ul>
+    <li>Have you successfully created at least one alert with "Once Per Bar Close" frequency setting?</li>
+    <li>Did you test the alert and receive a notification on your device?</li>
+    <li>Can you explain why "Once Per Bar Close" prevents false signals and repainting?</li>
+    <li>Have you organized your alerts with descriptive names that include symbol, timeframe, and indicator?</li>
+  </ul>
+  <p><strong>If yes to all 4:</strong> Your alerts are configured correctly! Review the <a href="#pro-tips">Pro Tips</a> below for optimization.<br>
+  <strong>If no to any:</strong> Revisit the <a href="#quick-setup-step-by-step">Quick Setup</a> section or check <a href="#common-mistakes-fixes">Common Mistakes</a> for troubleshooting.</p>
+</div>
+
 <hr />
 <h2 id="pro-tips">🎓 Pro Tips<a class="headerlink" href="#pro-tips" title="Permanent link">&para;</a></h2>
 <ol>
