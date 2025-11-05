@@ -17,8 +17,6 @@
   margin-left: 8px !important;
   vertical-align: middle !important;
   transition: all 0.2s ease !important;
-  /* VISIBLE TEST: orange border means CSS loaded */
-  border: 2px solid #ff6600 !important;
 }
 
 .skill-badge:hover {
