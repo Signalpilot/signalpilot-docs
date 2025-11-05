@@ -2219,6 +2219,20 @@ graph TD
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Webhook has been configured and tested (if automating)</li>
 </ul>
 <hr />
+<div class="sp-callout sp-callout--summary">
+  <div class="sp-callout__title">What You've Learned</div>
+  <ul>
+    <li><strong>Alert Creation Process:</strong> Three-step workflow to create TradingView alerts - select indicator on chart, click alert icon, configure condition/frequency/notification settings, then test before enabling</li>
+    <li><strong>Critical Frequency Setting:</strong> Always use "Once Per Bar Close" frequency to ensure non-repainting alerts that match historical signal behavior and prevent mid-bar false notifications</li>
+    <li><strong>Condition Selection:</strong> Choose "Any alert() function call" condition to capture all signals from Signal Pilot indicators, which use built-in alert() functions for each signal type</li>
+    <li><strong>Notification Channels:</strong> Configure multiple notification methods - TradingView app notifications (fastest), email alerts (detailed), SMS (urgent signals), webhooks (automation), or popup alerts (desktop monitoring)</li>
+    <li><strong>Message Customization:</strong> Use TradingView placeholders like {{ticker}}, {{interval}}, {{close}}, {{time}} to create dynamic alert messages with symbol, timeframe, price, and timestamp information</li>
+    <li><strong>Alert Management Best Practices:</strong> Limit to 10-15 active alerts to avoid notification fatigue, use descriptive naming conventions (symbol-timeframe-signal format), organize by priority, test thoroughly before live use</li>
+    <li><strong>Common Troubleshooting:</strong> If alerts don't fire - verify "Once Per Bar Close" frequency, check "Any alert() function call" condition, confirm indicator is properly loaded, test with simple alert first before complex configurations</li>
+  </ul>
+  <p><strong>Next Steps:</strong> Explore <a href="../how-to-webhooks/">Webhook Integration Guide</a> for automated notifications to Discord/Slack/custom systems, or review <a href="../ref-troubleshooting/">Troubleshooting Guide</a> if encountering alert issues.</p>
+</div>
+<hr />
 <h2 id="related-guides">📚 Related Guides<a class="headerlink" href="#related-guides" title="Permanent link">&para;</a></h2>
 <p><strong>New to <span class="signal-pilot-brand">Signal Pilot</span>?</strong>
 - <a href="../start-quick/">Quick Start</a> - Learn Pentarch in 5 minutes
