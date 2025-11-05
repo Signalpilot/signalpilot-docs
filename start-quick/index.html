@@ -126,6 +126,10 @@
   </script>
   <!-- END SIGNAL PILOT ENHANCEMENTS - CSS -->
 
+  <!-- Meta-Learning & Accessibility Enhancements -->
+  <link rel="stylesheet" href="../css/skill-badges.css">
+  <link rel="stylesheet" href="../css/meta-learning.css">
+
       <!-- SignalPilot Chatbot CSS -->
     <link rel="stylesheet" href="/css/chatbot.css">
   </head>
@@ -1865,7 +1869,7 @@ This quick start guide is for <strong>educational purposes only</strong>. This i
 <p><strong>Time required:</strong> 5 minutes<br />
 <strong>Difficulty:</strong> Beginner-friendly</p>
 <hr />
-<h2 id="step-1-install-pentarch-1-minute">Step 1: Install Pentarch (1 minute)<a class="headerlink" href="#step-1-install-pentarch-1-minute" title="Permanent link">&para;</a></h2>
+<h2 id="step-1-install-pentarch-1-minute">Step 1: Install Pentarch (1 minute) <span class="skill-badge skill-badge--beginner" data-tooltip="No prior experience required">Beginner Friendly</span><a class="headerlink" href="#step-1-install-pentarch-1-minute" title="Permanent link">&para;</a></h2>
 <h3 id="on-tradingview">On TradingView:<a class="headerlink" href="#on-tradingview" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>Open any chart</strong> (Bitcoin, stocks, forex - any market works)</li>
@@ -1877,7 +1881,7 @@ This quick start guide is for <strong>educational purposes only</strong>. This i
 - 5-phase system labels (TD, IGN, WRN, CAP, BDN) appearing on the chart
 - Colored dots below/above candles when signals fire</p>
 <hr />
-<h2 id="step-2-learn-the-5-signals-2-minutes">Step 2: Learn the 5 Signals (2 minutes)<a class="headerlink" href="#step-2-learn-the-5-signals-2-minutes" title="Permanent link">&para;</a></h2>
+<h2 id="step-2-learn-the-5-signals-2-minutes">Step 2: Learn the 5 Signals (2 minutes) <span class="skill-badge skill-badge--beginner" data-tooltip="Core concept - essential knowledge">Beginner Friendly</span><a class="headerlink" href="#step-2-learn-the-5-signals-2-minutes" title="Permanent link">&para;</a></h2>
 <p>Pentarch displays <strong>5 simple signals</strong> that indicate potential reversal conditions. Each signal represents a different phase in the potential trend cycle.</p>
 <h3 id="the-early-cycle-signals">The Early-Cycle Signals<a class="headerlink" href="#the-early-cycle-signals" title="Permanent link">&para;</a></h3>
 <p><strong>🔵 TD (Touchdown)</strong> = Early Warning
@@ -1901,8 +1905,28 @@ This quick start guide is for <strong>educational purposes only</strong>. This i
 - Indicates bearish breakdown conditions
 - Often triggers long position exits
 - Commonly interpreted as potential short entry signal</p>
+
+<div class="knowledge-check"
+     data-quiz-id="quick-start-early-cycle"
+     data-correct-answer="a"
+     data-correct-feedback="✓ Correct! TD (Touchdown) and IGN (Ignition) are the Early-Cycle signals that occur during accumulation and markup phases, suggesting potential entry opportunities for long positions."
+     data-incorrect-feedback="Not quite. Early-cycle signals occur at the beginning of a potential trend. Review the 'Early-Cycle Signals' section above and look for the signals that suggest potential entries (TD and IGN).">
+  <h4>✅ Knowledge Check</h4>
+  <p><strong>Question:</strong> Which Pentarch signals are considered "Early-Cycle" and suggest potential entry opportunities for long positions?</p>
+
+  <form class="quiz-form">
+    <label><input type="radio" name="q1" value="a"> TD (Touchdown) and IGN (Ignition)</label>
+    <label><input type="radio" name="q1" value="b"> CAP (Climax) and BDN (Breakdown)</label>
+    <label><input type="radio" name="q1" value="c"> WRN (Warning) and CAP (Climax)</label>
+    <label><input type="radio" name="q1" value="d"> All five signals equally</label>
+  </form>
+
+  <button class="check-answer-btn">Check Answer</button>
+  <div class="quiz-feedback" style="display:none;"></div>
+</div>
+
 <hr />
-<h2 id="step-3-set-up-your-first-alert-1-minute">Step 3: Set Up Your First Alert (1 minute)<a class="headerlink" href="#step-3-set-up-your-first-alert-1-minute" title="Permanent link">&para;</a></h2>
+<h2 id="step-3-set-up-your-first-alert-1-minute">Step 3: Set Up Your First Alert (1 minute) <span class="skill-badge skill-badge--beginner" data-tooltip="Simple configuration task">Beginner Friendly</span><a class="headerlink" href="#step-3-set-up-your-first-alert-1-minute" title="Permanent link">&para;</a></h2>
 <p>Set up an alert for <strong>IGN</strong> (potential long entry signal):</p>
 <ol>
 <li><strong>Right-click the chart</strong> → "Add Alert"</li>
@@ -1919,6 +1943,26 @@ This quick start guide is for <strong>educational purposes only</strong>. This i
 <li>✅ CAP Event (potential long exit signal)</li>
 <li>✅ BDN Event (potential short entry signal)</li>
 </ul>
+
+<div class="knowledge-check"
+     data-quiz-id="quick-start-alert-setting"
+     data-correct-answer="b"
+     data-correct-feedback="✓ Correct! 'Once Per Bar Close' ensures signals only fire after the bar closes, providing non-repainting guarantee and preventing false signals during bar formation."
+     data-incorrect-feedback="Not quite. The most critical setting prevents signals from disappearing. Review Step 3 about 'Once Per Bar Close' - this ensures signals are final and won't repaint.">
+  <h4>✅ Knowledge Check</h4>
+  <p><strong>Question:</strong> What is the most critical TradingView alert setting for Pentarch?</p>
+
+  <form class="quiz-form">
+    <label><input type="radio" name="q1" value="a"> Send Email notification</label>
+    <label><input type="radio" name="q1" value="b"> Once Per Bar Close</label>
+    <label><input type="radio" name="q1" value="c"> Play sound alert</label>
+    <label><input type="radio" name="q1" value="d"> Alert name format</label>
+  </form>
+
+  <button class="check-answer-btn">Check Answer</button>
+  <div class="quiz-feedback" style="display:none;"></div>
+</div>
+
 <hr />
 <h2 id="step-4-example-trade-illustration-1-minute">Step 4: Example Trade Illustration (1 minute)<a class="headerlink" href="#step-4-example-trade-illustration-1-minute" title="Permanent link">&para;</a></h2>
 <p>Example showing common Pentarch signal interpretation:</p>
@@ -2127,6 +2171,20 @@ This quick start guide is for <strong>educational purposes only</strong>. This i
 <p><strong>5. Single Market Focus</strong>
 - Learning one market (e.g., Bitcoin or one stock) before expanding is common
 - Each market has different behavioral characteristics</p>
+
+<div class="sp-callout sp-callout--reflection">
+  <div class="sp-callout__title">Reflection Check</div>
+  <p>Before moving on to more advanced topics, ask yourself:</p>
+  <ul>
+    <li>Can I identify all 5 Pentarch signals on my chart? (TD, IGN, WRN, CAP, BDN)</li>
+    <li>Did my first alert fire successfully with "Once Per Bar Close" setting?</li>
+    <li>Do I understand the difference between Early-Cycle (TD, IGN) and Late-Cycle (CAP, BDN) signals?</li>
+    <li>Have I observed at least 10 signals on my chosen market's chart?</li>
+  </ul>
+  <p><strong>If yes to all 4:</strong> You're ready for the <a href="../ref-workflow/">Trading Workflow Guide</a> to learn multi-indicator combinations<br>
+  <strong>If no to any:</strong> Review the relevant section above or ask the chatbot (bottom right corner)</p>
+</div>
+
 <hr />
 <h2 id="need-help">🆘 Need Help?<a class="headerlink" href="#need-help" title="Permanent link">&para;</a></h2>
 <p><strong>Common Questions:</strong>
@@ -2264,6 +2322,11 @@ This quick start guide is for <strong>educational purposes only</strong>. This i
        ======================================== -->
   <script src="../js/feedback-system.js"></script>
   <!-- END SIGNAL PILOT ENHANCEMENTS - JS -->
+
+  <!-- Meta-Learning & Accessibility Features -->
+  <script src="../js/keyboard-navigation.js"></script>
+  <script src="../js/text-sizing.js"></script>
+  <script src="../js/knowledge-checks.js"></script>
 
       <!-- SignalPilot Chatbot -->
     <script src="/js/chatbot.js"></script>
