@@ -1,8 +1,10 @@
 /**
  * Signal Pilot Docs - Visual Enhancements
  * Callout boxes, visual breaks, and improved readability elements
- * Version: 1.0
+ * Version: 1.1 - Responsive Optimizations
  * Created: November 2025
+ * Updated: November 2025 - Added responsive Mermaid diagram styles
+ * CACHE BUSTER: v2024-11-05-RESPONSIVE-ALL-DEVICES
  */
 
 /* ============================================
@@ -312,6 +314,82 @@
 /* ============================================
    RESPONSIVE ADJUSTMENTS
    ============================================ */
+
+/* Mermaid Diagram Responsive Styles */
+.mermaid {
+  overflow-x: auto;
+  max-width: 100%;
+  margin: 1rem 0;
+}
+
+/* Desktop - Large text for readability */
+@media screen and (min-width: 1200px) {
+  .mermaid text,
+  .mermaid .nodeLabel,
+  .mermaid .edgeLabel {
+    font-size: 18px !important;
+  }
+
+  .mermaid .node rect,
+  .mermaid .node circle,
+  .mermaid .node ellipse,
+  .mermaid .node polygon {
+    stroke-width: 2px !important;
+  }
+}
+
+/* Tablet - Medium text */
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+  .mermaid text,
+  .mermaid .nodeLabel,
+  .mermaid .edgeLabel {
+    font-size: 16px !important;
+  }
+
+  .mermaid {
+    font-size: 16px;
+  }
+}
+
+/* Mobile - Smaller but still readable */
+@media screen and (max-width: 768px) {
+  .mermaid text,
+  .mermaid .nodeLabel,
+  .mermaid .edgeLabel {
+    font-size: 13px !important;
+  }
+
+  .mermaid {
+    font-size: 13px;
+    margin: 1rem -1rem; /* Extend to edges on mobile */
+    padding: 0 0.5rem;
+  }
+
+  /* Make diagrams scrollable on mobile if needed */
+  .sp-callout .mermaid {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* Extra small screens */
+@media screen and (max-width: 480px) {
+  .mermaid text,
+  .mermaid .nodeLabel,
+  .mermaid .edgeLabel {
+    font-size: 11px !important;
+  }
+
+  .mermaid {
+    font-size: 11px;
+  }
+
+  /* Ensure diagrams don't overflow */
+  .mermaid svg {
+    max-width: 100%;
+    height: auto;
+  }
+}
 
 @media screen and (max-width: 768px) {
   .sp-callout {
