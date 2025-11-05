@@ -1948,6 +1948,41 @@
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
   <div class="sp-callout__icon">📊</div>
   <div class="sp-callout__content">
+    <h4>How the Voting System Works</h4>
+    <p style="margin-bottom: 1rem;">Three oscillators vote democratically to generate consensus signals:</p>
+    <div class="mermaid">
+graph LR
+    A[Market Data] --> B[MACD]
+    A --> C[RSI]
+    A --> D[StochRSI]
+
+    B --> E{MACD Vote}
+    C --> F{RSI Vote}
+    D --> G{StochRSI Vote}
+
+    E --> H[Democratic<br/>Voting System]
+    F --> H
+    G --> H
+
+    H --> I{Signal Mode?}
+
+    I -->|Conservative| J[Require 3 votes]
+    I -->|Balanced| K[Require 2 votes]
+    I -->|Aggressive| L[Require 1 vote]
+
+    J --> M[🟢 Signal Output]
+    K --> M
+    L --> M
+
+    style H fill:#ff9800,color:#fff
+    style M fill:#4caf50,color:#fff
+    </div>
+  </div>
+</div>
+
+<div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
+  <div class="sp-callout__icon">📊</div>
+  <div class="sp-callout__content">
     <h4>Five-Component Voting System</h4>
     <p style="margin-bottom: 1rem;">Five independent components analyze market conditions and vote. Maximum 5 votes total (displayed as "X/5" in signals):</p>
     <div class="mermaid">
