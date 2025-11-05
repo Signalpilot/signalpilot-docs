@@ -1,22 +1,24 @@
 /*
  * Skill Progression Badges
  * Visual indicators for content difficulty level
- * CACHE BUSTER: v2024-11-05-FIXED
+ * CACHE BUSTER: v2024-11-05-MEDIUM-SIZE-FINAL-XYZ789
  */
 
 .skill-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 4px 10px;
-  border-radius: 12px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-left: 8px;
-  vertical-align: middle;
-  transition: all 0.2s ease;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  padding: 3px 9px !important;
+  border-radius: 10px !important;
+  font-size: 0.7rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.4px !important;
+  margin-left: 8px !important;
+  vertical-align: middle !important;
+  transition: all 0.2s ease !important;
+  /* VISIBLE TEST: orange border means CSS loaded */
+  border: 2px solid #ff6600 !important;
 }
 
 .skill-badge:hover {
@@ -33,7 +35,7 @@
 
 .skill-badge--beginner::before {
   content: "🌱";
-  font-size: 0.875rem;
+  font-size: 0.75rem !important;
 }
 
 /* Intermediate Badge */
@@ -45,7 +47,7 @@
 
 .skill-badge--intermediate::before {
   content: "🌿";
-  font-size: 0.875rem;
+  font-size: 0.75rem !important;
 }
 
 /* Advanced Badge */
@@ -57,7 +59,7 @@
 
 .skill-badge--advanced::before {
   content: "🌳";
-  font-size: 0.875rem;
+  font-size: 0.75rem !important;
 }
 
 /* Tooltip on hover */
@@ -96,9 +98,9 @@
 /* Section headers with badges */
 h2 .skill-badge,
 h3 .skill-badge {
-  font-size: 0.7rem;
-  padding: 3px 8px;
-  margin-left: 10px;
+  font-size: 0.65rem !important;
+  padding: 2px 7px !important;
+  margin-left: 10px !important;
 }
 
 /* Responsive adjustments */
