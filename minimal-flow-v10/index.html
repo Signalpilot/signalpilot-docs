@@ -2054,6 +2054,43 @@
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
   <div class="sp-callout__icon">📊</div>
   <div class="sp-callout__content">
+    <h4>Position Tracking State Machine</h4>
+    <p style="margin-bottom: 1rem;">Volume Oracle tracks positions from entry to exit with real-time P&L:</p>
+    <div class="mermaid">
+stateDiagram-v2
+    [*] --> NoPosition: Waiting
+
+    NoPosition --> LongPosition: VBS+ Signal
+    NoPosition --> ShortPosition: VBS- Signal
+
+    LongPosition --> Tracking: Position Opened
+    Tracking --> ProfitCalc: Real-time P&L
+    ProfitCalc --> ExitTarget: Show Target Line
+
+    ExitTarget --> NoPosition: VBS- Exit Signal
+    ExitTarget --> NoPosition: Manual Exit
+
+    ShortPosition --> Tracking2: Position Opened
+    Tracking2 --> ProfitCalc2: Real-time P&L
+    ProfitCalc2 --> ExitTarget2: Show Target Line
+
+    ExitTarget2 --> NoPosition: VBS+ Exit Signal
+    ExitTarget2 --> NoPosition: Manual Exit
+
+    note right of Tracking
+        Features:
+        - Entry price recorded
+        - Unrealized P&L displayed
+        - Risk/Reward calculated
+        - Exit target shown
+    end note
+    </div>
+  </div>
+</div>
+
+<div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
+  <div class="sp-callout__icon">📊</div>
+  <div class="sp-callout__content">
     <h4>Three-System Architecture</h4>
     <p style="margin-bottom: 1rem;">Volume Oracle combines three independent analysis systems:</p>
     <div class="mermaid">

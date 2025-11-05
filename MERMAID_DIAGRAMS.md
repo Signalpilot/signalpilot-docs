@@ -214,13 +214,13 @@ graph TD
     Signal1 --> Confirm1[5. Confirm with Harmonic/Volume]
     Signal2 --> Confirm2[5. Confirm with Harmonic/Volume]
 
-    Confirm1 --> Entry1[6. Enter Long]
-    Confirm2 --> Entry2[6. Enter Short]
+    Confirm1 --> Entry1[6. Long Position Entry Example]
+    Confirm2 --> Entry2[6. Short Position Entry Example]
 
     Entry1 --> Manage[7. Manage Position]
     Entry2 --> Manage
 
-    Manage --> Exit[8. Exit on Opposite Signal<br/>or Target Hit]
+    Manage --> Exit[8. Position Close Example<br/>Opposite Signal or Target Reached]
 
     style Green fill:#4caf50,color:#fff
     style Red fill:#f44336,color:#fff
