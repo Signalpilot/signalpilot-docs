@@ -2033,44 +2033,6 @@
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
   <div class="sp-callout__icon">📊</div>
   <div class="sp-callout__content">
-    <h4>OBV Analysis Flow</h4>
-    <p style="margin-bottom: 1rem;">Plutus Flow uses adaptive smoothing to analyze On-Balance Volume:</p>
-    <div class="mermaid">
-graph TD
-    A[Price & Volume Data] --> B[OBV Calculation]
-
-    B --> C[Adaptive Smoothing]
-
-    C --> D{Smoothing Level?}
-    D -->|Level 1-2| E[Fast Response<br/>More Signals]
-    D -->|Level 3| F[Balanced<br/>Default]
-    D -->|Level 4-5| G[Slow Response<br/>Clean Trends]
-
-    E --> H[Trend Line Overlay]
-    F --> H
-    G --> H
-
-    H --> I{Analysis}
-
-    I --> J[OBV Direction]
-    I --> K[Divergences]
-    I --> L[Trend Strength]
-
-    J --> M[Signal Generation]
-    K --> M
-    L --> M
-
-    M --> N[Entry/Exit Signals]
-
-    style M fill:#9c27b0,color:#fff
-    style N fill:#4caf50,color:#fff
-    </div>
-  </div>
-</div>
-
-<div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
-  <div class="sp-callout__icon">📊</div>
-  <div class="sp-callout__content">
     <h4>How Plutus Flow Works</h4>
     <p style="margin-bottom: 1rem;">Three-layer analysis of On-Balance Volume:</p>
     <div class="mermaid">

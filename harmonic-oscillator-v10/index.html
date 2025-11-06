@@ -2002,39 +2002,38 @@ graph TD
     <p style="margin-bottom: 1rem;">Five independent components analyze market conditions and vote. Maximum 5 votes total (displayed as "X/5" in signals):</p>
     <div class="mermaid">
 graph TD
-    Data[Market Data<br/>Price + Volume] --> Composite[Composite Oscillator<br/>3 Inputs Combined]
+    Data[📊 Market Data<br/>Price + Volume] --> Voters[FIVE INDEPENDENT VOTERS]
 
-    Composite --> C1[MACD]
-    Composite --> C2[RSI<br/>Triple Envelope]
-    Composite --> C3[Stochastic RSI]
+    Voters --> V1[1️⃣ MACD VOTE<br/>Crossover Signals]
+    Voters --> V2[2️⃣ RSI VOTE<br/>Envelope Zones]
+    Voters --> V3[3️⃣ STOCHASTIC RSI VOTE<br/>Extreme Zones]
+    Voters --> V4[4️⃣ VOLUME VOTE<br/>Delta Patterns]
+    Voters --> V5[5️⃣ DIVERGENCE VOTE<br/>Price vs Oscillator]
 
-    Data --> V4[Volume Delta<br/>Patterns]
-    C1 --> V1[Vote 1:<br/>MACD Crosses]
-    C2 --> V2[Vote 2:<br/>RSI Zones]
-    C3 --> V3[Vote 3:<br/>Stoch Extremes]
-    V4 --> Vote4[Vote 4:<br/>Volume Pattern]
+    V1 --> Counter[VOTE COUNTER<br/>Tallies All Votes]
+    V2 --> Counter
+    V3 --> Counter
+    V4 --> Counter
+    V5 --> Counter
 
-    C1 & C2 & C3 --> Div[Divergence<br/>Detection]
-    Div --> Vote5[Vote 5:<br/>Divergence]
+    Counter --> Result{How Many<br/>Votes?}
 
-    V1 & V2 & V3 & Vote4 & Vote5 --> Counter[Vote Counter<br/>Max: 5]
+    Result -->|0-2 Votes| Neutral[⚪ NEUTRAL<br/>Not Enough Consensus]
+    Result -->|3 Votes| Signal[🟢 SIGNAL<br/>Moderate Confidence]
+    Result -->|4-5 Votes| Strong[⭐ STRONG SIGNAL<br/>High Confidence]
 
-    Counter --> Result{Total Votes?}
-
-    Result -->|3+ votes| Signal[Bull/Bear Signal]
-    Result -->|4-5 votes| Strong[STRONG Signal]
-    Result -->|0-2 votes| Neutral[NEUT Signal]
-
-    style Composite fill:#ff9800,color:#fff
-    style Counter fill:#2196f3,color:#fff
-    style Signal fill:#4caf50,color:#fff
-    style Strong fill:#4caf50,color:#fff
-    style Neutral fill:#757575,color:#fff
-    style C1 fill:#9c27b0,color:#fff
-    style C2 fill:#9c27b0,color:#fff
-    style C3 fill:#9c27b0,color:#fff
-    style V4 fill:#2196f3,color:#fff
-    style Div fill:#ff5722,color:#fff
+    style Data fill:#37474f,color:#fff,stroke:#263238,stroke-width:3px
+    style Voters fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:3px
+    style V1 fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:2px
+    style V2 fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:2px
+    style V3 fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:2px
+    style V4 fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:2px
+    style V5 fill:#ff5722,color:#fff,stroke:#e64a19,stroke-width:2px
+    style Counter fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:3px
+    style Result fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:3px
+    style Neutral fill:#757575,color:#fff,stroke:#616161,stroke-width:2px
+    style Signal fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
+    style Strong fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:4px
     </div>
     <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
       <strong>How to read:</strong> Composite oscillator (MACD, RSI, Stochastic RSI) generates 3 votes. Volume and Divergence add 2 more votes. Total possible: 5 votes. 3+ = signal, 4-5 = strong.

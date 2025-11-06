@@ -1862,35 +1862,45 @@ This alert setup guide is for <strong>educational purposes only</strong>. This i
     <p style="margin-bottom: 1.5rem;">Follow this simplified flow to create your first alert:</p>
     <div class="mermaid">
 graph TD
-    Start([📊 You Have Chart Open]) --> Step1[1. Right-click Indicator Name]
+    Start([📊 You Have Chart Open]) --> Step1[1️⃣ Right-click Indicator Name]
 
-    Step1 --> Step2[2. Click 'Add Alert on...' ]
+    Step1 --> Step2[2️⃣ Click 'Add Alert on...']
 
-    Step2 --> Step3[3. Alert Dialog Opens]
+    Step2 --> Step3[3️⃣ Alert Dialog Opens]
 
-    Step3 --> Choice{Choose Condition}
+    Step3 --> Choice{Choose<br/>Condition}
 
-    Choice --> Opt1[✅ 'Any alert() function call'<br/>RECOMMENDED]
-    Choice --> Opt2['Pentarch: IGN Long'<br/>Individual Signals]
+    Choice --> Opt1[✅ 'Any alert() function call'<br/>RECOMMENDED - Catches All Signals]
+    Choice --> Opt2['Pentarch: IGN Long'<br/>Individual Signal Selection]
 
-    Opt1 --> Step4[4. Name Your Alert]
+    Opt1 --> Step4[4️⃣ Name Your Alert<br/>Descriptive Label]
     Opt2 --> Step4
 
-    Step4 --> Step5[5. Set Notifications<br/>Mobile / Email / Webhook]
+    Step4 --> Step5[5️⃣ Set Notifications<br/>Mobile / Email / Webhook]
 
-    Step5 --> Critical{⚠️ CRITICAL SETTING}
+    Step5 --> Critical{⚠️ CRITICAL<br/>SETTING}
 
-    Critical --> Step6[Set to 'Once Per Bar Close'<br/>NOT 'Once Per Bar']
+    Critical --> Step6[6️⃣ Set to 'Once Per Bar Close'<br/>NOT 'Once Per Bar']
 
-    Step6 --> Done([✅ Alert Created!])
+    Step6 --> Done([✅ Alert Created Successfully!])
 
     Done --> Wait[🕐 Wait for Signal...]
     Wait --> Fire[🔔 Alert Fires When Signal Appears]
 
-    style Opt1 fill:#4caf50,color:#fff
-    style Critical fill:#ff5722,color:#fff
-    style Done fill:#00bcd4,color:#fff
-    style Fire fill:#4caf50,color:#fff
+    style Start fill:#37474f,stroke:#00bcd4,stroke-width:3px,color:#fff
+    style Step1 fill:#00bcd4,stroke:#00bcd4,stroke-width:2px,color:#fff
+    style Step2 fill:#00bcd4,stroke:#00bcd4,stroke-width:2px,color:#fff
+    style Step3 fill:#00bcd4,stroke:#00bcd4,stroke-width:2px,color:#fff
+    style Choice fill:#9c27b0,stroke:#9c27b0,stroke-width:3px,color:#fff
+    style Opt1 fill:#4caf50,stroke:#4caf50,stroke-width:3px,color:#fff
+    style Opt2 fill:#ff9800,stroke:#ff9800,stroke-width:2px,color:#fff
+    style Step4 fill:#00bcd4,stroke:#00bcd4,stroke-width:2px,color:#fff
+    style Step5 fill:#00bcd4,stroke:#00bcd4,stroke-width:2px,color:#fff
+    style Critical fill:#ff5722,stroke:#ff5722,stroke-width:4px,color:#fff
+    style Step6 fill:#f44336,stroke:#f44336,stroke-width:3px,color:#fff
+    style Done fill:#00bcd4,stroke:#4caf50,stroke-width:4px,color:#fff
+    style Wait fill:#9c27b0,stroke:#9c27b0,stroke-width:2px,color:#fff
+    style Fire fill:#4caf50,stroke:#4caf50,stroke-width:4px,color:#fff
     </div>
     <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
       <strong>How to read:</strong> Follow arrows from top to bottom. Green boxes = commonly used options. Red box = important setting for proper alert function!

@@ -2286,30 +2286,33 @@ CAP → BDN → TD (Climax to accumulation)
 
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
   <div class="sp-callout__title">📊 Visual Overview: Signal Detection Process</div>
-  <div class="mermaid" role="img" aria-label="Flowchart showing the four-layer signal detection process: Price data flows through four layers - Regime Classification, Pilot Line Distance, NanoFlow Momentum, and Bar Close Confirmation. When all layers confirm, a signal fires and an alert is sent.">
+  <div class="mermaid" role="img" aria-label="Vertical flowchart showing Pentarch's four-layer signal detection flowing top to bottom">
 graph TD
-    A[Price Data] --> B[Four-Layer Detection System]
+    Input[📊 Price Data Input] --> L1[LAYER 1: REGIME CLASSIFICATION<br/>Bullish/Bearish/Neutral Context]
 
-    B --> C{Layer 1:<br/>Regime<br/>Classification}
-    B --> D{Layer 2:<br/>Pilot Line<br/>Distance}
-    B --> E{Layer 3:<br/>NanoFlow<br/>Momentum}
-    B --> F{Layer 4:<br/>Bar Close<br/>Confirmation}
+    L1 --> L2[LAYER 2: PILOT LINE DISTANCE<br/>Price Extension from Trend Line]
 
-    C --> G[All Conditions Met]
-    D --> G
-    E --> G
-    F --> G
+    L2 --> L3[LAYER 3: NANOFLOW MOMENTUM<br/>Directional Momentum Validation]
 
-    G --> H{Close<br/>Confirmed?}
-    H -->|Yes| I[🟢 Signal Fires]
-    H -->|No| J[⏳ Wait for Close]
+    L3 --> L4[LAYER 4: BAR CLOSE CONFIRMATION<br/>Final Validation at Bar Close]
 
-    I --> K[Alert Sent]
+    L4 --> Check{All 4 Layers<br/>Confirmed?}
 
-    style I fill:#4caf50,color:#fff
-    style J fill:#ff9800,color:#fff
-    style K fill:#00bcd4,color:#fff
-    style B fill:#2196f3,color:#fff
+    Check -->|Yes, All Confirmed| Signal[🟢 SIGNAL FIRES<br/>IGN/CAP/WRN/BDN/TD]
+    Check -->|No, Wait| Wait[⏳ WAIT FOR NEXT BAR<br/>Recheck Conditions]
+
+    Signal --> Alert[📲 Alert Notification Sent]
+    Wait --> L1
+
+    style Input fill:#37474f,color:#fff,stroke:#263238,stroke-width:3px
+    style L1 fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:3px
+    style L2 fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
+    style L3 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:3px
+    style L4 fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:3px
+    style Check fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:3px
+    style Signal fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:4px
+    style Wait fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
+    style Alert fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:3px
   </div>
   <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
     <strong>How to read:</strong> Price data flows through four independent validation layers.

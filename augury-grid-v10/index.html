@@ -1943,69 +1943,41 @@
 <hr />
 <h2 id="core-functionality">🎯 Core Functionality<a class="headerlink" href="#core-functionality" title="Permanent link">&para;</a></h2>
 
-<h3 id="how-it-works-visual">How It Works (Visual Overview)</h3>
-<div class="mermaid">
-graph TB
-    A[Current Price] --> B{Check All 8 Symbols}
-    B --> C1[Symbol 1: Fibonacci Grid]
-    B --> C2[Symbol 2: Fibonacci Grid]
-    B --> C3[Symbol 3: Fibonacci Grid]
-    B --> C8[... Symbol 8: Fibonacci Grid]
-
-    C1 --> D1[Level Touches & Breaks]
-    C2 --> D2[Level Touches & Breaks]
-    C3 --> D3[Level Touches & Breaks]
-    C8 --> D8[Level Touches & Breaks]
-
-    D1 --> E[Alert System]
-    D2 --> E
-    D3 --> E
-    D8 --> E
-
-    E --> F[Configurable Alerts]
-
-    style A fill:#00bcd4,stroke:#0097a7,color:#fff
-    style E fill:#ff5722,stroke:#d84315,color:#fff
-    style F fill:#4caf50,stroke:#388e3c,color:#fff
-</div>
-
-<p><em>The Augury Grid monitors up to 8 symbols simultaneously, calculating Fibonacci levels for each and detecting price interactions with those levels in real-time.</em></p>
-
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
   <div class="sp-callout__icon">📊</div>
   <div class="sp-callout__content">
     <h4>Grid Scanning Workflow</h4>
-    <p style="margin-bottom: 1rem;">Augury Grid scans 8 symbols simultaneously and displays cycle phase analysis:</p>
+    <p style="margin-bottom: 1rem;">Augury Grid scans up to 8 symbols simultaneously and displays TD Sequential analysis:</p>
     <div class="mermaid">
 graph TD
-    Start[Configure 8 Symbols] --> Scan[Augury Grid Scans All]
+    Config[📊 Configure Up To 8 Symbols] --> Scanner[AUGURY GRID SCANNER<br/>Monitors All Symbols]
 
-    Scan --> A1[Symbol 1: BTC]
-    Scan --> A2[Symbol 2: ETH]
-    Scan --> A3[Symbol 3: SOL]
-    Scan --> A4[Symbol 4: ADA]
-    Scan --> A5[Symbol 5: XRP]
-    Scan --> A6[Symbol 6: DOT]
-    Scan --> A7[Symbol 7: AVAX]
-    Scan --> A8[Symbol 8: MATIC]
+    Scanner --> S1[1️⃣ Symbol 1<br/>TD Sequential Analysis]
+    S1 --> S2[2️⃣ Symbol 2<br/>TD Sequential Analysis]
+    S2 --> S3[3️⃣ Symbol 3<br/>TD Sequential Analysis]
+    S3 --> S4[4️⃣ Symbol 4<br/>TD Sequential Analysis]
+    S4 --> S5[5️⃣ Symbol 5<br/>TD Sequential Analysis]
+    S5 --> S6[6️⃣ Symbol 6<br/>TD Sequential Analysis]
+    S6 --> S7[7️⃣ Symbol 7<br/>TD Sequential Analysis]
+    S7 --> S8[8️⃣ Symbol 8<br/>TD Sequential Analysis]
 
-    A1 & A2 & A3 & A4 & A5 & A6 & A7 & A8 --> Analysis[Cycle Phase Analysis]
+    S8 --> Display[GRID DISPLAY<br/>All Symbols Visible at Once]
 
-    Analysis --> Display{Grid Display}
+    Display --> Results{Symbol Status}
 
-    Display --> Green[🟢 IGN Signal<br/>Strong Setup]
-    Display --> Yellow[🟡 WRN Signal<br/>Warning]
-    Display --> Red[🔴 CAP/BDN<br/>Exhaustion]
-    Display --> Gray[⚪ No Signal<br/>Neutral]
+    Results --> IGN[🟢 IGN SIGNAL<br/>Strong Bullish Setup<br/>High Priority]
+    Results --> WRN[🟡 WRN SIGNAL<br/>Warning Level<br/>Monitor Closely]
+    Results --> CAP[🔴 CAP/BDN SIGNAL<br/>Exhaustion Level<br/>Exercise Caution]
+    Results --> Neutral[⚪ NO SIGNAL<br/>Neutral/Counting<br/>Wait & Watch]
 
-    Green --> Priority[High Priority<br/>for Review]
-    Yellow --> Monitor[Monitor<br/>Closely]
-    Red --> Caution[Exercise<br/>Caution]
-
-    style Green fill:#4caf50,color:#fff
-    style Yellow fill:#ff9800,color:#fff
-    style Red fill:#f44336,color:#fff
-    style Priority fill:#00bcd4,color:#fff
+    style Config fill:#37474f,color:#fff,stroke:#263238,stroke-width:3px
+    style Scanner fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:3px
+    style Display fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:3px
+    style Results fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:3px
+    style IGN fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
+    style WRN fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:3px
+    style CAP fill:#f44336,color:#fff,stroke:#c62828,stroke-width:3px
+    style Neutral fill:#757575,color:#fff,stroke:#616161,stroke-width:2px
     </div>
   </div>
 </div>
