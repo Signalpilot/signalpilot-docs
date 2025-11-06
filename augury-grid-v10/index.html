@@ -1954,23 +1954,24 @@
     </ul>
 
     <p><strong>What You'll See:</strong></p>
-    <p>A grid/table showing multiple symbols with their current status:</p>
+    <p>A grid/table showing multiple symbols with their current signal status:</p>
     <ul style="margin: 1rem 0;">
-      <li><strong>Symbol Name</strong> (e.g., BTC, ETH, AAPL, SPY)</li>
-      <li><strong>Current Signal</strong> (IGN, WRN, CAP, BDN, TD, or neutral)</li>
-      <li><strong>Signal Strength</strong> (count numbers like 9, 13, etc.)</li>
-      <li><strong>Status Color</strong> (green for bullish, red for bearish, neutral for no signal)</li>
+      <li><strong>Symbol Name + Timeframe</strong> (e.g., BTCUSDT · 5m)</li>
+      <li><strong>Signal</strong> (↑ Bullish, ↓ Bearish, or — Neutral)</li>
+      <li><strong>Status</strong> (how long ago the last signal fired)</li>
+      <li><strong>TP1</strong> (target price based on ATR)</li>
+      <li><strong>Gauss Ribbon</strong> (price position: Inside/Outside, trend: Bullish/Bearish)</li>
+      <li><strong>Score</strong> (confluence score 0-100, higher = stronger signal)</li>
+      <li><strong>P&L</strong> (profit/loss % since last signal)</li>
     </ul>
 
-    <p><strong>What Signals Does It Show?</strong></p>
-    <p>Augury Grid uses the same TD Sequential signals as Pentarch:</p>
+    <p><strong>What Do The Signals Mean?</strong></p>
     <ul>
-      <li><strong>🟢 IGN (Ignition)</strong> = Upward momentum starting</li>
-      <li><strong>🟡 WRN (Warning)</strong> = Price getting stretched</li>
-      <li><strong>🔴 CAP/BDN (Climax/Breakdown)</strong> = Exhaustion detected</li>
-      <li><strong>🟣 TD (Touchdown)</strong> = Potential reversal area</li>
-      <li><strong>⚪ NO SIGNAL</strong> = Neutral—just counting/monitoring</li>
+      <li><strong>↑ Bullish</strong> = MACD histogram crossed above zero + all filters passed</li>
+      <li><strong>↓ Bearish</strong> = MACD histogram crossed below zero + all filters passed</li>
+      <li><strong>— Neutral</strong> = No signal, or filters not met</li>
     </ul>
+    <p>Signals only appear when multiple filters agree (ADX rising, higher timeframe confirmation, OBV direction, RSI regime, distance from average, etc.). This reduces false signals.</p>
 
     <p><strong>Perfect For:</strong></p>
     <ul>
@@ -1981,27 +1982,34 @@
     </ul>
 
     <details style="margin-top: 1rem;">
-      <summary style="cursor: pointer; font-weight: 600; color: #4caf50;">🎓 What's TD Sequential counting?</summary>
+      <summary style="cursor: pointer; font-weight: 600; color: #4caf50;">🎓 How does Augury Grid work?</summary>
       <div style="padding-left: 1rem; margin-top: 0.5rem;">
-        <p>TD Sequential is a counting system that identifies exhaustion points. It counts consecutive price bars moving in one direction:</p>
+        <p>Augury Grid scans symbols using a confluence-based system that only shows signals when multiple factors align.</p>
+        <p><strong>The core signal:</strong> MACD histogram crossing zero (momentum shift)</p>
+        <p><strong>But wait—there are filters!</strong> A signal only appears if these also align:</p>
         <ul>
-          <li>Counts from 1 to 9 (Setup phase)</li>
-          <li>Then 1 to 13 (Countdown phase)</li>
+          <li><strong>ADX:</strong> Trend strength must be rising and above minimum threshold</li>
+          <li><strong>Higher Timeframe:</strong> MACD on higher timeframe must agree</li>
+          <li><strong>OBV Slope:</strong> Volume flow must support the direction</li>
+          <li><strong>RSI Regime:</strong> Momentum must be in the right zone</li>
+          <li><strong>Distance Check:</strong> Price must be far enough from average</li>
+          <li><strong>Confluence Score:</strong> Must score at least 60/100 points</li>
         </ul>
-        <p>When the count reaches 9 or 13, that's an exhaustion signal—like a car running out of gas. The move may be ready to reverse or take a break.</p>
-        <p><strong>You don't need to understand the counting mechanics!</strong> Augury Grid does the counting for you and shows you only the relevant signals.</p>
+        <p><strong>Think of it like a nightclub bouncer:</strong> MACD is the VIP ticket, but the filters are the dress code, age check, and guest list. You need all of them to get in.</p>
+        <p><strong>You don't need to understand each filter!</strong> Just know that signals appearing on Augury Grid have passed multiple quality checks. Higher scores (80+) = stronger confluence.</p>
       </div>
     </details>
 
     <p><strong>Beginner Starting Point:</strong></p>
     <ol>
-      <li><strong>Start with 4-8 symbols</strong> you're familiar with (don't overwhelm yourself with 40)</li>
-      <li><strong>Watch for green (IGN) signals</strong> on your watchlist</li>
-      <li><strong>Click any symbol</strong> in the grid to jump directly to that chart</li>
-      <li><strong>Use it as a filter</strong>—only look at charts showing active signals</li>
+      <li><strong>Start with 4-8 symbols</strong> you're familiar with (don't overwhelm yourself with the full 8 rows)</li>
+      <li><strong>Watch for fresh signals</strong> (↑ Bullish or ↓ Bearish that fired recently—look at "Status" column)</li>
+      <li><strong>Check the Score</strong> (80+ = very strong confluence, 60-79 = moderate, below 60 filtered out)</li>
+      <li><strong>Click any symbol</strong> in the grid to jump directly to that chart for detailed analysis</li>
+      <li><strong>Monitor P&L</strong> to see which signals are working vs not working</li>
     </ol>
 
-    <p style="margin-top: 1rem;"><strong>💡 Pro Tip:</strong> Augury Grid is perfect for crypto traders monitoring 10+ pairs, or stock traders scanning their watchlist. It saves you from clicking through dozens of charts looking for setups.</p>
+    <p style="margin-top: 1rem;"><strong>💡 Pro Tip:</strong> Augury Grid is perfect for crypto traders monitoring 10+ pairs, or stock traders scanning their watchlist. Focus on rows showing fresh signals (fired within last few hours) with scores 80+. These are the highest-quality setups.</p>
   </div>
 </div>
 
