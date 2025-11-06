@@ -1962,31 +1962,35 @@
     <h4>How the Voting System Works</h4>
     <p style="margin-bottom: 1rem;">Three oscillators vote democratically to generate consensus signals:</p>
     <div class="mermaid">
-graph LR
-    A[Market Data] --> B[MACD]
-    A --> C[RSI]
-    A --> D[StochRSI]
+graph TD
+    Data[📊 Market Data Input] --> Oscillators[THREE OSCILLATOR INPUTS]
 
-    B --> E{MACD Vote}
-    C --> F{RSI Vote}
-    D --> G{StochRSI Vote}
+    Oscillators --> MACD[1️⃣ MACD<br/>Trend & Momentum]
+    Oscillators --> RSI[2️⃣ RSI<br/>Triple Envelope]
+    Oscillators --> Stoch[3️⃣ Stochastic RSI<br/>Oversold/Overbought]
 
-    E --> H[Democratic<br/>Voting System]
-    F --> H
-    G --> H
+    MACD --> Voting[DEMOCRATIC VOTING SYSTEM<br/>Each Oscillator Gets 1 Vote]
+    RSI --> Voting
+    Stoch --> Voting
 
-    H --> I{Signal Mode?}
+    Voting --> Mode{Voting Threshold}
 
-    I -->|Conservative| J[Require 3 votes]
-    I -->|Balanced| K[Require 2 votes]
-    I -->|Aggressive| L[Require 1 vote]
+    Mode -->|Conservative Mode| C[Require All 3 Votes<br/>Highest Confidence]
+    Mode -->|Balanced Mode| B[Require 2 of 3 Votes<br/>Default Setting]
+    Mode -->|Aggressive Mode| A[Require 1 of 3 Votes<br/>More Frequent]
 
-    J --> M[🟢 Signal Output]
-    K --> M
-    L --> M
+    C --> Output[🟢 Consensus Signal]
+    B --> Output
+    A --> Output
 
-    style H fill:#ff9800,color:#fff
-    style M fill:#4caf50,color:#fff
+    style Data fill:#37474f,color:#fff,stroke:#263238,stroke-width:3px
+    style Oscillators fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:3px
+    style Voting fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:3px
+    style Mode fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:3px
+    style Output fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:4px
+    style MACD fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:2px
+    style RSI fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:2px
+    style Stoch fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:2px
     </div>
   </div>
 </div>

@@ -2074,34 +2074,38 @@ graph TD
     <h4>How Plutus Flow Works</h4>
     <p style="margin-bottom: 1rem;">Three-layer analysis of On-Balance Volume:</p>
     <div class="mermaid">
-graph LR
-    Input[Price &<br/>Volume Data] --> Layer1[Layer 1:<br/>OBV Line<br/>Calculation]
+graph TD
+    Input[📊 Price & Volume Data] --> OBV[PLUTUS FLOW<br/>On-Balance Volume Analysis]
 
-    Layer1 --> Layer2[Layer 2:<br/>Trend Ribbons<br/>Green/Red]
+    OBV --> Layer1[LAYER 1: OBV CALCULATION<br/>Cumulative Volume Tracking]
 
-    Layer2 --> Layer3[Layer 3:<br/>Divergence<br/>Detection]
+    Layer1 --> Smooth{Adaptive Smoothing<br/>User Configurable}
 
-    Layer3 --> Output[📊 Visual Display]
+    Smooth -->|Fast Response| S1[Level 1-2<br/>More Signals<br/>Higher Sensitivity]
+    Smooth -->|Balanced| S2[Level 3 ⭐<br/>Default Setting<br/>Recommended]
+    Smooth -->|Slow Response| S3[Level 4-5<br/>Clean Trends<br/>Lower Noise]
 
-    subgraph "Smoothing Settings"
-        S1[Level 1-2: Fast]
-        S2[Level 3: Balanced]
-        S3[Level 4-5: Slow]
-    end
+    S1 --> Layer2[LAYER 2: TREND RIBBONS<br/>Color-Coded Visualization]
+    S2 --> Layer2
+    S3 --> Layer2
 
-    Layer1 -.-> S1
-    Layer1 -.-> S2
-    Layer1 -.-> S3
+    Layer2 --> Ribbons[🟢 Green = Bullish Trend<br/>🔴 Red = Bearish Trend<br/>Visual Context Layer]
 
-    style Input fill:#2196f3,color:#fff
-    style Layer1 fill:#9c27b0,color:#fff
-    style Layer2 fill:#9c27b0,color:#fff
-    style Layer3 fill:#9c27b0,color:#fff
-    style Output fill:#4caf50,color:#fff
-    style S2 fill:#ff9800,color:#fff
+    Ribbons --> Layer3[LAYER 3: DIVERGENCE DETECTION<br/>Price vs OBV Analysis]
+
+    Layer3 --> Output[📈 Complete Display<br/>OBV Line + Ribbons + Labels]
+
+    style Input fill:#37474f,color:#fff,stroke:#263238,stroke-width:3px
+    style OBV fill:#ff5722,color:#fff,stroke:#e64a19,stroke-width:3px
+    style Layer1 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:3px
+    style Smooth fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:3px
+    style Layer2 fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:3px
+    style Layer3 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:3px
+    style Output fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:4px
+    style S2 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:3px
     </div>
     <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
-      <strong>How to read:</strong> Data flows left to right through 3 layers. Smoothing level (1-5) adjusts sensitivity. Level 3 is default balanced setting.
+      <strong>How to read:</strong> Data flows top to bottom through 3 layers. Smoothing level (1-5) adjusts sensitivity at Layer 1. Level 3 (⭐) is the default balanced setting.
     </p>
   </div>
 </div>
