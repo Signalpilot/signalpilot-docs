@@ -517,6 +517,8 @@ body::before {
     visibility: visible !important;
     width: 12.1rem !important; /* Ensure primary sidebar has width */
     min-height: 100vh !important; /* Prevent layout shift - always full height */
+    flex-shrink: 0 !important; /* CRITICAL: Prevent sidebar from shrinking in flex layout */
+    flex-grow: 0 !important; /* Don't allow sidebar to grow */
   }
 
   /* Make scrollbar always visible in primary sidebar to hint at scrollable content */
@@ -556,14 +558,16 @@ body::before {
     display: block !important;
     visibility: visible !important;
     width: 12.1rem !important; /* Ensure TOC sidebar has width */
+    flex-shrink: 0 !important; /* CRITICAL: Prevent TOC from shrinking */
+    flex-grow: 0 !important; /* Don't allow TOC to grow */
   }
 
   /* Constrain sidebar height for sticky behavior */
   .md-sidebar__scrollwrap {
     height: auto !important;
-    max-height: calc(100vh - 2rem) !important; /* Maximum space - minimal offset */
-    min-height: 500px !important; /* Ensure minimum usable height */
-    overflow-y: auto !important; /* Allow TOC to scroll if content is long */
+    max-height: calc(100vh - 2.5rem) !important; /* Maximum space - account for top offset */
+    min-height: calc(100vh - 3rem) !important; /* Force tall scrollwrap */
+    overflow-y: auto !important; /* Allow sidebar to scroll if content is long */
   }
 
   /* Ensure sidebar itself has proper height */
