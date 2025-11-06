@@ -1,0 +1,54 @@
+/**
+ * MINIMAL OVERFLOW PREVENTION
+ * Only fixes actual overflow issues, doesn't change layout
+ */
+
+/* ============================================
+   PREVENT HORIZONTAL SCROLL
+   ============================================ */
+
+/* Only prevent body from scrolling horizontally */
+body {
+  overflow-x: hidden;
+}
+
+/* ============================================
+   FIX LONG URLs ONLY
+   ============================================ */
+
+@media screen and (max-width: 768px) {
+
+  /* Break long URLs that would cause overflow */
+  .md-content a[href^="http"],
+  article a[href^="http"] {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Code blocks get horizontal scroll */
+  .md-content pre,
+  article pre {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Tables get horizontal scroll */
+  .md-content table,
+  article table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Images in content don't exceed width */
+  .md-content img:not([class*="logo"]):not([class*="icon"]),
+  article img:not([class*="logo"]):not([class*="icon"]) {
+    max-width: 100%;
+    height: auto;
+  }
+
+}
+
+/* That's it. Nothing else. */
