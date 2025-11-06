@@ -2,55 +2,11 @@
    SIGNALPILOT DOCS - CONSOLIDATED STYLES
    Combines: extra.css, brand.css, aurora.css, interactive-code.css
    Optimized for performance and maintainability
-   CACHE BUST: v2024-11-06-21:35-AGGRESSIVE-SVG-TEXT
+   CACHE BUST: v2024-11-06-21:40-REMOVED-GLOBAL-MERMAID
    ================================================================================ */
 
-/* Force larger text in Mermaid diagrams for better readability */
-.mermaid text,
-.mermaid .nodeLabel,
-.mermaid .edgeLabel {
-  font-size: 30px !important;
-}
-
-.mermaid .node rect,
-.mermaid .node circle,
-.mermaid .node polygon {
-  font-size: 30px !important;
-}
-
-/* DIAGNOSTIC: Bright red outline to verify deployment */
-.mermaid {
-  border: 5px solid red !important;
-  padding: 20px !important;
-  background: rgba(255, 0, 0, 0.1) !important;
-}
-
-/* AGGRESSIVE: Force all SVG text elements to be larger */
-.mermaid svg text {
-  font-size: 30px !important;
-}
-
-.mermaid svg .label text,
-.mermaid svg .label foreignObject {
-  font-size: 30px !important;
-}
-
-.mermaid svg g.label {
-  font-size: 30px !important;
-}
-
-/* Force all text inside nodes */
-.mermaid .node text,
-.mermaid .nodes text,
-.mermaid g.node text {
-  font-size: 30px !important;
-}
-
-/* Force edge labels */
-.mermaid .edgeLabel text,
-.mermaid g.edgeLabel text {
-  font-size: 30px !important;
-}
+/* NOTE: Mermaid diagram styles moved to page-specific <style> blocks */
+/* See ref-comparison/index.html for page-specific diagram styling */
 
 /* ========================================
    0. GLOBAL BOX MODEL NORMALIZATION
