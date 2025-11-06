@@ -1933,13 +1933,13 @@
     <p style="margin-bottom: 1rem;">Omnideck integrates multiple detection systems into a unified framework:</p>
     <div class="mermaid" role="img" aria-label="Vertical flowchart showing Omnideck's 10 systems in 4 layers flowing from top to bottom">
 graph TD
-    Start[📊 Market Data Input] --> Layer1[LAYER 1: TREND DETECTION]
+    Start[📊 Market Data Input] --> Layer1[LAYER 1: TREND ANALYSIS]
 
     Layer1 --> T1[1️⃣ EMA Trio<br/>Moving Average Crossovers]
     Layer1 --> T2[2️⃣ SuperTrend<br/>Trend Ribbon]
     Layer1 --> T3[3️⃣ BMSB<br/>Support Band]
 
-    T1 --> Layer2[LAYER 2: ENTRY SIGNALS]
+    T1 --> Layer2[LAYER 2: PATTERN DETECTION]
     T2 --> Layer2
     T3 --> Layer2
 
@@ -1947,7 +1947,7 @@ graph TD
     Layer2 --> E2[5️⃣ Squeeze Detector<br/>Volatility Breakouts]
     Layer2 --> E3[6️⃣ Candlestick Patterns<br/>16 Pattern Types]
 
-    E1 --> Layer3[LAYER 3: TRADE MANAGEMENT]
+    E1 --> Layer3[LAYER 3: ZONE ANALYSIS]
     E2 --> Layer3
     E3 --> Layer3
 
@@ -1955,13 +1955,13 @@ graph TD
     Layer3 --> M2[8️⃣ Supply/Demand<br/>Key Price Zones]
     Layer3 --> M3[9️⃣ Liquidity Sweeps<br/>Stop Hunt Detection]
 
-    M1 --> Layer4[LAYER 4: META INTEGRATION]
+    M1 --> Layer4[LAYER 4: INTEGRATION]
     M2 --> Layer4
     M3 --> Layer4
 
     Layer4 --> Meta[🔟 Meta Tools<br/>System Coordination]
 
-    Meta --> Output[📈 Unified Signal Output<br/>All Systems Combined]
+    Meta --> Output[📈 Combined Output<br/>All Systems Unified]
 
     style Layer1 fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:3px
     style Layer2 fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
