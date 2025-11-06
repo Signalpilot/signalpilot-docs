@@ -565,8 +565,19 @@ body::before {
   /* Constrain sidebar height for sticky behavior */
   .md-sidebar__scrollwrap {
     height: auto !important;
-    max-height: calc(100vh - 2rem) !important; /* Maximum space for scrolling */
+    max-height: calc(100vh - 1.5rem) !important; /* Match sidebar top offset - maximum scrollable space */
     overflow-y: auto !important; /* Allow sidebar to scroll if content is long */
+    padding-bottom: 2rem !important; /* Extra padding at bottom so Reference/About sections are fully visible */
+  }
+
+  /* Fix hover overlap issue - ensure nav items don't overlap on hover */
+  .md-sidebar--primary .md-nav__item {
+    position: relative !important;
+    z-index: 1 !important;
+  }
+
+  .md-sidebar--primary .md-nav__item:hover {
+    z-index: 2 !important; /* Bring hovered item to front */
   }
 
   /* Ensure sidebar itself has proper height */
