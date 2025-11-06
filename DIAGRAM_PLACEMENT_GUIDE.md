@@ -41,7 +41,7 @@ Based on your feedback that the **Indicator Comparison Decision Tree is awesome*
 - **Add after:** Main introduction
 - **Why:** Helps users understand the grid concept
 
-#### 9. **Volume Oracle Position Tracking** → `minimal-flow-v10/index.html`
+#### 9. **Volume Oracle Position Tracking** → `volume-oracle-v10/index.html`
 - **Shows:** State machine: No Position → Long/Short → Tracking → Exit
 - **Add after:** "Position Tracking" or "VBS Signal" section
 - **Why:** Shows how position management works

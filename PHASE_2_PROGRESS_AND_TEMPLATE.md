@@ -150,7 +150,7 @@ Remaining product pages + key references:
 11-17. **Product Pages** (7):
 - janus-atlas-v10
 - augury-grid-v10
-- minimal-flow-v10 (Volume Oracle)
+- volume-oracle-v10 (Volume Oracle)
 - harmonic-oscillator-v10
 - plutus-flow-v10
 

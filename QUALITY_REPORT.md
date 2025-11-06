@@ -19,7 +19,7 @@ All 23 documentation pages with "What You've Learned" summaries have been thorou
 - augury-grid-v10
 - harmonic-oscillator-v10
 - janus-atlas-v10
-- minimal-flow-v10
+- volume-oracle-v10
 - plutus-flow-v10
 - suite-index
 - _settings-alerts

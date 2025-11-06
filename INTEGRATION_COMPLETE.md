@@ -291,7 +291,7 @@ You have 8 more diagrams ready to use in `MERMAID_DIAGRAMS.md`:
 
 **Where to add them:**
 - harmonic-oscillator-v10/index.html → Voting System diagram
-- minimal-flow-v10/index.html → Position Tracking diagram
+- volume-oracle-v10/index.html → Position Tracking diagram
 - ref-workflow/index.html → Trading Workflow diagram
 - omnideck-v10/index.html → System Layers diagram
 

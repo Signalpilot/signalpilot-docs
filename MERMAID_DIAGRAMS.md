@@ -155,7 +155,7 @@ graph LR
 
 ## 5. VOLUME ORACLE POSITION TRACKING
 
-**Use in:** `minimal-flow-v10/index.html` (Volume Oracle)
+**Use in:** `volume-oracle-v10/index.html` (Volume Oracle)
 
 ```mermaid
 stateDiagram-v2

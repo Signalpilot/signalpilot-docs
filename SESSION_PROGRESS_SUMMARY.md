@@ -65,7 +65,7 @@ All pages below have complete meta-learning enhancements:
 
 ### Product Pages (5 remaining)
 - augury-grid-v10 (screener)
-- minimal-flow-v10 (volume)
+- volume-oracle-v10 (volume)
 - harmonic-oscillator-v10 (divergence)
 - plutus-flow-v10 (flow)
 - start-quickstart (alternative start)
@@ -177,7 +177,7 @@ All pages below have complete meta-learning enhancements:
 
 **Immediate Priorities (Next 5 pages):**
 1. augury-grid-v10
-2. minimal-flow-v10
+2. volume-oracle-v10
 3. harmonic-oscillator-v10
 4. plutus-flow-v10
 5. start-quickstart

@@ -34,7 +34,7 @@
 - ✅ omnideck-v10
 - ✅ janus-atlas-v10
 - ✅ augury-grid-v10
-- ✅ minimal-flow-v10 (Volume Oracle)
+- ✅ volume-oracle-v10 (Volume Oracle)
 - ✅ harmonic-oscillator-v10
 - ✅ plutus-flow-v10
 

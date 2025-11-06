@@ -175,7 +175,7 @@ Total: **14 files**
 11. ✅ `harmonic-oscillator-v10/index.html` (regenerated diagram)
 12. ✅ `omnideck-v10/index.html` (regenerated diagram)
 13. ✅ `plutus-flow-v10/index.html` (regenerated diagram)
-14. ✅ `minimal-flow-v10/index.html` (regenerated diagram)
+14. ✅ `volume-oracle-v10/index.html` (regenerated diagram)
 
 ---
 
@@ -236,7 +236,7 @@ grep -rni "you'll need to|ensure you|make sure to|be careful to|don't|do not.*wh
 - omnideck-v10
 - janus-atlas-v10
 - augury-grid-v10
-- minimal-flow-v10 (Volume Oracle)
+- volume-oracle-v10 (Volume Oracle)
 - harmonic-oscillator-v10
 - plutus-flow-v10
 
