@@ -41,9 +41,25 @@
 
   // Initialize keyboard navigation
   function init() {
+    // Don't initialize on touch devices (mobile/tablet)
+    if (isTouchDevice()) {
+      console.log('[Keyboard Navigation] Skipped - touch device detected');
+      return;
+    }
+
     document.addEventListener('keydown', handleKeyPress);
     createShortcutGuide();
     console.log('[Keyboard Navigation] Initialized');
+  }
+
+  // Detect if device is touch-enabled
+  function isTouchDevice() {
+    return (
+      'ontouchstart' in window ||
+      navigator.maxTouchPoints > 0 ||
+      navigator.msMaxTouchPoints > 0 ||
+      window.matchMedia('(pointer: coarse)').matches
+    );
   }
 
   // Handle key press events

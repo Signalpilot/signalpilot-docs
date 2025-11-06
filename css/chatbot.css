@@ -659,15 +659,17 @@
 /* Mobile Responsive */
 @media (max-width: 480px) {
     .sp-chatbot-container {
-        bottom: 10px;
-        right: 10px;
+        bottom: 16px;
+        right: 16px;
     }
 
     .sp-chatbot-window {
-        width: calc(100vw - 20px);
-        height: calc(100vh - 100px);
-        bottom: 70px;
-        right: -10px;
+        width: 340px;
+        max-width: calc(100vw - 32px);
+        height: 500px;
+        max-height: 70vh;
+        bottom: 76px;
+        right: 0;
     }
 
     .sp-chatbot-message-content {
@@ -708,8 +710,10 @@
 /* Landscape mobile optimizations */
 @media (max-width: 896px) and (orientation: landscape) {
     .sp-chatbot-window {
-        height: calc(100vh - 80px);
-        max-height: calc(100vh - 80px);
+        width: 360px;
+        max-width: 50vw;
+        height: 400px;
+        max-height: 85vh;
     }
 
     .sp-chatbot-messages {
