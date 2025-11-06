@@ -1,6 +1,7 @@
 /**
  * MINIMAL OVERFLOW PREVENTION
  * Only fixes actual overflow issues, doesn't change layout
+ * CRITICAL: Never use overflow-x on html/body - breaks position: sticky!
  */
 
 /* ============================================
@@ -9,9 +10,11 @@
 
 @media screen and (max-width: 768px) {
 
-  /* Prevent body horizontal scroll on mobile only */
-  body {
-    overflow-x: hidden;
+  /* Use width constraint instead of overflow-x to prevent horizontal scroll */
+  .md-container,
+  .md-main,
+  .md-content {
+    max-width: 100vw;
   }
 
   /* Break long URLs that would cause overflow */
