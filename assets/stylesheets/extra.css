@@ -516,9 +516,9 @@ body::before {
     display: block !important;
     visibility: visible !important;
     width: 12.1rem !important; /* Ensure primary sidebar has width */
-    min-height: 100vh !important; /* Prevent layout shift - always full height */
     flex-shrink: 0 !important; /* CRITICAL: Prevent sidebar from shrinking in flex layout */
     flex-grow: 0 !important; /* Don't allow sidebar to grow */
+    height: auto !important; /* Let height adjust to content naturally */
   }
 
   /* Make scrollbar always visible in primary sidebar to hint at scrollable content */
@@ -3555,6 +3555,11 @@ a {
 .md-nav__link:hover,
 .sp-button:hover {
   transform: translateY(-1px);
+}
+
+/* Disable hover transform on sidebar to prevent overlap */
+.md-sidebar--primary .md-nav__link:hover {
+  transform: none !important;
 }
 
 .md-nav__link:active,
