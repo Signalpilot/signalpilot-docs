@@ -2105,24 +2105,27 @@ stateDiagram-v2
     <h4>Three-System Architecture</h4>
     <p style="margin-bottom: 1rem;">Volume Oracle combines three independent analysis systems:</p>
     <div class="mermaid">
-graph LR
-    Data[Market Data<br/>Price + Volume] --> VF[System 1:<br/>Volume Flow]
-    Data --> VZ[System 2:<br/>Volume Zones]
-    Data --> PM[System 3:<br/>Position Manager]
+graph TD
+    Data[📊 Market Data Input<br/>Price + Volume] --> Oracle[VOLUME ORACLE<br/>3 Independent Systems]
 
-    VF --> VF_Out[Color-Coded Bars<br/>🟢 Buying Pressure<br/>🔴 Selling Pressure]
-    VZ --> VZ_Out[Horizontal Boxes<br/>High-Volume Areas<br/>Consolidation Zones]
-    PM --> PM_Out[Reference Lines<br/>Entry Price Mark<br/>P/L Metrics Display]
+    Oracle --> VF[SYSTEM 1: VOLUME FLOW]
+    Oracle --> VZ[SYSTEM 2: VOLUME ZONES]
+    Oracle --> PM[SYSTEM 3: POSITION MANAGER]
 
-    VF_Out --> Chart[📊 Chart Display]
+    VF --> VF_Out[🟢🔴 Color-Coded Volume Bars<br/>Green = Buying Pressure<br/>Red = Selling Pressure]
+    VZ --> VZ_Out[📦 Horizontal Zone Boxes<br/>High-Volume Consolidation Areas<br/>Key Price Ranges]
+    PM --> PM_Out[📍 Position Tracking Lines<br/>Entry Price Reference<br/>Real-Time P&L Display]
+
+    VF_Out --> Chart[📈 Unified Chart Display]
     VZ_Out --> Chart
     PM_Out --> Chart
 
-    style VF fill:#4caf50,color:#fff
-    style VZ fill:#2196f3,color:#fff
-    style PM fill:#9c27b0,color:#fff
-    style Chart fill:#ff9800,color:#fff
-    style Data fill:#757575,color:#fff
+    style Data fill:#37474f,color:#fff,stroke:#263238,stroke-width:3px
+    style Oracle fill:#ff5722,color:#fff,stroke:#e64a19,stroke-width:3px
+    style VF fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
+    style VZ fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:3px
+    style PM fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:3px
+    style Chart fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:4px
     </div>
     <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
       <strong>How to read:</strong> Three independent systems analyze the same market data. Each system displays different visual elements on the chart. All three can be used together or individually.

@@ -1979,36 +1979,40 @@ graph TD
   <div class="sp-callout__content">
     <h4>The 10 Systems Visualized</h4>
     <p style="margin-bottom: 1rem;">All 10 detection systems working together in one indicator:</p>
-    <div class="mermaid" role="img" aria-label="Flowchart showing all 10 Omnideck systems: Market Data flows into Omnideck, which contains TD Sequential, Squeeze, Liquidity Sweeps, EMA Trio, SuperTrend, BMSB, Regime Box, Supply/Demand, Candlesticks, and Meta Tools. All systems output to the chart display.">
-graph LR
-    Input[Market Data] --> Systems{Omnideck<br/>10 Systems}
+    <div class="mermaid" role="img" aria-label="Vertical flowchart showing all 10 Omnideck systems organized by category">
+graph TD
+    Input[📊 Market Data Input] --> Omnideck[OMNIDECK: 10 INDEPENDENT SYSTEMS]
 
-    Systems --> S1[1️⃣ TD Sequential<br/>Exhaustion]
-    Systems --> S2[2️⃣ Squeeze<br/>Breakouts]
-    Systems --> S3[3️⃣ Liquidity Sweeps<br/>Stop Hunts]
-    Systems --> S4[4️⃣ EMA Trio<br/>Moving Averages]
-    Systems --> S5[5️⃣ SuperTrend<br/>Trend Ribbon]
+    Omnideck --> TrendGroup[TREND SYSTEMS 1-3]
+    Omnideck --> PatternGroup[PATTERN SYSTEMS 4-6]
+    Omnideck --> ZoneGroup[ZONE SYSTEMS 7-9]
+    Omnideck --> MetaGroup[META SYSTEM 10]
 
-    Systems --> S6[6️⃣ BMSB<br/>Support Band]
-    Systems --> S7[7️⃣ Regime Box<br/>Market Mood]
-    Systems --> S8[8️⃣ Supply/Demand<br/>Zones]
-    Systems --> S9[9️⃣ Candlesticks<br/>16 Patterns]
-    Systems --> S10[🔟 Meta Tools<br/>Integration]
+    TrendGroup --> S1[1️⃣ TD Sequential<br/>Exhaustion Counting]
+    TrendGroup --> S2[2️⃣ Squeeze Detector<br/>Volatility Breakouts]
+    TrendGroup --> S3[3️⃣ Liquidity Sweeps<br/>Stop Hunt Detection]
 
-    S1 & S2 & S3 & S4 & S5 & S6 & S7 & S8 & S9 & S10 --> Output[📈 Chart<br/>Display]
+    PatternGroup --> S4[4️⃣ EMA Trio<br/>Moving Average System]
+    PatternGroup --> S5[5️⃣ SuperTrend<br/>Adaptive Trend Ribbon]
+    PatternGroup --> S6[6️⃣ BMSB<br/>Support Band Analysis]
 
-    style Systems fill:#ff5722,color:#fff
-    style Output fill:#00bcd4,color:#fff
-    style S1 fill:#4caf50,color:#fff
-    style S2 fill:#4caf50,color:#fff
-    style S3 fill:#4caf50,color:#fff
-    style S4 fill:#4caf50,color:#fff
-    style S5 fill:#4caf50,color:#fff
-    style S6 fill:#2196f3,color:#fff
-    style S7 fill:#2196f3,color:#fff
-    style S8 fill:#2196f3,color:#fff
-    style S9 fill:#2196f3,color:#fff
-    style S10 fill:#9c27b0,color:#fff
+    ZoneGroup --> S7[7️⃣ Regime Box<br/>Market Mood Classification]
+    ZoneGroup --> S8[8️⃣ Supply/Demand<br/>Key Price Zones]
+    ZoneGroup --> S9[9️⃣ Candlestick Patterns<br/>16 Pattern Types]
+
+    MetaGroup --> S10[🔟 Meta Tools<br/>System Coordination]
+
+    S1 & S2 & S3 & S4 & S5 & S6 & S7 & S8 & S9 --> S10
+    S10 --> Output[📈 Unified Chart Display<br/>All Systems Combined]
+
+    style Omnideck fill:#ff5722,color:#fff,stroke:#e64a19,stroke-width:3px
+    style TrendGroup fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:3px
+    style PatternGroup fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
+    style ZoneGroup fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:3px
+    style MetaGroup fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:3px
+    style S10 fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:3px
+    style Output fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:4px
+    style Input fill:#37474f,color:#fff,stroke:#263238,stroke-width:3px
     </div>
     <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
       <strong>How to read:</strong> All 10 systems numbered 1-10. Each can be enabled/disabled independently. All active systems display on one chart.<br/>
