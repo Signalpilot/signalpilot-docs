@@ -502,7 +502,7 @@ body::before {
   .md-sidebar {
     position: -webkit-sticky !important;
     position: sticky !important;
-    top: 4.5rem !important; /* Reduced offset for more sidebar space */
+    top: 3.5rem !important; /* Reduced offset for more sidebar visibility */
     align-self: flex-start !important;
     display: block !important;
     visibility: visible !important;
@@ -512,7 +512,7 @@ body::before {
   .md-sidebar--primary {
     position: -webkit-sticky !important;
     position: sticky !important;
-    top: 4.5rem !important;
+    top: 3.5rem !important; /* Start higher for more visible content */
     display: block !important;
     visibility: visible !important;
     width: 12.1rem !important; /* Ensure primary sidebar has width */
@@ -551,7 +551,7 @@ body::before {
   .md-sidebar--secondary {
     position: -webkit-sticky !important;
     position: sticky !important;
-    top: 4.5rem !important;
+    top: 3.5rem !important; /* Start higher for more visible content */
     display: block !important;
     visibility: visible !important;
     width: 12.1rem !important; /* Ensure TOC sidebar has width */
@@ -560,7 +560,7 @@ body::before {
   /* Constrain sidebar height for sticky behavior */
   .md-sidebar__scrollwrap {
     height: auto !important;
-    max-height: 85vh !important; /* Give plenty of vertical space */
+    max-height: calc(100vh - 4rem) !important; /* Maximum space minus small top offset */
     min-height: 500px !important; /* Ensure minimum usable height */
     overflow-y: auto !important; /* Allow TOC to scroll if content is long */
   }
