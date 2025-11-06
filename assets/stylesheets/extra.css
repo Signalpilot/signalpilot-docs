@@ -565,8 +565,7 @@ body::before {
   /* Constrain sidebar height for sticky behavior */
   .md-sidebar__scrollwrap {
     height: auto !important;
-    max-height: calc(100vh - 2.5rem) !important; /* Maximum space - account for top offset */
-    min-height: calc(100vh - 3rem) !important; /* Force tall scrollwrap */
+    max-height: calc(100vh - 2rem) !important; /* Maximum space for scrolling */
     overflow-y: auto !important; /* Allow sidebar to scroll if content is long */
   }
 
