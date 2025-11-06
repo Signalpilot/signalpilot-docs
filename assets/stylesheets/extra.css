@@ -22,6 +22,7 @@ html {
   min-height: 100% !important;
   width: 100%;
   max-width: 100vw !important;
+  overflow-x: visible !important; /* Override main.css - sticky fix */
 }
 
 body {
@@ -869,7 +870,7 @@ body::before {
 .md-content__inner {
   max-width: 1400px;
   margin: 0 auto;
-  overflow-x: hidden; /* Prevent horizontal scroll on article content */
+  /* REMOVED overflow-x: hidden - breaks position: sticky on sidebars! */
 }
 
 .md-typeset {
