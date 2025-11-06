@@ -674,7 +674,8 @@
 
     .sp-chatbot-message-content {
         max-width: 85%;
-        font-size: 15px;
+        font-size: 14px;
+        padding: 10px 14px;
     }
 
     .sp-chatbot-header {
@@ -682,7 +683,11 @@
     }
 
     .sp-chatbot-title h3 {
-        font-size: 15px;
+        font-size: 14px;
+    }
+
+    .sp-chatbot-status {
+        font-size: 12px;
     }
 
     .sp-chatbot-messages {
@@ -691,6 +696,16 @@
 
     .sp-chatbot-input-wrapper {
         padding: 10px;
+    }
+
+    .sp-chatbot-input {
+        font-size: 14px;
+        padding: 10px 14px;
+    }
+
+    .sp-chatbot-quick-btn {
+        font-size: 13px;
+        padding: 6px 10px;
     }
 
     .sp-chatbot-toggle {
