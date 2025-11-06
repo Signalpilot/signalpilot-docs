@@ -139,6 +139,44 @@
       fontSize: 30
     });
   </script>
+
+  <!-- PAGE-SPECIFIC: Larger diagram text ONLY on this page -->
+  <style>
+    /* DIAGNOSTIC: Red border to verify deployment */
+    .mermaid {
+      border: 5px solid red !important;
+      padding: 20px !important;
+      background: rgba(255, 0, 0, 0.1) !important;
+    }
+
+    /* Force larger text in diagrams on THIS PAGE ONLY */
+    .mermaid text,
+    .mermaid .nodeLabel,
+    .mermaid .edgeLabel {
+      font-size: 30px !important;
+    }
+
+    .mermaid svg text {
+      font-size: 30px !important;
+    }
+
+    .mermaid svg .label text,
+    .mermaid svg .label foreignObject,
+    .mermaid svg g.label {
+      font-size: 30px !important;
+    }
+
+    .mermaid .node text,
+    .mermaid .nodes text,
+    .mermaid g.node text {
+      font-size: 30px !important;
+    }
+
+    .mermaid .edgeLabel text,
+    .mermaid g.edgeLabel text {
+      font-size: 30px !important;
+    }
+  </style>
   <!-- END SIGNAL PILOT ENHANCEMENTS - CSS -->
 
   <!-- Meta-Learning & Accessibility Enhancements -->
