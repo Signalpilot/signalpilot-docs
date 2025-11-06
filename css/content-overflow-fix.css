@@ -4,19 +4,15 @@
  */
 
 /* ============================================
-   PREVENT HORIZONTAL SCROLL
-   ============================================ */
-
-/* Only prevent body from scrolling horizontally */
-body {
-  overflow-x: hidden;
-}
-
-/* ============================================
-   FIX LONG URLs ONLY
+   MOBILE ONLY - PREVENT HORIZONTAL SCROLL
    ============================================ */
 
 @media screen and (max-width: 768px) {
+
+  /* Prevent body horizontal scroll on mobile only */
+  body {
+    overflow-x: hidden;
+  }
 
   /* Break long URLs that would cause overflow */
   .md-content a[href^="http"],
