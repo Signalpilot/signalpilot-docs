@@ -2,7 +2,7 @@
    SIGNALPILOT DOCS - CONSOLIDATED STYLES
    Combines: extra.css, brand.css, aurora.css, interactive-code.css
    Optimized for performance and maintainability
-   CACHE BUST: v2024-11-06-21:15
+   CACHE BUST: v2024-11-06-21:30-DIAGNOSTIC-RED-BORDER
    ================================================================================ */
 
 /* Force larger text in Mermaid diagrams for better readability */
@@ -16,6 +16,13 @@
 .mermaid .node circle,
 .mermaid .node polygon {
   font-size: 30px !important;
+}
+
+/* DIAGNOSTIC: Bright red outline to verify deployment */
+.mermaid {
+  border: 5px solid red !important;
+  padding: 20px !important;
+  background: rgba(255, 0, 0, 0.1) !important;
 }
 
 /* ========================================
