@@ -2068,33 +2068,37 @@
     <h4>Position Tracking State Machine</h4>
     <p style="margin-bottom: 1rem;">Volume Oracle tracks positions from entry to exit with real-time P&L:</p>
     <div class="mermaid">
-stateDiagram-v2
-    [*] --> NoPosition: Waiting
+graph TD
+    Start[📊 No Active Position<br/>Monitoring Market] --> Signal{VBS Signal<br/>Detected?}
 
-    NoPosition --> LongPosition: VBS+ Signal
-    NoPosition --> ShortPosition: VBS- Signal
+    Signal -->|VBS+ Bullish| Long[🟢 LONG POSITION OPENED<br/>Entry Price Recorded]
+    Signal -->|VBS- Bearish| Short[🔴 SHORT POSITION OPENED<br/>Entry Price Recorded]
 
-    LongPosition --> Tracking: Position Opened
-    Tracking --> ProfitCalc: Real-time P&L
-    ProfitCalc --> ExitTarget: Show Target Line
+    Long --> TrackLong[REAL-TIME TRACKING<br/>📈 P&L Updates Every Bar<br/>📍 Target Line Displayed<br/>⚖️ Risk/Reward Calculated]
+    Short --> TrackShort[REAL-TIME TRACKING<br/>📉 P&L Updates Every Bar<br/>📍 Target Line Displayed<br/>⚖️ Risk/Reward Calculated]
 
-    ExitTarget --> NoPosition: VBS- Exit Signal
-    ExitTarget --> NoPosition: Manual Exit
+    TrackLong --> ExitLong{Exit Condition?}
+    TrackShort --> ExitShort{Exit Condition?}
 
-    ShortPosition --> Tracking2: Position Opened
-    Tracking2 --> ProfitCalc2: Real-time P&L
-    ProfitCalc2 --> ExitTarget2: Show Target Line
+    ExitLong -->|VBS- Opposite Signal| Close1[✅ Position Closed<br/>Final P&L Recorded]
+    ExitLong -->|Manual Close| Close1
 
-    ExitTarget2 --> NoPosition: VBS+ Exit Signal
-    ExitTarget2 --> NoPosition: Manual Exit
+    ExitShort -->|VBS+ Opposite Signal| Close2[✅ Position Closed<br/>Final P&L Recorded]
+    ExitShort -->|Manual Close| Close2
 
-    note right of Tracking
-        Features:
-        - Entry price recorded
-        - Unrealized P&L displayed
-        - Risk/Reward calculated
-        - Exit target shown
-    end note
+    Close1 --> Start
+    Close2 --> Start
+
+    style Start fill:#37474f,color:#fff,stroke:#263238,stroke-width:3px
+    style Long fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
+    style Short fill:#f44336,color:#fff,stroke:#c62828,stroke-width:3px
+    style TrackLong fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:2px
+    style TrackShort fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:2px
+    style Close1 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:3px
+    style Close2 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:3px
+    style Signal fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:3px
+    style ExitLong fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:2px
+    style ExitShort fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:2px
     </div>
   </div>
 </div>
