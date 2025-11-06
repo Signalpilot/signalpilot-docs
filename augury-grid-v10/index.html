@@ -1939,7 +1939,7 @@
 
 <!-- Render the page content -->
 <h1 id="augury-grid-v10-multi-symbol-scanner">Augury Grid v1.0 — Multi-Symbol Scanner<a class="headerlink" href="#augury-grid-v10-multi-symbol-scanner" title="Permanent link">&para;</a></h1>
-<p>Real-time scanner displaying TD Sequential signals across multiple assets simultaneously. Monitor up to 40 tickers from single dashboard view.</p>
+<p>Real-time scanner displaying MACD histogram crossovers with confluence filters across multiple assets simultaneously. Monitor up to 40 tickers from single dashboard view.</p>
 
 <div class="sp-callout sp-callout--success" style="margin: 2rem 0; border-left: 4px solid #4caf50;">
   <div class="sp-callout__icon">👋</div>
@@ -1957,19 +1957,20 @@
     <p>A grid/table showing multiple symbols with their current status:</p>
     <ul style="margin: 1rem 0;">
       <li><strong>Symbol Name</strong> (e.g., BTC, ETH, AAPL, SPY)</li>
-      <li><strong>Current Signal</strong> (IGN, WRN, CAP, BDN, TD, or neutral)</li>
-      <li><strong>Signal Strength</strong> (count numbers like 9, 13, etc.)</li>
-      <li><strong>Status Color</strong> (green for bullish, red for bearish, neutral for no signal)</li>
+      <li><strong>Signal Direction</strong> (↑ Bullish or ↓ Bearish)</li>
+      <li><strong>Confluence Score</strong> (how many filters align)</li>
+      <li><strong>Take Profit Level (TP1)</strong> and current P&L</li>
+      <li><strong>Gauss Ribbon Status</strong> (trend filter)</li>
     </ul>
 
     <p><strong>What Signals Does It Show?</strong></p>
-    <p>Augury Grid uses the same TD Sequential signals as Pentarch:</p>
+    <p>Augury Grid detects MACD histogram crossovers filtered by multiple confluence factors:</p>
     <ul>
-      <li><strong>🟢 IGN (Ignition)</strong> = Upward momentum starting</li>
-      <li><strong>🟡 WRN (Warning)</strong> = Price getting stretched</li>
-      <li><strong>🔴 CAP/BDN (Climax/Breakdown)</strong> = Exhaustion detected</li>
-      <li><strong>🟣 TD (Touchdown)</strong> = Potential reversal area</li>
-      <li><strong>⚪ NO SIGNAL</strong> = Neutral—just counting/monitoring</li>
+      <li><strong>↑ Bullish Signal</strong> = MACD histogram crosses above zero with confluence confirmation</li>
+      <li><strong>↓ Bearish Signal</strong> = MACD histogram crosses below zero with confluence confirmation</li>
+      <li><strong>Confluence Filters:</strong> ADX (trend strength), Higher Timeframe alignment, OBV (volume), RSI (momentum), Distance from moving average</li>
+      <li><strong>Score Display</strong> = Shows how many confluence factors align (higher = stronger signal)</li>
+      <li><strong>⚪ NO SIGNAL</strong> = MACD histogram hasn't crossed or confluence filters not met</li>
     </ul>
 
     <p><strong>Perfect For:</strong></p>
@@ -1981,27 +1982,27 @@
     </ul>
 
     <details style="margin-top: 1rem;">
-      <summary style="cursor: pointer; font-weight: 600; color: #4caf50;">🎓 What's TD Sequential counting?</summary>
+      <summary style="cursor: pointer; font-weight: 600; color: #4caf50;">🎓 What's MACD histogram?</summary>
       <div style="padding-left: 1rem; margin-top: 0.5rem;">
-        <p>TD Sequential is a counting system that identifies exhaustion points. It counts consecutive price bars moving in one direction:</p>
+        <p>MACD (Moving Average Convergence Divergence) is a momentum indicator that shows the relationship between two moving averages. The histogram shows the difference between the MACD line and its signal line:</p>
         <ul>
-          <li>Counts from 1 to 9 (Setup phase)</li>
-          <li>Then 1 to 13 (Countdown phase)</li>
+          <li><strong>Histogram crosses above zero</strong> = Bullish momentum developing</li>
+          <li><strong>Histogram crosses below zero</strong> = Bearish momentum developing</li>
         </ul>
-        <p>When the count reaches 9 or 13, that's an exhaustion signal—like a car running out of gas. The move may be ready to reverse or take a break.</p>
-        <p><strong>You don't need to understand the counting mechanics!</strong> Augury Grid does the counting for you and shows you only the relevant signals.</p>
+        <p>Augury Grid doesn't just show raw MACD crosses—it adds <strong>confluence filters</strong> (ADX, HTF, OBV, RSI, distance) to show only the highest-probability setups.</p>
+        <p><strong>You don't need to understand the technical details!</strong> Augury Grid analyzes all the confluence factors and shows you a simple score and direction for each symbol.</p>
       </div>
     </details>
 
     <p><strong>Beginner Starting Point:</strong></p>
     <ol>
       <li><strong>Start with 4-8 symbols</strong> you're familiar with (don't overwhelm yourself with 40)</li>
-      <li><strong>Watch for green (IGN) signals</strong> on your watchlist</li>
+      <li><strong>Watch for ↑ Bullish or ↓ Bearish signals</strong> with high confluence scores</li>
       <li><strong>Click any symbol</strong> in the grid to jump directly to that chart</li>
-      <li><strong>Use it as a filter</strong>—only look at charts showing active signals</li>
+      <li><strong>Use it as a filter</strong>—only look at charts showing active MACD crossover signals</li>
     </ol>
 
-    <p style="margin-top: 1rem;"><strong>💡 Pro Tip:</strong> Augury Grid is perfect for crypto traders monitoring 10+ pairs, or stock traders scanning their watchlist. It saves you from clicking through dozens of charts looking for setups.</p>
+    <p style="margin-top: 1rem;"><strong>💡 Pro Tip:</strong> Augury Grid is perfect for crypto traders monitoring 10+ pairs, or stock traders scanning their watchlist for MACD momentum shifts. It saves you from clicking through dozens of charts looking for setups.</p>
   </div>
 </div>
 
@@ -2012,45 +2013,43 @@
   <div class="sp-callout__icon">📊</div>
   <div class="sp-callout__content">
     <h4>Grid Scanning Workflow</h4>
-    <p style="margin-bottom: 1rem;">Augury Grid scans up to 8 symbols simultaneously and displays TD Sequential analysis:</p>
+    <p style="margin-bottom: 1rem;">Augury Grid scans up to 8 symbols simultaneously and displays MACD confluence analysis:</p>
     <div class="mermaid">
 graph TD
     Config[📊 Configure Up To 8 Symbols] --> Scanner[AUGURY GRID SCANNER<br/>Monitors All Symbols]
 
-    Scanner --> S1[1️⃣ Symbol 1<br/>TD Sequential Analysis]
-    S1 --> S2[2️⃣ Symbol 2<br/>TD Sequential Analysis]
-    S2 --> S3[3️⃣ Symbol 3<br/>TD Sequential Analysis]
-    S3 --> S4[4️⃣ Symbol 4<br/>TD Sequential Analysis]
-    S4 --> S5[5️⃣ Symbol 5<br/>TD Sequential Analysis]
-    S5 --> S6[6️⃣ Symbol 6<br/>TD Sequential Analysis]
-    S6 --> S7[7️⃣ Symbol 7<br/>TD Sequential Analysis]
-    S7 --> S8[8️⃣ Symbol 8<br/>TD Sequential Analysis]
+    Scanner --> S1[1️⃣ Symbol 1<br/>MACD + Confluence Analysis]
+    S1 --> S2[2️⃣ Symbol 2<br/>MACD + Confluence Analysis]
+    S2 --> S3[3️⃣ Symbol 3<br/>MACD + Confluence Analysis]
+    S3 --> S4[4️⃣ Symbol 4<br/>MACD + Confluence Analysis]
+    S4 --> S5[5️⃣ Symbol 5<br/>MACD + Confluence Analysis]
+    S5 --> S6[6️⃣ Symbol 6<br/>MACD + Confluence Analysis]
+    S6 --> S7[7️⃣ Symbol 7<br/>MACD + Confluence Analysis]
+    S7 --> S8[8️⃣ Symbol 8<br/>MACD + Confluence Analysis]
 
     S8 --> Display[GRID DISPLAY<br/>All Symbols Visible at Once]
 
     Display --> Results{Symbol Status}
 
-    Results --> IGN[🟢 IGN SIGNAL<br/>Strong Bullish Setup<br/>High Priority]
-    Results --> WRN[🟡 WRN SIGNAL<br/>Warning Level<br/>Monitor Closely]
-    Results --> CAP[🔴 CAP/BDN SIGNAL<br/>Exhaustion Level<br/>Exercise Caution]
-    Results --> Neutral[⚪ NO SIGNAL<br/>Neutral/Counting<br/>Wait & Watch]
+    Results --> Bullish[↑ BULLISH SIGNAL<br/>MACD Cross + Score<br/>TP1 & P/L]
+    Results --> Bearish[↓ BEARISH SIGNAL<br/>MACD Cross + Score<br/>TP1 & P/L]
+    Results --> Neutral[⚪ NO SIGNAL<br/>No MACD Crossover<br/>Waiting]
 
     style Config fill:#37474f,color:#fff,stroke:#263238,stroke-width:3px
     style Scanner fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:3px
     style Display fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:3px
     style Results fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:3px
-    style IGN fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
-    style WRN fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:3px
-    style CAP fill:#f44336,color:#fff,stroke:#c62828,stroke-width:3px
+    style Bullish fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
+    style Bearish fill:#f44336,color:#fff,stroke:#c62828,stroke-width:3px
     style Neutral fill:#757575,color:#fff,stroke:#616161,stroke-width:2px
     </div>
   </div>
 </div>
 
-<p>Augury Grid displays TD Sequential exhaustion signals for multiple symbols on one screen. Each symbol shows current count status and recent signals in grid format.</p>
-<p><strong>Display Format:</strong> Organized grid showing ticker symbols with their current TD counts and signal status.</p>
+<p>Augury Grid displays MACD histogram crossover signals with confluence filtering for multiple symbols on one screen. Each symbol shows current signal direction, confluence score, TP1, P&L, and Gauss Ribbon status.</p>
+<p><strong>Display Format:</strong> Organized grid showing ticker symbols with their MACD signal direction (↑/↓), confluence score, and performance metrics.</p>
 <p><strong>Monitoring Capacity:</strong> Up to 40 symbols can be tracked simultaneously.</p>
-<p><strong>Signal Detection:</strong> Uses TD Sequential methodology (same as Omnideck System 1) to identify 9-count exhaustion patterns across all tracked symbols.</p>
+<p><strong>Signal Detection:</strong> Uses MACD histogram crossovers filtered by ADX, higher timeframe alignment, OBV, RSI, and distance metrics to identify high-probability momentum shifts.</p>
 <p><strong>Timeframe Compatibility:</strong> Works on all timeframes. All tracked symbols use the same timeframe as the chart.</p>
 <hr />
 <h2 id="educational-example-grid-view-november-2024">📊 Educational Example: Grid View (November 2024)<a class="headerlink" href="#educational-example-grid-view-november-2024" title="Permanent link">&para;</a></h2>
@@ -2060,51 +2059,65 @@ graph TD
 <thead>
 <tr>
 <th>Symbol</th>
-<th>Current Count</th>
-<th>Status</th>
+<th>Signal</th>
+<th>Score</th>
+<th>TP1</th>
+<th>P&L</th>
 <th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>BTC/USD</td>
-<td>Green 8</td>
-<td>Approaching</td>
-<td>One bar from Green 9</td>
+<td>↑ Bullish</td>
+<td>4/5</td>
+<td>$65,200</td>
+<td>+2.3%</td>
+<td>Strong confluence</td>
 </tr>
 <tr>
 <td>ETH/USD</td>
-<td>Green 9</td>
-<td>⚠️ Signal</td>
-<td>Exhaustion detected</td>
+<td>↑ Bullish</td>
+<td>5/5</td>
+<td>$3,580</td>
+<td>+3.1%</td>
+<td>All filters aligned</td>
 </tr>
 <tr>
 <td>SPY</td>
-<td>Red 5</td>
-<td>Counting</td>
-<td>Mid-sequence</td>
+<td>↓ Bearish</td>
+<td>3/5</td>
+<td>$432</td>
+<td>-1.2%</td>
+<td>Moderate confluence</td>
 </tr>
 <tr>
 <td>QQQ</td>
-<td>Neutral</td>
 <td>—</td>
-<td>No active sequence</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>No crossover</td>
 </tr>
 <tr>
 <td>AAPL</td>
-<td>Red 9</td>
-<td>⚠️ Signal</td>
-<td>Exhaustion detected</td>
+<td>↓ Bearish</td>
+<td>4/5</td>
+<td>$168</td>
+<td>-0.8%</td>
+<td>Strong confluence</td>
 </tr>
 <tr>
 <td>TSLA</td>
-<td>Green 3</td>
-<td>Counting</td>
-<td>Early decline sequence</td>
+<td>↑ Bullish</td>
+<td>2/5</td>
+<td>$248</td>
+<td>+0.5%</td>
+<td>Weak confluence</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Pattern Observed:</strong> ETH/USD and AAPL both showed Green 9 and Red 9 signals respectively at same time, allowing simultaneous monitoring of multiple exhaustion conditions across different assets.</p>
+<p><strong>Pattern Observed:</strong> ETH/USD showed perfect 5/5 confluence score while BTC/USD had strong 4/5, allowing simultaneous monitoring of multiple high-probability MACD momentum shifts across different assets.</p>
 <p><em>This example demonstrates grid monitoring capability. Individual interpretation and outcomes vary.</em></p>
 <hr />
 <h2 id="settings">⚙️ Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h2>
@@ -2175,26 +2188,28 @@ graph TD
 </tbody>
 </table>
 <hr />
-<h2 id="td-sequential-in-grid-format">🔢 TD Sequential in Grid Format<a class="headerlink" href="#td-sequential-in-grid-format" title="Permanent link">&para;</a></h2>
+<h2 id="td-sequential-in-grid-format">🔢 MACD Confluence Scanner in Grid Format<a class="headerlink" href="#td-sequential-in-grid-format" title="Permanent link">&para;</a></h2>
 <h3 id="visual-display-elements">Visual Display Elements<a class="headerlink" href="#visual-display-elements" title="Permanent link">&para;</a></h3>
-<p><strong>Count Display:</strong><br />
-- <strong>Green Numbers (1-9):</strong> Downtrend exhaustion counting<br />
-- <strong>Red Numbers (1-9):</strong> Uptrend exhaustion counting<br />
-- <strong>Neutral (—):</strong> No active sequence</p>
-<p><strong>Signal Indicators:</strong><br />
-- <strong>⚠️ Green 9:</strong> Oversold exhaustion detected<br />
-- <strong>⚠️ Red 9:</strong> Overbought exhaustion detected<br />
-- <strong>Approaching (8):</strong> One bar away from signal</p>
+<p><strong>Signal Direction:</strong><br />
+- <strong>↑ Bullish:</strong> MACD histogram crossed above zero with confluence<br />
+- <strong>↓ Bearish:</strong> MACD histogram crossed below zero with confluence<br />
+- <strong>Neutral (—):</strong> No MACD crossover or insufficient confluence</p>
+<p><strong>Performance Metrics:</strong><br />
+- <strong>Score (X/5):</strong> Number of confluence filters aligned (ADX, HTF, OBV, RSI, Distance)<br />
+- <strong>TP1:</strong> Calculated take-profit level based on signal<br />
+- <strong>P&L (%):</strong> Current profit/loss from signal entry<br />
+- <strong>Gauss Ribbon:</strong> Trend filter status</p>
 <h3 id="grid-cell-information">Grid Cell Information<a class="headerlink" href="#grid-cell-information" title="Permanent link">&para;</a></h3>
 <p>Each symbol cell displays:<br />
 1. <strong>Ticker Symbol</strong> - Asset identifier<br />
-2. <strong>Current Count</strong> - Active TD sequence position (1-9 or neutral)<br />
-3. <strong>Status Indicator</strong> - Signal present, approaching, counting, or neutral<br />
-4. <strong>Color Coding</strong> - Visual identification of bullish/bearish sequences</p>
+2. <strong>Signal Direction</strong> - ↑ Bullish, ↓ Bearish, or — (neutral)<br />
+3. <strong>Confluence Score</strong> - X/5 rating showing filter alignment<br />
+4. <strong>TP1 & P&L</strong> - Target price and current performance<br />
+5. <strong>Color Coding</strong> - Visual identification of bullish (green) or bearish (red) signals</p>
 <p><strong>Example Cell:</strong></p>
 <pre><code>ETH/USD
-Green 9 ⚠️
-(Exhaustion detected)
+↑ Bullish | Score: 5/5
+TP1: $3,580 | P&L: +3.1%
 </code></pre>
 <hr />
 <h2 id="educational-example-crypto-market-scan-december-2024">📖 Educational Example: Crypto Market Scan (December 2024)<a class="headerlink" href="#educational-example-crypto-market-scan-december-2024" title="Permanent link">&para;</a></h2>
@@ -2207,132 +2222,143 @@ Green 9 ⚠️
 <tr>
 <th>Rank</th>
 <th>Symbol</th>
-<th>Count</th>
-<th>Status</th>
+<th>Signal</th>
+<th>Score</th>
 <th>Price</th>
-<th>Analysis</th>
+<th>TP1</th>
+<th>P&L</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1</td>
 <td>BTC/USD</td>
-<td>Green 9</td>
-<td>⚠️ Signal</td>
+<td>↑ Bullish</td>
+<td>4/5</td>
 <td>$63,200</td>
-<td>Oversold conditions</td>
+<td>$66,500</td>
+<td>+1.8%</td>
 </tr>
 <tr>
 <td>2</td>
 <td>ETH/USD</td>
-<td>Green 8</td>
-<td>Approaching</td>
+<td>↑ Bullish</td>
+<td>5/5</td>
 <td>$3,420</td>
-<td>Near exhaustion</td>
+<td>$3,650</td>
+<td>+2.4%</td>
 </tr>
 <tr>
 <td>3</td>
 <td>BNB/USD</td>
-<td>Neutral</td>
+<td>—</td>
 <td>—</td>
 <td>$310</td>
-<td>No sequence</td>
+<td>—</td>
+<td>—</td>
 </tr>
 <tr>
 <td>4</td>
 <td>SOL/USD</td>
-<td>Green 9</td>
-<td>⚠️ Signal</td>
+<td>↑ Bullish</td>
+<td>4/5</td>
 <td>$98</td>
-<td>Oversold conditions</td>
+<td>$105</td>
+<td>+2.1%</td>
 </tr>
 <tr>
 <td>5</td>
 <td>XRP/USD</td>
-<td>Red 3</td>
-<td>Counting</td>
+<td>↓ Bearish</td>
+<td>3/5</td>
 <td>$0.62</td>
-<td>Early uptrend count</td>
+<td>$0.58</td>
+<td>-1.2%</td>
 </tr>
 <tr>
 <td>6</td>
 <td>ADA/USD</td>
-<td>Green 6</td>
-<td>Counting</td>
+<td>↑ Bullish</td>
+<td>3/5</td>
 <td>$0.58</td>
-<td>Mid-decline sequence</td>
+<td>$0.62</td>
+<td>+0.9%</td>
 </tr>
 <tr>
 <td>7</td>
 <td>AVAX/USD</td>
-<td>Green 9</td>
-<td>⚠️ Signal</td>
+<td>↑ Bullish</td>
+<td>5/5</td>
 <td>$35</td>
-<td>Oversold conditions</td>
+<td>$38</td>
+<td>+3.2%</td>
 </tr>
 <tr>
 <td>8</td>
 <td>DOT/USD</td>
-<td>Neutral</td>
+<td>—</td>
 <td>—</td>
 <td>$7.20</td>
-<td>No sequence</td>
+<td>—</td>
+<td>—</td>
 </tr>
 <tr>
 <td>9</td>
 <td>MATIC/USD</td>
-<td>Red 9</td>
-<td>⚠️ Signal</td>
+<td>↓ Bearish</td>
+<td>4/5</td>
 <td>$0.89</td>
-<td>Overbought conditions</td>
+<td>$0.82</td>
+<td>-2.1%</td>
 </tr>
 <tr>
 <td>10</td>
 <td>LINK/USD</td>
-<td>Green 4</td>
-<td>Counting</td>
+<td>↑ Bullish</td>
+<td>2/5</td>
 <td>$14.50</td>
-<td>Decline sequence</td>
+<td>$15.20</td>
+<td>+0.5%</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Multi-Signal Detection:</strong> Three symbols (BTC, SOL, AVAX) showed Green 9 simultaneously, indicating broad oversold conditions across major cryptocurrencies. One symbol (MATIC) showed Red 9, indicating isolated strength.</p>
-<p><strong>Outcome Observed:</strong> All three Green 9 signals (BTC, SOL, AVAX) preceded price increases over following 24-48 hours.</p>
+<p><strong>Multi-Signal Detection:</strong> Three symbols (BTC, SOL, AVAX) showed bullish MACD signals with strong 4-5/5 confluence scores, indicating broad bullish momentum across major cryptocurrencies. ETH and AVAX both showed perfect 5/5 confluence.</p>
+<p><strong>Outcome Observed:</strong> All high-confluence bullish signals (ETH 5/5, AVAX 5/5, BTC 4/5) preceded price increases over following 24-48 hours.</p>
 <p><em>This example demonstrates simultaneous multi-symbol monitoring. Individual interpretation and outcomes vary.</em></p>
 <hr />
 <h2 id="scanning-strategies">🎯 Scanning Strategies<a class="headerlink" href="#scanning-strategies" title="Permanent link">&para;</a></h2>
 <h3 id="strategy-1-broad-market-scan">Strategy 1: Broad Market Scan<a class="headerlink" href="#strategy-1-broad-market-scan" title="Permanent link">&para;</a></h3>
 <p><strong>Approach:</strong><br />
 - Monitor 20-40 symbols across multiple sectors<br />
-- Scan for any Green 9 or Red 9 signals appearing<br />
-- Focus attention on symbols showing exhaustion</p>
+- Scan for any bullish (↑) or bearish (↓) MACD signals with high confluence scores<br />
+- Focus attention on symbols showing 4/5 or 5/5 confluence</p>
 <p><strong>Use Case:</strong> Opportunity discovery across diverse markets</p>
 <p><strong>Example Watchlist:</strong> Major indices, sector ETFs, top crypto, forex pairs, commodities</p>
 <h3 id="strategy-2-sector-rotation-scan">Strategy 2: Sector Rotation Scan<a class="headerlink" href="#strategy-2-sector-rotation-scan" title="Permanent link">&para;</a></h3>
 <p><strong>Approach:</strong><br />
 - Monitor 10-15 symbols within specific sector<br />
-- Compare relative exhaustion levels<br />
-- Identify sector-wide patterns</p>
+- Compare relative confluence scores and momentum direction<br />
+- Identify sector-wide momentum patterns</p>
 <p><strong>Use Case:</strong> Sector-specific analysis and comparison</p>
 <p><strong>Example Watchlist:</strong> All semiconductor stocks (NVDA, AMD, INTC, TSM, AVGO, QCOM, MU, etc.)</p>
 <h3 id="strategy-3-correlation-scan">Strategy 3: Correlation Scan<a class="headerlink" href="#strategy-3-correlation-scan" title="Permanent link">&para;</a></h3>
 <p><strong>Approach:</strong><br />
 - Monitor related assets (e.g., BTC + major altcoins)<br />
-- Observe if signals appear simultaneously or in sequence<br />
-- Identify correlation patterns</p>
+- Observe if MACD signals appear simultaneously or in sequence<br />
+- Identify correlation patterns in momentum shifts</p>
 <p><strong>Use Case:</strong> Understanding market leadership and correlation</p>
 <p><strong>Example Watchlist:</strong> BTC/USD + top 15 altcoins</p>
 <h3 id="strategy-4-portfolio-monitor">Strategy 4: Portfolio Monitor<a class="headerlink" href="#strategy-4-portfolio-monitor" title="Permanent link">&para;</a></h3>
 <p><strong>Approach:</strong><br />
 - Track symbols in current portfolio holdings<br />
-- Monitor for exhaustion signals on held positions<br />
-- Use as position management reference</p>
-<p><strong>Use Case:</strong> Portfolio-level awareness of exhaustion conditions</p>
+- Monitor for MACD momentum shifts on held positions<br />
+- Use confluence scores as position management reference</p>
+<p><strong>Use Case:</strong> Portfolio-level awareness of momentum changes</p>
 <p><strong>Example Watchlist:</strong> Personal holdings (stocks, crypto, etc.)</p>
 <hr />
 <h2 id="alert-configuration">🔔 Alert Configuration<a class="headerlink" href="#alert-configuration" title="Permanent link">&para;</a></h2>
 <p><strong>Multi-Symbol Alert System:</strong></p>
-<p>Augury Grid can trigger alerts when any tracked symbol reaches TD 9 conditions.</p>
+<p>Augury Grid can trigger alerts when any tracked symbol generates a MACD crossover signal with confluence confirmation.</p>
 <p><strong>Available Alert Types:</strong></p>
 <table>
 <thead>
@@ -2344,19 +2370,24 @@ Green 9 ⚠️
 </thead>
 <tbody>
 <tr>
-<td><strong>Any Green 9</strong></td>
-<td>Any tracked symbol reaches Green 9</td>
-<td>"Symbol XYZ: Green 9 detected"</td>
+<td><strong>Any Bullish Signal</strong></td>
+<td>Any tracked symbol shows bullish MACD crossover</td>
+<td>"Symbol XYZ: Bullish signal (Score: 5/5)"</td>
 </tr>
 <tr>
-<td><strong>Any Red 9</strong></td>
-<td>Any tracked symbol reaches Red 9</td>
-<td>"Symbol XYZ: Red 9 detected"</td>
+<td><strong>Any Bearish Signal</strong></td>
+<td>Any tracked symbol shows bearish MACD crossover</td>
+<td>"Symbol XYZ: Bearish signal (Score: 4/5)"</td>
 </tr>
 <tr>
 <td><strong>Specific Symbol</strong></td>
 <td>Individual symbol alerts</td>
-<td>"BTC/USD: Green 9 detected"</td>
+<td>"BTC/USD: Bullish signal (Score: 5/5)"</td>
+</tr>
+<tr>
+<td><strong>High Confluence Only</strong></td>
+<td>Only signals with 4/5 or 5/5 scores</td>
+<td>"ETH/USD: High-probability bullish (5/5)"</td>
 </tr>
 <tr>
 <td><strong>Multiple Simultaneous</strong></td>
@@ -2368,13 +2399,15 @@ Green 9 ⚠️
 <p><strong>Alert Setup:</strong><br />
 1. Open indicator settings<br />
 2. Navigate to alert section<br />
-3. Enable "Any Symbol Green 9" or "Any Symbol Red 9"<br />
-4. Optional: Enable specific symbol alerts<br />
-5. Configure notification preferences (popup, email, webhook)</p>
+3. Enable "Any Bullish Signal" or "Any Bearish Signal"<br />
+4. Optional: Set minimum confluence score threshold (e.g., 4/5 or higher only)<br />
+5. Optional: Enable specific symbol alerts<br />
+6. Configure notification preferences (popup, email, webhook)</p>
 <p><strong>Alert Advantages:</strong><br />
 - No need to watch grid constantly<br />
-- Immediate notification when opportunity appears<br />
-- Can monitor 40 symbols with single alert configuration</p>
+- Immediate notification when high-confluence MACD signals appear<br />
+- Can monitor 40 symbols with single alert configuration<br />
+- Filter by confluence score to reduce noise</p>
 <hr />
 <h2 id="grid-update-behavior">🔄 Grid Update Behavior<a class="headerlink" href="#grid-update-behavior" title="Permanent link">&para;</a></h2>
 <p><strong>Real-Time Updates:</strong></p>
@@ -2383,49 +2416,51 @@ Green 9 ⚠️
 - 5-minute chart: Updates every 5 minutes<br />
 - 1-hour chart: Updates every hour<br />
 - Daily chart: Updates at daily close</p>
-<p><strong>Count Progression:</strong></p>
-<p>Counts increment when close-to-close conditions met:<br />
-- Green counts: Current close &lt; close 4 bars ago<br />
-- Red counts: Current close &gt; close 4 bars ago</p>
+<p><strong>Signal Generation:</strong></p>
+<p>MACD signals generate when histogram crosses zero with confluence confirmation:<br />
+- Bullish signal: MACD histogram crosses above zero + confluence filters<br />
+- Bearish signal: MACD histogram crosses below zero + confluence filters</p>
 <p><strong>Signal Persistence:</strong></p>
-<p>Green 9 and Red 9 signals remain displayed until:<br />
-- Count resets (opposite direction movement)<br />
-- New count sequence begins</p>
+<p>MACD signals remain displayed until:<br />
+- Histogram crosses back in opposite direction<br />
+- New crossover signal begins<br />
+- Confluence score updates in real-time as filters change</p>
 <hr />
 <h2 id="interpreting-grid-patterns">📚 Interpreting Grid Patterns<a class="headerlink" href="#interpreting-grid-patterns" title="Permanent link">&para;</a></h2>
-<h3 id="pattern-1-broad-market-exhaustion">Pattern 1: Broad Market Exhaustion<a class="headerlink" href="#pattern-1-broad-market-exhaustion" title="Permanent link">&para;</a></h3>
+<h3 id="pattern-1-broad-market-exhaustion">Pattern 1: Broad Market Momentum<a class="headerlink" href="#pattern-1-broad-market-exhaustion" title="Permanent link">&para;</a></h3>
 <p><strong>Observation:</strong><br />
-Multiple symbols (5+) show Green 9 or Red 9 simultaneously across same sector or asset class.</p>
+Multiple symbols (5+) show bullish or bearish MACD signals with high confluence (4-5/5) simultaneously across same sector or asset class.</p>
 <p><strong>Interpretation:</strong><br />
-Sector-wide or market-wide exhaustion conditions present.</p>
-<p><strong>Example:</strong> 8 out of 10 tech stocks showing Red 9 → Broad tech sector exhaustion characteristics.</p>
+Sector-wide or market-wide momentum shift in progress.</p>
+<p><strong>Example:</strong> 8 out of 10 tech stocks showing bearish signals with 4-5/5 scores → Broad tech sector momentum reversal characteristics.</p>
 <h3 id="pattern-2-divergent-signals">Pattern 2: Divergent Signals<a class="headerlink" href="#pattern-2-divergent-signals" title="Permanent link">&para;</a></h3>
 <p><strong>Observation:</strong><br />
-Some symbols show Green 9 while related symbols show Red 9.</p>
+Some symbols show bullish signals while related symbols show bearish signals.</p>
 <p><strong>Interpretation:</strong><br />
-Divergence in relative strength within sector or asset class.</p>
-<p><strong>Example:</strong> BTC showing Green 9, ETH showing Red 9 → Divergent exhaustion levels between major crypto assets.</p>
+Divergence in momentum direction within sector or asset class.</p>
+<p><strong>Example:</strong> BTC showing bullish 5/5 signal, ETH showing bearish 4/5 signal → Divergent momentum between major crypto assets.</p>
 <h3 id="pattern-3-sequential-cascade">Pattern 3: Sequential Cascade<a class="headerlink" href="#pattern-3-sequential-cascade" title="Permanent link">&para;</a></h3>
 <p><strong>Observation:</strong><br />
-Signals appear across related symbols in sequence over time rather than simultaneously.</p>
+MACD signals appear across related symbols in sequence over time rather than simultaneously.</p>
 <p><strong>Interpretation:</strong><br />
 Potential leadership or lagging pattern within sector.</p>
-<p><strong>Example:</strong> Tech mega-caps signal first (AAPL, MSFT), then mid-caps signal days later → Potential cascade pattern.</p>
-<h3 id="pattern-4-isolated-signal">Pattern 4: Isolated Signal<a class="headerlink" href="#pattern-4-isolated-signal" title="Permanent link">&para;</a></h3>
+<p><strong>Example:</strong> Tech mega-caps signal first (AAPL, MSFT), then mid-caps signal days later → Potential cascade pattern in momentum shifts.</p>
+<h3 id="pattern-4-isolated-signal">Pattern 4: Isolated High-Probability Signal<a class="headerlink" href="#pattern-4-isolated-signal" title="Permanent link">&para;</a></h3>
 <p><strong>Observation:</strong><br />
-One symbol shows signal while all others remain neutral or counting.</p>
+One symbol shows signal with 5/5 confluence while all others remain neutral or show low-confluence signals.</p>
 <p><strong>Interpretation:</strong><br />
-Asset-specific exhaustion rather than broad market pattern.</p>
-<p><strong>Example:</strong> Single stock shows Red 9 while entire sector neutral → Isolated strength characteristics.</p>
+Asset-specific momentum shift with exceptional confluence rather than broad market pattern.</p>
+<p><strong>Example:</strong> Single stock shows bullish 5/5 signal while entire sector neutral → Isolated high-probability setup characteristics.</p>
 <hr />
 <div class="sp-callout sp-callout--summary">
   <div class="sp-callout__title">What You've Learned</div>
   <ul>
-    <li><strong>Multi-Symbol Monitoring:</strong> Augury Grid simultaneously tracks up to 40 symbols on a single chart, providing real-time TD Sequential exhaustion signals across your entire watchlist</li>
-    <li><strong>TD Sequential Methodology:</strong> Displays Green 9 (oversold exhaustion) and Red 9 (overbought exhaustion) signals based on Thomas DeMark's proven exhaustion detection system</li>
+    <li><strong>Multi-Symbol Monitoring:</strong> Augury Grid simultaneously tracks up to 40 symbols on a single chart, providing real-time MACD histogram crossovers with confluence scores across your entire watchlist</li>
+    <li><strong>MACD Confluence Methodology:</strong> Displays bullish (↑) and bearish (↓) MACD histogram crossovers filtered by 5 confluence factors: ADX (trend strength), Higher Timeframe alignment, OBV (volume), RSI (momentum), and Distance from moving average</li>
+    <li><strong>Performance Metrics:</strong> Each symbol displays Signal Direction, Confluence Score (X/5), Take Profit level (TP1), current P&L percentage, and Gauss Ribbon status for comprehensive signal evaluation</li>
     <li><strong>Customizable Symbol Lists:</strong> Configure any combination of stocks, crypto, forex, futures, or commodities - symbols don't need to be from the same market or asset class</li>
-    <li><strong>Alert-Ready Scanning:</strong> Set TradingView alerts for any symbol in the grid to receive instant notifications when exhaustion signals appear</li>
-    <li><strong>Pattern Recognition:</strong> Identify broad market exhaustion (multiple symbols signaling together), divergent signals (conflicting exhaustion levels), sequential cascades (signals appearing in order), and isolated signals (single-symbol exhaustion)</li>
+    <li><strong>Alert-Ready Scanning:</strong> Set TradingView alerts for any symbol in the grid to receive instant notifications when high-confluence MACD crossover signals appear</li>
+    <li><strong>Pattern Recognition:</strong> Identify broad market momentum (multiple symbols signaling together with high confluence), divergent signals (conflicting directions), and isolated high-probability setups (5/5 confluence scores)</li>
     <li><strong>Grid Layout Options:</strong> Choose from 5×8, 6×6, 8×5, or 10×4 layouts depending on monitoring needs and screen space</li>
     <li><strong>Efficient Performance:</strong> Optimized to handle up to 40 symbols without performance degradation, with continuous real-time updates visible directly on your chart</li>
   </ul>
@@ -2448,7 +2483,7 @@ Asset-specific exhaustion rather than broad market pattern.</p>
 <h3 id="q-can-other-users-see-my-watchlist">Q: Can other users see my watchlist?<a class="headerlink" href="#q-can-other-users-see-my-watchlist" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> No. Symbol lists stored in personal indicator settings, not visible to others.</p>
 <h3 id="q-how-is-this-different-from-tradingviews-native-screener">Q: How is this different from TradingView's native screener?<a class="headerlink" href="#q-how-is-this-different-from-tradingviews-native-screener" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> Augury Grid displays on chart with continuous real-time updates, while native screener requires manual refresh and opens separately. Grid format provides at-a-glance monitoring of specific exhaustion methodology.</p>
+<p><strong>A:</strong> Augury Grid displays on chart with continuous real-time updates, while native screener requires manual refresh and opens separately. Grid format provides at-a-glance monitoring of MACD confluence methodology with live performance metrics (TP1, P&L).</p>
 <h3 id="q-can-i-export-grid-data">Q: Can I export grid data?<a class="headerlink" href="#q-can-i-export-grid-data" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> Grid data can be captured via TradingView alert webhooks. Each alert includes symbol and signal type data.</p>
 <h3 id="q-does-it-work-on-mobile">Q: Does it work on mobile?<a class="headerlink" href="#q-does-it-work-on-mobile" title="Permanent link">&para;</a></h3>
@@ -2465,28 +2500,36 @@ Asset-specific exhaustion rather than broad market pattern.</p>
 </thead>
 <tbody>
 <tr>
-<td><strong>Green 1-8</strong></td>
-<td>Downtrend exhaustion counting (not yet complete)</td>
+<td><strong>↑ Bullish</strong></td>
+<td>MACD histogram crossed above zero with confluence</td>
 </tr>
 <tr>
-<td><strong>Green 9 ⚠️</strong></td>
-<td>Oversold exhaustion detected</td>
+<td><strong>↓ Bearish</strong></td>
+<td>MACD histogram crossed below zero with confluence</td>
 </tr>
 <tr>
-<td><strong>Red 1-8</strong></td>
-<td>Uptrend exhaustion counting (not yet complete)</td>
+<td><strong>Score: 5/5</strong></td>
+<td>All confluence filters aligned (highest probability)</td>
 </tr>
 <tr>
-<td><strong>Red 9 ⚠️</strong></td>
-<td>Overbought exhaustion detected</td>
+<td><strong>Score: 4/5</strong></td>
+<td>Strong confluence (4 of 5 filters aligned)</td>
+</tr>
+<tr>
+<td><strong>Score: 3/5</strong></td>
+<td>Moderate confluence (3 of 5 filters aligned)</td>
+</tr>
+<tr>
+<td><strong>TP1</strong></td>
+<td>Calculated take-profit target level</td>
+</tr>
+<tr>
+<td><strong>P&L (%)</strong></td>
+<td>Current profit/loss from signal entry</td>
 </tr>
 <tr>
 <td><strong>Neutral (—)</strong></td>
-<td>No active TD sequence</td>
-</tr>
-<tr>
-<td><strong>Approaching (8)</strong></td>
-<td>One bar from potential signal</td>
+<td>No MACD crossover or insufficient confluence</td>
 </tr>
 </tbody>
 </table>
@@ -2539,7 +2582,7 @@ USD/CAD, USD/CHF, NZD/USD, EUR/GBP
 <p><strong>Technical Questions:</strong><br />
 support@signalpilot.io</p>
 <hr />
-<p><strong>Disclaimer:</strong> This indicator displays TD Sequential exhaustion signals across multiple symbols simultaneously. All signals represent historical pattern detection based on close-to-close price counting methodology. Individual interpretation, application, and outcomes vary. Past signal patterns do not guarantee future results. This is not financial advice.</p>
+<p><strong>Disclaimer:</strong> This indicator displays MACD histogram crossover signals with confluence filtering across multiple symbols simultaneously. All signals represent momentum analysis based on MACD histogram crossovers combined with ADX, higher timeframe, OBV, RSI, and distance filters. Individual interpretation, application, and outcomes vary. Past signal patterns do not guarantee future results. This is not financial advice.</p>
                 
                 
                 
