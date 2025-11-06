@@ -1964,6 +1964,50 @@
 <!-- Render the page content -->
 <h1 id="pentarch-v10-five-cycle-events">Pentarch v1.0 — Five Cycle Events<a class="headerlink" href="#pentarch-v10-five-cycle-events" title="Permanent link">&para;</a></h1>
 <p>Cycle phase detection indicator. Identifies market position across five distinct phases: accumulation, markup, distribution, climax, and decline.</p>
+
+<div class="sp-callout sp-callout--success" style="margin: 2rem 0; border-left: 4px solid #4caf50;">
+  <div class="sp-callout__icon">👋</div>
+  <div class="sp-callout__content">
+    <h3 style="margin-top: 0;">New to Trading? Start Here</h3>
+
+    <p><strong>In Plain English:</strong> Think of markets like ocean tides—they go through predictable patterns. Pentarch helps you see which part of the pattern you're in right now. It's like a weather forecast for price movement.</p>
+
+    <p><strong>What You'll See on Your Chart:</strong> Pentarch shows 5 colored labels that appear above or below price candles. Each label tells you what's happening:</p>
+
+    <ul style="margin: 1rem 0;">
+      <li><strong>🟣 TD (Touchdown)</strong> = "Accumulation phase detected—downward exhaustion"</li>
+      <li><strong>🟢 IGN (Ignition)</strong> = "Upward momentum is starting—markup phase beginning"</li>
+      <li><strong>🟡 WRN (Warning)</strong> = "Price is getting stretched—distribution phase"</li>
+      <li><strong>🟠 CAP (Climax)</strong> = "Upward exhaustion detected—climax phase"</li>
+      <li><strong>🔴 BDN (Breakdown)</strong> = "Downward pressure detected—decline phase"</li>
+    </ul>
+
+    <p><strong>How It Works (The Simple Version):</strong> Pentarch checks 4 things before showing a signal:</p>
+    <ol>
+      <li>Is the overall market mood bullish or bearish?</li>
+      <li>Is price far from the average, or close to it?</li>
+      <li>Is momentum building or fading?</li>
+      <li>Did the price bar actually close (not just flicker during trading)?</li>
+    </ol>
+    <p>Only when all 4 checks pass does a label appear. This reduces false signals.</p>
+
+    <p><strong>Beginner Starting Point:</strong> Just watch the signals for 1-2 weeks. Notice how TD and IGN often appear during accumulation/markup phases, while WRN and CAP appear during distribution/climax phases. The patterns will start to make sense!</p>
+
+    <details style="margin-top: 1rem;">
+      <summary style="cursor: pointer; font-weight: 600; color: #4caf50;">🎓 What are "market cycles"?</summary>
+      <p style="margin-top: 0.5rem; padding-left: 1rem;">Markets don't move in straight lines—they move in repeating patterns called cycles. A typical cycle has 5 phases:</p>
+      <ol style="padding-left: 2rem;">
+        <li><strong>Accumulation</strong>: Smart money quietly buying after a decline (TD signal)</li>
+        <li><strong>Markup</strong>: Prices start climbing as more buyers join (IGN signal)</li>
+        <li><strong>Distribution</strong>: Smart money starts selling near the top (WRN signal)</li>
+        <li><strong>Climax</strong>: The peak before reversal (CAP signal)</li>
+        <li><strong>Decline</strong>: Prices fall as sellers dominate (BDN signal)</li>
+      </ol>
+      <p style="padding-left: 1rem;">Understanding which phase you're in helps you make better decisions about when to enter or exit.</p>
+    </details>
+  </div>
+</div>
+
 <hr />
 <h2 id="core-functionality">🎯 Core Functionality <span class="skill-badge skill-badge--beginner" data-tooltip="No prior experience required">Beginner Friendly</span><a class="headerlink" href="#core-functionality" title="Permanent link">&para;</a></h2>
 <p>Pentarch displays signal labels when four-layer detection conditions align at bar close. Five event types appear as colored labels on the chart:</p>

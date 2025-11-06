@@ -2028,6 +2028,79 @@
 <!-- Render the page content -->
 <h1 id="plutus-flow-v10-smart-obv-analysis">Plutus Flow v1.0 — Smart OBV Analysis<a class="headerlink" href="#plutus-flow-v10-smart-obv-analysis" title="Permanent link">&para;</a></h1>
 <p>On-Balance Volume (OBV) indicator enhanced with trend analysis, divergence detection, and momentum confirmation. Displays OBV line, trend ribbons, and divergence labels.</p>
+
+<div class="sp-callout sp-callout--success" style="margin: 2rem 0; border-left: 4px solid #4caf50;">
+  <div class="sp-callout__icon">👋</div>
+  <div class="sp-callout__content">
+    <h3 style="margin-top: 0;">New to Trading? Start Here</h3>
+
+    <p><strong>What Is On-Balance Volume (OBV)?</strong></p>
+    <p>OBV tracks the total volume of buying vs selling over time. Think of it like a running scoreboard:</p>
+    <ul>
+      <li>When price goes <strong>UP</strong> → add today's volume to the running total</li>
+      <li>When price goes <strong>DOWN</strong> → subtract today's volume from the running total</li>
+    </ul>
+    <p>The OBV line shows whether buyers or sellers are winning the battle:</p>
+    <ul>
+      <li>📈 <strong>OBV rising</strong> = Buyers winning (accumulation happening)</li>
+      <li>📉 <strong>OBV falling</strong> = Sellers winning (distribution happening)</li>
+    </ul>
+
+    <p><strong>In Plain English:</strong> Plutus Flow takes basic OBV and adds helpful features to make it easier to read and more actionable. It's like OBV with superpowers.</p>
+
+    <p><strong>What You'll See on Your Chart:</strong></p>
+    <ul style="margin: 1rem 0;">
+      <li><strong>OBV Line</strong> — The main line showing cumulative volume direction</li>
+      <li><strong>Colored Ribbons</strong> — Background shading (green = bullish volume trend, red = bearish volume trend)</li>
+      <li><strong>Divergence Labels</strong> — "Bull Div" or "Bear Div" when price and volume disagree</li>
+    </ul>
+
+    <p><strong>The 3 Layers Explained Simply:</strong></p>
+    <ol>
+      <li><strong>Layer 1: The OBV Line</strong><br/>
+      Shows the running total of buying vs selling pressure. Like a tug-of-war rope—which side is winning?</li>
+
+      <li><strong>Layer 2: Colored Background Ribbons</strong><br/>
+      Green ribbon = Volume trend is bullish (buyers in control)<br/>
+      Red ribbon = Volume trend is bearish (sellers in control)<br/>
+      These give you the "big picture" at a glance.</li>
+
+      <li><strong>Layer 3: Divergence Labels</strong><br/>
+      <strong>"Bull Div"</strong> = Price is falling but volume says buyers are coming back (potentially bullish)<br/>
+      <strong>"Bear Div"</strong> = Price is rising but volume says sellers are building (potentially bearish)<br/>
+      These are early warning signals of potential reversals.</li>
+    </ol>
+
+    <details style="margin-top: 1rem;">
+      <summary style="cursor: pointer; font-weight: 600; color: #4caf50;">🎓 What's a "divergence"?</summary>
+      <div style="padding-left: 1rem; margin-top: 0.5rem;">
+        <p><strong>Divergence = When price and volume disagree</strong></p>
+        <p><strong>Bullish Divergence Example:</strong></p>
+        <ul>
+          <li>Price makes lower lows (downtrend)</li>
+          <li>BUT OBV makes higher lows (volume improving)</li>
+          <li>This suggests: "Selling pressure is weakening, reversal may be near"</li>
+        </ul>
+        <p><strong>Bearish Divergence Example:</strong></p>
+        <ul>
+          <li>Price makes higher highs (uptrend)</li>
+          <li>BUT OBV makes lower highs (volume weakening)</li>
+          <li>This suggests: "Buying pressure is weakening, reversal may be near"</li>
+        </ul>
+        <p>Divergences are powerful because they often signal reversals before they happen on the price chart.</p>
+      </div>
+    </details>
+
+    <p><strong>Beginner Starting Point:</strong></p>
+    <ul>
+      <li><strong>Week 1:</strong> Just observe the OBV line. Notice if it's trending up or down.</li>
+      <li><strong>Week 2:</strong> Watch the colored ribbons—see how they change from green to red and back.</li>
+      <li><strong>Week 3:</strong> Start noticing divergence labels when they appear.</li>
+      <li><strong>Week 4+:</strong> Experiment with different smoothing levels in settings (Level 3 is default and recommended).</li>
+    </ul>
+  </div>
+</div>
+
 <hr />
 <h2 id="core-functionality">🎯 Core Functionality<a class="headerlink" href="#core-functionality" title="Permanent link">&para;</a></h2>
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
