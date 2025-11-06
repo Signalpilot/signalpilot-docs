@@ -61,7 +61,7 @@
       'janus-atlas-v10': 'Janus Atlas v1.0',
       'omnideck-v10': 'Omnideck v1.0',
       'augury-grid-v10': 'Augury Grid v1.0',
-      'minimal-flow-v10': 'Volume Oracle v1.0',
+      'volume-oracle-v10': 'Volume Oracle v1.0',
       'harmonic-oscillator-v10': 'Harmonic Oscillator v1.0',
       'plutus-flow-v10': 'Plutus Flow v1.0',
       'start-quick': 'Quick Start',

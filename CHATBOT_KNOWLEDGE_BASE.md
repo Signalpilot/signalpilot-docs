@@ -74,7 +74,7 @@ The SignalPilot Documentation chatbot has **comprehensive knowledge** of all doc
 
 ### **5. Volume Oracle v1.0** (formerly Minimal Flow)
 **Keywords:** volume oracle, minimal flow, volume flow, volume zone
-**Link:** `../minimal-flow-v10/`
+**Link:** `../volume-oracle-v10/`
 **Covers:**
 - 3 volume analysis systems
 - Volume Flow (buying/selling pressure)

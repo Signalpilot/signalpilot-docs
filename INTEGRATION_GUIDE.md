@@ -271,7 +271,7 @@ graph TD
 |------|----------------|
 | `pentarch-v10/` | Pentarch Signal Flow (#1) |
 | `harmonic-oscillator-v10/` | Voting System (#4) |
-| `minimal-flow-v10/` | Position Tracking (#5) |
+| `volume-oracle-v10/` | Position Tracking (#5) |
 | `omnideck-v10/` | System Layers (#7) |
 | `ref-comparison/` | Decision Tree (#2) |
 | `how-to-alerts/` | Alert Workflow (#3) |

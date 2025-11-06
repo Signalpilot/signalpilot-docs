@@ -79,7 +79,7 @@
 - js/knowledge-checks.js
 
 **Pages with infrastructure only (19 remaining):**
-- janus-atlas-v10, augury-grid-v10, minimal-flow-v10
+- janus-atlas-v10, augury-grid-v10, volume-oracle-v10
 - harmonic-oscillator-v10, plutus-flow-v10
 - how-to-screener, how-to-webhooks
 - ref-comparison, ref-glossary, ref-non-repaint, ref-troubleshooting
@@ -153,7 +153,7 @@ These pages have functional features (keyboard nav, text sizing) but lack conten
 4. suite-index (suite overview)
 5. janus-atlas-v10 (3rd most popular product)
 6. augury-grid-v10 (screener tool)
-7. minimal-flow-v10 (minimalist indicator)
+7. volume-oracle-v10 (minimalist indicator)
 8. harmonic-oscillator-v10 (divergence tool)
 9. plutus-flow-v10 (flow analysis)
 10. how-to-screener (screener guide)

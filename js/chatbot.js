@@ -79,7 +79,7 @@ Choose which systems to display based on your needs.`,
 
             oracle: `**Volume Oracle v1.0** (formerly Minimal Flow) provides 3 volume analysis systems.
 
-📄 [Read Full Documentation](../minimal-flow-v10/)
+📄 [Read Full Documentation](../volume-oracle-v10/)
 
 **Systems:**
 • **Volume Flow** - Buying/selling pressure bars

@@ -90,7 +90,7 @@
 11. harmonic-oscillator-v10/index.html
 12. omnideck-v10/index.html
 13. plutus-flow-v10/index.html
-14. minimal-flow-v10/index.html
+14. volume-oracle-v10/index.html
 
 ### Chatbot (2 files):
 15. js/chatbot.js

@@ -349,7 +349,7 @@ graph TD
 2. **omnideck-v10** - "Omnideck system layers showing 10+ detection systems working together"
 3. **janus-atlas-v10** - "Janus Atlas level types showing 39 support/resistance levels"
 4. **augury-grid-v10** - "Augury Grid workflow showing matrix-based signal scanning"
-5. **minimal-flow-v10** - "Volume Oracle position tracking showing OBV zones and momentum"
+5. **volume-oracle-v10** - "Volume Oracle position tracking showing OBV zones and momentum"
 6. **harmonic-oscillator-v10** - "Harmonic Oscillator voting system showing 7 oscillator confluence"
 7. **plutus-flow-v10** - "Plutus Flow OBV analysis showing divergence detection"
 8. **ref-workflow** - "Complete trading workflow from setup to exit"

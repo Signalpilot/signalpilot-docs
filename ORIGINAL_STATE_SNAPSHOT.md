@@ -68,7 +68,7 @@ signalpilot-docs/
 │   ├── keyword-highlighter.js
 │   ├── sp-bg.js
 │   └── wheel-diagnostic.js
-├── minimal-flow-v10/
+├── volume-oracle-v10/
 │   └── index.html
 ├── omnideck-v10/
 │   └── index.html

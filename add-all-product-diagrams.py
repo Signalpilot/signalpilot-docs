@@ -178,7 +178,7 @@ diagrams = {
     style Priority fill:#00bcd4,color:#fff'''
     },
 
-    'minimal-flow-v10/index.html': {
+    'volume-oracle-v10/index.html': {
         'title': 'Position Tracking State Machine',
         'description': 'Volume Oracle tracks positions from entry to exit with real-time P&L:',
         'search_after': '<h2 id="core-functionality">',

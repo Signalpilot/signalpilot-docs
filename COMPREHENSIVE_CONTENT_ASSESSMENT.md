@@ -46,7 +46,7 @@ Line 1792: "Audited for zero repaint. Guaranteed."
 - "Frequently Used For"
 
 #### Issue 2b: Volume Oracle (Minimal Flow) - "Best For" Column Header
-**File:** `/home/user/signalpilot-docs/minimal-flow-v10/index.html`
+**File:** `/home/user/signalpilot-docs/volume-oracle-v10/index.html`
 **Location:** Line 2590 (table header)
 **Severity:** HIGH
 **Issue:** Table column header contains "Best For"
@@ -288,7 +288,7 @@ Line 1792: "Audited for zero repaint. Guaranteed."
    - Replace with: "Typical Use Cases" or "Common Applications"
 
 3. **Volume Oracle - Fix "Best For" table header**
-   - File: `/home/user/signalpilot-docs/minimal-flow-v10/index.html`
+   - File: `/home/user/signalpilot-docs/volume-oracle-v10/index.html`
    - Line: 2590
    - Replace with: "Typical Use Cases" or "Common Applications"
 

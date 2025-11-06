@@ -307,7 +307,7 @@ Complete settings, alerts, and configuration tables for all Signal Pilot indicat
 - [Janus Atlas Guide](../janus-atlas-v10/) — Levels System
 - [Omnideck Guide](../omnideck-v10/) — 7-System Suite
 - [Augury Grid Guide](../augury-grid-v10/) — 8-Symbol Monitor
-- [Volume Oracle Guide](../minimal-flow-v10/) — Volume Analysis
+- [Volume Oracle Guide](../volume-oracle-v10/) — Volume Analysis
 - [Harmonic Oscillator Guide](../harmonic-oscillator-v10/) — Triple Composite
 - [Plutus Flow Guide](../plutus-flow-v10/) — OBV Analysis
 

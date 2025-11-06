@@ -17,7 +17,7 @@ DOC_MAPPING = {
     'REVISED_DOCS_OMNIDECK.md': 'omnideck-v10/index.html',
     'REVISED_DOCS_JANUS_ATLAS.md': 'janus-atlas-v10/index.html',
     'REVISED_DOCS_HARMONIC_OSCILLATOR.md': 'harmonic-oscillator-v10/index.html',
-    'REVISED_DOCS_VOLUME_ORACLE.md': 'minimal-flow-v10/index.html',
+    'REVISED_DOCS_VOLUME_ORACLE.md': 'volume-oracle-v10/index.html',
 }
 
 class HeaderExtractor(HTMLParser):

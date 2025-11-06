@@ -33,7 +33,7 @@ Following your feedback that the **Indicator Comparison Decision Tree is awesome
    - **Shows:** How 8 symbols are scanned and prioritized
    - **Location:** Right after "Core Functionality" section
 
-6. **`minimal-flow-v10/index.html`** (Volume Oracle)
+6. **`volume-oracle-v10/index.html`** (Volume Oracle)
    - 📊 **Diagram:** Position Tracking State Machine
    - **Shows:** Complete position lifecycle with P&L tracking
    - **Location:** Right after "Core Functionality" section
