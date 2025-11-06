@@ -21,13 +21,16 @@
     border-radius: 4px;
   }
 
-  /* Ensure table cells don't wrap text too aggressively */
+  /* Allow table cells to wrap text properly on mobile */
   table th,
   table td {
-    white-space: nowrap;
-    min-width: 100px;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    min-width: 80px;
     padding: 12px 8px;
     font-size: 14px;
+    vertical-align: top;
   }
 
   /* First column should be sticky on mobile for better UX */
