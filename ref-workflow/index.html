@@ -1730,37 +1730,50 @@ summary: "How the 7 indicators can be combined into a complete trading system."<
     <p style="margin-bottom: 1rem;">From bias determination to position management—here's the complete flow:</p>
     <div class="mermaid">
 graph TD
-    Start[Start Trading Session] --> HTF[1. Check Higher Timeframe]
+    Start[📊 Start Analysis Session] --> HTF[1️⃣ Check Higher Timeframe Context]
 
-    HTF --> Bias{Determine Bias}
-    Bias -->|Bullish| Green[Green Regime ✅]
-    Bias -->|Bearish| Red[Red Regime ❌]
-    Bias -->|Neutral| Wait[⏸️ Wait for Clarity]
+    HTF --> Bias{Determine<br/>Market Regime}
+    Bias -->|Bullish Context| Green[🟢 Bullish Regime<br/>Uptrend Detected]
+    Bias -->|Bearish Context| Red[🔴 Bearish Regime<br/>Downtrend Detected]
+    Bias -->|Neutral| Wait[⏸️ Wait for Clarity<br/>No Clear Trend]
 
-    Green --> LookLong[2. Look for LONG Setups]
-    Red --> LookShort[2. Look for SHORT Setups]
+    Green --> LookUp[2️⃣ Monitor for Upward Patterns]
+    Red --> LookDown[2️⃣ Monitor for Downward Patterns]
 
-    LookLong --> Levels1[3. Check Janus Atlas Levels]
-    LookShort --> Levels2[3. Check Janus Atlas Levels]
+    LookUp --> Levels1[3️⃣ Check Janus Atlas Levels<br/>Key Support/Resistance Zones]
+    LookDown --> Levels2[3️⃣ Check Janus Atlas Levels<br/>Key Support/Resistance Zones]
 
-    Levels1 --> Signal1[4. Wait for Pentarch Signal]
-    Levels2 --> Signal2[4. Wait for Pentarch Signal]
+    Levels1 --> Signal1[4️⃣ Wait for Pentarch Signal<br/>Event Detection]
+    Levels2 --> Signal2[4️⃣ Wait for Pentarch Signal<br/>Event Detection]
 
-    Signal1 --> Confirm1[5. Confirm with Harmonic/Volume]
-    Signal2 --> Confirm2[5. Confirm with Harmonic/Volume]
+    Signal1 --> Confirm1[5️⃣ Confirm with Harmonic/Volume<br/>Multi-Indicator Confluence]
+    Signal2 --> Confirm2[5️⃣ Confirm with Harmonic/Volume<br/>Multi-Indicator Confluence]
 
-    Confirm1 --> Entry1[6. Long Position Entry Example]
-    Confirm2 --> Entry2[6. Short Position Entry Example]
+    Confirm1 --> Action1[6️⃣ Upward Pattern Confirmed<br/>All Indicators Aligned]
+    Confirm2 --> Action2[6️⃣ Downward Pattern Confirmed<br/>All Indicators Aligned]
 
-    Entry1 --> Manage[7. Manage Position]
-    Entry2 --> Manage
+    Action1 --> Monitor[7️⃣ Monitor Active Analysis<br/>Track Market Evolution]
+    Action2 --> Monitor
 
-    Manage --> Exit[8. Position Close Example<br/>Opposite Signal or Target Reached]
+    Monitor --> Exit[8️⃣ Analysis Cycle Complete<br/>Opposite Signal or Target Reached]
 
-    style Green fill:#4caf50,color:#fff
-    style Red fill:#f44336,color:#fff
-    style Entry1 fill:#4caf50,color:#fff
-    style Entry2 fill:#f44336,color:#fff
+    style Start fill:#37474f,stroke:#00bcd4,stroke-width:3px,color:#fff
+    style HTF fill:#00bcd4,stroke:#00bcd4,stroke-width:3px,color:#fff
+    style Green fill:#4caf50,stroke:#4caf50,stroke-width:3px,color:#fff
+    style Red fill:#f44336,stroke:#f44336,stroke-width:3px,color:#fff
+    style Wait fill:#ff9800,stroke:#ff9800,stroke-width:3px,color:#fff
+    style LookUp fill:#4caf50,stroke:#4caf50,stroke-width:2px,color:#fff
+    style LookDown fill:#f44336,stroke:#f44336,stroke-width:2px,color:#fff
+    style Levels1 fill:#9c27b0,stroke:#9c27b0,stroke-width:2px,color:#fff
+    style Levels2 fill:#9c27b0,stroke:#9c27b0,stroke-width:2px,color:#fff
+    style Signal1 fill:#2196f3,stroke:#2196f3,stroke-width:2px,color:#fff
+    style Signal2 fill:#2196f3,stroke:#2196f3,stroke-width:2px,color:#fff
+    style Confirm1 fill:#ff9800,stroke:#ff9800,stroke-width:2px,color:#fff
+    style Confirm2 fill:#ff9800,stroke:#ff9800,stroke-width:2px,color:#fff
+    style Action1 fill:#4caf50,stroke:#4caf50,stroke-width:3px,color:#fff
+    style Action2 fill:#f44336,stroke:#f44336,stroke-width:3px,color:#fff
+    style Monitor fill:#9c27b0,stroke:#9c27b0,stroke-width:3px,color:#fff
+    style Exit fill:#37474f,stroke:#00bcd4,stroke-width:4px,color:#fff
     </div>
   </div>
 </div>
