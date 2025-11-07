@@ -29,16 +29,6 @@
     // Only handle if drawer is open
     if (!drawer.checked) return;
 
-    // CRITICAL: Don't interfere with scrolling inside nested navigation
-    const target = e.target;
-    const isInsideNestedNav = target.closest('.md-nav__item--nested .md-nav');
-
-    if (isInsideNestedNav) {
-      // User is touching nested/expanded content - let them scroll freely
-      isSwiping = false;
-      return;
-    }
-
     touchStartX = e.touches[0].clientX;
     touchStartY = e.touches[0].clientY;
     isSwiping = true;
@@ -50,19 +40,8 @@
     touchEndX = e.touches[0].clientX;
     touchEndY = e.touches[0].clientY;
 
-    // Calculate distances
-    const deltaX = touchEndX - touchStartX;
-    const deltaY = Math.abs(touchEndY - touchStartY);
-
-    // Only prevent default if it's a CLEAR horizontal swipe
-    // Must be significantly horizontal AND have meaningful horizontal movement
-    const isSignificantHorizontal = Math.abs(deltaX) > 30; // At least 30px horizontal
-    const isMoreHorizontalThanVertical = Math.abs(deltaX) > deltaY * 1.5; // 50% more horizontal than vertical
-
-    if (isSignificantHorizontal && isMoreHorizontalThanVertical) {
-      e.preventDefault();
-    }
-    // Otherwise, let vertical scrolling work normally
+    // Just track the movement - with passive listeners we can't preventDefault
+    // This allows smooth scrolling while still detecting swipe gestures
   }
 
   function handleTouchEnd(e) {
@@ -95,41 +74,11 @@
   }
 
   // Add event listeners to the sidebar
-  sidebar.addEventListener('touchstart', handleTouchStart, { passive: false });
-  sidebar.addEventListener('touchmove', handleTouchMove, { passive: false });
+  // PASSIVE LISTENERS: Allows smooth scrolling without browser waiting for JS
+  // The trade-off is we can't preventDefault, but smooth scrolling is more important
+  sidebar.addEventListener('touchstart', handleTouchStart, { passive: true });
+  sidebar.addEventListener('touchmove', handleTouchMove, { passive: true });
   sidebar.addEventListener('touchend', handleTouchEnd, { passive: true });
-
-  // CRITICAL: For nested navigation, stop propagation so sidebar handlers don't interfere
-  function setupNestedNavScrolling() {
-    const nestedNavs = sidebar.querySelectorAll('.md-nav__item--nested .md-nav');
-    nestedNavs.forEach(nestedNav => {
-      // Mark these as already set up to avoid duplicate listeners
-      if (nestedNav.dataset.scrollSetup) return;
-      nestedNav.dataset.scrollSetup = 'true';
-
-      // Stop propagation for all touch events - let them scroll freely
-      nestedNav.addEventListener('touchstart', (e) => {
-        e.stopPropagation(); // Don't let sidebar handler see this
-      }, { passive: true });
-
-      nestedNav.addEventListener('touchmove', (e) => {
-        e.stopPropagation(); // Don't let sidebar handler see this
-      }, { passive: true });
-
-      nestedNav.addEventListener('touchend', (e) => {
-        e.stopPropagation(); // Don't let sidebar handler see this
-      }, { passive: true });
-    });
-  }
-
-  // Set up nested nav scrolling initially and when content changes
-  setupNestedNavScrolling();
-
-  // Re-run when navigation items expand (use MutationObserver to detect changes)
-  const observer = new MutationObserver(() => {
-    setupNestedNavScrolling();
-  });
-  observer.observe(sidebar, { childList: true, subtree: true });
 
   // Also support swipe-left on the overlay to close
   overlay.addEventListener('touchstart', function(e) {
