@@ -674,8 +674,9 @@
 
     .sp-chatbot-message-content {
         max-width: 85%;
-        font-size: 14px;
+        font-size: 13px;
         padding: 10px 14px;
+        line-height: 1.5;
     }
 
     .sp-chatbot-header {
