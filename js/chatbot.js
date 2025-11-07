@@ -561,9 +561,7 @@ Type **"help"** to see all available topics!
                                 </svg>
                             </div>
                             <div class="sp-chatbot-message-content">
-                                <p><strong>Hi! 👋</strong> I'm your SignalPilot Documentation Assistant.</p>
-                                <p>I can help you with indicators, setup, alerts, and anything in the docs!</p>
-                                <p><em>Try: "What is Pentarch?" or "How do I set up alerts?"</em></p>
+                                <p><strong>Hi! 👋</strong> I'm your SignalPilot Assistant. Ask me about indicators, setup, or alerts!</p>
                             </div>
                         </div>
                     </div>
@@ -662,7 +660,12 @@ Type **"help"** to see all available topics!
         if (this.isOpen) {
             this.elements.container.classList.remove('sp-chatbot-closed');
             this.elements.container.classList.add('sp-chatbot-open');
-            this.elements.input.focus();
+
+            // Only focus input on desktop (not on mobile to prevent keyboard popup)
+            const isMobile = window.matchMedia('(max-width: 768px)').matches;
+            if (!isMobile) {
+                this.elements.input.focus();
+            }
         } else {
             this.elements.container.classList.remove('sp-chatbot-open');
             this.elements.container.classList.add('sp-chatbot-closed');
@@ -809,7 +812,7 @@ Type **"help"** to see all available topics!
 
             // Re-add welcome message
             this.addMessage(
-                `<strong>Hi! 👋</strong> I'm your SignalPilot Documentation Assistant.<br><br>I can help you with indicators, setup, alerts, and anything in the docs!<br><br><em>Try: "What is Pentarch?" or "How do I set up alerts?"</em>`,
+                `<strong>Hi! 👋</strong> I'm your SignalPilot Assistant. Ask me about indicators, setup, or alerts!`,
                 'bot'
             );
         }
