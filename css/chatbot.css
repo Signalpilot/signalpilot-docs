@@ -672,27 +672,26 @@
         right: 0;
     }
 
+    /* NUCLEAR OPTION: Force tiny text on ALL chatbot message elements */
+    .sp-chatbot-message-content,
+    .sp-chatbot-message-content *,
+    .sp-chatbot-bot-message .sp-chatbot-message-content,
+    .sp-chatbot-bot-message .sp-chatbot-message-content * {
+        font-size: 7px !important;
+    }
+
     .sp-chatbot-message-content {
         max-width: 85% !important;
-        font-size: 8px !important;
-        padding: 4px 6px !important;
-        line-height: 1.3 !important;
+        padding: 3px 5px !important;
+        line-height: 1.2 !important;
     }
 
     .sp-chatbot-message-content p {
-        margin: 0 0 4px !important;
-        font-size: 8px !important;
+        margin: 0 0 3px !important;
     }
 
     .sp-chatbot-message-content p:last-child {
         margin-bottom: 0 !important;
-    }
-
-    .sp-chatbot-message-content ul,
-    .sp-chatbot-message-content li,
-    .sp-chatbot-message-content strong,
-    .sp-chatbot-message-content em {
-        font-size: 8px !important;
     }
 
     .sp-chatbot-header {
