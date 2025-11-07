@@ -1,9 +1,14 @@
 /**
  * Mobile Drawer Swipe-to-Close
- * Adds swipe gesture support for closing the navigation drawer on mobile
+ * DISABLED: Accordion navigation doesn't need swipe gestures
+ * This file is kept for easy reversion but functionality is disabled
  */
 (function() {
   'use strict';
+
+  // ACCORDION MODE: Swipe gestures disabled
+  console.log('ℹ️  Accordion navigation active - swipe gestures disabled');
+  return; // Exit early
 
   // Only run on touch-enabled devices
   if (!('ontouchstart' in window)) return;
