@@ -486,7 +486,13 @@ body::before {
   }
 
   /* Hide redundant active page link (you're already on this page, don't need a link to it) */
-  .md-sidebar--primary a.md-nav__link.md-nav__link--active {
+  /* Target the anchor link specifically, but keep the label toggle */
+  .md-sidebar--primary .md-nav__item--active > a.md-nav__link.md-nav__link--active {
+    display: none !important;
+  }
+
+  /* Also hide in the mobile drawer */
+  .md-sidebar .md-nav__item--active > a.md-nav__link.md-nav__link--active {
     display: none !important;
   }
 
