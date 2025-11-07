@@ -657,7 +657,7 @@
 }
 
 /* Mobile Responsive */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .sp-chatbot-container {
         bottom: 16px;
         right: 16px;
@@ -720,14 +720,6 @@
     .sp-chatbot-toggle {
         width: 56px;
         height: 56px;
-    }
-}
-
-/* Tablet Responsive */
-@media (min-width: 481px) and (max-width: 768px) {
-    .sp-chatbot-window {
-        width: 380px;
-        height: 550px;
     }
 }
 
