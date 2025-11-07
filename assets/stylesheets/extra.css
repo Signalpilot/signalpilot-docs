@@ -480,6 +480,11 @@ body::before {
     border-bottom: 1px solid var(--md-default-fg-color--lightest) !important;
   }
 
+  /* Hide redundant nested navigation title on mobile */
+  .md-sidebar--primary .md-nav__item .md-nav .md-nav__title {
+    display: none !important;
+  }
+
   /* Parent container for nested items */
   .md-sidebar--primary .md-nav__item--nested {
     position: relative !important; /* Container for absolute toggle button */
