@@ -316,6 +316,8 @@ body::before {
     height: 100vh !important;
     height: 100dvh !important; /* Use dynamic viewport height on mobile browsers */
     background-color: var(--md-default-bg-color) !important; /* CRITICAL: Solid background */
+    overflow-y: auto !important; /* Allow vertical scrolling */
+    overflow-x: hidden !important; /* Prevent horizontal scroll */
     touch-action: pan-y !important; /* Allow vertical touch scrolling */
     -webkit-overflow-scrolling: touch !important; /* Smooth iOS scrolling */
   }
@@ -335,10 +337,10 @@ body::before {
   #__drawer:checked ~ .md-container .md-sidebar--primary .md-sidebar__scrollwrap {
     background-color: var(--md-default-bg-color) !important;
     opacity: 1 !important;
-    height: 100% !important;
+    /* Removed height: 100% - let content determine height for proper scrolling */
     padding: 1rem 0 !important;
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2) !important; /* Add shadow for depth */
-    overflow-y: auto !important; /* Ensure vertical scrolling works */
+    /* overflow removed - parent sidebar handles scrolling */
     touch-action: pan-y !important; /* CRITICAL: Allow vertical touch scrolling */
     -webkit-overflow-scrolling: touch !important; /* Smooth momentum scrolling on iOS */
   }
