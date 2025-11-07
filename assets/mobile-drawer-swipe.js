@@ -44,10 +44,15 @@
     const deltaX = touchEndX - touchStartX;
     const deltaY = Math.abs(touchEndY - touchStartY);
 
-    // Only prevent default if it's a clear horizontal swipe
-    if (Math.abs(deltaX) > deltaY) {
+    // Only prevent default if it's a CLEAR horizontal swipe
+    // Must be significantly horizontal AND have meaningful horizontal movement
+    const isSignificantHorizontal = Math.abs(deltaX) > 30; // At least 30px horizontal
+    const isMoreHorizontalThanVertical = Math.abs(deltaX) > deltaY * 1.5; // 50% more horizontal than vertical
+
+    if (isSignificantHorizontal && isMoreHorizontalThanVertical) {
       e.preventDefault();
     }
+    // Otherwise, let vertical scrolling work normally
   }
 
   function handleTouchEnd(e) {
