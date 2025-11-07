@@ -2,7 +2,7 @@
    SIGNALPILOT DOCS - CONSOLIDATED STYLES
    Combines: extra.css, brand.css, aurora.css, interactive-code.css
    Optimized for performance and maintainability
-   CACHE BUST: v2024-11-06-21:40-REMOVED-GLOBAL-MERMAID
+   CACHE BUST: v2024-11-06-22:00-MOBILE-NESTED-NAV-FIX
    ================================================================================ */
 
 /* NOTE: Mermaid diagram styles moved to page-specific <style> blocks */
@@ -430,20 +430,56 @@ body::before {
   }
 
   /* ========================================
-     MOBILE MENU SIMPLIFICATION - OPTION 3
-     Show ONLY top-level navigation items
-     Hide all nested/sub-navigation for clarity
+     MOBILE MENU NAVIGATION
+     Allow nested navigation for full access to sub-pages
      ======================================== */
 
-  /* Hide nested navigation on mobile */
-  .md-sidebar--primary .md-nav__item .md-nav {
-    display: none !important;
+  /* Make toggle buttons visible and touch-friendly on mobile */
+  .md-sidebar--primary .md-nav__toggle {
+    display: block !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    width: 56px !important;
+    height: 56px !important;
+    cursor: pointer !important;
+    z-index: 1 !important;
   }
 
-  /* Hide toggle icons for nested items since we're not showing them */
-  .md-sidebar--primary .md-nav__item--nested .md-nav__link::after,
-  .md-sidebar--primary .md-nav__toggle {
-    display: none !important;
+  /* Make toggle icons larger and more visible */
+  .md-sidebar--primary .md-nav__item--nested > .md-nav__link::after {
+    display: inline-block !important;
+    font-size: 1.5rem !important;
+    width: 56px !important;
+    height: 56px !important;
+    line-height: 56px !important;
+    text-align: center !important;
+  }
+
+  /* Show nested navigation when toggle is checked */
+  .md-sidebar--primary .md-nav__toggle:checked ~ .md-nav {
+    display: block !important;
+  }
+
+  /* Style nested navigation items */
+  .md-sidebar--primary .md-nav__item .md-nav {
+    display: none !important; /* Hidden by default */
+    background-color: rgba(0, 0, 0, 0.05) !important;
+    padding-left: 1rem !important;
+  }
+
+  /* Style nested links */
+  .md-sidebar--primary .md-nav__item .md-nav .md-nav__link {
+    font-size: 0.9rem !important;
+    padding: 0.75rem 1.2rem !important;
+    min-height: 48px !important;
+    border-bottom: 1px solid var(--md-default-fg-color--lightest) !important;
+  }
+
+  /* Make parent items with children clickable */
+  .md-sidebar--primary .md-nav__item--nested > .md-nav__link {
+    position: relative !important;
+    padding-right: 56px !important; /* Make room for toggle icon */
   }
 
   /* Make top-level menu items larger and more touch-friendly */
