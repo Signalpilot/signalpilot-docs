@@ -99,6 +99,38 @@
   sidebar.addEventListener('touchmove', handleTouchMove, { passive: false });
   sidebar.addEventListener('touchend', handleTouchEnd, { passive: true });
 
+  // CRITICAL: For nested navigation, stop propagation so sidebar handlers don't interfere
+  function setupNestedNavScrolling() {
+    const nestedNavs = sidebar.querySelectorAll('.md-nav__item--nested .md-nav');
+    nestedNavs.forEach(nestedNav => {
+      // Mark these as already set up to avoid duplicate listeners
+      if (nestedNav.dataset.scrollSetup) return;
+      nestedNav.dataset.scrollSetup = 'true';
+
+      // Stop propagation for all touch events - let them scroll freely
+      nestedNav.addEventListener('touchstart', (e) => {
+        e.stopPropagation(); // Don't let sidebar handler see this
+      }, { passive: true });
+
+      nestedNav.addEventListener('touchmove', (e) => {
+        e.stopPropagation(); // Don't let sidebar handler see this
+      }, { passive: true });
+
+      nestedNav.addEventListener('touchend', (e) => {
+        e.stopPropagation(); // Don't let sidebar handler see this
+      }, { passive: true });
+    });
+  }
+
+  // Set up nested nav scrolling initially and when content changes
+  setupNestedNavScrolling();
+
+  // Re-run when navigation items expand (use MutationObserver to detect changes)
+  const observer = new MutationObserver(() => {
+    setupNestedNavScrolling();
+  });
+  observer.observe(sidebar, { childList: true, subtree: true });
+
   // Also support swipe-left on the overlay to close
   overlay.addEventListener('touchstart', function(e) {
     if (!drawer.checked) return;
