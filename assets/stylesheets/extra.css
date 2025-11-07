@@ -328,7 +328,7 @@ body::before {
   /* Scrollwrap styling */
   .md-sidebar--primary .md-sidebar__scrollwrap {
     background-color: var(--md-default-bg-color) !important;
-    padding: 1rem !important;
+    padding: 0.5rem !important;
   }
 
   /* All navigation elements always visible and clickable */
@@ -346,8 +346,8 @@ body::before {
   /* Ensure text is readable */
   .md-sidebar--primary .md-nav__link {
     color: var(--md-default-fg-color) !important;
-    padding: 0.75rem 1rem !important;
-    min-height: 48px !important; /* Touch-friendly */
+    padding: 0.5rem 0.75rem !important;
+    min-height: 40px !important; /* Touch-friendly */
     display: flex !important;
     align-items: center !important;
   }
@@ -364,10 +364,10 @@ body::before {
     pointer-events: auto !important;
   }
 
-  /* Improve text readability */
+  /* Improve text readability - reduced size for better fit */
   .md-sidebar--primary .md-nav__link {
-    font-size: 0.875rem !important;
-    line-height: 1.5 !important;
+    font-size: 0.75rem !important;
+    line-height: 1.4 !important;
   }
 
   /* Better visual hierarchy for nested items */
@@ -435,9 +435,9 @@ body::before {
 
   /* Style nested links */
   .md-sidebar--primary .md-nav__item .md-nav .md-nav__link {
-    font-size: 0.9rem !important;
-    padding: 0.75rem 1.2rem !important;
-    min-height: 48px !important;
+    font-size: 0.7rem !important;
+    padding: 0.5rem 0.85rem !important;
+    min-height: 40px !important;
     border-bottom: 1px solid var(--md-default-fg-color--lightest) !important;
     touch-action: auto !important; /* Allow all touch interactions */
   }
@@ -474,21 +474,21 @@ body::before {
     padding-right: 56px !important; /* Make room for toggle icon */
   }
 
-  /* Make top-level menu items larger and more touch-friendly */
+  /* Make top-level menu items compact but touch-friendly */
   .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link {
-    font-size: 1rem !important; /* Bigger text */
-    padding: 1rem 1.2rem !important; /* More padding */
-    min-height: 56px !important; /* Larger touch target */
+    font-size: 0.8rem !important; /* Compact text */
+    padding: 0.65rem 0.85rem !important; /* Reduced padding */
+    min-height: 44px !important; /* Smaller touch target */
     display: flex !important;
     align-items: center !important;
     border-bottom: 1px solid var(--md-default-fg-color--lightest) !important; /* Separator */
   }
 
-  /* Make icons bigger and more visible */
+  /* Make icons compact but visible */
   .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link svg {
-    height: 1.5rem !important;
-    width: 1.5rem !important;
-    margin-right: 0.75rem !important;
+    height: 1.1rem !important;
+    width: 1.1rem !important;
+    margin-right: 0.5rem !important;
   }
 
   /* Add hover/active states for better feedback */
@@ -510,8 +510,8 @@ body::before {
 
   /* Add section title styling if present */
   .md-sidebar--primary .md-nav__title {
-    padding: 1.2rem 1.2rem 0.8rem !important;
-    font-size: 0.875rem !important;
+    padding: 0.75rem 0.85rem 0.5rem !important;
+    font-size: 0.7rem !important;
     text-transform: uppercase !important;
     letter-spacing: 0.05em !important;
     opacity: 0.7 !important;
@@ -3825,16 +3825,51 @@ a {
    HOMEPAGE IMPROVEMENTS
    ======================================== */
 
-/* Most Common Tasks: Better mobile grid layout */
+/* Homepage grid layouts: Better mobile responsiveness */
 @media screen and (max-width: 768px) {
-  /* Target the grid container with inline styles - CSS specificity override */
+  /* New User Resources section */
+  #new-user-resources + div[style*="grid"] {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    margin: 1rem 0 !important;
+  }
+
+  #new-user-resources + div[style*="grid"] > div {
+    padding: 1.25rem !important;
+  }
+
+  #new-user-resources + div[style*="grid"] h3 {
+    font-size: 1rem !important;
+  }
+
+  #new-user-resources + div[style*="grid"] p,
+  #new-user-resources + div[style*="grid"] ol,
+  #new-user-resources + div[style*="grid"] ul {
+    font-size: 0.9rem !important;
+  }
+
+  /* Stats section (5 Cycle Events, etc.) - 2 column grid on mobile */
+  #signal-pilot-suite-the-complete-cycle-system ~ div[style*="display: grid"][style*="text-align: center"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
+    margin: 1.5rem 0 !important;
+  }
+
+  #signal-pilot-suite-the-complete-cycle-system ~ div[style*="display: grid"][style*="text-align: center"] > div > div:first-child {
+    font-size: 2rem !important;
+  }
+
+  #signal-pilot-suite-the-complete-cycle-system ~ div[style*="display: grid"][style*="text-align: center"] > div > div:last-child {
+    font-size: 0.85rem !important;
+  }
+
+  /* Most Common Tasks section */
   #most-common-tasks + p + div[style*="grid"] {
     grid-template-columns: 1fr !important;
     gap: 1rem !important;
     margin: 1rem 0 !important;
   }
 
-  /* Adjust card padding and font sizes for mobile */
   #most-common-tasks + p + div[style*="grid"] > div {
     padding: 1.25rem !important;
   }
@@ -3853,8 +3888,9 @@ a {
   }
 }
 
-/* For tablets: show 2 columns */
+/* For tablets: show 2 columns for resource cards */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
+  #new-user-resources + div[style*="grid"],
   #most-common-tasks + p + div[style*="grid"] {
     grid-template-columns: repeat(2, 1fr) !important;
   }
@@ -3864,7 +3900,7 @@ a {
 @media screen and (max-width: 76.24em) {
   .md-nav--primary > .md-nav__title {
     font-family: var(--sp-brand-font) !important;
-    font-size: 1.1rem !important;
+    font-size: 0.85rem !important;
     font-weight: 400 !important;
     letter-spacing: 0.02em !important;
   }
