@@ -316,6 +316,8 @@ body::before {
     height: 100vh !important;
     height: 100dvh !important; /* Use dynamic viewport height on mobile browsers */
     background-color: var(--md-default-bg-color) !important; /* CRITICAL: Solid background */
+    touch-action: pan-y !important; /* Allow vertical touch scrolling */
+    -webkit-overflow-scrolling: touch !important; /* Smooth iOS scrolling */
   }
 
   /* SHOW drawer when open - slide in from left */
@@ -336,6 +338,9 @@ body::before {
     height: 100% !important;
     padding: 1rem 0 !important;
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2) !important; /* Add shadow for depth */
+    overflow-y: auto !important; /* Ensure vertical scrolling works */
+    touch-action: pan-y !important; /* CRITICAL: Allow vertical touch scrolling */
+    -webkit-overflow-scrolling: touch !important; /* Smooth momentum scrolling on iOS */
   }
 
   /* Ensure sidebar itself also has solid background when drawer is open */
