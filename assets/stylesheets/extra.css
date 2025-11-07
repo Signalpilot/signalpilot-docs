@@ -2,7 +2,7 @@
    SIGNALPILOT DOCS - CONSOLIDATED STYLES
    Combines: extra.css, brand.css, aurora.css, interactive-code.css
    Optimized for performance and maintainability
-   CACHE BUST: v2024-11-06-22:00-MOBILE-NESTED-NAV-FIX
+   CACHE BUST: v2024-11-06-22:15-MOBILE-OVERLAY-FIX
    ================================================================================ */
 
 /* NOTE: Mermaid diagram styles moved to page-specific <style> blocks */
@@ -634,12 +634,26 @@ body::before {
 
 .md-overlay {
   z-index: 100 !important; /* Overlay BEHIND drawer so drawer is clickable */
+  opacity: 0 !important;
+  background-color: rgba(0, 0, 0, 0.54) !important;
+}
+
+/* Make overlay visible and dark when drawer is open */
+#__drawer:checked ~ .md-overlay {
+  opacity: 1 !important;
+  background-color: rgba(0, 0, 0, 0.54) !important;
 }
 
 /* Ensure overlay stays below drawer on narrow screens */
 @media screen and (max-width: 76.24em) {
   .md-overlay {
     z-index: 100 !important; /* Below drawer (250) */
+  }
+
+  /* Make overlay visible when drawer is open on mobile */
+  #__drawer:checked ~ .md-overlay {
+    opacity: 1 !important;
+    background-color: rgba(0, 0, 0, 0.54) !important;
   }
 }
 
