@@ -2,7 +2,7 @@
    SIGNALPILOT DOCS - CONSOLIDATED STYLES
    Combines: extra.css, brand.css, aurora.css, interactive-code.css
    Optimized for performance and maintainability
-   CACHE BUST: v2024-11-06-22:15-MOBILE-OVERLAY-FIX
+   CACHE BUST: v2024-11-06-22:45-MOBILE-NAV-FLOW-FIX
    ================================================================================ */
 
 /* NOTE: Mermaid diagram styles moved to page-specific <style> blocks */
@@ -459,13 +459,17 @@ body::before {
   /* Show nested navigation when toggle is checked */
   .md-sidebar--primary .md-nav__toggle:checked ~ .md-nav {
     display: block !important;
+    position: static !important; /* CRITICAL: in document flow, not absolute */
+    margin-top: 0 !important;
   }
 
   /* Style nested navigation items */
   .md-sidebar--primary .md-nav__item .md-nav {
     display: none !important; /* Hidden by default */
+    position: static !important; /* CRITICAL: flows in document, not overlaying */
     background-color: rgba(0, 0, 0, 0.05) !important;
     padding-left: 1rem !important;
+    width: 100% !important;
   }
 
   /* Style nested links */
@@ -474,6 +478,11 @@ body::before {
     padding: 0.75rem 1.2rem !important;
     min-height: 48px !important;
     border-bottom: 1px solid var(--md-default-fg-color--lightest) !important;
+  }
+
+  /* Parent container for nested items */
+  .md-sidebar--primary .md-nav__item--nested {
+    position: relative !important; /* Container for absolute toggle button */
   }
 
   /* Make parent items with children clickable */
@@ -633,27 +642,39 @@ body::before {
 }
 
 .md-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
   z-index: 100 !important; /* Overlay BEHIND drawer so drawer is clickable */
   opacity: 0 !important;
-  background-color: rgba(0, 0, 0, 0.54) !important;
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  pointer-events: none !important;
+  transition: opacity 250ms !important;
 }
 
 /* Make overlay visible and dark when drawer is open */
 #__drawer:checked ~ .md-overlay {
   opacity: 1 !important;
-  background-color: rgba(0, 0, 0, 0.54) !important;
+  pointer-events: auto !important;
+  background-color: rgba(0, 0, 0, 0.7) !important;
 }
 
 /* Ensure overlay stays below drawer on narrow screens */
 @media screen and (max-width: 76.24em) {
   .md-overlay {
     z-index: 100 !important; /* Below drawer (250) */
+    position: fixed !important;
+    display: block !important;
   }
 
   /* Make overlay visible when drawer is open on mobile */
   #__drawer:checked ~ .md-overlay {
     opacity: 1 !important;
-    background-color: rgba(0, 0, 0, 0.54) !important;
+    pointer-events: auto !important;
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    visibility: visible !important;
   }
 }
 
