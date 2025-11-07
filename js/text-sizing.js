@@ -7,11 +7,11 @@
   'use strict';
 
   // Font size configuration
-  // Material theme default is 125% (20px), so we match that
+  // Material theme default is 125% (20px), increased for better readability
   const FONT_SIZES = {
-    small: 16,    // 100% - smaller than default
-    normal: 20,   // 125% - matches Material theme default
-    large: 24     // 150% - larger than default
+    small: 18,    // 112.5% - increased from 16px
+    normal: 22,   // 137.5% - increased from 20px
+    large: 26     // 162.5% - increased from 24px
   };
 
   const STORAGE_KEY = 'sp-font-size';
@@ -37,13 +37,13 @@
     controls.setAttribute('role', 'group');
     controls.setAttribute('aria-label', 'Text size controls');
     controls.innerHTML = `
-      <button class="text-size-btn" data-size="small" aria-label="Decrease text size" title="Smaller text (14px)">
+      <button class="text-size-btn" data-size="small" aria-label="Decrease text size" title="Smaller text (18px)">
         A-
       </button>
-      <button class="text-size-btn active" data-size="normal" aria-label="Normal text size" title="Normal text (16px)">
+      <button class="text-size-btn active" data-size="normal" aria-label="Normal text size" title="Normal text (22px)">
         A
       </button>
-      <button class="text-size-btn" data-size="large" aria-label="Increase text size" title="Larger text (18px)">
+      <button class="text-size-btn" data-size="large" aria-label="Increase text size" title="Larger text (26px)">
         A+
       </button>
     `;

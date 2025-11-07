@@ -3822,5 +3822,54 @@ a {
 */
 
 /* ========================================
+   HOMEPAGE IMPROVEMENTS
+   ======================================== */
+
+/* Most Common Tasks: Better mobile grid layout */
+@media screen and (max-width: 768px) {
+  /* Target the grid container with inline styles - CSS specificity override */
+  #most-common-tasks + p + div[style*="grid"] {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    margin: 1rem 0 !important;
+  }
+
+  /* Adjust card padding and font sizes for mobile */
+  #most-common-tasks + p + div[style*="grid"] > div {
+    padding: 1.25rem !important;
+  }
+
+  #most-common-tasks + p + div[style*="grid"] h3 {
+    font-size: 1rem !important;
+  }
+
+  #most-common-tasks + p + div[style*="grid"] p {
+    font-size: 0.9rem !important;
+  }
+
+  #most-common-tasks + p + div[style*="grid"] a {
+    font-size: 0.85rem !important;
+    padding: 0.4rem 1.2rem !important;
+  }
+}
+
+/* For tablets: show 2 columns */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  #most-common-tasks + p + div[style*="grid"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Mobile sidebar title: Apply GUGI brand font */
+@media screen and (max-width: 76.24em) {
+  .md-nav--primary > .md-nav__title {
+    font-family: var(--sp-brand-font) !important;
+    font-size: 1.1rem !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.02em !important;
+  }
+}
+
+/* ========================================
    END OF CONSOLIDATED STYLES
    ======================================== */
