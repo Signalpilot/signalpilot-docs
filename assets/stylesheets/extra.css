@@ -485,6 +485,11 @@ body::before {
     display: none !important;
   }
 
+  /* Hide redundant active page link (you're already on this page, don't need a link to it) */
+  .md-sidebar--primary a.md-nav__link.md-nav__link--active {
+    display: none !important;
+  }
+
   /* Parent container for nested items */
   .md-sidebar--primary .md-nav__item--nested {
     position: relative !important; /* Container for absolute toggle button */
