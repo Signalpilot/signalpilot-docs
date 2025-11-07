@@ -29,6 +29,16 @@
     // Only handle if drawer is open
     if (!drawer.checked) return;
 
+    // CRITICAL: Don't interfere with scrolling inside nested navigation
+    const target = e.target;
+    const isInsideNestedNav = target.closest('.md-nav__item--nested .md-nav');
+
+    if (isInsideNestedNav) {
+      // User is touching nested/expanded content - let them scroll freely
+      isSwiping = false;
+      return;
+    }
+
     touchStartX = e.touches[0].clientX;
     touchStartY = e.touches[0].clientY;
     isSwiping = true;
