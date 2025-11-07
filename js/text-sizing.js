@@ -84,11 +84,9 @@
     const fontSize = FONT_SIZES[size];
     document.documentElement.style.fontSize = fontSize + 'px';
 
-    // Also update chatbot if present
-    const chatbot = document.querySelector('.sp-chatbot-container');
-    if (chatbot) {
-      chatbot.style.fontSize = fontSize + 'px';
-    }
+    // DON'T update chatbot - it has its own responsive font sizing
+    // The chatbot uses CSS media queries to set appropriate sizes
+    // Applying text-sizing here would override mobile optimizations
   }
 
   // Update active button state
