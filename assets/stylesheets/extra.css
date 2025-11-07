@@ -475,6 +475,9 @@ body::before {
     background-color: rgba(0, 0, 0, 0.05) !important;
     padding-left: 1rem !important;
     width: 100% !important;
+    overflow-y: visible !important; /* Don't constrain nested content */
+    touch-action: pan-y !important; /* Allow vertical scrolling */
+    -webkit-overflow-scrolling: touch !important; /* Smooth iOS scrolling */
   }
 
   /* Style nested links */
@@ -483,6 +486,12 @@ body::before {
     padding: 0.75rem 1.2rem !important;
     min-height: 48px !important;
     border-bottom: 1px solid var(--md-default-fg-color--lightest) !important;
+    touch-action: auto !important; /* Allow all touch interactions */
+  }
+
+  /* Ensure nested nav list is scrollable */
+  .md-sidebar--primary .md-nav__item .md-nav .md-nav__list {
+    touch-action: pan-y !important; /* Allow vertical scrolling */
   }
 
   /* Hide redundant nested navigation title on mobile */
