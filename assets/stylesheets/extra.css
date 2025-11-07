@@ -305,7 +305,9 @@ body::before {
   /* Sidebar styling on mobile - accordion style */
   .md-sidebar--primary {
     position: fixed !important;
+    inset: 3.5rem 0 0 0 !important; /* Modern: top right bottom left */
     left: 0 !important;
+    right: auto !important; /* Force left side, override right positioning */
     top: 3.5rem !important; /* Below header */
     width: 100% !important; /* Full width */
     max-width: 100vw !important;
@@ -317,7 +319,10 @@ body::before {
     overflow-x: hidden !important;
     -webkit-overflow-scrolling: touch !important; /* Smooth iOS scrolling */
     border-right: none !important; /* Full width, no border */
+    border-left: none !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important; /* Subtle shadow */
+    transform: none !important; /* No transforms */
+    margin: 0 !important;
   }
 
   /* Scrollwrap styling */
