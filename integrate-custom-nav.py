@@ -12,8 +12,21 @@ def add_custom_nav_to_html(html_content, html_file):
     """Add custom navigation CSS and JS to HTML file"""
 
     # Calculate relative path depth for subdirectories
-    depth = str(html_file).replace(os.getcwd(), '').lstrip('/').count('/') - 1
+    # Count directory levels: if file is in root, depth=0, if in subdir, depth=1, etc.
+    file_path_str = str(html_file)
+    # Remove the filename to get just the directory path
+    dir_path = os.path.dirname(file_path_str)
+
+    # Count depth by splitting on / and counting parts
+    if dir_path == '.' or dir_path == '':
+        depth = 0
+    else:
+        # Count slashes + 1 (e.g., "foo/bar" has 1 slash = depth 2)
+        depth = dir_path.count('/') + 1
+
     prefix = "../" * depth if depth > 0 else ""
+
+    print(f"  → File: {html_file}, Depth: {depth}, Prefix: '{prefix}'")
 
     # Check if already integrated
     if 'hide-mkdocs-sidebar.css' in html_content:

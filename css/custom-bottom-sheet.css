@@ -10,7 +10,7 @@
 .custom-nav-button {
   position: fixed;
   bottom: 2rem;
-  right: 2rem;
+  left: 2rem; /* LEFT side to avoid chatbot button on right */
   width: 60px;
   height: 60px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -373,7 +373,7 @@
 
   .custom-nav-button {
     bottom: 1.5rem;
-    right: 1.5rem;
+    left: 1.5rem; /* LEFT side on mobile too */
     width: 56px;
     height: 56px;
   }
