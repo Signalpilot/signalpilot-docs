@@ -3931,6 +3931,15 @@ a {
     margin-right: 0.5rem !important;
   }
 
+  /* Reduce header title font size to fit "SIGNAL PILOT" */
+  .md-header__title {
+    font-size: 0.7rem !important;
+  }
+
+  .md-header__topic {
+    font-size: 0.7rem !important;
+  }
+
   /* Ensure palette toggle only shows one icon at a time */
   .md-header__option[data-md-component="palette"] label:not([hidden]) {
     display: inline-block !important;
@@ -3939,6 +3948,26 @@ a {
   .md-header__option[data-md-component="palette"] label[hidden] {
     display: none !important;
   }
+}
+
+/* New User Resources: Fix list item formatting */
+#new-user-resources + div[style*="grid"] ul li {
+  display: block !important;
+  white-space: normal !important;
+}
+
+#new-user-resources + div[style*="grid"] ul li strong,
+#new-user-resources + div[style*="grid"] ul li a {
+  display: inline !important;
+}
+
+/* Ensure arrow and link stay on same line as description */
+#new-user-resources + div[style*="grid"] ul {
+  list-style: none !important;
+}
+
+#new-user-resources + div[style*="grid"] ul li::before {
+  content: none !important;
 }
 
 /* ========================================
