@@ -304,15 +304,15 @@ body::before {
     transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
   }
 
-  /* Sidebar styling on mobile - accordion style */
+  /* Sidebar styling on mobile - compact 50-60% width */
   .md-sidebar--primary {
     position: fixed !important;
     left: 0 !important;
     top: 3.5rem !important; /* Below header */
     bottom: 0 !important;
     right: auto !important; /* Force left side, override right positioning */
-    width: 85% !important; /* 85% width - leaves 15% visible on right */
-    max-width: 400px !important; /* Cap at 400px on larger phones */
+    width: 280px !important; /* ~50-60% on most phones (360-428px wide) */
+    max-width: 70vw !important; /* Don't exceed 70% of viewport - leaves 30% visible */
     height: calc(100vh - 3.5rem) !important; /* Full height minus header */
     height: calc(100dvh - 3.5rem) !important; /* Dynamic viewport */
     background-color: var(--md-default-bg-color) !important;
@@ -327,10 +327,10 @@ body::before {
     /* Note: transform is handled by the checked/unchecked states above for slide animation */
   }
 
-  /* Scrollwrap styling - cleaner padding */
+  /* Scrollwrap styling - minimal padding for narrow sidebar */
   .md-sidebar--primary .md-sidebar__scrollwrap {
     background-color: var(--md-default-bg-color) !important;
-    padding: 0.75rem 0.5rem !important; /* Top/bottom slightly larger for breathing room */
+    padding: 0.75rem 0.35rem !important; /* Reduced horizontal padding for narrow width */
   }
 
   /* All navigation elements always visible and clickable */
@@ -345,23 +345,25 @@ body::before {
     visibility: visible !important;
   }
 
-  /* Compact, modern navigation links */
+  /* Compact navigation links for narrow sidebar */
   .md-sidebar--primary .md-nav__link {
     color: var(--md-default-fg-color) !important;
-    padding: 0.4rem 0.75rem !important; /* Reduced from 0.5rem */
-    min-height: 36px !important; /* Reduced from 40px - still touch-friendly */
+    padding: 0.35rem 0.5rem !important; /* Minimal padding for narrow width */
+    min-height: 36px !important; /* Still touch-friendly */
     display: flex !important;
     align-items: center !important;
-    font-size: 0.8rem !important; /* Slightly larger than 0.75rem for readability */
-    line-height: 1.3 !important;
-    border-radius: 6px !important; /* Rounded corners for modern look */
+    font-size: 0.75rem !important; /* Smaller to prevent wrapping */
+    line-height: 1.2 !important;
+    border-radius: 4px !important;
     transition: background-color 0.15s ease, padding-left 0.15s ease !important;
+    word-break: break-word !important; /* Allow breaking long words */
+    hyphens: auto !important; /* Enable hyphenation */
   }
 
   /* Hover effect for better UX */
   .md-sidebar--primary .md-nav__link:hover {
     background-color: rgba(103, 158, 255, 0.08) !important;
-    padding-left: 0.85rem !important; /* Subtle indent on hover */
+    padding-left: 0.6rem !important; /* Subtle indent on hover */
   }
 
   /* Tighter spacing between items */
@@ -378,14 +380,14 @@ body::before {
 
   /* Cleaner hierarchy for nested items */
   .md-sidebar--primary .md-nav__item--nested > .md-nav > .md-nav__list > .md-nav__item {
-    padding-left: 0.5rem !important; /* Subtle indent instead of negative margin */
+    padding-left: 0.3rem !important; /* Minimal indent for narrow sidebar */
     margin-left: 0 !important;
   }
 
-  /* Sub-items should be slightly smaller and indented */
+  /* Sub-items should be slightly smaller with minimal indent */
   .md-sidebar--primary .md-nav__item--nested .md-nav__link {
-    font-size: 0.75rem !important;
-    padding-left: 1.25rem !important;
+    font-size: 0.7rem !important; /* Even smaller for nested */
+    padding-left: 0.75rem !important; /* Reduced indent */
   }
 
   /* NOTE: Browser tooltips from title attributes cannot be disabled with CSS alone.
