@@ -3974,12 +3974,32 @@ a {
 }
 
 /* New User Resources: Fix list item formatting - force single lines */
+/* Reduce UL padding to prevent overflow on mobile */
+#new-user-resources + div ul {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* Mobile: make lists smaller and allow wrapping if needed */
+@media screen and (max-width: 768px) {
+  #new-user-resources + div ul {
+    padding-left: 0.25rem !important;
+  }
+
+  #new-user-resources + div ul li {
+    font-size: 0.85rem !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+}
+
 #new-user-resources + div ul li {
   display: block !important;
   list-style: none !important;
   white-space: nowrap !important;
   overflow: visible !important;
   line-height: 1.8 !important;
+  padding-left: 0 !important;
 }
 
 /* Force all child elements to be inline */
