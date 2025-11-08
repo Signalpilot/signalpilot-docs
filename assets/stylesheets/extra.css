@@ -372,7 +372,23 @@ body::before {
 
   /* Better visual hierarchy for nested items */
   .md-sidebar--primary .md-nav__item--nested > .md-nav > .md-nav__list > .md-nav__item {
-    padding-left: 0.5rem !important;
+    padding-left: 0 !important;
+  }
+
+  /* Remove title tooltips from sidebar links */
+  .md-sidebar--primary .md-nav__link {
+    pointer-events: auto !important;
+  }
+
+  /* Hide title attribute tooltips - prevent duplicate text on hover */
+  .md-sidebar--primary .md-nav__link[title]:hover::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  /* Disable browser default tooltips on sidebar links */
+  .md-sidebar--primary .md-nav__link[title] {
+    position: relative !important;
   }
 
   /* DARK MODE */
@@ -426,7 +442,7 @@ body::before {
     display: none !important; /* Hidden by default */
     position: static !important; /* CRITICAL: flows in document, not overlaying */
     background-color: rgba(0, 0, 0, 0.05) !important;
-    padding-left: 1rem !important;
+    padding-left: 0.5rem !important;
     width: 100% !important;
     overflow-y: visible !important; /* Don't constrain nested content */
     touch-action: pan-y !important; /* Allow vertical scrolling */
@@ -436,7 +452,7 @@ body::before {
   /* Style nested links */
   .md-sidebar--primary .md-nav__item .md-nav .md-nav__link {
     font-size: 0.7rem !important;
-    padding: 0.5rem 0.85rem !important;
+    padding: 0.5rem 0.5rem 0.5rem 0.75rem !important;
     min-height: 40px !important;
     border-bottom: 1px solid var(--md-default-fg-color--lightest) !important;
     touch-action: auto !important; /* Allow all touch interactions */
@@ -3896,6 +3912,31 @@ a {
   #new-user-resources + div[style*="grid"],
   #most-common-tasks + p + div[style*="grid"] {
     grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Desktop: Make hero section more compact for better screenshot preview */
+@media screen and (min-width: 769px) {
+  /* Hero section with gradient background */
+  div[style*="padding: 3rem 1.5rem"][style*="gradient"] {
+    padding: 2rem 1.5rem !important;
+  }
+
+  /* Hero title */
+  div[style*="gradient"] h2[style*="font-size: 2.2rem"] {
+    font-size: 1.8rem !important;
+  }
+
+  /* Hero subtitle */
+  div[style*="gradient"] p[style*="font-size: 1.2rem"] {
+    font-size: 1rem !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  /* Hero buttons */
+  div[style*="gradient"] a[style*="font-size: 1.1rem"] {
+    font-size: 0.95rem !important;
+    padding: 0.7rem 2rem !important;
   }
 }
 
