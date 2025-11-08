@@ -35,10 +35,13 @@ def add_custom_nav_to_html(html_content, html_file):
     # Find the </head> tag to insert CSS before it
     head_pattern = r'</head>'
 
+    # Cache-busting version (increment this when JS/CSS changes)
+    version = "v2"
+
     css_links = f'''
   <!-- Custom Bottom Sheet Navigation -->
-  <link rel="stylesheet" href="{prefix}css/hide-mkdocs-sidebar.css">
-  <link rel="stylesheet" href="{prefix}css/custom-bottom-sheet.css">
+  <link rel="stylesheet" href="{prefix}css/hide-mkdocs-sidebar.css?{version}">
+  <link rel="stylesheet" href="{prefix}css/custom-bottom-sheet.css?{version}">
 </head>'''
 
     # Replace </head> with CSS links + </head>
@@ -49,7 +52,7 @@ def add_custom_nav_to_html(html_content, html_file):
 
     js_script = f'''
   <!-- Custom Bottom Sheet Navigation Script -->
-  <script src="{prefix}assets/custom-bottom-sheet.js"></script>
+  <script src="{prefix}assets/custom-bottom-sheet.js?{version}"></script>
 </body>'''
 
     # Replace </body> with JS script + </body>
