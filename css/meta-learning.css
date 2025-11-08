@@ -284,22 +284,26 @@
 /* Text Sizing Controls */
 .text-size-controls {
   display: flex;
-  gap: 4px;
+  gap: 0.2rem; /* Changed from 4px to rem */
   align-items: center;
-  margin-left: 16px;
+  margin-left: 0.8rem; /* Changed from 16px to rem */
 }
 
 .text-size-btn {
   background: rgba(0, 188, 212, 0.1);
   border: 1px solid #00bcd4;
   color: #00bcd4;
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-size: 14px;
+  padding: 0.3rem 0.6rem; /* Changed from 6px 12px to rem */
+  border-radius: 0.2rem; /* Changed from 4px to rem */
+  font-size: 0.7rem; /* Changed from 14px to rem */
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
-  min-width: 40px;
+  min-width: 2rem; /* Changed from 40px to rem */
+  line-height: 1; /* Ensure consistent height */
+  display: flex; /* Better centering */
+  align-items: center;
+  justify-content: center;
 }
 
 .text-size-btn:hover {
@@ -337,13 +341,13 @@
   }
 
   .text-size-controls {
-    margin-left: 8px;
+    margin-left: 0.4rem; /* Changed from 8px to rem */
   }
 
   .text-size-btn {
-    padding: 4px 8px;
-    font-size: 12px;
-    min-width: 32px;
+    padding: 0.2rem 0.4rem; /* Changed from 4px 8px to rem */
+    font-size: 0.6rem; /* Changed from 12px to rem */
+    min-width: 1.6rem; /* Changed from 32px to rem */
   }
 }
 
