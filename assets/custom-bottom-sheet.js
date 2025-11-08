@@ -136,8 +136,15 @@
           <div class="custom-sheet-handle-bar"></div>
         </div>
         <div class="custom-sheet-header">
-          <h2 class="custom-sheet-title">Signal Pilot Docs</h2>
-          <p class="custom-sheet-subtitle">Navigate the documentation</p>
+          <div class="custom-sheet-header-content">
+            <h2 class="custom-sheet-title">Signal Pilot Docs</h2>
+            <p class="custom-sheet-subtitle">Navigate the documentation</p>
+          </div>
+          <button class="custom-sheet-close" aria-label="Close navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+            </svg>
+          </button>
         </div>
         <div class="custom-sheet-content">
           <nav>
@@ -190,6 +197,12 @@
 
       // Overlay click - close sheet
       this.overlay.addEventListener('click', () => this.close());
+
+      // Close button click - close sheet
+      const closeButton = this.sheet.querySelector('.custom-sheet-close');
+      if (closeButton) {
+        closeButton.addEventListener('click', () => this.close());
+      }
 
       // Handle swipe down to dismiss
       this.setupSwipeGestures();

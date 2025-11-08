@@ -141,6 +141,13 @@
   position: sticky;
   top: 32px;
   z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.custom-sheet-header-content {
+  flex: 1;
 }
 
 .custom-sheet-title {
@@ -154,6 +161,37 @@
   font-size: 0.9rem;
   color: var(--md-default-fg-color--light, #666);
   margin: 0.25rem 0 0;
+}
+
+/* Close button in header */
+.custom-sheet-close {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.custom-sheet-close:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.custom-sheet-close:active {
+  background: rgba(0, 0, 0, 0.1);
+  transform: scale(0.95);
+}
+
+.custom-sheet-close svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--md-default-fg-color--light, #666);
 }
 
 /* ============================================
@@ -350,6 +388,14 @@
 
 [data-md-color-scheme="slate"] .custom-nav-children {
   background: rgba(255, 255, 255, 0.05);
+}
+
+[data-md-color-scheme="slate"] .custom-sheet-close:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+[data-md-color-scheme="slate"] .custom-sheet-close:active {
+  background: rgba(255, 255, 255, 0.12);
 }
 
 /* ============================================
