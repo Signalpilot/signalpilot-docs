@@ -4066,5 +4066,48 @@ a {
 }
 
 /* ========================================
+   GLOBAL MOBILE CARD/GRID OPTIMIZATIONS
+   Apply same logic to all card-based layouts across site
+   ======================================== */
+
+/* Mobile: Optimize ALL gradient card boxes across the entire site */
+@media screen and (max-width: 768px) {
+  /* Reduce padding on all gradient cards */
+  div[style*="padding: 2rem"][style*="gradient"] {
+    padding: 1rem !important;
+  }
+
+  /* Reduce font sizes in all gradient cards */
+  div[style*="padding: 2rem"][style*="gradient"] h3 {
+    font-size: 0.9rem !important;
+  }
+
+  div[style*="padding: 2rem"][style*="gradient"] p {
+    font-size: 0.75rem !important;
+  }
+
+  div[style*="padding: 2rem"][style*="gradient"] ul,
+  div[style*="padding: 2rem"][style*="gradient"] ol {
+    font-size: 0.7rem !important;
+    padding-left: 0.5rem !important;
+  }
+
+  div[style*="padding: 2rem"][style*="gradient"] li {
+    font-size: 0.7rem !important;
+  }
+
+  /* Optimize all grid layouts for mobile - force single column */
+  div[style*="display: grid"][style*="repeat(auto-fit"] {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  /* Reduce padding on cards with 1.5rem padding too */
+  div[style*="padding: 1.5rem"][style*="gradient"] {
+    padding: 1rem !important;
+  }
+}
+
+/* ========================================
    END OF CONSOLIDATED STYLES
    ======================================== */
