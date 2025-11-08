@@ -40,8 +40,8 @@
 
 .sp-chatbot-icon,
 .sp-chatbot-close-icon {
-    width: 28px;
-    height: 28px;
+    width: 32px; /* Bigger icon for better visibility */
+    height: 32px;
     transition: all 0.3s ease;
 }
 

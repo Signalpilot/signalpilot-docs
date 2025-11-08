@@ -9,13 +9,13 @@
 
 .custom-nav-button {
   position: fixed;
-  bottom: 2rem;
-  left: 2rem; /* LEFT side to avoid chatbot button on right */
+  bottom: 100px; /* Positioned ABOVE chatbot button */
+  right: 20px; /* Same horizontal position as chatbot */
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #29B6F6 0%, #0288D1 100%); /* Match chatbot blue gradient */
   border-radius: 50%;
-  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 4px 12px rgba(41, 182, 246, 0.4); /* Match chatbot shadow */
   border: none;
   cursor: pointer;
   z-index: 999;
@@ -27,17 +27,17 @@
 
 .custom-nav-button:hover {
   transform: scale(1.1);
-  box-shadow: 0 6px 28px rgba(102, 126, 234, 0.6);
+  box-shadow: 0 6px 20px rgba(41, 182, 246, 0.6); /* Match chatbot hover shadow */
 }
 
 .custom-nav-button:active {
   transform: scale(0.95);
 }
 
-/* Hamburger icon */
+/* Hamburger icon - bigger size */
 .custom-nav-button svg {
-  width: 24px;
-  height: 24px;
+  width: 32px; /* Bigger icon - matches chatbot */
+  height: 32px;
   fill: white;
 }
 
@@ -365,16 +365,16 @@
    MOBILE OPTIMIZATIONS
    ============================================ */
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .custom-bottom-sheet {
     height: 90vh;
     max-height: 90vh;
   }
 
   .custom-nav-button {
-    bottom: 1.5rem;
-    left: 1.5rem; /* LEFT side on mobile too */
-    width: 56px;
-    height: 56px;
+    bottom: 90px; /* Above chatbot on mobile (chatbot is at 16px) */
+    right: 16px; /* Match chatbot position on mobile */
+    width: 60px; /* Keep same size */
+    height: 60px;
   }
 }
