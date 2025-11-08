@@ -192,8 +192,14 @@
     }
 
     setupEventListeners() {
-      // Button click - open sheet
-      this.button.addEventListener('click', () => this.open());
+      // Button click - toggle sheet (open/close)
+      this.button.addEventListener('click', () => {
+        if (this.isOpen) {
+          this.close();
+        } else {
+          this.open();
+        }
+      });
 
       // Overlay click - close sheet
       this.overlay.addEventListener('click', () => this.close());
