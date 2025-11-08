@@ -3973,27 +3973,46 @@ a {
   }
 }
 
-/* New User Resources: Fix list item formatting - more specific selectors */
+/* New User Resources: Fix list item formatting - force single lines */
 #new-user-resources + div ul li {
-  display: list-item !important;
+  display: block !important;
   list-style: none !important;
-  white-space: normal !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
   line-height: 1.8 !important;
+}
+
+/* Force all child elements to be inline */
+#new-user-resources + div ul li * {
+  display: inline !important;
+  white-space: nowrap !important;
 }
 
 #new-user-resources + div ul li a {
   display: inline !important;
+  white-space: nowrap !important;
+  text-decoration: none !important;
 }
 
 #new-user-resources + div ul li strong {
   display: inline !important;
+  white-space: nowrap !important;
 }
 
 /* Remove any pseudo-elements that might be causing line breaks */
 #new-user-resources + div ul li::before,
-#new-user-resources + div ul li::after {
+#new-user-resources + div ul li::after,
+#new-user-resources + div ul li a::before,
+#new-user-resources + div ul li a::after {
   content: none !important;
   display: none !important;
+}
+
+/* Override any Material for MkDocs link styling in these lists */
+.md-typeset #new-user-resources + div ul li a,
+.md-typeset #new-user-resources + div ul li a strong {
+  display: inline !important;
+  word-break: keep-all !important;
 }
 
 /* ========================================
