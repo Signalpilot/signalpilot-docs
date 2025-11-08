@@ -843,9 +843,9 @@ body::before {
   }
 
   /* Prevent body scroll when drawer is open */
-  #__drawer:checked ~ .md-container {
-    overflow: hidden;
-  }
+  /* FIXED: Removed overflow:hidden from .md-container as it breaks position:fixed */
+  /* The sidebar is already position:fixed and covers full viewport, so no need to */
+  /* prevent background scrolling - the sidebar stays in place regardless */
 }
 
 /* ========================================
