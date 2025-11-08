@@ -370,26 +370,22 @@ body::before {
     line-height: 1.4 !important;
   }
 
-  /* Better visual hierarchy for nested items */
+  /* Better visual hierarchy for nested items - AGGRESSIVE padding reduction */
   .md-sidebar--primary .md-nav__item--nested > .md-nav > .md-nav__list > .md-nav__item {
     padding-left: 0 !important;
+    margin-left: -0.5rem !important; /* Pull items more to the left */
   }
 
-  /* Remove title tooltips from sidebar links */
-  .md-sidebar--primary .md-nav__link {
-    pointer-events: auto !important;
-  }
+  /* NOTE: Browser tooltips from title attributes cannot be disabled with CSS alone.
+     The remove-tooltips.js file must be included in your HTML.
+     Add this to your mkdocs.yml:
 
-  /* Hide title attribute tooltips - prevent duplicate text on hover */
-  .md-sidebar--primary .md-nav__link[title]:hover::after {
-    content: none !important;
-    display: none !important;
-  }
+     extra_javascript:
+       - assets/remove-tooltips.js
 
-  /* Disable browser default tooltips on sidebar links */
-  .md-sidebar--primary .md-nav__link[title] {
-    position: relative !important;
-  }
+     Or add this script tag before </body> in your HTML template:
+     <script src="assets/remove-tooltips.js"></script>
+  */
 
   /* DARK MODE */
   [data-md-color-scheme="slate"] .md-sidebar--primary,
@@ -437,22 +433,22 @@ body::before {
     margin-top: 0 !important;
   }
 
-  /* Style nested navigation items */
+  /* Style nested navigation items - REDUCED padding for better visibility */
   .md-sidebar--primary .md-nav__item .md-nav {
     display: none !important; /* Hidden by default */
     position: static !important; /* CRITICAL: flows in document, not overlaying */
     background-color: rgba(0, 0, 0, 0.05) !important;
-    padding-left: 0.5rem !important;
+    padding-left: 0.25rem !important; /* Reduced from 0.5rem */
     width: 100% !important;
     overflow-y: visible !important; /* Don't constrain nested content */
     touch-action: pan-y !important; /* Allow vertical scrolling */
     -webkit-overflow-scrolling: touch !important; /* Smooth iOS scrolling */
   }
 
-  /* Style nested links */
+  /* Style nested links - MORE left spacing */
   .md-sidebar--primary .md-nav__item .md-nav .md-nav__link {
     font-size: 0.7rem !important;
-    padding: 0.5rem 0.5rem 0.5rem 0.75rem !important;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem !important; /* Reduced left padding from 0.75rem */
     min-height: 40px !important;
     border-bottom: 1px solid var(--md-default-fg-color--lightest) !important;
     touch-action: auto !important; /* Allow all touch interactions */
