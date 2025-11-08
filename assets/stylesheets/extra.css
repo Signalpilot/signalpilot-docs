@@ -3956,14 +3956,21 @@ a {
     font-size: 0.6rem !important;
   }
 
-  /* Make search icon smaller on mobile */
+  /* Make search icon same size as theme toggle */
   .md-header__button[for="__search"] {
-    padding: 0.2rem !important;
+    padding: 0.25rem !important;
+    margin: 0.05rem !important;
   }
 
   .md-header__button[for="__search"] svg {
-    width: 1rem !important;
-    height: 1rem !important;
+    width: 1.2rem !important;
+    height: 1.2rem !important;
+  }
+
+  /* Make palette toggle icon same size */
+  .md-header__option[data-md-component="palette"] label svg {
+    width: 1.2rem !important;
+    height: 1.2rem !important;
   }
 
   /* Fix search overlay z-index and background */
