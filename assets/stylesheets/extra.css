@@ -3908,36 +3908,59 @@ a {
 
 /* Mobile header: Better spacing for buttons and text-sizing controls */
 @media screen and (max-width: 76.24em) {
-  /* Reduce header button spacing to make room for A-/A/A+ controls */
-  .md-header__button {
-    margin: 0.1rem !important;
-    padding: 0.3rem !important;
+  /* Reduce header inner padding to push hamburger all the way left */
+  .md-header__inner {
+    padding: 0 0.2rem 0 0 !important;
   }
 
-  /* Make hamburger icon smaller for better fit */
+  /* Push hamburger button all the way to the left edge */
   .md-header__button.md-icon[for="__drawer"] {
-    margin-left: 0 !important;
-    margin-right: 0.2rem !important;
+    margin: 0 !important;
+    padding: 0.4rem 0.2rem !important;
+    margin-left: 0.1rem !important;
   }
 
-  /* Reduce header title margins for more space */
+  /* Reduce all header buttons for better fit */
+  .md-header__button {
+    margin: 0.05rem !important;
+    padding: 0.25rem !important;
+  }
+
+  /* Drastically reduce header title margins */
   [dir=ltr] .md-header__title {
-    margin-left: 0.5rem !important;
-    margin-right: 0.2rem !important;
+    margin-left: 0.25rem !important;
+    margin-right: 0.1rem !important;
   }
 
   [dir=rtl] .md-header__title {
-    margin-left: 0.2rem !important;
-    margin-right: 0.5rem !important;
+    margin-left: 0.1rem !important;
+    margin-right: 0.25rem !important;
   }
 
-  /* Reduce header title font size to fit "SIGNAL PILOT" */
+  /* Make header title much smaller to fit "SIGNAL PILOT" */
   .md-header__title {
-    font-size: 0.7rem !important;
+    font-size: 0.6rem !important;
+    max-width: none !important;
+    flex-shrink: 1 !important;
   }
 
   .md-header__topic {
-    font-size: 0.7rem !important;
+    font-size: 0.6rem !important;
+  }
+
+  /* Fix search overlay z-index and background */
+  .md-search__overlay {
+    background-color: rgba(0, 0, 0, 0.54) !important;
+    opacity: 1 !important;
+  }
+
+  .md-search__inner {
+    background-color: var(--md-default-bg-color) !important;
+  }
+
+  /* Ensure search input is visible */
+  .md-search__form {
+    background-color: var(--md-default-bg-color) !important;
   }
 
   /* Ensure palette toggle only shows one icon at a time */
@@ -3950,24 +3973,27 @@ a {
   }
 }
 
-/* New User Resources: Fix list item formatting */
-#new-user-resources + div[style*="grid"] ul li {
-  display: block !important;
+/* New User Resources: Fix list item formatting - more specific selectors */
+#new-user-resources + div ul li {
+  display: list-item !important;
+  list-style: none !important;
   white-space: normal !important;
+  line-height: 1.8 !important;
 }
 
-#new-user-resources + div[style*="grid"] ul li strong,
-#new-user-resources + div[style*="grid"] ul li a {
+#new-user-resources + div ul li a {
   display: inline !important;
 }
 
-/* Ensure arrow and link stay on same line as description */
-#new-user-resources + div[style*="grid"] ul {
-  list-style: none !important;
+#new-user-resources + div ul li strong {
+  display: inline !important;
 }
 
-#new-user-resources + div[style*="grid"] ul li::before {
+/* Remove any pseudo-elements that might be causing line breaks */
+#new-user-resources + div ul li::before,
+#new-user-resources + div ul li::after {
   content: none !important;
+  display: none !important;
 }
 
 /* ========================================
