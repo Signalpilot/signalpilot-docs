@@ -3956,31 +3956,56 @@ a {
     font-size: 0.6rem !important;
   }
 
-  /* Make search icon same size as theme toggle */
+  /* Make search icon EXACTLY same size as theme toggle */
   .md-header__button[for="__search"] {
     padding: 0.25rem !important;
     margin: 0.05rem !important;
   }
 
   .md-header__button[for="__search"] svg {
-    width: 1.2rem !important;
-    height: 1.2rem !important;
+    width: 1.1rem !important;
+    height: 1.1rem !important;
   }
 
-  /* Make palette toggle icon same size */
+  /* Make palette toggle icon EXACTLY same size */
+  .md-header__option[data-md-component="palette"] {
+    margin: 0.05rem !important;
+  }
+
+  .md-header__option[data-md-component="palette"] label {
+    padding: 0.25rem !important;
+    margin: 0 !important;
+  }
+
   .md-header__option[data-md-component="palette"] label svg {
-    width: 1.2rem !important;
-    height: 1.2rem !important;
+    width: 1.1rem !important;
+    height: 1.1rem !important;
   }
 
-  /* Fix search overlay z-index and background */
+  /* Fix search overlay - position BELOW header, not on top */
+  .md-search {
+    position: fixed !important;
+    top: 3.5rem !important; /* Below header */
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 3 !important; /* Below header (header is z-index: 4) */
+  }
+
   .md-search__overlay {
+    position: fixed !important;
+    top: 3.5rem !important; /* Start below header */
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
     background-color: rgba(0, 0, 0, 0.54) !important;
     opacity: 1 !important;
+    z-index: 3 !important;
   }
 
   .md-search__inner {
     background-color: var(--md-default-bg-color) !important;
+    margin-top: 0 !important;
+    padding-top: 1rem !important;
   }
 
   /* Ensure search input is visible */
