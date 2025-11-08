@@ -5,24 +5,28 @@
 
 /* ============================================
    FLOATING NAV BUTTON - MOBILE ONLY
+   MATCHES CHATBOT BUTTON EXACTLY
    ============================================ */
 
 .custom-nav-button {
   position: fixed;
   bottom: 100px; /* Positioned ABOVE chatbot button */
   right: 20px; /* Same horizontal position as chatbot */
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, #29B6F6 0%, #0288D1 100%); /* Match chatbot blue gradient */
-  border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(41, 182, 246, 0.4); /* Match chatbot shadow */
+
+  /* EXACT MATCH TO CHATBOT: Size, gradient, shadow, border radius */
+  width: 60px;           /* ← Same as chatbot (60px) */
+  height: 60px;          /* ← Same as chatbot (60px) */
+  background: linear-gradient(135deg, #29B6F6 0%, #0288D1 100%); /* ← Same gradient as chatbot */
+  border-radius: 50%;    /* ← Same border radius as chatbot */
+  box-shadow: 0 4px 12px rgba(41, 182, 246, 0.4); /* ← Same shadow as chatbot */
+
   border: none;
   cursor: pointer;
   z-index: 1002; /* ABOVE overlay (1000) and sheet (1001) so button stays visible */
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* ← Same transition as chatbot */
 }
 
 .custom-nav-button:hover {
@@ -34,10 +38,10 @@
   transform: scale(0.95);
 }
 
-/* Hamburger icon - bigger size */
+/* Hamburger icon - EXACT MATCH to chatbot icon size */
 .custom-nav-button svg {
-  width: 32px; /* Bigger icon - matches chatbot */
-  height: 32px;
+  width: 32px;  /* ← Same as chatbot icon (32px) */
+  height: 32px; /* ← Same as chatbot icon (32px) */
   fill: white;
 }
 
@@ -430,7 +434,7 @@
   .custom-nav-button {
     bottom: 90px; /* Above chatbot on mobile (chatbot is at 16px) */
     right: 16px; /* Match chatbot position on mobile */
-    width: 60px; /* Keep same size */
-    height: 60px;
+    width: 60px;  /* ← ALWAYS equal to chatbot (60px) */
+    height: 60px; /* ← ALWAYS equal to chatbot (60px) */
   }
 }
