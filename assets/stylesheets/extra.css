@@ -3835,17 +3835,20 @@ a {
   }
 
   #new-user-resources + div[style*="grid"] > div {
-    padding: 1.25rem !important;
+    padding: 1rem !important;
   }
 
   #new-user-resources + div[style*="grid"] h3 {
-    font-size: 1rem !important;
+    font-size: 0.9rem !important;
   }
 
-  #new-user-resources + div[style*="grid"] p,
+  #new-user-resources + div[style*="grid"] p {
+    font-size: 0.75rem !important;
+  }
+
   #new-user-resources + div[style*="grid"] ol,
   #new-user-resources + div[style*="grid"] ul {
-    font-size: 0.9rem !important;
+    font-size: 0.7rem !important;
   }
 
   /* Stats section (5 Cycle Events, etc.) - 2 column grid on mobile */
@@ -3908,20 +3911,20 @@ a {
 
 /* Mobile header: Better spacing for buttons and text-sizing controls */
 @media screen and (max-width: 76.24em) {
-  /* Reduce header inner padding to push hamburger all the way left */
+  /* Remove ALL header inner padding on left to push hamburger to edge */
   .md-header__inner {
-    padding: 0 0.2rem 0 0 !important;
+    padding: 0 !important;
   }
 
-  /* Push hamburger button all the way to the left edge */
+  /* Push hamburger button ABSOLUTELY to the left edge - no margins at all */
   .md-header__button.md-icon[for="__drawer"] {
     margin: 0 !important;
-    padding: 0.4rem 0.2rem !important;
-    margin-left: 0.1rem !important;
+    padding: 0.5rem 0.3rem !important;
+    order: -1 !important;
   }
 
-  /* Reduce all header buttons for better fit */
-  .md-header__button {
+  /* Reduce all other header buttons for better fit */
+  .md-header__button:not([for="__drawer"]) {
     margin: 0.05rem !important;
     padding: 0.25rem !important;
   }
@@ -3980,14 +3983,26 @@ a {
   margin-left: 0 !important;
 }
 
-/* Mobile: make lists smaller and allow wrapping if needed */
+#new-user-resources + div ol {
+  padding-left: 0.75rem !important;
+  margin-left: 0 !important;
+}
+
+/* Mobile: make lists smaller and push more to the left */
 @media screen and (max-width: 768px) {
   #new-user-resources + div ul {
-    padding-left: 0.25rem !important;
+    padding-left: 0 !important;
+    margin-left: -0.25rem !important;
   }
 
-  #new-user-resources + div ul li {
-    font-size: 0.85rem !important;
+  #new-user-resources + div ol {
+    padding-left: 0.5rem !important;
+    margin-left: 0 !important;
+  }
+
+  #new-user-resources + div ul li,
+  #new-user-resources + div ol li {
+    font-size: 0.7rem !important;
     padding-left: 0 !important;
     margin-left: 0 !important;
   }
