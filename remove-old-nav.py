@@ -10,16 +10,16 @@ from pathlib import Path
 def remove_custom_nav_from_html(html_content):
     """Remove custom navigation CSS and JS from HTML file"""
 
-    # Remove CSS links
+    # Remove CSS links (with or without version query parameter)
     html_content = re.sub(
-        r'  <!-- Custom Bottom Sheet Navigation -->\s*\n\s*<link rel="stylesheet" href="[^"]*css/hide-mkdocs-sidebar\.css">\s*\n\s*<link rel="stylesheet" href="[^"]*css/custom-bottom-sheet\.css">\s*\n',
+        r'  <!-- Custom Bottom Sheet Navigation -->\s*\n\s*<link rel="stylesheet" href="[^"]*css/hide-mkdocs-sidebar\.css[^"]*">\s*\n\s*<link rel="stylesheet" href="[^"]*css/custom-bottom-sheet\.css[^"]*">\s*\n',
         '',
         html_content
     )
 
-    # Remove JS script
+    # Remove JS script (with or without version query parameter)
     html_content = re.sub(
-        r'  <!-- Custom Bottom Sheet Navigation Script -->\s*\n\s*<script src="[^"]*assets/custom-bottom-sheet\.js"></script>\s*\n',
+        r'  <!-- Custom Bottom Sheet Navigation Script -->\s*\n\s*<script src="[^"]*assets/custom-bottom-sheet\.js[^"]*"></script>\s*\n',
         '',
         html_content
     )
