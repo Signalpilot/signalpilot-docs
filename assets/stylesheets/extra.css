@@ -4095,15 +4095,15 @@ a {
     padding: 0.25rem !important;
   }
 
-  /* AGGRESSIVE: Remove ALL margins from title and use negative margin to pull left */
+  /* Fix: Add small positive margin to prevent text cutoff on left edge */
   [dir=ltr] .md-header__title {
-    margin-left: -0.1rem !important;
+    margin-left: 0.3rem !important; /* Small positive margin to prevent cutoff */
     margin-right: 0 !important;
   }
 
   [dir=rtl] .md-header__title {
     margin-left: 0 !important;
-    margin-right: -0.1rem !important;
+    margin-right: 0.3rem !important; /* Small positive margin to prevent cutoff */
   }
 
   /* Make header title much smaller to fit "SIGNAL PILOT" */
