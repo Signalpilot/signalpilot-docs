@@ -3916,28 +3916,33 @@ a {
     padding: 0 !important;
   }
 
-  /* Push hamburger button ABSOLUTELY to the left edge - no margins at all */
+  /* Hide logo button on mobile to save space */
+  .md-header__button.md-logo {
+    display: none !important;
+  }
+
+  /* Push hamburger button ABSOLUTELY to the left edge - minimal padding */
   .md-header__button.md-icon[for="__drawer"] {
     margin: 0 !important;
-    padding: 0.5rem 0.3rem !important;
+    padding: 0.4rem 0.2rem !important;
     order: -1 !important;
   }
 
   /* Reduce all other header buttons for better fit */
-  .md-header__button:not([for="__drawer"]) {
+  .md-header__button:not([for="__drawer"]):not(.md-logo) {
     margin: 0.05rem !important;
     padding: 0.25rem !important;
   }
 
-  /* Drastically reduce header title margins - push SIGNAL PILOT more left */
+  /* AGGRESSIVE: Remove ALL margins from title and use negative margin to pull left */
   [dir=ltr] .md-header__title {
-    margin-left: 0.1rem !important;
-    margin-right: 0.05rem !important;
+    margin-left: -0.1rem !important;
+    margin-right: 0 !important;
   }
 
   [dir=rtl] .md-header__title {
-    margin-left: 0.05rem !important;
-    margin-right: 0.1rem !important;
+    margin-left: 0 !important;
+    margin-right: -0.1rem !important;
   }
 
   /* Make header title much smaller to fit "SIGNAL PILOT" */
