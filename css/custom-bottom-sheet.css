@@ -4,7 +4,7 @@
  */
 
 /* ============================================
-   FLOATING NAV BUTTON
+   FLOATING NAV BUTTON - MOBILE ONLY
    ============================================ */
 
 .custom-nav-button {
@@ -39,6 +39,13 @@
   width: 32px; /* Bigger icon - matches chatbot */
   height: 32px;
   fill: white;
+}
+
+/* DESKTOP: Hide nav button completely */
+@media screen and (min-width: 76.25em) {
+  .custom-nav-button {
+    display: none !important;
+  }
 }
 
 /* ============================================
@@ -399,12 +406,15 @@
 }
 
 /* ============================================
-   DESKTOP: OPTIONAL SIDEBAR LAYOUT
+   DESKTOP: Hide bottom sheet completely
    ============================================ */
 
 @media screen and (min-width: 76.25em) {
-  /* On desktop, you can choose to show it as a permanent sidebar */
-  /* For now, keeping it as a button everywhere */
+  /* Desktop uses normal mkdocs sidebar - hide bottom sheet */
+  .custom-bottom-sheet,
+  .custom-nav-overlay {
+    display: none !important;
+  }
 }
 
 /* ============================================
