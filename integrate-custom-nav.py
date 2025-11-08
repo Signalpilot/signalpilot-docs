@@ -36,7 +36,7 @@ def add_custom_nav_to_html(html_content, html_file):
     head_pattern = r'</head>'
 
     # Cache-busting version (increment this when JS/CSS changes)
-    version = "v5"
+    version = "v6"
 
     css_links = f'''
   <!-- Custom Bottom Sheet Navigation -->
