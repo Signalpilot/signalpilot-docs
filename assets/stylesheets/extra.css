@@ -287,50 +287,58 @@ body::before {
   z-index: 200 !important; /* Drawer must be ABOVE overlay to be clickable */
 }
 
-/* ACCORDION MOBILE NAVIGATION: Simple, always-accessible navigation */
+/* BOTTOM SHEET MOBILE NAVIGATION: Modern, thumb-friendly pattern */
 @media screen and (max-width: 76.24em) {
-  /* Accordion approach: Navigation toggles between collapsed/expanded state */
-  /* No drawer sliding, no overlay - just simple show/hide */
+  /* Bottom sheet approach: Navigation slides up from bottom like modern apps */
+  /* Inspired by: Google Maps, Instagram, Spotify mobile patterns */
 
-  /* COLLAPSED STATE: Hide sidebar (slide out to left) */
+  /* COLLAPSED STATE: Hide sheet (slide down off-screen) */
   #__drawer:not(:checked) ~ .md-container .md-sidebar--primary {
-    transform: translateX(-100%) !important;
-    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    transform: translateY(100%) !important;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
   }
 
-  /* EXPANDED STATE: Show sidebar (slide in from left) */
+  /* EXPANDED STATE: Show sheet (slide up from bottom) */
   #__drawer:checked ~ .md-container .md-sidebar--primary {
-    transform: translateX(0) !important;
-    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    transform: translateY(0) !important;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
   }
 
-  /* Sidebar styling on mobile - compact 50-60% width */
+  /* Bottom Sheet Styling - Modern mobile app pattern */
   .md-sidebar--primary {
     position: fixed !important;
     left: 0 !important;
-    top: 3.5rem !important; /* Below header */
+    right: 0 !important;
     bottom: 0 !important;
-    right: auto !important; /* Force left side, override right positioning */
-    width: 280px !important; /* ~50-60% on most phones (360-428px wide) */
-    max-width: 70vw !important; /* Don't exceed 70% of viewport - leaves 30% visible */
-    height: calc(100vh - 3.5rem) !important; /* Full height minus header */
-    height: calc(100dvh - 3.5rem) !important; /* Dynamic viewport */
+    top: auto !important; /* Changed from top positioning */
+    width: 100% !important; /* Full width */
+    height: 65vh !important; /* 65% of viewport height - leaves top visible */
+    max-height: 65vh !important;
     background-color: var(--md-default-bg-color) !important;
-    z-index: 100 !important; /* Above content */
-    overflow-y: auto !important; /* Scrollable */
+    z-index: 100 !important; /* Above overlay */
+    overflow-y: auto !important; /* Scrollable content */
     overflow-x: hidden !important;
     -webkit-overflow-scrolling: touch !important; /* Smooth iOS scrolling */
-    border-right: 1px solid rgba(148, 163, 184, 0.2) !important; /* Visual separator */
-    border-left: none !important;
-    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.15) !important; /* Shadow on right edge */
+
+    /* Modern rounded top corners */
+    border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+
+    /* Top border and shadow for depth */
+    border-top: 1px solid rgba(148, 163, 184, 0.2) !important;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15) !important; /* Shadow at top */
     margin: 0 !important;
-    /* Note: transform is handled by the checked/unchecked states above for slide animation */
+    padding-top: 0 !important; /* Space for drag handle added by JS */
   }
 
-  /* Scrollwrap styling - minimal padding for narrow sidebar */
+  /* Scrollwrap styling with padding for bottom sheet */
   .md-sidebar--primary .md-sidebar__scrollwrap {
     background-color: var(--md-default-bg-color) !important;
-    padding: 0.75rem 0.35rem !important; /* Reduced horizontal padding for narrow width */
+    padding: 1rem 1rem !important; /* Generous padding for thumb zone */
+    border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
   }
 
   /* All navigation elements always visible and clickable */
@@ -345,30 +353,29 @@ body::before {
     visibility: visible !important;
   }
 
-  /* Compact navigation links for narrow sidebar */
+  /* Large, thumb-friendly navigation links for bottom sheet */
   .md-sidebar--primary .md-nav__link {
     color: var(--md-default-fg-color) !important;
-    padding: 0.35rem 0.5rem !important; /* Minimal padding for narrow width */
-    min-height: 36px !important; /* Still touch-friendly */
+    padding: 0.75rem 1rem !important; /* Larger padding for easy tapping */
+    min-height: 48px !important; /* Apple/Google minimum touch target */
     display: flex !important;
     align-items: center !important;
-    font-size: 0.75rem !important; /* Smaller to prevent wrapping */
-    line-height: 1.2 !important;
-    border-radius: 4px !important;
-    transition: background-color 0.15s ease, padding-left 0.15s ease !important;
-    word-break: break-word !important; /* Allow breaking long words */
-    hyphens: auto !important; /* Enable hyphenation */
+    font-size: 0.95rem !important; /* Larger, more readable */
+    line-height: 1.4 !important;
+    border-radius: 10px !important; /* Modern rounded corners */
+    transition: all 0.2s ease !important;
+    font-weight: 500 !important; /* Slightly bolder for readability */
   }
 
-  /* Hover effect for better UX */
-  .md-sidebar--primary .md-nav__link:hover {
-    background-color: rgba(103, 158, 255, 0.08) !important;
-    padding-left: 0.6rem !important; /* Subtle indent on hover */
+  /* Active/tap effect for better UX */
+  .md-sidebar--primary .md-nav__link:active {
+    background-color: rgba(103, 158, 255, 0.15) !important;
+    transform: scale(0.98) !important; /* Subtle press effect */
   }
 
-  /* Tighter spacing between items */
+  /* Comfortable spacing between items */
   .md-sidebar--primary .md-nav__item {
-    margin: 0.15rem 0 !important; /* Reduced from 0.25rem */
+    margin: 0.3rem 0 !important; /* More breathing room */
   }
 
   /* Hamburger menu button must be accessible */
@@ -378,16 +385,17 @@ body::before {
     pointer-events: auto !important;
   }
 
-  /* Cleaner hierarchy for nested items */
+  /* Clear hierarchy for nested items */
   .md-sidebar--primary .md-nav__item--nested > .md-nav > .md-nav__list > .md-nav__item {
-    padding-left: 0.3rem !important; /* Minimal indent for narrow sidebar */
+    padding-left: 1rem !important; /* Clear visual indent */
     margin-left: 0 !important;
   }
 
-  /* Sub-items should be slightly smaller with minimal indent */
+  /* Sub-items with clear visual hierarchy */
   .md-sidebar--primary .md-nav__item--nested .md-nav__link {
-    font-size: 0.7rem !important; /* Even smaller for nested */
-    padding-left: 0.75rem !important; /* Reduced indent */
+    font-size: 0.9rem !important; /* Slightly smaller but still readable */
+    padding-left: 1.5rem !important; /* Clear indent */
+    min-height: 44px !important; /* Slightly smaller but still thumb-friendly */
   }
 
   /* NOTE: Browser tooltips from title attributes cannot be disabled with CSS alone.
@@ -418,25 +426,25 @@ body::before {
      Allow nested navigation for full access to sub-pages
      ======================================== */
 
-  /* Compact toggle buttons for cleaner look */
+  /* Large, easy-to-tap toggle buttons */
   .md-sidebar--primary .md-nav__toggle {
     display: block !important;
     position: absolute !important;
     right: 0 !important;
     top: 0 !important;
-    width: 36px !important; /* Reduced from 56px */
-    height: 36px !important; /* Reduced from 56px */
+    width: 48px !important; /* Large tap target */
+    height: 48px !important; /* Large tap target */
     cursor: pointer !important;
     z-index: 1 !important;
   }
 
-  /* Smaller, cleaner toggle arrows */
+  /* Clear, visible toggle arrows */
   .md-sidebar--primary .md-nav__item--nested > .md-nav__link::after {
     display: inline-block !important;
-    font-size: 0.9rem !important; /* Reduced from 1.5rem to 0.9rem */
-    width: 36px !important; /* Reduced from 56px */
-    height: 36px !important; /* Match button height */
-    line-height: 36px !important; /* Match button height for centering */
+    font-size: 1.1rem !important; /* Visible but not huge */
+    width: 48px !important; /* Match button */
+    height: 48px !important; /* Match button height */
+    line-height: 48px !important; /* Center vertically */
     text-align: center !important;
   }
 
