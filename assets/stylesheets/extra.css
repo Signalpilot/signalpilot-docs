@@ -3915,6 +3915,31 @@ a {
   }
 }
 
+/* Desktop: Make hero section more compact for better screenshot preview */
+@media screen and (min-width: 769px) {
+  /* Hero section with gradient background */
+  div[style*="padding: 3rem 1.5rem"][style*="gradient"] {
+    padding: 2rem 1.5rem !important;
+  }
+
+  /* Hero title */
+  div[style*="gradient"] h2[style*="font-size: 2.2rem"] {
+    font-size: 1.8rem !important;
+  }
+
+  /* Hero subtitle */
+  div[style*="gradient"] p[style*="font-size: 1.2rem"] {
+    font-size: 1rem !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  /* Hero buttons */
+  div[style*="gradient"] a[style*="font-size: 1.1rem"] {
+    font-size: 0.95rem !important;
+    padding: 0.7rem 2rem !important;
+  }
+}
+
 /* Mobile sidebar title: Apply GUGI brand font */
 @media screen and (max-width: 76.24em) {
   .md-nav--primary > .md-nav__title {
