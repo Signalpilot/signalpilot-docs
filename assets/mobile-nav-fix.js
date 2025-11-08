@@ -3,6 +3,7 @@
  * Simple toggle behavior for mobile:
  * - Click the arrow (→) to expand/collapse nested items
  * - Browse and select specific pages from the expanded list
+ * - Prevent body scroll when sidebar is open (keeps sidebar truly fixed)
  */
 
 (function() {
@@ -29,17 +30,52 @@
     });
   }
 
+  // FIX: Prevent body scroll when drawer is open on mobile
+  // This keeps the sidebar truly fixed and prevents disorienting background scrolling
+  function setupBodyScrollLock() {
+    const drawerCheckbox = document.getElementById('__drawer');
+    if (!drawerCheckbox) return;
+
+    drawerCheckbox.addEventListener('change', function() {
+      if (!isMobileView()) return;
+
+      if (this.checked) {
+        // Sidebar opened - prevent body scroll
+        document.body.style.overflow = 'hidden';
+        document.body.style.position = 'fixed';
+        document.body.style.width = '100%';
+      } else {
+        // Sidebar closed - restore body scroll
+        document.body.style.overflow = '';
+        document.body.style.position = '';
+        document.body.style.width = '';
+      }
+    });
+  }
+
   // Run on page load
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', setupMobileNavigation);
+    document.addEventListener('DOMContentLoaded', function() {
+      setupMobileNavigation();
+      setupBodyScrollLock();
+    });
   } else {
     setupMobileNavigation();
+    setupBodyScrollLock();
   }
 
   // Re-run on window resize (if user rotates device or resizes window)
   let resizeTimer;
   window.addEventListener('resize', function() {
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(setupMobileNavigation, 250);
+    resizeTimer = setTimeout(function() {
+      setupMobileNavigation();
+      // Reset body styles if switched to desktop
+      if (!isMobileView()) {
+        document.body.style.overflow = '';
+        document.body.style.position = '';
+        document.body.style.width = '';
+      }
+    }, 250);
   });
 })();
