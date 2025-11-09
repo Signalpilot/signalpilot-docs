@@ -1892,6 +1892,87 @@ This guide shows how to use the Augury Grid screener tool for <strong>educationa
 - Acting on fresh opportunities</p>
 <p><strong>Time:</strong> 5-10 minutes</p>
 <hr />
+<h2 id="prerequisites">✅ Prerequisites (Before You Begin)</h2>
+
+<div class="sp-callout sp-callout--info">
+  <div class="sp-callout__title">📋 What You Need</div>
+  <p>Make sure you have these ready before using Augury Grid:</p>
+</div>
+
+<h3 id="required">🔴 Required</h3>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Details</th>
+<th>Why It's Needed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TradingView Account</strong></td>
+<td>Any tier (Free, Essential, Plus, Premium)</td>
+<td>Augury Grid works on all TradingView account tiers.</td>
+</tr>
+<tr>
+<td><strong>Augury Grid Indicator Access</strong></td>
+<td>Included with Signal Pilot subscription</td>
+<td>You must have access to the Augury Grid v1.0 indicator.</td>
+</tr>
+<tr>
+<td><strong>Basic Symbol Knowledge</strong></td>
+<td>Understanding of ticker formats (e.g., BINANCE:BTCUSDT, NASDAQ:AAPL)</td>
+<td>You'll need to configure symbols in TradingView format.</td>
+</tr>
+<tr>
+<td><strong>5-10 Minutes</strong></td>
+<td>Time for initial setup and testing</td>
+<td>First-time setup takes ~10 minutes. Daily usage takes ~2 minutes.</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="recommended">🟡 Highly Recommended</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Purpose</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Watchlist Prepared</strong></td>
+<td>Know which 8-40 symbols you want to monitor</td>
+<td>Have your crypto/stocks/forex watchlist ready. Examples: BTC, ETH, SPY, QQQ, EURUSD.</td>
+</tr>
+<tr>
+<td><strong>Understanding of Ticker Formats</strong></td>
+<td>Know how to write symbol names correctly</td>
+<td>Crypto: BINANCE:BTCUSDT, Stocks: NASDAQ:AAPL, Forex: FX:EURUSD</td>
+</tr>
+</tbody>
+</table>
+
+<div class="admonition tip">
+<p class="admonition-title">💡 Ticker Format Quick Reference</p>
+<p>TradingView requires specific formats:</p>
+<ul>
+<li><strong>Crypto:</strong> BINANCE:BTCUSDT, COINBASE:ETHUSD</li>
+<li><strong>Stocks:</strong> NASDAQ:AAPL, NYSE:TSLA</li>
+<li><strong>Forex:</strong> FX:EURUSD, OANDA:GBPUSD</li>
+<li><strong>Futures:</strong> CME:ES1! (S&P 500), CME:NQ1! (Nasdaq)</li>
+</ul>
+<p><strong>Tip:</strong> Right-click any symbol → Copy Symbol to get exact format.</p>
+</div>
+
+<div class="sp-callout sp-callout--success">
+  <div class="sp-callout__title">✅ Ready to Start?</div>
+  <p>If you have Augury Grid access and a watchlist ready, continue to the next section.</p>
+</div>
+
+<hr />
 <h2 id="what-is-augury-grid">What Is Augury Grid?<a class="headerlink" href="#what-is-augury-grid" title="Permanent link">&para;</a></h2>
 <p><strong>Augury Grid v1.0</strong> is an on-chart multi-symbol screener table. It monitors 8 tickers simultaneously and displays:</p>
 <ul>
@@ -2091,6 +2172,52 @@ This guide shows how to use the Augury Grid screener tool for <strong>educationa
 </table>
 <hr />
 <h2 id="common-mistakes-fixes">Common Mistakes &amp; Fixes<a class="headerlink" href="#common-mistakes-fixes" title="Permanent link">&para;</a></h2>
+
+<div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
+  <div class="sp-callout__title">🔍 Screener Troubleshooting Flowchart</div>
+  <p style="margin-bottom: 1.5rem;">Follow this diagnostic flow if Augury Grid isn't working:</p>
+  <div class="mermaid" role="img" aria-label="Screener troubleshooting decision tree">
+graph TD
+    Problem([🚨 Grid Not Showing<br/>or Not Updating]) --> Check1{Grid table<br/>visible on<br/>chart?}
+
+    Check1 -->|No| Fix1[❌ Indicator not added<br/>Add Augury Grid v1.0<br/>from indicators menu]
+    Check1 -->|Yes| Check2{Symbols showing<br/>'—' or 'N/A'?}
+
+    Check2 -->|Yes| Fix2[📋 Wrong ticker format<br/>Use EXCHANGE:SYMBOL format<br/>Example: BINANCE:BTCUSDT]
+    Check2 -->|No| Check3{Grid updating<br/>with price<br/>changes?}
+
+    Check3 -->|No| Fix3[🔄 Refresh chart<br/>F5 or reload page<br/>Check internet connection]
+    Check3 -->|Yes| Check4{Signals showing<br/>for all symbols?}
+
+    Check4 -->|No - Some missing| Fix4[⏳ Wait for bar close<br/>Signals appear only<br/>when MACD crosses]
+    Check4 -->|Yes| Check5{Quality scores<br/>showing 0-100?}
+
+    Check5 -->|No| Fix5[⚙️ Settings issue<br/>Check indicator settings<br/>Reset to defaults if needed]
+    Check5 -->|Yes| Check6{Symbols you want<br/>configured in<br/>settings?}
+
+    Check6 -->|No| Fix6[📝 Add symbols<br/>Settings → Symbol Configuration<br/>Add your watchlist]
+    Check6 -->|Yes| Working[✅ Grid Working!<br/>Scan for 4/5 or 5/5<br/>quality signals]
+
+    style Problem fill:#f44336,color:#fff,stroke:#d32f2f,stroke-width:4px
+    style Check1 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
+    style Check2 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
+    style Check3 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
+    style Check4 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
+    style Check5 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
+    style Check6 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
+    style Fix1 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
+    style Fix2 fill:#ff5722,color:#fff,stroke:#e64a19,stroke-width:3px
+    style Fix3 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
+    style Fix4 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
+    style Fix5 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
+    style Fix6 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
+    style Working fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:4px
+  </div>
+  <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.85;">
+    <strong>Most Common Issue:</strong> Wrong ticker format. Always use EXCHANGE:SYMBOL format (e.g., BINANCE:BTCUSDT, not just BTCUSDT). Right-click any symbol → Copy Symbol to get the correct format.
+  </p>
+</div>
+
 <h3 id="mistake-1-wrong-ticker-format">Mistake #1: Wrong Ticker Format<a class="headerlink" href="#mistake-1-wrong-ticker-format" title="Permanent link">&para;</a></h3>
 <p><strong>❌ Problem:</strong> Symbols show no data or "N/A"</p>
 <p><strong>✅ Fix:</strong>

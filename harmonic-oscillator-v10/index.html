@@ -2390,6 +2390,57 @@ graph TD
 
 <hr />
 <h2 id="understanding-the-voting-system">📚 Understanding the Voting System <span class="skill-badge skill-badge--intermediate" data-tooltip="Understanding of multiple oscillators required">Intermediate</span><a class="headerlink" href="#understanding-the-voting-system" title="Permanent link">&para;</a></h2>
+
+<div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
+  <div class="sp-callout__title">📊 Visual Guide: 5-Oscillator Voting System</div>
+  <p style="margin-bottom: 1.5rem;">How 5 oscillators vote together to create consensus signals:</p>
+  <div class="mermaid" role="img" aria-label="Harmonic Oscillator voting system flowchart">
+graph TD
+    Input[📊 Price & Volume Data] --> OSC1
+    Input --> OSC2
+    Input --> OSC3
+    Input --> OSC4
+    Input --> OSC5
+
+    OSC1[RSI Triple Envelope<br/>7/14/28]
+    OSC2[MACD Histogram<br/>12/26/9]
+    OSC3[Stochastic RSI<br/>14/14/3/3]
+    OSC4[Volume Oscillator<br/>Short/Long]
+    OSC5[Divergence Detector<br/>Price vs Oscillators]
+
+    OSC1 --> Vote{Count<br/>Votes}
+    OSC2 --> Vote
+    OSC3 --> Vote
+    OSC4 --> Vote
+    OSC5 --> Vote
+
+    Vote --> Check{How Many<br/>Bullish Votes?}
+
+    Check -->|"4-5 Bullish"| STRONG_BULL[🟢 STRONG Bull<br/>Maximum Agreement]
+    Check -->|"3 Bullish"| BULL[🟩 Bull<br/>Bullish Consensus]
+    Check -->|"2 Bullish<br/>2 Bearish<br/>1 Neutral"| NEUT[⚪ NEUT<br/>No Consensus]
+    Check -->|"3 Bearish"| BEAR[🟥 Bear<br/>Bearish Consensus]
+    Check -->|"4-5 Bearish"| STRONG_BEAR[🔴 STRONG Bear<br/>Maximum Agreement]
+
+    style Input fill:#37474f,color:#fff,stroke:#263238,stroke-width:3px
+    style OSC1 fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:2px
+    style OSC2 fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:2px
+    style OSC3 fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:2px
+    style OSC4 fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:2px
+    style OSC5 fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:2px
+    style Vote fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:3px
+    style Check fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:3px
+    style STRONG_BULL fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:4px
+    style BULL fill:#81c784,color:#fff,stroke:#66bb6a,stroke-width:3px
+    style NEUT fill:#9e9e9e,color:#fff,stroke:#757575,stroke-width:2px
+    style BEAR fill:#e57373,color:#fff,stroke:#ef5350,stroke-width:3px
+    style STRONG_BEAR fill:#f44336,color:#fff,stroke:#d32f2f,stroke-width:4px
+  </div>
+  <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.85;">
+    <strong>How it works:</strong> Each of the 5 oscillators "votes" bullish, bearish, or neutral based on its current reading. The Harmonic Oscillator aggregates these votes to create a consensus signal. 4-5 agreements = STRONG signal.
+  </p>
+</div>
+
 <h3 id="vote-assignment-logic">Vote Assignment Logic<a class="headerlink" href="#vote-assignment-logic" title="Permanent link">&para;</a></h3>
 <p>Each component "votes" based on its current reading:</p>
 <p><strong>RSI (Triple Envelope 7/14/28):</strong><br />

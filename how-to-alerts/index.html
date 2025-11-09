@@ -1885,6 +1885,111 @@ This alert setup guide is for <strong>educational purposes only</strong>. This i
 </p>
 </div>
 <p>This guide explains the process of setting up reliable, close-confirmed alerts for <span class="signal-pilot-brand">Signal Pilot</span> indicators. Proper alert configuration ensures signals are never missed and false intrabar notifications are avoided.</p>
+
+<hr />
+<h2 id="prerequisites">✅ Prerequisites (Before You Begin)<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+
+<div class="sp-callout sp-callout--info">
+  <div class="sp-callout__title">📋 What You Need</div>
+  <p>Make sure you have these ready before setting up alerts:</p>
+</div>
+
+<h3 id="required">🔴 Required</h3>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Details</th>
+<th>Why It's Needed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TradingView Account</strong></td>
+<td>Any tier (Free, Essential, Plus, Premium)</td>
+<td>Free accounts can create basic alerts (limited quantity). Paid tiers get more alerts.</td>
+</tr>
+<tr>
+<td><strong>Signal Pilot Indicator</strong></td>
+<td>At least one indicator added to your chart (Pentarch, Janus Atlas, etc.)</td>
+<td>You can only create alerts for indicators that are actually on your chart.</td>
+</tr>
+<tr>
+<td><strong>5-10 Minutes</strong></td>
+<td>Time for setup and testing</td>
+<td>First-time alert setup takes ~10 minutes. Subsequent alerts take ~2 minutes each.</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="recommended">🟡 Highly Recommended</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Purpose</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TradingView Mobile App</strong></td>
+<td>Receive alerts on your phone</td>
+<td>Download: <a href="https://www.tradingview.com/mobile/" target="_blank">iOS</a> or <a href="https://www.tradingview.com/mobile/" target="_blank">Android</a>. Essential for real-time notifications.</td>
+</tr>
+<tr>
+<td><strong>Notification Permissions</strong></td>
+<td>Allow TradingView to send push notifications</td>
+<td>Enable in your phone settings: Settings → TradingView → Notifications → Allow</td>
+</tr>
+<tr>
+<td><strong>Email Access</strong></td>
+<td>Receive alert emails as backup</td>
+<td>Use an email you check regularly. Mobile alerts are faster, but email is good backup.</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="optional-advanced">🟢 Optional (Advanced Users)</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Requirement</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Webhook Alerts</strong></td>
+<td>TradingView Pro, Pro+, or Premium plan</td>
+<td>Send alerts to Discord, Telegram, or custom automation. See <a href="../how-to-webhooks/">Webhook Guide</a>.</td>
+</tr>
+<tr>
+<td><strong>SMS Alerts</strong></td>
+<td>TradingView Premium plan + SMS setup</td>
+<td>Receive text messages for critical alerts. Most users use mobile app instead (free).</td>
+</tr>
+</tbody>
+</table>
+
+<div class="admonition warning">
+<p class="admonition-title">⚠️ Account Tier Limits</p>
+<p><strong>Free TradingView accounts</strong> are limited to 1 active alert at a time (as of 2025). If you need multiple alerts, consider upgrading to:</p>
+<ul>
+<li><strong>Essential ($14.95/month):</strong> 20 alerts</li>
+<li><strong>Plus ($29.95/month):</strong> 100 alerts</li>
+<li><strong>Premium ($59.95/month):</strong> 400 alerts + SMS + webhooks</li>
+</ul>
+<p>Check current pricing at <a href="https://www.tradingview.com/pricing/" target="_blank">TradingView Pricing</a>.</p>
+</div>
+
+<div class="sp-callout sp-callout--success">
+  <div class="sp-callout__title">✅ Ready to Start?</div>
+  <p>If you have a TradingView account and a Signal Pilot indicator on your chart, you're ready to create your first alert! Continue to the next section.</p>
+  <p><strong>Missing something?</strong> Complete the prerequisites above, then return to this guide.</p>
+</div>
+
 <hr />
 <h2 id="why-alerts-matter">🎯 Why Alerts Matter <span class="skill-badge skill-badge--beginner" data-tooltip="No prior experience required">Beginner Friendly</span><a class="headerlink" href="#why-alerts-matter" title="Permanent link">&para;</a></h2>
 
@@ -2163,6 +2268,54 @@ graph TD
 - The <a href="../ref-troubleshooting/">Troubleshooting Guide</a> provides additional help</p>
 <hr />
 <h2 id="common-mistakes-fixes">🚨 Common Mistakes &amp; Fixes<a class="headerlink" href="#common-mistakes-fixes" title="Permanent link">&para;</a></h2>
+
+<div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
+  <div class="sp-callout__title">🔍 Troubleshooting Flowchart</div>
+  <p style="margin-bottom: 1.5rem;">Follow this diagnostic flow if your alert isn't working:</p>
+  <div class="mermaid" role="img" aria-label="Alert troubleshooting decision tree">
+graph TD
+    Problem([🚨 Alert Not Firing]) --> Check1{Alert appears<br/>in active alerts<br/>list?}
+
+    Check1 -->|No| Fix1[❌ Alert wasn't saved<br/>Recreate the alert]
+    Check1 -->|Yes| Check2{Alert status<br/>shows Active?}
+
+    Check2 -->|No - Expired| Fix2[⏰ Alert expired<br/>Edit alert → Extend expiration]
+    Check2 -->|No - Disabled| Fix2b[🔇 Alert disabled<br/>Enable the alert]
+    Check2 -->|Yes| Check3{Using 'Once Per<br/>Bar Close'?}
+
+    Check3 -->|No| Fix3[⚠️ Wrong setting<br/>Change to 'Once Per Bar Close'<br/>NOT 'Once Per Bar']
+    Check3 -->|Yes| Check4{Bar has closed<br/>since signal?}
+
+    Check4 -->|No| Fix4[⏳ Wait for bar close<br/>Signal must confirm at close]
+    Check4 -->|Yes| Check5{Mobile app<br/>installed?}
+
+    Check5 -->|No| Fix5[📱 Install TradingView app<br/>Enable notifications in settings]
+    Check5 -->|Yes| Check6{Notifications<br/>enabled in<br/>phone settings?}
+
+    Check6 -->|No| Fix6[⚙️ Enable notifications<br/>Settings → TradingView → Notifications → On]
+    Check6 -->|Yes| Support[📞 Contact Support<br/>Provide: Chart symbol, indicator, screenshot]
+
+    style Problem fill:#f44336,color:#fff,stroke:#d32f2f,stroke-width:4px
+    style Check1 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
+    style Check2 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
+    style Check3 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
+    style Check4 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
+    style Check5 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
+    style Check6 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
+    style Fix1 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
+    style Fix2 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
+    style Fix2b fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
+    style Fix3 fill:#ff5722,color:#fff,stroke:#e64a19,stroke-width:3px
+    style Fix4 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
+    style Fix5 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
+    style Fix6 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
+    style Support fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
+  </div>
+  <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.85;">
+    <strong>Pro Tip:</strong> Most alert issues are solved by checking "Once Per Bar Close" setting and waiting for bar to actually close. If troubleshooting doesn't help, see <a href="../about-support/">Support</a>.
+  </p>
+</div>
+
 <h3 id="mistake-1-not-using-once-per-bar-close">Mistake #1: Not Using "Once Per Bar Close"<a class="headerlink" href="#mistake-1-not-using-once-per-bar-close" title="Permanent link">&para;</a></h3>
 <p><strong>Problem:</strong> Alerts fire intrabar, then signals disappear</p>
 <p><strong>Resolution:</strong>

@@ -2723,6 +2723,113 @@ Result: Bearish divergence detected
 </div>
 
 <hr />
+<h2 id="plutus-flow-vs-volume-oracle">📊 Plutus Flow vs Volume Oracle — Which One?<a class="headerlink" href="#plutus-flow-vs-volume-oracle" title="Permanent link">&para;</a></h2>
+
+<div class="sp-callout sp-callout--info">
+  <div class="sp-callout__title">💡 Both Are Volume Indicators - But Serve Different Purposes</div>
+  <p>Plutus Flow and Volume Oracle analyze volume differently. Here's how to choose:</p>
+</div>
+
+<h3 id="quick-comparison-table">Quick Comparison Table</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Plutus Flow v1.0</th>
+<th>Volume Oracle v1.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Primary Focus</strong></td>
+<td>Cumulative volume trend analysis (OBV-based)</td>
+<td>Real-time volume spike detection</td>
+</tr>
+<tr>
+<td><strong>Best For</strong></td>
+<td>Swing trading, trend following, divergence detection</td>
+<td>Day trading, scalping, entry confirmation</td>
+</tr>
+<tr>
+<td><strong>Timeframe</strong></td>
+<td>1H, 4H, Daily, Weekly (higher timeframes)</td>
+<td>5m, 15m, 1H (intraday timeframes)</td>
+</tr>
+<tr>
+<td><strong>Key Signal</strong></td>
+<td>Bullish/Bearish divergence (price vs OBV)</td>
+<td>Volume spikes (2x-3x average volume)</td>
+</tr>
+<tr>
+<td><strong>Trend Type</strong></td>
+<td>Long-term money flow direction</td>
+<td>Short-term smart money activity</td>
+</tr>
+<tr>
+<td><strong>Volume Analysis</strong></td>
+<td>Cumulative (running total of volume)</td>
+<td>Relative (comparing to recent average)</td>
+</tr>
+<tr>
+<td><strong>Works Best In</strong></td>
+<td>Trending markets (uptrends/downtrends)</td>
+<td>All market conditions (including ranging)</td>
+</tr>
+<tr>
+<td><strong>Unique Feature</strong></td>
+<td>OBV trend ribbons (show trend strength)</td>
+<td>Position Manager (tracks live P&L)</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="when-to-use-plutus-flow">✅ Use Plutus Flow When:</h3>
+<ul>
+<li><strong>You're swing trading</strong> (holding positions for days/weeks)</li>
+<li><strong>You want to track long-term money flow</strong> (is money flowing in or out over time?)</li>
+<li><strong>You trade divergences</strong> (price makes new low, but OBV makes higher low = accumulation)</li>
+<li><strong>You focus on higher timeframes</strong> (Daily, Weekly charts)</li>
+<li><strong>You want trend confirmation</strong> (ribbon width shows trend strength)</li>
+</ul>
+
+<p><strong>Example Plutus Flow Setup:</strong> Bitcoin Daily chart, looking for bullish OBV divergence to catch swing trade reversals.</p>
+
+<h3 id="when-to-use-volume-oracle">✅ Use Volume Oracle When:</h3>
+<ul>
+<li><strong>You're day trading or scalping</strong> (holding positions for minutes/hours)</li>
+<li><strong>You want to spot smart money entry points</strong> (unusual volume spikes = institutions entering)</li>
+<li><strong>You need volume confirmation</strong> (did that breakout have volume behind it?)</li>
+<li><strong>You track active positions</strong> (Position Manager shows live P&L)</li>
+<li><strong>You trade volume zones</strong> (areas where high volume clustered)</li>
+</ul>
+
+<p><strong>Example Volume Oracle Setup:</strong> S&P 500 15-minute chart, watching for volume spikes at support/resistance levels for quick intraday trades.</p>
+
+<h3 id="use-both-together">🔥 Use Both Together (Advanced)</h3>
+<p>Combine Plutus Flow (strategic) with Volume Oracle (tactical) for maximum effectiveness:</p>
+
+<ol>
+<li><strong>Plutus Flow</strong> → Identifies long-term trend direction (OBV rising = bullish bias)</li>
+<li><strong>Volume Oracle</strong> → Finds tactical entry points (volume spike at support = entry confirmation)</li>
+</ol>
+
+<p><strong>Example Combined Workflow:</strong></p>
+<ul>
+<li>Check Daily Plutus Flow: OBV trending up (bullish long-term)</li>
+<li>Drop to 15m chart with Volume Oracle: Wait for volume spike at Janus Atlas support level</li>
+<li>Enter long when both align: Long-term bullish flow + short-term volume spike = high-probability entry</li>
+</ul>
+
+<div class="admonition tip">
+<p class="admonition-title">💡 Pro Tip: Choose Based on Your Trading Style</p>
+<p><strong>Swing traders:</strong> Plutus Flow is your primary volume tool. Add Volume Oracle optionally for entry confirmation.</p>
+<p><strong>Day traders:</strong> Volume Oracle is your primary volume tool. Add Plutus Flow optionally for daily bias.</p>
+<p><strong>Position traders:</strong> Plutus Flow on Weekly/Monthly charts for long-term trend direction.</p>
+</div>
+
+<p><strong>See also:</strong> <a href="../volume-oracle-v10/">Volume Oracle Documentation</a> for comparison from the other perspective.</p>
+
+<hr />
 <h2 id="common-mistakes-to-avoid">⚠️ Common Mistakes to Avoid<a class="headerlink" href="#common-mistakes-to-avoid" title="Permanent link">&para;</a></h2>
 
 <div class="sp-callout sp-callout--warning">

@@ -1512,6 +1512,54 @@
 
 <h2 id="troubleshooting">🔍 Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 
+<div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
+  <div class="sp-callout__title">🔍 Webhook Troubleshooting Flowchart</div>
+  <p style="margin-bottom: 1.5rem;">Follow this diagnostic flow if webhooks aren't working:</p>
+  <div class="mermaid" role="img" aria-label="Webhook troubleshooting decision tree">
+graph TD
+    Problem([🚨 Webhook Not Sending]) --> Check1{Webhook URL<br/>pasted correctly<br/>in alert?}
+
+    Check1 -->|No| Fix1[❌ Missing webhook URL<br/>Edit alert → Paste webhook URL<br/>in Notifications tab]
+    Check1 -->|Yes| Check2{Alert actually<br/>firing?}
+
+    Check2 -->|No| Fix2[⚠️ Alert not firing<br/>See Alert Troubleshooting Guide]
+    Check2 -->|Yes| Check3{Tested webhook<br/>with webhook.site<br/>or similar?}
+
+    Check3 -->|No| Fix3[🧪 Test webhook first<br/>Use webhook.site to verify<br/>webhook URL works]
+    Check3 -->|Yes - Works| Check4{Discord/Telegram<br/>webhook URL<br/>correct format?}
+
+    Check3 -->|Yes - Fails| Fix3b[❌ Webhook URL broken<br/>Create NEW webhook URL<br/>in Discord/Telegram]
+
+    Check4 -->|No| Fix4[📋 Wrong format<br/>Discord: .../webhooks/...<br/>Telegram: bot token required]
+    Check4 -->|Yes| Check5{Message format<br/>valid JSON?}
+
+    Check5 -->|No| Fix5[⚠️ Invalid JSON<br/>Use JSON validator<br/>Check quotes and brackets]
+    Check5 -->|Yes| Check6{TradingView plan<br/>supports webhooks?}
+
+    Check6 -->|No - Free/Essential| Fix6[💰 Upgrade required<br/>Webhooks need Pro+<br/>or Premium plan]
+    Check6 -->|Yes - Pro+/Premium| Support[📞 Contact Support<br/>Provide: Screenshot of alert,<br/>webhook URL, JSON message]
+
+    style Problem fill:#f44336,color:#fff,stroke:#d32f2f,stroke-width:4px
+    style Check1 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
+    style Check2 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
+    style Check3 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
+    style Check4 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
+    style Check5 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
+    style Check6 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
+    style Fix1 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
+    style Fix2 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
+    style Fix3 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
+    style Fix3b fill:#ff5722,color:#fff,stroke:#e64a19,stroke-width:3px
+    style Fix4 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
+    style Fix5 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
+    style Fix6 fill:#ff5722,color:#fff,stroke:#e64a19,stroke-width:3px
+    style Support fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
+  </div>
+  <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.85;">
+    <strong>Quick Test:</strong> Always test your webhook with <a href="https://webhook.site" target="_blank">webhook.site</a> first. If it works there but not in Discord/Telegram, the issue is with your Discord/Telegram webhook setup.
+  </p>
+</div>
+
 <h3 id="webhook-not-received">Webhook Not Received</h3>
 <ul>
 <li><strong>Verify TradingView plan</strong>: Free accounts cannot use webhooks</li>
