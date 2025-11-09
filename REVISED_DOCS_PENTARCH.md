@@ -22,6 +22,41 @@ Pentarch displays signal labels when four-layer detection conditions align at ba
 
 ---
 
+## 📹 Video Tutorials
+
+### Getting Started with Pentarch (3:45)
+> 🎬 *Video coming soon - Subscribe to be notified*
+
+This video will cover:
+- Installing Pentarch on TradingView
+- Understanding the 5 cycle events (TD, IGN, WRN, CAP, BDN)
+- Configuring your first alert
+- Identifying your first TD signal
+
+---
+
+### Pentarch + Janus + Volume: The Trinity Workflow (5:20)
+> 🎬 *Video coming soon - Subscribe to be notified*
+
+This video will demonstrate:
+- Real-time example of The Trinity setup
+- How to identify level clusters with Janus Atlas
+- Volume Oracle confirmation techniques
+- Complete entry to exit workflow
+
+---
+
+### Advanced: Pentarch Pattern Sequences (4:10)
+> 🎬 *Video coming soon - Subscribe to be notified*
+
+This video will show:
+- Complete cycle sequences (TD→IGN→WRN→CAP→BDN)
+- Partial cycles and incomplete patterns
+- When to expect IGN after TD
+- Late-cycle reversal patterns (CAP→BDN)
+
+---
+
 ## 📚 Before You Start — Prerequisites
 
 ### Universal Requirements:

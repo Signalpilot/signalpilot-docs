@@ -21,6 +21,30 @@ Janus Atlas displays price levels automatically on your chart. 39 level types av
 
 ---
 
+## 📹 Video Tutorials
+
+### Janus Atlas Setup: First 5 Levels (2:30)
+> 🎬 *Video coming soon - Subscribe to be notified*
+
+This video will cover:
+- Installing Janus Atlas on TradingView
+- Enabling the 5 core levels (dH, dL, WH, WL, AVWAP)
+- Understanding support vs resistance
+- Observing your first level reaction
+
+---
+
+### Level Clusters: The Key to Confluence (4:15)
+> 🎬 *Video coming soon - Subscribe to be notified*
+
+This video will demonstrate:
+- What makes a level cluster (3+ levels within 1-2%)
+- Real examples of price reacting at clusters
+- How to identify high-probability cluster zones
+- Combining clusters with Pentarch patterns
+
+---
+
 ## 📚 Before You Start — Prerequisites
 
 ### Universal Requirements:
