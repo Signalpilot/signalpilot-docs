@@ -21,6 +21,33 @@ Janus Atlas displays price levels automatically on your chart. 39 level types av
 
 ---
 
+## 📚 Before You Start — Prerequisites
+
+### Universal Requirements:
+- **Basic Chart Reading:** Understand candlesticks, timeframes, and how to navigate TradingView
+- **Support & Resistance Concepts:** Recognize that price tends to react at certain levels
+- **Risk Management Fundamentals:** Understanding position sizing and stop-loss concepts
+- **TradingView Account:** Free tier minimum (Pro/Premium unlocks more indicators and alerts)
+- **Chart Observation Time:** At least 10-20 hours watching live charts to understand price movement
+
+### Additional Knowledge for Janus Atlas:
+- **Support/Resistance Theory:** Understanding why price reacts at specific levels
+- **Multiple Timeframe Analysis:** How Daily levels differ from Weekly levels
+- **VWAP Basics:** What Volume-Weighted Average Price represents
+
+### Recommended Learning Path:
+1. Start with **5 Core Levels Only** (Daily High/Low, Weekly High/Low, Anchored VWAP)
+2. Master these 5 before enabling additional level types
+3. Practice identifying **level clusters** (where multiple levels converge)
+4. Learn to combine with Pentarch patterns for confluence
+
+### Estimated Learning Time:
+- **Basic Proficiency:** 8-12 hours (understand 5 core levels, spot level reactions)
+- **Intermediate:** 25-35 hours (use multiple timeframe levels, identify clusters)
+- **Advanced:** 50+ hours (custom level configurations, multi-indicator confluence)
+
+---
+
 ## ⚙️ Settings
 
 ### Recommended Initial Configuration
