@@ -2149,7 +2149,7 @@
 </div>
 
 <hr />
-<h2 id="core-functionality">🎯 Core Functionality<a class="headerlink" href="#core-functionality" title="Permanent link">&para;</a></h2>
+<h2 id="core-functionality">🎯 Core Functionality <span class="skill-badge skill-badge--intermediate" data-tooltip="Understanding of volume concepts helpful">Intermediate</span><a class="headerlink" href="#core-functionality" title="Permanent link">&para;</a></h2>
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
   <div class="sp-callout__icon">📊</div>
   <div class="sp-callout__content">
@@ -2296,7 +2296,7 @@ graph TD
 <p><strong>Position Manager Benefit:</strong> Live tracking eliminates manual P&amp;L calculation. Breakeven line provides visual reference. Color-coded metrics show profit (green) or loss (red) instantly.</p>
 <p><em>This example demonstrates position tracking capability. Individual outcomes vary.</em></p>
 <hr />
-<h2 id="settings">⚙️ Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h2>
+<h2 id="settings">⚙️ Settings <span class="skill-badge skill-badge--beginner" data-tooltip="Simple configuration options">Beginner Friendly</span><a class="headerlink" href="#settings" title="Permanent link">&para;</a></h2>
 <h3 id="system-toggle-options">System Toggle Options<a class="headerlink" href="#system-toggle-options" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -2715,6 +2715,157 @@ Interpretation: Successful retest of broken level
   </ul>
   <p><strong>Next Steps:</strong> Explore <a href="../plutus-flow-v10/">Plutus Flow v1.0</a> for alternative flow analysis methods, or see <a href="../how-to-alerts/">Alert Setup Guide</a> to configure volume-based notifications.</p>
 </div>
+
+<hr />
+<h2 id="integration-with-other-indicators">🔗 Integration with Other Indicators<a class="headerlink" href="#integration-with-other-indicators" title="Permanent link">&para;</a></h2>
+
+<div class="sp-callout sp-callout--info">
+  <div class="sp-callout__title">💡 Volume Oracle Works Best in Combination</div>
+  <p>While Volume Oracle provides powerful volume spike and zone analysis on its own, combining it with other Signal Pilot indicators creates high-probability confluence setups. Here are proven integration workflows:</p>
+</div>
+
+<h3 id="volume-oracle-pentarch">Volume Oracle + Pentarch (Volume + Timing)<a class="headerlink" href="#volume-oracle-pentarch" title="Permanent link">&para;</a></h3>
+<p><strong>Workflow:</strong></p>
+<ol>
+<li><strong>Pentarch signal fires</strong> → TD, IGN, CAP, or WRN signal appears on chart</li>
+<li><strong>Check Volume Oracle for confirmation</strong> → Look for volume spike (1.5x+ or strong buying/selling volume label) at signal bar</li>
+<li><strong>Signal + volume spike = validated reversal</strong> → Volume confirms institutional participation in reversal signal</li>
+<li><strong>Low volume signal = proceed with caution</strong> → Signal without volume may lack follow-through</li>
+<li><strong>Expected outcome:</strong> Volume Oracle validates which Pentarch signals have institutional backing</li>
+</ol>
+<p><strong>Example:</strong> Pentarch CAP signal fires → Volume Oracle shows 3x volume spike + strong selling volume = confirmed bearish exhaustion with institutional selling</p>
+
+<h3 id="volume-oracle-janus-atlas">Volume Oracle + Janus Atlas (Volume at Levels)<a class="headerlink" href="#volume-oracle-janus-atlas" title="Permanent link">&para;</a></h3>
+<p><strong>Workflow:</strong></p>
+<ol>
+<li><strong>Price approaches key Janus level</strong> → Daily High/Low, Weekly levels, POC, VWAP, or Fibonacci levels</li>
+<li><strong>Check Volume Oracle at level touch</strong> → Look for volume spike when price hits the level</li>
+<li><strong>High volume at level = significance confirmed:</strong>
+<ul>
+<li>Volume spike + price rejection = strong support/resistance confirmed</li>
+<li>Volume spike + price breakthrough = level break validated, becomes new support/resistance</li>
+</ul>
+</li>
+<li><strong>Expected outcome:</strong> Volume Oracle shows which Janus levels are truly defended by institutions vs. noise</li>
+</ol>
+<p><strong>Example:</strong> Price hits Daily Low + Weekly Low confluence → Volume Oracle shows 2.5x spike + strong buying volume → price bounces = confirmed institutional support zone</p>
+
+<h3 id="volume-oracle-harmonic-oscillator">Volume Oracle + Harmonic Oscillator (Volume + Momentum)<a class="headerlink" href="#volume-oracle-harmonic-oscillator" title="Permanent link">&para;</a></h3>
+<p><strong>Workflow:</strong></p>
+<ol>
+<li><strong>Harmonic Oscillator shows momentum shift</strong> → Bear to Bull transition, or STRONG signal appears</li>
+<li><strong>Check Volume Oracle for volume confirmation</strong> → Momentum shift backed by volume spike = strong conviction move</li>
+<li><strong>Volume + momentum alignment = high probability:</strong>
+<ul>
+<li>Bull signal + strong buying volume spike = confirmed bullish momentum</li>
+<li>Bear signal + strong selling volume spike = confirmed bearish momentum</li>
+</ul>
+</li>
+<li><strong>Low volume momentum shift = weaker signal</strong> → May lack institutional participation, reduce position size</li>
+</ol>
+<p><strong>Example:</strong> Harmonic Oscillator STRONG bull (5/5) → Volume Oracle shows 2.8x spike + strong buying volume = maximum bullish confluence (momentum + volume)</p>
+
+<h3 id="volume-oracle-omnideck">Volume Oracle + Omnideck (Volume at TD Sequential)<a class="headerlink" href="#volume-oracle-omnideck" title="Permanent link">&para;</a></h3>
+<p><strong>Workflow:</strong></p>
+<ol>
+<li><strong>Omnideck TD Sequential completes countdown</strong> → Bar 13 appears (buy or sell countdown completion)</li>
+<li><strong>Check Volume Oracle at completion bar</strong> → Look for volume spike confirming exhaustion</li>
+<li><strong>TD Sequential + volume spike = validated exhaustion:</strong>
+<ul>
+<li>TD buy completion + strong buying volume = bullish exhaustion confirmed, potential reversal</li>
+<li>TD sell completion + strong selling volume = bearish exhaustion confirmed, potential reversal</li>
+</ul>
+</li>
+<li><strong>Expected outcome:</strong> Volume Oracle distinguishes real TD Sequential exhaustion from false signals</li>
+</ol>
+<p><strong>Example:</strong> Omnideck TD Sequential sell countdown completes (bar 13) → Volume Oracle shows 3.2x volume spike = confirmed climactic selling, high-probability reversal setup</p>
+
+<div class="admonition tip">
+<p class="admonition-title">Pro Tip: The Volume Confirmation Workflow</p>
+<p>For highest-probability setups, use <strong>Volume Oracle as the final confirmation layer</strong>. Workflow: <strong>Janus Atlas (identify level) → Pentarch (timing signal) → Volume Oracle (volume confirmation)</strong>. Price at key level + timing signal + volume spike = triple-confluence setup with institutional validation. Always ask: "Is there volume backing this setup?"</p>
+<p><strong>See also:</strong> <a href="../ref-workflow/">Complete Trading Workflow Guide</a> for detailed multi-indicator strategies.</p>
+</div>
+
+<hr />
+<h2 id="common-mistakes-to-avoid">⚠️ Common Mistakes to Avoid<a class="headerlink" href="#common-mistakes-to-avoid" title="Permanent link">&para;</a></h2>
+
+<div class="sp-callout sp-callout--warning">
+  <div class="sp-callout__title">Learn from Common Pitfalls</div>
+  <p>These mistakes are frequently made by new Volume Oracle users. Avoid them to improve your results:</p>
+</div>
+
+<h3 id="mistake-1-every-volume-spike-is-significant">Mistake #1: Treating Every Volume Spike as Significant<a class="headerlink" href="#mistake-1-every-volume-spike-is-significant" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> Not all volume spikes are equal. Random mid-range volume spikes often lack meaning. Context matters—spikes at key levels or with signals are far more significant.</p>
+<p><strong>The Fix:</strong></p>
+<ul>
+<li><strong>Volume spike + key level = significant</strong> → Spike at support/resistance shows institutional defense</li>
+<li><strong>Volume spike + Pentarch signal = significant</strong> → Spike at reversal signal confirms turning point</li>
+<li><strong>Volume spike mid-range with no context = less significant</strong> → May be random noise, wait for confluence</li>
+<li>Prioritize volume spikes that occur WITH other confirming factors (levels, signals, patterns)</li>
+</ul>
+<p><strong>Remember:</strong> Volume spikes matter most at inflection points (key levels, reversal signals, breakouts). Random mid-chart spikes = less actionable.</p>
+
+<h3 id="mistake-2-using-volume-zones-as-absolute-barriers">Mistake #2: Treating Volume Zones as Absolute Barriers<a class="headerlink" href="#mistake-2-using-volume-zones-as-absolute-barriers" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> Volume zones show high-activity areas, but they're not unbreakable walls. Price can and does break through volume zones, especially on high volume.</p>
+<p><strong>The Fix:</strong></p>
+<ul>
+<li>Volume zones = areas of interest, not absolute support/resistance</li>
+<li>If price breaks volume zone on high volume → zone break is validated, new trend likely</li>
+<li>If price breaks volume zone on low volume → false break, likely to reverse back into zone</li>
+<li>Use stop losses beyond zones (don't assume zones always hold)</li>
+</ul>
+<p><strong>Remember:</strong> Volume zones are probabilistic, not absolute. They show where institutions were active, but institutions can change their minds.</p>
+
+<h3 id="mistake-3-over-relying-on-position-manager">Mistake #3: Over-Relying on Position Manager as Trading Strategy<a class="headerlink" href="#mistake-3-over-relying-on-position-manager" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> Position Manager is a tracking/visualization tool, not a trading strategy. It shows P&L, average entry, and breakeven—but doesn't tell you WHEN to enter or exit.</p>
+<p><strong>The Fix:</strong></p>
+<ul>
+<li>Position Manager = tracking tool for existing positions</li>
+<li>Use Pentarch, Janus Atlas, and Volume Oracle spikes/zones to make entry/exit decisions</li>
+<li>Position Manager helps you see P&L and position size, but doesn't replace strategy</li>
+<li>Don't add to losing positions just because Position Manager shows you can "average down"—have a plan first</li>
+</ul>
+<p><strong>Remember:</strong> Position Manager tracks your trades, it doesn't create your strategy. Use signals and levels for decisions, Position Manager for monitoring.</p>
+
+<h3 id="mistake-4-ignoring-volume-profile-context">Mistake #4: Not Checking Volume Profile for Context<a class="headerlink" href="#mistake-4-ignoring-volume-profile-context" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> Volume spikes mean different things in high-volume vs. low-volume zones. A 2x spike in a high-volume zone is more significant than a 2x spike in a low-volume zone.</p>
+<p><strong>The Fix:</strong></p>
+<ul>
+<li>Enable Volume Profile view to see overall volume distribution</li>
+<li>High-volume zones (POC areas) → Activity spikes here are institutional positioning</li>
+<li>Low-volume zones (value gaps) → Price often moves quickly through these, spikes less meaningful</li>
+<li>Volume spikes at Point of Control (POC) or high-volume nodes = strongest significance</li>
+</ul>
+<p><strong>Remember:</strong> Context matters. Volume spikes at high-volume zones (POC, value area) carry more weight than spikes in low-volume gaps.</p>
+
+<h3 id="mistake-5-confusing-buying-selling-volume-labels">Mistake #5: Misinterpreting Buying vs. Selling Volume Labels<a class="headerlink" href="#mistake-5-confusing-buying-selling-volume-labels" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> "Strong buying volume" doesn't always mean "go long immediately." Context determines meaning—strong buying at resistance may precede a reversal (climax buying).</p>
+<p><strong>The Fix:</strong></p>
+<ul>
+<li><strong>Strong buying at support level:</strong> Bullish → Institutions defending support, potential bounce</li>
+<li><strong>Strong buying at resistance level:</strong> Context-dependent → Could be climax buying (exhaustion) OR breakout</li>
+<li><strong>Strong selling at resistance:</strong> Bearish → Institutions defending resistance, potential rejection</li>
+<li><strong>Strong selling at support:</strong> Context-dependent → Could be capitulation (reversal) OR breakdown</li>
+<li>Always combine volume labels with price location (Janus levels) and signals (Pentarch)</li>
+</ul>
+<p><strong>Remember:</strong> Volume labels show WHAT happened (buying/selling), not WHERE you should trade. Combine with levels and signals for context.</p>
+
+<h3 id="mistake-6-ignoring-relative-volume-changes">Mistake #6: Focusing Only on Absolute Volume, Not Relative Changes<a class="headerlink" href="#mistake-6-ignoring-relative-volume-changes" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> A 2x volume spike on low-volume stock may still be low absolute volume. A 1.3x spike on high-volume stock may represent huge institutional activity.</p>
+<p><strong>The Fix:</strong></p>
+<ul>
+<li>Volume Oracle shows volume multipliers (1.5x, 2x, 3x) relative to average → focus on these</li>
+<li>For low-volume assets: Look for 2x-3x+ spikes to filter noise</li>
+<li>For high-volume assets: Even 1.5x-2x spikes can be significant</li>
+<li>Compare current spike to recent historical spikes → Is this unusually high relative to recent activity?</li>
+</ul>
+<p><strong>Remember:</strong> Relative volume changes matter more than absolute values. A 2x spike today vs. yesterday's average is the signal, not the raw volume number.</p>
+
+<div class="admonition info">
+<p class="admonition-title">Additional Resources</p>
+<p>For more trading best practices, see <a href="../ref-best-practices/">Best Practices &amp; Pro Tips</a>. For volume analysis workflows, see <a href="../ref-workflow/">Trading Workflow Guide</a>.</p>
+</div>
+
 <hr />
 <h2 id="frequently-asked-questions">❓ Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permanent link">&para;</a></h2>
 <h3 id="q-can-position-manager-track-multiple-positions">Q: Can Position Manager track multiple positions?<a class="headerlink" href="#q-can-position-manager-track-multiple-positions" title="Permanent link">&para;</a></h3>
