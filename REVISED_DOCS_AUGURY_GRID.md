@@ -45,27 +45,6 @@ Augury Grid displays TD Sequential exhaustion signals for multiple symbols on on
 
 ---
 
-## 📊 Educational Example: Grid View (November 2024)
-
-*(Historical observation for educational purposes only. Not financial advice. Past performance does not indicate future results.)*
-
-**Example Dashboard Snapshot:**
-
-| Symbol | Current Count | Status | Notes |
-|--------|---------------|--------|-------|
-| BTC/USD | Green 8 | Approaching | One bar from Green 9 |
-| ETH/USD | Green 9 | ⚠️ Signal | Exhaustion detected |
-| SPY | Red 5 | Counting | Mid-sequence |
-| QQQ | Neutral | — | No active sequence |
-| AAPL | Red 9 | ⚠️ Signal | Exhaustion detected |
-| TSLA | Green 3 | Counting | Early decline sequence |
-
-**Pattern Observed:** ETH/USD and AAPL both showed Green 9 and Red 9 signals respectively at same time, allowing simultaneous monitoring of multiple exhaustion conditions across different assets.
-
-*This example demonstrates grid monitoring capability. Individual interpretation and outcomes vary.*
-
----
-
 ## ⚙️ Settings
 
 ### Symbol Configuration
@@ -139,6 +118,27 @@ Add symbols to monitor in settings panel. Up to 40 symbols can be tracked.
 **Timeframe:** 1H or 4H
 
 **Best For:** Forex traders, currency correlation analysis
+
+---
+
+## 📊 Educational Example: Grid View (November 2024)
+
+*(Historical observation for educational purposes only. Not financial advice. Past performance does not indicate future results.)*
+
+**Example Dashboard Snapshot:**
+
+| Symbol | Current Count | Status | Notes |
+|--------|---------------|--------|-------|
+| BTC/USD | Green 8 | Approaching | One bar from Green 9 |
+| ETH/USD | Green 9 | ⚠️ Signal | Exhaustion detected |
+| SPY | Red 5 | Counting | Mid-sequence |
+| QQQ | Neutral | — | No active sequence |
+| AAPL | Red 9 | ⚠️ Signal | Exhaustion detected |
+| TSLA | Green 3 | Counting | Early decline sequence |
+
+**Pattern Observed:** ETH/USD and AAPL both showed Green 9 and Red 9 signals respectively at same time, allowing simultaneous monitoring of multiple exhaustion conditions across different assets.
+
+*This example demonstrates grid monitoring capability. Individual interpretation and outcomes vary.*
 
 ---
 

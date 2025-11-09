@@ -61,60 +61,6 @@ Harmonic Oscillator analyzes five separate momentum oscillators simultaneously a
 
 ---
 
-## 📊 Educational Example 1: DAX Index (Germany) - February 2024
-
-**Voting System Analysis:**
-
-| Date | DAX Price | Bullish Votes | Bearish Votes | Zone Color | Signal Strength |
-|------|-----------|---------------|---------------|------------|-----------------|
-| Feb 12, 2024 | 16,850 | 2/7 | 5/7 | 🔴 Red | Strong Bearish |
-| Feb 13, 2024 | 16,720 | 1/7 | 6/7 | 🔴 Red | Very Strong Bearish |
-| Feb 14, 2024 | 16,680 | 3/7 | 4/7 | ⚪ Neutral | Equilibrium |
-| Feb 15, 2024 | 16,750 | 5/7 | 2/7 | 🟢 Green | Strong Bullish |
-| Feb 16, 2024 | 16,920 | 6/7 | 1/7 | 🟢 Green | Very Strong Bullish |
-
-**7-Oscillator Voting Breakdown (Feb 13 - Bearish Extreme):**
-
-1. **RSI (14):** 28 → **BEARISH** vote (oversold)
-2. **Stochastic:** 15 → **BEARISH** vote (oversold)
-3. **CCI:** -180 → **BEARISH** vote (oversold)
-4. **Williams %R:** -92 → **BEARISH** vote (oversold)
-5. **MFI:** 25 → **BEARISH** vote (money flow weak)
-6. **Ultimate Oscillator:** 35 → **BEARISH** vote (oversold)
-7. **ROC:** +2% → **BULLISH** vote (price still rising slightly)
-
-**Vote Tally:** 6 Bearish, 1 Bullish = 🔴 Very Strong Bearish Zone
-
-**Analysis Workflow:**
-
-**Phase 1 - Extreme Bearish (Feb 12-13):**
-- 5-6 oscillators voting bearish simultaneously
-- Harmonic Oscillator displayed **strong red zones**
-- Price declining but oscillators reaching oversold extremes
-- **Observation:** Market showing extreme bearish momentum, often precedes exhaustion
-
-**Phase 2 - Neutral Transition (Feb 14):**
-- Votes shifted to 3 bullish, 4 bearish (near equilibrium)
-- Harmonic Oscillator color shifted toward **neutral (white)**
-- Price stabilizing at 16,680
-- **Observation:** Momentum exhaustion phase - oscillators resetting
-
-**Phase 3 - Bullish Reversal (Feb 15-16):**
-- Votes flipped to 5-6 bullish, 1-2 bearish
-- Harmonic Oscillator displayed **strong green zones**
-- Price rallied from 16,680 to 16,920
-- **Observation:** Consensus shift from bearish extreme to bullish momentum
-
-**Historical Outcome:**
-DAX rallied from the Feb 13 low of 16,680 to 17,240 over the following 10 trading days (+3.4% gain), confirming the oscillator voting system's ability to identify momentum exhaustion and reversal points.
-
-**Key Insight:**
-Harmonic Oscillator's voting system provides **consensus view** across 7 different oscillators. When 5+ oscillators agree (extreme zones), it often signals momentum exhaustion and potential reversal.
-
-*(Educational example showing oscillator voting consensus. Past patterns do not guarantee future results. Not financial advice.)*
-
----
-
 ## ⚙️ Settings
 
 ### Oscillator Configuration
@@ -195,6 +141,60 @@ Default settings work for most users. Advanced traders can optimize for specific
 - Larger MACD histogram
 - Prominent RSI line
 - De-emphasize CCI, Williams %R
+
+---
+
+## 📊 Educational Example 1: DAX Index (Germany) - February 2024
+
+**Voting System Analysis:**
+
+| Date | DAX Price | Bullish Votes | Bearish Votes | Zone Color | Signal Strength |
+|------|-----------|---------------|---------------|------------|-----------------|
+| Feb 12, 2024 | 16,850 | 2/7 | 5/7 | 🔴 Red | Strong Bearish |
+| Feb 13, 2024 | 16,720 | 1/7 | 6/7 | 🔴 Red | Very Strong Bearish |
+| Feb 14, 2024 | 16,680 | 3/7 | 4/7 | ⚪ Neutral | Equilibrium |
+| Feb 15, 2024 | 16,750 | 5/7 | 2/7 | 🟢 Green | Strong Bullish |
+| Feb 16, 2024 | 16,920 | 6/7 | 1/7 | 🟢 Green | Very Strong Bullish |
+
+**7-Oscillator Voting Breakdown (Feb 13 - Bearish Extreme):**
+
+1. **RSI (14):** 28 → **BEARISH** vote (oversold)
+2. **Stochastic:** 15 → **BEARISH** vote (oversold)
+3. **CCI:** -180 → **BEARISH** vote (oversold)
+4. **Williams %R:** -92 → **BEARISH** vote (oversold)
+5. **MFI:** 25 → **BEARISH** vote (money flow weak)
+6. **Ultimate Oscillator:** 35 → **BEARISH** vote (oversold)
+7. **ROC:** +2% → **BULLISH** vote (price still rising slightly)
+
+**Vote Tally:** 6 Bearish, 1 Bullish = 🔴 Very Strong Bearish Zone
+
+**Analysis Workflow:**
+
+**Phase 1 - Extreme Bearish (Feb 12-13):**
+- 5-6 oscillators voting bearish simultaneously
+- Harmonic Oscillator displayed **strong red zones**
+- Price declining but oscillators reaching oversold extremes
+- **Observation:** Market showing extreme bearish momentum, often precedes exhaustion
+
+**Phase 2 - Neutral Transition (Feb 14):**
+- Votes shifted to 3 bullish, 4 bearish (near equilibrium)
+- Harmonic Oscillator color shifted toward **neutral (white)**
+- Price stabilizing at 16,680
+- **Observation:** Momentum exhaustion phase - oscillators resetting
+
+**Phase 3 - Bullish Reversal (Feb 15-16):**
+- Votes flipped to 5-6 bullish, 1-2 bearish
+- Harmonic Oscillator displayed **strong green zones**
+- Price rallied from 16,680 to 16,920
+- **Observation:** Consensus shift from bearish extreme to bullish momentum
+
+**Historical Outcome:**
+DAX rallied from the Feb 13 low of 16,680 to 17,240 over the following 10 trading days (+3.4% gain), confirming the oscillator voting system's ability to identify momentum exhaustion and reversal points.
+
+**Key Insight:**
+Harmonic Oscillator's voting system provides **consensus view** across 7 different oscillators. When 5+ oscillators agree (extreme zones), it often signals momentum exhaustion and potential reversal.
+
+*(Educational example showing oscillator voting consensus. Past patterns do not guarantee future results. Not financial advice.)*
 
 ---
 

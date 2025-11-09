@@ -63,57 +63,6 @@ Plutus Flow calculates On-Balance Volume and adds three analytical layers:
 
 ---
 
-## 📊 Educational Example 1: Ethereum Classic Divergence - April 2024
-
-**On-Balance Volume (OBV) Flow Analysis:**
-
-| Date | ETH Price | OBV Trend | Flow Color | Divergence? | Detail |
-|------|-----------|-----------|------------|-------------|--------|
-| Apr 8, 2024 | $3,280 | Rising | 🟢 Green | No | Price ↑ + OBV ↑ (healthy) |
-| Apr 10, 2024 | $3,450 | Rising | 🟢 Green | No | Price ↑ + OBV ↑ (healthy) |
-| Apr 12, 2024 | $3,580 | Flat | 🟡 Yellow | ⚠️ Warning | Price ↑ + OBV → (weakening) |
-| Apr 15, 2024 | $3,620 | Declining | 🔴 Red | ❌ Divergence | Price ↑ + OBV ↓ (bearish) |
-| Apr 17, 2024 | $3,380 | Declining | 🔴 Red | Confirmed | Price ↓ + OBV ↓ (reversal) |
-
-**Plutus Flow Analysis:**
-
-**Phase 1 - Healthy Uptrend (Apr 8-10):**
-- Price: $3,280 → $3,450 (+5.2%)
-- Plutus Flow: **Green zones** (OBV rising with price)
-- **Observation:** Volume accumulation supporting price rally
-- **Interpretation:** Buyers in control, healthy trend
-
-**Phase 2 - Warning Signal (Apr 12):**
-- Price: New high at $3,580
-- Plutus Flow: Shifted to **yellow zone** (OBV flattening)
-- **Observation:** Price making new highs but OBV not confirming
-- **Interpretation:** Buying pressure weakening - caution warranted
-
-**Phase 3 - Bearish Divergence (Apr 15):**
-- Price: New high at $3,620 (+1.1% higher than Apr 12)
-- Plutus Flow: **Red zone** (OBV declining while price rises)
-- **Classic Divergence Pattern:**
-  - Price: Higher high ($3,620 > $3,580)
-  - OBV: Lower high (declining trend)
-- **Observation:** Distribution occurring - smart money selling into rally
-- **Interpretation:** High-probability reversal setup
-
-**Phase 4 - Reversal Confirmation (Apr 17):**
-- Price: Dropped to $3,380 (-6.6% from peak)
-- Plutus Flow: Continued **red zones** (OBV falling with price)
-- **Observation:** Selling pressure confirmed
-- **Interpretation:** Divergence pattern played out
-
-**Historical Outcome:**
-Ethereum declined from the $3,620 peak to $3,180 over the following 12 days (-12.2% decline), validating the bearish divergence signal Plutus Flow identified on April 15.
-
-**Key Insight:**
-Plutus Flow's color-coded OBV visualization made the divergence immediately visible: price making new highs while the indicator showed red zones (declining OBV) = distribution warning.
-
-*(Educational example showing OBV divergence detection. Past patterns do not guarantee future results. Not financial advice.)*
-
----
-
 ## ⚙️ Settings
 
 ### OBV Calculation Settings
@@ -186,6 +135,57 @@ Default settings work for most users. Advanced traders can optimize for specific
 - Background: Minimal (remove unnecessary indicators)
 
 **Goal:** Make flow vs. price divergences visually obvious
+
+---
+
+## 📊 Educational Example 1: Ethereum Classic Divergence - April 2024
+
+**On-Balance Volume (OBV) Flow Analysis:**
+
+| Date | ETH Price | OBV Trend | Flow Color | Divergence? | Detail |
+|------|-----------|-----------|------------|-------------|--------|
+| Apr 8, 2024 | $3,280 | Rising | 🟢 Green | No | Price ↑ + OBV ↑ (healthy) |
+| Apr 10, 2024 | $3,450 | Rising | 🟢 Green | No | Price ↑ + OBV ↑ (healthy) |
+| Apr 12, 2024 | $3,580 | Flat | 🟡 Yellow | ⚠️ Warning | Price ↑ + OBV → (weakening) |
+| Apr 15, 2024 | $3,620 | Declining | 🔴 Red | ❌ Divergence | Price ↑ + OBV ↓ (bearish) |
+| Apr 17, 2024 | $3,380 | Declining | 🔴 Red | Confirmed | Price ↓ + OBV ↓ (reversal) |
+
+**Plutus Flow Analysis:**
+
+**Phase 1 - Healthy Uptrend (Apr 8-10):**
+- Price: $3,280 → $3,450 (+5.2%)
+- Plutus Flow: **Green zones** (OBV rising with price)
+- **Observation:** Volume accumulation supporting price rally
+- **Interpretation:** Buyers in control, healthy trend
+
+**Phase 2 - Warning Signal (Apr 12):**
+- Price: New high at $3,580
+- Plutus Flow: Shifted to **yellow zone** (OBV flattening)
+- **Observation:** Price making new highs but OBV not confirming
+- **Interpretation:** Buying pressure weakening - caution warranted
+
+**Phase 3 - Bearish Divergence (Apr 15):**
+- Price: New high at $3,620 (+1.1% higher than Apr 12)
+- Plutus Flow: **Red zone** (OBV declining while price rises)
+- **Classic Divergence Pattern:**
+  - Price: Higher high ($3,620 > $3,580)
+  - OBV: Lower high (declining trend)
+- **Observation:** Distribution occurring - smart money selling into rally
+- **Interpretation:** High-probability reversal setup
+
+**Phase 4 - Reversal Confirmation (Apr 17):**
+- Price: Dropped to $3,380 (-6.6% from peak)
+- Plutus Flow: Continued **red zones** (OBV falling with price)
+- **Observation:** Selling pressure confirmed
+- **Interpretation:** Divergence pattern played out
+
+**Historical Outcome:**
+Ethereum declined from the $3,620 peak to $3,180 over the following 12 days (-12.2% decline), validating the bearish divergence signal Plutus Flow identified on April 15.
+
+**Key Insight:**
+Plutus Flow's color-coded OBV visualization made the divergence immediately visible: price making new highs while the indicator showed red zones (declining OBV) = distribution warning.
+
+*(Educational example showing OBV divergence detection. Past patterns do not guarantee future results. Not financial advice.)*
 
 ---
 

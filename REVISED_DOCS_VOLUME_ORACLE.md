@@ -54,7 +54,89 @@ Volume Oracle provides three distinct systems working together:
 - **Intermediate:** 20-30 hours (volume divergence recognition, zone trading)
 - **Advanced:** 40+ hours (volume profile analysis, institutional footprint reading)
 
+## ⚙️ Settings
 
+### System Toggle Options
+
+| System | On/Off | Description |
+|--------|--------|-------------|
+| **Volume Flow** | ✓ | Color-coded volume bars |
+| **Volume Zones** | ✓ | High-volume consolidation areas |
+| **Position Manager** | ✓ | Entry tracking and P&L display |
+
+Each system can be enabled/disabled independently.
+
+### Volume Flow Configuration
+
+| Setting | Options | Default |
+|---------|---------|---------|
+| **Calculation Method** | Standard, Weighted, Tick | Standard |
+| **Smoothing Period** | 1-50 | 9 |
+| **Color Scheme** | Multiple palettes | Green/Red |
+
+### Volume Zones Configuration
+
+| Setting | Options | Default |
+|---------|---------|---------|
+| **Volume Threshold** | Low, Medium, High, Custom | Medium |
+| **Zone Display** | Boxes, Lines, Both | Boxes |
+| **Historical Zones** | 5, 10, 20, All | 10 |
+
+### Position Manager Configuration
+
+| Setting | Options | Default |
+|---------|---------|---------|
+| **Entry Method** | Manual, Auto (at signal) | Manual |
+| **Display Format** | Percentage, Points, Both | Both |
+| **Breakeven Line** | Show/Hide | Show |
+| **P&L Updates** | Real-time, Bar close | Real-time |
+
+---
+
+## ⚙️ Advanced Configuration Examples
+
+Default settings work for most users. Advanced traders can optimize for specific scenarios:
+
+### Configuration 1: Aggressive Volume Spike Detection
+
+**Use Case:** Catch every institutional move
+
+**Settings:**
+- **Spike Threshold:** 1.3x average (lower = more sensitive)
+- **Lookback Period:** 20 bars (shorter = more responsive)
+
+**Trade-off:**
+- ✅ Catches smaller volume surges
+- ⚠️ More false positives (retail volume spikes)
+
+---
+
+### Configuration 2: Conservative Volume Filtering
+
+**Use Case:** Only major institutional activity
+
+**Settings:**
+- **Spike Threshold:** 2.0x average (higher = more selective)
+- **Lookback Period:** 50 bars (longer = smoother baseline)
+
+**Trade-off:**
+- ✅ Only significant volume events
+- ⚠️ May miss moderate institutional activity
+
+---
+
+### Configuration 3: Volume Zone Optimization
+
+**Use Case:** Clean chart with key zones only
+
+**Settings:**
+- **Maximum Zones:** 5-7 (top zones only)
+- **Zone Significance:** High threshold
+- **Visual:** Reduce opacity to 50%
+
+**Best For:** Swing traders, long-term position holders
+
+---
 
 ## 📊 Educational Example 1: Bitcoin Volume Spike - January 2024
 
@@ -172,90 +254,6 @@ Volume Oracle's colored zones make divergences immediately visible:
 </details>
 
 *(Interactive educational example. Past patterns do not guarantee future results. Not financial advice.)*
-
----
-
-## ⚙️ Settings
-
-### System Toggle Options
-
-| System | On/Off | Description |
-|--------|--------|-------------|
-| **Volume Flow** | ✓ | Color-coded volume bars |
-| **Volume Zones** | ✓ | High-volume consolidation areas |
-| **Position Manager** | ✓ | Entry tracking and P&L display |
-
-Each system can be enabled/disabled independently.
-
-### Volume Flow Configuration
-
-| Setting | Options | Default |
-|---------|---------|---------|
-| **Calculation Method** | Standard, Weighted, Tick | Standard |
-| **Smoothing Period** | 1-50 | 9 |
-| **Color Scheme** | Multiple palettes | Green/Red |
-
-### Volume Zones Configuration
-
-| Setting | Options | Default |
-|---------|---------|---------|
-| **Volume Threshold** | Low, Medium, High, Custom | Medium |
-| **Zone Display** | Boxes, Lines, Both | Boxes |
-| **Historical Zones** | 5, 10, 20, All | 10 |
-
-### Position Manager Configuration
-
-| Setting | Options | Default |
-|---------|---------|---------|
-| **Entry Method** | Manual, Auto (at signal) | Manual |
-| **Display Format** | Percentage, Points, Both | Both |
-| **Breakeven Line** | Show/Hide | Show |
-| **P&L Updates** | Real-time, Bar close | Real-time |
-
----
-
-## ⚙️ Advanced Configuration Examples
-
-Default settings work for most users. Advanced traders can optimize for specific scenarios:
-
-### Configuration 1: Aggressive Volume Spike Detection
-
-**Use Case:** Catch every institutional move
-
-**Settings:**
-- **Spike Threshold:** 1.3x average (lower = more sensitive)
-- **Lookback Period:** 20 bars (shorter = more responsive)
-
-**Trade-off:**
-- ✅ Catches smaller volume surges
-- ⚠️ More false positives (retail volume spikes)
-
----
-
-### Configuration 2: Conservative Volume Filtering
-
-**Use Case:** Only major institutional activity
-
-**Settings:**
-- **Spike Threshold:** 2.0x average (higher = more selective)
-- **Lookback Period:** 50 bars (longer = smoother baseline)
-
-**Trade-off:**
-- ✅ Only significant volume events
-- ⚠️ May miss moderate institutional activity
-
----
-
-### Configuration 3: Volume Zone Optimization
-
-**Use Case:** Clean chart with key zones only
-
-**Settings:**
-- **Maximum Zones:** 5-7 (top zones only)
-- **Zone Significance:** High threshold
-- **Visual:** Reduce opacity to 50%
-
-**Best For:** Swing traders, long-term position holders
 
 ---
 
