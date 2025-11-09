@@ -2,6 +2,8 @@
 
 **Quick comparison of all 7 indicators on 2 pages**
 
+> 📱 **Mobile Users:** This page contains wide tables optimized for desktop viewing. For best experience on mobile, rotate to landscape mode or view on desktop. Tables support horizontal scrolling.
+
 ---
 
 ## 📊 Quick Comparison Matrix

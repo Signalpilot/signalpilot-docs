@@ -34,6 +34,8 @@ graph TD
 
 ## 📊 Complete Comparison Table
 
+> 📱 **Mobile Users:** The table below has 8 columns and is optimized for desktop. On mobile, you can scroll horizontally. For easier comparison on mobile, see the categorized sections below the table.
+
 | Feature | Pentarch | Janus Atlas | Omnideck | Augury Grid | Volume Oracle | Harmonic Osc. | Plutus Flow |
 |---------|----------|-------------|----------|-------------|---------------|---------------|-------------|
 | **Primary Purpose** | Cycle phase detection | Price levels mapping | All-in-one analysis | Multi-asset screening | Volume analysis | Momentum consensus | Divergence detection |
