@@ -18,6 +18,33 @@ Augury Grid displays TD Sequential exhaustion signals for multiple symbols on on
 
 ---
 
+## 📚 Before You Start — Prerequisites
+
+### Universal Requirements:
+- **Basic Chart Reading:** Understand candlesticks, timeframes, and how to navigate TradingView
+- **Support & Resistance Concepts:** Recognize that price tends to react at certain levels
+- **Risk Management Fundamentals:** Understanding position sizing and stop-loss concepts
+- **TradingView Account:** Free tier minimum (Pro/Premium unlocks more indicators and alerts)
+- **Chart Observation Time:** At least 10-20 hours watching live charts to understand price movement
+
+### Additional Knowledge for Augury Grid:
+- **MACD Indicator Theory:** How MACD measures momentum (histogram, crossovers)
+- **Multi-Symbol Monitoring:** Mental framework for tracking multiple assets
+- **Confluence Scoring:** Understanding that multiple aligned signals strengthen setups
+
+### Recommended Learning Path:
+1. **Start with 10-15 symbols**, not the full 40 (reduces overwhelm)
+2. Choose symbols you already trade or monitor regularly
+3. Use Grid for **filtering**, then analyze full charts for confirmation
+4. Combine with chart indicators for complete analysis
+
+### Estimated Learning Time:
+- **Basic Proficiency:** 5-8 hours (setup grid, understand bull/bear classification)
+- **Intermediate:** 15-20 hours (optimize symbol selection, effective filtering)
+- **Advanced:** 30+ hours (advanced watchlist strategies, multi-grid setups)
+
+---
+
 ## 📊 Educational Example: Grid View (November 2024)
 
 *(Historical observation for educational purposes only. Not financial advice. Past performance does not indicate future results.)*
@@ -69,6 +96,49 @@ Add symbols to monitor in settings panel. Up to 40 symbols can be tracked.
 | **Signal Alerts** | Individual on/off per symbol | All enabled |
 | **Count Display** | Show numbers or icons | Numbers |
 | **Color Scheme** | Multiple palettes | Scheme 1 |
+
+---
+
+## ⚙️ Advanced Configuration Examples
+
+#### Configuration 1: Crypto-Focused Watchlist
+
+**Symbols to Include:**
+- Major pairs: BINANCE:BTCUSDT, BINANCE:ETHUSDT
+- Altcoins: SOL, MATIC, AVAX, LINK (top 20 by market cap)
+- Total: 15-20 crypto symbols
+
+**Timeframe:** 4H or Daily (crypto trades 24/7)
+
+**Best For:** Crypto traders, 24/7 market monitoring
+
+---
+
+#### Configuration 2: Stock Market Leaders
+
+**Symbols to Include:**
+- Indices: SPY, QQQ, DIA, IWM
+- Mega caps: AAPL, MSFT, GOOGL, AMZN, NVDA
+- Sector leaders: XLE, XLF, XLK, XLV
+- Total: 20-30 symbols
+
+**Timeframe:** Daily (stock market hours)
+
+**Best For:** Equity traders, sector rotation analysis
+
+---
+
+#### Configuration 3: Forex Majors
+
+**Symbols to Include:**
+- Majors: EUR/USD, GBP/USD, USD/JPY, USD/CHF
+- Crosses: EUR/GBP, EUR/JPY, GBP/JPY
+- Commodities: XAU/USD (gold), XAG/USD (silver)
+- Total: 12-16 pairs
+
+**Timeframe:** 1H or 4H
+
+**Best For:** Forex traders, currency correlation analysis
 
 ---
 
@@ -238,6 +308,177 @@ Green 9 and Red 9 signals remain displayed until:
 
 ## 📚 Interpreting Grid Patterns
 
+---
+
+## 📊 Enhanced Example: Multi-Asset Screener Analysis - December 2023
+
+**Scenario:** Trader monitors 4 different asset classes simultaneously
+
+**Screener Configuration:**
+
+| Symbol | Asset Class | Timeframe | Pentarch Pattern | Janus Confluence | Volume Oracle |
+|--------|-------------|-----------|------------------|------------------|---------------|
+| SPY | US Equities | Daily | IGN (Dec 4) | ✅ Near Weekly Low | ✅ 1.6x Spike |
+| BTC/USD | Cryptocurrency | 4H | TD (Dec 5) | ✅ Near Monthly Support | ⚠️ Below Average |
+| EUR/USD | Forex | 1H | CAP (Dec 5) | ✅ Near Daily High | ✅ 1.4x Spike |
+| GLD | Commodities | Daily | No Pattern | ❌ Mid-range | ❌ Low Volume |
+
+**Analysis Workflow:**
+
+1. **Highest Priority:** SPY (all 3 confirmations aligned)
+   - Early-cycle IGN pattern
+   - Price at weekly support level
+   - Volume confirming the move
+   - **Observation:** Most confluence indicators present
+
+2. **Medium Priority:** EUR/USD (pattern + level + volume)
+   - Late-cycle CAP pattern at resistance
+   - Volume spike confirming selling pressure
+   - **Observation:** Potential reversal setup
+
+3. **Lower Priority:** BTC/USD (pattern + level, but no volume)
+   - Early-cycle TD pattern
+   - Volume below average (less confirmation)
+   - **Observation:** Might wait for volume confirmation
+
+4. **No Setup:** GLD (no pattern present)
+   - Skip this asset for now
+   - Continue monitoring for pattern appearance
+
+**Historical Outcome:**
+- SPY: Rallied +6.2% over next 15 trading days
+- EUR/USD: Reversed down -1.8% over next 5 days
+- BTC/USD: Consolidated sideways for 3 days before rallying (volume confirmation came later)
+- GLD: No significant move
+
+*(Educational example showing multi-asset screening workflow. Past patterns do not guarantee future results. Not financial advice.)*
+
+---
+
+## 🤝 Using Augury Grid With Other Indicators
+
+Augury Grid scans multiple symbols. Use for filtering, then analyze matches with chart indicators.
+
+### Setup 1: Grid Filtering → Chart Confirmation
+
+**Workflow:**
+1. **Augury Grid:** Scans 40 symbols, shows 8 with bullish MACD + high confluence
+2. **Open those 8 charts individually**
+3. **Add Pentarch + Janus Atlas** to each chart
+4. **Look for:** Pentarch pattern + Janus level + Grid bullish = Triple confirmation
+
+**Example:**
+- Grid shows BTC with Bull + Confluence Score 8/10
+- Open BTC chart
+- Pentarch shows IGN, Janus shows Daily Low nearby
+- Grid + Pentarch + Janus = Strong multi-indicator setup
+
+---
+
+## ⚠️ When NOT to Use Augury Grid
+
+### Avoid This Indicator When:
+
+- **📊 Single-Asset Focus: You Only Trade One Symbol**
+  Augury Grid scans up to 40 symbols simultaneously. If you only trade BTC or SPY, use individual indicators on that single chart instead—no need for scanning.
+
+- **⏱️ Execution Speed: Ultra-Fast Scalping Required**
+  Grid updates every bar close. For sub-minute scalping requiring instant execution, direct chart analysis is faster than grid scanning.
+
+- **💻 Account Limitations: TradingView Free Tier**
+  Free accounts have limited indicator slots. Using Augury Grid consumes one slot—consider if screener functionality justifies the slot vs. another indicator.
+
+- **🎯 Analysis Depth: Deep Technical Analysis Needed**
+  Grid shows MACD bull/bear + confluence score but doesn't show chart patterns, candlestick formations, or detailed setups. Use for filtering, then analyze specific charts.
+
+- **📉 Illiquid Markets: Low-Volume Exotic Pairs**
+  Adding illiquid symbols to grid may produce unreliable signals. Stick to major pairs, indices, and liquid stocks for best results.
+
+### Limitations to Understand:
+
+✓ **Screener Shows Opportunities, Not Complete Analysis**
+Grid identifies which symbols have MACD bullish/bearish conditions. You still need to analyze the actual chart before taking action.
+
+✓ **40-Symbol Maximum**
+TradingView technical limits restrict grid to 40 symbols. Can't scan entire markets—must select watchlist strategically.
+
+✓ **MACD-Based Filtering Only**
+Grid uses MACD for bull/bear classification. Other momentum methods (RSI, Stochastic) aren't used. MACD is excellent but not the only valid approach.
+
+✓ **Confluence Score Requires Interpretation**
+Higher confluence (multiple signals align) suggests stronger setup, but doesn't guarantee success. Still requires discretion and risk management.
+
+### Better Alternatives When:
+
+| Scenario | Use Instead |
+|----------|-------------|
+| Trading only 1-2 symbols | → Individual chart indicators |
+| Need non-MACD momentum | → Harmonic Oscillator |
+| Want visual chart patterns | → Manual chart review |
+| Limited indicator slots | → Prioritize chart indicators |
+
+---
+
+## 🔧 Troubleshooting Common Issues
+
+### Problem: "Grid showing all neutral (no bullish/bearish)"
+
+**Possible Causes:**
+
+1. **Market Condition: Consolidation**
+   - **Check:** Is broader market in tight range?
+   - **Solution:** Normal—MACD neutral during consolidation
+   - **Why:** Grid reflects MACD state, which is range-bound
+
+2. **Symbols Not Loading**
+   - **Check:** Are symbol names correct?
+   - **Solution:** Verify ticker format (BINANCE:BTCUSDT, NYSE:AAPL)
+   - **Why:** Incorrect symbols can't fetch data
+
+3. **Timeframe Issues**
+   - **Check:** Using very high timeframe (Monthly)?
+   - **Solution:** Use Daily or lower for more responsive signals
+   - **Why:** Higher timeframes change slowly
+
+---
+
+### Problem: "Symbols not appearing in grid"
+
+**Common Issues:**
+
+1. **Ticker Format Wrong**
+   - **Correct:** BINANCE:BTCUSDT
+   - **Wrong:** BTCUSDT (missing exchange)
+   - **Solution:** Include exchange prefix
+
+2. **Symbol Limit Exceeded**
+   - **Maximum:** 40 symbols
+   - **Check:** Did you add more than 40?
+   - **Solution:** Remove excess symbols
+
+3. **Delisted / Unavailable Symbol**
+   - **Check:** Is symbol still trading?
+   - **Solution:** Remove delisted symbols from list
+
+---
+
+### Problem: "Confluence score doesn't make sense"
+
+**Understanding Confluence Scoring:**
+
+**Confluence = How many signals align**
+
+Example: If 3 out of 5 internal signals agree → Confluence score 6/10
+
+**Not a prediction—just alignment measurement**
+
+**Low confluence (1-4):** Few signals aligned, mixed conditions
+**Medium confluence (5-7):** Moderate alignment
+**High confluence (8-10):** Strong multi-signal alignment
+
+**Higher ≠ guaranteed success, just stronger agreement among signals**
+
+---
 ### Pattern 1: Broad Market Exhaustion
 
 **Observation:**
