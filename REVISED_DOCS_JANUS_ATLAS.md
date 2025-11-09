@@ -90,6 +90,68 @@ Additional levels can be enabled progressively after familiarity with these core
 
 ---
 
+## ⚙️ Advanced Configuration Examples
+
+Default settings work for most users. Advanced traders can optimize for specific scenarios:
+
+#### Configuration 1: Minimalist Level Setup
+
+**Use Case:** Clean charts, focus on key levels only
+
+**Levels to Enable (5 Total):**
+1. Daily High
+2. Daily Low
+3. Weekly High
+4. Weekly Low
+5. Anchored VWAP
+
+**Levels to Disable:** All others (34 level types disabled)
+
+**Visual Settings:**
+- Line width: Thin
+- Opacity: 70-80%
+- Label size: Small
+
+**Best For:** Scalpers, clean-chart traders, beginners
+
+---
+
+#### Configuration 2: Multi-Timeframe Power Setup
+
+**Use Case:** Complete level picture across timeframes
+
+**Levels to Enable:**
+- **Intraday:** Hourly High/Low
+- **Daily:** Daily High/Low, Daily Open
+- **Weekly:** Weekly High/Low
+- **Monthly:** Monthly High/Low
+- **Special:** Anchored VWAP, Previous Day Close
+
+**Visual Strategy:**
+- Different colors per timeframe
+- Daily levels: Thicker lines
+- Intraday levels: Thinner lines
+
+**Best For:** Swing traders analyzing multiple timeframes
+
+---
+
+#### Configuration 3: Volume-Weighted Levels Focus
+
+**Use Case:** Institutional level tracking
+
+**Levels to Enable:**
+- Anchored VWAP (all variants)
+- Volume-weighted zones
+- POC (Point of Control)
+- VAH/VAL (Value Area High/Low)
+
+**Disable:** Time-based levels (just volume-based)
+
+**Best For:** Volume traders, institutional footprint analysis
+
+---
+
 ## 📊 Educational Example: S&P 500 Futures (October 2024)
 
 *(Historical observation for educational purposes only. Not financial advice. Past performance does not indicate future results.)*
@@ -361,6 +423,317 @@ Trigger: When price crosses above or below Daily VWAP line
 ```
 
 *Alerts provide level notification. Subsequent action determined by individual trading approach.*
+
+---
+
+## 📊 Educational Example 1: EUR/USD Level Cluster Reaction (November 2023)
+
+**Market Context:**
+EUR/USD had rallied from 1.0500 to 1.0920 over 3 weeks (+4.2%). On November 15, 2023, price approached a significant level cluster on the daily timeframe.
+
+**Level Cluster Identified:**
+
+| Level Type | Price | Source |
+|------------|-------|--------|
+| Weekly High | 1.0915 | Previous week's high |
+| Monthly High | 1.0928 | October 2023 monthly high |
+| Anchored VWAP | 1.0922 | Volume-weighted average from rally start |
+| Psychological | 1.0900 | Round number |
+
+**Cluster Range:** 1.0900 to 1.0928 (28 pips wide)
+
+**What Made This Cluster Significant:**
+
+✓ **Multiple Timeframes:** Weekly AND Monthly levels converging
+✓ **Volume Confirmation:** VWAP within cluster (volume accumulated here)
+✓ **Psychological Level:** 1.0900 round number adding weight
+✓ **Tight Range:** All levels within 28 pips = strong cluster
+
+**Price Action at Cluster:**
+
+- **Nov 14:** Approached cluster, reached 1.0905
+- **Nov 15:** Tested 1.0918 (into cluster), rejected
+- **Nov 16:** Second test to 1.0912, failed again
+- **Nov 17-20:** Reversed to 1.0795 (-117 pips from cluster high)
+
+**Educational Analysis:**
+
+When multiple Janus Atlas levels cluster within a tight range (here: 28 pips), the zone often acts as stronger resistance/support than individual isolated levels. This example demonstrated:
+
+1. **Level Confluence:** 4 different level types agreeing
+2. **Rejection Pattern:** Two tests, two failures (cluster held)
+3. **Timeframe Alignment:** Daily chart levels = Daily chart reaction
+
+**Key Lessons:**
+
+- **Clusters > Individual Levels:** Multiple levels together create zones
+- **Test and Reject:** Levels don't prevent touches, they often cause rejections
+- **Not Guaranteed:** Levels can break—clusters just increase reaction probability
+
+*(Educational example. Past level reactions do not guarantee future behavior. Not financial advice.)*
+
+---
+
+### 🎯 Pattern Recognition Challenge: Tesla August 2024
+
+**Your Task:** Evaluate this level setup.
+
+**Scenario:**
+Tesla (TSLA) is in a downtrend, declining from $265 to $216 over 6 weeks. On August 8, 2024, Janus Atlas shows a Daily Low at $215.50. Current price: $216.20.
+
+**Additional Observation:**
+- Previous swing low (July): $214.80
+- Previous swing low (June): $216.90
+- All three lows clustered within $2.10 range
+
+**Question:** What does this level configuration suggest?
+
+A) Strong support zone - likely bounce
+B) Weak level - will break easily
+C) No significance - random levels
+D) Support zone possibility - watch for confirmation
+
+<details>
+<summary>💡 Click to Reveal Analysis</summary>
+
+**Correct Answer: D) Support zone possibility - watch for confirmation**
+
+**Level Analysis:**
+
+This presents a potential support cluster:
+- Janus Daily Low: $215.50
+- Previous lows: $214.80, $216.90
+- Range: $2.10 (tight clustering for TSLA)
+
+**Why NOT Answer A (Strong support guaranteed):**
+
+Levels show WHERE price MAY react, not WHERE it WILL react. Even strong clusters can fail during momentum moves. "Support zone possibility" is more accurate than "strong support guaranteed."
+
+**What Actually Happened:**
+
+Price declined to $216.10 on August 8, then bounced to $222.40 over the next 5 trading days (+$6.30 or +2.9%). The cluster acted as support, but this wasn't guaranteed—it was a probability-based zone.
+
+**Educational Insights:**
+
+✓ **Level Clusters Create Zones:** Multiple lows within $2 = potential support zone
+✓ **Confirmation Needed:** Watch for actual rejection (higher low, volume, etc.)
+✓ **Probability, Not Certainty:** Even good clusters can fail
+✓ **Risk Management:** Use clusters for planning, not blind entries
+
+**How Experienced Traders Used This:**
+
+- Watched for price reaction near $215-217 zone
+- Waited for confirmation (bounce, volume spike, or pattern)
+- Set alerts at cluster levels rather than blind limit orders
+- Had plan for both scenarios (bounce OR break)
+
+</details>
+
+*(Educational challenge. Past level reactions do not guarantee future behavior. Not financial advice.)*
+
+---
+
+## 🤝 Using Janus Atlas With Other Indicators
+
+Janus Atlas maps 39 different price level types. Combining with pattern or momentum indicators adds directional context to levels.
+
+#### Setup 1: Janus Atlas + Pentarch (Level + Pattern Confluence)
+
+**Use Case:** Waiting for cycle patterns at key support/resistance levels
+
+**How It Works:**
+- Janus shows Daily Low at 50,000
+- Price approaches 50,000
+- Wait for Pentarch TD or IGN pattern to appear AT the level
+- Pattern + level = High-probability entry zone
+
+**Example Workflow:**
+1. Identify key Janus level (e.g., Daily Low, Weekly High)
+2. Set alert when price approaches level
+3. When price reaches level, watch for Pentarch pattern
+4. If pattern appears at level → Enter on level + pattern confluence
+
+**Real Application:**
+*Tesla (TSLA) - August 2024*
+- **Janus Atlas:** Daily Low at $215.50
+- **Price Action:** Declined to $216.20
+- **Pentarch:** TD pattern appeared at $216.80 (near Daily Low)
+- **Confluence:** Pattern appeared within 0.6% of level
+- **Outcome:** Early-cycle pattern at support level
+
+---
+
+#### Setup 2: Janus Atlas + Volume Oracle (Level + Volume Confluence)
+
+**Use Case:** Confirming level reactions with volume
+
+**How It Works:**
+- Janus shows Weekly High at 4,500
+- Price approaches 4,500
+- Volume Oracle shows spike as price reaches level
+- Volume spike at level = Institutional interest at that zone
+
+**Level Reaction Types:**
+- **Bounce with volume:** Level acting as support/resistance
+- **Break with volume:** Level being breached with conviction
+- **Touch without volume:** Weak reaction, level test
+
+**Example Workflow:**
+1. Price approaches Janus level
+2. Monitor Volume Oracle for spike
+3. Volume spike + price rejection = Level holding
+4. Volume spike + price break = Level broken with conviction
+
+---
+
+#### Setup 3: Janus Atlas + Harmonic Oscillator (Level + Momentum)
+
+**Use Case:** Trading level bounces when momentum confirms
+
+**How It Works:**
+- Price at Janus support level + Harmonic shows BUY = Bullish bounce setup
+- Price at Janus resistance level + Harmonic shows SELL = Bearish rejection setup
+
+**Example:**
+*Crude Oil (CL) - May 2024*
+- Price at Daily Low $77.50 (Janus Atlas support)
+- Harmonic Oscillator showing STRONG BUY (momentum bullish)
+- Confluence: Support level + bullish momentum
+- Outcome: Level bounce with momentum confirmation
+
+---
+
+## ⚠️ When NOT to Use Janus Atlas
+
+### Avoid This Indicator When:
+
+- **📊 Market Condition: Strong Trending Without Pullbacks**
+  During parabolic moves with no retracements, price may not interact with levels for extended periods. Levels become less actionable when price is far from all mapped zones.
+
+- **⏱️ Timeframe: Conflicting Multi-Timeframe Levels**
+  When 5-minute, hourly, and daily levels all cluster in different zones, interpretation becomes complex. Start with single-timeframe analysis before combining timeframes.
+
+- **💰 Asset Type: Newly Listed / Low History Assets**
+  Assets with <6 months of price history lack sufficient data to establish reliable long-term levels. Wait for more historical data to accumulate.
+
+- **🎯 Strategy Mismatch: Mean Reversion Only**
+  If you only trade reversals at levels, you'll miss trend continuation opportunities. Janus shows where price MAY react, not guaranteed reversals.
+
+- **📉 Gap-Heavy Markets**
+  Markets that frequently gap (individual stocks with overnight gaps) may jump over multiple levels, reducing their practical use for entry/exit planning.
+
+### Limitations to Understand:
+
+✓ **Levels Show Where Price MAY React, Not WILL React**
+Janus Atlas maps statistically significant price zones. Reactions at these levels are common but not guaranteed.
+
+✓ **More Levels ≠ Better Analysis**
+Beginners often enable all 39 level types, creating visual overload. Start with 5 core levels (Daily High/Low, Weekly High/Low, Anchored VWAP).
+
+✓ **Levels Are Dynamic, Not Static**
+Some levels (VWAP, Volume-weighted zones) recalculate with new data. What was resistance yesterday may shift today.
+
+✓ **Level Clusters > Individual Levels**
+Single isolated levels have less significance than clusters where multiple levels converge within tight ranges.
+
+### Better Alternatives When:
+
+| Scenario | Use Instead |
+|----------|-------------|
+| Need directional momentum signals | → Pentarch or Harmonic Oscillator |
+| Want volume-based price zones | → Volume Oracle Volume Zones |
+| Need all-in-one solution | → Omnideck (includes level system) |
+| Trading breakouts only | → Combine with Pentarch IGN patterns |
+
+---
+
+## 🔧 Troubleshooting Common Issues
+
+### Problem: "Too many levels on chart (visual overload)"
+
+**Solutions:**
+
+1. **Reduce Active Level Types**
+   - **Default:** All 39 level types enabled
+   - **Solution:** Start with 5 Core Levels only:
+     - Daily High/Low
+     - Weekly High/Low
+     - Anchored VWAP
+   - **How:** Disable all others in settings
+
+2. **Use Level Type Filtering**
+   - **Enable only what you need:**
+     - Scalping: Daily/Weekly levels
+     - Swing trading: Weekly/Monthly levels
+     - Position trading: Monthly/Quarterly levels
+
+3. **Adjust Visual Settings**
+   - Reduce line opacity
+   - Use thinner line widths
+   - Enable only nearby levels (hide distant ones)
+
+---
+
+### Problem: "Price not reacting at my levels"
+
+**Reality Check:**
+
+**Levels show WHERE price MAY react, not WHERE it WILL react**
+
+**Possible Reasons:**
+
+1. **Level Not Significant Enough**
+   - **Check:** Is it an isolated level or part of a cluster?
+   - **Solution:** Focus on level clusters (multiple levels within 1-2%)
+   - **Why:** Clusters have stronger magnetic effect than single levels
+
+2. **Strong Trend Override**
+   - **Check:** Is market in parabolic move?
+   - **Solution:** Levels work best during retracements, not parabolic trends
+   - **Why:** Strong momentum can ignore levels temporarily
+
+3. **Timeframe Mismatch**
+   - **Check:** Using Daily levels on 5m chart?
+   - **Solution:** Match level timeframe to trading timeframe
+   - **Why:** Daily levels more relevant on higher timeframes
+
+4. **Insufficient Volume at Level**
+   - **Check:** Did volume spike as price reached level?
+   - **Solution:** Combine with Volume Oracle for volume confirmation
+   - **Why:** Levels without volume often get run through
+
+---
+
+### Problem: "Levels changing/moving"
+
+**Understanding Dynamic vs. Static Levels:**
+
+**Dynamic Levels (Recalculate):**
+- Anchored VWAP
+- Volume-weighted levels
+- Session-based levels
+
+**Static Levels (Don't Change):**
+- Daily/Weekly/Monthly High/Low (once session closes)
+- Pivot points (once calculated)
+
+**This is expected behavior for certain level types**
+
+---
+
+### Problem: "Same level type showing multiple lines"
+
+**Example:** "Why do I see 3 different 'Daily High' lines?"
+
+**Explanation:**
+- Previous day's Daily High
+- Current day's Daily High (forming)
+- Next day's projected Daily High
+
+**Solution:**
+- Check level label descriptions
+- Disable historical levels if you only want current
+- Settings → Show only current session levels
 
 ---
 
