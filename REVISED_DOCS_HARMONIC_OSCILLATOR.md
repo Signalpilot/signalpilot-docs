@@ -708,6 +708,32 @@ Whipsaw Conditions:  Rapid BUY ↔ SELL alternation
 
 ---
 
+## 🔗 Related Topics
+
+### Learn More About Harmonic Oscillator
+- **[All Indicators At-a-Glance](docs/ref-cheatsheets/all-indicators-at-a-glance.md)** - Quick reference for Harmonic signals (BUY/SELL/STRONG/NEUT)
+- **[Learning Paths](docs/start-learning-path/index.md)** - Structured roadmap for mastering Harmonic Oscillator (2 weeks)
+- **[Glossary](docs/ref-glossary/index.md)** - RSI, Stochastic, CCI, Williams %R, MFI definitions
+
+### The Momentum Stack ⭐
+Harmonic Oscillator works best when combined with:
+- **[Pentarch](REVISED_DOCS_PENTARCH.md)** - Cycle phase signals for timing
+- **[Janus Atlas](REVISED_DOCS_JANUS_ATLAS.md)** - Price levels for entries/exits
+
+**Workflow:** Pentarch signal → Harmonic Oscillator confirmation → Janus level entry = High-probability setup
+
+### Additional Combinations
+- **[Volume Oracle](REVISED_DOCS_VOLUME_ORACLE.md)** - Add volume confirmation to momentum signals
+- **[Plutus Flow](REVISED_DOCS_PLUTUS_FLOW.md)** - Compare oscillator signals with OBV divergence patterns
+- **[Augury Grid](REVISED_DOCS_AUGURY_GRID.md)** - Scan multiple assets for Harmonic signals
+
+### Comparison & Optimization
+- **[Indicator Comparison](docs/ref-comparison/indicator-comparison.md)** - Compare all 7 indicators by difficulty, timeframes, use cases
+- **[Performance Optimization](docs/advanced/performance-optimization.md)** - Optimize Harmonic Oscillator rendering
+- **[All Indicators At-a-Glance](docs/ref-cheatsheets/all-indicators-at-a-glance.md)** - 2-page reference comparing all indicators
+
+---
+
 ## 📞 Support
 
 **Technical Questions:**

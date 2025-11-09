@@ -831,6 +831,32 @@ Single isolated levels have less significance than clusters where multiple level
 
 ---
 
+## 🔗 Related Topics
+
+### Learn More About Janus Atlas
+- **[Janus Atlas Levels Guide](docs/ref-cheatsheets/janus-atlas-levels-guide.md)** - Complete reference for all 39 level types
+- **[Learning Paths](docs/start-learning-path/index.md)** - Structured roadmap for mastering Janus (2 weeks)
+- **[Glossary](docs/ref-glossary/index.md)** - Level clusters, POC, VAH, VAL, BOS, CHoCH definitions
+
+### The Trinity Workflow ⭐ Most Popular
+Janus Atlas works best when combined with:
+- **[Pentarch](REVISED_DOCS_PENTARCH.md)** - Cycle phase signals for timing entries
+- **[Volume Oracle](REVISED_DOCS_VOLUME_ORACLE.md)** - Volume confirmation at levels
+
+**Workflow:** Pentarch signal → Janus level cluster → Volume spike = High-probability setup
+
+### Additional Combinations
+- **[Harmonic Oscillator](REVISED_DOCS_HARMONIC_OSCILLATOR.md)** - Confirm momentum at levels (BUY/SELL signals)
+- **[Plutus Flow](REVISED_DOCS_PLUTUS_FLOW.md)** - Identify divergences occurring at key levels
+- **[Augury Grid](REVISED_DOCS_AUGURY_GRID.md)** - Scan multiple assets approaching level clusters
+
+### Comparison & Optimization
+- **[Indicator Comparison](docs/ref-comparison/indicator-comparison.md)** - Compare all 7 indicators by difficulty, timeframes, use cases
+- **[Performance Optimization](docs/advanced/performance-optimization.md)** - Optimize Janus level rendering (reduce to 5-10 levels for better performance)
+- **[All Indicators At-a-Glance](docs/ref-cheatsheets/all-indicators-at-a-glance.md)** - 2-page reference comparing all indicators
+
+---
+
 ## 📞 Support
 
 **Technical Questions:**

@@ -614,6 +614,33 @@ USD/CAD, USD/CHF, NZD/USD, EUR/GBP
 
 ---
 
+## 🔗 Related Topics
+
+### Learn More About Augury Grid
+- **[All Indicators At-a-Glance](docs/ref-cheatsheets/all-indicators-at-a-glance.md)** - Quick reference for Augury Grid signals
+- **[Learning Paths](docs/start-learning-path/index.md)** - Structured roadmap for mastering Augury Grid (2-3 weeks)
+- **[Glossary](docs/ref-glossary/index.md)** - TD Sequential, exhaustion, level cluster definitions
+
+### The Scanner ⭐
+Augury Grid works best when combined with detailed analysis using:
+- **[Pentarch](REVISED_DOCS_PENTARCH.md)** - Analyze filtered assets for cycle phase signals
+- **[Janus Atlas](REVISED_DOCS_JANUS_ATLAS.md)** - Identify entry levels on scanned assets
+- **[Volume Oracle](REVISED_DOCS_VOLUME_ORACLE.md)** - Confirm volume on grid-filtered setups
+
+**Workflow:** Augury Grid scan for signals → Switch to detailed chart → Apply The Trinity analysis
+
+### Additional Combinations
+- **[Harmonic Oscillator](REVISED_DOCS_HARMONIC_OSCILLATOR.md)** - Check momentum on assets flagged by grid
+- **[Plutus Flow](REVISED_DOCS_PLUTUS_FLOW.md)** - Look for divergences on grid-filtered symbols
+- **[Omnideck](REVISED_DOCS_OMNIDECK.md)** - Deep analysis on top 3 assets from grid scan
+
+### Comparison & Optimization
+- **[Indicator Comparison](docs/ref-comparison/indicator-comparison.md)** - Compare all 7 indicators by difficulty, timeframes, use cases
+- **[Performance Optimization](docs/advanced/performance-optimization.md)** - Optimize Augury Grid for 30-40 symbols without lag
+- **[All Indicators At-a-Glance](docs/ref-cheatsheets/all-indicators-at-a-glance.md)** - 2-page reference comparing all indicators
+
+---
+
 ## 📞 Support
 
 **Technical Questions:**

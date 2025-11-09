@@ -727,6 +727,34 @@ TD Sequential might show bearish while Oscillators show bullish. This isn't a bu
 
 ---
 
+## 🔗 Related Topics
+
+### Learn More About Omnideck
+- **[All Indicators At-a-Glance](docs/ref-cheatsheets/all-indicators-at-a-glance.md)** - Quick reference comparing Omnideck to other indicators
+- **[Learning Paths](docs/start-learning-path/index.md)** - Structured roadmap for mastering Omnideck (10-12 weeks)
+- **[Glossary](docs/ref-glossary/index.md)** - TD Sequential, Squeeze, Liquidity Sweeps, and all system definitions
+
+### All-in-One Analysis
+Omnideck combines 8 systems in one indicator:
+- **Alternative to:** Using Pentarch + Janus + Volume Oracle + Harmonic separately
+- **Benefit:** Single indicator with comprehensive analysis
+- **Trade-off:** Higher complexity, steeper learning curve
+
+**When to use Omnideck vs. The Trinity:**
+- **Use Omnideck:** Advanced traders, want all-in-one, willing to invest 100+ hours
+- **Use The Trinity:** Beginners/intermediates, prefer modular approach, faster learning
+
+### Additional Combinations
+- **[Augury Grid](REVISED_DOCS_AUGURY_GRID.md)** - Scan multiple assets, then deep-dive with Omnideck on filtered symbols
+- Can combine with other Signal Pilot indicators, but Omnideck alone provides comprehensive analysis
+
+### Comparison & Optimization
+- **[Indicator Comparison](docs/ref-comparison/indicator-comparison.md)** - Compare all 7 indicators by difficulty, timeframes, use cases
+- **[Performance Optimization](docs/advanced/performance-optimization.md)** - Optimize Omnideck (disable unused systems, reduce visual elements)
+- **[All Indicators At-a-Glance](docs/ref-cheatsheets/all-indicators-at-a-glance.md)** - 2-page reference comparing all indicators
+
+---
+
 ## 📞 Support
 
 **Technical Questions:**

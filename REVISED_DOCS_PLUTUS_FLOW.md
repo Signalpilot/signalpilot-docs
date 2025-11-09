@@ -739,6 +739,32 @@ On assets where volume reporting is unreliable (some crypto exchanges, OTC stock
 
 ---
 
+## 🔗 Related Topics
+
+### Learn More About Plutus Flow
+- **[All Indicators At-a-Glance](docs/ref-cheatsheets/all-indicators-at-a-glance.md)** - Quick reference for Plutus Flow divergence patterns
+- **[Learning Paths](docs/start-learning-path/index.md)** - Structured roadmap for mastering Plutus Flow (2-3 weeks)
+- **[Glossary](docs/ref-glossary/index.md)** - OBV, divergence, accumulation/distribution definitions
+
+### The Divergence Hunter ⭐
+Plutus Flow works best when combined with:
+- **[Pentarch](REVISED_DOCS_PENTARCH.md)** - Cycle shift signals at divergence points (BDN→TD or CAP→BDN)
+- **[Janus Atlas](REVISED_DOCS_JANUS_ATLAS.md)** - Entry levels at divergence zones
+
+**Workflow:** Plutus divergence → Pentarch cycle shift → Janus level entry = Reversal setup
+
+### Additional Combinations
+- **[Volume Oracle](REVISED_DOCS_VOLUME_ORACLE.md)** - Compare OBV divergence with volume spike patterns
+- **[Harmonic Oscillator](REVISED_DOCS_HARMONIC_OSCILLATOR.md)** - Confirm divergence with momentum signals
+- **[Augury Grid](REVISED_DOCS_AUGURY_GRID.md)** - Scan multiple assets for divergence patterns
+
+### Comparison & Optimization
+- **[Indicator Comparison](docs/ref-comparison/indicator-comparison.md)** - Compare all 7 indicators by difficulty, timeframes, use cases
+- **[Performance Optimization](docs/advanced/performance-optimization.md)** - Optimize Plutus Flow rendering
+- **[All Indicators At-a-Glance](docs/ref-cheatsheets/all-indicators-at-a-glance.md)** - 2-page reference comparing all indicators
+
+---
+
 ## 📞 Support
 
 **Technical Questions:**

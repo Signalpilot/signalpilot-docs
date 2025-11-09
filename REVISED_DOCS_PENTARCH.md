@@ -839,6 +839,32 @@ Reversal:     BDN → TD → IGN
 
 ---
 
+## 🔗 Related Topics
+
+### Learn More About Pentarch
+- **[Pentarch Quick Reference](docs/ref-cheatsheets/pentarch-quick-reference.md)** - One-page printable cheat sheet
+- **[Learning Paths](docs/start-learning-path/index.md)** - Structured roadmap for mastering Pentarch (4-6 weeks)
+- **[Glossary](docs/ref-glossary/index.md)** - TD, IGN, WRN, CAP, BDN definitions and cycle terms
+
+### The Trinity Workflow ⭐ Most Popular
+Pentarch works best when combined with:
+- **[Janus Atlas](REVISED_DOCS_JANUS_ATLAS.md)** - Price levels for entries/exits
+- **[Volume Oracle](REVISED_DOCS_VOLUME_ORACLE.md)** - Volume confirmation
+
+**Workflow:** Pentarch signal → Janus level cluster → Volume spike = High-probability setup
+
+### Additional Combinations
+- **[Harmonic Oscillator](REVISED_DOCS_HARMONIC_OSCILLATOR.md)** - Add momentum confirmation (BUY/SELL signals)
+- **[Plutus Flow](REVISED_DOCS_PLUTUS_FLOW.md)** - Combine with divergence detection for reversals
+- **[Augury Grid](REVISED_DOCS_AUGURY_GRID.md)** - Scan multiple assets for Pentarch signals
+
+### Comparison & Optimization
+- **[Indicator Comparison](docs/ref-comparison/indicator-comparison.md)** - Compare all 7 indicators by difficulty, timeframes, use cases
+- **[Performance Optimization](docs/advanced/performance-optimization.md)** - Optimize Pentarch for faster chart rendering
+- **[All Indicators At-a-Glance](docs/ref-cheatsheets/all-indicators-at-a-glance.md)** - 2-page reference comparing all indicators
+
+---
+
 ## 📞 Support
 
 **Technical Questions:**
