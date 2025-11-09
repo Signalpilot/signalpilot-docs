@@ -2052,6 +2052,52 @@
 <p><strong>Color Customization:</strong> Multiple color palettes available in settings. Default palette: TD (purple), IGN (teal), WRN (yellow), CAP (orange), BDN (red). All event colors can be customized to individual preferences.</p>
 <p><strong>Detection Method:</strong> Four-layer confirmation system analyzes regime classification, pilot line distance, momentum validation, and bar close confirmation. Signals appear only when all layers align.</p>
 <p><strong>Timeframe Compatibility:</strong> Works on all timeframes.</p>
+
+<!-- 📸 SCREENSHOT NEEDED - Pentarch All 5 Signal Types on Live Chart
+     What to show: Bitcoin or S&P 500 chart showing all 5 signals (TD, IGN, WRN, CAP, BDN) visible
+     Setup: 4H or Daily timeframe, Pentarch v1.0 enabled, all signals enabled
+     Label/Annotate: Arrow pointing to each signal with its name (TD=blue, IGN=green, WRN=yellow, CAP=orange, BDN=red)
+     File name suggestion: pentarch-5-signals-labeled.png
+-->
+<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
+  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
+  <p style="margin: 0; color: #424242;"><strong>Pentarch All 5 Signal Types on Live Chart</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a chart showing all five signal types (TD, IGN, WRN, CAP, BDN) labeled on a live Bitcoin or S&P 500 chart.</p>
+</div>
+
+<h3 id="signal-flow-visual">📊 Signal Flow Visualization</h3>
+
+<p>The five Pentarch signals typically appear in a cyclical sequence as markets move through different phases. Here's how signals progress through a complete market cycle:</p>
+
+<div class="mermaid">
+graph LR
+    Start([📊 Market Cycle Begins]) --> TD
+    TD[TD Signal<br/>🟦 ACCUMULATION<br/>Early Cycle Bottom] --> IGN
+    IGN[IGN Signal<br/>🟩 IGNITION<br/>Reversal Starting] --> WRN
+    WRN[WRN Signal<br/>🟨 WARNING<br/>Late Cycle Peak] --> CAP
+    CAP[CAP Signal<br/>🟧 CAPITULATION<br/>Distribution Climax] --> BDN
+    BDN[BDN Signal<br/>🟥 BREAKDOWN<br/>Trend Breakdown] --> Start
+
+    style TD fill:#9C27B0,stroke:#7B1FA2,stroke-width:3px,color:#fff
+    style IGN fill:#00BCD4,stroke:#0097A7,stroke-width:3px,color:#fff
+    style WRN fill:#FFC107,stroke:#FFA000,stroke-width:3px,color:#000
+    style CAP fill:#FF5722,stroke:#E64A19,stroke-width:3px,color:#fff
+    style BDN fill:#F44336,stroke:#C62828,stroke-width:3px,color:#fff
+    style Start fill:#424242,stroke:#212121,stroke-width:2px,color:#fff
+</div>
+
+<div class="admonition tip">
+<p class="admonition-title">💡 How to Read This Flow</p>
+<ul>
+<li><strong>TD (Touchdown):</strong> Appears during accumulation phase - early cycle bottom conditions</li>
+<li><strong>IGN (Ignition):</strong> Signals reversal starting - momentum shifting upward</li>
+<li><strong>WRN (Warning):</strong> Appears at late cycle peaks - distribution phase beginning</li>
+<li><strong>CAP (Capitulation):</strong> Distribution climax - selling exhaustion</li>
+<li><strong>BDN (Breakdown):</strong> Trend breakdown confirmed - cycle reset</li>
+</ul>
+<p><strong>Important:</strong> Not every cycle includes all five signals. Some cycles may skip signals. This diagram shows the typical progression when all signals appear.</p>
+</div>
+
 <hr />
 <h2 id="settings">⚙️ Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h2>
 <p>Available configuration options:</p>
@@ -2087,6 +2133,19 @@
 </tbody>
 </table>
 <p><strong>Note:</strong> Color customization available for all five event types in indicator settings.</p>
+
+<!-- 📸 SCREENSHOT NEEDED - Pentarch Settings Panel Configuration
+     What to show: TradingView settings panel for Pentarch v1.0
+     Setup: Right-click indicator → Settings, show full settings dialog
+     Label/Annotate: Highlight "Signal Toggles" section showing TD, IGN, WRN, CAP, BDN checkboxes
+     File name suggestion: pentarch-settings-panel.png
+-->
+<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
+  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
+  <p style="margin: 0; color: #424242;"><strong>Pentarch Settings Panel Configuration</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a screenshot of the TradingView settings panel showing all configuration options and signal toggles.</p>
+</div>
+
 <hr />
 <h2 id="educational-example-bitcoin-december-2024">📊 Educational Example: Bitcoin (December 2024)<a class="headerlink" href="#educational-example-bitcoin-december-2024" title="Permanent link">&para;</a></h2>
 <p><em>(Historical observation for educational purposes only. Not financial advice. Past performance does not indicate future results.)</em></p>
@@ -2133,6 +2192,56 @@
 <hr />
 <h2 id="the-five-cycle-events">🔢 The Five Cycle Events <span class="skill-badge skill-badge--beginner" data-tooltip="Core concepts - no prerequisites needed">Beginner Friendly</span><a class="headerlink" href="#the-five-cycle-events" title="Permanent link">&para;</a></h2>
 <p><strong>Note on Colors:</strong> Pentarch includes multiple color palettes for the five event labels. Default palette: TD (purple), IGN (teal), WRN (yellow), CAP (orange), BDN (red). Colors can be customized in indicator settings.</p>
+
+<div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
+  <div class="sp-callout__title">📊 Visual Guide: Signal Sequence Flow</div>
+  <p style="margin-bottom: 1.5rem;">How the 5 cycle events progress from early accumulation to late breakdown:</p>
+  <div class="mermaid" role="img" aria-label="Pentarch signal sequence flowchart">
+graph LR
+    Start([📊 Market Cycle Begins]) --> TD
+
+    TD[TD Signal<br/>🟦 ACCUMULATION<br/>Early Cycle]
+    TD --> |"Trend Exhausting"|IGN
+
+    IGN[IGN Signal<br/>🟩 IGNITION<br/>Reversal Starting]
+    IGN --> |"New Trend Developing"|WRN
+
+    WRN[WRN Signal<br/>🟨 WARNING<br/>Late Cycle Approaching]
+    WRN --> |"Trend Maturing"|CAP
+
+    CAP[CAP Signal<br/>🟧 CAPITULATION<br/>Climax/Exhaustion]
+    CAP --> |"Trend Ending"|BDN
+
+    BDN[BDN Signal<br/>🟥 BREAKDOWN<br/>Trend Breakdown]
+    BDN --> |"Cycle Complete<br/>May Reverse"|Start
+
+    TD -.->|"Partial Sequence<br/>(Common)"| WRN
+    IGN -.->|"Partial Sequence<br/>(Common)"| CAP
+
+    style Start fill:#37474f,color:#fff,stroke:#263238,stroke-width:3px
+    style TD fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:3px
+    style IGN fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
+    style WRN fill:#ffd740,color:#333,stroke:#fbc02d,stroke-width:3px
+    style CAP fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:3px
+    style BDN fill:#f44336,color:#fff,stroke:#d32f2f,stroke-width:3px
+  </div>
+  <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.85;">
+    <strong>Note:</strong> Complete 5-event cycles (TD→IGN→WRN→CAP→BDN) are rare. Partial sequences (TD→IGN or WRN→CAP) are more common and still valuable for trading.
+  </p>
+</div>
+
+<!-- 📸 SCREENSHOT NEEDED - Pentarch Complete Signal Sequence Example
+     What to show: Chart showing a complete or partial signal sequence (TD→IGN→WRN→CAP→BDN)
+     Setup: Find historical example where at least 3-4 signals appeared in sequence
+     Label/Annotate: Number the signals (1. TD, 2. IGN, 3. WRN, etc.) and draw arrow showing progression
+     File name suggestion: pentarch-signal-sequence.png
+-->
+<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
+  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
+  <p style="margin: 0; color: #424242;"><strong>Pentarch Complete Signal Sequence Example</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a chart example showing how signals progress through a complete cycle (TD→IGN→WRN→CAP→BDN).</p>
+</div>
+
 <hr />
 <h3 id="td-touchdown-accumulation-phase">🟣 TD — Touchdown (Accumulation Phase)<a class="headerlink" href="#td-touchdown-accumulation-phase" title="Permanent link">&para;</a></h3>
 <p><strong>Visual Display:</strong> "TD" label appears below candle<br />
@@ -2295,6 +2404,18 @@ CAP → BDN → TD (Climax to accumulation)
 - WRN signals: Price extended above line<br />
 - CAP signals: Extreme extension above line<br />
 - BDN signals: Price breaks below line bearishly</p>
+
+<!-- 📸 SCREENSHOT NEEDED - Pentarch Pilot Line and Regime Bar Colors
+     What to show: Chart showing Pilot Line (moving average line) with colored regime bars
+     Setup: Pentarch enabled with Pilot Line visible, show regime bar colors (green/red/gray candles)
+     Label/Annotate: Point to Pilot Line, show green bars (bullish), red bars (bearish), gray bars (neutral)
+     File name suggestion: pentarch-pilot-line-regime-bars.png
+-->
+<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
+  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
+  <p style="margin: 0; color: #424242;"><strong>Pentarch Pilot Line and Regime Bar Coloring</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a chart showing the Pilot Line and regime bar coloring system (green/red/gray bars).</p>
+</div>
 <p><strong>Color States:</strong><br />
 - Blue = Bearish regime identified<br />
 - Green = Bullish regime identified<br />

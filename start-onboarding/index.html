@@ -2077,78 +2077,100 @@
 <p><strong>✅ Day 5 Complete</strong> You understand the power of confluence.</p>
 <hr />
 <h2 id="day-6-risk-management-setup">📅 Day 6: Risk Management Setup <span class="skill-badge skill-badge--intermediate" data-tooltip="Essential trading concepts">Intermediate</span><a class="headerlink" href="#day-6-risk-management-setup" title="Permanent link">&para;</a></h2>
-<h3 id="goal-prepare-for-safe-trading">Goal: Prepare for safe trading<a class="headerlink" href="#goal-prepare-for-safe-trading" title="Permanent link">&para;</a></h3>
+<h3 id="day-6-risk-management">Day 6: Risk Management & Position Sizing (45 minutes)</h3>
+
+<div class="sp-callout sp-callout--warning">
+  <div class="sp-callout__title">⚠️ Most Important Day</div>
+  <p>Risk management keeps you in the game. Without it, even the best signals lead to blown accounts. Take this day seriously.</p>
+</div>
+
+<p><strong>Morning (25 minutes): Position Sizing Fundamentals</strong></p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Learn stop loss placement</strong></li>
-<li>
-<p>For long entries (IGN):</p>
+  <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Calculate 1% account risk</strong>
+    <ul>
+      <li>Example: $1,000 account × 1% = $10 maximum loss per trade</li>
+      <li>Example: $5,000 account × 1% = $50 maximum loss per trade</li>
+      <li>Rule: Never risk more than 1-2% of total account on any single trade</li>
+    </ul>
+  </li>
+  <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Understand position sizing formula</strong>
+    <ul>
+      <li>Position Size = Account Risk ÷ Stop Loss Distance</li>
+      <li>Example: $10 max risk ÷ 50-point stop = 0.2 units (or $0.20 per point)</li>
+      <li>Example: $50 max risk ÷ 100-point stop = 0.5 units (or $0.50 per point)</li>
+      <li>Tool: Use TradingView's built-in position size calculator or create a spreadsheet</li>
+    </ul>
+  </li>
+  <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Learn Risk:Reward (R:R) ratios</strong>
+    <ul>
+      <li><strong>1:1 R:R</strong> = Risk $10 to make $10 (need 50%+ win rate to profit)</li>
+      <li><strong>1:2 R:R</strong> = Risk $10 to make $20 (need 34%+ win rate to profit) ← Recommended minimum</li>
+      <li><strong>1:3 R:R</strong> = Risk $10 to make $30 (need 26%+ win rate to profit) ← Ideal target</li>
+      <li>Higher R:R ratios = can lose more often and still be profitable</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Afternoon (20 minutes): Practical Stop Loss & Take Profit</strong></p>
+<ul class="task-list">
+  <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Place stop loss using Janus Atlas levels</strong>
+    <ul>
+      <li>For longs: Stop below recent swing low OR below nearest Janus Atlas support level</li>
+      <li>For shorts: Stop above recent swing high OR above nearest Janus Atlas resistance level</li>
+      <li>Example: IGN long signal at $50,000 → Stop at $49,900 (Daily Low from Janus Atlas)</li>
+      <li>Stop distance = $100 → Position size = $10 max risk ÷ $100 = 0.1 BTC</li>
+    </ul>
+  </li>
+  <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Set take profit targets</strong>
+    <ul>
+      <li>Target 1 (TP1): 1:2 R:R minimum (if risking $100, target $200 profit)</li>
+      <li>Target 2 (TP2): Next major Janus Atlas level (resistance for longs, support for shorts)</li>
+      <li>Example: Risk $100 (stop at $49,900) → TP1 at $50,200 (1:2 R:R) → TP2 at $50,500 (Daily High)</li>
+      <li>Consider taking partial profits at TP1, letting remainder run to TP2</li>
+    </ul>
+  </li>
+  <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Understand when NOT to trade</strong>
+    <ul>
+      <li>Don't trade if stop loss would exceed 1-2% account risk</li>
+      <li>Don't trade if R:R ratio is below 1:2 (risk too high for reward)</li>
+      <li>Don't trade if signal appears far from any Janus Atlas level (no clear stop zone)</li>
+      <li>Don't trade if you can't monitor the position (no time, traveling, distracted)</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="admonition tip">
+<p class="admonition-title">📊 Real Example: Pentarch IGN Signal with Risk Management</p>
+<p><strong>Setup:</strong></p>
 <ul>
-<li>Place stop below IGN candle low</li>
-<li>OR below support level</li>
-<li>Use whichever is tighter/closer</li>
+<li>Account size: $2,000</li>
+<li>Max risk per trade: 1% = $20</li>
+<li>Pentarch IGN bullish signal at $50,000</li>
+<li>Janus Atlas Daily Low at $49,850 (150 points below)</li>
 </ul>
-</li>
-<li>
-<p>For short entries (BDN):</p>
+<p><strong>Calculation:</strong></p>
 <ul>
-<li>Place stop above BDN candle high</li>
-<li>OR above resistance level</li>
-<li>Use whichever is tighter/closer</li>
+<li>Stop loss distance: $50,000 - $49,850 = $150</li>
+<li>Position size: $20 ÷ $150 = 0.133 units (or $0.133 per point)</li>
+<li>Take profit (1:2 R:R): $50,000 + ($150 × 2) = $50,300</li>
 </ul>
-</li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Practice position size calculation</strong></p>
-</li>
-<li>
-<p>Example calculation (hypothetical for educational purposes):</p>
+<p><strong>Trade Plan:</strong></p>
 <ul>
-<li>Hypothetical account: $10,000</li>
-<li>Example risk: 1% = $100</li>
-<li>Hypothetical entry example: Bitcoin at $40,000</li>
-<li>Example stop: $39,000</li>
-<li>Risk per unit in this example: $1,000</li>
-<li>Example position size: $100 / $1,000 = 0.1 BTC</li>
+<li>Entry: $50,000</li>
+<li>Stop: $49,850 (risk $20)</li>
+<li>TP1: $50,300 (reward $40, R:R = 1:2)</li>
+<li>If stopped out: Lose $20. If TP1 hit: Win $40.</li>
 </ul>
-</li>
-<li>
-<p>Practice calculation exercise:</p>
+</div>
+
+<p><strong>✅ Day 6 Complete When You Can:</strong></p>
 <ul>
-<li>Practice account value: $______</li>
-<li>Practice risk amount (example %): $______</li>
-<li>Practice position sizes for 3 different hypothetical setups</li>
+  <li>Calculate 1% of your account in your head</li>
+  <li>Use the position sizing formula (Account Risk ÷ Stop Distance)</li>
+  <li>Explain what 1:2 R:R ratio means and why it's important</li>
+  <li>Place a stop loss below a Janus Atlas level</li>
+  <li>Calculate your position size based on stop loss distance</li>
 </ul>
-</li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Explored: risk management concepts</strong></p>
-</li>
-<li>
-<p>Example risk management concepts to consider (educational examples only - not recommendations):</p>
-<ul>
-<li>Example concept: "Consider risk percentage per position" (educational illustration)</li>
-<li>Example concept: "Understanding stop loss concepts" (educational)</li>
-<li>Example concept: "Stop adjustment considerations" (educational)</li>
-<li>Example concept: "Break patterns after losses" (educational example)</li>
-</ul>
-</li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Explored: risk/reward concepts</strong></p>
-</li>
-<li>Find a historical IGN setup for educational analysis</li>
-<li>Hypothetical entry example: IGN price level</li>
-<li>Hypothetical stop example: Below support area</li>
-<li>Hypothetical target example: Next resistance level</li>
-<li>Calculate R/R for practice: (Target - Entry) / (Entry - Stop)</li>
-<li>
-<p>Educational note: Many examples in trading education show 2:1 ratios for illustration purposes</p>
-</li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Create a position size calculator</strong></p>
-</li>
-<li>Use a spreadsheet or notes app</li>
-<li>Template: Account Size × 1% ÷ (Entry - Stop)</li>
-<li>Keep it handy for every trade</li>
-</ul>
-<p><strong>✅ Day 6 Complete</strong> Your risk management framework is ready.</p>
 <hr />
 <h2 id="day-7-paper-trade">📅 Day 7: Paper Trade<a class="headerlink" href="#day-7-paper-trade" title="Permanent link">&para;</a></h2>
 <h3 id="goal-execute-your-first-practice-trades">Goal: Execute your first practice trades<a class="headerlink" href="#goal-execute-your-first-practice-trades" title="Permanent link">&para;</a></h3>
