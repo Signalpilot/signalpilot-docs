@@ -2,6 +2,8 @@
 
 Price level visualization system. Displays 39 different level types across timeframes, sessions, volume analysis, and market structure.
 
+**📋 [Quick Reference Cheat Sheet](docs/ref-cheatsheets/janus-atlas-levels-guide.md)** — One-page guide to all 39 level types, clusters, and configuration
+
 ---
 
 ## 🎯 Core Functionality

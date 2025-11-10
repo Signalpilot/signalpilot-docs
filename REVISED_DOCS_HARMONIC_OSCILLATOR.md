@@ -2,6 +2,8 @@
 
 Momentum indicator combining five technical oscillators into unified signal system. Displays BUY, SELL, NEUT, and STRONG signals based on multi-oscillator agreement.
 
+**📋 [Quick Reference Cheat Sheet](docs/ref-cheatsheets/harmonic-oscillator-quick-reference.md)** — One-page guide to 5-voter consensus, signals, and combinations
+
 ---
 
 ## 🎯 Core Functionality

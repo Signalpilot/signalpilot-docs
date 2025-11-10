@@ -2,6 +2,8 @@
 
 Three-system volume analysis indicator. Combines Volume Flow analysis, Volume Zone detection, and Position Manager tracking in single integrated tool.
 
+**📋 [Quick Reference Cheat Sheet](docs/ref-cheatsheets/volume-oracle-quick-reference.md)** — One-page guide to VBS signals, 3 systems, and position tracking
+
 ---
 
 ## 🎯 Core Functionality

@@ -2,6 +2,8 @@
 
 Real-time scanner displaying TD Sequential signals across multiple assets simultaneously. Monitor up to 40 tickers from single dashboard view.
 
+**📋 [Quick Reference Cheat Sheet](docs/ref-cheatsheets/augury-grid-quick-reference.md)** — One-page guide to multi-symbol screening, 5 confluence factors, and MACD signals
+
 ---
 
 ## 🎯 Core Functionality
