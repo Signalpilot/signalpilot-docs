@@ -32,13 +32,13 @@ Harmonic Oscillator analyzes five separate momentum oscillators simultaneously a
 
 ### Before You Start
 
-#### You Should Know:
+#### Prerequisite Knowledge:
 - **Basic Chart Reading:** Understand candlesticks, timeframes, and how to navigate TradingView
 - **Support & Resistance Concepts:** Recognize that price tends to react at certain levels
 - **Timeframe Selection:** Know the difference between 5m, 1H, 4H, Daily charts
 - **Risk Management Fundamentals:** Understanding position sizing and stop-loss concepts
 
-#### You Should Have:
+#### Recommended Setup:
 - **TradingView Account:** Free tier minimum (Pro/Premium unlocks additional features like more indicators and alerts)
 - **Chart Observation Time:** At least 10-20 hours watching live charts to understand price movement
 - **Practice Environment:** Paper trading account or demo account for testing

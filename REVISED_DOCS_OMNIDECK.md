@@ -559,7 +559,7 @@ Omnideck contains 10 systems. It can standalone or combine with specialized indi
 Omnideck provides 10 systems, but experienced traders typically use 2-4 at a time based on market conditions. Don't try to analyze all 10 simultaneously.
 
 ✓ **Requires Understanding of Individual Components**
-To use Omnideck effectively, you should understand what TD Sequential, VWAP, Oscillators, etc. actually measure. It's not plug-and-play for complete beginners.
+Effective use of Omnideck typically involves understanding what TD Sequential, VWAP, Oscillators, etc. actually measure. Not recommended as a first indicator for complete beginners.
 
 ✓ **More Features = More Learning Curve**
 Expect 20-30 hours to become proficient with Omnideck vs. 10-15 hours for single-purpose indicators.

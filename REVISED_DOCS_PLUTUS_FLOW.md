@@ -34,13 +34,13 @@ Plutus Flow calculates On-Balance Volume and adds three analytical layers:
 
 ### Before You Start
 
-#### You Should Know:
+#### Prerequisite Knowledge:
 - **Basic Chart Reading:** Understand candlesticks, timeframes, and how to navigate TradingView
 - **Support & Resistance Concepts:** Recognize that price tends to react at certain levels
 - **Timeframe Selection:** Know the difference between 5m, 1H, 4H, Daily charts
 - **Risk Management Fundamentals:** Understanding position sizing and stop-loss concepts
 
-#### You Should Have:
+#### Recommended Setup:
 - **TradingView Account:** Free tier minimum (Pro/Premium unlocks additional features like more indicators and alerts)
 - **Chart Observation Time:** At least 10-20 hours watching live charts to understand price movement
 - **Practice Environment:** Paper trading account or demo account for testing
@@ -318,7 +318,7 @@ Interpretation: Volume trend shift from bullish to bearish
 **Example:**
 ```
 Price: $100 → $90 → $85 (lower low)
-OBV:   150M → 145M → 147M (higher low at second bottom)
+OBV:   150M → 145M → 147M (higher low at second price low)
 Result: Bullish divergence detected
 ```
 
@@ -419,10 +419,10 @@ This is a **classic bullish divergence** - one of Plutus Flow's most powerful re
 - This **divergence** is the signal (price vs OBV disagreement)
 
 **What Happened Next:**
-- MSFT bottomed at $398 on June 14 (exact day divergence was strongest)
+- MSFT reached its low at $398 on June 14 (exact day divergence was strongest)
 - Reversed to $425 over the following 10 trading days (+6.8% rally)
 - Plutus Flow continued showing green zones during the rally (OBV confirming)
-- Classic bullish divergence pattern played out perfectly
+- Classic bullish divergence pattern played out
 
 **Why NOT the Other Answers:**
 
