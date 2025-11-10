@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Installation Troubleshooting - Signal Pilot Docs</title>
+  <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+  <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+  <link rel="icon" href="../favicon.ico">
+  <style>
+    body { font-family: Roboto, sans-serif; padding: 40px; max-width: 900px; margin: 0 auto; background: #f5f5f5; }
+    .content { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    h1 { color: #667eea; border-bottom: 2px solid #667eea; padding-bottom: 10px; }
+    h2 { color: #333; margin-top: 30px; }
+    h3 { color: #555; margin-top: 20px; }
+    h4 { color: #666; margin-top: 15px; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    table th, table td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+    table th { background: #667eea; color: white; }
+    .back-link { display: inline-block; margin-bottom: 20px; color: #667eea; text-decoration: none; }
+    .back-link:hover { text-decoration: underline; }
+    hr { border: none; border-top: 1px solid #eee; margin: 30px 0; }
+    .checklist { list-style: none; padding-left: 0; }
+    .checklist li:before { content: "□ "; color: #667eea; font-weight: bold; margin-right: 8px; }
+    code { background: #f5f5f5; padding: 2px 6px; border-radius: 3px; font-family: monospace; }
+    pre { background: #f5f5f5; padding: 15px; border-radius: 5px; overflow-x: auto; }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <a href="../" class="back-link">← Back to Home</a>
+
+    <h1>Installation Troubleshooting</h1>
+    <p>Resolve common issues when installing or loading Signal Pilot indicators.</p>
+
+    <hr>
+
+    <h2>🔍 Quick Diagnostic</h2>
+
+    <h3>Problem: "I can't find the indicator in TradingView"</h3>
+    <p><strong>Most likely cause:</strong> Looking in wrong section or access issue</p>
+    <p><strong>Solution:</strong> <a href="#indicator-not-in-invite-only-scripts">Jump to: Indicator Not in Invite-Only Scripts</a></p>
+
+    <hr>
+
+    <h3>Problem: "Indicator loads but nothing appears on chart"</h3>
+    <p><strong>Most likely cause:</strong> Wrong timeframe or settings</p>
+    <p><strong>Solution:</strong> <a href="#indicator-loaded-but-no-visuals">Jump to: Indicator Loaded but No Visuals</a></p>
+
+    <hr>
+
+    <h3>Problem: "No signals appearing"</h3>
+    <p><strong>Most likely cause:</strong> Patience needed or wrong timeframe</p>
+    <p><strong>Solution:</strong> <a href="#signals-not-appearing">Jump to: Signals Not Appearing</a></p>
+
+    <hr>
+
+    <h3>Problem: "Can't add indicator - says too many indicators"</h3>
+    <p><strong>Most likely cause:</strong> TradingView tier limit reached</p>
+    <p><strong>Solution:</strong> <a href="#too-many-indicators-error">Jump to: Too Many Indicators Error</a></p>
+
+    <hr>
+
+    <h2 id="indicator-not-in-invite-only-scripts">🚨 Indicator Not in Invite-Only Scripts</h2>
+
+    <p><strong>Symptoms:</strong></p>
+    <ul>
+      <li>Can't find Signal Pilot indicator in TradingView</li>
+      <li>"Invite-Only Scripts" tab is empty or doesn't show your indicators</li>
+      <li>Search returns no results</li>
+    </ul>
+
+    <h4>Cause 1: Email Mismatch</h4>
+    <p><strong>Check:</strong> TradingView account email matches purchase email</p>
+
+    <pre>1. Click profile icon (top right)
+2. Settings → Account
+3. Verify email address
+4. Compare to purchase confirmation email</pre>
+
+    <p><strong>Fix:</strong> If emails don't match:</p>
+    <ul>
+      <li>Option A: Change TradingView email to match purchase email</li>
+      <li>Option B: Contact support@signalpilot.io to transfer license</li>
+    </ul>
+
+    <hr>
+
+    <h4>Cause 2: Not Yet Granted Access</h4>
+    <p><strong>Check:</strong> How long since purchase?</p>
+
+    <p><strong>Fix:</strong></p>
+    <ul>
+      <li>Access granted within 24 hours of purchase (usually faster)</li>
+      <li>Check spam/promotions folder for access email</li>
+      <li>If >24 hours, contact support@signalpilot.io with order number</li>
+    </ul>
+
+    <hr>
+
+    <h4>Cause 3: Looking in Wrong Section</h4>
+    <p><strong>Check:</strong> Are you in "Invite-Only Scripts" tab?</p>
+
+    <pre>1. Click "Indicators" button (top toolbar, looks like ƒx)
+2. Click "Invite-Only Scripts" tab (not "Technicals" or "Community Scripts")
+3. Scroll to find Signal Pilot indicators</pre>
+
+    <hr>
+
+    <h4>Cause 4: Browser Cache Issue</h4>
+
+    <pre>1. Hard refresh: Ctrl+Shift+R (Windows) or Cmd+Shift+R (Mac)
+2. Clear browser cache
+3. Log out and log back into TradingView
+4. Try incognito/private mode</pre>
+
+    <hr>
+
+    <h2 id="indicator-loaded-but-no-visuals">🚨 Indicator Loaded but No Visuals</h2>
+
+    <p><strong>Symptoms:</strong></p>
+    <ul>
+      <li>Indicator name appears in left sidebar or below chart</li>
+      <li>Chart looks unchanged</li>
+      <li>No lines, labels, or panels visible</li>
+    </ul>
+
+    <h4>Cause 1: Wrong Timeframe</h4>
+    <p><strong>Issue:</strong> Some indicators don't show signals on all timeframes</p>
+
+    <pre>Pentarch: Use 15m-Weekly (not &lt;15m)
+Janus Atlas: Works on all timeframes
+Volume Oracle: Best on 5m-Daily
+Omnideck: Best on 1H-Daily
+Harmonic: Use 15m-Daily
+Plutus Flow: Best on 1H-Weekly
+Augury Grid: Use same timeframe as monitored symbols</pre>
+
+    <p><strong>Action:</strong> Switch to Daily chart, reload indicator, verify something appears</p>
+
+    <hr>
+
+    <h4>Cause 2: Indicator Settings Disabled Visual Elements</h4>
+    <p><strong>Issue:</strong> Settings accidentally turned off key components</p>
+
+    <pre>1. Click gear icon next to indicator name
+2. Check "Style" tab
+3. Verify visual elements are enabled (checkboxes ticked)
+4. Verify colors aren't set to chart background color
+5. Click "OK" to save</pre>
+
+    <hr>
+
+    <h2 id="signals-not-appearing">🚨 Signals Not Appearing</h2>
+
+    <p><strong>Symptoms:</strong></p>
+    <ul>
+      <li>Indicator loaded and visible</li>
+      <li>No signal labels, alerts, or pattern detection showing</li>
+      <li>Waited several hours/days with no activity</li>
+    </ul>
+
+    <h4>Cause 1: Patience Required (MOST COMMON)</h4>
+    <p><strong>Reality Check:</strong></p>
+
+    <table>
+      <tr>
+        <th>Indicator</th>
+        <th>Typical Wait Time for First Signal</th>
+      </tr>
+      <tr>
+        <td><strong>Janus Atlas</strong></td>
+        <td>Instant (levels always visible)</td>
+      </tr>
+      <tr>
+        <td><strong>Volume Oracle</strong></td>
+        <td>Minutes to hours (volume spikes)</td>
+      </tr>
+      <tr>
+        <td><strong>Harmonic Oscillator</strong></td>
+        <td>Instant to hours (momentum signals)</td>
+      </tr>
+      <tr>
+        <td><strong>Pentarch</strong></td>
+        <td>1-7 days (cycle events are rare)</td>
+      </tr>
+      <tr>
+        <td><strong>Plutus Flow</strong></td>
+        <td>Days to weeks (divergences are rare)</td>
+      </tr>
+      <tr>
+        <td><strong>Augury Grid</strong></td>
+        <td>Minutes to days (depends on monitored symbols)</td>
+      </tr>
+      <tr>
+        <td><strong>Omnideck</strong></td>
+        <td>Varies by system (some instant, some days)</td>
+      </tr>
+    </table>
+
+    <p><strong>Fix:</strong> Be patient. Pentarch TD signals may take 7+ days to appear depending on market conditions.</p>
+
+    <hr>
+
+    <h4>Cause 2: Low-Volume Asset</h4>
+    <p><strong>Issue:</strong> Asset doesn't have enough activity to generate signals</p>
+
+    <p><strong>Fix:</strong> Test on high-volume assets first:</p>
+    <ul>
+      <li>SPY, QQQ, AAPL (stocks)</li>
+      <li>BTC/USD, ETH/USD (crypto)</li>
+      <li>ES, NQ (futures)</li>
+      <li>EUR/USD, GBP/USD (forex)</li>
+    </ul>
+
+    <hr>
+
+    <h2 id="too-many-indicators-error">🚨 Too Many Indicators Error</h2>
+
+    <p><strong>Symptoms:</strong></p>
+    <ul>
+      <li>TradingView error: "Maximum number of indicators reached"</li>
+      <li>Can't add another indicator</li>
+      <li>Chart already has several indicators loaded</li>
+    </ul>
+
+    <p><strong>Cause:</strong> TradingView tier limit reached</p>
+
+    <p><strong>Limits by Account Tier:</strong></p>
+    <ul>
+      <li>Free: 3 indicators max</li>
+      <li>Essential ($14.95/mo): 5 indicators max</li>
+      <li>Plus ($29.95/mo): 10 indicators max</li>
+      <li>Premium ($59.95/mo): 25 indicators max</li>
+    </ul>
+
+    <h4>Option 1: Remove Unused Indicators</h4>
+
+    <pre>1. Find indicators you're not actively using
+2. Click "X" next to indicator name (left sidebar)
+3. Indicator removed, spot freed up
+4. Add desired Signal Pilot indicator</pre>
+
+    <hr>
+
+    <h4>Option 2: Upgrade TradingView Tier</h4>
+
+    <pre>1. Click profile icon → "Upgrade"
+2. Choose Essential or higher
+3. Restart browser after upgrading
+4. Add indicators (new limit applied)</pre>
+
+    <p><strong>Recommendation:</strong> Essential tier ($14.95/mo) gives 5 indicators—enough for The Trinity (3) + 2 more.</p>
+
+    <hr>
+
+    <h2>📞 When to Contact Support</h2>
+
+    <p><strong>Contact support@signalpilot.io if:</strong></p>
+
+    <ul>
+      <li>✅ Tried all solutions above</li>
+      <li>✅ Verified TradingView account email matches purchase</li>
+      <li>✅ Waited 24+ hours since purchase</li>
+      <li>✅ Indicator was working, now broken (no changes on your end)</li>
+      <li>✅ Error messages you don't understand</li>
+    </ul>
+
+    <p><strong>Include in Support Request:</strong></p>
+
+    <ol>
+      <li><strong>Order number</strong> (from purchase confirmation)</li>
+      <li><strong>TradingView account email</strong></li>
+      <li><strong>Specific error message</strong> (screenshot if possible)</li>
+      <li><strong>Indicator name</strong> (Pentarch, Janus, etc.)</li>
+      <li><strong>What you've already tried</strong> (saves time)</li>
+      <li><strong>Browser</strong> (Chrome, Firefox, Safari, etc.)</li>
+      <li><strong>TradingView tier</strong> (Free, Pro, Premium, etc.)</li>
+    </ol>
+
+    <hr>
+
+    <h2>✅ Installation Verification Checklist</h2>
+
+    <p>Before contacting support, verify:</p>
+
+    <ul class="checklist">
+      <li>Logged into TradingView with correct email</li>
+      <li>Can see "Invite-Only Scripts" tab</li>
+      <li>Indicator appears in Invite-Only Scripts list</li>
+      <li>Tried on Daily timeframe (universal compatibility)</li>
+      <li>Waited appropriate time for signals (see table above)</li>
+      <li>No TradingView indicator limit reached</li>
+      <li>Cleared browser cache and refreshed</li>
+      <li>Tested in incognito/private mode</li>
+      <li>Checked indicator settings (Style tab)</li>
+    </ul>
+
+    <p>If all checked and still not working → Contact support</p>
+
+    <hr>
+
+    <h2>🚀 Next Steps</h2>
+
+    <p><strong>Got it working?</strong></p>
+
+    <ol>
+      <li><strong>Configure settings:</strong> See indicator documentation for optimal settings</li>
+      <li><strong>Set up alerts:</strong> Configure TradingView alerts for your indicator</li>
+      <li><strong>Learn the indicator:</strong> Read the full documentation for your chosen indicator</li>
+    </ol>
+
+    <p><strong>Still stuck?</strong></p>
+
+    <ul>
+      <li>Email: support@signalpilot.io</li>
+      <li>Include: Order number, TradingView email, error details</li>
+      <li>Response time: Usually &lt;24 hours</li>
+    </ul>
+
+    <hr>
+
+    <p><strong>Related Guides:</strong></p>
+    <ul>
+      <li><a href="../about-system-requirements/">System Requirements</a></li>
+      <li><a href="../start-which-indicator/">Which Indicator Should I Start?</a></li>
+      <li><a href="../ref-troubleshooting/">General Troubleshooting Guide</a></li>
+    </ul>
+
+    <hr>
+
+    <p><a href="../" class="back-link">← Back to Home</a></p>
+  </div>
+</body>
+</html>
