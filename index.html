@@ -1637,7 +1637,7 @@ Markets move in cycles. Every asset. Every timeframe. Most traders chase signals
 </li>
 </ul>
 </div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center; margin: 3rem 0;">
+<div class="stats-grid">
 
   <div>
     <div style="font-size: 3rem; font-weight: 700; color: var(--md-primary-fg-color); font-family: var(--sp-brand-font); line-height: 1; margin-bottom: 0.5rem;">5</div>
@@ -1720,7 +1720,7 @@ Trading and investing involve substantial risk of loss. You should consult with 
 <h2 id="new-user-resources">👋 New User Resources<a class="headerlink" href="#new-user-resources" title="Permanent link">&para;</a></h2>
 
 <style>
-/* Desktop-only fix for New User Resources overflow */
+/* Desktop overflow fixes - clean layout for all grids */
 @media (min-width: 768px) {
   .user-resources-grid {
     display: grid;
@@ -1739,11 +1739,58 @@ Trading and investing involve substantial risk of loss. You should consult with 
     overflow-wrap: break-word;
     word-break: break-word;
   }
+
+  /* Most Common Tasks - 3 columns on desktop */
+  .common-tasks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  .common-tasks-box {
+    min-width: 0;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+  .common-tasks-box h3,
+  .common-tasks-box p {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  /* Stats grid - responsive for desktop */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    text-align: center;
+    margin: 3rem 0;
+  }
 }
 
-/* Mobile - keep current layout */
-@media (max-width: 767px) {
-  .user-resources-grid {
+/* Tablet breakpoint */
+@media (min-width: 480px) and (max-width: 767px) {
+  .user-resources-grid,
+  .common-tasks-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    text-align: center;
+    margin: 3rem 0;
+  }
+}
+
+/* Mobile - single column for all */
+@media (max-width: 479px) {
+  .user-resources-grid,
+  .common-tasks-grid,
+  .stats-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -1791,44 +1838,44 @@ Trading and investing involve substantial risk of loss. You should consult with 
 <hr />
 <h2 id="most-common-tasks">📌 Most Common Tasks<a class="headerlink" href="#most-common-tasks" title="Permanent link">&para;</a></h2>
 <p><strong>Quick links to what traders do most:</strong></p>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+<div class="common-tasks-grid">
 
-<div style="background: linear-gradient(135deg, color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent), color-mix(in srgb, var(--md-accent-fg-color) 8%, transparent)); border-radius: 12px; padding: 1.5rem; border-left: 4px solid var(--md-primary-fg-color);">
+<div class="common-tasks-box" style="background: linear-gradient(135deg, color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent), color-mix(in srgb, var(--md-accent-fg-color) 8%, transparent)); border-radius: 12px; padding: 1.5rem; border-left: 4px solid var(--md-primary-fg-color);">
   <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🔔</div>
   <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem;">Set Up Alerts</h3>
   <p style="margin: 0 0 1rem 0; color: var(--md-default-fg-color--light);">Get notified when signals fire</p>
   <a href="how-to-alerts/" style="display: inline-block; padding: 0.5rem 1.5rem; background: var(--md-primary-fg-color); color: white; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Alert Guide →</a>
 </div>
 
-<div style="background: linear-gradient(135deg, color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent), color-mix(in srgb, var(--md-accent-fg-color) 8%, transparent)); border-radius: 12px; padding: 1.5rem; border-left: 4px solid var(--md-primary-fg-color);">
+<div class="common-tasks-box" style="background: linear-gradient(135deg, color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent), color-mix(in srgb, var(--md-accent-fg-color) 8%, transparent)); border-radius: 12px; padding: 1.5rem; border-left: 4px solid var(--md-primary-fg-color);">
   <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">📖</div>
   <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem;">Understand Signals</h3>
   <p style="margin: 0 0 1rem 0; color: var(--md-default-fg-color--light);">Learn what TD, IGN, CAP, BDN mean</p>
   <a href="ref-glossary/" style="display: inline-block; padding: 0.5rem 1.5rem; background: var(--md-primary-fg-color); color: white; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Glossary →</a>
 </div>
 
-<div style="background: linear-gradient(135deg, color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent), color-mix(in srgb, var(--md-accent-fg-color) 8%, transparent)); border-radius: 12px; padding: 1.5rem; border-left: 4px solid var(--md-primary-fg-color);">
+<div class="common-tasks-box" style="background: linear-gradient(135deg, color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent), color-mix(in srgb, var(--md-accent-fg-color) 8%, transparent)); border-radius: 12px; padding: 1.5rem; border-left: 4px solid var(--md-primary-fg-color);">
   <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🎯</div>
   <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem;">Choose Indicators</h3>
   <p style="margin: 0 0 1rem 0; color: var(--md-default-fg-color--light);">Which indicators match your style?</p>
   <a href="ref-comparison/" style="display: inline-block; padding: 0.5rem 1.5rem; background: var(--md-primary-fg-color); color: white; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Comparison Guide →</a>
 </div>
 
-<div style="background: linear-gradient(135deg, color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent), color-mix(in srgb, var(--md-accent-fg-color) 8%, transparent)); border-radius: 12px; padding: 1.5rem; border-left: 4px solid var(--md-primary-fg-color);">
+<div class="common-tasks-box" style="background: linear-gradient(135deg, color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent), color-mix(in srgb, var(--md-accent-fg-color) 8%, transparent)); border-radius: 12px; padding: 1.5rem; border-left: 4px solid var(--md-primary-fg-color);">
   <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">❓</div>
   <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem;">Get Quick Answers</h3>
   <p style="margin: 0 0 1rem 0; color: var(--md-default-fg-color--light);">Common questions answered</p>
   <a href="about-faq/" style="display: inline-block; padding: 0.5rem 1.5rem; background: var(--md-primary-fg-color); color: white; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">FAQ →</a>
 </div>
 
-<div style="background: linear-gradient(135deg, color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent), color-mix(in srgb, var(--md-accent-fg-color) 8%, transparent)); border-radius: 12px; padding: 1.5rem; border-left: 4px solid var(--md-primary-fg-color);">
+<div class="common-tasks-box" style="background: linear-gradient(135deg, color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent), color-mix(in srgb, var(--md-accent-fg-color) 8%, transparent)); border-radius: 12px; padding: 1.5rem; border-left: 4px solid var(--md-primary-fg-color);">
   <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">📈</div>
   <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem;">Learn the Workflow</h3>
   <p style="margin: 0 0 1rem 0; color: var(--md-default-fg-color--light);">Complete trading process</p>
   <a href="ref-workflow/" style="display: inline-block; padding: 0.5rem 1.5rem; background: var(--md-primary-fg-color); color: white; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Trading Workflow →</a>
 </div>
 
-<div style="background: linear-gradient(135deg, color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent), color-mix(in srgb, var(--md-accent-fg-color) 8%, transparent)); border-radius: 12px; padding: 1.5rem; border-left: 4px solid var(--md-primary-fg-color);">
+<div class="common-tasks-box" style="background: linear-gradient(135deg, color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent), color-mix(in srgb, var(--md-accent-fg-color) 8%, transparent)); border-radius: 12px; padding: 1.5rem; border-left: 4px solid var(--md-primary-fg-color);">
   <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🔧</div>
   <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem;">Fix Problems</h3>
   <p style="margin: 0 0 1rem 0; color: var(--md-default-fg-color--light);">Troubleshoot common issues</p>
