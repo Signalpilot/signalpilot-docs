@@ -14,6 +14,74 @@ Volume Oracle is your **potential volume spike detector with built-in position m
 
 ---
 
+## 🚀 Installation (2 minutes)
+
+### Step 1: Open TradingView
+1. Go to [TradingView.com](https://www.tradingview.com)
+2. Log into your account
+3. Open any chart
+
+### Step 2: Add Volume Oracle to Chart
+1. Click **"Indicators"** button (top toolbar, looks like ƒx)
+2. Click **"Invite-Only Scripts"** tab
+3. Search for **"Volume Oracle v1.0"** or scroll to find it
+4. Click **"Volume Oracle v1.0 - Signal Pilot"**
+5. Indicator loads on your chart
+
+### Step 3: Verify It's Working
+**You should see:**
+- "Volume Oracle v1.0" appears in left sidebar
+- Colored volume bars in panel below chart (green/red/yellow/gray)
+- Volume zones (rectangular boxes) may appear on chart over time
+- Position Manager display (if you mark an entry price)
+
+> 👁️ **First Signal:** Within minutes to hours. Volume spikes (>1.5x average volume) appear as noticeably larger colored bars. Zones may take hours to days to form as high-volume consolidation areas develop.
+
+### Troubleshooting
+**Not seeing Volume Oracle in Invite-Only Scripts?**
+- Verify your TradingView email matches purchase email
+- Wait 24 hours after purchase for access
+- See [Installation Troubleshooting](troubleshooting-installation.md)
+
+**Loaded but no volume bars visible?**
+- Scroll down on chart - volume panel may be below visible area
+- Check indicator settings (Style tab) - ensure volume bars enabled
+- Verify chart has volume data (forex spot charts don't have real volume)
+- See [Installation Troubleshooting](troubleshooting-installation.md)
+
+**Volume bars all gray or one color?**
+- Normal in low-volatility periods
+- Try switching to high-volume asset (SPY, BTC/USD, ES futures)
+- Check timeframe - lower timeframes show more granular volume patterns
+
+**Need help?** support@signalpilot.io
+
+---
+
+## 📹 Video Tutorials
+
+### Getting Started with Volume Oracle (3:30)
+> 🎬 *Video coming soon - Subscribe to be notified*
+
+This video will cover:
+- Installing Volume Oracle on TradingView
+- Understanding the three systems (Flow, Zones, Position Manager)
+- Configuring volume spike alerts
+- Identifying your first high-volume bar
+
+---
+
+### Volume Oracle + The Trinity Workflow (5:00)
+> 🎬 *Video coming soon - Subscribe to be notified*
+
+This video will demonstrate:
+- Real-time example combining Volume Oracle with Pentarch and Janus Atlas
+- How volume confirms cycle signals and level reactions
+- Complete entry to exit workflow using The Trinity
+- Setting up multi-indicator alerts
+
+---
+
 ## Core Concept: Volume = Truth
 <span style="color: #0aa1d5; font-weight: 600; font-size: 1.1em;">💡 Core Philosophy - Volume Shows Intent</span>
 

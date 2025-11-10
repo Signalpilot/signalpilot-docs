@@ -9,6 +9,74 @@ Janus Atlas shows you **every important level on your chart** - all at once. Thi
 
 ---
 
+## 🚀 Installation (2 minutes)
+
+### Step 1: Open TradingView
+1. Go to [TradingView.com](https://www.tradingview.com)
+2. Log into your account
+3. Open any chart
+
+### Step 2: Add Janus Atlas to Chart
+1. Click **"Indicators"** button (top toolbar, looks like ƒx)
+2. Click **"Invite-Only Scripts"** tab
+3. Search for **"Janus Atlas v1.0"** or scroll to find it
+4. Click **"Janus Atlas v1.0 - Signal Pilot"**
+5. Indicator loads on your chart
+
+### Step 3: Verify It's Working
+**You should see:**
+- "Janus Atlas v1.0" appears in left sidebar
+- Multiple horizontal price level lines on chart
+- Level labels on right price scale (e.g., "dH", "WH", "VAH", "POC")
+- Lines in various colors (customizable in settings)
+
+> 👁️ **First Signal:** Immediately! Janus Atlas displays price levels as soon as it loads. You should see horizontal lines across your chart representing support/resistance levels. Default setup shows 5-10 key levels.
+
+### Troubleshooting
+**Not seeing Janus Atlas in Invite-Only Scripts?**
+- Verify your TradingView email matches purchase email
+- Wait 24 hours after purchase for access
+- See [Installation Troubleshooting](troubleshooting-installation.md)
+
+**Loaded but no lines visible?**
+- Check indicator settings (Style tab) - ensure at least 5 core levels enabled
+- Try zooming out on chart (levels may be outside visible range)
+- Verify level colors aren't matching chart background
+- See [Installation Troubleshooting](troubleshooting-installation.md)
+
+**Too many lines - chart looks messy?**
+- Normal with default settings (many levels enabled)
+- Disable levels in settings - start with 5 core levels: dH, dL, WH, WL, Daily VWAP
+- See Settings section below for recommendations
+
+**Need help?** support@signalpilot.io
+
+---
+
+## 📹 Video Tutorials
+
+### Janus Atlas Setup: First 5 Levels (2:30)
+> 🎬 *Video coming soon - Subscribe to be notified*
+
+This video will cover:
+- Installing Janus Atlas on TradingView
+- Enabling the 5 core levels (dH, dL, WH, WL, AVWAP)
+- Understanding support vs resistance
+- Observing your first level reaction
+
+---
+
+### Level Clusters: The Key to Confluence (4:15)
+> 🎬 *Video coming soon - Subscribe to be notified*
+
+This video will demonstrate:
+- What makes a level cluster (3+ levels within 1-2%)
+- Real examples of price reacting at clusters
+- How to identify high-probability cluster zones
+- Combining clusters with Pentarch patterns
+
+---
+
 ## 📍 The Levels (What You Get)
 <span style="color: #10b981; font-weight: 600;">Level Types</span>
 <span style="color: #0aa1d5; font-weight: 600; font-size: 1.1em;">⭐ Core Feature - 39 Level Types Available</span>
