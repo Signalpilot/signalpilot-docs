@@ -1,0 +1,2544 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <meta name="mobile-web-app-capable" content="yes">
+      <meta name="theme-color" content="#667eea">
+      <meta name="format-detection" content="telephone=no">
+      
+        <meta name="description" content="Resolve common issues when installing or loading Signal Pilot indicators. Step-by-step solutions for access, loading, and signal problems.">
+      
+      
+      
+        <link rel="canonical" href="https://docs.signalpilot.io/start-quick/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../start-prerequisites/">
+      
+      
+      <!-- Favicons -->
+      <link rel="icon" type="image/x-icon" href="../favicon.ico">
+      <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
+      <link rel="icon" type="image/png" sizes="512x512" href="../favicon-512x512.png">
+
+      <!-- PWA Manifest -->
+      <link rel="manifest" href="../manifest.json">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
+    
+    
+      
+        <title>Installation Troubleshooting - Signal Pilot Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/timeago.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../css/responsive-optimization.css">
+      <link rel="stylesheet" href="../css/content-overflow-fix.css">
+      <link rel="stylesheet" href="../css/mobile-layout-fixes.css">
+    
+      <link rel="stylesheet" href="../assets/brand.css">
+    
+      <link rel="stylesheet" href="../assets/aurora.css">
+    
+      <link rel="stylesheet" href="../assets/print.css">
+    
+      <link rel="stylesheet" href="../assets/interactive-code.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+
+
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-NZ05GV72K0"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-NZ05GV72K0",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-NZ05GV72K0",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+
+
+  
+
+    
+    
+    
+  <!-- Google Fonts: Gugi for brand consistency -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - CSS
+       To disable: comment out this entire block
+       ======================================== -->
+  <link rel="stylesheet" href="../css/feedback.css">
+  <link rel="stylesheet" href="../css/visual-enhancements.css">
+
+  <!-- Mermaid.js for diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'dark',
+      themeVariables: {
+        primaryColor: '#00bcd4',
+        primaryTextColor: '#fff',
+        primaryBorderColor: '#0097a7',
+        lineColor: '#00bcd4',
+        secondaryColor: '#ff5722',
+        tertiaryColor: '#4caf50',
+        fontSize: '18px',
+        fontFamily: 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+      },
+      flowchart: {
+        htmlLabels: true,
+        fontSize: 18
+      },
+      fontSize: 18
+    });
+  </script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - CSS -->
+
+  <!-- Meta-Learning & Accessibility Enhancements -->
+  <link rel="stylesheet" href="../css/skill-badges.css">
+  <link rel="stylesheet" href="../css/meta-learning.css">
+
+      <!-- SignalPilot Chatbot CSS -->
+    <link rel="stylesheet" href="/css/chatbot.css">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.signalpilot.io/">
+    <meta property="og:title" content="Installation Troubleshooting - Signal Pilot Docs">
+    <meta property="og:description" content="Resolve common issues when installing or loading Signal Pilot indicators. Step-by-step solutions for access, loading, and signal problems.">
+    <meta property="og:image" content="https://docs.signalpilot.io/assets/images/preview.png">
+    <meta property="og:site_name" content="Signal Pilot Docs">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.signalpilot.io/">
+    <meta name="twitter:title" content="Installation Troubleshooting - Signal Pilot Docs">
+    <meta name="twitter:description" content="Resolve common issues when installing or loading Signal Pilot indicators. Step-by-step solutions for access, loading, and signal problems.">
+    <meta name="twitter:image" content="https://docs.signalpilot.io/assets/images/preview.png">
+
+
+  
+
+
+
+
+
+
+
+  <!-- Custom Bottom Sheet Navigation -->
+  <link rel="stylesheet" href="../css/hide-mkdocs-sidebar.css?v7">
+  <link rel="stylesheet" href="../css/custom-bottom-sheet.css?v7">
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#quick-start-getting-your-first-signal-in-5-minutes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+  <!-- SignalPilot brand bar (keeps Material header & search intact) -->
+  <div class="sp-topnav">
+    <div class="sp-topnav__inner">
+      <a href="https://signalpilot.io" class="brand">
+        <span>Signal Pilot</span>
+      </a>
+      <nav class="sp-links" aria-label="Signal Pilot">
+        <a href="https://signalpilot.io/#why">Why</a>
+        <a href="https://signalpilot.io/#inside">What's inside</a>
+        <a href="https://education.signalpilot.io/">Education</a>
+        <a aria-current="page" href="https://docs.signalpilot.io/">Docs</a>
+        <a href="https://signalpilot.io/#pricing">Pricing</a>
+        <a href="https://signalpilot.io/#faq">FAQ</a>
+      </nav>
+    </div>
+  </div>
+
+  
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Signal Pilot Docs" class="md-header__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
+      
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Signal Pilot Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quick Start - Get Your First Signal in 5 Minutes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+
+
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Signalpilot/signalpilot-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    signalpilot-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Signal Pilot Docs" class="md-nav__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
+      
+
+    </a>
+    Signal Pilot Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Signalpilot/signalpilot-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    signalpilot-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    🚀 Getting Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            🚀 Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ⚡ Quick Start (5 min)
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    ⚡ Quick Start (5 min)
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-can-be-learned" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 What Can Be Learned
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-install-pentarch-1-minute" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Install Pentarch (1 minute)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1: Install Pentarch (1 minute)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#on-tradingview" class="md-nav__link">
+    <span class="md-ellipsis">
+      On TradingView:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-learn-the-5-signals-2-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Learn the 5 Signals (2 minutes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Learn the 5 Signals (2 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-early-cycle-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Early-Cycle Signals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-late-cycle-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Late-Cycle Signals
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-set-up-your-first-alert-1-minute" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Set Up Your First Alert (1 minute)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3: Set Up Your First Alert (1 minute)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commonly-monitored-alerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commonly Monitored Alerts:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-example-trade-illustration-1-minute" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Example Trade Illustration (1 minute)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 4: Example Trade Illustration (1 minute)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-bitcoin-long-trade-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Bitcoin Long Trade Scenario
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Quick Reference Cheat Sheet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-mistakes" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚫 Common Mistakes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚫 Common Mistakes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mistake-1-entering-on-td-blue-signal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #1: Entering on TD (Blue Signal)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-2-not-using-once-per-bar-close-for-alerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #2: Not Using "Once Per Bar Close" for Alerts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-3-trading-without-stop-losses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #3: Trading Without Stop Losses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-4-ignoring-key-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #4: Ignoring Key Levels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-5-using-too-low-timeframe-initially" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #5: Using Too Low Timeframe Initially
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-6-revenge-trading-after-a-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #6: Revenge Trading After a Loss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-7-risking-too-much-per-trade" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #7: Risking Too Much Per Trade
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-8-expecting-100-win-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #8: Expecting 100% Win Rate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-9-not-paper-trading-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #9: Not Paper Trading First
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-10-overcomplicating-with-too-many-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #10: Overcomplicating with Too Many Indicators
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ What's Next?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ What's Next?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#master-pentarch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Master Pentarch:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add Levels:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complete-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete System:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      💡 Common Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#need-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      🆘 Need Help?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-has-been-learned" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎉 What Has Been Learned:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../start-prerequisites/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prerequisites
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../start-onboarding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Onboarding Checklist (7 days)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    📖 How-To Guides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            📖 How-To Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-alerts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Set Up Alerts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-webhooks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use Webhooks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-screener/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use Screener
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    🚀 Suite (Latest)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            🚀 Suite (Latest)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../suite-index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📚 Suite Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pentarch-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pentarch v1.0 — Reversal Events
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../janus-atlas-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Janus Atlas v1.0 — Levels System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../omnideck-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Omnideck v1.0 — Everything Indicator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../augury-grid-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Augury Grid v1.0 — Multi-Symbol Screener
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../volume-oracle-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volume Oracle v1.0 — Volume Strategy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../harmonic-oscillator-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Harmonic Oscillator v1.0 — Composite Momentum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plutus-flow-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plutus Flow v1.0 — Advanced OBV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    📚 Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            📚 Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-workflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trading Workflow (Bias → Timing)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-comparison/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Indicator Comparison Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-best-practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Best Practices & Pro Tips
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-non-repaint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Non-Repainting Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-troubleshooting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshooting Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    ℹ️ About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            ℹ️ About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Support & Access
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-changelog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Changelog (high level)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Website Tiles
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Website Tiles
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_settings-alerts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Product Cards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-can-be-learned" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 What Can Be Learned
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-install-pentarch-1-minute" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Install Pentarch (1 minute)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1: Install Pentarch (1 minute)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#on-tradingview" class="md-nav__link">
+    <span class="md-ellipsis">
+      On TradingView:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-learn-the-5-signals-2-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Learn the 5 Signals (2 minutes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Learn the 5 Signals (2 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-early-cycle-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Early-Cycle Signals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-late-cycle-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Late-Cycle Signals
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-set-up-your-first-alert-1-minute" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Set Up Your First Alert (1 minute)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3: Set Up Your First Alert (1 minute)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commonly-monitored-alerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commonly Monitored Alerts:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-example-trade-illustration-1-minute" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Example Trade Illustration (1 minute)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 4: Example Trade Illustration (1 minute)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-bitcoin-long-trade-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Bitcoin Long Trade Scenario
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Quick Reference Cheat Sheet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-mistakes" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚫 Common Mistakes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚫 Common Mistakes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mistake-1-entering-on-td-blue-signal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #1: Entering on TD (Blue Signal)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-2-not-using-once-per-bar-close-for-alerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #2: Not Using "Once Per Bar Close" for Alerts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-3-trading-without-stop-losses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #3: Trading Without Stop Losses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-4-ignoring-key-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #4: Ignoring Key Levels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-5-using-too-low-timeframe-initially" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #5: Using Too Low Timeframe Initially
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-6-revenge-trading-after-a-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #6: Revenge Trading After a Loss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-7-risking-too-much-per-trade" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #7: Risking Too Much Per Trade
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-8-expecting-100-win-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #8: Expecting 100% Win Rate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-9-not-paper-trading-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #9: Not Paper Trading First
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-10-overcomplicating-with-too-many-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #10: Overcomplicating with Too Many Indicators
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ What's Next?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ What's Next?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#master-pentarch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Master Pentarch:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add Levels:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complete-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete System:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      💡 Common Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#need-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      🆘 Need Help?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-has-been-learned" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎉 What Has Been Learned:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+<h1>Installation Troubleshooting</h1>
+
+<p>Resolve common issues when installing or loading Signal Pilot indicators.</p>
+
+<hr />
+
+<h2>🔍 Quick Diagnostic</h2>
+
+<h3>Problem: "I can't find the indicator in TradingView"</h3>
+
+<p><strong>Most likely cause:</strong> Looking in wrong section or access issue</p>
+
+<p><strong>Solution:</strong> <a href="#indicator-not-in-invite-only-scripts">Jump to: Indicator Not in Invite-Only Scripts</a></p>
+
+<hr />
+
+<h3>Problem: "Indicator loads but nothing appears on chart"</h3>
+
+<p><strong>Most likely cause:</strong> Wrong timeframe or settings</p>
+
+<p><strong>Solution:</strong> <a href="#indicator-loaded-but-no-visuals">Jump to: Indicator Loaded but No Visuals</a></p>
+
+<hr />
+
+<h3>Problem: "No signals appearing"</h3>
+
+<p><strong>Most likely cause:</strong> Patience needed or wrong timeframe</p>
+
+<p><strong>Solution:</strong> <a href="#signals-not-appearing">Jump to: Signals Not Appearing</a></p>
+
+<hr />
+
+<h3>Problem: "Can't add indicator - says too many indicators"</h3>
+
+<p><strong>Most likely cause:</strong> TradingView tier limit reached</p>
+
+<p><strong>Solution:</strong> <a href="#too-many-indicators-error">Jump to: Too Many Indicators Error</a></p>
+
+<hr />
+
+<h3>Problem: "Indicator showing 'Access Denied' or 'Not Authorized'"</h3>
+
+<p><strong>Most likely cause:</strong> Email mismatch or license issue</p>
+
+<p><strong>Solution:</strong> <a href="#access-denied-error">Jump to: Access Denied Error</a></p>
+
+<hr />
+
+<h2>📋 Step-by-Step Installation Verification</h2>
+
+<p>Use this checklist to verify each step:</p>
+
+<h3>Step 1: Verify TradingView Account</h3>
+<ul>
+<li>[ ] Logged into TradingView.com</li>
+<li>[ ] Account email matches purchase email</li>
+<li>[ ] Account active (not suspended)</li>
+</ul>
+
+<p><strong>How to check:</strong> Click profile icon (top right) → Settings → Check email address</p>
+
+<hr />
+
+<h3>Step 2: Locate Indicator</h3>
+<ul>
+<li>[ ] Clicked "Indicators" button (top toolbar)</li>
+<li>[ ] Clicked "Invite-Only Scripts" tab</li>
+<li>[ ] Can see Signal Pilot indicators listed</li>
+</ul>
+
+<p><strong>If not visible:</strong> See <a href="#indicator-not-in-invite-only-scripts">Indicator Not in Invite-Only Scripts</a></p>
+
+<hr />
+
+<h3>Step 3: Add to Chart</h3>
+<ul>
+<li>[ ] Clicked indicator name</li>
+<li>[ ] Indicator appeared in indicator list (left side or below chart)</li>
+<li>[ ] Some visual element appeared on chart</li>
+</ul>
+
+<p><strong>If nothing appears:</strong> See <a href="#indicator-loaded-but-no-visuals">Indicator Loaded but No Visuals</a></p>
+
+<hr />
+
+<h3>Step 4: Verify Functionality</h3>
+<ul>
+<li>[ ] Can open indicator settings (gear icon)</li>
+<li>[ ] Understand what visual elements should appear</li>
+<li>[ ] Timeframe appropriate for indicator</li>
+</ul>
+
+<p><strong>If no signals:</strong> See <a href="#signals-not-appearing">Signals Not Appearing</a></p>
+
+<hr />
+
+<h2>🚨 Common Issues & Solutions</h2>
+
+<h3>Indicator Not in Invite-Only Scripts</h3>
+
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>Can't find Signal Pilot indicator in TradingView</li>
+<li>"Invite-Only Scripts" tab is empty or doesn't show your indicators</li>
+<li>Search returns no results</li>
+</ul>
+
+<p><strong>Causes & Solutions:</strong></p>
+
+<h4>Cause 1: Email Mismatch</h4>
+<p><strong>Check:</strong> TradingView account email matches purchase email <pre><code>1. Click profile icon (top right)
+2. Settings → Account
+3. Verify email address
+4. Compare to purchase confirmation email</code></pre></p>
+
+<p><strong>Fix:</strong> If emails don't match:</p>
+<ul>
+<li>Option A: Change TradingView email to match purchase email</li>
+<li>Option B: Contact support@signalpilot.io to transfer license</li>
+</ul>
+
+<hr />
+
+<h4>Cause 2: Not Yet Granted Access</h4>
+<p><strong>Check:</strong> How long since purchase?</p>
+
+<p><strong>Fix:</strong></p>
+<ul>
+<li>Access granted within 24 hours of purchase (usually faster)</li>
+<li>Check spam/promotions folder for access email</li>
+<li>If >24 hours, contact support@signalpilot.io with order number</li>
+</ul>
+
+<hr />
+
+<h4>Cause 3: Looking in Wrong Section</h4>
+<p><strong>Check:</strong> Are you in "Invite-Only Scripts" tab?</p>
+
+<p><strong>Fix:</strong> <pre><code>1. Click "Indicators" button (top toolbar, looks like ƒx)
+2. Click "Invite-Only Scripts" tab (not "Technicals" or "Community Scripts")
+3. Scroll to find Signal Pilot indicators</code></pre></p>
+
+<hr />
+
+<h4>Cause 4: Browser Cache Issue</h4>
+<p><strong>Fix:</strong> <pre><code>1. Hard refresh: Ctrl+Shift+R (Windows) or Cmd+Shift+R (Mac)
+2. Clear browser cache
+3. Log out and log back into TradingView
+4. Try incognito/private mode</code></pre></p>
+
+<hr />
+
+<h3>Indicator Loaded but No Visuals</h3>
+
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>Indicator name appears in left sidebar or below chart</li>
+<li>Chart looks unchanged</li>
+<li>No lines, labels, or panels visible</li>
+</ul>
+
+<p><strong>Causes & Solutions:</strong></p>
+
+<h4>Cause 1: Wrong Timeframe</h4>
+<p><strong>Issue:</strong> Some indicators don't show signals on all timeframes</p>
+
+<p><strong>Fix:</strong> <pre><code>Pentarch: Use 15m-Weekly (not <15m)
+Janus Atlas: Works on all timeframes
+Volume Oracle: Best on 5m-Daily
+Omnideck: Best on 1H-Daily
+Harmonic: Use 15m-Daily
+Plutus Flow: Best on 1H-Weekly
+Augury Grid: Use same timeframe as monitored symbols</code></pre></p>
+
+<p><strong>Action:</strong> Switch to Daily chart, reload indicator, verify something appears</p>
+
+<hr />
+
+<h4>Cause 2: Indicator Settings Disabled Visual Elements</h4>
+<p><strong>Issue:</strong> Settings accidentally turned off key components</p>
+
+<p><strong>Fix:</strong> <pre><code>1. Click gear icon next to indicator name
+2. Check "Style" tab
+3. Verify visual elements are enabled (checkboxes ticked)
+4. Verify colors aren't set to chart background color
+5. Click "OK" to save</code></pre></p>
+
+<hr />
+
+<h4>Cause 3: Overlapping with Other Indicators</h4>
+<p><strong>Issue:</strong> Indicator loaded but hidden behind other elements</p>
+
+<p><strong>Fix:</strong> <pre><code>1. Temporarily hide other indicators (click eye icon)
+2. Zoom in/out on chart (adjust scale)
+3. Check if indicator panel is collapsed (for panel-based indicators)
+4. Right-click chart → "Reset Chart"</code></pre></p>
+
+<hr />
+
+<h4>Cause 4: Chart Scale Issue</h4>
+<p><strong>Issue:</strong> Indicator rendering outside visible chart area</p>
+
+<p><strong>Fix:</strong> <pre><code>1. Right-click on price scale (right side) → "Reset Scale"
+2. Use mousewheel to zoom in/out
+3. Check "Auto" scaling is enabled</code></pre></p>
+
+<hr />
+
+<h3>Signals Not Appearing</h3>
+
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>Indicator loaded and visible</li>
+<li>No signal labels, alerts, or pattern detection showing</li>
+<li>Waited several hours/days with no activity</li>
+</ul>
+
+<p><strong>Causes & Solutions:</strong></p>
+
+<h4>Cause 1: Patience Required (MOST COMMON)</h4>
+<p><strong>Reality Check:</strong></p>
+
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Typical Wait Time for First Signal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Janus Atlas</strong></td>
+<td>Instant (levels always visible)</td>
+</tr>
+<tr>
+<td><strong>Volume Oracle</strong></td>
+<td>Minutes to hours (volume spikes)</td>
+</tr>
+<tr>
+<td><strong>Harmonic Oscillator</strong></td>
+<td>Instant to hours (momentum signals)</td>
+</tr>
+<tr>
+<td><strong>Pentarch</strong></td>
+<td>1-7 days (cycle events are rare)</td>
+</tr>
+<tr>
+<td><strong>Plutus Flow</strong></td>
+<td>Days to weeks (divergences are rare)</td>
+</tr>
+<tr>
+<td><strong>Augury Grid</strong></td>
+<td>Minutes to days (depends on monitored symbols)</td>
+</tr>
+<tr>
+<td><strong>Omnideck</strong></td>
+<td>Varies by system (some instant, some days)</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Fix:</strong> Be patient. Pentarch TD signals may take 7+ days to appear depending on market conditions.</p>
+
+<hr />
+
+<h4>Cause 2: Wrong Timeframe for Signal Type</h4>
+<p><strong>Issue:</strong> Using timeframe where signals don't typically occur</p>
+
+<p><strong>Examples:</strong></p>
+<ul>
+<li>Pentarch on 1-minute chart: Signals extremely rare</li>
+<li>Plutus Flow on 5-minute chart: Divergences hard to spot</li>
+</ul>
+
+<p><strong>Fix:</strong> Use recommended timeframes (see each indicator's documentation)</p>
+
+<hr />
+
+<h4>Cause 3: Low-Volume Asset</h4>
+<p><strong>Issue:</strong> Asset doesn't have enough activity to generate signals</p>
+
+<p><strong>Examples:</strong></p>
+<ul>
+<li>Penny stocks with <10K daily volume</li>
+<li>Obscure crypto pairs</li>
+<li>Inactive futures contracts</li>
+</ul>
+
+<p><strong>Fix:</strong> Test on high-volume assets first:</p>
+<ul>
+<li>SPY, QQQ, AAPL (stocks)</li>
+<li>BTC/USD, ETH/USD (crypto)</li>
+<li>ES, NQ (futures)</li>
+<li>EUR/USD, GBP/USD (forex)</li>
+</ul>
+
+<hr />
+
+<h4>Cause 4: Market Conditions Not Right</h4>
+<p><strong>Issue:</strong> Indicator waiting for specific conditions</p>
+
+<p><strong>Examples:</strong></p>
+<ul>
+<li>Pentarch TD: Needs 9 consecutive closes in one direction</li>
+<li>Plutus divergence: Needs price and OBV to diverge</li>
+<li>Volume Oracle: Needs volume spike >1.5x average</li>
+</ul>
+
+<p><strong>Fix:</strong> Normal behavior. Indicators identify specific patterns, not present at all times.</p>
+
+<hr />
+
+<h3></h3>
+
+<p>Too Many Indicators Error</p>
+
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>TradingView error: "Maximum number of indicators reached"</li>
+<li>Can't add another indicator</li>
+<li>Chart already has several indicators loaded</li>
+</ul>
+
+<p><strong>Cause:</strong> TradingView tier limit reached</p>
+
+<p><strong>Limits by Account Tier:</strong></p>
+<ul>
+<li>Free: 3 indicators max</li>
+<li>Essential ($14.95/mo): 5 indicators max</li>
+<li>Plus ($29.95/mo): 10 indicators max</li>
+<li>Premium ($59.95/mo): 25 indicators max</li>
+</ul>
+
+<p><strong>Solutions:</strong></p>
+
+<h4>Option 1: Remove Unused Indicators</h4>
+<p><pre><code>1. Find indicators you're not actively using
+2. Click "X" next to indicator name (left sidebar)
+3. Indicator removed, spot freed up
+4. Add desired Signal Pilot indicator</code></pre></p>
+
+<hr />
+
+<h4>Option 2: Upgrade TradingView Tier</h4>
+<p><pre><code>1. Click profile icon → "Upgrade"
+2. Choose Essential or higher
+3. Restart browser after upgrading
+4. Add indicators (new limit applied)</code></pre></p>
+
+<p><strong>Recommendation:</strong> Essential tier ($14.95/mo) gives 5 indicators—enough for The Trinity (3) + 2 more.</p>
+
+<hr />
+
+<h4>Option 3: Use Omnideck Instead</h4>
+<p><pre><code>If you want multiple Signal Pilot indicators but hit limit:
+- Omnideck = 8 systems in 1 indicator
+- Counts as only 1 toward TradingView limit
+- Trade-off: More complex to learn</code></pre></p>
+
+<hr />
+
+<h3>Access Denied Error</h3>
+
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>"Access Denied" or "Not Authorized" error</li>
+<li>Indicator listed but won't load</li>
+<li>Error message when clicking indicator</li>
+</ul>
+
+<p><strong>Causes & Solutions:</strong></p>
+
+<h4>Cause 1: Email Mismatch</h4>
+<p><strong>Most Common</strong></p>
+
+<p><strong>Fix:</strong> <pre><code>1. Click "Indicators" button (top toolbar, looks like ƒx)
+2. Click "Invite-Only Scripts" tab (not "Technicals" or "Community Scripts")
+3. Scroll to find Signal Pilot indicators</code></pre>0</p>
+
+<hr />
+
+<h4>Cause 2: License Expired or Suspended</h4>
+<p><strong>Check:</strong> Is this a subscription-based license?</p>
+
+<p><strong>Fix:</strong></p>
+<ul>
+<li>Verify payment method current</li>
+<li>Check email for renewal failure notices</li>
+<li>Contact support if payment processed but access denied</li>
+</ul>
+
+<hr />
+
+<h4>Cause 3: License Revoked (Policy Violation)</h4>
+<p><strong>Rare but possible</strong></p>
+
+<p><strong>Fix:</strong></p>
+<ul>
+<li>Contact support@signalpilot.io for details</li>
+<li>Review Terms of Service</li>
+<li>Resolve any account issues</li>
+</ul>
+
+<hr />
+
+<h3>Indicator Disappeared After Working</h3>
+
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>Indicator was working yesterday</li>
+<li>Now missing from chart or won't load</li>
+<li>No changes made on your end</li>
+</ul>
+
+<p><strong>Causes & Solutions:</strong></p>
+
+<h4>Cause 1: TradingView Layout Changed</h4>
+<p><strong>Fix:</strong> <pre><code>1. Click "Indicators" button (top toolbar, looks like ƒx)
+2. Click "Invite-Only Scripts" tab (not "Technicals" or "Community Scripts")
+3. Scroll to find Signal Pilot indicators</code></pre>1</p>
+
+<hr />
+
+<h4>Cause 2: Browser Extension Conflict</h4>
+<p><strong>Fix:</strong> <pre><code>1. Click "Indicators" button (top toolbar, looks like ƒx)
+2. Click "Invite-Only Scripts" tab (not "Technicals" or "Community Scripts")
+3. Scroll to find Signal Pilot indicators</code></pre>2</p>
+
+<hr />
+
+<h4>Cause 3: TradingView Maintenance</h4>
+<p><strong>Fix:</strong></p>
+<ul>
+<li>Check TradingView status page</li>
+<li>Wait 15-30 minutes</li>
+<li>Indicators usually auto-restore after maintenance</li>
+</ul>
+
+<hr />
+
+<h2>🔧 Advanced Troubleshooting</h2>
+
+<h3>Clear TradingView Data</h3>
+<p><strong>When:</strong> Nothing else works, visual glitches persist</p>
+
+<p><strong>Steps:</strong> <pre><code>1. Click "Indicators" button (top toolbar, looks like ƒx)
+2. Click "Invite-Only Scripts" tab (not "Technicals" or "Community Scripts")
+3. Scroll to find Signal Pilot indicators</code></pre>3</p>
+
+<p><strong>Warning:</strong> May reset some TradingView preferences.</p>
+
+<hr />
+
+<h3>Test in Different Browser</h3>
+<p><strong>When:</strong> Suspect browser-specific issue</p>
+
+<p><strong>Steps:</strong> <pre><code>1. Click "Indicators" button (top toolbar, looks like ƒx)
+2. Click "Invite-Only Scripts" tab (not "Technicals" or "Community Scripts")
+3. Scroll to find Signal Pilot indicators</code></pre>4</p>
+
+<hr />
+
+<h3>Check TradingView Console for Errors</h3>
+<p><strong>When:</strong> Technical troubleshooting needed</p>
+
+<p><strong>Steps:</strong> <pre><code>1. Click "Indicators" button (top toolbar, looks like ƒx)
+2. Click "Invite-Only Scripts" tab (not "Technicals" or "Community Scripts")
+3. Scroll to find Signal Pilot indicators</code></pre>5</p>
+
+<hr />
+
+<h2>📞 When to Contact Support</h2>
+
+<h3>Contact support@signalpilot.io if:</h3>
+
+<ul>
+<li>✅ Tried all solutions above</li>
+<li>✅ Verified TradingView account email matches purchase</li>
+<li>✅ Waited 24+ hours since purchase</li>
+<li>✅ Indicator was working, now broken (no changes on your end)</li>
+<li>✅ Error messages you don't understand</li>
+</ul>
+
+<h3>Include in Support Request:</h3>
+
+<ol>
+<li><strong>Order number</strong> (from purchase confirmation)</li>
+<li><strong>TradingView account email</strong></li>
+<li><strong>Specific error message</strong> (screenshot if possible)</li>
+<li><strong>Indicator name</strong> (Pentarch, Janus, etc.)</li>
+<li><strong>What you've already tried</strong> (saves time)</li>
+<li><strong>Browser</strong> (Chrome, Firefox, Safari, etc.)</li>
+<li><strong>TradingView tier</strong> (Free, Pro, Premium, etc.)</li>
+</ol>
+
+<hr />
+
+<h2>✅ Installation Verification Checklist</h2>
+
+<p>Before contacting support, verify:</p>
+
+<ul>
+<li>[ ] Logged into TradingView with correct email</li>
+<li>[ ] Can see "Invite-Only Scripts" tab</li>
+<li>[ ] Indicator appears in Invite-Only Scripts list</li>
+<li>[ ] Tried on Daily timeframe (universal compatibility)</li>
+<li>[ ] Waited appropriate time for signals (see table above)</li>
+<li>[ ] No TradingView indicator limit reached</li>
+<li>[ ] Cleared browser cache and refreshed</li>
+<li>[ ] Tested in incognito/private mode</li>
+<li>[ ] Checked indicator settings (Style tab)</li>
+</ul>
+
+<p>If all checked and still not working → Contact support</p>
+
+<hr />
+
+<h2>🚀 Next Steps</h2>
+
+<p><strong>Got it working?</strong></p>
+
+<ol>
+<li><strong>Configure settings:</strong> See indicator documentation for optimal settings</li>
+<li><strong>Set up alerts:</strong> <a href="how-to-alerts/index.html">How to Set TradingView Alerts</a></li>
+<li><strong>Learn the indicator:</strong> <a href="start-learning-path/index.md">Learning Paths</a></li>
+<li><strong>Join community:</strong> <a href="../community/index.md">Community</a></li>
+</ol>
+
+<p><strong>Still stuck?</strong></p>
+
+<ul>
+<li>Email: support@signalpilot.io</li>
+<li>Include: Order number, TradingView email, error details</li>
+<li>Response time: Usually <24 hours</li>
+</ul>
+
+<hr />
+
+<p><strong>Related Guides:</strong></p>
+<ul>
+<li><a href="about-system-requirements.md">System Requirements</a></li>
+<li><a href="start-which-indicator.md">Which Indicator Should I Start?</a></li>
+<li><a href="../advanced/performance-optimization.md">Performance Optimization</a></li>
+<li><a href="../ref-troubleshooting/index.html">General Troubleshooting Guide</a></li>
+</ul>
+
+</article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://x.com/signalpilot" target="_blank" rel="noopener" title="x.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Signalpilot" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.sections", "navigation.path", "content.code.copy", "search.suggest", "search.highlight", "content.tabs.link", "content.tooltips", "content.action.edit"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+
+
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+
+
+      
+        <script src="../js/timeago.min.js"></script>
+
+
+      
+        <script src="../js/timeago_mkdocs_material.js"></script>
+
+
+      
+        <script src="../assets/brand.js"></script>
+
+
+      
+        <script src="../assets/sp-bg.js"></script>
+
+
+      
+        <script src="../assets/keyword-highlighter.js"></script>
+
+
+      
+    
+      <script src="../assets/wheel-diagnostic.js"></script>
+      <script src="../assets/enhancements.js"></script>
+    <script src="assets/remove-tooltips.js"></script>
+    <script src="assets/bottom-sheet-nav.js"></script>
+      <script src="../assets/sticky-toc-scroll.js"></script>
+    <script src="../assets/components.js"></script>
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - JS
+       To disable: comment out this entire block
+       ======================================== -->
+  <script src="../js/feedback-system.js"></script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - JS -->
+
+  <!-- Meta-Learning & Accessibility Features -->
+  <script src="../js/keyboard-navigation.js"></script>
+  <script src="../js/text-sizing.js"></script>
+  <script src="../js/knowledge-checks.js"></script>
+
+      <!-- SignalPilot Chatbot -->
+    <script src="/js/chatbot.js"></script>
+  
+
+
+
+
+
+
+
+  <!-- Custom Bottom Sheet Navigation Script -->
+  <script src="../assets/custom-bottom-sheet.js?v7"></script>
+</body>
+</html>
