@@ -2,6 +2,8 @@
 
 All-in-one trading system. Combines 10 professional analysis tools into single optimized indicator.
 
+**📋 [Quick Reference Cheat Sheet](docs/ref-cheatsheets/omnideck-quick-reference.md)** — One-page guide to all 10 systems, 4 layers, and combinations
+
 ---
 
 ## 🎯 Core Functionality

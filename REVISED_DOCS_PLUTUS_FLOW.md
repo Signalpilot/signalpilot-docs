@@ -2,6 +2,8 @@
 
 On-Balance Volume (OBV) indicator enhanced with trend analysis, divergence detection, and momentum confirmation. Displays OBV line, trend ribbons, and divergence labels.
 
+**📋 [Quick Reference Cheat Sheet](docs/ref-cheatsheets/plutus-flow-quick-reference.md)** — One-page guide to 3 layers, divergence signals, and trend ribbons
+
 ---
 
 ## 🎯 Core Functionality

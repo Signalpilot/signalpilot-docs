@@ -2,6 +2,8 @@
 
 Cycle phase detection indicator. Identifies market position across five distinct phases: accumulation, markup, distribution, climax, and decline.
 
+**📋 [Quick Reference Cheat Sheet](docs/ref-cheatsheets/pentarch-quick-reference.md)** — One-page guide to all 5 cycle events, signal sequences, and settings
+
 ---
 
 ## 🎯 Core Functionality

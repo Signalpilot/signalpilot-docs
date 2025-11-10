@@ -133,7 +133,8 @@ BEARISH REVERSAL: CAP → BDN
 
 ## 📞 Need Help?
 
-**Full Documentation:** [Pentarch v1.0](../indicators/pentarch-v10.md)
+**Full Documentation:** [Pentarch v1.0 Complete Guide](../../REVISED_DOCS_PENTARCH.md)
+**All Cheat Sheets:** [All Indicators At-A-Glance](all-indicators-at-a-glance.md)
 **Support:** support@signalpilot.io
 
 ---
