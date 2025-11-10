@@ -159,7 +159,7 @@ Default settings work for most users. Advanced traders can optimize for specific
 
 ---
 
-## 📊 Educational Example: Bitcoin (November 2024)
+## 📊 Educational Example: Tesla (TSLA) - Daily Chart (September 2024)
 
 *(Historical observation for educational purposes only. Not financial advice. Past performance does not indicate future results.)*
 
@@ -168,23 +168,23 @@ Default settings work for most users. Advanced traders can optimize for specific
 
 **Signal Sequence:**
 
-| Time | Price | System Signals | Analysis |
+| Date | Price | System Signals | Analysis |
 |------|-------|----------------|----------|
-| Nov 5, 12pm | $64,000 | Regime: Red (bearish context) | Declining market |
-| Nov 5, 8pm | $63,500 | TD Green 9 (exhaustion detected) | Oversold conditions |
-| Nov 5, 11pm | $63,200 | Demand Zone ⭐⭐⭐ touched | Zone reached |
-| Nov 6, 2am | $63,800 | Squeeze arrow ↑ fired | Breakout signal |
-| Nov 6, 8am | $65,000 | Regime flipped Green | Bias change |
-| Nov 7, 4pm | $68,000 | Price continuation | +$4,800 move |
+| Sep 10 | $242 | Regime: Green (bullish context) | Uptrend established |
+| Sep 11 | $238 | Price touches EMA 50 | Pullback to support |
+| Sep 11 | $238 | Demand Zone ⭐⭐ touched | Zone reached |
+| Sep 12 | $242 | Squeeze dots accumulating (4 red dots) | Compression building |
+| Sep 13 | $248 | Squeeze arrow ↑ fired + EMA bounce | Breakout signal |
+| Sep 16 | $265 | Price continuation | +$27 move from zone |
 
 **Multi-System Confluence:**
-- TD 9 (exhaustion) + Demand Zone (support) + Squeeze (breakout) = High confluence setup
-- Regime flip confirmed directional change
-- All 4 systems aligned at entry zone
+- Demand Zone (support) + EMA 50 bounce + Squeeze (breakout) + Regime (bullish) = High confluence setup
+- Four systems aligned at $238 support zone
+- Compression preceded expansion (4 squeeze dots → arrow)
 
-**Outcome:** +$4,800 per BTC move observed (7.5% gain from $63,200 low).
+**Outcome:** +$27 per share move observed (11.3% gain from $238 low).
 
-*This example demonstrates multi-system confluence. Individual interpretation and outcomes vary. No pattern guarantees any specific outcome.*
+*This example demonstrates multi-system confluence in equity markets. Individual interpretation and outcomes vary. No pattern guarantees any specific outcome.*
 
 ---
 

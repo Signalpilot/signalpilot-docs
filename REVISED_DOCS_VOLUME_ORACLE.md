@@ -138,118 +138,122 @@ Default settings work for most users. Advanced traders can optimize for specific
 
 ---
 
-## 📊 Educational Example 1: Bitcoin Volume Spike - January 2024
+## 📊 Educational Example 1: Gold Futures (GC) Volume Spike - February 2024
 
 **Pattern Observed:**
 
-| Date | Event | BTC Price | Volume vs Avg | Zone Color | Detail |
+| Date | Event | Gold Price | Volume vs Avg | Zone Color | Detail |
 |------|-------|-----------|---------------|------------|--------|
-| Jan 10, 2024 | Accumulation | $46,200 | 0.8x (Below) | 🟡 Yellow | Quiet accumulation phase |
-| Jan 11, 2024 | Spike Start | $46,800 | 1.9x (High) | 🟢 Green | Volume breakout begins |
-| Jan 12, 2024 | Peak Volume | $47,500 | 2.4x (Very High) | 🟢 Green | Institutional participation |
-| Jan 15, 2024 | Follow-Through | $48,900 | 1.6x (High) | 🟢 Green | Sustained interest |
+| Feb 12, 2024 | Consolidation | $2,015 | 0.7x (Below) | 🟡 Yellow | Quiet consolidation phase |
+| Feb 13, 2024 | Spike Start | $2,028 | 2.1x (High) | 🟢 Green | Volume breakout begins |
+| Feb 14, 2024 | Peak Volume | $2,042 | 2.6x (Very High) | 🟢 Green | Institutional participation |
+| Feb 15, 2024 | Follow-Through | $2,055 | 1.8x (High) | 🟢 Green | Sustained interest |
 
 **Volume Analysis:**
 
-**Phase 1 - Accumulation (Jan 10):**
-- Volume Oracle showed **Yellow Zone** (0.8x average)
-- Below-average volume = quiet accumulation
-- Price consolidating in narrow range
-- **Observation:** Smart money potentially accumulating before move
+**Phase 1 - Consolidation (Feb 12):**
+- Volume Oracle showed **Yellow Zone** (0.7x average)
+- Below-average volume = quiet consolidation
+- Price range-bound near $2,015
+- **Observation:** Institutional positioning potentially occurring before move
 
-**Phase 2 - Breakout Confirmation (Jan 11-12):**
-- Volume spiked to **1.9x → 2.4x average**
+**Phase 2 - Breakout Confirmation (Feb 13-14):**
+- Volume spiked to **2.1x → 2.6x average**
 - Volume Oracle displayed **Green Zones** (high participation)
-- Price broke above $47,000 resistance with conviction
-- **Observation:** Volume spike confirmed breakout validity (not a fake-out)
+- Price broke above $2,025 resistance with strong volume
+- **Observation:** Volume spike confirmed breakout validity (not a false breakout)
 
-**Phase 3 - Sustained Follow-Through (Jan 15):**
-- Volume remained elevated at **1.6x average**
+**Phase 3 - Sustained Follow-Through (Feb 15):**
+- Volume remained elevated at **1.8x average**
 - Continued green zones = sustained institutional interest
-- Price extended rally to $48,900
+- Price extended rally to $2,055
 - **Observation:** Healthy volume profile supporting the move
 
 **Historical Outcome:**
-Bitcoin rallied from $46,200 to $48,900 over 5 days (+5.8% gain), supported by consistent volume confirmation throughout the move.
+Gold rallied from $2,015 to $2,055 over 4 days ($40/oz gain, +2.0%), supported by consistent volume confirmation throughout the move.
 
 **Key Insight:**
-Volume Oracle's colored zones made it immediately visible when the breakout had genuine institutional participation (green zones) versus potential fake-outs (would show yellow/red zones).
+Volume Oracle's colored zones made it immediately visible when the breakout had genuine institutional participation (green zones) versus potential false breakouts (would show yellow/red zones).
 
-*(Educational example showing volume confirmation workflow. Past patterns do not guarantee future results. Not financial advice.)*
+*(Educational example showing volume confirmation workflow in commodity futures. Past patterns do not guarantee future results. Not financial advice.)*
 
 ---
 
-## 🎯 Pattern Recognition Challenge: Apple Stock - March 2024
+## 🎯 Pattern Recognition Challenge: S&P 500 Index (SPY) - March 2024
 
-**Volume Pattern - AAPL Daily Chart:**
+**Volume Pattern - SPY Daily Chart:**
 
 **Week 1 (March 4-8):**
-- Price: $168 → $172 (+2.4%)
-- Volume Oracle: 🟡 Yellow Zones (0.9x average)
-- Pattern: Price rising on below-average volume
+- Price: $510 → $518 (+1.6%)
+- Volume Oracle: 🟢 Green Zones (1.8x average)
+- Pattern: Price rising with strong institutional volume
 
 **Week 2 (March 11-15):**
-- Price: $172 → $175 (+1.7%)
-- Volume Oracle: 🔴 Red Zones (0.6x average - very low)
-- Pattern: Price still rising, but volume declining further
+- Price: $518 → $525 (+1.4%)
+- Volume Oracle: 🟢 Green Zones (1.6x average)
+- Pattern: Volume sustained, confirming trend strength
 
-**Question:** What does this volume pattern typically suggest?
+**Week 3 (March 18-22):**
+- Price: $525 → $530 (+1.0%)
+- Volume Oracle: 🟡 Yellow Zones (1.0x average)
+- Pattern: Volume normalizing as trend matures
 
-A) Strong bullish signal - price going up means buy more
-B) Volume doesn't matter - focus only on price direction
-C) Potential weakness - price rising on declining volume often precedes reversal
-D) Bearish reversal guaranteed - sell immediately
+**Question:** What does this volume pattern progression suggest?
+
+A) Classic healthy uptrend - volume leads price higher, then normalizes
+B) Bearish divergence - run away immediately
+C) Volume patterns are random and meaningless
+D) More volume always means more gains guaranteed
 
 <details>
 <summary>💡 Click to Reveal Analysis</summary>
 
-**Correct Answer: C) Potential weakness - price rising on declining volume often precedes reversal**
+**Correct Answer: A) Classic healthy uptrend - volume leads price higher, then normalizes**
 
 **Detailed Breakdown:**
 
-**Volume-Price Divergence:**
+**Healthy Volume Progression:**
 
-In healthy uptrends, volume typically **increases** as price rises (confirmation of strength). When price rises but volume **decreases**, it suggests:
+Strong trends often show this volume pattern:
 
-1. **Lack of Conviction**
-   - Fewer participants driving the move
-   - Institutional buyers not participating
-   - Retail-driven rally without big money support
+1. **Phase 1: Volume Confirmation (Weeks 1-2)**
+   - High volume (1.6-1.8x) confirms institutional participation
+   - Price advancing with strong support
+   - Green zones indicate conviction in the move
 
-2. **Potential Exhaustion**
-   - Buyers getting exhausted (fewer buyers each day)
-   - Volume Oracle's red zones (0.6x average) = very low participation
-   - Often precedes consolidation or reversal
+2. **Phase 2: Volume Normalization (Week 3)**
+   - Volume returns to average as trend established
+   - Yellow zones indicate normal participation
+   - Trend can continue on normal volume after initial thrust
 
 3. **What Happened Next:**
-   - AAPL peaked at $175.50 on March 15
-   - Reversed down to $168 over the following week (-4.3%)
-   - Volume Oracle showed 🟢 Green Zones on the decline (volume returned during selling)
-   - Classic volume-price divergence pattern
+   - SPY continued uptrend to $542 over following 3 weeks (+2.3% additional)
+   - Volume remained in 1.0-1.3x range (yellow/green zones)
+   - Healthy trend progression with volume confirmation where needed
 
 **Why NOT the Other Answers:**
 
-**A) "Strong bullish signal"** ❌
-- Price direction alone doesn't confirm strength
-- Volume must support the move for healthy trends
-- Declining volume = weakening demand
+**B) "Bearish divergence - run away"** ❌
+- Volume normalization is healthy trend behavior
+- Not every volume decrease signals reversal
+- Strong initial volume confirmed the move's validity
 
-**B) "Volume doesn't matter"** ❌
-- Volume is critical for confirming trend validity
-- Volume Oracle exists specifically to highlight this
-- Ignoring volume leads to holding weak rallies too long
+**C) "Volume patterns are random"** ❌
+- Volume Oracle reveals clear institutional participation patterns
+- Initial high volume validated breakout strength
+- Normalized volume shows trend acceptance
 
-**D) "Sell immediately"** ❌
-- Divergence suggests caution, not guaranteed reversal
-- Price could consolidate sideways instead of reversing
-- Volume Oracle provides warning signals, not directive commands
+**D) "More volume = more gains guaranteed"** ❌
+- Volume confirms conviction but doesn't guarantee outcomes
+- Trends can continue on normal volume after strong start
+- Volume Oracle provides context, not predictions
 
 **Key Learning:**
-Volume Oracle's colored zones make divergences immediately visible:
-- 🟢 Green on rallies = Healthy (volume supporting move)
-- 🔴 Red on rallies = Warning (lack of conviction)
-- 🟢 Green on declines = Selling pressure (distribution)
-- 🔴 Red on declines = Potential exhaustion (low volume selling)
+Volume Oracle helps distinguish healthy from weak trends:
+- 🟢 Green zones at trend start = Strong institutional participation
+- 🟡 Yellow zones during continuation = Normal, healthy progression
+- 🔴 Red zones during rallies = May indicate lack of support
+- Pattern matters more than individual bars
 
 </details>
 

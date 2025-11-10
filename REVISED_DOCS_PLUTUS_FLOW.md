@@ -138,54 +138,54 @@ Default settings work for most users. Advanced traders can optimize for specific
 
 ---
 
-## 📊 Educational Example 1: Ethereum Classic Divergence - April 2024
+## 📊 Educational Example 1: Nvidia (NVDA) Bullish Divergence - June 2024
 
 **On-Balance Volume (OBV) Flow Analysis:**
 
-| Date | ETH Price | OBV Trend | Flow Color | Divergence? | Detail |
+| Date | NVDA Price | OBV Trend | Flow Color | Divergence? | Detail |
 |------|-----------|-----------|------------|-------------|--------|
-| Apr 8, 2024 | $3,280 | Rising | 🟢 Green | No | Price ↑ + OBV ↑ (healthy) |
-| Apr 10, 2024 | $3,450 | Rising | 🟢 Green | No | Price ↑ + OBV ↑ (healthy) |
-| Apr 12, 2024 | $3,580 | Flat | 🟡 Yellow | ⚠️ Warning | Price ↑ + OBV → (weakening) |
-| Apr 15, 2024 | $3,620 | Declining | 🔴 Red | ❌ Divergence | Price ↑ + OBV ↓ (bearish) |
-| Apr 17, 2024 | $3,380 | Declining | 🔴 Red | Confirmed | Price ↓ + OBV ↓ (reversal) |
+| Jun 3, 2024 | $118 | Declining | 🔴 Red | No | Price ↓ + OBV ↓ (confirming) |
+| Jun 5, 2024 | $112 | Declining | 🔴 Red | No | Price ↓ + OBV ↓ (confirming) |
+| Jun 7, 2024 | $108 | Flat | 🟡 Yellow | ⚠️ Notice | Price ↓ + OBV → (stabilizing) |
+| Jun 10, 2024 | $106 | Rising | 🟢 Green | ✅ Divergence | Price ↓ + OBV ↑ (bullish) |
+| Jun 12, 2024 | $116 | Rising | 🟢 Green | Confirmed | Price ↑ + OBV ↑ (reversal) |
 
 **Plutus Flow Analysis:**
 
-**Phase 1 - Healthy Uptrend (Apr 8-10):**
-- Price: $3,280 → $3,450 (+5.2%)
-- Plutus Flow: **Green zones** (OBV rising with price)
-- **Observation:** Volume accumulation supporting price rally
-- **Interpretation:** Buyers in control, healthy trend
+**Phase 1 - Downtrend (Jun 3-5):**
+- Price: $118 → $112 (-5.1%)
+- Plutus Flow: **Red zones** (OBV declining with price)
+- **Observation:** Volume confirming price decline
+- **Interpretation:** Selling pressure present
 
-**Phase 2 - Warning Signal (Apr 12):**
-- Price: New high at $3,580
-- Plutus Flow: Shifted to **yellow zone** (OBV flattening)
-- **Observation:** Price making new highs but OBV not confirming
-- **Interpretation:** Buying pressure weakening - caution warranted
+**Phase 2 - Accumulation Signal (Jun 7):**
+- Price: New low at $108
+- Plutus Flow: Shifted to **yellow zone** (OBV stabilizing)
+- **Observation:** Price making new lows but OBV flattening
+- **Interpretation:** Selling pressure decreasing - potential shift
 
-**Phase 3 - Bearish Divergence (Apr 15):**
-- Price: New high at $3,620 (+1.1% higher than Apr 12)
-- Plutus Flow: **Red zone** (OBV declining while price rises)
-- **Classic Divergence Pattern:**
-  - Price: Higher high ($3,620 > $3,580)
-  - OBV: Lower high (declining trend)
-- **Observation:** Distribution occurring - smart money selling into rally
+**Phase 3 - Bullish Divergence (Jun 10):**
+- Price: New low at $106 (-1.9% lower than Jun 7)
+- Plutus Flow: **Green zone** (OBV rising while price falls)
+- **Classic Bullish Divergence Pattern:**
+  - Price: Lower low ($106 < $108)
+  - OBV: Higher low (rising trend)
+- **Observation:** Accumulation occurring - smart money buying into weakness
 - **Interpretation:** High-probability reversal setup
 
-**Phase 4 - Reversal Confirmation (Apr 17):**
-- Price: Dropped to $3,380 (-6.6% from peak)
-- Plutus Flow: Continued **red zones** (OBV falling with price)
-- **Observation:** Selling pressure confirmed
+**Phase 4 - Reversal Confirmation (Jun 12):**
+- Price: Rallied to $116 (+9.4% from low)
+- Plutus Flow: Continued **green zones** (OBV rising with price)
+- **Observation:** Buying pressure confirmed
 - **Interpretation:** Divergence pattern played out
 
 **Historical Outcome:**
-Ethereum declined from the $3,620 peak to $3,180 over the following 12 days (-12.2% decline), validating the bearish divergence signal Plutus Flow identified on April 15.
+NVDA rallied from the $106 low to $128 over the following 10 days (+20.8% gain), validating the bullish divergence signal Plutus Flow identified on June 10.
 
 **Key Insight:**
-Plutus Flow's color-coded OBV visualization made the divergence immediately visible: price making new highs while the indicator showed red zones (declining OBV) = distribution warning.
+Plutus Flow's color-coded OBV visualization made the divergence immediately visible: price making new lows while the indicator showed green zones (rising OBV) = accumulation signal.
 
-*(Educational example showing OBV divergence detection. Past patterns do not guarantee future results. Not financial advice.)*
+*(Educational example showing bullish OBV divergence detection in equities. Past patterns do not guarantee future results. Not financial advice.)*
 
 ---
 
