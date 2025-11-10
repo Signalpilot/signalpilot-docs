@@ -226,7 +226,8 @@ Disable: Daily, Session levels
 
 ## 📞 Need Help?
 
-**Full Documentation:** [Janus Atlas v1.0](../indicators/janus-atlas-v10.md)
+**Full Documentation:** [Janus Atlas v1.0 Complete Guide](../../REVISED_DOCS_JANUS_ATLAS.md)
+**All Cheat Sheets:** [All Indicators At-A-Glance](all-indicators-at-a-glance.md)
 **Support:** support@signalpilot.io
 
 ---
