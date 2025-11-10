@@ -102,6 +102,7 @@ nav:
   - "🚀 Getting Started":
     - "⚡ Quick Start (5 min)": start-quick.md
     - "Prerequisites": start-prerequisites.md
+    - "Which Indicator Should I Start?": docs/start-which-indicator.md
     - "Onboarding Checklist (7 days)": start-onboarding.md
 
   - "📖 How-To Guides":
@@ -126,9 +127,11 @@ nav:
     - "Non-Repainting Policy": ref-non-repaint.md
     - "Glossary": ref-glossary.md
     - "Troubleshooting Guide": ref-troubleshooting.md
+    - "Installation Troubleshooting": docs/troubleshooting-installation.md
 
   - "ℹ️ About":
     - "FAQ": about-faq.md
+    - "System Requirements": docs/about-system-requirements.md
     - "Support & Access": about-support.md
     - "Changelog (high level)": about-changelog.md
 
