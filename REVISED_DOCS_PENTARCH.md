@@ -22,6 +22,49 @@ Pentarch displays signal labels when four-layer detection conditions align at ba
 
 ---
 
+## 🚀 Installation (2 minutes)
+
+### Step 1: Open TradingView
+1. Go to [TradingView.com](https://www.tradingview.com)
+2. Log into your account
+3. Open any chart
+
+### Step 2: Add Pentarch to Chart
+1. Click **"Indicators"** button (top toolbar, looks like ƒx)
+2. Click **"Invite-Only Scripts"** tab
+3. Search for **"Pentarch v1.0"** or scroll to find it
+4. Click **"Pentarch v1.0 - Signal Pilot"**
+5. Indicator loads on your chart
+
+### Step 3: Verify It's Working
+**You should see:**
+- "Pentarch v1.0" appears in left sidebar or below chart
+- Pilot Line (colored line) on chart
+- Regime-colored candles (if enabled in settings)
+- NanoFlow oscillator panel below chart
+
+> 👁️ **First Signal:** Within 1-7 days, you'll see your first cycle event label (TD, IGN, WRN, CAP, or BDN) appear near a candle. This is normal! Cycle signals are rare and may take days to form.
+
+### Troubleshooting
+**Not seeing Pentarch in Invite-Only Scripts?**
+- Verify your TradingView email matches purchase email
+- Wait 24 hours after purchase for access
+- See [Installation Troubleshooting](docs/troubleshooting-installation.md)
+
+**Loaded but nothing appears?**
+- Switch to Daily timeframe (signals more common)
+- Check indicator settings (Style tab) - ensure visuals enabled
+- See [Installation Troubleshooting](docs/troubleshooting-installation.md)
+
+**No signals appearing after days?**
+- Normal! TD/IGN/WRN/CAP/BDN signals require specific conditions
+- Try high-volume assets (SPY, BTC/USD, ES futures)
+- Patience required - signals are rare by design
+
+**Need help?** support@signalpilot.io
+
+---
+
 ## 📹 Video Tutorials
 
 ### Getting Started with Pentarch (3:45)
