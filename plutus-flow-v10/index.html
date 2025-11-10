@@ -6,6 +6,11 @@
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <meta name="mobile-web-app-capable" content="yes">
+      <meta name="theme-color" content="#667eea">
+      <meta name="format-detection" content="telephone=no">
       
         <meta name="description" content="Non-repainting, alert-ready TradingView indicators for any market/timeframe.">
       
@@ -20,7 +25,16 @@
         <link rel="next" href="../ref-workflow/">
       
       
-      <link rel="icon" href="../assets/watermark-monogram-color-transparent.png">
+      <!-- Favicons -->
+      <link rel="icon" type="image/x-icon" href="../favicon.ico">
+      <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
+      <link rel="icon" type="image/png" sizes="512x512" href="../favicon-512x512.png">
+
+      <!-- PWA Manifest -->
+      <link rel="manifest" href="../manifest.json">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
     
     
@@ -47,6 +61,7 @@
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -54,6 +69,9 @@
       <link rel="stylesheet" href="../css/timeago.css">
     
       <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../css/responsive-optimization.css">
+      <link rel="stylesheet" href="../css/content-overflow-fix.css">
+      <link rel="stylesheet" href="../css/mobile-layout-fixes.css">
     
       <link rel="stylesheet" href="../assets/brand.css">
     
@@ -64,6 +82,8 @@
       <link rel="stylesheet" href="../assets/interactive-code.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+
+
     
       
   
@@ -73,8 +93,12 @@
   
 
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-NZ05GV72K0"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-NZ05GV72K0",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-NZ05GV72K0",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+
   
     <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+
+
   
 
     
@@ -85,7 +109,72 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
 
-  </head>
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - CSS
+       To disable: comment out this entire block
+       ======================================== -->
+  <link rel="stylesheet" href="../css/feedback.css">
+  <link rel="stylesheet" href="../css/visual-enhancements.css">
+
+  <!-- Mermaid.js for diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'dark',
+      themeVariables: {
+        primaryColor: '#00bcd4',
+        primaryTextColor: '#fff',
+        primaryBorderColor: '#0097a7',
+        lineColor: '#00bcd4',
+        secondaryColor: '#ff5722',
+        tertiaryColor: '#4caf50',
+        fontSize: '18px',
+        fontFamily: 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+      },
+      flowchart: {
+        htmlLabels: true,
+        fontSize: 18
+      },
+      fontSize: 18
+    });
+  </script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - CSS -->
+
+  <!-- Meta-Learning & Accessibility Enhancements -->
+  <link rel="stylesheet" href="../css/skill-badges.css">
+  <link rel="stylesheet" href="../css/meta-learning.css">
+
+      <!-- SignalPilot Chatbot CSS -->
+    <link rel="stylesheet" href="/css/chatbot.css">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.signalpilot.io/">
+    <meta property="og:title" content="Signal Pilot Documentation">
+    <meta property="og:description" content="Professional trading indicators for TradingView. Complete guides for Pentarch, Janus Atlas, Omnideck, and more.">
+    <meta property="og:image" content="https://docs.signalpilot.io/assets/images/preview.png">
+    <meta property="og:site_name" content="Signal Pilot Docs">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.signalpilot.io/">
+    <meta name="twitter:title" content="Signal Pilot Documentation">
+    <meta name="twitter:description" content="Professional trading indicators for TradingView. Complete guides for Pentarch, Janus Atlas, Omnideck, and more.">
+    <meta name="twitter:image" content="https://docs.signalpilot.io/assets/images/preview.png">
+
+
+  
+
+
+
+
+
+
+
+  <!-- Custom Bottom Sheet Navigation -->
+  <link rel="stylesheet" href="../css/hide-mkdocs-sidebar.css?v7">
+  <link rel="stylesheet" href="../css/custom-bottom-sheet.css?v7">
+</head>
   
   
     
@@ -128,7 +217,6 @@
         <a href="https://signalpilot.io/#pricing">Pricing</a>
         <a href="https://signalpilot.io/#faq">FAQ</a>
       </nav>
-      <a class="sp-cta" href="https://signalpilot.io/#pricing">Get the Suite</a>
     </div>
   </div>
 
@@ -141,7 +229,6 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="Signal Pilot Docs" class="md-header__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
       
-  <img src="../assets/watermark-monogram-color-transparent.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -193,6 +280,8 @@
     
     
       <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+
+
     
     
     
@@ -276,7 +365,6 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Signal Pilot Docs" class="md-nav__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
       
-  <img src="../assets/watermark-monogram-color-transparent.png" alt="logo">
 
     </a>
     Signal Pilot Docs
@@ -389,27 +477,6 @@
   
   <span class="md-ellipsis">
     Prerequisites
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/start-which-indicator.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Which Indicator Should I Start?
   </span>
   
 
@@ -711,7 +778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../minimal-flow-v10/" class="md-nav__link">
+      <a href="../volume-oracle-v10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -797,178 +864,239 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
         <li class="md-nav__item">
-  <a href="#what-does-it-do" class="md-nav__link">
+  <a href="#core-functionality" class="md-nav__link">
     <span class="md-ellipsis">
-      🎯 What Does It Do?
+      🎯 Core Functionality
     </span>
   </a>
-  
+    
 </li>
-      
+
         <li class="md-nav__item">
-  <a href="#core-concept-obv-money-flow-direction" class="md-nav__link">
+  <a href="#educational-example-bitcoin-november-2024" class="md-nav__link">
     <span class="md-ellipsis">
-      Core Concept: OBV = Money Flow Direction
+      📊 Educational Example: Bitcoin (November 2024)
     </span>
   </a>
-  
+    
 </li>
-      
+
         <li class="md-nav__item">
-  <a href="#the-problem-with-regular-obv" class="md-nav__link">
+  <a href="#settings" class="md-nav__link">
     <span class="md-ellipsis">
-      The Problem with Regular OBV
+      ⚙️ Settings
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-can-be-seen-bottom-pane" class="md-nav__link">
-    <span class="md-ellipsis">
-      What Can Be Seen (Bottom Pane)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="What Can Be Seen (Bottom Pane)">
+    <nav class="md-nav" aria-label="⚙️ Settings">
       <ul class="md-nav__list">
-        
           <li class="md-nav__item">
-  <a href="#the-obv-line" class="md-nav__link">
+  <a href="#obv-calculation-settings" class="md-nav__link">
     <span class="md-ellipsis">
-      The OBV Line
+      OBV Calculation Settings
     </span>
   </a>
-  
+
 </li>
-        
+          <li class="md-nav__item">
+  <a href="#trend-ribbon-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trend Ribbon Settings
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#divergence-detection-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Divergence Detection Settings
+    </span>
+  </a>
+
+</li>
       </ul>
     </nav>
-  
+
 </li>
-      
+
         <li class="md-nav__item">
-  <a href="#the-main-signals" class="md-nav__link">
+  <a href="#layer-1-obv-line" class="md-nav__link">
     <span class="md-ellipsis">
-      The Main Signals
+      📊 Layer 1: OBV Line
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="The Main Signals">
+    <nav class="md-nav" aria-label="📊 Layer 1: OBV Line">
       <ul class="md-nav__list">
-        
           <li class="md-nav__item">
-  <a href="#1-cross-signals-flow-shift" class="md-nav__link">
+  <a href="#obv-calculation" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Cross Signals (Flow Shift)
+      OBV Calculation
     </span>
   </a>
-  
+
 </li>
-        
           <li class="md-nav__item">
-  <a href="#2-extreme-breach-climax-events" class="md-nav__link">
+  <a href="#obv-patterns" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Extreme Breach (Climax Events)
+      OBV Patterns
     </span>
   </a>
-  
+
 </li>
-        
           <li class="md-nav__item">
-  <a href="#3-divergences-the-best-signals" class="md-nav__link">
+  <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Divergences (The Best Signals)
+      Example
     </span>
   </a>
-  
+
 </li>
-        
       </ul>
     </nav>
-  
+
 </li>
-      
+
         <li class="md-nav__item">
-  <a href="#how-to-use-it-3-simple-steps" class="md-nav__link">
+  <a href="#layer-2-trend-ribbons" class="md-nav__link">
     <span class="md-ellipsis">
-      How to Use It (3 Simple Steps)
+      📊 Layer 2: Trend Ribbons
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="How to Use It (3 Simple Steps)">
+    <nav class="md-nav" aria-label="📊 Layer 2: Trend Ribbons">
       <ul class="md-nav__list">
-        
           <li class="md-nav__item">
-  <a href="#step-1-watch-the-obv-line" class="md-nav__link">
+  <a href="#ribbon-construction" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 1: Watch the OBV Line
+      Ribbon Construction
     </span>
   </a>
-  
+
 </li>
-        
           <li class="md-nav__item">
-  <a href="#step-2-use-cross-signals-for-entry" class="md-nav__link">
+  <a href="#ribbon-width" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 2: Use Cross Signals for Entry
+      Ribbon Width
     </span>
   </a>
-  
+
 </li>
-        
           <li class="md-nav__item">
-  <a href="#step-3-trade-divergences-highest-probability" class="md-nav__link">
+  <a href="#ribbon-patterns" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 3: Trade Divergences (Highest Probability)
+      Ribbon Patterns
     </span>
   </a>
-  
+
 </li>
-        
+          <li class="md-nav__item">
+  <a href="#example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+
+</li>
       </ul>
     </nav>
-  
+
 </li>
-      
+
         <li class="md-nav__item">
-  <a href="#real-example-sp-500" class="md-nav__link">
+  <a href="#layer-3-divergence-detection" class="md-nav__link">
     <span class="md-ellipsis">
-      Real Example (S&amp;P 500)
+      📊 Layer 3: Divergence Detection
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#settings-keep-it-simple" class="md-nav__link">
+    <nav class="md-nav" aria-label="📊 Layer 3: Divergence Detection">
+      <ul class="md-nav__list">
+          <li class="md-nav__item">
+  <a href="#bullish-divergence" class="md-nav__link">
     <span class="md-ellipsis">
-      Settings (Keep It Simple)
+      Bullish Divergence
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#bearish-divergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bearish Divergence
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#hidden-divergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hidden Divergence
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#divergence-confirmation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Divergence Confirmation
+    </span>
+  </a>
+
+</li>
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#educational-example-sp-500-futures-january-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      📖 Educational Example: S&P 500 Futures (January 2025)
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#alerts-can-be-set" class="md-nav__link">
+    <nav class="md-nav" aria-label="📖 Educational Example: S&P 500 Futures (January 2025)">
+      <ul class="md-nav__list">
+          <li class="md-nav__item">
+  <a href="#initial-conditions-jan-8-1000-am" class="md-nav__link">
     <span class="md-ellipsis">
-      Alerts (Can Be Set)
+      Initial Conditions (Jan 8, 10:00 AM)
     </span>
   </a>
-  
+
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#common-mistakes" class="md-nav__link">
+          <li class="md-nav__item">
+  <a href="#sequence-observed" class="md-nav__link">
     <span class="md-ellipsis">
-      Common Mistakes
+      Sequence Observed
     </span>
   </a>
-  
+
 </li>
-      
+          <li class="md-nav__item">
+  <a href="#key-observations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Observations
+    </span>
+  </a>
+
+</li>
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#alert-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔔 Alert Configuration
+    </span>
+  </a>
+    
+</li>
+
         <li class="md-nav__item">
   <a href="#frequently-asked-questions" class="md-nav__link">
     <span class="md-ellipsis">
@@ -976,35 +1104,149 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-cheat-sheet" class="md-nav__link">
+    <nav class="md-nav" aria-label="❓ Frequently Asked Questions">
+      <ul class="md-nav__list">
+          <li class="md-nav__item">
+  <a href="#q-what-is-on-balance-volume-obv" class="md-nav__link">
     <span class="md-ellipsis">
-      Quick Cheat Sheet
+      Q: What is On-Balance Volume (OBV)?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-how-is-plutus-flow-different-from-basic-obv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: How is Plutus Flow different from basic OBV?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-can-divergences-fail" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Can divergences fail?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-how-many-divergences-appear-on-average" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: How many divergences appear on average?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-should-i-wait-for-ribbon-confirmation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Should I wait for ribbon confirmation?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-what-causes-hidden-divergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: What causes hidden divergence?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-does-obv-work-on-all-assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Does OBV work on all assets?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-can-i-adjust-ribbon-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Can I adjust ribbon colors?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-do-divergence-labels-repaint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Do divergence labels repaint?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-what-sensitivity-setting-should-i-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: What sensitivity setting should I use?
+    </span>
+  </a>
+
+</li>
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#quick-reference-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Quick Reference Guide
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
+    <nav class="md-nav" aria-label="📋 Quick Reference Guide">
+      <ul class="md-nav__list">
+          <li class="md-nav__item">
+  <a href="#three-layer-system" class="md-nav__link">
     <span class="md-ellipsis">
-      Best Practices
+      Three-Layer System
     </span>
   </a>
-  
+
 </li>
-      
+          <li class="md-nav__item">
+  <a href="#divergence-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Divergence Types
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#ribbon-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ribbon Interpretation
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#obv-price-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      OBV + Price Patterns
+    </span>
+  </a>
+
+</li>
+      </ul>
+    </nav>
+
+</li>
+
         <li class="md-nav__item">
   <a href="#support" class="md-nav__link">
     <span class="md-ellipsis">
-      Support
+      📞 Support
     </span>
   </a>
-  
+    
 </li>
-      
+
+    </ul>
     </ul>
   
 </nav>
@@ -1187,27 +1429,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/troubleshooting-installation.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Installation Troubleshooting
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1267,27 +1488,6 @@
   
   <span class="md-ellipsis">
     FAQ
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/about-system-requirements.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    System Requirements
   </span>
   
 
@@ -1393,7 +1593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../_product-cards/" class="md-nav__link">
+      <a href="../_settings-alerts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1439,178 +1639,239 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
         <li class="md-nav__item">
-  <a href="#what-does-it-do" class="md-nav__link">
+  <a href="#core-functionality" class="md-nav__link">
     <span class="md-ellipsis">
-      🎯 What Does It Do?
+      🎯 Core Functionality
     </span>
   </a>
-  
+    
 </li>
-      
+
         <li class="md-nav__item">
-  <a href="#core-concept-obv-money-flow-direction" class="md-nav__link">
+  <a href="#educational-example-bitcoin-november-2024" class="md-nav__link">
     <span class="md-ellipsis">
-      Core Concept: OBV = Money Flow Direction
+      📊 Educational Example: Bitcoin (November 2024)
     </span>
   </a>
-  
+    
 </li>
-      
+
         <li class="md-nav__item">
-  <a href="#the-problem-with-regular-obv" class="md-nav__link">
+  <a href="#settings" class="md-nav__link">
     <span class="md-ellipsis">
-      The Problem with Regular OBV
+      ⚙️ Settings
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-can-be-seen-bottom-pane" class="md-nav__link">
-    <span class="md-ellipsis">
-      What Can Be Seen (Bottom Pane)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="What Can Be Seen (Bottom Pane)">
+    <nav class="md-nav" aria-label="⚙️ Settings">
       <ul class="md-nav__list">
-        
           <li class="md-nav__item">
-  <a href="#the-obv-line" class="md-nav__link">
+  <a href="#obv-calculation-settings" class="md-nav__link">
     <span class="md-ellipsis">
-      The OBV Line
+      OBV Calculation Settings
     </span>
   </a>
-  
+
 </li>
-        
+          <li class="md-nav__item">
+  <a href="#trend-ribbon-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trend Ribbon Settings
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#divergence-detection-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Divergence Detection Settings
+    </span>
+  </a>
+
+</li>
       </ul>
     </nav>
-  
+
 </li>
-      
+
         <li class="md-nav__item">
-  <a href="#the-main-signals" class="md-nav__link">
+  <a href="#layer-1-obv-line" class="md-nav__link">
     <span class="md-ellipsis">
-      The Main Signals
+      📊 Layer 1: OBV Line
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="The Main Signals">
+    <nav class="md-nav" aria-label="📊 Layer 1: OBV Line">
       <ul class="md-nav__list">
-        
           <li class="md-nav__item">
-  <a href="#1-cross-signals-flow-shift" class="md-nav__link">
+  <a href="#obv-calculation" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Cross Signals (Flow Shift)
+      OBV Calculation
     </span>
   </a>
-  
+
 </li>
-        
           <li class="md-nav__item">
-  <a href="#2-extreme-breach-climax-events" class="md-nav__link">
+  <a href="#obv-patterns" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Extreme Breach (Climax Events)
+      OBV Patterns
     </span>
   </a>
-  
+
 </li>
-        
           <li class="md-nav__item">
-  <a href="#3-divergences-the-best-signals" class="md-nav__link">
+  <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Divergences (The Best Signals)
+      Example
     </span>
   </a>
-  
+
 </li>
-        
       </ul>
     </nav>
-  
+
 </li>
-      
+
         <li class="md-nav__item">
-  <a href="#how-to-use-it-3-simple-steps" class="md-nav__link">
+  <a href="#layer-2-trend-ribbons" class="md-nav__link">
     <span class="md-ellipsis">
-      How to Use It (3 Simple Steps)
+      📊 Layer 2: Trend Ribbons
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="How to Use It (3 Simple Steps)">
+    <nav class="md-nav" aria-label="📊 Layer 2: Trend Ribbons">
       <ul class="md-nav__list">
-        
           <li class="md-nav__item">
-  <a href="#step-1-watch-the-obv-line" class="md-nav__link">
+  <a href="#ribbon-construction" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 1: Watch the OBV Line
+      Ribbon Construction
     </span>
   </a>
-  
+
 </li>
-        
           <li class="md-nav__item">
-  <a href="#step-2-use-cross-signals-for-entry" class="md-nav__link">
+  <a href="#ribbon-width" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 2: Use Cross Signals for Entry
+      Ribbon Width
     </span>
   </a>
-  
+
 </li>
-        
           <li class="md-nav__item">
-  <a href="#step-3-trade-divergences-highest-probability" class="md-nav__link">
+  <a href="#ribbon-patterns" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 3: Trade Divergences (Highest Probability)
+      Ribbon Patterns
     </span>
   </a>
-  
+
 </li>
-        
+          <li class="md-nav__item">
+  <a href="#example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+
+</li>
       </ul>
     </nav>
-  
+
 </li>
-      
+
         <li class="md-nav__item">
-  <a href="#real-example-sp-500" class="md-nav__link">
+  <a href="#layer-3-divergence-detection" class="md-nav__link">
     <span class="md-ellipsis">
-      Real Example (S&amp;P 500)
+      📊 Layer 3: Divergence Detection
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#settings-keep-it-simple" class="md-nav__link">
+    <nav class="md-nav" aria-label="📊 Layer 3: Divergence Detection">
+      <ul class="md-nav__list">
+          <li class="md-nav__item">
+  <a href="#bullish-divergence" class="md-nav__link">
     <span class="md-ellipsis">
-      Settings (Keep It Simple)
+      Bullish Divergence
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#bearish-divergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bearish Divergence
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#hidden-divergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hidden Divergence
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#divergence-confirmation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Divergence Confirmation
+    </span>
+  </a>
+
+</li>
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#educational-example-sp-500-futures-january-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      📖 Educational Example: S&P 500 Futures (January 2025)
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#alerts-can-be-set" class="md-nav__link">
+    <nav class="md-nav" aria-label="📖 Educational Example: S&P 500 Futures (January 2025)">
+      <ul class="md-nav__list">
+          <li class="md-nav__item">
+  <a href="#initial-conditions-jan-8-1000-am" class="md-nav__link">
     <span class="md-ellipsis">
-      Alerts (Can Be Set)
+      Initial Conditions (Jan 8, 10:00 AM)
     </span>
   </a>
-  
+
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#common-mistakes" class="md-nav__link">
+          <li class="md-nav__item">
+  <a href="#sequence-observed" class="md-nav__link">
     <span class="md-ellipsis">
-      Common Mistakes
+      Sequence Observed
     </span>
   </a>
-  
+
 </li>
-      
+          <li class="md-nav__item">
+  <a href="#key-observations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Observations
+    </span>
+  </a>
+
+</li>
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#alert-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔔 Alert Configuration
+    </span>
+  </a>
+    
+</li>
+
         <li class="md-nav__item">
   <a href="#frequently-asked-questions" class="md-nav__link">
     <span class="md-ellipsis">
@@ -1618,35 +1879,149 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-cheat-sheet" class="md-nav__link">
+    <nav class="md-nav" aria-label="❓ Frequently Asked Questions">
+      <ul class="md-nav__list">
+          <li class="md-nav__item">
+  <a href="#q-what-is-on-balance-volume-obv" class="md-nav__link">
     <span class="md-ellipsis">
-      Quick Cheat Sheet
+      Q: What is On-Balance Volume (OBV)?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-how-is-plutus-flow-different-from-basic-obv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: How is Plutus Flow different from basic OBV?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-can-divergences-fail" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Can divergences fail?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-how-many-divergences-appear-on-average" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: How many divergences appear on average?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-should-i-wait-for-ribbon-confirmation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Should I wait for ribbon confirmation?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-what-causes-hidden-divergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: What causes hidden divergence?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-does-obv-work-on-all-assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Does OBV work on all assets?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-can-i-adjust-ribbon-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Can I adjust ribbon colors?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-do-divergence-labels-repaint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Do divergence labels repaint?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-what-sensitivity-setting-should-i-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: What sensitivity setting should I use?
+    </span>
+  </a>
+
+</li>
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#quick-reference-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Quick Reference Guide
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
+    <nav class="md-nav" aria-label="📋 Quick Reference Guide">
+      <ul class="md-nav__list">
+          <li class="md-nav__item">
+  <a href="#three-layer-system" class="md-nav__link">
     <span class="md-ellipsis">
-      Best Practices
+      Three-Layer System
     </span>
   </a>
-  
+
 </li>
-      
+          <li class="md-nav__item">
+  <a href="#divergence-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Divergence Types
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#ribbon-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ribbon Interpretation
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#obv-price-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      OBV + Price Patterns
+    </span>
+  </a>
+
+</li>
+      </ul>
+    </nav>
+
+</li>
+
         <li class="md-nav__item">
   <a href="#support" class="md-nav__link">
     <span class="md-ellipsis">
-      Support
+      📞 Support
     </span>
   </a>
-  
+    
 </li>
-      
+
+    </ul>
     </ul>
   
 </nav>
@@ -1666,7 +2041,7 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1.1rem; height: 1.1rem; fill: currentColor; opacity: 0.7;">
         <path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/>
       </svg>
-      <span style="opacity: 0.85;">Updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 10, 2025 01:41:10 UTC"><span class="timeago" datetime="2025-11-10T01:41:10+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 10, 2025 01:41:10 UTC">2025-11-10</span></span>
+      <span style="opacity: 0.85;">Updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="October 31, 2025 01:38:02 UTC"><span class="timeago" datetime="2025-10-31T01:38:02+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="October 31, 2025 01:38:02 UTC">2025-10-31</span></span>
     </span>
   
 
@@ -1683,299 +2058,1028 @@
 </div>
 
 <!-- Render the page content -->
-<h1 id="plutus-flow-v10-smart-obv-analysis">Plutus Flow v1.0 - Smart OBV Analysis<a class="headerlink" href="#plutus-flow-v10-smart-obv-analysis" title="Permanent link">&para;</a></h1>
-<h2 id="what-does-it-do">🎯 What Does It Do?<a class="headerlink" href="#what-does-it-do" title="Permanent link">&para;</a></h2>
-<p><span style="color: #0aa1d5; font-weight: 600;">Core Functionality</span></p>
-<p>Plutus Flow is an <strong>advanced On-Balance Volume (OBV) indicator</strong> that shows when smart money may be accumulating (buying) or distributing (selling). Unlike standard OBV, it prevents volume spike distortion and detects potential powerful divergences.</p>
-<p><strong>Best for:</strong> Volume analysis, divergence trading, flow confirmation</p>
+<h1 id="plutus-flow-v10-smart-obv-analysis">Plutus Flow v1.0 — Smart OBV Analysis<a class="headerlink" href="#plutus-flow-v10-smart-obv-analysis" title="Permanent link">&para;</a></h1>
+<p>On-Balance Volume (OBV) indicator enhanced with trend analysis, divergence detection, and momentum confirmation. Displays OBV line, trend ribbons, and divergence labels.</p>
+
+<div class="sp-callout sp-callout--success" style="margin: 2rem 0; border-left: 4px solid #4caf50;">
+  <div class="sp-callout__icon">👋</div>
+  <div class="sp-callout__content">
+    <h3 style="margin-top: 0;">New to Trading? Start Here</h3>
+
+    <p><strong>What Is On-Balance Volume (OBV)?</strong></p>
+    <p>OBV tracks the total volume of buying vs selling over time. Think of it like a running scoreboard:</p>
+    <ul>
+      <li>When price goes <strong>UP</strong> → add today's volume to the running total</li>
+      <li>When price goes <strong>DOWN</strong> → subtract today's volume from the running total</li>
+    </ul>
+    <p>The OBV line shows whether buyers or sellers are winning the battle:</p>
+    <ul>
+      <li>📈 <strong>OBV rising</strong> = Buyers winning (accumulation happening)</li>
+      <li>📉 <strong>OBV falling</strong> = Sellers winning (distribution happening)</li>
+    </ul>
+
+    <p><strong>In Plain English:</strong> Plutus Flow takes basic OBV and adds helpful features to make it easier to read and more actionable. It's like OBV with superpowers.</p>
+
+    <p><strong>What You'll See on Your Chart:</strong></p>
+    <ul style="margin: 1rem 0;">
+      <li><strong>OBV Line</strong> — The main line showing cumulative volume direction</li>
+      <li><strong>Colored Ribbons</strong> — Background shading (green = bullish volume trend, red = bearish volume trend)</li>
+      <li><strong>Divergence Labels</strong> — "Bull Div" or "Bear Div" when price and volume disagree</li>
+    </ul>
+
+    <p><strong>The 3 Layers Explained Simply:</strong></p>
+    <ol>
+      <li><strong>Layer 1: The OBV Line</strong><br/>
+      Shows the running total of buying vs selling pressure. Like a tug-of-war rope—which side is winning?</li>
+
+      <li><strong>Layer 2: Colored Background Ribbons</strong><br/>
+      Green ribbon = Volume trend is bullish (buyers in control)<br/>
+      Red ribbon = Volume trend is bearish (sellers in control)<br/>
+      These give you the "big picture" at a glance.</li>
+
+      <li><strong>Layer 3: Divergence Labels</strong><br/>
+      <strong>"Bull Div"</strong> = Price is falling but volume says buyers are coming back (potentially bullish)<br/>
+      <strong>"Bear Div"</strong> = Price is rising but volume says sellers are building (potentially bearish)<br/>
+      These are early warning signals of potential reversals.</li>
+    </ol>
+
+    <details style="margin-top: 1rem;">
+      <summary style="cursor: pointer; font-weight: 600; color: #4caf50;">🎓 What's a "divergence"?</summary>
+      <div style="padding-left: 1rem; margin-top: 0.5rem;">
+        <p><strong>Divergence = When price and volume disagree</strong></p>
+        <p><strong>Bullish Divergence Example:</strong></p>
+        <ul>
+          <li>Price makes lower lows (downtrend)</li>
+          <li>BUT OBV makes higher lows (volume improving)</li>
+          <li>This suggests: "Selling pressure is weakening, reversal may be near"</li>
+        </ul>
+        <p><strong>Bearish Divergence Example:</strong></p>
+        <ul>
+          <li>Price makes higher highs (uptrend)</li>
+          <li>BUT OBV makes lower highs (volume weakening)</li>
+          <li>This suggests: "Buying pressure is weakening, reversal may be near"</li>
+        </ul>
+        <p>Divergences are powerful because they often signal reversals before they happen on the price chart.</p>
+      </div>
+    </details>
+
+    <p><strong>Beginner Starting Point:</strong></p>
+    <ul>
+      <li><strong>Week 1:</strong> Just observe the OBV line. Notice if it's trending up or down.</li>
+      <li><strong>Week 2:</strong> Watch the colored ribbons—see how they change from green to red and back.</li>
+      <li><strong>Week 3:</strong> Start noticing divergence labels when they appear.</li>
+      <li><strong>Week 4+:</strong> Experiment with different smoothing levels in settings (Level 3 is default and recommended).</li>
+    </ul>
+  </div>
+</div>
+
 <hr />
-<h2 id="core-concept-obv-money-flow-direction">Core Concept: OBV = Money Flow Direction<a class="headerlink" href="#core-concept-obv-money-flow-direction" title="Permanent link">&para;</a></h2>
-<p><strong>On-Balance Volume (OBV):</strong>
-- When price closes higher → Add volume (buying pressure)
-- When price closes lower → Subtract volume (selling pressure)
-- Result: Cumulative line showing net flow</p>
-<p><strong>Why it matters:</strong>
-- OBV rising = Accumulation (smart money buying)
-- OBV falling = Distribution (smart money selling)
-- OBV diverging from price = Potential warning signal</p>
+<h2 id="core-functionality">🎯 Core Functionality <span class="skill-badge skill-badge--intermediate" data-tooltip="Understanding of volume analysis helpful">Intermediate</span><a class="headerlink" href="#core-functionality" title="Permanent link">&para;</a></h2>
+<div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
+  <div class="sp-callout__icon">📊</div>
+  <div class="sp-callout__content">
+    <h4>How Plutus Flow Works</h4>
+    <p style="margin-bottom: 1rem;">Three-layer analysis of On-Balance Volume:</p>
+    <div class="mermaid">
+graph TD
+    Input[📊 Price & Volume Data] --> OBV[PLUTUS FLOW<br/>On-Balance Volume Analysis]
+
+    OBV --> Layer1[LAYER 1: OBV CALCULATION<br/>Cumulative Volume Tracking]
+
+    Layer1 --> Smooth{Adaptive Smoothing<br/>User Configurable}
+
+    Smooth -->|Fast Response| S1[Level 1-2<br/>More Signals<br/>Higher Sensitivity]
+    Smooth -->|Balanced| S2[Level 3 ⭐<br/>Default Setting<br/>Recommended]
+    Smooth -->|Slow Response| S3[Level 4-5<br/>Clean Trends<br/>Lower Noise]
+
+    S1 --> Layer2[LAYER 2: TREND RIBBONS<br/>Color-Coded Visualization]
+    S2 --> Layer2
+    S3 --> Layer2
+
+    Layer2 --> Ribbons[🟢 Green = Bullish Trend<br/>🔴 Red = Bearish Trend<br/>Visual Context Layer]
+
+    Ribbons --> Layer3[LAYER 3: DIVERGENCE DETECTION<br/>Price vs OBV Analysis]
+
+    Layer3 --> Output[📈 Complete Display<br/>OBV Line + Ribbons + Labels]
+
+    style Input fill:#37474f,color:#fff,stroke:#263238,stroke-width:3px
+    style OBV fill:#ff5722,color:#fff,stroke:#e64a19,stroke-width:3px
+    style Layer1 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:3px
+    style Smooth fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:3px
+    style Layer2 fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:3px
+    style Layer3 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:3px
+    style Output fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:4px
+    style S2 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:3px
+    </div>
+    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+      <strong>How to read:</strong> Data flows top to bottom through 3 layers. Smoothing level (1-5) adjusts sensitivity at Layer 1. Level 3 (⭐) is the default balanced setting.
+    </p>
+  </div>
+</div>
+
+<p>Plutus Flow calculates On-Balance Volume and adds three analytical layers:</p>
+<p><strong>Layer 1: OBV Line</strong><br />
+- Classic OBV calculation (cumulative volume based on price direction)<br />
+- Displays as primary line in indicator panel<br />
+- Rising OBV = accumulation, Falling OBV = distribution</p>
+<p><strong>Layer 2: Trend Ribbons</strong><br />
+- Moving averages of OBV create colored ribbon<br />
+- Green ribbon = bullish volume trend<br />
+- Red ribbon = bearish volume trend<br />
+- Provides visual context for OBV direction</p>
+<p><strong>Layer 3: Divergence Detection</strong><br />
+- Automatically identifies price-OBV divergences<br />
+- Labels appear: "Bull Div" or "Bear Div"<br />
+- Highlights when price and volume disagree</p>
+<p><strong>Display Location:</strong> Separate panel below price chart</p>
+<p><strong>Timeframe Compatibility:</strong> Works on all timeframes.</p>
+
+<!-- 📸 SCREENSHOT NEEDED - Plutus Flow - OBV Line, Trend Ribbons, Divergence Labels
+     What to show: Full chart with Plutus Flow showing OBV line, colored ribbons, and divergence markers
+     Setup: Plutus Flow enabled, all 3 systems visible
+     Label/Annotate: Point to OBV line, point to trend ribbons (colored bands), point to divergence markers
+     File name suggestion: plutus-flow-all-components.png
+-->
+<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
+  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
+  <p style="margin: 0; color: #424242;"><strong>Plutus Flow - OBV Line, Trend Ribbons, Divergence Labels</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a chart showing all three systems working together: OBV line, trend ribbons, and divergence markers.</p>
+</div>
+
 <hr />
-<h2 id="the-problem-with-regular-obv">The Problem with Regular OBV<a class="headerlink" href="#the-problem-with-regular-obv" title="Permanent link">&para;</a></h2>
-<p><strong>Volume spikes break it:</strong></p>
-<p>One huge volume bar (earnings, news) can permanently skew OBV, hiding subtle changes.</p>
-<p><strong>Plutus Solution: Spike-Clipping</strong></p>
-<ul>
-<li>Extreme volume is capped at 3× average</li>
-<li>Direction is preserved (buy vs sell)</li>
-<li>Permanent distortion is prevented</li>
-<li>Result: Smooth, reliable OBV line</li>
-</ul>
+<h2 id="educational-example-bitcoin-november-2024">📊 Educational Example: Bitcoin (November 2024)<a class="headerlink" href="#educational-example-bitcoin-november-2024" title="Permanent link">&para;</a></h2>
+<p><em>(Historical observation for educational purposes only. Not financial advice. Past performance does not indicate future results.)</em></p>
+<p><strong>4-Hour Chart Observation:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Price</th>
+<th>OBV Line</th>
+<th>Trend Ribbon</th>
+<th>Divergence</th>
+<th>Analysis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nov 4</td>
+<td>$64,500</td>
+<td>150M</td>
+<td>Green</td>
+<td>None</td>
+<td>Price + volume aligned</td>
+</tr>
+<tr>
+<td>Nov 5</td>
+<td>$63,200</td>
+<td>148M</td>
+<td>Red</td>
+<td>None</td>
+<td>Price down, OBV down</td>
+</tr>
+<tr>
+<td>Nov 6</td>
+<td>$62,800</td>
+<td>149M</td>
+<td>Red</td>
+<td>Bull Div</td>
+<td>Price lower low, OBV higher low</td>
+</tr>
+<tr>
+<td>Nov 7</td>
+<td>$64,000</td>
+<td>152M</td>
+<td>Green</td>
+<td>None</td>
+<td>Price + volume rise together</td>
+</tr>
+<tr>
+<td>Nov 8</td>
+<td>$66,200</td>
+<td>156M</td>
+<td>Green</td>
+<td>None</td>
+<td>Uptrend continues</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Pattern Observed:</strong> Bullish divergence appeared Nov 6 when price made lower low ($62,800 &lt; $63,200) but OBV made higher low (149M &gt; 148M). This indicated accumulation despite lower price.</p>
+<p><strong>Outcome:</strong> +$3,400 rally observed from divergence point ($62,800 → $66,200).</p>
+<p><em>This example demonstrates divergence detection. Individual interpretation and outcomes vary.</em></p>
 <hr />
-<h2 id="what-can-be-seen-bottom-pane">What Can Be Seen (Bottom Pane)<a class="headerlink" href="#what-can-be-seen-bottom-pane" title="Permanent link">&para;</a></h2>
-<h3 id="the-obv-line">The OBV Line<a class="headerlink" href="#the-obv-line" title="Permanent link">&para;</a></h3>
-<p><strong>Main line:</strong>
-- <strong>Green</strong> = OBV rising (accumulation)
-- <strong>Red</strong> = OBV falling (distribution)</p>
-<p><strong>Two bands around it:</strong>
-- Upper band (+2σ)
-- Lower band (-2σ)
-- Gray fill = Normal range</p>
+<h2 id="settings">⚙️ Settings <span class="skill-badge skill-badge--beginner" data-tooltip="Simple configuration options">Beginner Friendly</span><a class="headerlink" href="#settings" title="Permanent link">&para;</a></h2>
+<h3 id="obv-calculation-settings">OBV Calculation Settings<a class="headerlink" href="#obv-calculation-settings" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Options</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>OBV Source</strong></td>
+<td>Close, HL/2, HLC/3, OHLC/4</td>
+<td>Close</td>
+</tr>
+<tr>
+<td><strong>Smoothing</strong></td>
+<td>None, SMA, EMA</td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>Smoothing Period</strong></td>
+<td>1-50</td>
+<td>14</td>
+</tr>
+</tbody>
+</table>
+<h3 id="trend-ribbon-settings">Trend Ribbon Settings<a class="headerlink" href="#trend-ribbon-settings" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Options</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fast MA Period</strong></td>
+<td>5-50</td>
+<td>20</td>
+</tr>
+<tr>
+<td><strong>Slow MA Period</strong></td>
+<td>10-100</td>
+<td>50</td>
+</tr>
+<tr>
+<td><strong>Ribbon Display</strong></td>
+<td>On/Off</td>
+<td>On</td>
+</tr>
+<tr>
+<td><strong>Color Scheme</strong></td>
+<td>Multiple palettes</td>
+<td>Green/Red</td>
+</tr>
+</tbody>
+</table>
+<h3 id="divergence-detection-settings">Divergence Detection Settings<a class="headerlink" href="#divergence-detection-settings" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Options</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Lookback Period</strong></td>
+<td>5-50 bars</td>
+<td>14</td>
+</tr>
+<tr>
+<td><strong>Sensitivity</strong></td>
+<td>Low, Medium, High</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td><strong>Label Display</strong></td>
+<td>On/Off</td>
+<td>On</td>
+</tr>
+<tr>
+<td><strong>Alert Toggle</strong></td>
+<td>On/Off</td>
+<td>On</td>
+</tr>
+</tbody>
+</table>
+
+<!-- 📸 SCREENSHOT NEEDED - Plutus Flow Settings - OBV and Ribbon Configuration
+     What to show: Settings panel showing OBV calculation options and ribbon settings
+     Setup: Right-click Plutus Flow → Settings
+     Label/Annotate: Highlight OBV source selection and ribbon period settings
+     File name suggestion: plutus-flow-settings.png
+-->
+<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
+  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
+  <p style="margin: 0; color: #424242;"><strong>Plutus Flow Settings - OBV and Ribbon Configuration</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a screenshot of the TradingView settings panel showing OBV calculation options and ribbon settings.</p>
+</div>
+
 <hr />
-<h2 id="the-main-signals">The Main Signals<a class="headerlink" href="#the-main-signals" title="Permanent link">&para;</a></h2>
-<h3 id="1-cross-signals-flow-shift">1. Cross Signals (Flow Shift)<a class="headerlink" href="#1-cross-signals-flow-shift" title="Permanent link">&para;</a></h3>
-<p><strong>Bullish Cross</strong> (green circle)
-- OBV crosses above the middle line (20-SMA basis)
-- Potential flow shift from distribution to accumulation
-- Potential entry signal for longs</p>
-<p><strong>Bearish Cross</strong> (red circle)
-- OBV crosses below the middle line
-- Potential flow shift from accumulation to distribution
-- Potential entry signal for shorts</p>
-<p><strong>FlipGuard protection:</strong> Whipsaw is prevented with cooldown period</p>
+<h2 id="layer-1-obv-line">📊 Layer 1: OBV Line<a class="headerlink" href="#layer-1-obv-line" title="Permanent link">&para;</a></h2>
+<h3 id="obv-calculation">OBV Calculation<a class="headerlink" href="#obv-calculation" title="Permanent link">&para;</a></h3>
+<p><strong>Formula:</strong></p>
+<pre><code>If Close &gt; Previous Close: OBV = Previous OBV + Volume
+If Close &lt; Previous Close: OBV = Previous OBV - Volume
+If Close = Previous Close: OBV = Previous OBV
+</code></pre>
+<p><strong>Interpretation:</strong><br />
+- <strong>Rising OBV:</strong> More volume on up days than down days (accumulation characteristics)<br />
+- <strong>Falling OBV:</strong> More volume on down days than up days (distribution characteristics)<br />
+- <strong>Flat OBV:</strong> Volume balanced between up and down days</p>
+<h3 id="obv-patterns">OBV Patterns<a class="headerlink" href="#obv-patterns" title="Permanent link">&para;</a></h3>
+<p><strong>Pattern 1: Price and OBV Rising Together</strong></p>
+<pre><code>Price: ↑↑↑
+OBV:   ↑↑↑
+Interpretation: Volume confirms uptrend
+</code></pre>
+<p><strong>Pattern 2: Price and OBV Falling Together</strong></p>
+<pre><code>Price: ↓↓↓
+OBV:   ↓↓↓
+Interpretation: Volume confirms downtrend
+</code></pre>
+<p><strong>Pattern 3: Price Rising, OBV Flat/Falling</strong></p>
+<pre><code>Price: ↑↑↑
+OBV:   →→→ or ↓↓↓
+Interpretation: Bearish divergence (see Layer 3)
+</code></pre>
+<p><strong>Pattern 4: Price Falling, OBV Flat/Rising</strong></p>
+<pre><code>Price: ↓↓↓
+OBV:   →→→ or ↑↑↑
+Interpretation: Bullish divergence (see Layer 3)
+</code></pre>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
+<p><strong>Stock Rally Analysis:</strong><br />
+- Day 1: Price $100, Volume 1M shares, Close up → OBV = +1M<br />
+- Day 2: Price $102, Volume 1.5M shares, Close up → OBV = +2.5M<br />
+- Day 3: Price $105, Volume 2M shares, Close up → OBV = +4.5M</p>
+<p><strong>Interpretation:</strong> OBV rising strongly, confirming price uptrend with accumulation characteristics.</p>
+
+<!-- 📸 SCREENSHOT NEEDED - Plutus Flow Bullish Divergence Example
+     What to show: Chart showing price making lower low BUT OBV making higher low (divergence)
+     Setup: Find historical bullish divergence example
+     Label/Annotate: Draw lines showing price lower low, OBV higher low, label "Bullish Divergence"
+     File name suggestion: plutus-flow-bullish-divergence.png
+-->
+<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
+  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
+  <p style="margin: 0; color: #424242;"><strong>Plutus Flow Bullish Divergence Example</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a chart showing a bullish divergence pattern (price making lower low while OBV makes higher low).</p>
+</div>
+
 <hr />
-<h3 id="2-extreme-breach-climax-events">2. Extreme Breach (Climax Events)<a class="headerlink" href="#2-extreme-breach-climax-events" title="Permanent link">&para;</a></h3>
-<p><strong>Extreme Bullish Breach</strong> (orange circle)
-- OBV breaks above +2σ upper band
-- Accumulation climax
-- Often precedes reversal OR continuation breakout</p>
-<p><strong>Extreme Bearish Breach</strong> (purple circle)
-- OBV breaks below -2σ lower band
-- Distribution climax
-- Often precedes reversal OR breakdown continuation</p>
-<p><strong>Context can be used:</strong> Price action can be checked to identify reversal or continuation patterns</p>
+<h2 id="layer-2-trend-ribbons">📊 Layer 2: Trend Ribbons<a class="headerlink" href="#layer-2-trend-ribbons" title="Permanent link">&para;</a></h2>
+<h3 id="ribbon-construction">Ribbon Construction<a class="headerlink" href="#ribbon-construction" title="Permanent link">&para;</a></h3>
+<p><strong>Components:</strong><br />
+- Fast Moving Average of OBV (default: 20-period)<br />
+- Slow Moving Average of OBV (default: 50-period)</p>
+<p><strong>Color Logic:</strong><br />
+- <strong>Green Ribbon:</strong> Fast MA above Slow MA (bullish volume trend)<br />
+- <strong>Red Ribbon:</strong> Fast MA below Slow MA (bearish volume trend)</p>
+<h3 id="ribbon-width">Ribbon Width<a class="headerlink" href="#ribbon-width" title="Permanent link">&para;</a></h3>
+<p><strong>Ribbon Spacing:</strong><br />
+- Wide ribbon: Large separation between Fast and Slow MA (strong trend)<br />
+- Narrow ribbon: Small separation (weak trend or transition)</p>
+<h3 id="ribbon-patterns">Ribbon Patterns<a class="headerlink" href="#ribbon-patterns" title="Permanent link">&para;</a></h3>
+<p><strong>Pattern 1: Expanding Green Ribbon</strong></p>
+<pre><code>Fast MA pulling away above Slow MA
+Interpretation: Strengthening bullish volume trend
+</code></pre>
+<p><strong>Pattern 2: Narrowing Green Ribbon</strong></p>
+<pre><code>Fast MA approaching Slow MA from above
+Interpretation: Weakening bullish volume trend
+</code></pre>
+<p><strong>Pattern 3: Ribbon Color Flip (Red to Green)</strong></p>
+<pre><code>Fast MA crosses above Slow MA
+Interpretation: Volume trend shift from bearish to bullish
+</code></pre>
+<p><strong>Pattern 4: Ribbon Color Flip (Green to Red)</strong></p>
+<pre><code>Fast MA crosses below Slow MA
+Interpretation: Volume trend shift from bullish to bearish
+</code></pre>
+
+<!-- 📸 SCREENSHOT NEEDED - Plutus Flow Ribbon Width Changes (Trend Strength)
+     What to show: Chart showing ribbon width progression: narrow → wide → narrow
+     Setup: Find example where trend strengthens (wide ribbons) then weakens (narrow)
+     Label/Annotate: Label "Weak Trend" (narrow), "Strong Trend" (wide), "Weakening" (narrowing again)
+     File name suggestion: plutus-flow-ribbon-width-changes.png
+-->
+<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
+  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
+  <p style="margin: 0; color: #424242;"><strong>Plutus Flow Ribbon Width Changes (Trend Strength)</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a chart showing how ribbon width indicates trend strength (narrow → wide → narrow).</p>
+</div>
+
+<h3 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h3>
+<p><strong>Bitcoin Volume Trend:</strong><br />
+- OBV Fast MA (20): 145M<br />
+- OBV Slow MA (50): 138M<br />
+- Ribbon: Green (Fast &gt; Slow)<br />
+- Ribbon Width: 7M (moderate)</p>
+<p><strong>Interpretation:</strong> Bullish volume trend present with moderate strength.</p>
 <hr />
-<h3 id="3-divergences-the-best-signals">3. Divergences (The Best Signals)<a class="headerlink" href="#3-divergences-the-best-signals" title="Permanent link">&para;</a></h3>
-<p><strong>Regular Bullish Divergence</strong>
-- Price makes lower low
-- OBV makes higher low
-- Label: "BULL DIV" (green)
-- <strong>Signal:</strong> Selling pressure weakening, reversal up likely</p>
-<p><strong>Regular Bearish Divergence</strong>
-- Price makes higher high
-- OBV makes lower high
-- Label: "BEAR DIV" (red)
-- <strong>Signal:</strong> Buying pressure weakening, reversal down likely</p>
-<p><strong>Hidden Bullish Divergence</strong>
-- Price makes higher low
-- OBV makes lower low
-- Label: "H-BULL" (light green)
-- <strong>Signal:</strong> Healthy uptrend pullback, continuation up</p>
-<p><strong>Hidden Bearish Divergence</strong>
-- Price makes lower high
-- OBV makes higher high
-- Label: "H-BEAR" (light red)
-- <strong>Signal:</strong> Healthy downtrend bounce, continuation down</p>
+<h2 id="layer-3-divergence-detection">📊 Layer 3: Divergence Detection<a class="headerlink" href="#layer-3-divergence-detection" title="Permanent link">&para;</a></h2>
+<h3 id="bullish-divergence">Bullish Divergence<a class="headerlink" href="#bullish-divergence" title="Permanent link">&para;</a></h3>
+<p><strong>Conditions:</strong><br />
+1. Price makes lower low (LL)<br />
+2. OBV makes higher low (HL)<br />
+3. Pattern occurs within lookback period</p>
+<p><strong>Visual:</strong> "Bull Div" label appears on indicator panel</p>
+<p><strong>Interpretation:</strong> Price declining but volume showing accumulation characteristics. Disagreement between price and volume suggests potential reversal conditions.</p>
+<p><strong>Example:</strong></p>
+<pre><code>Price: $100 → $90 → $85 (lower low)
+OBV:   150M → 145M → 147M (higher low at second bottom)
+Result: Bullish divergence detected
+</code></pre>
+<h3 id="bearish-divergence">Bearish Divergence<a class="headerlink" href="#bearish-divergence" title="Permanent link">&para;</a></h3>
+<p><strong>Conditions:</strong><br />
+1. Price makes higher high (HH)<br />
+2. OBV makes lower high (LH)<br />
+3. Pattern occurs within lookback period</p>
+<p><strong>Visual:</strong> "Bear Div" label appears on indicator panel</p>
+<p><strong>Interpretation:</strong> Price rising but volume showing distribution characteristics. Disagreement between price and volume suggests potential reversal conditions.</p>
+<p><strong>Example:</strong></p>
+<pre><code>Price: $100 → $110 → $115 (higher high)
+OBV:   150M → 155M → 153M (lower high at second peak)
+Result: Bearish divergence detected
+</code></pre>
+<h3 id="hidden-divergence">Hidden Divergence<a class="headerlink" href="#hidden-divergence" title="Permanent link">&para;</a></h3>
+<p><strong>Hidden Bullish Divergence:</strong><br />
+- Price: Higher Low (HL)<br />
+- OBV: Lower Low (LL)<br />
+- Interpretation: Continuation pattern in uptrend</p>
+<p><strong>Hidden Bearish Divergence:</strong><br />
+- Price: Lower High (LH)<br />
+- OBV: Higher High (HH)<br />
+- Interpretation: Continuation pattern in downtrend</p>
+<p><em>Hidden divergences detected when enabled in settings.</em></p>
+<h3 id="divergence-confirmation">Divergence Confirmation<a class="headerlink" href="#divergence-confirmation" title="Permanent link">&para;</a></h3>
+<p><strong>Stronger Divergence Signals Include:</strong><br />
+- Ribbon color flip accompanying divergence<br />
+- Multiple divergences in sequence<br />
+- Divergence at significant support/resistance level<br />
+- Divergence combined with other indicators (TD Sequential, etc.)</p>
 <hr />
-<h2 id="how-to-use-it-3-simple-steps">How to Use It (3 Simple Steps)<a class="headerlink" href="#how-to-use-it-3-simple-steps" title="Permanent link">&para;</a></h2>
-<p><span style="color: #0aa1d5; font-weight: 600; font-size: 1.1em;">🎓 Essential Learning Guide</span></p>
-<h3 id="step-1-watch-the-obv-line">Step 1: Watch the OBV Line<a class="headerlink" href="#step-1-watch-the-obv-line" title="Permanent link">&para;</a></h3>
-<p><strong>Simple check:</strong>
-- <strong>Price up, OBV up</strong> = Healthy (volume confirms)
-- <strong>Price up, OBV flat/down</strong> = Weak (potential divergence warning)
-- <strong>Price down, OBV down</strong> = Healthy downtrend
-- <strong>Price down, OBV flat/up</strong> = Weak downtrend (divergence)</p>
+<h2 id="educational-example-sp-500-futures-january-2025">📖 Educational Example: S&amp;P 500 Futures (January 2025)<a class="headerlink" href="#educational-example-sp-500-futures-january-2025" title="Permanent link">&para;</a></h2>
+<p><em>(Historical observation for educational purposes only. Not financial advice. Past performance does not indicate future results.)</em></p>
+<p><strong>1-Hour Chart - Complete Analysis:</strong></p>
+<h3 id="initial-conditions-jan-8-1000-am">Initial Conditions (Jan 8, 10:00 AM)<a class="headerlink" href="#initial-conditions-jan-8-1000-am" title="Permanent link">&para;</a></h3>
+<p><strong>Price:</strong> 4,780 (local high)<br />
+<strong>OBV:</strong> 850M<br />
+<strong>Ribbon:</strong> Green (bullish volume trend)</p>
+<h3 id="sequence-observed">Sequence Observed<a class="headerlink" href="#sequence-observed" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Date/Time</th>
+<th>Price</th>
+<th>OBV</th>
+<th>Ribbon</th>
+<th>Pattern</th>
+<th>Analysis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jan 8, 10am</td>
+<td>4,780</td>
+<td>850M</td>
+<td>Green</td>
+<td>Peak</td>
+<td>Price and volume at highs</td>
+</tr>
+<tr>
+<td>Jan 8, 6pm</td>
+<td>4,760</td>
+<td>845M</td>
+<td>Green</td>
+<td>Decline</td>
+<td>Price down, OBV down</td>
+</tr>
+<tr>
+<td>Jan 9, 10am</td>
+<td>4,785</td>
+<td>840M</td>
+<td>Red</td>
+<td>Bear Div</td>
+<td>Price higher high, OBV lower high</td>
+</tr>
+<tr>
+<td>Jan 9, 4pm</td>
+<td>4,770</td>
+<td>835M</td>
+<td>Red</td>
+<td>Confirmed</td>
+<td>Ribbon flipped red</td>
+</tr>
+<tr>
+<td>Jan 10, 10am</td>
+<td>4,740</td>
+<td>825M</td>
+<td>Red</td>
+<td>Decline</td>
+<td>Downtrend continues</td>
+</tr>
+<tr>
+<td>Jan 10, 4pm</td>
+<td>4,730</td>
+<td>826M</td>
+<td>Red</td>
+<td>Bull Div</td>
+<td>Price lower low, OBV higher low</td>
+</tr>
+<tr>
+<td>Jan 11, 12pm</td>
+<td>4,755</td>
+<td>832M</td>
+<td>Green</td>
+<td>Reversal</td>
+<td>Ribbon flipped green</td>
+</tr>
+</tbody>
+</table>
+<h3 id="key-observations">Key Observations<a class="headerlink" href="#key-observations" title="Permanent link">&para;</a></h3>
+<p><strong>Bearish Divergence (Jan 9):</strong><br />
+- Price made higher high: 4,785 &gt; 4,780<br />
+- OBV made lower high: 840M &lt; 850M<br />
+- Ribbon flipped red confirming volume weakness<br />
+- Result: -45 point decline to 4,740</p>
+<p><strong>Bullish Divergence (Jan 10):</strong><br />
+- Price made lower low: 4,730 &lt; 4,740<br />
+- OBV made higher low: 826M &gt; 825M<br />
+- Ribbon flipped green confirming volume strength<br />
+- Result: +25 point bounce to 4,755</p>
+<p><strong>Complete Cycle:</strong> Two divergences correctly identified transitions at both trend change points.</p>
+<p><em>This example demonstrates complete divergence cycle. Individual interpretation and outcomes vary.</em></p>
 <hr />
-<h3 id="step-2-use-cross-signals-for-entry">Step 2: Use Cross Signals for Entry<a class="headerlink" href="#step-2-use-cross-signals-for-entry" title="Permanent link">&para;</a></h3>
-<p><strong>Bullish cross:</strong>
-1. OBV crosses above basis line (green circle) can be observed
-2. Price action can be verified (bullish candle, support nearby?)
-3. Long entry can be considered
-4. Stop below recent low can be placed</p>
-<p><strong>Bearish cross:</strong>
-1. OBV crosses below basis line (red circle) can be observed
-2. Price action can be verified (bearish candle, resistance nearby?)
-3. Short entry can be considered
-4. Stop above recent high can be placed</p>
+<h2 id="alert-configuration">🔔 Alert Configuration<a class="headerlink" href="#alert-configuration" title="Permanent link">&para;</a></h2>
+<p><strong>Available Alerts:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Alert Type</th>
+<th>Trigger</th>
+<th>Notification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bullish Divergence</strong></td>
+<td>Bull Div detected</td>
+<td>"Plutus Flow: Bullish divergence"</td>
+</tr>
+<tr>
+<td><strong>Bearish Divergence</strong></td>
+<td>Bear Div detected</td>
+<td>"Plutus Flow: Bearish divergence"</td>
+</tr>
+<tr>
+<td><strong>Ribbon Flip Green</strong></td>
+<td>Trend turns bullish</td>
+<td>"Plutus Flow: Volume trend bullish"</td>
+</tr>
+<tr>
+<td><strong>Ribbon Flip Red</strong></td>
+<td>Trend turns bearish</td>
+<td>"Plutus Flow: Volume trend bearish"</td>
+</tr>
+<tr>
+<td><strong>OBV Breakout</strong></td>
+<td>OBV exceeds threshold</td>
+<td>"Plutus Flow: OBV breakout"</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Alert Setup:</strong><br />
+1. Open indicator settings<br />
+2. Navigate to alert section<br />
+3. Enable desired alert types<br />
+4. Configure notification method (popup, email, webhook)</p>
 <hr />
-<h3 id="step-3-trade-divergences-highest-probability">Step 3: Trade Divergences (Highest Probability)<a class="headerlink" href="#step-3-trade-divergences-highest-probability" title="Permanent link">&para;</a></h3>
-<p><strong>The setup:</strong>
-1. Potential divergence label (BULL DIV or BEAR DIV) can be awaited
-2. Potential divergence at key level can be confirmed (Janus Atlas can be used for levels)
-3. Potential price reversal confirmation can be awaited (candle pattern, cross signal)
-4. Example entry in divergence direction
-5. Example stop beyond the divergence pivot</p>
-<p><strong>Win rate:</strong> 70-80% when at key levels</p>
+<div class="sp-callout sp-callout--summary">
+  <div class="sp-callout__title">What You've Learned</div>
+  <ul>
+    <li><strong>Enhanced On-Balance Volume:</strong> Plutus Flow builds on classic OBV methodology by adding trend ribbons and automated divergence detection for comprehensive volume flow analysis</li>
+    <li><strong>Three-Layer Analysis:</strong> Combines OBV Line (cumulative volume trend), Trend Ribbons (moving averages showing bullish/bearish volume direction), and Divergence Detection (price-volume disagreement identification)</li>
+    <li><strong>Accumulation vs Distribution:</strong> Rising OBV indicates accumulation (buying pressure building), falling OBV indicates distribution (selling pressure building), visible through the primary OBV line</li>
+    <li><strong>Visual Trend Ribbons:</strong> Color-coded ribbon overlay (green for bullish volume trend, red for bearish volume trend) provides immediate visual context for OBV direction changes</li>
+    <li><strong>Automated Divergence Alerts:</strong> System automatically identifies and labels bullish divergences (price declining while OBV rising) and bearish divergences (price rising while OBV falling)</li>
+    <li><strong>Separate Panel Display:</strong> Shows in dedicated panel below your price chart, keeping volume analysis separate from price action for cleaner chart organization</li>
+    <li><strong>Universal Timeframe Support:</strong> Works on all timeframes from 1-minute to monthly charts, adapting OBV calculations to your chosen interval</li>
+  </ul>
+  <p><strong>Next Steps:</strong> Review <a href="../volume-oracle-v10/">Volume Oracle v1.0</a> for alternative volume analysis methods, or explore <a href="../ref-workflow/">Trading Workflow Guide</a> to learn how to combine volume indicators with other Signal Pilot tools.</p>
+</div>
+
 <hr />
-<h2 id="real-example-sp-500">Real Example (S&amp;P 500)<a class="headerlink" href="#real-example-sp-500" title="Permanent link">&para;</a></h2>
-<p><strong>Setup:</strong>
-- Price: 4,450, making new highs
-- Previous high: 4,400
-- <strong>OBV:</strong> Making LOWER high (not confirming price)
-- Label appears: "BEAR DIV" (red)</p>
-<p><strong>The Trade:</strong>
-1. Potential divergence detected at resistance level (Weekly High from Janus Atlas)
-2. Price reversal candle can be awaited (shooting star forms)
-3. OBV crosses below basis line (potential bearish cross signal)
-4. Example entry short at 4,440
-5. Example stop above divergence high at 4,460
-6. Target: Previous support at 4,350</p>
-<p><strong>Result:</strong>
-- Price drops to 4,360 (target almost hit)
-- Exit at 4,365 = 75 points profit</p>
-<hr />
-<h2 id="settings-keep-it-simple">Settings (Keep It Simple)<a class="headerlink" href="#settings-keep-it-simple" title="Permanent link">&para;</a></h2>
-<p><strong>Core Settings:</strong>
-- <strong>Spike Clip:</strong> 3.0× (default, works for most)
-- <strong>Basis Length:</strong> 20 (default SMA)
-- <strong>Band StdDev:</strong> 2.0 (for ±2σ bands)</p>
-<p><strong>FlipGuard:</strong>
-- <strong>Cooldown:</strong> 5 bars (prevents whipsaw)
-- Enabled is kept (default)</p>
-<p><strong>Divergence:</strong>
-- <strong>Show All Types:</strong> Enabled (Regular + Hidden)
-- <strong>Show Beams:</strong> Enabled (visual lines connecting pivots)
-- <strong>Min Swing:</strong> 1.5× ATR (filters tiny divergences)</p>
-<p><strong>HTF Alignment:</strong>
-- Can be enabled for swing trading (check 4× timeframe)
-- Can be disabled for scalping</p>
-<p><strong>Default settings are used by most traders</strong></p>
-<hr />
-<h2 id="alerts-can-be-set">Alerts (Can Be Set)<a class="headerlink" href="#alerts-can-be-set" title="Permanent link">&para;</a></h2>
+<h2 id="integration-with-other-indicators">🔗 Integration with Other Indicators<a class="headerlink" href="#integration-with-other-indicators" title="Permanent link">&para;</a></h2>
+
+<div class="sp-callout sp-callout--info">
+  <div class="sp-callout__title">💡 Plutus Flow Works Best in Combination</div>
+  <p>While Plutus Flow provides powerful money flow and divergence analysis on its own, combining it with other Signal Pilot indicators creates high-probability confluence setups. Here are proven integration workflows:</p>
+</div>
+
+<h3 id="plutus-flow-pentarch">Plutus Flow + Pentarch (Divergence + Timing)<a class="headerlink" href="#plutus-flow-pentarch" title="Permanent link">&para;</a></h3>
+<p><strong>Workflow:</strong></p>
 <ol>
-<li><strong>OBV Cross Up</strong> - Bullish cross</li>
-<li><strong>OBV Cross Down</strong> - Bearish cross</li>
-<li><strong>Extreme Bullish Breach</strong> - Climax accumulation</li>
-<li><strong>Extreme Bearish Breach</strong> - Climax distribution</li>
-<li><strong>Regular Bullish Divergence</strong> - BULL DIV</li>
-<li><strong>Regular Bearish Divergence</strong> - BEAR DIV</li>
+<li><strong>Plutus Flow shows divergence</strong> → Price making higher highs while OBV making lower highs (bearish divergence) or vice versa (bullish divergence)</li>
+<li><strong>Wait for Pentarch confirmation signal</strong> → Bearish divergence + CAP/WRN signal = high-probability reversal. Bullish divergence + TD/IGN signal = strong long setup</li>
+<li><strong>Divergence + timing signal = precise entry</strong> → Money flow weakness confirmed by reversal timing</li>
+<li><strong>Expected outcome:</strong> Pentarch provides exact entry point when divergence pattern completes</li>
 </ol>
-<p><strong>How to set:</strong>
-1. Alarm icon can be clicked
-2. "Plutus Flow v1.0" can be selected
-3. Alert can be chosen
-4. Can be set to "Once Per Bar Close"</p>
+<p><strong>Example:</strong> Plutus Flow shows bearish divergence (price higher, OBV lower) → Pentarch CAP signal fires = high-probability short entry with money flow confirmation</p>
+
+<h3 id="plutus-flow-janus-atlas">Plutus Flow + Janus Atlas (Divergence at Levels)<a class="headerlink" href="#plutus-flow-janus-atlas" title="Permanent link">&para;</a></h3>
+<p><strong>Workflow:</strong></p>
+<ol>
+<li><strong>Price approaches key Janus level</strong> → Daily High, Weekly resistance, or Fibonacci extension</li>
+<li><strong>Check Plutus Flow for divergence at level</strong> → Bearish divergence at resistance level = money flow not supporting breakout</li>
+<li><strong>Level + divergence = high-probability reversal zone</strong> → Structural resistance + volume weakness = strong confluence</li>
+<li><strong>Expected outcome:</strong> Divergence at key levels filters for highest-probability reversal setups</li>
+</ol>
+<p><strong>Example:</strong> Price hits Weekly High + 1.618 Fib extension → Plutus Flow shows bearish divergence = strong short confluence (resistance + money flow exhaustion)</p>
+
+<h3 id="plutus-flow-harmonic-oscillator">Plutus Flow + Harmonic Oscillator (Money Flow + Momentum)<a class="headerlink" href="#plutus-flow-harmonic-oscillator" title="Permanent link">&para;</a></h3>
+<p><strong>Workflow:</strong></p>
+<ol>
+<li><strong>Plutus Flow ribbon expanding</strong> → OBV trending strongly, ribbon width increasing = strong money flow</li>
+<li><strong>Check Harmonic Oscillator alignment</strong> → Bull oscillator + rising OBV = full momentum + flow alignment. Bear oscillator + falling OBV = confirmed bearish flow</li>
+<li><strong>Flow + momentum agreement = high conviction</strong> → Both money flow and momentum pointing same direction</li>
+<li><strong>Divergence warning:</strong> Harmonic Bull + OBV falling = early weakness warning despite bullish price action</li>
+</ol>
+<p><strong>Example:</strong> Plutus Flow ribbon expanding bullish + Harmonic Oscillator STRONG bull = maximum bullish confluence (money + momentum aligned)</p>
+
+<h3 id="plutus-flow-volume-oracle">Plutus Flow + Volume Oracle (Cumulative vs. Spike Analysis)<a class="headerlink" href="#plutus-flow-volume-oracle" title="Permanent link">&para;</a></h3>
+<p><strong>Workflow:</strong></p>
+<ol>
+<li><strong>Different tools, complementary insights:</strong> Plutus Flow = cumulative money flow trend. Volume Oracle = real-time volume spikes and zones</li>
+<li><strong>Use together for complete volume picture:</strong> OBV shows overall accumulation/distribution trend. Volume Oracle shows where big players are active NOW</li>
+<li><strong>Confluence setup:</strong> Rising OBV (Plutus accumulation) + Volume Oracle spike at support = institutional buying confirmed</li>
+<li><strong>Divergence setup:</strong> Falling OBV (Plutus distribution) + Volume Oracle spike at resistance = institutional selling confirmed</li>
+</ol>
+<p><strong>Example:</strong> Plutus Flow OBV rising for 3 weeks (accumulation) → Volume Oracle shows 3x spike at Daily Low = confirmed institutional support zone</p>
+
+<div class="admonition tip">
+<p class="admonition-title">Pro Tip: The Divergence Workflow</p>
+<p>For highest-probability divergence trades, combine <strong>Plutus Flow (divergence) + Janus Atlas (levels) + Pentarch (timing) + Volume Oracle (confirmation)</strong>. Identify divergence at key resistance/support level, wait for Pentarch reversal signal, then confirm with volume spike. This multi-layer approach validates divergence patterns with structure, timing, and institutional activity.</p>
+<p><strong>See also:</strong> <a href="../ref-workflow/">Complete Trading Workflow Guide</a> for detailed multi-indicator strategies.</p>
+</div>
+
 <hr />
-<h2 id="common-mistakes">Common Mistakes<a class="headerlink" href="#common-mistakes" title="Permanent link">&para;</a></h2>
-<p><span style="color: #dc2626; font-weight: 600; font-size: 1.1em;">🚨 Critical Errors</span></p>
-<p>❌ <strong>Trading divergences in isolation</strong>
-→ ✅ Divergence + key level (Janus Atlas can be used) = Much higher win rate</p>
-<p>❌ <strong>Chasing extreme breaches</strong>
-→ ✅ Extreme breach = Warning, not entry. Price reaction can be awaited.</p>
-<p>❌ <strong>Ignoring the OBV trend</strong>
-→ ✅ OBV trending up + price pullback = Buy the dip. OBV flat + price up = Caution advised.</p>
-<p>❌ <strong>Using on Forex spot</strong>
-→ ✅ Volume data is needed. Futures, stocks, crypto can be used. Forex spot has NO volume.</p>
-<p>❌ <strong>Not waiting for confirmation</strong>
-→ ✅ Divergence label can be observed → Price reversal candle can be awaited → Then entry</p>
+<h2 id="plutus-flow-vs-volume-oracle">📊 Plutus Flow vs Volume Oracle — Which One?<a class="headerlink" href="#plutus-flow-vs-volume-oracle" title="Permanent link">&para;</a></h2>
+
+<div class="sp-callout sp-callout--info">
+  <div class="sp-callout__title">💡 Both Are Volume Indicators - But Serve Different Purposes</div>
+  <p>Plutus Flow and Volume Oracle analyze volume differently. Here's how to choose:</p>
+</div>
+
+<h3 id="quick-comparison-table">Quick Comparison Table</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Plutus Flow v1.0</th>
+<th>Volume Oracle v1.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Primary Focus</strong></td>
+<td>Cumulative volume trend analysis (OBV-based)</td>
+<td>Real-time volume spike detection</td>
+</tr>
+<tr>
+<td><strong>Best For</strong></td>
+<td>Swing trading, trend following, divergence detection</td>
+<td>Day trading, scalping, entry confirmation</td>
+</tr>
+<tr>
+<td><strong>Timeframe</strong></td>
+<td>1H, 4H, Daily, Weekly (higher timeframes)</td>
+<td>5m, 15m, 1H (intraday timeframes)</td>
+</tr>
+<tr>
+<td><strong>Key Signal</strong></td>
+<td>Bullish/Bearish divergence (price vs OBV)</td>
+<td>Volume spikes (2x-3x average volume)</td>
+</tr>
+<tr>
+<td><strong>Trend Type</strong></td>
+<td>Long-term money flow direction</td>
+<td>Short-term smart money activity</td>
+</tr>
+<tr>
+<td><strong>Volume Analysis</strong></td>
+<td>Cumulative (running total of volume)</td>
+<td>Relative (comparing to recent average)</td>
+</tr>
+<tr>
+<td><strong>Works Best In</strong></td>
+<td>Trending markets (uptrends/downtrends)</td>
+<td>All market conditions (including ranging)</td>
+</tr>
+<tr>
+<td><strong>Unique Feature</strong></td>
+<td>OBV trend ribbons (show trend strength)</td>
+<td>Position Manager (tracks live P&L)</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="when-to-use-plutus-flow">✅ Use Plutus Flow When:</h3>
+<ul>
+<li><strong>You're swing trading</strong> (holding positions for days/weeks)</li>
+<li><strong>You want to track long-term money flow</strong> (is money flowing in or out over time?)</li>
+<li><strong>You trade divergences</strong> (price makes new low, but OBV makes higher low = accumulation)</li>
+<li><strong>You focus on higher timeframes</strong> (Daily, Weekly charts)</li>
+<li><strong>You want trend confirmation</strong> (ribbon width shows trend strength)</li>
+</ul>
+
+<p><strong>Example Plutus Flow Setup:</strong> Bitcoin Daily chart, looking for bullish OBV divergence to catch swing trade reversals.</p>
+
+<h3 id="when-to-use-volume-oracle">✅ Use Volume Oracle When:</h3>
+<ul>
+<li><strong>You're day trading or scalping</strong> (holding positions for minutes/hours)</li>
+<li><strong>You want to spot smart money entry points</strong> (unusual volume spikes = institutions entering)</li>
+<li><strong>You need volume confirmation</strong> (did that breakout have volume behind it?)</li>
+<li><strong>You track active positions</strong> (Position Manager shows live P&L)</li>
+<li><strong>You trade volume zones</strong> (areas where high volume clustered)</li>
+</ul>
+
+<p><strong>Example Volume Oracle Setup:</strong> S&P 500 15-minute chart, watching for volume spikes at support/resistance levels for quick intraday trades.</p>
+
+<h3 id="use-both-together">🔥 Use Both Together (Advanced)</h3>
+<p>Combine Plutus Flow (strategic) with Volume Oracle (tactical) for maximum effectiveness:</p>
+
+<ol>
+<li><strong>Plutus Flow</strong> → Identifies long-term trend direction (OBV rising = bullish bias)</li>
+<li><strong>Volume Oracle</strong> → Finds tactical entry points (volume spike at support = entry confirmation)</li>
+</ol>
+
+<p><strong>Example Combined Workflow:</strong></p>
+<ul>
+<li>Check Daily Plutus Flow: OBV trending up (bullish long-term)</li>
+<li>Drop to 15m chart with Volume Oracle: Wait for volume spike at Janus Atlas support level</li>
+<li>Enter long when both align: Long-term bullish flow + short-term volume spike = high-probability entry</li>
+</ul>
+
+<div class="admonition tip">
+<p class="admonition-title">💡 Pro Tip: Choose Based on Your Trading Style</p>
+<p><strong>Swing traders:</strong> Plutus Flow is your primary volume tool. Add Volume Oracle optionally for entry confirmation.</p>
+<p><strong>Day traders:</strong> Volume Oracle is your primary volume tool. Add Plutus Flow optionally for daily bias.</p>
+<p><strong>Position traders:</strong> Plutus Flow on Weekly/Monthly charts for long-term trend direction.</p>
+</div>
+
+<p><strong>See also:</strong> <a href="../volume-oracle-v10/">Volume Oracle Documentation</a> for comparison from the other perspective.</p>
+
+<hr />
+<h2 id="common-mistakes-to-avoid">⚠️ Common Mistakes to Avoid<a class="headerlink" href="#common-mistakes-to-avoid" title="Permanent link">&para;</a></h2>
+
+<div class="sp-callout sp-callout--warning">
+  <div class="sp-callout__title">Learn from Common Pitfalls</div>
+  <p>These mistakes are frequently made by new Plutus Flow users. Avoid them to improve your results:</p>
+</div>
+
+<h3 id="mistake-1-using-obv-in-ranging-markets">Mistake #1: Using OBV in Ranging/Choppy Markets<a class="headerlink" href="#mistake-1-using-obv-in-ranging-markets" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> OBV works best in trending markets (strong directional moves). In ranging, sideways markets, OBV produces false signals and unreliable divergences.</p>
+<p><strong>The Fix:</strong></p>
+<ul>
+<li>Use Plutus Flow primarily in trending markets (identifiable uptrends/downtrends)</li>
+<li>Check Omnideck Regime Box or Pilot Line to confirm trend before relying on OBV signals</li>
+<li>In ranging markets, reduce position size or skip OBV-based trades entirely</li>
+<li>Wait for clear trend emergence before re-engaging with Plutus Flow analysis</li>
+</ul>
+<p><strong>Remember:</strong> OBV = trend tool, not range tool. Best results come during sustained directional moves.</p>
+
+<h3 id="mistake-2-trading-divergence-alone">Mistake #2: Trading Divergence Without Price Confirmation<a class="headerlink" href="#mistake-2-trading-divergence-alone" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> Divergences can persist for extended periods before price actually reverses. Entering immediately on divergence detection often leads to early entries and drawdowns.</p>
+<p><strong>The Fix:</strong></p>
+<ul>
+<li>Divergence = warning signal, not immediate entry trigger</li>
+<li>Wait for price confirmation: reversal candle pattern, support/resistance level touch, or Pentarch signal</li>
+<li>Combine divergence with Janus Atlas levels for structural confirmation</li>
+<li>Use Pentarch timing signals (TD, IGN, CAP) to pinpoint actual reversal moment</li>
+</ul>
+<p><strong>Remember:</strong> "Markets can remain irrational longer than you can remain solvent." Wait for price to confirm what OBV is suggesting.</p>
+
+<h3 id="mistake-3-misinterpreting-ribbon-width">Mistake #3: Confusing Ribbon Width Changes<a class="headerlink" href="#mistake-3-misinterpreting-ribbon-width" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> Beginners focus on ribbon direction (bullish/bearish) but ignore ribbon width. Ribbon width shows trend strength—narrow ribbon = weak trend, wide ribbon = strong trend.</p>
+<p><strong>The Fix:</strong></p>
+<ul>
+<li><strong>Expanding ribbon:</strong> OBV trend strengthening → Accumulation/distribution accelerating, strong conviction</li>
+<li><strong>Contracting ribbon:</strong> OBV trend weakening → Money flow slowing, potential reversal approaching</li>
+<li><strong>Narrow ribbon crossing:</strong> Weak, unreliable signal → Skip or wait for ribbon expansion before acting</li>
+<li><strong>Wide ribbon with direction:</strong> Strong, reliable signal → High conviction for trend continuation</li>
+</ul>
+<p><strong>Remember:</strong> Track ribbon width changes, not just direction. Expanding width = strengthening conviction. Contracting width = weakening trend.</p>
+
+<h3 id="mistake-4-ignoring-obv-absolute-levels">Mistake #4: Focusing Only on OBV Direction, Not Absolute Levels<a class="headerlink" href="#mistake-4-ignoring-obv-absolute-levels" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> OBV is cumulative, so absolute values matter. Rising OBV breaking to new all-time highs = strong accumulation. Rising OBV still below previous highs = weaker conviction.</p>
+<p><strong>The Fix:</strong></p>
+<ul>
+<li>Compare current OBV to historical levels: Is OBV at new highs/lows, or still below previous extremes?</li>
+<li>OBV new highs with price new highs = confirmed trend strength</li>
+<li>OBV failing to reach previous highs while price does = divergence warning (hidden weakness)</li>
+<li>Draw trendlines on OBV itself to spot breaks and confirmations</li>
+</ul>
+<p><strong>Remember:</strong> OBV's absolute position relative to history provides valuable context. New OBV highs = real strength. Failure to make new highs = caution.</p>
+
+<h3 id="mistake-5-not-comparing-multiple-timeframes">Mistake #5: Using Only One Timeframe for OBV Analysis<a class="headerlink" href="#mistake-5-not-comparing-multiple-timeframes" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> OBV on 15-minute chart may show divergence while Daily chart shows alignment. Single-timeframe analysis misses broader context.</p>
+<p><strong>The Fix:</strong></p>
+<ul>
+<li>Check OBV on higher timeframe (Daily, Weekly) for overall money flow trend</li>
+<li>Use lower timeframe OBV (1H, 15m) for entry timing within higher timeframe trend</li>
+<li>Strongest setups: Both timeframes aligned (Daily OBV rising + 1H OBV rising)</li>
+<li>Avoid counter-trend trades: Don't fight Daily OBV trend based on 15m divergence</li>
+</ul>
+<p><strong>Remember:</strong> Higher timeframe OBV = overall trend. Lower timeframe OBV = tactical entry timing. Align both for best results.</p>
+
+<h3 id="mistake-6-confusing-plutus-with-volume-oracle">Mistake #6: Treating Plutus Flow and Volume Oracle as Interchangeable<a class="headerlink" href="#mistake-6-confusing-plutus-with-volume-oracle" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> Both analyze volume, but they serve different purposes. Using them interchangeably leads to misinterpretation.</p>
+<p><strong>The Fix:</strong></p>
+<ul>
+<li><strong>Plutus Flow (OBV):</strong> Cumulative money flow trend → Long-term accumulation/distribution analysis</li>
+<li><strong>Volume Oracle:</strong> Real-time volume spikes and zones → Immediate institutional activity and support/resistance</li>
+<li>Use Plutus for trend context and divergence analysis</li>
+<li>Use Volume Oracle for intraday activity, breakout/breakdown confirmation, and level validation</li>
+</ul>
+<p><strong>Remember:</strong> Plutus = cumulative flow trend. Volume Oracle = real-time activity. Different tools for different jobs—use both together.</p>
+
+<div class="admonition info">
+<p class="admonition-title">Additional Resources</p>
+<p>For more trading best practices, see <a href="../ref-best-practices/">Best Practices &amp; Pro Tips</a>. For volume analysis workflows, see <a href="../ref-workflow/">Trading Workflow Guide</a>.</p>
+</div>
+
 <hr />
 <h2 id="frequently-asked-questions">❓ Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permanent link">&para;</a></h2>
-<p><span style="color: #10b981; font-weight: 600;">Common Questions</span></p>
-<p><strong>Q: What's the difference from standard OBV?</strong>
-<strong>A:</strong> Plutus Flow uses spike-clipped OBV (immune to extreme volume spikes), adds bands for extremes, detects potential divergences automatically, and has FlipGuard anti-whipsaw.</p>
-<p><strong>Q: Which is more reliable - crosses or divergences?</strong>
-<strong>A:</strong>
-- <strong>Divergences:</strong> 70-80% win rate (but rarer)
-- <strong>Crosses:</strong> 60-65% win rate (more frequent)</p>
-<p>Crosses can be used for active trading, divergences for high-conviction setups.</p>
-<p><strong>Q: Why did divergence appear 10 bars after the pivot?</strong>
-<strong>A:</strong> Divergence detection requires confirmed pivot (bars on both sides). Lag is intentional to prevent repaint. Once it appears, it's real.</p>
-<p><strong>Q: Does it work on Forex?</strong>
-<strong>A:</strong> Only Forex futures (CME) or CFDs with volume. Spot Forex (OANDA, etc.) has no volume.</p>
-<p><strong>Q: What if OBV stays in extreme zone (above/below bands) for 20 bars?</strong>
-<strong>A:</strong> Only the first bar crossing INTO the zone fires a signal. While it stays in zone = No new signals (prevents spam).</p>
-<p><strong>Q: Does it repaint?</strong>
-<strong>A:</strong> No. All signals lock at bar close. What is seen is final.</p>
+<h3 id="q-what-is-on-balance-volume-obv">Q: What is On-Balance Volume (OBV)?<a class="headerlink" href="#q-what-is-on-balance-volume-obv" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> OBV is cumulative volume indicator developed by Joe Granville. Adds volume on up days, subtracts volume on down days. Rising OBV suggests accumulation, falling OBV suggests distribution.</p>
+<h3 id="q-how-is-plutus-flow-different-from-basic-obv">Q: How is Plutus Flow different from basic OBV?<a class="headerlink" href="#q-how-is-plutus-flow-different-from-basic-obv" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Plutus Flow adds trend ribbons (moving averages) and automatic divergence detection to basic OBV calculation. Basic OBV shows only the cumulative line.</p>
+<h3 id="q-can-divergences-fail">Q: Can divergences fail?<a class="headerlink" href="#q-can-divergences-fail" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Yes. Divergences indicate disagreement between price and volume but do not guarantee reversals. Observation shows various outcomes following divergence patterns.</p>
+<h3 id="q-how-many-divergences-appear-on-average">Q: How many divergences appear on average?<a class="headerlink" href="#q-how-many-divergences-appear-on-average" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Frequency varies by asset, timeframe, and sensitivity settings. Higher sensitivity detects more divergences. Lower sensitivity detects fewer, stronger divergences.</p>
+<h3 id="q-should-i-wait-for-ribbon-confirmation">Q: Should I wait for ribbon confirmation?<a class="headerlink" href="#q-should-i-wait-for-ribbon-confirmation" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Depends on individual approach. Some wait for ribbon color flip to confirm divergence. Others act on divergence alone. Confirmation adds delay but may reduce false signals.</p>
+<h3 id="q-what-causes-hidden-divergence">Q: What causes hidden divergence?<a class="headerlink" href="#q-what-causes-hidden-divergence" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Hidden divergence occurs when price makes continuation pattern (HL in uptrend, LH in downtrend) while OBV makes divergent pattern. Suggests trend continuation rather than reversal.</p>
+<h3 id="q-does-obv-work-on-all-assets">Q: Does OBV work on all assets?<a class="headerlink" href="#q-does-obv-work-on-all-assets" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> OBV works on any asset with volume data (stocks, futures, crypto). Not applicable to forex spot markets (no centralized volume).</p>
+<h3 id="q-can-i-adjust-ribbon-colors">Q: Can I adjust ribbon colors?<a class="headerlink" href="#q-can-i-adjust-ribbon-colors" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Yes. Color scheme settings allow customization of ribbon colors and OBV line color.</p>
+<h3 id="q-do-divergence-labels-repaint">Q: Do divergence labels repaint?<a class="headerlink" href="#q-do-divergence-labels-repaint" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> No. Once divergence pattern confirmed and label appears, it does not change retroactively.</p>
+<h3 id="q-what-sensitivity-setting-should-i-use">Q: What sensitivity setting should I use?<a class="headerlink" href="#q-what-sensitivity-setting-should-i-use" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Medium (default) balances detection and false signals. High sensitivity detects more divergences but may include weaker patterns. Low sensitivity detects fewer, stronger patterns only.</p>
 <hr />
-<h2 id="quick-cheat-sheet">Quick Cheat Sheet<a class="headerlink" href="#quick-cheat-sheet" title="Permanent link">&para;</a></h2>
+<h2 id="quick-reference-guide">📋 Quick Reference Guide<a class="headerlink" href="#quick-reference-guide" title="Permanent link">&para;</a></h2>
+<h3 id="three-layer-system">Three-Layer System<a class="headerlink" href="#three-layer-system" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Signal</th>
-<th>Meaning</th>
-<th>Action</th>
+<th>Layer</th>
+<th>Component</th>
+<th>Visual</th>
+<th>Purpose</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>OBV Cross Up (green circle)</td>
-<td>Flow shift to buying</td>
-<td><strong>Long entry can be considered</strong></td>
+<td><strong>Layer 1</strong></td>
+<td>OBV Line</td>
+<td>Primary line</td>
+<td>Cumulative volume tracking</td>
 </tr>
 <tr>
-<td>OBV Cross Down (red circle)</td>
-<td>Flow shift to selling</td>
-<td><strong>Short entry can be considered</strong></td>
+<td><strong>Layer 2</strong></td>
+<td>Trend Ribbons</td>
+<td>Color bands</td>
+<td>Volume trend direction</td>
 </tr>
 <tr>
-<td>Extreme Bullish Breach (orange)</td>
-<td>Accumulation climax</td>
-<td>Reaction can be watched</td>
-</tr>
-<tr>
-<td>Extreme Bearish Breach (purple)</td>
-<td>Distribution climax</td>
-<td>Reaction can be watched</td>
-</tr>
-<tr>
-<td>BULL DIV (green label)</td>
-<td>Price/OBV disagree</td>
-<td><strong>Reversal up</strong> likely</td>
-</tr>
-<tr>
-<td>BEAR DIV (red label)</td>
-<td>Price/OBV disagree</td>
-<td><strong>Reversal down</strong> likely</td>
-</tr>
-<tr>
-<td>H-BULL (light green)</td>
-<td>Hidden divergence</td>
-<td><strong>Continuation up</strong></td>
-</tr>
-<tr>
-<td>H-BEAR (light red)</td>
-<td>Hidden divergence</td>
-<td><strong>Continuation down</strong></td>
+<td><strong>Layer 3</strong></td>
+<td>Divergence Labels</td>
+<td>"Bull Div" / "Bear Div"</td>
+<td>Price-volume disagreement</td>
 </tr>
 </tbody>
 </table>
+<h3 id="divergence-types">Divergence Types<a class="headerlink" href="#divergence-types" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>OBV vs Price</th>
+<th>Type</th>
+<th>Price Pattern</th>
+<th>OBV Pattern</th>
 <th>Interpretation</th>
-<th>Action</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Both rising</td>
-<td>Healthy uptrend</td>
-<td>Longs can be taken</td>
+<td><strong>Bullish</strong></td>
+<td>Lower Low (LL)</td>
+<td>Higher Low (HL)</td>
+<td>Potential reversal up</td>
 </tr>
 <tr>
-<td>Price up, OBV flat/down</td>
-<td>Weak uptrend</td>
-<td>Caution advised, divergence can be watched</td>
+<td><strong>Bearish</strong></td>
+<td>Higher High (HH)</td>
+<td>Lower High (LH)</td>
+<td>Potential reversal down</td>
 </tr>
 <tr>
-<td>Both falling</td>
-<td>Healthy downtrend</td>
-<td>Shorts can be taken</td>
+<td><strong>Hidden Bullish</strong></td>
+<td>Higher Low (HL)</td>
+<td>Lower Low (LL)</td>
+<td>Continuation up</td>
 </tr>
 <tr>
-<td>Price down, OBV flat/up</td>
-<td>Weak downtrend</td>
-<td>Caution advised, divergence can be watched</td>
+<td><strong>Hidden Bearish</strong></td>
+<td>Lower High (LH)</td>
+<td>Higher High (HH)</td>
+<td>Continuation down</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ribbon-interpretation">Ribbon Interpretation<a class="headerlink" href="#ribbon-interpretation" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Ribbon Color</th>
+<th>Fast MA vs Slow MA</th>
+<th>Volume Trend</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Green</strong></td>
+<td>Fast &gt; Slow</td>
+<td>Bullish</td>
+</tr>
+<tr>
+<td><strong>Red</strong></td>
+<td>Fast &lt; Slow</td>
+<td>Bearish</td>
+</tr>
+<tr>
+<td><strong>Wide Gap</strong></td>
+<td>Large separation</td>
+<td>Strong trend</td>
+</tr>
+<tr>
+<td><strong>Narrow Gap</strong></td>
+<td>Small separation</td>
+<td>Weak trend</td>
+</tr>
+</tbody>
+</table>
+<h3 id="obv-price-patterns">OBV + Price Patterns<a class="headerlink" href="#obv-price-patterns" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Price</th>
+<th>OBV</th>
+<th>Ribbon</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>↑</td>
+<td>↑</td>
+<td>Green</td>
+<td>Confirmed uptrend</td>
+</tr>
+<tr>
+<td>↓</td>
+<td>↓</td>
+<td>Red</td>
+<td>Confirmed downtrend</td>
+</tr>
+<tr>
+<td>↑</td>
+<td>↓</td>
+<td>Red</td>
+<td>Bearish divergence</td>
+</tr>
+<tr>
+<td>↓</td>
+<td>↑</td>
+<td>Green</td>
+<td>Bullish divergence</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
-<p><span style="color: #10b981; font-weight: 600; font-size: 1.1em;">✅ Recommended Approach</span></p>
-<ol>
-<li><strong>Can be combined with price action</strong> - Divergence alone is interesting, divergence + reversal candle = Entry</li>
-<li><strong>Divergences can be traded at key levels</strong> - Can be used with Janus Atlas for support/resistance</li>
-<li><strong>Extreme breaches are commonly respected</strong> - They're warnings, not entry signals - reaction can be awaited</li>
-<li><strong>Crosses shouldn't be chased</strong> - Entry on signal bar or next bar, not 5 bars later</li>
-<li><strong>HTF can be enabled for swing trading</strong> - Filters counter-trend signals</li>
-</ol>
+<h2 id="support">📞 Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
+<p><strong>Technical Questions:</strong><br />
+support@signalpilot.io</p>
 <hr />
-<h2 id="support">Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
-<p>Help is available at:
-- <a href="https://docs.signalpilot.io/suite-index/"><span class="signal-pilot-brand">Signal Pilot</span> Suite Overview</a> - How to combine with other indicators
-- <a href="../ref-workflow/">Suite Workflow</a> - Complete trading system
-- <a href="../about-support/">Support</a> - Get help</p>
-<hr />
-<p><strong>Important consideration:</strong> Plutus Flow shows where smart money may be accumulating or distributing. When OBV and price disagree (potential divergence) = Potential major move coming. Can be combined with levels for highest probability.</p>
+<p><strong>Disclaimer:</strong> This indicator analyzes On-Balance Volume (OBV) with enhanced trend and divergence detection. OBV calculation based on cumulative volume methodology developed by Joe Granville. Divergence detection identifies disagreement patterns between price movement and volume accumulation/distribution. Individual interpretation, application, and outcomes vary. Past divergence patterns do not guarantee future results. This is not financial advice.</p>
+                
+                
+                
+                
+                
                 
               </article>
             </div>
@@ -1983,7 +3087,11 @@
           
   <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 
+
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+
+
         </div>
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
@@ -2045,20 +3153,64 @@
     
     
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.sections", "navigation.path", "content.code.copy", "search.suggest", "search.highlight", "content.tabs.link", "content.tooltips", "content.action.edit"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+
+
     
     
       <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+
+
       
         <script src="../js/timeago.min.js"></script>
+
+
       
         <script src="../js/timeago_mkdocs_material.js"></script>
+
+
       
         <script src="../assets/brand.js"></script>
+
+
       
         <script src="../assets/sp-bg.js"></script>
+
+
       
         <script src="../assets/keyword-highlighter.js"></script>
+
+
       
     
-  </body>
+      <script src="../assets/wheel-diagnostic.js"></script>
+      <script src="../assets/enhancements.js"></script>
+    <script src="assets/remove-tooltips.js"></script>
+    <script src="assets/bottom-sheet-nav.js"></script>
+      <script src="../assets/sticky-toc-scroll.js"></script>
+    <script src="../assets/components.js"></script>
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - JS
+       To disable: comment out this entire block
+       ======================================== -->
+  <script src="../js/feedback-system.js"></script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - JS -->
+
+  <!-- Meta-Learning & Accessibility Features -->
+  <script src="../js/keyboard-navigation.js"></script>
+  <script src="../js/text-sizing.js"></script>
+  <script src="../js/knowledge-checks.js"></script>
+
+      <!-- SignalPilot Chatbot -->
+    <script src="/js/chatbot.js"></script>
+  
+
+
+
+
+
+
+
+  <!-- Custom Bottom Sheet Navigation Script -->
+  <script src="../assets/custom-bottom-sheet.js?v7"></script>
+</body>
 </html>

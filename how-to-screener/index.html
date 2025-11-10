@@ -6,6 +6,11 @@
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <meta name="mobile-web-app-capable" content="yes">
+      <meta name="theme-color" content="#667eea">
+      <meta name="format-detection" content="telephone=no">
       
         <meta name="description" content="Non-repainting, alert-ready TradingView indicators for any market/timeframe.">
       
@@ -20,7 +25,16 @@
         <link rel="next" href="../suite-index/">
       
       
-      <link rel="icon" href="../assets/watermark-monogram-color-transparent.png">
+      <!-- Favicons -->
+      <link rel="icon" type="image/x-icon" href="../favicon.ico">
+      <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
+      <link rel="icon" type="image/png" sizes="512x512" href="../favicon-512x512.png">
+
+      <!-- PWA Manifest -->
+      <link rel="manifest" href="../manifest.json">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
     
     
@@ -47,6 +61,7 @@
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -54,6 +69,9 @@
       <link rel="stylesheet" href="../css/timeago.css">
     
       <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../css/responsive-optimization.css">
+      <link rel="stylesheet" href="../css/content-overflow-fix.css">
+      <link rel="stylesheet" href="../css/mobile-layout-fixes.css">
     
       <link rel="stylesheet" href="../assets/brand.css">
     
@@ -64,6 +82,8 @@
       <link rel="stylesheet" href="../assets/interactive-code.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+
+
     
       
   
@@ -73,8 +93,12 @@
   
 
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-NZ05GV72K0"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-NZ05GV72K0",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-NZ05GV72K0",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+
   
     <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+
+
   
 
     
@@ -85,7 +109,73 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
 
-  </head>
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - CSS
+       To disable: comment out this entire block
+       ======================================== -->
+  <link rel="stylesheet" href="../css/feedback.css">
+  <link rel="stylesheet" href="../css/visual-enhancements.css">
+
+  <!-- Mermaid.js for diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'dark',
+      themeVariables: {
+        primaryColor: '#00bcd4',
+        primaryTextColor: '#fff',
+        primaryBorderColor: '#0097a7',
+        lineColor: '#00bcd4',
+        secondaryColor: '#ff5722',
+        tertiaryColor: '#4caf50',
+        fontSize: '18px',
+        fontFamily: 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+      },
+      flowchart: {
+        htmlLabels: true,
+        fontSize: 18
+      },
+      fontSize: 18
+    });
+  </script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - CSS -->
+
+  <!-- Meta-Learning & Accessibility Enhancements -->
+  <link rel="stylesheet" href="../css/skill-badges.css">
+  <link rel="stylesheet" href="../css/meta-learning.css">
+
+      <!-- SignalPilot Chatbot CSS -->
+    <link rel="stylesheet" href="/css/chatbot.css">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.signalpilot.io/">
+    <meta property="og:title" content="Signal Pilot Documentation">
+    <meta property="og:description" content="Professional trading indicators for TradingView. Complete guides for Pentarch, Janus Atlas, Omnideck, and more.">
+    <meta property="og:image" content="https://docs.signalpilot.io/assets/images/preview.png">
+    <meta property="og:site_name" content="Signal Pilot Docs">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.signalpilot.io/">
+    <meta name="twitter:title" content="Signal Pilot Documentation">
+    <meta name="twitter:description" content="Professional trading indicators for TradingView. Complete guides for Pentarch, Janus Atlas, Omnideck, and more.">
+    <meta name="twitter:image" content="https://docs.signalpilot.io/assets/images/preview.png">
+
+
+  
+
+
+
+
+
+
+
+
+  <!-- Custom Bottom Sheet Navigation -->
+  <link rel="stylesheet" href="../css/hide-mkdocs-sidebar.css?v7">
+  <link rel="stylesheet" href="../css/custom-bottom-sheet.css?v7">
+</head>
   
   
     
@@ -128,7 +218,6 @@
         <a href="https://signalpilot.io/#pricing">Pricing</a>
         <a href="https://signalpilot.io/#faq">FAQ</a>
       </nav>
-      <a class="sp-cta" href="https://signalpilot.io/#pricing">Get the Suite</a>
     </div>
   </div>
 
@@ -141,7 +230,6 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="Signal Pilot Docs" class="md-header__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
       
-  <img src="../assets/watermark-monogram-color-transparent.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -193,6 +281,8 @@
     
     
       <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+
+
     
     
     
@@ -276,7 +366,6 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Signal Pilot Docs" class="md-nav__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
       
-  <img src="../assets/watermark-monogram-color-transparent.png" alt="logo">
 
     </a>
     Signal Pilot Docs
@@ -389,27 +478,6 @@
   
   <span class="md-ellipsis">
     Prerequisites
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/start-which-indicator.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Which Indicator Should I Start?
   </span>
   
 
@@ -683,7 +751,7 @@
           <li class="md-nav__item">
   <a href="#4-enter-trade-if-confirmed" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Enter Trade (if confirmed)
+      4. Further Analysis (Educational Example)
     </span>
   </a>
   
@@ -1042,7 +1110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../minimal-flow-v10/" class="md-nav__link">
+      <a href="../volume-oracle-v10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1271,27 +1339,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/troubleshooting-installation.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Installation Troubleshooting
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1351,27 +1398,6 @@
   
   <span class="md-ellipsis">
     FAQ
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/about-system-requirements.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    System Requirements
   </span>
   
 
@@ -1477,7 +1503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../_product-cards/" class="md-nav__link">
+      <a href="../_settings-alerts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1624,7 +1650,7 @@
           <li class="md-nav__item">
   <a href="#4-enter-trade-if-confirmed" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Enter Trade (if confirmed)
+      4. Further Analysis (Educational Example)
     </span>
   </a>
   
@@ -1834,7 +1860,7 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1.1rem; height: 1.1rem; fill: currentColor; opacity: 0.7;">
         <path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/>
       </svg>
-      <span style="opacity: 0.85;">Updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 10, 2025 01:41:10 UTC"><span class="timeago" datetime="2025-11-10T01:41:10+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 10, 2025 01:41:10 UTC">2025-11-10</span></span>
+      <span style="opacity: 0.85;">Updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="October 31, 2025 01:38:02 UTC"><span class="timeago" datetime="2025-10-31T01:38:02+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="October 31, 2025 01:38:02 UTC">2025-10-31</span></span>
     </span>
   
 
@@ -1852,6 +1878,12 @@
 
 <!-- Render the page content -->
 <h1 id="use-the-multi-symbol-screener-augury-grid">Use the Multi-Symbol Screener (Augury Grid)<a class="headerlink" href="#use-the-multi-symbol-screener-augury-grid" title="Permanent link">&para;</a></h1>
+<div style="background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%); border-left: 4px solid #F59E0B; padding: 1.5rem; margin: 2rem 0; border-radius: 8px;">
+<p style="margin: 0 0 1rem 0; font-weight: 700; font-size: 1.1rem; color: #92400E;">⚠️ EDUCATIONAL CONTENT</p>
+<p style="margin: 0; color: #78350F; line-height: 1.6;">
+This guide shows how to use the Augury Grid screener tool for <strong>educational purposes only</strong>. This is <strong>NOT investment or trading advice</strong>. All examples are hypothetical and for illustrative purposes.
+</p>
+</div>
 <p><strong>Goal:</strong> Monitor 8 different instruments simultaneously on one chart instead of flipping between watchlists.</p>
 <p><strong>What Can Be Learned:</strong>
 - Setting up an 8-symbol watchlist
@@ -1859,6 +1891,87 @@
 - Filtering for high-quality signals
 - Acting on fresh opportunities</p>
 <p><strong>Time:</strong> 5-10 minutes</p>
+<hr />
+<h2 id="prerequisites">✅ Prerequisites (Before You Begin)</h2>
+
+<div class="sp-callout sp-callout--info">
+  <div class="sp-callout__title">📋 What You Need</div>
+  <p>Make sure you have these ready before using Augury Grid:</p>
+</div>
+
+<h3 id="required">🔴 Required</h3>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Details</th>
+<th>Why It's Needed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TradingView Account</strong></td>
+<td>Any tier (Free, Essential, Plus, Premium)</td>
+<td>Augury Grid works on all TradingView account tiers.</td>
+</tr>
+<tr>
+<td><strong>Augury Grid Indicator Access</strong></td>
+<td>Included with Signal Pilot subscription</td>
+<td>You must have access to the Augury Grid v1.0 indicator.</td>
+</tr>
+<tr>
+<td><strong>Basic Symbol Knowledge</strong></td>
+<td>Understanding of ticker formats (e.g., BINANCE:BTCUSDT, NASDAQ:AAPL)</td>
+<td>You'll need to configure symbols in TradingView format.</td>
+</tr>
+<tr>
+<td><strong>5-10 Minutes</strong></td>
+<td>Time for initial setup and testing</td>
+<td>First-time setup takes ~10 minutes. Daily usage takes ~2 minutes.</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="recommended">🟡 Highly Recommended</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Purpose</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Watchlist Prepared</strong></td>
+<td>Know which 8-40 symbols you want to monitor</td>
+<td>Have your crypto/stocks/forex watchlist ready. Examples: BTC, ETH, SPY, QQQ, EURUSD.</td>
+</tr>
+<tr>
+<td><strong>Understanding of Ticker Formats</strong></td>
+<td>Know how to write symbol names correctly</td>
+<td>Crypto: BINANCE:BTCUSDT, Stocks: NASDAQ:AAPL, Forex: FX:EURUSD</td>
+</tr>
+</tbody>
+</table>
+
+<div class="admonition tip">
+<p class="admonition-title">💡 Ticker Format Quick Reference</p>
+<p>TradingView requires specific formats:</p>
+<ul>
+<li><strong>Crypto:</strong> BINANCE:BTCUSDT, COINBASE:ETHUSD</li>
+<li><strong>Stocks:</strong> NASDAQ:AAPL, NYSE:TSLA</li>
+<li><strong>Forex:</strong> FX:EURUSD, OANDA:GBPUSD</li>
+<li><strong>Futures:</strong> CME:ES1! (S&P 500), CME:NQ1! (Nasdaq)</li>
+</ul>
+<p><strong>Tip:</strong> Right-click any symbol → Copy Symbol to get exact format.</p>
+</div>
+
+<div class="sp-callout sp-callout--success">
+  <div class="sp-callout__title">✅ Ready to Start?</div>
+  <p>If you have Augury Grid access and a watchlist ready, continue to the next section.</p>
+</div>
+
 <hr />
 <h2 id="what-is-augury-grid">What Is Augury Grid?<a class="headerlink" href="#what-is-augury-grid" title="Permanent link">&para;</a></h2>
 <p><strong>Augury Grid v1.0</strong> is an on-chart multi-symbol screener table. It monitors 8 tickers simultaneously and displays:</p>
@@ -1874,17 +1987,23 @@
 <h2 id="quick-setup-3-steps">Quick Setup (3 Steps)<a class="headerlink" href="#quick-setup-3-steps" title="Permanent link">&para;</a></h2>
 <h3 id="step-1-add-augury-grid-to-chart">Step 1: Add Augury Grid to Chart<a class="headerlink" href="#step-1-add-augury-grid-to-chart" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Any chart in TradingView can be opened</li>
-<li><strong>Indicators</strong> can be clicked → "<strong>Augury Grid</strong>" can be searched</li>
-<li><strong>"SP — Augury Grid v1.0"</strong> can be added</li>
+<li>Open any chart in TradingView</li>
+<li><strong>Indicators</strong> Click <strong>Augury Grid</strong>" Search for</li>
+<li><strong>"SP — Augury Grid v1.0"</strong> Add</li>
 </ol>
 <p><strong>What will be seen:</strong> A table appears showing 8 symbol slots (initially empty or with default symbols)</p>
+<!-- SCREENSHOT NEEDED: TradingView indicators search showing "Augury Grid" search results and selection -->
+<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
+  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
+  <p style="margin: 0; color: #424242;"><strong>TradingView Indicators Panel - Adding Augury Grid</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a screenshot of the indicators panel showing how to search for and add the Augury Grid indicator to a chart.</p>
+</div>
 <hr />
 <h3 id="step-2-configure-8-symbols">Step 2: Configure 8 Symbols<a class="headerlink" href="#step-2-configure-8-symbols" title="Permanent link">&para;</a></h3>
 <ol>
-<li>The indicator name can be clicked → <strong>Settings (gear icon)</strong></li>
+<li>Click the indicator name → <strong>Settings (gear icon)</strong></li>
 <li>Scrolling to <strong>Symbol Configuration</strong> is available</li>
-<li>8 tickers can be entered (the exact TradingView format is commonly used):</li>
+<li>8 tickers Enter (the exact TradingView format is commonly used):</li>
 </ol>
 <p><strong>Example multi-asset watchlist:</strong>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Symbol 1: BINANCE:BTCUSDT
@@ -1899,19 +2018,31 @@
 <p><strong>Format requirements:</strong>
 - The exchange prefix is commonly included: <code>BINANCE:</code>, <code>NASDAQ:</code>, <code>NYSE:</code>, etc.
 - The exact TradingView ticker format is commonly used
-- Each ticker can be tested on a chart first to verify it works</p>
+- Each ticker Test on a chart first to verify it works</p>
+<!-- SCREENSHOT NEEDED: Augury Grid indicator settings panel showing symbol configuration options -->
+<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
+  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
+  <p style="margin: 0; color: #424242;"><strong>Augury Grid Settings - Symbol Configuration</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a screenshot of the indicator settings panel showing the symbol configuration interface where you can enter 8 different symbols.</p>
+</div>
 <hr />
 <h3 id="step-3-set-quality-filter-optional">Step 3: Set Quality Filter (Optional)<a class="headerlink" href="#step-3-set-quality-filter-optional" title="Permanent link">&para;</a></h3>
 <p><strong>Minimum Confluence Score:</strong>
 - <strong>Default:</strong> 40 (shows all decent signals)
-- <strong>Recommended for beginners:</strong> 60 (Premium+ signals only)
+- <strong>Common starting point:</strong> 60 (Premium+ signals only)
 - <strong>Conservative:</strong> 80 (Elite signals only)</p>
 <p><strong>ADX Threshold:</strong>
 - <strong>Default:</strong> 20 (works for most traders)
 - <strong>Higher (25-30):</strong> Only strong trends
 - <strong>Lower (15):</strong> More signals, lower quality</p>
-<p><strong>OK</strong> can be clicked to save.</p>
+<p><strong>OK</strong> Click to save.</p>
 <hr />
+<!-- SCREENSHOT NEEDED: Fully populated Augury Grid showing multiple symbols with signals and quality ratings -->
+<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
+  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
+  <p style="margin: 0; color: #424242;"><strong>Fully Populated Augury Grid Table</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a screenshot of a complete Augury Grid table showing multiple symbols with signals, quality ratings, prices, and performance metrics.</p>
+</div>
 <h2 id="how-to-read-the-grid">How to Read the Grid<a class="headerlink" href="#how-to-read-the-grid" title="Permanent link">&para;</a></h2>
 <p>The table displays 7 columns for each symbol:</p>
 <table>
@@ -1963,7 +2094,7 @@
 <hr />
 <h2 id="workflow-finding-opportunities">Workflow: Finding Opportunities<a class="headerlink" href="#workflow-finding-opportunities" title="Permanent link">&para;</a></h2>
 <h3 id="1-glance-at-grid-10-seconds">1. Glance at Grid (10 seconds)<a class="headerlink" href="#1-glance-at-grid-10-seconds" title="Permanent link">&para;</a></h3>
-<p>Signals can be scanned for:
+<p>Signals Scan for:
 - ⭐⭐⭐ <strong>Elite</strong> (80-100) or ⭐⭐ <strong>Premium</strong> (60-79) signals
 - <strong>AGE 0-10 bars</strong> (fresh signals)
 - <strong>Green P&amp;L</strong> (if signal already triggered, it's working)</p>
@@ -1974,30 +2105,38 @@
 - Elite signal (87)
 - Fresh (2 bars old)
 - Already showing profit (+0.3%)
-- <strong>Action:</strong> This setup can be investigated</p>
+- <strong>Action:</strong> This setup Investigate</p>
+<!-- SCREENSHOT NEEDED: Augury Grid showing an Elite (5/5) signal example highlighted with annotations -->
+<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
+  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
+  <p style="margin: 0; color: #424242;"><strong>Augury Grid Elite Signal Example (Annotated)</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add an annotated Augury Grid row showing an Elite quality signal (87+ score) with labels explaining the signal strength, age, and profit indicators.</p>
+</div>
 <h3 id="3-verify-on-chart-2-minutes">3. Verify on Chart (2 minutes)<a class="headerlink" href="#3-verify-on-chart-2-minutes" title="Permanent link">&para;</a></h3>
-<p>The chart can be clicked to load <strong>BTC/USD</strong> and the following can be checked:
-- [ ] At support level or key zone? (<a href="../janus-atlas-v10/">Janus Atlas</a> can be used)
-- [ ] Volume confirming? (<a href="../minimal-flow-v10/">Volume Oracle</a> can be used)
+<p>The chart Click to load <strong>BTC/USD</strong> and the following Check:
+- [ ] At support level or key zone? (<a href="../janus-atlas-v10/">Janus Atlas</a> Use)
+- [ ] Volume confirming? (<a href="../volume-oracle-v10/">Volume Oracle</a> Use)
 - [ ] No major resistance overhead?
 - [ ] Aligns with trading bias?</p>
-<h3 id="4-enter-trade-if-confirmed">4. Enter Trade (if confirmed)<a class="headerlink" href="#4-enter-trade-if-confirmed" title="Permanent link">&para;</a></h3>
+<h3 id="4-enter-trade-if-confirmed">4. Further Analysis (Educational Example)<a class="headerlink" href="#4-enter-trade-if-confirmed" title="Permanent link">&para;</a></h3>
+<p><em>Note: The following are educational examples only - not trading instructions.</em></p>
 <ul>
-<li>Entry: Current price or limit order can be considered</li>
-<li>Stop loss: Below recent low (for BUY) or above recent high (for SELL) can be placed</li>
-<li>Target: TP1 from Grid can be used as first target</li>
-<li>P&amp;L column can be monitored to track performance</li>
+<li>Example entry consideration: Current price or limit order (hypothetical illustration)</li>
+<li>Example stop concept: Below recent low for longs or above recent high for shorts (educational example)</li>
+<li>Example target concept: TP1 from Grid as a reference point (illustrative)</li>
+<li>Monitoring approach: P&amp;L column Observe for educational tracking</li>
 </ul>
 <hr />
-<h2 id="quality-tiers-reference-guide">Quality Tiers (Reference Guide)<a class="headerlink" href="#quality-tiers-reference-guide" title="Permanent link">&para;</a></h2>
+<h2 id="quality-tiers-reference-guide">Quality Tiers (Educational Reference)<a class="headerlink" href="#quality-tiers-reference-guide" title="Permanent link">&para;</a></h2>
+<p><em>Note: These tiers are for educational understanding only. Not trading recommendations.</em></p>
 <table>
 <thead>
 <tr>
 <th>Score</th>
 <th>Quality</th>
 <th>Symbol</th>
-<th>Typical Win Rate</th>
-<th>Common Approach</th>
+<th>Confluence</th>
+<th>Educational Example Approach</th>
 </tr>
 </thead>
 <tbody>
@@ -2005,61 +2144,107 @@
 <td><strong>80-100</strong></td>
 <td>⭐⭐⭐ Elite</td>
 <td>Multiple factors aligned</td>
-<td>~70-80%</td>
-<td>Taken immediately (after verification)</td>
+<td>Highest</td>
+<td>Often considered first (educational example)</td>
 </tr>
 <tr>
 <td><strong>60-79</strong></td>
 <td>⭐⭐ Premium</td>
 <td>Strong setup</td>
-<td>~60-70%</td>
-<td>Taken with normal risk</td>
+<td>Strong</td>
+<td>Standard evaluation approach (illustrative)</td>
 </tr>
 <tr>
 <td><strong>40-59</strong></td>
 <td>⭐ Standard</td>
 <td>Basic setup</td>
-<td>~50-60%</td>
-<td>Selective (only if matches bias)</td>
+<td>Acceptable</td>
+<td>Selective analysis (educational example)</td>
 </tr>
 <tr>
 <td><strong>0-39</strong></td>
 <td>Weak</td>
 <td>Poor confluence</td>
-<td>&lt;50%</td>
+<td>Low</td>
 <td>Typically skipped</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="common-mistakes-fixes">Common Mistakes &amp; Fixes<a class="headerlink" href="#common-mistakes-fixes" title="Permanent link">&para;</a></h2>
+
+<div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
+  <div class="sp-callout__title">🔍 Screener Troubleshooting Flowchart</div>
+  <p style="margin-bottom: 1.5rem;">Follow this diagnostic flow if Augury Grid isn't working:</p>
+  <div class="mermaid" role="img" aria-label="Screener troubleshooting decision tree">
+graph TD
+    Problem([🚨 Grid Not Showing<br/>or Not Updating]) --> Check1{Grid table<br/>visible on<br/>chart?}
+
+    Check1 -->|No| Fix1[❌ Indicator not added<br/>Add Augury Grid v1.0<br/>from indicators menu]
+    Check1 -->|Yes| Check2{Symbols showing<br/>'—' or 'N/A'?}
+
+    Check2 -->|Yes| Fix2[📋 Wrong ticker format<br/>Use EXCHANGE:SYMBOL format<br/>Example: BINANCE:BTCUSDT]
+    Check2 -->|No| Check3{Grid updating<br/>with price<br/>changes?}
+
+    Check3 -->|No| Fix3[🔄 Refresh chart<br/>F5 or reload page<br/>Check internet connection]
+    Check3 -->|Yes| Check4{Signals showing<br/>for all symbols?}
+
+    Check4 -->|No - Some missing| Fix4[⏳ Wait for bar close<br/>Signals appear only<br/>when MACD crosses]
+    Check4 -->|Yes| Check5{Quality scores<br/>showing 0-100?}
+
+    Check5 -->|No| Fix5[⚙️ Settings issue<br/>Check indicator settings<br/>Reset to defaults if needed]
+    Check5 -->|Yes| Check6{Symbols you want<br/>configured in<br/>settings?}
+
+    Check6 -->|No| Fix6[📝 Add symbols<br/>Settings → Symbol Configuration<br/>Add your watchlist]
+    Check6 -->|Yes| Working[✅ Grid Working!<br/>Scan for 4/5 or 5/5<br/>quality signals]
+
+    style Problem fill:#f44336,color:#fff,stroke:#d32f2f,stroke-width:4px
+    style Check1 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
+    style Check2 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
+    style Check3 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
+    style Check4 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
+    style Check5 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
+    style Check6 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
+    style Fix1 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
+    style Fix2 fill:#ff5722,color:#fff,stroke:#e64a19,stroke-width:3px
+    style Fix3 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
+    style Fix4 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
+    style Fix5 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
+    style Fix6 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
+    style Working fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:4px
+  </div>
+  <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.85;">
+    <strong>Most Common Issue:</strong> Wrong ticker format. Always use EXCHANGE:SYMBOL format (e.g., BINANCE:BTCUSDT, not just BTCUSDT). Right-click any symbol → Copy Symbol to get the correct format.
+  </p>
+</div>
+
 <h3 id="mistake-1-wrong-ticker-format">Mistake #1: Wrong Ticker Format<a class="headerlink" href="#mistake-1-wrong-ticker-format" title="Permanent link">&para;</a></h3>
 <p><strong>❌ Problem:</strong> Symbols show no data or "N/A"</p>
 <p><strong>✅ Fix:</strong>
 - The exact TradingView format is commonly used: <code>BINANCE:BTCUSDT</code> not <code>BTC</code> or <code>BTCUSD</code>
 - The exchange prefix is commonly included
-- Ticker can be tested on chart first before adding to Grid</p>
+- Ticker Test on chart first before adding to Grid</p>
 <hr />
 <h3 id="mistake-2-trading-every-signal">Mistake #2: Trading Every Signal<a class="headerlink" href="#mistake-2-trading-every-signal" title="Permanent link">&para;</a></h3>
 <p><strong>❌ Problem:</strong> Taking too many trades, overtrading</p>
 <p><strong>✅ Fix:</strong>
-- Focus can be placed on ⭐⭐⭐ Elite and ⭐⭐ Premium signals only
-- Min Score can be set to 60+ in settings
+- Focus Place on ⭐⭐⭐ Elite and ⭐⭐ Premium signals only
+- Min Score Set to 60+ in settings
 - Chart verification commonly occurs before entering</p>
 <hr />
 <h3 id="mistake-3-chasing-old-signals">Mistake #3: Chasing Old Signals<a class="headerlink" href="#mistake-3-chasing-old-signals" title="Permanent link">&para;</a></h3>
 <p><strong>❌ Problem:</strong> Entering when AGE &gt; 15 bars</p>
 <p><strong>✅ Fix:</strong>
-- AGE column can be checked
+- AGE column Check
 - If &gt;15 bars, signal is likely stale
-- Fresh signals (0-10 bars) can be looked for instead</p>
+- Fresh signals (0-10 bars) Look for instead</p>
 <hr />
 <h3 id="mistake-4-ignoring-pl-column">Mistake #4: Ignoring P&amp;L Column<a class="headerlink" href="#mistake-4-ignoring-pl-column" title="Permanent link">&para;</a></h3>
 <p><strong>❌ Problem:</strong> Not checking if signal is working</p>
 <p><strong>✅ Fix:</strong>
-- If P&amp;L shows -5% and age is high, signal failed—it can be skipped
+- If P&amp;L shows -5% and age is high, signal failed—it Skip it
 - If P&amp;L is green and signal is fresh, it's confirming—good sign
-- P&amp;L can be used to validate signal quality</p>
+- P&amp;L Use to validate signal quality</p>
 <hr />
 <h3 id="mistake-5-not-verifying-context">Mistake #5: Not Verifying Context<a class="headerlink" href="#mistake-5-not-verifying-context" title="Permanent link">&para;</a></h3>
 <p><strong>❌ Problem:</strong> Blindly trading Grid signals without chart confirmation</p>
@@ -2071,20 +2256,20 @@
 <hr />
 <h2 id="advanced-tips">Advanced Tips<a class="headerlink" href="#advanced-tips" title="Permanent link">&para;</a></h2>
 <h3 id="tip-1-mix-timeframes">Tip #1: Mix Timeframes<a class="headerlink" href="#tip-1-mix-timeframes" title="Permanent link">&para;</a></h3>
-<p>Different timeframes can be set for each symbol:
+<p>Set different timeframes for each symbol:
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Symbol 1-2 (crypto): 1H
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Symbol 3-4 (stocks): 4H
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Symbol 5-6 (scalp): 15m
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>Symbol 7-8 (swing): Daily
 </span></code></pre></div>
-<strong>Why:</strong> Multiple horizons can be scanned simultaneously</p>
+<strong>Why:</strong> Scan multiple horizons simultaneously</p>
 <hr />
 <h3 id="tip-2-scan-same-ticker-multiple-timeframes">Tip #2: Scan Same Ticker, Multiple Timeframes<a class="headerlink" href="#tip-2-scan-same-ticker-multiple-timeframes" title="Permanent link">&para;</a></h3>
 <p><div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Symbol 1: SPY 15m (scalps)
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Symbol 2: SPY 1H (day trades)
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>Symbol 3: SPY 4H (swings)
 </span></code></pre></div>
-<strong>Why:</strong> Multi-timeframe confluence can be seen for one asset</p>
+<strong>Why:</strong> Multi-timeframe confluence See for one asset</p>
 <hr />
 <h3 id="tip-3-use-2-grid-instances">Tip #3: Use 2 Grid Instances<a class="headerlink" href="#tip-3-use-2-grid-instances" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2092,16 +2277,16 @@
 <li><strong>Grid 2:</strong> 8 stock tickers (4H)</li>
 <li><strong>Total:</strong> 16 symbols monitored</li>
 </ul>
-<p><strong>How:</strong> Augury Grid can be added twice to same chart</p>
+<p><strong>How:</strong> Augury Grid Add twice to same chart</p>
 <hr />
 <h3 id="tip-4-track-performance-by-tier">Tip #4: Track Performance by Tier<a class="headerlink" href="#tip-4-track-performance-by-tier" title="Permanent link">&para;</a></h3>
-<p>After 20+ trades, win rate can be calculated:
+<p>After 20+ trades, win rate Calculate:
 - How many Elite signals won?
 - How many Premium signals won?
-- Min Score filter can be adjusted based on results</p>
+- Adjust the Min Score filter based on results</p>
 <hr />
 <h2 id="workflow-example-real-scenario">Workflow Example (Real Scenario)<a class="headerlink" href="#workflow-example-real-scenario" title="Permanent link">&para;</a></h2>
-<p><strong>8:00 AM:</strong> Grid can be checked</p>
+<p><strong>8:00 AM:</strong> Grid Check</p>
 <p>Grid shows:
 <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>AAPL │ BUY │ 91 ⭐⭐⭐ │ $175.20 │ $177.80 │ 1 │ +0.1%
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>TSLA │ SELL │ 43 ⭐ │ $245.90 │ $242.10 │ 18 │ -2.3%
@@ -2111,20 +2296,20 @@
 - <strong>AAPL:</strong> Elite signal (91), fresh (1 bar), already working (+0.1%) ✅
 - <strong>TSLA:</strong> Standard signal (43), stale (18 bars), losing (-2.3%) ❌ Can be skipped
 - <strong>BTC:</strong> Premium signal (78), moderate age (5 bars), working (+0.8%) ✅</p>
-<p><strong>Action:</strong> Focus can be placed on <strong>AAPL</strong> and <strong>BTC</strong></p>
+<p><strong>Action:</strong> Focus Place on <strong>AAPL</strong> and <strong>BTC</strong></p>
 <hr />
-<p><strong>8:05 AM:</strong> AAPL Chart can be loaded
+<p><strong>8:05 AM:</strong> AAPL Load the chart
 - At Janus support: ✅
 - Volume spike visible: ✅
 - No resistance overhead: ✅
 - <strong>Decision:</strong> Long AAPL consideration at $175.50</p>
 <hr />
-<p><strong>8:10 AM:</strong> BTC Chart can be loaded
+<p><strong>8:10 AM:</strong> BTC Load the chart
 - Breaking out of consolidation: ✅
 - Higher timeframe aligned: ✅
 - <strong>Decision:</strong> Long BTC consideration at $64,300</p>
 <hr />
-<p><strong>Throughout day:</strong> P&amp;L column can be monitored to track trades</p>
+<p><strong>Throughout day:</strong> Monitor the P&amp;L column to track trades</p>
 <hr />
 <p><strong>4:00 PM:</strong> Results
 - AAPL hit TP1 at $177.80 (+1.3%)
@@ -2134,30 +2319,44 @@
 <h3 id="without-augury-grid">Without Augury Grid:<a class="headerlink" href="#without-augury-grid" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Manual flipping through 8-20 charts is required</li>
-<li>Signals can be missed while looking at other symbols</li>
+<li>You might miss signals while looking at other symbols</li>
 <li>No systematic quality scoring available</li>
 <li>Multiple setups are hard to track</li>
 </ul>
 <h3 id="with-augury-grid">With Augury Grid:<a class="headerlink" href="#with-augury-grid" title="Permanent link">&para;</a></h3>
 <ul>
-<li>All 8 symbols can be seen in one glance (10 seconds)</li>
+<li>All 8 symbols See in one glance (10 seconds)</li>
 <li>Quality scores show what's worth investigating</li>
-<li>Performance can be tracked in real-time</li>
-<li>Focus can be placed on best opportunities</li>
+<li>Track performance in real-time</li>
+<li>Focus Place on best opportunities</li>
 </ul>
-<p><strong>Bottom line:</strong> 30+ minutes per scan can be saved, more opportunities can be caught, only the best setups are traded.</p>
+<p><strong>Bottom line:</strong> 30+ minutes per scan saved, catch more opportunities, only the best setups are traded.</p>
 <hr />
 <h2 id="common-questions">Common Questions<a class="headerlink" href="#common-questions" title="Permanent link">&para;</a></h2>
 <p><strong>Q: Can I add more than 8 symbols?</strong>
-<strong>A:</strong> Not in one Grid (performance limit). But 2 Grid instances can be added = 16 symbols total.</p>
+<strong>A:</strong> Not in one Grid (performance limit). But 2 Grid instances Add = 16 symbols total.</p>
 <p><strong>Q: What if a symbol shows no data?</strong>
-<strong>A:</strong> The following can be checked: (1) Ticker format correct? (2) Exchange prefix included? (3) Available on TradingView plan?</p>
+<strong>A:</strong> The following Check: (1) Ticker format correct? (2) Exchange prefix included? (3) Available on TradingView plan?</p>
 <p><strong>Q: Should I trade every Elite signal?</strong>
-<strong>A:</strong> No. Elite = high quality potential, but context, levels, and trading plan can be verified. No system is 100%.</p>
+<strong>A:</strong> No. Elite = high quality potential, but context, levels, and trading plan verify. No system is 100%.</p>
 <p><strong>Q: Can I get alerts from the Grid?</strong>
-<strong>A:</strong> No (table indicators can't create alerts). Workaround: When Elite signal is seen, manual alert can be set on that symbol's chart.</p>
+<strong>A:</strong> No (table indicators cannot create alerts). Workaround: When Elite signal is seen, set a manual alert on that symbol's chart.</p>
 <p><strong>Q: How often does it update?</strong>
 <strong>A:</strong> Every bar close on configured timeframes. If Symbol 1 is set to 15m, it updates every 15 minutes.</p>
+<hr />
+<div class="sp-callout sp-callout--summary">
+  <div class="sp-callout__title">What You've Learned</div>
+  <ul>
+    <li><strong>Multi-Symbol Scanning Setup:</strong> Configure Augury Grid to simultaneously monitor up to 40 symbols on a single chart by entering ticker symbols in indicator settings (Symbol 1 through Symbol 40)</li>
+    <li><strong>Elite Signal Identification:</strong> Recognize high-probability setups when grid cells display "Elite" designation - indicating multiple TD Sequential factors aligning (count nearing 9, momentum confirming, price at key level)</li>
+    <li><strong>Timeframe Synchronization:</strong> All symbols in the grid use the same timeframe as your active chart - switch chart timeframe to scan different intervals simultaneously across all symbols</li>
+    <li><strong>Signal Interpretation:</strong> Grid shows Green 9 (oversold exhaustion), Red 9 (overbought exhaustion), count progress (1-8), and neutral status - "Elite" signals require additional context verification before trading</li>
+    <li><strong>Workflow Integration:</strong> Use Grid for opportunity discovery (scan multiple symbols), then switch to individual charts for detailed analysis with Pentarch, Janus Atlas, and other indicators before execution</li>
+    <li><strong>Layout Optimization:</strong> Choose grid layouts (5×8, 6×6, 8×5, 10×4) based on number of symbols monitored and available screen space - Grid adapts to show all configured symbols</li>
+    <li><strong>Limitation Awareness:</strong> Grid cannot create TradingView alerts (table indicators don't support alerts) - workaround is manual alerts set on individual symbol charts when Grid shows Elite signals</li>
+  </ul>
+  <p><strong>Next Steps:</strong> Review <a href="../augury-grid-v10/">Full Augury Grid Documentation</a> for advanced settings and scoring details, or explore <a href="../how-to-alerts/">Alert Setup Guide</a> for individual symbol notification configuration.</p>
+</div>
 <hr />
 <h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
 <p>✅ <strong>Learning achieved:</strong> How to scan 8 symbols simultaneously with Augury Grid</p>
@@ -2175,7 +2374,11 @@
           
   <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 
+
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+
+
         </div>
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
@@ -2237,20 +2440,65 @@
     
     
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.sections", "navigation.path", "content.code.copy", "search.suggest", "search.highlight", "content.tabs.link", "content.tooltips", "content.action.edit"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+
+
     
     
       <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+
+
       
         <script src="../js/timeago.min.js"></script>
+
+
       
         <script src="../js/timeago_mkdocs_material.js"></script>
+
+
       
         <script src="../assets/brand.js"></script>
+
+
       
         <script src="../assets/sp-bg.js"></script>
+
+
       
         <script src="../assets/keyword-highlighter.js"></script>
+
+
       
     
-  </body>
+      <script src="../assets/wheel-diagnostic.js"></script>
+      <script src="../assets/enhancements.js"></script>
+    <script src="assets/remove-tooltips.js"></script>
+    <script src="assets/bottom-sheet-nav.js"></script>
+      <script src="../assets/sticky-toc-scroll.js"></script>
+    <script src="../assets/components.js"></script>
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - JS
+       To disable: comment out this entire block
+       ======================================== -->
+  <script src="../js/feedback-system.js"></script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - JS -->
+
+  <!-- Meta-Learning & Accessibility Features -->
+  <script src="../js/keyboard-navigation.js"></script>
+  <script src="../js/text-sizing.js"></script>
+  <script src="../js/knowledge-checks.js"></script>
+
+      <!-- SignalPilot Chatbot -->
+    <script src="/js/chatbot.js"></script>
+  
+
+
+
+
+
+
+
+
+  <!-- Custom Bottom Sheet Navigation Script -->
+  <script src="../assets/custom-bottom-sheet.js?v7"></script>
+</body>
 </html>

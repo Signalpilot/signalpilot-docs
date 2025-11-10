@@ -6,6 +6,11 @@
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <meta name="mobile-web-app-capable" content="yes">
+      <meta name="theme-color" content="#667eea">
+      <meta name="format-detection" content="telephone=no">
       
         <meta name="description" content="Non-repainting, alert-ready TradingView indicators for any market/timeframe.">
       
@@ -20,7 +25,16 @@
         <link rel="next" href="../ref-glossary/">
       
       
-      <link rel="icon" href="../assets/watermark-monogram-color-transparent.png">
+      <!-- Favicons -->
+      <link rel="icon" type="image/x-icon" href="../favicon.ico">
+      <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
+      <link rel="icon" type="image/png" sizes="512x512" href="../favicon-512x512.png">
+
+      <!-- PWA Manifest -->
+      <link rel="manifest" href="../manifest.json">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
     
     
@@ -47,6 +61,7 @@
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -54,6 +69,9 @@
       <link rel="stylesheet" href="../css/timeago.css">
     
       <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../css/responsive-optimization.css">
+      <link rel="stylesheet" href="../css/content-overflow-fix.css">
+      <link rel="stylesheet" href="../css/mobile-layout-fixes.css">
     
       <link rel="stylesheet" href="../assets/brand.css">
     
@@ -64,6 +82,8 @@
       <link rel="stylesheet" href="../assets/interactive-code.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+
+
     
       
   
@@ -73,8 +93,12 @@
   
 
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-NZ05GV72K0"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-NZ05GV72K0",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-NZ05GV72K0",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+
   
     <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+
+
   
 
     
@@ -85,7 +109,72 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
 
-  </head>
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - CSS
+       To disable: comment out this entire block
+       ======================================== -->
+  <link rel="stylesheet" href="../css/feedback.css">
+  <link rel="stylesheet" href="../css/visual-enhancements.css">
+
+  <!-- Mermaid.js for diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'dark',
+      themeVariables: {
+        primaryColor: '#00bcd4',
+        primaryTextColor: '#fff',
+        primaryBorderColor: '#0097a7',
+        lineColor: '#00bcd4',
+        secondaryColor: '#ff5722',
+        tertiaryColor: '#4caf50',
+        fontSize: '18px',
+        fontFamily: 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+      },
+      flowchart: {
+        htmlLabels: true,
+        fontSize: 18
+      },
+      fontSize: 18
+    });
+  </script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - CSS -->
+
+  <!-- Meta-Learning & Accessibility Enhancements -->
+  <link rel="stylesheet" href="../css/skill-badges.css">
+  <link rel="stylesheet" href="../css/meta-learning.css">
+
+      <!-- SignalPilot Chatbot CSS -->
+    <link rel="stylesheet" href="/css/chatbot.css">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.signalpilot.io/">
+    <meta property="og:title" content="Signal Pilot Documentation">
+    <meta property="og:description" content="Professional trading indicators for TradingView. Complete guides for Pentarch, Janus Atlas, Omnideck, and more.">
+    <meta property="og:image" content="https://docs.signalpilot.io/assets/images/preview.png">
+    <meta property="og:site_name" content="Signal Pilot Docs">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.signalpilot.io/">
+    <meta name="twitter:title" content="Signal Pilot Documentation">
+    <meta name="twitter:description" content="Professional trading indicators for TradingView. Complete guides for Pentarch, Janus Atlas, Omnideck, and more.">
+    <meta name="twitter:image" content="https://docs.signalpilot.io/assets/images/preview.png">
+
+
+  
+
+
+
+
+
+
+
+  <!-- Custom Bottom Sheet Navigation -->
+  <link rel="stylesheet" href="../css/hide-mkdocs-sidebar.css?v7">
+  <link rel="stylesheet" href="../css/custom-bottom-sheet.css?v7">
+</head>
   
   
     
@@ -128,7 +217,6 @@
         <a href="https://signalpilot.io/#pricing">Pricing</a>
         <a href="https://signalpilot.io/#faq">FAQ</a>
       </nav>
-      <a class="sp-cta" href="https://signalpilot.io/#pricing">Get the Suite</a>
     </div>
   </div>
 
@@ -141,7 +229,6 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="Signal Pilot Docs" class="md-header__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
       
-  <img src="../assets/watermark-monogram-color-transparent.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -193,6 +280,8 @@
     
     
       <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+
+
     
     
     
@@ -276,7 +365,6 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Signal Pilot Docs" class="md-nav__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
       
-  <img src="../assets/watermark-monogram-color-transparent.png" alt="logo">
 
     </a>
     Signal Pilot Docs
@@ -389,27 +477,6 @@
   
   <span class="md-ellipsis">
     Prerequisites
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/start-which-indicator.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Which Indicator Should I Start?
   </span>
   
 
@@ -709,7 +776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../minimal-flow-v10/" class="md-nav__link">
+      <a href="../volume-oracle-v10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -950,27 +1017,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/troubleshooting-installation.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Installation Troubleshooting
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1030,27 +1076,6 @@
   
   <span class="md-ellipsis">
     FAQ
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/about-system-requirements.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    System Requirements
   </span>
   
 
@@ -1156,7 +1181,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../_product-cards/" class="md-nav__link">
+      <a href="../_settings-alerts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1214,7 +1239,7 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1.1rem; height: 1.1rem; fill: currentColor; opacity: 0.7;">
         <path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/>
       </svg>
-      <span style="opacity: 0.85;">Updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 10, 2025 01:41:10 UTC"><span class="timeago" datetime="2025-11-10T01:41:10+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 10, 2025 01:41:10 UTC">2025-11-10</span></span>
+      <span style="opacity: 0.85;">Updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="October 31, 2025 01:38:02 UTC"><span class="timeago" datetime="2025-10-31T01:38:02+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="October 31, 2025 01:38:02 UTC">2025-10-31</span></span>
     </span>
   
 
@@ -1232,6 +1257,40 @@
 
 <!-- Render the page content -->
 <h1 id="non-repainting-policy">Non-Repainting Policy<a class="headerlink" href="#non-repainting-policy" title="Permanent link">&para;</a></h1>
+
+<h2 id="why-this-matters">🎯 Why This Matters (For Traders)<a class="headerlink" href="#why-this-matters" title="Permanent link">&para;</a></h2>
+<p>Before diving into technical details, here's what non-repainting means in practical terms:</p>
+
+<div class="admonition info">
+<p class="admonition-title">What is Repainting?</p>
+<p>Some indicators change their past signals after new bars form. For example, an indicator might show a "buy" signal on an older candle when you look at it today, but that signal wasn't actually there yesterday when you were trading. This is called "repainting" and it creates misleading backtests.</p>
+</div>
+
+<div class="admonition success">
+<p class="admonition-title">Signal Pilot's Non-Repaint Guarantee</p>
+<p>Signal Pilot indicators are audited to ensure that once a signal appears on a closed candle, it stays there permanently. What you see on historical candles is exactly what appeared in real-time. This allows for:</p>
+<ul>
+<li>Accurate backtesting and performance evaluation</li>
+<li>Reliable alert configuration</li>
+<li>Confidence that historical signals represent actual market conditions</li>
+<li>No false backtesting results</li>
+</ul>
+</div>
+
+<h3 id="how-to-verify">How Can You Verify This?</h3>
+<p>Common methods traders use to verify non-repainting behavior:</p>
+<ol>
+<li><strong>Replay mode test</strong>: Use TradingView's bar replay feature and compare signals as bars form vs. after they're finished</li>
+<li><strong>Screenshot comparison</strong>: Take screenshots of signals as they form, then compare to the same candles days later</li>
+<li><strong>Alert logs</strong>: Compare alert timestamps to when signals actually appear on charts</li>
+<li><strong>Code audit</strong>: Review the technical implementation (see sections below)</li>
+</ol>
+
+<div class="admonition note">
+<p class="admonition-title">Educational Purpose</p>
+<p>The technical sections below provide code-level verification for developers and advanced users. This transparency allows independent verification of non-repainting claims.</p>
+</div>
+
 <p>SignalPilot is designed to be <strong>deterministic on candle close</strong>.</p>
 <ul>
 <li><strong>Close-confirmed signals</strong> — Alerts fire only when <code>barstate.isconfirmed</code>.</li>
@@ -1240,14 +1299,32 @@
 <li><strong>Anchoring</strong> — Labels/markers use <code>x=bar_index</code> and <code>yloc.price</code> to avoid wobble.</li>
 </ul>
 <p>What this means: <strong>No future-bar lookahead.</strong> Backtests and alerts match live behavior.</p>
-                
+<hr />
+<div class="sp-callout sp-callout--summary">
+  <div class="sp-callout__title">What You've Learned</div>
+  <ul>
+    <li><strong>Non-Repainting Defined:</strong> Signals that confirm at bar close and never change retroactively - what you see on historical candles is exactly what appeared in real-time when those bars formed</li>
+    <li><strong>Why It Matters:</strong> Non-repainting ensures accurate backtesting, reliable alert configuration, and confidence that historical performance represents actual market conditions - prevents misleading backtest results from changing signals</li>
+    <li><strong>Signal Pilot Guarantee:</strong> All indicators are audited to ensure close-confirmed signals using <code>barstate.isconfirmed</code>, no future-bar lookahead, and anchored visual elements that remain fixed after confirmation</li>
+    <li><strong>Verification Methods:</strong> You can verify non-repainting behavior through TradingView bar replay testing, screenshot comparisons over time, alert log reviews, or technical code audits</li>
+    <li><strong>Technical Implementation:</strong> Signals use close-confirmed triggers, HTF data pulled with <code>lookahead_off</code> setting, pivots/divergences drawn only after right-side confirmation, and anchored labels using <code>bar_index</code> coordinates</li>
+    <li><strong>Practical Impact:</strong> Deterministic behavior on candle close means backtests accurately reflect live trading performance, alerts fire at predictable times, and historical analysis provides reliable strategy development data</li>
+    <li><strong>Transparency Commitment:</strong> Technical implementation details provided for independent verification by developers and advanced users who want to audit non-repainting claims</li>
+  </ul>
+  <p><strong>Next Steps:</strong> Review <a href="../ref-best-practices/">Best Practices Guide</a> for optimal indicator usage, or explore <a href="../ref-troubleshooting/">Troubleshooting Guide</a> if you encounter unexpected behavior.</p>
+</div>
+
               </article>
             </div>
           
           
   <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 
+
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+
+
         </div>
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
@@ -1309,20 +1386,64 @@
     
     
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.sections", "navigation.path", "content.code.copy", "search.suggest", "search.highlight", "content.tabs.link", "content.tooltips", "content.action.edit"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+
+
     
     
       <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+
+
       
         <script src="../js/timeago.min.js"></script>
+
+
       
         <script src="../js/timeago_mkdocs_material.js"></script>
+
+
       
         <script src="../assets/brand.js"></script>
+
+
       
         <script src="../assets/sp-bg.js"></script>
+
+
       
         <script src="../assets/keyword-highlighter.js"></script>
+
+
       
     
-  </body>
+      <script src="../assets/wheel-diagnostic.js"></script>
+      <script src="../assets/enhancements.js"></script>
+    <script src="assets/remove-tooltips.js"></script>
+    <script src="assets/bottom-sheet-nav.js"></script>
+      <script src="../assets/sticky-toc-scroll.js"></script>
+    <script src="../assets/components.js"></script>
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - JS
+       To disable: comment out this entire block
+       ======================================== -->
+  <script src="../js/feedback-system.js"></script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - JS -->
+
+  <!-- Meta-Learning & Accessibility Features -->
+  <script src="../js/keyboard-navigation.js"></script>
+  <script src="../js/text-sizing.js"></script>
+  <script src="../js/knowledge-checks.js"></script>
+
+      <!-- SignalPilot Chatbot -->
+    <script src="/js/chatbot.js"></script>
+  
+
+
+
+
+
+
+
+  <!-- Custom Bottom Sheet Navigation Script -->
+  <script src="../assets/custom-bottom-sheet.js?v7"></script>
+</body>
 </html>

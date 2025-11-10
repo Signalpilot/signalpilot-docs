@@ -1,4 +1,9 @@
+# Signal Pilot Docs - robots.txt
 User-agent: *
 Allow: /
 
+# Sitemap location
 Sitemap: https://docs.signalpilot.io/sitemap.xml
+
+# Disallow admin/internal directories
+Disallow: /_code-examples-guide/

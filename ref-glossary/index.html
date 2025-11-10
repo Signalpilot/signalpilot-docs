@@ -6,6 +6,11 @@
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <meta name="mobile-web-app-capable" content="yes">
+      <meta name="theme-color" content="#667eea">
+      <meta name="format-detection" content="telephone=no">
       
         <meta name="description" content="Non-repainting, alert-ready TradingView indicators for any market/timeframe.">
       
@@ -20,7 +25,16 @@
         <link rel="next" href="../ref-troubleshooting/">
       
       
-      <link rel="icon" href="../assets/watermark-monogram-color-transparent.png">
+      <!-- Favicons -->
+      <link rel="icon" type="image/x-icon" href="../favicon.ico">
+      <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
+      <link rel="icon" type="image/png" sizes="512x512" href="../favicon-512x512.png">
+
+      <!-- PWA Manifest -->
+      <link rel="manifest" href="../manifest.json">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
     
     
@@ -47,6 +61,7 @@
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -54,6 +69,9 @@
       <link rel="stylesheet" href="../css/timeago.css">
     
       <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../css/responsive-optimization.css">
+      <link rel="stylesheet" href="../css/content-overflow-fix.css">
+      <link rel="stylesheet" href="../css/mobile-layout-fixes.css">
     
       <link rel="stylesheet" href="../assets/brand.css">
     
@@ -64,6 +82,8 @@
       <link rel="stylesheet" href="../assets/interactive-code.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+
+
     
       
   
@@ -73,8 +93,12 @@
   
 
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-NZ05GV72K0"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-NZ05GV72K0",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-NZ05GV72K0",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+
   
     <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+
+
   
 
     
@@ -85,7 +109,72 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
 
-  </head>
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - CSS
+       To disable: comment out this entire block
+       ======================================== -->
+  <link rel="stylesheet" href="../css/feedback.css">
+  <link rel="stylesheet" href="../css/visual-enhancements.css">
+
+  <!-- Mermaid.js for diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'dark',
+      themeVariables: {
+        primaryColor: '#00bcd4',
+        primaryTextColor: '#fff',
+        primaryBorderColor: '#0097a7',
+        lineColor: '#00bcd4',
+        secondaryColor: '#ff5722',
+        tertiaryColor: '#4caf50',
+        fontSize: '18px',
+        fontFamily: 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+      },
+      flowchart: {
+        htmlLabels: true,
+        fontSize: 18
+      },
+      fontSize: 18
+    });
+  </script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - CSS -->
+
+  <!-- Meta-Learning & Accessibility Enhancements -->
+  <link rel="stylesheet" href="../css/skill-badges.css">
+  <link rel="stylesheet" href="../css/meta-learning.css">
+
+      <!-- SignalPilot Chatbot CSS -->
+    <link rel="stylesheet" href="/css/chatbot.css">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.signalpilot.io/">
+    <meta property="og:title" content="Signal Pilot Documentation">
+    <meta property="og:description" content="Professional trading indicators for TradingView. Complete guides for Pentarch, Janus Atlas, Omnideck, and more.">
+    <meta property="og:image" content="https://docs.signalpilot.io/assets/images/preview.png">
+    <meta property="og:site_name" content="Signal Pilot Docs">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.signalpilot.io/">
+    <meta name="twitter:title" content="Signal Pilot Documentation">
+    <meta name="twitter:description" content="Professional trading indicators for TradingView. Complete guides for Pentarch, Janus Atlas, Omnideck, and more.">
+    <meta name="twitter:image" content="https://docs.signalpilot.io/assets/images/preview.png">
+
+
+  
+
+
+
+
+
+
+
+  <!-- Custom Bottom Sheet Navigation -->
+  <link rel="stylesheet" href="../css/hide-mkdocs-sidebar.css?v7">
+  <link rel="stylesheet" href="../css/custom-bottom-sheet.css?v7">
+</head>
   
   
     
@@ -128,7 +217,6 @@
         <a href="https://signalpilot.io/#pricing">Pricing</a>
         <a href="https://signalpilot.io/#faq">FAQ</a>
       </nav>
-      <a class="sp-cta" href="https://signalpilot.io/#pricing">Get the Suite</a>
     </div>
   </div>
 
@@ -141,7 +229,6 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="Signal Pilot Docs" class="md-header__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
       
-  <img src="../assets/watermark-monogram-color-transparent.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -193,6 +280,8 @@
     
     
       <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+
+
     
     
     
@@ -276,7 +365,6 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Signal Pilot Docs" class="md-nav__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
       
-  <img src="../assets/watermark-monogram-color-transparent.png" alt="logo">
 
     </a>
     Signal Pilot Docs
@@ -389,27 +477,6 @@
   
   <span class="md-ellipsis">
     Prerequisites
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/start-which-indicator.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Which Indicator Should I Start?
   </span>
   
 
@@ -709,7 +776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../minimal-flow-v10/" class="md-nav__link">
+      <a href="../volume-oracle-v10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1550,27 +1617,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/troubleshooting-installation.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Installation Troubleshooting
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1630,27 +1676,6 @@
   
   <span class="md-ellipsis">
     FAQ
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/about-system-requirements.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    System Requirements
   </span>
   
 
@@ -1756,7 +1781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../_product-cards/" class="md-nav__link">
+      <a href="../_settings-alerts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2392,7 +2417,7 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1.1rem; height: 1.1rem; fill: currentColor; opacity: 0.7;">
         <path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/>
       </svg>
-      <span style="opacity: 0.85;">Updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 10, 2025 01:41:10 UTC"><span class="timeago" datetime="2025-11-10T01:41:10+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 10, 2025 01:41:10 UTC">2025-11-10</span></span>
+      <span style="opacity: 0.85;">Updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="October 31, 2025 01:38:02 UTC"><span class="timeago" datetime="2025-10-31T01:38:02+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="October 31, 2025 01:38:02 UTC">2025-10-31</span></span>
     </span>
   
 
@@ -2444,19 +2469,19 @@
 <p><strong>Type:</strong> Bearish reversal warning
 <strong>Color:</strong> Red 🔴
 <strong>Meaning:</strong> Indicates late-cycle exhaustion conditions
-<strong>Common Usage:</strong> Often interpreted as exit signal for longs or stop tightening trigger
+<strong>Educational Context:</strong> In educational materials, often shown as a potential consideration point for long positions or stop adjustment analysis
 <strong>Typical Context:</strong> Appears during late-cycle exhaustion after extended uptrends
-<strong>Risk Management:</strong> Associated with elevated risk for long positions</p>
-<p><strong>Usage Note:</strong> Frequently used as exit signal for longs. Many traders take profits or move stops to protect gains.</p>
+<strong>Risk Management Note:</strong> Associated with elevated risk conditions for long positions in educational examples</p>
+<p><strong>Educational Note:</strong> In trading education, CAP signals are commonly discussed as exit consideration points for long positions. Educational examples often illustrate profit-taking or stop adjustment concepts at this signal.</p>
 <hr />
 <h3 id="bdn-breakdown">BDN (Breakdown)<a class="headerlink" href="#bdn-breakdown" title="Permanent link">&para;</a></h3>
 <p><strong>Type:</strong> Bearish reversal indication
 <strong>Color:</strong> Black ⚫
 <strong>Meaning:</strong> Indicates bearish breakdown conditions
-<strong>Common Usage:</strong> Often interpreted as long exit signal; potential short entry for advanced traders
+<strong>Educational Context:</strong> In educational materials, often shown as a long exit consideration or advanced short analysis point
 <strong>Typical Context:</strong> Indicates bearish reversal after CAP or standalone at resistance
-<strong>Risk Management:</strong> Common short stop placement is above BDN candle high</p>
-<p><strong>Usage Note:</strong> Frequently used as short entry signal or definitive long exit indication.</p>
+<strong>Risk Management Note:</strong> Educational examples commonly show stop placement concepts above BDN candle high for short positions</p>
+<p><strong>Educational Note:</strong> In trading education, BDN signals are commonly discussed as potential short consideration points or definitive long exit analysis. These are illustrative educational concepts only.</p>
 <hr />
 <h3 id="pilot-line-pl">Pilot Line (PL)<a class="headerlink" href="#pilot-line-pl" title="Permanent link">&para;</a></h3>
 <p><strong>Type:</strong> Trend indicator / reference line
@@ -2635,14 +2660,14 @@
 <p><strong>Definition:</strong> Regime filter indicating long trades are favorable
 <strong>Criteria:</strong> Trend-qualified AND not in squeeze
 <strong>Visual:</strong> Green background or indicator state
-<strong>Usage:</strong> Only take IGN signals when LOK active
+<strong>Common filtering approach:</strong> Many traders focus on IGN signals during LOK conditions
 <strong>Override:</strong> Experienced traders may trade against filter</p>
 <hr />
 <h3 id="sok-short-ok">SOK (Short OK)<a class="headerlink" href="#sok-short-ok" title="Permanent link">&para;</a></h3>
 <p><strong>Definition:</strong> Regime filter indicating short trades are favorable
 <strong>Criteria:</strong> Trend-qualified AND not in squeeze
 <strong>Visual:</strong> Red background or indicator state
-<strong>Usage:</strong> Only take BDN signals when SOK active
+<strong>Common filtering approach:</strong> Many traders focus on BDN signals during SOK conditions
 <strong>Override:</strong> Experienced traders may trade against filter</p>
 <hr />
 <h3 id="squeeze">Squeeze<a class="headerlink" href="#squeeze" title="Permanent link">&para;</a></h3>
@@ -2678,7 +2703,7 @@
 <strong>Example:</strong> $200 risk for $600 profit = 3:1 R/R
 <strong>Minimum Recommended:</strong> 2:1
 <strong>Calculation:</strong> (Target - Entry) / (Entry - Stop)
-<strong>Usage:</strong> Only take trades with favorable R/R</p>
+<strong>Common approach:</strong> Many traders seek favorable R/R ratios before entering positions</p>
 <hr />
 <h3 id="position-sizing">Position Sizing<a class="headerlink" href="#position-sizing" title="Permanent link">&para;</a></h3>
 <p><strong>Definition:</strong> How much capital to risk per trade
@@ -2801,6 +2826,20 @@
 <strong>Platforms:</strong> TradingView, broker simulators
 <strong>Requirement:</strong> Treat it like real money mentally</p>
 <hr />
+<div class="sp-callout sp-callout--summary">
+  <div class="sp-callout__title">What You've Learned</div>
+  <ul>
+    <li><strong>Comprehensive Terminology Reference:</strong> This glossary covers all Signal Pilot Suite terminology - from cycle signals (TD, IGN, WRN, CAP, BDN) through technical concepts (HTF, LTF, confluence) to trading fundamentals (backtesting, paper trading, risk management)</li>
+    <li><strong>Signal Types Clarified:</strong> Five Pentarch cycle signals defined with contexts - TD (accumulation/early cycle), IGN (markup/early cycle), WRN (distribution/late cycle), CAP (climax/late cycle), and BDN (decline/late cycle)</li>
+    <li><strong>Timeframe Terminology:</strong> HTF (Higher Timeframe) shows overall trend context, LTF (Lower Timeframe) provides precise entry timing, and MTF (Multi-Timeframe Analysis) combines both for confluence confirmation</li>
+    <li><strong>Level Types Explained:</strong> Janus Atlas level categories include timeframe levels (daily/weekly/monthly highs and lows), session levels (Asia, London, New York), volume levels (VWAP, POC, VAH, VAL), and market structure levels</li>
+    <li><strong>Non-Repainting Defined:</strong> Signals that confirm at bar close and never change retroactively - critical for reliable backtesting, alert setup, and live trading confidence</li>
+    <li><strong>Trading Fundamentals:</strong> Key concepts like confluence (multiple signals aligning), breakout (price moving beyond support/resistance), volatility (price fluctuation degree), and risk management (position sizing, stop placement)</li>
+    <li><strong>Quick Reference Format:</strong> Each term includes definition, context, examples, and related concepts for immediate understanding and practical application</li>
+  </ul>
+  <p><strong>Next Steps:</strong> Review <a href="../ref-troubleshooting/">Troubleshooting Guide</a> for common issues, or explore <a href="../ref-workflow/">Trading Workflow Guide</a> to see terminology in action.</p>
+</div>
+<hr />
 <h2 id="quick-links">🔗 Quick Links<a class="headerlink" href="#quick-links" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../about-faq/">FAQ</a> - Common questions</li>
@@ -2817,7 +2856,11 @@
           
   <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 
+
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+
+
         </div>
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
@@ -2879,20 +2922,64 @@
     
     
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.sections", "navigation.path", "content.code.copy", "search.suggest", "search.highlight", "content.tabs.link", "content.tooltips", "content.action.edit"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+
+
     
     
       <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+
+
       
         <script src="../js/timeago.min.js"></script>
+
+
       
         <script src="../js/timeago_mkdocs_material.js"></script>
+
+
       
         <script src="../assets/brand.js"></script>
+
+
       
         <script src="../assets/sp-bg.js"></script>
+
+
       
         <script src="../assets/keyword-highlighter.js"></script>
+
+
       
     
-  </body>
+      <script src="../assets/wheel-diagnostic.js"></script>
+      <script src="../assets/enhancements.js"></script>
+    <script src="assets/remove-tooltips.js"></script>
+    <script src="assets/bottom-sheet-nav.js"></script>
+      <script src="../assets/sticky-toc-scroll.js"></script>
+    <script src="../assets/components.js"></script>
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - JS
+       To disable: comment out this entire block
+       ======================================== -->
+  <script src="../js/feedback-system.js"></script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - JS -->
+
+  <!-- Meta-Learning & Accessibility Features -->
+  <script src="../js/keyboard-navigation.js"></script>
+  <script src="../js/text-sizing.js"></script>
+  <script src="../js/knowledge-checks.js"></script>
+
+      <!-- SignalPilot Chatbot -->
+    <script src="/js/chatbot.js"></script>
+  
+
+
+
+
+
+
+
+  <!-- Custom Bottom Sheet Navigation Script -->
+  <script src="../assets/custom-bottom-sheet.js?v7"></script>
+</body>
 </html>

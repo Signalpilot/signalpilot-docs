@@ -6,6 +6,11 @@
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <meta name="mobile-web-app-capable" content="yes">
+      <meta name="theme-color" content="#667eea">
+      <meta name="format-detection" content="telephone=no">
       
         <meta name="description" content="Non-repainting, alert-ready TradingView indicators for any market/timeframe.">
       
@@ -20,7 +25,16 @@
         <link rel="next" href="../how-to-alerts/">
       
       
-      <link rel="icon" href="../assets/watermark-monogram-color-transparent.png">
+      <!-- Favicons -->
+      <link rel="icon" type="image/x-icon" href="../favicon.ico">
+      <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
+      <link rel="icon" type="image/png" sizes="512x512" href="../favicon-512x512.png">
+
+      <!-- PWA Manifest -->
+      <link rel="manifest" href="../manifest.json">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
     
     
@@ -47,6 +61,7 @@
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -54,6 +69,9 @@
       <link rel="stylesheet" href="../css/timeago.css">
     
       <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../css/responsive-optimization.css">
+      <link rel="stylesheet" href="../css/content-overflow-fix.css">
+      <link rel="stylesheet" href="../css/mobile-layout-fixes.css">
     
       <link rel="stylesheet" href="../assets/brand.css">
     
@@ -64,6 +82,8 @@
       <link rel="stylesheet" href="../assets/interactive-code.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+
+
     
       
   
@@ -73,8 +93,12 @@
   
 
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-NZ05GV72K0"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-NZ05GV72K0",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-NZ05GV72K0",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+
   
     <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+
+
   
 
     
@@ -85,7 +109,72 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
 
-  </head>
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - CSS
+       To disable: comment out this entire block
+       ======================================== -->
+  <link rel="stylesheet" href="../css/feedback.css">
+  <link rel="stylesheet" href="../css/visual-enhancements.css">
+
+  <!-- Mermaid.js for diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'dark',
+      themeVariables: {
+        primaryColor: '#00bcd4',
+        primaryTextColor: '#fff',
+        primaryBorderColor: '#0097a7',
+        lineColor: '#00bcd4',
+        secondaryColor: '#ff5722',
+        tertiaryColor: '#4caf50',
+        fontSize: '18px',
+        fontFamily: 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+      },
+      flowchart: {
+        htmlLabels: true,
+        fontSize: 18
+      },
+      fontSize: 18
+    });
+  </script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - CSS -->
+
+  <!-- Meta-Learning & Accessibility Enhancements -->
+  <link rel="stylesheet" href="../css/skill-badges.css">
+  <link rel="stylesheet" href="../css/meta-learning.css">
+
+      <!-- SignalPilot Chatbot CSS -->
+    <link rel="stylesheet" href="/css/chatbot.css">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.signalpilot.io/">
+    <meta property="og:title" content="Signal Pilot Documentation">
+    <meta property="og:description" content="Professional trading indicators for TradingView. Complete guides for Pentarch, Janus Atlas, Omnideck, and more.">
+    <meta property="og:image" content="https://docs.signalpilot.io/assets/images/preview.png">
+    <meta property="og:site_name" content="Signal Pilot Docs">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.signalpilot.io/">
+    <meta name="twitter:title" content="Signal Pilot Documentation">
+    <meta name="twitter:description" content="Professional trading indicators for TradingView. Complete guides for Pentarch, Janus Atlas, Omnideck, and more.">
+    <meta name="twitter:image" content="https://docs.signalpilot.io/assets/images/preview.png">
+
+
+  
+
+
+
+
+
+
+
+  <!-- Custom Bottom Sheet Navigation -->
+  <link rel="stylesheet" href="../css/hide-mkdocs-sidebar.css?v7">
+  <link rel="stylesheet" href="../css/custom-bottom-sheet.css?v7">
+</head>
   
   
     
@@ -128,7 +217,6 @@
         <a href="https://signalpilot.io/#pricing">Pricing</a>
         <a href="https://signalpilot.io/#faq">FAQ</a>
       </nav>
-      <a class="sp-cta" href="https://signalpilot.io/#pricing">Get the Suite</a>
     </div>
   </div>
 
@@ -141,7 +229,6 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="Signal Pilot Docs" class="md-header__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
       
-  <img src="../assets/watermark-monogram-color-transparent.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -193,6 +280,8 @@
     
     
       <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+
+
     
     
     
@@ -276,7 +365,6 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Signal Pilot Docs" class="md-nav__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
       
-  <img src="../assets/watermark-monogram-color-transparent.png" alt="logo">
 
     </a>
     Signal Pilot Docs
@@ -391,27 +479,6 @@
   
   <span class="md-ellipsis">
     Prerequisites
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/start-which-indicator.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Which Indicator Should I Start?
   </span>
   
 
@@ -997,7 +1064,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../minimal-flow-v10/" class="md-nav__link">
+      <a href="../volume-oracle-v10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1226,27 +1293,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/troubleshooting-installation.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Installation Troubleshooting
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1306,27 +1352,6 @@
   
   <span class="md-ellipsis">
     FAQ
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/about-system-requirements.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    System Requirements
   </span>
   
 
@@ -1432,7 +1457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../_product-cards/" class="md-nav__link">
+      <a href="../_settings-alerts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1744,7 +1769,7 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1.1rem; height: 1.1rem; fill: currentColor; opacity: 0.7;">
         <path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/>
       </svg>
-      <span style="opacity: 0.85;">Updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 10, 2025 01:41:10 UTC"><span class="timeago" datetime="2025-11-10T01:41:10+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 10, 2025 01:41:10 UTC">2025-11-10</span></span>
+      <span style="opacity: 0.85;">Updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="October 31, 2025 01:38:02 UTC"><span class="timeago" datetime="2025-10-31T01:38:02+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="October 31, 2025 01:38:02 UTC">2025-10-31</span></span>
     </span>
   
 
@@ -1762,237 +1787,258 @@
 
 <!-- Render the page content -->
 <h1 id="onboarding-checklist">Onboarding Checklist<a class="headerlink" href="#onboarding-checklist" title="Permanent link">&para;</a></h1>
-<p>A complete 7-day guide to mastering <span class="signal-pilot-brand">Signal Pilot</span> indicators. This step-by-step checklist can be followed to progress from setup to confident trading.</p>
+<p>A complete 7-day guide to mastering <span class="signal-pilot-brand">Signal Pilot</span> indicators. Follow this step-by-step checklist to progress from setup to confident trading.</p>
 <hr />
-<h2 id="overview-your-first-week">🎯 Overview: Your First Week<a class="headerlink" href="#overview-your-first-week" title="Permanent link">&para;</a></h2>
+<h2 id="overview-your-first-week">🎯 Overview: Your First Week <span class="skill-badge skill-badge--beginner" data-tooltip="Perfect for complete beginners">Beginner Friendly</span><a class="headerlink" href="#overview-your-first-week" title="Permanent link">&para;</a></h2>
 <p><strong>Daily time commitment:</strong> 30-60 minutes
 <strong>By end of week:</strong> Ready to trade confidently
-<strong>Recommended pace:</strong> Each day can be mastered before moving on</p>
+<strong>Recommended pace:</strong> Master each day before moving on</p>
 <hr />
-<h2 id="day-1-setup-installation">📅 Day 1: Setup &amp; Installation<a class="headerlink" href="#day-1-setup-installation" title="Permanent link">&para;</a></h2>
+<h2 id="day-1-setup-installation">📅 Day 1: Setup &amp; Installation <span class="skill-badge skill-badge--beginner" data-tooltip="Easy first steps">Beginner Friendly</span><a class="headerlink" href="#day-1-setup-installation" title="Permanent link">&para;</a></h2>
 <h3 id="morning-account-setup-30-minutes">Morning: Account Setup (30 minutes)<a class="headerlink" href="#morning-account-setup-30-minutes" title="Permanent link">&para;</a></h3>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>TradingView subscription can be verified as active</strong></li>
-<li>TradingView can be logged into</li>
-<li>Account status can be checked (is commonly Essential, Pro, or Pro+)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Verified: TradingView subscription is active</strong></li>
+<li>Log into TradingView</li>
+<li>Check account status (Essential, Pro, or Pro+ required for indicators)</li>
 <li>
-<p>If not upgraded: <a href="https://www.tradingview.com/pricing/">can be upgraded now</a></p>
+<p>If not upgraded: <a href="https://www.tradingview.com/pricing/">Upgrade now</a></p>
 </li>
 <li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong><span class="signal-pilot-brand">Signal Pilot</span> access can be confirmed as granted</strong></p>
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Confirmed: <span class="signal-pilot-brand">Signal Pilot</span> access granted</strong></p>
 </li>
-<li>Email can be checked for confirmation</li>
-<li>If no email after 24h: <a href="../about-support/">support can be contacted</a></li>
+<li>Check email for confirmation</li>
+<li>If no email after 24h: <a href="../about-support/">Contact support</a></li>
 <li>
-<p>TradingView username correctness can be verified</p>
+<p>Verified: your TradingView username is correct</p>
 </li>
 <li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Indicator access can be tested</strong></p>
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Tested: indicator access</strong></p>
 </li>
-<li>TradingView can be opened</li>
-<li>"Indicators" button can be clicked</li>
-<li>"<span class="signal-pilot-brand">Signal Pilot</span>" or "Pentarch" can be searched</li>
-<li>Pentarch v8.9 (or latest version) is typically visible</li>
-<li>If not visible: Access status can be checked</li>
+<li>Open TradingView</li>
+<li>Click "Indicators" button</li>
+<li>Search for "<span class="signal-pilot-brand">Signal Pilot</span>" or "Pentarch"</li>
+<li>Pentarch v8.9 (or latest version) will be visible when properly added</li>
+<li>If not visible: Check access status</li>
 </ul>
 <hr />
 <h3 id="afternoon-first-indicator-install-30-minutes">Afternoon: First Indicator Install (30 minutes)<a class="headerlink" href="#afternoon-first-indicator-install-30-minutes" title="Permanent link">&para;</a></h3>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Pentarch can be added to a chart</strong></li>
-<li>Bitcoin (BTCUSD) chart can be opened</li>
-<li>Daily timeframe can be set</li>
-<li>"Indicators" can be clicked</li>
-<li>"Pentarch" can be searched</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Add Pentarch to a chart</strong></li>
+<li>Open Bitcoin (BTCUSD) chart</li>
+<li>Set Daily timeframe</li>
+<li>Click "Indicators"</li>
+<li>Search for "Pentarch"</li>
 <li>
-<p>"Pentarch v8.9" can be clicked to add</p>
+<p>Click "Pentarch v8.9" to add</p>
 </li>
 <li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>The interface can be explored</strong></p>
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Explored: the interface</strong></p>
 </li>
-<li>The 5 signal types can be seen on chart</li>
-<li>TD, IGN, WRN, CAP, BDN labels can be identified</li>
-<li>History can be scrolled back through</li>
+<li>See the 5 signal types on chart</li>
+<li>Identify TD, IGN, WRN, CAP, BDN labels</li>
+<li>Scroll back through history</li>
 <li>
-<p>Signal patterns can be observed</p>
+<p>Observed: signal patterns</p>
 </li>
 <li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Visual settings can be customized (optional)</strong></p>
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Customize visual settings (optional)</strong></p>
 </li>
-<li>Indicator name → Settings can be clicked</li>
-<li>"Style" tab → Colors can be adjusted if needed</li>
+<li>Click indicator name → Settings</li>
+<li>Adjust colors in "Style" tab if needed</li>
 <li>
-<p>Calculations can be kept on default</p>
+<p>Keep calculations on default</p>
 </li>
 <li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Setup can be saved</strong></p>
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Save your setup</strong></p>
 </li>
-<li>Top menu → "Layouts" can be navigated to</li>
-<li>"Save as..." → Can be named "BTC Pentarch Daily"</li>
+<li>Navigate to top menu → "Layouts"</li>
+<li>"Save as..." → Name it "BTC Pentarch Daily"</li>
 </ul>
-<p><strong>✅ Day 1 Complete</strong> First indicator has been successfully installed.</p>
+<p><strong>✅ Day 1 Complete</strong> You've successfully installed your first indicator.</p>
 <hr />
 <h2 id="day-2-learn-the-5-signals">📅 Day 2: Learn the 5 Signals<a class="headerlink" href="#day-2-learn-the-5-signals" title="Permanent link">&para;</a></h2>
 <h3 id="goal-understand-what-each-signal-means">Goal: Understand what each signal means<a class="headerlink" href="#goal-understand-what-each-signal-means" title="Permanent link">&para;</a></h3>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>The Quick Start guide can be read</strong></li>
-<li><a href="../start-quick/">Quick Start Guide</a> can be navigated to</li>
-<li>The "5 Signals" section can be read carefully</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Read the Quick Start guide</strong></li>
+<li>Navigate to <a href="../start-quick/">Quick Start Guide</a></li>
+<li>Read the "5 Signals" section carefully</li>
 <li>
-<p>Can be bookmarked for reference</p>
+<p>Bookmark it for reference</p>
 </li>
 <li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Signals can be found on the chart</strong></p>
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Find signals on the chart</strong></p>
 </li>
-<li>Saved layout from Day 1 can be opened</li>
+<li>Open your saved layout from Day 1</li>
 <li>
-<p>Example of each signal type can be found:</p>
+<p>Find an example of each signal type:</p>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> TD (blue) - Early-cycle warning</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> IGN (green) - Long entry</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> IGN (green) - Potential bullish reversal</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> WRN (yellow) - Late-cycle warning</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> CAP (red) - Exit longs</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> BDN (black) - Short entry</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> CAP (red) - Exhaustion signal</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> BDN (black) - Potential bearish breakdown</li>
 </ul>
 </li>
 <li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>A complete trade can be traced</strong></p>
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Trace a complete trade</strong></p>
 </li>
-<li>A TD signal can be found on the chart</li>
-<li>Whether IGN followed can be observed</li>
-<li>Price action after IGN can be tracked</li>
-<li>The exit (CAP or BDN) can be found</li>
+<li>Find a TD signal on the chart</li>
+<li>Observed: if IGN followed</li>
+<li>Track price action after IGN</li>
+<li>Find the exit (CAP or BDN)</li>
 <li>
-<p>Profit/loss can be calculated (mentally)</p>
+<p>Calculate profit/loss (mentally)</p>
 </li>
 <li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Identification can be practiced</strong></p>
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Practice identification</strong></p>
 </li>
-<li>Chart history can be scrolled through</li>
-<li>Each signal type can be called out</li>
-<li>What would be done at each signal can be stated</li>
+<li>Scroll through chart history</li>
+<li>Call out each signal type</li>
+<li>State what you'd do at each signal</li>
 <li>
-<p>This can be done for 10-15 historical signals</p>
+<p>Do this for 10-15 historical signals</p>
 </li>
 <li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Signal rules can be written down</strong></p>
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Write down signal rules</strong></p>
 </li>
-<li>Personal cheat sheet can be created:<ul>
-<li>TD = Watch, don't enter</li>
-<li>IGN = Enter long</li>
-<li>WRN = Tighten stop</li>
-<li>CAP = Exit long</li>
-<li>BDN = Exit all longs / enter short</li>
+<li>Create a personal cheat sheet:<ul>
+<li>TD = Educational meaning: Watch signal (preparation phase)</li>
+<li>IGN = Educational meaning: Potential long consideration signal</li>
+<li>WRN = Educational meaning: Warning signal (stop adjustment consideration)</li>
+<li>CAP = Educational meaning: Exhaustion signal (exit consideration for longs)</li>
+<li>BDN = Educational meaning: Breakdown signal (exit consideration for longs / short analysis for advanced traders)</li>
 </ul>
 </li>
 </ul>
-<p><strong>✅ Day 2 Complete</strong> All 5 signal types can be identified.</p>
+<p><strong>✅ Day 2 Complete</strong> You can identify all 5 signal types.</p>
 <hr />
 <h2 id="day-3-multiple-timeframes-markets">📅 Day 3: Multiple Timeframes &amp; Markets<a class="headerlink" href="#day-3-multiple-timeframes-markets" title="Permanent link">&para;</a></h2>
 <h3 id="goal-see-how-signals-work-across-different-contexts">Goal: See how signals work across different contexts<a class="headerlink" href="#goal-see-how-signals-work-across-different-contexts" title="Permanent link">&para;</a></h3>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Timeframes can be compared</strong></li>
-<li>Bitcoin on Daily can be opened (existing chart)</li>
-<li>New chart can be opened: Bitcoin on 4H</li>
-<li>Pentarch can be added to 4H chart</li>
-<li>Third chart can be opened: Bitcoin on 1H</li>
-<li>Pentarch can be added to 1H chart</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Compare timeframes</strong></li>
+<li>Open Bitcoin on Daily (existing chart)</li>
+<li>Open new chart: Bitcoin on 4H</li>
+<li>Add Pentarch to 4H chart</li>
+<li>Open third chart: Bitcoin on 1H</li>
+<li>Add Pentarch to 1H chart</li>
 <li>
-<p>Comparison can be made: More signals can be noticed on lower timeframes</p>
+<p>Compare: Notice more signals on lower timeframes</p>
 </li>
 <li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Different markets can be tried</strong></p>
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Try different markets</strong></p>
 </li>
-<li>Ethereum (ETHUSD) can be opened - Daily</li>
-<li>Pentarch can be added</li>
-<li>S&amp;P 500 (SPX or SPY) can be opened - Daily</li>
-<li>Pentarch can be added</li>
-<li>EUR/USD can be opened - Daily</li>
+<li>Open Ethereum (ETHUSD) - Daily</li>
+<li>Add Pentarch</li>
+<li>Open S&amp;P 500 (SPX or SPY) - Daily</li>
+<li>Add Pentarch</li>
+<li>Open EUR/USD - Daily</li>
 <li>
-<p>Pentarch can be added</p>
+<p>Add Pentarch</p>
 </li>
 <li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Differences can be observed</strong></p>
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Observed: differences</strong></p>
 </li>
-<li>Which markets have more signals can be noted</li>
-<li>Which are cleaner/clearer can be identified</li>
-<li>Preferred timeframes can be determined</li>
+<li>Note which markets have more signals</li>
+<li>Identify which are cleaner/clearer</li>
+<li>Determine your preferred timeframes</li>
 <li>
-<p>Observations can be written down</p>
+<p>Write down your observations</p>
 </li>
 <li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Focus can be chosen</strong></p>
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Choose your focus</strong></p>
 </li>
-<li>1-2 markets to trade can be selected</li>
-<li>Preferred timeframe can be selected (recommend starting with Daily or 4H)</li>
-<li>Layouts for each can be set up</li>
+<li>Select 1-2 markets to trade</li>
+<li>Select preferred timeframe (recommend starting with Daily or 4H)</li>
+<li>Set up layouts for each</li>
 </ul>
-<p><strong>✅ Day 3 Complete</strong> How indicators adapt to different markets is understood.</p>
+<p><strong>✅ Day 3 Complete</strong> You understand how indicators adapt to different markets.</p>
+<hr />
+
+<div class="knowledge-check"
+     data-quiz-id="onboarding-day3-check"
+     data-correct-answer="a"
+     data-correct-feedback="✓ Correct! In Day 2, you learned that TD (Touchdown) and IGN (Ignition) are the two Early-Cycle signals in Pentarch. TD indicates accumulation phase conditions, while IGN marks the beginning of markup phase. These are the signals you should focus on recognizing first."
+     data-incorrect-feedback="Not quite. Review Day 2: Learn the 5 Signals. Look for the section about Early-Cycle signals - these are the first two signals in the Pentarch cycle that indicate potential trend beginnings. Try again!">
+  <h4>✅ Knowledge Check (Day 1-3)</h4>
+  <p><strong>Question:</strong> After completing Days 1-3, which two Pentarch signals should you be able to identify as "Early-Cycle"?</p>
+
+  <form class="quiz-form">
+    <label><input type="radio" name="q1" value="a"> TD (Touchdown) and IGN (Ignition)</label>
+    <label><input type="radio" name="q1" value="b"> WRN (Warning) and CAP (Climax)</label>
+    <label><input type="radio" name="q1" value="c"> IGN (Ignition) and WRN (Warning)</label>
+    <label><input type="radio" name="q1" value="d"> All five signals are equally early-cycle</label>
+  </form>
+
+  <button class="check-answer-btn">Check Answer</button>
+  <div class="quiz-feedback" style="display:none;"></div>
+</div>
+
 <hr />
 <h2 id="day-4-add-your-first-alert">📅 Day 4: Add Your First Alert<a class="headerlink" href="#day-4-add-your-first-alert" title="Permanent link">&para;</a></h2>
 <h3 id="goal-automate-signal-notifications">Goal: Automate signal notifications<a class="headerlink" href="#goal-automate-signal-notifications" title="Permanent link">&para;</a></h3>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>First alert can be created</strong></li>
-<li>Main chart (BTC Daily) can be opened</li>
-<li>Chart can be right-clicked → "Add Alert"</li>
-<li>Condition: "Pentarch v8.9" can be selected</li>
-<li>Event: "IGN Event" can be chosen</li>
-<li>Options: <strong>"Once Per Bar Close"</strong> can be set (critical!)</li>
-<li>Name: "BTC Daily IGN - Potential Long" can be entered</li>
-<li>Expiration: 1 month (or "Don't expire") can be set</li>
-<li>Actions: Notification can be checked</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Create your first alert</strong></li>
+<li>Open your main chart (BTC Daily)</li>
+<li>Right-click chart → "Add Alert"</li>
+<li>Condition: Select "Pentarch v8.9"</li>
+<li>Event: Choose "IGN Event"</li>
+<li>Options: Set <strong>"Once Per Bar Close"</strong> (critical!)</li>
+<li>Name: Enter "BTC Daily IGN - Potential Long"</li>
+<li>Expiration: Set 1 month (or "Don't expire")</li>
+<li>Actions: Check Notification</li>
 <li>
-<p>"Create" can be clicked</p>
+<p>Click "Create"</p>
 </li>
 <li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Exit alert can be created</strong></p>
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Create exit alert</strong></p>
 </li>
-<li>Chart can be right-clicked → "Add Alert"</li>
-<li>Condition: "Pentarch v8.9" can be selected</li>
-<li>Event: "CAP Event" can be chosen</li>
-<li>Options: "Once Per Bar Close" can be set</li>
-<li>Name: "BTC Daily CAP - Exit Long" can be entered</li>
+<li>Right-click chart → "Add Alert"</li>
+<li>Condition: Select "Pentarch v8.9"</li>
+<li>Event: Choose "CAP Event"</li>
+<li>Options: Set "Once Per Bar Close"</li>
+<li>Name: Enter "BTC Daily CAP - Exhaustion Signal"</li>
 <li>
-<p>Alert can be created</p>
+<p>Create the alert</p>
 </li>
 <li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Mobile notifications can be set up</strong></p>
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Set up mobile notifications</strong></p>
 </li>
-<li>TradingView app can be downloaded (if not already)</li>
-<li>Same account can be logged into</li>
-<li>Settings → Notifications → All can be enabled</li>
+<li>Download TradingView app (if not already installed)</li>
+<li>Log into the same account</li>
+<li>Settings → Notifications → Enable All</li>
 <li>
-<p>Phone Settings → Apps → TradingView → Notifications can be allowed</p>
+<p>Phone Settings → Apps → TradingView → Allow Notifications</p>
 </li>
 <li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Alerts can be tested</strong></p>
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Tested: your alerts</strong></p>
 </li>
-<li>15m chart can be switched to (signals fire more often)</li>
-<li>Test alert on 15m can be created</li>
-<li>Signal can be waited for (typically occurs quickly)</li>
+<li>Switch to 15m chart (signals fire more often)</li>
+<li>Create test alert on 15m</li>
+<li>Wait for a signal (typically happens quickly)</li>
 <li>
-<p>Notification receipt can be verified</p>
+<p>Verified: you receive the notification</p>
 </li>
 <li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Alerts for watchlist can be created</strong></p>
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Create alerts for your watchlist</strong></p>
 </li>
-<li>Alerts for 2-3 chosen markets can be added</li>
-<li>IGN alerts for longs can be set</li>
-<li>CAP/BDN alerts for exits can be set</li>
+<li>Add alerts for your 2-3 chosen markets</li>
+<li>Configure alerts for IGN patterns (common for early-cycle monitoring)</li>
+<li>Configure alerts for CAP/BDN patterns (common for late-cycle monitoring)</li>
 </ul>
 <p><strong>✅ Day 4 Complete</strong> Signal notifications will now be received automatically.</p>
 <hr />
 <h2 id="day-5-add-janus-atlas-levels">📅 Day 5: Add Janus Atlas (Levels)<a class="headerlink" href="#day-5-add-janus-atlas-levels" title="Permanent link">&para;</a></h2>
 <h3 id="goal-understand-where-signals-are-strongest">Goal: Understand where signals are strongest<a class="headerlink" href="#goal-understand-where-signals-are-strongest" title="Permanent link">&para;</a></h3>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Janus Atlas can be added to chart</strong></li>
-<li>BTC Daily chart can be opened</li>
-<li>"Indicators" can be clicked</li>
-<li>"Janus Atlas" can be searched</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Add Janus Atlas to your chart</strong></li>
+<li>Open BTC Daily chart</li>
+<li>Click "Indicators"</li>
+<li>Search for "Janus Atlas"</li>
 <li>
-<p>"Janus Atlas v1.0" can be added</p>
+<p>Add "Janus Atlas v1.0"</p>
 </li>
 <li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Level types can be identified</strong></p>
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Identify level types</strong></p>
 </li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Support levels (horizontal lines below price)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Resistance levels (horizontal lines above price)</li>
@@ -2001,123 +2047,145 @@
 <p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Order blocks (highlighted candles/zones)</p>
 </li>
 <li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Confluence setups can be found</strong></p>
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Find confluence setups</strong></p>
 </li>
-<li>Chart can be scrolled through</li>
-<li>IGN signal AT support level can be found</li>
-<li>3-5 examples can be marked</li>
-<li>CAP signal AT resistance level can be found</li>
+<li>Scroll through the chart</li>
+<li>Find IGN signal AT support level</li>
+<li>Mark 3-5 examples</li>
+<li>Find CAP signal AT resistance level</li>
 <li>
-<p>3-5 examples can be marked</p>
+<p>Mark 3-5 examples</p>
 </li>
 <li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Signal quality can be compared</strong></p>
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Compare signal quality</strong></p>
 </li>
-<li>IGN at major support vs IGN in middle of nowhere can be compared</li>
-<li>Which worked better historically can be observed</li>
+<li>Compare IGN at major support vs IGN in middle of nowhere</li>
+<li>Observed: which worked better historically</li>
 <li>
-<p>It can be noticed: Confluence = higher success rate</p>
+<p>Notice: Confluence = higher success rate</p>
 </li>
 <li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Trading rules can be updated</strong></p>
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Update your trading rules</strong></p>
 </li>
-<li>Can be added to trading rules:<ul>
-<li>"Only trade IGN at major support"</li>
-<li>"Only trade CAP/BDN at major resistance"</li>
-<li>"Skip signals far from levels"</li>
+<li>Example confluence concepts to study:<ul>
+<li>"Observation: IGN patterns that occur at major support levels"</li>
+<li>"Observed: CAP/BDN patterns that occur at major resistance levels"</li>
+<li>"Note how patterns at key levels may differ from those away from levels"</li>
 </ul>
 </li>
 </ul>
-<p><strong>✅ Day 5 Complete</strong> The power of confluence is understood.</p>
+<p><strong>✅ Day 5 Complete</strong> You understand the power of confluence.</p>
 <hr />
-<h2 id="day-6-risk-management-setup">📅 Day 6: Risk Management Setup<a class="headerlink" href="#day-6-risk-management-setup" title="Permanent link">&para;</a></h2>
-<h3 id="goal-prepare-for-safe-trading">Goal: Prepare for safe trading<a class="headerlink" href="#goal-prepare-for-safe-trading" title="Permanent link">&para;</a></h3>
+<h2 id="day-6-risk-management-setup">📅 Day 6: Risk Management Setup <span class="skill-badge skill-badge--intermediate" data-tooltip="Essential trading concepts">Intermediate</span><a class="headerlink" href="#day-6-risk-management-setup" title="Permanent link">&para;</a></h2>
+<h3 id="day-6-risk-management">Day 6: Risk Management & Position Sizing (45 minutes)</h3>
+
+<div class="sp-callout sp-callout--warning">
+  <div class="sp-callout__title">⚠️ Most Important Day</div>
+  <p>Risk management keeps you in the game. Without it, even the best signals lead to blown accounts. Take this day seriously.</p>
+</div>
+
+<p><strong>Morning (25 minutes): Position Sizing Fundamentals</strong></p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Stop loss placement can be learned</strong></li>
-<li>
-<p>For long entries (IGN):</p>
+  <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Calculate 1% account risk</strong>
+    <ul>
+      <li>Example: $1,000 account × 1% = $10 maximum loss per trade</li>
+      <li>Example: $5,000 account × 1% = $50 maximum loss per trade</li>
+      <li>Rule: Never risk more than 1-2% of total account on any single trade</li>
+    </ul>
+  </li>
+  <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Understand position sizing formula</strong>
+    <ul>
+      <li>Position Size = Account Risk ÷ Stop Loss Distance</li>
+      <li>Example: $10 max risk ÷ 50-point stop = 0.2 units (or $0.20 per point)</li>
+      <li>Example: $50 max risk ÷ 100-point stop = 0.5 units (or $0.50 per point)</li>
+      <li>Tool: Use TradingView's built-in position size calculator or create a spreadsheet</li>
+    </ul>
+  </li>
+  <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Learn Risk:Reward (R:R) ratios</strong>
+    <ul>
+      <li><strong>1:1 R:R</strong> = Risk $10 to make $10 (need 50%+ win rate to profit)</li>
+      <li><strong>1:2 R:R</strong> = Risk $10 to make $20 (need 34%+ win rate to profit) ← Recommended minimum</li>
+      <li><strong>1:3 R:R</strong> = Risk $10 to make $30 (need 26%+ win rate to profit) ← Ideal target</li>
+      <li>Higher R:R ratios = can lose more often and still be profitable</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Afternoon (20 minutes): Practical Stop Loss & Take Profit</strong></p>
+<ul class="task-list">
+  <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Place stop loss using Janus Atlas levels</strong>
+    <ul>
+      <li>For longs: Stop below recent swing low OR below nearest Janus Atlas support level</li>
+      <li>For shorts: Stop above recent swing high OR above nearest Janus Atlas resistance level</li>
+      <li>Example: IGN long signal at $50,000 → Stop at $49,900 (Daily Low from Janus Atlas)</li>
+      <li>Stop distance = $100 → Position size = $10 max risk ÷ $100 = 0.1 BTC</li>
+    </ul>
+  </li>
+  <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Set take profit targets</strong>
+    <ul>
+      <li>Target 1 (TP1): 1:2 R:R minimum (if risking $100, target $200 profit)</li>
+      <li>Target 2 (TP2): Next major Janus Atlas level (resistance for longs, support for shorts)</li>
+      <li>Example: Risk $100 (stop at $49,900) → TP1 at $50,200 (1:2 R:R) → TP2 at $50,500 (Daily High)</li>
+      <li>Some traders take partial profits at TP1, letting remainder run to TP2</li>
+    </ul>
+  </li>
+  <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Study common risk filters traders use</strong>
+    <ul>
+      <li>Traders commonly avoid setups where stop loss would exceed 1-2% account risk</li>
+      <li>Many traders filter for R:R ratio of 1:2 or better</li>
+      <li>Patterns far from Janus Atlas levels often lack clear stop zones</li>
+      <li>Position monitoring requirements vary by trading style and availability</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="admonition tip">
+<p class="admonition-title">📊 Real Example: Pentarch IGN Signal with Risk Management</p>
+<p><strong>Setup:</strong></p>
 <ul>
-<li>Stop can be placed below IGN candle low</li>
-<li>OR below support level</li>
-<li>Whichever is tighter/closer can be used</li>
+<li>Account size: $2,000</li>
+<li>Max risk per trade: 1% = $20</li>
+<li>Pentarch IGN bullish signal at $50,000</li>
+<li>Janus Atlas Daily Low at $49,850 (150 points below)</li>
 </ul>
-</li>
-<li>
-<p>For short entries (BDN):</p>
+<p><strong>Calculation:</strong></p>
 <ul>
-<li>Stop can be placed above BDN candle high</li>
-<li>OR above resistance level</li>
-<li>Whichever is tighter/closer can be used</li>
+<li>Stop loss distance: $50,000 - $49,850 = $150</li>
+<li>Position size: $20 ÷ $150 = 0.133 units (or $0.133 per point)</li>
+<li>Take profit (1:2 R:R): $50,000 + ($150 × 2) = $50,300</li>
 </ul>
-</li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Position size calculation can be practiced</strong></p>
-</li>
-<li>
-<p>Example calculation:</p>
+<p><strong>Trade Plan:</strong></p>
 <ul>
-<li>Account: $10,000</li>
-<li>Risk: 1% = $100</li>
-<li>Entry: Bitcoin at $40,000</li>
-<li>Stop: $39,000</li>
-<li>Risk per unit: $1,000</li>
-<li>Position size: $100 / $1,000 = 0.1 BTC</li>
+<li>Entry: $50,000</li>
+<li>Stop: $49,850 (risk $20)</li>
+<li>TP1: $50,300 (reward $40, R:R = 1:2)</li>
+<li>If stopped out: Lose $20. If TP1 hit: Win $40.</li>
 </ul>
-</li>
-<li>
-<p>Practice with personal account size:</p>
+</div>
+
+<p><strong>✅ Day 6 Complete When You Can:</strong></p>
 <ul>
-<li>My account: $______</li>
-<li>My risk (1%): $______</li>
-<li>Position sizes for 3 different setups can be calculated</li>
+  <li>Calculate 1% of your account in your head</li>
+  <li>Use the position sizing formula (Account Risk ÷ Stop Distance)</li>
+  <li>Explain what 1:2 R:R ratio means and why it's important</li>
+  <li>Place a stop loss below a Janus Atlas level</li>
+  <li>Calculate your position size based on stop loss distance</li>
 </ul>
-</li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Risk rules can be set</strong></p>
-</li>
-<li>
-<p>These rules can be written down:</p>
-<ul>
-<li>"Maximum 1-2% will be risked per trade"</li>
-<li>"A stop loss will ALWAYS be used"</li>
-<li>"Stop will NEVER be moved closer to entry"</li>
-<li>"Breaks will be taken after 2 losses in a day"</li>
-</ul>
-</li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Risk/reward can be calculated</strong></p>
-</li>
-<li>A historical IGN setup can be found</li>
-<li>Entry: IGN price</li>
-<li>Stop: Below support</li>
-<li>Target: Next resistance</li>
-<li>R/R can be calculated: (Target - Entry) / (Entry - Stop)</li>
-<li>
-<p>Should be at least 2:1</p>
-</li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Position size calculator can be created</strong></p>
-</li>
-<li>Spreadsheet or notes app can be used</li>
-<li>Template: Account Size × 1% ÷ (Entry - Stop)</li>
-<li>Can be kept handy for every trade</li>
-</ul>
-<p><strong>✅ Day 6 Complete</strong> Risk management framework is ready.</p>
 <hr />
 <h2 id="day-7-paper-trade">📅 Day 7: Paper Trade<a class="headerlink" href="#day-7-paper-trade" title="Permanent link">&para;</a></h2>
 <h3 id="goal-execute-your-first-practice-trades">Goal: Execute your first practice trades<a class="headerlink" href="#goal-execute-your-first-practice-trades" title="Permanent link">&para;</a></h3>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Paper trading can be enabled</strong></li>
-<li>TradingView → Paper Trading tab (bottom of chart) can be navigated to</li>
-<li>Starting capital can be set</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Enable paper trading</strong></li>
+<li>Navigate to TradingView → Paper Trading tab (bottom of chart)</li>
+<li>Set your starting capital</li>
 <li>
-<p>Or external paper trading account can be used</p>
+<p>Or use an external paper trading account</p>
 </li>
 <li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Setup can be waited for</strong></p>
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Wait for a setup</strong></p>
 </li>
-<li>Alerts can be waited for to fire</li>
-<li>OR current setup can be found on chart</li>
+<li>Wait for alerts to fire</li>
+<li>OR find a current setup on the chart</li>
 <li>
 <p>Requirements:</p>
 <ul class="task-list">
@@ -2127,92 +2195,108 @@
 </ul>
 </li>
 <li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Paper trade #1 can be executed</strong></p>
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Execute paper trade #1</strong></p>
 </li>
-<li>Signal fires (or setup is found)</li>
-<li>Position size can be calculated</li>
-<li>Position can be entered</li>
-<li>Stop loss can be set IMMEDIATELY</li>
-<li>Target can be set (optional)</li>
+<li>Signal fires (or you find the setup)</li>
+<li>Calculate position size</li>
+<li>Enter the position</li>
+<li>Set stop loss IMMEDIATELY</li>
+<li>Set target (optional)</li>
 <li>
-<p>Trade can be logged</p>
+<p>Log the trade</p>
 </li>
 <li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Trade can be documented</strong></p>
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Document the trade</strong></p>
 </li>
-<li>Screenshot of entry can be taken</li>
+<li>Take screenshot of entry</li>
 <li>
-<p>These can be written down:</p>
+<p>Write down these details:</p>
 <ul>
 <li>Date &amp; time</li>
 <li>Entry price</li>
 <li>Stop price</li>
 <li>Target price</li>
 <li>Position size</li>
-<li>Why it was taken (signal + level)</li>
+<li>Why you took it (signal + level)</li>
 <li>How it feels</li>
 </ul>
 </li>
 <li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Trade can be monitored &amp; managed</strong></p>
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Monitor &amp; manage the trade</strong></p>
 </li>
-<li>Charts can be checked 2-3 times per day</li>
-<li>Micromanagement can be avoided</li>
-<li>Stop can be trusted</li>
+<li>Check charts 2-3 times per day</li>
+<li>Avoid micromanagement</li>
+<li>Trust your stop</li>
 <li>
-<p>Exit can be made on opposite signal OR target hit</p>
+<p>Exit on opposite signal OR target hit</p>
 </li>
 <li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>3-5 paper trades can be completed</strong></p>
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Complete 3-5 paper trades</strong></p>
 </li>
-<li>Rushing can be avoided</li>
-<li>Can take 1-2 weeks to find setups</li>
-<li>QUALITY can be focused on, not quantity</li>
+<li>Avoid rushing</li>
+<li>This may take 1-2 weeks to find quality setups</li>
+<li>Focus on QUALITY, not quantity</li>
 <li>One good trade &gt; five mediocre trades</li>
 </ul>
-<p><strong>✅ Day 7 Complete</strong> First paper trades have been executed.</p>
+<p><strong>✅ Day 7 Complete</strong> You've executed your first paper trades.</p>
+<hr />
+
+<div class="sp-callout sp-callout--reflection">
+  <div class="sp-callout__title">Week 1 Reflection</div>
+  <p>Before moving to live trading, honestly assess your progress:</p>
+  <ul>
+    <li>Can you identify all 5 Pentarch signals (TD, IGN, WRN, CAP, BDN) on any chart?</li>
+    <li>Have you successfully configured at least one alert with "Once Per Bar Close"?</li>
+    <li>Do you understand the concept of confluence (signal + level = higher probability)?</li>
+    <li>Have you completed at least 3 paper trades using Pentarch + Janus Atlas?</li>
+    <li>Can you calculate proper position size using the 1-2% risk rule?</li>
+  </ul>
+  <p><strong>If yes to all 5:</strong> You're ready to graduate Week 1! Continue to the <a href="#week-1-graduation-checklist">Graduation Checklist</a> below.<br>
+  <strong>If no to any:</strong> Repeat the relevant day. There's no rush - mastering the basics prevents costly mistakes later.</p>
+</div>
+
 <hr />
 <h2 id="week-1-graduation-checklist">✅ Week 1 Graduation Checklist<a class="headerlink" href="#week-1-graduation-checklist" title="Permanent link">&para;</a></h2>
-<p><strong>Before moving to live trading, YES can be verified to all:</strong></p>
+<p><strong>Before moving to live trading, verify YES to all:</strong></p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> All 5 Pentarch signal types can be identified</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> What action to take at each signal is understood</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Key support/resistance levels can be identified</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Confluence (signal + level = better) is understood</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Working alerts have been set up</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Position size calculation is known</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Where to place stop losses is known</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> At least 3 paper trades have been completed</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> A trading journal/log is maintained</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Comfort with the process is felt</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> You can identify all 5 Pentarch signal types</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> You understand what action to take at each signal</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> You can identify key support/resistance levels</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> You understand confluence (signal + level = better)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> You've set up working alerts</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> You know how to calculate position size</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> You know where to place stop losses</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> You've completed at least 3 paper trades</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> You're maintaining a trading journal/log</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> You feel comfortable with the process</li>
 </ul>
-<p><strong>All YES?</strong> → Progression to live trading can be considered (start very small)</p>
-<p><strong>Any NO?</strong> → Another week on paper trading and reviewing can be spent</p>
+<p><strong>All YES?</strong> → Consider progressing to live trading (start very small)</p>
+<p><strong>Any NO?</strong> → Spend another week on paper trading and review</p>
 <hr />
 <h2 id="next-steps-weeks-2-4">🎓 Next Steps: Weeks 2-4<a class="headerlink" href="#next-steps-weeks-2-4" title="Permanent link">&para;</a></h2>
 <h3 id="week-2-3-consistency">Week 2-3: Consistency<a class="headerlink" href="#week-2-3-consistency" title="Permanent link">&para;</a></h3>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 10-20 paper trades can be executed</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Win rate can be tracked</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Average R/R can be tracked</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Process can be refined</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> What works best can be identified</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Execute 10-20 paper trades</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Track your win rate</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Track your average R/R</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Refine your process</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Identify what works best for you</li>
 </ul>
 <h3 id="week-4-transition-decision">Week 4: Transition Decision<a class="headerlink" href="#week-4-transition-decision" title="Permanent link">&para;</a></h3>
 <p><strong>If paper trading shows:</strong>
-- ✅ Win rate 50%+
-- ✅ Average R/R 2:1+
-- ✅ Consistent profitability
+- ✅ Positive performance metrics tracked
+- ✅ Favorable risk/reward management
+- ✅ Consistent profitability in paper trading
 - ✅ Rules being followed consistently</p>
-<p><strong>Then can be considered:</strong>
-- Live trading with MINIMUM size can be started
-- 10-25% of intended position size
-- Slow scaling up as confidence grows</p>
+<p><strong>Then consider:</strong>
+- Start live trading with MINIMUM size
+- 10-25% of your intended position size
+- Slowly scale up as confidence grows</p>
 <p><strong>If NOT meeting criteria:</strong>
-- Paper trading can be continued
-- <a href="../ref-best-practices/">Best Practices</a> can be reviewed
-- Issues can be identified
-- Help can be sought if needed</p>
+- Continue paper trading
+- Review <a href="../ref-best-practices/">Best Practices</a>
+- Identify issues
+- Seek help if needed</p>
 <hr />
 <h2 id="continued-learning-resources">📚 Continued Learning Resources<a class="headerlink" href="#continued-learning-resources" title="Permanent link">&para;</a></h2>
 <p><strong>Essential reading:</strong>
@@ -2225,13 +2309,27 @@
 - <a href="../ref-glossary/">Glossary</a> - Deep term definitions
 - <a href="https://education.signalpilot.io/">Education Portal</a> - Video tutorials</p>
 <hr />
+<div class="sp-callout sp-callout--summary">
+  <div class="sp-callout__title">What You've Learned</div>
+  <ul>
+    <li><strong>7-Day Structured Onboarding:</strong> Systematic progression from installation (Day 1) through Pentarch signals (Days 2-3), Janus Atlas levels (Day 4), confluence trading (Day 5), alert setup (Day 6), to first live signal (Day 7)</li>
+    <li><strong>Foundation-First Approach:</strong> Start with Pentarch + Janus Atlas only (core duo) before adding confirmation tools - master 2 indicators deeply rather than using all 7 superficially</li>
+    <li><strong>Progressive Skill Building:</strong> Day 1 installation and chart setup, Day 2-3 signal identification and nomenclature, Day 4 level recognition and confluence zones, Day 5 combined analysis, Day 6 automation with alerts, Day 7 live market application</li>
+    <li><strong>Practice-Based Learning:</strong> Each day includes specific hands-on tasks - screenshot 5 signals, identify 10 levels, find 3 confluence zones, set up 2 alerts - learning through doing not just reading</li>
+    <li><strong>Confluence Emphasis:</strong> By Day 5, understand that best setups require Pentarch signal AT Janus level - single-indicator trades discouraged, multi-factor confirmation prioritized</li>
+    <li><strong>Alert Configuration Milestone:</strong> Day 6 teaches critical "Once Per Bar Close" frequency setting and "Any alert() function call" condition for non-repainting notifications matching historical behavior</li>
+    <li><strong>First Week Goals:</strong> By Day 7, able to identify TD/IGN signals, recognize dH/WH/VWAP levels, spot confluence zones, configure working alerts, understand why patience and selectivity matter more than trade frequency</li>
+  </ul>
+  <p><strong>Next Steps:</strong> After completing Day 7, review <a href="../ref-workflow/">Trading Workflow Guide</a> for advanced multi-indicator strategies, or explore <a href="../ref-best-practices/">Best Practices Guide</a> for risk management framework.</p>
+</div>
+<hr />
 <h2 id="need-help">🆘 Need Help?<a class="headerlink" href="#need-help" title="Permanent link">&para;</a></h2>
 <p><strong>If stuck on any day:</strong>
-- The <a href="../start-quick/">Quick Start Guide</a> can be reviewed
-- <a href="../about-faq/">FAQ</a> can be checked
-- <a href="../ref-troubleshooting/">Troubleshooting</a> can be visited
-- <a href="../about-support/">Support</a> can be contacted</p>
-<p><strong>Important consideration:</strong> There's no rush. Time can be taken with each day. Mastery comes from practice and repetition.</p>
+- Review the <a href="../start-quick/">Quick Start Guide</a>
+- Check the <a href="../about-faq/">FAQ</a>
+- Visit <a href="../ref-troubleshooting/">Troubleshooting</a>
+- <a href="../about-support/">Contact Support</a></p>
+<p><strong>Important consideration:</strong> There's no rush. Take your time with each day. Mastery comes from practice and repetition.</p>
 <p><strong>Congratulations on starting the <span class="signal-pilot-brand">Signal Pilot</span> journey.</strong></p>
                 
               </article>
@@ -2240,7 +2338,11 @@
           
   <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 
+
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+
+
         </div>
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
@@ -2302,20 +2404,64 @@
     
     
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.sections", "navigation.path", "content.code.copy", "search.suggest", "search.highlight", "content.tabs.link", "content.tooltips", "content.action.edit"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+
+
     
     
       <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+
+
       
         <script src="../js/timeago.min.js"></script>
+
+
       
         <script src="../js/timeago_mkdocs_material.js"></script>
+
+
       
         <script src="../assets/brand.js"></script>
+
+
       
         <script src="../assets/sp-bg.js"></script>
+
+
       
         <script src="../assets/keyword-highlighter.js"></script>
+
+
       
     
-  </body>
+      <script src="../assets/wheel-diagnostic.js"></script>
+      <script src="../assets/enhancements.js"></script>
+    <script src="assets/remove-tooltips.js"></script>
+    <script src="assets/bottom-sheet-nav.js"></script>
+      <script src="../assets/sticky-toc-scroll.js"></script>
+    <script src="../assets/components.js"></script>
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - JS
+       To disable: comment out this entire block
+       ======================================== -->
+  <script src="../js/feedback-system.js"></script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - JS -->
+
+  <!-- Meta-Learning & Accessibility Features -->
+  <script src="../js/keyboard-navigation.js"></script>
+  <script src="../js/text-sizing.js"></script>
+  <script src="../js/knowledge-checks.js"></script>
+
+      <!-- SignalPilot Chatbot -->
+    <script src="/js/chatbot.js"></script>
+  
+
+
+
+
+
+
+
+  <!-- Custom Bottom Sheet Navigation Script -->
+  <script src="../assets/custom-bottom-sheet.js?v7"></script>
+</body>
 </html>
