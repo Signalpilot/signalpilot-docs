@@ -1,0 +1,2256 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Non-repainting, alert-ready TradingView indicators for any market/timeframe.">
+      
+      
+      
+        <link rel="canonical" href="https://docs.signalpilot.io/how-to-screener/">
+      
+      
+        <link rel="prev" href="../how-to-webhooks/">
+      
+      
+        <link rel="next" href="../suite-index/">
+      
+      
+      <link rel="icon" href="../assets/watermark-monogram-color-transparent.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
+    
+    
+      
+        <title>Use the Multi-Symbol Screener - Signal Pilot Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/timeago.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../assets/brand.css">
+    
+      <link rel="stylesheet" href="../assets/aurora.css">
+    
+      <link rel="stylesheet" href="../assets/print.css">
+    
+      <link rel="stylesheet" href="../assets/interactive-code.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-NZ05GV72K0"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-NZ05GV72K0",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-NZ05GV72K0",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  <!-- Google Fonts: Gugi for brand consistency -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#use-the-multi-symbol-screener-augury-grid" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+  <!-- SignalPilot brand bar (keeps Material header & search intact) -->
+  <div class="sp-topnav">
+    <div class="sp-topnav__inner">
+      <a href="https://signalpilot.io" class="brand">
+        <span>Signal Pilot</span>
+      </a>
+      <nav class="sp-links" aria-label="Signal Pilot">
+        <a href="https://signalpilot.io/#why">Why</a>
+        <a href="https://signalpilot.io/#inside">What's inside</a>
+        <a href="https://education.signalpilot.io/">Education</a>
+        <a aria-current="page" href="https://docs.signalpilot.io/">Docs</a>
+        <a href="https://signalpilot.io/#pricing">Pricing</a>
+        <a href="https://signalpilot.io/#faq">FAQ</a>
+      </nav>
+      <a class="sp-cta" href="https://signalpilot.io/#pricing">Get the Suite</a>
+    </div>
+  </div>
+
+  
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Signal Pilot Docs" class="md-header__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
+      
+  <img src="../assets/watermark-monogram-color-transparent.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Signal Pilot Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Use the Multi-Symbol Screener
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Signalpilot/signalpilot-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    signalpilot-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Signal Pilot Docs" class="md-nav__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
+      
+  <img src="../assets/watermark-monogram-color-transparent.png" alt="logo">
+
+    </a>
+    Signal Pilot Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Signalpilot/signalpilot-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    signalpilot-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    🚀 Getting Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            🚀 Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../start-quick/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ⚡ Quick Start (5 min)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../start-prerequisites/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prerequisites
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/start-which-indicator.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Which Indicator Should I Start?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../start-onboarding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Onboarding Checklist (7 days)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    📖 How-To Guides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            📖 How-To Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-alerts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Set Up Alerts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-webhooks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use Webhooks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Use Screener
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Use Screener
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-augury-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Augury Grid?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-setup-3-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Setup (3 Steps)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick Setup (3 Steps)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-add-augury-grid-to-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Add Augury Grid to Chart
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-configure-8-symbols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Configure 8 Symbols
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-set-quality-filter-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Set Quality Filter (Optional)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-read-the-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Read the Grid
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-finding-opportunities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow: Finding Opportunities
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Workflow: Finding Opportunities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-glance-at-grid-10-seconds" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Glance at Grid (10 seconds)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-identify-best-setup-30-seconds" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Identify Best Setup (30 seconds)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-verify-on-chart-2-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Verify on Chart (2 minutes)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-enter-trade-if-confirmed" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Enter Trade (if confirmed)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-tiers-reference-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality Tiers (Reference Guide)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-mistakes-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Mistakes &amp; Fixes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Mistakes & Fixes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mistake-1-wrong-ticker-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #1: Wrong Ticker Format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-2-trading-every-signal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #2: Trading Every Signal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-3-chasing-old-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #3: Chasing Old Signals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-4-ignoring-pl-column" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #4: Ignoring P&amp;L Column
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-5-not-verifying-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #5: Not Verifying Context
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Tips
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tip-1-mix-timeframes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tip #1: Mix Timeframes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip-2-scan-same-ticker-multiple-timeframes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tip #2: Scan Same Ticker, Multiple Timeframes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip-3-use-2-grid-instances" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tip #3: Use 2 Grid Instances
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip-4-track-performance-by-tier" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tip #4: Track Performance by Tier
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-example-real-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow Example (Real Scenario)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Matters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Why This Matters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#without-augury-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Without Augury Grid:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#with-augury-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      With Augury Grid:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    🚀 Suite (Latest)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            🚀 Suite (Latest)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../suite-index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📚 Suite Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pentarch-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pentarch v1.0 — Reversal Events
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../janus-atlas-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Janus Atlas v1.0 — Levels System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../omnideck-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Omnideck v1.0 — Everything Indicator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../augury-grid-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Augury Grid v1.0 — Multi-Symbol Screener
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../minimal-flow-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volume Oracle v1.0 — Volume Strategy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../harmonic-oscillator-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Harmonic Oscillator v1.0 — Composite Momentum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plutus-flow-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plutus Flow v1.0 — Advanced OBV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    📚 Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            📚 Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-workflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trading Workflow (Bias → Timing)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-comparison/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Indicator Comparison Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-best-practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Best Practices & Pro Tips
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-non-repaint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Non-Repainting Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-troubleshooting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshooting Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/troubleshooting-installation.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation Troubleshooting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    ℹ️ About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            ℹ️ About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/about-system-requirements.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System Requirements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Support & Access
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-changelog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Changelog (high level)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Website Tiles
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Website Tiles
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_product-cards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Product Cards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-augury-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Augury Grid?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-setup-3-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Setup (3 Steps)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick Setup (3 Steps)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-add-augury-grid-to-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Add Augury Grid to Chart
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-configure-8-symbols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Configure 8 Symbols
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-set-quality-filter-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Set Quality Filter (Optional)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-read-the-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Read the Grid
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-finding-opportunities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow: Finding Opportunities
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Workflow: Finding Opportunities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-glance-at-grid-10-seconds" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Glance at Grid (10 seconds)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-identify-best-setup-30-seconds" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Identify Best Setup (30 seconds)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-verify-on-chart-2-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Verify on Chart (2 minutes)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-enter-trade-if-confirmed" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Enter Trade (if confirmed)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-tiers-reference-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality Tiers (Reference Guide)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-mistakes-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Mistakes &amp; Fixes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Mistakes & Fixes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mistake-1-wrong-ticker-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #1: Wrong Ticker Format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-2-trading-every-signal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #2: Trading Every Signal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-3-chasing-old-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #3: Chasing Old Signals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-4-ignoring-pl-column" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #4: Ignoring P&amp;L Column
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-5-not-verifying-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #5: Not Verifying Context
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Tips
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tip-1-mix-timeframes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tip #1: Mix Timeframes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip-2-scan-same-ticker-multiple-timeframes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tip #2: Scan Same Ticker, Multiple Timeframes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip-3-use-2-grid-instances" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tip #3: Use 2 Grid Instances
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip-4-track-performance-by-tier" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tip #4: Track Performance by Tier
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-example-real-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow Example (Real Scenario)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Matters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Why This Matters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#without-augury-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Without Augury Grid:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#with-augury-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      With Augury Grid:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  <!-- Reading time and last updated info -->
+<div class="md-content-meta" style="display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 1.5rem; padding: 0.75rem 1rem; background: color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent); border-radius: 8px; font-size: 0.9rem; color: var(--md-default-fg-color);">
+  
+    <span style="display: flex; align-items: center; gap: 0.4rem;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1.1rem; height: 1.1rem; fill: currentColor; opacity: 0.7;">
+        <path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/>
+      </svg>
+      <span style="opacity: 0.85;">Updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 10, 2025 01:41:10 UTC"><span class="timeago" datetime="2025-11-10T01:41:10+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 10, 2025 01:41:10 UTC">2025-11-10</span></span>
+    </span>
+  
+
+  
+    
+    
+    <span style="display: flex; align-items: center; gap: 0.4rem;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1.1rem; height: 1.1rem; fill: currentColor; opacity: 0.7;">
+        <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M16.2,16.2L11,13V7H12.5V12.2L17,14.9L16.2,16.2Z"/>
+      </svg>
+      <span style="opacity: 0.85;">10 min read</span>
+    </span>
+  
+</div>
+
+<!-- Render the page content -->
+<h1 id="use-the-multi-symbol-screener-augury-grid">Use the Multi-Symbol Screener (Augury Grid)<a class="headerlink" href="#use-the-multi-symbol-screener-augury-grid" title="Permanent link">&para;</a></h1>
+<p><strong>Goal:</strong> Monitor 8 different instruments simultaneously on one chart instead of flipping between watchlists.</p>
+<p><strong>What Can Be Learned:</strong>
+- Setting up an 8-symbol watchlist
+- Reading the screener table
+- Filtering for high-quality signals
+- Acting on fresh opportunities</p>
+<p><strong>Time:</strong> 5-10 minutes</p>
+<hr />
+<h2 id="what-is-augury-grid">What Is Augury Grid?<a class="headerlink" href="#what-is-augury-grid" title="Permanent link">&para;</a></h2>
+<p><strong>Augury Grid v1.0</strong> is an on-chart multi-symbol screener table. It monitors 8 tickers simultaneously and displays:</p>
+<ul>
+<li><strong>Live signals</strong> (BUY/SELL) with quality scores (0-100)</li>
+<li><strong>Real-time prices</strong> and profit targets</li>
+<li><strong>Signal age</strong> (how fresh it is)</li>
+<li><strong>P&amp;L tracking</strong> (how the signal is performing)</li>
+</ul>
+<p><strong>Best for:</strong> Multi-asset traders, portfolio management, finding setups across watchlists</p>
+<p>📖 <strong>Full documentation:</strong> <a href="../augury-grid-v10/">Augury Grid v1.0 — Multi-Symbol Screener</a></p>
+<hr />
+<h2 id="quick-setup-3-steps">Quick Setup (3 Steps)<a class="headerlink" href="#quick-setup-3-steps" title="Permanent link">&para;</a></h2>
+<h3 id="step-1-add-augury-grid-to-chart">Step 1: Add Augury Grid to Chart<a class="headerlink" href="#step-1-add-augury-grid-to-chart" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Any chart in TradingView can be opened</li>
+<li><strong>Indicators</strong> can be clicked → "<strong>Augury Grid</strong>" can be searched</li>
+<li><strong>"SP — Augury Grid v1.0"</strong> can be added</li>
+</ol>
+<p><strong>What will be seen:</strong> A table appears showing 8 symbol slots (initially empty or with default symbols)</p>
+<hr />
+<h3 id="step-2-configure-8-symbols">Step 2: Configure 8 Symbols<a class="headerlink" href="#step-2-configure-8-symbols" title="Permanent link">&para;</a></h3>
+<ol>
+<li>The indicator name can be clicked → <strong>Settings (gear icon)</strong></li>
+<li>Scrolling to <strong>Symbol Configuration</strong> is available</li>
+<li>8 tickers can be entered (the exact TradingView format is commonly used):</li>
+</ol>
+<p><strong>Example multi-asset watchlist:</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Symbol 1: BINANCE:BTCUSDT
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Symbol 2: BINANCE:ETHUSDT
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Symbol 3: NASDAQ:AAPL
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Symbol 4: NYSE:SPY
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Symbol 5: NASDAQ:QQQ
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Symbol 6: NASDAQ:TSLA
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Symbol 7: CME_MINI:ES1!
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Symbol 8: CME_MINI:NQ1!
+</span></code></pre></div></p>
+<p><strong>Format requirements:</strong>
+- The exchange prefix is commonly included: <code>BINANCE:</code>, <code>NASDAQ:</code>, <code>NYSE:</code>, etc.
+- The exact TradingView ticker format is commonly used
+- Each ticker can be tested on a chart first to verify it works</p>
+<hr />
+<h3 id="step-3-set-quality-filter-optional">Step 3: Set Quality Filter (Optional)<a class="headerlink" href="#step-3-set-quality-filter-optional" title="Permanent link">&para;</a></h3>
+<p><strong>Minimum Confluence Score:</strong>
+- <strong>Default:</strong> 40 (shows all decent signals)
+- <strong>Recommended for beginners:</strong> 60 (Premium+ signals only)
+- <strong>Conservative:</strong> 80 (Elite signals only)</p>
+<p><strong>ADX Threshold:</strong>
+- <strong>Default:</strong> 20 (works for most traders)
+- <strong>Higher (25-30):</strong> Only strong trends
+- <strong>Lower (15):</strong> More signals, lower quality</p>
+<p><strong>OK</strong> can be clicked to save.</p>
+<hr />
+<h2 id="how-to-read-the-grid">How to Read the Grid<a class="headerlink" href="#how-to-read-the-grid" title="Permanent link">&para;</a></h2>
+<p>The table displays 7 columns for each symbol:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>What It Shows</th>
+<th>How to Use It</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SYMBOL</strong></td>
+<td>Ticker name</td>
+<td>Quick identification</td>
+</tr>
+<tr>
+<td><strong>SIGNAL</strong></td>
+<td>BUY / SELL / -</td>
+<td>Current direction (green/red/gray)</td>
+</tr>
+<tr>
+<td><strong>SCORE</strong></td>
+<td>0-100 quality rating</td>
+<td>⭐⭐⭐ Elite (80+), ⭐⭐ Premium (60-79), ⭐ Standard (40-59)</td>
+</tr>
+<tr>
+<td><strong>PRICE</strong></td>
+<td>Current price</td>
+<td>Real-time market price</td>
+</tr>
+<tr>
+<td><strong>TP1</strong></td>
+<td>First target</td>
+<td>Auto-calculated profit target (ATR-based)</td>
+</tr>
+<tr>
+<td><strong>AGE</strong></td>
+<td>Bars since signal</td>
+<td>0-5 = fresh, 6-15 = moderate, 16+ = stale</td>
+</tr>
+<tr>
+<td><strong>P&amp;L</strong></td>
+<td>Performance since signal</td>
+<td>Green = winning, red = losing</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="workflow-finding-opportunities">Workflow: Finding Opportunities<a class="headerlink" href="#workflow-finding-opportunities" title="Permanent link">&para;</a></h2>
+<h3 id="1-glance-at-grid-10-seconds">1. Glance at Grid (10 seconds)<a class="headerlink" href="#1-glance-at-grid-10-seconds" title="Permanent link">&para;</a></h3>
+<p>Signals can be scanned for:
+- ⭐⭐⭐ <strong>Elite</strong> (80-100) or ⭐⭐ <strong>Premium</strong> (60-79) signals
+- <strong>AGE 0-10 bars</strong> (fresh signals)
+- <strong>Green P&amp;L</strong> (if signal already triggered, it's working)</p>
+<h3 id="2-identify-best-setup-30-seconds">2. Identify Best Setup (30 seconds)<a class="headerlink" href="#2-identify-best-setup-30-seconds" title="Permanent link">&para;</a></h3>
+<p>Example:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>BTC/USD │ BUY │ 87 ⭐⭐⭐ │ $64,250 │ $65,800 │ 2 │ +0.3%
+</span></code></pre></div>
+- Elite signal (87)
+- Fresh (2 bars old)
+- Already showing profit (+0.3%)
+- <strong>Action:</strong> This setup can be investigated</p>
+<h3 id="3-verify-on-chart-2-minutes">3. Verify on Chart (2 minutes)<a class="headerlink" href="#3-verify-on-chart-2-minutes" title="Permanent link">&para;</a></h3>
+<p>The chart can be clicked to load <strong>BTC/USD</strong> and the following can be checked:
+- [ ] At support level or key zone? (<a href="../janus-atlas-v10/">Janus Atlas</a> can be used)
+- [ ] Volume confirming? (<a href="../minimal-flow-v10/">Volume Oracle</a> can be used)
+- [ ] No major resistance overhead?
+- [ ] Aligns with trading bias?</p>
+<h3 id="4-enter-trade-if-confirmed">4. Enter Trade (if confirmed)<a class="headerlink" href="#4-enter-trade-if-confirmed" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Entry: Current price or limit order can be considered</li>
+<li>Stop loss: Below recent low (for BUY) or above recent high (for SELL) can be placed</li>
+<li>Target: TP1 from Grid can be used as first target</li>
+<li>P&amp;L column can be monitored to track performance</li>
+</ul>
+<hr />
+<h2 id="quality-tiers-reference-guide">Quality Tiers (Reference Guide)<a class="headerlink" href="#quality-tiers-reference-guide" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Quality</th>
+<th>Symbol</th>
+<th>Typical Win Rate</th>
+<th>Common Approach</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>80-100</strong></td>
+<td>⭐⭐⭐ Elite</td>
+<td>Multiple factors aligned</td>
+<td>~70-80%</td>
+<td>Taken immediately (after verification)</td>
+</tr>
+<tr>
+<td><strong>60-79</strong></td>
+<td>⭐⭐ Premium</td>
+<td>Strong setup</td>
+<td>~60-70%</td>
+<td>Taken with normal risk</td>
+</tr>
+<tr>
+<td><strong>40-59</strong></td>
+<td>⭐ Standard</td>
+<td>Basic setup</td>
+<td>~50-60%</td>
+<td>Selective (only if matches bias)</td>
+</tr>
+<tr>
+<td><strong>0-39</strong></td>
+<td>Weak</td>
+<td>Poor confluence</td>
+<td>&lt;50%</td>
+<td>Typically skipped</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="common-mistakes-fixes">Common Mistakes &amp; Fixes<a class="headerlink" href="#common-mistakes-fixes" title="Permanent link">&para;</a></h2>
+<h3 id="mistake-1-wrong-ticker-format">Mistake #1: Wrong Ticker Format<a class="headerlink" href="#mistake-1-wrong-ticker-format" title="Permanent link">&para;</a></h3>
+<p><strong>❌ Problem:</strong> Symbols show no data or "N/A"</p>
+<p><strong>✅ Fix:</strong>
+- The exact TradingView format is commonly used: <code>BINANCE:BTCUSDT</code> not <code>BTC</code> or <code>BTCUSD</code>
+- The exchange prefix is commonly included
+- Ticker can be tested on chart first before adding to Grid</p>
+<hr />
+<h3 id="mistake-2-trading-every-signal">Mistake #2: Trading Every Signal<a class="headerlink" href="#mistake-2-trading-every-signal" title="Permanent link">&para;</a></h3>
+<p><strong>❌ Problem:</strong> Taking too many trades, overtrading</p>
+<p><strong>✅ Fix:</strong>
+- Focus can be placed on ⭐⭐⭐ Elite and ⭐⭐ Premium signals only
+- Min Score can be set to 60+ in settings
+- Chart verification commonly occurs before entering</p>
+<hr />
+<h3 id="mistake-3-chasing-old-signals">Mistake #3: Chasing Old Signals<a class="headerlink" href="#mistake-3-chasing-old-signals" title="Permanent link">&para;</a></h3>
+<p><strong>❌ Problem:</strong> Entering when AGE &gt; 15 bars</p>
+<p><strong>✅ Fix:</strong>
+- AGE column can be checked
+- If &gt;15 bars, signal is likely stale
+- Fresh signals (0-10 bars) can be looked for instead</p>
+<hr />
+<h3 id="mistake-4-ignoring-pl-column">Mistake #4: Ignoring P&amp;L Column<a class="headerlink" href="#mistake-4-ignoring-pl-column" title="Permanent link">&para;</a></h3>
+<p><strong>❌ Problem:</strong> Not checking if signal is working</p>
+<p><strong>✅ Fix:</strong>
+- If P&amp;L shows -5% and age is high, signal failed—it can be skipped
+- If P&amp;L is green and signal is fresh, it's confirming—good sign
+- P&amp;L can be used to validate signal quality</p>
+<hr />
+<h3 id="mistake-5-not-verifying-context">Mistake #5: Not Verifying Context<a class="headerlink" href="#mistake-5-not-verifying-context" title="Permanent link">&para;</a></h3>
+<p><strong>❌ Problem:</strong> Blindly trading Grid signals without chart confirmation</p>
+<p><strong>✅ Fix:</strong>
+- The chart is typically loaded
+- Support/resistance levels are commonly checked
+- Volume and structure are commonly verified
+- Grid finds opportunities, context confirmation is needed</p>
+<hr />
+<h2 id="advanced-tips">Advanced Tips<a class="headerlink" href="#advanced-tips" title="Permanent link">&para;</a></h2>
+<h3 id="tip-1-mix-timeframes">Tip #1: Mix Timeframes<a class="headerlink" href="#tip-1-mix-timeframes" title="Permanent link">&para;</a></h3>
+<p>Different timeframes can be set for each symbol:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Symbol 1-2 (crypto): 1H
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Symbol 3-4 (stocks): 4H
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Symbol 5-6 (scalp): 15m
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>Symbol 7-8 (swing): Daily
+</span></code></pre></div>
+<strong>Why:</strong> Multiple horizons can be scanned simultaneously</p>
+<hr />
+<h3 id="tip-2-scan-same-ticker-multiple-timeframes">Tip #2: Scan Same Ticker, Multiple Timeframes<a class="headerlink" href="#tip-2-scan-same-ticker-multiple-timeframes" title="Permanent link">&para;</a></h3>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Symbol 1: SPY 15m (scalps)
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Symbol 2: SPY 1H (day trades)
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>Symbol 3: SPY 4H (swings)
+</span></code></pre></div>
+<strong>Why:</strong> Multi-timeframe confluence can be seen for one asset</p>
+<hr />
+<h3 id="tip-3-use-2-grid-instances">Tip #3: Use 2 Grid Instances<a class="headerlink" href="#tip-3-use-2-grid-instances" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Grid 1:</strong> 8 crypto pairs (1H)</li>
+<li><strong>Grid 2:</strong> 8 stock tickers (4H)</li>
+<li><strong>Total:</strong> 16 symbols monitored</li>
+</ul>
+<p><strong>How:</strong> Augury Grid can be added twice to same chart</p>
+<hr />
+<h3 id="tip-4-track-performance-by-tier">Tip #4: Track Performance by Tier<a class="headerlink" href="#tip-4-track-performance-by-tier" title="Permanent link">&para;</a></h3>
+<p>After 20+ trades, win rate can be calculated:
+- How many Elite signals won?
+- How many Premium signals won?
+- Min Score filter can be adjusted based on results</p>
+<hr />
+<h2 id="workflow-example-real-scenario">Workflow Example (Real Scenario)<a class="headerlink" href="#workflow-example-real-scenario" title="Permanent link">&para;</a></h2>
+<p><strong>8:00 AM:</strong> Grid can be checked</p>
+<p>Grid shows:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>AAPL │ BUY │ 91 ⭐⭐⭐ │ $175.20 │ $177.80 │ 1 │ +0.1%
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>TSLA │ SELL │ 43 ⭐ │ $245.90 │ $242.10 │ 18 │ -2.3%
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>BTC  │ BUY │ 78 ⭐⭐ │ $64,250 │ $65,800 │ 5 │ +0.8%
+</span></code></pre></div></p>
+<p><strong>Analysis:</strong>
+- <strong>AAPL:</strong> Elite signal (91), fresh (1 bar), already working (+0.1%) ✅
+- <strong>TSLA:</strong> Standard signal (43), stale (18 bars), losing (-2.3%) ❌ Can be skipped
+- <strong>BTC:</strong> Premium signal (78), moderate age (5 bars), working (+0.8%) ✅</p>
+<p><strong>Action:</strong> Focus can be placed on <strong>AAPL</strong> and <strong>BTC</strong></p>
+<hr />
+<p><strong>8:05 AM:</strong> AAPL Chart can be loaded
+- At Janus support: ✅
+- Volume spike visible: ✅
+- No resistance overhead: ✅
+- <strong>Decision:</strong> Long AAPL consideration at $175.50</p>
+<hr />
+<p><strong>8:10 AM:</strong> BTC Chart can be loaded
+- Breaking out of consolidation: ✅
+- Higher timeframe aligned: ✅
+- <strong>Decision:</strong> Long BTC consideration at $64,300</p>
+<hr />
+<p><strong>Throughout day:</strong> P&amp;L column can be monitored to track trades</p>
+<hr />
+<p><strong>4:00 PM:</strong> Results
+- AAPL hit TP1 at $177.80 (+1.3%)
+- BTC still running, stop moved to breakeven</p>
+<hr />
+<h2 id="why-this-matters">Why This Matters<a class="headerlink" href="#why-this-matters" title="Permanent link">&para;</a></h2>
+<h3 id="without-augury-grid">Without Augury Grid:<a class="headerlink" href="#without-augury-grid" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Manual flipping through 8-20 charts is required</li>
+<li>Signals can be missed while looking at other symbols</li>
+<li>No systematic quality scoring available</li>
+<li>Multiple setups are hard to track</li>
+</ul>
+<h3 id="with-augury-grid">With Augury Grid:<a class="headerlink" href="#with-augury-grid" title="Permanent link">&para;</a></h3>
+<ul>
+<li>All 8 symbols can be seen in one glance (10 seconds)</li>
+<li>Quality scores show what's worth investigating</li>
+<li>Performance can be tracked in real-time</li>
+<li>Focus can be placed on best opportunities</li>
+</ul>
+<p><strong>Bottom line:</strong> 30+ minutes per scan can be saved, more opportunities can be caught, only the best setups are traded.</p>
+<hr />
+<h2 id="common-questions">Common Questions<a class="headerlink" href="#common-questions" title="Permanent link">&para;</a></h2>
+<p><strong>Q: Can I add more than 8 symbols?</strong>
+<strong>A:</strong> Not in one Grid (performance limit). But 2 Grid instances can be added = 16 symbols total.</p>
+<p><strong>Q: What if a symbol shows no data?</strong>
+<strong>A:</strong> The following can be checked: (1) Ticker format correct? (2) Exchange prefix included? (3) Available on TradingView plan?</p>
+<p><strong>Q: Should I trade every Elite signal?</strong>
+<strong>A:</strong> No. Elite = high quality potential, but context, levels, and trading plan can be verified. No system is 100%.</p>
+<p><strong>Q: Can I get alerts from the Grid?</strong>
+<strong>A:</strong> No (table indicators can't create alerts). Workaround: When Elite signal is seen, manual alert can be set on that symbol's chart.</p>
+<p><strong>Q: How often does it update?</strong>
+<strong>A:</strong> Every bar close on configured timeframes. If Symbol 1 is set to 15m, it updates every 15 minutes.</p>
+<hr />
+<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<p>✅ <strong>Learning achieved:</strong> How to scan 8 symbols simultaneously with Augury Grid</p>
+<p><strong>Continued learning available:</strong>
+- 📖 <a href="../augury-grid-v10/">Full Augury Grid Documentation</a> - Advanced settings, scoring system details
+- 📊 <a href="../janus-atlas-v10/">Janus Atlas (Support/Resistance)</a> - Verify key levels for Grid signals
+- 🔔 <a href="../how-to-alerts/">Set Up Alerts</a> - Alert on individual symbols when Grid shows Elite signals
+- 📈 <a href="../ref-best-practices/">Best Practices Guide</a> - Risk management, workflow optimization</p>
+<hr />
+<p><strong>Important consideration:</strong> Augury Grid is an opportunity scanner across multiple symbols. It highlights what to investigate—context verification and execution decisions remain with the trader. Scan smart, trade better.</p>
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://x.com/signalpilot" target="_blank" rel="noopener" title="x.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Signalpilot" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.sections", "navigation.path", "content.code.copy", "search.suggest", "search.highlight", "content.tabs.link", "content.tooltips", "content.action.edit"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="../js/timeago.min.js"></script>
+      
+        <script src="../js/timeago_mkdocs_material.js"></script>
+      
+        <script src="../assets/brand.js"></script>
+      
+        <script src="../assets/sp-bg.js"></script>
+      
+        <script src="../assets/keyword-highlighter.js"></script>
+      
+    
+  </body>
+</html>

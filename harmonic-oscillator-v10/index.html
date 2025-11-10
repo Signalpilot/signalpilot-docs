@@ -1,0 +1,2275 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Non-repainting, alert-ready TradingView indicators for any market/timeframe.">
+      
+      
+      
+        <link rel="canonical" href="https://docs.signalpilot.io/harmonic-oscillator-v10/">
+      
+      
+        <link rel="prev" href="../minimal-flow-v10/">
+      
+      
+        <link rel="next" href="../plutus-flow-v10/">
+      
+      
+      <link rel="icon" href="../assets/watermark-monogram-color-transparent.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
+    
+    
+      
+        <title>Harmonic Oscillator v1.0 — Composite Momentum - Signal Pilot Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/timeago.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../assets/brand.css">
+    
+      <link rel="stylesheet" href="../assets/aurora.css">
+    
+      <link rel="stylesheet" href="../assets/print.css">
+    
+      <link rel="stylesheet" href="../assets/interactive-code.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-NZ05GV72K0"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-NZ05GV72K0",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-NZ05GV72K0",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  <!-- Google Fonts: Gugi for brand consistency -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#harmonic-oscillator-v10-adaptive-3-in-1-momentum-indicator" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+  <!-- SignalPilot brand bar (keeps Material header & search intact) -->
+  <div class="sp-topnav">
+    <div class="sp-topnav__inner">
+      <a href="https://signalpilot.io" class="brand">
+        <span>Signal Pilot</span>
+      </a>
+      <nav class="sp-links" aria-label="Signal Pilot">
+        <a href="https://signalpilot.io/#why">Why</a>
+        <a href="https://signalpilot.io/#inside">What's inside</a>
+        <a href="https://education.signalpilot.io/">Education</a>
+        <a aria-current="page" href="https://docs.signalpilot.io/">Docs</a>
+        <a href="https://signalpilot.io/#pricing">Pricing</a>
+        <a href="https://signalpilot.io/#faq">FAQ</a>
+      </nav>
+      <a class="sp-cta" href="https://signalpilot.io/#pricing">Get the Suite</a>
+    </div>
+  </div>
+
+  
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Signal Pilot Docs" class="md-header__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
+      
+  <img src="../assets/watermark-monogram-color-transparent.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Signal Pilot Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Harmonic Oscillator v1.0 — Composite Momentum
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Signalpilot/signalpilot-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    signalpilot-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Signal Pilot Docs" class="md-nav__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
+      
+  <img src="../assets/watermark-monogram-color-transparent.png" alt="logo">
+
+    </a>
+    Signal Pilot Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Signalpilot/signalpilot-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    signalpilot-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    🚀 Getting Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            🚀 Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../start-quick/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ⚡ Quick Start (5 min)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../start-prerequisites/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prerequisites
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/start-which-indicator.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Which Indicator Should I Start?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../start-onboarding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Onboarding Checklist (7 days)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    📖 How-To Guides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            📖 How-To Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-alerts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Set Up Alerts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-webhooks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use Webhooks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-screener/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use Screener
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    🚀 Suite (Latest)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            🚀 Suite (Latest)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../suite-index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📚 Suite Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pentarch-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pentarch v1.0 — Reversal Events
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../janus-atlas-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Janus Atlas v1.0 — Levels System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../omnideck-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Omnideck v1.0 — Everything Indicator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../augury-grid-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Augury Grid v1.0 — Multi-Symbol Screener
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../minimal-flow-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volume Oracle v1.0 — Volume Strategy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Harmonic Oscillator v1.0 — Composite Momentum
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Harmonic Oscillator v1.0 — Composite Momentum
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-does-it-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 What Does It Do?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-concept-democratic-voting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Concept: Democratic Voting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Concept: Democratic Voting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-macd-trend-strength-vote" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. MACD - Trend Strength Vote
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-rsi-extreme-detection-vote" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. RSI - Extreme Detection Vote
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-stochrsi-timing-vote" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. StochRSI - Timing Vote
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-composite-what-you-see" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Composite (What You See)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Signals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Signals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consensus-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consensus Signals
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signal-modes-pick-your-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signal Modes (Pick Your Style)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Signal Modes (Pick Your Style)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conservative-3-votes-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conservative (3 votes required)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#balanced-2-votes-required-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      Balanced (2 votes required) - DEFAULT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aggressive-1-vote-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aggressive (1 vote required)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#divergence-detection-the-power-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      Divergence Detection (The Power Feature)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Divergence Detection (The Power Feature)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regular-bullish-divergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regular Bullish Divergence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regular-bearish-divergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regular Bearish Divergence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hidden-divergences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hidden Divergences
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-patterns-3-core-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage Patterns (3 Core Components)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage Patterns (3 Core Components)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#component-1-mode-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Component 1: Mode Selection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#component-2-extreme-zone-recognition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Component 2: Extreme Zone Recognition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#component-3-divergence-confirmation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Component 3: Divergence Confirmation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-example-ethereum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real Example (Ethereum)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#htf-higher-timeframe-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTF (Higher Timeframe) Filter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings-configuration-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings (Configuration Approach)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alert-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alert Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-pitfalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Pitfalls
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frequently-asked-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❓ Frequently Asked Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Cheat Sheet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Support
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plutus-flow-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plutus Flow v1.0 — Advanced OBV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    📚 Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            📚 Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-workflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trading Workflow (Bias → Timing)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-comparison/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Indicator Comparison Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-best-practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Best Practices & Pro Tips
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-non-repaint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Non-Repainting Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-troubleshooting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshooting Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/troubleshooting-installation.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation Troubleshooting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    ℹ️ About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            ℹ️ About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/about-system-requirements.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System Requirements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Support & Access
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-changelog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Changelog (high level)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Website Tiles
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Website Tiles
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_product-cards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Product Cards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-does-it-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 What Does It Do?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-concept-democratic-voting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Concept: Democratic Voting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Concept: Democratic Voting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-macd-trend-strength-vote" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. MACD - Trend Strength Vote
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-rsi-extreme-detection-vote" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. RSI - Extreme Detection Vote
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-stochrsi-timing-vote" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. StochRSI - Timing Vote
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-composite-what-you-see" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Composite (What You See)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Signals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Signals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consensus-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consensus Signals
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signal-modes-pick-your-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signal Modes (Pick Your Style)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Signal Modes (Pick Your Style)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conservative-3-votes-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conservative (3 votes required)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#balanced-2-votes-required-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      Balanced (2 votes required) - DEFAULT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aggressive-1-vote-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aggressive (1 vote required)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#divergence-detection-the-power-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      Divergence Detection (The Power Feature)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Divergence Detection (The Power Feature)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regular-bullish-divergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regular Bullish Divergence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regular-bearish-divergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regular Bearish Divergence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hidden-divergences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hidden Divergences
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-patterns-3-core-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage Patterns (3 Core Components)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage Patterns (3 Core Components)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#component-1-mode-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Component 1: Mode Selection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#component-2-extreme-zone-recognition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Component 2: Extreme Zone Recognition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#component-3-divergence-confirmation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Component 3: Divergence Confirmation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-example-ethereum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real Example (Ethereum)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#htf-higher-timeframe-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTF (Higher Timeframe) Filter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings-configuration-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings (Configuration Approach)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alert-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alert Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-pitfalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Pitfalls
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frequently-asked-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❓ Frequently Asked Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Cheat Sheet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Support
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  <!-- Reading time and last updated info -->
+<div class="md-content-meta" style="display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 1.5rem; padding: 0.75rem 1rem; background: color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent); border-radius: 8px; font-size: 0.9rem; color: var(--md-default-fg-color);">
+  
+    <span style="display: flex; align-items: center; gap: 0.4rem;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1.1rem; height: 1.1rem; fill: currentColor; opacity: 0.7;">
+        <path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/>
+      </svg>
+      <span style="opacity: 0.85;">Updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 10, 2025 01:41:10 UTC"><span class="timeago" datetime="2025-11-10T01:41:10+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 10, 2025 01:41:10 UTC">2025-11-10</span></span>
+    </span>
+  
+
+  
+    
+    
+    <span style="display: flex; align-items: center; gap: 0.4rem;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1.1rem; height: 1.1rem; fill: currentColor; opacity: 0.7;">
+        <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M16.2,16.2L11,13V7H12.5V12.2L17,14.9L16.2,16.2Z"/>
+      </svg>
+      <span style="opacity: 0.85;">9 min read</span>
+    </span>
+  
+</div>
+
+<!-- Render the page content -->
+<h1 id="harmonic-oscillator-v10-adaptive-3-in-1-momentum-indicator">Harmonic Oscillator v1.0 ADAPTIVE - 3-in-1 Momentum Indicator<a class="headerlink" href="#harmonic-oscillator-v10-adaptive-3-in-1-momentum-indicator" title="Permanent link">&para;</a></h1>
+<h2 id="what-does-it-do">🎯 What Does It Do?<a class="headerlink" href="#what-does-it-do" title="Permanent link">&para;</a></h2>
+<p><span style="color: #0aa1d5; font-weight: 600;">Core Functionality</span></p>
+<p>Harmonic Oscillator combines <strong>MACD, RSI, and StochRSI</strong> into one smart oscillator (0-100 scale). Think of it as "three expert traders voting" - when 2 or 3 agree, the probability skyrockets.</p>
+<p><strong>Best for:</strong> Momentum traders, divergence traders, anyone tired of juggling multiple oscillators</p>
+<hr />
+<h2 id="core-concept-democratic-voting">Core Concept: Democratic Voting<a class="headerlink" href="#core-concept-democratic-voting" title="Permanent link">&para;</a></h2>
+<p><span style="color: #0aa1d5; font-weight: 600; font-size: 1.1em;">💡 Core Philosophy - 3 Oscillators Vote Together</span></p>
+<p>No single indicator is perfect. But when multiple agree? That's high probability.</p>
+<p><strong>The Three Voters:</strong></p>
+<h3 id="1-macd-trend-strength-vote">1. MACD - Trend Strength Vote<a class="headerlink" href="#1-macd-trend-strength-vote" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Bullish vote:</strong> Histogram rising and positive</li>
+<li><strong>Bearish vote:</strong> Histogram falling and negative</li>
+<li><strong>Why:</strong> Best for trend changes</li>
+</ul>
+<h3 id="2-rsi-extreme-detection-vote">2. RSI - Extreme Detection Vote<a class="headerlink" href="#2-rsi-extreme-detection-vote" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Bullish vote:</strong> RSI &lt; 30 (oversold)</li>
+<li><strong>Bearish vote:</strong> RSI &gt; 70 (overbought)</li>
+<li><strong>Why:</strong> Best for reversal zones</li>
+</ul>
+<h3 id="3-stochrsi-timing-vote">3. StochRSI - Timing Vote<a class="headerlink" href="#3-stochrsi-timing-vote" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Bullish vote:</strong> StochRSI &lt; 20 (oversold)</li>
+<li><strong>Bearish vote:</strong> StochRSI &gt; 80 (overbought)</li>
+<li><strong>Why:</strong> Best for precise entry timing</li>
+</ul>
+<hr />
+<h2 id="the-composite-what-you-see">The Composite (What You See)<a class="headerlink" href="#the-composite-what-you-see" title="Permanent link">&para;</a></h2>
+<p><strong>One line, 0-100 scale:</strong></p>
+<p><strong>80-100</strong> = Extreme overbought (potential reversal down likely)
+<strong>60-80</strong> = Bullish momentum
+<strong>40-60</strong> = Neutral (no clear direction)
+<strong>20-40</strong> = Bearish momentum
+<strong>0-20</strong> = Extreme oversold (potential reversal up likely)</p>
+<p><strong>Two key zones:</strong>
+- Above 70 = Overbought zone (watch for shorts)
+- Below 30 = Oversold zone (watch for longs)</p>
+<hr />
+<h2 id="the-signals">The Signals<a class="headerlink" href="#the-signals" title="Permanent link">&para;</a></h2>
+<h3 id="consensus-signals">Consensus Signals<a class="headerlink" href="#consensus-signals" title="Permanent link">&para;</a></h3>
+<p><strong>Bullish Signal:</strong>
+- Composite crosses above 30 (exiting oversold)
+- At least 2 of 3 components vote bullish
+- Green label appears</p>
+<p><strong>Bearish Signal:</strong>
+- Composite crosses below 70 (exiting overbought)
+- At least 2 of 3 components vote bearish
+- Red label appears</p>
+<hr />
+<h2 id="signal-modes-pick-your-style">Signal Modes (Pick Your Style)<a class="headerlink" href="#signal-modes-pick-your-style" title="Permanent link">&para;</a></h2>
+<h3 id="conservative-3-votes-required">Conservative (3 votes required)<a class="headerlink" href="#conservative-3-votes-required" title="Permanent link">&para;</a></h3>
+<ul>
+<li>All three are required to agree</li>
+<li><strong>Fewest signals</strong></li>
+<li><strong>Win rate: 75-80%</strong></li>
+<li><strong>Best for:</strong> Swing trading</li>
+</ul>
+<h3 id="balanced-2-votes-required-default">Balanced (2 votes required) - DEFAULT<a class="headerlink" href="#balanced-2-votes-required-default" title="Permanent link">&para;</a></h3>
+<ul>
+<li>At least 2 of 3 agree</li>
+<li><strong>Moderate frequency</strong></li>
+<li><strong>Win rate: 65-70%</strong></li>
+<li><strong>Best for:</strong> Most traders</li>
+</ul>
+<h3 id="aggressive-1-vote-required">Aggressive (1 vote required)<a class="headerlink" href="#aggressive-1-vote-required" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Only 1 component needed</li>
+<li><strong>Most signals</strong></li>
+<li><strong>Win rate: 55-60%</strong></li>
+<li><strong>Best for:</strong> Scalping</li>
+</ul>
+<hr />
+<h2 id="divergence-detection-the-power-feature">Divergence Detection (The Power Feature)<a class="headerlink" href="#divergence-detection-the-power-feature" title="Permanent link">&para;</a></h2>
+<p>When price and oscillator disagree = Reversal coming</p>
+<h3 id="regular-bullish-divergence">Regular Bullish Divergence<a class="headerlink" href="#regular-bullish-divergence" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Price makes lower low</li>
+<li>Oscillator makes higher low</li>
+<li><strong>Signal:</strong> Downtrend weakening, potential reversal up likely</li>
+<li>Label: "BULL DIV" (green)</li>
+</ul>
+<h3 id="regular-bearish-divergence">Regular Bearish Divergence<a class="headerlink" href="#regular-bearish-divergence" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Price makes higher high</li>
+<li>Oscillator makes lower high</li>
+<li><strong>Signal:</strong> Uptrend weakening, potential reversal down likely</li>
+<li>Label: "BEAR DIV" (red)</li>
+</ul>
+<h3 id="hidden-divergences">Hidden Divergences<a class="headerlink" href="#hidden-divergences" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Hidden Bull:</strong> Price higher low, oscillator lower low = Continuation up</li>
+<li><strong>Hidden Bear:</strong> Price lower high, oscillator higher high = Continuation down</li>
+</ul>
+<p><strong>These are commonly the highest-probability setups.</strong></p>
+<hr />
+<h2 id="usage-patterns-3-core-components">Usage Patterns (3 Core Components)<a class="headerlink" href="#usage-patterns-3-core-components" title="Permanent link">&para;</a></h2>
+<p><span style="color: #0aa1d5; font-weight: 600; font-size: 1.1em;">🎓 Essential Learning Guide</span></p>
+<h3 id="component-1-mode-selection">Component 1: Mode Selection<a class="headerlink" href="#component-1-mode-selection" title="Permanent link">&para;</a></h3>
+<p><strong>Beginner configuration:</strong> Balanced mode (2 votes) is the standard starting point</p>
+<p><strong>Typical settings:</strong>
+- Signal Mode: Balanced
+- HTF Filter: Enabled (4× chart timeframe is common)
+- Divergence: Enabled
+- Min Votes: 2</p>
+<hr />
+<h3 id="component-2-extreme-zone-recognition">Component 2: Extreme Zone Recognition<a class="headerlink" href="#component-2-extreme-zone-recognition" title="Permanent link">&para;</a></h3>
+<p><strong>Signals from extreme zones are typically prioritized:</strong></p>
+<p><strong>For long positions:</strong>
+1. Composite dropping below 20 (extreme oversold) is observed
+2. Potential bullish signal (cross above 30) is monitored
+3. 2-3 votes are verified (component status can be checked)
+4. Long entries are evaluated</p>
+<p><strong>For short positions:</strong>
+1. Composite above 80 (extreme overbought) is observed
+2. Potential bearish signal (cross below 70) is monitored
+3. 2-3 votes are verified
+4. Short entries are evaluated</p>
+<hr />
+<h3 id="component-3-divergence-confirmation">Component 3: Divergence Confirmation<a class="headerlink" href="#component-3-divergence-confirmation" title="Permanent link">&para;</a></h3>
+<p><strong>Elite probability setup characteristics:</strong>
+- Composite at extreme (&lt; 20 or &gt; 80)
+- Divergence label present (BULL DIV or BEAR DIV)
+- Signal fires
+- = Elite-tier probability classification</p>
+<hr />
+<h2 id="real-example-ethereum">Real Example (Ethereum)<a class="headerlink" href="#real-example-ethereum" title="Permanent link">&para;</a></h2>
+<p><strong>Setup:</strong>
+- Price: $1,800, falling for days
+- <strong>Composite:</strong> Drops to 15 (extreme oversold)
+- <strong>Divergence:</strong> Price makes lower low at $1,750, but composite makes higher low (BULL DIV label)
+- <strong>Signal:</strong> Potential bullish signal fires at composite 32 (crossing above 30)
+- <strong>Votes:</strong> All 3 components vote bullish (Conservative = potential elite signal)</p>
+<p><strong>The Trade:</strong>
+1. Example entry long at $1,760
+2. Example stop below recent low at $1,720
+3. Example target: Composite 70 (overbought, exit zone)
+4. Price rallies to $2,100
+5. Composite hits 72, example exit</p>
+<p><strong>Result:</strong> $340 profit per ETH (19% gain)</p>
+<hr />
+<h2 id="htf-higher-timeframe-filter">HTF (Higher Timeframe) Filter<a class="headerlink" href="#htf-higher-timeframe-filter" title="Permanent link">&para;</a></h2>
+<p><strong>Optional but powerful:</strong></p>
+<p>Enable HTF filter to only take signals aligned with higher timeframe:</p>
+<p><strong>Example:</strong>
+- Your chart: 1H
+- HTF: 4H (set in settings)
+- Bullish signal on 1H only fires if 4H composite &gt; 50
+- <strong>Effect:</strong> Win rate +10-15%, signals reduced ~30%</p>
+<p><strong>Recommended:</strong>
+- Scalpers: HTF optional (may be too restrictive)
+- Day traders: HTF recommended
+- Swing traders: HTF mandatory</p>
+<hr />
+<h2 id="settings-configuration-approach">Settings (Configuration Approach)<a class="headerlink" href="#settings-configuration-approach" title="Permanent link">&para;</a></h2>
+<p><strong>Signal Mode:</strong>
+- Conservative (3 votes) / Balanced (2 votes) / Aggressive (1 vote)</p>
+<p><strong>HTF Filter:</strong>
+- Typically enabled for swing trading
+- Often disabled for scalping
+- 4× chart timeframe is the standard setting (e.g., 1H chart → 4H HTF)</p>
+<p><strong>Divergence:</strong>
+- All types (Regular + Hidden) can be enabled
+- Divergence beams (visual lines) are available</p>
+<p><strong>Most common configuration:</strong>
+- Mode: Balanced
+- HTF: Enabled (4× chart TF)
+- Divergence: Enabled</p>
+<hr />
+<h2 id="alert-configuration">Alert Configuration<a class="headerlink" href="#alert-configuration" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Elite Bull Signal</strong> - 3 votes + HTF + divergence</li>
+<li><strong>Elite Bear Signal</strong> - 3 votes + HTF + divergence</li>
+<li><strong>Premium Bull Signal</strong> - 2 votes + HTF</li>
+<li><strong>Premium Bear Signal</strong> - 2 votes + HTF</li>
+<li><strong>Bullish Divergence</strong> - BULL DIV detected</li>
+<li><strong>Bearish Divergence</strong> - BEAR DIV detected</li>
+</ol>
+<p><strong>Configuration steps:</strong>
+1. Alarm icon is clicked
+2. "Harmonic Oscillator v1.0" is selected
+3. Alert type is chosen
+4. "Once Per Bar Close" is set</p>
+<hr />
+<h2 id="common-pitfalls">Common Pitfalls<a class="headerlink" href="#common-pitfalls" title="Permanent link">&para;</a></h2>
+<p><span style="color: #dc2626; font-weight: 600; font-size: 1.1em;">🚨 Critical Learning Points</span></p>
+<p>❌ <strong>Trading signals from neutral zone (40-60)</strong>
+→ ✅ Signals from extremes (&lt; 20 or &gt; 80) are typically prioritized</p>
+<p>❌ <strong>Overlooking divergences</strong>
+→ ✅ Divergence + signal combinations = Highest probability classifications</p>
+<p>❌ <strong>Using Aggressive mode without additional filters</strong>
+→ ✅ Aggressive mode typically requires manual filtering (all 3 component agreement verification)</p>
+<p>❌ <strong>Trading against HTF filter when enabled</strong>
+→ ✅ HTF blocking indicates multi-timeframe misalignment - respecting it is standard practice</p>
+<p>❌ <strong>Reacting to level touches without crossover</strong>
+→ ✅ Awaiting composite CROSS of the level (30 or 70), not just touch, is the confirmation requirement</p>
+<hr />
+<h2 id="frequently-asked-questions">❓ Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permanent link">&para;</a></h2>
+<p><span style="color: #10b981; font-weight: 600;">Common Questions</span></p>
+<p><strong>Q: What's better - Conservative or Aggressive?</strong>
+<strong>A:</strong>
+- Conservative (3 votes) = Fewer signals, 75-80% win rate
+- Balanced (2 votes) = Best for most traders, 65-70% win rate
+- Aggressive (1 vote) = More signals, 55-60% win rate</p>
+<p><strong>Q: Should I enable HTF filter?</strong>
+<strong>A:</strong> Yes if you want quality over quantity. HTF increases win rate ~10-15% but reduces signal frequency ~30-40%.</p>
+<p><strong>Q: Which divergence is strongest?</strong>
+<strong>A:</strong>
+- <strong>Regular divergences</strong> = Best potential reversal signals
+- <strong>Hidden divergences</strong> = Best continuation signals
+Both are valuable in different contexts.</p>
+<p><strong>Q: How often do potential Elite signals appear?</strong>
+<strong>A:</strong> Rarely. Elite needs 3 votes + HTF + divergence. Expect:
+- 1H chart: 1-2 per week
+- Daily chart: 1-2 per month</p>
+<p><strong>Q: Does it repaint?</strong>
+<strong>A:</strong> No. All signals lock at bar close. What you see is what you get.</p>
+<hr />
+<h2 id="quick-cheat-sheet">Quick Cheat Sheet<a class="headerlink" href="#quick-cheat-sheet" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Composite Level</th>
+<th>Meaning</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0-20</td>
+<td>Extreme oversold</td>
+<td>Watch for potential bullish signal</td>
+</tr>
+<tr>
+<td>20-30</td>
+<td>Oversold</td>
+<td>Potential bullish signals here are good</td>
+</tr>
+<tr>
+<td>30-70</td>
+<td>Neutral</td>
+<td>Wait for extremes</td>
+</tr>
+<tr>
+<td>70-80</td>
+<td>Overbought</td>
+<td>Potential bearish signals here are good</td>
+</tr>
+<tr>
+<td>80-100</td>
+<td>Extreme overbought</td>
+<td>Watch for potential bearish signal</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Signal Type</th>
+<th>Votes</th>
+<th>Win Rate</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Conservative</td>
+<td>3/3</td>
+<td>75-80%</td>
+<td>Take every time</td>
+</tr>
+<tr>
+<td>Balanced</td>
+<td>2/3</td>
+<td>65-70%</td>
+<td>Take with normal risk</td>
+</tr>
+<tr>
+<td>Aggressive</td>
+<td>1/3</td>
+<td>55-60%</td>
+<td>Be selective</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Divergence</th>
+<th>Meaning</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BULL DIV</td>
+<td>Regular bullish</td>
+<td><strong>Reversal up</strong> likely</td>
+</tr>
+<tr>
+<td>BEAR DIV</td>
+<td>Regular bearish</td>
+<td><strong>Reversal down</strong> likely</td>
+</tr>
+<tr>
+<td>H-BULL</td>
+<td>Hidden bullish</td>
+<td><strong>Continuation up</strong> (buy dip)</td>
+</tr>
+<tr>
+<td>H-BEAR</td>
+<td>Hidden bearish</td>
+<td><strong>Continuation down</strong> (sell rip)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<p><span style="color: #10b981; font-weight: 600; font-size: 1.1em;">✅ Recommended Approach</span></p>
+<ol>
+<li><strong>Extreme zone focus</strong> - Signals from &lt; 20 or &gt; 80 are typically prioritized</li>
+<li><strong>Divergence integration</strong> - Divergence + signal combinations = Elite classifications</li>
+<li><strong>Mode-style alignment</strong> - Swing = Conservative, Day trade = Balanced, Scalp = Aggressive</li>
+<li><strong>HTF enablement for swings</strong> - HTF filter is standard for swing trading contexts</li>
+<li><strong>Level combination</strong> - Combining with Janus Atlas (levels) is associated with highest probability</li>
+</ol>
+<hr />
+<h2 id="support">Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
+<p>Additional resources available:
+- <a href="https://docs.signalpilot.io/suite-index/"><span class="signal-pilot-brand">Signal Pilot</span> Suite Overview</a> - Indicator combination strategies
+- <a href="../ref-workflow/">Suite Workflow</a> - Complete trading system
+- <a href="../about-support/">Support</a> - Support resources</p>
+<hr />
+<p><strong>Summary:</strong> Harmonic Oscillator displays when MACD, RSI, and StochRSI achieve consensus. 2 or 3 component agreement = Potential high probability signal. Divergence addition = Potential elite probability signal.</p>
+<p><strong>Vote consensus with extreme zone focus</strong> 🎯</p>
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://x.com/signalpilot" target="_blank" rel="noopener" title="x.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Signalpilot" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.sections", "navigation.path", "content.code.copy", "search.suggest", "search.highlight", "content.tabs.link", "content.tooltips", "content.action.edit"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="../js/timeago.min.js"></script>
+      
+        <script src="../js/timeago_mkdocs_material.js"></script>
+      
+        <script src="../assets/brand.js"></script>
+      
+        <script src="../assets/sp-bg.js"></script>
+      
+        <script src="../assets/keyword-highlighter.js"></script>
+      
+    
+  </body>
+</html>
