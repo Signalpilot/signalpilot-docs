@@ -2,9 +2,14 @@
 
 Connect with other Signal Pilot users, share analysis, and learn from the community.
 
+> ⚡ **Launch Status:** Community features launching Q1 2026. This page previews upcoming community initiatives. Join our mailing list to be notified when features go live.
+>
+> **Available Now:** Comprehensive documentation, email support (support@signalpilot.io)
+> **Coming Q1 2026:** Discord server, forum, user-contributed guides, community contests
+
 ---
 
-## 💬 Community Channels
+## 💬 Community Channels (Coming Q1 2026)
 
 ### Discord Server
 > 🔗 *Community server coming soon - Check back for updates*
