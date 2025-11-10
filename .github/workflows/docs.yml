@@ -1,8 +1,9 @@
-name: Build & Deploy Docs
+name: Build & Deploy Docs (TEMPORARILY DISABLED)
 
 on:
-  push:
-    branches: [ main ]
+  # DISABLED to prevent auto-deploy while restoring gh-pages
+  # push:
+  #   branches: [ main ]
   workflow_dispatch:
 
 permissions:
