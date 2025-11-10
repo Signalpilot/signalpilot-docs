@@ -1,0 +1,785 @@
+:root {
+  --sp-card-bg: var(--md-default-bg-color);
+  --sp-card-border: rgba(255,255,255,0.08);
+  --sp-card-radius: 0.75rem;
+  --sp-card-gap: 1rem;
+}
+
+/* grid density + responsive columns */
+.md-typeset .grid.cards {
+  gap: var(--sp-card-gap);
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+/* card styling */
+.md-typeset .grid.cards > * {
+  background: var(--sp-card-bg);
+  border: 1px solid var(--sp-card-border);
+  border-radius: var(--sp-card-radius);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  padding: 1rem 1.2rem;
+  transition: transform .2s ease-in-out, box-shadow .2s ease-in-out, border-color .2s;
+}
+
+.md-typeset .grid.cards > *:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.35);
+  border-color: var(--md-primary-fg-color);
+}
+
+/* tidy text inside cards */
+.md-typeset .grid.cards strong { color: var(--md-primary-fg-color); }
+.md-typeset .grid.cards p { margin: 0.25rem 0; }
+.md-typeset .grid.cards em { opacity: .85; }
+
+/* icon sizing in cards */
+.md-typeset .grid.cards .material-icons,
+.md-typeset .grid.cards .twemoji {
+  font-size: 1.05rem;
+  vertical-align: text-bottom;
+}
+
+/* ========================================
+   SIGNAL PILOT BRAND STYLING
+   ======================================== */
+
+/* Apply Gugi font to all Signal Pilot brand text */
+.signal-pilot-brand,
+.sp-brand-text {
+  font-family: 'Gugi', system-ui, -apple-system, sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+}
+
+/* ========================================
+   KEYWORD STYLING - COLOR-CODED TERMS
+   ======================================== */
+
+/* Base keyword styling */
+.md-typeset .kw-signal,
+.md-typeset .kw-tech,
+.md-typeset .kw-level,
+.md-typeset .kw-action,
+.md-typeset .kw-quality,
+.md-typeset .kw-divergence,
+.md-typeset .kw-volume {
+  font-weight: 700;
+  padding: 0.15em 0.5em;
+  border-radius: 4px;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+/* Pentarch Signals - Colored badges with left border */
+.md-typeset .kw-signal.td {
+  color: #60a5fa !important;
+  background: rgba(96, 165, 250, 0.15);
+  border-left: 3px solid #60a5fa;
+}
+
+.md-typeset .kw-signal.ign {
+  color: #34d399 !important;
+  background: rgba(52, 211, 153, 0.15);
+  border-left: 3px solid #34d399;
+}
+
+.md-typeset .kw-signal.wrn {
+  color: #fbbf24 !important;
+  background: rgba(251, 191, 36, 0.15);
+  border-left: 3px solid #fbbf24;
+}
+
+.md-typeset .kw-signal.cap {
+  color: #f87171 !important;
+  background: rgba(248, 113, 113, 0.15);
+  border-left: 3px solid #f87171;
+}
+
+.md-typeset .kw-signal.bdn {
+  color: #dc2626 !important;
+  background: rgba(220, 38, 38, 0.15);
+  border-left: 3px solid #dc2626;
+}
+
+/* Technical Indicators - Purple */
+.md-typeset .kw-tech {
+  color: #a78bfa !important;
+  background: rgba(167, 139, 250, 0.15);
+  border-left: 3px solid #a78bfa;
+}
+
+/* Levels/Structure - Cyan */
+.md-typeset .kw-level {
+  color: #22d3ee !important;
+  background: rgba(34, 211, 238, 0.15);
+  border-left: 3px solid #22d3ee;
+}
+
+/* Actions - Orange */
+.md-typeset .kw-action {
+  color: #fb923c !important;
+  background: rgba(251, 146, 60, 0.15);
+  border-left: 3px solid #fb923c;
+}
+
+/* Quality - Gold */
+.md-typeset .kw-quality {
+  color: #fbbf24 !important;
+  background: rgba(251, 191, 36, 0.15);
+  border-left: 3px solid #fbbf24;
+}
+
+/* Divergence - Pink */
+.md-typeset .kw-divergence {
+  color: #f472b6 !important;
+  background: rgba(244, 114, 182, 0.15);
+  border-left: 3px solid #f472b6;
+}
+
+/* Volume - Lime */
+.md-typeset .kw-volume {
+  color: #84cc16 !important;
+  background: rgba(132, 204, 22, 0.15);
+  border-left: 3px solid #84cc16;
+}
+
+/* ========================================
+   VISUAL HIERARCHY MARKERS - RESPONSIVE
+   ======================================== */
+
+/* Base styles for section markers */
+.md-typeset h2 > span,
+.md-typeset h3 > span {
+  display: inline-block;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+  line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+/* Desktop: Full size (default from inline styles) */
+.md-typeset h2 > span {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.md-typeset h3 > span {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+/* Tablet: Slightly smaller */
+@media screen and (max-width: 768px) {
+  .md-typeset h2 > span {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+
+  .md-typeset h3 > span {
+    font-size: 0.95em;
+    line-height: 1.5;
+  }
+}
+
+/* Mobile: More compact, ensure readability */
+@media screen and (max-width: 480px) {
+  .md-typeset h2 > span {
+    font-size: 0.9em;
+    line-height: 1.6;
+    display: block;
+    margin-top: 0.75rem;
+  }
+
+  .md-typeset h3 > span {
+    font-size: 0.85em;
+    line-height: 1.6;
+    display: block;
+    margin-top: 0.5rem;
+  }
+
+  /* Ensure emojis don't break layout on mobile */
+  .md-typeset h2 > span::before,
+  .md-typeset h3 > span::before {
+    display: inline;
+    margin-right: 0.25rem;
+  }
+}
+
+/* Small mobile: Even more compact */
+@media screen and (max-width: 360px) {
+  .md-typeset h2 > span {
+    font-size: 0.85em;
+    padding: 0.25rem 0;
+  }
+
+  .md-typeset h3 > span {
+    font-size: 0.8em;
+    padding: 0.25rem 0;
+  }
+}
+
+/* High contrast for accessibility */
+@media (prefers-contrast: high) {
+  .md-typeset h2 > span,
+  .md-typeset h3 > span {
+    font-weight: 700;
+    text-shadow: 0 0 1px currentColor;
+  }
+}
+
+/* Ensure proper spacing after markers */
+.md-typeset h2:has(> span) + *,
+.md-typeset h3:has(> span) + * {
+  margin-top: 1rem;
+}
+
+/* ========================================
+   MOBILE OPTIMIZATION - NAVIGATION
+   ======================================== */
+
+/* Hide less important nav links on small mobile */
+@media screen and (max-width: 640px) {
+  .sp-links a:not([aria-current]) {
+    display: none;
+  }
+
+  .sp-links a[aria-current] {
+    font-weight: 600;
+  }
+
+  .sp-cta {
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+/* Very small mobile - ultra compact */
+@media screen and (max-width: 400px) {
+  .sp-topnav__inner {
+    padding: 0.4rem 0.75rem !important;
+  }
+}
+
+/* ========================================
+   MOBILE OPTIMIZATION - CARDS
+   ======================================== */
+
+/* Smaller card padding on mobile */
+@media screen and (max-width: 640px) {
+  .md-typeset .grid.cards {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .md-typeset .grid.cards > * {
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* ========================================
+   MOBILE OPTIMIZATION - TABLES
+   ======================================== */
+
+/* Make tables horizontally scrollable on mobile */
+@media screen and (max-width: 768px) {
+  /* Force parent container to allow horizontal scrolling */
+  .md-typeset {
+    overflow-x: visible;
+  }
+
+  /* Make table container scrollable */
+  .md-content__inner {
+    overflow-x: visible;
+  }
+
+  /* Table should be scrollable and maintain structure */
+  .md-typeset table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    border: 1px solid var(--md-typeset-table-color, rgba(0,0,0,0.1));
+    border-radius: 4px;
+  }
+
+  /* Preserve table structure inside */
+  .md-typeset table thead,
+  .md-typeset table tbody {
+    display: table;
+    width: 100%;
+  }
+
+  .md-typeset table tr {
+    display: table-row;
+  }
+
+  .md-typeset table th,
+  .md-typeset table td {
+    display: table-cell;
+    font-size: 0.85rem;
+    padding: 0.6rem 0.5rem;
+    white-space: nowrap;
+  }
+}
+
+/* ========================================
+   MOBILE OPTIMIZATION - CODE BLOCKS
+   ======================================== */
+
+/* Better code block handling on mobile */
+@media screen and (max-width: 640px) {
+  .md-typeset pre {
+    font-size: 0.8rem;
+    padding: 0.75rem;
+  }
+
+  .md-typeset code {
+    word-break: break-word;
+  }
+}
+
+/* ========================================
+   TOUCH OPTIMIZATION
+   ======================================== */
+
+/* Larger tap targets for mobile - ONLY for content, NOT navigation */
+@media (pointer: coarse) {
+  .md-content a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+/* Mobile navigation: Let MkDocs Material handle it natively - no custom CSS */
+
+/* ========================================
+   NEW USER CARDS - START HERE SECTION
+   ======================================== */
+
+/* Make links in cards more obvious */
+.md-typeset div[style*="border-left: 4px solid"] a {
+  color: var(--md-primary-fg-color) !important;
+  text-decoration: underline !important;
+  font-weight: 600 !important;
+}
+
+.md-typeset div[style*="border-left: 4px solid"] a:hover {
+  color: var(--md-accent-fg-color) !important;
+}
+
+/* Mobile: Stack cards vertically */
+@media screen and (max-width: 768px) {
+  div[style*="grid-template-columns: repeat(auto-fit, minmax(300px"] {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  div[style*="border-left: 4px solid"] {
+    padding: 1.5rem !important;
+  }
+
+  div[style*="border-left: 4px solid"] h3 {
+    font-size: 1.2rem !important;
+  }
+
+  div[style*="border-left: 4px solid"] ol,
+  div[style*="border-left: 4px solid"] ul {
+    font-size: 0.95rem !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  div[style*="border-left: 4px solid"] {
+    padding: 1.25rem !important;
+  }
+
+  div[style*="border-left: 4px solid"] h3 {
+    font-size: 1.1rem !important;
+  }
+}
+
+/* ========================================
+   HOMEPAGE H1 - "SIGNAL PILOT DOCUMENTATION"
+   ======================================== */
+
+/* Responsive H1 heading - prevent cut-off on mobile */
+.md-typeset h1 span[style*="font-family: 'Gugi'"] {
+  display: block;
+  line-height: 1.2;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+/* Desktop - keep original size */
+@media screen and (min-width: 1024px) {
+  .md-typeset h1 span[style*="font-family: 'Gugi'"] {
+    font-size: 2.5rem;
+  }
+}
+
+/* Tablet - slightly smaller */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .md-typeset h1 span[style*="font-family: 'Gugi'"] {
+    font-size: 2.2rem !important;
+  }
+}
+
+/* Mobile - much smaller to prevent cut-off */
+@media screen and (max-width: 767px) {
+  .md-typeset h1 span[style*="font-family: 'Gugi'"] {
+    font-size: 1.8rem !important;
+    letter-spacing: 0.03em !important;
+  }
+}
+
+/* Small mobile - even smaller */
+@media screen and (max-width: 480px) {
+  .md-typeset h1 span[style*="font-family: 'Gugi'"] {
+    font-size: 1.5rem !important;
+    letter-spacing: 0.02em !important;
+    line-height: 1.3;
+  }
+}
+
+/* Tiny mobile - minimum readable size */
+@media screen and (max-width: 360px) {
+  .md-typeset h1 span[style*="font-family: 'Gugi'"] {
+    font-size: 1.3rem !important;
+    letter-spacing: 0.01em !important;
+  }
+}
+
+/* Ensure H1 container doesn't overflow */
+.md-typeset h1 {
+  overflow: hidden;
+  text-overflow: clip;
+  word-wrap: break-word;
+}
+
+/* ========================================
+   HOMEPAGE - MOST COMMON TASKS CARDS
+   ======================================== */
+
+/* CRITICAL: Make card buttons always visible with white text */
+.md-typeset div[style*="border-radius: 12px"] a[style*="background: var(--md-primary-fg-color)"] {
+  color: white !important;
+  background: var(--md-primary-fg-color) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Hover state for buttons */
+.md-typeset div[style*="border-radius: 12px"] a[style*="background: var(--md-primary-fg-color)"]:hover {
+  background: var(--md-accent-fg-color) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 92, 255, 0.4);
+}
+
+/* Desktop: 3 columns */
+@media screen and (min-width: 1024px) {
+  .md-typeset div[style*="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))"] {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+/* Tablet: 2 columns */
+@media screen and (max-width: 1023px) and (min-width: 640px) {
+  .md-typeset div[style*="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.25rem !important;
+  }
+}
+
+/* Mobile: 1 column, compact spacing */
+@media screen and (max-width: 639px) {
+  .md-typeset div[style*="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))"] {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    margin: 1.5rem 0 !important;
+  }
+
+  /* Compact card padding */
+  .md-typeset div[style*="border-radius: 12px"] {
+    padding: 1.25rem !important;
+  }
+
+  /* Slightly smaller headings in cards */
+  .md-typeset div[style*="border-radius: 12px"] h3 {
+    font-size: 1rem !important;
+  }
+
+  /* Smaller button text */
+  .md-typeset div[style*="border-radius: 12px"] a[style*="border-radius: 6px"] {
+    padding: 0.4rem 1.25rem !important;
+    font-size: 0.85rem !important;
+  }
+}
+
+/* Small mobile: Even more compact */
+@media screen and (max-width: 400px) {
+  .md-typeset div[style*="border-radius: 12px"] {
+    padding: 1rem !important;
+  }
+
+  .md-typeset div[style*="border-radius: 12px"] h3 {
+    font-size: 0.95rem !important;
+  }
+}
+
+/* ========================================
+   HOMEPAGE - HERO BUTTONS & CTA
+   ======================================== */
+
+/* Hero section buttons */
+@media screen and (max-width: 640px) {
+  /* Stack buttons vertically on mobile */
+  div[style*="display: flex"][style*="flex-wrap: wrap"] {
+    flex-direction: column !important;
+  }
+
+  div[style*="display: flex"][style*="flex-wrap: wrap"] a {
+    width: 100% !important;
+    text-align: center !important;
+    padding: 0.75rem 2rem !important;
+    font-size: 1rem !important;
+  }
+}
+
+/* Hero heading text */
+@media screen and (max-width: 768px) {
+  div[style*="background: linear-gradient(135deg, #345CFF"] h2 {
+    font-size: 1.6rem !important;
+  }
+
+  div[style*="background: linear-gradient(135deg, #345CFF"] p {
+    font-size: 1rem !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  div[style*="background: linear-gradient(135deg, #345CFF"] h2 {
+    font-size: 1.4rem !important;
+  }
+
+  div[style*="background: linear-gradient(135deg, #345CFF"] p {
+    font-size: 0.95rem !important;
+  }
+
+  div[style*="background: linear-gradient(135deg, #345CFF"] {
+    padding: 2rem 1rem !important;
+  }
+}
+
+/* ========================================
+   HOMEPAGE - STATS GRID
+   ======================================== */
+
+/* Stats number grid */
+@media screen and (max-width: 640px) {
+  div[style*="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+
+  div[style*="font-size: 3rem"] {
+    font-size: 2.5rem !important;
+  }
+
+  div[style*="font-weight: 700; font-size: 1rem"] {
+    font-size: 0.9rem !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  div[style*="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))"] {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+}
+
+/* ========================================
+   HOMEPAGE - SUITE CARDS (Material Icons)
+   ======================================== */
+
+/* MkDocs Material grid cards - mobile optimization */
+@media screen and (max-width: 640px) {
+  .md-typeset .grid.cards > * {
+    min-height: auto;
+  }
+
+  /* Ensure buttons in cards are touch-friendly */
+  .md-typeset .grid.cards .md-button {
+    min-height: 44px;
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* ========================================
+   RECOMMENDED COMBINATIONS - COMPACT MOBILE
+   ======================================== */
+
+/* Recommended combinations section */
+@media screen and (max-width: 640px) {
+  .md-typeset div[style*="background: linear-gradient(135deg, color-mix"] {
+    padding: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .md-typeset div[style*="background: linear-gradient(135deg, color-mix"] p {
+    font-size: 1rem !important;
+  }
+}
+
+/* ========================================
+   TESTIMONIALS - MOBILE SPACING
+   ======================================== */
+
+@media screen and (max-width: 640px) {
+  div[style*="font-size: 1.2rem; font-style: italic"] {
+    font-size: 1rem !important;
+  }
+
+  div[style*="font-weight: 600; color: var(--md-primary-fg-color)"] {
+    font-size: 0.9rem !important;
+  }
+}
+
+/* ========================================
+   FINAL CTA SECTION - RESPONSIVE
+   ======================================== */
+
+@media screen and (max-width: 768px) {
+  div[style*="text-align: center"][style*="padding: 3rem 2rem"] h2 {
+    font-size: 1.6rem !important;
+  }
+
+  div[style*="text-align: center"][style*="padding: 3rem 2rem"] p {
+    font-size: 1rem !important;
+  }
+
+  div[style*="text-align: center"][style*="padding: 3rem 2rem"] {
+    padding: 2rem 1.5rem !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  div[style*="text-align: center"][style*="padding: 3rem 2rem"] h2 {
+    font-size: 1.4rem !important;
+  }
+}
+
+/* ========================================
+   SUITE INDEX - COMPARISON TABLE
+   ======================================== */
+
+/* Make comparison table extra mobile-friendly with sticky first column */
+@media screen and (max-width: 768px) {
+  /* First column (indicator name) - make sticky so it's always visible */
+  .md-typeset table td:first-child,
+  .md-typeset table th:first-child {
+    position: sticky;
+    left: 0;
+    background: var(--md-default-bg-color);
+    z-index: 2;
+    min-width: 140px;
+    font-weight: 600;
+    border-right: 2px solid var(--md-typeset-table-color, rgba(0,0,0,0.1));
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Table header styling */
+  .md-typeset table th {
+    background: var(--md-code-bg-color);
+    font-weight: 700;
+  }
+
+  /* First header cell needs higher z-index for sticky corner */
+  .md-typeset table th:first-child {
+    z-index: 3;
+  }
+
+  /* Ensure other columns have minimum width for readability */
+  .md-typeset table th:not(:first-child),
+  .md-typeset table td:not(:first-child) {
+    min-width: 120px;
+  }
+}
+
+/* Extra small mobile - more compact */
+@media screen and (max-width: 480px) {
+  .md-typeset table th,
+  .md-typeset table td {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.4rem;
+  }
+
+  .md-typeset table td:first-child,
+  .md-typeset table th:first-child {
+    min-width: 110px;
+  }
+
+  .md-typeset table th:not(:first-child),
+  .md-typeset table td:not(:first-child) {
+    min-width: 100px;
+  }
+}
+
+/* ========================================
+   SUITE INDEX - DECISION GUIDE ARROWS
+   ======================================== */
+
+/* Decision guide with arrows - better mobile formatting */
+@media screen and (max-width: 640px) {
+  /* Make arrow symbols more visible on mobile */
+  .md-typeset p:has(strong):has(a[href$=".md"]) {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    line-height: 1.6;
+  }
+}
+
+/* ========================================
+   LEARNING PATH - WEEK SECTIONS
+   ======================================== */
+
+/* Week-by-week learning sections */
+@media screen and (max-width: 640px) {
+  .md-typeset h3[id^="week-"] {
+    font-size: 1.1rem;
+  }
+
+  .md-typeset ol li,
+  .md-typeset ul li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+  }
+}
+
+/* ========================================
+   RECOMMENDED COMBINATIONS - MOBILE
+   ======================================== */
+
+/* Combination setup sections */
+@media screen and (max-width: 640px) {
+  .md-typeset h3:contains("Setup"),
+  .md-typeset h3:contains("Minimalist"),
+  .md-typeset h3:contains("Pro Setup") {
+    font-size: 1.05rem;
+    margin-top: 1.5rem;
+  }
+
+  /* Indicator lists in combinations */
+  .md-typeset ul:has(li:contains("Pentarch")),
+  .md-typeset ul:has(li:contains("Janus")) {
+    padding-left: 1.25rem;
+  }
+}
+

@@ -6,15 +6,30 @@
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <meta name="mobile-web-app-capable" content="yes">
+      <meta name="theme-color" content="#667eea">
+      <meta name="format-detection" content="telephone=no">
       
         <meta name="description" content="Non-repainting, alert-ready TradingView indicators for any market/timeframe.">
       
       
       
       
-      
-      
-      <link rel="icon" href="/assets/watermark-monogram-color-transparent.png">
+
+
+      <!-- Favicons -->
+      <link rel="icon" type="image/x-icon" href="/favicon.ico">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+      <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
+
+      <!-- PWA Manifest -->
+      <link rel="manifest" href="/manifest.json">
+
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
     
     
@@ -41,6 +56,7 @@
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -48,6 +64,7 @@
       <link rel="stylesheet" href="/css/timeago.css">
     
       <link rel="stylesheet" href="/assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="/css/responsive-optimization.css">
     
       <link rel="stylesheet" href="/assets/brand.css">
     
@@ -58,6 +75,14 @@
       <link rel="stylesheet" href="/assets/interactive-code.css">
     
     <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+
+    <script src="assets/wheel-diagnostic.js"></script>
+    <script src="assets/enhancements.js"></script>
+    <script src="assets/remove-tooltips.js"></script>
+    <script src="assets/bottom-sheet-nav.js"></script>
+    <!-- <script src="assets/sticky-toc-scroll.js"></script> DISABLED - was interfering with scroll -->
+
+        <script src="assets/components.js"></script>
     
       
   
@@ -67,8 +92,24 @@
   
 
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-NZ05GV72K0"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-NZ05GV72K0",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-NZ05GV72K0",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+    <script src="assets/wheel-diagnostic.js"></script>
+    <script src="assets/enhancements.js"></script>
+    <script src="assets/remove-tooltips.js"></script>
+    <script src="assets/bottom-sheet-nav.js"></script>
+    <!-- <script src="assets/sticky-toc-scroll.js"></script> DISABLED - was interfering with scroll -->
+
+        <script src="assets/components.js"></script>
   
     <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+
+    <script src="assets/wheel-diagnostic.js"></script>
+    <script src="assets/enhancements.js"></script>
+    <script src="assets/remove-tooltips.js"></script>
+    <script src="assets/bottom-sheet-nav.js"></script>
+    <!-- <script src="assets/sticky-toc-scroll.js"></script> DISABLED - was interfering with scroll -->
+
+        <script src="assets/components.js"></script>
   
 
     
@@ -79,7 +120,69 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
 
-  </head>
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - CSS
+       To disable: comment out this entire block
+       ======================================== -->
+  <link rel="stylesheet" href="../css/feedback.css">
+  <link rel="stylesheet" href="../css/visual-enhancements.css">
+
+  <!-- Mermaid.js for diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'dark',
+      themeVariables: {
+        primaryColor: '#00bcd4',
+        primaryTextColor: '#fff',
+        primaryBorderColor: '#0097a7',
+        lineColor: '#00bcd4',
+        secondaryColor: '#ff5722',
+        tertiaryColor: '#4caf50',
+        fontSize: '18px',
+        fontFamily: 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+      },
+      flowchart: {
+        htmlLabels: true,
+        fontSize: 18
+      },
+      fontSize: 18
+    });
+  </script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - CSS -->
+
+      <!-- SignalPilot Chatbot CSS -->
+    <link rel="stylesheet" href="/css/chatbot.css">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.signalpilot.io/">
+    <meta property="og:title" content="Signal Pilot Documentation">
+    <meta property="og:description" content="Professional trading indicators for TradingView. Complete guides for Pentarch, Janus Atlas, Omnideck, and more.">
+    <meta property="og:image" content="https://docs.signalpilot.io/assets/images/preview.png">
+    <meta property="og:site_name" content="Signal Pilot Docs">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.signalpilot.io/">
+    <meta name="twitter:title" content="Signal Pilot Documentation">
+    <meta name="twitter:description" content="Professional trading indicators for TradingView. Complete guides for Pentarch, Janus Atlas, Omnideck, and more.">
+    <meta name="twitter:image" content="https://docs.signalpilot.io/assets/images/preview.png">
+
+
+  
+
+
+
+
+
+
+
+
+  <!-- Custom Bottom Sheet Navigation -->
+  <link rel="stylesheet" href="css/hide-mkdocs-sidebar.css?v7">
+  <link rel="stylesheet" href="css/custom-bottom-sheet.css?v7">
+</head>
   
   
     
@@ -117,7 +220,6 @@
         <a href="https://signalpilot.io/#pricing">Pricing</a>
         <a href="https://signalpilot.io/#faq">FAQ</a>
       </nav>
-      <a class="sp-cta" href="https://signalpilot.io/#pricing">Get the Suite</a>
     </div>
   </div>
 
@@ -130,7 +232,6 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="/." title="Signal Pilot Docs" class="md-header__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
       
-  <img src="/assets/watermark-monogram-color-transparent.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -182,6 +283,14 @@
     
     
       <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+
+    <script src="assets/wheel-diagnostic.js"></script>
+    <script src="assets/enhancements.js"></script>
+    <script src="assets/remove-tooltips.js"></script>
+    <script src="assets/bottom-sheet-nav.js"></script>
+    <!-- <script src="assets/sticky-toc-scroll.js"></script> DISABLED - was interfering with scroll -->
+
+        <script src="assets/components.js"></script>
     
     
     
@@ -265,7 +374,6 @@
   <label class="md-nav__title" for="__drawer">
     <a href="/." title="Signal Pilot Docs" class="md-nav__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
       
-  <img src="/assets/watermark-monogram-color-transparent.png" alt="logo">
 
     </a>
     Signal Pilot Docs
@@ -378,27 +486,6 @@
   
   <span class="md-ellipsis">
     Prerequisites
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/docs/start-which-indicator.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Which Indicator Should I Start?
   </span>
   
 
@@ -698,7 +785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/minimal-flow-v10/" class="md-nav__link">
+      <a href="/volume-oracle-v10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -927,27 +1014,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/docs/troubleshooting-installation.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Installation Troubleshooting
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1007,27 +1073,6 @@
   
   <span class="md-ellipsis">
     FAQ
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/docs/about-system-requirements.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    System Requirements
   </span>
   
 
@@ -1133,7 +1178,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/_product-cards/" class="md-nav__link">
+      <a href="/_settings-alerts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1190,7 +1235,23 @@
           
   <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 
+    <script src="assets/wheel-diagnostic.js"></script>
+    <script src="assets/enhancements.js"></script>
+    <script src="assets/remove-tooltips.js"></script>
+    <script src="assets/bottom-sheet-nav.js"></script>
+    <!-- <script src="assets/sticky-toc-scroll.js"></script> DISABLED - was interfering with scroll -->
+
+        <script src="assets/components.js"></script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+
+    <script src="assets/wheel-diagnostic.js"></script>
+    <script src="assets/enhancements.js"></script>
+    <script src="assets/remove-tooltips.js"></script>
+    <script src="assets/bottom-sheet-nav.js"></script>
+    <!-- <script src="assets/sticky-toc-scroll.js"></script> DISABLED - was interfering with scroll -->
+
+        <script src="assets/components.js"></script>
         </div>
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
@@ -1252,20 +1313,96 @@
     
     
     <script id="__config" type="application/json">{"base": "/", "features": ["navigation.top", "navigation.sections", "navigation.path", "content.code.copy", "search.suggest", "search.highlight", "content.tabs.link", "content.tooltips", "content.action.edit"], "search": "/assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+
+    <script src="assets/wheel-diagnostic.js"></script>
+    <script src="assets/enhancements.js"></script>
+    <script src="assets/remove-tooltips.js"></script>
+    <script src="assets/bottom-sheet-nav.js"></script>
+    <!-- <script src="assets/sticky-toc-scroll.js"></script> DISABLED - was interfering with scroll -->
+
+        <script src="assets/components.js"></script>
     
     
       <script src="/assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+
+    <script src="assets/wheel-diagnostic.js"></script>
+    <script src="assets/enhancements.js"></script>
+    <script src="assets/remove-tooltips.js"></script>
+    <script src="assets/bottom-sheet-nav.js"></script>
+    <!-- <script src="assets/sticky-toc-scroll.js"></script> DISABLED - was interfering with scroll -->
+
+        <script src="assets/components.js"></script>
       
         <script src="/js/timeago.min.js"></script>
+
+    <script src="assets/wheel-diagnostic.js"></script>
+    <script src="assets/enhancements.js"></script>
+    <script src="assets/remove-tooltips.js"></script>
+    <script src="assets/bottom-sheet-nav.js"></script>
+    <!-- <script src="assets/sticky-toc-scroll.js"></script> DISABLED - was interfering with scroll -->
+
+        <script src="assets/components.js"></script>
       
         <script src="/js/timeago_mkdocs_material.js"></script>
+
+    <script src="assets/wheel-diagnostic.js"></script>
+    <script src="assets/enhancements.js"></script>
+    <script src="assets/remove-tooltips.js"></script>
+    <script src="assets/bottom-sheet-nav.js"></script>
+    <!-- <script src="assets/sticky-toc-scroll.js"></script> DISABLED - was interfering with scroll -->
+
+        <script src="assets/components.js"></script>
       
         <script src="/assets/brand.js"></script>
+
+    <script src="assets/wheel-diagnostic.js"></script>
+    <script src="assets/enhancements.js"></script>
+    <script src="assets/remove-tooltips.js"></script>
+    <script src="assets/bottom-sheet-nav.js"></script>
+    <!-- <script src="assets/sticky-toc-scroll.js"></script> DISABLED - was interfering with scroll -->
+
+        <script src="assets/components.js"></script>
       
         <script src="/assets/sp-bg.js"></script>
+
+    <script src="assets/wheel-diagnostic.js"></script>
+    <script src="assets/enhancements.js"></script>
+    <script src="assets/remove-tooltips.js"></script>
+    <script src="assets/bottom-sheet-nav.js"></script>
+    <!-- <script src="assets/sticky-toc-scroll.js"></script> DISABLED - was interfering with scroll -->
+
+        <script src="assets/components.js"></script>
       
         <script src="/assets/keyword-highlighter.js"></script>
+
+    <script src="assets/wheel-diagnostic.js"></script>
+    <script src="assets/enhancements.js"></script>
+    <script src="assets/remove-tooltips.js"></script>
+    <script src="assets/bottom-sheet-nav.js"></script>
+    <!-- <script src="assets/sticky-toc-scroll.js"></script> DISABLED - was interfering with scroll -->
+
+        <script src="assets/components.js"></script>
       
     
-  </body>
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - JS
+       To disable: comment out this entire block
+       ======================================== -->
+  <script src="../js/feedback-system.js"></script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - JS -->
+
+      <!-- SignalPilot Chatbot -->
+    <script src="/js/chatbot.js"></script>
+  
+
+
+
+
+
+
+
+
+  <!-- Custom Bottom Sheet Navigation Script -->
+  <script src="assets/custom-bottom-sheet.js?v7"></script>
+</body>
 </html>

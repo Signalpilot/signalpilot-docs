@@ -6,8 +6,13 @@
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <meta name="mobile-web-app-capable" content="yes">
+      <meta name="theme-color" content="#667eea">
+      <meta name="format-detection" content="telephone=no">
       
-        <meta name="description" content="The Complete Cycle System - Close-confirmed cycle detection across accumulation, markup, distribution, climax, and decline phases. Used by 500+ traders across 40+ countries. Audited for zero repaint. Guaranteed.">
+        <meta name="description" content="The Complete Cycle System - Close-confirmed cycle detection across accumulation, markup, distribution, climax, and decline phases. Seven professional indicators. Audited for zero repaint.">
       
       
       
@@ -17,8 +22,18 @@
       
         <link rel="next" href="start-quick/">
       
-      
-      <link rel="icon" href="assets/watermark-monogram-color-transparent.png">
+
+      <!-- Favicons -->
+      <link rel="icon" type="image/x-icon" href="favicon.ico">
+      <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
+      <link rel="icon" type="image/png" sizes="512x512" href="favicon-512x512.png">
+
+      <!-- PWA Manifest -->
+      <link rel="manifest" href="manifest.json">
+
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
     
     
@@ -45,6 +60,7 @@
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -52,6 +68,9 @@
       <link rel="stylesheet" href="css/timeago.css">
     
       <link rel="stylesheet" href="assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="css/responsive-optimization.css">
+      <link rel="stylesheet" href="css/content-overflow-fix.css">
+      <link rel="stylesheet" href="css/mobile-layout-fixes.css">
     
       <link rel="stylesheet" href="assets/brand.css">
     
@@ -62,6 +81,8 @@
       <link rel="stylesheet" href="assets/interactive-code.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+
+
     
       
   
@@ -71,8 +92,12 @@
   
 
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-NZ05GV72K0"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-NZ05GV72K0",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-NZ05GV72K0",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+
   
     <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+
+
   
 
     
@@ -83,7 +108,121 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
 
-  </head>
+  <!-- Structured Data - JSON-LD for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://docs.signalpilot.io/#website",
+        "url": "https://docs.signalpilot.io/",
+        "name": "Signal Pilot Documentation",
+        "description": "The Complete Cycle System - Close-confirmed cycle detection across accumulation, markup, distribution, climax, and decline phases. Seven professional indicators. Audited for zero repaint.",
+        "publisher": {
+          "@id": "https://signalpilot.io/#organization"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://docs.signalpilot.io/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://signalpilot.io/#organization",
+        "name": "Signal Pilot",
+        "url": "https://signalpilot.io/",
+        "sameAs": [
+          "https://x.com/signalpilot",
+          "https://github.com/Signalpilot"
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://docs.signalpilot.io/#webpage",
+        "url": "https://docs.signalpilot.io/",
+        "name": "Signal Pilot Documentation - Signal Pilot Docs",
+        "isPartOf": {
+          "@id": "https://docs.signalpilot.io/#website"
+        },
+        "about": {
+          "@id": "https://signalpilot.io/#organization"
+        },
+        "description": "The Complete Cycle System - Close-confirmed cycle detection across accumulation, markup, distribution, climax, and decline phases. Seven professional indicators. Audited for zero repaint.",
+        "inLanguage": "en-US"
+      }
+    ]
+  }
+  </script>
+
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - CSS
+       To disable: comment out this entire block
+       ======================================== -->
+  <link rel="stylesheet" href="css/feedback.css">
+  <link rel="stylesheet" href="css/visual-enhancements.css">
+
+  <!-- Mermaid.js for diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'dark',
+      themeVariables: {
+        primaryColor: '#00bcd4',
+        primaryTextColor: '#fff',
+        primaryBorderColor: '#0097a7',
+        lineColor: '#00bcd4',
+        secondaryColor: '#ff5722',
+        tertiaryColor: '#4caf50',
+        fontSize: '18px',
+        fontFamily: 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+      },
+      flowchart: {
+        htmlLabels: true,
+        fontSize: 18
+      },
+      fontSize: 18
+    });
+  </script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - CSS -->
+
+  <!-- Meta-Learning & Accessibility Enhancements -->
+  <link rel="stylesheet" href="css/skill-badges.css">
+  <link rel="stylesheet" href="css/meta-learning.css">
+
+      <!-- SignalPilot Chatbot CSS -->
+    <link rel="stylesheet" href="/css/chatbot.css">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.signalpilot.io/">
+    <meta property="og:title" content="Signal Pilot Documentation">
+    <meta property="og:description" content="Professional trading indicators for TradingView. Complete guides for Pentarch, Janus Atlas, Omnideck, and more.">
+    <meta property="og:image" content="https://docs.signalpilot.io/assets/images/preview.png">
+    <meta property="og:site_name" content="Signal Pilot Docs">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.signalpilot.io/">
+    <meta name="twitter:title" content="Signal Pilot Documentation">
+    <meta name="twitter:description" content="Professional trading indicators for TradingView. Complete guides for Pentarch, Janus Atlas, Omnideck, and more.">
+    <meta name="twitter:image" content="https://docs.signalpilot.io/assets/images/preview.png">
+
+
+  
+
+
+
+
+
+
+
+  <!-- Custom Bottom Sheet Navigation -->
+  <link rel="stylesheet" href="css/hide-mkdocs-sidebar.css?v7">
+  <link rel="stylesheet" href="css/custom-bottom-sheet.css?v7">
+</head>
   
   
     
@@ -126,7 +265,6 @@
         <a href="https://signalpilot.io/#pricing">Pricing</a>
         <a href="https://signalpilot.io/#faq">FAQ</a>
       </nav>
-      <a class="sp-cta" href="https://signalpilot.io/#pricing">Get the Suite</a>
     </div>
   </div>
 
@@ -138,9 +276,6 @@
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="." title="Signal Pilot Docs" class="md-header__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
-      
-  <img src="assets/watermark-monogram-color-transparent.png" alt="logo">
-
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
@@ -191,6 +326,8 @@
     
     
       <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+
+
     
     
     
@@ -273,9 +410,6 @@
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="." title="Signal Pilot Docs" class="md-nav__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
-      
-  <img src="assets/watermark-monogram-color-transparent.png" alt="logo">
-
     </a>
     Signal Pilot Docs
   </label>
@@ -461,9 +595,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#used-by-500-traders-worldwide" class="md-nav__link">
+  <a href="#built-for-serious-traders" class="md-nav__link">
     <span class="md-ellipsis">
-      💬 Used by 500+ Traders Worldwide
+      💬 Built for Serious Traders
     </span>
   </a>
   
@@ -559,27 +693,6 @@
   
   <span class="md-ellipsis">
     Prerequisites
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="docs/start-which-indicator.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Which Indicator Should I Start?
   </span>
   
 
@@ -879,7 +992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="minimal-flow-v10/" class="md-nav__link">
+      <a href="volume-oracle-v10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1108,27 +1221,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="docs/troubleshooting-installation.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Installation Troubleshooting
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1188,27 +1280,6 @@
   
   <span class="md-ellipsis">
     FAQ
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="docs/about-system-requirements.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    System Requirements
   </span>
   
 
@@ -1314,11 +1385,11 @@
   
   
     <li class="md-nav__item">
-      <a href="_product-cards/" class="md-nav__link">
+      <a href="_settings-alerts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Product Cards
+    ⚙️ Settings & Alerts
   </span>
   
 
@@ -1476,9 +1547,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#used-by-500-traders-worldwide" class="md-nav__link">
+  <a href="#built-for-serious-traders" class="md-nav__link">
     <span class="md-ellipsis">
-      💬 Used by 500+ Traders Worldwide
+      💬 Built for Serious Traders
     </span>
   </a>
   
@@ -1512,7 +1583,7 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1.1rem; height: 1.1rem; fill: currentColor; opacity: 0.7;">
         <path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/>
       </svg>
-      <span style="opacity: 0.85;">Updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 10, 2025 01:41:10 UTC"><span class="timeago" datetime="2025-11-10T01:41:10+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 10, 2025 01:41:10 UTC">2025-11-10</span></span>
+      <span style="opacity: 0.85;">Updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="October 31, 2025 01:38:02 UTC"><span class="timeago" datetime="2025-10-31T01:38:02+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="October 31, 2025 01:38:02 UTC">2025-10-31</span></span>
     </span>
   
 
@@ -1574,8 +1645,8 @@ Markets move in cycles. Every asset. Every timeframe. Most traders chase signals
   </div>
 
   <div>
-    <div style="font-size: 3rem; font-weight: 700; color: var(--md-primary-fg-color); font-family: var(--sp-brand-font); line-height: 1; margin-bottom: 0.5rem;">500+</div>
-    <div style="font-weight: 700; font-size: 1rem; color: var(--md-default-fg-color);">Active Traders</div>
+    <div style="font-size: 3rem; font-weight: 700; color: var(--md-primary-fg-color); font-family: var(--sp-brand-font); line-height: 1; margin-bottom: 0.5rem;">7</div>
+    <div style="font-weight: 700; font-size: 1rem; color: var(--md-default-fg-color);">Indicators</div>
   </div>
 
   <div>
@@ -1584,10 +1655,20 @@ Markets move in cycles. Every asset. Every timeframe. Most traders chase signals
   </div>
 
   <div>
-    <div style="font-size: 3rem; font-weight: 700; color: var(--md-accent-fg-color); font-family: var(--sp-brand-font); line-height: 1; margin-bottom: 0.5rem;">40+</div>
-    <div style="font-weight: 700; font-size: 1rem; color: var(--md-default-fg-color);">Countries</div>
+    <div style="font-size: 3rem; font-weight: 700; color: var(--md-accent-fg-color); font-family: var(--sp-brand-font); line-height: 1; margin-bottom: 0.5rem;">24/7</div>
+    <div style="font-weight: 700; font-size: 1rem; color: var(--md-default-fg-color);">Market Access</div>
   </div>
 
+</div>
+
+<div style="background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%); border-left: 4px solid #F59E0B; padding: 1.5rem; margin: 2rem 0; border-radius: 8px;">
+<p style="margin: 0 0 1rem 0; font-weight: 700; font-size: 1.1rem; color: #92400E;">⚠️ IMPORTANT DISCLAIMER</p>
+<p style="margin: 0 0 0.75rem 0; color: #78350F; line-height: 1.6;">
+This documentation is for <strong>educational and informational purposes only</strong>. It is <strong>NOT investment, financial, or trading advice</strong>. All examples and combinations shown are <strong>hypothetical and for illustrative purposes only</strong>. Past performance does not indicate future results.
+</p>
+<p style="margin: 0; color: #78350F; line-height: 1.6;">
+Trading and investing involve substantial risk of loss. You should consult with a qualified financial professional before making any investment decisions. Signal Pilot provides technical analysis tools only - not investment recommendations.
+</p>
 </div>
 
 <hr />
@@ -1617,7 +1698,7 @@ Markets move in cycles. Every asset. Every timeframe. Most traders chase signals
 <li>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c0 .7.12 1.36.34 2H12c-3.31 0-6-2.69-6-6 0-4 6-10.75 6-10.75S16.31 8.1 17.62 12c-3.12.22-5.62 2.82-5.62 6m7-1v-3h-2v3h-3v2h3v3h2v-3h3v-2h-3Z"/></svg></span> <strong>Volume Oracle v1.0 — Volume Intelligence</strong>
   Tracks institutional accumulation and distribution patterns through volume spike analysis. Includes position management framework with automatic entry, stop, and target levels.
-  <a class="md-button md-button--primary" href="minimal-flow-v10/">Read Guide <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg></span></a></p>
+  <a class="md-button md-button--primary" href="volume-oracle-v10/">Read Guide <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg></span></a></p>
 </li>
 <li>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.5 21c-3 0-4.19-4.24-5.45-8.72C10.14 9.04 9 5 7.5 5 4.11 5 4 11.93 4 12H2c0-.37.06-9 5.5-9 3 0 4.21 4.25 5.47 8.74C13.83 14.8 15 19 16.5 19c3.44 0 3.53-6.93 3.53-7h2c0 .37-.06 9-5.53 9Z"/></svg></span> <strong>Harmonic Oscillator v1.0 — Composite Momentum</strong>
@@ -1640,18 +1721,18 @@ Markets move in cycles. Every asset. Every timeframe. Most traders chase signals
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
 
 <div style="background: linear-gradient(135deg, color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent), color-mix(in srgb, var(--md-accent-fg-color) 8%, transparent)); border-radius: 12px; padding: 2rem; border-left: 4px solid var(--md-primary-fg-color);">
-<h3 style="margin-top: 0; color: var(--md-primary-fg-color);">🚀 Complete Beginner</h3>
+<h3 style="margin-top: 0; color: var(--md-primary-fg-color); font-size: 1.1rem; font-weight: 600;">🚀 Complete Beginner</h3>
 <p style="font-weight: 600; margin-bottom: 1.5rem;">New to <span class="signal-pilot-brand">Signal Pilot</span>?</p>
 <ol style="line-height: 1.8; margin: 0; padding-left: 1.25rem;">
-<li><a href="start-prerequisites/"><strong>Prerequisites</strong></a> - Preparation guide (5 min)</li>
+<li><a href="start-prerequisites/"><strong>📋 Prerequisites</strong></a> - Preparation guide (5 min)</li>
 <li><a href="start-quick/"><strong>⚡ Quick Start</strong></a> - Initial setup walkthrough</li>
-<li><a href="start-onboarding/"><strong>Onboarding</strong></a> - First 7 days guide</li>
-<li><a href="how-to-alerts/"><strong>Alert Setup</strong></a> - Notification configuration</li>
+<li><a href="start-onboarding/"><strong>🎯 Onboarding</strong></a> - First 7 days guide</li>
+<li><a href="how-to-alerts/"><strong>🔔 Alert Setup</strong></a> - Notification configuration</li>
 </ol>
 </div>
 
 <div style="background: linear-gradient(135deg, color-mix(in srgb, var(--md-accent-fg-color) 8%, transparent), color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent)); border-radius: 12px; padding: 2rem; border-left: 4px solid var(--md-accent-fg-color);">
-<h3 style="margin-top: 0; color: var(--md-accent-fg-color);">📊 Indicator Usage Guides</h3>
+<h3 style="margin-top: 0; color: var(--md-accent-fg-color); font-size: 1.1rem; font-weight: 600;">📊 Indicator Usage Guides</h3>
 <p style="font-weight: 600; margin-bottom: 1.5rem;">Learning how indicators are used:</p>
 <ul style="line-height: 1.8; margin: 0; padding-left: 1.25rem; list-style: none;">
 <li>→ <a href="start-quick/"><strong>Quick Start</strong></a> - Pentarch introduction</li>
@@ -1662,7 +1743,7 @@ Markets move in cycles. Every asset. Every timeframe. Most traders chase signals
 </div>
 
 <div style="background: linear-gradient(135deg, color-mix(in srgb, #dc2626 8%, transparent), color-mix(in srgb, #f59e0b 8%, transparent)); border-radius: 12px; padding: 2rem; border-left: 4px solid #dc2626;">
-<h3 style="margin-top: 0; color: #dc2626;">🆘 Issue Resolution</h3>
+<h3 style="margin-top: 0; color: #dc2626; font-size: 1.1rem; font-weight: 600;">🆘 Issue Resolution</h3>
 <p style="font-weight: 600; margin-bottom: 1.5rem;">Help resources available:</p>
 <ul style="line-height: 1.8; margin: 0; padding-left: 1.25rem; list-style: none;">
 <li>→ <a href="ref-troubleshooting/"><strong>Troubleshooting</strong></a> - Problem resolution</li>
@@ -1725,25 +1806,25 @@ Markets move in cycles. Every asset. Every timeframe. Most traders chase signals
 <hr />
 <h2 id="quick-selector">🎯 Quick Selector<a class="headerlink" href="#quick-selector" title="Permanent link">&para;</a></h2>
 <p><strong>Indicator selection by focus area:</strong></p>
-<h3 id="cycle-event-detection">Cycle event detection<a class="headerlink" href="#cycle-event-detection" title="Permanent link">&para;</a></h3>
+<h3 id="cycle-event-detection" style="font-size: 1.05rem; font-weight: 600;">Cycle event detection<a class="headerlink" href="#cycle-event-detection" title="Permanent link">&para;</a></h3>
 <p>→ <strong><a href="pentarch-v10/">Pentarch v1.0</a></strong> - Five cycle events across accumulation, markup, distribution, climax, and decline (TD/IGN/WRN/CAP/BDN)</p>
-<h3 id="key-level-visualization">Key level visualization<a class="headerlink" href="#key-level-visualization" title="Permanent link">&para;</a></h3>
+<h3 id="key-level-visualization" style="font-size: 1.05rem; font-weight: 600;">Key level visualization<a class="headerlink" href="#key-level-visualization" title="Permanent link">&para;</a></h3>
 <p>→ <strong><a href="janus-atlas-v10/">Janus Atlas v1.0</a></strong> - Daily/Weekly/Monthly highs/lows, VWAP, session levels, structure</p>
-<h3 id="comprehensive-analysis">Comprehensive analysis<a class="headerlink" href="#comprehensive-analysis" title="Permanent link">&para;</a></h3>
+<h3 id="comprehensive-analysis" style="font-size: 1.05rem; font-weight: 600;">Comprehensive analysis<a class="headerlink" href="#comprehensive-analysis" title="Permanent link">&para;</a></h3>
 <p>→ <strong><a href="omnideck-v10/">Omnideck v1.0</a></strong> - 10 systems combined (TD, Squeeze, EMAs, Zones, Patterns, etc.)</p>
-<h3 id="multi-symbol-scanning">Multi-symbol scanning<a class="headerlink" href="#multi-symbol-scanning" title="Permanent link">&para;</a></h3>
+<h3 id="multi-symbol-scanning" style="font-size: 1.05rem; font-weight: 600;">Multi-symbol scanning<a class="headerlink" href="#multi-symbol-scanning" title="Permanent link">&para;</a></h3>
 <p>→ <strong><a href="augury-grid-v10/">Augury Grid v1.0</a></strong> - 8-symbol monitoring with quality scores</p>
-<h3 id="volume-based-analysis">Volume-based analysis<a class="headerlink" href="#volume-based-analysis" title="Permanent link">&para;</a></h3>
-<p>→ <strong><a href="minimal-flow-v10/">Volume Oracle v1.0</a></strong> - Volume spikes + position management system</p>
-<h3 id="momentumoscillator-analysis">Momentum/oscillator analysis<a class="headerlink" href="#momentumoscillator-analysis" title="Permanent link">&para;</a></h3>
+<h3 id="volume-based-analysis" style="font-size: 1.05rem; font-weight: 600;">Volume-based analysis<a class="headerlink" href="#volume-based-analysis" title="Permanent link">&para;</a></h3>
+<p>→ <strong><a href="volume-oracle-v10/">Volume Oracle v1.0</a></strong> - Volume spikes + position management system</p>
+<h3 id="momentumoscillator-analysis" style="font-size: 1.05rem; font-weight: 600;">Momentum/oscillator analysis<a class="headerlink" href="#momentumoscillator-analysis" title="Permanent link">&para;</a></h3>
 <p>→ <strong><a href="harmonic-oscillator-v10/">Harmonic Oscillator v1.0</a></strong> - 3-in-1 composite (MACD+RSI+StochRSI)</p>
-<h3 id="money-flow-obv-analysis">Money flow (OBV) analysis<a class="headerlink" href="#money-flow-obv-analysis" title="Permanent link">&para;</a></h3>
+<h3 id="money-flow-obv-analysis" style="font-size: 1.05rem; font-weight: 600;">Money flow (OBV) analysis<a class="headerlink" href="#money-flow-obv-analysis" title="Permanent link">&para;</a></h3>
 <p>→ <strong><a href="plutus-flow-v10/">Plutus Flow v1.0</a></strong> - Advanced OBV with divergence detection</p>
 <hr />
-<h2 id="used-by-500-traders-worldwide">💬 Used by 500+ Traders Worldwide<a class="headerlink" href="#used-by-500-traders-worldwide" title="Permanent link">&para;</a></h2>
+<h2 id="built-for-serious-traders">💬 Built for Serious Traders<a class="headerlink" href="#built-for-serious-traders" title="Permanent link">&para;</a></h2>
 <div style="background: linear-gradient(135deg, color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent), color-mix(in srgb, var(--md-accent-fg-color) 8%, transparent)); border-radius: 16px; padding: 2rem; margin-bottom: 2rem; text-align: center; border: 2px solid color-mix(in srgb, var(--md-primary-fg-color) 30%, transparent);">
-  <p style="font-size: 1.3rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--md-primary-fg-color);">Used by 500+ traders across 40+ countries.</p>
-  <p style="font-size: 1.1rem; color: var(--md-default-fg-color);">Audited for zero repaint. Guaranteed.</p>
+  <p style="font-size: 1.3rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--md-primary-fg-color);">Professional-grade indicators for all markets and timeframes.</p>
+  <p style="font-size: 1.1rem; color: var(--md-default-fg-color);">Audited for zero repaint.</p>
 </div>
 
 <div style="background: linear-gradient(135deg, color-mix(in srgb, var(--md-accent-fg-color) 8%, transparent), color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent)); border-radius: 16px; padding: 2rem; margin-bottom: 2rem; border-left: 4px solid var(--md-accent-fg-color);">
@@ -1757,7 +1838,7 @@ Markets move in cycles. Every asset. Every timeframe. Most traders chase signals
 </div>
 
 <hr />
-<h2 id="recommended-combinations">💡 Recommended Combinations<a class="headerlink" href="#recommended-combinations" title="Permanent link">&para;</a></h2>
+<h2 id="recommended-combinations">💡 Common Indicator Combinations<a class="headerlink" href="#recommended-combinations" title="Permanent link">&para;</a></h2>
 <p><strong>Cycle Events + Structure:</strong>
 <a href="pentarch-v10/">Pentarch v1.0</a> + <a href="janus-atlas-v10/">Janus Atlas v1.0</a>
 → Pentarch identifies cycle position. Janus displays key levels.</p>
@@ -1765,7 +1846,7 @@ Markets move in cycles. Every asset. Every timeframe. Most traders chase signals
 <a href="omnideck-v10/">Omnideck v1.0</a> + <a href="janus-atlas-v10/">Janus Atlas v1.0</a>
 → Combined detection across signals, levels, structure, and regime.</p>
 <p><strong>Volume-Based Analysis:</strong>
-<a href="minimal-flow-v10/">Volume Oracle v1.0</a> + <a href="plutus-flow-v10/">Plutus Flow v1.0</a>
+<a href="volume-oracle-v10/">Volume Oracle v1.0</a> + <a href="plutus-flow-v10/">Plutus Flow v1.0</a>
 → Volume spikes paired with OBV flow analysis.</p>
 <p><strong>Divergence Detection:</strong>
 <a href="harmonic-oscillator-v10/">Harmonic Oscillator v1.0</a> + <a href="plutus-flow-v10/">Plutus Flow v1.0</a>
@@ -1774,6 +1855,24 @@ Markets move in cycles. Every asset. Every timeframe. Most traders chase signals
 <a href="augury-grid-v10/">Augury Grid v1.0</a> + Any indicator for confirmation
 → Grid scans multiple assets. Indicators provide confirmation.</p>
 <hr />
+
+<!-- ========================================
+     VISUAL SITEMAP - To disable, comment out this section
+     ======================================== -->
+<div style="margin: 4rem 0; padding: 3rem 2rem; background: rgba(0, 188, 212, 0.05); border-radius: 20px; border: 2px solid rgba(0, 188, 212, 0.2);">
+  <h2 style="text-align: center; font-size: 2rem; margin-bottom: 1.5rem; color: var(--md-primary-fg-color);">📚 Explore Our Documentation</h2>
+  <p style="text-align: center; margin-bottom: 2rem; color: var(--md-default-fg-color); opacity: 0.8;">Interactive sitemap showing all 32 pages organized by category</p>
+  <iframe 
+    src="assets/site-structure.html" 
+    style="width: 100%; height: 800px; border: none; border-radius: 12px; background: #1e1e1e;"
+    title="Documentation Sitemap"
+  ></iframe>
+  <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; opacity: 0.7;">
+    <a href="assets/site-structure.html" target="_blank" style="color: var(--md-accent-fg-color);">Open sitemap in new window →</a>
+  </p>
+</div>
+<!-- END VISUAL SITEMAP -->
+
 <div style="text-align: center; padding: 3rem 2rem; background: linear-gradient(135deg, color-mix(in srgb, var(--md-primary-fg-color) 12%, transparent), color-mix(in srgb, var(--md-accent-fg-color) 12%, transparent)); border-radius: 20px; margin-top: 3rem; border: 2px solid color-mix(in srgb, var(--md-primary-fg-color) 30%, transparent);">
   <h2 style="font-size: 2rem; margin-bottom: 1rem; color: var(--md-primary-fg-color); font-family: var(--sp-brand-font);">The Complete Cycle System</h2>
   <p style="font-size: 1.1rem; margin-bottom: 2rem; color: var(--md-default-fg-color); max-width: 600px; margin-left: auto; margin-right: auto;">When you see where you are in the cycle, timing becomes clearer. Risk becomes manageable. Noise becomes filterable.</p>
@@ -1789,7 +1888,11 @@ Markets move in cycles. Every asset. Every timeframe. Most traders chase signals
           
   <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 
+
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+
+
         </div>
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
@@ -1851,20 +1954,66 @@ Markets move in cycles. Every asset. Every timeframe. Most traders chase signals
     
     
     <script id="__config" type="application/json">{"base": ".", "features": ["navigation.top", "navigation.sections", "navigation.path", "content.code.copy", "search.suggest", "search.highlight", "content.tabs.link", "content.tooltips", "content.action.edit"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+
+
     
     
       <script src="assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+
+
       
         <script src="js/timeago.min.js"></script>
+
+
       
         <script src="js/timeago_mkdocs_material.js"></script>
+
+
       
         <script src="assets/brand.js"></script>
+
+
       
         <script src="assets/sp-bg.js"></script>
+
+
       
         <script src="assets/keyword-highlighter.js"></script>
+
+
+
+
       
     
-  </body>
+    <script src="assets/wheel-diagnostic.js"></script>
+    <script src="assets/enhancements.js"></script>
+    <script src="assets/remove-tooltips.js"></script>
+    <script src="assets/bottom-sheet-nav.js"></script>
+    <!-- <script src="assets/sticky-toc-scroll.js"></script> DISABLED - was interfering with scroll -->
+    <script src="assets/components.js"></script>
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - JS
+       To disable: comment out this entire block
+       ======================================== -->
+  <script src="js/feedback-system.js"></script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - JS -->
+
+  <!-- Meta-Learning & Accessibility Features -->
+  <script src="js/keyboard-navigation.js"></script>
+  <script src="js/text-sizing.js"></script>
+  <script src="js/knowledge-checks.js"></script>
+
+      <!-- SignalPilot Chatbot -->
+    <script src="/js/chatbot.js"></script>
+  
+
+
+
+
+
+
+
+  <!-- Custom Bottom Sheet Navigation Script -->
+  <script src="assets/custom-bottom-sheet.js?v7"></script>
+</body>
 </html>

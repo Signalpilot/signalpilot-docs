@@ -6,7 +6,7 @@
 (function() {
   'use strict';
 
-  // Indicator names to EXCLUDE (never highlight these)
+  // Indicator names and structural terms to EXCLUDE (never highlight these)
   const indicatorNames = [
     'Pentarch',
     'Janus Atlas',
@@ -18,9 +18,35 @@
     'Signal Pilot'
   ];
 
+  // Structural labels to EXCLUDE (these are section headers, not keywords)
+  const structuralLabels = [
+    'Visual:',
+    'Cycle Position:',
+    'What Pentarch Detects:',
+    'Common Usage:',
+    'Example:',
+    'Interpretation:',
+    'Result:',
+    'A:',
+    'Q:'
+  ];
+
+  // FAQ question patterns to EXCLUDE (questions containing keywords shouldn't be highlighted)
+  const faqQuestionPatterns = [
+    /^Q:/i,  // Starts with "Q:"
+    /^\?/,   // Starts with question mark
+    /how do i/i,
+    /what is/i,
+    /when should/i,
+    /can i/i,
+    /does it/i,
+    /is it/i,
+    /should i/i
+  ];
+
   // Keyword categories and their patterns
   const keywordPatterns = {
-    // Pentarch Signals (most specific)
+    // Pentarch Signals (most specific - highest priority)
     signal: {
       td: /\b(TD|Touchdown)\b/gi,
       ign: /\b(IGN|Ignition)\b/gi,
@@ -29,23 +55,26 @@
       bdn: /\b(BDN|Breakdown)\b/gi
     },
 
-    // Technical Indicators
-    tech: /\b(VWAP|ATR|OBV|MACD|RSI|Stoch|StochRSI|EMA|SMA|SuperTrend|Bollinger|Fibonacci)\b/gi,
+    // Product-Specific Core Elements (SignalPilot terminology)
+    core: /\b(Pilot Line|Event Signals?|Event Candles?|Regime|Close-Confirmed|Bar Close|EMA Trio|BMSB|Bull Market Support Band|Squeeze|TD Sequential|Liquidity Sweeps?|SuperTrend|Regime Box|Supply Zones?|Demand Zones?|Supply\/Demand Zones?|Candlestick Patterns?|Meta Tools?|NanoFlow|Volume Assist|FlipGuard|OBV|On-Balance Volume|CVD|Cumulative Volume Delta|EVR|Extreme Volume Rejection|Quality Scores?|Z-Score)\b/gi,
+
+    // Cycle Phases (Pentarch-specific market cycle terminology)
+    phase: /\b(Accumulation Phases?|Markup Phases?|Distribution Phases?|Decline Phases?|Climax Phases?|Early-Cycle|Late-Cycle|Mid-Cycle)\b/gi,
 
     // Levels/Structure
     level: /\b(Support|Resistance|Daily High|Daily Low|Weekly High|Weekly Low|Monthly High|Monthly Low|Session High|Session Low|POC|VAH|VAL)\b/gi,
 
-    // Action terms
-    action: /\b(Entry|Exit|Stop Loss|Take Profit|Target|Position)\b/gi,
+    // Action terms (trading positions and actions - but NOT "Cycle Position")
+    action: /\b(Entry|Exit|Stop Loss|Take Profit|Targets?|Long Positions?|Short Positions?|Position Sizing)\b/gi,
 
-    // Quality terms
-    quality: /\b(Elite|Premium|Standard|⭐⭐⭐|⭐⭐)\b/gi,
+    // Quality/Grade terms
+    quality: /\b(Elite|Premium|Standard|High-Quality|Low-Quality)\b/gi,
 
-    // Divergence
-    divergence: /\b(Divergence|Bullish Divergence|Bearish Divergence|Hidden Divergence|Regular Divergence)\b/gi,
+    // Divergence terms
+    divergence: /\b(Divergences?|Bullish Divergences?|Bearish Divergences?|Hidden Divergences?|Regular Divergences?)\b/gi,
 
-    // Volume (specific terms only - NOT generic "Flow" or "Volume")
-    volume: /\b(Volume Spike|Liquidity Sweep)\b/gi
+    // Volume/Flow (specific institutional terms)
+    volume: /\b(Volume Spikes?|Liquidity Sweeps?|Institutional Flow|Smart Money)\b/gi
   };
 
   function isIndicatorName(text) {
@@ -53,6 +82,20 @@
     return indicatorNames.some(name =>
       text.includes(name) || text.trim() === name
     );
+  }
+
+  function isStructuralLabel(text) {
+    // Check if the text is a structural label (section header)
+    const trimmed = text.trim();
+    return structuralLabels.some(label =>
+      trimmed === label || trimmed.endsWith(label)
+    );
+  }
+
+  function isFAQQuestion(text) {
+    // Check if the text is an FAQ question (should not be highlighted)
+    const trimmed = text.trim();
+    return faqQuestionPatterns.some(pattern => pattern.test(trimmed));
   }
 
   function highlightKeywords() {
@@ -71,11 +114,30 @@
         return;
       }
 
+      // SKIP if this is a structural label (section header)
+      if (isStructuralLabel(text)) {
+        element.dataset.kwProcessed = 'true';
+        return;
+      }
+
+      // SKIP if this is an FAQ question (prevents entire questions from highlighting)
+      if (isFAQQuestion(text)) {
+        element.dataset.kwProcessed = 'true';
+        return;
+      }
+
+      // Only highlight if the ENTIRE text is EXACTLY a keyword (word-for-word match)
+      // This prevents partial highlighting like "overlooking CAP signals" -> only "CAP" should match
+      const trimmedText = text.trim();
       let matched = false;
 
       // Check Pentarch signals first (they're most specific)
       for (const [signal, pattern] of Object.entries(keywordPatterns.signal)) {
-        if (pattern.test(text)) {
+        // Reset regex
+        pattern.lastIndex = 0;
+        const match = pattern.exec(trimmedText);
+        // Only highlight if the match is the ENTIRE text
+        if (match && match[0] === trimmedText) {
           element.classList.add('kw-signal', signal);
           element.dataset.kwProcessed = 'true';
           matched = true;
@@ -88,13 +150,20 @@
         for (const [category, pattern] of Object.entries(keywordPatterns)) {
           if (category === 'signal') continue; // Already checked
 
-          if (pattern.test(text)) {
+          // Reset regex
+          pattern.lastIndex = 0;
+          const match = pattern.exec(trimmedText);
+          // Only highlight if the match is the ENTIRE text
+          if (match && match[0] === trimmedText) {
             element.classList.add(`kw-${category}`);
             element.dataset.kwProcessed = 'true';
             break;
           }
         }
       }
+
+      // Mark as processed even if not matched
+      element.dataset.kwProcessed = 'true';
     });
   }
 

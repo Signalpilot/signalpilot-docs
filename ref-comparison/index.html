@@ -6,6 +6,11 @@
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <meta name="mobile-web-app-capable" content="yes">
+      <meta name="theme-color" content="#667eea">
+      <meta name="format-detection" content="telephone=no">
       
         <meta name="description" content="Non-repainting, alert-ready TradingView indicators for any market/timeframe.">
       
@@ -20,7 +25,16 @@
         <link rel="next" href="../ref-best-practices/">
       
       
-      <link rel="icon" href="../assets/watermark-monogram-color-transparent.png">
+      <!-- Favicons -->
+      <link rel="icon" type="image/x-icon" href="../favicon.ico">
+      <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
+      <link rel="icon" type="image/png" sizes="512x512" href="../favicon-512x512.png">
+
+      <!-- PWA Manifest -->
+      <link rel="manifest" href="../manifest.json">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
     
     
@@ -47,6 +61,7 @@
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -54,6 +69,9 @@
       <link rel="stylesheet" href="../css/timeago.css">
     
       <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../css/responsive-optimization.css">
+      <link rel="stylesheet" href="../css/content-overflow-fix.css">
+      <link rel="stylesheet" href="../css/mobile-layout-fixes.css">
     
       <link rel="stylesheet" href="../assets/brand.css">
     
@@ -64,6 +82,8 @@
       <link rel="stylesheet" href="../assets/interactive-code.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+
+
     
       
   
@@ -73,8 +93,12 @@
   
 
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-NZ05GV72K0"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-NZ05GV72K0",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-NZ05GV72K0",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+
   
     <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+
+
   
 
     
@@ -85,7 +109,110 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
 
-  </head>
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - CSS
+       To disable: comment out this entire block
+       ======================================== -->
+  <link rel="stylesheet" href="../css/feedback.css">
+  <link rel="stylesheet" href="../css/visual-enhancements.css">
+
+  <!-- Mermaid.js for diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'dark',
+      themeVariables: {
+        primaryColor: '#00bcd4',
+        primaryTextColor: '#fff',
+        primaryBorderColor: '#0097a7',
+        lineColor: '#00bcd4',
+        secondaryColor: '#ff5722',
+        tertiaryColor: '#4caf50',
+        fontSize: '25px',
+        fontFamily: 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+      },
+      flowchart: {
+        htmlLabels: true,
+        fontSize: 25,
+        useMaxWidth: false
+      },
+      fontSize: 25
+    });
+  </script>
+
+  <!-- PAGE-SPECIFIC: Larger diagram text ONLY on this page -->
+  <style>
+    /* Force readable text in diagrams on THIS PAGE ONLY */
+    .mermaid text,
+    .mermaid .nodeLabel,
+    .mermaid .edgeLabel {
+      font-size: 25px !important;
+    }
+
+    .mermaid svg text {
+      font-size: 25px !important;
+    }
+
+    .mermaid svg .label text,
+    .mermaid svg .label foreignObject,
+    .mermaid svg g.label {
+      font-size: 25px !important;
+    }
+
+    .mermaid .node text,
+    .mermaid .nodes text,
+    .mermaid g.node text {
+      font-size: 25px !important;
+    }
+
+    .mermaid .edgeLabel text,
+    .mermaid g.edgeLabel text {
+      font-size: 25px !important;
+    }
+
+    /* Make diagram container wider to accommodate larger text */
+    .mermaid svg {
+      max-width: 100% !important;
+      height: auto !important;
+    }
+  </style>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - CSS -->
+
+  <!-- Meta-Learning & Accessibility Enhancements -->
+  <link rel="stylesheet" href="../css/skill-badges.css">
+  <link rel="stylesheet" href="../css/meta-learning.css">
+
+      <!-- SignalPilot Chatbot CSS -->
+    <link rel="stylesheet" href="/css/chatbot.css">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.signalpilot.io/">
+    <meta property="og:title" content="Signal Pilot Documentation">
+    <meta property="og:description" content="Professional trading indicators for TradingView. Complete guides for Pentarch, Janus Atlas, Omnideck, and more.">
+    <meta property="og:image" content="https://docs.signalpilot.io/assets/images/preview.png">
+    <meta property="og:site_name" content="Signal Pilot Docs">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.signalpilot.io/">
+    <meta name="twitter:title" content="Signal Pilot Documentation">
+    <meta name="twitter:description" content="Professional trading indicators for TradingView. Complete guides for Pentarch, Janus Atlas, Omnideck, and more.">
+    <meta name="twitter:image" content="https://docs.signalpilot.io/assets/images/preview.png">
+
+
+  
+
+
+
+
+
+
+
+  <!-- Custom Bottom Sheet Navigation -->
+  <link rel="stylesheet" href="../css/hide-mkdocs-sidebar.css?v7">
+  <link rel="stylesheet" href="../css/custom-bottom-sheet.css?v7">
+</head>
   
   
     
@@ -128,7 +255,6 @@
         <a href="https://signalpilot.io/#pricing">Pricing</a>
         <a href="https://signalpilot.io/#faq">FAQ</a>
       </nav>
-      <a class="sp-cta" href="https://signalpilot.io/#pricing">Get the Suite</a>
     </div>
   </div>
 
@@ -141,7 +267,6 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="Signal Pilot Docs" class="md-header__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
       
-  <img src="../assets/watermark-monogram-color-transparent.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -193,6 +318,8 @@
     
     
       <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+
+
     
     
     
@@ -276,7 +403,6 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Signal Pilot Docs" class="md-nav__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
       
-  <img src="../assets/watermark-monogram-color-transparent.png" alt="logo">
 
     </a>
     Signal Pilot Docs
@@ -389,27 +515,6 @@
   
   <span class="md-ellipsis">
     Prerequisites
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/start-which-indicator.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Which Indicator Should I Start?
   </span>
   
 
@@ -709,7 +814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../minimal-flow-v10/" class="md-nav__link">
+      <a href="../volume-oracle-v10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1445,27 +1550,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/troubleshooting-installation.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Installation Troubleshooting
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1525,27 +1609,6 @@
   
   <span class="md-ellipsis">
     FAQ
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/about-system-requirements.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    System Requirements
   </span>
   
 
@@ -1651,7 +1714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../_product-cards/" class="md-nav__link">
+      <a href="../_settings-alerts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2182,7 +2245,7 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1.1rem; height: 1.1rem; fill: currentColor; opacity: 0.7;">
         <path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/>
       </svg>
-      <span style="opacity: 0.85;">Updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 10, 2025 01:41:10 UTC"><span class="timeago" datetime="2025-11-10T01:41:10+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 10, 2025 01:41:10 UTC">2025-11-10</span></span>
+      <span style="opacity: 0.85;">Updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="October 31, 2025 01:38:02 UTC"><span class="timeago" datetime="2025-10-31T01:38:02+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="October 31, 2025 01:38:02 UTC">2025-10-31</span></span>
     </span>
   
 
@@ -2200,7 +2263,47 @@
 
 <!-- Render the page content -->
 <h1 id="indicator-comparison-guide">Indicator Comparison Guide<a class="headerlink" href="#indicator-comparison-guide" title="Permanent link">&para;</a></h1>
-<p><span class="signal-pilot-brand">Signal Pilot</span> indicator selection can be matched to trading style and experience level. This guide presents the comparison framework.</p>
+
+<div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
+  <div class="sp-callout__title">🎯 Quick Selection Guide</div>
+  <div class="mermaid">
+flowchart TB
+    Start["📊 CHOOSE YOUR INDICATOR<br/>Based on Your Primary Goal"]
+
+    Start --> P1
+
+    P1["<b>1️⃣ PENTARCH v1.0</b><br/>Best for: Reversal Detection<br/>✅ Exhaustion Detection<br/>🔄 Cycle Phase Analysis<br/>📊 TD Sequential Counts"]
+
+    P1 --> P2
+
+    P2["<b>2️⃣ OMNIDECK v1.0</b><br/>Best for: Trend Following<br/>🌟 All-in-One Solution<br/>🎯 10 Integrated Systems<br/>📈 Complete Chart Display"]
+
+    P2 --> P3
+
+    P3["<b>3️⃣ VOLUME ORACLE v1.0</b><br/>Best for: Volume Analysis<br/>💰 Money Flow Analysis<br/>📍 Position Tracking<br/>📊 Volume Confirmation"]
+
+    P3 --> P4
+
+    P4["<b>4️⃣ JANUS ATLAS v1.0</b><br/>Best for: Levels & Structure<br/>🎯 39 Level Types<br/>📐 Support/Resistance Zones<br/>🏗️ Market Structure"]
+
+    P4 --> P5
+
+    P5["<b>5️⃣ HARMONIC OSCILLATOR v1.0</b><br/>Best for: Momentum Consensus<br/>🗳️ 5-Component Voting<br/>📉 Divergence Detection<br/>✅ Consensus Signals"]
+
+    style Start fill:#37474f,stroke:#00bcd4,stroke-width:4px,color:#fff
+    style P1 fill:#9c27b0,stroke:#9c27b0,stroke-width:3px,color:#fff
+    style P2 fill:#ff5722,stroke:#ff5722,stroke-width:3px,color:#fff
+    style P3 fill:#4caf50,stroke:#4caf50,stroke-width:3px,color:#fff
+    style P4 fill:#2196f3,stroke:#2196f3,stroke-width:3px,color:#fff
+    style P5 fill:#ff9800,stroke:#ff9800,stroke-width:3px,color:#fff
+  </div>
+  <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+    <strong>How to read:</strong> This vertical guide shows all five indicators in order.
+    Pick the one that matches your primary trading goal.
+  </p>
+</div>
+
+<p>Match your <span class="signal-pilot-brand">Signal Pilot</span> indicator selection to your trading style and experience level. This guide presents the comparison framework.</p>
 <hr />
 <h2 id="quick-recommendations">🎯 Quick Recommendations<a class="headerlink" href="#quick-recommendations" title="Permanent link">&para;</a></h2>
 <h3 id="complete-beginner">👶 Complete Beginner<a class="headerlink" href="#complete-beginner" title="Permanent link">&para;</a></h3>
@@ -2225,7 +2328,7 @@
 <p><strong>Recommended setup:</strong>
 - <a href="../pentarch-v10/">Pentarch</a> - Core signals
 - <a href="../janus-atlas-v10/">Janus Atlas</a> - Key levels
-- <a href="../minimal-flow-v10/">Volume Oracle</a> OR <a href="../harmonic-oscillator-v10/">Harmonic Oscillator</a> - Confirmation</p>
+- <a href="../volume-oracle-v10/">Volume Oracle</a> OR <a href="../harmonic-oscillator-v10/">Harmonic Oscillator</a> - Confirmation</p>
 <p><strong>Why:</strong>
 - Confluence between signals and levels
 - Volume or momentum confirmation
@@ -2391,7 +2494,7 @@ Scans multiple symbols simultaneously, showing signals in a table format</p>
 - Doesn't show chart details
 - Still need to open charts to trade
 - Limited to TradingView symbol limits
-- Table can be large with many symbols</p>
+- Table may be large with many symbols</p>
 <p><strong>Standalone usage:</strong> Designed for scanning opportunities</p>
 <p><strong>Common pairing:</strong> Pentarch or Omnideck on individual charts</p>
 <p><strong>May be skipped:</strong> By traders focusing on 1-2 symbols</p>
@@ -2413,7 +2516,7 @@ Analyzes order flow and volume patterns for confirmation</p>
 - Not a standalone entry system
 - Requires understanding of volume
 - Best as confirmation tool
-- Crypto volumes can be misleading</p>
+- Crypto volumes may be misleading</p>
 <p><strong>Standalone usage:</strong> Not designed for standalone use—requires price signals</p>
 <p><strong>Common pairing:</strong> Pentarch + Janus (signal + level + volume)</p>
 <p><strong>May be skipped:</strong> By traders who don't incorporate volume in strategy</p>
@@ -2462,53 +2565,63 @@ Enhanced On-Balance Volume indicator for volume trend analysis</p>
 <p><strong>Common pairing:</strong> Pentarch + Janus</p>
 <p><strong>May be skipped:</strong> By traders who don't incorporate volume in strategy</p>
 <hr />
-<h2 id="recommended-indicator-combinations">🎨 Recommended Indicator Combinations<a class="headerlink" href="#recommended-indicator-combinations" title="Permanent link">&para;</a></h2>
-<h3 id="beginner-simple-reversals">Beginner: Simple Reversals<a class="headerlink" href="#beginner-simple-reversals" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>✅ Pentarch only
+<div style="background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%); border-left: 4px solid #F59E0B; padding: 1.5rem; margin: 2rem 0; border-radius: 8px;">
+<p style="margin: 0 0 1rem 0; font-weight: 700; font-size: 1.1rem; color: #92400E;">⚠️ IMPORTANT DISCLAIMER</p>
+<p style="margin: 0 0 0.75rem 0; color: #78350F; line-height: 1.6;">
+The following combinations are <strong>educational examples only</strong>. They are <strong>NOT investment, financial, or trading advice</strong>. All setup examples shown are <strong>hypothetical and for illustrative purposes only</strong>.
+</p>
+<p style="margin: 0; color: #78350F; line-height: 1.6;">
+Consult with a qualified financial professional before making any investment decisions. Signal Pilot provides technical analysis tools only - not investment recommendations.
+</p>
+</div>
+
+<h2 id="recommended-indicator-combinations">🎨 Common Indicator Combinations (Educational Examples)<a class="headerlink" href="#recommended-indicator-combinations" title="Permanent link">&para;</a></h2>
+<h3 id="beginner-simple-reversals">Beginner Level: Simple Reversal Example<a class="headerlink" href="#beginner-simple-reversals" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>✅ Pentarch only (educational starting point)
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Why: Master one thing first
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Entry: IGN signals
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Exit: CAP/BDN signals
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Stop: Below IGN candle
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Concept: Master one indicator first (educational approach)
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Example entry consideration: IGN signal indications
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Example exit consideration: CAP/BDN signal indications
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Example stop concept: Below IGN candle (illustrative)
 </span></code></pre></div>
-<h3 id="intermediate-signals-levels">Intermediate: Signals + Levels<a class="headerlink" href="#intermediate-signals-levels" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>✅ Pentarch
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>✅ Janus Atlas
+<h3 id="intermediate-signals-levels">Intermediate Level: Signals + Levels Example<a class="headerlink" href="#intermediate-signals-levels" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>✅ Pentarch (educational example)
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>✅ Janus Atlas (educational example)
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Why: Confluence at key levels
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Entry: IGN at major support
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>Exit: CAP at major resistance
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>Stop: Below support level
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Concept: Confluence at key levels (educational)
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Example entry consideration: IGN at major support (illustrative)
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>Example exit consideration: CAP at major resistance (illustrative)
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>Example stop concept: Below support level (illustrative)
 </span></code></pre></div>
-<h3 id="advanced-complete-system">Advanced: Complete System<a class="headerlink" href="#advanced-complete-system" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>✅ Pentarch (timing)
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>✅ Janus Atlas (levels)
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>✅ Volume Oracle (volume)
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>✅ Harmonic Oscillator (momentum)
+<h3 id="advanced-complete-system">Advanced Level: Complete System Example<a class="headerlink" href="#advanced-complete-system" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>✅ Pentarch (timing - educational example)
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>✅ Janus Atlas (levels - educational example)
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>✅ Volume Oracle (volume - educational example)
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>✅ Harmonic Oscillator (momentum - educational example)
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>Why: Maximum confluence
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>Entry: All 4 confirming
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>Exit: Signal + momentum divergence
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>Stop: Below structure
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>Concept: Maximum confluence (educational)
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>Example entry consideration: All 4 indicators aligning (illustrative)
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>Example exit consideration: Signal + momentum divergence (illustrative)
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>Example stop concept: Below structure (illustrative)
 </span></code></pre></div>
-<h3 id="all-in-one-omnideck">All-in-One: Omnideck<a class="headerlink" href="#all-in-one-omnideck" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>✅ Omnideck
+<h3 id="all-in-one-omnideck">All-in-One Example: Omnideck<a class="headerlink" href="#all-in-one-omnideck" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>✅ Omnideck (comprehensive educational example)
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>Why: Everything included
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Entry: Omnideck signals at levels
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>Exit: Opposite signals
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>Stop: Based on Omnideck structure
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>Concept: Everything included (educational)
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Example entry consideration: Omnideck signals at levels (illustrative)
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>Example exit consideration: Opposite signals (illustrative)
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>Example stop concept: Based on Omnideck structure (illustrative)
 </span></code></pre></div>
-<h3 id="scanner-execution">Scanner + Execution<a class="headerlink" href="#scanner-execution" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>✅ Augury Grid (scanning)
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>✅ Omnideck OR Pentarch+Janus (execution)
+<h3 id="scanner-execution">Scanner + Execution Example<a class="headerlink" href="#scanner-execution" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>✅ Augury Grid (scanning - educational example)
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>✅ Omnideck OR Pentarch+Janus (execution - educational example)
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>Why: Find setups fast, trade with full info
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>Workflow:
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>Concept: Find setups fast, analyze with full info (educational)
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>Example Workflow (illustrative):
 </span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>1. Augury finds signals across watchlist
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2. Promising charts can be opened
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>3. Setup can be verified on execution chart
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>4. Trading can be executed
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2. Review promising charts
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>3. Analyze the setup on execution chart
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>4. Perform further analysis
 </span></code></pre></div>
 <hr />
 <h2 id="decision-tree-which-indicators-do-i-need">🤔 Decision Tree: Which Indicators Do I Need?<a class="headerlink" href="#decision-tree-which-indicators-do-i-need" title="Permanent link">&para;</a></h2>
@@ -2554,7 +2667,7 @@ Other indicators not required</p>
 <h3 id="ignoring-key-levels">❌ Ignoring Key Levels<a class="headerlink" href="#ignoring-key-levels" title="Permanent link">&para;</a></h3>
 <p><strong>Problem:</strong> Taking Pentarch signals anywhere
 <strong>Issue:</strong> Many false signals away from levels
-<strong>Fix:</strong> Janus Atlas can be added, trading at key levels is commonly practiced</p>
+<strong>Fix:</strong> Add Janus Atlas to identify key levels where signals historically show different characteristics</p>
 <hr />
 <h3 id="switching-indicators-too-fast">❌ Switching Indicators Too Fast<a class="headerlink" href="#switching-indicators-too-fast" title="Permanent link">&para;</a></h3>
 <p><strong>Problem:</strong> Changing setup every week
@@ -2564,7 +2677,7 @@ Other indicators not required</p>
 <h3 id="using-omnideck-individual-indicators">❌ Using Omnideck + Individual Indicators<a class="headerlink" href="#using-omnideck-individual-indicators" title="Permanent link">&para;</a></h3>
 <p><strong>Problem:</strong> Omnideck + Pentarch + Janus all loaded
 <strong>Issue:</strong> Duplicate signals, redundant data
-<strong>Fix:</strong> Omnideck OR individual indicators can be chosen, but not both</p>
+<strong>Fix:</strong> Choose Omnideck OR individual indicators, but not both</p>
 <hr />
 <h2 id="by-trading-style">📈 By Trading Style<a class="headerlink" href="#by-trading-style" title="Permanent link">&para;</a></h2>
 <h3 id="day-traders">Day Traders<a class="headerlink" href="#day-traders" title="Permanent link">&para;</a></h3>
@@ -2609,22 +2722,22 @@ Other indicators not required</p>
 </ul>
 <h3 id="week-3-4-confirmation">Week 3-4: Confirmation<a class="headerlink" href="#week-3-4-confirmation" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Janus Atlas can be added</li>
-<li>Key levels can be learned to identify</li>
-<li>Pentarch signals can be traded only AT Janus levels</li>
+<li>Add Janus Atlas</li>
+<li>Learn to identify key levels</li>
+<li>Trade Pentarch signals only AT Janus levels</li>
 <li>Goal: Understand confluence</li>
 </ul>
 <h3 id="week-5-6-refinement">Week 5-6: Refinement<a class="headerlink" href="#week-5-6-refinement" title="Permanent link">&para;</a></h3>
 <ul>
-<li>ONE confirmation indicator can be added:</li>
+<li>Add ONE confirmation indicator:</li>
 <li>Volume Oracle (if volume is liked)</li>
 <li>Harmonic Oscillator (if momentum is liked)</li>
 <li>Goal: Filter for highest probability setups</li>
 </ul>
 <h3 id="week-7-8-efficiency">Week 7-8: Efficiency<a class="headerlink" href="#week-7-8-efficiency" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Augury Grid can be added if trading multiple symbols</li>
-<li>Workflow can be streamlined</li>
+<li>Add Augury Grid if trading multiple symbols</li>
+<li>Streamline your workflow</li>
 <li>Goal: Fast scanning, confident execution</li>
 </ul>
 <h3 id="week-9-mastery">Week 9+: Mastery<a class="headerlink" href="#week-9-mastery" title="Permanent link">&para;</a></h3>
@@ -2635,6 +2748,20 @@ Other indicators not required</p>
 <li>Goal: Profitable, repeatable process</li>
 </ul>
 <hr />
+<div class="sp-callout sp-callout--summary">
+  <div class="sp-callout__title">What You've Learned</div>
+  <ul>
+    <li><strong>Seven Core Indicators:</strong> Signal Pilot Suite includes Pentarch (cycle detection), Omnideck (all-in-one suite), Janus Atlas (level mapping), Augury Grid (multi-symbol screener), Harmonic Oscillator (consensus momentum), Volume Oracle (flow analysis), and Plutus Flow (OBV tracking)</li>
+    <li><strong>Indicator Comparison Framework:</strong> Each tool differs in purpose (signals vs levels vs volume), complexity (simple to advanced), signal frequency (rare to frequent), and ideal use cases (trending vs ranging markets)</li>
+    <li><strong>Strategic Combinations:</strong> Pentarch + Janus Atlas provides cycle signals at key levels, Omnideck offers complete integrated suite, Harmonic Oscillator adds momentum confirmation, and volume indicators validate strength</li>
+    <li><strong>Trading Style Alignment:</strong> Intraday traders use Pentarch/Omnideck on 15m-1H, swing traders use Pentarch/Janus on 4H-Daily, scalpers prioritize Omnideck speed on 1m-15m, position traders combine multiple tools on Daily-Weekly</li>
+    <li><strong>Progressive Learning Path:</strong> Start with Pentarch alone (Weeks 1-2), add Janus Atlas for confluence (Weeks 3-4), introduce one confirmation indicator (Weeks 5-6), streamline with Augury Grid if needed (Weeks 7-8), then achieve mastery (Week 9+)</li>
+    <li><strong>Decision Matrix:</strong> Choose Pentarch for early cycle detection, Omnideck for simplicity and speed, Janus Atlas for structural analysis, volume tools for confirmation, and Augury Grid for multi-symbol scanning</li>
+    <li><strong>Complementary Stacking:</strong> Indicators designed to work together - combine signal generators (Pentarch, Omnideck) with level indicators (Janus) and confirmation tools (Harmonic, Volume) for highest probability setups</li>
+  </ul>
+  <p><strong>Next Steps:</strong> Review <a href="../ref-workflow/">Trading Workflow Guide</a> for complete process details, or see <a href="../start-quick/">Quick Start Guide</a> to begin with Pentarch-only setup.</p>
+</div>
+<hr />
 <h2 id="related-guides">📚 Related Guides<a class="headerlink" href="#related-guides" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../start-quick/">Quick Start</a> - Get started with Pentarch</li>
@@ -2642,7 +2769,7 @@ Other indicators not required</p>
 <li><a href="../ref-workflow/">Trading Workflow</a> - Complete process</li>
 <li><a href="../ref-best-practices/">Best Practices</a> - Pro tips</li>
 </ul>
-<p><strong>Selection uncertainty:</strong> <strong>Pentarch only</strong> for 2 weeks is a common starting approach. Additional indicators can be added later.</p>
+<p><strong>Selection uncertainty:</strong> <strong>Pentarch only</strong> for 2 weeks is a common starting approach. Add additional indicators later.</p>
                 
               </article>
             </div>
@@ -2650,7 +2777,11 @@ Other indicators not required</p>
           
   <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 
+
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+
+
         </div>
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
@@ -2712,20 +2843,64 @@ Other indicators not required</p>
     
     
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.sections", "navigation.path", "content.code.copy", "search.suggest", "search.highlight", "content.tabs.link", "content.tooltips", "content.action.edit"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+
+
     
     
       <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+
+
       
         <script src="../js/timeago.min.js"></script>
+
+
       
         <script src="../js/timeago_mkdocs_material.js"></script>
+
+
       
         <script src="../assets/brand.js"></script>
+
+
       
         <script src="../assets/sp-bg.js"></script>
+
+
       
         <script src="../assets/keyword-highlighter.js"></script>
+
+
       
     
-  </body>
+      <script src="../assets/wheel-diagnostic.js"></script>
+      <script src="../assets/enhancements.js"></script>
+    <script src="assets/remove-tooltips.js"></script>
+    <script src="assets/bottom-sheet-nav.js"></script>
+      <script src="../assets/sticky-toc-scroll.js"></script>
+    <script src="../assets/components.js"></script>
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - JS
+       To disable: comment out this entire block
+       ======================================== -->
+  <script src="../js/feedback-system.js"></script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - JS -->
+
+  <!-- Meta-Learning & Accessibility Features -->
+  <script src="../js/keyboard-navigation.js"></script>
+  <script src="../js/text-sizing.js"></script>
+  <script src="../js/knowledge-checks.js"></script>
+
+      <!-- SignalPilot Chatbot -->
+    <script src="/js/chatbot.js"></script>
+  
+
+
+
+
+
+
+
+  <!-- Custom Bottom Sheet Navigation Script -->
+  <script src="../assets/custom-bottom-sheet.js?v7"></script>
+</body>
 </html>

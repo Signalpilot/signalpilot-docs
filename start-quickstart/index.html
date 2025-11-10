@@ -6,6 +6,11 @@
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <meta name="mobile-web-app-capable" content="yes">
+      <meta name="theme-color" content="#667eea">
+      <meta name="format-detection" content="telephone=no">
       
         <meta name="description" content="Non-repainting, alert-ready TradingView indicators for any market/timeframe.">
       
@@ -16,12 +21,21 @@
       
       
       
-      <link rel="icon" href="../assets/watermark-monogram-color-transparent.png">
+      <!-- Favicons -->
+      <link rel="icon" type="image/x-icon" href="../favicon.ico">
+      <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
+      <link rel="icon" type="image/png" sizes="512x512" href="../favicon-512x512.png">
+
+      <!-- PWA Manifest -->
+      <link rel="manifest" href="../manifest.json">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
     
     
       
-        <title>Quick Start — How to Fly the SignalPilot Suite - Signal Pilot Docs</title>
+        <title>Suite Overview — How to Fly the SignalPilot Suite - Signal Pilot Docs</title>
       
     
     
@@ -43,6 +57,7 @@
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -50,6 +65,9 @@
       <link rel="stylesheet" href="../css/timeago.css">
     
       <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../css/responsive-optimization.css">
+      <link rel="stylesheet" href="../css/content-overflow-fix.css">
+      <link rel="stylesheet" href="../css/mobile-layout-fixes.css">
     
       <link rel="stylesheet" href="../assets/brand.css">
     
@@ -60,6 +78,8 @@
       <link rel="stylesheet" href="../assets/interactive-code.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+
+
     
       
   
@@ -69,8 +89,12 @@
   
 
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-NZ05GV72K0"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-NZ05GV72K0",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-NZ05GV72K0",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+
   
     <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+
+
   
 
     
@@ -81,7 +105,72 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
 
-  </head>
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - CSS
+       To disable: comment out this entire block
+       ======================================== -->
+  <link rel="stylesheet" href="../css/feedback.css">
+  <link rel="stylesheet" href="../css/visual-enhancements.css">
+
+  <!-- Mermaid.js for diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'dark',
+      themeVariables: {
+        primaryColor: '#00bcd4',
+        primaryTextColor: '#fff',
+        primaryBorderColor: '#0097a7',
+        lineColor: '#00bcd4',
+        secondaryColor: '#ff5722',
+        tertiaryColor: '#4caf50',
+        fontSize: '18px',
+        fontFamily: 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+      },
+      flowchart: {
+        htmlLabels: true,
+        fontSize: 18
+      },
+      fontSize: 18
+    });
+  </script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - CSS -->
+
+  <!-- Meta-Learning & Accessibility Enhancements -->
+  <link rel="stylesheet" href="../css/skill-badges.css">
+  <link rel="stylesheet" href="../css/meta-learning.css">
+
+      <!-- SignalPilot Chatbot CSS -->
+    <link rel="stylesheet" href="/css/chatbot.css">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.signalpilot.io/">
+    <meta property="og:title" content="Signal Pilot Documentation">
+    <meta property="og:description" content="Professional trading indicators for TradingView. Complete guides for Pentarch, Janus Atlas, Omnideck, and more.">
+    <meta property="og:image" content="https://docs.signalpilot.io/assets/images/preview.png">
+    <meta property="og:site_name" content="Signal Pilot Docs">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.signalpilot.io/">
+    <meta name="twitter:title" content="Signal Pilot Documentation">
+    <meta name="twitter:description" content="Professional trading indicators for TradingView. Complete guides for Pentarch, Janus Atlas, Omnideck, and more.">
+    <meta name="twitter:image" content="https://docs.signalpilot.io/assets/images/preview.png">
+
+
+  
+
+
+
+
+
+
+
+  <!-- Custom Bottom Sheet Navigation -->
+  <link rel="stylesheet" href="../css/hide-mkdocs-sidebar.css?v7">
+  <link rel="stylesheet" href="../css/custom-bottom-sheet.css?v7">
+</head>
   
   
     
@@ -124,7 +213,6 @@
         <a href="https://signalpilot.io/#pricing">Pricing</a>
         <a href="https://signalpilot.io/#faq">FAQ</a>
       </nav>
-      <a class="sp-cta" href="https://signalpilot.io/#pricing">Get the Suite</a>
     </div>
   </div>
 
@@ -137,7 +225,6 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="Signal Pilot Docs" class="md-header__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
       
-  <img src="../assets/watermark-monogram-color-transparent.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -154,8 +241,8 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Quick Start — How to Fly the SignalPilot Suite
-            
+              Suite Overview — How to Fly the SignalPilot Suite
+
           </span>
         </div>
       </div>
@@ -189,6 +276,8 @@
     
     
       <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+
+
     
     
     
@@ -272,7 +361,6 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Signal Pilot Docs" class="md-nav__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
       
-  <img src="../assets/watermark-monogram-color-transparent.png" alt="logo">
 
     </a>
     Signal Pilot Docs
@@ -385,27 +473,6 @@
   
   <span class="md-ellipsis">
     Prerequisites
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/start-which-indicator.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Which Indicator Should I Start?
   </span>
   
 
@@ -705,7 +772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../minimal-flow-v10/" class="md-nav__link">
+      <a href="../volume-oracle-v10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -934,27 +1001,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/troubleshooting-installation.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Installation Troubleshooting
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1014,27 +1060,6 @@
   
   <span class="md-ellipsis">
     FAQ
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/about-system-requirements.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    System Requirements
   </span>
   
 
@@ -1140,7 +1165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../_product-cards/" class="md-nav__link">
+      <a href="../_settings-alerts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1278,7 +1303,7 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1.1rem; height: 1.1rem; fill: currentColor; opacity: 0.7;">
         <path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/>
       </svg>
-      <span style="opacity: 0.85;">Updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 10, 2025 01:41:10 UTC"><span class="timeago" datetime="2025-11-10T01:41:10+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 10, 2025 01:41:10 UTC">2025-11-10</span></span>
+      <span style="opacity: 0.85;">Updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="October 31, 2025 01:38:02 UTC"><span class="timeago" datetime="2025-10-31T01:38:02+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="October 31, 2025 01:38:02 UTC">2025-10-31</span></span>
     </span>
   
 
@@ -1295,202 +1320,270 @@
 </div>
 
 <!-- Render the page content -->
-<h1 id="quick-start-signalpilot-suite-overview">🚀 Quick Start — SignalPilot Suite Overview<a class="headerlink" href="#quick-start-signalpilot-suite-overview" title="Permanent link">&para;</a></h1>
-<p>Welcome aboard the <strong>SignalPilot Suite</strong> — a cohesive system built to make charts cleaner, smarter, and faster to read.
-This guide shows how all modules can be installed, understood, and combined step-by-step.</p>
+<h1 id="suite-overview">🚀 Suite Overview — The 7 Signal Pilot Indicators<a class="headerlink" href="#suite-overview" title="Permanent link">&para;</a></h1>
+
+<p>Welcome to the <strong>Signal Pilot Suite</strong> — a collection of 7 professional-grade TradingView indicators designed to work independently or together. Each indicator serves a specific purpose in your trading analysis.</p>
+
+<div class="sp-callout sp-callout--info">
+  <div class="sp-callout__title">📊 Choose Your Approach</div>
+  <p><strong>Beginner?</strong> Start with just 1-2 indicators (Pentarch + Janus Atlas recommended)</p>
+  <p><strong>Intermediate?</strong> Add Harmonic Oscillator or Volume Oracle for confirmation</p>
+  <p><strong>Advanced?</strong> Use Omnideck as your all-in-one solution, or combine 3-4 indicators for maximum confluence</p>
+  <p><strong>Scanning markets?</strong> Use Augury Grid to find signals across multiple symbols</p>
+</div>
+
 <hr />
-<h2 id="step-1-establish-bias-momentum-layer">🧭 Step 1 — Establish Bias (Momentum Layer)<a class="headerlink" href="#step-1-establish-bias-momentum-layer" title="Permanent link">&para;</a></h2>
-<p>The Bias group defines <strong>trend direction and strength</strong>.
-It can be thought of as a market compass.</p>
+
+<h2 id="the-seven-indicators">The 7 Signal Pilot Indicators</h2>
+
+<h3 id="pentarch-reversal-timing">1. Pentarch v1.0 — Reversal & Timing Signals</h3>
+<p><strong>Purpose:</strong> Detects potential reversal points and cycle phases using 5 event types</p>
+<p><strong>Best For:</strong> Timing entries and exits, catching early reversals, understanding market cycle position</p>
+
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Module</th>
-<th style="text-align: left;">Purpose</th>
-<th style="text-align: left;">Typical Use</th>
+<th>Signal Type</th>
+<th>Meaning</th>
+<th>When to Use</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong><a href="spp-macd-plus.md">Momentum Regime (MACD+)</a></strong></td>
-<td style="text-align: left;">Detects potential regime flips and momentum phases using adaptive color zones.</td>
-<td style="text-align: left;">Can confirm whether the current leg is impulsive or corrective.</td>
+<td><strong>TD (Accumulation)</strong></td>
+<td>Early-cycle watchlist signal - trend may be exhausting</td>
+<td>Be ready for potential reversal</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong><a href="sp-ema-trio-pro.md">Trend Stack (EMA 50/100/200 Pro)</a></strong></td>
-<td style="text-align: left;">Tracks medium- and long-term trend alignment with GC/DC and pullback logic.</td>
-<td style="text-align: left;">"Stacked" trending conditions and disciplined re-entries can be identified.</td>
+<td><strong>IGN (Ignition)</strong></td>
+<td>Early-cycle action signal - potential reversal igniting</td>
+<td>Entry consideration for early reversal</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong><a href="sp-oscillator-matrix.md">Momentum Matrix (Panel Pro)</a></strong></td>
-<td style="text-align: left;">Aggregates multiple oscillators into a single normalized panel.</td>
-<td style="text-align: left;">Quick visual scan of momentum strength across timeframes can be performed.</td>
+<td><strong>WRN (Warning)</strong></td>
+<td>Late-cycle warning - trend becoming mature</td>
+<td>Reduce position size or prepare exit</td>
+</tr>
+<tr>
+<td><strong>CAP (Capitulation)</strong></td>
+<td>Climax signal - potential exhaustion reversal</td>
+<td>Entry consideration for climax reversal</td>
+</tr>
+<tr>
+<td><strong>BDN (Breakdown)</strong></td>
+<td>Late-cycle signal - trend breaking down</td>
+<td>Cautious entry (may be late to the move)</td>
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p><strong>Common practice:</strong> If Bias modules disagree, lighter trading or waiting for alignment can be considered.</p>
-</blockquote>
+
+<p><strong>Beginner Tip:</strong> Focus on IGN and CAP signals for entry timing. Use TD and WRN as early warnings.</p>
+<p><strong>Learn more:</strong> <a href="../pentarch-v10/">Pentarch Documentation</a></p>
+
 <hr />
-<h2 id="step-2-measure-participation-volume-flow">💧 Step 2 — Measure Participation (Volume / Flow)<a class="headerlink" href="#step-2-measure-participation-volume-flow" title="Permanent link">&para;</a></h2>
-<p>Bias tells <em>where</em> the market wants to go; Participation tells <em>who's actually moving it</em>.
-These modules show conviction and flow strength.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Module</th>
-<th style="text-align: left;">Purpose</th>
-<th style="text-align: left;">Typical Use</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong><a href="sp-pva-overlay.md">Participation (PVA Overlay)</a></strong></td>
-<td style="text-align: left;">Colors candles by relative volume and flow bursts.</td>
-<td style="text-align: left;">Unusual volume during key price moves can be spotted.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong><a href="sp-pva-volume.md">Volume Pulse (PVA Volume)</a></strong></td>
-<td style="text-align: left;">Plots RVOL and Z-score spikes to highlight activity surges.</td>
-<td style="text-align: left;">When volume validates a breakout can be confirmed.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong><a href="sp-obv-pro.md">Flow Balance (OBV Pro)</a></strong></td>
-<td style="text-align: left;">Smoothed On-Balance-Volume with FlipGuard filtering.</td>
-<td style="text-align: left;">Silent accumulation or distribution ahead of price can be detected.</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><strong>Rule of thumb:</strong> Momentum without volume = low conviction. Volume without structure = chaos.</p>
-</blockquote>
+
+<h3 id="janus-atlas-levels">2. Janus Atlas v1.0 — Structure & Levels System</h3>
+<p><strong>Purpose:</strong> Auto-maps support, resistance, and key price levels (39 different level types)</p>
+<p><strong>Best For:</strong> Finding high-probability entry/exit zones, setting profit targets, identifying level confluence</p>
+
+<p><strong>The 5 Beginner Levels</strong> (start here):</p>
+<ul>
+<li><strong>Daily High/Low (dH/dL)</strong> — Today's price range boundaries</li>
+<li><strong>Weekly High/Low (wH/wL)</strong> — This week's extremes</li>
+<li><strong>POC (Point of Control)</strong> — Highest volume price level</li>
+</ul>
+
+<p><strong>Advanced Levels</strong> (add later):</p>
+<ul>
+<li>Monthly highs/lows, session levels, VWAP anchors, quarterly pivots, Fibonacci levels, and more (39 total)</li>
+</ul>
+
+<div class="admonition warning">
+<p class="admonition-title">⚠️ DON'T enable all 39 levels at once!</p>
+<p>Your chart will become unreadable. Start with the 5 beginner levels, then gradually add more as needed.</p>
+</div>
+
+<p><strong>Best Practice:</strong> Combine Janus Atlas levels with Pentarch signals. Example: IGN signal AT Daily Low = strong support confluence</p>
+<p><strong>Learn more:</strong> <a href="../janus-atlas-v10/">Janus Atlas Documentation</a></p>
+
 <hr />
-<h2 id="step-3-map-structure-liquidity-where">🏗️ Step 3 — Map Structure &amp; Liquidity (Where)<a class="headerlink" href="#step-3-map-structure-liquidity-where" title="Permanent link">&para;</a></h2>
-<p>This layer identifies <em>reaction zones</em> — areas where price tends to pause, reverse, or accelerate.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Module</th>
-<th style="text-align: left;">Purpose</th>
-<th style="text-align: left;">Typical Use</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong><a href="sp-sml-structure-liquidity.md">Structure Map (SML)</a></strong></td>
-<td style="text-align: left;">Auto-maps swing structure, liquidity grabs, and breaks of structure.</td>
-<td style="text-align: left;">BOS/CHOCH levels can be visualized without clutter.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong><a href="sp-sdzones-pro.md">SD Zones (Pro)</a></strong></td>
-<td style="text-align: left;">Detects and maintains Supply/Demand zones with anchored precision.</td>
-<td style="text-align: left;">High-probability reaction zones for entries can be marked.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong><a href="sp-key-levels-suite.md">Key Anchors (Key Levels Suite)</a></strong></td>
-<td style="text-align: left;">Combines HTF, session, and VWAP anchors.</td>
-<td style="text-align: left;">Confluence between intraday and higher-timeframe levels can be identified.</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><strong>Common practice:</strong> Structure defines the <em>map</em> — not the signal. Can be combined with Bias + Participation for context.</p>
-</blockquote>
+
+<h3 id="harmonic-oscillator-momentum">3. Harmonic Oscillator v1.0 — Momentum Voting System</h3>
+<p><strong>Purpose:</strong> Aggregates 5 oscillators into consensus momentum signals</p>
+<p><strong>Best For:</strong> Confirming trend direction, identifying momentum shifts, filtering false signals</p>
+
+<p><strong>The 4 Signal Types:</strong></p>
+<ul>
+<li><strong>Bull</strong> — Bullish momentum consensus (3+ oscillators bullish)</li>
+<li><strong>Bear</strong> — Bearish momentum consensus (3+ oscillators bearish)</li>
+<li><strong>NEUT</strong> — Neutral/uncertain momentum (oscillators disagree)</li>
+<li><strong>STRONG</strong> — Enhanced bull or bear signal (4-5 oscillators agree)</li>
+</ul>
+
+<p><strong>Best Practice:</strong> Use Harmonic Oscillator to confirm Pentarch signals. Example: IGN + Bull signal = momentum-confirmed reversal</p>
+<p><strong>Learn more:</strong> <a href="../harmonic-oscillator-v10/">Harmonic Oscillator Documentation</a></p>
+
 <hr />
-<h2 id="step-4-refine-timing-when">⏱️ Step 4 — Refine Timing (When)<a class="headerlink" href="#step-4-refine-timing-when" title="Permanent link">&para;</a></h2>
-<p>Timing modules zoom in to catch turns, continuations, and exhaustion points — where opportunity meets precision.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Module</th>
-<th style="text-align: left;">Purpose</th>
-<th style="text-align: left;">Typical Use</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong><a href="sp-rsi-triad-confirm.md">RSI Triad Confirm</a></strong></td>
-<td style="text-align: left;">3-speed RSI confirming internal strength or divergence.</td>
-<td style="text-align: left;">Whether pullbacks have reset momentum can be confirmed.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong><a href="sp-contextstoch-rsi.md">Context Stoch (SRSI+)</a></strong></td>
-<td style="text-align: left;">Context-aware Stochastic RSI avoiding false reversals.</td>
-<td style="text-align: left;">Micro-rotation strength within a regime can be gauged.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong><a href="sp-ltf.md">Leg Timer (TD9 + Clean Squeeze)</a></strong></td>
-<td style="text-align: left;">Counts exhaustion legs (TD9) and squeeze compressions.</td>
-<td style="text-align: left;">Exhaustion or early squeeze breakouts can be spotted.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong><a href="sp-ec-pro.md">Reversal Engine (EC Pro)</a></strong></td>
-<td style="text-align: left;">Event-centric detection of tops/bottoms with PilotLine + NanoFlows.</td>
-<td style="text-align: left;">Potential reversal events can be identified and alerted on.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong><a href="sp-rcs-reversal-structure.md">Reversal Candlestick Structure (RCS)</a></strong></td>
-<td style="text-align: left;">Highlights high-quality reversal candle patterns.</td>
-<td style="text-align: left;">Visual confirmation that a turn is forming can be observed.</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>Timing signals are commonly combined only when <strong>Bias + Participation</strong> agree. Counter-trading the regime typically occurs only when exhaustion is being faded with confirmation.</p>
-</blockquote>
-<hr />
-<h2 id="step-5-filter-scan-confirm-meta-tools">🧩 Step 5 — Filter, Scan, &amp; Confirm (Meta Tools)<a class="headerlink" href="#step-5-filter-scan-confirm-meta-tools" title="Permanent link">&para;</a></h2>
-<p>Meta modules are the <em>air-traffic control</em>: they keep signals honest and scalable.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Module</th>
-<th style="text-align: left;">Purpose</th>
-<th style="text-align: left;">Typical Use</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong><a href="sp-regime-vol-filter.md">Regime Box (Regime &amp; Volatility Filter)</a></strong></td>
-<td style="text-align: left;">Defines trend &amp; volatility regimes (SQZ / EXP / OK).</td>
-<td style="text-align: left;">Setups can be filtered by volatility state.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong><a href="sp-screener-sfx.md">Screener (Screener Table)</a></strong></td>
-<td style="text-align: left;">On-chart table scanning multiple symbols for signals.</td>
-<td style="text-align: left;">Markets can be scanned for aligned conditions in one view.</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><strong>Suggested Setup:</strong> Regime Box can be kept always on; it's the Suite's master gatekeeper.</p>
-</blockquote>
-<hr />
-<h2 id="step-6-build-your-flight-deck">🛠️ Step 6 — Build Your Flight Deck<a class="headerlink" href="#step-6-build-your-flight-deck" title="Permanent link">&para;</a></h2>
+
+<h3 id="plutus-flow-volume-trend">4. Plutus Flow v1.0 — Advanced OBV (Volume Trend)</h3>
+<p><strong>Purpose:</strong> Tracks cumulative volume flow, trend ribbons, and divergences</p>
+<p><strong>Best For:</strong> Identifying volume-based divergences, tracking long-term money flow, swing trading</p>
+
+<p><strong>Three Components:</strong></p>
 <ol>
-<li><strong>Base template can be added</strong></li>
-<li>One chart layout with Bias, Participation, Structure, Timing, Meta layers stacked vertically or side-by-side.</li>
-<li><strong>Workspace can be saved</strong> for reuse across pairs or markets.</li>
-<li><strong>Alerts can be enabled</strong> only on <em>close-confirmed</em> events:</li>
-<li>Regime Box → <code>EXP ON</code>, <code>SQZ ON</code>, <code>LONG OK</code>, <code>SHORT OK</code></li>
-<li>Reversal Engine → <code>BDN</code>, <code>CAP</code>, <code>WRN</code></li>
-<li>Leg Timer → <code>TD9</code>, <code>Squeeze</code></li>
-<li><strong>Optional:</strong> The <strong><a href="sp-screener-sfx.md">Screener</a></strong> can be used for multi-symbol scanning.</li>
+<li><strong>OBV Line</strong> — Cumulative buying vs selling pressure</li>
+<li><strong>Trend Ribbons</strong> — Colored bands showing trend strength (narrow = weak, wide = strong)</li>
+<li><strong>Divergence Detection</strong> — Automatic alerts when price and OBV disagree</li>
 </ol>
+
+<p><strong>Key Concept:</strong> Bullish Divergence = Price makes lower low, BUT OBV makes higher low (accumulation despite price drop)</p>
+<p><strong>Best Practice:</strong> Works best in TRENDING markets. Avoid using in ranging/choppy conditions.</p>
+<p><strong>Learn more:</strong> <a href="../plutus-flow-v10/">Plutus Flow Documentation</a></p>
+
 <hr />
-<h2 id="step-7-follow-the-suite-workflow">🧭 Step 7 — Follow the Suite Workflow<a class="headerlink" href="#step-7-follow-the-suite-workflow" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p><strong>Bias → Participation → Structure → Timing → Meta</strong></p>
-</blockquote>
+
+<h3 id="volume-oracle-volume-analysis">5. Volume Oracle v1.0 — Volume Analysis Suite</h3>
+<p><strong>Purpose:</strong> Real-time volume spike detection, zones, and position tracking</p>
+<p><strong>Best For:</strong> Spotting smart money activity, intraday trading, volume confirmation</p>
+
+<p><strong>Three Systems:</strong></p>
 <ol>
-<li><strong>Trend direction can be confirmed</strong> (Bias).</li>
-<li><strong>Conviction can be validated</strong> (Participation).</li>
-<li><strong>Reaction zones can be located</strong> (Structure).</li>
-<li><strong>Entry signal can be waited for</strong> (Timing).</li>
-<li><strong>By regime can be filtered</strong> (Meta).</li>
-<li><strong>Alert / Automate / Log</strong>.</li>
+<li><strong>Volume Flow</strong> — Green/red volume bars with buying/selling labels on spikes</li>
+<li><strong>Volume Zones</strong> — Horizontal bands showing where volume clustered</li>
+<li><strong>Position Manager</strong> — Live P&L tracking for active positions</li>
 </ol>
-<p>Each module is deterministic, non-repainting, and uses anchored visuals — everything finalizes at candle close.</p>
+
+<p><strong>Best Practice:</strong> Use Volume Oracle for SPIKE detection (intraday), use Plutus Flow for TREND analysis (swing trades)</p>
+<p><strong>Example:</strong> Pentarch CAP signal + Volume Oracle shows 3x volume spike = climax confirmed</p>
+<p><strong>Learn more:</strong> <a href="../volume-oracle-v10/">Volume Oracle Documentation</a></p>
+
+<hr />
+
+<h3 id="augury-grid-scanner">6. Augury Grid v1.0 — Multi-Symbol Scanner</h3>
+<p><strong>Purpose:</strong> Scans up to 40 symbols for MACD bullish/bearish signals with confluence scores</p>
+<p><strong>Best For:</strong> Finding opportunities across multiple markets, sector scanning, watchlist monitoring</p>
+
+<p><strong>How It Works:</strong></p>
+<ul>
+<li>Displays table on chart showing Symbol | Signal (↑/↓) | Confluence Score (1-5) | Target | P&L</li>
+<li>Scores 1/5 to 5/5 indicate signal strength (trade only 4/5 or 5/5 for highest probability)</li>
+<li>Monitors crypto, stocks, forex, futures - any TradingView symbol</li>
+</ul>
+
+<p><strong>Best Practice:</strong> Use Augury Grid to FILTER markets, then switch to individual chart for deep analysis with Pentarch/Janus</p>
+<p><strong>Workflow:</strong> Grid scan → Find 5/5 signal → Open that symbol → Analyze with Pentarch + Janus → Trade</p>
+<p><strong>Learn more:</strong> <a href="../augury-grid-v10/">Augury Grid Documentation</a></p>
+
+<hr />
+
+<h3 id="omnideck-all-in-one">7. Omnideck v1.0 — All-in-One Indicator (10 Systems)</h3>
+<p><strong>Purpose:</strong> Combines 10 analysis systems into one comprehensive indicator</p>
+<p><strong>Best For:</strong> Traders who want everything in one place, chart organization, reducing indicator clutter</p>
+
+<p><strong>The 10 Systems:</strong></p>
+<ol>
+<li><strong>Regime Box</strong> — Trend and volatility classification</li>
+<li><strong>EMA Stack (50/100/200)</strong> — Multi-timeframe trend alignment</li>
+<li><strong>MACD+</strong> — Enhanced MACD with color zones</li>
+<li><strong>Adaptive Channels</strong> — Dynamic support/resistance bands</li>
+<li><strong>TD Sequential</strong> — Exhaustion countdown (counts to 9, 13)</li>
+<li><strong>Squeeze Indicator</strong> — Volatility compression detection</li>
+<li><strong>Support/Resistance Zones</strong> — Auto-mapped S/R levels</li>
+<li><strong>Supply/Demand Zones</strong> — Institutional order flow zones</li>
+<li><strong>Session Boxes</strong> — Asia/London/NY session ranges</li>
+<li><strong>Market Structure</strong> — Higher highs, lower lows, breaks of structure</li>
+</ol>
+
+<div class="admonition warning">
+<p class="admonition-title">⚠️ DON'T enable all 10 systems at once!</p>
+<p>Start with 4 systems: Regime Box + EMA Stack + TD Sequential + Support/Resistance. Add more gradually.</p>
+</div>
+
+<p><strong>Best Practice:</strong> Omnideck is great as your PRIMARY indicator. Still combine with Janus Atlas levels or Volume Oracle for confirmation.</p>
+<p><strong>Learn more:</strong> <a href="../omnideck-v10/">Omnideck Documentation</a></p>
+
+<hr />
+
+<h2 id="choosing-your-indicator-setup">Choosing Your Indicator Setup</h2>
+
+<h3 id="beginner-setup">🟢 Beginner Setup (1-2 Indicators)</h3>
+<p><strong>Recommended:</strong> Pentarch + Janus Atlas</p>
+<ul>
+<li>Pentarch gives you timing signals (when to enter/exit)</li>
+<li>Janus Atlas gives you levels (where to enter/exit)</li>
+<li>Simple, clean, not overwhelming</li>
+</ul>
+
+<h3 id="intermediate-setup">🟡 Intermediate Setup (2-3 Indicators)</h3>
+<p><strong>Option A:</strong> Pentarch + Janus Atlas + Volume Oracle</p>
+<ul>
+<li>The "Trinity" — timing + levels + volume confirmation</li>
+<li>Highest-probability setups</li>
+</ul>
+
+<p><strong>Option B:</strong> Pentarch + Janus Atlas + Harmonic Oscillator</p>
+<ul>
+<li>Timing + levels + momentum confirmation</li>
+<li>Great for swing trading</li>
+</ul>
+
+<h3 id="advanced-setup">🔴 Advanced Setup (3-4+ Indicators)</h3>
+<p><strong>The Complete Stack:</strong> Pentarch + Janus Atlas + Harmonic Oscillator + Volume Oracle + Augury Grid</p>
+<ul>
+<li>Augury Grid scans markets</li>
+<li>Deep analysis on selected symbols with 4-indicator confluence</li>
+<li>Maximum filtering and confirmation</li>
+</ul>
+
+<h3 id="all-in-one-alternative">🟣 All-in-One Alternative</h3>
+<p><strong>Just use Omnideck</strong> as your primary indicator</p>
+<ul>
+<li>Best if you prefer everything in one place</li>
+<li>Still recommend adding Janus Atlas for additional level types</li>
+<li>Start with 4 Omnideck systems, gradually enable more</li>
+</ul>
+
+<hr />
+
+<h2 id="sample-trading-workflow">Example Trading Workflow (Pentarch + Janus + Volume)</h2>
+
+<p>Many traders use the indicators together in this sequence:</p>
+
+<ol>
+<li><strong>Market scanning</strong> — Augury Grid can be used to monitor multiple symbols (optional)</li>
+<li><strong>Pattern identification</strong> — Watching for Pentarch patterns (IGN or CAP commonly monitored)</li>
+<li><strong>Level confluence</strong> — Evaluating if pattern occurs near key Janus Atlas support/resistance</li>
+<li><strong>Volume confirmation</strong> — Checking if Volume Oracle shows spike confirming the move</li>
+<li><strong>Setup evaluation</strong> — When all 3 align, higher-probability setup may be identified</li>
+<li><strong>Risk management</strong> — Traders often place stops below/above recent swing points or key levels</li>
+<li><strong>Target identification</strong> — Next major Janus Atlas level is commonly used</li>
+</ol>
+
+<p><strong>Historical Example:</strong></p>
+<ul>
+<li>Pentarch IGN bullish pattern appeared at $50,000</li>
+<li>Janus Atlas showed Daily Low at $49,950 (50 points away = level confluence)</li>
+<li>Volume Oracle showed 2.5x volume spike (confirmation)</li>
+<li>Result: This represented a higher-probability long setup</li>
+</ul>
+
+<p><em>(Educational example. Past patterns do not guarantee future results. Not financial advice.)</em></p>
+
+<hr />
+
+<div class="sp-callout sp-callout--summary">
+  <div class="sp-callout__title">What You've Learned</div>
+  <ul>
+    <li><strong>The 7 Indicators:</strong> Pentarch (timing), Janus Atlas (levels), Harmonic Oscillator (momentum), Plutus Flow (volume trend), Volume Oracle (volume spikes), Augury Grid (scanner), Omnideck (all-in-one)</li>
+    <li><strong>Beginner Path:</strong> Start with just Pentarch + Janus Atlas — timing signals plus key levels create high-probability setups without overwhelming complexity</li>
+    <li><strong>Intermediate Path:</strong> Add volume confirmation (Volume Oracle) or momentum confirmation (Harmonic Oscillator) for 3-indicator confluence</li>
+    <li><strong>Advanced Path:</strong> Combine 4-5 indicators for maximum filtering, or use Omnideck as your all-in-one solution with 10 systems</li>
+    <li><strong>The Trinity Workflow:</strong> Pentarch timing + Janus levels + Volume Oracle confirmation = highest-probability trading setups</li>
+    <li><strong>Market Scanning:</strong> Augury Grid finds opportunities across 40 symbols, then deep-dive analyze individual charts with other indicators</li>
+    <li><strong>Non-Repainting:</strong> All indicators confirm at bar close and never change retroactively — reliable for backtesting and automated alerts</li>
+  </ul>
+  <p><strong>Next Steps:</strong> See <a href="../start-quick/">Quick Start Guide</a> to set up your first indicator in 5 minutes, or explore <a href="../ref-workflow/">Complete Trading Workflow</a> for advanced multi-indicator strategies.</p>
+</div>
 <hr />
 <h2 id="continue-learning">📚 Continue Learning<a class="headerlink" href="#continue-learning" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1511,7 +1604,11 @@ Educational / Research use only — no financial advice.</p>
           
   <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 
+
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+
+
         </div>
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
@@ -1573,20 +1670,64 @@ Educational / Research use only — no financial advice.</p>
     
     
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.sections", "navigation.path", "content.code.copy", "search.suggest", "search.highlight", "content.tabs.link", "content.tooltips", "content.action.edit"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+
+
     
     
       <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+
+
       
         <script src="../js/timeago.min.js"></script>
+
+
       
         <script src="../js/timeago_mkdocs_material.js"></script>
+
+
       
         <script src="../assets/brand.js"></script>
+
+
       
         <script src="../assets/sp-bg.js"></script>
+
+
       
         <script src="../assets/keyword-highlighter.js"></script>
+
+
       
     
-  </body>
+      <script src="../assets/wheel-diagnostic.js"></script>
+      <script src="../assets/enhancements.js"></script>
+    <script src="assets/remove-tooltips.js"></script>
+    <script src="assets/bottom-sheet-nav.js"></script>
+      <script src="../assets/sticky-toc-scroll.js"></script>
+    <script src="../assets/components.js"></script>
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - JS
+       To disable: comment out this entire block
+       ======================================== -->
+  <script src="../js/feedback-system.js"></script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - JS -->
+
+  <!-- Meta-Learning & Accessibility Features -->
+  <script src="../js/keyboard-navigation.js"></script>
+  <script src="../js/text-sizing.js"></script>
+  <script src="../js/knowledge-checks.js"></script>
+
+      <!-- SignalPilot Chatbot -->
+    <script src="/js/chatbot.js"></script>
+  
+
+
+
+
+
+
+
+  <!-- Custom Bottom Sheet Navigation Script -->
+  <script src="../assets/custom-bottom-sheet.js?v7"></script>
+</body>
 </html>

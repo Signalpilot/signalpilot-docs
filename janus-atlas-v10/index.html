@@ -6,6 +6,11 @@
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <meta name="mobile-web-app-capable" content="yes">
+      <meta name="theme-color" content="#667eea">
+      <meta name="format-detection" content="telephone=no">
       
         <meta name="description" content="Non-repainting, alert-ready TradingView indicators for any market/timeframe.">
       
@@ -20,7 +25,16 @@
         <link rel="next" href="../omnideck-v10/">
       
       
-      <link rel="icon" href="../assets/watermark-monogram-color-transparent.png">
+      <!-- Favicons -->
+      <link rel="icon" type="image/x-icon" href="../favicon.ico">
+      <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
+      <link rel="icon" type="image/png" sizes="512x512" href="../favicon-512x512.png">
+
+      <!-- PWA Manifest -->
+      <link rel="manifest" href="../manifest.json">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
     
     
@@ -47,6 +61,7 @@
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -54,6 +69,9 @@
       <link rel="stylesheet" href="../css/timeago.css">
     
       <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../css/responsive-optimization.css">
+      <link rel="stylesheet" href="../css/content-overflow-fix.css">
+      <link rel="stylesheet" href="../css/mobile-layout-fixes.css">
     
       <link rel="stylesheet" href="../assets/brand.css">
     
@@ -64,6 +82,8 @@
       <link rel="stylesheet" href="../assets/interactive-code.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+
+
     
       
   
@@ -73,8 +93,12 @@
   
 
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-NZ05GV72K0"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-NZ05GV72K0",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-NZ05GV72K0",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+
   
     <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+
+
   
 
     
@@ -85,7 +109,72 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
 
-  </head>
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - CSS
+       To disable: comment out this entire block
+       ======================================== -->
+  <link rel="stylesheet" href="../css/feedback.css">
+  <link rel="stylesheet" href="../css/visual-enhancements.css">
+
+  <!-- Mermaid.js for diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'dark',
+      themeVariables: {
+        primaryColor: '#00bcd4',
+        primaryTextColor: '#fff',
+        primaryBorderColor: '#0097a7',
+        lineColor: '#00bcd4',
+        secondaryColor: '#ff5722',
+        tertiaryColor: '#4caf50',
+        fontSize: '18px',
+        fontFamily: 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+      },
+      flowchart: {
+        htmlLabels: true,
+        fontSize: 18
+      },
+      fontSize: 18
+    });
+  </script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - CSS -->
+
+  <!-- Meta-Learning & Accessibility Enhancements -->
+  <link rel="stylesheet" href="../css/skill-badges.css">
+  <link rel="stylesheet" href="../css/meta-learning.css">
+
+      <!-- SignalPilot Chatbot CSS -->
+    <link rel="stylesheet" href="/css/chatbot.css">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.signalpilot.io/">
+    <meta property="og:title" content="Signal Pilot Documentation">
+    <meta property="og:description" content="Professional trading indicators for TradingView. Complete guides for Pentarch, Janus Atlas, Omnideck, and more.">
+    <meta property="og:image" content="https://docs.signalpilot.io/assets/images/preview.png">
+    <meta property="og:site_name" content="Signal Pilot Docs">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.signalpilot.io/">
+    <meta name="twitter:title" content="Signal Pilot Documentation">
+    <meta name="twitter:description" content="Professional trading indicators for TradingView. Complete guides for Pentarch, Janus Atlas, Omnideck, and more.">
+    <meta name="twitter:image" content="https://docs.signalpilot.io/assets/images/preview.png">
+
+
+  
+
+
+
+
+
+
+
+  <!-- Custom Bottom Sheet Navigation -->
+  <link rel="stylesheet" href="../css/hide-mkdocs-sidebar.css?v7">
+  <link rel="stylesheet" href="../css/custom-bottom-sheet.css?v7">
+</head>
   
   
     
@@ -128,7 +217,6 @@
         <a href="https://signalpilot.io/#pricing">Pricing</a>
         <a href="https://signalpilot.io/#faq">FAQ</a>
       </nav>
-      <a class="sp-cta" href="https://signalpilot.io/#pricing">Get the Suite</a>
     </div>
   </div>
 
@@ -141,7 +229,6 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="Signal Pilot Docs" class="md-header__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
       
-  <img src="../assets/watermark-monogram-color-transparent.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -193,6 +280,8 @@
     
     
       <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+
+
     
     
     
@@ -276,7 +365,6 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Signal Pilot Docs" class="md-nav__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
       
-  <img src="../assets/watermark-monogram-color-transparent.png" alt="logo">
 
     </a>
     Signal Pilot Docs
@@ -389,27 +477,6 @@
   
   <span class="md-ellipsis">
     Prerequisites
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/start-which-indicator.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Which Indicator Should I Start?
   </span>
   
 
@@ -692,154 +759,218 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
         <li class="md-nav__item">
-  <a href="#what-does-it-do" class="md-nav__link">
+  <a href="#core-functionality" class="md-nav__link">
     <span class="md-ellipsis">
-      🎯 What Does It Do?
+      🎯 Core Functionality
     </span>
   </a>
-  
+    
 </li>
-      
+
         <li class="md-nav__item">
-  <a href="#the-levels-what-you-get" class="md-nav__link">
+  <a href="#settings" class="md-nav__link">
     <span class="md-ellipsis">
-      📍 The Levels (What You Get)
+      ⚙️ Settings
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📍 The Levels (What You Get)">
+    <nav class="md-nav" aria-label="⚙️ Settings">
       <ul class="md-nav__list">
-        
           <li class="md-nav__item">
-  <a href="#timeframe-levels" class="md-nav__link">
+  <a href="#recommended-initial-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      📅 Timeframe Levels
+      Recommended Initial Configuration
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#all-39-level-types-available" class="md-nav__link">
+    <span class="md-ellipsis">
+      All 39 Level Types Available
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#configuration-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Options
+    </span>
+  </a>
+
+</li>
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#educational-example-sp-500-futures-october-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Educational Example: S&P 500 Futures (October 2024)
+    </span>
+  </a>
+    
+</li>
+
+        <li class="md-nav__item">
+  <a href="#level-type-descriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      📍 Level Type Descriptions
     </span>
   </a>
   
-</li>
-        
+    <nav class="md-nav" aria-label="📍 Level Type Descriptions">
+      <ul class="md-nav__list">
           <li class="md-nav__item">
-  <a href="#session-levels" class="md-nav__link">
+  <a href="#timeframe-levels-dailyweeklymonthly" class="md-nav__link">
     <span class="md-ellipsis">
-      🕐 Session Levels
+      📅 Timeframe Levels (Daily/Weekly/Monthly)
     </span>
   </a>
-  
+
 </li>
-        
           <li class="md-nav__item">
-  <a href="#vwap-lines" class="md-nav__link">
+  <a href="#session-levels-asianeuropeannorth-american" class="md-nav__link">
     <span class="md-ellipsis">
-      📊 VWAP Lines
+      🕐 Session Levels (Asian/European/North American)
     </span>
   </a>
-  
+
 </li>
-        
+          <li class="md-nav__item">
+  <a href="#vwap-lines-volume-weighted-average-price" class="md-nav__link">
+    <span class="md-ellipsis">
+      💰 VWAP Lines (Volume-Weighted Average Price)
+    </span>
+  </a>
+
+</li>
           <li class="md-nav__item">
   <a href="#volume-profile-poc-vah-val" class="md-nav__link">
     <span class="md-ellipsis">
       🎯 Volume Profile (POC, VAH, VAL)
     </span>
   </a>
-  
+
 </li>
-        
           <li class="md-nav__item">
-  <a href="#market-structure-hhhllhll-boschoch" class="md-nav__link">
+  <a href="#market-structure-swing-points-breaks" class="md-nav__link">
     <span class="md-ellipsis">
-      📈 Market Structure (HH/HL/LH/LL, BOS/CHoCH)
+      📈 Market Structure (Swing Points & Breaks)
     </span>
   </a>
-  
+
 </li>
-        
       </ul>
     </nav>
-  
+
 </li>
-      
+
         <li class="md-nav__item">
-  <a href="#usage-patterns-3-core-components" class="md-nav__link">
+  <a href="#educational-example-bitcoin-november-2024" class="md-nav__link">
     <span class="md-ellipsis">
-      Usage Patterns (3 Core Components)
+      📖 Educational Example: Bitcoin (November 2024)
+    </span>
+  </a>
+    
+</li>
+
+        <li class="md-nav__item">
+  <a href="#level-reaction-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Level Reaction Patterns
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Usage Patterns (3 Core Components)">
+    <nav class="md-nav" aria-label="🔄 Level Reaction Patterns">
       <ul class="md-nav__list">
-        
           <li class="md-nav__item">
-  <a href="#component-1-level-selection" class="md-nav__link">
+  <a href="#pattern-1-bounce-supportresistance" class="md-nav__link">
     <span class="md-ellipsis">
-      Component 1: Level Selection
+      Pattern 1: Bounce (Support/Resistance)
     </span>
   </a>
-  
+
 </li>
-        
           <li class="md-nav__item">
-  <a href="#component-2-reaction-patterns" class="md-nav__link">
+  <a href="#pattern-2-break-continuation" class="md-nav__link">
     <span class="md-ellipsis">
-      Component 2: Reaction Patterns
+      Pattern 2: Break (Continuation)
     </span>
   </a>
-  
+
 </li>
-        
           <li class="md-nav__item">
-  <a href="#component-3-structure-based-trend-analysis" class="md-nav__link">
+  <a href="#pattern-3-retest-after-break" class="md-nav__link">
     <span class="md-ellipsis">
-      Component 3: Structure-Based Trend Analysis
+      Pattern 3: Retest After Break
     </span>
   </a>
-  
+
 </li>
-        
+          <li class="md-nav__item">
+  <a href="#pattern-4-cluster-zone-multiple-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern 4: Cluster Zone (Multiple Levels)
+    </span>
+  </a>
+
+</li>
       </ul>
     </nav>
-  
+
 </li>
-      
+
         <li class="md-nav__item">
-  <a href="#real-example-es-futures" class="md-nav__link">
+  <a href="#level-usage-by-trading-style" class="md-nav__link">
     <span class="md-ellipsis">
-      Real Example (ES Futures)
+      🎯 Level Usage by Trading Style
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#settings-configuration-approach" class="md-nav__link">
+    <nav class="md-nav" aria-label="🎯 Level Usage by Trading Style">
+      <ul class="md-nav__list">
+          <li class="md-nav__item">
+  <a href="#for-scalping-5m-15m-charts" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚙️ Settings (Configuration Approach)
+      For Scalping (5m-15m charts):
     </span>
   </a>
-  
+
 </li>
-      
+          <li class="md-nav__item">
+  <a href="#for-day-trading-1h-4h-charts" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Day Trading (1H-4H charts):
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#for-swing-trading-daily-charts" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Swing Trading (Daily charts):
+    </span>
+  </a>
+
+</li>
+      </ul>
+    </nav>
+
+</li>
+
         <li class="md-nav__item">
   <a href="#alert-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Alert Configuration
+      🔔 Alert Configuration
     </span>
   </a>
-  
+    
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#common-pitfalls" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common Pitfalls
-    </span>
-  </a>
-  
-</li>
-      
+
         <li class="md-nav__item">
   <a href="#frequently-asked-questions" class="md-nav__link">
     <span class="md-ellipsis">
@@ -847,35 +978,141 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-cheat-sheet" class="md-nav__link">
+    <nav class="md-nav" aria-label="❓ Frequently Asked Questions">
+      <ul class="md-nav__list">
+          <li class="md-nav__item">
+  <a href="#q-how-many-levels-should-i-enable" class="md-nav__link">
     <span class="md-ellipsis">
-      Quick Cheat Sheet
+      Q: How many levels should I enable?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-do-all-39-levels-appear-at-once" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Do all 39 levels appear at once?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-can-i-customize-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Can I customize colors?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-what-timeframes-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: What timeframes work?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-do-levels-repaint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Do levels repaint?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-how-are-pocvahval-calculated" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: How are POC/VAH/VAL calculated?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-whats-the-difference-between-bos-and-choch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: What's the difference between BOS and CHoCH?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-can-i-use-with-other-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Can I use with other indicators?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-does-it-work-on-all-assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Does it work on all assets?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-how-often-do-levels-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: How often do levels update?
+    </span>
+  </a>
+
+</li>
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#quick-reference-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Quick Reference Guide
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
+    <nav class="md-nav" aria-label="📋 Quick Reference Guide">
+      <ul class="md-nav__list">
+          <li class="md-nav__item">
+  <a href="#essential-levels-quick-reference" class="md-nav__link">
     <span class="md-ellipsis">
-      Best Practices
+      Essential Levels Quick Reference
     </span>
   </a>
-  
+
 </li>
-      
+          <li class="md-nav__item">
+  <a href="#level-interaction-quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level Interaction Quick Reference
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#timeframe-relevance-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timeframe Relevance Guide
+    </span>
+  </a>
+
+</li>
+      </ul>
+    </nav>
+
+</li>
+
         <li class="md-nav__item">
   <a href="#support" class="md-nav__link">
     <span class="md-ellipsis">
-      Support
+      📞 Support
     </span>
   </a>
-  
+    
 </li>
-      
+
+    </ul>
     </ul>
   
 </nav>
@@ -934,7 +1171,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../minimal-flow-v10/" class="md-nav__link">
+      <a href="../volume-oracle-v10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1163,27 +1400,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/troubleshooting-installation.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Installation Troubleshooting
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1243,27 +1459,6 @@
   
   <span class="md-ellipsis">
     FAQ
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/about-system-requirements.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    System Requirements
   </span>
   
 
@@ -1369,7 +1564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../_product-cards/" class="md-nav__link">
+      <a href="../_settings-alerts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1415,154 +1610,218 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
         <li class="md-nav__item">
-  <a href="#what-does-it-do" class="md-nav__link">
+  <a href="#core-functionality" class="md-nav__link">
     <span class="md-ellipsis">
-      🎯 What Does It Do?
+      🎯 Core Functionality
     </span>
   </a>
-  
+    
 </li>
-      
+
         <li class="md-nav__item">
-  <a href="#the-levels-what-you-get" class="md-nav__link">
+  <a href="#settings" class="md-nav__link">
     <span class="md-ellipsis">
-      📍 The Levels (What You Get)
+      ⚙️ Settings
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📍 The Levels (What You Get)">
+    <nav class="md-nav" aria-label="⚙️ Settings">
       <ul class="md-nav__list">
-        
           <li class="md-nav__item">
-  <a href="#timeframe-levels" class="md-nav__link">
+  <a href="#recommended-initial-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      📅 Timeframe Levels
+      Recommended Initial Configuration
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#all-39-level-types-available" class="md-nav__link">
+    <span class="md-ellipsis">
+      All 39 Level Types Available
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#configuration-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Options
+    </span>
+  </a>
+
+</li>
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#educational-example-sp-500-futures-october-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Educational Example: S&P 500 Futures (October 2024)
+    </span>
+  </a>
+    
+</li>
+
+        <li class="md-nav__item">
+  <a href="#level-type-descriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      📍 Level Type Descriptions
     </span>
   </a>
   
-</li>
-        
+    <nav class="md-nav" aria-label="📍 Level Type Descriptions">
+      <ul class="md-nav__list">
           <li class="md-nav__item">
-  <a href="#session-levels" class="md-nav__link">
+  <a href="#timeframe-levels-dailyweeklymonthly" class="md-nav__link">
     <span class="md-ellipsis">
-      🕐 Session Levels
+      📅 Timeframe Levels (Daily/Weekly/Monthly)
     </span>
   </a>
-  
+
 </li>
-        
           <li class="md-nav__item">
-  <a href="#vwap-lines" class="md-nav__link">
+  <a href="#session-levels-asianeuropeannorth-american" class="md-nav__link">
     <span class="md-ellipsis">
-      📊 VWAP Lines
+      🕐 Session Levels (Asian/European/North American)
     </span>
   </a>
-  
+
 </li>
-        
+          <li class="md-nav__item">
+  <a href="#vwap-lines-volume-weighted-average-price" class="md-nav__link">
+    <span class="md-ellipsis">
+      💰 VWAP Lines (Volume-Weighted Average Price)
+    </span>
+  </a>
+
+</li>
           <li class="md-nav__item">
   <a href="#volume-profile-poc-vah-val" class="md-nav__link">
     <span class="md-ellipsis">
       🎯 Volume Profile (POC, VAH, VAL)
     </span>
   </a>
-  
+
 </li>
-        
           <li class="md-nav__item">
-  <a href="#market-structure-hhhllhll-boschoch" class="md-nav__link">
+  <a href="#market-structure-swing-points-breaks" class="md-nav__link">
     <span class="md-ellipsis">
-      📈 Market Structure (HH/HL/LH/LL, BOS/CHoCH)
+      📈 Market Structure (Swing Points & Breaks)
     </span>
   </a>
-  
+
 </li>
-        
       </ul>
     </nav>
-  
+
 </li>
-      
+
         <li class="md-nav__item">
-  <a href="#usage-patterns-3-core-components" class="md-nav__link">
+  <a href="#educational-example-bitcoin-november-2024" class="md-nav__link">
     <span class="md-ellipsis">
-      Usage Patterns (3 Core Components)
+      📖 Educational Example: Bitcoin (November 2024)
+    </span>
+  </a>
+    
+</li>
+
+        <li class="md-nav__item">
+  <a href="#level-reaction-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Level Reaction Patterns
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Usage Patterns (3 Core Components)">
+    <nav class="md-nav" aria-label="🔄 Level Reaction Patterns">
       <ul class="md-nav__list">
-        
           <li class="md-nav__item">
-  <a href="#component-1-level-selection" class="md-nav__link">
+  <a href="#pattern-1-bounce-supportresistance" class="md-nav__link">
     <span class="md-ellipsis">
-      Component 1: Level Selection
+      Pattern 1: Bounce (Support/Resistance)
     </span>
   </a>
-  
+
 </li>
-        
           <li class="md-nav__item">
-  <a href="#component-2-reaction-patterns" class="md-nav__link">
+  <a href="#pattern-2-break-continuation" class="md-nav__link">
     <span class="md-ellipsis">
-      Component 2: Reaction Patterns
+      Pattern 2: Break (Continuation)
     </span>
   </a>
-  
+
 </li>
-        
           <li class="md-nav__item">
-  <a href="#component-3-structure-based-trend-analysis" class="md-nav__link">
+  <a href="#pattern-3-retest-after-break" class="md-nav__link">
     <span class="md-ellipsis">
-      Component 3: Structure-Based Trend Analysis
+      Pattern 3: Retest After Break
     </span>
   </a>
-  
+
 </li>
-        
+          <li class="md-nav__item">
+  <a href="#pattern-4-cluster-zone-multiple-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern 4: Cluster Zone (Multiple Levels)
+    </span>
+  </a>
+
+</li>
       </ul>
     </nav>
-  
+
 </li>
-      
+
         <li class="md-nav__item">
-  <a href="#real-example-es-futures" class="md-nav__link">
+  <a href="#level-usage-by-trading-style" class="md-nav__link">
     <span class="md-ellipsis">
-      Real Example (ES Futures)
+      🎯 Level Usage by Trading Style
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#settings-configuration-approach" class="md-nav__link">
+    <nav class="md-nav" aria-label="🎯 Level Usage by Trading Style">
+      <ul class="md-nav__list">
+          <li class="md-nav__item">
+  <a href="#for-scalping-5m-15m-charts" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚙️ Settings (Configuration Approach)
+      For Scalping (5m-15m charts):
     </span>
   </a>
-  
+
 </li>
-      
+          <li class="md-nav__item">
+  <a href="#for-day-trading-1h-4h-charts" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Day Trading (1H-4H charts):
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#for-swing-trading-daily-charts" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Swing Trading (Daily charts):
+    </span>
+  </a>
+
+</li>
+      </ul>
+    </nav>
+
+</li>
+
         <li class="md-nav__item">
   <a href="#alert-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Alert Configuration
+      🔔 Alert Configuration
     </span>
   </a>
-  
+    
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#common-pitfalls" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common Pitfalls
-    </span>
-  </a>
-  
-</li>
-      
+
         <li class="md-nav__item">
   <a href="#frequently-asked-questions" class="md-nav__link">
     <span class="md-ellipsis">
@@ -1570,35 +1829,141 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-cheat-sheet" class="md-nav__link">
+    <nav class="md-nav" aria-label="❓ Frequently Asked Questions">
+      <ul class="md-nav__list">
+          <li class="md-nav__item">
+  <a href="#q-how-many-levels-should-i-enable" class="md-nav__link">
     <span class="md-ellipsis">
-      Quick Cheat Sheet
+      Q: How many levels should I enable?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-do-all-39-levels-appear-at-once" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Do all 39 levels appear at once?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-can-i-customize-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Can I customize colors?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-what-timeframes-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: What timeframes work?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-do-levels-repaint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Do levels repaint?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-how-are-pocvahval-calculated" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: How are POC/VAH/VAL calculated?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-whats-the-difference-between-bos-and-choch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: What's the difference between BOS and CHoCH?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-can-i-use-with-other-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Can I use with other indicators?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-does-it-work-on-all-assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Does it work on all assets?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-how-often-do-levels-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: How often do levels update?
+    </span>
+  </a>
+
+</li>
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#quick-reference-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Quick Reference Guide
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
+    <nav class="md-nav" aria-label="📋 Quick Reference Guide">
+      <ul class="md-nav__list">
+          <li class="md-nav__item">
+  <a href="#essential-levels-quick-reference" class="md-nav__link">
     <span class="md-ellipsis">
-      Best Practices
+      Essential Levels Quick Reference
     </span>
   </a>
-  
+
 </li>
-      
+          <li class="md-nav__item">
+  <a href="#level-interaction-quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level Interaction Quick Reference
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#timeframe-relevance-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timeframe Relevance Guide
+    </span>
+  </a>
+
+</li>
+      </ul>
+    </nav>
+
+</li>
+
         <li class="md-nav__item">
   <a href="#support" class="md-nav__link">
     <span class="md-ellipsis">
-      Support
+      📞 Support
     </span>
   </a>
-  
+    
 </li>
-      
+
+    </ul>
     </ul>
   
 </nav>
@@ -1618,7 +1983,7 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1.1rem; height: 1.1rem; fill: currentColor; opacity: 0.7;">
         <path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/>
       </svg>
-      <span style="opacity: 0.85;">Updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 10, 2025 01:41:10 UTC"><span class="timeago" datetime="2025-11-10T01:41:10+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 10, 2025 01:41:10 UTC">2025-11-10</span></span>
+      <span style="opacity: 0.85;">Updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="October 31, 2025 01:38:02 UTC"><span class="timeago" datetime="2025-10-31T01:38:02+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="October 31, 2025 01:38:02 UTC">2025-10-31</span></span>
     </span>
   
 
@@ -1635,277 +2000,870 @@
 </div>
 
 <!-- Render the page content -->
-<h1 id="janus-atlas-v10-your-market-map">Janus Atlas v1.0 - Your Market Map<a class="headerlink" href="#janus-atlas-v10-your-market-map" title="Permanent link">&para;</a></h1>
-<h2 id="what-does-it-do">🎯 What Does It Do?<a class="headerlink" href="#what-does-it-do" title="Permanent link">&para;</a></h2>
-<p><span style="color: #0aa1d5; font-weight: 600;">Core Functionality</span></p>
-<p>Janus Atlas shows you <strong>every important level on your chart</strong> - all at once. Think of it like having a professional trading floor's price levels marked for you automatically.</p>
-<p><strong>Best for:</strong> Everyone - from scalpers to swing traders</p>
+<h1 id="janus-atlas-v10-your-market-map">Janus Atlas v1.0 — Your Market Map<a class="headerlink" href="#janus-atlas-v10-your-market-map" title="Permanent link">&para;</a></h1>
+<p>Price level visualization system. Displays 39 different level types across timeframes, sessions, volume analysis, and market structure.</p>
+
+<div class="sp-callout sp-callout--success" style="margin: 2rem 0; border-left: 4px solid #4caf50;">
+  <div class="sp-callout__icon">👋</div>
+  <div class="sp-callout__content">
+    <h3 style="margin-top: 0;">New to Trading? Start Here</h3>
+
+    <p><strong>In Plain English:</strong> Price levels are like psychological markers where price tends to bounce or stall. Think of them as "invisible walls" on your chart where buying or selling pressure tends to kick in.</p>
+
+    <p><strong>DON'T PANIC about "39 Level Types"!</strong> You absolutely do NOT need all 39 levels. In fact, showing all 39 would make your chart completely unreadable.</p>
+
+    <div style="background: #fff3e0; padding: 1rem; border-radius: 8px; margin: 1rem 0; color: #1a1a1a;">
+      <p style="margin: 0; color: #1a1a1a;"><strong>⚠️ IMPORTANT:</strong> Start with just 5 levels. Seriously. Just 5. You can add more later as you learn what you need.</p>
+    </div>
+
+    <p><strong>Beginner Starting Point (Turn On Only These 5):</strong></p>
+    <ol>
+      <li><strong>Daily High/Low</strong> — Yesterday's highest and lowest prices (price often revisits these)</li>
+      <li><strong>Weekly High/Low</strong> — Last week's range (important psychological levels)</li>
+      <li><strong>VWAP</strong> — The "fair price" for today based on actual trading volume</li>
+      <li><strong>POC</strong> — Point of Control = where MOST trading happened today</li>
+      <li><strong>Market Structure</strong> — Recent swing highs and lows (shows trend structure)</li>
+    </ol>
+    <p><em>Turn OFF everything else until you understand these 5 basics.</em></p>
+
+    <!-- 📸 SCREENSHOT NEEDED - Janus Atlas Beginner 5-Level Setup (Clean Chart)
+         What to show: Chart with ONLY 5 levels enabled (Daily High, Daily Low, Weekly High, Weekly Low, POC)
+         Setup: Janus Atlas settings → Enable only 5 beginner levels, disable rest
+         Label/Annotate: Label each of the 5 levels on the chart, emphasize "clean and readable"
+         File name suggestion: janus-atlas-beginner-5-levels.png
+    -->
+    <div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
+      <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
+      <p style="margin: 0; color: #424242;"><strong>Janus Atlas Beginner 5-Level Setup (Clean Chart)</strong></p>
+      <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a clean chart showing only the 5 beginner levels (Daily High, Daily Low, Weekly High, Weekly Low, POC).</p>
+    </div>
+
+    <p><strong>What You'll See on Your Chart:</strong></p>
+    <ul style="margin: 1rem 0;">
+      <li><strong>Horizontal lines</strong> at important price levels</li>
+      <li><strong>Labels</strong> telling you what each line represents (e.g., "dH" = Daily High)</li>
+      <li><strong>Price reactions</strong> when market touches these levels (bounces, breaks, or stalls)</li>
+    </ul>
+
+    <details style="margin-top: 1rem;">
+      <summary style="cursor: pointer; font-weight: 600; color: #4caf50;">🎓 What are "support" and "resistance"?</summary>
+      <div style="padding-left: 1rem; margin-top: 0.5rem;">
+        <p><strong>Support</strong> = A price level where buying pressure tends to kick in (price "bounces" up from here)</p>
+        <p>Think of it like a floor—price falls, hits the floor, bounces back up.</p>
+
+        <p><strong>Resistance</strong> = A price level where selling pressure tends to kick in (price "bounces" down from here)</p>
+        <p>Think of it like a ceiling—price rises, hits the ceiling, bounces back down.</p>
+
+        <p><strong>Why do these levels work?</strong> Because traders remember where price reversed before. When price approaches those levels again, many traders place orders there, creating a self-fulfilling prophecy.</p>
+
+        <p><strong>Key insight:</strong> Support can become resistance (and vice versa) once broken. If price breaks through a floor, that floor often becomes a ceiling later.</p>
+      </div>
+    </details>
+
+    <details style="margin-top: 1rem;">
+      <summary style="cursor: pointer; font-weight: 600; color: #4caf50;">🎓 Understanding the 5 beginner levels</summary>
+      <div style="padding-left: 1rem; margin-top: 0.5rem;">
+        <p><strong>📍 VWAP (Volume-Weighted Average Price)</strong></p>
+        <p>Plain English: The "fair price" for today based on actual trading. If price is above VWAP, buyers are in control. If below, sellers dominate.</p>
+
+        <p><strong>📍 POC (Point of Control)</strong></p>
+        <p>Plain English: The price where MOST shares/contracts traded today. Price often returns to this "magnetic" level.</p>
+
+        <p><strong>📍 Daily/Weekly High/Low</strong></p>
+        <p>Plain English: Yesterday's and last week's highest/lowest prices. These act as psychological barriers because traders remember them.</p>
+
+        <p><strong>📍 Market Structure (Swing Highs/Lows)</strong></p>
+        <p>Plain English: Recent peaks and valleys. When price breaks above a recent high, that's bullish. When it breaks below a recent low, that's bearish.</p>
+      </div>
+    </details>
+
+    <p style="margin-top: 1rem;"><strong>Learning Path:</strong></p>
+    <ul>
+      <li><strong>Week 1:</strong> Just observe the 5 basic levels. Watch how price reacts when it touches them.</li>
+      <li><strong>Week 2-3:</strong> Start noticing bounce patterns (support) and rejection patterns (resistance).</li>
+      <li><strong>Month 2:</strong> Add 2-3 more level types (maybe session levels or Fibonacci).</li>
+      <li><strong>Month 3+:</strong> Gradually explore the other 32 levels only if you need them for your specific strategy.</li>
+    </ul>
+  </div>
+</div>
+
 <hr />
-<h2 id="the-levels-what-you-get">📍 The Levels (What You Get)<a class="headerlink" href="#the-levels-what-you-get" title="Permanent link">&para;</a></h2>
-<p><span style="color: #10b981; font-weight: 600;">Level Types</span>
-<span style="color: #0aa1d5; font-weight: 600; font-size: 1.1em;">⭐ Core Feature - 39 Level Types Available</span></p>
-<h3 id="timeframe-levels">📅 Timeframe Levels<a class="headerlink" href="#timeframe-levels" title="Permanent link">&para;</a></h3>
-<p><span style="color: #10b981; font-weight: 600;">📊 Foundation - Daily/Weekly/Monthly Ranges</span></p>
-<p><strong>What you see:</strong> Lines labeled dH, dL, WH, WL, MtH, etc.</p>
-<p><strong>What they are:</strong>
-- <strong>Daily High/Low</strong> (dH/dL) - Today's range
-- <strong>Weekly High/Low</strong> (WH/WL) - This week's range
-- <strong>Monthly High/Low</strong> (MtH/MtL) - This month's range
-- <strong>Opens &amp; Midpoints</strong> - Reference points for each timeframe</p>
-<p><strong>Why they matter:</strong> Price reacts at these levels. They're like magnets - price either bounces off them or breaks through decisively.</p>
-<p><strong>Example:</strong> Bitcoin drops to Weekly Low at $65,000 → Often bounces back up (support)</p>
+<h2 id="core-functionality">🎯 Core Functionality <span class="skill-badge skill-badge--beginner" data-tooltip="Easy to understand">Beginner Friendly</span><a class="headerlink" href="#core-functionality" title="Permanent link">&para;</a></h2>
+<div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
+  <div class="sp-callout__icon">📊</div>
+  <div class="sp-callout__content">
+    <h4>39 Level Types at a Glance</h4>
+    <p style="margin-bottom: 1rem;">Janus Atlas organizes 39 different level types into five main categories:</p>
+    <div class="mermaid">
+mindmap
+  root((Janus Atlas<br/>39 Level Types))
+    VWAP
+      Daily VWAP
+      Weekly VWAP
+      Monthly VWAP
+      Custom Period
+    Volume Profile
+      POC
+      VAH
+      VAL
+      Value Area
+    Sessions
+      Asia High/Low
+      London High/Low
+      NY High/Low
+      Custom Session
+    Market Structure
+      BOS
+      CHoCH
+      Swing High/Low
+      Liquidity Sweeps
+    Classic Levels
+      Daily/Weekly/Monthly H/L
+      Pivot Points
+      Fibonacci Levels
+      Round Numbers
+    </div>
+  </div>
+</div>
+
+<p>Janus Atlas displays price levels automatically on your chart. 39 level types available, all can be toggled individually.</p>
+<p><strong>Level Categories:</strong><br />
+- <strong>Timeframe Levels:</strong> Daily, Weekly, Monthly highs/lows/opens/closes<br />
+- <strong>Session Levels:</strong> Asian, European, North American ranges<br />
+- <strong>VWAP Lines:</strong> Volume-weighted average prices (current and previous periods)<br />
+- <strong>Volume Profile:</strong> POC, VAH, VAL (point of control and value areas)<br />
+- <strong>Market Structure:</strong> Swing highs/lows, BOS, CHoCH labels</p>
+<p><strong>Visual Display:</strong> Lines and labels on chart showing level locations and names.</p>
+<p><strong>Timeframe Compatibility:</strong> Works on all timeframes.</p>
+
+<!-- 📸 SCREENSHOT NEEDED - Janus Atlas - 5 Levels vs 39 Levels Comparison
+     What to show: Side-by-side comparison OR split screen showing left=5 levels (clean), right=39 levels (cluttered)
+     Setup: Same chart, same timeframe, different level configurations
+     Label/Annotate: Add text overlay "❌ Too Many Levels" on crowded chart, "✅ Perfect for Beginners" on clean chart
+     File name suggestion: janus-atlas-5-vs-39-levels.png
+-->
+<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
+  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
+  <p style="margin: 0; color: #424242;"><strong>Janus Atlas - 5 Levels vs 39 Levels Comparison</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a side-by-side comparison showing why starting with 5 levels is better than 39 (clean vs cluttered).</p>
+</div>
 <hr />
-<h3 id="session-levels">🕐 Session Levels<a class="headerlink" href="#session-levels" title="Permanent link">&para;</a></h3>
-<p><span style="color: #a855f7; font-weight: 600;">⏰ Scalper Essential - Asian/Euro/NA Ranges</span></p>
-<p><strong>What you see:</strong> Lines labeled AH, AL (Asian), EH, EL (European), NAH, NAL (North American)</p>
-<p><strong>What they are:</strong> High and low of each trading session</p>
-<p><strong>Why they matter:</strong>
-- Asian lows often get "swept" during London open (stop hunt)
-- North American highs are key resistance for the day
-- Session breaks = liquidity grabs</p>
-<p><strong>Example:</strong> Price spikes above Asian High at $66,500, immediately drops → Classic fake-out</p>
-<hr />
-<h3 id="vwap-lines">📊 VWAP Lines<a class="headerlink" href="#vwap-lines" title="Permanent link">&para;</a></h3>
-<p><span style="color: #f59e0b; font-weight: 600;">💰 Institutional Favorite - True Average Price</span></p>
-<p><strong>What you see:</strong> Lines labeled VWAP-D, VWAP-W (and previous ones like pVWAP-D)</p>
-<p><strong>What it is:</strong> The "true average" price - where most volume traded</p>
-<p><strong>Why it matters:</strong>
-- <strong>Above VWAP</strong> = Bulls in control
-- <strong>Below VWAP</strong> = Bears in control
-- Price loves to return to VWAP (like gravity)</p>
-<p><strong>Example:</strong> Price spikes to $68,000, but VWAP is at $66,000 → Likely pulls back to VWAP</p>
-<hr />
-<h3 id="volume-profile-poc-vah-val">🎯 Volume Profile (POC, VAH, VAL)<a class="headerlink" href="#volume-profile-poc-vah-val" title="Permanent link">&para;</a></h3>
-<p><span style="color: #dc2626; font-weight: 600;">🎯 High Priority - Price Magnet Zones</span></p>
-<p><strong>What you see:</strong> Three key lines</p>
-<ul>
-<li><strong>POC</strong> (Point of Control) - Where MOST volume traded</li>
-<li><strong>VAH</strong> (Value Area High) - Top of fair value zone</li>
-<li><strong>VAL</strong> (Value Area Low) - Bottom of fair value zone</li>
-</ul>
-<p><strong>Why they matter:</strong>
-- POC acts like a magnet (price returns here)
-- Above VAH = Overbought territory
-- Below VAL = Oversold territory</p>
-<p><strong>Example:</strong> Price at $69,000, POC is $67,000 → Expect pullback to $67,000</p>
-<hr />
-<h3 id="market-structure-hhhllhll-boschoch">📈 Market Structure (HH/HL/LH/LL, BOS/CHoCH)<a class="headerlink" href="#market-structure-hhhllhll-boschoch" title="Permanent link">&para;</a></h3>
-<p><span style="color: #10b981; font-weight: 600;">📈 Trend Context - Uptrend vs Downtrend</span></p>
-<p><strong>What you see:</strong> Labels at swing points</p>
-<ul>
-<li><strong>HH</strong> (Higher High), <strong>HL</strong> (Higher Low) = Uptrend</li>
-<li><strong>LH</strong> (Lower High), <strong>LL</strong> (Lower Low) = Downtrend</li>
-<li><strong>BOS</strong> (Break of Structure) = Trend continues</li>
-<li><strong>CHoCH</strong> (Change of Character) = Trend might reverse</li>
-</ul>
-<p><strong>Example:</strong>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Price makes: HL → HH → HL → HH (with BOS labels)
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>= Strong uptrend, keep buying dips
-</span></code></pre></div></p>
-<hr />
-<h2 id="usage-patterns-3-core-components">Usage Patterns (3 Core Components)<a class="headerlink" href="#usage-patterns-3-core-components" title="Permanent link">&para;</a></h2>
-<p><span style="color: #0aa1d5; font-weight: 600; font-size: 1.1em;">🎓 Essential Learning - Start Here</span></p>
-<h3 id="component-1-level-selection">Component 1: Level Selection<a class="headerlink" href="#component-1-level-selection" title="Permanent link">&para;</a></h3>
-<p><span style="color: #ff6b35; font-weight: 600;">⚠️ Critical - Progressive Level Addition Recommended</span></p>
-<p>Starting with a subset of levels is recommended rather than enabling all 39 simultaneously:</p>
-<p><strong>For scalping (5m-15m charts):</strong>
-- ✅ Session levels (Asian/Euro/NA)
-- ✅ Daily VWAP
-- ✅ Daily High/Low
-- ✅ POC/VAH/VAL</p>
-<p><strong>For day trading (1H-4H charts):</strong>
-- ✅ Daily + Weekly levels
-- ✅ Daily + Weekly VWAP
-- ✅ POC/VAH/VAL
-- ✅ Market structure</p>
-<p><strong>For swing trading (Daily charts):</strong>
-- ✅ Weekly + Monthly levels
-- ✅ Weekly + Monthly VWAP
-- ✅ Market structure
-- ❌ Session levels (too granular for this timeframe)</p>
-<hr />
-<h3 id="component-2-reaction-patterns">Component 2: Reaction Patterns<a class="headerlink" href="#component-2-reaction-patterns" title="Permanent link">&para;</a></h3>
-<p><span style="color: #a855f7; font-weight: 600;">👀 Key Concept - Bounce vs Break</span></p>
-<p>When price approaches a level, several patterns are commonly observed:</p>
-<p><strong>Bounce = Support/Resistance pattern observed</strong>
-→ Trades in the direction of the bounce are common</p>
-<p><strong>Break = Level penetration observed</strong>
-→ Trades in the direction of the break are common (retest patterns often awaited)</p>
-<p><strong>Cluster = Multiple levels converging</strong>
-→ These zones are typically associated with stronger reactions</p>
-<p><strong>Example:</strong> Weekly Low + Monthly VWAP + POC all at $65,000 → Zone often interpreted as major support</p>
-<hr />
-<h3 id="component-3-structure-based-trend-analysis">Component 3: Structure-Based Trend Analysis<a class="headerlink" href="#component-3-structure-based-trend-analysis" title="Permanent link">&para;</a></h3>
-<p><span style="color: #10b981; font-weight: 600;">📊 Trend Filter - Combining Levels + Structure</span></p>
-<p>The structure labels (HH/HL/LH/LL) provide current trend context:</p>
-<p><strong>Healthy Uptrend Pattern:</strong>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>HH → HL → HH → HL
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>     ↑        ↑
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>   (BOS)   (BOS)
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Dip buying at HL is common
-</span></code></pre></div></p>
-<p><strong>Trend Exhaustion Pattern:</strong>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>HH → HL → HH → LH
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>              ↑
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>          (CHoCH) ← Warning indication
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>Short opportunities often evaluated
-</span></code></pre></div></p>
-<hr />
-<h2 id="real-example-es-futures">Real Example (ES Futures)<a class="headerlink" href="#real-example-es-futures" title="Permanent link">&para;</a></h2>
-<p><strong>Setup:</strong>
-- Price: 4,520
-- <strong>Weekly High</strong> = 4,550 (resistance above)
-- <strong>Daily VWAP</strong> = 4,500 (support below)
-- <strong>POC</strong> = 4,510 (middle magnet)
-- Structure showing <strong>HH</strong> pattern (uptrend)</p>
-<p><strong>The Trade:</strong>
-1. Price pulls back to Daily VWAP at 4,500
-2. Holds above VWAP (bounce)
-3. Example entry long at 4,502
-4. Example target: Weekly High at 4,550 or POC at 4,510
-5. Example stop: Below VWAP at 4,495</p>
-<p><strong>Result:</strong> Price rallies to 4,545 (near Weekly High) = +40 points profit</p>
-<hr />
-<h2 id="settings-configuration-approach">⚙️ Settings (Configuration Approach)<a class="headerlink" href="#settings-configuration-approach" title="Permanent link">&para;</a></h2>
-<p><span style="color: #10b981; font-weight: 600;">Configuration Options</span></p>
-<p>Minimal configuration changes are typically required. Level visibility is the primary adjustment:</p>
-<p><strong>Show/Hide Levels:</strong>
-- Unused timeframes can be disabled
-- Example: Swing trading contexts often have Daily levels disabled (timeframe mismatch)</p>
-<p><strong>Colors:</strong>
-- Color schemes are customizable
-- Simpler color palettes are associated with clearer interpretation</p>
-<p><strong>Market Structure:</strong>
-- <strong>Auto mode</strong> (detects swing size automatically) is the standard configuration
-- Manual mode is available for specific pivot lookback requirements</p>
-<p><strong>Most traders use default settings and adjust level visibility based on their analysis needs.</strong></p>
-<hr />
-<h2 id="alert-configuration">Alert Configuration<a class="headerlink" href="#alert-configuration" title="Permanent link">&para;</a></h2>
-<p><strong>Available alerts:</strong>
-1. <strong>Daily High Touch</strong> - Price reaches today's high (potential breakout observation point)
-2. <strong>Daily Low Touch</strong> - Price reaches today's low (support test observation point)</p>
-<p><strong>Configuration steps:</strong>
-1. Alarm icon on TradingView is clicked
-2. "Janus Atlas v1.0" is selected
-3. The desired level (Daily High or Daily Low) is chosen
-4. "Once Per Bar Close" is set</p>
-<p><strong>Common practice:</strong> Combining with other indicator alerts for confluence is common. Example: "Daily High touch + Pentarch WRN" = late-cycle exhaustion observation point</p>
-<hr />
-<h2 id="common-pitfalls">Common Pitfalls<a class="headerlink" href="#common-pitfalls" title="Permanent link">&para;</a></h2>
-<p><span style="color: #dc2626; font-weight: 600; font-size: 1.1em;">🚨 Critical Learning Points</span></p>
-<p>❌ <strong>Enabling all 39 levels simultaneously</strong>
-→ ✅ Starting with 5-7 levels and adding progressively is the recommended approach.</p>
-<p>❌ <strong>Overlooking level clusters</strong>
-→ ✅ Overlapping levels typically indicate the most significant zones.</p>
-<p>❌ <strong>Trading without confirmation patterns</strong>
-→ ✅ Awaiting actual price reaction at levels (bounce or break) is standard practice.</p>
-<p>❌ <strong>Timeframe mismatch</strong>
-→ ✅ Scalpers typically use session/daily levels. Swing traders typically use weekly/monthly.</p>
-<p>❌ <strong>Neglecting VWAP context</strong>
-→ ✅ VWAP positioning provides directional context. Above = bullish territory, Below = bearish territory.</p>
-<hr />
-<h2 id="frequently-asked-questions">❓ Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permanent link">&para;</a></h2>
-<p><span style="color: #10b981; font-weight: 600;">Common Questions</span></p>
-<p><strong>Q: How often do these levels change?</strong>
-<strong>A:</strong>
-- Daily levels reset every day
-- Weekly levels reset every Monday
-- Monthly levels reset each new month
-- VWAP resets based on its anchor (D/W/M)</p>
-<p><strong>Q: What's the most important level?</strong>
-<strong>A:</strong> Depends on your timeframe:
-- Scalpers: Daily VWAP + Session highs/lows
-- Day traders: Daily High/Low + Weekly levels
-- Swing traders: Weekly/Monthly levels</p>
-<p><strong>Q: Do levels work on all instruments?</strong>
-<strong>A:</strong> Yes. Crypto, stocks, futures, forex - they all respect key levels.</p>
-<p><strong>Q: What if price is between levels?</strong>
-<strong>A:</strong> Wait. Best trades happen AT levels, not between them. Patience = profits.</p>
-<p><strong>Q: How do I know if a level is support or resistance?</strong>
-<strong>A:</strong>
-- Price above level = Level is support (may bounce up)
-- Price below level = Level is resistance (may bounce down)</p>
-<p><strong>Q: Does it repaint?</strong>
-<strong>A:</strong> No. Once a level is drawn, it stays. What you see is what you get.</p>
-<p><strong>Q: Can I use this with other indicators?</strong>
-<strong>A:</strong> Yes. Janus Atlas shows WHERE to trade. Use other indicators (like Pentarch) to show you WHEN to trade.</p>
-<hr />
-<h2 id="quick-cheat-sheet">Quick Cheat Sheet<a class="headerlink" href="#quick-cheat-sheet" title="Permanent link">&para;</a></h2>
+<h2 id="settings">⚙️ Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h2>
+<h3 id="recommended-initial-configuration">Example Starting Configuration<a class="headerlink" href="#recommended-initial-configuration" title="Permanent link">&para;</a></h3>
+<p><strong>Example Level Selection (educational starting point to avoid visual overload):</strong></p>
+<p>Enable these 5 level types first:<br />
+- ✓ Daily High/Low (dH, dL)<br />
+- ✓ Daily VWAP<br />
+- ✓ POC/VAH/VAL<br />
+- ✓ Weekly High/Low (WH, WL)<br />
+- ✓ Market Structure</p>
+<p>Additional levels can be enabled progressively after familiarity with these core levels.</p>
+<h3 id="all-39-level-types-available">All 39 Level Types Available<a class="headerlink" href="#all-39-level-types-available" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Level Type</th>
-<th>What It Shows</th>
-<th>How To Use</th>
+<th>Category</th>
+<th>Levels Available</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Daily High/Low</td>
-<td>Today's range</td>
-<td>Breakout or support/resistance</td>
+<td><strong>Daily</strong></td>
+<td>High, Low, Open, Close, Midpoint</td>
 </tr>
 <tr>
-<td>Weekly High/Low</td>
+<td><strong>Weekly</strong></td>
+<td>High, Low, Open, Close, Midpoint</td>
+</tr>
+<tr>
+<td><strong>Monthly</strong></td>
+<td>High, Low, Open, Close, Midpoint</td>
+</tr>
+<tr>
+<td><strong>Quarterly</strong></td>
+<td>High, Low, Open, Close</td>
+</tr>
+<tr>
+<td><strong>Yearly</strong></td>
+<td>High, Low, Open, Close</td>
+</tr>
+<tr>
+<td><strong>Session (Asian)</strong></td>
+<td>High, Low, Open, Close</td>
+</tr>
+<tr>
+<td><strong>Session (European)</strong></td>
+<td>High, Low, Open, Close</td>
+</tr>
+<tr>
+<td><strong>Session (North American)</strong></td>
+<td>High, Low, Open, Close</td>
+</tr>
+<tr>
+<td><strong>VWAP</strong></td>
+<td>Daily, Weekly, Monthly (current + previous)</td>
+</tr>
+<tr>
+<td><strong>Volume Profile</strong></td>
+<td>POC, VAH, VAL, Developing POC</td>
+</tr>
+<tr>
+<td><strong>Market Structure</strong></td>
+<td>HH, HL, LH, LL, BOS, CHoCH</td>
+</tr>
+</tbody>
+</table>
+<h3 id="configuration-options">Configuration Options<a class="headerlink" href="#configuration-options" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Options</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Level Visibility</strong></td>
+<td>Individual on/off for each of 39 types</td>
+<td>Starter set enabled</td>
+</tr>
+<tr>
+<td><strong>Line Style</strong></td>
+<td>Solid, Dashed, Dotted</td>
+<td>Varies by type</td>
+</tr>
+<tr>
+<td><strong>Label Display</strong></td>
+<td>On/Off for each level type</td>
+<td>On</td>
+</tr>
+<tr>
+<td><strong>Color Scheme</strong></td>
+<td>Multiple presets available</td>
+<td>Scheme 1</td>
+</tr>
+</tbody>
+</table>
+
+<!-- 📸 SCREENSHOT NEEDED - Janus Atlas Settings Panel - All 39 Level Types
+     What to show: TradingView settings panel for Janus Atlas showing all level type checkboxes
+     Setup: Right-click indicator → Settings, scroll to show level categories
+     Label/Annotate: Highlight "Beginner 5" section at top, show other categories below
+     File name suggestion: janus-atlas-settings-panel.png
+-->
+<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
+  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
+  <p style="margin: 0; color: #424242;"><strong>Janus Atlas Settings Panel - All 39 Level Types</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a screenshot of the TradingView settings panel showing all level type checkboxes and configuration options.</p>
+</div>
+
+<hr />
+
+<div class="knowledge-check"
+     data-quiz-id="janus-level-count"
+     data-correct-answer="b"
+     data-correct-feedback="✓ Correct! Janus Atlas displays 39 different level types across timeframes, sessions, volume analysis, and market structure. This comprehensive coverage includes daily/weekly/monthly levels, session highs/lows, VWAPs, POCs, VAHs/VALs, and various other institutional reference points."
+     data-incorrect-feedback="Not quite. Review the 'Core Functionality' section at the top of this page. Janus Atlas is known for its comprehensive level coverage. Count includes timeframe levels, session levels, volume levels, and market structure levels. Try again!">
+  <h4>✅ Knowledge Check</h4>
+  <p><strong>Question:</strong> How many different level types does Janus Atlas display?</p>
+
+  <form class="quiz-form">
+    <label><input type="radio" name="q1" value="a"> 15 level types</label>
+    <label><input type="radio" name="q1" value="b"> 39 level types</label>
+    <label><input type="radio" name="q1" value="c"> 52 level types</label>
+    <label><input type="radio" name="q1" value="d"> 100+ level types</label>
+  </form>
+
+  <button class="check-answer-btn">Check Answer</button>
+  <div class="quiz-feedback" style="display:none;"></div>
+</div>
+
+<hr />
+<h2 id="educational-example-sp-500-futures-october-2024">📊 Educational Example: S&amp;P 500 Futures (October 2024)<a class="headerlink" href="#educational-example-sp-500-futures-october-2024" title="Permanent link">&para;</a></h2>
+<p><em>(Historical observation for educational purposes only. Not financial advice. Past performance does not indicate future results.)</em></p>
+<p><strong>Setup Observed:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Price Action</th>
+<th>Levels Present</th>
+<th>Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Oct 10</td>
+<td>4,250</td>
+<td>Weekly Low + POC + Monthly VWAP cluster</td>
+<td>Multiple level confluence</td>
+</tr>
+<tr>
+<td>Oct 11</td>
+<td>Bounce to 4,290</td>
+<td>Price reaction at cluster</td>
+<td>+40 point move</td>
+</tr>
+<tr>
+<td>Oct 12</td>
+<td>Continue to 4,350</td>
+<td>Above all cluster levels</td>
+<td>+100 points total</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Pattern Observed:</strong> Three major levels converged at 4,250 (Weekly Low + POC + Monthly VWAP). Price showed bounce reaction from this zone.</p>
+<p><strong>Outcome:</strong> +100 point rally observed from cluster zone.</p>
+<p><em>This example demonstrates level clustering and price reaction patterns. Individual interpretation and outcomes vary. No pattern guarantees any specific outcome.</em></p>
+<hr />
+<h2 id="level-type-descriptions">📍 Level Type Descriptions <span class="skill-badge skill-badge--intermediate" data-tooltip="Understanding all level types">Intermediate</span><a class="headerlink" href="#level-type-descriptions" title="Permanent link">&para;</a></h2>
+<h3 id="timeframe-levels-dailyweeklymonthly">📅 Timeframe Levels (Daily/Weekly/Monthly)<a class="headerlink" href="#timeframe-levels-dailyweeklymonthly" title="Permanent link">&para;</a></h3>
+<p><strong>What Displays:</strong><br />
+- Lines labeled: dH, dL, WH, WL, MtH, MtL (plus opens, closes, midpoints)</p>
+<p><strong>Level Definitions:</strong><br />
+- <strong>Daily High/Low:</strong> Today's price range extremes<br />
+- <strong>Weekly High/Low:</strong> Current week's price range extremes<br />
+- <strong>Monthly High/Low:</strong> Current month's price range extremes<br />
+- <strong>Opens:</strong> Period opening prices<br />
+- <strong>Midpoints:</strong> Calculated center of period range</p>
+<p><strong>Characteristics:</strong><br />
+- Price reactions occur at these levels<br />
+- Weekly levels show stronger reactions than daily<br />
+- Monthly levels show strongest reactions<br />
+- Clusters of multiple levels indicate zones of interest</p>
+<p><strong>Example:</strong> Bitcoin declines to Weekly Low at $65,000 → Bounce reaction observed (support characteristics).</p>
+<hr />
+<h3 id="session-levels-asianeuropeannorth-american">🕐 Session Levels (Asian/European/North American)<a class="headerlink" href="#session-levels-asianeuropeannorth-american" title="Permanent link">&para;</a></h3>
+<p><strong>What Displays:</strong><br />
+- Lines labeled: AH, AL (Asian), EH, EL (European), NAH, NAL (North American)</p>
+<p><strong>Level Definitions:</strong><br />
+- <strong>Asian Session:</strong> Tokyo trading hours range<br />
+- <strong>European Session:</strong> London trading hours range<br />
+- <strong>North American Session:</strong> New York trading hours range<br />
+- Each shows: High, Low, Open, Close</p>
+<p><strong>Characteristics:</strong><br />
+- Session highs/lows often tested during subsequent sessions<br />
+- Asian lows often swept during London open<br />
+- North American highs act as resistance levels<br />
+- Session breaks indicate liquidity characteristics</p>
+<p><strong>Example:</strong> Price spikes above Asian High at $66,500, immediately reverses → Session high sweep pattern (liquidity grab characteristics).</p>
+<hr />
+<h3 id="vwap-lines-volume-weighted-average-price">💰 VWAP Lines (Volume-Weighted Average Price)<a class="headerlink" href="#vwap-lines-volume-weighted-average-price" title="Permanent link">&para;</a></h3>
+<p><strong>What Displays:</strong><br />
+- Lines labeled: VWAP-D (daily), VWAP-W (weekly), VWAP-M (monthly)<br />
+- Also shows previous period VWAP: pVWAP-D, pVWAP-W, pVWAP-M</p>
+<p><strong>Level Definition:</strong><br />
+- VWAP = Volume-weighted average price<br />
+- Represents "true average" where most volume traded<br />
+- Calculated as cumulative (volume × price) / cumulative volume</p>
+<p><strong>Characteristics:</strong><br />
+- Price above VWAP = Bullish positioning<br />
+- Price below VWAP = Bearish positioning<br />
+- Price returns to VWAP (magnet effect observed)<br />
+- Institutional reference level</p>
+<p><strong>Example:</strong> Price spikes to $68,000, VWAP at $66,000 → Pullback to VWAP level observed.</p>
+<hr />
+<h3 id="volume-profile-poc-vah-val">🎯 Volume Profile (POC, VAH, VAL)<a class="headerlink" href="#volume-profile-poc-vah-val" title="Permanent link">&para;</a></h3>
+<p><strong>What Displays:</strong><br />
+- POC (Point of Control) - Horizontal line at highest volume price<br />
+- VAH (Value Area High) - Upper boundary of value zone<br />
+- VAL (Value Area Low) - Lower boundary of value zone</p>
+<p><strong>Level Definitions:</strong><br />
+- <strong>POC:</strong> Price level with highest traded volume (strongest magnet effect)<br />
+- <strong>VAH:</strong> Top of value area (standard 70% of volume above VAL)<br />
+- <strong>VAL:</strong> Bottom of value area (standard 70% of volume below VAH)</p>
+<p><strong>Characteristics:</strong><br />
+- POC acts as strong magnet (repeated price returns observed)<br />
+- Above VAH = Extended above fair value<br />
+- Below VAL = Extended below fair value<br />
+- Value area contains "fair value" zone</p>
+<p><strong>Example:</strong> Price at $69,000, POC at $67,000 → Pullback to POC observed (magnet effect).</p>
+<hr />
+<h3 id="market-structure-swing-points-breaks">📈 Market Structure (Swing Points &amp; Breaks)<a class="headerlink" href="#market-structure-swing-points-breaks" title="Permanent link">&para;</a></h3>
+<p><strong>What Displays:</strong><br />
+- <strong>Labels at swing points:</strong> HH (Higher High), HL (Higher Low), LH (Lower High), LL (Lower Low)<br />
+- <strong>Break labels:</strong> BOS (Break of Structure), CHoCH (Change of Character)</p>
+<p><strong>Structure Definitions:</strong><br />
+- <strong>HH/HL:</strong> Uptrend swing pattern (higher highs, higher lows)<br />
+- <strong>LH/LL:</strong> Downtrend swing pattern (lower highs, lower lows)<br />
+- <strong>BOS:</strong> Structure break in trend direction (continuation signal)<br />
+- <strong>CHoCH:</strong> Structure change opposite to trend (reversal warning)</p>
+<p><strong>Characteristics:</strong><br />
+- HH → HL → HH pattern = Uptrend structure<br />
+- LH → LL → LH pattern = Downtrend structure<br />
+- BOS labels indicate trend continuation<br />
+- CHoCH labels indicate potential reversal</p>
+<p><strong>Example Pattern:</strong></p>
+<pre><code>Price: HL → HH → HL → HH (with BOS labels)
+Structure: Strong uptrend characteristics
+</code></pre>
+<p><em>Market structure provides trend context. Individual interpretation varies.</em></p>
+
+<!-- 📸 SCREENSHOT NEEDED - Janus Atlas Different Level Types Labeled on Chart
+     What to show: Chart showing multiple level types with labels (dH, dL, wH, wL, POC, VWAP, mH, mL)
+     Setup: Enable 10-15 different level types for visibility
+     Label/Annotate: Add text labels pointing to each level type with abbreviation and full name
+     File name suggestion: janus-atlas-level-types-labeled.png
+-->
+<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
+  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
+  <p style="margin: 0; color: #424242;"><strong>Janus Atlas Different Level Types Labeled on Chart</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a chart showing different level types clearly labeled (dH, dL, wH, wL, POC, VWAP, mH, mL, etc.).</p>
+</div>
+
+<hr />
+<h2 id="educational-example-bitcoin-november-2024">📖 Educational Example: Bitcoin (November 2024)<a class="headerlink" href="#educational-example-bitcoin-november-2024" title="Permanent link">&para;</a></h2>
+<p><em>(Historical observation for educational purposes only. Not financial advice. Past performance does not indicate future results.)</em></p>
+<p><strong>Chart: 4-Hour Timeframe</strong></p>
+<p><strong>Levels Active:</strong><br />
+- Daily VWAP: $43,200<br />
+- Weekly Low: $42,800<br />
+- POC: $43,000<br />
+- Market Structure: Showing HL pattern (uptrend)</p>
+<p><strong>Sequence Observed:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Price</th>
+<th>Level Interaction</th>
+<th>Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nov 5, 8am</td>
+<td>$43,500</td>
+<td>Above VWAP cluster</td>
+<td>Pullback begins</td>
+</tr>
+<tr>
+<td>Nov 5, 8pm</td>
+<td>$42,900</td>
+<td>Tests Weekly Low + POC zone</td>
+<td>Cluster reached</td>
+</tr>
+<tr>
+<td>Nov 6, 8am</td>
+<td>$43,100</td>
+<td>Bounce from cluster</td>
+<td>HL formed</td>
+</tr>
+<tr>
+<td>Nov 7, 4pm</td>
+<td>$44,800</td>
+<td>Rally continues</td>
+<td>+$1,900 from cluster</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Pattern Analysis:</strong><br />
+- Three levels clustered: Weekly Low ($42,800) + POC ($43,000) + VWAP ($43,200)<br />
+- Price pulled back to cluster zone<br />
+- Bounce occurred, HL structure formed<br />
+- Rally of $1,900 observed (4.4% move)</p>
+<p><strong>Level Interaction:</strong> Cluster created support zone where multiple levels converged. Price reaction observed at this confluence.</p>
+<p><em>This example demonstrates level clustering and structure formation. Individual interpretation and outcomes vary.</em></p>
+<hr />
+<h2 id="level-reaction-patterns">🔄 Level Reaction Patterns<a class="headerlink" href="#level-reaction-patterns" title="Permanent link">&para;</a></h2>
+<p><strong>Common Patterns Observed:</strong></p>
+<h3 id="pattern-1-bounce-supportresistance">Pattern 1: Bounce (Support/Resistance)<a class="headerlink" href="#pattern-1-bounce-supportresistance" title="Permanent link">&para;</a></h3>
+<pre><code>Price approaches level → Reversal occurs
+Interpretation: Support (bounce up) or Resistance (bounce down)
+</code></pre>
+<p><strong>Example:</strong> Price declines to Weekly Low → Bounce to upside observed.</p>
+<h3 id="pattern-2-break-continuation">Pattern 2: Break (Continuation)<a class="headerlink" href="#pattern-2-break-continuation" title="Permanent link">&para;</a></h3>
+<pre><code>Price approaches level → Penetrates through → Continues direction
+Interpretation: Level broken, continuation pattern
+</code></pre>
+<p><strong>Example:</strong> Price breaks above Daily High → Continues upward momentum.</p>
+<h3 id="pattern-3-retest-after-break">Pattern 3: Retest After Break<a class="headerlink" href="#pattern-3-retest-after-break" title="Permanent link">&para;</a></h3>
+<pre><code>Price breaks level → Pulls back to test level → Continues original direction
+Interpretation: Break confirmation, retest pattern
+</code></pre>
+<p><strong>Example:</strong> Price breaks $100 level → Pulls back to $100 → Continues higher.</p>
+<h3 id="pattern-4-cluster-zone-multiple-levels">Pattern 4: Cluster Zone (Multiple Levels)<a class="headerlink" href="#pattern-4-cluster-zone-multiple-levels" title="Permanent link">&para;</a></h3>
+<pre><code>Multiple levels converge → Enhanced reaction characteristics
+Interpretation: High confluence zone, stronger reactions observed
+</code></pre>
+<p><strong>Example:</strong> Weekly Low + VWAP + POC at $65,000 → Strong support characteristics at zone.</p>
+<p><em>Patterns provide context for level interactions. Individual interpretation varies.</em></p>
+<hr />
+<h2 id="level-usage-by-trading-style">🎯 Level Usage by Trading Style<a class="headerlink" href="#level-usage-by-trading-style" title="Permanent link">&para;</a></h2>
+<h3 id="for-scalping-5m-15m-charts">For Scalping (5m-15m charts):<a class="headerlink" href="#for-scalping-5m-15m-charts" title="Permanent link">&para;</a></h3>
+<p><strong>Recommended Levels:</strong><br />
+- ✓ Session levels (Asian/Euro/NA)<br />
+- ✓ Daily VWAP<br />
+- ✓ Daily High/Low<br />
+- ✓ POC/VAH/VAL<br />
+- ✓ Market structure</p>
+<p><strong>Rationale:</strong> Intraday levels relevant for short-term positioning.</p>
+<h3 id="for-day-trading-1h-4h-charts">For Day Trading (1H-4H charts):<a class="headerlink" href="#for-day-trading-1h-4h-charts" title="Permanent link">&para;</a></h3>
+<p><strong>Recommended Levels:</strong><br />
+- ✓ Daily + Weekly levels<br />
+- ✓ Daily + Weekly VWAP<br />
+- ✓ POC/VAH/VAL<br />
+- ✓ Market structure<br />
+- ✓ Previous day levels</p>
+<p><strong>Rationale:</strong> Combination of intraday and swing levels.</p>
+<h3 id="for-swing-trading-daily-charts">For Swing Trading (Daily charts):<a class="headerlink" href="#for-swing-trading-daily-charts" title="Permanent link">&para;</a></h3>
+<p><strong>Recommended Levels:</strong><br />
+- ✓ Weekly + Monthly levels<br />
+- ✓ Weekly + Monthly VWAP<br />
+- ✓ Market structure<br />
+- ✓ Quarterly levels<br />
+- ✗ Session levels (too granular)</p>
+<p><strong>Rationale:</strong> Higher timeframe levels match swing holding periods.</p>
+<p><em>Level selection varies based on individual trading approach and timeframe.</em></p>
+<hr />
+<h2 id="alert-configuration">🔔 Alert Configuration<a class="headerlink" href="#alert-configuration" title="Permanent link">&para;</a></h2>
+<p><strong>Alert Capabilities:</strong></p>
+<p>Janus Atlas can trigger alerts when price approaches or crosses specific levels.</p>
+<p><strong>Available Alert Types:</strong><br />
+- Price crossing level (above/below)<br />
+- Price within distance of level<br />
+- Multiple levels clustering<br />
+- Structure break (BOS/CHoCH)</p>
+<p><strong>Alert Setup:</strong><br />
+1. Open indicator settings<br />
+2. Navigate to alert section<br />
+3. Select desired level types for alerts<br />
+4. Set distance threshold<br />
+5. Configure notification preferences</p>
+<p><strong>Example Alert:</strong></p>
+<pre><code>Alert: &quot;Price crossed Daily VWAP&quot;
+Trigger: When price crosses above or below Daily VWAP line
+</code></pre>
+<p><em>Alerts provide level notification. Subsequent action determined by individual trading approach.</em></p>
+
+<hr />
+<h2 id="integration-with-other-indicators">🔗 Integration with Other Indicators<a class="headerlink" href="#integration-with-other-indicators" title="Permanent link">&para;</a></h2>
+
+<div class="sp-callout sp-callout--info">
+  <div class="sp-callout__title">💡 Janus Atlas Works Best in Combination</div>
+  <p>While Janus Atlas provides powerful support/resistance levels on its own, combining it with other Signal Pilot indicators creates high-probability confluence setups. Here are proven integration workflows:</p>
+</div>
+
+<h3 id="janus-atlas-pentarch">Janus Atlas + Pentarch (Timing at Levels)<a class="headerlink" href="#janus-atlas-pentarch" title="Permanent link">&para;</a></h3>
+<p><strong>Workflow:</strong></p>
+<ol>
+<li><strong>Enable key Janus levels</strong> → Focus on Daily/Weekly levels, POC, VWAP, and key Fibonacci levels</li>
+<li><strong>Wait for price to approach level</strong> → Monitor as price nears confluence zone (3+ levels clustering)</li>
+<li><strong>Watch for Pentarch signal</strong> → TD or IGN signal firing at key level = high-probability setup</li>
+<li><strong>Expected outcome:</strong> Timing signals that align with structural levels have stronger follow-through</li>
+</ol>
+<p><strong>Example:</strong> Price drops to Daily Low + Weekly Low + 0.618 Fib confluence → Pentarch TD signal fires = strong bullish reversal setup</p>
+
+<h3 id="janus-atlas-volume-oracle">Janus Atlas + Volume Oracle (Level Confirmation)<a class="headerlink" href="#janus-atlas-volume-oracle" title="Permanent link">&para;</a></h3>
+<p><strong>Workflow:</strong></p>
+<ol>
+<li><strong>Price approaches major level</strong> → Watch Daily High, Weekly POC, or major Fibonacci level</li>
+<li><strong>Check Volume Oracle for spike</strong> → High volume at level = institutional activity confirming importance</li>
+<li><strong>Level rejection or breakthrough</strong> → Volume spike + price rejection = strong level. Volume spike + breakthrough = level break confirmed</li>
+<li><strong>Expected outcome:</strong> Volume validates which levels are truly significant vs. noise</li>
+</ol>
+<p><strong>Example:</strong> Price hits Daily High → Volume Oracle shows 2.5x volume spike → price rejects = confirmed resistance</p>
+
+<h3 id="janus-atlas-harmonic-oscillator">Janus Atlas + Harmonic Oscillator (Momentum at Levels)<a class="headerlink" href="#janus-atlas-harmonic-oscillator" title="Permanent link">&para;</a></h3>
+<p><strong>Workflow:</strong></p>
+<ol>
+<li><strong>Price reaches support level</strong> → Daily Low, Weekly Low, or POC zone</li>
+<li><strong>Check Harmonic Oscillator</strong> → Look for STRONG signal or momentum shift (Bear → Bull transition)</li>
+<li><strong>Momentum + level alignment</strong> → Oscillator confirmation at key level increases reversal probability</li>
+<li><strong>Expected outcome:</strong> Momentum shifts at structural levels = powerful confluence</li>
+</ol>
+<p><strong>Example:</strong> Price touches Weekly Low → Harmonic Oscillator shifts from Bear to Bull = momentum-confirmed support bounce</p>
+
+<h3 id="janus-atlas-plutus-flow">Janus Atlas + Plutus Flow (Flow at Levels)<a class="headerlink" href="#janus-atlas-plutus-flow" title="Permanent link">&para;</a></h3>
+<p><strong>Workflow:</strong></p>
+<ol>
+<li><strong>Price approaches resistance level</strong> → Daily High, Weekly High, or Fibonacci extension</li>
+<li><strong>Check Plutus Flow for divergence</strong> → Price making higher highs while OBV making lower highs = bearish divergence at resistance</li>
+<li><strong>Level + divergence = high-probability reversal</strong> → Structural resistance + money flow weakness = strong short setup</li>
+<li><strong>Expected outcome:</strong> Divergence at key levels filters for highest-probability reversals</li>
+</ol>
+<p><strong>Example:</strong> Price hits Weekly High + 1.618 Fib → Plutus Flow shows bearish divergence = strong reversal confluence</p>
+
+<div class="admonition tip">
+<p class="admonition-title">Pro Tip: The Level Confluence Workflow</p>
+<p>For highest-probability setups, combine <strong>Janus Atlas (levels) + Pentarch (timing) + Volume Oracle (confirmation)</strong>. Look for 3+ Janus levels clustering in a zone, wait for Pentarch signal, then confirm with volume spike. This triple-confluence approach filters for only the strongest opportunities.</p>
+<p><strong>See also:</strong> <a href="../ref-workflow/">Complete Trading Workflow Guide</a> for detailed multi-indicator strategies.</p>
+</div>
+
+<hr />
+<h2 id="common-mistakes-to-avoid">⚠️ Common Mistakes to Avoid<a class="headerlink" href="#common-mistakes-to-avoid" title="Permanent link">&para;</a></h2>
+
+<div class="sp-callout sp-callout--warning">
+  <div class="sp-callout__title">Learn from Common Pitfalls</div>
+  <p>These mistakes are frequently made by new Janus Atlas users. Avoid them to improve your results:</p>
+</div>
+
+<h3 id="mistake-1-enabling-all-39-levels">Mistake #1: Enabling All 39 Levels Immediately<a class="headerlink" href="#mistake-1-enabling-all-39-levels" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> Turning on all 39 levels creates a cluttered, unreadable chart. Too many lines = analysis paralysis and missed opportunities.</p>
+<p><strong>The Fix:</strong></p>
+<ul>
+<li>Start with 5-7 core levels: Daily High/Low, Weekly High/Low, POC, VWAP</li>
+<li>Add levels progressively based on what your strategy needs</li>
+<li>Use timeframe-appropriate levels (Daily chart → focus on Weekly/Monthly levels)</li>
+<li>Disable intraday levels if trading higher timeframes</li>
+</ul>
+<p><strong>Remember:</strong> Less is more. A clean chart with 5-7 key levels is far more actionable than 39 overlapping lines.</p>
+
+<h3 id="mistake-2-treating-all-levels-equally">Mistake #2: Treating All Levels as Equally Important<a class="headerlink" href="#mistake-2-treating-all-levels-equally" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> Not all levels have equal significance. Daily and Weekly levels carry more weight than 15-minute levels. Treating them equally reduces effectiveness.</p>
+<p><strong>The Fix:</strong></p>
+<ul>
+<li>Prioritize higher timeframe levels: Weekly High/Low > Daily High/Low > Intraday levels</li>
+<li>Monthly and Weekly levels are major structural zones</li>
+<li>POC (Point of Control) levels show highest volume areas = institutional interest</li>
+<li>Fibonacci levels derived from major swings are stronger than minor swings</li>
+</ul>
+<p><strong>Remember:</strong> Higher timeframe levels = stronger reactions. Focus on Weekly/Daily for swing trades, Daily/4H for day trades.</p>
+
+<h3 id="mistake-3-no-level-confluence-analysis">Mistake #3: Ignoring Level Confluence (Clustering)<a class="headerlink" href="#mistake-3-no-level-confluence-analysis" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> Trading every individual level touch reduces win rate. The strongest setups occur when 3+ levels cluster in the same zone (confluence).</p>
+<p><strong>The Fix:</strong></p>
+<ul>
+<li>Look for zones where 3+ levels cluster within 0.5-1% price range</li>
+<li>Example confluence: Daily Low + Weekly Low + 0.618 Fib + Daily VWAP</li>
+<li>The more levels clustering = stronger support/resistance zone</li>
+<li>Prioritize trades at confluence zones, skip isolated single-level touches</li>
+</ul>
+<p><strong>Remember:</strong> Confluence zones (3+ levels) are where institutions defend levels aggressively. These offer highest-probability setups.</p>
+
+<h3 id="mistake-4-no-level-break-confirmation">Mistake #4: Assuming Levels Always Hold<a class="headerlink" href="#mistake-4-no-level-break-confirmation" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> Support and resistance levels can break. Trading blindly at levels without confirmation leads to "catching falling knives" or shorting breakouts.</p>
+<p><strong>The Fix:</strong></p>
+<ul>
+<li>Wait for confirmation: price rejection (wick reversal), volume spike, or Pentarch signal</li>
+<li>If level breaks on high volume, don't fight it → level becomes new support/resistance</li>
+<li>Use Harmonic Oscillator or Pentarch to confirm reversals at levels</li>
+<li>Place stop loss beyond the level (below support for longs, above resistance for shorts)</li>
+</ul>
+<p><strong>Remember:</strong> Levels are zones of interest, not absolute barriers. Always confirm with price action, volume, or momentum signals.</p>
+
+<h3 id="mistake-5-using-too-many-fibonacci-tools">Mistake #5: Overloading with Fibonacci Levels<a class="headerlink" href="#mistake-5-using-too-many-fibonacci-tools" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> Janus Atlas includes 12 Fibonacci levels. Enabling all of them creates clutter and dilutes focus on key retracement/extension zones.</p>
+<p><strong>The Fix:</strong></p>
+<ul>
+<li>Focus on key Fibonacci levels: 0.382, 0.5, 0.618 (retracements), 1.272, 1.618 (extensions)</li>
+<li>Disable minor Fib levels (0.236, 0.786) unless they align with other confluence</li>
+<li>Use Fibonacci retracements for pullback entries in trends</li>
+<li>Use Fibonacci extensions for profit targets in breakouts</li>
+</ul>
+<p><strong>Remember:</strong> The 0.618 retracement and 1.618 extension are the most reliable Fibonacci levels. Start with these.</p>
+
+<h3 id="mistake-6-static-levels-dynamic-markets">Mistake #6: Using Static Levels in Dynamic Markets<a class="headerlink" href="#mistake-6-static-levels-dynamic-markets" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> Markets evolve. Yesterday's Daily High may be irrelevant today. Relying on outdated levels reduces effectiveness.</p>
+<p><strong>The Fix:</strong></p>
+<ul>
+<li>Janus Atlas automatically updates Daily/Weekly/Monthly levels → levels refresh with each new period</li>
+<li>Update Fibonacci swings regularly to reflect current market structure</li>
+<li>VWAP and POC levels recalculate dynamically → always current</li>
+<li>Review and adjust which levels are enabled weekly based on market conditions</li>
+</ul>
+<p><strong>Remember:</strong> Dynamic levels (VWAP, POC, Daily H/L) adapt to current conditions. Static levels (old Fibs) become stale.</p>
+
+<div class="admonition info">
+<p class="admonition-title">Additional Resources</p>
+<p>For more trading best practices, see <a href="../ref-best-practices/">Best Practices &amp; Pro Tips</a>. For risk management guidance, see <a href="../ref-workflow/">Trading Workflow Guide</a>.</p>
+</div>
+
+<hr />
+<h2 id="frequently-asked-questions">❓ Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permanent link">&para;</a></h2>
+<h3 id="q-how-many-levels-should-i-enable">Q: How many levels should I enable?<a class="headerlink" href="#q-how-many-levels-should-i-enable" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Starting with 5-7 key levels recommended to avoid visual overload. Additional levels can be added progressively based on individual approach.</p>
+<h3 id="q-do-all-39-levels-appear-at-once">Q: Do all 39 levels appear at once?<a class="headerlink" href="#q-do-all-39-levels-appear-at-once" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> No. Each level can be toggled on/off individually. Display exactly the levels relevant to your approach.</p>
+<h3 id="q-can-i-customize-colors">Q: Can I customize colors?<a class="headerlink" href="#q-can-i-customize-colors" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Yes. Each level type has customizable color settings. Multiple preset color schemes available.</p>
+<h3 id="q-what-timeframes-work">Q: What timeframes work?<a class="headerlink" href="#q-what-timeframes-work" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> All timeframes supported. Level relevance varies by timeframe (e.g., session levels more relevant on intraday charts).</p>
+<h3 id="q-do-levels-repaint">Q: Do levels repaint?<a class="headerlink" href="#q-do-levels-repaint" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Current period levels update in real-time (e.g., today's high adjusts as price moves). Historical levels do not change retroactively.</p>
+<h3 id="q-how-are-pocvahval-calculated">Q: How are POC/VAH/VAL calculated?<a class="headerlink" href="#q-how-are-pocvahval-calculated" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Volume Profile calculations based on volume distribution across price levels. POC = highest volume node. VAH/VAL = value area boundaries (standard 70% volume distribution).</p>
+<h3 id="q-whats-the-difference-between-bos-and-choch">Q: What's the difference between BOS and CHoCH?<a class="headerlink" href="#q-whats-the-difference-between-bos-and-choch" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> BOS (Break of Structure) = break in trend direction (continuation). CHoCH (Change of Character) = break opposite to trend (potential reversal indication).</p>
+<h3 id="q-can-i-use-with-other-indicators">Q: Can I use with other indicators?<a class="headerlink" href="#q-can-i-use-with-other-indicators" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Yes. Janus Atlas compatible with all other indicators. Designed to work with entire Signal Pilot suite.</p>
+<h3 id="q-does-it-work-on-all-assets">Q: Does it work on all assets?<a class="headerlink" href="#q-does-it-work-on-all-assets" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Yes. Compatible with stocks, futures, forex, crypto - any asset on TradingView.</p>
+<h3 id="q-how-often-do-levels-update">Q: How often do levels update?<a class="headerlink" href="#q-how-often-do-levels-update" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Real-time for current period levels. Historical levels fixed once period closes.</p>
+<hr />
+<h2 id="quick-reference-guide">📋 Quick Reference Guide<a class="headerlink" href="#quick-reference-guide" title="Permanent link">&para;</a></h2>
+<h3 id="essential-levels-quick-reference">Essential Levels Quick Reference<a class="headerlink" href="#essential-levels-quick-reference" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Level Type</th>
+<th>Label</th>
+<th>Typical Use Cases</th>
+<th>Key Characteristic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Daily High/Low</strong></td>
+<td>dH, dL</td>
+<td>All styles</td>
+<td>Today's range extremes</td>
+</tr>
+<tr>
+<td><strong>Weekly High/Low</strong></td>
+<td>WH, WL</td>
+<td>Swing/Day</td>
 <td>This week's range</td>
-<td>Major support/resistance</td>
 </tr>
 <tr>
-<td>VWAP</td>
-<td>True average price</td>
-<td>Above = bullish, Below = bearish</td>
+<td><strong>Monthly High/Low</strong></td>
+<td>MtH, MtL</td>
+<td>Swing</td>
+<td>This month's range</td>
 </tr>
 <tr>
+<td><strong>Daily VWAP</strong></td>
+<td>VWAP-D</td>
+<td>Day/Scalp</td>
+<td>Intraday average price</td>
+</tr>
+<tr>
+<td><strong>Weekly VWAP</strong></td>
+<td>VWAP-W</td>
+<td>Swing/Day</td>
+<td>Weekly average price</td>
+</tr>
+<tr>
+<td><strong>POC</strong></td>
 <td>POC</td>
-<td>Where most volume traded</td>
-<td>Price magnet (returns here)</td>
+<td>All styles</td>
+<td>Highest volume price</td>
 </tr>
 <tr>
-<td>VAH/VAL</td>
-<td>Fair value boundaries</td>
-<td>Above VAH = overbought, Below VAL = oversold</td>
+<td><strong>VAH/VAL</strong></td>
+<td>VAH, VAL</td>
+<td>All styles</td>
+<td>Value area boundaries</td>
 </tr>
 <tr>
-<td>HH/HL</td>
-<td>Uptrend structure</td>
-<td>Buy dips at HL</td>
+<td><strong>Session Highs/Lows</strong></td>
+<td>AH, AL, EH, EL, NAH, NAL</td>
+<td>Scalp/Day</td>
+<td>Session range extremes</td>
 </tr>
 <tr>
-<td>LH/LL</td>
-<td>Downtrend structure</td>
-<td>Sell rips at LH</td>
+<td><strong>Market Structure</strong></td>
+<td>HH, HL, LH, LL, BOS, CHoCH</td>
+<td>All styles</td>
+<td>Trend context</td>
+</tr>
+</tbody>
+</table>
+<h3 id="level-interaction-quick-reference">Level Interaction Quick Reference<a class="headerlink" href="#level-interaction-quick-reference" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Description</th>
+<th>Observed Characteristic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bounce</strong></td>
+<td>Price touches, reverses</td>
+<td>Support/Resistance</td>
 </tr>
 <tr>
-<td>BOS</td>
-<td>Trend continues</td>
-<td>Stay with the trend</td>
+<td><strong>Break</strong></td>
+<td>Price penetrates, continues</td>
+<td>Level broken</td>
 </tr>
 <tr>
-<td>CHoCH</td>
-<td>Trend warning</td>
-<td>Get ready to flip direction</td>
+<td><strong>Retest</strong></td>
+<td>Break → return → continue</td>
+<td>Confirmation pattern</td>
+</tr>
+<tr>
+<td><strong>Cluster</strong></td>
+<td>Multiple levels converge</td>
+<td>Enhanced reaction zone</td>
+</tr>
+</tbody>
+</table>
+<h3 id="timeframe-relevance-guide">Timeframe Relevance Guide<a class="headerlink" href="#timeframe-relevance-guide" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Chart Timeframe</th>
+<th>Most Relevant Levels</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>5m-15m</strong></td>
+<td>Session levels, Daily VWAP, POC</td>
+</tr>
+<tr>
+<td><strong>1H-4H</strong></td>
+<td>Daily/Weekly levels, Daily/Weekly VWAP, POC/VAH/VAL</td>
+</tr>
+<tr>
+<td><strong>Daily</strong></td>
+<td>Weekly/Monthly levels, Weekly/Monthly VWAP, Structure</td>
+</tr>
+<tr>
+<td><strong>Weekly</strong></td>
+<td>Monthly/Quarterly levels, Monthly VWAP</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
-<p><span style="color: #10b981; font-weight: 600; font-size: 1.1em;">✅ Recommended Approach</span></p>
-<ol>
-<li><strong>Progressive addition</strong> - Starting with 5-7 key levels rather than all 39</li>
-<li><strong>Timeframe alignment</strong> - Scalper vs swing trader contexts require different level sets</li>
-<li><strong>Cluster observation</strong> - Multiple converging levels typically indicate strongest zones</li>
-<li><strong>Structure integration</strong> - Levels indicate WHERE, structure indicates trend direction</li>
-<li><strong>Patient observation</strong> - Awaiting price arrival at levels before trade evaluation</li>
-</ol>
+<div class="sp-callout sp-callout--summary">
+  <div class="sp-callout__title">What You've Learned</div>
+  <ul>
+    <li><strong>39 Institutional Level Types:</strong> Janus Atlas displays comprehensive level mapping including timeframe levels (daily/weekly/monthly highs and lows), session levels (Asia, London, New York), volume levels (VWAP, POC, VAH, VAL), and market structure levels (previous day opens/closes, midpoints)</li>
+    <li><strong>Level Categories:</strong> Four main categories - Timeframe Levels (dH, dL, WH, WL, MtH, MtL plus opens/closes/midpoints), Session Levels (Asia, London, NY highs/lows/opens/closes), Volume Levels (VWAP, POC, VAH, VAL with deviations), Market Structure Levels (previous periods and swing points)</li>
+    <li><strong>Customization Options:</strong> Toggle individual level types on/off based on trading style, adjust colors and line styles for visual clarity, control label display to reduce chart clutter, show/hide different timeframe levels</li>
+    <li><strong>Level Cluster Recognition:</strong> High-probability trade zones occur where 3+ different level types converge at same price - combining timeframe level + volume level + session level creates strong confluence for support/resistance reactions</li>
+    <li><strong>Trading Style Application:</strong> Scalpers focus on session levels and intraday VWAP (1m-15m timeframes), day traders use daily levels plus session highs/lows (15m-1H charts), swing traders prioritize weekly/monthly levels plus volume levels (4H-Daily), position traders combine all major levels (Daily-Weekly)</li>
+    <li><strong>Non-Repainting Guarantee:</strong> All levels calculate at bar close and remain fixed - historical levels match what appeared in real-time, enabling reliable backtesting and alert configuration without retroactive changes</li>
+    <li><strong>Pentarch Integration:</strong> Optimal strategy combines Janus Atlas levels with Pentarch cycle signals - wait for TD/IGN/WRN signals to appear AT key levels for highest probability trade entries with clear invalidation points</li>
+  </ul>
+  <p><strong>Next Steps:</strong> Review <a href="../ref-workflow/">Trading Workflow Guide</a> to learn how to combine Janus Atlas levels with Pentarch signals, or explore <a href="../pentarch-v10/">Pentarch Guide</a> for cycle detection fundamentals.</p>
+</div>
 <hr />
-<h2 id="support">Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
-<p>Additional resources available:
-- <a href="https://docs.signalpilot.io/suite-index/"><span class="signal-pilot-brand">Signal Pilot</span> Suite Overview</a> - Indicator combination strategies
-- <a href="../ref-workflow/">Suite Workflow</a> - Complete trading system
-- <a href="../about-support/">Support</a> - Support resources</p>
+
+<div class="sp-callout sp-callout--reflection">
+  <div class="sp-callout__title">Reflection Check</div>
+  <p>Before trading with Janus Atlas, ask yourself:</p>
+  <ul>
+    <li>Do you understand the difference between timeframe levels (dH/dL) vs volume levels (POC/VAH/VAL)?</li>
+    <li>Can you identify level clusters where 3+ levels converge at the same price?</li>
+    <li>Have you practiced identifying key support/resistance levels on your charts?</li>
+    <li>Do you know which level types match your trading style (scalper vs swing trader vs position trader)?</li>
+  </ul>
+  <p><strong>If yes to all 4:</strong> You're ready to use Janus Atlas effectively! See <a href="../ref-workflow/">Workflow Guide</a> for combination strategies.<br>
+  <strong>If no to any:</strong> Review the <a href="#level-type-descriptions">Level Type Descriptions</a> and <a href="#level-usage-by-trading-style">Level Usage by Trading Style</a> sections above.</p>
+</div>
+
 <hr />
-<p><strong>Summary:</strong> Janus Atlas displays WHERE price may potentially react. Combining it with Pentarch (WHEN potential reversals may occur) or other indicators often enhances analysis.</p>
-<p><strong>Level trading with structural awareness</strong> 🎯</p>
+<h2 id="support">📞 Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
+<p><strong>Technical Questions:</strong><br />
+support@signalpilot.io</p>
+<p><strong>Additional Resources:</strong><br />
+- Signal Pilot Suite Overview<br />
+- Getting Started Guide<br />
+- Video Tutorials (if available)</p>
+<hr />
+<p><strong>Disclaimer:</strong> This indicator displays price levels based on various calculation methodologies (timeframe extremes, volume weighting, volume profile distribution, market structure analysis). All levels represent historical or current price data. Individual interpretation, application, and outcomes vary. Past level reactions do not guarantee future results. This is not financial advice.</p>
+                
+                
+                
+                
+                
                 
               </article>
             </div>
@@ -1913,7 +2871,11 @@
           
   <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 
+
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+
+
         </div>
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
@@ -1975,20 +2937,64 @@
     
     
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.sections", "navigation.path", "content.code.copy", "search.suggest", "search.highlight", "content.tabs.link", "content.tooltips", "content.action.edit"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+
+
     
     
       <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+
+
       
         <script src="../js/timeago.min.js"></script>
+
+
       
         <script src="../js/timeago_mkdocs_material.js"></script>
+
+
       
         <script src="../assets/brand.js"></script>
+
+
       
         <script src="../assets/sp-bg.js"></script>
+
+
       
         <script src="../assets/keyword-highlighter.js"></script>
+
+
       
     
-  </body>
+      <script src="../assets/wheel-diagnostic.js"></script>
+      <script src="../assets/enhancements.js"></script>
+    <script src="assets/remove-tooltips.js"></script>
+    <script src="assets/bottom-sheet-nav.js"></script>
+      <script src="../assets/sticky-toc-scroll.js"></script>
+    <script src="../assets/components.js"></script>
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - JS
+       To disable: comment out this entire block
+       ======================================== -->
+  <script src="../js/feedback-system.js"></script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - JS -->
+
+  <!-- Meta-Learning & Accessibility Features -->
+  <script src="../js/keyboard-navigation.js"></script>
+  <script src="../js/text-sizing.js"></script>
+  <script src="../js/knowledge-checks.js"></script>
+
+      <!-- SignalPilot Chatbot -->
+    <script src="/js/chatbot.js"></script>
+  
+
+
+
+
+
+
+
+  <!-- Custom Bottom Sheet Navigation Script -->
+  <script src="../assets/custom-bottom-sheet.js?v7"></script>
+</body>
 </html>
