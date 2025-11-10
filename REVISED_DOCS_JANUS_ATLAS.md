@@ -19,6 +19,52 @@ Janus Atlas displays price levels automatically on your chart. 39 level types av
 
 **Timeframe Compatibility:** Works on all timeframes.
 
+> 👁️ **What You'll See:** Price level lines appear immediately across your chart. Levels are always visible—there's no "signal" to wait for. Watch how price reacts when it approaches these levels (bounces, breaks, retests).
+
+---
+
+## 🚀 Installation (2 minutes)
+
+### Step 1: Open TradingView
+1. Go to [TradingView.com](https://www.tradingview.com)
+2. Log into your account
+3. Open any chart
+
+### Step 2: Add Janus Atlas to Chart
+1. Click **"Indicators"** button (top toolbar, looks like ƒx)
+2. Click **"Invite-Only Scripts"** tab
+3. Search for **"Janus Atlas v1.0"** or scroll to find it
+4. Click **"Janus Atlas v1.0 - Signal Pilot"**
+5. Indicator loads on your chart
+
+### Step 3: Verify It's Working
+**You should see:**
+- "Janus Atlas v1.0" appears in left sidebar
+- Multiple horizontal price level lines on chart
+- Level labels on right price scale (e.g., "dH", "WH", "VAH", "POC")
+- Lines in various colors (customizable in settings)
+
+> 👁️ **First Signal:** Immediately! Janus Atlas displays price levels as soon as it loads. You should see horizontal lines across your chart representing support/resistance levels. Default setup shows 5-10 key levels.
+
+### Troubleshooting
+**Not seeing Janus Atlas in Invite-Only Scripts?**
+- Verify your TradingView email matches purchase email
+- Wait 24 hours after purchase for access
+- See [Installation Troubleshooting](docs/troubleshooting-installation.md)
+
+**Loaded but no lines visible?**
+- Check indicator settings (Style tab) - ensure at least 5 core levels enabled
+- Try zooming out on chart (levels may be outside visible range)
+- Verify level colors aren't matching chart background
+- See [Installation Troubleshooting](docs/troubleshooting-installation.md)
+
+**Too many lines - chart looks messy?**
+- Normal with default settings (many levels enabled)
+- Disable levels in settings - start with 5 core levels: dH, dL, WH, WL, Daily VWAP
+- See Settings section below for recommendations
+
+**Need help?** support@signalpilot.io
+
 ---
 
 ## 📹 Video Tutorials

@@ -24,6 +24,79 @@ Omnideck integrates 10 separate trading systems into one indicator. Each system 
 
 **Timeframe Compatibility:** Works on all timeframes.
 
+> 👁️ **What You'll See:** Multiple systems activate simultaneously. Some signals (EMA positions, Regime background color) appear instantly. Others (TD 9 counts, Squeeze arrows, pattern labels) may take hours to days depending on market conditions.
+
+---
+
+## 🚀 Installation (2 minutes)
+
+### Step 1: Open TradingView
+1. Go to [TradingView.com](https://www.tradingview.com)
+2. Log into your account
+3. Open any chart
+
+### Step 2: Add Omnideck to Chart
+1. Click **"Indicators"** button (top toolbar, looks like ƒx)
+2. Click **"Invite-Only Scripts"** tab
+3. Search for **"Omnideck v1.0"** or scroll to find it
+4. Click **"Omnideck v1.0 - Signal Pilot"**
+5. Indicator loads on your chart
+
+### Step 3: Verify It's Working
+**You should see (with default settings):**
+- "Omnideck v1.0" appears in left sidebar
+- EMA lines on chart (three colored moving averages)
+- Regime Box background color (green/red tint)
+- Oscillator panel below chart (if enabled)
+- TD Sequential numbers may appear over time
+- Various other system components depending on settings
+
+> 👁️ **First Signal:** Varies by system. Some components (EMAs, Regime color, SuperTrend) appear immediately. Others (TD 9, Squeeze breakouts, patterns) require specific conditions and may take hours to days.
+
+### Troubleshooting
+**Not seeing Omnideck in Invite-Only Scripts?**
+- Verify your TradingView email matches purchase email
+- Wait 24 hours after purchase for access
+- See [Installation Troubleshooting](docs/troubleshooting-installation.md)
+
+**Loaded but chart looks overwhelming?**
+- Normal! Omnideck has 10 systems - can be visually dense
+- Disable systems you don't need: Settings → Enable/Disable individual systems
+- Start with 2-3 systems, add more gradually
+- See Settings section for recommended starter configurations
+
+**Loaded but chart looks unchanged?**
+- Check indicator settings - at least 2-3 systems should be enabled by default
+- Try zooming in/out on chart
+- Switch to Daily timeframe (more signals visible)
+- See [Installation Troubleshooting](docs/troubleshooting-installation.md)
+
+**Need help?** support@signalpilot.io
+
+---
+
+## 📹 Video Tutorials
+
+### Getting Started with Omnideck (4:00)
+> 🎬 *Video coming soon - Subscribe to be notified*
+
+This video will cover:
+- Installing Omnideck on TradingView
+- Understanding the 10 systems overview
+- Enabling/disabling systems for your trading style
+- Configuring your first multi-system setup
+
+---
+
+### Omnideck Power User Workflow (6:30)
+> 🎬 *Video coming soon - Subscribe to be notified*
+
+This video will demonstrate:
+- Real-time example using 4-5 systems simultaneously
+- How to identify confluence (multiple systems aligning)
+- Complete entry to exit workflow with system confirmation
+- Advanced alert configuration for multi-system signals
+
 ---
 
 ## 📚 Before You Start — Prerequisites

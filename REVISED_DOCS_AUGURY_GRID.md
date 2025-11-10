@@ -16,6 +16,80 @@ Augury Grid displays TD Sequential exhaustion signals for multiple symbols on on
 
 **Timeframe Compatibility:** Works on all timeframes. All tracked symbols use the same timeframe as the chart.
 
+> 👁️ **What You'll See:** Grid of symbols displays immediately showing current TD Sequential counts for each. Green 9 / Red 9 exhaustion signals appear across different symbols as conditions form (minutes to days depending on market activity).
+
+---
+
+## 🚀 Installation (2 minutes)
+
+### Step 1: Open TradingView
+1. Go to [TradingView.com](https://www.tradingview.com)
+2. Log into your account
+3. Open any chart
+
+### Step 2: Add Augury Grid to Chart
+1. Click **"Indicators"** button (top toolbar, looks like ƒx)
+2. Click **"Invite-Only Scripts"** tab
+3. Search for **"Augury Grid v1.0"** or scroll to find it
+4. Click **"Augury Grid v1.0 - Signal Pilot"**
+5. Indicator loads on your chart
+
+### Step 3: Verify It's Working
+**You should see:**
+- "Augury Grid v1.0" appears in left sidebar
+- Grid overlay on chart showing multiple symbol tickers
+- Each cell displays symbol name + current TD count or signal status
+- Grid updates in real-time as data refreshes
+
+> 👁️ **First Signal:** Immediately to days. Grid displays current state of all symbols instantly. Green 9 or Red 9 exhaustion signals appear as TD Sequential patterns complete on individual symbols—timing varies by symbol and market conditions.
+
+### Troubleshooting
+**Not seeing Augury Grid in Invite-Only Scripts?**
+- Verify your TradingView email matches purchase email
+- Wait 24 hours after purchase for access
+- See [Installation Troubleshooting](docs/troubleshooting-installation.md)
+
+**Grid appears but shows "No Data" for symbols?**
+- Symbol not available on your TradingView plan/exchange
+- Symbol ticker may be incorrect (check spelling)
+- Configure symbols in settings - see Settings section below
+
+**Grid too small or overlapping chart?**
+- Resize grid: Settings → Grid position and size
+- Reduce number of symbols to fit better
+- Try different chart layout (full screen, split screen)
+
+**Symbols not updating?**
+- Check internet connection
+- Refresh browser page (Ctrl+R or Cmd+R)
+- Verify TradingView data feed active
+
+**Need help?** support@signalpilot.io
+
+---
+
+## 📹 Video Tutorials
+
+### Getting Started with Augury Grid (3:45)
+> 🎬 *Video coming soon - Subscribe to be notified*
+
+This video will cover:
+- Installing Augury Grid on TradingView
+- Configuring your first watchlist (10-15 symbols)
+- Understanding TD Sequential counts in grid format
+- Identifying Green 9 and Red 9 exhaustion signals
+
+---
+
+### Multi-Asset Scanning Strategy (5:30)
+> 🎬 *Video coming soon - Subscribe to be notified*
+
+This video will demonstrate:
+- Real-time scanning across 30-40 symbols
+- How to filter grid signals for high-probability setups
+- Workflow: Grid scan → Deep dive with The Trinity
+- Alert configuration for grid-based notifications
+
 ---
 
 ## 📚 Before You Start — Prerequisites

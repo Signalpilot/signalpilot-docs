@@ -28,6 +28,76 @@ Plutus Flow calculates On-Balance Volume and adds three analytical layers:
 
 **Timeframe Compatibility:** Works on all timeframes.
 
+> 👁️ **What You'll See:** OBV line and colored ribbons (green/red) appear immediately in panel below chart. Divergence labels ("Bull Div" / "Bear Div") appear only when specific divergence patterns form—this may take days to weeks depending on market conditions and timeframe.
+
+---
+
+## 🚀 Installation (2 minutes)
+
+### Step 1: Open TradingView
+1. Go to [TradingView.com](https://www.tradingview.com)
+2. Log into your account
+3. Open any chart
+
+### Step 2: Add Plutus Flow to Chart
+1. Click **"Indicators"** button (top toolbar, looks like ƒx)
+2. Click **"Invite-Only Scripts"** tab
+3. Search for **"Plutus Flow v1.0"** or scroll to find it
+4. Click **"Plutus Flow v1.0 - Signal Pilot"**
+5. Indicator loads on your chart
+
+### Step 3: Verify It's Working
+**You should see:**
+- "Plutus Flow v1.0" appears in indicator panel below chart
+- OBV line displayed (primary line in panel)
+- Colored trend ribbons (green or red) behind OBV line
+- Panel labeled with OBV values on right side
+
+> 👁️ **First Signal:** Days to weeks for divergence labels. OBV line and ribbons are visible immediately and update with each bar. Divergence labels ("Bull Div" / "Bear Div") appear only when price and OBV diverge—this requires specific market conditions and may take time.
+
+### Troubleshooting
+**Not seeing Plutus Flow in Invite-Only Scripts?**
+- Verify your TradingView email matches purchase email
+- Wait 24 hours after purchase for access
+- See [Installation Troubleshooting](docs/troubleshooting-installation.md)
+
+**Loaded but panel looks empty?**
+- OBV line may be very small—zoom out vertically on indicator panel
+- Right-click panel → "Reset Scale"
+- Check Style tab—ensure OBV line is enabled and visible color
+
+**No divergence labels appearing after weeks?**
+- Normal! Divergences are rare and require specific conditions
+- Divergence = Price makes new high/low BUT OBV doesn't confirm
+- Try switching to trending asset with clear price swings (SPY, BTC/USD)
+- Divergences are advanced signals—OBV line direction is primary signal
+
+**Need help?** support@signalpilot.io
+
+---
+
+## 📹 Video Tutorials
+
+### Getting Started with Plutus Flow (3:30)
+> 🎬 *Video coming soon - Subscribe to be notified*
+
+This video will cover:
+- Installing Plutus Flow on TradingView
+- Understanding the three layers (OBV, Ribbons, Divergences)
+- Reading OBV direction vs. price movement
+- Identifying your first divergence signal
+
+---
+
+### Plutus Flow Divergence Hunting Workflow (5:00)
+> 🎬 *Video coming soon - Subscribe to be notified*
+
+This video will demonstrate:
+- Real-time divergence example on a trending asset
+- Combining Plutus Flow with Pentarch for reversal confirmation
+- Setting alerts for divergence detection
+- Multi-timeframe flow analysis techniques
+
 ---
 
 ## 📚 Prerequisites

@@ -26,6 +26,77 @@ Harmonic Oscillator analyzes five separate momentum oscillators simultaneously a
 
 **Timeframe Compatibility:** Works on all timeframes.
 
+> 👁️ **What You'll See:** Signal label (BUY, SELL, STRONG, or NEUT) appears on chart immediately or within hours. Oscillator panel below chart shows all 7 oscillators voting in real-time, updating with each bar close.
+
+---
+
+## 🚀 Installation (2 minutes)
+
+### Step 1: Open TradingView
+1. Go to [TradingView.com](https://www.tradingview.com)
+2. Log into your account
+3. Open any chart
+
+### Step 2: Add Harmonic Oscillator to Chart
+1. Click **"Indicators"** button (top toolbar, looks like ƒx)
+2. Click **"Invite-Only Scripts"** tab
+3. Search for **"Harmonic Oscillator v1.0"** or scroll to find it
+4. Click **"Harmonic Oscillator v1.0 - Signal Pilot"**
+5. Indicator loads on your chart
+
+### Step 3: Verify It's Working
+**You should see:**
+- "Harmonic Oscillator v1.0" appears in left sidebar
+- Signal label on chart (BUY, SELL, STRONG, or NEUT)
+- Oscillator panel below chart showing 7 oscillators
+- Signal labels update as bars close
+
+> 👁️ **First Signal:** Immediately to within hours. Momentum signals appear frequently as oscillators vote. You should see a signal label (BUY/SELL/STRONG/NEUT) within the first trading session.
+
+### Troubleshooting
+**Not seeing Harmonic Oscillator in Invite-Only Scripts?**
+- Verify your TradingView email matches purchase email
+- Wait 24 hours after purchase for access
+- See [Installation Troubleshooting](docs/troubleshooting-installation.md)
+
+**Loaded but no signal labels visible?**
+- Check indicator settings (Style tab) - ensure signal labels enabled
+- Wait for next bar close (signals update at bar close, not mid-bar)
+- Switch to higher timeframe (15m, 1H, Daily) for more reliable signals
+- See [Installation Troubleshooting](docs/troubleshooting-installation.md)
+
+**Only seeing NEUT signals?**
+- Normal during choppy/consolidating markets
+- NEUT means oscillators are divided (no consensus)
+- Try switching to trending asset (SPY, BTC/USD)
+- NEUT is valid signal meaning "no clear direction"
+
+**Need help?** support@signalpilot.io
+
+---
+
+## 📹 Video Tutorials
+
+### Getting Started with Harmonic Oscillator (3:15)
+> 🎬 *Video coming soon - Subscribe to be notified*
+
+This video will cover:
+- Installing Harmonic Oscillator on TradingView
+- Understanding the voting system (BUY/SELL/STRONG/NEUT)
+- Reading the oscillator panel (7 oscillators voting)
+- Configuring your first momentum alert
+
+---
+
+### Harmonic + Pentarch: Momentum Confirmation (4:45)
+> 🎬 *Video coming soon - Subscribe to be notified*
+
+This video will demonstrate:
+- Real-time example combining Harmonic Oscillator with Pentarch
+- How to use momentum to confirm cycle signals
+- Workflow: Pentarch signal → Harmonic confirmation → Entry
+- Setting up combined alerts for high-conviction setups
+
 ---
 
 ## 📚 Prerequisites
