@@ -9,6 +9,40 @@ Plutus Flow is an **advanced On-Balance Volume (OBV) indicator** that shows when
 
 ---
 
+## 🚀 Installation
+<span style="color: #0aa1d5; font-weight: 600;">Quick Setup Guide</span>
+
+### Step 1: Access Your Indicators
+1. TradingView chart can be opened
+2. "Indicators" button (top toolbar) can be clicked
+3. "Invite-only scripts" tab can be selected
+
+### Step 2: Add Plutus Flow
+1. "Plutus Flow v1.0" can be searched for
+2. Indicator can be clicked to add to chart
+3. Bottom pane with OBV line and bands will appear
+
+### Step 3: Verify It's Working
+**👁️ First signal to watch for:**
+- **OBV line** (green/red) should be visible in bottom pane
+- **Two bands** (upper +2σ, lower -2σ) around the line
+- Wait for a **cross signal** (green or red circle) or **divergence label** (BULL DIV / BEAR DIV)
+
+**Common issue:** If OBV line is flat/not moving → Chart may lack volume data (check you're on stocks/crypto/futures, NOT Forex spot)
+
+---
+
+## 📹 Video Tutorials
+<span style="color: #10b981; font-weight: 600;">Visual Walkthroughs</span>
+
+**Installation & First Trade** (5 min)
+Coming soon - Complete setup walkthrough + first divergence trade
+
+**Advanced Divergence Trading** (8 min)
+Coming soon - How to combine with Janus Atlas levels for 80%+ win rate
+
+---
+
 ## Core Concept: OBV = Money Flow Direction
 
 **On-Balance Volume (OBV):**
