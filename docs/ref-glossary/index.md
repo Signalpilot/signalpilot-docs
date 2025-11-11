@@ -15,7 +15,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Accumulation
 **Definition:** A market phase where assets are bought steadily, typically after a decline. Price may consolidate or drift sideways as buying pressure builds.
 
-**Used in:** [Pentarch](../indicators/pentarch-v10.md) (TD signal indicates accumulation phase conditions)
+**Used in:** [Pentarch](../../pentarch-v10/) (TD signal indicates accumulation phase conditions)
 
 **Related terms:** [Distribution](#distribution), [Markup](#markup), [Market Cycle](#market-cycle)
 
@@ -33,7 +33,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Anchored VWAP
 **Definition:** Volume-Weighted Average Price calculated from a specific starting point (anchor) rather than the current period. Common anchors include session open, major swing high/low, or significant event.
 
-**Used in:** [Janus Atlas](../indicators/janus-atlas-v10.md) (one of 39 level types)
+**Used in:** [Janus Atlas](../../janus-atlas-v10/) (one of 39 level types)
 
 **Related terms:** [VWAP](#vwap), [Volume-Weighted](#volume-weighted)
 
@@ -44,7 +44,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Bar Close Confirmation
 **Definition:** A detection methodology where signals only finalize when the current price bar completes. Prevents mid-bar signals that may disappear before bar close.
 
-**Used in:** [Pentarch](../indicators/pentarch-v10.md) (all signals confirm at bar close only)
+**Used in:** [Pentarch](../../pentarch-v10/) (all signals confirm at bar close only)
 
 **Related terms:** [Repainting](#repainting), [Non-Repainting](#non-repainting)
 
@@ -53,7 +53,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### BDN (Breakdown)
 **Definition:** Pentarch's fifth cycle event. Indicates conditions commonly associated with decline phase initiation after climax exhaustion.
 
-**Used in:** [Pentarch](../indicators/pentarch-v10.md)
+**Used in:** [Pentarch](../../pentarch-v10/)
 
 **Default Color:** Red
 
@@ -64,7 +64,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### BOS (Break of Structure)
 **Definition:** Price movement that breaks a recent swing high (bullish BOS) or swing low (bearish BOS), potentially indicating trend shift or continuation.
 
-**Used in:** [Janus Atlas](../indicators/janus-atlas-v10.md) (Market Structure labels)
+**Used in:** [Janus Atlas](../../janus-atlas-v10/) (Market Structure labels)
 
 **Related terms:** [CHoCH](#choch-change-of-character), [Market Structure](#market-structure)
 
@@ -75,7 +75,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### CAP (Climax)
 **Definition:** Pentarch's fourth cycle event. Indicates conditions commonly associated with climax phase exhaustion characteristics.
 
-**Used in:** [Pentarch](../indicators/pentarch-v10.md)
+**Used in:** [Pentarch](../../pentarch-v10/)
 
 **Default Color:** Orange
 
@@ -86,7 +86,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### CHoCH (Change of Character)
 **Definition:** A shift in market behavior, often identified by changes in swing patterns, momentum, or structure. May indicate potential trend change.
 
-**Used in:** [Janus Atlas](../indicators/janus-atlas-v10.md) (Market Structure labels)
+**Used in:** [Janus Atlas](../../janus-atlas-v10/) (Market Structure labels)
 
 **Related terms:** [BOS](#bos-break-of-structure), [Market Structure](#market-structure)
 
@@ -95,7 +95,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Cluster (Level Cluster)
 **Definition:** Multiple price levels converging within a tight range (typically 1-3%). Level clusters often create stronger support/resistance zones than individual levels.
 
-**Used in:** [Janus Atlas](../indicators/janus-atlas-v10.md)
+**Used in:** [Janus Atlas](../../janus-atlas-v10/)
 
 **Example:** Daily High at 50,000 + Weekly High at 50,200 + Monthly VWAP at 50,100 = Cluster zone 50,000-50,200
 
@@ -119,7 +119,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Divergence
 **Definition:** Disagreement between price action and an indicator. Bullish divergence: price makes lower low while indicator makes higher low. Bearish divergence: price makes higher high while indicator makes lower high.
 
-**Used in:** [Plutus Flow](../indicators/plutus-flow-v10.md) (divergence detection system)
+**Used in:** [Plutus Flow](../../plutus-flow-v10/) (divergence detection system)
 
 **Related terms:** [OBV](#obv-on-balance-volume), [Accumulation](#accumulation), [Distribution](#distribution)
 
@@ -128,7 +128,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Distribution
 **Definition:** A market phase where assets are sold steadily, typically after a rally. Price may consolidate or drift sideways as selling pressure builds.
 
-**Used in:** [Pentarch](../indicators/pentarch-v10.md) (WRN signal indicates distribution phase conditions)
+**Used in:** [Pentarch](../../pentarch-v10/) (WRN signal indicates distribution phase conditions)
 
 **Related terms:** [Accumulation](#accumulation), [Markup](#markup), [Market Cycle](#market-cycle)
 
@@ -139,7 +139,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Early-Cycle
 **Definition:** The initial phases of a market cycle, typically accumulation and early markup. Pentarch's TD and IGN signals indicate early-cycle conditions.
 
-**Used in:** [Pentarch](../indicators/pentarch-v10.md)
+**Used in:** [Pentarch](../../pentarch-v10/)
 
 **Related terms:** [Late-Cycle](#late-cycle), [Market Cycle](#market-cycle), [TD](#td-touchdown), [IGN](#ign-ignition)
 
@@ -150,7 +150,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Five Cycle Events
 **Definition:** Pentarch's complete signal set: TD (Touchdown), IGN (Ignition), WRN (Warning), CAP (Climax), BDN (Breakdown). Represents progression through market cycle phases.
 
-**Used in:** [Pentarch](../indicators/pentarch-v10.md)
+**Used in:** [Pentarch](../../pentarch-v10/)
 
 **Sequence:** TD → IGN → WRN → CAP → BDN (complete cycle)
 
@@ -161,7 +161,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Four-Layer Detection
 **Definition:** Pentarch's methodology requiring four independent confirmations before signal appears: (1) Regime classification, (2) Pilot Line distance, (3) NanoFlow momentum, (4) Bar close confirmation.
 
-**Used in:** [Pentarch](../indicators/pentarch-v10.md)
+**Used in:** [Pentarch](../../pentarch-v10/)
 
 **Related terms:** [Bar Close Confirmation](#bar-close-confirmation), [Non-Repainting](#non-repainting)
 
@@ -172,7 +172,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Grid View
 **Definition:** Augury Grid's tabular display showing multiple assets simultaneously with their respective Pentarch signals, Janus levels, and Volume Oracle data.
 
-**Used in:** [Augury Grid](../indicators/augury-grid-v10.md)
+**Used in:** [Augury Grid](../../augury-grid-v10/)
 
 **Related terms:** [Multi-Asset Screening](#multi-asset-screening), [Screener](#screener)
 
@@ -183,7 +183,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Harmonic Oscillator
 **Definition:** Signal Pilot indicator using 7-oscillator voting system to generate consensus momentum signals: BUY, SELL, STRONG, NEUT.
 
-**Documentation:** [Harmonic Oscillator v1.0](../indicators/harmonic-oscillator-v10.md)
+**Documentation:** [Harmonic Oscillator v1.0](../../harmonic-oscillator-v10/)
 
 **Related terms:** [Voting System](#voting-system), [Oscillator](#oscillator)
 
@@ -194,7 +194,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### IGN (Ignition)
 **Definition:** Pentarch's second cycle event. Indicates conditions commonly associated with markup phase beginning and bullish momentum breakout.
 
-**Used in:** [Pentarch](../indicators/pentarch-v10.md)
+**Used in:** [Pentarch](../../pentarch-v10/)
 
 **Default Color:** Teal
 
@@ -207,7 +207,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Janus Atlas
 **Definition:** Signal Pilot indicator mapping 39 different price level types across timeframes, sessions, volume analysis, and market structure.
 
-**Documentation:** [Janus Atlas v1.0](../indicators/janus-atlas-v10.md)
+**Documentation:** [Janus Atlas v1.0](../../janus-atlas-v10/)
 
 **Related terms:** [Level](#level), [Support](#support), [Resistance](#resistance), [VWAP](#vwap)
 
@@ -218,7 +218,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Late-Cycle
 **Definition:** The final phases of a market cycle, typically distribution, climax, and decline. Pentarch's WRN, CAP, and BDN signals indicate late-cycle conditions.
 
-**Used in:** [Pentarch](../indicators/pentarch-v10.md)
+**Used in:** [Pentarch](../../pentarch-v10/)
 
 **Related terms:** [Early-Cycle](#early-cycle), [Market Cycle](#market-cycle), [WRN](#wrn-warning), [CAP](#cap-climax)
 
@@ -227,7 +227,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Level
 **Definition:** A specific price point where historical trading activity occurred, potentially causing future price reactions. Janus Atlas identifies 39 different level types.
 
-**Used in:** [Janus Atlas](../indicators/janus-atlas-v10.md)
+**Used in:** [Janus Atlas](../../janus-atlas-v10/)
 
 **Types:** Daily High/Low, Weekly High/Low, Monthly High/Low, VWAP, POC, VAH, VAL, Session levels, etc.
 
@@ -240,7 +240,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Market Cycle
 **Definition:** The progression of market phases: accumulation → markup → distribution → climax → decline. Pentarch identifies position within this cycle.
 
-**Used in:** [Pentarch](../indicators/pentarch-v10.md)
+**Used in:** [Pentarch](../../pentarch-v10/)
 
 **Phases:** Accumulation (TD), Markup (IGN), Distribution (WRN), Climax (CAP), Decline (BDN)
 
@@ -251,7 +251,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Market Structure
 **Definition:** The pattern of swing highs and swing lows that define trend direction and strength. Janus Atlas tracks structure breaks and changes.
 
-**Used in:** [Janus Atlas](../indicators/janus-atlas-v10.md) (Market Structure labels: HH, HL, LH, LL, BOS, CHoCH)
+**Used in:** [Janus Atlas](../../janus-atlas-v10/) (Market Structure labels: HH, HL, LH, LL, BOS, CHoCH)
 
 **Related terms:** [BOS](#bos-break-of-structure), [CHoCH](#choch-change-of-character)
 
@@ -260,7 +260,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Markup
 **Definition:** A market phase where price rises after accumulation, characterized by increasing momentum and participation.
 
-**Used in:** [Pentarch](../indicators/pentarch-v10.md) (IGN signal indicates markup phase beginning)
+**Used in:** [Pentarch](../../pentarch-v10/) (IGN signal indicates markup phase beginning)
 
 **Related terms:** [Accumulation](#accumulation), [Distribution](#distribution), [Market Cycle](#market-cycle)
 
@@ -269,7 +269,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Multi-Asset Screening
 **Definition:** Simultaneous analysis of multiple symbols/markets to identify setups meeting specific criteria.
 
-**Used in:** [Augury Grid](../indicators/augury-grid-v10.md)
+**Used in:** [Augury Grid](../../augury-grid-v10/)
 
 **Related terms:** [Grid View](#grid-view), [Screener](#screener)
 
@@ -280,7 +280,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### NanoFlow
 **Definition:** Pentarch's momentum component oscillating between -100 and +100. Contributes to Four-Layer Detection System by validating momentum characteristics.
 
-**Used in:** [Pentarch](../indicators/pentarch-v10.md)
+**Used in:** [Pentarch](../../pentarch-v10/)
 
 **Display:** Separate panel below chart
 
@@ -302,7 +302,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### OBV (On-Balance Volume)
 **Definition:** Cumulative volume indicator adding volume on up-days and subtracting volume on down-days. Plutus Flow uses advanced OBV methodology for divergence detection.
 
-**Used in:** [Plutus Flow](../indicators/plutus-flow-v10.md)
+**Used in:** [Plutus Flow](../../plutus-flow-v10/)
 
 **Related terms:** [Divergence](#divergence), [Volume-Weighted](#volume-weighted)
 
@@ -311,7 +311,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Omnideck
 **Definition:** Signal Pilot's comprehensive all-in-one indicator containing 8 integrated systems: TD Sequential, VWAP, Oscillators, Volume Flow, Regime Classification, NanoFlow, Zones, and Levels.
 
-**Documentation:** [Omnideck v1.0](../indicators/omnideck-v10.md)
+**Documentation:** [Omnideck v1.0](../../omnideck-v10/)
 
 **Difficulty:** Advanced (100+ hour learning curve)
 
@@ -322,7 +322,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Oscillator
 **Definition:** A technical indicator that fluctuates between defined boundaries (e.g., 0-100), typically used to identify overbought/oversold conditions or momentum shifts.
 
-**Used in:** [Harmonic Oscillator](../indicators/harmonic-oscillator-v10.md) (7 oscillators: RSI, Stochastic, CCI, Williams %R, MFI, Ultimate Oscillator, ROC)
+**Used in:** [Harmonic Oscillator](../../harmonic-oscillator-v10/) (7 oscillators: RSI, Stochastic, CCI, Williams %R, MFI, Ultimate Oscillator, ROC)
 
 **Related terms:** [Momentum](#momentum), [Voting System](#voting-system)
 
@@ -333,7 +333,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Pentarch
 **Definition:** Signal Pilot's cycle phase detection indicator. Identifies market position across five distinct cycle events (TD, IGN, WRN, CAP, BDN).
 
-**Documentation:** [Pentarch v1.0](../indicators/pentarch-v10.md)
+**Documentation:** [Pentarch v1.0](../../pentarch-v10/)
 
 **Related terms:** [Five Cycle Events](#five-cycle-events), [Market Cycle](#market-cycle)
 
@@ -342,7 +342,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Pilot Line
 **Definition:** Pentarch's adaptive trend line serving as reference for signal distance calculations. Changes color based on regime classification.
 
-**Used in:** [Pentarch](../indicators/pentarch-v10.md)
+**Used in:** [Pentarch](../../pentarch-v10/)
 
 **Colors:** Blue (bearish regime), Green (bullish regime), Gray (neutral)
 
@@ -353,7 +353,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Plutus Flow
 **Definition:** Signal Pilot's OBV-based divergence detection indicator. Tracks cumulative volume direction to identify accumulation/distribution and price-volume divergences.
 
-**Documentation:** [Plutus Flow v1.0](../indicators/plutus-flow-v10.md)
+**Documentation:** [Plutus Flow v1.0](../../plutus-flow-v10/)
 
 **Related terms:** [OBV](#obv-on-balance-volume), [Divergence](#divergence)
 
@@ -362,7 +362,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### POC (Point of Control)
 **Definition:** The price level with highest traded volume during a specified period. Represents area of greatest acceptance/agreement.
 
-**Used in:** [Janus Atlas](../indicators/janus-atlas-v10.md) (one of 39 level types)
+**Used in:** [Janus Atlas](../../janus-atlas-v10/) (one of 39 level types)
 
 **Related terms:** [VAH](#vah-value-area-high), [VAL](#val-value-area-low), [Volume Profile](#volume-profile)
 
@@ -371,7 +371,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Position Manager
 **Definition:** Volume Oracle's position tracking system. Displays entry price, breakeven line, and real-time P&L on chart.
 
-**Used in:** [Volume Oracle](../indicators/volume-oracle-v10.md) (System 3)
+**Used in:** [Volume Oracle](../../volume-oracle-v10/) (System 3)
 
 **Features:** Live P&L tracking, breakeven line, percentage/points display
 
@@ -382,7 +382,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Regime Classification
 **Definition:** Pentarch's system for identifying market structure state: bullish, bearish, or neutral. First layer of Four-Layer Detection System.
 
-**Used in:** [Pentarch](../indicators/pentarch-v10.md), [Omnideck](../indicators/omnideck-v10.md)
+**Used in:** [Pentarch](../../pentarch-v10/), [Omnideck](../../omnideck-v10/)
 
 **Visual:** Candle body colors (Green=bullish, Red=bearish, Gray=neutral)
 
@@ -400,7 +400,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Resistance
 **Definition:** A price level where selling pressure historically exceeded buying pressure, potentially causing price to pause or reverse. Identified by Janus Atlas High levels.
 
-**Used in:** [Janus Atlas](../indicators/janus-atlas-v10.md)
+**Used in:** [Janus Atlas](../../janus-atlas-v10/)
 
 **Related terms:** [Support](#support), [Level](#level), [Cluster](#cluster-level-cluster)
 
@@ -411,7 +411,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Screener
 **Definition:** Tool for filtering multiple assets based on specific criteria to identify trading opportunities.
 
-**Used in:** [Augury Grid](../indicators/augury-grid-v10.md)
+**Used in:** [Augury Grid](../../augury-grid-v10/)
 
 **Related terms:** [Multi-Asset Screening](#multi-asset-screening), [Grid View](#grid-view)
 
@@ -420,7 +420,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Support
 **Definition:** A price level where buying pressure historically exceeded selling pressure, potentially causing price to pause or reverse. Identified by Janus Atlas Low levels.
 
-**Used in:** [Janus Atlas](../indicators/janus-atlas-v10.md)
+**Used in:** [Janus Atlas](../../janus-atlas-v10/)
 
 **Related terms:** [Resistance](#resistance), [Level](#level), [Cluster](#cluster-level-cluster)
 
@@ -431,7 +431,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### TD (Touchdown)
 **Definition:** Pentarch's first cycle event. Indicates conditions commonly associated with accumulation phase beginning and oversold characteristics.
 
-**Used in:** [Pentarch](../indicators/pentarch-v10.md)
+**Used in:** [Pentarch](../../pentarch-v10/)
 
 **Default Color:** Purple
 
@@ -442,7 +442,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### TD Sequential
 **Definition:** Tom DeMark's sequential counting system for identifying potential exhaustion points. Omnideck includes full TD Sequential implementation.
 
-**Used in:** [Omnideck](../indicators/omnideck-v10.md)
+**Used in:** [Omnideck](../../omnideck-v10/)
 
 **Counts:** Setup (1-9), Countdown (1-13)
 
@@ -467,7 +467,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### VAH (Value Area High)
 **Definition:** The upper boundary of the range containing 70% of traded volume during a specified period. Part of Volume Profile analysis.
 
-**Used in:** [Janus Atlas](../indicators/janus-atlas-v10.md) (one of 39 level types)
+**Used in:** [Janus Atlas](../../janus-atlas-v10/) (one of 39 level types)
 
 **Related terms:** [VAL](#val-value-area-low), [POC](#poc-point-of-control), [Volume Profile](#volume-profile)
 
@@ -476,7 +476,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### VAL (Value Area Low)
 **Definition:** The lower boundary of the range containing 70% of traded volume during a specified period. Part of Volume Profile analysis.
 
-**Used in:** [Janus Atlas](../indicators/janus-atlas-v10.md) (one of 39 level types)
+**Used in:** [Janus Atlas](../../janus-atlas-v10/) (one of 39 level types)
 
 **Related terms:** [VAH](#vah-value-area-high), [POC](#poc-point-of-control), [Volume Profile](#volume-profile)
 
@@ -485,7 +485,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Volume Oracle
 **Definition:** Signal Pilot's three-system volume analysis indicator combining Volume Flow, Volume Zones, and Position Manager.
 
-**Documentation:** [Volume Oracle v1.0](../indicators/volume-oracle-v10.md)
+**Documentation:** [Volume Oracle v1.0](../../volume-oracle-v10/)
 
 **Systems:** (1) Volume Flow bars, (2) Volume Zones boxes, (3) Position Manager P&L
 
@@ -496,7 +496,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Volume Profile
 **Definition:** Analysis method showing volume distribution across price levels. Identifies POC (most traded price), VAH, and VAL.
 
-**Used in:** [Janus Atlas](../indicators/janus-atlas-v10.md) (POC, VAH, VAL levels)
+**Used in:** [Janus Atlas](../../janus-atlas-v10/) (POC, VAH, VAL levels)
 
 **Related terms:** [POC](#poc-point-of-control), [VAH](#vah-value-area-high), [VAL](#val-value-area-low)
 
@@ -505,7 +505,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Volume Spike
 **Definition:** Volume significantly above average (typically >1.5x-2.0x). Volume Oracle highlights spikes to identify institutional participation.
 
-**Used in:** [Volume Oracle](../indicators/volume-oracle-v10.md)
+**Used in:** [Volume Oracle](../../volume-oracle-v10/)
 
 **Thresholds:** 1.5x (moderate), 2.0x (strong), 2.5x+ (very strong)
 
@@ -516,7 +516,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Volume Zone
 **Definition:** Price range where significant volume accumulated. Volume Oracle displays zones as horizontal boxes on chart.
 
-**Used in:** [Volume Oracle](../indicators/volume-oracle-v10.md) (System 2)
+**Used in:** [Volume Oracle](../../volume-oracle-v10/) (System 2)
 
 **Related terms:** [Volume Spike](#volume-spike), [Support](#support), [Resistance](#resistance)
 
@@ -525,7 +525,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Volume-Weighted
 **Definition:** Calculation method giving more weight to periods with higher volume. Used in VWAP and related indicators.
 
-**Used in:** [Janus Atlas](../indicators/janus-atlas-v10.md) (VWAP levels)
+**Used in:** [Janus Atlas](../../janus-atlas-v10/) (VWAP levels)
 
 **Related terms:** [VWAP](#vwap), [Anchored VWAP](#anchored-vwap)
 
@@ -534,7 +534,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Voting System
 **Definition:** Harmonic Oscillator's methodology where 7 independent oscillators each "vote" bullish or bearish. Signal generated based on consensus (3+ votes).
 
-**Used in:** [Harmonic Oscillator](../indicators/harmonic-oscillator-v10.md)
+**Used in:** [Harmonic Oscillator](../../harmonic-oscillator-v10/)
 
 **Signals:**
 - 3+ bullish votes = BUY
@@ -549,7 +549,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### VWAP (Volume-Weighted Average Price)
 **Definition:** Average price weighted by volume. Represents the mean price at which an asset traded during the period, giving more importance to high-volume price levels.
 
-**Used in:** [Janus Atlas](../indicators/janus-atlas-v10.md) (Daily, Weekly, Monthly VWAP levels), [Omnideck](../indicators/omnideck-v10.md)
+**Used in:** [Janus Atlas](../../janus-atlas-v10/) (Daily, Weekly, Monthly VWAP levels), [Omnideck](../../omnideck-v10/)
 
 **Related terms:** [Anchored VWAP](#anchored-vwap), [Volume-Weighted](#volume-weighted)
 
@@ -560,7 +560,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### WRN (Warning)
 **Definition:** Pentarch's third cycle event. Indicates conditions commonly associated with distribution phase and momentum weakening characteristics.
 
-**Used in:** [Pentarch](../indicators/pentarch-v10.md)
+**Used in:** [Pentarch](../../pentarch-v10/)
 
 **Default Color:** Yellow
 
