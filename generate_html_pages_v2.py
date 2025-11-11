@@ -49,6 +49,18 @@ PAGES = [
         "html_path": "/home/user/signalpilot-docs/troubleshooting-installation/index.html",
         "title": "Installation Troubleshooting - Signal Pilot Docs",
         "description": "Resolve common issues when installing or loading Signal Pilot indicators. Step-by-step solutions for access, loading, and signal problems."
+    },
+    {
+        "md_path": "/home/user/signalpilot-docs/docs/configuration-wizard.md",
+        "html_path": "/home/user/signalpilot-docs/docs/configuration-wizard/index.html",
+        "title": "Configuration Wizard - Signal Pilot Docs",
+        "description": "Interactive guide to configure Signal Pilot indicators based on your trading style, asset type, and experience level."
+    },
+    {
+        "md_path": "/home/user/signalpilot-docs/docs/search-guide.md",
+        "html_path": "/home/user/signalpilot-docs/docs/search-guide/index.html",
+        "title": "Search Guide & Quick Links - Signal Pilot Docs",
+        "description": "Quick links to the most commonly searched Signal Pilot documentation topics and resources."
     }
 ]
 
