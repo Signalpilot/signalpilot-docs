@@ -879,6 +879,94 @@ Single isolated levels have less significance than clusters where multiple level
 
 ---
 
+## ⚠️ Common Mistakes to Avoid
+
+### ❌ Mistake #1: Enabling All 39 Levels at Once (Visual Overload)
+
+**Why it's wrong:**
+- Too many lines create chart clutter and analysis paralysis
+- Can't distinguish important levels from noise
+- Overwhelming for beginners trying to learn level reactions
+
+**What to do instead:**
+✅ Start with 5 core levels: Daily H/L, Weekly H/L, Anchored VWAP
+✅ Add 5 more levels every 1-2 weeks as you master each set
+✅ Disable levels you don't actively use in your strategy
+
+**Progressive approach:**
+- Week 1-2: Daily/Weekly H/L + Anchored VWAP (5 levels)
+- Week 3-4: Add Monthly H/L + POC + VAH/VAL (5 more)
+- Week 5+: Gradually add session levels, market structure, etc.
+
+---
+
+### ❌ Mistake #2: Trading Every Level Touch Without Confirmation
+
+**Why it's wrong:**
+- Price touches hundreds of levels daily—not all are significant
+- Individual levels have lower probability than level clusters
+- No volume or momentum confirmation = 50/50 coin flip
+
+**What to do instead:**
+✅ Only trade level CLUSTERS (3+ levels within 1-2%)
+✅ Wait for Volume Oracle spike (>1.5x average) at the level
+✅ Combine with Pentarch signal (TD at support, CAP at resistance)
+
+**High-probability setup:** Level cluster + Volume spike + Pentarch signal = 3-factor confluence
+
+---
+
+### ❌ Mistake #3: Using Wrong Levels for Your Timeframe
+
+**Why it's wrong:**
+- Daily High/Low on 1-minute chart = too slow, misses intraday moves
+- Minute-level market structure on Daily chart = irrelevant noise
+- Mismatch between level timeframe and trading timeframe reduces effectiveness
+
+**What to do instead:**
+✅ **Scalping (1m-5m):** Use Intraday H/L, Session ranges, Intraday VWAP
+✅ **Day Trading (5m-1H):** Use Daily H/L, Previous Close, Daily VWAP, Session levels
+✅ **Swing Trading (1H-Daily):** Use Weekly/Monthly H/L, Weekly VWAP, POC/VAH/VAL
+✅ **Position Trading (Daily-Weekly):** Use Monthly/Quarterly/Yearly levels
+
+**Rule of thumb:** Your level timeframe should be 1-2 steps above your chart timeframe
+
+---
+
+### ❌ Mistake #4: Expecting Exact Bounces at Every Level (Ignoring Wicks)
+
+**Why it's wrong:**
+- Levels are zones, not precise lines
+- Price often wicks through levels by 0.5-1% before reversing
+- Stop losses placed exactly at levels get hunted frequently
+
+**What to do instead:**
+✅ Treat levels as zones with ±0.5-1% buffer (e.g., Daily High at 50,000 = zone 49,500-50,500)
+✅ Place stops 1-2% beyond levels, not exactly at levels
+✅ Observe historical wicks at each level to determine buffer size
+✅ Use limit orders inside the zone, not market orders at the line
+
+**Better mindset:** "Price tested the 50K zone" (49.8K-50.2K) vs "Price must bounce at exactly 50K"
+
+---
+
+### ❌ Mistake #5: Forgetting to Adjust Anchored VWAP After Major Events
+
+**Why it's wrong:**
+- Anchored VWAP anchors to a specific bar (e.g., session open, swing high/low)
+- After major moves or new sessions, old anchors become irrelevant
+- Outdated anchors give false support/resistance signals
+
+**What to do instead:**
+✅ Re-anchor VWAP daily at session open (auto-updates with Daily/Weekly VWAP)
+✅ Manually re-anchor at significant swing highs/lows after major trends
+✅ Use multiple anchored VWAPs: current session + previous major swing
+✅ Check VWAP settings to ensure "Auto Update" is enabled for daily/weekly variants
+
+**Quick check:** If Anchored VWAP hasn't updated in 3+ days, re-anchor at recent swing high/low
+
+---
+
 ## 🔗 Related Topics
 
 ### Learn More About Janus Atlas

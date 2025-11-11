@@ -884,6 +884,88 @@ Reversal:     BDN → TD → IGN
 
 ---
 
+## ⚠️ Common Mistakes to Avoid
+
+### ❌ Mistake #1: Trading Every TD Without Waiting for IGN Confirmation
+
+**Why it's wrong:**
+- Not every TD leads to IGN (incomplete cycles are normal)
+- TD alone indicates accumulation phase *conditions*, not guaranteed reversal
+- TD without IGN follow-through often results in false starts
+
+**What to do instead:**
+✅ Use TD as early warning, wait for IGN confirmation before taking action
+✅ Combine TD with Janus level cluster + Volume spike for higher probability
+✅ Track TD→IGN success rate on your asset/timeframe before trading
+
+**Example:** TD at 48,000 → wait 1-7 bars → if IGN confirms at 48,500, then consider entry
+
+---
+
+### ❌ Mistake #2: Ignoring Timeframe Suitability (Using on 1m/5m Charts)
+
+**Why it's wrong:**
+- Pentarch requires minimum 15m timeframe for reliable detection
+- Lower timeframes (1m-5m) create too much noise and false signals
+- Four-layer detection system needs sufficient data for accurate confirmation
+
+**What to do instead:**
+✅ Use Pentarch on 15m minimum, ideally 1H-Daily for clearest patterns
+✅ For scalping (1m-5m), use Volume Oracle or Harmonic Oscillator instead
+✅ Multi-timeframe approach: Daily Pentarch for bias, 1H for timing
+
+**Recommended timeframes:** 15m, 1H, 4H, Daily, Weekly
+
+---
+
+### ❌ Mistake #3: Trading Late-Cycle Signals (CAP/BDN) as Reversal Entries
+
+**Why it's wrong:**
+- CAP/BDN indicate exhaustion, but timing reversal entries is difficult
+- Late-cycle signals often appear before final blow-off moves
+- Higher risk entering at potential tops/bottoms without confirmation
+
+**What to do instead:**
+✅ Use CAP/BDN as exit signals for existing positions, not new entries
+✅ Wait for early-cycle signals (TD→IGN) for lower-risk entries
+✅ If trading reversals, wait for TD *after* BDN, not at BDN itself
+
+**Better approach:** CAP = take profits → wait → TD = prepare → IGN = enter
+
+---
+
+### ❌ Mistake #4: Expecting All 5 Signals in Perfect Sequence Every Time
+
+**Why it's wrong:**
+- Complete cycles (TD→IGN→WRN→CAP→BDN) are not guaranteed
+- Markets shift phases without completing full sequences
+- Waiting for "perfect" cycles means missing many valid setups
+
+**What to do instead:**
+✅ Recognize partial sequences are normal (e.g., TD→IGN→WRN, then restart)
+✅ Focus on high-probability patterns: TD→IGN (early cycle) or WRN→CAP (late cycle)
+✅ Use confluence with other indicators to validate incomplete cycles
+
+**Reality:** 40-60% of cycles are incomplete—this is normal market behavior
+
+---
+
+### ❌ Mistake #5: Overloading Chart with Too Many Indicators Alongside Pentarch
+
+**Why it's wrong:**
+- Analysis paralysis from conflicting signals across 5-7 indicators
+- Visual clutter reduces ability to see Pentarch patterns clearly
+- More indicators ≠ better decisions
+
+**What to do instead:**
+✅ Start with The Trinity: Pentarch + Janus Atlas + Volume Oracle (3 max)
+✅ Add one indicator at a time, master it, then add another
+✅ Remove indicators that consistently conflict or add no value
+
+**Optimal setup:** Pentarch (signals) + Janus (levels) + Volume (confirmation) = 3 complementary tools
+
+---
+
 ## 🔗 Related Topics
 
 ### Learn More About Pentarch

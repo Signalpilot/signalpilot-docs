@@ -804,6 +804,89 @@ A "high volume" spike on a stock that typically trades 100K shares/day (500K spi
 
 ---
 
+## ⚠️ Common Mistakes to Avoid
+
+### ❌ Mistake #1: Ignoring Volume Zones, Only Watching Volume Spikes
+
+**Why it's wrong:**
+- Volume Zones show accumulated volume areas (support/resistance)
+- Spikes are single-bar events—zones show where institutions accumulated over time
+- Missing zones = missing the most significant volume-based levels
+
+**What to do instead:**
+✅ Use Volume Zones (System 2) to identify key price areas FIRST
+✅ Then watch for Volume Spikes (green/red bars) AT those zones for confirmation
+✅ Combine: Zone + Spike + Janus level = highest probability setup
+
+**Better approach:** Zones = where to watch, Spikes = when to act
+
+---
+
+### ❌ Mistake #2: Trading Every Green Volume Bar as a Buy Signal
+
+**Why it's wrong:**
+- Green bars = buying pressure, NOT buy signals
+- High volume can occur during distribution (smart money exiting into demand)
+- Volume confirms price action—it doesn't predict direction alone
+
+**What to do instead:**
+✅ Green volume bar + price bounce at Janus support = bullish confirmation
+✅ Green volume bar + price rejection at resistance = potential trap (distribution)
+✅ Always combine volume with price structure and Pentarch cycle phase
+
+**Key insight:** Volume tells you STRENGTH of move, not DIRECTION of next move
+
+---
+
+### ❌ Mistake #3: Using Volume Oracle on Forex Spot Pairs (No Real Volume Data)
+
+**Why it's wrong:**
+- Forex spot markets (EUR/USD, GBP/USD) have NO centralized volume data
+- TradingView shows "tick volume" (price updates) not actual traded volume
+- Volume Oracle designed for markets with real volume: stocks, crypto, futures
+
+**What to do instead:**
+✅ **For Forex:** Use currency futures (6E, 6B, 6J) instead of spot pairs—they have real volume
+✅ **Or:** Skip Volume Oracle for forex, use Pentarch + Janus + Harmonic instead
+✅ **Crypto/Stocks/Futures:** Volume Oracle works perfectly (real volume data)
+
+**Rule:** If your asset shows "volume" but it's decentralized (spot forex), use futures or skip volume analysis
+
+---
+
+### ❌ Mistake #4: Misinterpreting Position Manager as Entry Signal Generator
+
+**Why it's wrong:**
+- Position Manager (System 3) tracks existing positions—it doesn't generate entry signals
+- It calculates P&L and breakeven after you've already entered
+- Trying to use it for entries misunderstands its purpose
+
+**What to do instead:**
+✅ Use Systems 1-2 (Volume Flow + Zones) for analysis and confirmation
+✅ Enter trade based on confluence: Pentarch + Janus + Volume spike
+✅ THEN use Position Manager to track your P&L, breakeven, and risk/reward
+
+**Workflow:** Analyze → Confirm → Enter → Track with Position Manager
+
+---
+
+### ❌ Mistake #5: Expecting Volume Confirmation on Every Pentarch Signal
+
+**Why it's wrong:**
+- Not all Pentarch signals occur with volume spikes (especially late-night/low liquidity)
+- Some cycle phases (accumulation/distribution) happen quietly without volume explosions
+- Demanding volume on every signal = missing valid low-volume accumulation setups
+
+**What to do instead:**
+✅ High volume preferred but not required for all signals
+✅ Low-volume TD at Janus support = stealth accumulation (still valid)
+✅ Require volume confirmation for CAP/BDN (exhaustion) signals
+✅ Track your success rate: volume vs no-volume setups on your asset
+
+**Flexibility:** Volume spike = higher probability, but absence doesn't invalidate setup
+
+---
+
 ## 🔗 Related Topics
 
 ### Learn More About Volume Oracle
