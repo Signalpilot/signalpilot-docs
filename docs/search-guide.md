@@ -114,4 +114,20 @@ We'll respond within 24 hours and may add your query to this page to help others
 
 ---
 
+## 🔗 Related Pages
+
+**Configuration:**
+- [Configuration Wizard](configuration-wizard.md) - Personalized settings for your trading style
+- [Which Indicator to Start?](start-which-indicator.md) - Decision tree for beginners
+
+**Learning:**
+- [Learning Paths](start-learning-path/index.md) - Structured progression guides
+- [Glossary](ref-glossary/index.md) - Trading terms explained
+
+**Reference:**
+- [Indicator Comparison](ref-comparison/indicator-comparison.md) - Side-by-side features
+- [Best Practices](ref-best-practices/) - Common workflows
+
+---
+
 **Last Updated:** January 2025

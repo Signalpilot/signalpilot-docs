@@ -322,4 +322,23 @@ We're building a collaborative learning environment for Signal Pilot users. Chec
 
 ---
 
+## 🔗 Related Resources
+
+**Getting Started:**
+- [Configuration Wizard](../configuration-wizard.md) - Set up your indicators
+- [Which Indicator to Start?](../start-which-indicator.md) - Choose your first indicator
+- [Learning Paths](../start-learning-path/index.md) - Structured progression
+
+**Documentation:**
+- [All Indicators At-A-Glance](../ref-cheatsheets/) - Quick reference for all 7 indicators
+- [Glossary](../ref-glossary/index.md) - Trading terms defined
+- [Troubleshooting](../ref-troubleshooting/) - Common issues and solutions
+
+**Support:**
+- Email: support@signalpilot.io
+- [GitHub Discussions](https://github.com/Signalpilot/signalpilot-docs/discussions)
+- [FAQ](../about-faq/) - Frequently asked questions
+
+---
+
 **Last Updated:** January 2025
