@@ -167,8 +167,8 @@ Answer 5 quick questions below, then jump to your recommended configuration sect
 
 **Harmonic Oscillator Settings:**
 - All default settings
-- Watch for: BUY/SELL + STRONG signals
-- Ignore: NEUT (stay out)
+- Primary signals: BUY/SELL + STRONG (higher confidence)
+- NEUT signals: Typically indicate neutral conditions (lower conviction for entries)
 
 **Chart Setup:**
 - Timeframe: 5m chart
@@ -208,42 +208,42 @@ Answer 5 quick questions below, then jump to your recommended configuration sect
 **Volume Oracle Settings:**
 - Enable: All 3 systems (Flow + Zones + Position Manager)
 - **Spike Threshold: 1.3x** (crypto has more volatile volume than stocks)
-- Volume Flow: Watch for green bars >1.3x average
+- Volume Flow: Green bars exceeding 1.3x average indicate heightened activity
 - Volume Zones: Accumulation = support, Distribution = resistance
-- Position Manager: Track real-time P&L
+- Position Manager: Provides real-time P&L tracking
 
-**The Workflow (High-Probability Setup):**
+**Common Workflow (High-Probability Setup):**
 
 **Step 1: Pattern Recognition**
-- Scan 1H chart for Pentarch TD signal
-- **What you're looking for:** Small orange triangle below price (bullish TD) or above (bearish TD)
-- **Mindset:** TD is NOT an entry - it's a "watch this area" signal
+- Traders typically scan the 1H chart for Pentarch TD signals
+- **Signal appearance:** Small orange triangle below price (bullish TD) or above (bearish TD)
+- **Common interpretation:** TD represents a "watch this area" signal rather than an immediate entry
 
-**Step 2: Level Confluence Check**
-- Did TD appear AT or NEAR a Janus level?
-- **Perfect scenarios:**
+**Step 2: Level Confluence Analysis**
+- The analysis examines whether TD appeared at or near a Janus level
+- **High-probability scenarios observed:**
   - TD at Daily Low + 4H Low (double level cluster)
   - TD at Daily VWAP (often acts as magnet)
   - TD at Anchored VWAP from major swing low
-- **Skip the trade if:** TD appears in middle of nowhere (no level support)
+- **Lower-probability scenario:** TD appearing in middle of range with no level support
 
 **Step 3: Volume Confirmation**
-- Check Volume Oracle for spike >1.3x when TD printed
-- **What to look for:**
-  - Green volume bar >1.3x average volume
+- Volume Oracle analysis looks for spikes >1.3x when TD printed
+- **Confirmation signals:**
+  - Green volume bar exceeding 1.3x average volume
   - Volume Zone showing accumulation (green zone building)
-- **Warning sign:** TD without volume spike = low conviction, skip
+- **Lower-confidence signal:** TD without volume spike tends to have reduced reliability
 
-**Step 4: Entry Trigger**
-- Wait for Pentarch IGN signal (confirms TD wasn't false)
-- **Entry:** Place buy order when IGN appears
-- **Stop Loss:** Below TD candle low (typically 2-4% on crypto)
-- **Position Size:** Risk 1-2% of account on stop
+**Step 4: Entry Signal**
+- Traders commonly wait for Pentarch IGN signal (confirms TD validity)
+- **Entry timing:** Orders typically placed when IGN appears
+- **Stop placement:** Commonly positioned below TD candle low (typically 2-4% on crypto)
+- **Position sizing:** Many traders risk 1-2% of account per trade
 
 **Step 5: Trade Management**
-- **First target:** Pentarch WRN signal → Take 50% profit
-- **Second target:** Pentarch CAP signal → Exit remaining 50%
-- **Trail stop:** Move stop to break-even after WRN appears
+- **First target:** WRN signal commonly triggers 50% profit-taking
+- **Second target:** CAP signal often triggers exit of remaining 50%
+- **Stop adjustment:** Stops frequently moved to break-even after WRN appears
 
 **Real Example (Bitcoin 1H):**
 ```
@@ -259,18 +259,18 @@ BTC at $28,450
 Total gain: $3,000 on 1 BTC position = 10.5% gain
 ```
 
-**Pro Tips:**
-- **Best times:** Major liquidity events (US market open, Asia open affect crypto)
-- **Avoid:** Low-volume periods (weekends often have false signals)
-- **Confluence is king:** 3-factor setups (Pentarch + Janus + Volume) have 60-70% success rate vs 40-45% for single-factor
-- **Patience pays:** Wait for ALL 3 confirmations - missing one drops success rate dramatically
+**Observations from Experienced Traders:**
+- **Higher-probability timing:** Major liquidity events (US market open, Asia open) tend to produce clearer signals
+- **Lower-probability periods:** Weekends and low-volume periods often generate more false signals
+- **Confluence advantage:** 3-factor setups (Pentarch + Janus + Volume) show 60-70% success rate vs 40-45% for single-factor
+- **Confirmation value:** Waiting for all 3 confirmations correlates with higher success rates
 
-**Common Mistakes to Avoid:**
-1. **Trading TD without IGN** → 60% of TDs fail without IGN confirmation
-2. **Ignoring Janus levels** → TDs in middle of range have 30% lower success
-3. **No volume confirmation** → Volume spikes increase success rate by 15-20%
-4. **Holding past CAP** → CAP signals exhaustion, staying in risks giving back gains
-5. **Using too many levels** → More than 8 Janus levels = visual clutter and analysis paralysis
+**Common Patterns Observed:**
+1. **TD without IGN** → Approximately 60% of TDs without IGN confirmation tend to fail
+2. **TDs without level support** → TDs in middle of range show 30% lower success rates
+3. **Volume correlation** → Volume spikes correlate with 15-20% higher success rates
+4. **Holding past CAP** → CAP signals often mark exhaustion; continuing to hold tends to reduce gains
+5. **Level overload** → More than 8 Janus levels correlates with reduced clarity and decision quality
 
 **Expected Results (with discipline):**
 - Win rate: 60-70% with full 3-factor confluence
@@ -291,7 +291,7 @@ Total gain: $3,000 on 1 BTC position = 10.5% gain
 **Pentarch Settings:**
 - Chart: Daily timeframe
 - All defaults
-- Track complete sequences: TD→IGN→WRN→CAP
+- Complete signal sequences observed: TD→IGN→WRN→CAP
 
 **Janus Atlas Settings:**
 - Enable: Weekly H/L, Monthly H/L, Weekly VWAP, POC/VAH/VAL (8-10 levels)
@@ -300,13 +300,13 @@ Total gain: $3,000 on 1 BTC position = 10.5% gain
 **Augury Grid Settings:**
 - Add 20-30 crypto pairs (BTC, ETH, top alts)
 - Scan for TD signals across grid
-- Use for opportunity identification
+- Commonly used for multi-asset opportunity identification
 
-**Workflow:**
-1. Morning scan: Check Augury Grid for TD signals
-2. Switch to asset chart, verify TD at Janus Weekly Low
-3. Volume spike >1.5x
-4. Enter swing position, hold for IGN→WRN→CAP sequence
+**Common Workflow:**
+1. Morning scans using Augury Grid identify potential TD signals
+2. Individual asset charts are analyzed to verify TD at Janus Weekly levels
+3. Volume spikes exceeding 1.5x provide confirmation
+4. Swing positions commonly held through complete IGN→WRN→CAP signal sequence
 
 ---
 
@@ -357,41 +357,41 @@ Total gain: $3,000 on 1 BTC position = 10.5% gain
 - **Volume Zones:** Accumulation zones = institutional buying (support)
 - **Position Manager:** CRITICAL for stocks - shows real-time P&L and tracks multiple positions
 
-**The Workflow (Professional Day Trading Setup):**
+**Common Workflow (Professional Day Trading Approach):**
 
 **Pre-Market Preparation (8:00am-9:30am ET):**
-1. Identify Premarket High/Low using Janus Atlas
-2. Note Previous Close level (this is your "magnet" - price returns here 70% of the time)
-3. Check SPY direction (up = trade longs, down = trade shorts, sideways = wait)
-4. Add Opening Range levels when market opens (9:30am-10am range)
+1. Traders commonly identify Premarket High/Low using Janus Atlas
+2. Previous Close level is noted (price tends to return here in approximately 70% of sessions)
+3. SPY direction is observed (uptrend favors longs, downtrend favors shorts, sideways suggests waiting)
+4. Opening Range levels are tracked when market opens (9:30am-10am range)
 
-**Step 1: Wait for Setup (9:45am-11:30am)**
-- Let opening volatility settle (first 15 minutes often choppy)
-- **Watch for:** Pentarch TD at one of these POWER LEVELS:
-  - **Previous Close** (highest probability level)
+**Step 1: Setup Recognition (9:45am-11:30am)**
+- Opening volatility typically settles after the first 15 minutes
+- **Traders commonly watch for:** Pentarch TD at these key levels:
+  - **Previous Close** (historically shows highest probability)
   - **Opening Range High/Low**
   - **Premarket High/Low**
-  - **Daily VWAP** (especially if price is ranging)
+  - **Daily VWAP** (particularly in ranging conditions)
 
-**Step 2: The 4-Factor Confluence Check**
-- **Factor 1:** Pentarch TD appears
-- **Factor 2:** TD is AT a Janus level (within 0.5% = at the level)
-- **Factor 3:** Volume Oracle spikes >1.5x
-- **Factor 4:** SPY is confirming direction (if SPY up, take long TDs; if SPY down, take short TDs)
-- **Required:** ALL 4 factors must align - if one missing, skip the trade
+**Step 2: The 4-Factor Confluence Analysis**
+- **Factor 1:** Pentarch TD signal appears
+- **Factor 2:** TD occurs at a Janus level (within 0.5%)
+- **Factor 3:** Volume Oracle shows spike >1.5x
+- **Factor 4:** SPY confirms directional bias (SPY up supports longs; SPY down supports shorts)
+- **Observation:** Setups with all 4 factors tend to show higher success rates
 
-**Step 3: Entry Execution**
-- Wait for Pentarch IGN (typically 1-4 candles after TD)
-- **Entry:** Market order when IGN appears (or limit at IGN candle close)
-- **Stop Loss:** Below TD low (long) or above TD high (short)
-- **Typical stop:** 0.3-0.8% on large caps, 1-2% on small caps
-- **Position size:** Risk 1% of account (e.g., $100K account = $1,000 risk per trade)
+**Step 3: Entry Signal**
+- Traders typically wait for Pentarch IGN (usually 1-4 candles after TD)
+- **Entry timing:** Orders commonly placed when IGN appears (market or limit at candle close)
+- **Stop placement:** Commonly positioned below TD low (long) or above TD high (short)
+- **Typical stop distance:** 0.3-0.8% on large caps, 1-2% on small caps
+- **Position sizing:** Common approach risks 1% of account (e.g., $100K account = $1,000 risk per trade)
 
-**Step 4: Trade Management (The 50/25/25 Rule)**
-- **At WRN:** Take 50% profit, move stop to break-even
-- **At CAP:** Take 25% more profit (75% out total)
-- **Final 25%:** Trail stop or hold for outsized move
-- **Reason:** Locks in gains while leaving room for runners
+**Step 4: Trade Management (The 50/25/25 Approach)**
+- **At WRN:** 50% profit commonly taken, stop moved to break-even
+- **At CAP:** Additional 25% commonly closed (75% total)
+- **Final 25%:** Often held with trailing stop for extended moves
+- **Rationale:** Balances locking gains with capturing potential larger moves
 
 **Real Example (Apple - AAPL 15m Chart):**
 ```
@@ -432,24 +432,24 @@ Reward/Risk: 2:1 (textbook trade)
 Time in trade: 2h 20min
 ```
 
-**Power Hour (2:30pm-4pm ET) Strategy:**
-- **Setup:** Same as morning, but use Opening Range levels + Previous Close
-- **Best signals:** TD at Previous Close during power hour = institutions repositioning
-- **Exit rule:** Exit ALL positions by 3:55pm (avoid overnight risk unless swing trading)
+**Power Hour (2:30pm-4pm ET) Observations:**
+- **Setup similarities:** Same confluence analysis as morning, using Opening Range levels + Previous Close
+- **High-probability pattern:** TD at Previous Close during power hour often indicates institutional repositioning
+- **Session-end timing:** Many day traders close positions by 3:55pm to avoid overnight gap risk
 
-**Pro Tips for Stock Day Trading:**
-1. **Previous Close is KING** - 70% of TD signals at Previous Close succeed vs 45% at random levels
-2. **Match SPY direction** - Don't fight the market (SPY down 1%+ = avoid longs, focus shorts)
-3. **Volume confirms everything** - Stocks with average volume <1M shares/day = skip (too illiquid)
-4. **Opening Range matters** - First hour high/low often holds all day (key levels)
-5. **Avoid lunch chop** - 11:30am-2pm often rangebound and low-volume (take lunch break)
+**Observations from Experienced Stock Day Traders:**
+1. **Previous Close significance** - TD signals at Previous Close show ~70% success vs ~45% at random levels
+2. **Market correlation** - Aligning with SPY direction (avoiding longs when SPY down 1%+) tends to improve outcomes
+3. **Volume threshold** - Stocks averaging <1M shares/day tend to have wider spreads and increased slippage
+4. **Opening Range relevance** - First hour high/low commonly acts as support/resistance throughout the session
+5. **Mid-day patterns** - 11:30am-2pm period often shows reduced volume and tighter ranges
 
-**Common Mistakes (and Fixes):**
-1. **Trading low-volume stocks** → Stick to average >1M volume/day (SPY, QQQ, AAPL, TSLA, etc.)
-2. **Ignoring SPY** → SPY context increases win rate by 10-15%
-3. **Fighting Previous Close** → When price is at Prev Close, respect it (don't fade it)
-4. **Not using BOS/CHoCH** → Market structure gives early warnings of reversals
-5. **Holding past 4pm** → Overnight gaps can wipe out day's gains (exit by 3:55pm unless intentional swing)
+**Common Patterns Observed:**
+1. **Low-volume stocks** → Stocks averaging <1M volume/day show increased slippage and false signals
+2. **SPY divergence** → Trading against SPY direction correlates with 10-15% lower win rates
+3. **Previous Close dynamics** → Fading Previous Close (trading against it) tends to underperform
+4. **Market structure signals** → BOS/CHoCH patterns often provide early reversal warnings
+5. **Overnight holding** → Gap risk increases when holding past 4pm (unless intentionally swing trading)
 
 **Expected Results (First 3 Months):**
 - Trades per day: 1-3 high-quality setups
@@ -458,16 +458,16 @@ Time in trade: 2h 20min
 - Average loss: 0.3-0.6% (stopped out)
 - Daily target: 1-2% account growth (realistic and sustainable)
 
-**Best Stocks to Start:**
-- **Learn on:** SPY, QQQ, AAPL, MSFT, TSLA (high liquidity, clean signals)
-- **Avoid initially:** Penny stocks, stocks <$10, anything with <500K avg volume
-- **Intermediate:** Individual stocks in play (earnings, news, unusual volume)
+**Commonly Recommended Learning Progression:**
+- **Initial learning phase:** SPY, QQQ, AAPL, MSFT, TSLA tend to offer high liquidity and cleaner signals
+- **Generally avoided initially:** Penny stocks, stocks <$10, or issues with <500K avg volume (higher risk characteristics)
+- **Intermediate phase:** Individual stocks with catalysts (earnings, news, unusual volume)
 
-**Risk Management Rules:**
-- Max 3 positions open simultaneously
-- Max 3% total account risk (e.g., 3 trades at 1% risk each)
-- If down 2 trades in a row → stop trading, review setup
-- Never average down - stop is stop
+**Common Risk Management Approaches:**
+- Position limit: Maximum 3 simultaneous positions is a common practice
+- Total risk limit: Maximum 3% total account risk (e.g., 3 trades at 1% risk each)
+- Losing streak protocol: After 2 consecutive losses, many traders pause to review their setup
+- Position averaging: Adding to losing positions tends to increase risk exposure significantly
 
 ---
 
@@ -488,11 +488,11 @@ Time in trade: 2h 20min
 - TD + Harmonic BUY = aligned
 - CAP + Harmonic SELL = aligned
 
-**Workflow:**
-1. Pentarch TD on Daily chart
-2. Verify TD at Janus Weekly Low
-3. Harmonic shows BUY or STRONG
-4. Enter on next day's open or IGN confirmation
+**Common Workflow:**
+1. Traders monitor for Pentarch TD signals on Daily chart
+2. Analysis includes verification of TD proximity to Janus Weekly levels
+3. Harmonic indicator assessed for BUY or STRONG signals
+4. Entry commonly occurs at next day's open or upon IGN confirmation
 
 ---
 
@@ -515,11 +515,11 @@ Time in trade: 2h 20min
 - All defaults
 - Excellent volume substitute for forex
 
-**Workflow:**
-1. Identify session (Asian = low vol, London/NY = high vol)
-2. Wait for Pentarch TD at session low
-3. Harmonic shows BUY/STRONG
-4. Enter, target previous session high
+**Common Workflow:**
+1. Session context is identified (Asian typically shows lower volume, London/NY higher volume)
+2. Traders watch for Pentarch TD signals near session lows
+3. Harmonic indicator is assessed for BUY/STRONG confirmation
+4. Entry commonly targets movement toward previous session high
 
 ### Swing Trading Forex (4H-Daily)
 **Indicators:** Pentarch + Janus + Harmonic
@@ -527,23 +527,23 @@ Time in trade: 2h 20min
 **Pentarch Settings:**
 - Chart: 4H or Daily
 - All defaults
-- Track full cycle sequences
+- Full cycle sequences are monitored
 
 **Janus Atlas Settings:**
 - Enable: Weekly H/L, Monthly H/L, Weekly VWAP, Quarterly Pivots (8-10 levels)
 - Session levels: Disable on higher timeframes
-- Focus on macro levels only
+- Analysis concentrates on macro levels
 
 **Harmonic Oscillator Settings:**
 - All defaults
-- Use for trend confirmation
+- Commonly applied for trend confirmation analysis
 - BUY/SELL align with Pentarch cycles
 
-**Workflow:**
-1. Pentarch TD on Daily chart
-2. Verify TD at Weekly Janus level
-3. Harmonic shows BUY/STRONG
-4. Enter swing position, hold for IGN→WRN→CAP
+**Common Workflow:**
+1. Traders monitor for Pentarch TD signals on Daily chart
+2. TD proximity to Weekly Janus levels is analyzed
+3. Harmonic indicator assessed for BUY/STRONG confirmation
+4. Swing positions commonly held through IGN→WRN→CAP sequence
 
 ---
 
@@ -589,15 +589,15 @@ Time in trade: 2h 20min
 - Spike Threshold: 1.5x
 - Position Manager: Highly recommended
 
-**Workflow:**
-1. Pentarch TD on 15m chart
-2. Verify TD at Daily Low or Session Open
-3. Volume spike >1.5x
-4. Enter on IGN confirmation
+**Common Workflow:**
+1. Traders monitor for Pentarch TD signals on 15m chart
+2. TD proximity to Daily Low or Session Open is assessed
+3. Volume spikes exceeding 1.5x are analyzed for confirmation
+4. Entry commonly occurs upon IGN signal appearance
 
-**Key Levels:**
-- Previous Close = magnet level for ES/NQ
-- Overnight High/Low = key intraday levels
+**Key Level Observations:**
+- Previous Close often acts as a magnet level for ES/NQ (price frequently returns to this level)
+- Overnight High/Low commonly serve as significant intraday support/resistance
 
 ---
 
@@ -620,12 +620,12 @@ Time in trade: 2h 20min
 - Use for cycle confirmation
 - Pentarch TD + Harmonic BUY = strong confluence
 
-**Workflow:**
-1. Pentarch TD on Daily
-2. At Weekly Janus level
-3. Volume zone + spike
-4. Harmonic confirms
-5. Enter swing position
+**Common Workflow:**
+1. Traders watch for Pentarch TD signals on Daily chart
+2. TD occurrence at Weekly Janus levels is noted
+3. Volume zones and spikes are analyzed
+4. Harmonic confirmation is assessed
+5. Swing positions commonly initiated when all factors align
 
 ---
 
@@ -644,8 +644,8 @@ Time in trade: 2h 20min
 - STRONG = high confidence
 - NEUT = stay out
 
-**No Pentarch:** Requires 15m minimum
-**No Janus:** Too cluttered on 1m-5m (use mental levels instead)
+**Pentarch limitation:** Requires 15m minimum timeframe for reliability
+**Janus consideration:** Can appear cluttered on 1m-5m timeframes; traders often use mental key levels instead
 
 **Quick Setup:**
 - Chart: 5m
@@ -662,7 +662,7 @@ Time in trade: 2h 20min
 
 **Pentarch:**
 - Chart: 1H (or 15m for faster pace)
-- Focus: TD→IGN sequences
+- Primary pattern: TD→IGN signal sequences
 
 **Janus:**
 - 5-8 levels maximum
@@ -673,7 +673,7 @@ Time in trade: 2h 20min
 - All systems enabled
 - Spike threshold: 1.5x
 
-**Workflow:** Pentarch signal → At Janus level → Volume spike = Entry
+**Common Workflow:** Entry signals commonly generated when Pentarch signal appears at Janus level with Volume spike confirmation
 
 ---
 
@@ -693,9 +693,9 @@ Time in trade: 2h 20min
 
 **Volume:**
 - All systems
-- Watch for accumulation zones (Volume Zones)
+- Accumulation zones (Volume Zones) provide support/resistance insights
 
-**Workflow:** Daily Pentarch TD → At Weekly Janus level → Volume zone = Multi-day swing entry
+**Common Workflow:** Multi-day swing entries commonly occur when Daily Pentarch TD appears at Weekly Janus level within Volume accumulation zone
 
 ---
 
@@ -719,11 +719,11 @@ Time in trade: 2h 20min
 - Scan for Weekly Pentarch TDs
 - Filter by sector strength
 
-**Workflow:**
-1. Weekly Augury Grid scan for TD signals
-2. Switch to Daily chart, verify TD at Monthly Janus level
-3. Check sector rotation (is sector leading?)
-4. Enter position, hold for weeks/months until CAP or BDN
+**Common Workflow:**
+1. Weekly Augury Grid scans identify potential TD signals across multiple assets
+2. Daily chart analysis verifies TD proximity to Monthly Janus levels
+3. Sector rotation analysis assesses whether sector shows leadership characteristics
+4. Positions commonly held for weeks/months until CAP or BDN signals appear
 
 **Key Insight:** Position trading requires patience - hold through IGN→WRN noise
 
@@ -745,11 +745,11 @@ Time in trade: 2h 20min
 - Look for multi-week accumulation/distribution zones
 - Spike threshold: 1.3x (crypto volume is volatile)
 
-**Workflow:**
-1. Pentarch TD on Weekly chart (rare, but powerful)
-2. At Monthly or Quarterly Janus level
-3. Volume Oracle shows accumulation zone (weeks of building)
-4. Enter position, hold for months
+**Common Workflow:**
+1. Weekly chart TD signals are monitored (less frequent but historically significant)
+2. TD occurrence at Monthly or Quarterly Janus levels is noted
+3. Volume Oracle accumulation zones (developing over weeks) are analyzed
+4. Positions commonly held for months when all factors align
 
 **Example:** BTC weekly TD at Yearly Low + accumulation zone = major cycle bottom
 
@@ -771,7 +771,7 @@ Time in trade: 2h 20min
 - Find best macro setups
 - Cross-asset correlation analysis
 
-**Workflow:** Grid scan → Pentarch analysis → Janus confluence → Position entry
+**Common Workflow:** Grid scans identify opportunities → Pentarch cycle analysis → Janus level confluence check → Position entry when factors align
 
 ---
 
@@ -781,7 +781,7 @@ Time in trade: 2h 20min
 **Settings:**
 - Enable ONLY: Daily H/L, Weekly H/L, Anchored VWAP (5 levels)
 - Disable everything else
-- Observe for 10+ days before trading
+- Observation period of 10+ days commonly recommended before trading
 
 ### Week 3-4: Add Volume Oracle
 **Settings:**
@@ -795,10 +795,10 @@ Time in trade: 2h 20min
 - All defaults
 - Paper trade for 20-30 signals
 
-**Do NOT:**
-- Enable all 39 Janus levels
-- Trade every signal
-- Add more indicators yet
+**Common Practices to Avoid:**
+- Enabling all 39 Janus levels tends to create visual overload
+- Trading every signal typically dilutes win rate
+- Adding more indicators prematurely often increases confusion
 
 ---
 
@@ -818,8 +818,8 @@ Time in trade: 2h 20min
 **Volume:**
 - All 3 systems
 
-**Goal:** Find 3-factor confluence:
-- Pentarch signal + Janus level + Volume spike
+**Analytical Focus:** Identifying 3-factor confluence patterns:
+- Pentarch signal + Janus level + Volume spike alignment
 
 ---
 
