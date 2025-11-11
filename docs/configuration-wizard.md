@@ -262,26 +262,20 @@ Total gain: $3,000 on 1 BTC position = 10.5% gain
 **Observations from Experienced Traders:**
 - **Higher-probability timing:** Major liquidity events (US market open, Asia open) tend to produce clearer signals
 - **Lower-probability periods:** Weekends and low-volume periods often generate more false signals
-- **Confluence advantage:** 3-factor setups (Pentarch + Janus + Volume) show 60-70% success rate vs 40-45% for single-factor
-- **Confirmation value:** Waiting for all 3 confirmations correlates with higher success rates
+- **Confluence value:** Combining multiple confirmation factors (Pentarch + Janus + Volume) is commonly emphasized
+- **Confirmation approach:** Traders often prioritize setups where multiple factors align
 
 **Common Patterns Observed:**
-1. **TD without IGN** → Approximately 60% of TDs without IGN confirmation tend to fail
-2. **TDs without level support** → TDs in middle of range show 30% lower success rates
-3. **Volume correlation** → Volume spikes correlate with 15-20% higher success rates
+1. **TD without IGN** → TDs without IGN confirmation show higher failure rates
+2. **TDs without level support** → TDs in middle of range tend to be less reliable
+3. **Volume correlation** → Volume spikes are frequently cited as an important confirmation factor
 4. **Holding past CAP** → CAP signals often mark exhaustion; continuing to hold tends to reduce gains
-5. **Level overload** → More than 8 Janus levels correlates with reduced clarity and decision quality
-
-**Expected Results (with discipline):**
-- Win rate: 60-70% with full 3-factor confluence
-- Average win: 8-12% (TD to CAP)
-- Average loss: 2-4% (stop below TD)
-- Risk/Reward: 2.5:1 to 4:1
+5. **Level overload** → Excessive Janus levels (more than 8) correlates with reduced clarity and decision quality
 
 **Asset-Specific Notes:**
-- **BTC/ETH:** Clean signals, best for learning
-- **Altcoins:** More volatile, widen stops to 4-6%
-- **Low-cap coins:** Skip these until you master BTC/ETH (too choppy)
+- **BTC/ETH:** Generally produce cleaner signals, commonly recommended for initial learning
+- **Altcoins:** Higher volatility characteristics; stop distances commonly widened to 4-6%
+- **Low-cap coins:** Generally avoided until proficiency is developed with major assets (increased choppiness)
 
 ---
 
@@ -438,25 +432,18 @@ Time in trade: 2h 20min
 - **Session-end timing:** Many day traders close positions by 3:55pm to avoid overnight gap risk
 
 **Observations from Experienced Stock Day Traders:**
-1. **Previous Close significance** - TD signals at Previous Close show ~70% success vs ~45% at random levels
-2. **Market correlation** - Aligning with SPY direction (avoiding longs when SPY down 1%+) tends to improve outcomes
+1. **Previous Close significance** - TD signals at Previous Close are frequently noted as higher-probability setups
+2. **Market correlation** - Aligning with SPY direction is commonly cited as beneficial
 3. **Volume threshold** - Stocks averaging <1M shares/day tend to have wider spreads and increased slippage
 4. **Opening Range relevance** - First hour high/low commonly acts as support/resistance throughout the session
 5. **Mid-day patterns** - 11:30am-2pm period often shows reduced volume and tighter ranges
 
 **Common Patterns Observed:**
 1. **Low-volume stocks** → Stocks averaging <1M volume/day show increased slippage and false signals
-2. **SPY divergence** → Trading against SPY direction correlates with 10-15% lower win rates
+2. **SPY divergence** → Trading against SPY direction tends to produce less favorable outcomes
 3. **Previous Close dynamics** → Fading Previous Close (trading against it) tends to underperform
 4. **Market structure signals** → BOS/CHoCH patterns often provide early reversal warnings
 5. **Overnight holding** → Gap risk increases when holding past 4pm (unless intentionally swing trading)
-
-**Expected Results (First 3 Months):**
-- Trades per day: 1-3 high-quality setups
-- Win rate: 65-75% with full confluence
-- Average win: 0.8-1.5% (3-6 hours hold time)
-- Average loss: 0.3-0.6% (stopped out)
-- Daily target: 1-2% account growth (realistic and sustainable)
 
 **Commonly Recommended Learning Progression:**
 - **Initial learning phase:** SPY, QQQ, AAPL, MSFT, TSLA tend to offer high liquidity and cleaner signals
@@ -797,7 +784,7 @@ Time in trade: 2h 20min
 
 **Common Practices to Avoid:**
 - Enabling all 39 Janus levels tends to create visual overload
-- Trading every signal typically dilutes win rate
+- Trading without proper confluence analysis often produces less favorable results
 - Adding more indicators prematurely often increases confusion
 
 ---
