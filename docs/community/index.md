@@ -2,43 +2,56 @@
 
 Connect with other Signal Pilot users, share analysis, and learn from the community.
 
-> ⚡ **Launch Status:** Community features launching Q1 2026. This page previews upcoming community initiatives. Join our mailing list to be notified when features go live.
+> ⚡ **Join the Discussion:** [GitHub Discussions](https://github.com/Signalpilot/signalpilot-docs/discussions) is now live for community Q&A, chart sharing, and feedback!
 >
-> **Available Now:** Comprehensive documentation, email support (support@signalpilot.io)
-> **Coming Q1 2026:** Discord server, forum, user-contributed guides, community contests
+> **Available Now:** GitHub Discussions, comprehensive documentation, email support (support@signalpilot.io)
+> **Coming Q1 2026:** Discord server, user-contributed guides, community contests
 
 ---
 
-## 💬 Community Channels (Coming Q1 2026)
+## 💬 Community Channels
+
+### GitHub Discussions (LIVE NOW!)
+> 🔗 **[Join the Community Forum](https://github.com/Signalpilot/signalpilot-docs/discussions)**
+
+**What's available:**
+- 📊 **Chart Sharing & Analysis** - Share setups and learn from others
+- 🎯 **Pentarch Signals Discussion** - Cycle sequences and timing
+- 📏 **Janus Levels Strategy** - Level clusters and reactions
+- 💡 **General Q&A** - Ask questions about any indicator
+- 🆘 **Help & Support** - Troubleshooting and configuration help
+- 💬 **Feature Requests** - Suggest improvements
+
+**Why GitHub Discussions?**
+- Permanent, searchable archive of Q&A
+- Markdown formatting for charts and code
+- Direct integration with documentation
+- No separate login required (use your GitHub account)
+
+---
 
 ### Discord Server
-> 🔗 *Community server coming soon - Check back for updates*
+> 🔗 *Real-time chat coming Q1 2026*
 
-**What you'll find:**
-- Real-time chart sharing
-- Setup discussions and feedback
-- Indicator configuration help
-- Trading ideas (educational purposes)
+**Planned features:**
+- Live chart sharing
+- Real-time setup discussions
 - Community events and challenges
+- Voice channels for study groups
 
-**Channels (Planned):**
-- #general-discussion
-- #pentarch-signals
-- #janus-levels
-- #chart-sharing
-- #help-and-support
-- #community-resources
+**Integration:** Discord (real-time) + GitHub Discussions (permanent archive) will complement each other
 
 ---
 
-### Forum
-> 🔗 *Forum coming soon - Check back for updates*
+### Forum Archive
+> 📚 GitHub Discussions serves as our community forum
 
-**Topics:**
-- Indicator tutorials and guides
-- Best practices and workflows
-- Success stories and lessons learned
-- Feature requests and suggestions
+GitHub Discussions provides:
+- Threaded conversations
+- Search and filtering
+- Categories for organized topics
+- Upvoting best answers
+- Email notifications
 
 ---
 
