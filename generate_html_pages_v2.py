@@ -203,6 +203,10 @@ def convert_markdown_to_html(md_content):
         elif stripped == '':
             html_lines.append('')
 
+        # Block-level HTML elements (details, summary, div, etc.) - pass through as-is
+        elif re.match(r'^<(details|/details|summary|/summary|div|/div|section|/section)', stripped):
+            html_lines.append(stripped)
+
         # Regular paragraphs
         else:
             # Collect consecutive non-empty, non-special lines
@@ -211,7 +215,8 @@ def convert_markdown_to_html(md_content):
                 s = lines[i].strip()
                 if (s == '' or s.startswith('#') or s.startswith('|') or
                     re.match(r'^[\-\*\+] ', s) or re.match(r'^\d+\. ', s) or
-                    s == '---' or s.startswith('>')):
+                    s == '---' or s.startswith('>') or
+                    re.match(r'^<(details|/details|summary|/summary|div|/div|section|/section)', s)):
                     break
                 para_lines.append(s)
                 i += 1
