@@ -245,18 +245,21 @@ Answer 5 quick questions below, then jump to your recommended configuration sect
 - **Second target:** CAP signal often triggers exit of remaining 50%
 - **Stop adjustment:** Stops frequently moved to break-even after WRN appears
 
-**Real Example (Bitcoin 1H):**
+**Illustrative Example - Historical Bitcoin Trade (For Educational Purposes Only):**
 ```
+This example illustrates one specific past trade scenario. Past performance does not
+indicate future results. Individual outcomes vary significantly.
+
 BTC at $28,450
 1. Pentarch TD appears at Daily Low ($28,400)
 2. Janus shows Daily Low + 4H Low cluster at $28,350-$28,450
 3. Volume Oracle spikes to 1.8x (strong confirmation)
 4. IGN appears 3 hours later at $28,600
-   → Enter long: $28,600
-   → Stop: $28,200 (below TD, risking $400 = 1.4%)
-5. WRN appears at $29,800 → Take 50% profit (+$1,200)
-6. CAP appears at $30,400 → Exit remaining 50% (+$1,800)
-Total gain: $3,000 on 1 BTC position = 10.5% gain
+   → Entry occurred at: $28,600
+   → Stop placed at: $28,200 (below TD, risking $400 = 1.4%)
+5. WRN appears at $29,800 → 50% position closed (+$1,200)
+6. CAP appears at $30,400 → Remaining 50% closed (+$1,800)
+Result in this specific instance: $3,000 gain on 1 BTC position = 10.5%
 ```
 
 **Observations from Experienced Traders:**
@@ -372,7 +375,7 @@ Total gain: $3,000 on 1 BTC position = 10.5% gain
 - **Factor 2:** TD occurs at a Janus level (within 0.5%)
 - **Factor 3:** Volume Oracle shows spike >1.5x
 - **Factor 4:** SPY confirms directional bias (SPY up supports longs; SPY down supports shorts)
-- **Observation:** Setups with all 4 factors tend to show higher success rates
+- **Observation:** Setups with all 4 factors aligning are commonly prioritized by experienced traders
 
 **Step 3: Entry Signal**
 - Traders typically wait for Pentarch IGN (usually 1-4 candles after TD)
@@ -387,8 +390,11 @@ Total gain: $3,000 on 1 BTC position = 10.5% gain
 - **Final 25%:** Often held with trailing stop for extended moves
 - **Rationale:** Balances locking gains with capturing potential larger moves
 
-**Real Example (Apple - AAPL 15m Chart):**
+**Illustrative Example - Historical AAPL Trade (For Educational Purposes Only):**
 ```
+This example illustrates one specific past trade scenario. Past performance does not
+indicate future results. Individual outcomes vary significantly.
+
 Date: Market open 9:30am ET
 AAPL Previous Close: $178.45
 Premarket High: $179.10
@@ -402,27 +408,23 @@ SPY: +0.4% green (confirming uptrend)
 
 Trade Execution:
 10:10am → IGN appears at $178.70
-   → Entry: 100 shares at $178.70
-   → Stop: $178.20 (below TD, risking $50 = $0.50/share)
-   → Position size: $1,000 risk / $0.50 stop = 2,000 shares (adjusted to $17,870 position)
+   → Entry occurred at: $178.70 (2,000 shares)
+   → Stop placed at: $178.20 (risking $1,000 total)
 
 10:45am → WRN at $179.40
-   → Exit 50% (1,000 shares) at $179.40
-   → Profit: $700 (locked in)
-   → Move stop to $178.70 (break-even on remaining)
+   → 50% (1,000 shares) closed at $179.40
+   → Realized: $700 on this portion
+   → Stop moved to $178.70 (break-even on remaining)
 
 11:20am → CAP at $179.90
-   → Exit 25% (500 shares) at $179.90
-   → Profit: $600 more
-   → Keep final 500 shares with trailing stop
+   → 25% (500 shares) closed at $179.90
+   → Realized: $600 on this portion
 
 12:30pm → Trail stop hit at $180.10
-   → Exit final 500 shares at $180.10
-   → Profit: $700 more
+   → Final 500 shares closed at $180.10
+   → Realized: $700 on this portion
 
-Total: $2,000 profit on 2,000 shares
-Risk: $1,000
-Reward/Risk: 2:1 (textbook trade)
+Result in this specific instance: $2,000 total
 Time in trade: 2h 20min
 ```
 
