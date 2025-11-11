@@ -169,6 +169,8 @@ Answer 5 quick questions below, then jump to your recommended configuration sect
 - All default settings
 - Primary signals: BUY/SELL + STRONG (higher confidence)
 - NEUT signals: Typically indicate neutral conditions (lower conviction for entries)
+- Watch for: BUY/SELL + STRONG signals
+- Ignore: NEUT (stay out)
 
 **Chart Setup:**
 - Timeframe: 5m chart
@@ -279,6 +281,28 @@ Result in this specific instance: $3,000 gain on 1 BTC position = 10.5%
 - **BTC/ETH:** Generally produce cleaner signals, commonly recommended for initial learning
 - **Altcoins:** Higher volatility characteristics; stop distances commonly widened to 4-6%
 - **Low-cap coins:** Generally avoided until proficiency is developed with major assets (increased choppiness)
+### Day Trading Crypto (15m-1H)
+**Indicators:** The Trinity (Pentarch + Janus + Volume Oracle)
+
+**Pentarch Settings:**
+- All defaults
+- Focus signals: TD (entries), IGN (confirmation), CAP (exits)
+- Ignore BDN on crypto (less reliable due to 24/7 trading)
+
+**Janus Atlas Settings:**
+- Enable ONLY: Daily H/L, 4H H/L, Anchored VWAP (6 levels max)
+- Disable: All session levels (crypto is 24/7)
+- Disable: Market structure labels (too noisy on 15m-1H)
+
+**Volume Oracle Settings:**
+- Enable: All 3 systems
+- Spike Threshold: 1.3x (crypto has volatile volume)
+
+**Workflow:**
+1. Wait for Pentarch TD on 1H
+2. Check if TD at Janus Daily Low or 4H support
+3. Confirm with Volume spike >1.3x
+4. Enter on IGN confirmation
 
 ---
 
@@ -289,6 +313,7 @@ Result in this specific instance: $3,000 gain on 1 BTC position = 10.5%
 - Chart: Daily timeframe
 - All defaults
 - Complete signal sequences observed: TD→IGN→WRN→CAP
+- Track complete sequences: TD→IGN→WRN→CAP
 
 **Janus Atlas Settings:**
 - Enable: Weekly H/L, Monthly H/L, Weekly VWAP, POC/VAH/VAL (8-10 levels)
@@ -304,6 +329,13 @@ Result in this specific instance: $3,000 gain on 1 BTC position = 10.5%
 2. Individual asset charts are analyzed to verify TD at Janus Weekly levels
 3. Volume spikes exceeding 1.5x provide confirmation
 4. Swing positions commonly held through complete IGN→WRN→CAP signal sequence
+- Use for opportunity identification
+
+**Workflow:**
+1. Morning scan: Check Augury Grid for TD signals
+2. Switch to asset chart, verify TD at Janus Weekly Low
+3. Volume spike >1.5x
+4. Enter swing position, hold for IGN→WRN→CAP sequence
 
 ---
 
@@ -457,6 +489,25 @@ Time in trade: 2h 20min
 - Total risk limit: Maximum 3% total account risk (e.g., 3 trades at 1% risk each)
 - Losing streak protocol: After 2 consecutive losses, many traders pause to review their setup
 - Position averaging: Adding to losing positions tends to increase risk exposure significantly
+### Day Trading Stocks (5m-1H)
+**Indicators:** The Trinity
+
+**Pentarch Settings:**
+- Chart: 15m or 1H
+- All defaults
+- Best during market hours: 9:30am-4pm ET
+
+**Janus Atlas Settings:**
+- Enable: Daily H/L, Previous Close, Daily VWAP, Premarket H/L (8 levels)
+- Enable: Market Structure (BOS, CHoCH) - stocks have clear structure
+- Session levels: Enable if trading extended hours
+
+**Volume Oracle Settings:**
+- All 3 systems enabled
+- Spike Threshold: 1.5x
+- Position Manager: Enable for real-time P&L
+
+**Key Insight:** Previous Close is CRITICAL for stocks (often acts as magnetic level)
 
 ---
 
@@ -482,6 +533,11 @@ Time in trade: 2h 20min
 2. Analysis includes verification of TD proximity to Janus Weekly levels
 3. Harmonic indicator assessed for BUY or STRONG signals
 4. Entry commonly occurs at next day's open or upon IGN confirmation
+**Workflow:**
+1. Pentarch TD on Daily chart
+2. Verify TD at Janus Weekly Low
+3. Harmonic shows BUY or STRONG
+4. Enter on next day's open or IGN confirmation
 
 ---
 
@@ -615,6 +671,11 @@ Time in trade: 2h 20min
 3. Volume zones and spikes are analyzed
 4. Harmonic confirmation is assessed
 5. Swing positions commonly initiated when all factors align
+**Workflow:**
+1. Identify session (Asian = low vol, London/NY = high vol)
+2. Wait for Pentarch TD at session low
+3. Harmonic shows BUY/STRONG
+4. Enter, target previous session high
 
 ---
 
@@ -635,6 +696,8 @@ Time in trade: 2h 20min
 
 **Pentarch limitation:** Requires 15m minimum timeframe for reliability
 **Janus consideration:** Can appear cluttered on 1m-5m timeframes; traders often use mental key levels instead
+**No Pentarch:** Requires 15m minimum
+**No Janus:** Too cluttered on 1m-5m (use mental levels instead)
 
 **Quick Setup:**
 - Chart: 5m
@@ -652,6 +715,7 @@ Time in trade: 2h 20min
 **Pentarch:**
 - Chart: 1H (or 15m for faster pace)
 - Primary pattern: TD→IGN signal sequences
+- Focus: TD→IGN sequences
 
 **Janus:**
 - 5-8 levels maximum
@@ -663,6 +727,7 @@ Time in trade: 2h 20min
 - Spike threshold: 1.5x
 
 **Common Workflow:** Entry signals commonly generated when Pentarch signal appears at Janus level with Volume spike confirmation
+**Workflow:** Pentarch signal → At Janus level → Volume spike = Entry
 
 ---
 
@@ -685,6 +750,9 @@ Time in trade: 2h 20min
 - Accumulation zones (Volume Zones) provide support/resistance insights
 
 **Common Workflow:** Multi-day swing entries commonly occur when Daily Pentarch TD appears at Weekly Janus level within Volume accumulation zone
+- Watch for accumulation zones (Volume Zones)
+
+**Workflow:** Daily Pentarch TD → At Weekly Janus level → Volume zone = Multi-day swing entry
 
 ---
 
@@ -745,6 +813,7 @@ Time in trade: 2h 20min
 ---
 
 ### Macro Cycles - Multi-Asset (Daily-Weekly)
+### Macro Cycles (Daily-Weekly)
 **Indicators:** Pentarch + Janus + Augury Grid
 
 **Pentarch:**
@@ -761,6 +830,10 @@ Time in trade: 2h 20min
 - Cross-asset correlation analysis
 
 **Common Workflow:** Grid scans identify opportunities → Pentarch cycle analysis → Janus level confluence check → Position entry when factors align
+- Screen 30-40 assets
+- Find best macro setups
+
+**Workflow:** Grid scan → Pentarch analysis → Janus confluence → Position entry
 
 ---
 
@@ -771,6 +844,7 @@ Time in trade: 2h 20min
 - Enable ONLY: Daily H/L, Weekly H/L, Anchored VWAP (5 levels)
 - Disable everything else
 - Observation period of 10+ days commonly recommended before trading
+- Observe for 10+ days before trading
 
 ### Week 3-4: Add Volume Oracle
 **Settings:**
@@ -788,6 +862,10 @@ Time in trade: 2h 20min
 - Enabling all 39 Janus levels tends to create visual overload
 - Trading without proper confluence analysis often produces less favorable results
 - Adding more indicators prematurely often increases confusion
+**Do NOT:**
+- Enable all 39 Janus levels
+- Trade every signal
+- Add more indicators yet
 
 ---
 
@@ -809,6 +887,8 @@ Time in trade: 2h 20min
 
 **Analytical Focus:** Identifying 3-factor confluence patterns:
 - Pentarch signal + Janus level + Volume spike alignment
+**Goal:** Find 3-factor confluence:
+- Pentarch signal + Janus level + Volume spike
 
 ---
 
@@ -878,6 +958,15 @@ Time in trade: 2h 20min
 | Multi-asset scanning | Augury Grid + Trinity | Screening 20+ assets daily |
 | Clean minimal chart | Janus (5 levels) + Volume | Beginners or simple setups |
 | Maximum confluence | Trinity + Harmonic + Plutus | Advanced multi-factor analysis |
+| If you are... | Use this setup | Timeframe |
+|---------------|----------------|-----------|
+| Complete beginner | Janus only (5 levels) | Daily |
+| Learning indicators | Trinity (P+J+V) | 1H or Daily |
+| Scalper | Volume + Harmonic | 1m-5m |
+| Day trader | Trinity | 15m-1H |
+| Swing trader | Trinity + Harmonic | 4H-Daily |
+| Multi-asset trader | Augury Grid + Trinity | Any |
+| All-in-one preference | Omnideck | 1H-Daily |
 
 ---
 
