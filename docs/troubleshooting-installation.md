@@ -504,10 +504,11 @@ If all checked and still not working → Contact support
 
 **Got it working?**
 
-1. **Configure settings:** See indicator documentation for optimal settings
-2. **Set up alerts:** [How to Set TradingView Alerts](how-to-alerts/index.html)
-3. **Learn the indicator:** [Learning Paths](start-learning-path/index.md)
-4. **Join community:** [Community](../community/index.md)
+1. **Quick start:** [Quick Reference Cheat Sheets](ref-cheatsheets/all-indicators-at-a-glance.md) - Fast lookup for all indicators
+2. **Configure settings:** See indicator documentation for optimal settings
+3. **Set up alerts:** [How to Set TradingView Alerts](how-to-alerts/index.html)
+4. **Learn the indicator:** [Learning Paths](start-learning-path/index.md)
+5. **Join community:** [Community](../community/index.md)
 
 **Still stuck?**
 

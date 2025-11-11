@@ -256,7 +256,8 @@ Signal Pilot works wherever TradingView is accessible:
 1. Verify you meet requirements above ✅
 2. Choose which indicator to start with: [Which Indicator Should I Start?](start-which-indicator.md)
 3. Follow installation guide: [Installation](#) *(link to installation guide)*
-4. Join the community: [Community](../community/index.md)
+4. Bookmark quick references: [All Indicators At-A-Glance](ref-cheatsheets/all-indicators-at-a-glance.md)
+5. Join the community: [Community](../community/index.md)
 
 ---
 
