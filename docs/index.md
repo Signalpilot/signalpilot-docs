@@ -195,6 +195,20 @@ Want to see how all 7 indicators work together?
   <a href="ref-troubleshooting/" style="display: inline-block; padding: 0.5rem 1.5rem; background: var(--md-primary-fg-color); color: white; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Troubleshooting →</a>
 </div>
 
+<div style="background: linear-gradient(135deg, color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent), color-mix(in srgb, var(--md-accent-fg-color) 8%, transparent)); border-radius: 12px; padding: 1.5rem; border-left: 4px solid var(--md-primary-fg-color);">
+  <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">⚙️</div>
+  <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem;">Configuration Wizard</h3>
+  <p style="margin: 0 0 1rem 0; color: var(--md-default-fg-color--light);">Personalized setups for your trading style</p>
+  <a href="configuration-wizard/" style="display: inline-block; padding: 0.5rem 1.5rem; background: var(--md-primary-fg-color); color: white; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Setup Guide →</a>
+</div>
+
+<div style="background: linear-gradient(135deg, color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent), color-mix(in srgb, var(--md-accent-fg-color) 8%, transparent)); border-radius: 12px; padding: 1.5rem; border-left: 4px solid var(--md-primary-fg-color);">
+  <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🔍</div>
+  <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem;">Search the Docs</h3>
+  <p style="margin: 0 0 1rem 0; color: var(--md-default-fg-color--light);">Find what you need quickly</p>
+  <a href="search-guide/" style="display: inline-block; padding: 0.5rem 1.5rem; background: var(--md-primary-fg-color); color: white; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Search Tips →</a>
+</div>
+
 </div>
 
 ---
