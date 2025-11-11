@@ -15,7 +15,7 @@ Answer 5 quick questions below, then jump to your recommended configuration sect
 <details>
 <summary><strong>A) Cryptocurrency (BTC, ETH, Altcoins)</strong></summary>
 
-**Best Indicators:** All indicators work excellently
+**Indicator Compatibility:** All indicators work excellently
 - ✅ Full volume data available
 - ✅ 24/7 trading (all timeframes valid)
 - ✅ High volatility = clear signals
@@ -27,10 +27,10 @@ Answer 5 quick questions below, then jump to your recommended configuration sect
 <details>
 <summary><strong>B) Stocks (SPY, AAPL, Individual Stocks)</strong></summary>
 
-**Best Indicators:** All indicators work excellently
+**Indicator Compatibility:** All indicators work excellently
 - ✅ Full volume data available
 - ✅ Clear market structure
-- ✅ Best during market hours (9:30am-4pm ET)
+- ✅ Optimal during market hours (9:30am-4pm ET)
 
 **Jump to:** [Stocks Configurations](#stocks-configurations)
 
@@ -50,7 +50,7 @@ Answer 5 quick questions below, then jump to your recommended configuration sect
 <details>
 <summary><strong>D) Futures (ES, NQ, 6E, Commodities)</strong></summary>
 
-**Best Indicators:** All indicators work excellently
+**Indicator Compatibility:** All indicators work excellently
 - ✅ Full volume data available
 - ✅ Clear market structure
 - ✅ Session-based trading
@@ -304,6 +304,12 @@ Result in this specific instance: $3,000 gain on 1 BTC position = 10.5%
 3. Confirm with Volume spike >1.3x
 4. Enter on IGN confirmation
 
+**Related Resources:**
+- [Pentarch Quick Reference](ref-cheatsheets-pentarch/) - All signal types explained
+- [Janus Atlas Levels Guide](ref-cheatsheets-janus/) - Visual level reference
+- [Volume Oracle Quick Reference](ref-cheatsheets-volume-oracle/) - Volume analysis guide
+- [Common Mistakes to Avoid](ref-best-practices/) - Pitfalls and solutions
+
 ---
 
 ### Swing Trading Crypto (4H-Daily)
@@ -337,6 +343,11 @@ Result in this specific instance: $3,000 gain on 1 BTC position = 10.5%
 3. Volume spike >1.5x
 4. Enter swing position, hold for IGN→WRN→CAP sequence
 
+**Related Configurations:**
+- [Position Trading Crypto](#position-trading-crypto-weekly-monthly) - For longer-term holdings
+- [Scalping Crypto](#scalping-crypto-1m-5m) - For faster timeframes
+- See also: [All Indicators At-A-Glance](ref-cheatsheets/) - Quick comparison chart
+
 ---
 
 ## Stocks Configurations
@@ -360,8 +371,8 @@ Result in this specific instance: $3,000 gain on 1 BTC position = 10.5%
   - CAP = Full exit
   - BDN = Avoid new entries (exhaustion phase)
 
-**Janus Atlas Settings - THE 8 CRITICAL LEVELS:**
-1. **Previous Close** (MOST IMPORTANT for stocks)
+**Janus Atlas Settings - 8 Key Levels for Stocks:**
+1. **Previous Close** (Frequently cited as highly significant for stocks)
 2. **Daily High**
 3. **Daily Low**
 4. **Premarket High**
@@ -384,7 +395,7 @@ Result in this specific instance: $3,000 gain on 1 BTC position = 10.5%
 - **Spike Threshold: 1.5x** (stocks have more stable volume patterns than crypto)
 - **Volume Flow:** Green bars >1.5x = strong buying, Red bars >1.5x = strong selling
 - **Volume Zones:** Accumulation zones = institutional buying (support)
-- **Position Manager:** CRITICAL for stocks - shows real-time P&L and tracks multiple positions
+- **Position Manager:** Highly valuable for stocks - shows real-time P&L and tracks multiple positions
 
 **Common Workflow (Professional Day Trading Approach):**
 
@@ -509,6 +520,12 @@ Time in trade: 2h 20min
 
 **Key Insight:** Previous Close is CRITICAL for stocks (often acts as magnetic level)
 
+**Related Resources:**
+- [Setting Up Alerts](../how-to-alerts/) - Automate signal notifications
+- [Non-Repainting Explained](ref-non-repaint/) - Why Signal Pilot signals are reliable
+- [Performance Optimization](advanced/performance-optimization/) - Speed up indicator loading
+- [TradingView Screener Setup](../how-to-screener/) - Multi-asset scanning
+
 ---
 
 ### Swing Trading Stocks (Daily)
@@ -554,7 +571,7 @@ Time in trade: 2h 20min
 
 **Janus Atlas Settings:**
 - Enable: Daily H/L, Asian/European/NY Session H/L, Daily VWAP (12 levels)
-- Session levels are CRITICAL for forex (major liquidity zones)
+- Session levels are particularly significant for forex (major liquidity zones)
 
 **Harmonic Oscillator Settings:**
 - All defaults
@@ -626,7 +643,7 @@ Time in trade: 2h 20min
 
 **Janus Atlas Settings:**
 - Enable: Daily H/L, Overnight H/L, Previous Close, Session VWAP (6-8 levels)
-- Session levels CRITICAL for futures (major liquidity zones)
+- Session levels particularly significant for futures (major liquidity zones)
 - Enable: Market Structure (BOS, CHoCH)
 
 **Volume Oracle Settings:**
@@ -826,7 +843,7 @@ Time in trade: 2h 20min
 
 **Augury Grid:**
 - Screen 30-40 assets across asset classes
-- Find best macro setups
+- Identify high-confluence macro setups
 - Cross-asset correlation analysis
 
 **Common Workflow:** Grid scans identify opportunities → Pentarch cycle analysis → Janus level confluence check → Position entry when factors align
@@ -937,7 +954,7 @@ Time in trade: 2h 20min
 | Position trader | P+J+Grid | Stocks/Crypto | Daily-Weekly |
 
 ### By Asset Type
-| Asset | Best Setup | Timeframe | Notes |
+| Asset | Common Setup | Timeframe | Notes |
 |-------|-----------|-----------|-------|
 | Crypto scalping | Volume + Harmonic | 1m-5m | 24/7 liquidity |
 | Crypto day trading | Trinity | 15m-1H | Disable session levels |
