@@ -91,7 +91,7 @@ flowchart TD
 **Objective:** Master support/resistance level identification
 
 #### Week 1 Tasks:
-- [ ] Read [Janus Atlas documentation](../indicators/janus-atlas-v10.md)
+- [ ] Read [Janus Atlas documentation](../../janus-atlas-v10/)
 - [ ] Install indicator on TradingView
 - [ ] Enable only 5 core levels: Daily H/L, Weekly H/L, Anchored VWAP
 - [ ] Observe how price reacts at these levels for 3+ days
@@ -121,7 +121,7 @@ flowchart TD
 **Objective:** Add volume confirmation to level analysis
 
 #### Week 3 Tasks:
-- [ ] Read [Volume Oracle documentation](../indicators/volume-oracle-v10.md)
+- [ ] Read [Volume Oracle documentation](../../volume-oracle-v10/)
 - [ ] Install indicator (enable all 3 systems: Flow, Zones, Position Manager)
 - [ ] Identify your first volume spike (>1.5x average)
 - [ ] Compare volume zones vs Janus Atlas price levels
@@ -146,7 +146,7 @@ flowchart TD
 **Objective:** Master cycle phase identification and combine with Janus + Volume for maximum confluence
 
 #### Weeks 4-5: Learn the 5 Cycle Events
-- [ ] Read [Pentarch documentation](../indicators/pentarch-v10.md)
+- [ ] Read [Pentarch documentation](../../pentarch-v10/)
 - [ ] Install indicator on Daily chart first (clearest patterns)
 - [ ] Learn to recognize all 5 signals: TD, IGN, WRN, CAP, BDN
 - [ ] Observe your first complete cycle (TD→IGN→WRN→CAP→BDN)
@@ -188,7 +188,7 @@ flowchart TD
 
 **Objective:** Add momentum layer for additional confirmation
 
-- [ ] Read [Harmonic Oscillator documentation](../indicators/harmonic-oscillator-v10.md)
+- [ ] Read [Harmonic Oscillator documentation](../../harmonic-oscillator-v10/)
 - [ ] Learn the 4 signals: BUY, SELL, STRONG, NEUT
 - [ ] Filter Pentarch patterns with Harmonic:
   - Pentarch IGN + Harmonic BUY/STRONG = Aligned
