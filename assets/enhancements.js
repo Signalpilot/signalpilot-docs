@@ -56,7 +56,7 @@
 
     // Build breadcrumb trail
     const breadcrumbMap = {
-      'suite-index': '📚 Suite Reference',
+      'suite-index': 'Suite Reference',
       'pentarch-v10': 'Pentarch v1.0',
       'janus-atlas-v10': 'Janus Atlas v1.0',
       'omnideck-v10': 'Omnideck v1.0',
@@ -64,10 +64,10 @@
       'volume-oracle-v10': 'Volume Oracle v1.0',
       'harmonic-oscillator-v10': 'Harmonic Oscillator v1.0',
       'plutus-flow-v10': 'Plutus Flow v1.0',
-      'start-quick': '⚡ Install & Configure',
+      'start-quick': 'Install & Configure',
       'start-prerequisites': 'Prerequisites',
       'start-onboarding': 'Onboarding Guide',
-      'start-quickstart': '🔍 Compare Indicators',
+      'start-quickstart': 'Compare Indicators',
       'how-to-alerts': 'Setting Up Alerts',
       'how-to-webhooks': 'Using Webhooks',
       'how-to-screener': 'Screener Setup',
