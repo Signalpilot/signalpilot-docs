@@ -137,7 +137,7 @@ def convert_markdown_to_html(md_content):
 
         # Blockquotes
         elif stripped.startswith('>'):
-            html_lines.append(f'<blockquote>{stripped[1:].strip()}</blockquote>')
+            html_lines.append(f'<blockquote>{process_inline(stripped[1:].strip())}</blockquote>')
 
         # Tables
         elif stripped.startswith('|'):
