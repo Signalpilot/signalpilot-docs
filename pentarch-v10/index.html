@@ -2050,7 +2050,13 @@
 <li><strong>BDN (Breakdown)</strong> - Label above candle</li>
 </ul>
 <p><strong>Color Customization:</strong> Multiple color palettes available in settings. Default palette: TD (purple), IGN (teal), WRN (yellow), CAP (orange), BDN (red). All event colors can be customized to individual preferences.</p>
-<p><strong>Detection Method:</strong> Four-layer confirmation system analyzes regime classification, pilot line distance, momentum validation, and bar close confirmation. Signals appear only when all layers align.</p>
+<p><strong>Detection Method:</strong> Four-layer confirmation system analyzes:
+1. <strong>Regime classification</strong> (which market phase is active - accumulation, markup, distribution, or markdown)
+2. <strong>Pilot line distance</strong> (distance between price and the dynamic moving average baseline)
+3. <strong>Momentum validation</strong> (strength and direction of price movement)
+4. <strong>Bar close confirmation</strong> (signal confirmed only after candle closes, preventing repainting)
+
+Signals appear only when all four layers align.</p>
 <p><strong>Timeframe Compatibility:</strong> Works on all timeframes.</p>
 
 <!-- 📸 SCREENSHOT NEEDED - Pentarch All 5 Signal Types on Live Chart
