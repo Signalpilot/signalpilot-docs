@@ -4350,22 +4350,5 @@ a {
 }
 
 /* ========================================
-   NAVIGATION DUPLICATION FIX
-   Hide misnamed start-quickstart directory from nav
-   ======================================== */
-
-/* Hide the duplicate "Quickstart" nav item that points to start-quickstart/ */
-.md-nav__item a[href="start-quickstart/"],
-.md-nav__item a[href="/start-quickstart/"],
-.md-nav__item a[href="./start-quickstart/"] {
-  display: none !important;
-}
-
-/* Hide parent list item if it only contains the duplicate link */
-.md-nav__item:has(> a[href="start-quickstart/"]) {
-  display: none !important;
-}
-
-/* ========================================
    END OF CONSOLIDATED STYLES
    ======================================== */
