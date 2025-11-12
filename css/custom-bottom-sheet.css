@@ -312,6 +312,14 @@
   opacity: 1;
 }
 
+/* Navigation text */
+.custom-nav-text {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.5;
+  flex: 1;
+}
+
 /* ============================================
    SECTION HEADERS
    ============================================ */

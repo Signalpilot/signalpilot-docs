@@ -163,7 +163,7 @@
             <li class="custom-nav-item">
               <a href="${item.url}" class="custom-nav-link ${activeClass}">
                 <span class="custom-nav-icon">${item.icon}</span>
-                ${item.text}
+                <span class="custom-nav-text">${item.text}</span>
               </a>
             </li>
           `;
