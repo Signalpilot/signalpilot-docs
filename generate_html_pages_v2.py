@@ -52,13 +52,13 @@ PAGES = [
     },
     {
         "md_path": "/home/user/signalpilot-docs/docs/configuration-wizard.md",
-        "html_path": "/home/user/signalpilot-docs/docs/configuration-wizard/index.html",
+        "html_path": "/home/user/signalpilot-docs/configuration-wizard/index.html",
         "title": "Configuration Wizard - Signal Pilot Docs",
         "description": "Interactive guide to configure Signal Pilot indicators based on your trading style, asset type, and experience level."
     },
     {
         "md_path": "/home/user/signalpilot-docs/docs/search-guide.md",
-        "html_path": "/home/user/signalpilot-docs/docs/search-guide/index.html",
+        "html_path": "/home/user/signalpilot-docs/search-guide/index.html",
         "title": "Search Guide & Quick Links - Signal Pilot Docs",
         "description": "Quick links to the most commonly searched Signal Pilot documentation topics and resources."
     }
