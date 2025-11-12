@@ -88,6 +88,16 @@ def read_template():
 def convert_markdown_to_html(md_content):
     """Convert markdown to HTML with improved handling."""
 
+    def make_id(text):
+        """Convert heading text to HTML id (slug)."""
+        # Remove emojis and special chars, convert to lowercase
+        slug = re.sub(r'[^\w\s-]', '', text.lower())
+        # Replace spaces with hyphens
+        slug = re.sub(r'[\s_]+', '-', slug)
+        # Remove leading/trailing hyphens
+        slug = slug.strip('-')
+        return slug
+
     # First, protect mermaid blocks from further processing
     mermaid_blocks = []
     def save_mermaid(match):
@@ -119,17 +129,23 @@ def convert_markdown_to_html(md_content):
 
         # Headers
         if stripped.startswith('######'):
-            html_lines.append(f'<h6>{stripped[6:].strip()}</h6>')
+            text = stripped[6:].strip()
+            html_lines.append(f'<h6 id="{make_id(text)}">{text}</h6>')
         elif stripped.startswith('#####'):
-            html_lines.append(f'<h5>{stripped[5:].strip()}</h5>')
+            text = stripped[5:].strip()
+            html_lines.append(f'<h5 id="{make_id(text)}">{text}</h5>')
         elif stripped.startswith('####'):
-            html_lines.append(f'<h4>{stripped[4:].strip()}</h4>')
+            text = stripped[4:].strip()
+            html_lines.append(f'<h4 id="{make_id(text)}">{text}</h4>')
         elif stripped.startswith('###'):
-            html_lines.append(f'<h3>{stripped[3:].strip()}</h3>')
+            text = stripped[3:].strip()
+            html_lines.append(f'<h3 id="{make_id(text)}">{text}</h3>')
         elif stripped.startswith('##'):
-            html_lines.append(f'<h2>{stripped[2:].strip()}</h2>')
+            text = stripped[2:].strip()
+            html_lines.append(f'<h2 id="{make_id(text)}">{text}</h2>')
         elif stripped.startswith('#'):
-            html_lines.append(f'<h1>{stripped[1:].strip()}</h1>')
+            text = stripped[1:].strip()
+            html_lines.append(f'<h1 id="{make_id(text)}">{text}</h1>')
 
         # Horizontal rules
         elif stripped == '---':
