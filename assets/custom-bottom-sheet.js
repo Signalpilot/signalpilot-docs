@@ -13,8 +13,8 @@
       {
         title: 'Getting Started',
         items: [
-          { text: 'Quick Start', url: '/start-quick/', icon: '⚡' },
-          { text: 'Quickstart Guide', url: '/start-quickstart/', icon: '🚀' },
+          { text: '⚡ Install & Configure', url: '/start-quick/', icon: '⚡' },
+          { text: '🔍 Compare Indicators', url: '/start-quickstart/', icon: '🔍' },
           { text: 'Prerequisites', url: '/start-prerequisites/', icon: '📋' },
           { text: 'Onboarding', url: '/start-onboarding/', icon: '👋' }
         ]
@@ -22,7 +22,7 @@
       {
         title: 'Signal Pilot Suite',
         items: [
-          { text: 'Suite Overview', url: '/suite-index/', icon: '📦' },
+          { text: '📚 Suite Reference', url: '/suite-index/', icon: '📚' },
           { text: 'Pentarch v1.0', url: '/pentarch-v10/', icon: '🎯' },
           { text: 'Janus Atlas v1.0', url: '/janus-atlas-v10/', icon: '🗺️' },
           { text: 'Omnideck v1.0', url: '/omnideck-v10/', icon: '⚙️' },
