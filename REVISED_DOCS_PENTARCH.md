@@ -1526,6 +1526,23 @@ Risk management (1:2 ratio minimum) makes 50% win rates profitable.
 
 ---
 
+## 🔗 Works Well With Other Signal Pilot Indicators
+
+**High Synergy Pairs:**
+- **+ Janus Atlas:** TD Sequential signals + level clusters = precise timing at key support/resistance
+- **+ Volume Oracle:** TD signals + institutional flow = volume-confirmed cycle reversals
+- **+ Harmonic Oscillator:** TD signals + oscillator consensus = cycle + momentum alignment
+
+**Common Combinations:**
+- **Pentarch TD 9 Buy + Janus support cluster** → Reversal signal at tested level with cycle confirmation
+- **Pentarch TD 13 Sell + Volume Oracle Flow red** → Distribution signal with institutional exit confirmation
+- **Pentarch TDST break + Harmonic oversold** → Breakout with momentum exhaustion reversal
+
+**Why These Pair Well:**
+Pentarch provides deep TD Sequential analysis (WHEN cycles turn). Janus adds WHERE price may react (levels). Volume Oracle confirms WHO is acting (institutions). Harmonic confirms momentum state. Combining cycle timing with levels and volume creates high-probability setups.
+
+---
+
 ## ❓ Frequently Asked Questions
 
 ### Q: When do signals appear?

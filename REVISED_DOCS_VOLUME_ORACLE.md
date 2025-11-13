@@ -897,6 +897,97 @@ A "high volume" spike on a stock that typically trades 100K shares/day (500K spi
 
 ---
 
+## 🧠 Volume Trading Psychology: Key Challenges
+
+### Challenge 1: Trusting Volume Flow Color Without Price Confirmation
+
+**What Happens:** Volume Flow turns green (bullish), you buy immediately. Price continues dropping. You're confused: "Flow is green but price is falling!"
+
+**The Fix:** Volume Flow shows accumulation/distribution, not immediate price direction. Green Flow in downtrend = smart money accumulating, but price may continue falling before reversing. Wait for price confirmation.
+
+**Mental Script:** "Flow color + price action alignment = trade. Flow alone = observation, not signal."
+
+---
+
+### Challenge 2: Ignoring Position Manager Warnings
+
+**What Happens:** Position Manager shows red "TRAPPED LONG" label. You hold because "I believe in this trade." Price drops 5% more. Position Manager was warning early about institutional exits.
+
+**The Fix:** Position Manager tracks institutional behavior (entry/exit zones). When it shows trapped signals, listen. It's detecting exits before retail traders notice.
+
+**Mental Script:** "When Position Manager says trapped, I reassess immediately. Ego costs money."
+
+---
+
+### Challenge 3: Trading Volume Spikes Without Context
+
+**What Happens:** Huge volume spike appears. You think "Big move coming!" and enter. Price chops sideways. The volume was institutional distribution, not accumulation.
+
+**The Fix:** Volume spikes need Flow color context. Spike + green Flow = accumulation (bullish). Spike + red Flow = distribution (bearish). Volume alone doesn't indicate direction.
+
+**Mental Script:** "Volume spike + Flow green = bullish. Volume spike + Flow red = bearish. Volume alone = wait for context."
+
+---
+
+## 🚫 Top 5 Mistakes with Volume Oracle
+
+### Mistake #1: Trading Volume Flow Color Changes Without Price Confirmation
+
+**What Happens:** Flow turns green, you buy instantly. Price keeps dropping for 2 days. Flow stayed green but price ignored it initially.
+
+**The Fix:** Flow shows institutional positioning, not immediate price action. Wait for price to confirm Flow direction before entering. Flow + price alignment = signal.
+
+---
+
+### Mistake #2: Ignoring "Trapped Long/Short" Signals from Position Manager
+
+**What Happens:** Position Manager shows "TRAPPED LONG." You ignore it, thinking "It'll bounce." Price drops 8% more as institutions exit.
+
+**The Fix:** Trapped signals detect institutional exits before retail notices. When Position Manager warns, reassess your position immediately. Exit or tighten stops.
+
+---
+
+### Mistake #3: Trading Volume Spikes Without Flow Context
+
+**What Happens:** Massive volume bar appears. You enter thinking "Big move coming!" Price chops. The spike was distribution (selling), not accumulation (buying).
+
+**The Fix:** Volume spikes need Flow color. Spike + green Flow = bullish accumulation. Spike + red Flow = bearish distribution. Never trade volume spikes in isolation.
+
+---
+
+### Mistake #4: Confusing Flow Zones with Support/Resistance Levels
+
+**What Happens:** You see Flow zones and treat them like traditional support/resistance. You buy at a zone bottom expecting bounce. Price breaks through easily.
+
+**The Fix:** Flow zones show accumulation/distribution areas, not price barriers. They indicate WHERE institutions acted, not IF price will hold. Use zones for context, not as stop-loss levels.
+
+---
+
+### Mistake #5: Expecting Immediate Price Reaction to Flow Changes
+
+**What Happens:** Flow turns green. You buy. Price continues down for 3 days. You think "This indicator doesn't work!" Price then rallies hard.
+
+**The Fix:** Institutional accumulation (green Flow) often occurs DURING price declines. Smart money buys the dip over days/weeks. Green Flow = accumulation phase, not instant reversal signal.
+
+---
+
+## 🔗 Works Well With Other Signal Pilot Indicators
+
+**High Synergy Pairs:**
+- **+ Pentarch:** Institutional flow + TD Sequential = volume-confirmed cycle signals
+- **+ Omnideck:** Volume Flow + multi-system alignment = institutional participation validation
+- **+ Janus Atlas:** Flow zones + level clusters = accumulation/distribution at key levels
+
+**Common Combinations:**
+- **Volume Flow green + Pentarch TD 9 Buy** → Institutional accumulation at cycle low
+- **Volume Flow red + Janus resistance cluster** → Distribution at tested resistance
+- **Position Manager "trapped long" + Omnideck Regime red** → Multi-indicator exit signal
+
+**Why These Pair Well:**
+Volume Oracle shows WHO is acting (institutions vs retail) and WHERE (entry/exit zones). Pentarch/Omnideck show WHEN to act (timing). Janus shows price levels. Combining participant analysis with timing creates setups where retail and institutional interests align.
+
+---
+
 ## ❓ Frequently Asked Questions
 
 ### Q: Can Position Manager track multiple positions?

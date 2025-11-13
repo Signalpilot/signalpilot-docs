@@ -148,39 +148,8 @@ Enable these systems first:
 
 Additional systems can be enabled progressively.
 
-### Progressive Learning Path
-
-**Week 1-2: Foundation (4 systems)**
-- Master TD Sequential signal interpretation
-- Understand Squeeze breakout mechanics
-- Learn EMA trend identification
-- Use Regime Box for directional context
-
-**Week 3-4: Enhancement (add 2-3 systems)**
-- Add BMSB (support band)
-- Add SuperTrend (trend confirmation)
-- Add Liquidity Sweeps (stop hunt detection)
-
-**Month 2+: Customization (selective addition)**
-- Add Supply/Demand Zones if zone-based approach used
-- Add Candlestick Patterns if pattern recognition valued
-
-### System Toggle Options
-
-| System | On/Off Toggle | Alert Available |
-|--------|---------------|-----------------|
-| TD Sequential | ✓ | ✓ |
-| Squeeze | ✓ | ✓ |
-| Liquidity Sweeps | ✓ | ✓ |
-| EMA Trio | ✓ | Cross alerts |
-| SuperTrend | ✓ | Flip alerts |
-| BMSB | ✓ | Touch alerts |
-| Regime Box | ✓ | Change alerts |
-| S/D Zones | ✓ | Touch alerts |
-| Candlestick Patterns | ✓ | ✓ |
-| Meta Tools | Always on | - |
-
 ---
+
 
 ## ⚙️ Advanced Configuration Examples
 
@@ -971,6 +940,160 @@ Wider stops reduce whipsaw risk when combining systems.
 - If it takes 2 minutes to explain why 7 systems justify the trade → Too complex → Skip
 
 **For complete Risk Management framework (position sizing, stop strategies, drawdown management), see [Pentarch Risk Management Section](REVISED_DOCS_PENTARCH.md#-risk-management--position-sizing).**
+
+---
+
+## 🧠 Psychology: Key Challenges with Multi-System Trading
+
+### Challenge 1: Analysis Paralysis from 10 Systems
+
+**What Happens:** TD 9 appears, but RSI is overbought, Regime is yellow, SuperTrend is green, EMAs bullish, Stochastic diverging. 30 minutes pass analyzing every angle. Signal expires untaken.
+
+**The Fix:** Set a 10-minute timer for analysis. If you can't decide in 10 minutes, the setup isn't clear enough → Skip and wait for next signal.
+
+**Mental Script:** "6+ systems aligned = take it. 5 systems split evenly = skip. Still analyzing at minute 8 = skip."
+
+---
+
+### Challenge 2: "More Systems = Safer Trade" Fallacy
+
+**What Happens:** You find 7 aligned systems and think "This can't lose!" You risk 2% (double your normal) because it's "so perfect." Trade fails immediately. You're devastated.
+
+**The Fix:** Risk management applies to EVERY trade. 1% max risk, 2:1 R:R minimum, stop set before entry—no exceptions for "perfect" setups.
+
+**Mental Script:** "7 systems aligned = higher probability, not certainty. I still follow my 1% risk rule on every single trade."
+
+---
+
+### Challenge 3: System Blaming After Losses
+
+**What Happens:** Trade loses on TD 9 + Regime + EMAs. You think: "TD Sequential doesn't work!" Next signal: you disable TD, enable different systems. Week later: new systems lose, disable those too. Month later: cycled through all 10 systems, nothing "works."
+
+**The Fix:** Commit to your chosen 4-6 systems for minimum 50 trades before changing. One loss doesn't invalidate a system—sample size reveals performance.
+
+**Mental Script:** "One loss doesn't mean broken system—I need 50 trades to evaluate true performance."
+
+---
+
+## 🌳 Decision Tree: Should I Take This Multi-System Trade?
+
+```
+┌──────────────────────────────────────┐
+│  OMNIDECK SIGNAL APPEARS (any system)│
+└─────────────┬────────────────────────┘
+              │
+              ▼
+       ┌──────────────┐
+       │ How many     │
+       │ systems      │
+       │ agree?       │
+       └──┬───────┬───┘
+          │       │
+        0-2     3+
+          │       │
+          ▼       ▼
+       ❌ SKIP  Continue
+                  │
+                  ▼
+           ┌──────────────┐
+           │ Any systems  │
+           │ directly     │
+           │ conflicting? │
+           └──┬───────┬───┘
+              │       │
+             YES      NO
+              │       │
+              ▼       ▼
+           ❌ SKIP  Continue
+                      │
+                      ▼
+               ┌──────────────┐
+               │ Can explain  │
+               │ in 15 secs?  │
+               └──┬───────┬───┘
+                  │       │
+                 NO      YES
+                  │       │
+                  ▼       ▼
+               ❌ SKIP  Continue
+                          │
+                          ▼
+                   ┌──────────────┐
+                   │ Higher TF    │
+                   │ confirmation?│
+                   └──┬───────┬───┘
+                      │       │
+                     NO      YES
+                      │       │
+                      ▼       ▼
+                   Medium  ✅ HIGH
+                   Quality QUALITY
+```
+
+**Quick Rules:**
+- **3+ systems aligned:** Minimum for trade consideration
+- **No major conflicts:** SuperTrend vs Regime, TD vs all oscillators
+- **15-second test:** Can you explain the setup simply and quickly?
+- **Higher TF check:** One timeframe higher confirms direction
+
+---
+
+## 🚫 Top 5 Mistakes with Omnideck
+
+### Mistake #1: Enabling All 10 Systems on Day 1
+
+**What Happens:** You install Omnideck, enable everything immediately. Chart becomes visual chaos. You don't understand what any system does because you never learned them separately. Analysis paralysis sets in.
+
+**The Fix:** Start with 2-3 systems (Week 1), add 1-2 more (Week 2), settle on your core 4-6 systems permanently. Most successful users never enable all 10.
+
+---
+
+### Mistake #2: Treating Conflicting Systems as "Broken"
+
+**What Happens:** TD 9 Buy appears, but SuperTrend is red and Regime is red. You think: "This indicator is broken—systems are contradicting!"
+
+**The Fix:** Conflicting systems = low confluence setup = skip or reduce size significantly. Not a bug, it's information about market complexity.
+
+---
+
+### Mistake #3: Ignoring Higher Timeframe Because "10 Systems Should Be Enough"
+
+**What Happens:** You have 7 systems aligned bullish on 15-minute chart. You skip checking the 1-hour chart. Trade fails. You check 1H after the loss: strong downtrend. Your 15M signal was a tiny pullback in a larger downtrend.
+
+**The Fix:** Always check one timeframe higher before entry. 10 systems on lower TF don't override higher TF trend direction.
+
+---
+
+### Mistake #4: Switching System Combinations Every Week
+
+**What Happens:** Week 1: TD + Regime loses once, you switch to Squeeze + EMAs. Week 2: That loses, you switch again. Month ends: no idea which systems actually work because you never tested any combination long enough.
+
+**The Fix:** Choose one combination (4-6 systems), commit to 50 trades minimum before evaluating. Every system experiences losses—sample size matters.
+
+---
+
+### Mistake #5: Assuming "Perfect" Setups Can't Lose
+
+**What Happens:** You find 9/10 systems aligned bullish. You think "This is guaranteed!" and risk 3% because "it's so perfect." Trade immediately reverses and stops you out.
+
+**The Fix:** No setup is guaranteed. Even 10/10 systems aligned doesn't eliminate risk. 1% risk rule applies to every trade, no exceptions.
+
+---
+
+## 🔗 Works Well With Other Signal Pilot Indicators
+
+**High Synergy Pairs:**
+- **+ Janus Atlas:** Multi-system signals + level clusters = high-confluence reversal setups
+- **+ Volume Oracle:** System alignment + institutional flow confirmation = validated trends
+- **+ Pentarch:** TD Sequential depth + multi-system validation = comprehensive cycle analysis
+
+**Common Combinations:**
+- **Omnideck TD 9 + Janus support cluster** → Reversal signal with level confluence
+- **Omnideck Regime green + Volume Flow green** → Institutional trend confirmation
+- **Omnideck Squeeze breakout + Pentarch TDST break** → Multi-methodology breakout validation
+
+**Why These Pair Well:**
+Omnideck provides multi-system confluence. Adding Janus Atlas levels or Volume Oracle institutional flow adds independent confirmation from different market dimensions (levels, volume), reducing false signals.
 
 ---
 

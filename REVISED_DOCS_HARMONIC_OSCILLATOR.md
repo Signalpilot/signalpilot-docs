@@ -873,6 +873,161 @@ BUY signals in uptrends and SELL signals in downtrends are most reliable. Choppy
 
 ---
 
+## 🧠 Oscillator Trading Psychology: Key Challenges
+
+### Challenge 1: Premature Reversal Trading in Strong Trends
+
+**What Happens:** RSI hits 70 (overbought). You think "Time to short!" Price continues higher for 2 more weeks while RSI stays overbought the entire time. You're stopped out multiple times trying to catch the top.
+
+**The Fix:** Overbought/oversold doesn't mean reversal—it means strong momentum. In strong trends, oscillators stay extreme for extended periods. Wait for trend weakness before trading against it.
+
+**Mental Script:** "Overbought in uptrend = strength, not reversal signal. I need trend change confirmation first."
+
+---
+
+### Challenge 2: Trusting Single Oscillator Over Voting Consensus
+
+**What Happens:** RSI shows bullish divergence (you're excited!). But Stochastic, CCI, MFI, and Williams all show no divergence. You trade based on RSI alone. Trade fails because 4/5 oscillators disagreed.
+
+**The Fix:** Harmonic Oscillator uses voting consensus for a reason. 1 oscillator agreeing = weak signal. 3+ oscillators agreeing = strong signal. Trust the consensus, not the outlier.
+
+**Mental Script:** "How many oscillators agree? If fewer than 3, I skip. Consensus beats single oscillator."
+
+---
+
+### Challenge 3: Ignoring Trend Context (Trading Oscillators in Vacuum)
+
+**What Happens:** All 5 oscillators show oversold. You buy immediately. Price continues lower. You check trend: strong downtrend on higher timeframe. Your "oversold bounce" was a small pause in a larger decline.
+
+**The Fix:** Oscillators show momentum, not direction. Check higher TF trend first. Trade oversold bounces in uptrends, overbought pullbacks in downtrends. Don't trade oscillators against higher TF trend.
+
+**Mental Script:** "Oscillators + higher TF trend alignment = trade. Oscillators vs trend = skip."
+
+---
+
+## 🌳 Decision Tree: Should I Trade This Oscillator Signal?
+
+```
+┌──────────────────────────────────┐
+│  OSCILLATOR SIGNAL APPEARS       │
+│  (Divergence/Extreme/Consensus)  │
+└─────────────┬────────────────────┘
+              │
+              ▼
+       ┌──────────────┐
+       │ How many     │
+       │ oscillators  │
+       │ agree?       │
+       └──┬───────┬───┘
+          │       │
+        0-2     3+
+          │       │
+          ▼       ▼
+       ❌ SKIP  Continue
+                  │
+                  ▼
+           ┌──────────────┐
+           │ Is price in  │
+           │ strong trend?│
+           └──┬───────┬───┘
+              │       │
+             YES      NO
+              │       │
+              ▼       ▼
+          Check     Continue
+          alignment    │
+              │        │
+              ▼        ▼
+       ┌──────────────────┐
+       │ Trading WITH     │
+       │ trend or AGAINST?│
+       └──┬──────────┬────┘
+          │          │
+       AGAINST     WITH
+          │          │
+          ▼          ▼
+       ❌ SKIP   Continue
+                     │
+                     ▼
+              ┌──────────────┐
+              │ Higher TF    │
+              │ confirms?    │
+              └──┬───────┬───┘
+                 │       │
+                NO      YES
+                 │       │
+                 ▼       ▼
+              Medium  ✅ HIGH
+              Quality QUALITY
+```
+
+**Quick Rules:**
+- **3+ oscillators must agree:** Minimum for trading consideration
+- **Check trend first:** Strong trend = oscillators can stay extreme for weeks
+- **Trade WITH trend:** Oversold in uptrend = buy. Overbought in downtrend = short
+- **Higher TF check:** One timeframe higher must align
+
+---
+
+## 🚫 Top 5 Mistakes with Harmonic Oscillator
+
+### Mistake #1: Trading Overbought/Oversold as Automatic Reversals
+
+**What Happens:** RSI hits 30 (oversold), you buy immediately thinking "It's oversold, must go up!" Price continues dropping for days. RSI stays oversold the entire time.
+
+**The Fix:** Oversold means strong downward momentum, not "reversal coming." In downtrends, oscillators stay oversold. Wait for trend exhaustion signs before trading mean reversion.
+
+---
+
+### Mistake #2: Ignoring the Voting Consensus (Trading 1/5 Agreement)
+
+**What Happens:** RSI shows bullish divergence. You're excited and trade it. Stochastic, CCI, MFI, Williams all show NO divergence. Trade fails because only 1 out of 5 oscillators agreed.
+
+**The Fix:** 1 oscillator = noise. 3+ oscillators = signal. If fewer than 3 agree, skip the trade. The voting system exists to filter false signals.
+
+---
+
+### Mistake #3: Trading Oscillators Against Higher Timeframe Trend
+
+**What Happens:** All 5 oscillators oversold on 15M chart. You buy. Price drops further. You check Daily chart: strong downtrend. Your 15M "oversold" was a tiny pause in a Daily downtrend.
+
+**The Fix:** Check higher TF trend first. Trade oscillator signals that ALIGN with higher TF. Oversold in uptrend = buy. Oversold in downtrend = skip or short continuation.
+
+---
+
+### Mistake #4: Confusing Divergence Types (Regular vs Hidden)
+
+**What Happens:** You see divergence and trade it as a reversal signal. Trade immediately goes against you. Later you realize: it was hidden divergence (trend continuation), not regular divergence (reversal).
+
+**The Fix:** Learn the difference: Regular divergence = potential reversal. Hidden divergence = trend continuation. Match your trade direction to the divergence type.
+
+---
+
+### Mistake #5: Trading Extreme Readings Without Confirmation
+
+**What Happens:** All 5 oscillators hit extreme overbought (90+). You short immediately. Price continues higher for 3 more days. You're stopped out. Oscillators stayed extreme the entire time.
+
+**The Fix:** Extreme readings show strong momentum, not imminent reversal. Wait for oscillators to START TURNING back from extreme before entering. Extreme alone ≠ reversal signal.
+
+---
+
+## 🔗 Works Well With Other Signal Pilot Indicators
+
+**High Synergy Pairs:**
+- **+ Pentarch:** Oscillator consensus + TD Sequential = momentum-confirmed cycle signals
+- **+ Omnideck:** Multi-oscillator voting + multi-system alignment = double-layer confirmation
+- **+ Janus Atlas:** Divergence signals + level clusters = reversal timing at key levels
+
+**Common Combinations:**
+- **Harmonic bullish divergence + Janus support cluster** → Momentum reversal at tested level
+- **Harmonic 3+ oscillators oversold + Pentarch TD 9 Buy** → Cycle + momentum alignment
+- **Harmonic overbought + Omnideck Regime red** → Multi-indicator distribution warning
+
+**Why These Pair Well:**
+Harmonic Oscillator shows momentum and divergence (internal market pressure). Pentarch/Omnideck show timing and structure. Janus shows levels. Combining momentum analysis with timing and levels creates high-probability reversal setups.
+
+---
+
 ## ❓ Frequently Asked Questions
 
 ### Q: Why use five oscillators instead of one?

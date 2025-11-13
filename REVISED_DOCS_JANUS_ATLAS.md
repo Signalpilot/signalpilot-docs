@@ -1034,6 +1034,158 @@ Single isolated levels have less significance than clusters where multiple level
 
 ---
 
+## 🧠 Level Trading Psychology: Key Challenges
+
+### Challenge 1: "This Level Has Held 5 Times Before" Trap
+
+**What Happens:** You see a support level that's been tested and held 5 times. You think "This is super strong—it's held 5 times!" Price breaks through on the 6th test.
+
+**The Fix:** Each test weakens a level. Fresh levels (1-2 tests) hold better than over-tested levels (4+ tests). Wait for the break and trade the retest instead.
+
+**Mental Script:** "4+ tests = likely to break soon. I'll wait for the break and trade the retest, not the bounce."
+
+---
+
+### Challenge 2: Fighting Higher Timeframe Trend
+
+**What Happens:** You short 15M resistance in a Daily uptrend. Price blasts through, stops you out. Your 15M resistance was a minor pause in a larger uptrend.
+
+**The Fix:** Check one timeframe higher before every level trade. Only trade levels that align with higher TF trend direction.
+
+**Mental Script:** "Is this level trade with or against the higher TF? If against, skip it."
+
+---
+
+### Challenge 3: Isolated Levels vs Cluster Confusion
+
+**What Happens:** You trade a single Fibonacci level because "Fib levels are powerful." It fails. You skip a cluster of 3 levels because "too many lines." The cluster holds perfectly.
+
+**The Fix:** Cluster strength matters more than level type. A cluster of 3 "weak" pivot levels is stronger than 1 isolated "powerful" Fib level.
+
+**Mental Script:** "How many levels are clustered here? If just one, I need other confirmation. If 3+, that's strong confluence."
+
+---
+
+## 🌳 Decision Tree: Should I Trade This Level?
+
+```
+┌──────────────────────────────┐
+│  PRICE APPROACHING LEVEL     │
+└──────────┬───────────────────┘
+           │
+           ▼
+    ┌──────────────┐
+    │ Is it part  │
+    │ of a cluster│
+    │ (2+ levels)?│
+    └──┬───────┬──┘
+       │       │
+      NO      YES
+       │       │
+       ▼       ▼
+    ❌ SKIP  Continue
+                │
+                ▼
+         ┌──────────────┐
+         │ How many     │
+         │ times tested?│
+         └──┬───────┬───┘
+            │       │
+          4+      <4
+            │       │
+            ▼       ▼
+         ❌ SKIP  Continue
+                    │
+                    ▼
+             ┌──────────────┐
+             │ Higher TF    │
+             │ trend aligns?│
+             └──┬───────┬───┘
+                │       │
+               NO      YES
+                │       │
+                ▼       ▼
+             ❌ SKIP  Continue
+                        │
+                        ▼
+                 ┌──────────────┐
+                 │ Can achieve  │
+                 │ 2:1 R:R?     │
+                 └──┬───────┬───┘
+                    │       │
+                   NO      YES
+                    │       │
+                    ▼       ▼
+                 ❌ SKIP  ✅ TAKE
+```
+
+**Quick Rules:**
+- **Cluster required:** 2+ levels within 1% of each other
+- **Test count matters:** Fresh levels (1-3 tests) hold better than over-tested (4+)
+- **Higher TF alignment:** Check one TF higher, must align
+- **R:R check:** Must achieve 2:1 minimum with stop beyond level
+
+---
+
+## 🚫 Top 5 Mistakes with Janus Atlas
+
+### Mistake #1: Trading Every Level Touch
+
+**What Happens:** You enable 10+ level types. Price touches a level every few bars. You take every touch as a signal. 20-30 trades per week, most lose.
+
+**The Fix:** Level touch alone is NOT a signal. Need: cluster + fresh test + higher TF alignment + 2:1 R:R. Filter aggressively.
+
+---
+
+### Mistake #2: Ignoring Test Count (Trading Over-Tested Levels)
+
+**What Happens:** Support tested 6 times, you buy the 7th test thinking "It's so strong!" It breaks through, stops you out.
+
+**The Fix:** 1-2 tests = fresh (trade it), 3 tests = acceptable (caution), 4+ tests = over-tested (wait for break, trade retest).
+
+---
+
+### Mistake #3: Confusing Level Type with Level Strength
+
+**What Happens:** You trade Fibonacci levels only because "Fibs are powerful." They fail. You skip pivot clusters because "pivots are weak." Pivot clusters work perfectly.
+
+**The Fix:** Clustering matters more than level type. 3 "weak" pivots clustered = stronger than 1 "powerful" isolated Fib.
+
+---
+
+### Mistake #4: Using Levels on Wrong Timeframe
+
+**What Happens:** Trading 5M scalps but only Weekly/Monthly levels enabled. Or trading Daily swings with Session levels cluttering the chart.
+
+**The Fix:** Match level types to trading timeframe. 5M traders need Session levels. Daily traders need Weekly levels. Enable what's relevant, disable the rest.
+
+---
+
+### Mistake #5: Stop Loss AT Level Instead of BEYOND It
+
+**What Happens:** Support at $50, you place stop at $50. Price wicks to $49.95, stops you out, bounces to $51.50. Level held, you got wicked out.
+
+**The Fix:** Place stops 0.2-0.5% BEYOND the cluster. Give levels room to breathe. If price breaks beyond your stop zone, the level truly failed.
+
+---
+
+## 🔗 Works Well With Other Signal Pilot Indicators
+
+**High Synergy Pairs:**
+- **+ Pentarch:** Level clusters + TD Sequential signals = precise reversal timing at key levels
+- **+ Omnideck:** Level confluence + multi-system alignment = institutional zones with technical confirmation
+- **+ Volume Oracle:** Support/resistance levels + volume analysis = level strength validation
+
+**Common Combinations:**
+- **Janus support cluster + Pentarch TD 9 Buy** → Reversal at tested level with cycle confirmation
+- **Janus resistance + Omnideck TD 13 Sell + Regime red** → Multi-layer resistance confluence
+- **Janus level + Volume Oracle trapped signal** → Institutional exit zones at key levels
+
+**Why These Pair Well:**
+Janus Atlas identifies WHERE price may react (levels). Pentarch/Omnideck identify WHEN to enter (timing/cycles). Volume Oracle confirms WHO is acting (institutions). Combining spatial (levels) + temporal (timing) + participant (volume) analysis creates complete picture.
+
+---
+
 ## ❓ Frequently Asked Questions
 
 ### Q: How many levels should I enable?
