@@ -816,6 +816,80 @@ If yes to any → Skip the trade, regardless of technical signal.
 
 ---
 
+## 🧠 Multi-Asset Trading Psychology: Key Challenges
+
+### Challenge 1: Overtrading Correlated Symbols ("Diversification" Illusion)
+
+**What Happens:** Grid shows bullish signals on SPY, QQQ, IWM, DIA. You take all 4 trades thinking "I'm diversified across 4 symbols!" Market drops. All 4 lose simultaneously. They were 95% correlated—essentially one trade split 4 ways.
+
+**The Fix:** Check correlation heatmap. If correlation >80%, treat as ONE trade, not four separate trades. Taking multiple positions in highly correlated assets = concentrated risk, not diversification.
+
+**Mental Script:** "Are these symbols moving together? If correlation >80%, I pick the strongest ONE signal, not all of them."
+
+---
+
+### Challenge 2: Analysis Paralysis from Monitoring Too Many Symbols
+
+**What Happens:** You monitor 50 symbols in Grid. 12 show signals simultaneously. You spend 90 minutes analyzing each. By the time you decide, 10 signals expired. You're mentally exhausted and took 2 trades poorly.
+
+**The Fix:** Limit watchlist to 15-20 symbols maximum. Quality over quantity. Focus on symbols with clear signals and low correlation. More symbols = diluted attention = worse decisions.
+
+**Mental Script:** "I don't need to trade every signal. I need to trade the BEST signals from a focused watchlist."
+
+---
+
+### Challenge 3: Chasing Sector Rotation FOMO
+
+**What Happens:** Tech signals fire, you enter. Next day Energy sector shows signals, you think "I'm missing Energy!" You add Energy positions. Day after Healthcare signals appear, you add those too. Now you're in 8 positions across 4 sectors with unclear conviction on any.
+
+**The Fix:** Sector rotation takes weeks/months, not days. Pick ONE or TWO sectors showing strongest momentum/signals. Stick with them for weeks. Chasing daily rotation = overtrading and confusion.
+
+**Mental Script:** "Sector rotation is slow. I commit to 1-2 sectors showing clear strength, not chasing every daily rotation."
+
+---
+
+## 🚫 Top 5 Mistakes with Augury Grid
+
+### Mistake #1: Taking Multiple Trades in Highly Correlated Assets
+
+**What Happens:** Grid signals SPY, QQQ, VOO, IVV all bullish. You take all 4 trades thinking you're "diversified." Market drops. All 4 lose simultaneously. They're 98% correlated.
+
+**The Fix:** Check correlation heatmap. If >80% correlated, treat as ONE trade. Choose the strongest signal from the group. Correlated assets = one position, not four.
+
+---
+
+### Mistake #2: Monitoring Too Many Symbols (50+ Symbol Paralysis)
+
+**What Happens:** You add 50+ symbols to Grid. Signals fire constantly. You can't keep up. Analysis takes hours. You miss good entries. You're mentally exhausted.
+
+**The Fix:** Limit to 15-20 symbols. Focus on liquid, diverse sectors. Quality filtered signals beat quantity overwhelming signals. More isn't better.
+
+---
+
+### Mistake #3: Ignoring Sector Correlation When Building Positions
+
+**What Happens:** You're long AAPL, MSFT, NVDA, GOOGL thinking "4 different stocks!" Market-wide tech selloff happens. All 4 drop 5%. Your portfolio drops 20% because all positions were in ONE sector.
+
+**The Fix:** Check sector exposure. Limit to 2-3 positions per sector maximum. Spread across Technology, Healthcare, Finance, Energy, Consumer for actual diversification.
+
+---
+
+### Mistake #4: Chasing Every Sector Rotation Signal
+
+**What Happens:** Monday: Tech signals fire, you enter. Wednesday: Energy signals, you add positions. Friday: Healthcare signals, you add more. Week ends: 10 positions, no clear strategy, confused about what you're trading.
+
+**The Fix:** Sector rotation is a weeks/months process, not daily. Pick 1-2 strongest sectors, commit for weeks. Chasing daily rotation = overtrading.
+
+---
+
+### Mistake #5: Equal Position Sizing Across Different Volatility Symbols
+
+**What Happens:** You risk 1% on both SPY (low volatility) and TSLA (high volatility) with same dollar amounts. TSLA position size is too large relative to its volatility. One TSLA whips saw costs you 3% when you intended 1% risk.
+
+**The Fix:** Adjust position size for volatility. Higher volatility symbols (TSLA, crypto) = smaller position size. Lower volatility (SPY, bonds) = normal position. Risk per trade stays constant, position sizes vary.
+
+---
+
 ## ❓ Frequently Asked Questions
 
 ### Q: How many symbols should I monitor?

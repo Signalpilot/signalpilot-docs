@@ -896,6 +896,80 @@ On assets where volume reporting is unreliable (some crypto exchanges, OTC stock
 
 ---
 
+## 🧠 Divergence Trading Psychology: Key Challenges
+
+### Challenge 1: Trading Divergence Too Early (Before Price Confirmation)
+
+**What Happens:** You spot bullish divergence—price making lower lows but OBV making higher lows. You buy immediately at the divergence. Price continues dropping for 5 more days. Divergence was early; reversal hadn't started.
+
+**The Fix:** Divergence shows potential, not timing. Wait for price to confirm with higher low or trend break before entering. Divergence + price confirmation = signal. Divergence alone = observation.
+
+**Mental Script:** "Divergence spotted. Now I wait for price to confirm the reversal before entering."
+
+---
+
+### Challenge 2: Confusing Divergence Types (Regular vs Hidden)
+
+**What Happens:** You see divergence and automatically trade it as a reversal. Trade goes against you immediately. Later you realize: it was hidden divergence (continuation), not regular divergence (reversal).
+
+**The Fix:** Learn the difference. Regular divergence = reversal signal (price and OBV disagree). Hidden divergence = continuation signal (trend will resume). Match trade direction to divergence type.
+
+**Mental Script:** "Is this regular (reversal) or hidden (continuation)? I trade the direction that matches the divergence type."
+
+---
+
+### Challenge 3: Ignoring OBV Direction Trend (Trading Against Institutional Flow)
+
+**What Happens:** Price is rising but OBV is declining (distribution). You keep buying because "price is going up!" Price suddenly reverses hard. Institutions were exiting the whole time.
+
+**The Fix:** OBV shows institutional flow. Rising price + falling OBV = distribution (weak rally). Wait for price/OBV alignment before entering. Trading against institutional flow = low probability.
+
+**Mental Script:** "Are price and OBV moving together? If diverging, I wait for alignment before entering."
+
+---
+
+## 🚫 Top 5 Mistakes with Plutus Flow
+
+### Mistake #1: Trading Divergence Without Price Confirmation
+
+**What Happens:** You spot bullish divergence and buy immediately. Price continues down for 3-5 days. Divergence was real, but timing was early. You're stopped out before the reversal starts.
+
+**The Fix:** Divergence shows potential reversal, not entry timing. Wait for price to confirm (higher low, trend break, structure change) before entering.
+
+---
+
+### Mistake #2: Confusing Regular and Hidden Divergence
+
+**What Happens:** You see divergence, trade it as a reversal. Trade fails. Later you realize it was hidden divergence (trend continuation), not regular divergence (reversal).
+
+**The Fix:** Regular divergence = reversal signal. Hidden divergence = continuation signal. Match your trade direction to the correct divergence type.
+
+---
+
+### Mistake #3: Ignoring Higher Timeframe OBV Trend
+
+**What Happens:** 15M OBV shows bullish divergence. You buy. Price drops. You check Daily OBV: strong downtrend. Your 15M divergence was a small pause in a larger Daily distribution.
+
+**The Fix:** Check higher TF OBV before trading divergence. 15M divergence in Daily downtrend OBV = low probability. Trade divergences that align with higher TF OBV direction.
+
+---
+
+### Mistake #4: Trading Price/OBV Misalignment as "Broken Indicator"
+
+**What Happens:** Price rises 5% but OBV declines. You think "This indicator is broken—price is clearly bullish!" You buy. Price reverses sharply. OBV was warning of distribution.
+
+**The Fix:** Price/OBV disagreement isn't a bug—it's information. Rising price + falling OBV = weak rally, institutions distributing. Wait for alignment before entering.
+
+---
+
+### Mistake #5: Expecting Immediate Reversals from Divergence
+
+**What Happens:** Bullish divergence appears. You enter immediately. Price continues down for 2 weeks. You exit, frustrated. 3 days later, price finally reverses sharply.
+
+**The Fix:** Divergence can take days/weeks to play out. Institutions accumulate/distribute over time. Use divergence for bias, not precise entry timing. Wait for price structure to confirm.
+
+---
+
 ## ❓ Frequently Asked Questions
 
 ### Q: What is On-Balance Volume (OBV)?
