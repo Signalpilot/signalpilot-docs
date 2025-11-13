@@ -2736,6 +2736,66 @@ graph TD
 </div>
 
 <hr />
+<h2 id="when-this-doesnt-work-well">🌫️ When This Doesn't Work Well<a class="headerlink" href="#when-this-doesnt-work-well" title="Permanent link">&para;</a></h2>
+
+<div class="sp-callout sp-callout--warning">
+  <div class="sp-callout__title">Understanding Reduced Reliability Conditions</div>
+  <p>Omnideck systems show reduced reliability or increased complexity in certain market conditions. Recognizing these environments helps set appropriate expectations:</p>
+</div>
+
+<h3 id="choppy-range-bound-markets">Choppy, Range-Bound Markets<a class="headerlink" href="#choppy-range-bound-markets" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> When price oscillates sideways in a narrow range with no clear trend, multiple Omnideck systems generate conflicting signals simultaneously.</p>
+<p><strong>What Happens:</strong> Regime Box shows neutral (gray), Pilot Line whipsaws back and forth, TD Sequential fires frequently in both directions, Supertrend flips repeatedly. Signal clarity decreases dramatically as different systems disagree.</p>
+<p><strong>Context:</strong> This isn't a flaw—it's Omnideck accurately reflecting market ambiguity. When the market has no clear direction, technical systems designed to follow trends naturally produce conflicting outputs. The conflict itself is information: stay out or reduce size.</p>
+
+<h3 id="too-many-systems-enabled-simultaneously">Too Many Systems Enabled Simultaneously<a class="headerlink" href="#too-many-systems-enabled-simultaneously" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> User enables all 10 systems at once on a single chart, especially on lower timeframes (5m, 15m).</p>
+<p><strong>What Happens:</strong> Visual overload makes it difficult to identify which signals matter. Too much information becomes noise rather than clarity. Analysis paralysis sets in—so many data points that decision-making becomes impossible.</p>
+<p><strong>Context:</strong> Omnideck provides 10 systems because different traders need different tools, not because everyone should use all 10 simultaneously. Most profitable users run 3-5 systems they deeply understand. More systems ≠ better decisions beyond a certain point.</p>
+
+<h3 id="td-sequential-in-strong-parabolic-trends">TD Sequential in Strong Parabolic Trends<a class="headerlink" href="#td-sequential-in-strong-parabolic-trends" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> During vertical price moves (especially in crypto, momentum stocks, or panic selling), TD Sequential counts complete but price continues without reversal.</p>
+<p><strong>What Happens:</strong> TD 13 buy/sell completions fire, suggesting exhaustion, but price momentum is so extreme that "exhaustion" lasts weeks or months. Multiple failed reversals occur before actual top/bottom forms.</p>
+<p><strong>Context:</strong> TD Sequential measures typical exhaustion patterns, but extraordinary trends (driven by narratives, short squeezes, or panic) can remain "exhausted" far longer than technical patterns suggest. Combine TD signals with Regime Box strength and <a href="../volume-oracle-v10/">Volume Oracle</a> climax patterns for confirmation.</p>
+
+<h3 id="major-news-fundamental-events">Major News & Fundamental Events<a class="headerlink" href="#major-news-fundamental-events" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> During earnings, Federal Reserve decisions, geopolitical crises, or regulatory announcements, price becomes driven by news rather than technical patterns.</p>
+<p><strong>What Happens:</strong> All Omnideck systems analyze price action, but they don't "know" about external catalysts. Price can gap through support/resistance levels shown by Pivot Points, ignore Ichimoku Cloud signals, or reverse violently despite all systems showing trend continuation.</p>
+<p><strong>Context:</strong> Technical analysis works best when price is driven by supply/demand dynamics and participant psychology. When fundamental news dominates, technical patterns temporarily lose predictive power. This affects all technical systems, not just Omnideck. Calendar awareness helps identify these periods.</p>
+
+<h3 id="very-low-timeframes-all-systems">Very Low Timeframes (1-Minute, 5-Minute) with Multiple Systems<a class="headerlink" href="#very-low-timeframes-all-systems" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> Using Omnideck on 1m or 5m charts with 5+ systems enabled, especially in low-volume environments.</p>
+<p><strong>What Happens:</strong> Systems fire constantly due to market microstructure noise (bid-ask spreads, algorithmic activity, small retail orders). Signal frequency increases but quality decreases. Stop losses get hit frequently before "legitimate" moves develop.</p>
+<p><strong>Context:</strong> Lower timeframes amplify noise exponentially. Systems like TD Sequential and Ichimoku Cloud work on any timeframe, but their signal-to-noise ratio degrades significantly below 15m. If you must trade lower timeframes, reduce number of systems enabled and confirm signals with higher timeframe context (1H, 4H).</p>
+
+<h3 id="individual-system-limitations">Individual System Inherent Limitations<a class="headerlink" href="#individual-system-limitations" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> Each of the 10 systems has specific market conditions where it underperforms:</p>
+<ul>
+<li><strong>TD Sequential:</strong> Weak in strong trending markets (premature exhaustion signals)</li>
+<li><strong>Pilot Line:</strong> Lags during sudden reversals (moving average-based)</li>
+<li><strong>Squeeze:</strong> Less effective in trending markets (designed for volatility expansion from consolidation)</li>
+<li><strong>Supertrend:</strong> Whipsaws in choppy markets (trend-following system in non-trending environment)</li>
+<li><strong>Pivot Points:</strong> Lose significance during strong momentum moves (support/resistance breaks)</li>
+<li><strong>BMSB:</strong> Can give late signals at extremes (mean reversion indicator in trending market)</li>
+</ul>
+<p><strong>What Happens:</strong> Relying on a single system during its weak condition produces poor results. For example, trading every TD Sequential signal during a parabolic bull run leads to multiple stopped-out short positions.</p>
+<p><strong>Context:</strong> This is why Omnideck provides 10 systems—no single system works in all conditions. The goal is to use systems that match current market structure (trend systems during trends, mean reversion systems during ranges, exhaustion systems at cycle turning points). System selection based on market context is as important as signal interpretation.</p>
+
+<div class="admonition tip">
+<p class="admonition-title">Recognizing Reduced Reliability Environments</p>
+<p><strong>Practical Identification:</strong></p>
+<ul>
+<li><strong>Regime Box neutral (gray) for extended periods:</strong> Market lacks directional conviction—reduce activity</li>
+<li><strong>3+ systems giving conflicting signals:</strong> Wait for alignment before acting</li>
+<li><strong>TD Sequential counts completing rapidly in both directions:</strong> Sign of choppy conditions</li>
+<li><strong>Supertrend flipping color multiple times within 10 bars:</strong> Indicates whipsaw environment</li>
+<li><strong>Chart feels cluttered/overwhelming:</strong> Too many systems enabled—disable 3-4 and focus on core systems</li>
+<li><strong>Economic calendar shows major events:</strong> Expect technical patterns to be overridden by news</li>
+</ul>
+<p><strong>Remember:</strong> Omnideck's multi-system approach is most powerful when systems confirm each other. When systems conflict significantly, that conflict is a signal to step aside—not to pick which system to trust. Wait for multi-system confluence (3+ systems aligned) for highest-probability setups.</p>
+</div>
+
+<hr />
 <h2 id="frequently-asked-questions">❓ Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permanent link">&para;</a></h2>
 <h3 id="q-should-i-enable-all-10-systems">Q: Should I enable all 10 systems?<a class="headerlink" href="#q-should-i-enable-all-10-systems" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> Starting with 3-4 systems recommended to learn each properly. Systems can be added progressively based on individual approach.</p>

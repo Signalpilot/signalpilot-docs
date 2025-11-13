@@ -3028,6 +3028,59 @@ Interpretation: Successful retest of broken level
 </div>
 
 <hr />
+<h2 id="when-this-doesnt-work-well">🌫️ When This Doesn't Work Well<a class="headerlink" href="#when-this-doesnt-work-well" title="Permanent link">&para;</a></h2>
+
+<div class="sp-callout sp-callout--warning">
+  <div class="sp-callout__title">Understanding Reduced Reliability Conditions</div>
+  <p>Volume Oracle analysis shows reduced reliability in certain market conditions. Recognizing these environments helps set appropriate expectations:</p>
+</div>
+
+<h3 id="extremely-low-volume-sessions">Extremely Low Volume Sessions<a class="headerlink" href="#extremely-low-volume-sessions" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> During major holidays (Christmas, Thanksgiving), extended weekends, or overnight sessions (especially for stocks/ETFs), volume drops to 10-30% of normal levels.</p>
+<p><strong>What Happens:</strong> Volume spikes become meaningless when baseline volume is already low. A 3x spike during overnight trading might represent 1/10th the volume of a normal day session move. Volume zones form on tiny volume that isn't representative of institutional participation. Buying/selling pressure signals fire but lack follow-through.</p>
+<p><strong>Context:</strong> Volume analysis works because volume represents participation and conviction. When total participation is minimal, volume metrics lose predictive power. It's like analyzing crowd behavior at an empty stadium—the signals exist but aren't statistically significant. Most effective volume analysis occurs during regular market hours when institutional participation is highest.</p>
+
+<h3 id="high-frequency-trading-environments">High-Frequency Trading Environments (24/7 Crypto)<a class="headerlink" href="#high-frequency-trading-environments" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> In crypto markets and some forex pairs, algorithmic high-frequency trading (HFT) and market makers create constant volume churn that isn't directional or intentional.</p>
+<p><strong>What Happens:</strong> Volume bars show constant high volume but without corresponding meaningful price movement. Volume spikes occur frequently (sometimes every 5-10 bars) due to HFT activity, not institutional positioning. Volume zones form and immediately become irrelevant. Signal-to-noise ratio drops—too many "significant" volume events for any to actually be significant.</p>
+<p><strong>Context:</strong> Volume Oracle analyzes volume as a measure of conviction and participation. In HFT-dominated environments, volume reflects algorithmic activity (spread capture, arbitrage, market making) rather than directional conviction. Traditional volume analysis assumptions (high volume = institutional interest) break down. This affects crypto exchanges more than stock markets due to 24/7 trading and lower regulatory oversight of HFT activity.</p>
+
+<h3 id="major-news-earnings-events">Major News & Earnings Events<a class="headerlink" href="#major-news-earnings-events" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> Federal Reserve announcements, earnings reports, FDA approvals, or major geopolitical events cause volume to spike 10x-50x normal levels as news is digested.</p>
+<p><strong>What Happens:</strong> Volume Oracle correctly identifies the spike (which is real), but the spike's meaning is different from normal volume spikes. News-driven volume often shows initial panic/excitement that reverses within minutes as the market re-evaluates the news. Volume zones that form during news events frequently get violated immediately as volatility whipsaws price. Buying/selling pressure signals can flip multiple times within the same news event.</p>
+<p><strong>Context:</strong> Normal volume spikes indicate smart money positioning or institutional accumulation/distribution over time. News event volume represents reactive trading—everyone processing the same information simultaneously. The first volume spike is often panic, the second is repositioning, the third is rational evaluation. Volume Oracle measures the volume (which is accurate), but interpreting WHICH spike matters requires news context. Best practice: Wait 15-30 minutes after major news for volume patterns to stabilize before trusting Volume Oracle signals.</p>
+
+<h3 id="low-float-illiquid-assets">Low Float & Illiquid Assets<a class="headerlink" href="#low-float-illiquid-assets" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> Small-cap stocks, low-volume altcoins, or thinly traded assets where daily volume is minimal and a single large order moves price 5-10%.</p>
+<p><strong>What Happens:</strong> Every volume bar looks significant because baseline volume is so low. A single whale order or small fund taking a position appears as a massive volume spike, but it's just one participant, not broad institutional interest. Volume zones form but don't represent institutional support—they represent one entity's entry. Price whipsaws easily through these zones because there's no depth of buyers/sellers defending them.</p>
+<p><strong>Context:</strong> Volume Oracle assumes liquid markets where volume represents aggregate participation from hundreds or thousands of participants. In illiquid markets, volume might represent 5-10 participants. The analysis becomes less about "market conviction" and more about "who has a large position." This doesn't invalidate the tool, but changes interpretation: high volume in illiquid assets = specific participants positioning, not broad market agreement. Combine with order book depth analysis if available.</p>
+
+<h3 id="opening-closing-session-spikes">Opening & Closing Session Volume Spikes<a class="headerlink" href="#opening-closing-session-spikes" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> First 30 minutes after market open and last 30 minutes before close (especially last 10 minutes) show artificially elevated volume due to market-on-open orders, stop losses triggering, and closing auctions.</p>
+<p><strong>What Happens:</strong> Volume Oracle correctly identifies volume spikes, but these spikes are mechanical (index rebalancing, mutual fund closes, retail stop losses) rather than directional conviction. Volume zones formed during opening/closing often lack significance during mid-session trading. Buying/selling pressure signals can be misleading—high selling pressure in last 5 minutes might be profit-taking, not bearish conviction.</p>
+<p><strong>Context:</strong> Not all volume is equal. Opening volume represents overnight news digestion + order backlogs. Closing volume represents fund closes + index rebalancing + retail MOC (market-on-close) orders. Neither necessarily predicts next-session direction. Most reliable volume analysis occurs during mid-session trading (10:30 AM - 3:30 PM ET for US stocks) when volume represents actual directional positioning rather than mechanical flows. Be cautious interpreting volume zones that form entirely within first/last 30 minutes of session.</p>
+
+<h3 id="gap-days-overnight-gaps">Gap Days & Overnight Gaps<a class="headerlink" href="#gap-days-overnight-gaps" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> Price gaps 3-10% overnight due to news or international market moves, opening well above/below previous volume zones.</p>
+<p><strong>What Happens:</strong> Volume zones plotted at $100-$102 become irrelevant when price opens at $115. The indicator still shows them as support zones, but price never trades there post-gap. Volume analysis resets—old zones lose significance, new volume zones need to form at new price levels.</p>
+<p><strong>Context:</strong> Volume zones represent areas where accumulation/distribution occurred at specific price levels. Gaps create discontinuities—price jumps from $102 to $115 without trading $103-$114. Previous volume zones don't magically move up with price; they stay where they formed. After significant gaps (3%+), re-evaluate which volume zones are still relevant. Zones far from current price (10%+ away) may never be tested again. Focus on new zones forming at post-gap price levels.</p>
+
+<div class="admonition tip">
+<p class="admonition-title">Recognizing Reduced Reliability Environments</p>
+<p><strong>Practical Identification:</strong></p>
+<ul>
+<li><strong>Volume below 40% of 20-day average:</strong> Low participation environment—signals less meaningful</li>
+<li><strong>Volume spikes every 3-5 bars:</strong> Likely HFT activity or news event volatility—wait for stabilization</li>
+<li><strong>Economic calendar shows major events within 30 minutes:</strong> Wait for post-news volume patterns to form</li>
+<li><strong>Asset's daily volume under $10M (stocks) or equivalent:</strong> Illiquid—volume analysis less reliable</li>
+<li><strong>Currently in first/last 30 minutes of session:</strong> Mechanical volume flows—use caution</li>
+<li><strong>Price gapped 5%+ overnight:</strong> Old volume zones likely obsolete, wait for new structure</li>
+<li><strong>Crypto during low-activity hours (2-6 AM UTC):</strong> HFT dominance, low institutional participation</li>
+</ul>
+<p><strong>Remember:</strong> Volume Oracle measures what happened—high volume, buying/selling pressure, zone formation. It doesn't tell you WHY volume occurred or WHETHER that volume is meaningful. Context determines meaning: Mid-session institutional accumulation on rising volume = highly significant. Opening gap fill on mechanical volume = less significant. News spike volume that reverses in 10 minutes = noise. The tool provides accurate volume analysis; you provide market context to interpret it correctly.</p>
+</div>
+
+<hr />
 <h2 id="frequently-asked-questions">❓ Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permanent link">&para;</a></h2>
 <h3 id="q-can-position-manager-track-multiple-positions">Q: Can Position Manager track multiple positions?<a class="headerlink" href="#q-can-position-manager-track-multiple-positions" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> Current version tracks one position at a time. To track multiple positions, open multiple chart windows with Volume Oracle on each.</p>

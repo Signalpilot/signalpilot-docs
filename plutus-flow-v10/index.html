@@ -2911,6 +2911,65 @@ Result: Bearish divergence detected
 </div>
 
 <hr />
+<h2 id="when-this-doesnt-work-well">🌫️ When This Doesn't Work Well<a class="headerlink" href="#when-this-doesnt-work-well" title="Permanent link">&para;</a></h2>
+
+<div class="sp-callout sp-callout--warning">
+  <div class="sp-callout__title">Understanding Reduced Reliability Conditions</div>
+  <p>Plutus Flow divergences and OBV analysis show reduced reliability in certain market conditions. Recognizing these environments helps set appropriate expectations:</p>
+</div>
+
+<h3 id="persistent-divergences-without-resolution">Persistent Divergences Without Resolution (Extended Timeframes)<a class="headerlink" href="#persistent-divergences-without-resolution" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> Bullish or bearish divergence appears and persists for weeks or months without price reversal. Price continues trending while OBV shows opposite pattern.</p>
+<p><strong>What Happens:</strong> Bullish divergence appears at $100 (price LL, OBV HL), signaling potential reversal. But price continues falling to $90, $80, $70 over the next month. The divergence was "right" in detecting accumulation, but the reversal timing was premature by 4-8 weeks. Traders who acted on the initial divergence get stopped out despite the pattern being technically valid.</p>
+<p><strong>Context:</strong> Divergences signal disagreement between price and volume flow—they indicate something is building beneath the surface. But they DON'T indicate WHEN the reversal will occur. A divergence can persist for months during strong trends. This is especially common in: (1) Strong downtrends where capitulation hasn't occurred yet, (2) Distribution phases where smart money exits slowly over weeks, (3) News-driven moves that override technical patterns. Best practice: Divergences indicate potential reversal zones, not immediate reversal triggers. Wait for price confirmation—reversal candle pattern, <a href="../pentarch-v10/">Pentarch</a> signal, or break of structure—before treating divergence as actionable. Divergence alone = "watch closely." Divergence + price confirmation = "potential entry."</p>
+
+<h3 id="extremely-low-volume-environments">Extremely Low Volume Environments<a class="headerlink" href="#extremely-low-volume-environments" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> During holidays, overnight sessions, or illiquid altcoins/small-caps, volume drops to 10-30% of normal levels.</p>
+<p><strong>What Happens:</strong> OBV calculations become less meaningful when baseline volume is minimal. A 1000-share up day followed by a 900-share down day creates OBV movement, but neither represents institutional positioning—just retail noise. Ribbon color flips occur but lack significance. Divergences form but aren't backed by real accumulation/distribution volume.</p>
+<p><strong>Context:</strong> OBV (On-Balance Volume) assumes volume represents conviction and positioning. In low-volume environments, "volume" might represent a handful of participants, not broad market activity. A rising OBV in a low-volume environment might mean one small fund accumulating, not institutional consensus. Combine Plutus Flow with <a href="../volume-oracle-v10/">Volume Oracle</a>: if Volume Oracle shows consistently below-average volume, treat Plutus signals with skepticism. OBV analysis is most reliable during regular market hours with normal or above-average participation levels.</p>
+
+<h3 id="gap-days-discontinuous-price-action">Gap Days & Discontinuous Price Action<a class="headerlink" href="#gap-days-discontinuous-price-action" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> Price gaps 5-15% overnight due to earnings, news, or international events. Gaps create discontinuities in both price and volume analysis.</p>
+<p><strong>What Happens:</strong> OBV calculation treats gaps differently than continuous price movement. Example: Stock closes at $100, opens at $115 (+15% gap). Overnight, no volume occurred at $101-$114. OBV adds the gap-day volume to cumulative total, but that volume represents the $115 open, not the $100-$115 range. Pre-gap divergences often become invalidated post-gap as new price structure emerges. Ribbon trends that existed pre-gap may reverse immediately post-gap.</p>
+<p><strong>Context:</strong> OBV is designed for continuous price action where volume accumulates gradually. Gaps break this assumption—they create instant price changes without corresponding gradual volume accumulation. After significant gaps (5%+): (1) Previous divergences may be obsolete—reassess from new price level, (2) Ribbon trends need 5-10 bars to adjust to new structure, (3) Focus on new divergence patterns forming post-gap rather than pre-gap patterns. Think of major gaps as "reset" events for OBV analysis.</p>
+
+<h3 id="choppy-sideways-markets">Choppy, Sideways Markets (Ribbon Whipsaws)<a class="headerlink" href="#choppy-sideways-markets" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> Price oscillates in a horizontal range (±5% around midpoint) for weeks without directional bias.</p>
+<p><strong>What Happens:</strong> Ribbon color flips constantly—green for 5 bars, then red for 5 bars, then green again. OBV oscillates around a flat baseline without establishing clear uptrend or downtrend. Frequent divergences appear in both directions, but none lead to sustained moves. Signal-to-noise ratio drops significantly.</p>
+<p><strong>Context:</strong> OBV excels at identifying accumulation/distribution during trending markets. In sideways markets, buyers and sellers are balanced—no net accumulation or distribution occurs. The OBV line moves up and down but ends each week roughly where it started. Ribbon flips represent minor shifts in this balance, not meaningful trend changes. Divergences that form in sideways markets often indicate small imbalances that self-correct within the range. Best practice: When <a href="../pentarch-v10/">Pentarch</a> regime bars or <a href="../omnideck-v10/">Omnideck</a> Regime Box show prolonged neutral (gray) conditions, trust Plutus Flow less. Wait for breakout from range + OBV expansion in breakout direction for highest-probability signals.</p>
+
+<h3 id="very-low-timeframes-false-divergences">Very Low Timeframes (1-Minute, 5-Minute) - False Divergences<a class="headerlink" href="#very-low-timeframes-false-divergences" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> Using Plutus Flow on 1m or 5m charts to identify short-term divergences for scalping.</p>
+<p><strong>What Happens:</strong> Divergences fire constantly—sometimes 3-5 per hour. Most fail to produce any reversal. OBV line becomes extremely noisy, oscillating rapidly bar-to-bar. Ribbon color flips every 5-10 minutes. Signal quality degrades to near-random.</p>
+<p><strong>Context:</strong> OBV is a cumulative indicator designed for identifying institutional accumulation/distribution over days, weeks, or months. On 1m charts, OBV reflects retail order flow, HFT activity, and spread dynamics—not institutional positioning. A bullish divergence on a 1m chart might represent one algorithm's activity over 10 minutes, not meaningful money flow. Recommended minimum timeframes: 15m for active day trading, 1H for swing trading, 4H/Daily for position trading. Lower timeframes work technically but produce too many false divergences to be profitable. The signal that matters is the Daily chart showing divergence, not the 5m chart showing divergence.</p>
+
+<h3 id="high-frequency-crypto-markets">High-Frequency Trading Environments (24/7 Crypto)<a class="headerlink" href="#high-frequency-crypto-markets" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> Crypto markets with constant algorithmic activity, market-making bots, and wash trading creating artificial volume.</p>
+<p><strong>What Happens:</strong> OBV shows rising trend but price goes nowhere—indication that volume is artificial or circular (bots trading back and forth). Divergences appear frequently but lack follow-through because "volume" doesn't represent real conviction, just algorithmic activity. Ribbon trends look strong but price action is weak.</p>
+<p><strong>Context:</strong> OBV assumes volume represents real buying/selling decisions by participants with conviction. In crypto markets (especially lower-cap altcoins), significant volume can be: (1) Wash trading to inflate metrics, (2) Market-maker bots providing liquidity, (3) Arbitrage bots, (4) Liquidation cascades (forced selling, not discretionary). None of these represent the "smart money accumulation" OBV was designed to detect. Plutus Flow works better on: (1) Major crypto pairs (BTC, ETH) on regulated exchanges, (2) Traditional markets (stocks, futures) with strict volume reporting, (3) Higher timeframes (Daily+) where short-term algo noise averages out. Be cautious using OBV divergences on low-cap altcoins or during low-liquidity crypto hours (2-6 AM UTC).</p>
+
+<h3 id="forex-spot-markets">Forex Spot Markets (No Centralized Volume)<a class="headerlink" href="#forex-spot-markets" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> Attempting to use Plutus Flow on forex spot pairs (EUR/USD, GBP/USD, etc.) in standard spot markets.</p>
+<p><strong>What Happens:</strong> TradingView displays "volume" for forex, but it's tick volume (number of price changes) or volume from a single broker, not actual traded volume. OBV calculates based on this proxy data, producing divergences and ribbon trends, but they lack the foundation of real volume data.</p>
+<p><strong>Context:</strong> Forex spot market is decentralized—no central exchange reports total volume. What TradingView shows as "volume" is either: (1) Tick volume (how many times price changed), or (2) Volume from one broker's order flow. Neither represents actual global forex volume. OBV divergences in forex are based on incomplete data and therefore less reliable than in markets with real centralized volume (stocks, futures, crypto). If trading forex: (1) Use futures contracts (e.g., 6E Euro futures) which have real volume, or (2) Focus on price action and non-volume indicators like <a href="../pentarch-v10/">Pentarch</a> or <a href="../janus-atlas-v10/">Janus Atlas</a>. Plutus Flow is best suited for stocks, stock indices, futures, and crypto—assets with verifiable volume data.</p>
+
+<div class="admonition tip">
+<p class="admonition-title">Recognizing Reduced Reliability Environments</p>
+<p><strong>Practical Identification:</strong></p>
+<ul>
+<li><strong>Divergence has persisted for 20+ bars without reversal:</strong> Wait for price confirmation, don't assume imminent reversal</li>
+<li><strong>Volume consistently below 50% of average (<a href="../volume-oracle-v10/">Volume Oracle</a> shows this):</strong> OBV less meaningful</li>
+<li><strong>Price gapped 5%+ overnight:</strong> Reassess divergences from new price structure</li>
+<li><strong>Ribbon flipping color every 5-10 bars:</strong> Sideways market—wait for directional breakout</li>
+<li><strong>Trading 1m-5m charts:</strong> Too many false divergences—use 15m minimum, preferably 1H+</li>
+<li><strong>Crypto during 2-6 AM UTC or low-cap altcoin:</strong> Volume quality questionable</li>
+<li><strong>Forex spot pairs:</strong> No real volume data—use futures or non-volume indicators</li>
+<li><strong>OBV rising but price flat for 2+ weeks:</strong> Possible artificial/HFT volume</li>
+</ul>
+<p><strong>Remember:</strong> Plutus Flow (OBV) measures cumulative volume flow to identify accumulation and distribution. It works best when: (1) Real volume data exists (stocks, futures, major crypto), (2) Normal participation levels (regular market hours), (3) Trending or transitioning markets (not sideways chop), (4) Appropriate timeframes (1H+ for best signal quality), (5) Divergences are confirmed with price action. OBV tells you IF smart money is accumulating/distributing. It doesn't tell you WHEN the market will respond to that accumulation. The best trades combine Plutus divergence (volume context) + <a href="../pentarch-v10/">Pentarch</a> signal (timing) + <a href="../janus-atlas-v10/">Janus Atlas</a> level (location) for complete picture.</p>
+</div>
+
+<hr />
 <h2 id="frequently-asked-questions">❓ Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permanent link">&para;</a></h2>
 <h3 id="q-what-is-on-balance-volume-obv">Q: What is On-Balance Volume (OBV)?<a class="headerlink" href="#q-what-is-on-balance-volume-obv" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> OBV is cumulative volume indicator developed by Joe Granville. Adds volume on up days, subtracts volume on down days. Rising OBV suggests accumulation, falling OBV suggests distribution.</p>
