@@ -663,6 +663,240 @@ A "high volume" spike on a stock that typically trades 100K shares/day (500K spi
 
 ---
 
+## 🎮 Interactive Examples
+
+> **📍 PLACEHOLDER: Volume Flow Live Simulator**
+>
+> *Location: Insert interactive volume analysis demo here*
+>
+> **What to include:**
+> - Live-updating volume bars with color changes (green/red) based on price movement
+> - Comparison view: Regular volume bars vs Volume Flow bars side-by-side
+> - Click any bar → Popup shows: "Price: +2.3%, Volume: 1.8M, Flow: Bullish (buying pressure)"
+>
+> **User interaction:**
+> - Toggle: "Show regular volume" vs "Show Volume Flow"
+> - Slider: Adjust sensitivity threshold to see how Flow colors change
+
+> **📍 PLACEHOLDER: Volume Zone Formation Demo**
+>
+> *Location: Insert zone creation visualization here*
+>
+> **What to include:**
+> - Time-lapse showing how a volume zone forms bar-by-bar
+> - Highlight: "Bar 1: Volume spike 2.1x → Zone begins" → "Bar 2-5: Consolidation → Zone solidifies"
+> - Show support zone holding price on test vs breaking through
+>
+> **User interaction:**
+> - Button: "Play zone formation" - Animates zone appearing
+> - Toggle: "Show successful zones only" vs "Show all zones including broken"
+
+---
+
+## 📝 Reality Check: 3 Volume Scenarios
+
+### Scenario #1: Win - Volume Spike Confirmation (AAPL Daily Chart) ✅
+
+**Setup:**
+- **Asset:** Apple (AAPL)
+- **Pattern:** Price bounced at support level
+- **Volume Signal:** 2.3x average volume on bounce bar
+
+**Analysis:**
+
+| Date | Event | Price | Volume vs Avg | Volume Flow |
+|------|-------|-------|---------------|-------------|
+| May 8 | Pullback to support | $172 | 0.9x (below avg) | Red (selling) |
+| May 9 | Bounce begins | $174 | **2.3x (spike)** | **Green (buying)** |
+| May 10 | Follow-through | $177 | 1.6x (elevated) | Green |
+
+**Trade Execution:**
+- **Entry:** $174.50 (on volume spike confirmation)
+- **Stop:** $171 (below support)
+- **Target:** $180 (1:2 risk-reward)
+- **Outcome:** Target hit in 4 days, +3.2% gain
+
+**Why It Worked:**
+✓ Volume spike (2.3x) indicated institutional participation at support
+✓ Volume Flow turned green (buying pressure) confirming directional bias
+✓ Elevated volume continued next day (1.6x) showing sustained interest
+✓ Support level held with high-volume confirmation
+
+**Key Lesson:** Volume spikes at key levels (support/resistance) provide strong confirmation. The 2.3x spike distinguished this bounce from previous failed attempts with low volume (0.7-1.0x).
+
+---
+
+### Scenario #2: Loss - Low Volume Breakout Failure (Gold Futures, 4H Chart) ❌
+
+**Setup:**
+- **Asset:** Gold (GC)
+- **Pattern:** Breakout above resistance at $2,050
+- **Volume Signal:** Only 0.8x average volume on breakout bar
+
+**Analysis:**
+
+| Date/Time | Event | Price | Volume vs Avg | Volume Flow |
+|-----------|-------|-------|---------------|-------------|
+| Jun 14, 12pm | Testing resistance | $2,048 | 0.9x | Neutral |
+| Jun 14, 4pm | Breakout | $2,053 | **0.8x (weak)** | Green (but low volume) |
+| Jun 15, 8am | Reversal begins | $2,051 | 1.2x | Red (selling) |
+| Jun 15, 4pm | Back below resistance | $2,045 | 1.5x (higher) | Red |
+
+**Trade Execution:**
+- **Entry:** Long at $2,053 (breakout)
+- **Stop:** $2,046 (-$7 below breakout)
+- **Outcome:** Stopped out next day, -$700 loss per contract
+
+**What Went Wrong:**
+❌ Volume was BELOW average (0.8x) on breakout - no institutional interest
+❌ Ignored low volume warning (Volume Oracle showed weak participation)
+❌ When price reversed, volume increased (1.5x) - institutions selling into rally
+❌ Classic "low volume breakout failure" pattern
+
+**Key Lesson:** Breakouts without volume confirmation (minimum 1.5x average) have 60-70% failure rate. Volume Oracle's low reading (0.8x) was a critical warning sign. Wait for volume confirmation before entering breakout trades.
+
+**What to do differently:** Filter breakouts - only take those with 1.5x+ volume AND green Volume Flow.
+
+---
+
+### Scenario #3: Missed Opportunity - Volume Zone Ignored (BTC 1H Chart) 📊
+
+**Setup:**
+- **Asset:** Bitcoin
+- **Pattern:** Strong volume zone at $48,000 from 2 weeks prior
+- **Decision:** Ignored zone, didn't enter
+
+**Analysis:**
+
+| Date/Time | Event | Price | Volume vs Avg | Volume Zone |
+|-----------|-------|-------|---------------|-------------|
+| Apr 3 | Zone formed | $48,000-48,200 | 2.5x spike | Support zone created |
+| Apr 18 (15 days later) | Price returns to zone | $48,100 | 1.3x | Zone still visible |
+| Apr 18, 2pm | Bounce from zone | $48,300 | 1.8x | Green flow |
+| Apr 19 | Rally continues | $50,200 | — | Zone held |
+
+**Decision Process:**
+- **Observation:** Price approached $48K volume zone
+- **Hesitation:** "That zone is 15 days old, probably not relevant anymore"
+- **Outcome:** Missed +4.4% move ($48,100 → $50,200)
+
+**What Was Missed:**
+⚠️ Volume zones remain relevant for weeks (not just days)
+⚠️ Zone at $48K had been tested only once before (still valid)
+⚠️ Volume on bounce was elevated (1.8x) confirming zone strength
+⚠️ Volume Flow turned green at zone (buying pressure)
+
+**Key Lesson:** Volume zones don't expire quickly. High-volume zones remain relevant for 2-4 weeks, sometimes months. The fact that 15 days had passed made the zone MORE significant (price "remembered" that level). Zones are most powerful when:
+- Formed with 2.0x+ volume
+- Tested 1-2 times previously (not overused)
+- Price returns with elevated volume (1.5x+)
+
+**Takeaway:** Track volume zones over longer timeframes. Set alerts at major zones even if formed weeks ago.
+
+---
+
+## ⚠️ When Volume Oracle Signals Fail
+
+### Failure Scenario #1: Volume Spike in Wrong Direction (30% occurrence)
+
+**What Happens:**
+- Volume spikes to 2.0x+ average
+- But price moves opposite to expected direction
+- "High volume = bullish" assumption fails
+
+**Example:** EUR/USD FOMC announcement
+- Volume spikes to 3.5x average
+- Initial spike upward (+40 pips)
+- Immediate reversal downward (-75 pips)
+- High volume, but whipsaw action
+
+**Why It Failed:** News-driven volume spikes create erratic price action. Volume confirms participation, not direction. During major news (FOMC, NFP, earnings), volume spikes occur regardless of directional outcome.
+
+**How to Avoid:** Skip trades 30 minutes before/after major scheduled news. Volume analysis works best in normal market conditions, not during news volatility.
+
+---
+
+### Failure Scenario #2: Volume Zone Breaks (20-25% of zones)
+
+**What Happens:**
+- Strong volume zone forms (2.0x+ volume)
+- Price returns to zone weeks later
+- Instead of bouncing, price breaks through
+- Zone fails as support/resistance
+
+**Example:** Support zone at $100 (formed with 2.8x volume)
+- Price returns to $100 three weeks later
+- Initial bounce to $102
+- Reversal back to $100, then breaks to $97
+- Zone broken
+
+**Why It Failed:** Volume zones show where institutions traded heavily, but don't guarantee future support. If market structure changes (new trend emerges, fundamental shift), old zones break.
+
+**How to Avoid:**
+- Check higher timeframe trend (don't fight Daily trend on 1H zones)
+- Zones older than 30-45 days have lower reliability
+- If zone tested 3+ times already, likely to break on next test (weakened)
+
+---
+
+### Failure Scenario #3: Low Volume Doesn't Always Mean Weakness
+
+**What Happens:**
+- Price makes steady progress with below-average volume (0.6-0.8x)
+- Assumption: "Low volume = weak move = reversal coming"
+- Price continues grinding higher for days/weeks
+- Waiting for volume confirmation means missing the move
+
+**Example:** Slow grind higher in SPY
+- Week 1-3: $500 → $515 on 0.7-0.9x average volume
+- "Low volume rally = not sustainable"
+- Week 4: Continues to $522 with same low volume
+- Week 5: Finally volume spike at $525, but most move already happened
+
+**Why This Happens:** Some market moves occur with low participation (thin markets, holidays, steady accumulation). Not every move needs high volume. Trend continuation often occurs quietly.
+
+**Lesson:** Volume confirmation is ideal, but lack of volume doesn't always invalidate a move. Combine Volume Oracle with price structure (Pentarch, Janus) - if price + levels align, low volume shouldn't be sole reason to skip trade.
+
+---
+
+## 💰 Risk Management for Volume Oracle Users
+
+**Volume-Specific Position Sizing:**
+
+| Volume Confirmation Strength | Risk % per Trade | Confidence Level |
+|------------------------------|------------------|------------------|
+| **Weak (<1.5x avg)** | 0.5% | Lower confidence |
+| **Moderate (1.5-2.0x avg)** | 1.0% | Standard confidence |
+| **Strong (2.0-3.0x avg)** | 1.0-1.5% | Higher confidence |
+| **Extreme (>3.0x avg)** | 0.5-1.0% | Caution (often news-driven) |
+
+**Note:** Extreme volume (>3.0x) can indicate news events or exhaustion. Use caution even with high readings.
+
+---
+
+### Stop Placement with Volume Zones
+
+**When entering at volume zone:**
+- Place stop 1-2% beyond the zone boundary
+- Example: Zone at $98-100, enter long at $100, stop at $97 (1% below zone)
+
+**When entering on volume spike:**
+- Place stop below the spike bar's low (for longs) or above high (for shorts)
+- Example: Volume spike at $50 (low: $49, high: $51), enter long at $51, stop at $48.50
+
+---
+
+### When to Skip Trades (Volume Edition)
+
+❌ **Skip if volume < 1.5x average on breakouts** (60-70% failure rate)
+❌ **Skip if volume zone tested 4+ times** (zone weakened)
+❌ **Skip if volume spike during major news** (FOMC, NFP, earnings)
+❌ **Skip if Volume Flow conflicts with price action** (price rising but Flow red)
+
+**For complete Risk Management framework, see [Pentarch Risk Management Section](REVISED_DOCS_PENTARCH.md#-risk-management--position-sizing).**
+
+---
+
 ## ❓ Frequently Asked Questions
 
 ### Q: Can Position Manager track multiple positions?
