@@ -1034,9 +1034,39 @@ Single isolated levels have less significance than clusters where multiple level
 
 ---
 
-## 🌳 Decision Tree: Should I Trade This Level?
+## 🧠 Level Trading Psychology: Key Challenges
 
-### Level-Based Trade Decision Flow
+### Challenge 1: "This Level Has Held 5 Times Before" Trap
+
+**What Happens:** You see a support level that's been tested and held 5 times. You think "This is super strong—it's held 5 times!" Price breaks through on the 6th test.
+
+**The Fix:** Each test weakens a level. Fresh levels (1-2 tests) hold better than over-tested levels (4+ tests). Wait for the break and trade the retest instead.
+
+**Mental Script:** "4+ tests = likely to break soon. I'll wait for the break and trade the retest, not the bounce."
+
+---
+
+### Challenge 2: Fighting Higher Timeframe Trend
+
+**What Happens:** You short 15M resistance in a Daily uptrend. Price blasts through, stops you out. Your 15M resistance was a minor pause in a larger uptrend.
+
+**The Fix:** Check one timeframe higher before every level trade. Only trade levels that align with higher TF trend direction.
+
+**Mental Script:** "Is this level trade with or against the higher TF? If against, skip it."
+
+---
+
+### Challenge 3: Isolated Levels vs Cluster Confusion
+
+**What Happens:** You trade a single Fibonacci level because "Fib levels are powerful." It fails. You skip a cluster of 3 levels because "too many lines." The cluster holds perfectly.
+
+**The Fix:** Cluster strength matters more than level type. A cluster of 3 "weak" pivot levels is stronger than 1 isolated "powerful" Fib level.
+
+**Mental Script:** "How many levels are clustered here? If just one, I need other confirmation. If 3+, that's strong confluence."
+
+---
+
+## 🌳 Decision Tree: Should I Trade This Level?
 
 ```
 ┌──────────────────────────────┐
@@ -1080,8 +1110,7 @@ Single isolated levels have less significance than clusters where multiple level
                         ▼
                  ┌──────────────┐
                  │ Can achieve  │
-                 │ 2:1 R:R from │
-                 │ this level?  │
+                 │ 2:1 R:R?     │
                  └──┬───────┬───┘
                     │       │
                    NO      YES
@@ -1090,407 +1119,53 @@ Single isolated levels have less significance than clusters where multiple level
                  ❌ SKIP  ✅ TAKE
 ```
 
----
-
-### Printable Level Trading Checklist
-
-**Print and keep at your trading station:**
-
-```
-┌─────────────────────────────────────────────────┐
-│     JANUS ATLAS LEVEL CHECKLIST                 │
-├─────────────────────────────────────────────────┤
-│                                                 │
-│ Asset: _______________  TF: _________           │
-│ Date: _______________   Time: ________          │
-│                                                 │
-│ ✓ LEVEL QUALITY                                 │
-│   [ ] Part of a cluster (2+ levels within 1%)   │
-│   [ ] Tested fewer than 4 times                 │
-│   [ ] Level type: ___________________           │
-│   [ ] Cluster strength: Weak / Medium / Strong  │
-│                                                 │
-│ ✓ HIGHER TIMEFRAME                              │
-│   [ ] Higher TF trend checked                   │
-│   [ ] Higher TF aligns with level trade         │
-│                                                 │
-│ ✓ RISK:REWARD                                   │
-│   [ ] Entry: __________                         │
-│   [ ] Stop: __________ (beyond level)           │
-│   [ ] Target: __________                        │
-│   [ ] R:R: ____:1 (must be ≥2:1)                │
-│   [ ] Risk: ____% (must be ≤1%)                 │
-│                                                 │
-│ ✓ CONFLUENCE (optional, strengthens setup)     │
-│   [ ] Other indicator confirms (Pentarch, etc)  │
-│   [ ] Volume pattern supports                   │
-│   [ ] Session timing supports                   │
-│                                                 │
-│ ✓ MARKET CONDITIONS                             │
-│   [ ] NOT in <5% chop for 2+ weeks              │
-│   [ ] NOT a 4+ test level (likely to break)     │
-│                                                 │
-│ IF ALL CRITICAL CHECKS PASS → PROCEED           │
-│ IF ANY CRITICAL CHECK FAILS → SKIP              │
-│                                                 │
-└─────────────────────────────────────────────────┘
-```
-
----
-
-### Level-Specific Decision Scenarios
-
-#### Scenario 1: Support Level Approach (Long Setup)
-
-```
-Price approaching support cluster
-       ↓
-Check cluster strength → 3+ levels within 1%? → Strong
-                       → 2 levels? → Medium
-                       → 1 level? → Weak (❌ Skip)
-       ↓
-Check test count → First/second test? → Fresh (best)
-                 → Third test? → Acceptable
-                 → Fourth+ test? → ❌ Skip (likely to break)
-       ↓
-Check higher TF → Uptrend or neutral? → Continue
-                → Downtrend? → ❌ Skip (catching falling knife)
-       ↓
-Check R:R → Can place stop below cluster AND achieve 2:1? → ✅ Take
-          → Cannot achieve 2:1? → ❌ Skip (level too close to resistance)
-```
-
-#### Scenario 2: Resistance Level Approach (Short Setup)
-
-```
-Price approaching resistance cluster
-       ↓
-Check cluster strength → 3+ levels within 1%? → Strong
-                       → 2 levels? → Medium
-                       → 1 level? → Weak (❌ Skip)
-       ↓
-Check test count → First/second test? → Fresh (best)
-                 → Third test? → Acceptable
-                 → Fourth+ test? → ❌ Skip (likely to break)
-       ↓
-Check higher TF → Downtrend or neutral? → Continue
-                → Uptrend? → ❌ Skip (fighting momentum)
-       ↓
-Check R:R → Can place stop above cluster AND achieve 2:1? → ✅ Take
-          → Cannot achieve 2:1? → ❌ Skip (level too close to support)
-```
-
-#### Scenario 3: Breakout Trade (Level Break)
-
-```
-Price breaks through level cluster
-       ↓
-Check retest → Did price retest broken level? → Wait for retest
-             → Price retesting now? → Continue
-       ↓
-Check level flip → Support broke = now resistance? → Confirms break
-                 → Resistance broke = now support? → Confirms break
-                 → No flip behavior? → ❌ Skip (false break)
-       ↓
-Check volume → Higher volume on break? → Strong break
-             → Low volume on break? → Weak (consider skipping)
-       ↓
-Check higher TF → Breakout direction aligns with higher TF? → ✅ Take
-                → Against higher TF? → ❌ Skip (low probability)
-```
-
----
-
-### Quick Reference: Level Strength Guide
-
-**Strong Cluster (Highest Probability):**
-- 3+ levels within 1%
-- First or second test only
-- Higher TF trend aligned
-- Multiple level types present (e.g., Weekly + Daily + Fibonacci)
-- **Typical approach:** Normal position size (1% risk)
-
-**Medium Cluster (Acceptable):**
-- 2 levels within 1%
-- Third test
-- Higher TF neutral or weakly aligned
-- **Typical approach:** Half position size (0.5% risk)
-
-**Weak Level (Usually Skip):**
-- Isolated single level
-- Fourth+ test
-- Higher TF opposed
-- No clear R:R (level too close to next resistance/support)
-- **Typical approach:** Skip entirely
-
----
-
-## 🧠 Level Trading Psychology (Key Challenges)
-
-### Challenge 1: "This Level Has Held 5 Times Before" Trap
-
-**What Happens:**
-You see a support level that's been tested 5 times and held every time. You think: "This level is super strong—it's held 5 times! I'm taking this trade."
-
-Price breaks through on the 6th test. You're stopped out.
-
-**Why This Happens:**
-Each test weakens a level. It's like hitting a wall repeatedly—eventually it cracks. Markets remember levels that have been tested multiple times and target them for breaks.
-
-**Reframe:**
-More tests = weaker level, not stronger. Fresh levels (1-2 tests) hold better than over-tested levels (4+ tests).
-
-**Practical Solution:**
-- Levels tested 1-2 times: Fresh, higher hold probability
-- Levels tested 3 times: Acceptable, moderate probability
-- Levels tested 4+ times: Avoid, likely to break soon
-
-**Mental Script:**
-- "This is the 4th test—I'll wait for the break and trade the retest instead"
-- "Fresh levels are stronger than repeatedly-tested levels"
-- "Each test chips away at the level's strength"
-
----
-
-### Challenge 2: Fighting Higher Timeframe Trend
-
-**What Happens:**
-You're trading 15-minute chart. You see a strong resistance cluster. Price approaches from below, you short. Price blasts through your resistance, stops you out. You check Daily chart (after the loss): strong uptrend, all indicators bullish. Your 15-minute resistance was a minor pause in a Daily uptrend.
-
-**Why This Happens:**
-Lower timeframe levels can't override higher timeframe trends. A 15-minute resistance cluster is weak compared to a Daily uptrend.
-
-**Reframe:**
-Higher timeframe dictates direction. Lower timeframe levels provide timing within that direction, not against it.
-
-**Practical Solution:**
-Before trading any level:
-- Check one timeframe higher (minimum)
-- Only trade levels that align with higher TF trend
-- If higher TF is strongly opposite → Skip the level trade entirely
-
-**Example:**
-- Trading 15M resistance in Daily uptrend? → Skip (fighting trend)
-- Trading 15M support in Daily uptrend? → Take (aligned with trend)
-
-**Mental Script:**
-- "Is this level trade with the higher TF trend or against it?"
-- "If I'm fighting the Daily trend on a 15M chart, I'm likely wrong"
-- "Higher timeframe wins when lower TF conflicts with it"
-
----
-
-### Challenge 3: Isolated Levels vs Cluster Confusion
-
-**What Happens:**
-You see a single Fibonacci level, no other levels nearby. You trade it because "Fib levels are strong." It fails. Later you see a cluster of 3 levels (Weekly + Daily + Pivot) within 1%—you skip it because "there are too many lines." The cluster holds perfectly. You missed the good trade and took the bad one.
-
-**Why This Happens:**
-Misconception that any individual level is strong enough alone. Markets react more to level clusters than isolated levels.
-
-**Reframe:**
-Clusters = confluence = higher probability. Isolated levels = low confluence = lower probability.
-
-**Practical Solution:**
-Create a simple rule:
-- **Cluster (2+ levels within 1%):** Consider trading
-- **Isolated single level:** Skip unless confirmed by other indicators (Pentarch signal, Volume Oracle, etc.)
-
-**Mental Script:**
-- "How many levels are clustered here? If it's just one, I need other confirmation"
-- "Three levels agreeing on this zone = much stronger than one Fib level"
-- "More institutional traders watch clusters than isolated single levels"
-
----
-
-### Challenge 4: Level Break FOMO (Fear Of Missing Out)
-
-**What Happens:**
-Price breaks through resistance cluster. It shoots up 2-3% immediately. You think: "I'm missing the move! I need to get in NOW!" You chase, buying at the top of the breakout impulse. Price immediately retraces 50%, stops you out. Later, price retests the broken level (now support), holds, and continues higher. That was the actual entry.
-
-**Why This Happens:**
-Breakouts create urgency and excitement. Initial breakout impulse is often followed by a retest of the broken level—that's the high-probability entry, not the initial surge.
-
-**Reframe:**
-Breakouts typically retest. Waiting for the retest is patience, not "missing out." The retest entry is usually safer and offers better R:R than chasing the initial impulse.
-
-**Practical Solution:**
-When a level breaks:
-1. **DO NOT chase the immediate breakout**
-2. Mark the broken level as "watch for retest"
-3. Wait for price to return to the level
-4. Check if level flips (old resistance becomes new support)
-5. Enter on the retest, not the initial break
-
-**Mental Script:**
-- "Breakouts retest—I'll wait for the safer entry"
-- "Chasing momentum usually means buying at the worst price"
-- "The retest entry offers better R:R than the breakout impulse"
-
----
-
-### Challenge 5: "Analysis Paralysis" from 39 Levels
-
-**What Happens:**
-You enable many of the 39 level types. Your chart becomes a maze of horizontal lines—Weekly, Daily, 4H, Fibs, pivots, sessions, round numbers, all visible. You see 15+ levels on screen. Every price move hits "a level." You can't decide which levels matter. You freeze.
-
-**Why This Happens:**
-Too many visual inputs = decision overload. Not all 39 level types are equally important for your specific trading style and timeframe.
-
-**Reframe:**
-Janus Atlas offers 39 types because different traders use different approaches. You don't need all 39—you need the 5-7 most relevant to YOUR style and timeframe.
-
-**Practical Solution:**
-Start with 5-7 core levels:
-- **For swing traders (4H/Daily):** Weekly levels, Daily levels, Key Fibs, Major pivots
-- **For day traders (15M/1H):** Daily levels, Session levels, Key Fibs, Intraday pivots
-- **For position traders (Daily/Weekly):** Monthly levels, Weekly levels, Major Fibs
-
-Test these for 20-30 trades. Only add more levels if data shows gaps in your approach.
-
-**Mental Script:**
-- "I don't need all 39 levels—I need the right 5-7 for my timeframe"
-- "More lines on the chart ≠ better trading decisions"
-- "Professional simplicity beats amateur complexity"
+**Quick Rules:**
+- **Cluster required:** 2+ levels within 1% of each other
+- **Test count matters:** Fresh levels (1-3 tests) hold better than over-tested (4+)
+- **Higher TF alignment:** Check one TF higher, must align
+- **R:R check:** Must achieve 2:1 minimum with stop beyond level
 
 ---
 
 ## 🚫 Top 5 Mistakes with Janus Atlas
 
-### Mistake #1: Trading Every Level Touch ⚠️ CRITICAL
+### Mistake #1: Trading Every Level Touch
 
-**What Happens:**
-You enable 10+ level types. Price touches a level every few bars. You take every touch as a trade signal. You're taking 20-30 trades per week. Most lose. You're exhausted and losing money.
+**What Happens:** You enable 10+ level types. Price touches a level every few bars. You take every touch as a signal. 20-30 trades per week, most lose.
 
-**Why This Is a Mistake:**
-Not all levels are equal. Not all touches are tradeable. A level touch is an observation, not a signal. High-probability level trades require: cluster strength, low test count, higher TF alignment, and good R:R.
-
-**Real Example:**
-"I enabled Weekly, Daily, 4H, Session, Pivot, and Fibonacci levels. My chart had 12+ lines. Every time price touched any line, I entered. Took 25 trades in one week. Win rate: 32%. Realized I was treating every level as equal. Started filtering: only clusters, only first/second tests, only aligned with higher TF. Next month: 8 trades, win rate: 62%."
-
-**Fix:**
-Level touch alone is NOT a signal. Level touch + cluster + fresh test + higher TF alignment + 2:1 R:R = signal.
-
-Use the decision tree checklist above to filter level touches.
-
-**How to Verify You're Not Making This Mistake:**
-Track "level touches observed" vs "level trades taken" in your journal. If you're taking >50% of level touches as trades → You're not filtering enough.
+**The Fix:** Level touch alone is NOT a signal. Need: cluster + fresh test + higher TF alignment + 2:1 R:R. Filter aggressively.
 
 ---
 
 ### Mistake #2: Ignoring Test Count (Trading Over-Tested Levels)
 
-**What Happens:**
-You find a support level that's been tested and held 6 times over the past month. You think: "Wow, this level is incredibly strong—it's held 6 times! I'm buying here."
+**What Happens:** Support tested 6 times, you buy the 7th test thinking "It's so strong!" It breaks through, stops you out.
 
-Price breaks through on the 7th test. You're stopped out.
-
-**Why This Is a Mistake:**
-Each test weakens a level. Institutional traders see the same level you do—after 4+ tests, they anticipate a break and position for it. Over-tested levels become targets, not barriers.
-
-**Real Example:**
-"I saw a Daily support at $100 that had held 5 times. I thought it was 'the strongest support in the chart.' I bought on the 6th test with confidence. It broke, stopped me out. Price fell to $95 before bouncing. Later learned: levels tested 4+ times have significantly lower hold rate. Should have waited for the break and traded the retest instead."
-
-**Fix:**
-Create test count rules:
-- **1-2 tests:** Fresh level, high hold probability → Trade it
-- **3 tests:** Acceptable, moderate probability → Trade with caution
-- **4+ tests:** Over-tested, high break probability → Wait for break, trade the retest
-
-**How to Verify You're Not Making This Mistake:**
-In your journal, track test count for each level trade. If you're taking trades on 4+ tested levels and losing them → You're making this mistake.
+**The Fix:** 1-2 tests = fresh (trade it), 3 tests = acceptable (caution), 4+ tests = over-tested (wait for break, trade retest).
 
 ---
 
-### Mistake #3: Confusing Level Types with Level Strength
+### Mistake #3: Confusing Level Type with Level Strength
 
-**What Happens:**
-You trade a Fibonacci level because "Fib levels are powerful." It fails. You skip a cluster of 3 pivot levels because "pivots are weaker than Fibs." The pivot cluster holds perfectly.
+**What Happens:** You trade Fibonacci levels only because "Fibs are powerful." They fail. You skip pivot clusters because "pivots are weak." Pivot clusters work perfectly.
 
-**Why This Is a Mistake:**
-Level strength comes from confluence (clustering), not level type. A cluster of 3 "weak" pivot levels is stronger than 1 isolated "powerful" Fibonacci level.
-
-**Real Example:**
-"I was taught 'Fib levels are the most important' so I only traded Fibonacci levels. Ignored pivots, ignored session levels. Lost on most trades. Then someone showed me: look for clusters regardless of type. Cluster of Daily + Weekly + Pivot = stronger than isolated Fib 0.618. Changed my filtering, win rate improved immediately."
-
-**Fix:**
-Stop ranking level types by "power." Start ranking by clustering:
-- **3+ levels within 1%:** Strong cluster (any types)
-- **2 levels within 1%:** Medium cluster (any types)
-- **1 isolated level:** Weak (needs other confirmation)
-
-Level type matters less than level clustering.
-
-**How to Verify You're Not Making This Mistake:**
-Review your last 10 losing level trades. How many were isolated single levels? If >5 were isolated → You're overvaluing level type and undervaluing clustering.
+**The Fix:** Clustering matters more than level type. 3 "weak" pivots clustered = stronger than 1 "powerful" isolated Fib.
 
 ---
 
 ### Mistake #4: Using Levels on Wrong Timeframe
 
-**What Happens:**
-You're trading 5-minute scalps. You enable Weekly and Monthly levels. They show lines far from current price. You ignore them. Later you get stopped out repeatedly because price kept hitting a Weekly level you didn't notice.
+**What Happens:** Trading 5M scalps but only Weekly/Monthly levels enabled. Or trading Daily swings with Session levels cluttering the chart.
 
-Or opposite: You're swing trading on Daily charts. You enable Session levels (Asia/London/NY open/close). Your chart is cluttered with 6+ session lines every day. Most are irrelevant to your Daily timeframe.
-
-**Why This Is a Mistake:**
-Each level type has a relevant timeframe range. Weekly levels matter more on 4H/Daily charts than on 5-minute charts. Session levels matter more on 15M/1H charts than on Daily charts.
-
-**Real Example (Scenario A - Scalper):**
-"I traded 5-minute charts, enabled only Fibonacci and Daily levels. Kept hitting unexpected resistance that wasn't on my chart. Finally realized: I needed Session levels (NY open, London open) because those matter on 5M, but I was ignoring them."
-
-**Real Example (Scenario B - Swing Trader):**
-"I traded Daily charts, enabled everything including Session levels. My chart had 15 lines, most were session opens/closes I didn't care about. Disabled session levels, kept only Weekly/Daily/Monthly. Chart became cleaner, decisions became easier."
-
-**Fix:**
-Match level types to your trading timeframe:
-
-| Your Timeframe | Relevant Level Types |
-|----------------|---------------------|
-| **5M-15M (Scalping)** | Session levels, Intraday pivots, Round numbers, Daily levels |
-| **15M-1H (Day Trading)** | Daily levels, Session levels, Key Fibs, Intraday pivots |
-| **4H-Daily (Swing Trading)** | Weekly levels, Daily levels, Major Fibs, Weekly pivots |
-| **Daily-Weekly (Position)** | Monthly levels, Weekly levels, Major Fibs, Quarterly pivots |
-
-**How to Verify You're Not Making This Mistake:**
-Check which level types you have enabled. Do they match your primary trading timeframe? If you're trading 5M and have Monthly levels enabled (but no Session levels) → Mismatch.
+**The Fix:** Match level types to trading timeframe. 5M traders need Session levels. Daily traders need Weekly levels. Enable what's relevant, disable the rest.
 
 ---
 
-### Mistake #5: Setting Stop Loss AT the Level Instead of BEYOND It
+### Mistake #5: Stop Loss AT Level Instead of BEYOND It
 
-**What Happens:**
-Price is at $50.20. You see support cluster at $50.00. You buy at $50.20 and place your stop at $50.00 (right at the level). Price dips to $49.95 (5 cents below the level), triggers your stop, then bounces hard back to $51.50. You got stopped out on a perfect level bounce because your stop was too tight.
+**What Happens:** Support at $50, you place stop at $50. Price wicks to $49.95, stops you out, bounces to $51.50. Level held, you got wicked out.
 
-**Why This Is a Mistake:**
-Levels are zones, not exact prices. Price often "wicks" slightly through a level before bouncing. If your stop is exactly at the level, you'll get stopped out on wicks even when the level holds.
-
-**Real Example:**
-"I traded a support cluster at $100. Bought at $100.50, stop at $100. Price wicked to $99.85, stopped me out, then bounced to $103. Happened 5 times before I learned: stop needs to be BEYOND the level, not AT it. Started placing stops 10-20 cents beyond the cluster. Suddenly levels 'worked' because I wasn't getting wicked out."
-
-**Fix:**
-Place stops beyond the level cluster:
-- **For support trades:** Stop 10-30 cents (or 0.2-0.5%) below the lowest level in the cluster
-- **For resistance trades:** Stop 10-30 cents (or 0.2-0.5%) above the highest level in the cluster
-
-Give the level room to breathe. If a level breaks beyond your stop zone, the level truly failed (not just a wick).
-
-**How to Verify You're Not Making This Mistake:**
-Review your last 10 stopped-out level trades. Check: did price stop you out and then bounce from the level? If yes in 5+ trades → Your stops are too tight. You're getting wicked out, not truly stopped out.
-
----
-
-## Summary: Top 5 Mistakes at a Glance
-
-| # | Mistake | Fix |
-|---|---------|-----|
-| 1 | Trading every level touch | Level touch ≠ signal. Need: cluster + fresh test + higher TF + R:R |
-| 2 | Trading over-tested levels (4+) | Fresh levels (1-2 tests) hold better. 4+ tests = likely to break |
-| 3 | Confusing level type with strength | Clustering matters more than level type. 3 pivots > 1 Fib |
-| 4 | Wrong timeframe for level types | Match levels to TF: 5M=sessions, Daily=weekly, etc. |
-| 5 | Stop AT level instead of BEYOND | Place stops 0.2-0.5% beyond cluster to avoid wicks |
-
-**🎯 Action Item:** Review your last 10 level trades. Which of these 5 mistakes occurred most often? Fix that one first.
+**The Fix:** Place stops 0.2-0.5% BEYOND the cluster. Give levels room to breathe. If price breaks beyond your stop zone, the level truly failed.
 
 ---
 
