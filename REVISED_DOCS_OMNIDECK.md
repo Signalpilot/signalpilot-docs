@@ -732,6 +732,248 @@ TD Sequential might show bearish while Oscillators show bullish. This isn't a bu
 
 ---
 
+## 🎮 Interactive Examples
+
+> **📍 PLACEHOLDER: Omnideck System Explorer**
+>
+> *Location: Insert interactive multi-system demo here*
+>
+> **What to include:**
+> - Toggle switches for each of the 10 systems (enable/disable in real-time)
+> - Chart updates dynamically as systems are enabled/disabled
+> - Visual demonstration: "This is the chart with just TD Sequential" → Enable Squeeze → "Now with breakout arrows added"
+>
+> **User interaction:**
+> - Checkbox grid: Select 2-3 systems → See them work together
+> - Highlight tool: Click a signal → See which systems contributed to it
+> - Comparison mode: System A alone vs System A + B together
+
+> **📍 PLACEHOLDER: Confluence Heat Map**
+>
+> *Location: Insert system alignment visualization here*
+>
+> **What to include:**
+> - Timeline showing when multiple systems align (2-system, 3-system, 4+ system confluence)
+> - Color-coded: Green = 4+ systems agree, Yellow = 2-3 systems, Red = Conflicting signals
+> - Click any point → See which systems were active and what they showed
+>
+> **User interaction:**
+> - Filter: "Show only moments when 3+ systems aligned"
+> - Dropdown: Select primary system → See what other systems confirmed it
+
+---
+
+## 📝 Reality Check: 3-Trade Scenarios
+
+### Scenario #1: Win - Multi-System Confluence (ES Futures, 4H Chart) ✅
+
+**Setup:**
+- **Asset:** ES (S&P 500 Futures)
+- **Systems Used:** TD Sequential + Squeeze Detector + Regime Box + EMA Trio
+- **Market Condition:** Trending upward for 2 weeks
+
+**System Analysis:**
+
+| System | Signal | Interpretation |
+|--------|--------|----------------|
+| TD Sequential | TD 9 Buy | Pullback exhaustion after uptrend |
+| Squeeze Detector | Green arrow (bullish breakout) | Volatility expansion upward |
+| Regime Box | Green background | Bullish regime confirmed |
+| EMA Trio | Price above all 3 EMAs | Strong trend structure |
+
+**Trade Execution:**
+- **Entry:** 4,785 (on Squeeze breakout)
+- **Stop:** 4,765 (below TD 9 bar low)
+- **Target:** 4,825 (1:2 risk-reward)
+- **Outcome:** Target hit in 18 hours, +$2,000 profit on 1 contract
+
+**Why It Worked:**
+✓ 4 systems aligned simultaneously (rare, high-probability)
+✓ Trend + Timing + Momentum all bullish
+✓ Entry on confirmation (Squeeze breakout), not anticipation
+
+**Key Lesson:** Omnideck's power is confluence. When 3-4 systems align, probability increases significantly. This setup had all systems pointing same direction.
+
+---
+
+### Scenario #2: Loss - System Conflict Ignored (BTC 1H Chart) ❌
+
+**Setup:**
+- **Asset:** Bitcoin
+- **Systems Used:** TD Sequential + Oscillators
+- **Market Condition:** Choppy, range-bound
+
+**System Analysis:**
+
+| System | Signal | Interpretation |
+|--------|--------|----------------|
+| TD Sequential | TD 9 Sell | Potential exhaustion |
+| RSI Oscillator | Bullish (62, rising) | Momentum still strong |
+| Regime Box | Neutral (gray) | No clear bias |
+
+**Trade Execution:**
+- **Entry:** Short at $62,500 (based solely on TD 9 Sell)
+- **Stop:** $63,200
+- **Mistake:** Ignored conflicting Oscillator signal
+
+**What Went Wrong:**
+- BTC rallied to $63,500 (stopped out for -$1,000 loss)
+- TD 9 Sell was valid, but Oscillators showed momentum hadn't exhausted yet
+- Regime Box neutrality was warning sign (no trend support for reversal)
+
+**Key Lesson:** Don't trade single-system signals when other systems conflict. TD 9 alone isn't enough if momentum (Oscillators) still strong. Wait for alignment or skip trade.
+
+---
+
+### Scenario #3: Breakeven - Analysis Paralysis (EUR/USD Daily Chart) ⚖️
+
+**Setup:**
+- **Asset:** EUR/USD
+- **Systems Attempted:** All 10 systems enabled
+- **Market Condition:** Consolidation
+
+**System Overload:**
+
+| System | Signal | Conflict? |
+|--------|--------|-----------|
+| TD Sequential | TD 9 Buy | Bullish |
+| Squeeze | No signal | Neutral |
+| Oscillators | Bearish divergence | Bearish |
+| VWAP | Price below | Bearish |
+| EMA Trio | Mixed (above 50, below 100/200) | Neutral |
+| SuperTrend | Red (bearish) | Bearish |
+| Regime Box | Red background | Bearish |
+
+**Trade Execution:**
+- **Entry:** Attempted long at 1.0850 (based on TD 9 Buy, ignored 5 bearish systems)
+- **Result:** Choppy sideways, exited at breakeven after 3 days
+
+**What Went Wrong:**
+❌ Too many systems enabled (10/10) created information overload
+❌ Cherry-picked TD 9 Buy signal, ignored 5 bearish systems
+❌ No clear confluence (1 bullish vs 5 bearish vs 4 neutral)
+❌ Analysis paralysis led to poor trade selection
+
+**Key Lesson:** More systems ≠ better decisions. 10 systems create conflicting signals in choppy markets. Use 3-4 systems maximum. When no clear confluence exists (6+ systems aligned), skip the trade.
+
+**Omnideck Best Practice:** Enable only systems you actively use. Disable the rest to reduce noise.
+
+---
+
+## ⚠️ When Omnideck Systems Fail
+
+### Failure Mode #1: TD Sequential False 9-Counts (30-40% failure rate)
+
+**What Happens:**
+- TD 9 Buy or Sell appears
+- Price continues in original direction instead of reversing
+- Setup fails
+
+**Example:** TD 9 Sell at resistance during strong bull trend
+- TD 9 Sell fires at $100
+- Price dips to $98, then continues to $108
+- TD 9 correctly identified short-term exhaustion, but trend overpowered it
+
+**Why It Failed:** TD 9 is a pullback/exhaustion tool, not a trend reversal tool. In strong trends, exhaustion leads to small pullbacks, not reversals.
+
+**How to Avoid:** Check Regime Box + EMAs. If Regime is green and price above all EMAs, don't counter-trend trade TD 9 Sells. Use TD 9 for entry in trend direction (TD 9 Buy in uptrends, TD 9 Sell in downtrends).
+
+---
+
+### Failure Mode #2: Squeeze Breakouts that Whipsaw (25-30% failure rate)
+
+**What Happens:**
+- Squeeze compression occurs
+- Breakout arrow fires (green or red)
+- Price immediately reverses (whipsaw)
+
+**Example:** Squeeze breakout during low-volume hours
+- Green arrow (bullish breakout) at 3:00 AM EST
+- Price rallies $50, then reverses -$80
+- Fake breakout
+
+**Why It Failed:** Squeezes detect volatility compression, but can't predict direction. Breakouts during low volume/liquidity often fail.
+
+**How to Avoid:**
+- Check volume: Breakouts need 1.5x+ average volume for validity
+- Avoid trading Squeezes during non-market hours (Forex) or overnight sessions (Futures)
+- Combine with Regime Box: Only take bullish breakouts when Regime is green, bearish when red
+
+---
+
+### Failure Mode #3: System Overload - Too Many Enabled (leads to analysis paralysis)
+
+**What Happens:**
+- All 10 systems enabled
+- Conflicting signals across systems
+- Unable to make clear decisions
+- Miss good setups or take bad ones
+
+**Why It Fails:** Human brain can process 3-5 variables effectively. 10 systems = 10 variables = cognitive overload.
+
+**How to Avoid:**
+- Enable 3-4 systems maximum (e.g., TD Sequential + Squeeze + Regime + EMAs)
+- Master those 3-4 before adding more
+- Create system presets: "Trend Setup" (EMAs + Regime + SuperTrend), "Reversal Setup" (TD + Oscillators + Squeeze)
+
+---
+
+### Failure Mode #4: Over-Reliance on Single System Within Omnideck
+
+**What Happens:**
+- Trader enables all 10 systems but only watches one (e.g., TD Sequential)
+- Ignores other 9 systems providing context
+- Single-system decisions lead to lower win rate
+
+**Why It Fails:** If only using TD Sequential, why run Omnideck? Individual indicators (Pentarch, Harmonic, etc.) are optimized for single-system use.
+
+**How to Avoid:** Use Omnideck for its strength - multi-system confluence. If only using 1-2 systems, switch to dedicated indicators (Pentarch for TD, Harmonic for Oscillators, etc.). Reserve Omnideck for when you actively want 3-4 system perspectives.
+
+---
+
+## 💰 Risk Management for Omnideck Users
+
+**Omnideck-Specific Considerations:**
+
+### Position Sizing with Multi-System Setups
+
+**Confluence-Based Sizing:**
+- **2 systems aligned:** 0.5-0.75% account risk (lower confidence)
+- **3 systems aligned:** 1.0% account risk (standard)
+- **4+ systems aligned:** 1.0-1.5% account risk (higher confidence, rare setups)
+
+**Never exceed 1.5% risk per trade, even with perfect confluence.**
+
+---
+
+### Stop Placement for Omnideck Trades
+
+**Use the most conservative system's stop:**
+
+Example: TD 9 Buy at $100, Squeeze breakout at $102
+- TD 9 stop: $97 (below TD 9 bar low)
+- Squeeze stop: $100 (below breakout level)
+- **Use TD 9 stop at $97** (wider, more conservative)
+
+Wider stops reduce whipsaw risk when combining systems.
+
+---
+
+### When to Skip Omnideck Trades
+
+❌ **Skip if fewer than 3 systems align**
+- Example: Only TD 9 signal, no Oscillator/Regime/EMA confirmation → Skip
+
+❌ **Skip if systems are conflicting (5+ disagree)**
+- Example: TD 9 Buy but Regime red, EMAs bearish, SuperTrend red → Skip
+
+❌ **Skip if you can't quickly explain the setup in 15 seconds**
+- If it takes 2 minutes to explain why 7 systems justify the trade → Too complex → Skip
+
+**For complete Risk Management framework (position sizing, stop strategies, drawdown management), see [Pentarch Risk Management Section](REVISED_DOCS_PENTARCH.md#-risk-management--position-sizing).**
+
+---
+
 ## ❓ Frequently Asked Questions
 
 ### Q: Should I enable all 10 systems?

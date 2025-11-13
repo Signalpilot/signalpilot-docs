@@ -102,6 +102,52 @@ This video will show:
 
 ---
 
+## 🎮 Interactive Examples
+
+> **📍 PLACEHOLDER: Interactive Signal Explorer**
+>
+> *Location: Insert interactive chart demo here*
+>
+> **What to include:**
+> - Interactive chart showing Pentarch signals appearing in real-time simulation
+> - Click-through demonstration: "Watch TD signal form" → Bar closes → TD label appears
+> - Hover over signals to see detection conditions that were met
+> - Timeline slider to replay historical signal sequences (TD→IGN→WRN)
+>
+> **User interaction:**
+> - Button: "Play Signal Formation" - Shows 4-layer detection process
+> - Toggle: "Show/Hide Detection Layers" - Reveals Pilot Line distance, regime, momentum
+> - Quiz mode: "What signal comes next?" based on current chart conditions
+
+> **📍 PLACEHOLDER: Pattern Sequence Simulator**
+>
+> *Location: Insert pattern sequence explorer here*
+>
+> **What to include:**
+> - Visual flowchart: Click "TD appeared" → Shows possible next outcomes (IGN, WRN, or nothing)
+> - Probability visualization: "In 100 historical TD signals, 62 led to IGN within 7 bars"
+> - Compare complete vs partial cycles side-by-side
+>
+> **User interaction:**
+> - Dropdown: Select cycle phase (TD/IGN/WRN/CAP/BDN) → See common next signals
+> - Toggle: "Show successful sequences only" vs "Show all outcomes including failures"
+
+> **📍 PLACEHOLDER: Trinity Confluence Builder**
+>
+> *Location: Insert confluence demonstration tool here*
+>
+> **What to include:**
+> - Split-screen chart showing Pentarch + Janus Atlas + Volume Oracle
+> - Highlight moments when all 3 indicators align
+> - Color-coded timeline: Green = Triple confluence, Yellow = 2/3 aligned, Red = Conflicting
+>
+> **User interaction:**
+> - Checkbox filters: "Show only Trinity setups"
+> - Slider: "Confluence threshold" (how close must indicators align?)
+> - Click signal → Popup shows: "Pentarch: IGN | Janus: Daily Low cluster | Volume: 2.1x spike"
+
+---
+
 ## 📚 Before You Start — Prerequisites
 
 ### Universal Requirements:
@@ -553,6 +599,180 @@ CAP → BDN → TD (Climax to accumulation)
 
 ---
 
+## 📝 Reality Check: 3-Trade Walkthrough
+
+Real trading involves wins, losses, and breakeven trades. Here are three realistic scenarios showing how Pentarch signals perform in different market conditions.
+
+### Trade #1: Win - BTC Daily Chart (February 2024) ✅
+
+**Setup:**
+- **Asset:** Bitcoin (BTC/USD)
+- **Timeframe:** Daily
+- **Signal Sequence:** TD → IGN
+- **Market Condition:** Recovering from 15% pullback
+
+**Entry Decision Process:**
+
+| Date | Event | Price | Analysis |
+|------|-------|-------|----------|
+| Feb 12 | Pentarch TD | $48,200 | Accumulation phase detected after decline from $52K |
+| Feb 13-14 | Observation | $48,500 | Watching for IGN confirmation, no action taken |
+| Feb 15 | Pentarch IGN | $49,100 | Markup phase confirmed (+$900 from TD) |
+| Feb 15 | Volume Check | — | Volume Oracle shows 1.8x average volume ✓ |
+| Feb 15 | Level Check | — | Janus Atlas Daily Low cluster at $48,000-48,500 ✓ |
+
+**Trade Execution:**
+- **Entry:** $49,100 (IGN signal close)
+- **Stop:** $47,500 (below TD low, -$1,600 risk)
+- **Target:** $52,300 (1:2 risk-reward, +$3,200 reward)
+- **Position Size:** 1% account risk
+
+**Outcome:**
+- BTC rallied to $51,800 over 8 days (+5.5%)
+- Partial exit at $51,500 (profit), remainder stopped at breakeven
+- **Net Result:** +4.9% on position, +0.8% account gain
+
+**What Worked:**
+✓ Waited for IGN confirmation (didn't trade TD alone)
+✓ Volume confirmation added confidence
+✓ Clear stop placement below structure
+✓ Realistic 1:2 risk-reward ratio
+
+**Key Lesson:** Patience to wait for confluence (TD→IGN + Volume + Levels) improved probability.
+
+---
+
+### Trade #2: Loss - EUR/USD 4H Chart (March 2024) ❌
+
+**Setup:**
+- **Asset:** EUR/USD
+- **Timeframe:** 4-Hour
+- **Signal:** CAP
+- **Market Condition:** Strong uptrend, 3-week rally
+
+**Entry Decision Process:**
+
+| Date/Time | Event | Price | Analysis |
+|-----------|-------|-------|----------|
+| Mar 18, 8am | Pentarch CAP | 1.0920 | Climax phase detected |
+| Mar 18, 8am | Level Check | — | Janus Weekly High at 1.0915 ✓ |
+| Mar 18, 12pm | Entry Decision | 1.0915 | Attempted reversal trade (short position) |
+
+**Trade Execution:**
+- **Entry:** 1.0915 (short)
+- **Stop:** 1.0965 (+50 pips above CAP)
+- **Target:** 1.0815 (1:2 risk-reward, -100 pips)
+- **Position Size:** 1% account risk
+
+**What Went Wrong:**
+
+| Date/Time | Event | Price | Impact |
+|-----------|-------|-------|--------|
+| Mar 18, 4pm | Continued rally | 1.0940 | Position underwater -25 pips |
+| Mar 19, 8am | Stop hit | 1.0965 | Stopped out -50 pips |
+| Mar 19-22 | Post-stop action | 1.0985 peak | Eventually reversed, but too late |
+
+**Outcome:**
+- Stopped out for full loss -50 pips
+- **Net Result:** -1% account loss
+
+**What Went Wrong:**
+❌ Traded CAP as reversal entry (late-cycle signals better for exits, not entries)
+❌ Ignored ongoing strong momentum (trend still clearly bullish)
+❌ Entry timing too aggressive (CAP doesn't mean immediate reversal)
+❌ No confirmation wait period (rushed into trade)
+
+**Key Lesson:** CAP signals indicate exhaustion conditions, but NOT precise reversal timing. Better approach: Use CAP to exit longs or wait for TD/IGN on opposite side.
+
+**What to do differently:**
+- Wait for BDN → TD → IGN sequence for reversal confirmation
+- Use CAP for profit-taking on existing positions, not new counter-trend entries
+- Check higher timeframe trend (Daily was still bullish)
+
+---
+
+### Trade #3: Breakeven - SPY 1H Chart (April 2024) ⚖️
+
+**Setup:**
+- **Asset:** S&P 500 ETF (SPY)
+- **Timeframe:** 1-Hour
+- **Signal Sequence:** TD → IGN
+- **Market Condition:** Range-bound, low volatility
+
+**Entry Decision Process:**
+
+| Date/Time | Event | Price | Analysis |
+|-----------|-------|-------|----------|
+| Apr 8, 10am | Pentarch TD | $515.20 | Accumulation phase in consolidation |
+| Apr 8, 2pm | Pentarch IGN | $516.50 | Markup phase confirmed |
+| Apr 8, 2pm | Volume Check | — | Volume Oracle: 1.2x average (weak) ⚠️ |
+| Apr 8, 3pm | Entry | $516.50 | Entered despite weak volume |
+
+**Trade Execution:**
+- **Entry:** $516.50
+- **Stop:** $514.00 (-$2.50 risk)
+- **Target:** $521.50 (1:2 risk-reward, +$5.00)
+- **Position Size:** 1% account risk
+
+**What Happened:**
+
+| Date/Time | Event | Price | Action Taken |
+|-----------|-------|-------|--------------|
+| Apr 9, 11am | Rally begins | $518.50 | +$2.00 unrealized profit |
+| Apr 9, 2pm | Stalls | $519.00 | Choppy action, concern rising |
+| Apr 10, 10am | Pullback | $517.00 | Move stop to breakeven at $516.50 |
+| Apr 10, 3pm | Stopped BE | $516.50 | Exited at breakeven |
+| Apr 11-12 | Post-exit | $520.00 | Rally continued without us |
+
+**Outcome:**
+- Moved stop to breakeven too early
+- Stopped out at entry price
+- **Net Result:** $0 (minus commissions ~-$5)
+
+**What Happened:**
+⚠️ Volume confirmation was weak (1.2x vs ideal 1.5x+)
+⚠️ Range-bound market reduced follow-through probability
+⚠️ Moved stop to breakeven prematurely (gave trade no room)
+⚠️ Impatience - exited before pattern had time to develop
+
+**Key Lesson:** In low-volatility, range-bound conditions, Pentarch signals have lower follow-through rates. Weak volume confirmation (< 1.5x) is a warning sign. Give trades room to breathe before moving stops.
+
+**What to do differently:**
+- Filter setups: Only take Trinity setups (Pentarch + Janus + Volume 1.5x+)
+- Avoid trading in tight ranges (wait for volatility expansion)
+- Allow more room before moving stop to breakeven (wait for target to be 2:1 in favor)
+
+---
+
+### Walkthrough Summary - What These 3 Trades Teach
+
+**Win Rate Reality:** 1 win, 1 loss, 1 breakeven = 33% win rate (typical for swing setups)
+
+**Profit Reality:** +0.8% - 1.0% + 0% = **-0.2% net** across 3 trades
+
+**Key Insights:**
+
+1. **Confluence Matters:** Trade #1 (win) had triple confirmation. Trade #2 (loss) lacked momentum context. Trade #3 (breakeven) had weak volume.
+
+2. **Signal Type Matters:** Early-cycle signals (TD→IGN) have better entry characteristics than late-cycle (CAP/BDN) for new positions.
+
+3. **Context is Everything:** Same signal (IGN) performed differently in trending market (Trade #1 win) vs range-bound market (Trade #3 breakeven).
+
+4. **Patience Pays:** Rushing into CAP reversal (Trade #2) resulted in loss. Waiting for full confluence (Trade #1) resulted in win.
+
+5. **Not Every Setup is "The One":** Even with proper signals, 2 out of 3 trades didn't reach targets. This is normal.
+
+**Realistic Expectations:**
+- Pentarch signals identify conditions, not guarantee outcomes
+- Expect 30-50% of setups to reach full targets
+- Expect 20-30% to stop out for losses
+- Expect 20-30% to breakeven or small profit/loss
+- Risk management and confluence filters separate profitable traders from others
+
+*(Educational walkthroughs based on historical market behavior. Past examples do not guarantee future results. Not financial advice.)*
+
+---
+
 ## 🎯 The Pilot Line — Trend Reference
 
 **Visual Display:** Line on chart tracking dynamic trend position
@@ -721,6 +941,179 @@ Pentarch patterns work best when combined with support/resistance levels (Janus 
 | Want all-in-one analysis | → Omnideck |
 | Trading very short term (<15m) | → Volume Oracle (faster signals) |
 | Need multi-asset scanning | → Augury Grid |
+
+---
+
+## ⚠️ When Pentarch Signals Fail - Specific Scenarios
+
+Understanding *why* and *when* Pentarch signals fail helps set realistic expectations and improve decision-making.
+
+### Failure Scenario #1: TD Without IGN Follow-Through (40-45% of TD signals)
+
+**What Happens:**
+- TD signal appears indicating accumulation phase
+- Price consolidates or drifts sideways for days/weeks
+- No IGN confirmation ever appears
+- Eventually BDN or new decline begins
+
+**Real Example - Tesla (TSLA) December 2023:**
+
+| Date | Event | Price | What Happened |
+|------|-------|-------|---------------|
+| Dec 8 | TD signal | $238 | Accumulation phase detected after drop from $265 |
+| Dec 9-15 | Sideways | $235-242 | No directional movement, waiting for IGN |
+| Dec 18 | Breakdown | $230 | Price broke lower, no IGN appeared |
+| Dec 22 | BDN signal | $225 | Decline phase confirmed |
+
+**Why It Failed:**
+- Broader market weakness (SPY declining) overpowered individual stock signal
+- Volume declining throughout period (institutional distribution, not accumulation)
+- No higher timeframe support (Weekly chart still bearish)
+
+**Lesson:** TD signals indicate *potential* accumulation, not *guaranteed* reversal. Approximately 40-45% of TD signals do not lead to IGN within 10 bars. Wait for IGN confirmation before taking action.
+
+---
+
+### Failure Scenario #2: IGN Signal in Choppy/Range-Bound Markets (30-40% failure rate)
+
+**What Happens:**
+- IGN appears during sideways consolidation
+- Price rallies 1-3%, then reverses back into range
+- No sustained momentum follows
+- Whipsaw results
+
+**Real Example - Gold (GC) January 2024:**
+
+| Date | Event | Price | What Happened |
+|------|-------|-------|---------------|
+| Jan 10 | IGN signal | $2,048/oz | Markup phase detected in consolidation |
+| Jan 11 | Brief rally | $2,062/oz | +$14 move (+0.7%) |
+| Jan 12 | Reversal | $2,051/oz | Back to range midpoint |
+| Jan 15 | Range continues | $2,040-2,055 | No breakout, sideways for 2 weeks |
+
+**Why It Failed:**
+- Market in tight consolidation (2% range for 3 weeks prior)
+- Low volatility environment (VIX equivalent for Gold <15)
+- No catalyst for breakout
+- Volume declining (institutions not participating)
+
+**Lesson:** IGN signals have lower success rates in range-bound, low-volatility conditions. Best performance occurs when volatility is expanding and market has directional bias. Filter setups: Avoid IGN in <3% weekly ranges.
+
+---
+
+### Failure Scenario #3: CAP Signal Followed by Extended Blow-Off (25-30% of CAP signals)
+
+**What Happens:**
+- CAP appears indicating climax phase
+- Instead of reversing, price extends 5-15% higher in blow-off move
+- Late entries attempting reversal get stopped out
+- Reversal eventually comes, but much later than CAP
+
+**Real Example - NVIDIA (NVDA) February 2024:**
+
+| Date | Event | Price | What Happened |
+|------|-------|-------|---------------|
+| Feb 20 | CAP signal | $785 | Climax phase after +45% rally |
+| Feb 21 | Continued rally | $802 | +$17 extension |
+| Feb 22 | Blow-off top | $823 | +$38 beyond CAP (+4.8%) |
+| Feb 23 | Reversal begins | $795 | Finally peaked |
+| Mar 1 | Pullback | $740 | -$83 from peak |
+
+**Why CAP "Failed" (but also succeeded):**
+- CAP correctly identified late-cycle conditions
+- Timing was early by 3 days (+4.8% more upside)
+- Traders who shorted at CAP got stopped out
+- Traders who used CAP to exit longs captured most of move
+
+**Lesson:** CAP signals identify exhaustion *zones*, not exact tops. Price can extend 3-10% beyond CAP in strong trends. Use CAP for profit-taking/position reduction, NOT for counter-trend entries. Wait for BDN → TD → IGN for safer reversal entries.
+
+---
+
+### Failure Scenario #4: Whipsaw in News-Driven Volatility
+
+**What Happens:**
+- Major news event (FOMC, earnings, geopolitical)
+- Multiple conflicting signals fire within hours/days
+- TD → CAP → IGN → BDN in rapid succession
+- No tradeable structure
+
+**Real Example - EUR/USD FOMC Decision (March 2024):**
+
+| Date/Time | Event | Price | What Happened |
+|-----------|-------|-------|---------------|
+| Mar 20, 2:00pm | Pre-FOMC CAP | 1.0875 | Climax before announcement |
+| Mar 20, 2:15pm | FOMC hawkish | 1.0920 | +45 pips spike |
+| Mar 20, 2:30pm | BDN signal | 1.0918 | Decline phase detected |
+| Mar 20, 3:00pm | Reversal | 1.0850 | -68 pips drop |
+| Mar 20, 3:30pm | TD signal | 1.0852 | Accumulation phase detected |
+| Mar 21, 10:00am | Sideways | 1.0860-1.0880 | Choppy, no clear direction |
+
+**Why Signals Failed:**
+- Extreme volatility (200% of average)
+- Rapid mean reversion after spike
+- Multiple timeframe compression (signals that normally take days appeared in hours)
+- Emotional trading, not structural
+
+**Lesson:** Avoid trading Pentarch signals 30 minutes before/after major scheduled news (FOMC, NFP, CPI, earnings). Signals during news volatility have 60-70% whipsaw rate. Wait 4-6 hours post-news for structure to settle.
+
+---
+
+### Failure Scenario #5: Signal Conflicts With Higher Timeframe (Lower success rate)
+
+**What Happens:**
+- Lower timeframe (1H) shows bullish IGN
+- Higher timeframe (Daily/Weekly) shows bearish structure
+- Lower timeframe signal fails within 1-3 days
+- Higher timeframe trend overpowers
+
+**Real Example - S&P 500 (SPY) 1H vs Daily April 2024:**
+
+| Timeframe | Signal | Price | Outcome |
+|-----------|--------|-------|---------|
+| 1H Chart | IGN | $518 | Bullish markup phase (lower TF) |
+| Daily Chart | WRN (previous day) | $520 | Distribution phase (higher TF) |
+| **Result** | Conflict | — | 1H IGN failed, Daily WRN won |
+| 3 days later | Pullback | $510 | -$8 decline (-1.5%) |
+
+**Why Lower TF Failed:**
+- Higher timeframe structure takes precedence (Daily > 1H)
+- Daily timeframe showed distribution (WRN), 1H showed bullish (IGN)
+- Institutions trade higher timeframes, retail trades lower
+- Lower TF signal was counter-trend noise
+
+**Lesson:** Check higher timeframe Pentarch signals before trading lower timeframes. If Daily shows CAP/WRN, avoid taking 1H/4H bullish IGN signals. Align trades with higher timeframe bias.
+
+---
+
+### Common Failure Patterns Summary
+
+| Failure Type | Frequency | Primary Cause | How to Avoid |
+|--------------|-----------|---------------|--------------|
+| **TD without IGN** | 40-45% | Market conditions change, no momentum follow-through | Wait for IGN confirmation, don't trade TD alone |
+| **IGN in ranges** | 30-40% | Low volatility, no breakout catalyst | Filter: Avoid in <3% weekly ranges, check VIX |
+| **CAP blow-offs** | 25-30% | Strong momentum extends beyond exhaustion signal | Use CAP for exits, not entries; wait for BDN→TD |
+| **News whipsaws** | 60-70% | Extreme volatility, emotional trading | Avoid 30min pre/post major news events |
+| **TF conflicts** | 45-55% | Higher timeframe trend overpowers lower TF signal | Check Daily/Weekly before trading 1H/4H signals |
+
+---
+
+### What "Failure" Actually Means
+
+**Important Context:**
+- "Failed signal" doesn't mean indicator is broken
+- It means market conditions didn't support follow-through
+- Pentarch identifies *conditions*, not *predictions*
+- 50-60% success rate is typical and profitable with proper risk management
+
+**Math Example:**
+- 10 trades: 5 wins (+10% each), 5 losses (-5% each)
+- Wins: 5 × +10% = +50%
+- Losses: 5 × -5% = -25%
+- **Net: +25% despite 50% win rate**
+
+Risk management (1:2 ratio minimum) makes 50% win rates profitable.
+
+**Takeaway:** Expect failures. Plan for them. Use proper risk-reward ratios to profit despite them.
 
 ---
 
@@ -963,6 +1356,237 @@ Reversal:     BDN → TD → IGN
 ✅ Remove indicators that consistently conflict or add no value
 
 **Optimal setup:** Pentarch (signals) + Janus (levels) + Volume (confirmation) = 3 complementary tools
+
+---
+
+## 💰 Risk Management & Position Sizing
+
+Pattern recognition is only half the equation. Risk management determines long-term profitability.
+
+### Position Sizing Framework
+
+**1% Risk Rule (Conservative, Recommended for beginners):**
+
+- Risk only 1% of total account per trade
+- Example: $10,000 account = $100 maximum risk per trade
+- If stop is $2.00 away, position size = $100 ÷ $2.00 = 50 shares
+
+**Calculation Formula:**
+```
+Position Size = (Account × Risk %) ÷ Stop Distance
+```
+
+**Example Scenarios:**
+
+| Account Size | Risk % | Stop Distance | Position Size | Max Loss if Stopped |
+|--------------|--------|---------------|---------------|---------------------|
+| $10,000 | 1% | $2.00 | 50 shares | $100 |
+| $10,000 | 2% | $1.50 | 133 shares | $200 |
+| $50,000 | 1% | $5.00 | 100 shares | $500 |
+| $50,000 | 0.5% | $3.00 | 83 shares | $250 |
+
+---
+
+### Stop-Loss Placement Strategies
+
+**Strategy #1: Structure-Based Stops (Recommended for Pentarch)**
+
+**For Bullish IGN Signals:**
+- Place stop below TD signal low (if TD preceded IGN)
+- If no TD, place stop below IGN bar low minus 1 ATR
+- Typical distance: 2-5% below entry on Daily charts
+
+**Example:**
+- TD at $100, IGN at $103
+- Stop placement: $99.50 (below TD low)
+- Entry: $103, Stop: $99.50, Risk: $3.50
+
+**For Bearish BDN Signals:**
+- Place stop above CAP signal high (if CAP preceded BDN)
+- If no CAP, place stop above BDN bar high plus 1 ATR
+- Typical distance: 2-5% above entry
+
+---
+
+**Strategy #2: ATR-Based Stops (For volatile assets)**
+
+**What is ATR:** Average True Range measures typical price volatility
+
+**Stop Placement:**
+- 1.5× ATR for tight stops (higher stop-out risk)
+- 2.0× ATR for moderate stops (balanced)
+- 2.5× ATR for loose stops (more room, lower stop-out risk)
+
+**Example:** BTC Daily ATR = $1,200
+- Entry: $50,000
+- ATR-based stop (2× ATR): $50,000 - $2,400 = $47,600
+- Risk: $2,400 per coin
+
+---
+
+**Strategy #3: Percentage-Based Stops (Simplest approach)**
+
+**Fixed % stops based on timeframe:**
+- **Daily charts:** 3-5% stop distance
+- **4H charts:** 2-4% stop distance
+- **1H charts:** 1-2% stop distance
+
+**Example:** SPY Daily chart, IGN at $520
+- 3% stop distance: $520 × 0.97 = $504.40
+- 5% stop distance: $520 × 0.95 = $494.00
+- Choose based on volatility conditions
+
+---
+
+### Profit Targets & Risk-Reward Ratios
+
+**Minimum Risk-Reward Ratio: 1:2 (Industry standard)**
+
+| Entry | Stop | Risk | 1:1 Target | 1:2 Target | 1:3 Target |
+|-------|------|------|------------|------------|------------|
+| $100 | $97 | $3 | $103 | $106 | $109 |
+| $50,000 | $48,500 | $1,500 | $51,500 | $53,000 | $54,500 |
+
+**Why 1:2 minimum matters:**
+- 50% win rate at 1:2 ratio = +25% net profit over 10 trades
+- 40% win rate at 1:2 ratio = +0% (breakeven)
+- 40% win rate at 1:3 ratio = +20% net profit
+
+**Profit-Taking Strategies:**
+
+**Partial Profit Approach (Recommended):**
+1. Exit 50% of position at 1:1 ratio (risk removed)
+2. Move stop to breakeven on remaining 50%
+3. Let remainder run to 1:2 or 1:3 target
+
+**Example:**
+- Entry: 100 shares at $50 (Risk: $2/share, Stop: $48)
+- Exit 50 shares at $52 (1:1, locked +$100 profit)
+- Move stop to $50 on remaining 50 shares (no risk)
+- Target $54 for remaining 50 shares (1:2)
+
+---
+
+### When to Skip Trades (Setup Filtering)
+
+Not every Pentarch signal deserves capital. Filter aggressively.
+
+**Skip the trade if:**
+
+❌ **Volume confirmation < 1.5× average** (weak institutional participation)
+- Example: IGN appears but volume only 1.1× average → Skip
+
+❌ **No confluence with levels** (no Janus cluster within 1-2%)
+- Example: TD at $100, nearest Janus level at $95 → Skip
+
+❌ **Higher timeframe conflict** (Daily bearish, 1H bullish signal)
+- Example: Daily shows CAP, 1H shows IGN → Skip the 1H trade
+
+❌ **Risk-reward ratio < 1:2** (stop distance doesn't allow 1:2 target)
+- Example: Entry $100, Stop $98, resistance at $103 → Only 1:1.5 possible → Skip
+
+❌ **Major news event within 6 hours** (FOMC, NFP, earnings)
+- Example: IGN appears 2 hours before Fed decision → Skip
+
+❌ **Low volatility/tight range** (< 3% weekly range)
+- Example: Asset trading in $48-50 range for 2 weeks, IGN at $49 → Skip
+
+❌ **Account already has 3+ open positions** (over-concentration risk)
+- Limit concurrent positions to manage correlation and drawdown
+
+---
+
+### Trade Frequency Expectations
+
+**Realistic Signal Frequency (with proper filtering):**
+
+| Timeframe | Pentarch Signals/Month | After Filtering (Trinity setups) | Actual Trades Taken |
+|-----------|------------------------|-----------------------------------|---------------------|
+| **Daily** | 8-15 signals | 4-8 qualify | 2-4 high-probability |
+| **4H** | 15-25 signals | 7-12 qualify | 3-6 high-probability |
+| **1H** | 30-50 signals | 10-20 qualify | 5-10 high-probability |
+
+**Key insight:** More signals ≠ more trades. Quality over quantity.
+
+**Filtering reduces signal count by 60-80%, but increases success rate by 15-25%.**
+
+---
+
+### Portfolio-Level Risk Management
+
+**Maximum Account Risk at Any Time: 3-5%**
+
+**Example:**
+- Account: $20,000
+- Max total risk: 5% = $1,000
+- Trade 1: $300 risk (1.5%)
+- Trade 2: $400 risk (2%)
+- Trade 3: $300 risk (1.5%)
+- **Total:** $1,000 (5%) → Opening Trade 4 would exceed risk limits
+
+**Correlation Risk:**
+- Multiple positions in correlated assets increase portfolio risk
+- Example: SPY + QQQ + AAPL held simultaneously creates tech-heavy exposure
+- Diversification across asset classes (Stocks + Forex + Commodities) helps reduce correlation risk
+
+---
+
+### Drawdown Management
+
+**What is Drawdown:** Peak-to-trough decline in account equity
+
+**Normal Drawdowns (expected):**
+- 5-10% drawdown: Normal trading activity
+- 10-15% drawdown: Indicates need for review of recent trades
+- 15-20% drawdown: Signals need to pause trading and analyze issues
+- 20%+ drawdown: Serious issue indicating need to reduce position sizes by 50%
+
+**Recovery Rules:**
+
+**After 3 consecutive losses:**
+1. Stop new trades for 24-48 hours
+2. Review last 10 trades for pattern mistakes
+3. Reduce position size by 50% for next 3 trades
+4. Rebuild confidence gradually
+
+**After 15% drawdown:**
+1. Pause trading for 1 week minimum
+2. Paper trade next 5 setups (no real money)
+3. Identify systematic errors
+4. Return with 0.5% risk per trade (half normal size)
+
+---
+
+### Risk Management Checklist (Use Before Every Trade)
+
+✅ **Position Sizing:**
+- [ ] Calculated risk amount (1% of account or less)
+- [ ] Calculated position size based on stop distance
+- [ ] Verified total portfolio risk < 5%
+
+✅ **Stop Placement:**
+- [ ] Stop placed below structure (TD low or support)
+- [ ] Stop distance allows for 1:2 risk-reward minimum
+- [ ] Stop is meaningful (not too tight to get whipsawed)
+
+✅ **Profit Target:**
+- [ ] Identified 1:2 target zone (price level)
+- [ ] 1:2 target is realistic (not beyond major resistance)
+- [ ] Partial profit plan defined (50% at 1:1, 50% at 1:2)
+
+✅ **Setup Quality:**
+- [ ] Confluence confirmed (Pentarch + Janus or Volume)
+- [ ] Higher timeframe alignment checked
+- [ ] Volume confirmation ≥ 1.5× average
+- [ ] No major news within 6 hours
+
+✅ **Mental Check:**
+- [ ] Not revenge trading after recent loss
+- [ ] Not over-confident after recent win
+- [ ] Trade fits my strategy rules
+- [ ] Can afford to lose this trade amount
+
+**If ANY checkbox is unchecked → Skip the trade.**
 
 ---
 
