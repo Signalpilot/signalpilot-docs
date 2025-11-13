@@ -970,6 +970,23 @@ On assets where volume reporting is unreliable (some crypto exchanges, OTC stock
 
 ---
 
+## 🔗 Works Well With Other Signal Pilot Indicators
+
+**High Synergy Pairs:**
+- **+ Pentarch:** OBV divergence + TD Sequential = volume-confirmed cycle reversals
+- **+ Harmonic Oscillator:** OBV divergence + oscillator divergence = double-divergence confirmation
+- **+ Janus Atlas:** OBV divergence + level clusters = reversal confluence at tested levels
+
+**Common Combinations:**
+- **Plutus bullish divergence + Pentarch TD 9 Buy** → Volume + cycle alignment for reversal
+- **Plutus bearish divergence + Harmonic oscillator divergence** → Multi-methodology distribution warning
+- **Plutus OBV declining + Janus resistance cluster** → Volume confirms weak rally at key level
+
+**Why These Pair Well:**
+Plutus Flow shows volume-based accumulation/distribution and divergence. Pentarch/Harmonic show momentum and cycles. Janus shows levels. Divergence alone can be early—combining with timing indicators (Pentarch) or levels (Janus) improves entry precision.
+
+---
+
 ## ❓ Frequently Asked Questions
 
 ### Q: What is On-Balance Volume (OBV)?

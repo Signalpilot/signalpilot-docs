@@ -1169,6 +1169,23 @@ Single isolated levels have less significance than clusters where multiple level
 
 ---
 
+## 🔗 Works Well With Other Signal Pilot Indicators
+
+**High Synergy Pairs:**
+- **+ Pentarch:** Level clusters + TD Sequential signals = precise reversal timing at key levels
+- **+ Omnideck:** Level confluence + multi-system alignment = institutional zones with technical confirmation
+- **+ Volume Oracle:** Support/resistance levels + volume analysis = level strength validation
+
+**Common Combinations:**
+- **Janus support cluster + Pentarch TD 9 Buy** → Reversal at tested level with cycle confirmation
+- **Janus resistance + Omnideck TD 13 Sell + Regime red** → Multi-layer resistance confluence
+- **Janus level + Volume Oracle trapped signal** → Institutional exit zones at key levels
+
+**Why These Pair Well:**
+Janus Atlas identifies WHERE price may react (levels). Pentarch/Omnideck identify WHEN to enter (timing/cycles). Volume Oracle confirms WHO is acting (institutions). Combining spatial (levels) + temporal (timing) + participant (volume) analysis creates complete picture.
+
+---
+
 ## ❓ Frequently Asked Questions
 
 ### Q: How many levels should I enable?

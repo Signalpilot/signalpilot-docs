@@ -1080,6 +1080,23 @@ Wider stops reduce whipsaw risk when combining systems.
 
 ---
 
+## 🔗 Works Well With Other Signal Pilot Indicators
+
+**High Synergy Pairs:**
+- **+ Janus Atlas:** Multi-system signals + level clusters = high-confluence reversal setups
+- **+ Volume Oracle:** System alignment + institutional flow confirmation = validated trends
+- **+ Pentarch:** TD Sequential depth + multi-system validation = comprehensive cycle analysis
+
+**Common Combinations:**
+- **Omnideck TD 9 + Janus support cluster** → Reversal signal with level confluence
+- **Omnideck Regime green + Volume Flow green** → Institutional trend confirmation
+- **Omnideck Squeeze breakout + Pentarch TDST break** → Multi-methodology breakout validation
+
+**Why These Pair Well:**
+Omnideck provides multi-system confluence. Adding Janus Atlas levels or Volume Oracle institutional flow adds independent confirmation from different market dimensions (levels, volume), reducing false signals.
+
+---
+
 ## ❓ Frequently Asked Questions
 
 ### Q: Should I enable all 10 systems?

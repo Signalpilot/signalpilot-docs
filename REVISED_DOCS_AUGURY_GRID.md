@@ -890,6 +890,24 @@ If yes to any → Skip the trade, regardless of technical signal.
 
 ---
 
+## 🔗 Works Well With Other Signal Pilot Indicators
+
+**High Synergy Pairs:**
+- **+ Any Single-Asset Indicator:** Grid finds opportunities across multiple symbols, then apply Pentarch/Omnideck to selected symbol for detailed analysis
+- **+ Volume Oracle:** Grid identifies symbol, Volume Oracle confirms institutional participation in that specific asset
+- **+ Janus Atlas:** Grid filters watchlist, Janus shows key levels on chosen symbol
+
+**Common Workflow:**
+1. **Augury Grid scans 20 symbols** → Identifies 3 with strong signals
+2. **Switch to strongest signal chart** → Apply Pentarch or Omnideck for timing
+3. **Check Janus Atlas levels** → Confirm entry near support/resistance
+4. **Verify Volume Oracle Flow** → Ensure institutional alignment
+
+**Why These Pair Well:**
+Augury Grid is a scanner/filter, not a deep analysis tool. It identifies WHICH assets to focus on. Once filtered, use single-asset indicators (Pentarch, Omnideck, Janus, Volume Oracle) for detailed trade analysis on the selected symbol.
+
+---
+
 ## ❓ Frequently Asked Questions
 
 ### Q: How many symbols should I monitor?

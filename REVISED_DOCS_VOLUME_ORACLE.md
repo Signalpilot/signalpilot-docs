@@ -971,6 +971,23 @@ A "high volume" spike on a stock that typically trades 100K shares/day (500K spi
 
 ---
 
+## 🔗 Works Well With Other Signal Pilot Indicators
+
+**High Synergy Pairs:**
+- **+ Pentarch:** Institutional flow + TD Sequential = volume-confirmed cycle signals
+- **+ Omnideck:** Volume Flow + multi-system alignment = institutional participation validation
+- **+ Janus Atlas:** Flow zones + level clusters = accumulation/distribution at key levels
+
+**Common Combinations:**
+- **Volume Flow green + Pentarch TD 9 Buy** → Institutional accumulation at cycle low
+- **Volume Flow red + Janus resistance cluster** → Distribution at tested resistance
+- **Position Manager "trapped long" + Omnideck Regime red** → Multi-indicator exit signal
+
+**Why These Pair Well:**
+Volume Oracle shows WHO is acting (institutions vs retail) and WHERE (entry/exit zones). Pentarch/Omnideck show WHEN to act (timing). Janus shows price levels. Combining participant analysis with timing creates setups where retail and institutional interests align.
+
+---
+
 ## ❓ Frequently Asked Questions
 
 ### Q: Can Position Manager track multiple positions?

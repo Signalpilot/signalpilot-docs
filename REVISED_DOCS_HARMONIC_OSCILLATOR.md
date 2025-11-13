@@ -1011,6 +1011,23 @@ BUY signals in uptrends and SELL signals in downtrends are most reliable. Choppy
 
 ---
 
+## 🔗 Works Well With Other Signal Pilot Indicators
+
+**High Synergy Pairs:**
+- **+ Pentarch:** Oscillator consensus + TD Sequential = momentum-confirmed cycle signals
+- **+ Omnideck:** Multi-oscillator voting + multi-system alignment = double-layer confirmation
+- **+ Janus Atlas:** Divergence signals + level clusters = reversal timing at key levels
+
+**Common Combinations:**
+- **Harmonic bullish divergence + Janus support cluster** → Momentum reversal at tested level
+- **Harmonic 3+ oscillators oversold + Pentarch TD 9 Buy** → Cycle + momentum alignment
+- **Harmonic overbought + Omnideck Regime red** → Multi-indicator distribution warning
+
+**Why These Pair Well:**
+Harmonic Oscillator shows momentum and divergence (internal market pressure). Pentarch/Omnideck show timing and structure. Janus shows levels. Combining momentum analysis with timing and levels creates high-probability reversal setups.
+
+---
+
 ## ❓ Frequently Asked Questions
 
 ### Q: Why use five oscillators instead of one?
