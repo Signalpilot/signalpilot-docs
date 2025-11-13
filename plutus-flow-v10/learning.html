@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Plutus Flow v1.0 - Advanced Learning Guide - Signal Pilot</title>
+    <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+    <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <meta name="theme-color" content="#8b5cf6">
+    <style>
+        body {
+            background: #1a1d2e;
+            color: #e0e0e0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+        .learning-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            padding: 10px 20px;
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid #8b5cf6;
+            border-radius: 8px;
+            color: #8b5cf6;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .back-link:hover {
+            background: rgba(139, 92, 246, 0.2);
+            transform: translateX(-4px);
+        }
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #8b5cf6 0%, #d946ef 100%);
+            border-radius: 16px;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 40px rgba(139, 92, 246, 0.3);
+        }
+        .hero h1 {
+            color: white;
+            font-size: 42px;
+            margin: 0 0 16px 0;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .hero p {
+            color: rgba(255,255,255,0.95);
+            font-size: 18px;
+            margin: 0;
+        }
+        h2 {
+            color: #8b5cf6;
+            font-size: 32px;
+            margin: 60px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #8b5cf6;
+        }
+        h3 {
+            color: #a78bfa;
+            font-size: 24px;
+            margin: 40px 0 16px 0;
+        }
+        strong {
+            color: #c4b5fd;
+        }
+        .challenge-box {
+            background: rgba(139, 92, 246, 0.05);
+            border-left: 4px solid #8b5cf6;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+        .challenge-box:hover {
+            background: rgba(139, 92, 246, 0.08);
+            transform: translateX(4px);
+        }
+        .mistake-box {
+            background: rgba(239, 68, 68, 0.05);
+            border-left: 4px solid #ef4444;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+        .mistake-box:hover {
+            background: rgba(239, 68, 68, 0.08);
+            transform: translateX(4px);
+        }
+        .pairing-section {
+            background: rgba(217, 70, 239, 0.05);
+            border: 1px solid rgba(217, 70, 239, 0.3);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+        .pairing-section h3 {
+            color: #e879f9;
+            margin-top: 0;
+        }
+        .visual-divider {
+            text-align: center;
+            margin: 50px 0;
+            font-size: 32px;
+            opacity: 0.3;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid rgba(139, 92, 246, 0.2);
+            margin: 40px 0;
+        }
+        .intro-box {
+            background: rgba(217, 70, 239, 0.1);
+            border: 2px solid #d946ef;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 40px;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        .divergence-types {
+            background: rgba(139, 92, 246, 0.08);
+            border: 2px solid #8b5cf6;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        .divergence-types h4 {
+            color: #a78bfa;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="learning-container">
+        <a href="index.html" class="back-link">← Back to Plutus Flow Documentation</a>
+
+        <div class="hero">
+            <div style="font-size: 64px; margin-bottom: 20px;">💰</div>
+            <h1>Plutus Flow v1.0<br/>Advanced Learning Guide</h1>
+            <p>Master OBV Divergence • Accumulation/Distribution • Institutional Flow Psychology</p>
+        </div>
+
+        <div class="intro-box">
+            <strong>⚠️ The Premature Divergence Trap:</strong> You spot beautiful bullish divergence—price making lower lows but OBV making higher lows. You buy immediately. Price drops another 5 days straight. <em>"The divergence was obvious! Why didn't it work?"</em> Because divergence shows <strong>potential</strong>, not <strong>timing</strong>. This guide teaches you when divergence actually matters, how to distinguish regular from hidden divergence, and why waiting for price confirmation is critical.
+        </div>
+
+        <div class="divergence-types">
+            <h4>🎯 Understanding Divergence Types</h4>
+            <p><strong>Regular Divergence = Reversal Signal</strong></p>
+            <ul>
+                <li><strong>Bullish Regular:</strong> Price makes lower lows, OBV makes higher lows → Potential upside reversal</li>
+                <li><strong>Bearish Regular:</strong> Price makes higher highs, OBV makes lower highs → Potential downside reversal</li>
+            </ul>
+            <p><strong>Hidden Divergence = Continuation Signal</strong></p>
+            <ul>
+                <li><strong>Bullish Hidden:</strong> Price makes higher lows, OBV makes lower lows → Uptrend continuation</li>
+                <li><strong>Bearish Hidden:</strong> Price makes lower highs, OBV makes higher highs → Downtrend continuation</li>
+            </ul>
+            <p><strong>Key Insight:</strong> Confusing these types = trading reversals when you should trade continuation (or vice versa) = losing trades.</p>
+        </div>
+
+        <h2>🧠 Divergence Trading Psychology: The 3 Critical Challenges</h2>
+
+        <div class="challenge-box">
+            <h3>⏰ Challenge 1: Trading Divergence Too Early (Before Price Confirmation)</h3>
+            <p><strong>What Happens:</strong> You spot bullish divergence—price making lower lows at $48, $46, $44, but OBV making higher lows. Textbook setup! You buy immediately at $44, excited about the "obvious" reversal signal.</p>
+
+            <p>Price continues dropping: $42... $40... $38... for 5 more days. You're stopped out at $40, frustrated. One week later, price finally reverses and rallies to $52. The divergence WAS real—your timing was just early.</p>
+
+            <p><strong>Why This Happens:</strong> You treat divergence as a precise entry signal. But divergence shows <strong>potential</strong> (institutions accumulating), not <strong>timing</strong> (when reversal starts).</p>
+
+            <p><strong>The Fix:</strong> Divergence alone = observation and preparation. Wait for <strong>price confirmation</strong> before entering:</p>
+            <ul>
+                <li>Higher low forming (price stops making lower lows)</li>
+                <li>Trend line break</li>
+                <li>Support level holding</li>
+                <li>Price structure change (consolidation, base formation)</li>
+            </ul>
+
+            <p><strong>Mental Script:</strong> <em>"Divergence spotted. Now I wait for price to confirm the reversal before entering. Divergence + price confirmation = signal."</em></p>
+        </div>
+
+        <div class="challenge-box">
+            <h3>🔄 Challenge 2: Confusing Divergence Types (Regular vs Hidden)</h3>
+            <p><strong>What Happens:</strong> You see divergence between price and OBV. You automatically trade it as a reversal signal because "divergence = reversal, right?" You buy. Trade immediately goes against you, continuing in the existing trend.</p>
+
+            <p>Frustrated, you review the charts later and realize: it was <strong>hidden divergence</strong> (a continuation signal), not <strong>regular divergence</strong> (a reversal signal). You traded the wrong direction.</p>
+
+            <p><strong>Why This Happens:</strong> Most traders learn "divergence = reversal" and never learn hidden divergence exists. They treat all divergence the same way.</p>
+
+            <p><strong>The Fix:</strong> Learn both types and match trade direction to divergence type:</p>
+            <ul>
+                <li><strong>Regular divergence:</strong> Trade the reversal (against current trend)</li>
+                <li><strong>Hidden divergence:</strong> Trade the continuation (with current trend)</li>
+            </ul>
+
+            <p><strong>Mental Script:</strong> <em>"Is this regular (reversal) or hidden (continuation)? I trade the direction that matches the divergence type."</em></p>
+        </div>
+
+        <div class="challenge-box">
+            <h3>📉 Challenge 3: Ignoring OBV Direction Trend (Trading Against Institutional Flow)</h3>
+            <p><strong>What Happens:</strong> Price is rising steadily: $50 → $52 → $54 → $56. You're excited and keep buying because "uptrend!" But you ignore OBV, which is declining the entire time.</p>
+
+            <p>Suddenly, price reverses sharply: $56 → $50 in 3 days. You're confused: <em>"It was a strong uptrend! What happened?"</em> You check OBV <em>after</em> the loss: it was declining the whole time, warning of distribution. Institutions were exiting while retail was buying.</p>
+
+            <p><strong>Why This Happens:</strong> Price hypnotizes traders. Rising price feels bullish. You ignore OBV's institutional warning signs.</p>
+
+            <p><strong>The Fix:</strong> OBV shows institutional flow direction. Price/OBV disagreement = warning:</p>
+            <ul>
+                <li>✅ <strong>Rising price + rising OBV:</strong> Healthy uptrend, institutions participating</li>
+                <li>❌ <strong>Rising price + falling OBV:</strong> Distribution, weak rally, institutions exiting</li>
+                <li>✅ <strong>Falling price + falling OBV:</strong> Healthy downtrend, institutions selling</li>
+                <li>❌ <strong>Falling price + rising OBV:</strong> Accumulation, institutions buying the dip</li>
+            </ul>
+
+            <p><strong>Mental Script:</strong> <em>"Are price and OBV moving together? If diverging, I wait for alignment before entering. Trading against institutional flow = low probability."</em></p>
+        </div>
+
+        <div class="visual-divider">🚫</div>
+
+        <h2>🚫 Top 5 Mistakes That Kill Divergence Traders</h2>
+
+        <div class="mistake-box">
+            <h3>Mistake #1: Trading Divergence Without Price Confirmation</h3>
+            <p><strong>What Happens:</strong> You spot bullish divergence and buy immediately at the divergence. Price continues down for 3-5 more days. Divergence was real, but timing was early. You're stopped out before the reversal actually starts.</p>
+
+            <p><strong>The Fix:</strong> Divergence shows <strong>potential reversal</strong>, not <strong>entry timing</strong>. Wait for price to confirm:</p>
+            <ul>
+                <li>Price forms higher low (stops making lower lows)</li>
+                <li>Trend line break</li>
+                <li>Consolidation or base formation</li>
+                <li>Support level holds with strong bounce</li>
+            </ul>
+            <p>Only enter after price confirms the divergence. <strong>Divergence + price confirmation = signal.</strong> Divergence alone = too early.</p>
+        </div>
+
+        <div class="mistake-box">
+            <h3>Mistake #2: Confusing Regular and Hidden Divergence</h3>
+            <p><strong>What Happens:</strong> You see divergence, automatically trade it as a reversal. Trade fails spectacularly. Later you realize it was hidden divergence (trend continuation), not regular divergence (reversal). You traded the wrong direction.</p>
+
+            <p><strong>The Fix:</strong> Memorize the difference and check carefully before trading:</p>
+            <table style="width: 100%; margin: 15px 0; border-collapse: collapse;">
+                <tr style="background: rgba(139, 92, 246, 0.1);">
+                    <th style="padding: 10px; text-align: left; border: 1px solid rgba(139, 92, 246, 0.3);">Divergence Type</th>
+                    <th style="padding: 10px; text-align: left; border: 1px solid rgba(139, 92, 246, 0.3);">Price Action</th>
+                    <th style="padding: 10px; text-align: left; border: 1px solid rgba(139, 92, 246, 0.3);">Trade Direction</th>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid rgba(139, 92, 246, 0.2);">Regular Bullish</td>
+                    <td style="padding: 10px; border: 1px solid rgba(139, 92, 246, 0.2);">Lower lows</td>
+                    <td style="padding: 10px; border: 1px solid rgba(139, 92, 246, 0.2);">Reversal UP</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid rgba(139, 92, 246, 0.2);">Regular Bearish</td>
+                    <td style="padding: 10px; border: 1px solid rgba(139, 92, 246, 0.2);">Higher highs</td>
+                    <td style="padding: 10px; border: 1px solid rgba(139, 92, 246, 0.2);">Reversal DOWN</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid rgba(139, 92, 246, 0.2);">Hidden Bullish</td>
+                    <td style="padding: 10px; border: 1px solid rgba(139, 92, 246, 0.2);">Higher lows</td>
+                    <td style="padding: 10px; border: 1px solid rgba(139, 92, 246, 0.2);">Continuation UP</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid rgba(139, 92, 246, 0.2);">Hidden Bearish</td>
+                    <td style="padding: 10px; border: 1px solid rgba(139, 92, 246, 0.2);">Lower highs</td>
+                    <td style="padding: 10px; border: 1px solid rgba(139, 92, 246, 0.2);">Continuation DOWN</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="mistake-box">
+            <h3>Mistake #3: Ignoring Higher Timeframe OBV Trend</h3>
+            <p><strong>What Happens:</strong> Your 15-minute chart shows bullish OBV divergence. Perfect setup! You buy confidently. Price drops. Confused, you check the Daily OBV <em>after</em> the loss: strong downtrend with institutions distributing. Your 15M divergence was a tiny pause in a larger Daily distribution phase.</p>
+
+            <p><strong>The Fix:</strong> Always check higher timeframe OBV BEFORE trading divergence:</p>
+            <ul>
+                <li>✅ <strong>15M bullish divergence + Daily OBV rising:</strong> High probability, aligned with institutional flow</li>
+                <li>❌ <strong>15M bullish divergence + Daily OBV falling:</strong> Low probability, fighting institutional distribution</li>
+            </ul>
+            <p>Trade divergences that align with higher timeframe institutional flow direction. Fighting higher TF OBV = fighting institutions = low probability.</p>
+        </div>
+
+        <div class="mistake-box">
+            <h3>Mistake #4: Trading Price/OBV Misalignment as "Broken Indicator"</h3>
+            <p><strong>What Happens:</strong> Price rises 5% over 3 days but OBV declines the entire time. You think: <em>"This indicator is broken—price is clearly bullish! I'm buying!"</em> You enter. Price reverses sharply, dropping 8%. OBV was warning of distribution the whole time.</p>
+
+            <p><strong>The Fix:</strong> Price/OBV disagreement isn't a bug—<strong>it's critical information</strong>:</p>
+            <ul>
+                <li><strong>Rising price + falling OBV:</strong> Weak rally, institutions distributing (selling into retail buying)</li>
+                <li><strong>Falling price + rising OBV:</strong> Weak selloff, institutions accumulating (buying the retail panic)</li>
+            </ul>
+            <p>When price and OBV disagree, <strong>trust OBV</strong> (institutional flow) over price (retail emotion). Wait for alignment before entering.</p>
+        </div>
+
+        <div class="mistake-box">
+            <h3>Mistake #5: Expecting Immediate Reversals from Divergence</h3>
+            <p><strong>What Happens:</strong> Bullish divergence appears. You enter immediately expecting a quick reversal. Price continues declining for 2 more weeks. You exit frustrated, thinking "Divergence doesn't work!" Three days after you exit, price finally reverses and rallies 15%.</p>
+
+            <p><strong>Why This Happened:</strong> Institutional accumulation/distribution takes TIME. Divergence doesn't trigger instant reversals.</p>
+
+            <p><strong>The Fix:</strong> Divergence can take <strong>days or weeks</strong> to play out. Institutions accumulate/distribute over extended periods:</p>
+            <ul>
+                <li>Use divergence for directional bias (bullish or bearish)</li>
+                <li>Wait for price confirmation before entering</li>
+                <li>Be patient—reversals take time to develop</li>
+                <li>Use wider stops to accommodate the accumulation/distribution phase</li>
+            </ul>
+        </div>
+
+        <div class="visual-divider">🔗</div>
+
+        <h2>🔗 Synergy: Pairing Plutus Flow with Other Indicators</h2>
+
+        <div class="pairing-section">
+            <h3>🎯 High Synergy Combinations</h3>
+            <ul>
+                <li><strong>+ Pentarch:</strong> OBV divergence + TD Sequential = volume-confirmed cycle reversals. Know institutions are accumulating (OBV) at cycle extremes (Pentarch).</li>
+                <li><strong>+ Harmonic Oscillator:</strong> OBV divergence + oscillator divergence = double-divergence confirmation. When both volume and momentum diverge, reversal probability increases.</li>
+                <li><strong>+ Janus Atlas:</strong> OBV divergence + level clusters = reversal confluence at tested price levels. Institutional accumulation at key support.</li>
+            </ul>
+
+            <h3>🎲 Common Trading Combinations</h3>
+            <ul>
+                <li><strong>Plutus bullish divergence + Pentarch TD 9 Buy</strong> → Volume + cycle alignment for reversal setup</li>
+                <li><strong>Plutus bearish divergence + Harmonic oscillator divergence</strong> → Multi-methodology distribution warning</li>
+                <li><strong>Plutus OBV declining + Janus resistance cluster</strong> → Volume confirms weak rally at key resistance level</li>
+            </ul>
+
+            <h3>💡 Why These Pair Well</h3>
+            <p>Plutus Flow shows <strong>volume-based accumulation/distribution</strong> and divergence (what institutions are doing). Pentarch/Harmonic show <strong>momentum and cycles</strong> (when reversals happen). Janus shows <strong>price levels</strong> (where reactions occur).</p>
+
+            <p>Divergence alone can be early. Combining OBV divergence (Plutus) with timing indicators (Pentarch/Harmonic) or levels (Janus) dramatically improves entry precision: <strong>the right institutional flow, at the right time, at the right price.</strong></p>
+        </div>
+
+        <hr />
+
+        <div style="text-align: center; padding: 40px 20px;">
+            <p style="font-size: 18px; margin-bottom: 20px;">💰 <strong>Ready to trade with institutional flow?</strong></p>
+            <a href="index.html" class="back-link" style="font-size: 18px;">← Back to Plutus Flow Documentation</a>
+        </div>
+    </div>
+</body>
+</html>
