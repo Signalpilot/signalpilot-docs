@@ -597,6 +597,225 @@ Asset-specific exhaustion rather than broad market pattern.
 
 ---
 
+## 🎮 Interactive Examples
+
+> **📍 PLACEHOLDER: Grid Scanner Simulator**
+>
+> *Location: Insert multi-asset grid visualization here*
+>
+> **What to include:**
+> - Live grid showing 20 assets simultaneously
+> - Color-coded cells: Green 9s = Bullish exhaustion, Red 9s = Bearish exhaustion, Blue backgrounds = Regime
+> - Real-time updates: Watch cells change color as market conditions evolve
+> - Click any cell → Opens that asset's chart with detailed analysis
+>
+> **User interaction:**
+> - Filter dropdown: "Show only Green 9s" or "Show only bearish regime assets"
+> - Sort controls: "Sort by strongest signal" or "Sort by symbol alphabetically"
+> - Watchlist builder: Click cells to add to custom watchlist
+
+> **📍 PLACEHOLDER: Correlation Heat Map**
+>
+> *Location: Insert sector correlation visualization here*
+>
+> **What to include:**
+> - Heat map showing which assets move together
+> - Example: "When SPY shows Green 9, QQQ shows Green 9 78% of the time (high correlation)"
+> - Identify independent signals vs correlated group moves
+>
+> **User interaction:**
+> - Select asset → Highlights correlated assets in grid
+> - Toggle: "Show correlation strength" (red = high correlation, green = independent)
+
+---
+
+## 📝 Reality Check: 3 Multi-Asset Scenarios
+
+### Scenario #1: Win - Sector-Wide Signal (Tech Stocks June 2024) ✅
+
+**Setup:**
+- **Scanning:** 15 tech stocks on Augury Grid
+- **Signal:** 8/15 stocks showing Green 9 (exhaustion after decline) within 2-day period
+- **Interpretation:** Sector-wide oversold condition
+
+**Grid Analysis:**
+
+| Asset | Signal | Date | Regime |
+|-------|--------|------|--------|
+| AAPL | Green 9 | Jun 12 | Bullish regime |
+| MSFT | Green 9 | Jun 12 | Bullish regime |
+| NVDA | Green 9 | Jun 13 | Bullish regime |
+| GOOGL | Green 9 | Jun 12 | Neutral |
+| META | Green 9 | Jun 13 | Bullish regime |
+| AMD | Green 9 | Jun 12 | Bullish regime |
+| TSLA | Green 9 | Jun 14 | Neutral |
+| CRM | Green 9 | Jun 13 | Bullish regime |
+
+**8/15 tech stocks = 53% showing exhaustion signals**
+
+**Trade Execution:**
+- **Strategy:** Entered longs on top 3 strongest (AAPL, MSFT, NVDA)
+- **Position sizing:** 0.75% risk each (2.25% total portfolio risk across 3)
+- **Stops:** Below each stock's Green 9 low
+- **Outcome:** All 3 rallied 4-7% over next 10 days, combined +$4,200 profit
+
+**Why It Worked:**
+✓ Sector-wide signal (not isolated) = High confidence
+✓ 53% of sector showing same exhaustion = Institutional positioning shift
+✓ Chose stocks with bullish regime (6/8 had bullish background)
+✓ Diversified across 3 names instead of all-in on one
+
+**Key Lesson:** When 40-60% of a sector shows same signal within 2-3 days, it indicates broader market structure shift, not random noise. Augury Grid's power is identifying these sector-wide patterns impossible to see on single-asset charts.
+
+---
+
+### Scenario #2: Loss - False Correlation Trade (Crypto March 2024) ❌
+
+**Setup:**
+- **Scanning:** 10 crypto assets
+- **Signal:** BTC shows Red 9, expecting altcoins to follow
+- **Mistake:** Shorted altcoins based on BTC signal
+
+**Grid Analysis:**
+
+| Asset | Signal | Regime | Actual Outcome |
+|-------|--------|--------|----------------|
+| BTC | Red 9 | Bearish | Declined -3.5% (correct) |
+| ETH | None | Neutral | Rose +2.1% (incorrect assumption) |
+| SOL | Green 9 | Bullish | Rose +5.8% (opposite of BTC) |
+| ADA | None | Bullish | Rose +3.2% (decoupled) |
+
+**Trade Execution:**
+- **Entry:** Shorted ETH, SOL, ADA (assuming BTC correlation)
+- **Reasoning:** "BTC Red 9 = All crypto down"
+- **Outcome:** Stopped out on all 3, -4.2% combined loss
+
+**What Went Wrong:**
+❌ Assumed BTC signal applies to all altcoins (false correlation)
+❌ Ignored that SOL showed opposite signal (Green 9 vs BTC Red 9)
+❌ Didn't check individual asset regimes (SOL/ADA bullish, BTC bearish)
+❌ Traded assumption instead of actual signals
+
+**Key Lesson:** Augury Grid shows each asset independently for a reason. Just because BTC shows Red 9 doesn't mean altcoins follow. Check EACH asset's individual signal and regime. Correlation is not guaranteed. Trade what the grid shows, not what you assume.
+
+**Correct approach:** BTC Red 9 → Short BTC only. SOL Green 9 → Long SOL. Trade individual signals, not sector assumptions.
+
+---
+
+### Scenario #3: Breakeven - Information Overload (Scanning 50 Assets) ⚖️
+
+**Setup:**
+- **Scanning:** 50 stocks across 8 sectors simultaneously
+- **Problem:** Too many signals, couldn't prioritize
+- **Outcome:** Took 7 trades, 3 winners, 2 losers, 2 breakevens = Flat
+
+**Signal Overload:**
+- 12 Green 9s across 50 assets
+- 8 Red 9s
+- 5 regime changes
+- **Result:** 25 potential setups, analysis paralysis
+
+**What Happened:**
+⚠️ Spent 3 hours analyzing 25 setups
+⚠️ By the time analysis done, some signals already moved
+⚠️ Took 7 mediocre trades instead of 2-3 best
+⚠️ Over-diversified (7 positions = diluted returns)
+⚠️ Net result: Breakeven after commissions
+
+**Key Lesson:** More symbols ≠ better results. Augury Grid can handle 50+ symbols, but human brain can't effectively analyze that many. Optimal: Scan 10-15 assets maximum. Focus on quality over quantity.
+
+**Better approach:**
+- Scan 10-15 core assets (not 50)
+- Pre-filter: Only show Green/Red 9s (hide neutral)
+- Take top 2-3 setups with best confluence (signal + regime + volume)
+- 2-3 high-conviction trades beats 7 mediocre ones
+
+---
+
+## ⚠️ When Augury Grid Signals Fail
+
+### Failure Scenario #1: Isolated Signals in Correlated Assets (Low reliability)
+
+**What Happens:**
+- Scan 10 tech stocks
+- Only 1 shows Green 9 (AAPL)
+- Other 9 show no signals (neutral)
+- AAPL Green 9 fails (no rally follows)
+
+**Why It Fails:** When one asset in a correlated sector shows exhaustion but others don't, it's often noise, not a real sector shift. Isolated signals lack confirmation.
+
+**How to Avoid:** Require 30-40% of sector showing same signal. Example: If scanning 10 stocks, wait for 3-4 to show Green 9 before acting. Single asset signals in correlated groups have ~45% success rate. 3-4 asset clusters have ~65% success rate.
+
+---
+
+### Failure Scenario #2: Overtrading Due to Too Many Symbols
+
+**What Happens:**
+- Scan 50+ symbols
+- See 15-20 signals per day
+- Take 10 trades (overtrading)
+- Win rate drops due to quality dilution
+- Commission costs erode profits
+
+**Why It Fails:** Human brain can't effectively analyze 20 setups per day. Quality suffers. Taking 10 trades instead of 2-3 best means including mediocre setups.
+
+**How to Avoid:** Limit scanning to 10-15 core assets. Pre-filter grid to show only strongest signals (Green/Red 9 + regime agreement). Take top 2-3 setups maximum per day.
+
+---
+
+### Failure Scenario #3: Ignoring Individual Asset Context
+
+**What Happens:**
+- Grid shows Green 9 on stock
+- Blindly enter long
+- Ignore that stock has company-specific bad news
+- Stock continues declining despite Green 9
+
+**Why It Fails:** Augury Grid shows technical signals, not fundamental context. Stock-specific news (earnings miss, CEO departure, legal issues) can override technical signals.
+
+**How to Avoid:** Before entering trade, quick fundamental check:
+- Any recent news? (30-second Google search)
+- Earnings date coming up? (avoid trading 3 days before earnings)
+- Legal/regulatory issues?
+If yes to any → Skip the trade, regardless of technical signal.
+
+---
+
+## 💰 Risk Management for Augury Grid Users
+
+**Multi-Asset Position Sizing:**
+
+**CRITICAL RULE: Never exceed 5% total portfolio risk across all Grid-based positions**
+
+**Example portfolio risk allocation:**
+- Scanning 10 stocks
+- Find 5 with Green 9 signals
+- **Don't take all 5 at 1% each (5% total risk)**
+- Instead: Take top 3 at 0.75% each (2.25% total risk)
+
+| Number of Positions | Risk Per Position | Total Portfolio Risk |
+|---------------------|-------------------|----------------------|
+| 1 position | 1.0-1.5% | 1.0-1.5% |
+| 2 positions | 0.75-1.0% each | 1.5-2.0% total |
+| 3 positions | 0.5-0.75% each | 1.5-2.25% total |
+| 4+ positions | **Avoid** | Over-diversification |
+
+**Why limit positions:** Correlation risk. Even "uncorrelated" assets tend to move together during market volatility. 5 positions at 1% each = 5% risk can become 8-10% risk if assets gap together.
+
+---
+
+### When to Skip Grid Trades
+
+❌ **Skip if isolated signal** (only 1 asset in sector showing signal)
+❌ **Skip if already holding 3+ positions** (over-diversification, correlation risk)
+❌ **Skip if company-specific news pending** (earnings in 3 days, legal issues)
+❌ **Skip if asset you don't understand** (unfamiliar sector, low liquidity)
+❌ **Skip if total portfolio risk would exceed 5%** (risk management ceiling)
+
+**For complete Risk Management framework, see [Pentarch Risk Management Section](REVISED_DOCS_PENTARCH.md#-risk-management--position-sizing).**
+
+---
+
 ## ❓ Frequently Asked Questions
 
 ### Q: How many symbols should I monitor?

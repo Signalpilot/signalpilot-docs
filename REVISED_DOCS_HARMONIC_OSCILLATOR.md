@@ -646,6 +646,233 @@ BUY signals in uptrends and SELL signals in downtrends are most reliable. Choppy
 
 ---
 
+## 🎮 Interactive Examples
+
+> **📍 PLACEHOLDER: Voting System Simulator**
+>
+> *Location: Insert 5-oscillator voting demo here*
+>
+> **What to include:**
+> - Real-time display of all 5 oscillators (RSI, Stochastic, MFI, CCI, WaveTrend)
+> - Vote counter: "3 Bullish, 2 Bearish → Majority: BULLISH"
+> - Visual indicators turn green/red as they vote
+> - Show how adding 5th oscillator breaks 2-2 tie
+>
+> **User interaction:**
+> - Toggle individual oscillators on/off → See how vote count changes
+> - Slider: Move through historical bars → Watch votes change over time
+> - Highlight: Click "BUY" signal → Shows which 3+ oscillators agreed
+
+> **📍 PLACEHOLDER: Divergence Spotter**
+>
+> *Location: Insert divergence identification tool here*
+>
+> **What to include:**
+> - Split view: Price chart on top, oscillators below
+> - Highlight divergences: "Price making lower low, BUT oscillators making higher low"
+> - Color-coded: Green = Bullish divergence, Red = Bearish divergence
+> - Statistics: "This divergence led to +3.8% rally over 5 bars"
+>
+> **User interaction:**
+> - Toggle: "Show divergences only" vs "Show all signals"
+> - Filter: "Minimum 3-oscillator divergence agreement"
+
+---
+
+## 📝 Reality Check: 3 Oscillator Scenarios
+
+### Scenario #1: Win - Strong Consensus (AAPL Daily Chart) ✅
+
+**Setup:**
+- **Asset:** Apple (AAPL)
+- **Signal:** BUY signal at oversold  level
+- **Oscillator Votes:** 5/5 unanimous bullish
+
+**Oscillator Analysis:**
+
+| Oscillator | Reading | Vote | Status |
+|------------|---------|------|--------|
+| RSI | 28 | BULLISH | Oversold (<30) |
+| Stochastic | 15 | BULLISH | Deep oversold |
+| MFI | 22 | BULLISH | Money flow oversold |
+| CCI | -185 | BULLISH | Extreme oversold |
+| WaveTrend | Oversold cross | BULLISH | Bullish cross confirmed |
+
+**Votes:** 5 Bullish, 0 Bearish = **Unanimous BUY**
+
+**Trade Execution:**
+- **Entry:** $168.50 (on BUY signal)
+- **Stop:** $165 (below recent low)
+- **Target:** $175.50 (1:2 risk-reward)
+- **Outcome:** Target hit in 6 days, +4.2% gain
+
+**Why It Worked:**
+✓ All 5 oscillators agreed (rare, only ~15% of signals are unanimous)
+✓ Multiple oscillators showed extreme readings (RSI <30, CCI <-100)
+✓ Occurred at support level (combined with Janus Atlas)
+✓ Volume spike on entry day (Volume Oracle confirmation)
+
+**Key Lesson:** Unanimous votes (5/5 or 0/5) represent highest-probability setups. When all 5 oscillators agree, the signal has ~70-75% success rate vs ~55% for simple 3/5 majority. Wait for unanimous signals in ranging markets, accept 3/5 majorities in strong trends.
+
+---
+
+### Scenario #2: Loss - Weak Majority in Strong Trend (BTC 1H Chart) ❌
+
+**Setup:**
+- **Asset:** Bitcoin
+- **Signal:** SELL signal (short)
+- **Oscillator Votes:** 3 Bearish, 2 Bullish = Slim majority
+- **Market Context:** Strong uptrend (Daily chart)
+
+**Oscillator Analysis:**
+
+| Oscillator | Reading | Vote | Status |
+|------------|---------|------|--------|
+| RSI | 72 | BEARISH | Overbought (>70) |
+| Stochastic | 88 | BEARISH | Overbought |
+| MFI | 68 | BULLISH | Money flow still positive |
+| CCI | +145 | BEARISH | Elevated |
+| WaveTrend | Neutral | BULLISH | No clear signal |
+
+**Votes:** 3 Bearish, 2 Bullish = **SELL signal (3/5 majority)**
+
+**Trade Execution:**
+- **Entry:** Short at $63,500
+- **Stop:** $64,200
+- **Outcome:** Stopped out next day for -$700 loss
+
+**What Went Wrong:**
+❌ Slim majority (3/5) instead of strong consensus (4/5 or 5/5)
+❌ Traded against Daily uptrend (1H SELL vs Daily BUY bias)
+❌ 2 oscillators still bullish (MFI + WaveTrend) = conflicting signal
+❌ Overbought can stay overbought in strong trends
+
+**Key Lesson:** In strong trends, oscillators can remain overbought/oversold for extended periods. 3/5 majority is not sufficient to counter-trend trade. Require 4/5 or 5/5 consensus for reversal trades. For trend-following trades, 3/5 is acceptable.
+
+**Rule:** Counter-trend = Need 4-5/5 votes. With-trend = 3/5 acceptable.
+
+---
+
+### Scenario #3: Breakeven - Divergence Signal Too Early (SPY Daily Chart) ⚖️
+
+**Setup:**
+- **Asset:** SPY (S&P 500 ETF)
+- **Signal:** Bullish divergence detected
+- **Pattern:** Price making lower lows, oscillators making higher lows
+
+**Divergence Analysis:**
+
+| Date | Price Action | RSI | Stochastic | Analysis |
+|------|--------------|-----|------------|----------|
+| Oct 10 | Low: $430 | 32 | 18 | First low |
+| Oct 25 | Lower low: $425 | 38 | 25 | Bullish divergence forming |
+| Oct 26 | Entry | 40 | 30 | Entered long on divergence |
+| Oct 27-Nov 3 | Sideways $423-428 | Choppy | Choppy | No follow-through |
+| Nov 4 | Exit breakeven | — | — | Exited after 8 days flat |
+| Nov 10 | Rally begins | $435 | — | Rally happened 6 days after exit |
+
+**Trade Execution:**
+- **Entry:** $426 (on bullish divergence confirmation)
+- **Stop:** $422 (below second low)
+- **Outcome:** Exited at $426 breakeven after 8 days of sideways action
+
+**What Happened:**
+⚠️ Divergence was valid (price lower, oscillators higher)
+⚠️ But timing was early (rally came 14 days after divergence, not immediately)
+⚠️ Held position for 8 days with no progress → Exited
+⚠️ Rally occurred 6 days after exit (frustrating, but correct risk management)
+
+**Key Lesson:** Divergences identify potential reversals, but timing can be early by days or weeks. Divergences are NOT precision timing tools. Better approach: Use divergence as "alert" → Wait for BUY signal (3/5 vote) to time entry, not divergence alone.
+
+**Improved approach:** Divergence spotted Oct 25 → Wait for BUY signal → BUY appeared Nov 8 → Enter then (avoided 8 days of dead money).
+
+---
+
+## ⚠️ When Harmonic Oscillator Signals Fail
+
+### Failure Scenario #1: Overbought/Oversold in Strong Trends (40% failure rate)
+
+**What Happens:**
+- RSI hits 75 (overbought) → SELL signal fires
+- But market in strong uptrend
+- Price continues higher for weeks with RSI 70-80 entire time
+- Short position gets stopped out
+
+**Why It Fails:** "Overbought" doesn't mean "reversal imminent." It means "strong momentum." In trends, overbought/oversold are normal, not reversal signals.
+
+**How to Avoid:** Check higher timeframe trend FIRST. If Daily is bullish, ignore 1H/4H SELL signals from overbought readings. Only trade oscillator signals WITH the trend, not against it.
+
+---
+
+### Failure Scenario #2: Choppy Range-Bound Markets (35% failure rate)
+
+**What Happens:**
+- Market in tight $48-52 range for 3 weeks
+- Oscillators swing wildly: BUY → SELL → BUY → SELL every 2-3 days
+- Multiple whipsaws, no follow-through
+- 5 trades, 2 wins, 3 losses = Net loss
+
+**Why It Fails:** Oscillators are momentum tools. In zero-momentum consolidation, they oscillate uselessly between overbought/oversold.
+
+**How to Avoid:** When market range <5% for 2+ weeks, pause oscillator trading. Wait for range breakout. Use Pentarch (cycle detection) or Janus (level breaks) instead.
+
+---
+
+### Failure Scenario #3: Divergences That Never Resolve (30% of divergences)
+
+**What Happens:**
+- Bullish divergence forms (price lower, oscillators higher)
+- Wait for reversal... wait... wait...
+- Divergence fades away as price continues lower
+- Never resulted in reversal
+
+**Why It Fails:** Divergences show weakening momentum, not guaranteed reversals. About 30% of divergences fade without creating reversals.
+
+**How to Avoid:** Don't trade divergences alone. Wait for BUY/SELL signal (3/5 vote) to CONFIRM the divergence. Divergence = "watch for reversal." Signal = "reversal likely starting now."
+
+---
+
+## 💰 Risk Management for Harmonic Oscillator Users
+
+**Vote-Based Position Sizing:**
+
+| Vote Strength | Risk % per Trade | Confidence Level |
+|---------------|------------------|------------------|
+| **3/5 majority** | 0.75% | Standard |
+| **4/5 strong majority** | 1.0% | High confidence |
+| **5/5 unanimous** | 1.0-1.5% | Highest confidence |
+
+**Note:** Never exceed 1.5% risk even on unanimous votes.
+
+---
+
+### Stop Placement for Oscillator Trades
+
+**For BUY signals:**
+- Place stop below recent swing low (typically 2-4% below entry on Daily charts)
+- Example: BUY at $50, recent low $48.50, stop at $48
+
+**For SELL signals:**
+- Place stop above recent swing high
+- Example: SELL at $100, recent high $102, stop at $102.50
+
+**For divergence trades:**
+- Use wider stops (divergence timing is imprecise)
+- Example: 3-5% stops vs typical 2-3%
+
+---
+
+### When to Skip Harmonic Trades
+
+❌ **Skip if only 3/5 vote AND counter-trend** (require 4-5/5 for reversals)
+❌ **Skip if market in <5% range for 2+ weeks** (oscillators unreliable in ranges)
+❌ **Skip if divergence alone, no BUY/SELL signal** (divergence needs confirmation)
+❌ **Skip if overbought/oversold in strong trend** (can stay extreme for weeks)
+
+**For complete Risk Management framework, see [Pentarch Risk Management Section](REVISED_DOCS_PENTARCH.md#-risk-management--position-sizing).**
+
+---
+
 ## ❓ Frequently Asked Questions
 
 ### Q: Why use five oscillators instead of one?

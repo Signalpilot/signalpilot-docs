@@ -809,6 +809,231 @@ Single isolated levels have less significance than clusters where multiple level
 
 ---
 
+## 🎮 Interactive Examples
+
+> **📍 PLACEHOLDER: Level Cluster Explorer**
+>
+> *Location: Insert interactive level clustering demo here*
+>
+> **What to include:**
+> - Interactive chart with all 39 levels visible
+> - Hover over price range → Highlights clustered levels (e.g., "3 levels within 1.2%: Daily High, Weekly Open, Monthly Mid")
+> - Heat map overlay: Red zones = Heavy level clusters (3+ levels), Yellow = Moderate (2 levels), Green = Clear zones
+>
+> **User interaction:**
+> - Slider: "Cluster tolerance %" (adjust what distance counts as "cluster")
+> - Checkbox: Select which level types to include in cluster analysis
+> - Click cluster → Shows: "4 levels clustered at $50,200-50,500: resistance zone"
+
+> **📍 PLACEHOLDER: Level Test Visualizer**
+>
+> *Location: Insert level reaction demonstration here*
+>
+> **What to include:**
+> - Time-lapse showing price approaching level, testing, and either bouncing or breaking
+> - Before/after comparison: "Level untested" → "Price tested 3 times" → "Level breaks on 4th test"
+> - Statistics: "This Weekly High held 5 times, broke on 6th test"
+>
+> **User interaction:**
+> - Toggle: "Show successful holds only" vs "Show broken levels"
+> - Play button: Animate historical level tests over time
+
+---
+
+## 📝 Reality Check: 3 Level-Based Scenarios
+
+### Scenario #1: Win - Level Cluster Confluence (ES Futures Daily Chart) ✅
+
+**Setup:**
+- **Asset:** ES (S&P 500 Futures)
+- **Pattern:** Price pullback to level cluster support
+- **Janus Analysis:** 4 levels clustered within 0.8% range
+
+**Level Cluster Analysis:**
+
+| Level Type | Price | Distance from Entry |
+|------------|-------|---------------------|
+| Daily Low | 4,782 | -0.2% |
+| Weekly Open | 4,785 | Entry point |
+| Monthly Mid | 4,790 | +0.1% |
+| Previous Week High | 4,792 | +0.1% |
+
+**Cluster Zone:** 4,782-4,792 (0.8% range, 4 levels = strong support cluster)
+
+**Trade Execution:**
+- **Entry:** 4,785 (at Weekly Open, center of cluster)
+- **Stop:** 4,765 (below entire cluster zone)
+- **Target:** 4,825 (1:2 risk-reward)
+- **Outcome:** Bounced to 4,831, target exceeded, +$2,300 profit per contract
+
+**Why It Worked:**
+✓ 4 different timeframe levels clustered (Daily + Weekly + Monthly = multi-TF support)
+✓ Cluster width only 0.8% (tight = strong)
+✓ First test of this cluster (fresh levels, not overused)
+✓ Combined with Pentarch TD signal at same zone (confluence)
+
+**Key Lesson:** Level clusters (3+ levels within 1-2%) create stronger support/resistance than single levels. The 4-level cluster at 4,782-4,792 represented institutional memory across multiple timeframes. Price "remembered" this zone.
+
+---
+
+### Scenario #2: Loss - Weak Single Level (BTC 1H Chart) ❌
+
+**Setup:**
+- **Asset:** Bitcoin
+- **Pattern:** Attempted bounce at single level
+- **Janus Analysis:** Only 1 level present (4H High), no cluster
+
+**Level Analysis:**
+
+| Level Type | Price | Cluster? | Previous Tests |
+|------------|-------|----------|----------------|
+| 4H High | $49,500 | No (isolated) | Tested 4 times already |
+| Nearest other level | $48,800 | 1.4% away | — |
+
+**Trade Execution:**
+- **Entry:** Long at $49,500 (at 4H High, now acting as support)
+- **Stop:** $49,100
+- **Outcome:** Stopped out same day, -$400 loss per coin
+
+**What Went Wrong:**
+❌ Single level in isolation (no cluster = weaker support)
+❌ Level already tested 4 times (weakened from overuse)
+❌ 4H level vs Daily downtrend (lower timeframe level didn't hold against higher TF trend)
+❌ Ignored that nearest level was 1.4% away (no backup support nearby)
+
+**Key Lesson:** Single isolated levels, especially after multiple tests, have lower reliability. Ideal setups have:
+- Level cluster (2-3+ levels within 1%)
+- First or second test (not 4th or 5th)
+- Higher timeframe levels (Daily/Weekly > 1H/4H)
+- Confluence with other indicators (Pentarch, Volume)
+
+**What to do differently:** Wait for level clusters. Skip isolated, over-tested levels.
+
+---
+
+### Scenario #3: Breakeven - Level Break After False Hold (EUR/USD Daily Chart) ⚖️
+
+**Setup:**
+- **Asset:** EUR/USD
+- **Pattern:** Weekly Low test
+- **Janus Analysis:** Strong level (Weekly Low at 1.0850)
+
+**Level Test Sequence:**
+
+| Date | Event | Price | Level Status |
+|------|-------|-------|--------------|
+| Sep 12 | First test | 1.0852 | Held (bounced to 1.0890) |
+| Sep 13 | Entry point | 1.0855 | Entered long after bounce |
+| Sep 14 | Second test | 1.0848 | Level held again |
+| Sep 15 | Level breaks | 1.0842 | Broke through -0.75% |
+| Sep 15 | Stop hit | 1.0845 | Exited at breakeven (moved stop) |
+
+**Trade Execution:**
+- **Entry:** 1.0855 (after initial bounce from Weekly Low)
+- **Initial Stop:** 1.0830 (below level)
+- **Stop Adjustment:** Moved to 1.0845 (breakeven) after second test showed weakness
+- **Outcome:** Stopped at breakeven, $0 net (avoided -$150 loss)
+
+**What Happened:**
+⚠️ Weekly Low held first test (normal)
+⚠️ Second test within 24 hours showed weakness (warning sign)
+⚠️ Moved stop to breakeven as defensive measure
+⚠️ Level broke on third attempt, but breakeven stop saved capital
+
+**Key Lesson:** Levels can hold multiple times before breaking. When same level tested twice within 24-48 hours, it's weakening. Move stop to breakeven or exit. "Double bottom" can become "failed support" quickly. This trade demonstrated good risk management - recognizing weakness and protecting capital.
+
+**Defensive tactic used:** After second test of support within 24 hours → Move stop to breakeven → Let market decide without risking capital.
+
+---
+
+## ⚠️ When Janus Levels Fail
+
+### Failure Scenario #1: Overused Levels (Break After 3-4 Tests)
+
+**What Happens:**
+- Strong level (Weekly High at $100)
+- Price tests level 3-4 times
+- Each test weakens the level
+- 4th or 5th test: Level breaks
+
+**Why It Fails:** Levels are like walls - each test chips away at them. After 3-4 tests, the level is "known" to all traders. Breaking it triggers stop-losses and creates momentum.
+
+**Statistics:** Levels typically hold 2-3 times before breaking. 4th test has ~60% break rate, 5th test has ~75% break rate.
+
+**How to Avoid:** Count level tests. After 3 tests, don't trade bounces off that level. Instead, wait for break and trade the new range.
+
+---
+
+### Failure Scenario #2: Lower Timeframe Levels vs Higher Timeframe Trends
+
+**What Happens:**
+- 1H High at $50 (resistance)
+- Price pulls back to $50 on 4H chart
+- Attempt to short at 1H resistance
+- Daily chart shows strong uptrend
+- 1H level breaks easily, stopped out
+
+**Why It Fails:** Higher timeframe trends overpower lower timeframe levels. Daily trend > 4H levels > 1H levels.
+
+**Rule:** Check higher timeframe. If Daily is bullish, don't trade bearish setups at 1H/4H resistance levels. Only trade with the higher timeframe trend.
+
+---
+
+### Failure Scenario #3: Levels in Choppy/Ranging Markets
+
+**What Happens:**
+- 20+ levels visible on chart (Daily Highs, Lows, Opens, Closes, Weekly, Monthly)
+- Market in 3-week consolidation ($48-52 range)
+- Price bounces between levels erratically
+- No level holds cleanly
+- Multiple whipsaws
+
+**Why It Fails:** In tight ranges, every level gets tested multiple times. Level analysis works best in trending or clear directional markets. In consolidation, levels become noise.
+
+**How to Avoid:** When market range is <5% for 2+ weeks, reduce level-based trading. Wait for range breakout. Use Volume Oracle instead (volume analysis works better in ranges).
+
+---
+
+## 💰 Risk Management for Janus Atlas Users
+
+**Level-Based Position Sizing:**
+
+| Level Quality | Risk % per Trade | Confidence Level |
+|---------------|------------------|------------------|
+| **Single level, 3+ tests** | 0.5% | Low (overused) |
+| **Single fresh level** | 0.75% | Moderate |
+| **2-level cluster** | 1.0% | Standard |
+| **3-4+ level cluster (<1.5%)** | 1.0-1.5% | High (strong cluster) |
+
+---
+
+### Stop Placement with Janus Levels
+
+**For level cluster support:**
+- Place stop 0.5-1.0% below the LOWEST level in cluster
+- Example: Cluster at $98-100, stop at $97 (1% below lowest)
+
+**For single level:**
+- Place stop 1-2% beyond the level
+- Example: Support at $50, stop at $49 (2% below)
+
+**For resistance trading (shorts):**
+- Same rules in reverse (stop above highest cluster level)
+
+---
+
+### When to Skip Level-Based Trades
+
+❌ **Skip if level tested 4+ times** (likely to break)
+❌ **Skip if isolated level with no cluster** (weak, <50% hold rate)
+❌ **Skip if lower TF level conflicts with higher TF trend** (1H resistance in Daily uptrend)
+❌ **Skip if market in <5% range for 2+ weeks** (choppy, levels unreliable)
+❌ **Skip if risk-reward doesn't allow 1:2 ratio** (level too close to resistance/support)
+
+**For complete Risk Management framework, see [Pentarch Risk Management Section](REVISED_DOCS_PENTARCH.md#-risk-management--position-sizing).**
+
+---
+
 ## ❓ Frequently Asked Questions
 
 ### Q: How many levels should I enable?

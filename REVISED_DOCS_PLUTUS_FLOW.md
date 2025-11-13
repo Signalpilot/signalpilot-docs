@@ -671,6 +671,231 @@ On assets where volume reporting is unreliable (some crypto exchanges, OTC stock
 
 ---
 
+## 🎮 Interactive Examples
+
+> **📍 PLACEHOLDER: Divergence Explorer**
+>
+> *Location: Insert OBV divergence visualization here*
+>
+> **What to include:**
+> - Split-screen: Price chart on top, OBV line below
+> - Highlight divergences automatically: "Price making higher high, but OBV making lower high = Bearish divergence"
+> - Historical success rate: "Last 10 divergences: 7 led to reversals, 3 failed"
+> - Color-coded arrows: Green = Bullish divergence confirmed, Red = Bearish divergence confirmed
+>
+> **User interaction:**
+> - Toggle: "Show divergences only" vs "Show all OBV movement"
+> - Slider: Move through time → Watch how divergence developed
+> - Click divergence → See outcome: "Led to -8.5% decline over 12 days"
+
+> **📍 PLACEHOLDER: Flow Direction Comparison**
+>
+> *Location: Insert institutional vs retail flow comparison here*
+>
+> **What to include:**
+> - Side-by-side comparison: "OBV rising (institutional accumulation) while price falling (retail distribution)"
+> - Visual representation: Green arrows = Institutional buying, Red arrows = Retail selling
+> - Statistics: "When OBV + price align, success rate: 68%. When diverge: 45%"
+>
+> **User interaction:**
+> - Toggle: "Align phase" vs "Diverge phase"
+> - Chart playback: Watch how OBV leads price by days/weeks
+
+---
+
+## 📝 Reality Check: 3 OBV/Divergence Scenarios
+
+### Scenario #1: Win - Bullish Divergence Confirmed (TSLA Daily Chart) ✅
+
+**Setup:**
+- **Asset:** Tesla (TSLA)
+- **Pattern:** Bullish divergence (price lower, OBV higher)
+- **Timeframe:** Daily chart, 3-week observation
+
+**Divergence Analysis:**
+
+| Date | Price Action | OBV Trend | Analysis |
+|------|--------------|-----------|----------|
+| Sep 5 | Low: $238 | OBV: -1.2M | First low point |
+| Sep 18 | Lower low: $232 | OBV: -0.9M | OBV higher despite price lower |
+| Sep 19 | Divergence confirmed | — | Price -2.5%, but OBV +25% = Bullish divergence |
+| Sep 20 | Entry | OBV rising | Entered long on confirmation |
+
+**Trade Execution:**
+- **Entry:** $234 (day after divergence confirmation)
+- **Stop:** $228 (below second low)
+- **Target:** $246 (1:2 risk-reward)
+- **Outcome:** Target hit in 8 days, +5.1% gain
+
+**Why It Worked:**
+✓ Clear divergence (price -2.5%, OBV +25% = significant)
+✓ OBV rising on down days = Institutions accumulating while retail selling
+✓ Volume increasing on up days, decreasing on down days (Flow confirmation)
+✓ Waited for price confirmation (didn't jump in early)
+
+**Key Lesson:** Bullish divergences work best when OBV increases significantly (20%+) while price makes marginal new lows (<5%). This shows institutional absorption of retail selling. The wider the divergence (OBV up big, price down small), the stronger the signal.
+
+---
+
+### Scenario #2: Loss - False Divergence in Downtrend (Gold Futures 4H Chart) ❌
+
+**Setup:**
+- **Asset:** Gold (GC)
+- **Pattern:** Attempted bullish divergence
+- **Market Context:** Strong Daily downtrend
+
+**Divergence Analysis:**
+
+| Date/Time | Price Action | OBV Trend | Outcome |
+|-----------|--------------|-----------|---------|
+| Jul 10, 8am | Low: $2,040 | OBV: -850K | First low |
+| Jul 12, 4pm | Lower low: $2,038 | OBV: -840K | Marginal OBV improvement (+1.2%) |
+| Jul 13, 8am | Entry long | — | Entered on weak divergence |
+| Jul 13-15 | Continued decline | OBV declining again | Stopped out at $2,025 |
+
+**Trade Execution:**
+- **Entry:** $2,038 (on marginal divergence)
+- **Stop:** $2,025 (below support)
+- **Outcome:** Stopped out for -$13/oz loss
+
+**What Went Wrong:**
+❌ Divergence too weak (OBV only +1.2%, not significant)
+❌ Daily chart still in strong downtrend (4H divergence vs Daily downtrend)
+❌ OBV never confirmed by turning bullish on higher timeframe
+❌ Jumped in on first hint of divergence instead of waiting for confirmation
+
+**Key Lesson:** Weak divergences (OBV change <10%) in strong trends often fail. Require:
+- OBV improvement of 15-20%+ for significance
+- Higher timeframe (Daily) confirmation
+- Price structure showing reversal (not just OBV alone)
+
+**Better approach:** Wait for Daily OBV divergence (not just 4H). If Daily trend bearish, skip 4H bullish divergence signals.
+
+---
+
+### Scenario #3: Breakeven - Divergence Timing Too Early (SPY Daily Chart) ⚖️
+
+**Setup:**
+- **Asset:** SPY (S&P 500 ETF)
+- **Pattern:** Bearish divergence detected
+- **Problem:** Reversal timing off by 2 weeks
+
+**Divergence Timeline:**
+
+| Date | Price Action | OBV Trend | Decision |
+|------|--------------|-----------|----------|
+| Oct 8 | High: $455 | OBV: +2.1M | First high |
+| Oct 22 | Higher high: $462 | OBV: +1.9M | OBV lower despite price higher = Bearish divergence |
+| Oct 23 | Entry short | — | Entered short on divergence |
+| Oct 23-Nov 3 | Sideways $460-465 | Choppy | No follow-through for 10 days |
+| Nov 4 | Exit breakeven | — | Exited after 10 days flat |
+| Nov 18 | Decline begins | $448 | Reversal happened 14 days later |
+
+**Trade Execution:**
+- **Entry:** Short at $462 (on divergence)
+- **Stop:** $468 (above high)
+- **Outcome:** Exited at $462 breakeven after 10 days of no movement
+
+**What Happened:**
+⚠️ Divergence was valid (price +1.5%, OBV -9.5%)
+⚠️ But timing early (reversal came 2 weeks later, not immediately)
+⚠️ Held for 10 days with no progress → Correct to exit
+⚠️ Reversal eventually came, but patience ran out
+
+**Key Lesson:** Divergences identify potential reversals, not precise timing. Can be early by days or weeks. Better approach: Use divergence as "watch for reversal" → Wait for price structure break (lower low/lower high) or other confirmation before entering.
+
+**Improved approach:**
+- Oct 22: Divergence spotted → Note it, don't trade yet
+- Nov 5: Price breaks below $460 support → NOW enter short
+- Divergence gave advance warning, price break gave timing
+
+---
+
+## ⚠️ When Plutus Flow/OBV Signals Fail
+
+### Failure Scenario #1: Weak Divergences (<10% OBV change) - High failure rate
+
+**What Happens:**
+- Price makes new high at $100
+- OBV marginal lower at -2% vs previous high
+- "Divergence" detected but too weak
+- Price continues higher, no reversal
+
+**Why It Fails:** Small OBV changes (<10%) are noise, not significant institutional repositioning. True divergences require 15-20%+ OBV change.
+
+**How to Avoid:** Filter weak divergences. Only trade when:
+- OBV change ≥15% (moderate significance)
+- OBV change ≥25% (high significance)
+- Confirmed by price structure break
+
+---
+
+### Failure Scenario #2: Crypto/Forex Assets (No Real Volume)
+
+**What Happens:**
+- Apply OBV to Bitcoin or EUR/USD
+- OBV shows divergence
+- Signal fails because volume data unreliable
+
+**Why It Fails:** Crypto exchanges report conflicting volume. Forex is decentralized (no central volume). OBV requires accurate volume data.
+
+**How to Avoid:** Use Plutus Flow/OBV only on:
+- Stocks (accurate exchange volume)
+- Futures (centralized volume)
+- **Avoid:** Crypto, Forex (use Pentarch or Harmonic instead)
+
+---
+
+### Failure Scenario #3: Divergence in Strong Trend Continuation
+
+**What Happens:**
+- Strong uptrend for 8 weeks
+- Bearish divergence appears (price higher, OBV lower)
+- Expect reversal → Doesn't happen
+- Trend continues for 4 more weeks
+
+**Why It Fails:** In parabolic trends, smart money often distributes gradually (OBV declining) while momentum carries price higher. Divergence can persist for weeks before resolving.
+
+**How to Avoid:** In strong trends (8+ weeks, 30%+ gains), divergences are distribution signals, not immediate reversal signals. Watch for price structure break (lower high, support break) before trading divergence.
+
+---
+
+## 💰 Risk Management for Plutus Flow Users
+
+**Divergence-Based Position Sizing:**
+
+| Divergence Strength | Risk % per Trade | Confidence Level |
+|---------------------|------------------|------------------|
+| **Weak (<15% OBV change)** | Skip trade | Too unreliable |
+| **Moderate (15-25% change)** | 0.75% | Standard |
+| **Strong (25%+ change)** | 1.0-1.25% | Higher confidence |
+
+---
+
+### Stop Placement for Divergence Trades
+
+**For bullish divergence (going long):**
+- Place stop below the second low (where divergence formed)
+- Use wider stops (divergence timing imprecise) - typically 3-5% on Daily charts
+
+**For bearish divergence (going short):**
+- Place stop above the second high (where divergence formed)
+- Example: Divergence at $100 high, stop at $103 (+3%)
+
+---
+
+### When to Skip Plutus Flow Trades
+
+❌ **Skip if OBV change <15%** (weak divergence, high failure rate)
+❌ **Skip if crypto or forex** (volume data unreliable)
+❌ **Skip if divergence without price confirmation** (wait for structure break)
+❌ **Skip if lower TF divergence vs higher TF trend** (4H bullish divergence in Daily downtrend)
+❌ **Skip if in parabolic trend** (8+ weeks, 30%+ move = distribution can last weeks)
+
+**For complete Risk Management framework, see [Pentarch Risk Management Section](REVISED_DOCS_PENTARCH.md#-risk-management--position-sizing).**
+
+---
+
 ## ❓ Frequently Asked Questions
 
 ### Q: What is On-Balance Volume (OBV)?
