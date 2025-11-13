@@ -2072,7 +2072,7 @@ graph TD
 - "Pentarch v1.0"
 - "Omnideck v1.0"
 - "Janus Atlas v1.0"</p>
-<p><strong>Note:</strong> The indicator is typically already added to the chart before creating the alert.</p>
+<p><strong>Note:</strong> Add the indicator to the chart before creating the alert.</p>
 <hr />
 <h3 id="3-step-3-choose-event">3️⃣ Step 3: Choose Event<a class="headerlink" href="#3-step-3-choose-event" title="Permanent link">&para;</a></h3>
 <p><strong>The Event dropdown</strong> displays available signals for the selected indicator.</p>
@@ -2097,7 +2097,7 @@ graph TD
 <hr />
 <h3 id="4-step-4-configure-options-critical">4️⃣ Step 4: Configure Options (CRITICAL)<a class="headerlink" href="#4-step-4-configure-options-critical" title="Permanent link">&para;</a></h3>
 <p><span style="color: #dc2626; font-weight: 600;">⚠️ Most Important Step</span></p>
-<p><strong>Options</strong> → The setting <strong>"Once Per Bar Close"</strong> is commonly selected.</p>
+<p><strong>Options</strong> → Select the <strong>"Once Per Bar Close"</strong> setting.</p>
 <p>This is the <strong>most important setting</strong>:
 - ✅ Alerts only fire when the signal is CONFIRMED (bar closed)
 - ✅ No disappearing signals
@@ -2249,22 +2249,22 @@ graph TD
 <p><strong>Better approach:</strong>
 - Focus on 3-5 main symbols
 - Alert only on key signals (IGN, CAP, BDN)
-- TD and WRN can be skipped (unless specifically wanted)
+- Skip TD and WRN (unless specifically wanted)
 - Augury Grid provides scanning instead of alerting 20+ symbols</p>
 <hr />
 <h3 id="test-your-alerts">Test Your Alerts<a class="headerlink" href="#test-your-alerts" title="Permanent link">&para;</a></h3>
 <p><strong>Before relying on alerts:</strong></p>
 <ol>
-<li>A test alert Create on a low timeframe (5m or 15m)</li>
+<li>Create a test alert on a low timeframe (5m or 15m)</li>
 <li>The next signal typically arrives quickly</li>
-<li>Notification receipt Verify</li>
-<li>Phone notification Check</li>
-<li>Email arrival can be confirmed (if enabled)</li>
+<li>Verify notification receipt</li>
+<li>Check phone notification</li>
+<li>Confirm email arrival (if enabled)</li>
 </ol>
 <p><strong>If not working:</strong>
-- TradingView notification settings Check
-- Phone app permissions Verify
-- Email spam folder Review
+- Check TradingView notification settings
+- Verify phone app permissions
+- Review email spam folder
 - The <a href="../ref-troubleshooting/">Troubleshooting Guide</a> provides additional help</p>
 <hr />
 <h2 id="common-mistakes-fixes">🚨 Common Mistakes &amp; Fixes<a class="headerlink" href="#common-mistakes-fixes" title="Permanent link">&para;</a></h2>
@@ -2320,44 +2320,44 @@ graph TD
 <p><strong>Problem:</strong> Alerts fire intrabar, then signals disappear</p>
 <p><strong>Resolution:</strong>
 1. Delete incorrect alerts
-2. New alerts Create
-3. The <strong>"Once Per Bar Close"</strong> setting is commonly selected
-4. Settings Save</p>
+2. Create new alerts
+3. Select the <strong>"Once Per Bar Close"</strong> setting
+4. Save settings</p>
 <p><strong>Why this matters:</strong> Intrabar signals are preliminary and can change. Only closed-bar signals are final.</p>
 <hr />
 <h3 id="mistake-2-vague-alert-names">Mistake #2: Vague Alert Names<a class="headerlink" href="#mistake-2-vague-alert-names" title="Permanent link">&para;</a></h3>
 <p><strong>Problem:</strong> An alert labeled "Signal 1" provides no context</p>
 <p><strong>Resolution:</strong>
-- The symbol can be included: BTC, ETH, SPY
-- The timeframe can be specified: Daily, 4H, 1H
-- The event can be noted: IGN, CAP, BDN
+- Include the symbol: BTC, ETH, SPY
+- Specify the timeframe: Daily, 4H, 1H
+- Note the event: IGN, CAP, BDN
 - Example: "BTC 4H IGN Long"</p>
 <hr />
 <h3 id="mistake-3-too-many-alerts">Mistake #3: Too Many Alerts<a class="headerlink" href="#mistake-3-too-many-alerts" title="Permanent link">&para;</a></h3>
 <p><strong>Problem:</strong> Alert spam creates overwhelming notifications</p>
 <p><strong>Resolution:</strong>
-- Low-priority alerts can be deleted
-- Focus can be narrowed to the best 3-5 markets
-- Alerts can be limited to entry/exit signals
-- Augury Grid Use for scanning</p>
+- Delete low-priority alerts
+- Narrow focus to the best 3-5 markets
+- Limit alerts to entry/exit signals
+- Use Augury Grid for scanning</p>
 <hr />
 <h3 id="mistake-4-wrong-indicator-selected">Mistake #4: Wrong Indicator Selected<a class="headerlink" href="#mistake-4-wrong-indicator-selected" title="Permanent link">&para;</a></h3>
 <p><strong>Problem:</strong> Alerts don't fire or fire on wrong signals</p>
 <p><strong>Resolution:</strong>
-- The indicator's presence on the chart Verify
-- Indicator version can be matched with alert settings
-- Event name correctness can be confirmed
+- Verify the indicator's presence on the chart
+- Match indicator version with alert settings
+- Confirm event name correctness
 - Testing with a recent historical signal Perform</p>
 <hr />
 <h3 id="mistake-5-mobile-notifications-not-working">Mistake #5: Mobile Notifications Not Working<a class="headerlink" href="#mistake-5-mobile-notifications-not-working" title="Permanent link">&para;</a></h3>
 <p><strong>Problem:</strong> Alerts fire but phone notifications aren't received</p>
 <p><strong>Resolution:</strong></p>
 <p><strong>TradingView App:</strong>
-- App → Profile → Settings → Notifications → All options Enable</p>
+- App → Profile → Settings → Notifications → Enable all options</p>
 <p><strong>iPhone:</strong>
-- Settings → Notifications → TradingView → Notifications can be allowed</p>
+- Settings → Notifications → TradingView → Allow Notifications</p>
 <p><strong>Android:</strong>
-- Settings → Apps → TradingView → Notifications → Notifications Enable</p>
+- Settings → Apps → TradingView → Notifications → Enable Notifications</p>
 <p><strong>Also worth checking:</strong>
 - Do Not Disturb mode status
 - Phone internet connection
@@ -2374,7 +2374,7 @@ graph TD
 <p><strong>For automating trades with bots:</strong></p>
 <h3 id="webhook-url-setup">Webhook URL Setup<a class="headerlink" href="#webhook-url-setup" title="Permanent link">&para;</a></h3>
 <ol>
-<li>A webhook URL can be obtained from your automation platform:</li>
+<li>Obtain a webhook URL from your automation platform:</li>
 <li>3Commas</li>
 <li>Alertatron</li>
 <li>
@@ -2383,15 +2383,15 @@ graph TD
 <li>
 <p>In alert settings:</p>
 </li>
-<li>"Webhook URL" Check</li>
-<li>The webhook URL can be pasted</li>
+<li>Check "Webhook URL"</li>
+<li>Paste the webhook URL</li>
 <li>
 <p>The message Configure in JSON format</p>
 </li>
 <li>
 <p>Webhook testing process:</p>
 </li>
-<li>An alert can be triggered (low timeframe provides quick testing)</li>
+<li>Trigger an alert (low timeframe provides quick testing)</li>
 <li>Webhook receipt Verify</li>
 <li>Bot response Check</li>
 </ol>
@@ -2407,37 +2407,37 @@ graph TD
 </span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">  </span><span class="nt">&quot;take_profit&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{{</span><span class="w"> </span><span class="err">high</span><span class="w"> </span><span class="p">}}</span>
 </span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="p">}</span>
 </span></code></pre></div>
-<p><strong>Important:</strong> Automated trading is commonly tested on paper/demo accounts first.</p>
+<p><strong>Important:</strong> Test automated trading on paper/demo accounts first.</p>
 <hr />
 <h2 id="mobile-app-alert-setup">📱 Mobile App Alert Setup<a class="headerlink" href="#mobile-app-alert-setup" title="Permanent link">&para;</a></h2>
 <h3 id="ios-iphoneipad">iOS (iPhone/iPad)<a class="headerlink" href="#ios-iphoneipad" title="Permanent link">&para;</a></h3>
 <ol>
-<li>The TradingView app can be downloaded from the App Store</li>
-<li>The same account credentials Use to log in</li>
-<li>Profile → Settings → Notifications can be accessed</li>
-<li>"Push Notifications" Enable</li>
-<li>Sound Enable</li>
-<li>"Important Alerts First" Enable</li>
+<li>Download the TradingView app from the App Store</li>
+<li>Use the same account credentials to log in</li>
+<li>Access Profile → Settings → Notifications</li>
+<li>Enable "Push Notifications"</li>
+<li>Enable Sound</li>
+<li>Enable "Important Alerts First"</li>
 </ol>
 <p><strong>iPhone System Settings:</strong>
 - Settings → Notifications → TradingView
-- Allow Notifications: can be turned ON
-- Sounds: can be turned ON
-- Badges: can be turned ON
-- Show on Lock Screen: can be turned ON</p>
+- Allow Notifications: Turn ON
+- Sounds: Turn ON
+- Badges: Turn ON
+- Show on Lock Screen: Turn ON</p>
 <hr />
 <h3 id="android">Android<a class="headerlink" href="#android" title="Permanent link">&para;</a></h3>
 <ol>
-<li>The TradingView app can be downloaded from the Play Store</li>
-<li>The same account credentials Use to log in</li>
-<li>Profile → Settings → Notifications can be accessed</li>
-<li>"Push Notifications" Enable</li>
-<li>Sound Enable</li>
+<li>Download the TradingView app from the Play Store</li>
+<li>Use the same account credentials to log in</li>
+<li>Access Profile → Settings → Notifications</li>
+<li>Enable "Push Notifications"</li>
+<li>Enable Sound</li>
 </ol>
 <p><strong>Android System Settings:</strong>
 - Settings → Apps → TradingView → Notifications
-- Allow notifications: can be turned ON
-- Override Do Not Disturb: can be turned ON (optional)</p>
+- Allow notifications: Turn ON
+- Override Do Not Disturb: Turn ON (optional)</p>
 <hr />
 <h2 id="alert-checklist">✅ Alert Checklist<a class="headerlink" href="#alert-checklist" title="Permanent link">&para;</a></h2>
 <p><strong>Before considering your alert setup complete:</strong></p>
@@ -2505,7 +2505,7 @@ graph TD
 <li><strong>Backup list maintenance</strong> documents the alert strategy</li>
 </ol>
 <hr />
-<p><strong>Alerts enable automated signal reception.</strong> The setup process can begin now.</p>
+<p><strong>Alerts enable automated signal reception.</strong> Begin the setup process now.</p>
                 
               </article>
             </div>
