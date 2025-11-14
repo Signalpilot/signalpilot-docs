@@ -1,0 +1,166 @@
+site_name: Signal Pilot Docs
+site_description: Non-repainting, alert-ready TradingView indicators for any market/timeframe.
+site_url: https://docs.signalpilot.io/
+repo_url: https://github.com/Signalpilot/signalpilot-docs
+repo_name: signalpilot-docs
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  features:
+    - navigation.top
+    # - navigation.instant  # DISABLED: Causes caching issues - content not updating immediately
+    - navigation.sections
+    - navigation.path  # Enable breadcrumbs navigation
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.tooltips
+    - content.action.edit  # Enable edit button on pages
+  palette:
+    # Dark mode (with aurora) - DEFAULT on first visit
+    - scheme: slate
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    # Light mode
+    - scheme: default
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  logo: assets/watermark-monogram-color-transparent.png
+  favicon: assets/watermark-monogram-color-transparent.png
+  icon:
+    repo: fontawesome/brands/github
+  custom_dir: overrides
+
+plugins:
+  - search:
+      lang: en
+      separator: '[\s\-\.,!?\(\)\[\]\{\}\/]+'  # Better tokenization (TD, non-repainting, etc.)
+  - macros
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+      fallback_to_build_date: true
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  # Interactive code features
+  - pymdownx.highlight:
+      anchor_linenums: true      # Linkable line numbers
+      line_spans: __span         # Enable line highlighting
+      pygments_lang_class: true  # Better syntax highlighting
+  - pymdownx.inlinehilite        # Inline code highlighting
+  - pymdownx.tabbed:
+      alternate_style: true      # Tabbed content blocks
+  - pymdownx.tasklist:
+      custom_checkbox: true      # Interactive checkboxes
+
+# Material-compatible styles (brand.css has all theme rules for Material)
+extra_css:
+  - assets/stylesheets/extra.css
+  - assets/brand.css
+  - assets/aurora.css
+  - assets/print.css
+  - assets/interactive-code.css
+
+# Background effects and utilities
+extra_javascript:
+  - assets/brand.js
+  - assets/sp-bg.js
+  - assets/keyword-highlighter.js
+  
+
+nav:
+  - Home: index.md
+
+  - "🚀 Getting Started":
+    - "👋 Start Here (Choose Your Path)": docs/start-here.md
+    - "⚡ Quick Start (5 min)": start-quick.md
+    - "🔍 Suite Overview": docs/start-suite-overview.md
+    - "📋 Prerequisites": start-prerequisites.md
+    - "📅 Onboarding Checklist (7 days)": start-onboarding.md
+    - "Which Indicator Should I Start?": docs/start-which-indicator.md
+
+  - "📖 How-To Guides":
+    - "Set Up Alerts": how-to-alerts.md
+    - "Use Webhooks": how-to-webhooks.md
+    - "Use Screener": how-to-screener.md
+
+  - "🚀 Suite (Latest)":
+    - "📚 Suite Overview": suite-index.md
+    - "Pentarch v1.0 — Reversal Events": pentarch-v10.md
+    - "Janus Atlas v1.0 — Levels System": janus-atlas-v10.md
+    - "Omnideck v1.0 — Everything Indicator": omnideck-v10.md
+    - "Augury Grid v1.0 — Multi-Symbol Screener": augury-grid-v10.md
+    - "Volume Oracle v1.0 — Volume Strategy": minimal-flow-v10.md
+    - "Harmonic Oscillator v1.0 — Composite Momentum": harmonic-oscillator-v10.md
+    - "Plutus Flow v1.0 — Advanced OBV": plutus-flow-v10.md
+
+  - "📚 Reference":
+    - "Trading Workflow (Bias → Timing)": ref-workflow.md
+    - "Indicator Comparison Guide": ref-comparison.md
+    - "Best Practices & Pro Tips": ref-best-practices.md
+    - "Non-Repainting Policy": ref-non-repaint.md
+    - "Glossary": ref-glossary.md
+    - "Troubleshooting Guide": ref-troubleshooting.md
+    - "Installation Troubleshooting": docs/troubleshooting-installation.md
+
+  - "ℹ️ About":
+    - "FAQ": about-faq.md
+    - "System Requirements": docs/about-system-requirements.md
+    - "Support & Access": about-support.md
+    - "Changelog (high level)": about-changelog.md
+
+  - Website Tiles:
+    - "Product Cards": _product-cards.md
+
+extra:
+  analytics:
+    provider: google
+    property: G-NZ05GV72K0
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback! Help us improve by
+            <a href="https://github.com/Signalpilot/signalpilot-docs/issues/new" target="_blank" rel="noopener">reporting an issue</a>.
+  social:
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/signalpilot
+    - icon: fontawesome/brands/github
+      link: https://github.com/Signalpilot
+  copyright: "© Signal Pilot Labs, Inc. All rights reserved."
