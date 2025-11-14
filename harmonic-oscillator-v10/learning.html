@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -7,203 +7,235 @@
     <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
     <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
     <meta name="theme-color" content="#06b6d4">
     <style>
+        :root {
+            --md-text-font: "Roboto";
+            --md-primary-fg-color: #06b6d4;
+        }
         body {
-            background: #1a1d2e;
-            color: #e0e0e0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            padding: 0;
-            margin: 0;
+            font-family: "Roboto", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+            font-size: 18px;
+            line-height: 1.7;
         }
-        .learning-container {
-            max-width: 900px;
+        .md-content {
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 40px 20px;
         }
-        .back-link {
-            display: inline-block;
-            margin-bottom: 30px;
-            padding: 10px 20px;
-            background: rgba(6, 182, 212, 0.1);
-            border: 1px solid #06b6d4;
-            border-radius: 8px;
-            color: #06b6d4;
-            text-decoration: none;
-            transition: all 0.2s;
+        .md-typeset {
+            font-size: 18px;
+            line-height: 1.7;
+            color: var(--md-typeset-color);
         }
-        .back-link:hover {
-            background: rgba(6, 182, 212, 0.2);
-            transform: translateX(-4px);
+        .md-typeset h1 {
+            font-size: 2.5em;
+            font-weight: 400;
+            line-height: 1.3;
+            margin: 0 0 1.5rem;
+        }
+        .md-typeset h2 {
+            font-size: 2em;
+            font-weight: 400;
+            line-height: 1.4;
+            margin: 2.5rem 0 1.2rem;
+            border-bottom: 2px solid var(--md-primary-fg-color);
+            padding-bottom: 0.5rem;
+        }
+        .md-typeset h3 {
+            font-size: 1.5em;
+            font-weight: 400;
+            margin: 2rem 0 1rem;
+        }
+        .md-typeset p {
+            margin: 1.2em 0;
+            font-size: 1.05em;
+        }
+        .md-typeset ul, .md-typeset ol {
+            margin: 1.2em 0;
+            padding-left: 2em;
+        }
+        .md-typeset li {
+            margin: 0.6em 0;
+            line-height: 1.7;
         }
         .hero {
             text-align: center;
-            padding: 60px 20px;
+            padding: 4rem 2rem;
             background: linear-gradient(135deg, #06b6d4 0%, #8b5cf6 100%);
-            border-radius: 16px;
-            margin-bottom: 50px;
-            box-shadow: 0 10px 40px rgba(6, 182, 212, 0.3);
+            border-radius: 12px;
+            margin: 2rem 0 3rem;
+            box-shadow: 0 8px 30px rgba(6, 182, 212, 0.25);
+        }
+        .hero-icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
         }
         .hero h1 {
-            color: white;
-            font-size: 42px;
-            margin: 0 0 16px 0;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            color: white !important;
+            font-size: 2.8em !important;
+            margin: 0 0 1rem 0 !important;
+            border: none !important;
+            padding: 0 !important;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
         .hero p {
-            color: rgba(255,255,255,0.95);
-            font-size: 18px;
-            margin: 0;
+            color: rgba(255,255,255,0.95) !important;
+            font-size: 1.3em !important;
+            margin: 0 !important;
         }
-        h2 {
-            color: #06b6d4;
-            font-size: 32px;
-            margin: 60px 0 20px 0;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #06b6d4;
+        .sp-callout {
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            border-left: 4px solid;
         }
-        h3 {
-            color: #22d3ee;
-            font-size: 24px;
-            margin: 40px 0 16px 0;
+        .sp-callout--info {
+            background: rgba(139, 92, 246, 0.08);
+            border-color: #8b5cf6;
         }
-        strong {
-            color: #67e8f9;
+        .sp-callout h3 {
+            margin-top: 0 !important;
+            font-size: 1.4em !important;
         }
         .challenge-box {
             background: rgba(6, 182, 212, 0.05);
             border-left: 4px solid #06b6d4;
-            padding: 20px;
-            margin: 20px 0;
+            padding: 1.8rem;
+            margin: 2rem 0;
             border-radius: 8px;
-            transition: all 0.2s;
         }
-        .challenge-box:hover {
-            background: rgba(6, 182, 212, 0.08);
-            transform: translateX(4px);
+        .challenge-box h3 {
+            color: #06b6d4;
+            margin-top: 0 !important;
         }
         .mistake-box {
             background: rgba(239, 68, 68, 0.05);
             border-left: 4px solid #ef4444;
-            padding: 20px;
-            margin: 20px 0;
+            padding: 1.8rem;
+            margin: 2rem 0;
             border-radius: 8px;
-            transition: all 0.2s;
         }
-        .mistake-box:hover {
-            background: rgba(239, 68, 68, 0.08);
-            transform: translateX(4px);
+        .mistake-box h3 {
+            color: #ef4444;
+            margin-top: 0 !important;
         }
         .decision-tree {
-            background: #0f111a;
-            padding: 30px;
-            border-radius: 12px;
-            font-family: monospace;
-            font-size: 14px;
-            line-height: 1.4;
+            background: #f5f5f5;
+            padding: 2rem;
+            border-radius: 8px;
+            font-family: "Roboto Mono", monospace;
+            font-size: 0.95em;
+            line-height: 1.5;
             overflow-x: auto;
-            margin: 20px 0;
-            border: 2px solid rgba(6, 182, 212, 0.2);
+            margin: 2rem 0;
+            border: 1px solid #e0e0e0;
         }
         .quick-rules {
             background: rgba(139, 92, 246, 0.1);
             border-left: 4px solid #8b5cf6;
-            padding: 20px;
-            margin: 20px 0;
+            padding: 1.8rem;
+            margin: 2rem 0;
             border-radius: 8px;
-        }
-        .quick-rules ul {
-            margin: 0;
-            padding-left: 20px;
         }
         .pairing-section {
             background: rgba(139, 92, 246, 0.05);
             border: 1px solid rgba(139, 92, 246, 0.3);
-            padding: 25px;
-            border-radius: 12px;
-            margin: 20px 0;
+            padding: 1.8rem;
+            border-radius: 8px;
+            margin: 2rem 0;
         }
         .pairing-section h3 {
             color: #a78bfa;
-            margin-top: 0;
+            margin-top: 0 !important;
+        }
+        .back-link {
+            display: inline-block;
+            margin: 2rem 0;
+            padding: 0.8rem 1.5rem;
+            background: var(--md-primary-fg-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .back-link:hover {
+            background: #8b5cf6;
+            transform: translateX(-4px);
         }
         .visual-divider {
             text-align: center;
-            margin: 50px 0;
-            font-size: 32px;
-            opacity: 0.3;
+            margin: 3rem 0;
+            font-size: 2.5rem;
+            opacity: 0.2;
         }
-        hr {
-            border: none;
-            border-top: 1px solid rgba(6, 182, 212, 0.2);
-            margin: 40px 0;
-        }
-        .intro-box {
-            background: rgba(139, 92, 246, 0.1);
-            border: 2px solid #8b5cf6;
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 40px;
-            font-size: 18px;
-            line-height: 1.8;
+        strong {
+            font-weight: 600;
+            color: var(--md-typeset-color);
         }
     </style>
 </head>
 <body>
-    <div class="learning-container">
-        <a href="index.html" class="back-link">← Back to Harmonic Oscillator Documentation</a>
+    <div class="md-container">
+        <main class="md-main">
+            <div class="md-content" data-md-component="content">
+                <article class="md-content__inner md-typeset">
 
-        <div class="hero">
-            <div style="font-size: 64px; margin-bottom: 20px;">〰️</div>
-            <h1>Harmonic Oscillator v1.0<br/>Advanced Learning Guide</h1>
-            <p>Master Momentum Trading • Voting Consensus • Divergence Psychology</p>
-        </div>
+                    <a href="index.html" class="back-link">← Back to Harmonic Oscillator Documentation</a>
 
-        <div class="intro-box">
-            <strong>⚠️ The #1 Oscillator Mistake:</strong> "RSI is overbought, time to short!" Price continues higher for 2 more weeks. Sound familiar? Most traders treat oscillators as crystal balls. This guide reveals why <em>"overbought"</em> often means <em>"strong momentum,"</em> how to use 5-oscillator voting consensus correctly, and when to actually trust oscillator signals.
-        </div>
+                    <div class="hero">
+                        <div class="hero-icon">〰️</div>
+                        <h1>Harmonic Oscillator v1.0 Advanced Learning Guide</h1>
+                        <p>Master Momentum Trading • Voting Consensus • Divergence Psychology</p>
+                    </div>
 
-        <h2>🧠 Oscillator Trading Psychology: The 3 Critical Challenges</h2>
+                    <div class="sp-callout sp-callout--info">
+                        <h3>⚠️ The #1 Oscillator Mistake</h3>
+                        <p><strong>"RSI is overbought, time to short!"</strong> Price continues higher for 2 more weeks. Sound familiar? Most traders treat oscillators as crystal balls. This guide reveals why <em>"overbought"</em> often means <em>"strong momentum,"</em> how to use 5-oscillator voting consensus correctly, and when to actually trust oscillator signals.</p>
+                    </div>
 
-        <div class="challenge-box">
-            <h3>🚀 Challenge 1: Premature Reversal Trading in Strong Trends</h3>
-            <p><strong>What Happens:</strong> RSI hits 70 (overbought). Your inner voice says "Time to short! It's overbought!" You short confidently. Price continues climbing for 2 more weeks while RSI stays overbought the entire time. You're stopped out multiple times trying to catch the top. Each time: "This time it HAS to reverse!"</p>
+                    <h2>🧠 Oscillator Trading Psychology: The 3 Critical Challenges</h2>
 
-            <p><strong>Why This Happens:</strong> You've been taught "overbought = reversal imminent." But in reality, <strong>overbought in strong trends = powerful momentum</strong>, not weakness.</p>
+                    <div class="challenge-box">
+                        <h3>🚀 Challenge 1: Premature Reversal Trading in Strong Trends</h3>
+                        <p><strong>What Happens:</strong> RSI hits 70 (overbought). Your inner voice says "Time to short! It's overbought!" You short confidently. Price continues climbing for 2 more weeks while RSI stays overbought the entire time. You're stopped out multiple times trying to catch the top. Each time: "This time it HAS to reverse!"</p>
 
-            <p><strong>The Fix:</strong> Overbought/oversold doesn't mean reversal—it means strong momentum. In strong trends, oscillators stay extreme for extended periods. Wait for actual trend weakness (lower highs, support breaks) before trading against it.</p>
+                        <p><strong>Why This Happens:</strong> You've been taught "overbought = reversal imminent." But in reality, <strong>overbought in strong trends = powerful momentum</strong>, not weakness.</p>
 
-            <p><strong>Mental Script:</strong> <em>"Overbought in uptrend = strength, not reversal signal. I need trend change confirmation first."</em></p>
-        </div>
+                        <p><strong>The Fix:</strong> Overbought/oversold doesn't mean reversal—it means strong momentum. In strong trends, oscillators stay extreme for extended periods. Wait for actual trend weakness (lower highs, support breaks) before trading against it.</p>
 
-        <div class="challenge-box">
-            <h3>🗳️ Challenge 2: Trusting Single Oscillator Over Voting Consensus</h3>
-            <p><strong>What Happens:</strong> RSI shows beautiful bullish divergence. You're excited! It looks perfect on your chart. You trade it immediately. But Stochastic, CCI, MFI, and Williams all show NO divergence. Trade fails spectacularly because 4 out of 5 oscillators disagreed with your signal.</p>
+                        <p><strong>Mental Script:</strong> <em>"Overbought in uptrend = strength, not reversal signal. I need trend change confirmation first."</em></p>
+                    </div>
 
-            <p><strong>Why This Happens:</strong> Confirmation bias. You saw what you wanted to see (the divergence) and ignored the voting consensus.</p>
+                    <div class="challenge-box">
+                        <h3>🗳️ Challenge 2: Trusting Single Oscillator Over Voting Consensus</h3>
+                        <p><strong>What Happens:</strong> RSI shows beautiful bullish divergence. You're excited! It looks perfect on your chart. You trade it immediately. But Stochastic, CCI, MFI, and Williams all show NO divergence. Trade fails spectacularly because 4 out of 5 oscillators disagreed with your signal.</p>
 
-            <p><strong>The Fix:</strong> Harmonic Oscillator uses voting consensus for a reason. <strong>1 oscillator agreeing = weak signal (noise). 3+ oscillators agreeing = strong signal.</strong> Trust the consensus, not the outlier. Democracy beats dictatorship in trading.</p>
+                        <p><strong>Why This Happens:</strong> Confirmation bias. You saw what you wanted to see (the divergence) and ignored the voting consensus.</p>
 
-            <p><strong>Mental Script:</strong> <em>"How many oscillators agree? If fewer than 3, I skip. Consensus beats single oscillator."</em></p>
-        </div>
+                        <p><strong>The Fix:</strong> Harmonic Oscillator uses voting consensus for a reason. <strong>1 oscillator agreeing = weak signal (noise). 3+ oscillators agreeing = strong signal.</strong> Trust the consensus, not the outlier. Democracy beats dictatorship in trading.</p>
 
-        <div class="challenge-box">
-            <h3>📈 Challenge 3: Ignoring Trend Context (Trading in a Vacuum)</h3>
-            <p><strong>What Happens:</strong> All 5 oscillators show oversold. Perfect consensus! You buy immediately, feeling confident. Price continues dropping. Confused, you check the higher timeframe: strong downtrend on Daily. Your "oversold bounce" was a tiny pause in a waterfall decline.</p>
+                        <p><strong>Mental Script:</strong> <em>"How many oscillators agree? If fewer than 3, I skip. Consensus beats single oscillator."</em></p>
+                    </div>
 
-            <p><strong>Why This Happens:</strong> You traded oscillators in isolation, ignoring the bigger picture. Oscillators show <em>momentum</em>, not <em>direction</em>.</p>
+                    <div class="challenge-box">
+                        <h3>📈 Challenge 3: Ignoring Trend Context (Trading in a Vacuum)</h3>
+                        <p><strong>What Happens:</strong> All 5 oscillators show oversold. Perfect consensus! You buy immediately, feeling confident. Price continues dropping. Confused, you check the higher timeframe: strong downtrend on Daily. Your "oversold bounce" was a tiny pause in a waterfall decline.</p>
 
-            <p><strong>The Fix:</strong> Always check higher timeframe trend FIRST. Trade <strong>oversold bounces in uptrends</strong>, <strong>overbought pullbacks in downtrends</strong>. Never trade oscillators against higher TF trend—you're fighting the current.</p>
+                        <p><strong>Why This Happens:</strong> You traded oscillators in isolation, ignoring the bigger picture. Oscillators show <em>momentum</em>, not <em>direction</em>.</p>
 
-            <p><strong>Mental Script:</strong> <em>"Oscillators + higher TF trend alignment = trade. Oscillators vs trend = skip."</em></p>
-        </div>
+                        <p><strong>The Fix:</strong> Always check higher timeframe trend FIRST. Trade <strong>oversold bounces in uptrends</strong>, <strong>overbought pullbacks in downtrends</strong>. Never trade oscillators against higher TF trend—you're fighting the current.</p>
 
-        <div class="visual-divider">〰️</div>
+                        <p><strong>Mental Script:</strong> <em>"Oscillators + higher TF trend alignment = trade. Oscillators vs trend = skip."</em></p>
+                    </div>
 
-        <h2>🌳 Decision Tree: Should I Trade This Oscillator Signal?</h2>
+                    <div class="visual-divider">〰️</div>
 
-        <div class="decision-tree">
+                    <h2>🌳 Decision Tree: Should I Trade This Oscillator Signal?</h2>
+
+                    <div class="decision-tree">
 <pre>┌──────────────────────────────────┐
 │  OSCILLATOR SIGNAL APPEARS       │
 │  (Divergence/Extreme/Consensus)  │
@@ -255,114 +287,118 @@
                  ▼       ▼
               Medium  ✅ HIGH
               Quality QUALITY</pre>
-        </div>
+                    </div>
 
-        <div class="quick-rules">
-            <strong>⚡ Quick Rules for Oscillator Trades:</strong>
-            <ul>
-                <li><strong>3+ oscillators must agree:</strong> Minimum requirement for trading consideration</li>
-                <li><strong>Check trend first:</strong> Strong trend = oscillators can stay extreme for weeks</li>
-                <li><strong>Trade WITH trend:</strong> Oversold in uptrend = buy. Overbought in downtrend = short</li>
-                <li><strong>Higher TF check:</strong> One timeframe higher must align with your trade direction</li>
-            </ul>
-        </div>
+                    <div class="quick-rules">
+                        <h3 style="margin-top: 0;">⚡ Quick Rules for Oscillator Trades</h3>
+                        <ul>
+                            <li><strong>3+ oscillators must agree:</strong> Minimum requirement for trading consideration</li>
+                            <li><strong>Check trend first:</strong> Strong trend = oscillators can stay extreme for weeks</li>
+                            <li><strong>Trade WITH trend:</strong> Oversold in uptrend = buy. Overbought in downtrend = short</li>
+                            <li><strong>Higher TF check:</strong> One timeframe higher must align with your trade direction</li>
+                        </ul>
+                    </div>
 
-        <div class="visual-divider">🚫</div>
+                    <div class="visual-divider">🚫</div>
 
-        <h2>🚫 Top 5 Mistakes That Kill Oscillator Traders</h2>
+                    <h2>🚫 Top 5 Mistakes That Kill Oscillator Traders</h2>
 
-        <div class="mistake-box">
-            <h3>Mistake #1: Trading Overbought/Oversold as Automatic Reversals</h3>
-            <p><strong>What Happens:</strong> RSI hits 30 (oversold). You buy immediately thinking "It's oversold, must go up!" Price continues dropping for 5 more days. RSI stays oversold the entire time. You're bleeding capital trying to catch the falling knife.</p>
+                    <div class="mistake-box">
+                        <h3>Mistake #1: Trading Overbought/Oversold as Automatic Reversals</h3>
+                        <p><strong>What Happens:</strong> RSI hits 30 (oversold). You buy immediately thinking "It's oversold, must go up!" Price continues dropping for 5 more days. RSI stays oversold the entire time. You're bleeding capital trying to catch the falling knife.</p>
 
-            <p><strong>The Truth:</strong> <strong>Oversold = strong downward momentum</strong>, not "reversal coming soon."</p>
+                        <p><strong>The Truth:</strong> <strong>Oversold = strong downward momentum</strong>, not "reversal coming soon."</p>
 
-            <p><strong>The Fix:</strong> In downtrends, oscillators stay oversold. In uptrends, they stay overbought. Wait for trend exhaustion signs (structure breaks, volume spikes, higher TF reversal patterns) before trading mean reversion. Extreme readings show momentum strength, not imminent reversals.</p>
-        </div>
+                        <p><strong>The Fix:</strong> In downtrends, oscillators stay oversold. In uptrends, they stay overbought. Wait for trend exhaustion signs (structure breaks, volume spikes, higher TF reversal patterns) before trading mean reversion. Extreme readings show momentum strength, not imminent reversals.</p>
+                    </div>
 
-        <div class="mistake-box">
-            <h3>Mistake #2: Ignoring the Voting Consensus (Trading 1/5 Agreement)</h3>
-            <p><strong>What Happens:</strong> RSI shows gorgeous bullish divergence. You're excited and trade it. Meanwhile, Stochastic, CCI, MFI, and Williams all show NO divergence. You ignored them because "RSI is the most popular oscillator." Trade fails because only 1 out of 5 oscillators agreed.</p>
+                    <div class="mistake-box">
+                        <h3>Mistake #2: Ignoring the Voting Consensus (Trading 1/5 Agreement)</h3>
+                        <p><strong>What Happens:</strong> RSI shows gorgeous bullish divergence. You're excited and trade it. Meanwhile, Stochastic, CCI, MFI, and Williams all show NO divergence. You ignored them because "RSI is the most popular oscillator." Trade fails because only 1 out of 5 oscillators agreed.</p>
 
-            <p><strong>The Fix:</strong> Oscillator voting system:</p>
-            <ul>
-                <li>🔴 <strong>1-2 oscillators agree:</strong> Noise, skip the trade</li>
-                <li>🟡 <strong>3 oscillators agree:</strong> Moderate signal, proceed with caution</li>
-                <li>🟢 <strong>4-5 oscillators agree:</strong> Strong signal, high confidence</li>
-            </ul>
-            <p>The voting system exists to filter false signals. Respect it.</p>
-        </div>
+                        <p><strong>The Fix:</strong> Oscillator voting system:</p>
+                        <ul>
+                            <li>🔴 <strong>1-2 oscillators agree:</strong> Noise, skip the trade</li>
+                            <li>🟡 <strong>3 oscillators agree:</strong> Moderate signal, proceed with caution</li>
+                            <li>🟢 <strong>4-5 oscillators agree:</strong> Strong signal, high confidence</li>
+                        </ul>
+                        <p>The voting system exists to filter false signals. Respect it.</p>
+                    </div>
 
-        <div class="mistake-box">
-            <h3>Mistake #3: Trading Oscillators Against Higher Timeframe Trend</h3>
-            <p><strong>What Happens:</strong> All 5 oscillators show oversold on your 15-minute chart. Perfect consensus! You buy confidently. Price drops further. Frustrated, you check the Daily chart <em>after</em> the loss: strong downtrend with no signs of exhaustion. Your 15M "oversold bounce" was a tiny pause in a Daily downtrend.</p>
+                    <div class="mistake-box">
+                        <h3>Mistake #3: Trading Oscillators Against Higher Timeframe Trend</h3>
+                        <p><strong>What Happens:</strong> All 5 oscillators show oversold on your 15-minute chart. Perfect consensus! You buy confidently. Price drops further. Frustrated, you check the Daily chart <em>after</em> the loss: strong downtrend with no signs of exhaustion. Your 15M "oversold bounce" was a tiny pause in a Daily downtrend.</p>
 
-            <p><strong>The Fix:</strong> Check higher TF trend BEFORE trading oscillator signals:</p>
-            <ul>
-                <li>✅ <strong>Daily uptrend + 15M oversold:</strong> Buy the dip</li>
-                <li>✅ <strong>Daily downtrend + 15M overbought:</strong> Short the rally</li>
-                <li>❌ <strong>Daily downtrend + 15M oversold:</strong> Skip or short continuation</li>
-                <li>❌ <strong>Daily uptrend + 15M overbought:</strong> Skip or buy continuation</li>
-            </ul>
-        </div>
+                        <p><strong>The Fix:</strong> Check higher TF trend BEFORE trading oscillator signals:</p>
+                        <ul>
+                            <li>✅ <strong>Daily uptrend + 15M oversold:</strong> Buy the dip</li>
+                            <li>✅ <strong>Daily downtrend + 15M overbought:</strong> Short the rally</li>
+                            <li>❌ <strong>Daily downtrend + 15M oversold:</strong> Skip or short continuation</li>
+                            <li>❌ <strong>Daily uptrend + 15M overbought:</strong> Skip or buy continuation</li>
+                        </ul>
+                    </div>
 
-        <div class="mistake-box">
-            <h3>Mistake #4: Confusing Divergence Types (Regular vs Hidden)</h3>
-            <p><strong>What Happens:</strong> You see divergence on your chart. You trade it as a reversal signal. Trade immediately goes against you. Later you realize: it was <strong>hidden divergence</strong> (trend continuation), not <strong>regular divergence</strong> (reversal).</p>
+                    <div class="mistake-box">
+                        <h3>Mistake #4: Confusing Divergence Types (Regular vs Hidden)</h3>
+                        <p><strong>What Happens:</strong> You see divergence on your chart. You trade it as a reversal signal. Trade immediately goes against you. Later you realize: it was <strong>hidden divergence</strong> (trend continuation), not <strong>regular divergence</strong> (reversal).</p>
 
-            <p><strong>The Difference:</strong></p>
-            <ul>
-                <li><strong>Regular Divergence:</strong> Price makes higher high, oscillator makes lower high = bearish reversal signal</li>
-                <li><strong>Hidden Divergence:</strong> Price makes higher low, oscillator makes lower low = bullish continuation signal</li>
-            </ul>
+                        <p><strong>The Difference:</strong></p>
+                        <ul>
+                            <li><strong>Regular Divergence:</strong> Price makes higher high, oscillator makes lower high = bearish reversal signal</li>
+                            <li><strong>Hidden Divergence:</strong> Price makes higher low, oscillator makes lower low = bullish continuation signal</li>
+                        </ul>
 
-            <p><strong>The Fix:</strong> Learn both types. Match your trade direction to the divergence type. Regular = reversal. Hidden = continuation.</p>
-        </div>
+                        <p><strong>The Fix:</strong> Learn both types. Match your trade direction to the divergence type. Regular = reversal. Hidden = continuation.</p>
+                    </div>
 
-        <div class="mistake-box">
-            <h3>Mistake #5: Trading Extreme Readings Without Confirmation</h3>
-            <p><strong>What Happens:</strong> All 5 oscillators hit extreme overbought (90+). You short immediately thinking "This is SO overbought!" Price continues higher for 3 more days. You're stopped out. Oscillators stayed extreme the entire time.</p>
+                    <div class="mistake-box">
+                        <h3>Mistake #5: Trading Extreme Readings Without Confirmation</h3>
+                        <p><strong>What Happens:</strong> All 5 oscillators hit extreme overbought (90+). You short immediately thinking "This is SO overbought!" Price continues higher for 3 more days. You're stopped out. Oscillators stayed extreme the entire time.</p>
 
-            <p><strong>The Fix:</strong> Extreme readings show <strong>strong momentum</strong>, not imminent reversal. Wait for oscillators to <strong>START TURNING BACK</strong> from extreme levels before entering. Look for:</p>
-            <ul>
-                <li>Oscillator divergence forming</li>
-                <li>Oscillators crossing back below 70 (or above 30)</li>
-                <li>Price structure breaking (support/resistance violation)</li>
-            </ul>
-            <p><strong>Extreme alone ≠ reversal signal.</strong> Extreme + turning back = signal.</p>
-        </div>
+                        <p><strong>The Fix:</strong> Extreme readings show <strong>strong momentum</strong>, not imminent reversal. Wait for oscillators to <strong>START TURNING BACK</strong> from extreme levels before entering. Look for:</p>
+                        <ul>
+                            <li>Oscillator divergence forming</li>
+                            <li>Oscillators crossing back below 70 (or above 30)</li>
+                            <li>Price structure breaking (support/resistance violation)</li>
+                        </ul>
+                        <p><strong>Extreme alone ≠ reversal signal.</strong> Extreme + turning back = signal.</p>
+                    </div>
 
-        <div class="visual-divider">🔗</div>
+                    <div class="visual-divider">🔗</div>
 
-        <h2>🔗 Synergy: Pairing Harmonic Oscillator with Other Indicators</h2>
+                    <h2>🔗 Synergy: Pairing Harmonic Oscillator with Other Indicators</h2>
 
-        <div class="pairing-section">
-            <h3>🎯 High Synergy Combinations</h3>
-            <ul>
-                <li><strong>+ Pentarch:</strong> Oscillator consensus + TD Sequential = momentum-confirmed cycle signals. You know momentum (Harmonic) and cycle timing (Pentarch).</li>
-                <li><strong>+ Omnideck:</strong> Multi-oscillator voting + multi-system alignment = double-layer confirmation. When both systems align, confidence skyrockets.</li>
-                <li><strong>+ Janus Atlas:</strong> Divergence signals + level clusters = reversal timing at key levels. Momentum shift at tested support/resistance.</li>
-            </ul>
+                    <div class="pairing-section">
+                        <h3>🎯 High Synergy Combinations</h3>
+                        <ul>
+                            <li><strong>+ Pentarch:</strong> Oscillator consensus + TD Sequential = momentum-confirmed cycle signals. You know momentum (Harmonic) and cycle timing (Pentarch).</li>
+                            <li><strong>+ Omnideck:</strong> Multi-oscillator voting + multi-system alignment = double-layer confirmation. When both systems align, confidence skyrockets.</li>
+                            <li><strong>+ Janus Atlas:</strong> Divergence signals + level clusters = reversal timing at key levels. Momentum shift at tested support/resistance.</li>
+                        </ul>
 
-            <h3>🎲 Common Trading Combinations</h3>
-            <ul>
-                <li><strong>Harmonic bullish divergence + Janus support cluster</strong> → Momentum reversal at tested level</li>
-                <li><strong>Harmonic 3+ oscillators oversold + Pentarch TD 9 Buy</strong> → Cycle timing + momentum alignment</li>
-                <li><strong>Harmonic overbought + Omnideck Regime red</strong> → Multi-indicator distribution warning</li>
-            </ul>
+                        <h3>🎲 Common Trading Combinations</h3>
+                        <ul>
+                            <li><strong>Harmonic bullish divergence + Janus support cluster</strong> → Momentum reversal at tested level</li>
+                            <li><strong>Harmonic 3+ oscillators oversold + Pentarch TD 9 Buy</strong> → Cycle timing + momentum alignment</li>
+                            <li><strong>Harmonic overbought + Omnideck Regime red</strong> → Multi-indicator distribution warning</li>
+                        </ul>
 
-            <h3>💡 Why These Pair Well</h3>
-            <p>Harmonic Oscillator shows <strong>momentum and internal pressure</strong> (what the oscillators feel). Pentarch/Omnideck show <strong>timing and structure</strong> (when cycles complete). Janus shows <strong>levels</strong> (where price may react).</p>
+                        <h3>💡 Why These Pair Well</h3>
+                        <p><strong>Harmonic Oscillator shows momentum and internal pressure</strong> (what the oscillators feel). Pentarch/Omnideck show <strong>timing and structure</strong> (when cycles complete). Janus shows <strong>levels</strong> (where price may react).</p>
 
-            <p>Combining momentum analysis with timing and levels creates high-probability setups: the right momentum shift, at the right time, at the right place.</p>
-        </div>
+                        <p>Combining momentum analysis with timing and levels creates high-probability setups: the right momentum shift, at the right time, at the right place.</p>
+                    </div>
 
-        <hr />
+                    <hr style="margin: 3rem 0; border: none; border-top: 1px solid rgba(0,0,0,0.1);">
 
-        <div style="text-align: center; padding: 40px 20px;">
-            <p style="font-size: 18px; margin-bottom: 20px;">〰️ <strong>Ready to master oscillator trading?</strong></p>
-            <a href="index.html" class="back-link" style="font-size: 18px;">← Back to Harmonic Oscillator Documentation</a>
-        </div>
+                    <div style="text-align: center; padding: 2rem 0;">
+                        <p style="font-size: 1.2em; margin-bottom: 1.5rem;"><strong>Ready to master oscillator trading?</strong></p>
+                        <a href="index.html" class="back-link">← Back to Harmonic Oscillator Documentation</a>
+                    </div>
+
+                </article>
+            </div>
+        </main>
     </div>
 </body>
 </html>
