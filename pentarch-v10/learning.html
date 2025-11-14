@@ -244,7 +244,7 @@
                 </div>
             </div>
         </div>
-        
+
         <form class="md-header__option" data-md-component="palette">
             <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_0">
             <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
@@ -255,9 +255,9 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
             </label>
         </form>
-        
+
         <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
-        
+
         <label class="md-header__button md-icon" for="__search">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
         </label>
@@ -287,7 +287,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="md-header__source">
             <a href="https://github.com/Signalpilot/signalpilot-docs" title="Go to repository" class="md-source" data-md-component="source">
                 <div class="md-source__icon md-icon">
@@ -319,72 +319,80 @@
 
                     <div class="visual-divider">🚀</div>
 
-                    <h2>🚀 Your First Pentarch Signal in 5 Minutes</h2>
+                    <h2>🚀 Understanding Pentarch's 5-Cycle Event System</h2>
 
                     <div class="info-box" style="background: rgba(6, 182, 212, 0.08); border-left-color: #22c55e;">
-                        <h3 style="color: #22c55e; margin-top: 0;">Never used Pentarch before? Start here.</h3>
+                        <h3 style="color: #22c55e; margin-top: 0;">What Makes Pentarch Different</h3>
 
-                        <p><strong>Step 1: Enable the Indicator</strong><br>
-                        Load Pentarch on Daily chart (best for beginners). It automatically marks cycle event signals on candles.</p>
+                        <p><strong>Pentarch is NOT TD Sequential</strong><br>
+                        Unlike classic TD Sequential (which counts TD 9 and TD 13), Pentarch uses a 4-layer detection system to identify 5 distinct market cycle phases through specific events.</p>
 
-                        <p><strong>Step 2: Wait for TD 9 Signal</strong><br>
-                        Look for a "9" marker appearing on a candle. This is your primary signal:<br>
-                        • TD 9 Buy = potential upside reversal<br>
-                        • TD 9 Sell = potential downside reversal</p>
+                        <p><strong>The 5 Cycle Events:</strong></p>
+                        <ul>
+                            <li><strong>🟣 TD (Touchdown)</strong> — Accumulation phase signal<br>
+                            <em>What it means:</em> Price extended below trend, oversold conditions detected</li>
 
-                        <p><strong>Step 3: Check for Confirmation</strong><br>
-                        Don't trade TD 9 immediately. Wait for:<br>
-                        • Price Flip: Next candle closes in opposite direction<br>
-                        • Or TD 13: If it continues to 13, even stronger signal</p>
+                            <li><strong>🩵 IGN (Ignition)</strong> — Markup phase signal<br>
+                            <em>What it means:</em> Momentum breakout conditions met, bullish structure shift</li>
 
-                        <p><strong>Step 4: Check Trend Context</strong><br>
-                        Best TD 9 signals occur:<br>
-                        • Near support/resistance<br>
-                        • After extended moves (8+ days in same direction)<br>
-                        • NOT in middle of choppy consolidation</p>
+                            <li><strong>🟡 WRN (Warning)</strong> — Distribution phase signal<br>
+                            <em>What it means:</em> Price extended above trend, overbought regime present</li>
 
-                        <p><strong>Step 5: Entry + Stop</strong><br>
-                        Enter after confirmation (price flip), stop beyond TD 9 candle extreme</p>
+                            <li><strong>🟠 CAP (Climax)</strong> — Climax phase signal<br>
+                            <em>What it means:</em> Extreme extension detected, late-cycle exhaustion</li>
+
+                            <li><strong>🔴 BDN (Breakdown)</strong> — Decline phase signal<br>
+                            <em>What it means:</em> Bearish structure break confirmed, decline phase beginning</li>
+                        </ul>
 
                         <hr style="margin: 1.5rem 0; opacity: 0.2;">
 
-                        <p><strong>Example: TD 9 Buy Signal</strong></p>
+                        <p><strong>Example: Full Cycle Pattern</strong></p>
                         <ul>
-                            <li>SPY Daily chart: 9-day downtrend, TD 9 Buy appears at $445</li>
-                            <li>Next day: Price closes above previous day's close ✅ (price flip confirmation)</li>
-                            <li>Check context: Near 50-day MA support ✅</li>
-                            <li>Entry: Long at $446 (after confirmation)</li>
-                            <li>Stop: $442 (below TD 9 low of $444)</li>
-                            <li>Target: Previous swing high at $455 (2:1 R:R)</li>
+                            <li>SPY drops from $460 to $445 → <strong>TD</strong> appears (accumulation phase)</li>
+                            <li>Price rallies to $450 → <strong>IGN</strong> appears (markup beginning)</li>
+                            <li>Price reaches $465 → <strong>WRN</strong> appears (distribution phase)</li>
+                            <li>Price pushes to $470 → <strong>CAP</strong> appears (climax exhaustion)</li>
+                            <li>Price breaks down to $460 → <strong>BDN</strong> appears (decline phase)</li>
                         </ul>
 
-                        <p style="margin-bottom: 0;"><em>Don't trade every TD 9. Wait for price flip confirmation + favorable context. TD 9 tells you "cycle exhausted," not "reverses tomorrow."</em></p>
+                        <p style="margin-bottom: 0;"><em>Not every cycle shows all 5 events. You might see partial patterns like TD → IGN (early cycle only) or WRN → CAP (late cycle only).</em></p>
                     </div>
 
                     <div class="visual-divider">📋</div>
 
-                    <h2>📋 The 3-2-1 Rule for Pentarch</h2>
+                    <h2>📋 The 5-4-3 Rule for Pentarch</h2>
 
                     <div class="info-box" style="background: rgba(6, 182, 212, 0.08); border-left-color: #a855f7;">
                         <h3 style="color: #a855f7; margin-top: 0;">Memorize This Framework</h3>
 
-                        <p><strong>3 Things to ALWAYS Check:</strong></p>
+                        <p><strong>5 Cycle Events to Know:</strong></p>
                         <ul>
-                            <li>✅ <strong>Signal Type:</strong> TD 9, TD 13, IGN, or Perfection (know what you're trading)</li>
-                            <li>✅ <strong>Price Flip Confirmation:</strong> Next candle closes opposite direction of TD 9</li>
-                            <li>✅ <strong>Trend Context:</strong> Near support/resistance, not mid-consolidation</li>
+                            <li>✅ <strong>TD</strong> = Accumulation phase (downside exhaustion)</li>
+                            <li>✅ <strong>IGN</strong> = Markup phase (bullish momentum beginning)</li>
+                            <li>✅ <strong>WRN</strong> = Distribution phase (upside extension)</li>
+                            <li>✅ <strong>CAP</strong> = Climax phase (extreme exhaustion)</li>
+                            <li>✅ <strong>BDN</strong> = Decline phase (bearish structure break)</li>
                         </ul>
 
-                        <p><strong>2 Things to NEVER Do:</strong></p>
+                        <p><strong>4 Detection Layers (All Must Confirm):</strong></p>
                         <ul>
-                            <li>❌ <strong>Never trade TD 9 without price flip</strong> (can continue to 13 before reversing)</li>
-                            <li>❌ <strong>Never abandon system after 3 losses</strong> (probability = 3 losses in 16 trades at 60% win rate)</li>
+                            <li>✅ <strong>Layer 1:</strong> Regime classification (bullish/bearish/neutral)</li>
+                            <li>✅ <strong>Layer 2:</strong> Pilot Line distance (price extension from trend)</li>
+                            <li>✅ <strong>Layer 3:</strong> NanoFlow momentum (directional momentum validation)</li>
+                            <li>✅ <strong>Layer 4:</strong> Bar close confirmation (all conditions hold at close)</li>
                         </ul>
 
-                        <p><strong>1 Golden Rule:</strong></p>
+                        <p><strong>3 Things to NEVER Do:</strong></p>
+                        <ul>
+                            <li>❌ <strong>Never trade mid-bar</strong> (signals confirm at bar close only)</li>
+                            <li>❌ <strong>Never abandon system after 3 losses</strong> (probability = normal variance)</li>
+                            <li>❌ <strong>Never ignore higher timeframe context</strong> (trend alignment critical)</li>
+                        </ul>
+
                         <p style="font-size: 1.15em; padding: 1rem; background: rgba(100, 149, 237, 0.15); border-radius: 6px; margin-bottom: 0;">
-                            📌 <strong>Pentarch shows cycle exhaustion. Price flip shows reversal. Wait for both.</strong><br>
-                            <em style="font-size: 0.9em;">TD 9 means "9-day trend completed." Doesn't guarantee reversal—wait for price confirmation first.</em>
+                            📌 <strong>Golden Rule: All 4 layers must confirm at bar close before signal appears.</strong><br>
+                            <em style="font-size: 0.9em;">Pentarch uses strict multi-layer validation to reduce false signals—trust the system when signals fire.</em>
                         </p>
                     </div>
 
@@ -394,7 +402,7 @@
 
                     <div class="challenge-box">
                         <h3>💔 Challenge 1: The 3-Loss Spiral (Self-Doubt & System Questioning)</h3>
-                        <p><strong>What Happens:</strong> You take 3 Pentarch signal losses in a row. TD 9 Buy fails. IGN Buy fails. TD Perfection Buy fails. Your account is down 3%. Your brain floods with doubt:</p>
+                        <p><strong>What Happens:</strong> You take 3 Pentarch signal losses in a row. TD fails, IGN fails, WRN fails. Your account is down 3%. Your brain floods with doubt:</p>
                         <ul>
                             <li><em>"Does this indicator actually work?"</em></li>
                             <li><em>"Did I waste $250 on this?"</em></li>
@@ -431,10 +439,10 @@
 
                         <p><strong>The 4-Step Recovery Protocol:</strong></p>
                         <ol>
-                            <li><strong>STOP Trading for 48 Hours (Mandatory Cooling-Off)</strong> - Close TradingView, don't check charts, don't look for "revenge setups," let emotions settle</li>
-                            <li><strong>Review Trade Journal (72 hours after last trade)</strong> - Were all 3 losing trades valid setups? Did you follow your decision tree? Calculate: If you followed rules on all 3, system is fine (variance). If you broke rules on 2+, issue is discipline, not system</li>
-                            <li><strong>Calculate Expectancy (Verify Positive System)</strong> - Formula: (Win% × Avg Win) - (Loss% × Avg Loss). Example: Last 10 trades = 6 wins (+$600), 4 losses (-$200) = +$40 per trade expectancy. System is positive despite current drawdown</li>
-                            <li><strong>Return with Reduced Size (Next 3 Trades)</strong> - Reduce position size to 0.5% risk (half normal) to rebuild confidence gradually. After 2 wins or 3 breakevens, return to 1% risk. If losses continue, return to paper trading for 1 week</li>
+                            <li><strong>STOP Trading for 48 Hours (Mandatory Cooling-Off)</strong> — Close TradingView, don't check charts, don't look for "revenge setups," let emotions settle</li>
+                            <li><strong>Review Trade Journal (72 hours after last trade)</strong> — Were all 3 losing trades valid setups? Did you follow your decision tree? Calculate: If you followed rules on all 3, system is fine (variance). If you broke rules on 2+, issue is discipline, not system</li>
+                            <li><strong>Calculate Expectancy (Verify Positive System)</strong> — Formula: (Win% × Avg Win) - (Loss% × Avg Loss). Example: Last 10 trades = 6 wins (+$600), 4 losses (-$200) = +$40 per trade expectancy. System is positive despite current drawdown</li>
+                            <li><strong>Return with Reduced Size (Next 3 Trades)</strong> — Reduce position size to 0.5% risk (half normal) to rebuild confidence gradually. After 2 wins or 3 breakevens, return to 1% risk. If losses continue, return to paper trading for 1 week</li>
                         </ol>
 
                         <p><strong>Mental Script:</strong> <em>"3 losses in a row is statistically normal. I'm taking a 48-hour break to let emotions settle, then reviewing my journal objectively."</em></p>
@@ -442,7 +450,7 @@
 
                     <div class="challenge-box">
                         <h3>😰 Challenge 2: FOMO After Missed Signals ("I Missed the IGN!")</h3>
-                        <p><strong>What Happens:</strong> IGN Buy signal appears at $50 while you're away from your desk. You check charts 3 hours later: price is now at $53 (+6%). Your emotional response:</p>
+                        <p><strong>What Happens:</strong> IGN signal appears at $50 while you're away from your desk. You check charts 3 hours later: price is now at $53 (+6%). Your emotional response:</p>
                         <ol>
                             <li><strong>Regret:</strong> "Why wasn't I watching?!"</li>
                             <li><strong>FOMO:</strong> "This is going to $60, I need to jump in NOW!"</li>
@@ -455,7 +463,7 @@
 
                         <p><strong>What to Do Instead:</strong></p>
                         <ul>
-                            <li><strong>Accept the Missed Opportunity:</strong> There will be 50+ IGN signals this year across all assets. Missing 1 signal = missing 2% of annual opportunities. Better to miss 10 good setups than take 3 bad entries</li>
+                            <li><strong>Accept the Missed Opportunity:</strong> There will be 50+ Pentarch signals this year across all assets. Missing 1 signal = missing 2% of annual opportunities. Better to miss 10 good setups than take 3 bad entries</li>
                             <li><strong>Never Chase Price After 2% Move:</strong> If price moved >2% from signal, it's too late. Wait for pullback or next signal</li>
                             <li><strong>Set Alerts for Future Signals:</strong> Enable TradingView alerts "Once Per Bar Close" for all Pentarch signals, so you don't miss the next one</li>
                         </ul>
@@ -474,68 +482,68 @@
                │
                ▼
         ┌──────────────┐
-        │  Is it TD    │
-        │    alone?    │
+        │  Which cycle │
+        │  event is it?│
         └──┬────────┬──┘
            │        │
-          YES       NO
+        TD/BDN    IGN/WRN/CAP
            │        │
-           │        ▼
-           │   ┌──────────────────────┐
-           │   │ Check CONFLUENCE     │
-           │   │ - Janus level <1%?   │
-           │   │ - Volume >1.5x avg?  │
-           │   └──┬──────────────┬────┘
-           │      │              │
-           │    BOTH YES     NEITHER/1
-           │      │              │
-           ▼      ▼              ▼
-        ❌ SKIP  Continue     ⚠️ MEDIUM
-        (40-45%              (Consider
-         fail rate)           skipping)
-                  │
-                  ▼
-           ┌──────────────────────┐
-           │ HIGHER TIMEFRAME     │
-           │ ALIGNMENT CHECK      │
-           │ Daily trend matches? │
-           └──┬──────────────┬────┘
-              │              │
-             YES             NO
-              │              │
-              ▼              ▼
-         Continue        ❌ SKIP
-                        (45-55%
-                         fail rate)
-              │
-              ▼
-       ┌──────────────────────┐
-       │ RISK-REWARD CHECK    │
-       │ Can achieve 1:2 RR   │
-       │ with reasonable stop?│
-       └──┬──────────────┬────┘
-          │              │
-         YES             NO
-          │              │
-          ▼              ▼
-     Continue        ❌ SKIP
-                    (Target too
-                     close)
-          │
-          ▼
-   ┌──────────────────────┐
-   │ MARKET CONDITIONS    │
-   │ - NOT <3% range?     │
-   │ - NO news in 6hrs?   │
-   └──┬──────────────┬────┘
-      │              │
-    BOTH YES       EITHER NO
-      │              │
-      ▼              ▼
-  Continue        ❌ SKIP
-                 (Bad conditions)
-      │
-      ▼
+           ▼        ▼
+    ┌──────────────────────┐
+    │ Check CONFLUENCE     │
+    │ - Janus level <1%?   │
+    │ - Volume >1.5x avg?  │
+    │ - Pilot Line dist?   │
+    └──┬──────────────┬────┘
+       │              │
+    2+ YES        <2 YES
+       │              │
+       ▼              ▼
+    Continue      ⚠️ MEDIUM
+                  (Consider
+                   skipping)
+       │
+       ▼
+┌──────────────────────┐
+│ HIGHER TIMEFRAME     │
+│ ALIGNMENT CHECK      │
+│ Daily trend matches? │
+└──┬──────────────┬────┘
+   │              │
+  YES             NO
+   │              │
+   ▼              ▼
+Continue        ❌ SKIP
+               (Counter-
+                trend)
+   │
+   ▼
+┌──────────────────────┐
+│ RISK-REWARD CHECK    │
+│ Can achieve 1:2 RR   │
+│ with reasonable stop?│
+└──┬──────────────┬────┘
+   │              │
+  YES             NO
+   │              │
+   ▼              ▼
+Continue        ❌ SKIP
+               (Poor R:R)
+   │
+   ▼
+┌──────────────────────┐
+│ BAR CLOSE CONFIRMED? │
+│ (Not mid-bar)        │
+└──┬──────────────┬────┘
+   │              │
+  YES             NO
+   │              │
+   ▼              ▼
+Continue        ❌ WAIT
+               (Bar must
+                close)
+   │
+   ▼
 ┌──────────────────────┐
 │ PORTFOLIO RISK CHECK │
 │ - <3 open positions? │
@@ -567,12 +575,12 @@
                         <div style="background: rgba(0,0,0,0.2); padding: 1.5rem; border-radius: 8px; font-family: var(--md-code-font);">
                             <p><strong>Trade #_____ (Date: ______) Signal Type: _______</strong></p>
                             <ul style="list-style: none; padding-left: 0;">
-                                <li>☐ <strong>Signal type identified</strong> (TD 9, TD 13, IGN, Perfection)</li>
+                                <li>☐ <strong>Signal type identified</strong> (TD, IGN, WRN, CAP, or BDN)</li>
                                 <li>☐ <strong>Bar closed</strong> (not trading mid-bar)</li>
-                                <li>☐ <strong>Price flip confirmed</strong> (next candle closes opposite direction)</li>
-                                <li>☐ <strong>Trend context checked</strong> (near support/resistance, not mid-chop)</li>
+                                <li>☐ <strong>4 layers confirmed</strong> (regime + distance + momentum + close)</li>
                                 <li>☐ <strong>Higher TF aligned</strong> (check one timeframe up)</li>
-                                <li>☐ <strong>Stop placed beyond extreme</strong> (below TD 9 low, above TD 9 high)</li>
+                                <li>☐ <strong>Confluence present</strong> (Janus level, volume, or Pilot Line distance)</li>
+                                <li>☐ <strong>Stop placed correctly</strong> (beyond signal candle extreme)</li>
                                 <li>☐ <strong>Position sized correctly</strong> (max 1% risk)</li>
                                 <li>☐ <strong>Not revenge trading</strong> (not entering to recover from previous loss)</li>
                             </ul>
@@ -580,13 +588,13 @@
 
                         <hr style="margin: 1.5rem 0; opacity: 0.2;">
 
-                        <p><strong>After Your First 3 TD Signals, Review:</strong></p>
+                        <p><strong>After Your First 10 Pentarch Signals, Review:</strong></p>
                         <ul>
                             <li>Did I wait for bar close on all trades? <strong>Y / N</strong></li>
-                            <li>Did I wait for price flip confirmation? <strong>Y / N</strong></li>
-                            <li>Win rate so far: <strong>___/3</strong></li>
+                            <li>Did I check 4-layer confirmation? <strong>Y / N</strong></li>
+                            <li>Win rate so far: <strong>___/10</strong></li>
                             <li>Did I abandon system after losses? <strong>Y / N</strong></li>
-                            <li>Which signal type worked best? <strong>___________</strong></li>
+                            <li>Which event type worked best? <strong>___________</strong></li>
                         </ul>
 
                         <p style="margin-bottom: 0;"><strong>Emotional Recovery Protocol:</strong> After 3 consecutive losses (happens every 15-16 trades at 60% win rate), take a 24-hour break. Review your last 10 trades against this checklist. If checklist compliance was 90%+, trust the process. If compliance was <70%, fix process before resuming.</p>
@@ -598,9 +606,9 @@
 
                     <div class="mistake-box">
                         <h3>Mistake #1: Not Waiting for Bar Close ⚠️ CRITICAL</h3>
-                        <p><strong>What Happens:</strong> You see TD 9 forming mid-bar at 2:30 PM on a 1-hour chart. You enter immediately at $50. By 3:00 PM bar close, conditions no longer met. TD 9 doesn't appear. You're in a trade with no actual signal.</p>
+                        <p><strong>What Happens:</strong> You see a potential IGN signal forming mid-bar at 2:30 PM on a 1-hour chart. You enter immediately at $50. By 3:00 PM bar close, conditions no longer met. IGN doesn't appear. You're in a trade with no actual signal.</p>
 
-                        <p><strong>Why Wrong:</strong> Signals confirm at bar CLOSE, not intra-bar. What looks like TD 9 at 50% bar completion can disappear by 100% completion. Entry before bar close = guessing, not signal-based trading.</p>
+                        <p><strong>Why Wrong:</strong> Pentarch requires ALL 4 layers to confirm at bar CLOSE. What looks like a signal at 50% bar completion can disappear by 100% completion. Entry before bar close = guessing, not signal-based trading.</p>
 
                         <p><strong>The Fix:</strong></p>
                         <ul>
@@ -613,55 +621,56 @@
                     </div>
 
                     <div class="mistake-box">
-                        <h3>Mistake #2: Using Sub-15-Minute Timeframes (The Noise Trap)</h3>
-                        <p><strong>What Happens:</strong> You trade 5-minute charts to "get more signals." You're getting 20 signals per day, but 80% are whipsaws resulting in constant losses. You're exhausted and losing money.</p>
+                        <h3>Mistake #2: Confusing Pentarch with TD Sequential</h3>
+                        <p><strong>What Happens:</strong> You're waiting for "TD 9" or "TD 13" counts. You're looking for 9-day or 13-day exhaustion patterns. You're confused why the indicator isn't showing these numbers.</p>
 
-                        <p><strong>Why Wrong:</strong> Pentarch cycle detection requires minimum data quality. Sub-15M timeframes have excessive noise and false signals. Detection layers don't function reliably on very short timeframes.</p>
+                        <p><strong>Why Wrong:</strong> Pentarch is NOT TD Sequential. It doesn't count candles (9, 13). Instead, it uses a 4-layer detection system to identify 5 cycle phase events: TD (accumulation), IGN (markup), WRN (distribution), CAP (climax), BDN (decline).</p>
 
                         <p><strong>The Fix:</strong></p>
                         <ul>
-                            <li>Minimum timeframe: <strong>15 minutes</strong></li>
-                            <li>Recommended: <strong>1H, 4H, Daily</strong></li>
-                            <li>For beginners: <strong>Daily only</strong> (clearest patterns, fewest false signals)</li>
-                            <li>Remember: More signals ≠ more profit (quality > quantity)</li>
+                            <li>Stop looking for TD 9 and TD 13 counts</li>
+                            <li>Learn the 5 cycle events: TD, IGN, WRN, CAP, BDN</li>
+                            <li>Understand each event represents a market cycle phase, not a candle count</li>
+                            <li>Focus on the 4-layer detection system (regime + distance + momentum + close)</li>
                         </ul>
                     </div>
 
                     <div class="mistake-box">
-                        <h3>Mistake #3: Overloading Chart with All 7 Indicators (Visual Chaos)</h3>
-                        <p><strong>What Happens:</strong> You have Pentarch + Omnideck + Harmonic + Janus + Volume + Plutus + Augury all on one chart. You can't see price action anymore. Contradicting signals everywhere. Analysis paralysis sets in. You can't make decisions.</p>
+                        <h3>Mistake #3: Ignoring Higher Timeframe Context</h3>
+                        <p><strong>What Happens:</strong> IGN signal appears on 15-minute chart. You enter long immediately. But Daily chart shows strong downtrend. Trade fails as price continues lower despite 15m signal.</p>
 
-                        <p><strong>Why Wrong:</strong> Visual clutter prevents clear decision-making. Contradicting signals from 7 sources make it impossible to act. Redundant information (Pentarch and Omnideck both show TD). Human brain can process 3-5 variables effectively, not 7-10.</p>
+                        <p><strong>Why Wrong:</strong> Cycle events are more reliable when aligned with higher timeframe trend. Counter-trend signals have significantly lower success rate (45-55% vs 65-75% aligned).</p>
 
-                        <p><strong>The Fix - "The Trinity" (3 Indicators Maximum):</strong></p>
+                        <p><strong>The Fix - Required Timeframe Checks:</strong></p>
                         <ul>
-                            <li><strong>Pentarch:</strong> Signal generation and timing</li>
-                            <li><strong>Janus Atlas:</strong> Entry levels (support/resistance)</li>
-                            <li><strong>Volume Oracle:</strong> Institutional confirmation</li>
+                            <li><strong>15m chart:</strong> Check 1H trend alignment</li>
+                            <li><strong>1H chart:</strong> Check 4H or Daily trend alignment</li>
+                            <li><strong>4H chart:</strong> Check Daily or Weekly trend alignment</li>
+                            <li><strong>Daily chart:</strong> Check Weekly trend alignment</li>
                         </ul>
-                        <p>Remove all other indicators from your chart. <strong>Simplicity = Clarity = Better decisions.</strong></p>
+                        <p>If higher TF shows opposite trend, either skip trade or reduce position size to 0.5% risk.</p>
                     </div>
 
                     <div class="mistake-box">
-                        <h3>Mistake #4: Trading TD Alone Without Confluence (40-45% Fail Rate)</h3>
-                        <p><strong>What Happens:</strong> TD 9 Buy appears. You enter immediately without checking anything else. No Janus level check. No volume check. No higher timeframe check. Trade fails 40-45% of the time.</p>
+                        <h3>Mistake #4: Trading Without Confluence (Lower Win Rate)</h3>
+                        <p><strong>What Happens:</strong> TD signal appears. You enter immediately without checking anything else. No Janus level check. No volume check. No Pilot Line distance verification. Trade fails more often than expected.</p>
 
-                        <p><strong>Why Wrong:</strong> TD alone has moderate success rate. Confluence dramatically improves probability. Trading without filters = accepting preventable losses.</p>
+                        <p><strong>Why Wrong:</strong> Single-layer signals have moderate success rate. Confluence dramatically improves probability. Trading without filters = accepting preventable losses.</p>
 
                         <p><strong>The Fix - Required Confluence Checks:</strong></p>
                         <ol>
                             <li><strong>Janus Level Within 1%:</strong> Is there support/resistance within 1% of current price?</li>
                             <li><strong>Volume >1.5x Average:</strong> Is volume confirming the move?</li>
-                            <li><strong>Higher Timeframe Aligned:</strong> Does Daily trend match your trade direction?</li>
+                            <li><strong>Pilot Line Distance:</strong> Is price significantly extended from Pilot Line?</li>
                         </ol>
-                        <p>If 2+ of these confirm, probability improves to 65-70%. If all 3 confirm, probability improves to 75-80%.</p>
+                        <p>If 2+ of these confirm, probability improves significantly. If all 3 confirm, highest-probability setup.</p>
                     </div>
 
                     <div class="mistake-box">
                         <h3>Mistake #5: Ignoring Risk Management (The Account Killer)</h3>
-                        <p><strong>What Happens:</strong> TD Perfection Buy appears (high probability signal). You think "This can't lose!" and risk 5% instead of your normal 1%. Trade fails. You lose 5% on a single trade. Emotional damage is severe. You're now trading scared.</p>
+                        <p><strong>What Happens:</strong> CAP signal appears (strong signal). You think "This can't lose!" and risk 5% instead of your normal 1%. Trade fails. You lose 5% on a single trade. Emotional damage is severe. You're now trading scared.</p>
 
-                        <p><strong>Why Wrong:</strong> NO signal is guaranteed, not even TD Perfection. Risk management protects you from the inevitable losses. Violating risk rules = gambling, not trading.</p>
+                        <p><strong>Why Wrong:</strong> NO signal is guaranteed, not even CAP or IGN. Risk management protects you from the inevitable losses. Violating risk rules = gambling, not trading.</p>
 
                         <p><strong>The Fix - Non-Negotiable Risk Rules:</strong></p>
                         <ul>
@@ -680,35 +689,35 @@
                     <div class="info-box">
                         <h3 style="margin-top: 0;">Quick Answers to Common Confusion</h3>
 
-                        <p><strong>Q1: TD 9 appeared. Should I enter immediately?</strong><br>
-                        A: No. Wait for: (1) Bar to close, (2) Next bar's price flip confirmation. TD 9 can continue to 13 before reversing.</p>
+                        <p><strong>Q1: TD signal appeared. Should I enter immediately?</strong><br>
+                        A: No. Wait for: (1) Bar to close, (2) Check confluence (Janus level, volume), (3) Verify higher TF alignment. TD shows accumulation phase, not guaranteed reversal.</p>
 
-                        <p><strong>Q2: What's the difference between TD 9 and TD 13?</strong><br>
-                        A: TD 9 = initial exhaustion. TD 13 = extreme exhaustion (stronger signal). If TD 9 doesn't reverse, it may continue to 13.</p>
+                        <p><strong>Q2: What's the difference between TD and IGN?</strong><br>
+                        A: TD = Accumulation phase (downside exhaustion, oversold). IGN = Markup phase (bullish momentum beginning, structure shift). TD often precedes IGN in full cycle pattern.</p>
 
                         <p><strong>Q3: I had 3 losses in a row. Should I stop using Pentarch?</strong><br>
                         A: No. At 60% win rate (excellent), you'll see 3 consecutive losses every 15-16 trades. It's probability, not system failure.</p>
 
-                        <p><strong>Q4: Can I trade TD 9 in choppy consolidation?</strong><br>
-                        A: Not recommended. Best signals occur after extended trends (8+ bars same direction) near support/resistance. Skip choppy ranges.</p>
+                        <p><strong>Q4: Can I trade TD in choppy consolidation?</strong><br>
+                        A: Not recommended. Best signals occur after extended moves with clear trend. Skip choppy ranges. Wait for defined accumulation/distribution phases.</p>
 
-                        <p><strong>Q5: What if TD 9 appears but no price flip occurs?</strong><br>
-                        A: Skip the trade. Price flip = confirmation that reversal is actually happening. No flip = cycle exhaustion without reversal (yet).</p>
+                        <p><strong>Q5: How do I know if all 4 layers confirmed?</strong><br>
+                        A: If the signal appears on your chart at bar close, all 4 layers confirmed. Pentarch doesn't show signals unless all layers align—that's the built-in validation.</p>
 
-                        <p><strong>Q6: How long should I wait for price flip?</strong><br>
-                        A: Usually 1-2 bars. If 3+ bars pass with no flip, signal weakening. Don't wait forever—move on to next setup.</p>
+                        <p><strong>Q6: What timeframes work best for Pentarch?</strong><br>
+                        A: All timeframes from 15m to Daily work. For beginners: Daily/4H charts (clearest patterns, fewest false signals). Advanced: 1H/15m (more signals, requires stricter filtering).</p>
 
-                        <p><strong>Q7: Can I use Pentarch on 5-minute charts?</strong><br>
-                        A: Yes, but expect more false signals. Daily/4H charts are most reliable. Lower timeframes = more noise.</p>
+                        <p><strong>Q7: Can Pentarch predict exact tops and bottoms?</strong><br>
+                        A: No indicator predicts exact tops/bottoms. Pentarch identifies cycle PHASES (accumulation, markup, distribution, climax, decline). Use for phase awareness, not pinpoint prediction.</p>
 
-                        <p><strong>Q8: What's an IGN signal?</strong><br>
-                        A: IGN (Ignition Signal) = high-conviction markup phase signal showing institutional money flow alignment with bullish cycle shift. Stronger than regular TD signal.</p>
+                        <p><strong>Q8: Should I trade every signal I see?</strong><br>
+                        A: No. Filter for: (1) Bar close confirmation, (2) Higher TF alignment, (3) Confluence (Janus/Volume), (4) Good R:R ratio. Skip 40-50% of signals.</p>
 
-                        <p><strong>Q9: Should I trade every TD 9 I see?</strong><br>
-                        A: No. Filter for: (1) Price flip confirmation, (2) Near support/resistance, (3) Higher TF alignment. Skip 50-60% of TD 9s.</p>
+                        <p><strong>Q9: Why did IGN fail to produce a rally?</strong><br>
+                        A: IGN shows markup phase CONDITIONS met. External factors (news, higher TF resistance, low volume) can override. Always check confluence and context.</p>
 
                         <p><strong>Q10: My Pentarch win rate is 45%. What's wrong?</strong><br>
-                        A: Likely: (1) Trading mid-bar (not waiting for close), (2) No price flip confirmation, (3) Trading in choppy consolidation, (4) Not checking higher TF.</p>
+                        A: Likely: (1) Trading mid-bar (not waiting for close), (2) No confluence checking, (3) Counter-trend trades (not checking higher TF), (4) Poor R:R ratio (targets too close).</p>
                     </div>
 
                     <div class="visual-divider">📄</div>
@@ -718,63 +727,64 @@
                     <div class="decision-tree" style="background: rgba(6, 182, 212, 0.05); border: 2px solid #6495ed;">
 <pre style="font-size: 0.9em; line-height: 1.6;">
 ┌────────────────────────────────────────────────────────────────┐
-│              PENTARCH (TD SEQUENTIAL) QUICK REFERENCE           │
+│              PENTARCH (5 CYCLE EVENTS) QUICK REFERENCE          │
 │                    (Save or Print This)                        │
 ├────────────────────────────────────────────────────────────────┤
 │                                                                │
-│  📊 SIGNAL HIERARCHY (Strength Order):                         │
-│     1. TD Perfection (rarest, strongest)                      │
-│     2. IGN (Institutional Signal, high conviction)            │
-│     3. TD 13 (extreme exhaustion)                             │
-│     4. TD 9 (initial exhaustion - most common)                │
+│  📊 THE 5 CYCLE EVENTS:                                        │
+│     🟣 TD (Touchdown) = Accumulation phase                     │
+│     🩵 IGN (Ignition) = Markup phase                           │
+│     🟡 WRN (Warning) = Distribution phase                      │
+│     🟠 CAP (Climax) = Climax phase                             │
+│     🔴 BDN (Breakdown) = Decline phase                         │
 │                                                                │
-│  ✅ GOOD TD 9 SETUP:                                           │
+│  ✅ GOOD PENTARCH SETUP:                                       │
 │     • Bar closed (not mid-bar)                                │
-│     • Price flip confirmed (next candle opposite direction)   │
-│     • Near support/resistance                                 │
-│     • After extended move (8+ bars same direction)            │
+│     • 4 layers confirmed (regime+distance+momentum+close)     │
 │     • Higher TF aligned                                       │
+│     • Confluence present (Janus level, volume, or distance)   │
+│     • Good R:R ratio (minimum 1:2)                            │
 │                                                                │
-│  ❌ SKIP TD 9 IF:                                              │
+│  ❌ SKIP SIGNAL IF:                                            │
 │     • Mid-bar (bar hasn't closed yet)                         │
-│     • No price flip (next candle continues same direction)    │
-│     • Middle of choppy consolidation                          │
-│     • Against higher TF trend                                 │
+│     • Counter higher TF trend                                 │
+│     • No confluence (weak isolated signal)                    │
+│     • Poor R:R (target too close, stop too wide)              │
 │                                                                │
 │  📍 ENTRY & STOP:                                              │
-│     Entry: After price flip bar closes                        │
-│     Stop: Beyond TD 9 extreme (below low, above high)         │
-│     Example: TD 9 Buy at $50, low $48 → Stop $47.50          │
+│     Entry: After bar close confirmation                       │
+│     Stop: Beyond signal candle extreme                        │
+│     Example: TD at $50, low $48 → Stop $47.50                │
 │                                                                │
 │  ⏱️ TIMING:                                                     │
 │     • Wait for bar close (CRITICAL)                           │
-│     • Wait 1-2 bars for price flip                            │
+│     • All 4 layers must confirm simultaneously                │
 │     • Don't front-run (patience beats prediction)             │
 │                                                                │
-│  🎓 THE 3-2-1 RULE:                                            │
-│     3 Always Check: Signal type, Price flip, Context          │
-│     2 Never Do: Trade mid-bar, Abandon after 3 losses         │
-│     1 Golden Rule: TD shows exhaustion, flip shows reversal   │
+│  🎓 THE 5-4-3 RULE:                                            │
+│     5 Events: TD, IGN, WRN, CAP, BDN                          │
+│     4 Layers: Regime, Distance, Momentum, Close               │
+│     3 Never: Mid-bar, Abandon after losses, Ignore HTF        │
 │                                                                │
 │  📈 WIN RATE REALITY:                                          │
-│     • 60% win rate = EXCELLENT for Pentarch signals           │
+│     • 55-65% win rate = EXCELLENT for Pentarch                │
 │     • 3 consecutive losses every ~16 trades (probability)     │
 │     • Don't abandon system after bad streak                   │
 │     • Track 50+ trades before evaluating performance          │
 │                                                                │
 │  🧠 EMOTIONAL RECOVERY AFTER LOSSES:                           │
 │     After 3 straight losses:                                  │
-│     1. Take 24-hour break                                     │
+│     1. Take 48-hour break                                     │
 │     2. Review last 10 trades vs checklist                     │
 │     3. If checklist compliance >90%, trust process            │
 │     4. If compliance <70%, fix process first                  │
-│     5. Resume trading (it's probability, not system)          │
+│     5. Resume trading with 0.5% risk for 3 trades             │
 │                                                                │
 │  💡 KEY INSIGHT:                                               │
-│     TD 9 = "9-day cycle complete"                             │
-│     NOT "Reverses tomorrow"                                   │
-│     Price flip = Actual reversal forming                      │
-│     Wait for BOTH before entering                             │
+│     Pentarch shows CYCLE PHASES, not exact reversals          │
+│     TD = "Accumulation conditions detected"                   │
+│     NOT "Bottomed and reversing tomorrow"                     │
+│     Use for phase awareness + confluence confirmation         │
 │                                                                │
 └────────────────────────────────────────────────────────────────┘
 
@@ -791,19 +801,19 @@
 
                         <p><strong>📅 Week 1: Recognition Phase</strong></p>
                         <ul>
-                            <li>✅ You can identify TD 9, TD 13, IGN signals</li>
+                            <li>✅ You can identify TD, IGN, WRN, CAP, BDN signals</li>
+                            <li>✅ You understand the 5 cycle phases (accumulation → decline)</li>
                             <li>✅ You wait for bar close (not trading mid-bar)</li>
-                            <li>✅ You wait for price flip before entering</li>
-                            <li>✅ You understand 60% win rate means 3 losses happen</li>
-                            <li>✅ You check trend context before every trade</li>
+                            <li>✅ You understand 4-layer detection system</li>
+                            <li>✅ You know 60% win rate means 3 losses happen normally</li>
                         </ul>
 
                         <p><strong>📅 Week 2-4: Execution Phase</strong></p>
                         <ul>
-                            <li>✅ You automatically wait for bar close + price flip</li>
-                            <li>✅ You're comfortable skipping 50%+ of TD 9 signals</li>
+                            <li>✅ You automatically wait for bar close before entry</li>
+                            <li>✅ You check higher TF alignment before every trade</li>
+                            <li>✅ You're comfortable skipping 40-50% of signals (filtering)</li>
                             <li>✅ You don't abandon system after 2-3 losses</li>
-                            <li>✅ Stop placement is consistent (beyond extremes)</li>
                             <li>✅ You're tracking win rate over 20+ trades (not 5 trades)</li>
                         </ul>
 
@@ -811,9 +821,10 @@
                         <ul>
                             <li>✅ Win rate stabilizing around 55-65%</li>
                             <li>✅ You understand probability (3 losses in 16 trades is normal)</li>
-                            <li>✅ You're combining Pentarch with other indicators (Janus, Volume, Harmonic)</li>
-                            <li>✅ You can differentiate high-quality vs low-quality TD 9s</li>
+                            <li>✅ You're combining Pentarch with Janus, Volume, Harmonic for confluence</li>
+                            <li>✅ You can differentiate high-quality vs low-quality signals</li>
                             <li>✅ Emotional recovery after losses takes <24 hours</li>
+                            <li>✅ You recognize full cycle patterns (TD → IGN → WRN → CAP → BDN)</li>
                         </ul>
 
                         <hr style="margin: 1.5rem 0; opacity: 0.2;">
@@ -822,12 +833,13 @@
                         <ul>
                             <li>❌ You're trading mid-bar regularly</li>
                             <li>❌ You abandoned Pentarch after 3-5 losses</li>
-                            <li>❌ You're not waiting for price flip confirmation</li>
-                            <li>❌ You're trading every TD 9 you see (not filtering)</li>
+                            <li>❌ You're still looking for "TD 9" or "TD 13" counts</li>
+                            <li>❌ You're not checking higher TF alignment</li>
+                            <li>❌ You're trading every signal without filtering</li>
                             <li>❌ Win rate below 45% after 50+ trades</li>
                         </ul>
 
-                        <p style="margin-bottom: 0;"><strong>Remember:</strong> Pentarch is a 5-event cycle system. It shows when trends are exhausted, not when they'll reverse. Price flip confirmation is mandatory—it's the difference between "cycle complete" and "reversal happening." Three consecutive losses are statistically normal at 60% win rate. Trust the process, track 50+ trades, and let probability work in your favor over time.</p>
+                        <p style="margin-bottom: 0;"><strong>Remember:</strong> Pentarch is a 5-event cycle detection system using 4-layer validation. It identifies market phases (accumulation, markup, distribution, climax, decline), not exact reversals. Wait for bar close confirmation—all 4 layers must align. Three consecutive losses are statistically normal at 60% win rate. Trust the process, filter for confluence, track 50+ trades, and let probability work in your favor over time.</p>
                     </div>
 
                     <div class="visual-divider">🔗</div>
@@ -837,22 +849,23 @@
                     <div class="pairing-section">
                         <h3>🎯 High Synergy Combinations ("The Trinity")</h3>
                         <ul>
-                            <li><strong>+ Janus Atlas:</strong> Pentarch cycle signals + level clusters = precise timing at key support/resistance. You know WHEN cycles turn (Pentarch) and WHERE price may react (Janus).</li>
-                            <li><strong>+ Volume Oracle:</strong> TD signals + institutional flow = volume-confirmed cycle reversals. Ensure institutions are participating (Volume) when cycles complete (Pentarch).</li>
-                            <li><strong>+ Harmonic Oscillator:</strong> TD signals + oscillator consensus = cycle + momentum alignment. Both cycle exhaustion AND momentum divergence = high-probability reversal.</li>
+                            <li><strong>+ Janus Atlas:</strong> Pentarch cycle events + level clusters = precise timing at key support/resistance. You know WHICH phase you're in (Pentarch) and WHERE price may react (Janus).</li>
+                            <li><strong>+ Volume Oracle:</strong> Pentarch signals + institutional flow = volume-confirmed cycle phase transitions. Ensure institutions are participating (Volume) when cycles shift (Pentarch).</li>
+                            <li><strong>+ Harmonic Oscillator:</strong> Pentarch events + oscillator consensus = cycle phase + momentum alignment. Both phase shift AND momentum confirmation = high-probability setup.</li>
                         </ul>
 
                         <h3>🎲 Common Trading Combinations</h3>
                         <ul>
-                            <li><strong>Pentarch TD 9 Buy + Janus support cluster</strong> → Reversal signal at tested level with cycle confirmation</li>
-                            <li><strong>Pentarch TD 13 Sell + Volume Oracle Flow red</strong> → Distribution signal with institutional exit confirmation</li>
-                            <li><strong>Pentarch TDST break + Harmonic oversold</strong> → Breakout timing with momentum exhaustion reversal</li>
+                            <li><strong>Pentarch TD + Janus support cluster</strong> → Accumulation phase signal at tested level</li>
+                            <li><strong>Pentarch WRN + Volume Oracle Flow red</strong> → Distribution phase with institutional exit confirmation</li>
+                            <li><strong>Pentarch IGN + Harmonic bullish consensus</strong> → Markup phase with momentum confirmation</li>
+                            <li><strong>Pentarch CAP + Janus resistance cluster</strong> → Climax phase at key resistance zone</li>
                         </ul>
 
                         <h3>💡 Why These Pair Well</h3>
-                        <p><strong>Pentarch provides deep 5-event cycle analysis (WHEN cycles turn).</strong> Janus adds WHERE price may react (levels). Volume Oracle confirms WHO is acting (institutions). Harmonic confirms momentum state.</p>
+                        <p><strong>Pentarch provides cycle phase identification (WHEN and WHICH phase).</strong> Janus adds WHERE price may react (levels). Volume Oracle confirms WHO is acting (institutions). Harmonic confirms momentum state.</p>
 
-                        <p>Combining cycle timing (Pentarch) with levels (Janus), volume (Volume Oracle), and momentum (Harmonic) creates the highest-probability setups: <strong>the right timing, at the right price, with the right participants, at the right momentum state.</strong></p>
+                        <p>Combining cycle phases (Pentarch) with levels (Janus), volume (Volume Oracle), and momentum (Harmonic) creates the highest-probability setups: <strong>the right phase, at the right price, with the right participants, at the right momentum state.</strong></p>
                     </div>
 
                     <hr />
