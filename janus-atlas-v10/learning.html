@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Janus Atlas v1.0 - Advanced Learning Guide - Signal Pilot</title>
+    <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+    <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <meta name="theme-color" content="#f59e0b">
+    <style>
+        body {
+            background: #1a1d2e;
+            color: #e0e0e0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+        .learning-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            padding: 10px 20px;
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid #f59e0b;
+            border-radius: 8px;
+            color: #f59e0b;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .back-link:hover {
+            background: rgba(245, 158, 11, 0.2);
+            transform: translateX(-4px);
+        }
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #f59e0b 0%, #06b6d4 100%);
+            border-radius: 16px;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 40px rgba(245, 158, 11, 0.3);
+        }
+        .hero h1 {
+            color: white;
+            font-size: 42px;
+            margin: 0 0 16px 0;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .hero p {
+            color: rgba(255,255,255,0.95);
+            font-size: 18px;
+            margin: 0;
+        }
+        h2 {
+            color: #f59e0b;
+            font-size: 32px;
+            margin: 60px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f59e0b;
+        }
+        h3 {
+            color: #fbbf24;
+            font-size: 24px;
+            margin: 40px 0 16px 0;
+        }
+        strong {
+            color: #fcd34d;
+        }
+        .challenge-box {
+            background: rgba(245, 158, 11, 0.05);
+            border-left: 4px solid #f59e0b;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+        .challenge-box:hover {
+            background: rgba(245, 158, 11, 0.08);
+            transform: translateX(4px);
+        }
+        .mistake-box {
+            background: rgba(239, 68, 68, 0.05);
+            border-left: 4px solid #ef4444;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+        .mistake-box:hover {
+            background: rgba(239, 68, 68, 0.08);
+            transform: translateX(4px);
+        }
+        .decision-tree {
+            background: #0f111a;
+            padding: 30px;
+            border-radius: 12px;
+            font-family: monospace;
+            font-size: 14px;
+            line-height: 1.4;
+            overflow-x: auto;
+            margin: 20px 0;
+            border: 2px solid rgba(245, 158, 11, 0.2);
+        }
+        .quick-rules {
+            background: rgba(6, 182, 212, 0.1);
+            border-left: 4px solid #06b6d4;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .quick-rules ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .pairing-section {
+            background: rgba(6, 182, 212, 0.05);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+        .pairing-section h3 {
+            color: #06b6d4;
+            margin-top: 0;
+        }
+        .visual-divider {
+            text-align: center;
+            margin: 50px 0;
+            font-size: 32px;
+            opacity: 0.3;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid rgba(245, 158, 11, 0.2);
+            margin: 40px 0;
+        }
+        .intro-box {
+            background: rgba(6, 182, 212, 0.1);
+            border: 2px solid #06b6d4;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 40px;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="learning-container">
+        <a href="index.html" class="back-link">← Back to Janus Atlas Documentation</a>
+
+        <div class="hero">
+            <div style="font-size: 64px; margin-bottom: 20px;">🏛️</div>
+            <h1>Janus Atlas v1.0<br/>Advanced Learning Guide</h1>
+            <p>Master the Art of Level Trading • Psychology • Decision Trees • Common Mistakes</p>
+        </div>
+
+        <div class="intro-box">
+            <strong>🎯 Why Most Traders Fail at Level Trading:</strong> They trade every level touch, ignore test counts, and fight higher timeframe trends. This guide teaches you to identify <em>which</em> levels matter, <em>when</em> to trade them, and <em>how</em> to avoid the psychological traps that destroy level-based strategies.
+        </div>
+
+        <h2>🧠 Level Trading Psychology: The 3 Critical Challenges</h2>
+
+        <div class="challenge-box">
+            <h3>💥 Challenge 1: "This Level Has Held 5 Times Before" Trap</h3>
+            <p><strong>What Happens:</strong> You see a support level that's been tested and held 5 times. You think "This is super strong—it's held 5 times!" You buy the 6th test. Price immediately breaks through, stops you out, and never looks back.</p>
+
+            <p><strong>Why This Happens:</strong> You're confusing <em>past strength</em> with <em>current strength</em>. Each test weakens a level like cracks forming in ice. The 6th test is often the breaking point.</p>
+
+            <p><strong>The Fix:</strong> Fresh levels (1-2 tests) hold better than over-tested levels (4+ tests). After 4 tests, wait for the break and trade the <strong>retest</strong> instead of the bounce.</p>
+
+            <p><strong>Mental Script:</strong> <em>"4+ tests = likely to break soon. I'll wait for the break and trade the retest, not the bounce."</em></p>
+        </div>
+
+        <div class="challenge-box">
+            <h3>⚔️ Challenge 2: Fighting the Higher Timeframe Trend</h3>
+            <p><strong>What Happens:</strong> You short 15-minute resistance at $50 because it's been resistance 3 times today. Price blasts through to $52, stops you out. You check the Daily chart <em>after</em> the loss: strong uptrend. Your 15M resistance was just a minor pause in a larger uptrend.</p>
+
+            <p><strong>Why This Happens:</strong> You're zoomed in so far that you can't see the forest for the trees. Lower timeframe levels are speed bumps, not roadblocks, when they oppose higher TF trends.</p>
+
+            <p><strong>The Fix:</strong> Check one timeframe higher before EVERY level trade. Only trade levels that align with higher TF trend direction. If 15M resistance is against Daily uptrend, skip it.</p>
+
+            <p><strong>Mental Script:</strong> <em>"Is this level trade with or against the higher TF? If against, skip it—I'm fighting the current."</em></p>
+        </div>
+
+        <div class="challenge-box">
+            <h3>🎯 Challenge 3: Isolated Levels vs Cluster Confusion</h3>
+            <p><strong>What Happens:</strong> You trade a single Fibonacci level at $50 because "Fib levels are powerful." It fails. You skip a cluster of 3 levels at $51 (pivot + VWAP + session high) because "too many lines means confusion." The cluster holds perfectly.</p>
+
+            <p><strong>Why This Happens:</strong> You're prioritizing <em>level type</em> (Fibonacci) over <em>level confluence</em> (clustering). The market doesn't care about your preferred indicator—it responds to zones where multiple levels converge.</p>
+
+            <p><strong>The Fix:</strong> Cluster strength matters more than level type. A cluster of 3 "weak" pivot levels is stronger than 1 isolated "powerful" Fib level.</p>
+
+            <p><strong>Mental Script:</strong> <em>"How many levels are clustered here? If just one, I need other confirmation. If 3+, that's strong confluence."</em></p>
+        </div>
+
+        <div class="visual-divider">⚡</div>
+
+        <h2>🌳 Decision Tree: Should I Trade This Level?</h2>
+
+        <div class="decision-tree">
+<pre>┌──────────────────────────────┐
+│  PRICE APPROACHING LEVEL     │
+└──────────┬───────────────────┘
+           │
+           ▼
+    ┌──────────────┐
+    │ Is it part  │
+    │ of a cluster│
+    │ (2+ levels)?│
+    └──┬───────┬──┘
+       │       │
+      NO      YES
+       │       │
+       ▼       ▼
+    ❌ SKIP  Continue
+                │
+                ▼
+         ┌──────────────┐
+         │ How many     │
+         │ times tested?│
+         └──┬───────┬───┘
+            │       │
+          4+      <4
+            │       │
+            ▼       ▼
+         ❌ SKIP  Continue
+                    │
+                    ▼
+             ┌──────────────┐
+             │ Higher TF    │
+             │ trend aligns?│
+             └──┬───────┬───┘
+                │       │
+               NO      YES
+                │       │
+                ▼       ▼
+             ❌ SKIP  Continue
+                        │
+                        ▼
+                 ┌──────────────┐
+                 │ Can achieve  │
+                 │ 2:1 R:R?     │
+                 └──┬───────┬───┘
+                    │       │
+                   NO      YES
+                    │       │
+                    ▼       ▼
+                 ❌ SKIP  ✅ TAKE</pre>
+        </div>
+
+        <div class="quick-rules">
+            <strong>⚡ Quick Rules for Level Trades:</strong>
+            <ul>
+                <li><strong>Cluster required:</strong> Minimum 2 levels within 1% of each other</li>
+                <li><strong>Test count matters:</strong> Fresh (1-3 tests) = good, Over-tested (4+) = wait for break</li>
+                <li><strong>Higher TF alignment:</strong> Check one TF higher, must align with trend</li>
+                <li><strong>R:R check:</strong> Must achieve 2:1 minimum with stop placed <em>beyond</em> the level</li>
+            </ul>
+        </div>
+
+        <div class="visual-divider">🚫</div>
+
+        <h2>🚫 Top 5 Mistakes That Kill Level Traders</h2>
+
+        <div class="mistake-box">
+            <h3>Mistake #1: Trading Every Level Touch</h3>
+            <p><strong>What Happens:</strong> You enable 10+ level types (Fibs, pivots, VWAP, session levels, weekly levels, monthly levels...). Your chart looks like a electrical wiring diagram. Price touches a level every few bars. You take every touch as a signal. Result: 20-30 trades per week, most lose, you're exhausted and broke.</p>
+
+            <p><strong>The Fix:</strong> Level touch alone is NOT a signal. You need ALL of these:</p>
+            <ul>
+                <li>✅ Cluster (2+ levels)</li>
+                <li>✅ Fresh test (under 4 tests)</li>
+                <li>✅ Higher TF alignment</li>
+                <li>✅ 2:1 R:R possible</li>
+            </ul>
+            <p>Filter aggressively. 90% of level touches should be ignored.</p>
+        </div>
+
+        <div class="mistake-box">
+            <h3>Mistake #2: Ignoring Test Count (Trading Over-Tested Levels)</h3>
+            <p><strong>What Happens:</strong> Support at $50 has been tested 6 times. Each time it bounced. You buy the 7th test thinking "It's so strong!" It breaks through, stops you out, and drops to $48.</p>
+
+            <p><strong>The Fix:</strong> Test count is CRITICAL:</p>
+            <ul>
+                <li>🟢 <strong>1-2 tests:</strong> Fresh level, trade it</li>
+                <li>🟡 <strong>3 tests:</strong> Acceptable, use caution</li>
+                <li>🔴 <strong>4+ tests:</strong> Over-tested, wait for break then trade retest</li>
+            </ul>
+        </div>
+
+        <div class="mistake-box">
+            <h3>Mistake #3: Confusing Level Type with Level Strength</h3>
+            <p><strong>What Happens:</strong> You trade Fibonacci levels exclusively because "Fibs are powerful and based on sacred geometry." They fail repeatedly. Meanwhile, you skip pivot clusters because "pivots are just basic levels." Those pivot clusters work perfectly.</p>
+
+            <p><strong>The Truth:</strong> The market doesn't care about your indicator religion.</p>
+
+            <p><strong>The Fix:</strong> <strong>Clustering matters more than level type.</strong> 3 "weak" pivots clustered together = stronger than 1 "powerful" isolated Fib. Prioritize confluence over ideology.</p>
+        </div>
+
+        <div class="mistake-box">
+            <h3>Mistake #4: Using Levels on Wrong Timeframe</h3>
+            <p><strong>What Happens:</strong> You're scalping 5-minute charts but only have Weekly and Monthly levels enabled. They're so far away they're useless. Or you're swing trading Daily charts but Session levels are cluttering your chart with noise.</p>
+
+            <p><strong>The Fix:</strong> Match level types to trading timeframe:</p>
+            <ul>
+                <li>📊 <strong>5M-15M traders:</strong> Session levels, Daily pivots</li>
+                <li>📊 <strong>1H-4H traders:</strong> Daily levels, Weekly pivots</li>
+                <li>📊 <strong>Daily traders:</strong> Weekly levels, Monthly pivots</li>
+            </ul>
+            <p>Enable what's relevant for your timeframe. Disable everything else.</p>
+        </div>
+
+        <div class="mistake-box">
+            <h3>Mistake #5: Stop Loss AT Level Instead of BEYOND It</h3>
+            <p><strong>What Happens:</strong> Support cluster at $50. You place stop at $50. Price wicks down to $49.95, stops you out, then bounces to $51.50. The level held, but you got wicked out by $0.05.</p>
+
+            <p><strong>Why This Happens:</strong> Levels aren't laser-precise lines. They're zones. You need to give them breathing room.</p>
+
+            <p><strong>The Fix:</strong> Place stops <strong>0.2-0.5% BEYOND</strong> the cluster. This gives the level room to breathe while still protecting you if it truly breaks. If price reaches your stop zone, the level has genuinely failed.</p>
+        </div>
+
+        <div class="visual-divider">🔗</div>
+
+        <h2>🔗 Synergy: Pairing Janus Atlas with Other Indicators</h2>
+
+        <div class="pairing-section">
+            <h3>🎯 High Synergy Combinations</h3>
+            <ul>
+                <li><strong>+ Pentarch:</strong> Level clusters + TD Sequential signals = precise reversal timing at key levels. You know WHERE (Janus) and WHEN (Pentarch).</li>
+                <li><strong>+ Omnideck:</strong> Level confluence + multi-system alignment = institutional zones with technical confirmation. Multiple systems agreeing at a key level = high-probability setup.</li>
+                <li><strong>+ Volume Oracle:</strong> Support/resistance levels + volume analysis = level strength validation. See if institutions are defending or breaking the level.</li>
+            </ul>
+
+            <h3>🎲 Common Trading Combinations</h3>
+            <ul>
+                <li><strong>Janus support cluster + Pentarch TD 9 Buy</strong> → Reversal at tested level with cycle confirmation</li>
+                <li><strong>Janus resistance + Omnideck TD 13 Sell + Regime red</strong> → Multi-layer resistance confluence</li>
+                <li><strong>Janus level + Volume Oracle trapped signal</strong> → Institutional exit zones at key levels</li>
+            </ul>
+
+            <h3>💡 Why These Pair Well</h3>
+            <p>Janus Atlas identifies <strong>WHERE</strong> price may react (spatial analysis: levels and zones). Pentarch/Omnideck identify <strong>WHEN</strong> to enter (temporal analysis: timing and cycles). Volume Oracle confirms <strong>WHO</strong> is acting (participant analysis: institutions vs retail).</p>
+
+            <p>Combining spatial + temporal + participant analysis creates a complete picture: the right place, at the right time, with the right players.</p>
+        </div>
+
+        <hr />
+
+        <div style="text-align: center; padding: 40px 20px;">
+            <p style="font-size: 18px; margin-bottom: 20px;">🏛️ <strong>Ready to apply what you've learned?</strong></p>
+            <a href="index.html" class="back-link" style="font-size: 18px;">← Back to Janus Atlas Documentation</a>
+        </div>
+    </div>
+</body>
+</html>
