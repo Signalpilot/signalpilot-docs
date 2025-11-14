@@ -14,7 +14,7 @@
         title: 'Getting Started',
         items: [
           { text: 'Install & Configure', url: '/start-quick/', icon: '⚡' },
-          { text: 'Compare Indicators', url: '/start-quickstart/', icon: '🔍' },
+          { text: 'Compare Indicators', url: '/ref-comparison/', icon: '🔍' },
           { text: 'Prerequisites', url: '/start-prerequisites/', icon: '📋' },
           { text: 'Onboarding', url: '/start-onboarding/', icon: '👋' }
         ]
