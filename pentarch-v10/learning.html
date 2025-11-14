@@ -1,237 +1,196 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Pentarch v1.0 - Advanced Learning Guide - Signal Pilot</title>
+    <title>Pentarch v1.0 - Advanced Learning Guide - Signal Pilot Docs</title>
+
+    <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <meta name="theme-color" content="#dc2626">
+
+    <!-- Material for MkDocs stylesheets -->
+    <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+    <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+    <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+
+    <!-- Signal Pilot custom CSS -->
+    <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+    <link rel="stylesheet" href="../assets/brand.css">
+    <link rel="stylesheet" href="../assets/aurora.css">
+    <link rel="stylesheet" href="../assets/responsive-optimization.css">
+    <link rel="stylesheet" href="../assets/content-overflow-fix.css">
+
+    <!-- Learning page custom styles -->
     <style>
-        :root {
-            --md-text-font: "Roboto";
-            --md-primary-fg-color: #dc2626;
-        }
-        body {
-            font-family: "Roboto", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
-            font-size: 18px;
-            line-height: 1.7;
-            background: #1a1d2e;
-            color: #e0e0e0;
-            margin: 0;
-            padding: 0;
-        }
-        .md-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        .md-content {
-            padding: 0 20px;
-        }
+        /* Larger base font for learning content */
         .md-typeset {
-            font-size: inherit;
+            font-size: 1.125rem; /* 18px */
             line-height: 1.7;
-            background: #1a1d2e;
-            color: #e0e0e0;
-            margin: 0;
-            padding: 0;
         }
+
         .md-typeset h1 {
             font-size: 2.5em;
             font-weight: 400;
-            line-height: 1.3;
-            margin: 0.67em 0;
-            color: #ffffff;
         }
+
         .md-typeset h2 {
             font-size: 2em;
             font-weight: 400;
-            line-height: 1.4;
-            margin: 1.5em 0 0.8em 0;
             padding-bottom: 0.3em;
-            border-bottom: 2px solid var(--md-primary-fg-color);
-            color: var(--md-primary-fg-color);
+            border-bottom: 2px solid var(--md-accent-fg-color);
         }
+
         .md-typeset h3 {
             font-size: 1.5em;
             font-weight: 400;
-            line-height: 1.5;
-            margin: 1.2em 0 0.6em 0;
-            color: #ef4444;
         }
+
         .md-typeset p {
             font-size: 1.05em;
-            margin: 0.8em 0;
+            margin: 1em 0;
         }
-        .md-typeset ul, .md-typeset ol {
-            font-size: 1.05em;
-            margin: 0.8em 0;
-            padding-left: 2em;
-        }
-        .md-typeset li {
-            margin: 0.4em 0;
-            line-height: 1.8;
-        }
-        .md-typeset strong {
-            color: #f87171;
-            font-weight: 600;
-        }
-        .md-typeset table {
-            width: 100%;
-            margin: 1.2em 0;
-            border-collapse: collapse;
-            font-size: 1em;
-        }
-        .md-typeset th {
-            padding: 12px;
-            text-align: left;
-            border: 1px solid rgba(220, 38, 38, 0.3);
-            background: rgba(220, 38, 38, 0.15);
-            color: #f87171;
-            font-weight: 600;
-        }
-        .md-typeset td {
-            padding: 12px;
-            border: 1px solid rgba(220, 38, 38, 0.2);
-        }
-        .back-link {
-            display: inline-block;
-            margin: 30px 0;
-            padding: 12px 24px;
-            background: rgba(220, 38, 38, 0.1);
-            border: 1px solid var(--md-primary-fg-color);
-            border-radius: 8px;
-            color: var(--md-primary-fg-color);
-            text-decoration: none;
-            font-size: 1em;
-            transition: all 0.2s;
-        }
-        .back-link:hover {
-            background: rgba(220, 38, 38, 0.2);
-            transform: translateX(-4px);
-        }
-        .hero {
+
+        /* Hero section with gradient */
+        .learning-hero, .hero {
             text-align: center;
-            padding: 80px 40px;
+            padding: 4rem 2rem;
             background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
-            border-radius: 16px;
-            margin: 40px 0 60px 0;
-            box-shadow: 0 10px 40px rgba(220, 38, 38, 0.3);
-        }
-        .hero-icon {
-            font-size: 80px;
-            margin-bottom: 24px;
-        }
-        .hero h1 {
-            color: white;
-            font-size: 3em;
-            margin: 0 0 20px 0;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
-            font-weight: 400;
-        }
-        .hero p {
-            color: rgba(255,255,255,0.95);
-            font-size: 1.3em;
-            margin: 0;
-        }
-        .intro-box {
-            background: rgba(153, 27, 27, 0.1);
-            border: 2px solid #991b1b;
             border-radius: 12px;
-            padding: 32px;
-            margin: 40px 0;
-            font-size: 1.1em;
-            line-height: 1.8;
+            margin: 2rem 0 3rem;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
         }
+
+        .learning-hero-icon, .hero-icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+        }
+
+        .learning-hero h1, .hero h1 {
+            color: white !important;
+            font-size: 2.8em !important;
+            margin: 0 0 1rem 0 !important;
+            border: none !important;
+            padding: 0 !important;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .learning-hero p, .hero p {
+            color: rgba(255,255,255,0.95) !important;
+            font-size: 1.3em !important;
+            margin: 0 !important;
+        }
+
+        /* Challenge boxes */
         .challenge-box {
-            background: rgba(220, 38, 38, 0.05);
-            border-left: 4px solid var(--md-primary-fg-color);
-            padding: 24px;
-            margin: 24px 0;
+            background: rgba(100, 100, 200, 0.08);
+            border-left: 4px solid #dc2626;
+            padding: 1.8rem;
+            margin: 2rem 0;
             border-radius: 8px;
-            transition: all 0.2s;
         }
-        .challenge-box:hover {
-            background: rgba(220, 38, 38, 0.08);
-            transform: translateX(4px);
-        }
+
         .challenge-box h3 {
-            margin-top: 0;
+            color: #dc2626;
+            margin-top: 0 !important;
         }
+
+        /* Mistake boxes */
         .mistake-box {
-            background: rgba(249, 115, 22, 0.05);
-            border-left: 4px solid #f97316;
-            padding: 24px;
-            margin: 24px 0;
+            background: rgba(239, 68, 68, 0.08);
+            border-left: 4px solid #ef4444;
+            padding: 1.8rem;
+            margin: 2rem 0;
             border-radius: 8px;
-            transition: all 0.2s;
         }
-        .mistake-box:hover {
-            background: rgba(249, 115, 22, 0.08);
-            transform: translateX(4px);
-        }
+
         .mistake-box h3 {
-            margin-top: 0;
-            color: #f97316;
+            color: #ef4444;
+            margin-top: 0 !important;
         }
+
+        /* Decision tree */
         .decision-tree {
-            background: #0f111a;
-            padding: 30px;
-            border-radius: 12px;
-            font-family: 'Courier New', monospace;
-            font-size: 14px;
+            background: var(--md-code-bg-color);
+            padding: 2rem;
+            border-radius: 8px;
+            font-family: var(--md-code-font);
+            font-size: 0.95em;
             line-height: 1.5;
             overflow-x: auto;
-            margin: 30px 0;
-            border: 2px solid rgba(220, 38, 38, 0.2);
+            margin: 2rem 0;
+            border: 2px solid rgba(100, 100, 200, 0.2);
         }
-        .decision-tree pre {
-            margin: 0;
-            color: #e0e0e0;
-        }
-        .tree-usage {
-            background: rgba(220, 38, 38, 0.08);
-            padding: 24px;
+
+        /* Info callouts */
+        .info-box, .sp-callout, .sp-callout--info, .quick-rules, .intro-box, .flow-explanation, .divergence-types, .workflow-box, .tree-usage {
+            background: rgba(100, 100, 200, 0.08);
+            border-left: 4px solid #dc2626;
+            padding: 1.8rem;
+            margin: 2rem 0;
             border-radius: 8px;
-            margin: 24px 0;
-            font-size: 1.05em;
         }
+
+        .info-box h3, .sp-callout h3, .quick-rules h3 {
+            color: #dc2626;
+            margin-top: 0 !important;
+        }
+
+        /* Pairing section */
         .pairing-section {
-            background: rgba(153, 27, 27, 0.05);
-            border: 1px solid rgba(153, 27, 27, 0.3);
-            padding: 28px;
-            border-radius: 12px;
-            margin: 24px 0;
+            background: rgba(100, 100, 200, 0.05);
+            border: 1px solid rgba(100, 100, 200, 0.3);
+            padding: 1.8rem;
+            border-radius: 8px;
+            margin: 2rem 0;
         }
+
         .pairing-section h3 {
-            color: #b91c1c;
-            margin-top: 0;
+            color: #dc2626;
+            margin-top: 0 !important;
         }
+
+        /* Visual dividers */
         .visual-divider {
             text-align: center;
-            margin: 60px 0;
-            font-size: 40px;
+            margin: 3rem 0;
+            font-size: 2.5rem;
             opacity: 0.3;
         }
-        hr {
-            border: none;
-            border-top: 1px solid rgba(220, 38, 38, 0.2);
-            margin: 50px 0;
+
+        /* Back link styling */
+        .back-to-docs, .back-link {
+            display: inline-block;
+            margin: 2rem 0;
+            padding: 0.8rem 1.5rem;
+            background: rgba(100, 100, 200, 0.1);
+            border: 1px solid #dc2626;
+            color: #dc2626;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.2s;
         }
-        .footer-section {
-            text-align: center;
-            padding: 50px 20px;
-        }
-        .footer-section p {
-            font-size: 1.2em;
-            margin-bottom: 24px;
+
+        .back-to-docs:hover, .back-link:hover {
+            background: rgba(100, 100, 200, 0.2);
+            transform: translateX(-4px);
         }
     </style>
 </head>
-<body>
-    <div class="md-container">
-        <div class="md-main">
-            <div class="md-content" data-md-component="content">
+
+<body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan">
+    <div data-md-component="container">
+        <main class="md-main" data-md-component="main">
+            <div class="md-main__inner md-grid">
+                <div class="md-content" data-md-component="content">
                 <article class="md-content__inner md-typeset">
                     <a href="index.html" class="back-link">← Back to Pentarch Documentation</a>
 
@@ -526,6 +485,12 @@
                 </article>
             </div>
         </div>
+    </div>
+</body>
+</html>
+                </div>
+            </div>
+        </main>
     </div>
 </body>
 </html>
