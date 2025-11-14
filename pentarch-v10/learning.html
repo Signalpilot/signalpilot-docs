@@ -9,28 +9,96 @@
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <meta name="theme-color" content="#dc2626">
     <style>
-        body {
-            background: #1a1d2e;
-            color: #e0e0e0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            padding: 0;
-            margin: 0;
+        :root {
+            --md-text-font: "Roboto";
+            --md-primary-fg-color: #dc2626;
         }
-        .learning-container {
-            max-width: 900px;
+        body {
+            font-family: "Roboto", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+            font-size: 18px;
+            line-height: 1.7;
+            color: #e0e0e0;
+            background: #1a1d2e;
+        }
+        .md-container {
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 40px 20px;
+        }
+        .md-content {
+            padding: 0 20px;
+        }
+        .md-typeset {
+            font-size: inherit;
+            line-height: 1.7;
+        }
+        .md-typeset h1 {
+            font-size: 2.5em;
+            font-weight: 400;
+            line-height: 1.3;
+            margin: 0.67em 0;
+            color: #ffffff;
+        }
+        .md-typeset h2 {
+            font-size: 2em;
+            font-weight: 400;
+            line-height: 1.4;
+            margin: 1.5em 0 0.8em 0;
+            padding-bottom: 0.3em;
+            border-bottom: 2px solid var(--md-primary-fg-color);
+            color: var(--md-primary-fg-color);
+        }
+        .md-typeset h3 {
+            font-size: 1.5em;
+            font-weight: 400;
+            line-height: 1.5;
+            margin: 1.2em 0 0.6em 0;
+            color: #ef4444;
+        }
+        .md-typeset p {
+            font-size: 1.05em;
+            margin: 0.8em 0;
+        }
+        .md-typeset ul, .md-typeset ol {
+            font-size: 1.05em;
+            margin: 0.8em 0;
+            padding-left: 2em;
+        }
+        .md-typeset li {
+            margin: 0.4em 0;
+            line-height: 1.8;
+        }
+        .md-typeset strong {
+            color: #f87171;
+            font-weight: 600;
+        }
+        .md-typeset table {
+            width: 100%;
+            margin: 1.2em 0;
+            border-collapse: collapse;
+            font-size: 1em;
+        }
+        .md-typeset th {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid rgba(220, 38, 38, 0.3);
+            background: rgba(220, 38, 38, 0.15);
+            color: #f87171;
+            font-weight: 600;
+        }
+        .md-typeset td {
+            padding: 12px;
+            border: 1px solid rgba(220, 38, 38, 0.2);
         }
         .back-link {
             display: inline-block;
-            margin-bottom: 30px;
-            padding: 10px 20px;
+            margin: 30px 0;
+            padding: 12px 24px;
             background: rgba(220, 38, 38, 0.1);
-            border: 1px solid #dc2626;
+            border: 1px solid var(--md-primary-fg-color);
             border-radius: 8px;
-            color: #dc2626;
+            color: var(--md-primary-fg-color);
             text-decoration: none;
+            font-size: 1em;
             transition: all 0.2s;
         }
         .back-link:hover {
@@ -39,43 +107,42 @@
         }
         .hero {
             text-align: center;
-            padding: 60px 20px;
+            padding: 80px 40px;
             background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
             border-radius: 16px;
-            margin-bottom: 50px;
+            margin: 40px 0 60px 0;
             box-shadow: 0 10px 40px rgba(220, 38, 38, 0.3);
+        }
+        .hero-icon {
+            font-size: 80px;
+            margin-bottom: 24px;
         }
         .hero h1 {
             color: white;
-            font-size: 42px;
-            margin: 0 0 16px 0;
+            font-size: 3em;
+            margin: 0 0 20px 0;
             text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            font-weight: 400;
         }
         .hero p {
             color: rgba(255,255,255,0.95);
-            font-size: 18px;
+            font-size: 1.3em;
             margin: 0;
         }
-        h2 {
-            color: #dc2626;
-            font-size: 32px;
-            margin: 60px 0 20px 0;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #dc2626;
-        }
-        h3 {
-            color: #ef4444;
-            font-size: 24px;
-            margin: 40px 0 16px 0;
-        }
-        strong {
-            color: #f87171;
+        .intro-box {
+            background: rgba(153, 27, 27, 0.1);
+            border: 2px solid #991b1b;
+            border-radius: 12px;
+            padding: 32px;
+            margin: 40px 0;
+            font-size: 1.1em;
+            line-height: 1.8;
         }
         .challenge-box {
             background: rgba(220, 38, 38, 0.05);
-            border-left: 4px solid #dc2626;
-            padding: 20px;
-            margin: 20px 0;
+            border-left: 4px solid var(--md-primary-fg-color);
+            padding: 24px;
+            margin: 24px 0;
             border-radius: 8px;
             transition: all 0.2s;
         }
@@ -83,11 +150,14 @@
             background: rgba(220, 38, 38, 0.08);
             transform: translateX(4px);
         }
+        .challenge-box h3 {
+            margin-top: 0;
+        }
         .mistake-box {
             background: rgba(249, 115, 22, 0.05);
             border-left: 4px solid #f97316;
-            padding: 20px;
-            margin: 20px 0;
+            padding: 24px;
+            margin: 24px 0;
             border-radius: 8px;
             transition: all 0.2s;
         }
@@ -95,23 +165,38 @@
             background: rgba(249, 115, 22, 0.08);
             transform: translateX(4px);
         }
+        .mistake-box h3 {
+            margin-top: 0;
+            color: #f97316;
+        }
         .decision-tree {
             background: #0f111a;
             padding: 30px;
             border-radius: 12px;
-            font-family: monospace;
-            font-size: 13px;
-            line-height: 1.4;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.5;
             overflow-x: auto;
-            margin: 20px 0;
+            margin: 30px 0;
             border: 2px solid rgba(220, 38, 38, 0.2);
+        }
+        .decision-tree pre {
+            margin: 0;
+            color: #e0e0e0;
+        }
+        .tree-usage {
+            background: rgba(220, 38, 38, 0.08);
+            padding: 24px;
+            border-radius: 8px;
+            margin: 24px 0;
+            font-size: 1.05em;
         }
         .pairing-section {
             background: rgba(153, 27, 27, 0.05);
             border: 1px solid rgba(153, 27, 27, 0.3);
-            padding: 25px;
+            padding: 28px;
             border-radius: 12px;
-            margin: 20px 0;
+            margin: 24px 0;
         }
         .pairing-section h3 {
             color: #b91c1c;
@@ -119,133 +204,120 @@
         }
         .visual-divider {
             text-align: center;
-            margin: 50px 0;
-            font-size: 32px;
+            margin: 60px 0;
+            font-size: 40px;
             opacity: 0.3;
         }
         hr {
             border: none;
             border-top: 1px solid rgba(220, 38, 38, 0.2);
-            margin: 40px 0;
+            margin: 50px 0;
         }
-        .intro-box {
-            background: rgba(153, 27, 27, 0.1);
-            border: 2px solid #991b1b;
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 40px;
-            font-size: 18px;
-            line-height: 1.8;
+        .footer-section {
+            text-align: center;
+            padding: 50px 20px;
         }
-        .probability-table {
-            width: 100%;
-            margin: 20px 0;
-            border-collapse: collapse;
-        }
-        .probability-table th {
-            background: rgba(220, 38, 38, 0.15);
-            padding: 12px;
-            border: 1px solid rgba(220, 38, 38, 0.3);
-            text-align: left;
-        }
-        .probability-table td {
-            padding: 10px 12px;
-            border: 1px solid rgba(220, 38, 38, 0.2);
+        .footer-section p {
+            font-size: 1.2em;
+            margin-bottom: 24px;
         }
     </style>
 </head>
 <body>
-    <div class="learning-container">
-        <a href="index.html" class="back-link">← Back to Pentarch Documentation</a>
+    <div class="md-container">
+        <div class="md-main">
+            <div class="md-content" data-md-component="content">
+                <article class="md-content__inner md-typeset">
+                    <a href="index.html" class="back-link">← Back to Pentarch Documentation</a>
 
-        <div class="hero">
-            <div style="font-size: 64px; margin-bottom: 20px;">🎯</div>
-            <h1>Pentarch v1.0<br/>Advanced Learning Guide</h1>
-            <p>Master TD Sequential • Emotional Recovery • Decision Trees • Beginner Traps</p>
-        </div>
+                    <div class="hero">
+                        <div class="hero-icon">🎯</div>
+                        <h1>Pentarch v1.0<br/>Advanced Learning Guide</h1>
+                        <p>Master TD Sequential • Emotional Recovery • Decision Trees • Beginner Traps</p>
+                    </div>
 
-        <div class="intro-box">
-            <strong>📉 The 3-Loss Spiral:</strong> You take 3 consecutive Pentarch signal losses. Your brain screams: <em>"Does this indicator work? Did I waste my money? Everyone else is profitable, why am I failing?"</em> You switch settings, change timeframes, or quit entirely. <strong>Here's the truth:</strong> With a 60% win rate (excellent!), you'll see 3 consecutive losses every 15-16 trades—it's <strong>probability</strong>, not system failure. This guide teaches you emotional recovery protocols, decision frameworks, and how to avoid the beginner mistakes that destroy 80% of TD Sequential traders.
-        </div>
+                    <div class="intro-box">
+                        <strong>📉 The 3-Loss Spiral:</strong> You take 3 consecutive Pentarch signal losses. Your brain screams: <em>"Does this indicator work? Did I waste my money? Everyone else is profitable, why am I failing?"</em> You switch settings, change timeframes, or quit entirely. <strong>Here's the truth:</strong> With a 60% win rate (excellent!), you'll see 3 consecutive losses every 15-16 trades—it's <strong>probability</strong>, not system failure. This guide teaches you emotional recovery protocols, decision frameworks, and how to avoid the beginner mistakes that destroy 80% of TD Sequential traders.
+                    </div>
 
-        <h2>🧠 Trading Psychology: Emotional Recovery After Losses</h2>
+                    <h2>🧠 Trading Psychology: Emotional Recovery After Losses</h2>
 
-        <div class="challenge-box">
-            <h3>💔 Challenge 1: The 3-Loss Spiral (Self-Doubt & System Questioning)</h3>
-            <p><strong>What Happens:</strong> You take 3 Pentarch signal losses in a row. TD 9 Buy fails. IGN Buy fails. TD Perfection Buy fails. Your account is down 3%. Your brain floods with doubt:</p>
-            <ul>
-                <li><em>"Does this indicator actually work?"</em></li>
-                <li><em>"Did I waste $250 on this?"</em></li>
-                <li><em>"Everyone else seems profitable, why am I failing?"</em></li>
-                <li><em>"Should I change the settings? Try different timeframes?"</em></li>
-            </ul>
-            <p><strong>These feelings are NORMAL and EXPECTED.</strong> But they're also dangerous if you act on them impulsively.</p>
+                    <div class="challenge-box">
+                        <h3>💔 Challenge 1: The 3-Loss Spiral (Self-Doubt & System Questioning)</h3>
+                        <p><strong>What Happens:</strong> You take 3 Pentarch signal losses in a row. TD 9 Buy fails. IGN Buy fails. TD Perfection Buy fails. Your account is down 3%. Your brain floods with doubt:</p>
+                        <ul>
+                            <li><em>"Does this indicator actually work?"</em></li>
+                            <li><em>"Did I waste $250 on this?"</em></li>
+                            <li><em>"Everyone else seems profitable, why am I failing?"</em></li>
+                            <li><em>"Should I change the settings? Try different timeframes?"</em></li>
+                        </ul>
+                        <p><strong>These feelings are NORMAL and EXPECTED.</strong> But they're also dangerous if you act on them impulsively.</p>
 
-            <p><strong>Mathematical Reality Check:</strong></p>
-            <table class="probability-table">
-                <tr>
-                    <th>Win Rate</th>
-                    <th>Probability of 3 Losses in Row</th>
-                    <th>How Often This Happens</th>
-                </tr>
-                <tr>
-                    <td>60%</td>
-                    <td>6.4%</td>
-                    <td>Every 15-16 trades</td>
-                </tr>
-                <tr>
-                    <td>50%</td>
-                    <td>12.5%</td>
-                    <td>Every 8 trades</td>
-                </tr>
-                <tr>
-                    <td>40%</td>
-                    <td>21.6%</td>
-                    <td>Every 4-5 trades</td>
-                </tr>
-            </table>
+                        <p><strong>Mathematical Reality Check:</strong></p>
+                        <table>
+                            <tr>
+                                <th>Win Rate</th>
+                                <th>Probability of 3 Losses in Row</th>
+                                <th>How Often This Happens</th>
+                            </tr>
+                            <tr>
+                                <td>60%</td>
+                                <td>6.4%</td>
+                                <td>Every 15-16 trades</td>
+                            </tr>
+                            <tr>
+                                <td>50%</td>
+                                <td>12.5%</td>
+                                <td>Every 8 trades</td>
+                            </tr>
+                            <tr>
+                                <td>40%</td>
+                                <td>21.6%</td>
+                                <td>Every 4-5 trades</td>
+                            </tr>
+                        </table>
 
-            <p><strong>Translation:</strong> If you have a 60% win rate (excellent performance), you'll STILL see 3 consecutive losses approximately once every 15 trades. <strong>This is probability, not system failure.</strong></p>
+                        <p><strong>Translation:</strong> If you have a 60% win rate (excellent performance), you'll STILL see 3 consecutive losses approximately once every 15 trades. <strong>This is probability, not system failure.</strong></p>
 
-            <p><strong>The 4-Step Recovery Protocol:</strong></p>
-            <ol style="font-size: 16px; line-height: 1.8;">
-                <li><strong>STOP Trading for 48 Hours (Mandatory Cooling-Off)</strong> - Close TradingView, don't check charts, don't look for "revenge setups," let emotions settle</li>
-                <li><strong>Review Trade Journal (72 hours after last trade)</strong> - Were all 3 losing trades valid setups? Did you follow your decision tree? Calculate: If you followed rules on all 3, system is fine (variance). If you broke rules on 2+, issue is discipline, not system</li>
-                <li><strong>Calculate Expectancy (Verify Positive System)</strong> - Formula: (Win% × Avg Win) - (Loss% × Avg Loss). Example: Last 10 trades = 6 wins (+$600), 4 losses (-$200) = +$40 per trade expectancy. System is positive despite current drawdown</li>
-                <li><strong>Return with Reduced Size (Next 3 Trades)</strong> - Reduce position size to 0.5% risk (half normal) to rebuild confidence gradually. After 2 wins or 3 breakevens, return to 1% risk. If losses continue, return to paper trading for 1 week</li>
-            </ol>
+                        <p><strong>The 4-Step Recovery Protocol:</strong></p>
+                        <ol>
+                            <li><strong>STOP Trading for 48 Hours (Mandatory Cooling-Off)</strong> - Close TradingView, don't check charts, don't look for "revenge setups," let emotions settle</li>
+                            <li><strong>Review Trade Journal (72 hours after last trade)</strong> - Were all 3 losing trades valid setups? Did you follow your decision tree? Calculate: If you followed rules on all 3, system is fine (variance). If you broke rules on 2+, issue is discipline, not system</li>
+                            <li><strong>Calculate Expectancy (Verify Positive System)</strong> - Formula: (Win% × Avg Win) - (Loss% × Avg Loss). Example: Last 10 trades = 6 wins (+$600), 4 losses (-$200) = +$40 per trade expectancy. System is positive despite current drawdown</li>
+                            <li><strong>Return with Reduced Size (Next 3 Trades)</strong> - Reduce position size to 0.5% risk (half normal) to rebuild confidence gradually. After 2 wins or 3 breakevens, return to 1% risk. If losses continue, return to paper trading for 1 week</li>
+                        </ol>
 
-            <p><strong>Mental Script:</strong> <em>"3 losses in a row is statistically normal. I'm taking a 48-hour break to let emotions settle, then reviewing my journal objectively."</em></p>
-        </div>
+                        <p><strong>Mental Script:</strong> <em>"3 losses in a row is statistically normal. I'm taking a 48-hour break to let emotions settle, then reviewing my journal objectively."</em></p>
+                    </div>
 
-        <div class="challenge-box">
-            <h3>😰 Challenge 2: FOMO After Missed Signals ("I Missed the IGN!")</h3>
-            <p><strong>What Happens:</strong> IGN Buy signal appears at $50 while you're away from your desk. You check charts 3 hours later: price is now at $53 (+6%). Your emotional response:</p>
-            <ol>
-                <li><strong>Regret:</strong> "Why wasn't I watching?!"</li>
-                <li><strong>FOMO:</strong> "This is going to $60, I need to jump in NOW!"</li>
-                <li><strong>Rationalization:</strong> "It's still early in the move, right?"</li>
-                <li><strong>Poor Entry:</strong> You buy at $53 (3% above the signal)</li>
-                <li><strong>Immediate Pullback:</strong> Price drops to $51 the next day</li>
-                <li><strong>Panic Exit:</strong> You stop out at $51 for -$2 loss</li>
-                <li><strong>Frustration:</strong> "Of course it reverses when I enter"</li>
-            </ol>
+                    <div class="challenge-box">
+                        <h3>😰 Challenge 2: FOMO After Missed Signals ("I Missed the IGN!")</h3>
+                        <p><strong>What Happens:</strong> IGN Buy signal appears at $50 while you're away from your desk. You check charts 3 hours later: price is now at $53 (+6%). Your emotional response:</p>
+                        <ol>
+                            <li><strong>Regret:</strong> "Why wasn't I watching?!"</li>
+                            <li><strong>FOMO:</strong> "This is going to $60, I need to jump in NOW!"</li>
+                            <li><strong>Rationalization:</strong> "It's still early in the move, right?"</li>
+                            <li><strong>Poor Entry:</strong> You buy at $53 (3% above the signal)</li>
+                            <li><strong>Immediate Pullback:</strong> Price drops to $51 the next day</li>
+                            <li><strong>Panic Exit:</strong> You stop out at $51 for -$2 loss</li>
+                            <li><strong>Frustration:</strong> "Of course it reverses when I enter"</li>
+                        </ol>
 
-            <p><strong>What to Do Instead:</strong></p>
-            <ul>
-                <li><strong>Accept the Missed Opportunity:</strong> There will be 50+ IGN signals this year across all assets. Missing 1 signal = missing 2% of annual opportunities. Better to miss 10 good setups than take 3 bad entries</li>
-                <li><strong>Never Chase Price After 2% Move:</strong> If price moved >2% from signal, it's too late. Wait for pullback or next signal</li>
-                <li><strong>Set Alerts for Future Signals:</strong> Enable TradingView alerts "Once Per Bar Close" for all Pentarch signals, so you don't miss the next one</li>
-            </ul>
+                        <p><strong>What to Do Instead:</strong></p>
+                        <ul>
+                            <li><strong>Accept the Missed Opportunity:</strong> There will be 50+ IGN signals this year across all assets. Missing 1 signal = missing 2% of annual opportunities. Better to miss 10 good setups than take 3 bad entries</li>
+                            <li><strong>Never Chase Price After 2% Move:</strong> If price moved >2% from signal, it's too late. Wait for pullback or next signal</li>
+                            <li><strong>Set Alerts for Future Signals:</strong> Enable TradingView alerts "Once Per Bar Close" for all Pentarch signals, so you don't miss the next one</li>
+                        </ul>
 
-            <p><strong>Mental Script:</strong> <em>"I missed this signal, but there will be 50+ more this year. Chasing price 3% late = high-risk entry. I wait for the next signal."</em></p>
-        </div>
+                        <p><strong>Mental Script:</strong> <em>"I missed this signal, but there will be 50+ more this year. Chasing price 3% late = high-risk entry. I wait for the next signal."</em></p>
+                    </div>
 
-        <div class="visual-divider">🌳</div>
+                    <div class="visual-divider">🌳</div>
 
-        <h2>🌳 Decision Tree: Should I Take This Trade?</h2>
+                    <h2>🌳 Decision Tree: Should I Take This Trade?</h2>
 
-        <div class="decision-tree">
+                    <div class="decision-tree">
 <pre>┌─────────────────────────────────────────┐
 │   PENTARCH SIGNAL APPEARS (TD/IGN/etc)  │
 └──────────────┬──────────────────────────┘
@@ -328,121 +400,126 @@
 │ TAKE │       exceeded)
 │ TRADE│
 └──────┘</pre>
-        </div>
+                    </div>
 
-        <p style="background: rgba(220, 38, 38, 0.08); padding: 20px; border-radius: 8px; margin: 20px 0;"><strong>🎯 How to Use:</strong> Start at the top when any Pentarch signal appears. Work down the tree, answering each question honestly. Don't skip steps. Don't rationalize "yes" when the truth is "no." If ANY critical filter fails → Skip the trade. <strong>Discipline wins over ego.</strong></p>
+                    <div class="tree-usage">
+                        <strong>🎯 How to Use:</strong> Start at the top when any Pentarch signal appears. Work down the tree, answering each question honestly. Don't skip steps. Don't rationalize "yes" when the truth is "no." If ANY critical filter fails → Skip the trade. <strong>Discipline wins over ego.</strong>
+                    </div>
 
-        <div class="visual-divider">🚫</div>
+                    <div class="visual-divider">🚫</div>
 
-        <h2>🚫 Top 5 Beginner Mistakes That Kill Pentarch Traders</h2>
+                    <h2>🚫 Top 5 Beginner Mistakes That Kill Pentarch Traders</h2>
 
-        <div class="mistake-box">
-            <h3>Mistake #1: Not Waiting for Bar Close ⚠️ CRITICAL</h3>
-            <p><strong>What Happens:</strong> You see TD 9 forming mid-bar at 2:30 PM on a 1-hour chart. You enter immediately at $50. By 3:00 PM bar close, conditions no longer met. TD 9 doesn't appear. You're in a trade with no actual signal.</p>
+                    <div class="mistake-box">
+                        <h3>Mistake #1: Not Waiting for Bar Close ⚠️ CRITICAL</h3>
+                        <p><strong>What Happens:</strong> You see TD 9 forming mid-bar at 2:30 PM on a 1-hour chart. You enter immediately at $50. By 3:00 PM bar close, conditions no longer met. TD 9 doesn't appear. You're in a trade with no actual signal.</p>
 
-            <p><strong>Why Wrong:</strong> Signals confirm at bar CLOSE, not intra-bar. What looks like TD 9 at 50% bar completion can disappear by 100% completion. Entry before bar close = guessing, not signal-based trading.</p>
+                        <p><strong>Why Wrong:</strong> Signals confirm at bar CLOSE, not intra-bar. What looks like TD 9 at 50% bar completion can disappear by 100% completion. Entry before bar close = guessing, not signal-based trading.</p>
 
-            <p><strong>The Fix:</strong></p>
-            <ul>
-                <li>Set alerts to "Once Per Bar CLOSE" (not "Once Per Bar")</li>
-                <li>Wait for bar to 100% close before entry</li>
-                <li>If signal appears at 4:00 PM bar close, entry at 4:01 PM is fine</li>
-                <li>On 1H chart: Wait for :00 close (9:00, 10:00, 11:00, etc.)</li>
-            </ul>
-            <p><strong>Exception:</strong> None. Always wait for bar close. No exceptions.</p>
-        </div>
+                        <p><strong>The Fix:</strong></p>
+                        <ul>
+                            <li>Set alerts to "Once Per Bar CLOSE" (not "Once Per Bar")</li>
+                            <li>Wait for bar to 100% close before entry</li>
+                            <li>If signal appears at 4:00 PM bar close, entry at 4:01 PM is fine</li>
+                            <li>On 1H chart: Wait for :00 close (9:00, 10:00, 11:00, etc.)</li>
+                        </ul>
+                        <p><strong>Exception:</strong> None. Always wait for bar close. No exceptions.</p>
+                    </div>
 
-        <div class="mistake-box">
-            <h3>Mistake #2: Using Sub-15-Minute Timeframes (The Noise Trap)</h3>
-            <p><strong>What Happens:</strong> You trade 5-minute charts to "get more signals." You're getting 20 signals per day, but 80% are whipsaws resulting in constant losses. You're exhausted and losing money.</p>
+                    <div class="mistake-box">
+                        <h3>Mistake #2: Using Sub-15-Minute Timeframes (The Noise Trap)</h3>
+                        <p><strong>What Happens:</strong> You trade 5-minute charts to "get more signals." You're getting 20 signals per day, but 80% are whipsaws resulting in constant losses. You're exhausted and losing money.</p>
 
-            <p><strong>Why Wrong:</strong> Pentarch cycle detection requires minimum data quality. Sub-15M timeframes have excessive noise and false signals. Detection layers don't function reliably on very short timeframes.</p>
+                        <p><strong>Why Wrong:</strong> Pentarch cycle detection requires minimum data quality. Sub-15M timeframes have excessive noise and false signals. Detection layers don't function reliably on very short timeframes.</p>
 
-            <p><strong>The Fix:</strong></p>
-            <ul>
-                <li>Minimum timeframe: <strong>15 minutes</strong></li>
-                <li>Recommended: <strong>1H, 4H, Daily</strong></li>
-                <li>For beginners: <strong>Daily only</strong> (clearest patterns, fewest false signals)</li>
-                <li>Remember: More signals ≠ more profit (quality > quantity)</li>
-            </ul>
-        </div>
+                        <p><strong>The Fix:</strong></p>
+                        <ul>
+                            <li>Minimum timeframe: <strong>15 minutes</strong></li>
+                            <li>Recommended: <strong>1H, 4H, Daily</strong></li>
+                            <li>For beginners: <strong>Daily only</strong> (clearest patterns, fewest false signals)</li>
+                            <li>Remember: More signals ≠ more profit (quality > quantity)</li>
+                        </ul>
+                    </div>
 
-        <div class="mistake-box">
-            <h3>Mistake #3: Overloading Chart with All 7 Indicators (Visual Chaos)</h3>
-            <p><strong>What Happens:</strong> You have Pentarch + Omnideck + Harmonic + Janus + Volume + Plutus + Augury all on one chart. You can't see price action anymore. Contradicting signals everywhere. Analysis paralysis sets in. You can't make decisions.</p>
+                    <div class="mistake-box">
+                        <h3>Mistake #3: Overloading Chart with All 7 Indicators (Visual Chaos)</h3>
+                        <p><strong>What Happens:</strong> You have Pentarch + Omnideck + Harmonic + Janus + Volume + Plutus + Augury all on one chart. You can't see price action anymore. Contradicting signals everywhere. Analysis paralysis sets in. You can't make decisions.</p>
 
-            <p><strong>Why Wrong:</strong> Visual clutter prevents clear decision-making. Contradicting signals from 7 sources make it impossible to act. Redundant information (Pentarch and Omnideck both show TD). Human brain can process 3-5 variables effectively, not 7-10.</p>
+                        <p><strong>Why Wrong:</strong> Visual clutter prevents clear decision-making. Contradicting signals from 7 sources make it impossible to act. Redundant information (Pentarch and Omnideck both show TD). Human brain can process 3-5 variables effectively, not 7-10.</p>
 
-            <p><strong>The Fix - "The Trinity" (3 Indicators Maximum):</strong></p>
-            <ul>
-                <li><strong>Pentarch:</strong> Signal generation and timing</li>
-                <li><strong>Janus Atlas:</strong> Entry levels (support/resistance)</li>
-                <li><strong>Volume Oracle:</strong> Institutional confirmation</li>
-            </ul>
-            <p>Remove all other indicators from your chart. <strong>Simplicity = Clarity = Better decisions.</strong></p>
-        </div>
+                        <p><strong>The Fix - "The Trinity" (3 Indicators Maximum):</strong></p>
+                        <ul>
+                            <li><strong>Pentarch:</strong> Signal generation and timing</li>
+                            <li><strong>Janus Atlas:</strong> Entry levels (support/resistance)</li>
+                            <li><strong>Volume Oracle:</strong> Institutional confirmation</li>
+                        </ul>
+                        <p>Remove all other indicators from your chart. <strong>Simplicity = Clarity = Better decisions.</strong></p>
+                    </div>
 
-        <div class="mistake-box">
-            <h3>Mistake #4: Trading TD Alone Without Confluence (40-45% Fail Rate)</h3>
-            <p><strong>What Happens:</strong> TD 9 Buy appears. You enter immediately without checking anything else. No Janus level check. No volume check. No higher timeframe check. Trade fails 40-45% of the time.</p>
+                    <div class="mistake-box">
+                        <h3>Mistake #4: Trading TD Alone Without Confluence (40-45% Fail Rate)</h3>
+                        <p><strong>What Happens:</strong> TD 9 Buy appears. You enter immediately without checking anything else. No Janus level check. No volume check. No higher timeframe check. Trade fails 40-45% of the time.</p>
 
-            <p><strong>Why Wrong:</strong> TD alone has moderate success rate. Confluence dramatically improves probability. Trading without filters = accepting preventable losses.</p>
+                        <p><strong>Why Wrong:</strong> TD alone has moderate success rate. Confluence dramatically improves probability. Trading without filters = accepting preventable losses.</p>
 
-            <p><strong>The Fix - Required Confluence Checks:</strong></p>
-            <ol>
-                <li><strong>Janus Level Within 1%:</strong> Is there support/resistance within 1% of current price?</li>
-                <li><strong>Volume >1.5x Average:</strong> Is volume confirming the move?</li>
-                <li><strong>Higher Timeframe Aligned:</strong> Does Daily trend match your trade direction?</li>
-            </ol>
-            <p>If 2+ of these confirm, probability improves to 65-70%. If all 3 confirm, probability improves to 75-80%.</p>
-        </div>
+                        <p><strong>The Fix - Required Confluence Checks:</strong></p>
+                        <ol>
+                            <li><strong>Janus Level Within 1%:</strong> Is there support/resistance within 1% of current price?</li>
+                            <li><strong>Volume >1.5x Average:</strong> Is volume confirming the move?</li>
+                            <li><strong>Higher Timeframe Aligned:</strong> Does Daily trend match your trade direction?</li>
+                        </ol>
+                        <p>If 2+ of these confirm, probability improves to 65-70%. If all 3 confirm, probability improves to 75-80%.</p>
+                    </div>
 
-        <div class="mistake-box">
-            <h3>Mistake #5: Ignoring Risk Management (The Account Killer)</h3>
-            <p><strong>What Happens:</strong> TD Perfection Buy appears (high probability signal). You think "This can't lose!" and risk 5% instead of your normal 1%. Trade fails. You lose 5% on a single trade. Emotional damage is severe. You're now trading scared.</p>
+                    <div class="mistake-box">
+                        <h3>Mistake #5: Ignoring Risk Management (The Account Killer)</h3>
+                        <p><strong>What Happens:</strong> TD Perfection Buy appears (high probability signal). You think "This can't lose!" and risk 5% instead of your normal 1%. Trade fails. You lose 5% on a single trade. Emotional damage is severe. You're now trading scared.</p>
 
-            <p><strong>Why Wrong:</strong> NO signal is guaranteed, not even TD Perfection. Risk management protects you from the inevitable losses. Violating risk rules = gambling, not trading.</p>
+                        <p><strong>Why Wrong:</strong> NO signal is guaranteed, not even TD Perfection. Risk management protects you from the inevitable losses. Violating risk rules = gambling, not trading.</p>
 
-            <p><strong>The Fix - Non-Negotiable Risk Rules:</strong></p>
-            <ul>
-                <li><strong>1% risk per trade maximum</strong> (no exceptions for "perfect" setups)</li>
-                <li><strong>Maximum 3 open positions</strong> simultaneously</li>
-                <li><strong>Total portfolio risk <5%</strong> at any time</li>
-                <li><strong>2:1 minimum Risk:Reward ratio</strong> (2R target minimum)</li>
-            </ul>
-            <p>These rules apply to EVERY trade. Perfect signals don't get special treatment.</p>
-        </div>
+                        <p><strong>The Fix - Non-Negotiable Risk Rules:</strong></p>
+                        <ul>
+                            <li><strong>1% risk per trade maximum</strong> (no exceptions for "perfect" setups)</li>
+                            <li><strong>Maximum 3 open positions</strong> simultaneously</li>
+                            <li><strong>Total portfolio risk <5%</strong> at any time</li>
+                            <li><strong>2:1 minimum Risk:Reward ratio</strong> (2R target minimum)</li>
+                        </ul>
+                        <p>These rules apply to EVERY trade. Perfect signals don't get special treatment.</p>
+                    </div>
 
-        <div class="visual-divider">🔗</div>
+                    <div class="visual-divider">🔗</div>
 
-        <h2>🔗 Synergy: Pairing Pentarch with Other Indicators</h2>
+                    <h2>🔗 Synergy: Pairing Pentarch with Other Indicators</h2>
 
-        <div class="pairing-section">
-            <h3>🎯 High Synergy Combinations ("The Trinity")</h3>
-            <ul>
-                <li><strong>+ Janus Atlas:</strong> TD Sequential signals + level clusters = precise timing at key support/resistance. You know WHEN cycles turn (Pentarch) and WHERE price may react (Janus).</li>
-                <li><strong>+ Volume Oracle:</strong> TD signals + institutional flow = volume-confirmed cycle reversals. Ensure institutions are participating (Volume) when cycles complete (Pentarch).</li>
-                <li><strong>+ Harmonic Oscillator:</strong> TD signals + oscillator consensus = cycle + momentum alignment. Both cycle exhaustion AND momentum divergence = high-probability reversal.</li>
-            </ul>
+                    <div class="pairing-section">
+                        <h3>🎯 High Synergy Combinations ("The Trinity")</h3>
+                        <ul>
+                            <li><strong>+ Janus Atlas:</strong> TD Sequential signals + level clusters = precise timing at key support/resistance. You know WHEN cycles turn (Pentarch) and WHERE price may react (Janus).</li>
+                            <li><strong>+ Volume Oracle:</strong> TD signals + institutional flow = volume-confirmed cycle reversals. Ensure institutions are participating (Volume) when cycles complete (Pentarch).</li>
+                            <li><strong>+ Harmonic Oscillator:</strong> TD signals + oscillator consensus = cycle + momentum alignment. Both cycle exhaustion AND momentum divergence = high-probability reversal.</li>
+                        </ul>
 
-            <h3>🎲 Common Trading Combinations</h3>
-            <ul>
-                <li><strong>Pentarch TD 9 Buy + Janus support cluster</strong> → Reversal signal at tested level with cycle confirmation</li>
-                <li><strong>Pentarch TD 13 Sell + Volume Oracle Flow red</strong> → Distribution signal with institutional exit confirmation</li>
-                <li><strong>Pentarch TDST break + Harmonic oversold</strong> → Breakout timing with momentum exhaustion reversal</li>
-            </ul>
+                        <h3>🎲 Common Trading Combinations</h3>
+                        <ul>
+                            <li><strong>Pentarch TD 9 Buy + Janus support cluster</strong> → Reversal signal at tested level with cycle confirmation</li>
+                            <li><strong>Pentarch TD 13 Sell + Volume Oracle Flow red</strong> → Distribution signal with institutional exit confirmation</li>
+                            <li><strong>Pentarch TDST break + Harmonic oversold</strong> → Breakout timing with momentum exhaustion reversal</li>
+                        </ul>
 
-            <h3>💡 Why These Pair Well</h3>
-            <p><strong>Pentarch provides deep TD Sequential analysis (WHEN cycles turn).</strong> Janus adds WHERE price may react (levels). Volume Oracle confirms WHO is acting (institutions). Harmonic confirms momentum state.</p>
+                        <h3>💡 Why These Pair Well</h3>
+                        <p><strong>Pentarch provides deep TD Sequential analysis (WHEN cycles turn).</strong> Janus adds WHERE price may react (levels). Volume Oracle confirms WHO is acting (institutions). Harmonic confirms momentum state.</p>
 
-            <p>Combining cycle timing (Pentarch) with levels (Janus), volume (Volume Oracle), and momentum (Harmonic) creates the highest-probability setups: <strong>the right timing, at the right price, with the right participants, at the right momentum state.</strong></p>
-        </div>
+                        <p>Combining cycle timing (Pentarch) with levels (Janus), volume (Volume Oracle), and momentum (Harmonic) creates the highest-probability setups: <strong>the right timing, at the right price, with the right participants, at the right momentum state.</strong></p>
+                    </div>
 
-        <hr />
+                    <hr />
 
-        <div style="text-align: center; padding: 40px 20px;">
-            <p style="font-size: 18px; margin-bottom: 20px;">🎯 <strong>Ready to master TD Sequential?</strong></p>
-            <a href="index.html" class="back-link" style="font-size: 18px;">← Back to Pentarch Documentation</a>
+                    <div class="footer-section">
+                        <p>🎯 <strong>Ready to master TD Sequential?</strong></p>
+                        <a href="index.html" class="back-link">← Back to Pentarch Documentation</a>
+                    </div>
+                </article>
+            </div>
         </div>
     </div>
 </body>
