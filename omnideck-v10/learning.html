@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -7,295 +7,361 @@
     <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
     <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
     <meta name="theme-color" content="#667eea">
     <style>
+        :root {
+            --md-text-font: "Roboto";
+            --md-primary-fg-color: #667eea;
+        }
         body {
-            background: #1a1d2e;
-            color: #e0e0e0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            padding: 0;
-            margin: 0;
+            font-family: "Roboto", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+            font-size: 18px;
+            line-height: 1.7;
         }
-        .learning-container {
-            max-width: 900px;
+        .md-content {
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 40px 20px;
         }
-        .back-link {
-            display: inline-block;
-            margin-bottom: 30px;
-            padding: 10px 20px;
-            background: rgba(102, 126, 234, 0.1);
-            border: 1px solid #667eea;
-            border-radius: 8px;
-            color: #667eea;
-            text-decoration: none;
-            transition: all 0.2s;
+        .md-typeset {
+            font-size: 18px;
+            line-height: 1.7;
+            color: var(--md-typeset-color);
         }
-        .back-link:hover {
-            background: rgba(102, 126, 234, 0.2);
-            transform: translateX(-4px);
+        .md-typeset h1 {
+            font-size: 2.5em;
+            font-weight: 400;
+            line-height: 1.3;
+            margin: 0 0 1.5rem;
+        }
+        .md-typeset h2 {
+            font-size: 2em;
+            font-weight: 400;
+            line-height: 1.4;
+            margin: 2.5rem 0 1.2rem;
+            border-bottom: 2px solid var(--md-primary-fg-color);
+            padding-bottom: 0.5rem;
+        }
+        .md-typeset h3 {
+            font-size: 1.5em;
+            font-weight: 400;
+            margin: 2rem 0 1rem;
+        }
+        .md-typeset p {
+            margin: 1.2em 0;
+            font-size: 1.05em;
+        }
+        .md-typeset ul, .md-typeset ol {
+            margin: 1.2em 0;
+            padding-left: 2em;
+        }
+        .md-typeset li {
+            margin: 0.6em 0;
+            line-height: 1.7;
         }
         .hero {
             text-align: center;
-            padding: 60px 20px;
+            padding: 4rem 2rem;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 16px;
-            margin-bottom: 50px;
+            border-radius: 12px;
+            margin: 2rem 0 3rem;
+            box-shadow: 0 8px 30px rgba(102, 126, 234, 0.25);
+        }
+        .hero-icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
         }
         .hero h1 {
-            color: white;
-            font-size: 42px;
-            margin: 0 0 16px 0;
+            color: white !important;
+            font-size: 2.8em !important;
+            margin: 0 0 1rem 0 !important;
+            border: none !important;
+            padding: 0 !important;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
         .hero p {
-            color: rgba(255,255,255,0.9);
-            font-size: 18px;
-            margin: 0;
+            color: rgba(255,255,255,0.95) !important;
+            font-size: 1.3em !important;
+            margin: 0 !important;
         }
-        h2 {
-            color: #667eea;
-            font-size: 32px;
-            margin: 60px 0 20px 0;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #667eea;
+        .sp-callout {
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            border-left: 4px solid;
         }
-        h3 {
-            color: #8b9cff;
-            font-size: 24px;
-            margin: 40px 0 16px 0;
+        .sp-callout--info {
+            background: rgba(102, 126, 234, 0.08);
+            border-color: #667eea;
         }
-        strong {
-            color: #a0b0ff;
+        .sp-callout h3 {
+            margin-top: 0 !important;
+            font-size: 1.4em !important;
         }
-        .challenge-box, .mistake-box {
+        .challenge-box {
             background: rgba(102, 126, 234, 0.05);
             border-left: 4px solid #667eea;
-            padding: 20px;
-            margin: 20px 0;
+            padding: 1.8rem;
+            margin: 2rem 0;
             border-radius: 8px;
+        }
+        .challenge-box h3 {
+            color: #667eea;
+            margin-top: 0 !important;
+        }
+        .mistake-box {
+            background: rgba(239, 68, 68, 0.05);
+            border-left: 4px solid #ef4444;
+            padding: 1.8rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+        .mistake-box h3 {
+            color: #ef4444;
+            margin-top: 0 !important;
         }
         .decision-tree {
-            background: #0f111a;
-            padding: 30px;
-            border-radius: 12px;
-            font-family: monospace;
-            font-size: 14px;
-            line-height: 1.4;
-            overflow-x: auto;
-            margin: 20px 0;
-        }
-        .quick-rules {
-            background: rgba(76, 175, 80, 0.1);
-            border-left: 4px solid #4caf50;
-            padding: 20px;
-            margin: 20px 0;
+            background: #f5f5f5;
+            padding: 2rem;
             border-radius: 8px;
-        }
-        .quick-rules ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-        .intro-box {
-            background: rgba(102, 126, 234, 0.1);
-            border: 2px solid #667eea;
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 40px;
-            font-size: 18px;
-            line-height: 1.8;
-        }
-        .visual-divider {
-            text-align: center;
-            margin: 50px 0;
-            font-size: 32px;
-            opacity: 0.3;
+            font-family: "Roboto Mono", monospace;
+            font-size: 0.95em;
+            line-height: 1.5;
+            overflow-x: auto;
+            margin: 2rem 0;
+            border: 1px solid #e0e0e0;
         }
         .pairing-section {
             background: rgba(255, 152, 0, 0.05);
             border: 1px solid rgba(255, 152, 0, 0.3);
-            padding: 25px;
-            border-radius: 12px;
-            margin: 20px 0;
+            padding: 1.8rem;
+            border-radius: 8px;
+            margin: 2rem 0;
         }
         .pairing-section h3 {
             color: #ff9800;
-            margin-top: 0;
+            margin-top: 0 !important;
         }
-        hr {
-            border: none;
-            border-top: 1px solid rgba(102, 126, 234, 0.2);
-            margin: 40px 0;
+        .back-link {
+            display: inline-block;
+            margin: 2rem 0;
+            padding: 0.8rem 1.5rem;
+            background: var(--md-primary-fg-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .back-link:hover {
+            background: #764ba2;
+            transform: translateX(-4px);
+        }
+        .visual-divider {
+            text-align: center;
+            margin: 3rem 0;
+            font-size: 2.5rem;
+            opacity: 0.2;
+        }
+        strong {
+            font-weight: 600;
+            color: var(--md-typeset-color);
         }
     </style>
 </head>
 <body>
-    <div class="learning-container">
-        <a href="index.html" class="back-link">← Back to Omnideck Documentation</a>
+    <div class="md-container">
+        <main class="md-main">
+            <div class="md-content" data-md-component="content">
+                <article class="md-content__inner md-typeset">
 
-        <div class="hero">
-            <div style="font-size: 64px; margin-bottom: 20px;">📚</div>
-            <h1>Omnideck v1.0<br/>Advanced Learning Guide</h1>
-            <p>Psychology • Decision Trees • Common Mistakes • Indicator Pairing</p>
-        </div>
+                    <a href="index.html" class="back-link">← Back to Omnideck Documentation</a>
 
-        <div class="intro-box">
-            <strong>🎯 Why 10 Systems Can Hurt More Than Help:</strong> More indicators doesn't mean more profit. Most traders enable all 10 Omnideck systems on day one, suffer analysis paralysis, and quit within a week. This guide teaches you the <em>psychology</em> of multi-system trading, <em>which combinations</em> actually work, and <em>how to avoid</em> the mental traps that destroy complex strategies.
-        </div>
+                    <div class="hero">
+                        <div class="hero-icon">📚</div>
+                        <h1>Omnideck v1.0 Advanced Learning Guide</h1>
+                        <p>Psychology • Decision Trees • Common Mistakes • Indicator Pairing</p>
+                    </div>
 
-        <h2>🧠 Psychology: Key Challenges with Multi-System Trading</h2>
+                    <div class="sp-callout sp-callout--info">
+                        <h3>🎯 Why 10 Systems Can Hurt More Than Help</h3>
+                        <p><strong>More indicators doesn't mean more profit.</strong> Most traders enable all 10 Omnideck systems on day one, suffer analysis paralysis, and quit within a week. This guide teaches you the psychology of multi-system trading, which combinations actually work, and how to avoid the mental traps that destroy complex strategies.</p>
+                    </div>
 
-        <div class="challenge-box">
-            <h3>Challenge 1: Analysis Paralysis from 10 Systems</h3>
-            <p><strong>What Happens:</strong> TD 9 appears, but RSI is overbought, Regime is yellow, SuperTrend is green, EMAs bullish, Stochastic diverging. 30 minutes pass analyzing every angle. Signal expires untaken.</p>
-            <p><strong>The Fix:</strong> Set a 10-minute timer for analysis. If you can't decide in 10 minutes, the setup isn't clear enough → Skip and wait for next signal.</p>
-            <p><strong>Mental Script:</strong> "6+ systems aligned = take it. 5 systems split evenly = skip. Still analyzing at minute 8 = skip."</p>
-        </div>
+                    <h2>🧠 Psychology: Key Challenges with Multi-System Trading</h2>
 
-        <div class="challenge-box">
-            <h3>Challenge 2: "More Systems = Safer Trade" Fallacy</h3>
-            <p><strong>What Happens:</strong> You find 7 aligned systems and think "This can't lose!" You risk 2% (double your normal) because it's "so perfect." Trade fails immediately. You're devastated.</p>
-            <p><strong>The Fix:</strong> Risk management applies to EVERY trade. 1% max risk, 2:1 R:R minimum, stop set before entry—no exceptions for "perfect" setups.</p>
-            <p><strong>Mental Script:</strong> "7 systems aligned = higher probability, not certainty. I still follow my 1% risk rule on every single trade."</p>
-        </div>
+                    <div class="challenge-box">
+                        <h3>Challenge 1: Analysis Paralysis from 10 Systems</h3>
+                        <p><strong>What Happens:</strong> TD 9 appears, but RSI is overbought, Regime is yellow, SuperTrend is green, EMAs bullish, Stochastic diverging. You spend 30 minutes analyzing every angle. By the time you decide, the signal has expired untaken.</p>
 
-        <div class="challenge-box">
-            <h3>Challenge 3: System Blaming After Losses</h3>
-            <p><strong>What Happens:</strong> Trade loses on TD 9 + Regime + EMAs. You think: "TD Sequential doesn't work!" Next signal: you disable TD, enable different systems. Week later: new systems lose, disable those too. Month later: cycled through all 10 systems, nothing "works."</p>
-            <p><strong>The Fix:</strong> Commit to your chosen 4-6 systems for minimum 50 trades before changing. One loss doesn't invalidate a system—sample size reveals performance.</p>
-            <p><strong>Mental Script:</strong> "One loss doesn't mean broken system—I need 50 trades to evaluate true performance."</p>
-        </div>
+                        <p><strong>Why This Happens:</strong> You're trying to get perfect confirmation from all 10 systems. But perfect alignment rarely happens, and waiting for it means missing 90% of valid trades.</p>
 
-        <div class="visual-divider">⚡</div>
+                        <p><strong>The Fix:</strong> Set a 10-minute analysis timer. If 6+ systems agree, take the trade. If fewer than 6 agree OR timer expires, skip it. Perfection is the enemy of execution.</p>
 
-        <h2>🌳 Decision Tree: Should I Take This Multi-System Trade?</h2>
+                        <p><strong>Mental Script:</strong> <em>"6+ systems aligned = take it. Timer expired or &lt;6 alignment = skip it. No exceptions."</em></p>
+                    </div>
 
-        <div class="decision-tree">
+                    <div class="challenge-box">
+                        <h3>Challenge 2: System Switching After Every Loss</h3>
+                        <p><strong>What Happens:</strong> You use TD + Regime + SuperTrend for your first trade. It loses. Next trade, you switch to TD + EMAs + Squeeze, thinking "Maybe this combination is better!" That loses too. Third trade, you try TD + BMSB + Candlestick patterns. After 10 trades, you've used 8 different combinations and have no idea what actually works.</p>
+
+                        <p><strong>Why This Happens:</strong> Every loss triggers doubt. With 10 systems available, there are hundreds of possible combinations. Your brain thinks switching = progress, but it's actually chaos.</p>
+
+                        <p><strong>The Fix:</strong> Choose your 4-6 systems BEFORE starting. Commit to that exact combination for a minimum of 50 trades. One loss doesn't mean the combination is broken—you need sample size to evaluate performance.</p>
+
+                        <p><strong>Mental Script:</strong> <em>"I committed to these 6 systems for 50 trades. I'm on trade #12. One loss doesn't change my system."</em></p>
+                    </div>
+
+                    <div class="challenge-box">
+                        <h3>Challenge 3: System Blaming After Losses</h3>
+                        <p><strong>What Happens:</strong> Trade loses on TD 9 + Regime + EMAs. You think: "TD Sequential doesn't work!" Next signal: you disable TD, enable different systems. Week later: new systems lose, disable those too. Month later: you've cycled through all 10 systems, nothing "works."</p>
+
+                        <p><strong>Why This Happens:</strong> You're blaming individual systems instead of accepting that ALL trading systems have losing trades. No system wins 100% of the time.</p>
+
+                        <p><strong>The Fix:</strong> Commit to your chosen 4-6 systems for minimum 50 trades before changing. One loss doesn't invalidate a system—sample size reveals performance. Track: "After 50 trades with TD + Regime + SuperTrend + EMAs, I won 32/50 (64%)." That's data. "TD doesn't work after 3 losses" is emotion.</p>
+
+                        <p><strong>Mental Script:</strong> <em>"One loss doesn't mean broken system—I need 50 trades to evaluate true performance."</em></p>
+                    </div>
+
+                    <div class="visual-divider">⚡</div>
+
+                    <h2>🌳 Decision Tree: Should I Take This Multi-System Trade?</h2>
+
+                    <div class="decision-tree">
 <pre>┌──────────────────────────────────────┐
 │  OMNIDECK SIGNAL APPEARS (any system)│
-└─────────────┬────────────────────────┘
-              │
-              ▼
-       ┌──────────────┐
-       │ How many     │
-       │ systems      │
-       │ agree?       │
-       └──┬───────┬───┘
-          │       │
-        0-2     3+
-          │       │
-          ▼       ▼
-       ❌ SKIP  Continue
-                  │
-                  ▼
-           ┌──────────────┐
-           │ Any systems  │
-           │ directly     │
-           │ conflicting? │
-           └──┬───────┬───┘
-              │       │
-             YES      NO
-              │       │
-              ▼       ▼
-           ❌ SKIP  Continue
-                      │
-                      ▼
-               ┌──────────────┐
-               │ Can explain  │
-               │ in 15 secs?  │
-               └──┬───────┬───┘
-                  │       │
-                 NO      YES
-                  │       │
-                  ▼       ▼
-               ❌ SKIP  Continue
-                          │
-                          ▼
-                   ┌──────────────┐
-                   │ Higher TF    │
-                   │ confirmation?│
-                   └──┬───────┬───┘
-                      │       │
-                     NO      YES
-                      │       │
-                      ▼       ▼
-                   Medium  ✅ HIGH
-                   Quality QUALITY</pre>
-        </div>
+└──────────┬───────────────────────────┘
+           │
+           ▼
+    ┌──────────────┐
+    │ How many of  │
+    │ YOUR chosen  │
+    │ systems agree?│
+    └──┬───────┬───┘
+       │       │
+     <6       6+
+       │       │
+       ▼       ▼
+    ❌ SKIP  Continue
+                │
+                ▼
+         ┌──────────────┐
+         │ Any major    │
+         │ conflicts?   │
+         └──┬───────┬───┘
+            │       │
+           YES      NO
+            │       │
+            ▼       ▼
+         ❌ SKIP  Continue
+                    │
+                    ▼
+             ┌──────────────┐
+             │ Higher TF    │
+             │ agrees?      │
+             └──┬───────┬───┘
+                │       │
+               NO      YES
+                │       │
+                ▼       ▼
+             ❌ SKIP  Continue
+                        │
+                        ▼
+                 ┌──────────────┐
+                 │ 15-second    │
+                 │ explanation  │
+                 │ test pass?   │
+                 └──┬───────┬───┘
+                    │       │
+                   NO      YES
+                    │       │
+                    ▼       ▼
+                 ❌ SKIP  ✅ TAKE</pre>
+                    </div>
 
-        <div class="quick-rules">
-            <strong>Quick Rules:</strong>
-            <ul>
-                <li><strong>3+ systems aligned:</strong> Minimum for trade consideration</li>
-                <li><strong>No major conflicts:</strong> SuperTrend vs Regime, TD vs all oscillators</li>
-                <li><strong>15-second test:</strong> Can you explain the setup simply and quickly?</li>
-                <li><strong>Higher TF check:</strong> One timeframe higher confirms direction</li>
-            </ul>
-        </div>
+                    <div class="sp-callout sp-callout--info">
+                        <h3>⚡ Quick Rules for Omnideck</h3>
+                        <ul>
+                            <li><strong>6+ systems must agree:</strong> Minimum for trade consideration (out of your chosen systems)</li>
+                            <li><strong>No major conflicts:</strong> SuperTrend vs Regime, TD exhaustion vs all momentum bullish</li>
+                            <li><strong>15-second test:</strong> Can you explain the setup simply in 15 seconds? If not, skip</li>
+                            <li><strong>Higher TF check:</strong> One timeframe higher must confirm direction</li>
+                        </ul>
+                    </div>
 
-        <div class="visual-divider">🚫</div>
+                    <div class="visual-divider">🚫</div>
 
-        <h2>🚫 Top 5 Mistakes with Omnideck</h2>
+                    <h2>🚫 Top 5 Mistakes with Omnideck</h2>
 
-        <div class="mistake-box">
-            <h3>Mistake #1: Enabling All 10 Systems on Day 1</h3>
-            <p><strong>What Happens:</strong> You install Omnideck, enable everything immediately. Chart becomes visual chaos. You don't understand what any system does because you never learned them separately. Analysis paralysis sets in.</p>
-            <p><strong>The Fix:</strong> Start with 2-3 systems (Week 1), add 1-2 more (Week 2), settle on your core 4-6 systems permanently. Most successful users never enable all 10.</p>
-        </div>
+                    <div class="mistake-box">
+                        <h3>Mistake #1: Enabling All 10 Systems on Day 1</h3>
+                        <p><strong>What Happens:</strong> You install Omnideck, enable everything immediately. Chart becomes visual chaos. You don't understand what any system does because you never learned them separately. Analysis paralysis sets in. You take no trades or take random trades.</p>
 
-        <div class="mistake-box">
-            <h3>Mistake #2: Treating Conflicting Systems as "Broken"</h3>
-            <p><strong>What Happens:</strong> TD 9 Buy appears, but SuperTrend is red and Regime is red. You think: "This indicator is broken—systems are contradicting!"</p>
-            <p><strong>The Fix:</strong> Conflicting systems = low confluence setup = skip or reduce size significantly. Not a bug, it's information about market complexity.</p>
-        </div>
+                        <p><strong>The Fix:</strong> Start with 3 systems only (TD Sequential + EMAs + Support/Resistance). Trade these for 2 weeks. Once comfortable, add 1-2 more. Maximum recommended: 6 systems simultaneously. Never use all 10 at once.</p>
+                    </div>
 
-        <div class="mistake-box">
-            <h3>Mistake #3: Ignoring Higher Timeframe Because "10 Systems Should Be Enough"</h3>
-            <p><strong>What Happens:</strong> You have 7 systems aligned bullish on 15-minute chart. You skip checking the 1-hour chart. Trade fails. You check 1H after the loss: strong downtrend. Your 15M signal was a tiny pullback in a larger downtrend.</p>
-            <p><strong>The Fix:</strong> Always check one timeframe higher before entry. 10 systems on lower TF don't override higher TF trend direction.</p>
-        </div>
+                    <div class="mistake-box">
+                        <h3>Mistake #2: Using TD Signals Without Confirming Other Systems</h3>
+                        <p><strong>What Happens:</strong> TD 9 Buy appears. You enter immediately without checking: Is Regime bullish? Are EMAs aligned? Is there support nearby? Trade fails because TD alone isn't enough.</p>
 
-        <div class="mistake-box">
-            <h3>Mistake #4: Switching System Combinations Every Week</h3>
-            <p><strong>What Happens:</strong> Week 1: TD + Regime loses once, you switch to Squeeze + EMAs. Week 2: That loses, you switch again. Month ends: no idea which systems actually work because you never tested any combination long enough.</p>
-            <p><strong>The Fix:</strong> Choose one combination (4-6 systems), commit to 50 trades minimum before evaluating. Every system experiences losses—sample size matters.</p>
-        </div>
+                        <p><strong>The Fix:</strong> TD signals are triggers, not complete setups. Before entering any TD signal, check: 1) Regime color, 2) EMA alignment, 3) Nearest support/resistance, 4) Volume. Need 3+ confirmations.</p>
+                    </div>
 
-        <div class="mistake-box">
-            <h3>Mistake #5: Assuming "Perfect" Setups Can't Lose</h3>
-            <p><strong>What Happens:</strong> You find 9/10 systems aligned bullish. You think "This is guaranteed!" and risk 3% because "it's so perfect." Trade immediately reverses and stops you out.</p>
-            <p><strong>The Fix:</strong> No setup is guaranteed. Even 10/10 systems aligned doesn't eliminate risk. 1% risk rule applies to every trade, no exceptions.</p>
-        </div>
+                    <div class="mistake-box">
+                        <h3>Mistake #3: Ignoring System Conflicts</h3>
+                        <p><strong>What Happens:</strong> TD 13 Sell (exhaustion) appears, but SuperTrend is bright green (strong uptrend), Regime is green (bullish), EMAs all bullish, Squeeze just fired bullish. You see the TD signal and short anyway. Trade fails spectacularly.</p>
 
-        <div class="visual-divider">🔗</div>
+                        <p><strong>The Fix:</strong> When one system contradicts 5+ others, skip the trade. Example: TD 13 Sell is valid, but if 7 other systems are screaming bullish, the trend overrules the exhaustion signal. Wait for alignment.</p>
+                    </div>
 
-        <h2>🔗 Works Well With Other Signal Pilot Indicators</h2>
+                    <div class="mistake-box">
+                        <h3>Mistake #4: Not Simplifying Your System Over Time</h3>
+                        <p><strong>What Happens:</strong> You've been using 8 systems for 3 months. Performance is mediocre (52% win rate). You keep adding more filters, more systems, more complexity. Win rate drops to 48%.</p>
 
-        <div class="pairing-section">
-            <h3>High Synergy Pairs:</h3>
-            <ul>
-                <li><strong>+ Janus Atlas:</strong> Multi-system signals + level clusters = high-confluence reversal setups</li>
-                <li><strong>+ Volume Oracle:</strong> System alignment + institutional flow confirmation = validated trends</li>
-                <li><strong>+ Pentarch:</strong> TD Sequential depth + multi-system validation = comprehensive cycle analysis</li>
-            </ul>
+                        <p><strong>The Fix:</strong> After 50+ trades, review which systems actually helped vs added noise. Most successful Omnideck traders eventually simplify down to 4-5 core systems. Complexity ≠ performance. More often: Simplicity = clarity = better decisions.</p>
+                    </div>
 
-            <h3>Common Combinations:</h3>
-            <ul>
-                <li><strong>Omnideck TD 9 + Janus support cluster</strong> → Reversal signal with level confluence</li>
-                <li><strong>Omnideck Regime green + Volume Flow green</strong> → Institutional trend confirmation</li>
-                <li><strong>Omnideck Squeeze breakout + Pentarch TDST break</strong> → Multi-methodology breakout validation</li>
-            </ul>
+                    <div class="mistake-box">
+                        <h3>Mistake #5: Assuming "Perfect" Setups Can't Lose</h3>
+                        <p><strong>What Happens:</strong> You find 9/10 systems aligned bullish. You think "This is guaranteed!" and risk 3% because "it's so perfect." Trade immediately reverses and stops you out. You lose 3% on a single trade.</p>
 
-            <h3>Why These Pair Well:</h3>
-            <p>Omnideck provides multi-system confluence. Adding Janus Atlas levels or Volume Oracle institutional flow adds independent confirmation from different market dimensions (levels, volume), reducing false signals.</p>
-        </div>
+                        <p><strong>The Fix:</strong> No setup is guaranteed. Even 10/10 systems aligned doesn't eliminate risk. Risk management rules apply to EVERY trade: 1% risk maximum, no exceptions. Perfect-looking setups can still fail—that's probability.</p>
+                    </div>
 
-        <hr />
+                    <div class="visual-divider">🔗</div>
 
-        <div style="text-align: center; padding: 40px 20px;">
-            <a href="index.html" class="back-link" style="font-size: 18px;">← Back to Omnideck Documentation</a>
-        </div>
+                    <h2>🔗 Works Well With Other Signal Pilot Indicators</h2>
+
+                    <div class="pairing-section">
+                        <h3>High Synergy Pairs</h3>
+                        <ul>
+                            <li><strong>+ Janus Atlas:</strong> Omnideck multi-system signals + Janus level clusters = precise entries at key support/resistance zones</li>
+                            <li><strong>+ Volume Oracle:</strong> Omnideck alignment + Volume Flow confirmation = institutional participation validation</li>
+                            <li><strong>+ Pentarch:</strong> Omnideck TD system + Pentarch deep TD analysis = enhanced cycle timing with multiple confirmation layers</li>
+                        </ul>
+
+                        <h3>Common Combinations</h3>
+                        <ul>
+                            <li><strong>Omnideck TD 9 + Regime green + Janus support cluster</strong> → Multi-layer bullish reversal at key level</li>
+                            <li><strong>Omnideck squeeze breakout + Volume Oracle Flow</strong> → Volatility expansion with institutional confirmation</li>
+                            <li><strong>Omnideck 7+ systems aligned + Pentarch IGN</strong> → Extreme conviction setup with institutional signal</li>
+                        </ul>
+
+                        <h3>Why These Pair Well</h3>
+                        <p><strong>Omnideck provides comprehensive multi-system analysis in one place.</strong> Janus adds precise entry levels. Volume Oracle confirms institutional participation. Pentarch adds deeper TD Sequential analysis. Use Omnideck for initial filtering and confirmation, then refine entries with complementary indicators.</p>
+                    </div>
+
+                    <hr style="margin: 3rem 0; border: none; border-top: 1px solid rgba(0,0,0,0.1);">
+
+                    <div style="text-align: center; padding: 2rem 0;">
+                        <p style="font-size: 1.2em; margin-bottom: 1.5rem;"><strong>Ready to apply what you've learned?</strong></p>
+                        <a href="index.html" class="back-link">← Back to Omnideck Documentation</a>
+                    </div>
+
+                </article>
+            </div>
+        </main>
     </div>
 </body>
 </html>
