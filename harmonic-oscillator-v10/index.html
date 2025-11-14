@@ -1979,7 +1979,7 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1.1rem; height: 1.1rem; fill: currentColor; opacity: 0.7;">
         <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M16.2,16.2L11,13V7H12.5V12.2L17,14.9L16.2,16.2Z"/>
       </svg>
-      <span style="opacity: 0.85;">9 min read</span>
+      <span style="opacity: 0.85;">29 min read</span>
     </span>
   
 </div>
@@ -2055,38 +2055,39 @@
   <div class="sp-callout__icon">📊</div>
   <div class="sp-callout__content">
     <h4>How the Voting System Works</h4>
-    <p style="margin-bottom: 1rem;">Three oscillators vote democratically to generate consensus signals:</p>
+    <p style="margin-bottom: 1rem;">Five independent components vote democratically to generate consensus signals. The composite oscillator contributes 3 votes:</p>
     <div class="mermaid">
 graph TD
-    Data[📊 Market Data Input] --> Oscillators[THREE OSCILLATOR INPUTS]
+    Data[📊 Market Data Input] --> Oscillators[COMPOSITE OSCILLATOR<br/>3 of 5 Votes]
 
     Oscillators --> MACD[1️⃣ MACD<br/>Trend & Momentum]
     Oscillators --> RSI[2️⃣ RSI<br/>Triple Envelope]
     Oscillators --> Stoch[3️⃣ Stochastic RSI<br/>Oversold/Overbought]
 
-    MACD --> Voting[DEMOCRATIC VOTING SYSTEM<br/>Each Oscillator Gets 1 Vote]
+    MACD --> Voting[VOTE CONTRIBUTION<br/>3 Votes from Oscillators<br/>+2 from Volume & Divergence]
     RSI --> Voting
     Stoch --> Voting
 
-    Voting --> Mode{Voting Threshold}
+    Voting --> Threshold{Vote Count}
 
-    Mode -->|Conservative Mode| C[Require All 3 Votes<br/>Highest Confidence]
-    Mode -->|Balanced Mode| B[Require 2 of 3 Votes<br/>Default Setting]
-    Mode -->|Aggressive Mode| A[Require 1 of 3 Votes<br/>More Frequent]
-
-    C --> Output[🟢 Consensus Signal]
-    B --> Output
-    A --> Output
+    Threshold -->|3 Votes| Signal[🟢 BULL or BEAR<br/>Moderate Confidence]
+    Threshold -->|4-5 Votes| Strong[⭐ STRONG<br/>Maximum Confidence]
+    Threshold -->|0-2 Votes| Neutral[⚪ NEUT<br/>No Clear Consensus]
 
     style Data fill:#37474f,color:#fff,stroke:#263238,stroke-width:3px
     style Oscillators fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:3px
     style Voting fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:3px
-    style Mode fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:3px
-    style Output fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:4px
+    style Threshold fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:3px
+    style Signal fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
+    style Strong fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:4px
+    style Neutral fill:#757575,color:#fff,stroke:#616161,stroke-width:2px
     style MACD fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:2px
     style RSI fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:2px
     style Stoch fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:2px
     </div>
+    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+      <strong>Note:</strong> This diagram shows the 3-oscillator component. See the full 5-component system below, which includes Volume and Divergence votes.
+    </p>
   </div>
 </div>
 
@@ -3005,6 +3006,22 @@ Momentum Reversal:   Bull → Bear (or vice versa)
 High Conviction:     Direct STRONG signal
 Whipsaw Conditions:  Rapid Bull ↔ Bear alternation
 </code></pre>
+<hr />
+
+<div class="sp-callout sp-callout--reflection">
+  <div class="sp-callout__title">Reflection Check</div>
+  <p>Before using Harmonic Oscillator in your trading, ask yourself:</p>
+  <ul>
+    <li>Can you explain the five-component voting system (MACD, RSI, Stochastic RSI, Volume, Divergence) and how votes are tallied?</li>
+    <li>Do you understand the four signal types (Bull, Bear, STRONG, NEUT) and what vote thresholds trigger each?</li>
+    <li>Can you differentiate between a regular signal (3 votes) and a STRONG signal (4-5 votes) in terms of confidence level?</li>
+    <li>Have you observed how NEUT signals indicate transitional periods where patience is recommended?</li>
+    <li>Do you understand that Harmonic Oscillator displays multi-component momentum consensus, not trading instructions, and requires your own interpretation?</li>
+  </ul>
+  <p><strong>If yes to all 5:</strong> You're ready to use Harmonic Oscillator! Explore the <a href="../ref-workflow/">Workflow Guide</a> to learn momentum confirmation strategies.<br>
+  <strong>If no to any:</strong> Review the relevant section above or use the chatbot (bottom right) to ask specific questions.</p>
+</div>
+
 <hr />
 <h2 id="support">📞 Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
 <p><strong>Technical Questions:</strong><br />
