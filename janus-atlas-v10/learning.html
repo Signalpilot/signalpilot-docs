@@ -1,14 +1,10 @@
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Janus Atlas v1.0 - Advanced Learning Guide - Signal Pilot</title>
-    <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
-    <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
     <meta name="theme-color" content="#f59e0b">
     <style>
         :root {
@@ -19,15 +15,20 @@
             font-family: "Roboto", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
             font-size: 18px;
             line-height: 1.7;
+            background: #1a1d2e;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
         }
         .md-content {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 20px;
         }
         .md-typeset {
             font-size: 18px;
             line-height: 1.7;
-            color: var(--md-typeset-color);
+            color: #e0e0e0;
         }
         .md-typeset h1 {
             font-size: 2.5em;
@@ -122,15 +123,16 @@
             margin-top: 0 !important;
         }
         .decision-tree {
-            background: #f5f5f5;
+            background: #0f111a;
             padding: 2rem;
             border-radius: 8px;
-            font-family: "Roboto Mono", monospace;
+            font-family: "Roboto Mono", Consolas, monospace;
             font-size: 0.95em;
             line-height: 1.5;
             overflow-x: auto;
             margin: 2rem 0;
-            border: 1px solid #e0e0e0;
+            border: 2px solid rgba(245, 158, 11, 0.2);
+            color: #e0e0e0;
         }
         .quick-rules {
             background: rgba(6, 182, 212, 0.1);
@@ -154,15 +156,16 @@
             display: inline-block;
             margin: 2rem 0;
             padding: 0.8rem 1.5rem;
-            background: var(--md-primary-fg-color);
-            color: white;
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid var(--md-primary-fg-color);
+            color: var(--md-primary-fg-color);
             text-decoration: none;
             border-radius: 6px;
             font-weight: 500;
             transition: all 0.2s;
         }
         .back-link:hover {
-            background: #06b6d4;
+            background: rgba(245, 158, 11, 0.2);
             transform: translateX(-4px);
         }
         .visual-divider {
@@ -173,7 +176,12 @@
         }
         strong {
             font-weight: 600;
-            color: var(--md-typeset-color);
+            color: #f59e0b;
+        }
+        hr {
+            margin: 3rem 0;
+            border: none;
+            border-top: 1px solid rgba(245, 158, 11, 0.2);
         }
     </style>
 </head>
@@ -382,7 +390,7 @@
                         <p>Combining spatial + temporal + participant analysis creates a complete picture: the right place, at the right time, with the right players.</p>
                     </div>
 
-                    <hr style="margin: 3rem 0; border: none; border-top: 1px solid rgba(0,0,0,0.1);">
+                    <hr>
 
                     <div style="text-align: center; padding: 2rem 0;">
                         <p style="font-size: 1.2em; margin-bottom: 1.5rem;"><strong>Ready to apply what you've learned?</strong></p>
