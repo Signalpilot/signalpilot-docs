@@ -2838,6 +2838,59 @@ graph TD
 </div>
 
 <hr />
+<h2 id="when-this-doesnt-work-well">🌫️ When This Doesn't Work Well<a class="headerlink" href="#when-this-doesnt-work-well" title="Permanent link">&para;</a></h2>
+
+<div class="sp-callout sp-callout--warning">
+  <div class="sp-callout__title">Understanding Reduced Reliability Conditions</div>
+  <p>Harmonic Oscillator signals show reduced reliability in certain market conditions. Recognizing these environments helps set appropriate expectations:</p>
+</div>
+
+<h3 id="choppy-sideways-ranging-markets">Choppy, Sideways, Ranging Markets<a class="headerlink" href="#choppy-sideways-ranging-markets" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> When price oscillates in a horizontal range with no clear directional trend, the five oscillators produce conflicting votes as momentum shifts back and forth every few bars.</p>
+<p><strong>What Happens:</strong> NEUT signals dominate the chart. When Bull or Bear signals do appear, they flip quickly (Bull → NEUT → Bear → NEUT) within 5-10 bars. Signal frequency increases but reliability decreases. Following these signals leads to whipsaws—entering long on Bull signal, getting stopped out, then seeing Bear signal that also fails.</p>
+<p><strong>Context:</strong> Oscillators measure momentum and rate of change. In sideways markets, there IS momentum (price moves up and down), but it's non-directional—momentum shifts from bullish to bearish repeatedly without follow-through. This isn't a failure—Harmonic is correctly identifying that momentum keeps shifting. The constant NEUT and rapid flips are the indicator telling you "this market lacks directional conviction, wait for clarity." Combine with <a href="../pentarch-v10/">Pentarch</a> regime bars or <a href="../omnideck-v10/">Omnideck</a> Regime Box—if those show neutral/gray simultaneously, skip trades until trend clarity emerges.</p>
+
+<h3 id="very-low-timeframes-5m-1m">Very Low Timeframes (5-Minute, 1-Minute)<a class="headerlink" href="#very-low-timeframes-5m-1m" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> Using Harmonic Oscillator on 1m or 5m charts, especially in crypto or highly volatile stocks.</p>
+<p><strong>What Happens:</strong> Signal changes happen every 2-4 bars. Bull → Bear → Bull → NEUT in a 20-minute span. Oscillators react to microstructure noise (spoofing, HFT activity, bid-ask spreads) rather than meaningful momentum shifts. Impossible to trade effectively—by the time you enter on Bull signal, it's already flipping to NEUT.</p>
+<p><strong>Context:</strong> Oscillators use lookback periods (RSI: 14 bars, Stochastic: 14 bars, CCI: 20 bars, etc.). On 1m charts, 14 bars = 14 minutes of data. Any price spike within those 14 minutes dramatically shifts oscillator readings, causing premature signal flips. On 1H charts, 14 bars = 14 hours of data—much more stable, less susceptible to single-candle noise. Recommended minimum timeframes: 15m for day traders, 1H for swing traders, 4H/Daily for position traders. Lower timeframes work technically but produce too many low-quality signals to be profitable.</p>
+
+<h3 id="regime-transitions-trend-changes">Regime Transitions & Trend Changes<a class="headerlink" href="#regime-transitions-trend-changes" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> During the actual moment when trends reverse—transitioning from established bull trend to new bear trend (or vice versa).</p>
+<p><strong>What Happens:</strong> Oscillators whipsaw during the transition. Example: Strong uptrend (Harmonic shows STRONG Bull) → Market tops → Harmonic flips to NEUT → Then Bear → Then NEUT again → Finally settles on Bear. During this 10-20 bar transition, signals are unreliable. You might enter short on first Bear signal, get stopped out when it flips back to NEUT, then watch price fall without you after signal finally stabilizes.</p>
+<p><strong>Context:</strong> Harmonic Oscillator excels at confirming established trends (strong Bull signals during clear uptrends). It struggles during the messy, ambiguous transition periods between trends. This is inherent to how oscillators work—they need several bars of new data to "confirm" the new trend. Early signals during transitions are provisional and frequently reverse. Best practice: Wait for 2-3 consecutive same-direction signals after a regime change before trusting the new direction. Or use <a href="../pentarch-v10/">Pentarch</a> TD/IGN signals for better timing during actual reversals, then use Harmonic for trend confirmation.</p>
+
+<h3 id="strong-persistent-trends-overbought-oversold">Strong Persistent Trends (Overbought/Oversold Conditions)<a class="headerlink" href="#strong-persistent-trends-overbought-oversold" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> During parabolic moves or persistent one-directional trends, oscillators reach extreme readings (RSI 80+, Stochastic 90+) and stay there for weeks.</p>
+<p><strong>What Happens:</strong> Harmonic might flip from STRONG Bull to just Bull or even NEUT as oscillators max out, despite price continuing to rally. This can create premature "momentum weakening" signals that lead to exiting winning positions too early. Conversely, Bear signals may appear during strong uptrends when oscillators dip briefly, but price never actually reverses.</p>
+<p><strong>Context:</strong> Oscillators are designed to identify overbought/oversold conditions, but "overbought can stay overbought" during extraordinary trends. When oscillators hit extremes (RSI 85+), they can't go much higher even if buying pressure continues. Some oscillators will vote neutral or even bearish (due to overbought readings) while price keeps rising. This is why Harmonic uses a voting system—it softens single-oscillator extremes—but even the consensus can weaken during persistent trends. In strong trending markets, prioritize trend-following indicators (<a href="../omnideck-v10/">Omnideck</a> Pilot Line, <a href="../pentarch-v10/">Pentarch</a> regime bars) over oscillators. Use Harmonic for entry timing within the trend (buy dips on Bull signals during uptrends), not for trend reversal calls.</p>
+
+<h3 id="sudden-gaps-news-driven-moves">Sudden Gaps & News-Driven Moves<a class="headerlink" href="#sudden-gaps-news-driven-moves" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> Price gaps 5-10% overnight due to earnings, news, or global events. Or intraday flash moves where price jumps 3-5% in one candle.</p>
+<p><strong>What Happens:</strong> Oscillators lag behind the move. Example: Price gaps down 8% on earnings miss, immediately oversold. Harmonic might still show Bull or NEUT from yesterday's data because oscillators use 14-20 bar lookback periods that include pre-gap bars. By the time Harmonic flips to Bear (3-5 bars later), the worst of the move is over and price is already consolidating or bouncing.</p>
+<p><strong>Context:</strong> All oscillators are lagging indicators—they calculate based on recent history. Gaps and flash moves create discontinuities where yesterday's data becomes instantly obsolete. Harmonic will eventually catch up (usually within 5-10 bars), but initial signals immediately after major gaps are unreliable because they're based on pre-gap momentum that no longer exists. After significant gaps or flash moves, wait 10-15 bars for oscillators to "digest" the new price level before trusting Harmonic signals. Or use non-lagging indicators like <a href="../janus-atlas-v10/">Janus Atlas</a> levels (which update in real-time) immediately post-gap.</p>
+
+<h3 id="low-volatility-consolidation">Low Volatility Consolidation Periods<a class="headerlink" href="#low-volatility-consolidation" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> Price trades in an extremely tight range (1-2% range over multiple days/weeks) with minimal volatility. Common during summer doldrums, holidays, or post-earnings consolidation.</p>
+<p><strong>What Happens:</strong> Oscillators become hypersensitive to tiny moves. A 0.5% price increase in a 1% range generates Bull signals despite the move being statistically insignificant. Harmonic fires Bull and Bear signals on noise rather than meaningful momentum. Signal frequency might appear high, but no signals lead to substantial follow-through.</p>
+<p><strong>Context:</strong> Oscillators measure rate of change and momentum relative to recent price action. In low-volatility environments, even small moves represent large percentage changes from the narrow baseline. A 0.3% move becomes "significant momentum" when the last 10 bars only moved 0.1-0.2% each. These signals are technically valid but practically useless—they identify relative momentum shifts within a stagnant market. Combine with <a href="../volume-oracle-v10/">Volume Oracle</a>: if volume is below average and Harmonic is firing signals, you're likely in a low-volatility trap. Wait for volume expansion and price breakout from consolidation before trusting momentum signals.</p>
+
+<div class="admonition tip">
+<p class="admonition-title">Recognizing Reduced Reliability Environments</p>
+<p><strong>Practical Identification:</strong></p>
+<ul>
+<li><strong>NEUT signals appearing 40%+ of the time:</strong> Market lacks directional momentum—reduce activity</li>
+<li><strong>Signals flipping every 3-5 bars:</strong> Timeframe too low or choppy conditions—use higher timeframe</li>
+<li><strong>Bull → NEUT → Bear → NEUT pattern within 10 bars:</strong> Regime transition—wait for stabilization</li>
+<li><strong>STRONG Bull signal but price barely moving:</strong> Low volatility environment—wait for expansion</li>
+<li><strong>Price continues trending but Harmonic weakens from STRONG to Bull:</strong> Oscillators at extremes—use trend indicators instead</li>
+<li><strong>Major gap or flash move just occurred:</strong> Wait 10+ bars for oscillators to recalibrate</li>
+<li><strong>Regime Box/Pentarch shows neutral while Harmonic shows Bull/Bear:</strong> Conflicting indicators—skip trade</li>
+</ul>
+<p><strong>Remember:</strong> Harmonic Oscillator measures momentum consensus across five oscillators. It tells you WHAT momentum currently exists, not WHETHER that momentum is sustainable or tradeable. Best results occur during trending markets with clear directional bias, on appropriate timeframes (15m+), after regimes have established. During transitions, ranges, and extremes, oscillators struggle—that's when you combine with trend-following indicators (<a href="../pentarch-v10/">Pentarch</a>, <a href="../omnideck-v10/">Omnideck</a>) and structural levels (<a href="../janus-atlas-v10/">Janus Atlas</a>) for confirmation.</p>
+</div>
+
+<hr />
 <h2 id="frequently-asked-questions">❓ Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permanent link">&para;</a></h2>
 <h3 id="q-why-use-five-oscillators-instead-of-one">Q: Why use five oscillators instead of one?<a class="headerlink" href="#q-why-use-five-oscillators-instead-of-one" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> Multiple oscillators provide consensus view. Single oscillator may give false signal while others disagree. Multi-oscillator agreement reduces single-indicator noise.</p>
@@ -2898,6 +2951,9 @@ graph TD
 </tr>
 </tbody>
 </table>
+
+<p><strong>Remember:</strong> STRONG signals (4-5 aligned oscillators) carry significantly more weight than simple Bull/Bear signals (3 oscillators). Trade STRONG signals at key levels for highest probability setups. NEUT signals indicate waiting periods—patience is profitable.</p>
+
 <h3 id="oscillator-quick-reference">Component Quick Reference<a class="headerlink" href="#oscillator-quick-reference" title="Permanent link">&para;</a></h3>
 <table>
 <thead>

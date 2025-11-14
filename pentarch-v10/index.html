@@ -2466,6 +2466,9 @@ CAP → BDN → TD (Climax to accumulation)
 - BDN signals appear during bearish regime transitions<br />
 - TD/WRN/CAP can appear in various regimes</p>
 <p><em>Regime colors provide structure context. Individual interpretation varies.</em></p>
+
+<p><strong>Remember:</strong> Gray (neutral) regime bars indicate transitional periods where signal reliability decreases. TD and IGN signals during clear green/red regime bars carry more weight than signals during gray choppy periods. Wait for regime clarity for highest-confidence setups.</p>
+
 <hr />
 <h2 id="nanoflow-momentum-component">⚡ NanoFlow — Momentum Component <span class="skill-badge skill-badge--intermediate" data-tooltip="Understanding of momentum indicators helpful">Intermediate</span><a class="headerlink" href="#nanoflow-momentum-component" title="Permanent link">&para;</a></h2>
 <p><strong>Visual Display:</strong> Momentum oscillator in separate panel below chart</p>
@@ -2797,6 +2800,52 @@ graph TD
     <div style="margin-top: 24px; color: rgba(255,255,255,0.85); font-size: 14px;">
         ⏱️ 15-18 minute read
     </div>
+</div>
+
+<hr />
+<h2 id="when-this-doesnt-work-well">🌫️ When This Doesn't Work Well<a class="headerlink" href="#when-this-doesnt-work-well" title="Permanent link">&para;</a></h2>
+
+<div class="sp-callout sp-callout--warning">
+  <div class="sp-callout__title">Understanding Reduced Reliability Conditions</div>
+  <p>Pentarch signals show reduced reliability in certain market conditions. Recognizing these environments helps set appropriate expectations:</p>
+</div>
+
+<h3 id="choppy-sideways-markets">Choppy, Sideways Markets<a class="headerlink" href="#choppy-sideways-markets" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> When price moves sideways in a tight range with no clear directional bias, signals fire more frequently but follow-through diminishes. Gray (neutral) regime bars often cluster during these periods.</p>
+<p><strong>What Happens:</strong> TD/IGN signals may fire multiple times in alternating directions without sustained moves. Signal-to-noise ratio decreases. Whipsaws become more common.</p>
+<p><strong>Context:</strong> This isn't a flaw—it reflects actual market behavior. Sideways consolidation produces ambiguous momentum patterns that generate valid but lower-probability signals.</p>
+
+<h3 id="extremely-low-volume-periods">Extremely Low Volume Periods<a class="headerlink" href="#extremely-low-volume-periods" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> During holidays, overnight sessions, or illiquid trading hours, volume drops significantly below average levels.</p>
+<p><strong>What Happens:</strong> Price moves lack institutional participation. Signals may fire on small retail-driven moves that quickly reverse. Follow-through becomes unreliable.</p>
+<p><strong>Context:</strong> Pentarch detects momentum shifts, but low volume means those shifts lack the "fuel" (buying/selling pressure) to sustain moves. Combine with <a href="../volume-oracle-v10/">Volume Oracle</a> to identify these conditions.</p>
+
+<h3 id="major-news-events-earnings">Major News Events & Earnings Releases<a class="headerlink" href="#major-news-events-earnings" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> During Federal Reserve announcements, earnings reports, or major geopolitical events, price action becomes driven by news rather than technical patterns.</p>
+<p><strong>What Happens:</strong> Signals may fire immediately before/after events, but price can gap or reverse violently regardless of signal. Technical patterns temporarily lose predictive value as fundamental news dominates.</p>
+<p><strong>Context:</strong> Pentarch analyzes price and momentum—it doesn't "know" about external catalysts. Signals remain technically valid but compete with stronger fundamental forces during these windows.</p>
+
+<h3 id="very-low-timeframes">Very Low Timeframes (1-Minute, 5-Minute)<a class="headerlink" href="#very-low-timeframes" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> On 1m and 5m charts, market microstructure noise (bid-ask spreads, algos, spoofing) becomes significant relative to price moves.</p>
+<p><strong>What Happens:</strong> Signal frequency increases dramatically, but many signals represent noise rather than meaningful momentum shifts. Stop losses get hit more frequently due to volatility relative to move size.</p>
+<p><strong>Context:</strong> Pentarch works on all timeframes, but very low timeframes amplify noise faster than they amplify signal quality. Higher timeframes (15m+, 1H, 4H, Daily) filter out microstructure noise and improve signal-to-noise ratio.</p>
+
+<h3 id="trend-exhaustion-without-catalysts">Extended Trends Without Clear Exhaustion Signals<a class="headerlink" href="#trend-exhaustion-without-catalysts" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> During strong trending markets (especially parabolic moves), counter-trend signals may fire but price continues trending without reversal.</p>
+<p><strong>What Happens:</strong> CAP or TD signals appear suggesting reversal, but momentum remains so strong that price only pauses briefly before continuing the original trend. Counter-trend signals get "run over" by persistent momentum.</p>
+<p><strong>Context:</strong> Markets can remain overbought or oversold longer than technical indicators suggest. Pentarch detects exhaustion patterns, but extraordinary trends (driven by strong narratives or momentum cascades) can persist beyond typical cycle lengths. Confirm with <a href="../omnideck-v10/">Omnideck</a> regime strength and <a href="../volume-oracle-v10/">Volume Oracle</a> exhaustion patterns.</p>
+
+<div class="admonition tip">
+<p class="admonition-title">Recognizing Reduced Reliability Environments</p>
+<p><strong>Practical Identification:</strong></p>
+<ul>
+<li><strong>Gray regime bars clustering:</strong> Signal of choppy conditions—wait for regime clarity</li>
+<li><strong>Volume bars consistently below average:</strong> Use <a href="../volume-oracle-v10/">Volume Oracle</a> to confirm low participation</li>
+<li><strong>Calendar awareness:</strong> Check economic calendars for major scheduled events</li>
+<li><strong>Signal frequency spiking:</strong> If you see 5+ signals in rapid succession alternating directions, you're likely in chop</li>
+<li><strong>Timeframe comparison:</strong> If 5m shows signals but 1H doesn't, the lower timeframe is likely noise</li>
+</ul>
+<p><strong>Remember:</strong> Pentarch doesn't "fail" in these conditions—it accurately reflects that the market itself is ambiguous or driven by non-technical factors. Skipping low-quality environments is as important as identifying high-quality ones.</p>
 </div>
 
 <hr />

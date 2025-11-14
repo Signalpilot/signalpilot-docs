@@ -2316,6 +2316,9 @@ mindmap
 <p><strong>Pattern Observed:</strong> Three major levels converged at 4,250 (Weekly Low + POC + Monthly VWAP). Price showed bounce reaction from this zone.</p>
 <p><strong>Outcome:</strong> +100 point rally observed from cluster zone.</p>
 <p><em>This example demonstrates level clustering and price reaction patterns. Individual interpretation and outcomes vary. No pattern guarantees any specific outcome.</em></p>
+
+<p><strong>Remember:</strong> Levels don't always hold—they're zones of interest, not guarantees. Watch for price confirmation (reversal candles, volume spikes, or momentum shifts) before assuming a level will support or resist. Some level touches lead to bounces, others lead to breakouts. The key difference is usually confirmation from other indicators.</p>
+
 <hr />
 <h2 id="level-type-descriptions">📍 Level Type Descriptions <span class="skill-badge skill-badge--intermediate" data-tooltip="Understanding all level types">Intermediate</span><a class="headerlink" href="#level-type-descriptions" title="Permanent link">&para;</a></h2>
 <h3 id="timeframe-levels-dailyweeklymonthly">📅 Timeframe Levels (Daily/Weekly/Monthly)<a class="headerlink" href="#timeframe-levels-dailyweeklymonthly" title="Permanent link">&para;</a></h3>
@@ -2516,6 +2519,9 @@ Interpretation: High confluence zone, stronger reactions observed
 - ✗ Session levels (too granular)</p>
 <p><strong>Rationale:</strong> Higher timeframe levels match swing holding periods.</p>
 <p><em>Level selection varies based on individual trading approach and timeframe.</em></p>
+
+<p><strong>Remember:</strong> Match level timeframes to your holding period—scalpers watch session levels, day traders watch daily levels, swing traders watch weekly/monthly. Using mismatched levels (daily levels on a 1-minute chart) creates noise and reduces effectiveness.</p>
+
 <hr />
 <h2 id="alert-configuration">🔔 Alert Configuration<a class="headerlink" href="#alert-configuration" title="Permanent link">&para;</a></h2>
 <p><strong>Alert Capabilities:</strong></p>
@@ -2708,6 +2714,69 @@ Trigger: When price crosses above or below Daily VWAP line
     <div style="margin-top: 24px; color: rgba(255,255,255,0.85); font-size: 14px;">
         ⏱️ 12-15 minute read
     </div>
+</div>
+
+<hr />
+<h2 id="when-this-doesnt-work-well">🌫️ When This Doesn't Work Well<a class="headerlink" href="#when-this-doesnt-work-well" title="Permanent link">&para;</a></h2>
+
+<div class="sp-callout sp-callout--warning">
+  <div class="sp-callout__title">Understanding Reduced Reliability Conditions</div>
+  <p>Janus Atlas levels show reduced reliability in certain market conditions. Recognizing these environments helps set appropriate expectations:</p>
+</div>
+
+<h3 id="strong-momentum-trending-markets">Strong Momentum & Trending Markets<a class="headerlink" href="#strong-momentum-trending-markets" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> During parabolic moves, momentum cascades, or panic selling, price momentum becomes so extreme that support/resistance levels get blown through without meaningful reactions.</p>
+<p><strong>What Happens:</strong> Price touches Daily High, Weekly VWAP, or Fibonacci resistance levels but barely pauses before continuing higher. Levels that normally produce multi-hour reversals only create 5-10 minute consolidations. Traditional level-based entries get immediately stopped out.</p>
+<p><strong>Context:</strong> Support and resistance work because enough market participants decide to buy/sell at those levels. During extraordinary momentum, FOMO (fear of missing out) or panic override rational level-based decision-making. Levels become "speed bumps" rather than "walls." Combine with <a href="../volume-oracle-v10/">Volume Oracle</a> climax patterns and <a href="../pentarch-v10/">Pentarch</a> exhaustion signals to identify when momentum is overriding levels.</p>
+
+<h3 id="major-news-gaps-catalyst-events">Major News, Gaps, & Catalyst Events<a class="headerlink" href="#major-news-gaps-catalyst-events" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> Earnings surprises, Federal Reserve decisions, geopolitical shocks, or company-specific news cause price to gap through multiple levels overnight or intraday.</p>
+<p><strong>What Happens:</strong> Price opens 5-10% away from previous close, gapping through Daily Low, Weekly VWAP, and multiple Fibonacci levels without touching them. Levels that existed pre-gap become irrelevant post-gap as new price ranges establish.</p>
+<p><strong>Context:</strong> Janus Atlas plots levels based on price history, but it doesn't "know" about external catalysts. Gaps create discontinuities where price never actually trades at the plotted levels. After major gaps, levels need to be re-evaluated—old structure often becomes obsolete, and new structure (post-gap highs/lows) becomes relevant.</p>
+
+<h3 id="extremely-low-volume-illiquid-sessions">Extremely Low Volume & Illiquid Sessions<a class="headerlink" href="#extremely-low-volume-illiquid-sessions" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> During holidays, overnight sessions (especially in stocks/ETFs), or low-participation periods, volume drops to 10-20% of normal levels.</p>
+<p><strong>What Happens:</strong> Price may appear to "respect" levels by bouncing at Daily VWAP or POC, but moves are small and unreliable. Low volume means any small order can push price through levels that would normally hold. Follow-through after level touches becomes minimal.</p>
+<p><strong>Context:</strong> Support and resistance require participation—buyers defending support, sellers defending resistance. Without volume, levels lose their significance because there aren't enough participants to enforce them. This is why session levels (Asian/London/New York highs/lows) become critical—they mark where actual liquidity and participation exist. Use <a href="../volume-oracle-v10/">Volume Oracle</a> to confirm when participation is sufficient for levels to be reliable.</p>
+
+<h3 id="too-many-levels-information-overload">Too Many Levels Enabled (Information Overload)<a class="headerlink" href="#too-many-levels-information-overload" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> User enables 20+ of the 39 available levels simultaneously, creating a chart covered in horizontal lines.</p>
+<p><strong>What Happens:</strong> Price is always "at a level" because lines are spaced every 0.5-1%. Every price point looks significant, which means nothing is actually significant. Decision-making becomes impossible—every move looks like it should reverse at the next level.</p>
+<p><strong>Context:</strong> Janus Atlas provides 39 levels because different traders need different tools for different strategies, not because everyone should display all 39 simultaneously. The most effective approach: enable 5-8 levels most relevant to your timeframe and strategy. More levels don't provide more edge—they provide more confusion. Quality of levels matters more than quantity.</p>
+
+<h3 id="mismatched-timeframes-level-selection">Mismatched Timeframes & Level Selection<a class="headerlink" href="#mismatched-timeframes-level-selection" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> Using high-timeframe levels on low-timeframe charts, or vice versa. Example: watching Monthly High/Low on a 1-minute chart, or session levels on a weekly chart.</p>
+<p><strong>What Happens:</strong></p>
+<ul>
+<li><strong>Monthly levels on 1m charts:</strong> Levels are too far away to be relevant. Price may not reach them for days/weeks. Meanwhile, missing all the intraday session levels where actual opportunities exist.</li>
+<li><strong>Session levels on weekly charts:</strong> Levels are so granular they become noise. Asian High from 3 weeks ago is irrelevant to a swing trader holding for months.</li>
+</ul>
+<p><strong>Context:</strong> Match level timeframes to trading timeframe and holding period. Scalpers (1m-15m): focus on session levels (AH, AL, EH, EL, NAH, NAL), Daily VWAP, POC. Day traders (15m-1H): Daily/Weekly highs/lows, Daily VWAP, key Fibs. Swing traders (4H-Daily): Weekly/Monthly levels, major Fibonacci retracements/extensions. Using mismatched levels creates false signals and missed opportunities.</p>
+
+<h3 id="levels-without-confluence-confirmation">Isolated Levels Without Confluence or Confirmation<a class="headerlink" href="#levels-without-confluence-confirmation" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> Trading every single-level touch without requiring confluence (multiple levels clustering) or confirmation (volume spike, reversal candle, momentum signal).</p>
+<p><strong>What Happens:</strong> Win rate drops significantly. Many levels get touched and immediately broken. Example: price touches Daily VWAP in isolation, no other levels nearby, no volume spike, no <a href="../pentarch-v10/">Pentarch</a> signal—just a brief touch before continuing trend. Single-level touches fail more often than confluence zones.</p>
+<p><strong>Context:</strong> Not all levels carry equal weight. A confluence zone where Daily Low + Weekly Low + 0.618 Fib + POC all cluster within 1% shows institutional interest and defense. An isolated Daily VWAP touch with no other confluence is a coin flip. Highest-probability setups occur at:</p>
+<ul>
+<li><strong>Confluence zones:</strong> 3+ levels clustering in same price zone</li>
+<li><strong>Confirmed touches:</strong> Level touch + volume spike + reversal candle or <a href="../harmonic-oscillator-v10/">Harmonic Oscillator</a> signal</li>
+<li><strong>Key structure levels:</strong> Weekly/Monthly highs, major Fibonacci levels (0.618, 1.618), multi-day POC</li>
+</ul>
+<p>Single, isolated, unconfirmed level touches work sometimes, but the opportunity cost (missing higher-quality setups while getting stopped out on marginal ones) makes them inefficient.</p>
+
+<div class="admonition tip">
+<p class="admonition-title">Recognizing Reduced Reliability Environments</p>
+<p><strong>Practical Identification:</strong></p>
+<ul>
+<li><strong>Price blowing through 3+ levels without pausing:</strong> Strong momentum overriding levels—wait for exhaustion</li>
+<li><strong>Gap on open skipping multiple levels:</strong> Re-evaluate structure, old levels likely obsolete</li>
+<li><strong>Volume below 50% of average:</strong> Levels lose enforcement power—use <a href="../volume-oracle-v10/">Volume Oracle</a> to confirm</li>
+<li><strong>Chart covered in lines (20+ levels enabled):</strong> Disable half of them, focus on key levels only</li>
+<li><strong>Economic calendar shows major events within 2 hours:</strong> Levels may be overridden by news—reduce size or wait</li>
+<li><strong>Trading 1m charts with Monthly levels:</strong> Mismatch—switch to session levels instead</li>
+<li><strong>No confluence, no confirmation, just a level touch:</strong> Skip the trade, wait for better setup</li>
+</ul>
+<p><strong>Remember:</strong> Janus Atlas shows you WHERE price might react. It doesn't tell you IF price will react or HOW STRONG the reaction will be. Context (momentum, volume, confluence, confirmation) determines whether a level touch is a high-probability setup or just a line on a chart. The best traders use fewer levels with better context rather than more levels with less selectivity.</p>
 </div>
 
 <hr />

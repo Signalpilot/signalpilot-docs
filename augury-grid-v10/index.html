@@ -2165,6 +2165,9 @@ graph TD
 </table>
 <p><strong>Pattern Observed:</strong> ETH/USD showed perfect 5/5 confluence score while BTC/USD had strong 4/5, allowing simultaneous monitoring of multiple high-probability MACD momentum shifts across different assets.</p>
 <p><em>This example demonstrates grid monitoring capability. Individual interpretation and outcomes vary.</em></p>
+
+<p><strong>Remember:</strong> Notice in the example above that TSLA's 2/5 confluence gained +0.5% while ETH's 5/5 gained +3.1%. Confluence scores indicate probability, not certainty. Focus your limited attention and capital on 4/5 and 5/5 signals—low confluence signals occasionally work but aren't worth the opportunity cost of missing stronger setups.</p>
+
 <hr />
 <h2 id="settings">⚙️ Settings <span class="skill-badge skill-badge--beginner" data-tooltip="Simple configuration options">Beginner Friendly</span><a class="headerlink" href="#settings" title="Permanent link">&para;</a></h2>
 <h3 id="symbol-configuration">Symbol Configuration<a class="headerlink" href="#symbol-configuration" title="Permanent link">&para;</a></h3>
@@ -2714,6 +2717,66 @@ Asset-specific momentum shift with exceptional confluence rather than broad mark
     <div style="margin-top: 24px; color: rgba(255,255,255,0.85); font-size: 14px;">
         ⏱️ 12-15 minute read
     </div>
+</div>
+
+<hr />
+<h2 id="when-this-doesnt-work-well">🌫️ When This Doesn't Work Well<a class="headerlink" href="#when-this-doesnt-work-well" title="Permanent link">&para;</a></h2>
+
+<div class="sp-callout sp-callout--warning">
+  <div class="sp-callout__title">Understanding Reduced Reliability Conditions</div>
+  <p>Augury Grid signals show reduced reliability in certain market conditions. Recognizing these environments helps set appropriate expectations:</p>
+</div>
+
+<h3 id="broad-choppy-market-conditions">Broad Choppy Market Conditions (Market-Wide Indecision)<a class="headerlink" href="#broad-choppy-market-conditions" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> When overall market environment (SPY, QQQ, or sector indices) is sideways/choppy, most stocks/assets in your watchlist exhibit similar indecisive behavior.</p>
+<p><strong>What Happens:</strong> Grid shows mostly 2/5 and 3/5 confluence scores across all symbols. Few 4/5 or 5/5 signals appear. Symbols that do signal often flip from Bullish to Neutral to Bearish within 5-10 bars. P&L percentages hover around ±1-2%, showing no sustained follow-through. Win rate drops because even "good" setups lack the broader market momentum to follow through.</p>
+<p><strong>Context:</strong> Augury Grid analyzes individual symbol momentum via MACD and confluence factors. But individual symbols are influenced by overall market sentiment. During broad market choppy periods (VIX elevated but direction unclear, major indices range-bound), even stocks with strong individual confluence struggle to trend. This isn't Augury failing—it's accurately showing that momentum exists but lacks supporting market context. Best practice: Check SPY/QQQ regime first using <a href="../pentarch-v10/">Pentarch</a> or <a href="../omnideck-v10/">Omnideck</a>. If broader market shows neutral/choppy regime, treat Augury signals with higher skepticism. Trade smaller size or wait for market clarity. When overall market is trending (clear bull or bear regime), Augury signals become significantly more reliable.</p>
+
+<h3 id="low-confluence-score-signals">Trading Low Confluence Score Signals (2/5, 3/5)<a class="headerlink" href="#low-confluence-score-signals" title="Permanent link">&lgrid-analysis shows various outcomes. Observation suggests higher confluence correlates with more sustained moves, but no threshold guarantees specific results.</p>
+<p><strong>Context:</strong> Confluence scores measure how many supporting factors align with the MACD crossover. Higher scores (4/5, 5/5) indicate: price action agrees, volume supports the move, higher timeframe aligns, momentum is strong, and structure confirms direction. Lower scores (2/5, 3/5) mean several factors are missing or conflicting. A 2/5 signal might have MACD crossover + volume, but price action is weak, higher timeframe disagrees, and momentum is shallow. This doesn't mean the 2/5 signal will definitely fail, but historical observation shows fewer 2/5 signals produce sustained follow-through compared to 4/5 signals. Notice in examples throughout this documentation: focus consistently emphasizes 4/5 and 5/5 signals. This isn't arbitrary—it reflects that higher confluence matters. Best practice: If capital is limited, focus exclusively on 4/5 and 5/5 signals. If monitoring capacity is limited, set alerts only for highest-confluence setups. Think of 2/5 and 3/5 as "educational signals"—they show potential, but shouldn't compete for attention with higher-quality 4/5 and 5/5 opportunities.</p>
+
+<h3 id="whipsaw-transition-periods">Whipsaw & Transition Periods<a class="headerlink" href="#whipsaw-transition-periods" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> Individual symbols transitioning between regimes—moving from downtrend to consolidation to uptrend, or vice versa.</p>
+<p><strong>What Happens:</strong> Grid shows signal instability: Symbol X fires Bullish 5/5 → 3 bars later flips to Neutral → 5 bars later fires Bearish 4/5 → then back to Neutral. Confluence scores fluctuate rapidly. P&L shows +3%, -2%, +1%, -1% oscillating pattern. This happens because MACD is centered around zero crossover, and during transitions, the histogram oscillates around the zero line without committing to either direction.</p>
+<p><strong>Context:</strong> MACD-based systems (like Augury Grid) excel at identifying momentum within established trends. They struggle during regime transitions when momentum itself is unstable. During these periods, the histogram crosses zero multiple times in both directions as the market "decides" which way to trend. These whipsaws are inherent to zero-crossing methodologies. Best practice: When you see a symbol flip signals 3+ times within 20 bars, that symbol is in transition—remove it from active consideration temporarily. Revisit it after 10-15 bars to see if regime has stabilized. Or combine with <a href="../pentarch-v10/">Pentarch</a>: only trade Augury signals when Pentarch regime bars show clear color (green or red, not gray) for the same symbol. This filters out symbols in transition.</p>
+
+<h3 id="mismatched-timeframe-strategy">Mismatched Timeframe & Trading Strategy<a class="headerlink" href="#mismatched-timeframe-strategy" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> Using Augury Grid on a timeframe that doesn't match your trading style or hold duration.</p>
+<p><strong>What Happens:</strong></p>
+<ul>
+<li><strong>Day trader using Daily chart grid:</strong> Signals fire once every few days. By the time signal appears, much of the intraday move has already occurred. Miss 80% of opportunities waiting for daily signals.</li>
+<li><strong>Swing trader using 5m chart grid:</strong> Signals fire constantly (10+ signals per hour across watchlist). Impossible to act on all of them. Most reverse before you can analyze and enter. Signal overload leads to paralysis or random selection.</li>
+</ul>
+<p><strong>Context:</strong> Augury Grid's entire watchlist uses the timeframe of your active chart. This is by design—it allows rapid scanning of multiple symbols on a consistent timeframe. But it requires matching chart timeframe to trading style. Scalpers (hold minutes-hours) → 5m-15m charts. Day traders (hold hours-day) → 15m-1H charts. Swing traders (hold days-weeks) → 4H-Daily charts. Position traders (hold weeks-months) → Daily-Weekly charts. Mismatch creates either: (1) Too few signals (missing opportunities), or (2) Too many signals (overwhelming noise). Best practice: If you're a day trader, don't use Augury Grid on a Daily chart. If you're a swing trader, don't use it on 15m charts. Match the grid's timeframe to your actual hold period.</p>
+
+<h3 id="highly-correlated-watchlist">Highly Correlated Watchlist (All Symbols Move Together)<a class="headerlink" href="#highly-correlated-watchlist" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> Watchlist contains symbols that are highly correlated—they all move together (e.g., all tech stocks, all crypto, all oil stocks).</p>
+<p><strong>What Happens:</strong> Grid shows "diversification illusion." When tech sector rallies, all 30 symbols in watchlist flash Bullish 5/5 simultaneously. Feels like 30 opportunities, but it's really ONE opportunity (tech sector) expressed through 30 symbols. When sector reverses, all 30 flip Bearish together. No true diversification. Risk concentration masked by symbol count.</p>
+<p><strong>Context:</strong> Augury Grid's value is finding THE BEST opportunities across a diversified watchlist. If all symbols are correlated, the grid just amplifies sector moves without adding information. A watchlist of AAPL, MSFT, GOOGL, META, NVDA, AMD, TSLA (all high-beta tech) will show nearly identical signals. This defeats the purpose of multi-symbol scanning. Better watchlist design: Mix sectors (tech, healthcare, energy, financials, consumer), mix asset classes (stocks, crypto, commodities), mix market caps (large-cap, mid-cap, small-cap). When tech gives Bullish 5/5, healthcare might show Bearish 5/5, and energy shows Neutral. THIS is useful—it shows WHERE opportunity is rotating. If your grid shows all symbols firing same signal simultaneously, your watchlist is too correlated. Diversify symbol selection.</p>
+
+<h3 id="low-liquidity-symbols">Low Liquidity & Thinly Traded Symbols<a class="headerlink" href="#low-liquidity-symbols" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> Including penny stocks, micro-cap altcoins, or illiquid futures contracts in your watchlist.</p>
+<p><strong>What Happens:</strong> Signals appear (MACD crossover is valid), but price action is erratic. A Bullish 5/5 fires, but the bid-ask spread is 5%. Price gaps intraday due to lack of buyers. Slippage eats most of theoretical profit. P&L shows +8% but actual fill is at +3% due to liquidity issues.</p>
+<p><strong>Context:</strong> Augury Grid analyzes momentum mathematically (MACD calculations). It doesn't "know" about liquidity, bid-ask spreads, or average daily volume. A $0.50 penny stock can show perfect 5/5 confluence, but if daily volume is only 10,000 shares, entering a 5,000-share position moves the market against you. MACD confluence works best on liquid instruments where your order doesn't materially impact price. Best practice: Pre-filter your watchlist by liquidity before adding to Augury Grid. For stocks: minimum $5M average daily volume. For crypto: minimum $50M daily volume (on the specific exchange you trade). For futures: use front-month contracts with high open interest. Grid shows technical signals; you must ensure those signals are tradeable with acceptable slippage.</p>
+
+<h3 id="ignoring-individual-chart-context">Using Grid Signals Without Individual Chart Confirmation<a class="headerlink" href="#ignoring-individual-chart-context" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> Trading directly from grid signals without pulling up individual charts to verify setup quality.</p>
+<p><strong>What Happens:</strong> Grid shows AAPL Bullish 5/5. You enter immediately. Pull up AAPL chart afterward and realize: it's at major resistance (<a href="../janus-atlas-v10/">Janus Atlas</a> Weekly High), volume is below average (<a href="../volume-oracle-v10/">Volume Oracle</a> shows this), and it just had 3 failed bullish attempts at this level. The 5/5 signal is technically valid, but context makes it low-probability. Trade fails.</p>
+<p><strong>Context:</strong> Augury Grid is a screener—its job is to surface candidates worth investigating, not to provide complete trade analysis. The grid analyzes MACD confluence across multiple symbols efficiently. But it doesn't check: support/resistance context, volume quality, recent failed attempts, higher timeframe alignment, news events, earnings dates, sector rotation. These require individual chart analysis. Best practice workflow: (1) Grid identifies candidates (4/5 and 5/5 signals), (2) Pull up individual chart for top 3-5 candidates, (3) Check <a href="../janus-atlas-v10/">Janus Atlas</a> levels (are we at major support/resistance?), (4) Check <a href="../volume-oracle-v10/">Volume Oracle</a> (is volume supporting this move?), (5) Check <a href="../pentarch-v10/">Pentarch</a> (does regime support this direction?), (6) THEN decide to enter. Grid narrows 40 symbols to 5 candidates. You narrow 5 candidates to 1-2 actual trades. That's the workflow.</p>
+
+<div class="admonition tip">
+<p class="admonition-title">Recognizing Reduced Reliability Environments</p>
+<p><strong>Practical Identification:</strong></p>
+<ul>
+<li><strong>Entire grid showing mostly 2/5 and 3/5 scores:</strong> Broad market chop—reduce activity or trade higher confluence only</li>
+<li><strong>SPY/QQQ showing neutral/gray on <a href="../pentarch-v10/">Pentarch</a>:</strong> Market lacks direction—Augury signals less reliable</li>
+<li><strong>Multiple symbols flipping signals within 10 bars:</strong> Whipsaw environment—wait for stabilization</li>
+<li><strong>All symbols in watchlist fire same signal simultaneously:</strong> Watchlist too correlated—diversify</li>
+<li><strong>P&L oscillating ±1-2% without sustained moves:</strong> Choppy conditions or wrong timeframe</li>
+<li><strong>Symbol volume under $5M daily (stocks) or $50M (crypto):</strong> Liquidity concerns—remove from watchlist</li>
+<li><strong>Trading from grid without checking individual charts:</strong> Missing context—verify setups individually</li>
+</ul>
+<p><strong>Remember:</strong> Augury Grid's strength is efficiency—scanning 40 symbols simultaneously to find momentum shifts. Its weakness is context—it doesn't know about support/resistance, volume quality, broader market regime, or individual symbol liquidity. The grid finds candidates. You validate candidates. Best results come from combining Augury's scanning efficiency with individual chart analysis using <a href="../janus-atlas-v10/">Janus Atlas</a> (levels), <a href="../volume-oracle-v10/">Volume Oracle</a> (volume confirmation), and <a href="../pentarch-v10/">Pentarch</a> (regime context). Grid → Candidates → Validation → Trade. That's the complete workflow.</p>
 </div>
 
 <hr />
