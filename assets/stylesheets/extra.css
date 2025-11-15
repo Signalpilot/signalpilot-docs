@@ -4378,3 +4378,33 @@ a {
 /* ========================================
    END OF CONSOLIDATED STYLES
    ======================================== */
+
+/* ========================================
+   FIX: Sidebar Navigation Overflow
+   Prevent menu items from shifting left when Suite section is expanded
+   ======================================== */
+
+/* Ensure all navigation items maintain proper left alignment */
+.md-nav__list .md-nav__item {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+/* Ensure nested navigation links don't overflow */
+.md-nav__list .md-nav__link {
+  padding-left: 1.2rem !important;
+  overflow: visible !important;
+}
+
+/* Fix for items under expanded sections */
+.md-nav[data-md-level="1"] .md-nav__list {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+/* Ensure text doesn't get cut off */
+.md-nav__link .md-ellipsis {
+  overflow: visible !important;
+  text-overflow: clip !important;
+}
+
