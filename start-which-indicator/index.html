@@ -1,25 +1,41 @@
 
+
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <meta name="mobile-web-app-capable" content="yes">
+      <meta name="theme-color" content="#667eea">
+      <meta name="format-detection" content="telephone=no">
       
-        <meta name="description" content="Non-repainting, alert-ready TradingView indicators for any market/timeframe.">
-      
-      
-      
-        <link rel="canonical" href="https://docs.signalpilot.io/start-which-indicator/">
-      
-      
-      
-      
-        
+        <meta name="description" content="Choose the right Signal Pilot indicator for your experience level, trading style, and goals. Complete decision flowchart and 3-question quiz.">
       
       
-      <link rel="icon" href="../assets/watermark-monogram-color-transparent.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      
+        <link rel="canonical" href="https://docs.signalpilot.io/start-quick/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../start-prerequisites/">
+      
+      
+      <!-- Favicons -->
+      <link rel="icon" type="image/x-icon" href="../favicon.ico">
+      <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
+      <link rel="icon" type="image/png" sizes="512x512" href="../favicon-512x512.png">
+
+      <!-- PWA Manifest -->
+      <link rel="manifest" href="../manifest.json">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
     
     
       
@@ -27,10 +43,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -45,6 +61,7 @@
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -52,6 +69,9 @@
       <link rel="stylesheet" href="../css/timeago.css">
     
       <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../css/responsive-optimization.css">
+      <link rel="stylesheet" href="../css/content-overflow-fix.css">
+      <link rel="stylesheet" href="../css/mobile-layout-fixes.css">
     
       <link rel="stylesheet" href="../assets/brand.css">
     
@@ -61,7 +81,9 @@
     
       <link rel="stylesheet" href="../assets/interactive-code.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+
+
     
       
   
@@ -70,14 +92,89 @@
   
   
 
-<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-NZ05GV72K0"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-NZ05GV72K0",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-NZ05GV72K0",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-NZ05GV72K0"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-NZ05GV72K0",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-NZ05GV72K0",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+
   
     <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+
+
   
 
     
     
-  </head>
+    
+  <!-- Google Fonts: Gugi for brand consistency -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - CSS
+       To disable: comment out this entire block
+       ======================================== -->
+  <link rel="stylesheet" href="../css/feedback.css">
+  <link rel="stylesheet" href="../css/visual-enhancements.css">
+
+  <!-- Mermaid.js for diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'dark',
+      themeVariables: {
+        primaryColor: '#00bcd4',
+        primaryTextColor: '#fff',
+        primaryBorderColor: '#0097a7',
+        lineColor: '#00bcd4',
+        secondaryColor: '#ff5722',
+        tertiaryColor: '#4caf50',
+        fontSize: '18px',
+        fontFamily: 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+      },
+      flowchart: {
+        htmlLabels: true,
+        fontSize: 18
+      },
+      fontSize: 18
+    });
+  </script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - CSS -->
+
+  <!-- Meta-Learning & Accessibility Enhancements -->
+  <link rel="stylesheet" href="../css/skill-badges.css">
+  <link rel="stylesheet" href="../css/meta-learning.css">
+
+      <!-- Signal Pilot Chatbot CSS -->
+    <link rel="stylesheet" href="/css/chatbot.css">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.signalpilot.io/">
+    <meta property="og:title" content="Which Indicator Should I Start With? - Signal Pilot Docs">
+    <meta property="og:description" content="Choose the right Signal Pilot indicator for your experience level, trading style, and goals. Complete decision flowchart and 3-question quiz.">
+    <meta property="og:image" content="https://docs.signalpilot.io/assets/images/preview.png">
+    <meta property="og:site_name" content="Signal Pilot Docs">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.signalpilot.io/">
+    <meta name="twitter:title" content="Which Indicator Should I Start With? - Signal Pilot Docs">
+    <meta name="twitter:description" content="Choose the right Signal Pilot indicator for your experience level, trading style, and goals. Complete decision flowchart and 3-question quiz.">
+    <meta name="twitter:image" content="https://docs.signalpilot.io/assets/images/preview.png">
+
+
+  
+
+
+
+
+
+
+
+  <!-- Custom Bottom Sheet Navigation -->
+  <link rel="stylesheet" href="../css/hide-mkdocs-sidebar.css?v7">
+  <link rel="stylesheet" href="../css/custom-bottom-sheet.css?v7">
+</head>
   
   
     
@@ -96,7 +193,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#which-indicator-should-i-start-with" class="md-skip">
+        <a href="#quick-start-getting-your-first-signal-in-5-minutes" class="md-skip">
           Skip to content
         </a>
       
@@ -106,6 +203,24 @@
     </div>
     
     
+  <!-- Signal Pilot brand bar (keeps Material header & search intact) -->
+  <div class="sp-topnav">
+    <div class="sp-topnav__inner">
+      <a href="https://signalpilot.io" target="_blank" rel="noopener noreferrer" class="brand">
+        <span>Signal Pilot</span>
+      </a>
+      <nav class="sp-links" aria-label="Signal Pilot">
+        <a href="https://signalpilot.io/#why" target="_blank" rel="noopener noreferrer">Why</a>
+        <a href="https://signalpilot.io/#inside" target="_blank" rel="noopener noreferrer">What's inside</a>
+        <a href="https://education.signalpilot.io/" target="_blank" rel="noopener noreferrer">Education</a>
+        <a aria-current="page" href="https://docs.signalpilot.io/">Docs</a>
+        <a href="https://signalpilot.io/#pricing" target="_blank" rel="noopener noreferrer">Pricing</a>
+        <a href="https://signalpilot.io/#faq" target="_blank" rel="noopener noreferrer">FAQ</a>
+      </nav>
+    </div>
+  </div>
+
+  
       
 
   
@@ -114,12 +229,11 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="Signal Pilot Docs" class="md-header__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
       
-  <img src="../assets/watermark-monogram-color-transparent.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -131,7 +245,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Which Indicator Should I Start With?
+              Quick Start - Get Your First Signal in 5 Minutes
             
           </span>
         </div>
@@ -147,7 +261,7 @@
     <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
       </label>
     
   
@@ -157,7 +271,7 @@
     <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
       </label>
     
   
@@ -165,32 +279,32 @@
       
     
     
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+
+
     
     
     
-      
-      
-        <label class="md-header__button md-icon" for="__search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog">
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
       
@@ -209,14 +323,13 @@
     </div>
   </div>
 </div>
-      
     
     
       <div class="md-header__source">
         <a href="https://github.com/Signalpilot/signalpilot-docs" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     signalpilot-docs
@@ -228,6 +341,7 @@
   
 </header>
     
+
     <div class="md-container" data-md-component="container">
       
       
@@ -251,7 +365,6 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Signal Pilot Docs" class="md-nav__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
       
-  <img src="../assets/watermark-monogram-color-transparent.png" alt="logo">
 
     </a>
     Signal Pilot Docs
@@ -261,7 +374,7 @@
       <a href="https://github.com/Signalpilot/signalpilot-docs" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     signalpilot-docs
@@ -278,19 +391,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.md" class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Home
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -302,9 +408,10 @@
       
   
   
+    
   
   
-    
+  
     
     
     
@@ -314,39 +421,28 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     🚀 Getting Started
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    🚀 Getting Started
-  
-
+            🚀 Getting Started
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -354,22 +450,373 @@
                 
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ⚡ Install & Configure
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    ⚡ Install & Configure
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-can-be-learned" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 What Can Be Learned
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-install-pentarch-1-minute" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Install Pentarch (1 minute)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1: Install Pentarch (1 minute)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#on-tradingview" class="md-nav__link">
+    <span class="md-ellipsis">
+      On TradingView:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-learn-the-5-signals-2-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Learn the 5 Signals (2 minutes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Learn the 5 Signals (2 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-early-cycle-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Early-Cycle Signals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-late-cycle-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Late-Cycle Signals
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-set-up-your-first-alert-1-minute" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Set Up Your First Alert (1 minute)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3: Set Up Your First Alert (1 minute)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commonly-monitored-alerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commonly Monitored Alerts:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-example-trade-illustration-1-minute" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Example Trade Illustration (1 minute)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 4: Example Trade Illustration (1 minute)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-bitcoin-long-trade-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Bitcoin Long Trade Scenario
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Quick Reference Cheat Sheet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-mistakes" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚫 Common Mistakes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚫 Common Mistakes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mistake-1-entering-on-td-blue-signal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #1: Entering on TD (Blue Signal)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-2-not-using-once-per-bar-close-for-alerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #2: Not Using "Once Per Bar Close" for Alerts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-3-trading-without-stop-losses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #3: Trading Without Stop Losses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-4-ignoring-key-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #4: Ignoring Key Levels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-5-using-too-low-timeframe-initially" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #5: Using Too Low Timeframe Initially
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-6-revenge-trading-after-a-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #6: Revenge Trading After a Loss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-7-risking-too-much-per-trade" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #7: Risking Too Much Per Trade
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-8-expecting-100-win-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #8: Expecting 100% Win Rate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-9-not-paper-trading-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #9: Not Paper Trading First
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-10-overcomplicating-with-too-many-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #10: Overcomplicating with Too Many Indicators
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ What's Next?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ What's Next?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#master-pentarch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Master Pentarch:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add Levels:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complete-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete System:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      💡 Common Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#need-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      🆘 Need Help?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-has-been-learned" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎉 What Has Been Learned:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
-      <a href="../docs/start-here.md" class="md-nav__link">
+      <a href="../start-prerequisites/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
-    👋 Start Here (Choose Your Path)
-  
-
-    
+    Prerequisites
   </span>
-  
   
 
       </a>
@@ -385,131 +832,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../start-quick.md" class="md-nav__link">
+      <a href="../start-onboarding/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
-    ⚡ Quick Start (5 min)
-  
-
-    
+    Onboarding Checklist (7 days)
   </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/start-suite-overview.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    🔍 Suite Overview
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../start-prerequisites.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    📋 Prerequisites
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../start-onboarding.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    📅 Onboarding Checklist (7 days)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/start-which-indicator.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Which Indicator Should I Start?
-  
-
-    
-  </span>
-  
   
 
       </a>
@@ -531,7 +859,6 @@
   
   
   
-    
     
     
     
@@ -551,16 +878,9 @@
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     📖 How-To Guides
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -569,11 +889,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    📖 How-To Guides
-  
-
+            📖 How-To Guides
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -584,19 +900,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-to-alerts.md" class="md-nav__link">
+      <a href="../how-to-alerts/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Set Up Alerts
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -612,19 +921,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-to-webhooks.md" class="md-nav__link">
+      <a href="../how-to-webhooks/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Use Webhooks
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -640,19 +942,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-to-screener.md" class="md-nav__link">
+      <a href="../how-to-screener/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Use Screener
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -674,7 +969,6 @@
   
   
   
-    
     
     
     
@@ -694,16 +988,9 @@
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     🚀 Suite (Latest)
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -712,11 +999,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    🚀 Suite (Latest)
-  
-
+            🚀 Suite (Latest)
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -727,19 +1010,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../suite-index.md" class="md-nav__link">
+      <a href="../suite-index/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     📚 Suite Overview
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -758,16 +1034,9 @@
       <a href="../pentarch-v10/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
-    Pentarch v1.0 — Five Cycle Events
-  
-
-    
+    Pentarch v1.0 — Reversal Events
   </span>
-  
   
 
       </a>
@@ -786,16 +1055,9 @@
       <a href="../janus-atlas-v10/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Janus Atlas v1.0 — Levels System
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -814,16 +1076,9 @@
       <a href="../omnideck-v10/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Omnideck v1.0 — Everything Indicator
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -842,16 +1097,9 @@
       <a href="../augury-grid-v10/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Augury Grid v1.0 — Multi-Symbol Screener
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -867,19 +1115,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../minimal-flow-v10/" class="md-nav__link">
+      <a href="../volume-oracle-v10/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
-    Volume Oracle v1.0 — Volume Intelligence System
-  
-
-    
+    Volume Oracle v1.0 — Volume Strategy
   </span>
-  
   
 
       </a>
@@ -898,16 +1139,9 @@
       <a href="../harmonic-oscillator-v10/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Harmonic Oscillator v1.0 — Composite Momentum
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -926,16 +1160,9 @@
       <a href="../plutus-flow-v10/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Plutus Flow v1.0 — Advanced OBV
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -957,7 +1184,6 @@
   
   
   
-    
     
     
     
@@ -977,16 +1203,9 @@
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     📚 Reference
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -995,11 +1214,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    📚 Reference
-  
-
+            📚 Reference
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1010,19 +1225,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../ref-workflow.md" class="md-nav__link">
+      <a href="../ref-workflow/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Trading Workflow (Bias → Timing)
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1038,19 +1246,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../ref-comparison.md" class="md-nav__link">
+      <a href="../ref-comparison/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Indicator Comparison Guide
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1066,19 +1267,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../ref-best-practices.md" class="md-nav__link">
+      <a href="../ref-best-practices/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Best Practices & Pro Tips
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1094,19 +1288,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../ref-non-repaint.md" class="md-nav__link">
+      <a href="../ref-non-repaint/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Non-Repainting Policy
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1122,19 +1309,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../ref-glossary.md" class="md-nav__link">
+      <a href="../ref-glossary/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Glossary
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1150,47 +1330,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../ref-troubleshooting.md" class="md-nav__link">
+      <a href="../ref-troubleshooting/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Troubleshooting Guide
-  
-
-    
   </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/troubleshooting-installation.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Installation Troubleshooting
-  
-
-    
-  </span>
-  
   
 
       </a>
@@ -1212,7 +1357,6 @@
   
   
   
-    
     
     
     
@@ -1232,16 +1376,9 @@
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     ℹ️ About
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1250,11 +1387,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    ℹ️ About
-  
-
+            ℹ️ About
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1265,19 +1398,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../about-faq.md" class="md-nav__link">
+      <a href="../about-faq/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     FAQ
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1293,47 +1419,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../docs/about-system-requirements.md" class="md-nav__link">
+      <a href="../about-support/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
-    System Requirements
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../about-support.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
     Support & Access
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1349,19 +1440,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../about-changelog.md" class="md-nav__link">
+      <a href="../about-changelog/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Changelog (high level)
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1386,7 +1470,6 @@
     
     
     
-    
       
         
         
@@ -1403,16 +1486,9 @@
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     Website Tiles
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1421,11 +1497,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Website Tiles
-  
-
+            Website Tiles
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1436,19 +1508,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../_product-cards.md" class="md-nav__link">
+      <a href="../_settings-alerts/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Product Cards
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1491,23 +1556,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#quick-recommendation-30-seconds" class="md-nav__link">
+  <a href="#what-can-be-learned" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        🎯 Quick Recommendation (30 seconds)
-      
+      🎯 What Can Be Learned
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🎯 Quick Recommendation (30 seconds)">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-install-pentarch-1-minute" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Install Pentarch (1 minute)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1: Install Pentarch (1 minute)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#choose-your-path" class="md-nav__link">
+  <a href="#on-tradingview" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Choose Your Path:
-      
+      On TradingView:
     </span>
   </a>
   
@@ -1519,56 +1589,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#decision-flowchart" class="md-nav__link">
+  <a href="#step-2-learn-the-5-signals-2-minutes" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        🧭 Decision Flowchart
-      
+      Step 2: Learn the 5 Signals (2 minutes)
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-question-quiz" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📝 3-Question Quiz
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📝 3-Question Quiz">
+    <nav class="md-nav" aria-label="Step 2: Learn the 5 Signals (2 minutes)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#question-1-whats-your-experience-level" class="md-nav__link">
+  <a href="#the-early-cycle-signals" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Question 1: What's your experience level?
-      
+      The Early-Cycle Signals
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#question-2-whats-your-primary-trading-style" class="md-nav__link">
+  <a href="#the-late-cycle-signals" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Question 2: What's your primary trading style?
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#question-3-whats-your-primary-goal" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Question 3: What's your primary goal?
-      
+      The Late-Cycle Signals
     </span>
   </a>
   
@@ -1580,45 +1622,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#by-experience-level" class="md-nav__link">
+  <a href="#step-3-set-up-your-first-alert-1-minute" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        🎓 By Experience Level
-      
+      Step 3: Set Up Your First Alert (1 minute)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🎓 By Experience Level">
+    <nav class="md-nav" aria-label="Step 3: Set Up Your First Alert (1 minute)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#beginners-0-6-months-trading-experience" class="md-nav__link">
+  <a href="#commonly-monitored-alerts" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        🟢 Beginners (0-6 months trading experience)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#intermediate-6-24-months-trading-experience" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🟡 Intermediate (6-24 months trading experience)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#advanced-24-months-trading-experience" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🔴 Advanced (24+ months trading experience)
-      
+      Commonly Monitored Alerts:
     </span>
   </a>
   
@@ -1630,56 +1646,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#by-trading-style" class="md-nav__link">
+  <a href="#step-4-example-trade-illustration-1-minute" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        💼 By Trading Style
-      
+      Step 4: Example Trade Illustration (1 minute)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="💼 By Trading Style">
+    <nav class="md-nav" aria-label="Step 4: Example Trade Illustration (1 minute)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#scalping-seconds-to-minutes" class="md-nav__link">
+  <a href="#example-bitcoin-long-trade-scenario" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Scalping (Seconds to Minutes)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#day-trading-minutes-to-hours" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Day Trading (Minutes to Hours)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#swing-trading-days-to-weeks" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Swing Trading (Days to Weeks)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#position-trading-weeks-to-months" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Position Trading (Weeks to Months)
-      
+      Example: Bitcoin Long Trade Scenario
     </span>
   </a>
   
@@ -1691,56 +1670,109 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#most-popular-combinations" class="md-nav__link">
+  <a href="#quick-reference-cheat-sheet" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        🏆 Most Popular Combinations
-      
+      📋 Quick Reference Cheat Sheet
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🏆 Most Popular Combinations">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-mistakes" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚫 Common Mistakes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚫 Common Mistakes">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the-trinity-most-popular" class="md-nav__link">
+  <a href="#mistake-1-entering-on-td-blue-signal" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        The Trinity ⭐ (Most Popular)
-      
+      Mistake #1: Entering on TD (Blue Signal)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-momentum-stack" class="md-nav__link">
+  <a href="#mistake-2-not-using-once-per-bar-close-for-alerts" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        The Momentum Stack
-      
+      Mistake #2: Not Using "Once Per Bar Close" for Alerts
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-divergence-hunter" class="md-nav__link">
+  <a href="#mistake-3-trading-without-stop-losses" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        The Divergence Hunter
-      
+      Mistake #3: Trading Without Stop Losses
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-scanner" class="md-nav__link">
+  <a href="#mistake-4-ignoring-key-levels" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        The Scanner
-      
+      Mistake #4: Ignoring Key Levels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-5-using-too-low-timeframe-initially" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #5: Using Too Low Timeframe Initially
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-6-revenge-trading-after-a-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #6: Revenge Trading After a Loss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-7-risking-too-much-per-trade" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #7: Risking Too Much Per Trade
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-8-expecting-100-win-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #8: Expecting 100% Win Rate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-9-not-paper-trading-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #9: Not Paper Trading First
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-10-overcomplicating-with-too-many-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #10: Overcomplicating with Too Many Indicators
     </span>
   </a>
   
@@ -1752,67 +1784,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#time-commitment-guide" class="md-nav__link">
+  <a href="#whats-next" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        ⏱️ Time Commitment Guide
-      
+      ✅ What's Next?
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#recommended-onboarding-sequence" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🚀 Recommended Onboarding Sequence
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🚀 Recommended Onboarding Sequence">
+    <nav class="md-nav" aria-label="✅ What's Next?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#week-1-foundation" class="md-nav__link">
+  <a href="#master-pentarch" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Week 1: Foundation
-      
+      Master Pentarch:
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#week-2-volume-confirmation" class="md-nav__link">
+  <a href="#add-levels" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Week 2: Volume Confirmation
-      
+      Add Levels:
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#weeks-3-6-cycle-understanding" class="md-nav__link">
+  <a href="#complete-system" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Weeks 3-6: Cycle Understanding
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#weeks-7-9-integration" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Weeks 7-9: Integration
-      
+      Complete System:
     </span>
   </a>
   
@@ -1824,83 +1826,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#common-questions" class="md-nav__link">
+  <a href="#common-best-practices" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        ❓ Common Questions
-      
+      💡 Common Best Practices
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="❓ Common Questions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#q-can-i-start-with-multiple-indicators-at-once" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Q: Can I start with multiple indicators at once?
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#q-how-long-until-i-see-results" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Q: How long until I see results?
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#q-should-i-use-all-7-indicators" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Q: Should I use all 7 indicators?
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#q-what-if-i-choose-the-wrong-indicator" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Q: What if I choose the "wrong" indicator?
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#q-can-i-skip-the-beginner-indicators-and-go-straight-to-omnideck" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Q: Can I skip the beginner indicators and go straight to Omnideck?
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#your-next-steps" class="md-nav__link">
+  <a href="#need-help" class="md-nav__link">
     <span class="md-ellipsis">
+      🆘 Need Help?
+    </span>
+  </a>
+  
+</li>
       
-        🎯 Your Next Steps
-      
+        <li class="md-nav__item">
+  <a href="#what-has-been-learned" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎉 What Has Been Learned:
     </span>
   </a>
   
@@ -1916,83 +1862,85 @@
           
           
             <div class="md-content" data-md-component="content">
-              
-                
-
-
-
-
-              
               <article class="md-content__inner md-typeset">
-                
-                  
+<h1 id="which-indicator-should-i-start-with">Which Indicator Should I Start With?</h1>
 
-
-  
-    <a href="https://github.com/Signalpilot/signalpilot-docs/edit/main/docs/start-which-indicator.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
-    </a>
-  
-  
-
-
-<h1 id="which-indicator-should-i-start-with">Which Indicator Should I Start With?<a class="headerlink" href="#which-indicator-should-i-start-with" title="Permanent link">&para;</a></h1>
 <p>Choose the right Signal Pilot indicator for your experience level, trading style, and goals.</p>
-<hr />
-<h2 id="quick-recommendation-30-seconds">🎯 Quick Recommendation (30 seconds)<a class="headerlink" href="#quick-recommendation-30-seconds" title="Permanent link">&para;</a></h2>
-<h3 id="choose-your-path">Choose Your Path:<a class="headerlink" href="#choose-your-path" title="Permanent link">&para;</a></h3>
-<p><strong>👋 I'm Brand New to Technical Indicators</strong>
-→ Start with: <strong><a href="../REVISED_DOCS_JANUS_ATLAS.md">Janus Atlas</a></strong> (<a href="../ref-cheatsheets/janus-atlas-levels-guide/">Quick Reference</a>) + <strong><a href="../REVISED_DOCS_VOLUME_ORACLE.md">Volume Oracle</a></strong> (<a href="../ref-cheatsheets/volume-oracle-quick-reference/">Quick Reference</a>)
-- <strong>Why:</strong> Simplest concepts (support/resistance + volume)
-- <strong>Learning time:</strong> 8-10 hours combined
-- <strong>First signal:</strong> Within minutes of loading</p>
-<hr />
-<p><strong>📈 I Want to Understand Market Cycles</strong>
-→ Start with: <strong><a href="../REVISED_DOCS_PENTARCH.md">Pentarch</a></strong> (<a href="../ref-cheatsheets/pentarch-quick-reference/">Quick Reference</a>)
-- <strong>Why:</strong> Identifies where you are in market cycle (accumulation → distribution)
-- <strong>Learning time:</strong> 10-60 hours (pattern recognition required)
-- <strong>First signal:</strong> Within 1-7 days</p>
-<hr />
-<p><strong>⚡ I Want the Most Popular Combination</strong>
-→ Start with: <strong>The Trinity</strong> (<a href="../REVISED_DOCS_PENTARCH.md">Pentarch</a> + <a href="../REVISED_DOCS_JANUS_ATLAS.md">Janus Atlas</a> + <a href="../REVISED_DOCS_VOLUME_ORACLE.md">Volume Oracle</a>) — <a href="../ref-cheatsheets/all-indicators-at-a-glance/">See all cheat sheets</a>
-- <strong>Why:</strong> Most comprehensive setup, covers all bases
-- <strong>Learning time:</strong> 45-100 hours total
-- <strong>Path:</strong> Learn Janus (2 weeks) → Volume (1 week) → Pentarch (4-6 weeks)</p>
-<hr />
-<p><strong>🔬 I Want Everything in One Indicator</strong>
-→ Start with: <strong><a href="../REVISED_DOCS_OMNIDECK.md">Omnideck</a></strong> (<a href="ref-cheatsheets/omnideck-quick-reference.md">Quick Reference</a>)
-- <strong>Why:</strong> 8 systems in one indicator, all-in-one analysis
-- <strong>Learning time:</strong> 100+ hours (advanced)
-- <strong>Note:</strong> Not recommended as first indicator—master simpler ones first</p>
-<hr />
-<p><strong>📊 I Want to Scan Multiple Assets</strong>
-→ Start with: <strong><a href="../REVISED_DOCS_AUGURY_GRID.md">Augury Grid</a></strong> (<a href="ref-cheatsheets/augury-grid-quick-reference.md">Quick Reference</a>)
-- <strong>Why:</strong> Monitor 30-40 symbols simultaneously for exhaustion signals
-- <strong>Learning time:</strong> 12-50 hours
-- <strong>Best used with:</strong> Pentarch or Janus for detailed analysis on selected assets</p>
-<hr />
-<h2 id="decision-flowchart">🧭 Decision Flowchart<a class="headerlink" href="#decision-flowchart" title="Permanent link">&para;</a></h2>
-<pre class="mermaid"><code>graph TD
-    A[What's your experience level?] --&gt; B{New to indicators?}
-    A --&gt; C{Some experience?}
-    A --&gt; D{Advanced trader?}
 
-    B --&gt;|Yes| E[What's your primary goal?]
-    C --&gt;|Yes| F[What's your trading style?]
-    D --&gt;|Yes| G[What's your focus?]
+<hr />
 
-    E --&gt;|Find support/resistance| H[Janus Atlas]
-    E --&gt;|Understand volume| I[Volume Oracle]
-    E --&gt;|Both| J[Janus + Volume]
+<h2 id="quick-recommendation-30-seconds">🎯 Quick Recommendation (30 seconds)</h2>
 
-    F --&gt;|Day trading| K[The Trinity]
-    F --&gt;|Swing trading| L[Pentarch + Janus]
-    F --&gt;|Scalping| M[Volume Oracle + Harmonic]
+<h3 id="choose-your-path">Choose Your Path:</h3>
 
-    G --&gt;|All-in-one| N[Omnideck]
-    G --&gt;|Multi-asset scanning| O[Augury Grid]
-    G --&gt;|Advanced patterns| P[Pentarch + Plutus]
+<p><strong>👋 I'm Brand New to Technical Indicators</strong> → Start with: <strong><a href="../janus-atlas-v10/">Janus Atlas</a></strong> (<a href="../ref-cheatsheets-janus/">Quick Reference</a>) + <strong><a href="../volume-oracle-v10/">Volume Oracle</a></strong> (<a href="../ref-cheatsheets-volume-oracle/">Quick Reference</a>)</p>
+<ul>
+<li><strong>Why:</strong> Simplest concepts (support/resistance + volume)</li>
+<li><strong>Learning time:</strong> 8-10 hours combined</li>
+<li><strong>First signal:</strong> Within minutes of loading</li>
+</ul>
+
+<hr />
+
+<p><strong>📈 I Want to Understand Market Cycles</strong> → Start with: <strong><a href="../pentarch-v10/">Pentarch</a></strong> (<a href="../ref-cheatsheets-pentarch/">Quick Reference</a>)</p>
+<ul>
+<li><strong>Why:</strong> Identifies where you are in market cycle (accumulation → distribution)</li>
+<li><strong>Learning time:</strong> 10-60 hours (pattern recognition required)</li>
+<li><strong>First signal:</strong> Within 1-7 days</li>
+</ul>
+
+<hr />
+
+<p><strong>⚡ I Want the Most Popular Combination</strong> → Start with: <strong>The Trinity</strong> (<a href="../pentarch-v10/">Pentarch</a> + <a href="../janus-atlas-v10/">Janus Atlas</a> + <a href="../volume-oracle-v10/">Volume Oracle</a>) — <a href="../ref-cheatsheets-at-a-glance/">See all cheat sheets</a></p>
+<ul>
+<li><strong>Why:</strong> Most comprehensive setup, covers all bases</li>
+<li><strong>Learning time:</strong> 45-100 hours total</li>
+<li><strong>Path:</strong> Learn Janus (2 weeks) → Volume (1 week) → Pentarch (4-6 weeks)</li>
+</ul>
+
+<hr />
+
+<p><strong>🔬 I Want Everything in One Indicator</strong> → Start with: <strong><a href="../omnideck-v10/">Omnideck</a></strong> (<a href="../ref-cheatsheets-omnideck/">Quick Reference</a>)</p>
+<ul>
+<li><strong>Why:</strong> 8 systems in one indicator, all-in-one analysis</li>
+<li><strong>Learning time:</strong> 100+ hours (advanced)</li>
+<li><strong>Note:</strong> Not recommended as first indicator—master simpler ones first</li>
+</ul>
+
+<hr />
+
+<p><strong>📊 I Want to Scan Multiple Assets</strong> → Start with: <strong><a href="../augury-grid-v10/">Augury Grid</a></strong> (<a href="../ref-cheatsheets-augury-grid/">Quick Reference</a>)</p>
+<ul>
+<li><strong>Why:</strong> Monitor 30-40 symbols simultaneously for exhaustion signals</li>
+<li><strong>Learning time:</strong> 12-50 hours</li>
+<li><strong>Best used with:</strong> Pentarch or Janus for detailed analysis on selected assets</li>
+</ul>
+
+<hr />
+
+<h2 id="decision-flowchart">🧭 Decision Flowchart</h2>
+
+<p><div class="mermaid">
+graph TD
+    A[What's your experience level?] --> B{New to indicators?}
+    A --> C{Some experience?}
+    A --> D{Advanced trader?}
+
+    B -->|Yes| E[What's your primary goal?]
+    C -->|Yes| F[What's your trading style?]
+    D -->|Yes| G[What's your focus?]
+
+    E -->|Find support/resistance| H[Janus Atlas]
+    E -->|Understand volume| I[Volume Oracle]
+    E -->|Both| J[Janus + Volume]
+
+    F -->|Day trading| K[The Trinity]
+    F -->|Swing trading| L[Pentarch + Janus]
+    F -->|Scalping| M[Volume Oracle + Harmonic]
+
+    G -->|All-in-one| N[Omnideck]
+    G -->|Multi-asset scanning| O[Augury Grid]
+    G -->|Advanced patterns| P[Pentarch + Plutus]
 
     style H fill:#3498db
     style I fill:#e74c3c
@@ -2002,157 +1950,219 @@
     style M fill:#e67e22
     style N fill:#2ecc71
     style O fill:#34495e
-    style P fill:#c0392b</code></pre>
+    style P fill:#c0392b
+</div></p>
+
 <hr />
-<h2 id="3-question-quiz">📝 3-Question Quiz<a class="headerlink" href="#3-question-quiz" title="Permanent link">&para;</a></h2>
-<h3 id="question-1-whats-your-experience-level">Question 1: What's your experience level?<a class="headerlink" href="#question-1-whats-your-experience-level" title="Permanent link">&para;</a></h3>
-<p><strong>A) Complete beginner</strong> - Never used technical indicators before
-→ Recommended: Janus Atlas or Volume Oracle</p>
-<p><strong>B) Some experience</strong> - Used RSI, MACD, moving averages
-→ Recommended: Pentarch or The Trinity</p>
-<p><strong>C) Advanced</strong> - Comfortable with complex multi-indicator systems
-→ Recommended: Omnideck or full Signal Pilot suite</p>
+
+<h2 id="3-question-quiz">📝 3-Question Quiz</h2>
+
+<h3 id="question-1-whats-your-experience-level">Question 1: What's your experience level?</h3>
+
+<p><strong>A) Complete beginner</strong> - Never used technical indicators before → Recommended: Janus Atlas or Volume Oracle</p>
+
+<p><strong>B) Some experience</strong> - Used RSI, MACD, moving averages → Recommended: Pentarch or The Trinity</p>
+
+<p><strong>C) Advanced</strong> - Comfortable with complex multi-indicator systems → Recommended: Omnideck or full Signal Pilot suite</p>
+
 <hr />
-<h3 id="question-2-whats-your-primary-trading-style">Question 2: What's your primary trading style?<a class="headerlink" href="#question-2-whats-your-primary-trading-style" title="Permanent link">&para;</a></h3>
-<p><strong>A) Scalping</strong> (seconds to minutes, many trades per day)
-→ Recommended: <a href="../REVISED_DOCS_VOLUME_ORACLE.md">Volume Oracle</a> + <a href="../REVISED_DOCS_HARMONIC_OSCILLATOR.md">Harmonic Oscillator</a> (<a href="ref-cheatsheets/harmonic-oscillator-quick-reference.md">Quick Reference</a>)
-→ Timeframes: 1m-5m</p>
-<p><strong>B) Day Trading</strong> (minutes to hours, close all by EOD)
-→ Recommended: The Trinity (Pentarch + Janus + Volume)
-→ Timeframes: 5m-1H</p>
-<p><strong>C) Swing Trading</strong> (days to weeks)
-→ Recommended: Pentarch + Janus Atlas
-→ Timeframes: 4H-Daily</p>
-<p><strong>D) Position Trading</strong> (weeks to months)
-→ Recommended: Pentarch + Plutus Flow
-→ Timeframes: Daily-Weekly</p>
+
+<h3 id="question-2-whats-your-primary-trading-style">Question 2: What's your primary trading style?</h3>
+
+<p><strong>A) Scalping</strong> (seconds to minutes, many trades per day) → Recommended: <a href="../volume-oracle-v10/">Volume Oracle</a> + <a href="../harmonic-oscillator-v10/">Harmonic Oscillator</a> (<a href="../ref-cheatsheets-harmonic/">Quick Reference</a>) → Timeframes: 1m-5m</p>
+
+<p><strong>B) Day Trading</strong> (minutes to hours, close all by EOD) → Recommended: The Trinity (Pentarch + Janus + Volume) → Timeframes: 5m-1H</p>
+
+<p><strong>C) Swing Trading</strong> (days to weeks) → Recommended: Pentarch + Janus Atlas → Timeframes: 4H-Daily</p>
+
+<p><strong>D) Position Trading</strong> (weeks to months) → Recommended: Pentarch + Plutus Flow → Timeframes: Daily-Weekly</p>
+
 <hr />
-<h3 id="question-3-whats-your-primary-goal">Question 3: What's your primary goal?<a class="headerlink" href="#question-3-whats-your-primary-goal" title="Permanent link">&para;</a></h3>
-<p><strong>A) Find precise entry/exit levels</strong>
-→ Recommended: <strong>Janus Atlas</strong> (39 price levels)</p>
-<p><strong>B) Identify market cycle phase</strong>
-→ Recommended: <strong>Pentarch</strong> (5 cycle events)</p>
-<p><strong>C) Confirm moves with volume</strong>
-→ Recommended: <strong>Volume Oracle</strong> (volume spikes, zones, flow)</p>
-<p><strong>D) Get momentum signals</strong>
-→ Recommended: <strong>Harmonic Oscillator</strong> (BUY/SELL/STRONG/NEUT)</p>
-<p><strong>E) Spot divergences</strong>
-→ Recommended: <strong><a href="../REVISED_DOCS_PLUTUS_FLOW.md">Plutus Flow</a></strong> (<a href="ref-cheatsheets/plutus-flow-quick-reference.md">Quick Reference</a>) (OBV divergence detection)</p>
-<p><strong>F) Scan multiple assets quickly</strong>
-→ Recommended: <strong>Augury Grid</strong> (multi-symbol screener)</p>
-<p><strong>G) All of the above</strong>
-→ Recommended: <strong>Omnideck</strong> (8-in-1 indicator)</p>
+
+<h3 id="question-3-whats-your-primary-goal">Question 3: What's your primary goal?</h3>
+
+<p><strong>A) Find precise entry/exit levels</strong> → Recommended: <strong>Janus Atlas</strong> (39 price levels)</p>
+
+<p><strong>B) Identify market cycle phase</strong> → Recommended: <strong>Pentarch</strong> (5 cycle events)</p>
+
+<p><strong>C) Confirm moves with volume</strong> → Recommended: <strong>Volume Oracle</strong> (volume spikes, zones, flow)</p>
+
+<p><strong>D) Get momentum signals</strong> → Recommended: <strong>Harmonic Oscillator</strong> (BUY/SELL/STRONG/NEUT)</p>
+
+<p><strong>E) Spot divergences</strong> → Recommended: <strong><a href="../plutus-flow-v10/">Plutus Flow</a></strong> (<a href="../ref-cheatsheets-plutus/">Quick Reference</a>) (OBV divergence detection)</p>
+
+<p><strong>F) Scan multiple assets quickly</strong> → Recommended: <strong>Augury Grid</strong> (multi-symbol screener)</p>
+
+<p><strong>G) All of the above</strong> → Recommended: <strong>Omnideck</strong> (8-in-1 indicator)</p>
+
 <hr />
-<h2 id="by-experience-level">🎓 By Experience Level<a class="headerlink" href="#by-experience-level" title="Permanent link">&para;</a></h2>
-<h3 id="beginners-0-6-months-trading-experience">🟢 Beginners (0-6 months trading experience)<a class="headerlink" href="#beginners-0-6-months-trading-experience" title="Permanent link">&para;</a></h3>
+
+<h2 id="by-experience-level">🎓 By Experience Level</h2>
+
+<h3 id="beginners-0-6-months-trading-experience">🟢 Beginners (0-6 months trading experience)</h3>
+
 <p><strong>Start Here:</strong></p>
+
 <ol>
 <li><strong>Janus Atlas</strong> (Easiest)</li>
+</ol>
+<ul>
 <li><strong>Concept:</strong> Price levels (support/resistance)</li>
 <li><strong>Learning curve:</strong> Gentle</li>
 <li><strong>Time to proficiency:</strong> 8-50 hours</li>
-<li>
-<p><strong>Why first:</strong> Most intuitive concept—"price bounces at levels"</p>
-</li>
-<li>
-<p><strong>Volume Oracle</strong> (Easy)</p>
-</li>
+<li><strong>Why first:</strong> Most intuitive concept—"price bounces at levels"</li>
+</ul>
+
+<ol>
+<li><strong>Volume Oracle</strong> (Easy)</li>
+</ol>
+<ul>
 <li><strong>Concept:</strong> Volume confirmation</li>
 <li><strong>Learning curve:</strong> Gentle</li>
 <li><strong>Time to proficiency:</strong> 8-40 hours</li>
 <li><strong>Why second:</strong> Simple visual (green = high volume, red = low)</li>
-</ol>
-<p><strong>Avoid:</strong>
-- ❌ Omnideck (too complex)
-- ❌ Pentarch (requires pattern recognition skills)</p>
-<p><strong>Learning Path:</strong> <a href="../start-learning-path/#path-1-beginner-the-trinity-45-weeks">Beginner Trinity Path</a></p>
+</ul>
+
+<p><strong>Avoid:</strong></p>
+<ul>
+<li>❌ Omnideck (too complex)</li>
+<li>❌ Pentarch (requires pattern recognition skills)</li>
+</ul>
+
+<p><strong>Learning Path:</strong> <a href="../start-learning-path/">Beginner Trinity Path</a></p>
+
 <hr />
-<h3 id="intermediate-6-24-months-trading-experience">🟡 Intermediate (6-24 months trading experience)<a class="headerlink" href="#intermediate-6-24-months-trading-experience" title="Permanent link">&para;</a></h3>
+
+<h3 id="intermediate-6-24-months-trading-experience">🟡 Intermediate (6-24 months trading experience)</h3>
+
 <p><strong>Add These:</strong></p>
+
 <ol>
 <li><strong>Pentarch</strong> (Moderate)</li>
+</ol>
+<ul>
 <li><strong>Concept:</strong> Market cycle phase detection</li>
 <li><strong>Learning curve:</strong> Moderate (pattern recognition needed)</li>
 <li><strong>Time to proficiency:</strong> 10-60 hours</li>
-<li>
-<p><strong>Why now:</strong> Ready to understand cycle dynamics</p>
-</li>
-<li>
-<p><strong>Harmonic Oscillator</strong> (Easy-Moderate)</p>
-</li>
+<li><strong>Why now:</strong> Ready to understand cycle dynamics</li>
+</ul>
+
+<ol>
+<li><strong>Harmonic Oscillator</strong> (Easy-Moderate)</li>
+</ol>
+<ul>
 <li><strong>Concept:</strong> Multi-oscillator consensus voting</li>
 <li><strong>Learning curve:</strong> Moderate</li>
 <li><strong>Time to proficiency:</strong> 8-40 hours</li>
 <li><strong>Why useful:</strong> Adds momentum confirmation layer</li>
-</ol>
-<p><strong>Learning Path:</strong> <a href="../start-learning-path/#path-2-intermediate-multi-indicator-mastery-8-12-weeks">Intermediate Multi-Indicator Path</a></p>
+</ul>
+
+<p><strong>Learning Path:</strong> <a href="../start-learning-path/">Intermediate Multi-Indicator Path</a></p>
+
 <hr />
-<h3 id="advanced-24-months-trading-experience">🔴 Advanced (24+ months trading experience)<a class="headerlink" href="#advanced-24-months-trading-experience" title="Permanent link">&para;</a></h3>
+
+<h3 id="advanced-24-months-trading-experience">🔴 Advanced (24+ months trading experience)</h3>
+
 <p><strong>Master These:</strong></p>
+
 <ol>
 <li><strong>Plutus Flow</strong> (Moderate-Advanced)</li>
+</ol>
+<ul>
 <li><strong>Concept:</strong> OBV divergence detection</li>
 <li><strong>Learning curve:</strong> Moderate (requires understanding of divergences)</li>
-<li>
-<p><strong>Time to proficiency:</strong> 10-50 hours</p>
-</li>
-<li>
-<p><strong>Augury Grid</strong> (Moderate-Advanced)</p>
-</li>
+<li><strong>Time to proficiency:</strong> 10-50 hours</li>
+</ul>
+
+<ol>
+<li><strong>Augury Grid</strong> (Moderate-Advanced)</li>
+</ol>
+<ul>
 <li><strong>Concept:</strong> Multi-asset screening</li>
 <li><strong>Learning curve:</strong> Moderate (requires understanding patterns first)</li>
-<li>
-<p><strong>Time to proficiency:</strong> 12-50 hours</p>
-</li>
-<li>
-<p><strong>Omnideck</strong> (Advanced)</p>
-</li>
+<li><strong>Time to proficiency:</strong> 12-50 hours</li>
+</ul>
+
+<ol>
+<li><strong>Omnideck</strong> (Advanced)</li>
+</ol>
+<ul>
 <li><strong>Concept:</strong> 8 systems in one indicator</li>
 <li><strong>Learning curve:</strong> Steep (100+ hours)</li>
 <li><strong>Time to proficiency:</strong> 100-150 hours</li>
 <li><strong>Why last:</strong> Requires understanding individual components first</li>
-</ol>
-<p><strong>Learning Path:</strong> <a href="../start-learning-path/#path-3-advanced-power-user-comprehensive-mastery-15-20-weeks">Advanced Power User Path</a></p>
+</ul>
+
+<p><strong>Learning Path:</strong> <a href="../start-learning-path/">Advanced Power User Path</a></p>
+
 <hr />
-<h2 id="by-trading-style">💼 By Trading Style<a class="headerlink" href="#by-trading-style" title="Permanent link">&para;</a></h2>
-<h3 id="scalping-seconds-to-minutes">Scalping (Seconds to Minutes)<a class="headerlink" href="#scalping-seconds-to-minutes" title="Permanent link">&para;</a></h3>
-<p><strong>Best Indicators:</strong>
-- ✅ Volume Oracle (volume spikes for entry timing)
-- ✅ Harmonic Oscillator (quick momentum signals)
-- ⚠️ Janus Atlas (use session levels only, not all 39)</p>
-<p><strong>Timeframes:</strong> 1m, 5m
-<strong>Combination:</strong> Volume Oracle + Harmonic Oscillator</p>
+
+<h2 id="by-trading-style">💼 By Trading Style</h2>
+
+<h3 id="scalping-seconds-to-minutes">Scalping (Seconds to Minutes)</h3>
+
+<p><strong>Best Indicators:</strong></p>
+<ul>
+<li>✅ Volume Oracle (volume spikes for entry timing)</li>
+<li>✅ Harmonic Oscillator (quick momentum signals)</li>
+<li>⚠️ Janus Atlas (use session levels only, not all 39)</li>
+</ul>
+
+<p><strong>Timeframes:</strong> 1m, 5m <strong>Combination:</strong> Volume Oracle + Harmonic Oscillator</p>
+
 <p><strong>Why:</strong> Fast signals, minimal lag, clear entry/exit cues</p>
+
 <hr />
-<h3 id="day-trading-minutes-to-hours">Day Trading (Minutes to Hours)<a class="headerlink" href="#day-trading-minutes-to-hours" title="Permanent link">&para;</a></h3>
-<p><strong>Best Indicators:</strong>
-- ✅ The Trinity (Pentarch + Janus + Volume Oracle)
-- ✅ Harmonic Oscillator (for additional confirmation)</p>
-<p><strong>Timeframes:</strong> 5m, 15m, 1H
-<strong>Combination:</strong> The Trinity (3 indicators)</p>
+
+<h3 id="day-trading-minutes-to-hours">Day Trading (Minutes to Hours)</h3>
+
+<p><strong>Best Indicators:</strong></p>
+<ul>
+<li>✅ The Trinity (Pentarch + Janus + Volume Oracle)</li>
+<li>✅ Harmonic Oscillator (for additional confirmation)</li>
+</ul>
+
+<p><strong>Timeframes:</strong> 5m, 15m, 1H <strong>Combination:</strong> The Trinity (3 indicators)</p>
+
 <p><strong>Why:</strong> Covers cycle phase, levels, and volume—comprehensive day trading setup</p>
+
 <hr />
-<h3 id="swing-trading-days-to-weeks">Swing Trading (Days to Weeks)<a class="headerlink" href="#swing-trading-days-to-weeks" title="Permanent link">&para;</a></h3>
-<p><strong>Best Indicators:</strong>
-- ✅ Pentarch (cycle phase identification)
-- ✅ Janus Atlas (weekly/monthly levels)
-- ✅ Plutus Flow (divergences for reversals)</p>
-<p><strong>Timeframes:</strong> 4H, Daily
-<strong>Combination:</strong> Pentarch + Janus + Plutus</p>
+
+<h3 id="swing-trading-days-to-weeks">Swing Trading (Days to Weeks)</h3>
+
+<p><strong>Best Indicators:</strong></p>
+<ul>
+<li>✅ Pentarch (cycle phase identification)</li>
+<li>✅ Janus Atlas (weekly/monthly levels)</li>
+<li>✅ Plutus Flow (divergences for reversals)</li>
+</ul>
+
+<p><strong>Timeframes:</strong> 4H, Daily <strong>Combination:</strong> Pentarch + Janus + Plutus</p>
+
 <p><strong>Why:</strong> Pattern-based, works on longer timeframes, identifies major turning points</p>
+
 <hr />
-<h3 id="position-trading-weeks-to-months">Position Trading (Weeks to Months)<a class="headerlink" href="#position-trading-weeks-to-months" title="Permanent link">&para;</a></h3>
-<p><strong>Best Indicators:</strong>
-- ✅ Pentarch (macro cycle analysis)
-- ✅ Janus Atlas (monthly/quarterly levels)
-- ✅ Plutus Flow (long-term divergences)</p>
-<p><strong>Timeframes:</strong> Daily, Weekly
-<strong>Combination:</strong> Pentarch + Plutus Flow</p>
+
+<h3 id="position-trading-weeks-to-months">Position Trading (Weeks to Months)</h3>
+
+<p><strong>Best Indicators:</strong></p>
+<ul>
+<li>✅ Pentarch (macro cycle analysis)</li>
+<li>✅ Janus Atlas (monthly/quarterly levels)</li>
+<li>✅ Plutus Flow (long-term divergences)</li>
+</ul>
+
+<p><strong>Timeframes:</strong> Daily, Weekly <strong>Combination:</strong> Pentarch + Plutus Flow</p>
+
 <p><strong>Why:</strong> Long-term trend and divergence focus</p>
+
 <hr />
-<h2 id="most-popular-combinations">🏆 Most Popular Combinations<a class="headerlink" href="#most-popular-combinations" title="Permanent link">&para;</a></h2>
-<h3 id="the-trinity-most-popular">The Trinity ⭐ (Most Popular)<a class="headerlink" href="#the-trinity-most-popular" title="Permanent link">&para;</a></h3>
+
+<h2 id="most-popular-combinations">🏆 Most Popular Combinations</h2>
+
+<h3 id="the-trinity-most-popular">The Trinity ⭐ (Most Popular)</h3>
 <p><strong>Pentarch + Janus Atlas + Volume Oracle</strong></p>
+
 <ul>
 <li><strong>Use case:</strong> Comprehensive analysis for day/swing trading</li>
 <li><strong>Covers:</strong> Cycle phase + price levels + volume confirmation</li>
@@ -2160,39 +2170,55 @@
 <li><strong>Difficulty:</strong> Moderate</li>
 <li><strong>Workflow:</strong> Pentarch signal → Janus level → Volume spike = high-probability setup</li>
 </ul>
+
 <p><strong>Perfect for:</strong> Day traders and swing traders wanting complete coverage</p>
+
 <hr />
-<h3 id="the-momentum-stack">The Momentum Stack<a class="headerlink" href="#the-momentum-stack" title="Permanent link">&para;</a></h3>
+
+<h3 id="the-momentum-stack">The Momentum Stack</h3>
 <p><strong>Pentarch + Harmonic Oscillator + Janus Atlas</strong></p>
+
 <ul>
 <li><strong>Use case:</strong> Cycle + momentum + levels</li>
 <li><strong>Covers:</strong> Phase detection + momentum voting + entry levels</li>
 <li><strong>Learning time:</strong> 30-80 hours</li>
 <li><strong>Difficulty:</strong> Moderate</li>
 </ul>
+
 <p><strong>Perfect for:</strong> Traders who want momentum confirmation with cycles</p>
+
 <hr />
-<h3 id="the-divergence-hunter">The Divergence Hunter<a class="headerlink" href="#the-divergence-hunter" title="Permanent link">&para;</a></h3>
+
+<h3 id="the-divergence-hunter">The Divergence Hunter</h3>
 <p><strong>Plutus Flow + Pentarch + Janus Atlas</strong></p>
+
 <ul>
 <li><strong>Use case:</strong> Spotting reversals via divergences</li>
 <li><strong>Covers:</strong> OBV divergence + cycle shift + support/resistance</li>
 <li><strong>Learning time:</strong> 40-90 hours</li>
 <li><strong>Difficulty:</strong> Moderate-Advanced</li>
 </ul>
+
 <p><strong>Perfect for:</strong> Swing/position traders focused on turning points</p>
+
 <hr />
-<h3 id="the-scanner">The Scanner<a class="headerlink" href="#the-scanner" title="Permanent link">&para;</a></h3>
+
+<h3 id="the-scanner">The Scanner</h3>
 <p><strong>Augury Grid + The Trinity</strong></p>
+
 <ul>
 <li><strong>Use case:</strong> Multi-asset screening → detailed analysis</li>
 <li><strong>Covers:</strong> 30-40 symbol scan → full analysis on selected assets</li>
 <li><strong>Learning time:</strong> 60-120 hours</li>
 <li><strong>Difficulty:</strong> Advanced</li>
 </ul>
+
 <p><strong>Perfect for:</strong> Traders managing watchlists or trading multiple assets</p>
+
 <hr />
-<h2 id="time-commitment-guide">⏱️ Time Commitment Guide<a class="headerlink" href="#time-commitment-guide" title="Permanent link">&para;</a></h2>
+
+<h2 id="time-commitment-guide">⏱️ Time Commitment Guide</h2>
+
 <table>
 <thead>
 <tr>
@@ -2247,174 +2273,104 @@
 </tr>
 </tbody>
 </table>
+
 <p><strong>Note:</strong> "Minimum to Get It" = basic understanding. "Proficiency" = consistent successful application. "Mastery" = advanced pattern recognition and multi-scenario handling.</p>
+
 <hr />
-<h2 id="recommended-onboarding-sequence">🚀 Recommended Onboarding Sequence<a class="headerlink" href="#recommended-onboarding-sequence" title="Permanent link">&para;</a></h2>
-<h3 id="week-1-foundation">Week 1: Foundation<a class="headerlink" href="#week-1-foundation" title="Permanent link">&para;</a></h3>
+
+<h2 id="recommended-onboarding-sequence">🚀 Recommended Onboarding Sequence</h2>
+
+<h3 id="week-1-foundation">Week 1: Foundation</h3>
 <ul>
 <li><strong>Load:</strong> Janus Atlas</li>
 <li><strong>Goal:</strong> Understand support/resistance levels</li>
 <li><strong>Time:</strong> 10-15 hours observation + reading</li>
 <li><strong>Milestone:</strong> Identify 10 level reactions on your charts</li>
 </ul>
-<h3 id="week-2-volume-confirmation">Week 2: Volume Confirmation<a class="headerlink" href="#week-2-volume-confirmation" title="Permanent link">&para;</a></h3>
+
+<h3 id="week-2-volume-confirmation">Week 2: Volume Confirmation</h3>
 <ul>
 <li><strong>Add:</strong> Volume Oracle</li>
 <li><strong>Goal:</strong> Confirm moves with volume</li>
 <li><strong>Time:</strong> 8-12 hours</li>
 <li><strong>Milestone:</strong> Spot 5 volume spikes at key levels</li>
 </ul>
-<h3 id="weeks-3-6-cycle-understanding">Weeks 3-6: Cycle Understanding<a class="headerlink" href="#weeks-3-6-cycle-understanding" title="Permanent link">&para;</a></h3>
+
+<h3 id="weeks-3-6-cycle-understanding">Weeks 3-6: Cycle Understanding</h3>
 <ul>
 <li><strong>Add:</strong> Pentarch</li>
 <li><strong>Goal:</strong> Identify cycle phases (TD, IGN, WRN, CAP, BDN)</li>
 <li><strong>Time:</strong> 15-25 hours</li>
 <li><strong>Milestone:</strong> Observe complete cycle sequence</li>
 </ul>
-<h3 id="weeks-7-9-integration">Weeks 7-9: Integration<a class="headerlink" href="#weeks-7-9-integration" title="Permanent link">&para;</a></h3>
+
+<h3 id="weeks-7-9-integration">Weeks 7-9: Integration</h3>
 <ul>
 <li><strong>Practice:</strong> The Trinity workflow</li>
 <li><strong>Goal:</strong> Combine all three for high-probability setups</li>
 <li><strong>Time:</strong> 10-20 hours</li>
 <li><strong>Milestone:</strong> Find 3 examples of all three aligning</li>
 </ul>
+
 <hr />
-<h2 id="common-questions">❓ Common Questions<a class="headerlink" href="#common-questions" title="Permanent link">&para;</a></h2>
-<h3 id="q-can-i-start-with-multiple-indicators-at-once">Q: Can I start with multiple indicators at once?<a class="headerlink" href="#q-can-i-start-with-multiple-indicators-at-once" title="Permanent link">&para;</a></h3>
+
+<h2 id="common-questions">❓ Common Questions</h2>
+
+<h3 id="q-can-i-start-with-multiple-indicators-at-once">Q: Can I start with multiple indicators at once?</h3>
 <p><strong>A:</strong> Possible but not recommended. Better to master one indicator fully before adding another. Exception: Janus + Volume can be learned together (complementary, not overwhelming).</p>
-<h3 id="q-how-long-until-i-see-results">Q: How long until I see results?<a class="headerlink" href="#q-how-long-until-i-see-results" title="Permanent link">&para;</a></h3>
+
+<h3 id="q-how-long-until-i-see-results">Q: How long until I see results?</h3>
 <p><strong>A:</strong> First signal: Minutes to days (depending on indicator). Consistent proficiency: 8-150 hours depending on indicator complexity and your experience level.</p>
-<h3 id="q-should-i-use-all-7-indicators">Q: Should I use all 7 indicators?<a class="headerlink" href="#q-should-i-use-all-7-indicators" title="Permanent link">&para;</a></h3>
+
+<h3 id="q-should-i-use-all-7-indicators">Q: Should I use all 7 indicators?</h3>
 <p><strong>A:</strong> No. Most traders use 2-4 indicators. Using all 7 simultaneously creates visual overload and slow charts. Start with 1-2, expand to 3-4 max.</p>
-<h3 id="q-what-if-i-choose-the-wrong-indicator">Q: What if I choose the "wrong" indicator?<a class="headerlink" href="#q-what-if-i-choose-the-wrong-indicator" title="Permanent link">&para;</a></h3>
+
+<h3 id="q-what-if-i-choose-the-wrong-indicator">Q: What if I choose the "wrong" indicator?</h3>
 <p><strong>A:</strong> No wrong choice—all indicators are valuable. If one doesn't click, try another. Many users start with Janus, add Volume, then explore others based on needs.</p>
-<h3 id="q-can-i-skip-the-beginner-indicators-and-go-straight-to-omnideck">Q: Can I skip the beginner indicators and go straight to Omnideck?<a class="headerlink" href="#q-can-i-skip-the-beginner-indicators-and-go-straight-to-omnideck" title="Permanent link">&para;</a></h3>
+
+<h3 id="q-can-i-skip-the-beginner-indicators-and-go-straight-to-omnideck">Q: Can I skip the beginner indicators and go straight to Omnideck?</h3>
 <p><strong>A:</strong> Technically yes, but not recommended. Omnideck contains 8 systems—understanding those individual components first makes Omnideck much easier to master.</p>
+
 <hr />
-<h2 id="your-next-steps">🎯 Your Next Steps<a class="headerlink" href="#your-next-steps" title="Permanent link">&para;</a></h2>
+
+<h2 id="your-next-steps">🎯 Your Next Steps</h2>
+
 <p><strong>Made your choice?</strong></p>
+
 <ol>
 <li><strong>Read the indicator documentation:</strong> Click your chosen indicator above</li>
-<li><strong>Install on TradingView:</strong> <a href="#">Installation Guide</a> <em>(link to installation section)</em></li>
+<li><strong>Install on TradingView:</strong> <a href="../troubleshooting-installation/">Installation Guide</a></li>
 <li><strong>Follow the learning path:</strong> <a href="../start-learning-path/">Learning Paths</a></li>
-<li><strong>Join the community:</strong> <a href="../community/index.md">Community</a></li>
+<li><strong>Join the community:</strong> <a href="../about-support/">Community</a></li>
 </ol>
-<p><strong>Still unsure?</strong>
-- Compare all indicators: <a href="../ref-comparison/indicator-comparison/">Indicator Comparison</a>
-- Check system requirements: <a href="../about-system-requirements/">System Requirements</a>
-- Read the FAQ: <a href="about-faq/index.html">FAQ</a></p>
+
+<p><strong>Still unsure?</strong></p>
+<ul>
+<li>Compare all indicators: <a href="../ref-comparison/">Indicator Comparison</a></li>
+<li>Check system requirements: <a href="../about-system-requirements/">System Requirements</a></li>
+<li>Read the FAQ: <a href="about-faq/index.html">FAQ</a></li>
+</ul>
+
 <hr />
-<p><strong>Need Help Deciding?</strong>
-Contact support@signalpilot.io with your trading style, goals, and experience level—we'll recommend the best starting point.</p>
 
+<p><strong>Need Help Deciding?</strong> Contact support@signalpilot.io with your trading style, goals, and experience level—we'll recommend the best starting point.</p>
 
-
-
-
-
-
-  
-    
-  
-  
-    
-  
-
-
-  <aside class="md-source-file">
-    
-      
-  <span class="md-source-file__fact">
-    <span class="md-icon" title="Last update">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
-    </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 10, 2025 20:20:46 UTC"><span class="timeago" datetime="2025-11-10T20:20:46+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 10, 2025 20:20:46 UTC">2025-11-10</span>
-  </span>
-
-    
-    
-      
-  <span class="md-source-file__fact">
-    <span class="md-icon" title="Created">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
-    </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 10, 2025 02:25:21 UTC"><span class="timeago" datetime="2025-11-10T02:25:21+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 10, 2025 02:25:21 UTC">2025-11-10</span>
-  </span>
-
-    
-    
-    
-  </aside>
-
-
-  
-
-
-
-  <form class="md-feedback" name="feedback" hidden>
-    <fieldset>
-      <legend class="md-feedback__title">
-        Was this page helpful?
-      </legend>
-      <div class="md-feedback__inner">
-        <div class="md-feedback__list">
-          
-            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
-            </button>
-          
-            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"/></svg>
-            </button>
-          
-        </div>
-        <div class="md-feedback__note">
-          
-            <div data-md-value="1" hidden>
-              
-              
-                
-              
-              
-              
-                
-                
-              
-              Thanks for your feedback!
-            </div>
-          
-            <div data-md-value="0" hidden>
-              
-              
-                
-              
-              
-              
-                
-                
-              
-              Thanks for your feedback! Help us improve by <a href="https://github.com/Signalpilot/signalpilot-docs/issues/new" target="_blank" rel="noopener">reporting an issue</a>.
-            </div>
-          
-        </div>
-      </div>
-    </fieldset>
-  </form>
-
-
-                
-              </article>
+</article>
             </div>
           
           
-  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+
 
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+
+
         </div>
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
   Back to top
 </button>
         
@@ -2434,8 +2390,7 @@ Contact support@signalpilot.io with your trading style, goals, and experience le
   
 </div>
       
-        
-<div class="md-social">
+        <div class="md-social">
   
     
     
@@ -2445,7 +2400,7 @@ Contact support@signalpilot.io with your trading style, goals, and experience le
       
     
     <a href="https://x.com/signalpilot" target="_blank" rel="noopener" title="x.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M357.2 48h70.6L273.6 224.2 455 464H313L201.7 318.6 74.5 464H3.8l164.9-188.5L-5.2 48h145.6l100.5 132.9zm-24.8 373.8h39.1L119.1 88h-42z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"/></svg>
     </a>
   
     
@@ -2456,7 +2411,7 @@ Contact support@signalpilot.io with your trading style, goals, and experience le
       
     
     <a href="https://github.com/Signalpilot" target="_blank" rel="noopener" title="github.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
     </a>
   
 </div>
@@ -2471,24 +2426,65 @@ Contact support@signalpilot.io with your trading style, goals, and experience le
     </div>
     
     
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.sections", "navigation.path", "content.code.copy", "search.suggest", "search.highlight", "content.tabs.link", "content.tooltips", "content.action.edit"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+
+
     
-      
-      
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.top", "navigation.sections", "navigation.path", "content.code.copy", "search.suggest", "search.highlight", "content.tabs.link", "content.tooltips", "content.action.edit"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
-    
-      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+
+
       
         <script src="../js/timeago.min.js"></script>
+
+
       
         <script src="../js/timeago_mkdocs_material.js"></script>
+
+
       
         <script src="../assets/brand.js"></script>
+
+
       
         <script src="../assets/sp-bg.js"></script>
+
+
       
         <script src="../assets/keyword-highlighter.js"></script>
+
+
       
     
-  </body>
+      <script src="../assets/wheel-diagnostic.js"></script>
+      <script src="../assets/enhancements.js"></script>
+    <script src="assets/remove-tooltips.js"></script>
+    <script src="assets/bottom-sheet-nav.js"></script>
+      <script src="../assets/sticky-toc-scroll.js"></script>
+    <script src="../assets/components.js"></script>
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - JS
+       To disable: comment out this entire block
+       ======================================== -->
+  <script src="../js/feedback-system.js"></script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - JS -->
+
+  <!-- Meta-Learning & Accessibility Features -->
+  <script src="../js/keyboard-navigation.js"></script>
+  <script src="../js/text-sizing.js"></script>
+  <script src="../js/knowledge-checks.js"></script>
+
+      <!-- Signal Pilot Chatbot -->
+    <script src="/js/chatbot.js"></script>
+  
+
+
+
+
+
+
+
+  <!-- Custom Bottom Sheet Navigation Script -->
+  <script src="../assets/custom-bottom-sheet.js?v7"></script>
+</body>
 </html>
