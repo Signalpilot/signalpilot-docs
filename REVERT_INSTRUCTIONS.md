@@ -1,95 +1,95 @@
-# 🚨 EMERGENCY REVERT INSTRUCTIONS
+# 🚨 Emergency Revert Instructions
 
-If the mkdocs.yml commit (4a5c64a) breaks everything and causes old content to appear, follow these steps IMMEDIATELY.
+## What Changed
+
+These navigation labels were updated in `mkdocs.yml`:
+
+| Original | New |
+|----------|-----|
+| `Pentarch v1.0 — Reversal Events` | `Pentarch v1.0 — Five Cycle Events` |
+| `Volume Oracle v1.0 — Volume Strategy` | `Volume Oracle v1.0 — Volume Intelligence System` |
 
 ---
 
-## ⚡ QUICK REVERT (Easiest Method)
-
-Just run this command:
+## Option 1: Run the Revert Script (Easiest)
 
 ```bash
-bash EMERGENCY_REVERT.sh
+./REVERT_NAV_CHANGES.sh
 ```
 
-This script will:
-1. Reset your branch to commit `022c2e2` (before mkdocs.yml changes)
-2. Ask for confirmation before force pushing
-3. Restore everything to the working state
+This will:
+- ✅ Backup your current `mkdocs.yml` with timestamp
+- ✅ Restore the original navigation labels
+- ✅ Show confirmation message
 
 ---
 
-## 🔧 MANUAL REVERT (If Script Fails)
+## Option 2: Git Revert (Safest)
 
-### Step 1: Reset to Previous Commit
+Revert just the mkdocs.yml file to before the changes:
+
 ```bash
-git reset --hard 022c2e2
+git checkout 3502afb^ -- mkdocs.yml
 ```
 
-### Step 2: Force Push to Remote
+Then check the changes:
 ```bash
-git push --force-with-lease origin claude/enhance-learning-pages-onboarding-01GRQ85D1r4Xie7VVu5jgDKa
+git diff mkdocs.yml
 ```
 
----
-
-## 📊 What Each Commit Does
-
-- **4a5c64a** (CURRENT) - Added mkdocs.yml with new navigation
-- **022c2e2** (SAFE) - Navigation improvements (HTML only, no mkdocs.yml)
-- **5fc1e4f** (SAFE) - Enhanced learning pages
-
----
-
-## ✅ How to Verify Revert Worked
-
-After reverting, check:
-
+If happy, commit it:
 ```bash
-# Should show commit 022c2e2
-git log --oneline -1
-
-# Should NOT exist
-ls mkdocs.yml 2>/dev/null && echo "❌ mkdocs.yml still exists" || echo "✅ mkdocs.yml removed"
+git commit -m "REVERT: Restore original navigation labels"
 ```
 
 ---
 
-## 🔍 What Went Wrong?
+## Option 3: Manual Edit
 
-If you need to revert, the problem was likely:
-- mkdocs.yml navigation didn't match your actual files
-- MkDocs regenerated HTML and overwrote your manual changes
-- Navigation pointed to non-existent pages
+Open `mkdocs.yml` and change these two lines:
 
----
+**Line ~27 (Pentarch):**
+```yaml
+# Change this:
+- "Pentarch v1.0 — Five Cycle Events": pentarch-v10.md
 
-## 💡 After Reverting
-
-Once reverted, you can:
-1. Investigate what went wrong
-2. Fix mkdocs.yml navigation properly
-3. Try again with correct paths
-
----
-
-## 🆘 If You're Panicking
-
-**STOP. BREATHE. YOU HAVE A BACKUP.**
-
-Commit `022c2e2` is your safe restore point.
-Everything before that commit is preserved.
-Your work is NOT lost - it's just one git command away.
-
-Run:
-```bash
-bash EMERGENCY_REVERT.sh
+# Back to this:
+- "Pentarch v1.0 — Reversal Events": pentarch-v10.md
 ```
 
-And you'll be back to safety.
+**Line ~31 (Volume Oracle):**
+```yaml
+# Change this:
+- "Volume Oracle v1.0 — Volume Intelligence System": minimal-flow-v10.md
+
+# Back to this:
+- "Volume Oracle v1.0 — Volume Strategy": minimal-flow-v10.md
+```
 
 ---
 
-**Created:** $(date)
-**Safe Commit:** 022c2e2
-**Risky Commit:** 4a5c64a
+## After Reverting
+
+Rebuild the site to see changes:
+```bash
+mkdocs build
+```
+
+Or if testing locally:
+```bash
+mkdocs serve
+```
+
+---
+
+## Testing Without Risk
+
+To test the current changes WITHOUT deploying:
+
+```bash
+mkdocs serve
+```
+
+Then visit `http://127.0.0.1:8000` and check the navigation.
+
+If something looks wrong, use one of the revert methods above!
