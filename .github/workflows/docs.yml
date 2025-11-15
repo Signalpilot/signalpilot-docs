@@ -1,0 +1,45 @@
+name: Build & Deploy Docs
+
+on:
+  # DISABLED: Auto-deployment disabled to prevent accidental gh-pages overwrites
+  # push:
+  #   branches: [ main ]
+  workflow_dispatch:  # Manual trigger still available via GitHub Actions UI
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        id: py
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # ✅ NEW: cache pip downloads across runs
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ steps.py.outputs.python-version }}-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-${{ steps.py.outputs.python-version }}-
+            ${{ runner.os }}-pip-
+
+      - name: Install MkDocs toolchain (from requirements.txt)
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip show mkdocs mkdocs-material mkdocs-macros-plugin
+
+      - name: Build site
+        run: mkdocs build
+
+      - name: Deploy to GitHub Pages (gh-pages)
+        run: mkdocs gh-deploy --force --no-history
