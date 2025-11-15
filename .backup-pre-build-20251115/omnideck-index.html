@@ -1,0 +1,3148 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <meta name="mobile-web-app-capable" content="yes">
+      <meta name="theme-color" content="#667eea">
+      <meta name="format-detection" content="telephone=no">
+      
+        <meta name="description" content="Non-repainting, alert-ready TradingView indicators for any market/timeframe.">
+      
+      
+      
+        <link rel="canonical" href="https://docs.signalpilot.io/omnideck-v10/">
+      
+      
+        <link rel="prev" href="../janus-atlas-v10/">
+      
+      
+        <link rel="next" href="../augury-grid-v10/">
+      
+      
+      <!-- Favicons -->
+      <link rel="icon" type="image/x-icon" href="../favicon.ico">
+      <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
+      <link rel="icon" type="image/png" sizes="512x512" href="../favicon-512x512.png">
+
+      <!-- PWA Manifest -->
+      <link rel="manifest" href="../manifest.json">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
+    
+    
+      
+        <title>Omnideck v1.0 — Everything Indicator - Signal Pilot Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/timeago.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../css/responsive-optimization.css">
+      <link rel="stylesheet" href="../css/content-overflow-fix.css">
+      <link rel="stylesheet" href="../css/mobile-layout-fixes.css">
+    
+      <link rel="stylesheet" href="../assets/brand.css">
+    
+      <link rel="stylesheet" href="../assets/aurora.css">
+    
+      <link rel="stylesheet" href="../assets/print.css">
+    
+      <link rel="stylesheet" href="../assets/interactive-code.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+
+
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-NZ05GV72K0"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-NZ05GV72K0",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-NZ05GV72K0",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+
+
+  
+
+    
+    
+    
+  <!-- Google Fonts: Gugi for brand consistency -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - CSS
+       To disable: comment out this entire block
+       ======================================== -->
+  <link rel="stylesheet" href="../css/feedback.css">
+  <link rel="stylesheet" href="../css/visual-enhancements.css">
+
+  <!-- Mermaid.js for diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'dark',
+      themeVariables: {
+        primaryColor: '#00bcd4',
+        primaryTextColor: '#fff',
+        primaryBorderColor: '#0097a7',
+        lineColor: '#00bcd4',
+        secondaryColor: '#ff5722',
+        tertiaryColor: '#4caf50',
+        fontSize: '18px',
+        fontFamily: 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+      },
+      flowchart: {
+        htmlLabels: true,
+        fontSize: 18
+      },
+      fontSize: 18
+    });
+  </script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - CSS -->
+
+  <!-- Meta-Learning & Accessibility Enhancements -->
+  <link rel="stylesheet" href="../css/skill-badges.css">
+  <link rel="stylesheet" href="../css/meta-learning.css">
+
+      <!-- Signal Pilot Chatbot CSS -->
+    <link rel="stylesheet" href="/css/chatbot.css">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.signalpilot.io/">
+    <meta property="og:title" content="Signal Pilot Documentation">
+    <meta property="og:description" content="Professional trading indicators for TradingView. Complete guides for Pentarch, Janus Atlas, Omnideck, and more.">
+    <meta property="og:image" content="https://docs.signalpilot.io/assets/images/preview.png">
+    <meta property="og:site_name" content="Signal Pilot Docs">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.signalpilot.io/">
+    <meta name="twitter:title" content="Signal Pilot Documentation">
+    <meta name="twitter:description" content="Professional trading indicators for TradingView. Complete guides for Pentarch, Janus Atlas, Omnideck, and more.">
+    <meta name="twitter:image" content="https://docs.signalpilot.io/assets/images/preview.png">
+
+
+  
+
+
+
+
+
+
+
+  <!-- Custom Bottom Sheet Navigation -->
+  <link rel="stylesheet" href="../css/hide-mkdocs-sidebar.css?v7">
+  <link rel="stylesheet" href="../css/custom-bottom-sheet.css?v7">
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#omnideck-v10-10-indicators-in-one" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+  <!-- Signal Pilot brand bar (keeps Material header & search intact) -->
+  <div class="sp-topnav">
+    <div class="sp-topnav__inner">
+      <a href="https://signalpilot.io" target="_blank" rel="noopener noreferrer" class="brand">
+        <span>Signal Pilot</span>
+      </a>
+      <nav class="sp-links" aria-label="Signal Pilot">
+        <a href="https://signalpilot.io/#why" target="_blank" rel="noopener noreferrer">Why</a>
+        <a href="https://signalpilot.io/#inside" target="_blank" rel="noopener noreferrer">What's inside</a>
+        <a href="https://education.signalpilot.io/" target="_blank" rel="noopener noreferrer">Education</a>
+        <a aria-current="page" href="https://docs.signalpilot.io/">Docs</a>
+        <a href="https://signalpilot.io/#pricing" target="_blank" rel="noopener noreferrer">Pricing</a>
+        <a href="https://signalpilot.io/#faq" target="_blank" rel="noopener noreferrer">FAQ</a>
+      </nav>
+    </div>
+  </div>
+
+  
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Signal Pilot Docs" class="md-header__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
+      
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Signal Pilot Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Omnideck v1.0 — Everything Indicator
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+
+
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Signalpilot/signalpilot-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    signalpilot-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Signal Pilot Docs" class="md-nav__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
+      
+
+    </a>
+    Signal Pilot Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Signalpilot/signalpilot-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    signalpilot-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    🚀 Getting Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            🚀 Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../start-quick/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ⚡ Install & Configure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../start-prerequisites/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prerequisites
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../start-onboarding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Onboarding Checklist (7 days)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    📖 How-To Guides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            📖 How-To Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-alerts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Set Up Alerts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-webhooks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use Webhooks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-screener/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use Screener
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    🚀 Suite (Latest)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            🚀 Suite (Latest)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../suite-index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📚 Suite Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pentarch-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pentarch v1.0 — Reversal Events
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../janus-atlas-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Janus Atlas v1.0 — Levels System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Omnideck v1.0 — Everything Indicator
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Omnideck v1.0 — Everything Indicator
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        <li class="md-nav__item">
+  <a href="#core-functionality" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Core Functionality
+    </span>
+  </a>
+    
+</li>
+
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Settings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚙️ Settings">
+      <ul class="md-nav__list">
+          <li class="md-nav__item">
+  <a href="#recommended-initial-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended Initial Configuration
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#progressive-learning-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      Progressive Learning Path
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#system-toggle-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Toggle Options
+    </span>
+  </a>
+
+</li>
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#educational-example-bitcoin-november-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Educational Example: Bitcoin (November 2024)
+    </span>
+  </a>
+    
+</li>
+
+        <li class="md-nav__item">
+  <a href="#the-10-systems-explained" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔢 The 10 Systems Explained
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔢 The 10 Systems Explained">
+      <ul class="md-nav__list">
+          <li class="md-nav__item">
+  <a href="#system-1-td-sequential-exhaustion-counter" class="md-nav__link">
+    <span class="md-ellipsis">
+      System 1: TD Sequential — Exhaustion Counter
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#system-2-squeeze-breakout-detector" class="md-nav__link">
+    <span class="md-ellipsis">
+      System 2: Squeeze — Breakout Detector
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#system-3-liquidity-sweeps-stop-hunt-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      System 3: Liquidity Sweeps — Stop Hunt Detection
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#system-4-ema-trio-moving-averages" class="md-nav__link">
+    <span class="md-ellipsis">
+      System 4: EMA Trio — Moving Averages
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#system-5-supertrend-trend-ribbon" class="md-nav__link">
+    <span class="md-ellipsis">
+      System 5: SuperTrend — Trend Ribbon
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#system-6-bmsb-bull-market-support-band" class="md-nav__link">
+    <span class="md-ellipsis">
+      System 6: BMSB — Bull Market Support Band
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#system-7-regime-box-market-mood-background" class="md-nav__link">
+    <span class="md-ellipsis">
+      System 7: Regime Box — Market Mood Background
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#system-8-supplydemand-zones-institutional-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      System 8: Supply/Demand Zones — Institutional Levels
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#system-9-candlestick-patterns-16-classic-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      System 9: Candlestick Patterns — 16 Classic Patterns
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#system-10-meta-tools-integration-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      System 10: Meta Tools — Integration Layer
+    </span>
+  </a>
+
+</li>
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#analysis-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Analysis Framework
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Analysis Framework">
+      <ul class="md-nav__list">
+          <li class="md-nav__item">
+  <a href="#hierarchical-analysis-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hierarchical Analysis Approach
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#example-analysis-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Analysis Sequence
+    </span>
+  </a>
+
+</li>
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#alert-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔔 Alert Configuration
+    </span>
+  </a>
+    
+</li>
+
+        <li class="md-nav__item">
+  <a href="#frequently-asked-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❓ Frequently Asked Questions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="❓ Frequently Asked Questions">
+      <ul class="md-nav__list">
+          <li class="md-nav__item">
+  <a href="#q-should-i-enable-all-10-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Should I enable all 10 systems?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-does-it-slow-down-my-charts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Does it slow down my charts?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-can-i-customize-each-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Can I customize each system?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-what-timeframes-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: What timeframes work?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-how-do-systems-interact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: How do systems interact?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-can-i-use-just-one-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Can I use just one system?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-whats-the-difference-between-supertrend-and-regime-box" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: What's the difference between SuperTrend and Regime Box?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-do-zones-repaint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Do zones repaint?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-can-i-export-system-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Can I export system signals?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-works-with-other-signal-pilot-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Works with other Signal Pilot indicators?
+    </span>
+  </a>
+
+</li>
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#quick-reference-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Quick Reference Guide
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Quick Reference Guide">
+      <ul class="md-nav__list">
+          <li class="md-nav__item">
+  <a href="#system-quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Quick Reference
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#recommended-system-combinations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended System Combinations
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#confluence-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confluence Levels
+    </span>
+  </a>
+
+</li>
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    <span class="md-ellipsis">
+      📞 Support
+    </span>
+  </a>
+    
+</li>
+
+    </ul>
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../augury-grid-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Augury Grid v1.0 — Multi-Symbol Screener
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../volume-oracle-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volume Oracle v1.0 — Volume Strategy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../harmonic-oscillator-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Harmonic Oscillator v1.0 — Composite Momentum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plutus-flow-v10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plutus Flow v1.0 — Advanced OBV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    📚 Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            📚 Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-workflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trading Workflow (Bias → Timing)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-comparison/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Indicator Comparison Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-best-practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Best Practices & Pro Tips
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-non-repaint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Non-Repainting Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref-troubleshooting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshooting Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    ℹ️ About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            ℹ️ About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Support & Access
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-changelog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Changelog (high level)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Website Tiles
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Website Tiles
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_settings-alerts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Product Cards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        <li class="md-nav__item">
+  <a href="#core-functionality" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Core Functionality
+    </span>
+  </a>
+    
+</li>
+
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Settings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚙️ Settings">
+      <ul class="md-nav__list">
+          <li class="md-nav__item">
+  <a href="#recommended-initial-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended Initial Configuration
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#progressive-learning-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      Progressive Learning Path
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#system-toggle-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Toggle Options
+    </span>
+  </a>
+
+</li>
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#educational-example-bitcoin-november-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Educational Example: Bitcoin (November 2024)
+    </span>
+  </a>
+    
+</li>
+
+        <li class="md-nav__item">
+  <a href="#the-10-systems-explained" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔢 The 10 Systems Explained
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔢 The 10 Systems Explained">
+      <ul class="md-nav__list">
+          <li class="md-nav__item">
+  <a href="#system-1-td-sequential-exhaustion-counter" class="md-nav__link">
+    <span class="md-ellipsis">
+      System 1: TD Sequential — Exhaustion Counter
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#system-2-squeeze-breakout-detector" class="md-nav__link">
+    <span class="md-ellipsis">
+      System 2: Squeeze — Breakout Detector
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#system-3-liquidity-sweeps-stop-hunt-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      System 3: Liquidity Sweeps — Stop Hunt Detection
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#system-4-ema-trio-moving-averages" class="md-nav__link">
+    <span class="md-ellipsis">
+      System 4: EMA Trio — Moving Averages
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#system-5-supertrend-trend-ribbon" class="md-nav__link">
+    <span class="md-ellipsis">
+      System 5: SuperTrend — Trend Ribbon
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#system-6-bmsb-bull-market-support-band" class="md-nav__link">
+    <span class="md-ellipsis">
+      System 6: BMSB — Bull Market Support Band
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#system-7-regime-box-market-mood-background" class="md-nav__link">
+    <span class="md-ellipsis">
+      System 7: Regime Box — Market Mood Background
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#system-8-supplydemand-zones-institutional-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      System 8: Supply/Demand Zones — Institutional Levels
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#system-9-candlestick-patterns-16-classic-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      System 9: Candlestick Patterns — 16 Classic Patterns
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#system-10-meta-tools-integration-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      System 10: Meta Tools — Integration Layer
+    </span>
+  </a>
+
+</li>
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#analysis-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Analysis Framework
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Analysis Framework">
+      <ul class="md-nav__list">
+          <li class="md-nav__item">
+  <a href="#hierarchical-analysis-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hierarchical Analysis Approach
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#example-analysis-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Analysis Sequence
+    </span>
+  </a>
+
+</li>
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#alert-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔔 Alert Configuration
+    </span>
+  </a>
+    
+</li>
+
+        <li class="md-nav__item">
+  <a href="#frequently-asked-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❓ Frequently Asked Questions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="❓ Frequently Asked Questions">
+      <ul class="md-nav__list">
+          <li class="md-nav__item">
+  <a href="#q-should-i-enable-all-10-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Should I enable all 10 systems?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-does-it-slow-down-my-charts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Does it slow down my charts?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-can-i-customize-each-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Can I customize each system?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-what-timeframes-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: What timeframes work?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-how-do-systems-interact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: How do systems interact?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-can-i-use-just-one-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Can I use just one system?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-whats-the-difference-between-supertrend-and-regime-box" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: What's the difference between SuperTrend and Regime Box?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-do-zones-repaint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Do zones repaint?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-can-i-export-system-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Can I export system signals?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-works-with-other-signal-pilot-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Works with other Signal Pilot indicators?
+    </span>
+  </a>
+
+</li>
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#quick-reference-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Quick Reference Guide
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Quick Reference Guide">
+      <ul class="md-nav__list">
+          <li class="md-nav__item">
+  <a href="#system-quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Quick Reference
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#recommended-system-combinations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended System Combinations
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#confluence-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confluence Levels
+    </span>
+  </a>
+
+</li>
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    <span class="md-ellipsis">
+      📞 Support
+    </span>
+  </a>
+    
+</li>
+
+    </ul>
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  <!-- Reading time and last updated info -->
+<div class="md-content-meta" style="display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 1.5rem; padding: 0.75rem 1rem; background: color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent); border-radius: 8px; font-size: 0.9rem; color: var(--md-default-fg-color);">
+  
+    <span style="display: flex; align-items: center; gap: 0.4rem;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1.1rem; height: 1.1rem; fill: currentColor; opacity: 0.7;">
+        <path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/>
+      </svg>
+      <span style="opacity: 0.85;">Updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="October 31, 2025 01:38:02 UTC"><span class="timeago" datetime="2025-10-31T01:38:02+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="October 31, 2025 01:38:02 UTC">2025-10-31</span></span>
+    </span>
+  
+
+  
+    
+    
+    <span style="display: flex; align-items: center; gap: 0.4rem;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1.1rem; height: 1.1rem; fill: currentColor; opacity: 0.7;">
+        <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M16.2,16.2L11,13V7H12.5V12.2L17,14.9L16.2,16.2Z"/>
+      </svg>
+      <span style="opacity: 0.85;">28 min read</span>
+    </span>
+  
+</div>
+
+<!-- Render the page content -->
+<h1 id="omnideck-v10-10-indicators-in-one">Omnideck v1.0 — 10 Indicators in One<a class="headerlink" href="#omnideck-v10-10-indicators-in-one" title="Permanent link">&para;</a></h1>
+<p>All-in-one trading system. Combines 10 professional analysis tools into single optimized indicator.</p>
+
+<div class="sp-callout sp-callout--success" style="margin: 2rem 0; border-left: 4px solid #4caf50;">
+  <div class="sp-callout__icon">👋</div>
+  <div class="sp-callout__content">
+    <h3 style="margin-top: 0;">New to Trading? Start Here</h3>
+
+    <p><strong>In Plain English:</strong> Omnideck is like having 10 experienced traders looking at your chart at once. Instead of adding 10 separate indicators (which makes charts messy and confusing), Omnideck combines all 10 into ONE clean display.</p>
+
+    <p><strong>Don't Panic About "10 Systems"!</strong> You don't need to understand or use all 10 at once. Think of it like a Swiss Army knife—it has many tools, but you start by learning the basics.</p>
+
+    <p><strong>Beginner Starting Point (Your First 2 Weeks):</strong></p>
+    <p>Turn on ONLY these 3 features at first:</p>
+    <ol>
+      <li><strong>Moving Averages (EMA Trio)</strong> — Shows price direction (up or down trend)</li>
+      <li><strong>Support/Resistance Zones</strong> — Shows where price might bounce or stall</li>
+      <li><strong><a href="../pentarch-v10/">Pentarch</a> Signals</strong> — Shows colored labels when key events happen (TD, IGN, WRN, CAP, BDN)</li>
+    </ol>
+    <p><em>Everything else? Turn it OFF for now. You can add more features as you learn.</em></p>
+
+    <p><strong>What You'll See on Your Chart:</strong></p>
+    <ul style="margin: 1rem 0;">
+      <li><strong>Colored lines</strong> showing the trend direction</li>
+      <li><strong>Shaded zones</strong> showing important support and resistance areas</li>
+      <li><strong>Labels (TD, IGN, WRN, CAP, BDN)</strong> showing cycle phase events</li>
+    </ul>
+
+    <p><strong>Learning Path:</strong></p>
+    <ul>
+      <li><strong>Week 1-2:</strong> Use only 3 features (mentioned above). Watch patterns form.</li>
+      <li><strong>Week 3:</strong> Add Volume Bars to see buying/selling pressure</li>
+      <li><strong>Week 4:</strong> Add Squeeze Detector to spot volatility breakouts</li>
+      <li><strong>Month 2+:</strong> Gradually explore the other 5 systems at your own pace</li>
+    </ul>
+
+    <details style="margin-top: 1rem;">
+      <summary style="cursor: pointer; font-weight: 600; color: #4caf50;">🎓 What are the 10 systems? (Advanced Info)</summary>
+      <p style="margin-top: 0.5rem; padding-left: 1rem;">Omnideck includes these 10 analysis systems:</p>
+      <ol style="padding-left: 2rem;">
+        <li><strong>TD Sequential</strong> — Counts price exhaustion (like Pentarch)</li>
+        <li><strong>Squeeze Detector</strong> — Spots when volatility is about to explode</li>
+        <li><strong>Liquidity Sweeps</strong> — Detects stop-hunt patterns</li>
+        <li><strong>EMA Trio</strong> — Three moving averages showing trend direction</li>
+        <li><strong>SuperTrend</strong> — Adaptive trend-following ribbon</li>
+        <li><strong>BMSB</strong> — Support band analysis</li>
+        <li><strong>Regime Box</strong> — Classifies market mood (bullish/bearish/neutral)</li>
+        <li><strong>Supply/Demand Zones</strong> — Key price zones where orders cluster</li>
+        <li><strong>Candlestick Patterns</strong> — 16 pattern types automatically detected</li>
+        <li><strong>Meta Tools</strong> — Coordinates all systems and prevents conflicts</li>
+      </ol>
+      <p style="padding-left: 1rem;"><strong>But remember:</strong> You don't need to master all 10 to benefit from Omnideck. Start simple, add complexity gradually.</p>
+    </details>
+
+    <div style="background: #fff3e0; padding: 1rem; border-radius: 8px; margin-top: 1rem; color: #1a1a1a;">
+      <p style="margin: 0; color: #1a1a1a;"><strong>💡 Pro Tip:</strong> Omnideck is designed for intermediate-to-advanced traders, but beginners can use it successfully by starting with just 2-3 features. Don't let "10 systems" intimidate you—use what you understand, ignore the rest until you're ready!</p>
+    </div>
+
+    <!-- 📸 SCREENSHOT NEEDED - Omnideck Beginner 4-System Setup (Not Overwhelming)
+         What to show: Chart with ONLY 4 systems enabled: Regime Box + EMA Stack + MACD+ + Support/Resistance Zones
+         Setup: Omnideck settings → Enable only those 4 systems, disable other 6
+         Label/Annotate: Label each system on chart, add text "Start with these 4 systems"
+         File name suggestion: omnideck-beginner-4-systems.png
+    -->
+    <div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
+      <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
+      <p style="margin: 0; color: #424242;"><strong>Omnideck Beginner 4-System Setup (Not Overwhelming)</strong></p>
+      <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a chart showing a beginner-friendly setup with just 4 systems: Regime Box, EMA Stack, MACD+, and Support/Resistance Zones.</p>
+    </div>
+
+  </div>
+</div>
+
+<hr />
+<h2 id="core-functionality">🎯 Core Functionality <span class="skill-badge skill-badge--beginner" data-tooltip="No prior experience required">Beginner Friendly</span><a class="headerlink" href="#core-functionality" title="Permanent link">&para;</a></h2>
+<div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
+  <div class="sp-callout__icon">📊</div>
+  <div class="sp-callout__content">
+    <h4>10 Systems in 4 Layers</h4>
+    <p style="margin-bottom: 1rem;">Omnideck integrates multiple detection systems into a unified framework:</p>
+    <div class="mermaid" role="img" aria-label="Vertical flowchart showing Omnideck's 10 systems in 4 layers flowing from top to bottom">
+graph TD
+    Start[📊 Market Data Input] --> Layer1[LAYER 1: TREND ANALYSIS]
+
+    Layer1 --> T1[1️⃣ EMA Trio<br/>Moving Average Crossovers]
+    Layer1 --> T2[2️⃣ SuperTrend<br/>Trend Ribbon]
+    Layer1 --> T3[3️⃣ BMSB<br/>Support Band]
+
+    T1 --> Layer2[LAYER 2: PATTERN DETECTION]
+    T2 --> Layer2
+    T3 --> Layer2
+
+    Layer2 --> E1[4️⃣ TD Sequential<br/>Exhaustion Counting]
+    Layer2 --> E2[5️⃣ Squeeze Detector<br/>Volatility Breakouts]
+    Layer2 --> E3[6️⃣ Candlestick Patterns<br/>16 Pattern Types]
+
+    E1 --> Layer3[LAYER 3: ZONE ANALYSIS]
+    E2 --> Layer3
+    E3 --> Layer3
+
+    Layer3 --> M1[7️⃣ Regime Box<br/>Market Mood Analysis]
+    Layer3 --> M2[8️⃣ Supply/Demand<br/>Key Price Zones]
+    Layer3 --> M3[9️⃣ Liquidity Sweeps<br/>Stop Hunt Detection]
+
+    M1 --> Layer4[LAYER 4: INTEGRATION]
+    M2 --> Layer4
+    M3 --> Layer4
+
+    Layer4 --> Meta[🔟 Meta Tools<br/>System Coordination]
+
+    Meta --> Output[📈 Combined Output<br/>All Systems Unified]
+
+    style Layer1 fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:3px
+    style Layer2 fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
+    style Layer3 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:3px
+    style Layer4 fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:3px
+    style Meta fill:#ff5722,color:#fff,stroke:#e64a19,stroke-width:3px
+    style Output fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:4px
+    style Start fill:#37474f,color:#fff,stroke:#263238,stroke-width:3px
+    </div>
+  </div>
+</div>
+
+<div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
+  <div class="sp-callout__icon">📊</div>
+  <div class="sp-callout__content">
+    <h4>The 10 Systems Visualized</h4>
+    <p style="margin-bottom: 1rem;">All 10 detection systems working together in one indicator:</p>
+    <div class="mermaid" role="img" aria-label="Vertical flowchart showing all 10 Omnideck systems flowing top to bottom">
+graph TD
+    Input[📊 Market Data Input] --> S1[1️⃣ TD Sequential<br/>Exhaustion Counting]
+
+    S1 --> S2[2️⃣ Squeeze Detector<br/>Volatility Breakouts]
+    S2 --> S3[3️⃣ Liquidity Sweeps<br/>Stop Hunt Detection]
+
+    S3 --> S4[4️⃣ EMA Trio<br/>Moving Average System]
+    S4 --> S5[5️⃣ SuperTrend<br/>Adaptive Trend Ribbon]
+    S5 --> S6[6️⃣ BMSB<br/>Support Band Analysis]
+
+    S6 --> S7[7️⃣ Regime Box<br/>Market Mood Classification]
+    S7 --> S8[8️⃣ Supply/Demand<br/>Key Price Zones]
+    S8 --> S9[9️⃣ Candlestick Patterns<br/>16 Pattern Types]
+
+    S9 --> S10[🔟 Meta Tools<br/>System Coordination & Conflict Prevention]
+
+    S10 --> Output[📈 Unified Chart Display<br/>All 10 Systems Combined]
+
+    style Input fill:#37474f,color:#fff,stroke:#263238,stroke-width:3px
+    style S1 fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:2px
+    style S2 fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:2px
+    style S3 fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:2px
+    style S4 fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:2px
+    style S5 fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:2px
+    style S6 fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:2px
+    style S7 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
+    style S8 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
+    style S9 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
+    style S10 fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:3px
+    style Output fill:#ff5722,color:#fff,stroke:#e64a19,stroke-width:4px
+    </div>
+    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+      <strong>How to read:</strong> All 10 systems numbered 1-10. Each can be enabled/disabled independently. All active systems display on one chart.<br/>
+      <strong>System 10 (Meta Tools):</strong> Behind-the-scenes coordination layer that prevents signal conflicts, manages display priorities, and optimizes performance when multiple systems are active.
+    </p>
+  </div>
+</div>
+
+<p>Omnideck integrates 10 separate trading systems into one indicator. Each system can be enabled/disabled individually.</p>
+<p><strong>The 10 Systems Available:</strong><br />
+1. TD Sequential - Exhaustion counter (9-count system)<br />
+2. Squeeze Detector - Volatility breakout arrows<br />
+3. Liquidity Sweeps - Stop hunt detection (LL/HH tags)<br />
+4. EMA Trio - Three moving averages (50/100/200)<br />
+5. SuperTrend - Trend ribbon (green/red)<br />
+6. BMSB - Bull Market Support Band (20 SMA + 21 EMA)<br />
+7. Regime Box - Market mood background color<br />
+8. Supply/Demand Zones - Institutional level boxes<br />
+9. Candlestick Patterns - 16 classic patterns<br />
+10. Meta Tools - System integration layer</p>
+<p><strong>Display:</strong> All enabled systems appear on single chart without performance degradation.</p>
+<p><strong>Timeframe Compatibility:</strong> Works on all timeframes.</p>
+
+<p><strong>Remember:</strong> Just because you CAN enable all 10 systems doesn't mean you SHOULD. Chart overload leads to analysis paralysis—too many signals create confusion, not clarity. Most profitable traders use 3-5 systems maximum, choosing ones that complement their specific approach rather than enabling everything.</p>
+
+<!-- 📸 SCREENSHOT NEEDED - Omnideck All 10 Systems Enabled (Information Overload Example)
+     What to show: Chart with ALL 10 Omnideck systems enabled simultaneously
+     Setup: Enable all systems to show what NOT to do
+     Label/Annotate: Add warning text overlay "⚠️ Too Much! Don't Do This" or similar
+     File name suggestion: omnideck-all-10-systems-overload.png
+-->
+<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
+  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
+  <p style="margin: 0; color: #424242;"><strong>Omnideck All 10 Systems Enabled (Information Overload Example)</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a chart showing what happens with all 10 systems enabled at once (an example of what NOT to do).</p>
+</div>
+
+<hr />
+<h2 id="settings">⚙️ Settings <span class="skill-badge skill-badge--beginner" data-tooltip="Easy to configure - no prerequisites">Beginner Friendly</span><a class="headerlink" href="#settings" title="Permanent link">&para;</a></h2>
+<h3 id="recommended-initial-configuration">Example Starting Configuration<a class="headerlink" href="#recommended-initial-configuration" title="Permanent link">&para;</a></h3>
+<p><strong>Example System Selection (educational starting point - 4 of 10):</strong></p>
+<p>Enable these systems first:<br />
+- ✓ TD Sequential (exhaustion signals)<br />
+- ✓ Squeeze Detector (breakout arrows)<br />
+- ✓ EMA Trio (trend context)<br />
+- ✓ Regime Box (bias filter)</p>
+<p>Additional systems can be enabled progressively.</p>
+<h3 id="progressive-learning-path">Progressive Learning Path<a class="headerlink" href="#progressive-learning-path" title="Permanent link">&para;</a></h3>
+<p><strong>Week 1-2: Foundation (4 systems)</strong><br />
+- Master TD Sequential signal interpretation<br />
+- Understand Squeeze breakout mechanics<br />
+- Learn EMA trend identification<br />
+- Use Regime Box for directional context</p>
+<p><strong>Week 3-4: Enhancement (add 2-3 systems)</strong><br />
+- Add BMSB (support band)<br />
+- Add SuperTrend (trend confirmation)<br />
+- Add Liquidity Sweeps (stop hunt detection)</p>
+<p><strong>Month 2+: Customization (selective addition)</strong><br />
+- Add Supply/Demand Zones if zone-based approach used<br />
+- Add Candlestick Patterns if pattern recognition valued</p>
+<h3 id="system-toggle-options">System Toggle Options<a class="headerlink" href="#system-toggle-options" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>On/Off Toggle</th>
+<th>Alert Available</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TD Sequential</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Squeeze</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Liquidity Sweeps</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>EMA Trio</td>
+<td>✓</td>
+<td>Cross alerts</td>
+</tr>
+<tr>
+<td>SuperTrend</td>
+<td>✓</td>
+<td>Flip alerts</td>
+</tr>
+<tr>
+<td>BMSB</td>
+<td>✓</td>
+<td>Touch alerts</td>
+</tr>
+<tr>
+<td>Regime Box</td>
+<td>✓</td>
+<td>Change alerts</td>
+</tr>
+<tr>
+<td>S/D Zones</td>
+<td>✓</td>
+<td>Touch alerts</td>
+</tr>
+<tr>
+<td>Candlestick Patterns</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Meta Tools</td>
+<td>Always on</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+
+<!-- 📸 SCREENSHOT NEEDED - Omnideck Settings Panel - 10 System Toggles
+     What to show: Settings panel showing all 10 system on/off toggles
+     Setup: Right-click Omnideck → Settings → System toggle section
+     Label/Annotate: Highlight beginner-recommended systems (checkmark next to Regime Box, EMA, MACD, SR)
+     File name suggestion: omnideck-settings-10-toggles.png
+-->
+<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
+  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
+  <p style="margin: 0; color: #424242;"><strong>Omnideck Settings Panel - 10 System Toggles</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a screenshot of the TradingView settings panel showing all 10 system on/off toggles.</p>
+</div>
+
+<hr />
+<h2 id="educational-example-bitcoin-november-2024">📊 Educational Example: Bitcoin (November 2024)<a class="headerlink" href="#educational-example-bitcoin-november-2024" title="Permanent link">&para;</a></h2>
+<p><em>(Historical observation for educational purposes only. Not financial advice. Past performance does not indicate future results.)</em></p>
+<p><strong>Setup Observed - Systems Active:</strong><br />
+- TD Sequential, Squeeze, EMA Trio, Regime Box, Demand Zones</p>
+<p><strong>Signal Sequence:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Price</th>
+<th>System Signals</th>
+<th>Analysis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nov 5, 12pm</td>
+<td>$64,000</td>
+<td>Regime: Red (bearish context)</td>
+<td>Declining market</td>
+</tr>
+<tr>
+<td>Nov 5, 8pm</td>
+<td>$63,500</td>
+<td>TD Green 9 (exhaustion detected)</td>
+<td>Oversold conditions</td>
+</tr>
+<tr>
+<td>Nov 5, 11pm</td>
+<td>$63,200</td>
+<td>Demand Zone ⭐⭐⭐ touched</td>
+<td>Zone reached</td>
+</tr>
+<tr>
+<td>Nov 6, 2am</td>
+<td>$63,800</td>
+<td>Squeeze arrow ↑ fired</td>
+<td>Breakout signal</td>
+</tr>
+<tr>
+<td>Nov 6, 8am</td>
+<td>$65,000</td>
+<td>Regime flipped Green</td>
+<td>Bias change</td>
+</tr>
+<tr>
+<td>Nov 7, 4pm</td>
+<td>$68,000</td>
+<td>Price continuation</td>
+<td>+$4,800 move</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Multi-System Confluence:</strong><br />
+- TD 9 (exhaustion) + Demand Zone (support) + Squeeze (breakout) = High confluence setup<br />
+- Regime flip confirmed directional change<br />
+- All 4 systems aligned at entry zone</p>
+<p><strong>Outcome:</strong> +$4,800 per BTC move observed (7.5% gain from $63,200 low).</p>
+<p><em>This example demonstrates multi-system confluence. Individual interpretation and outcomes vary. No pattern guarantees any specific outcome.</em></p>
+<hr />
+<h2 id="the-10-systems-explained">🔢 The 10 Systems Explained <span class="skill-badge skill-badge--intermediate" data-tooltip="Understanding of technical analysis helpful">Intermediate</span><a class="headerlink" href="#the-10-systems-explained" title="Permanent link">&para;</a></h2>
+<h3 id="system-1-td-sequential-exhaustion-counter">System 1: TD Sequential — Exhaustion Counter<a class="headerlink" href="#system-1-td-sequential-exhaustion-counter" title="Permanent link">&para;</a></h3>
+<p><strong>Visual Display:</strong><br />
+- Green numbers 1-9 below bars (downtrend exhaustion)<br />
+- Red numbers 1-9 above bars (uptrend exhaustion)</p>
+<p><strong>How It Works:</strong><br />
+- Counts consecutive closes in one direction<br />
+- At count 9, exhaustion conditions indicated<br />
+- Counter resets when direction changes</p>
+<p><strong>Signal Interpretation:</strong><br />
+- Green 9 = Extended decline, potential reversal up<br />
+- Red 9 = Extended advance, potential reversal down</p>
+<p><strong>Example:</strong> Price falling for 9 bars, Green 9 appears at $100 → Oversold exhaustion detected.</p>
+<hr />
+<h3 id="system-2-squeeze-breakout-detector">System 2: Squeeze — Breakout Detector<a class="headerlink" href="#system-2-squeeze-breakout-detector" title="Permanent link">&para;</a></h3>
+<p><strong>Visual Display:</strong><br />
+- Red dots on candles = Volatility compression<br />
+- Green arrow ↑ = Bullish breakout<br />
+- Red arrow ↓ = Bearish breakdown</p>
+<p><strong>How It Works:</strong><br />
+- Monitors Bollinger Bands vs Keltner Channels<br />
+- Red dots = Bands inside Channels (squeeze forming)<br />
+- Arrow fires when bands expand (breakout)</p>
+<p><strong>Signal Interpretation:</strong><br />
+- Multiple red dots (3-5+) = Larger move potential<br />
+- Green arrow = Bullish breakout direction<br />
+- Red arrow = Bearish breakdown direction</p>
+<p><strong>Example:</strong> 5 red dots accumulate, green arrow fires at $102 → Bullish breakout detected.</p>
+<hr />
+<h3 id="system-3-liquidity-sweeps-stop-hunt-detection">System 3: Liquidity Sweeps — Stop Hunt Detection<a class="headerlink" href="#system-3-liquidity-sweeps-stop-hunt-detection" title="Permanent link">&para;</a></h3>
+<p><strong>Visual Display:</strong><br />
+- LL tag = Lower Low sweep (potential fake breakdown)<br />
+- HH tag = Higher High sweep (potential fake breakout)</p>
+<p><strong>How It Works:</strong><br />
+- Detects when price spikes to new high/low then immediately reverses<br />
+- Identifies stop hunt / liquidity grab patterns</p>
+<p><strong>Signal Interpretation:</strong><br />
+- LL sweep = Stops triggered below support, reversal potential<br />
+- HH sweep = Stops triggered above resistance, reversal potential</p>
+<p><strong>Example:</strong> Price drops to $98 (LL tag), immediately bounces to $102 → Stop hunt pattern detected.</p>
+<hr />
+<h3 id="system-4-ema-trio-moving-averages">System 4: EMA Trio — Moving Averages<a class="headerlink" href="#system-4-ema-trio-moving-averages" title="Permanent link">&para;</a></h3>
+<p><strong>Visual Display:</strong><br />
+- Three lines: EMA 50 (fast), EMA 100 (medium), EMA 200 (slow)</p>
+<p><strong>Signals Generated:</strong><br />
+- GC (Golden Cross) = Fast crosses above slow (bullish)<br />
+- DC (Death Cross) = Fast crosses below slow (bearish)<br />
+- PB (Pullback) = Price touches EMA then bounces</p>
+<p><strong>Signal Interpretation:</strong><br />
+- Price above all EMAs = Uptrend structure<br />
+- Price below all EMAs = Downtrend structure<br />
+- EMA alignment (50&gt;100&gt;200) = Strong trend</p>
+<p><strong>Example:</strong> Price above all 3 EMAs with 50&gt;100&gt;200 → Bullish trend structure.</p>
+<hr />
+<h3 id="system-5-supertrend-trend-ribbon">System 5: SuperTrend — Trend Ribbon<a class="headerlink" href="#system-5-supertrend-trend-ribbon" title="Permanent link">&para;</a></h3>
+<p><strong>Visual Display:</strong><br />
+- Green ribbon = Bullish trend identified<br />
+- Red ribbon = Bearish trend identified</p>
+<p><strong>How It Works:</strong><br />
+- ATR-based trend following system<br />
+- Ribbon color indicates current trend direction</p>
+<p><strong>Signal Interpretation:</strong><br />
+- Green ribbon = Long bias conditions<br />
+- Red ribbon = Short bias conditions<br />
+- Ribbon flips = Trend change indication</p>
+<p><strong>Example:</strong> Green ribbon + TD 9 green = Oversold in uptrend (dip buying setup characteristics).</p>
+<hr />
+<h3 id="system-6-bmsb-bull-market-support-band">System 6: BMSB — Bull Market Support Band<a class="headerlink" href="#system-6-bmsb-bull-market-support-band" title="Permanent link">&para;</a></h3>
+<p><strong>Visual Display:</strong><br />
+- Two close lines: 20 SMA + 21 EMA</p>
+<p><strong>How It Works:</strong><br />
+- Acts as dynamic support zone in uptrends<br />
+- Combination of SMA and EMA creates "band"</p>
+<p><strong>Signal Interpretation:</strong><br />
+- Uptrend + price touches BMSB = Potential bounce zone<br />
+- Price breaks below BMSB = Trend weakening indication</p>
+<p><strong>Example:</strong> Stock in uptrend pulls back to BMSB at $105, bounces → Support band held.</p>
+<hr />
+<h3 id="system-7-regime-box-market-mood-background">System 7: Regime Box — Market Mood Background<a class="headerlink" href="#system-7-regime-box-market-mood-background" title="Permanent link">&para;</a></h3>
+<p><strong>Visual Display:</strong><br />
+- Green background = Bullish regime detected<br />
+- Red background = Bearish regime detected<br />
+- Gray background = Neutral/choppy conditions</p>
+<p><strong>How It Works:</strong><br />
+- Analyzes multiple factors to determine market regime<br />
+- Background color provides bias filter</p>
+<p><strong>Signal Interpretation:</strong><br />
+- Green background = Long bias conditions<br />
+- Red background = Short bias conditions<br />
+- Gray background = Selective approach conditions</p>
+<p><strong>Example:</strong> Regime green + Squeeze arrow up = Maximum conviction setup characteristics.</p>
+<hr />
+<h3 id="system-8-supplydemand-zones-institutional-levels">System 8: Supply/Demand Zones — Institutional Levels<a class="headerlink" href="#system-8-supplydemand-zones-institutional-levels" title="Permanent link">&para;</a></h3>
+<p><strong>Visual Display:</strong><br />
+- Green boxes = Demand zones (potential support)<br />
+- Red boxes = Supply zones (potential resistance)<br />
+- Stars ⭐⭐⭐ = Quality rating (more stars = stronger zone)</p>
+<p><strong>How It Works:</strong><br />
+- Identifies areas where institutional accumulation/distribution occurred<br />
+- Star rating based on volume, momentum, time characteristics</p>
+<p><strong>Signal Interpretation:</strong><br />
+- ⭐⭐⭐ zones = Highest quality (strongest reaction potential)<br />
+- Price at zone = Reaction point observation<br />
+- Zone break = Level invalidation</p>
+<p><strong>Example:</strong> Price drops to ⭐⭐⭐ demand zone at $100, forms hammer → High-quality support zone reached.</p>
+<hr />
+<h3 id="system-9-candlestick-patterns-16-classic-patterns">System 9: Candlestick Patterns — 16 Classic Patterns<a class="headerlink" href="#system-9-candlestick-patterns-16-classic-patterns" title="Permanent link">&para;</a></h3>
+<p><strong>Visual Display:</strong><br />
+- Labels like "HAM" (Hammer), "BE" (Bullish Engulfing), "SS" (Shooting Star)</p>
+<p><strong>Patterns Detected:</strong><br />
+16 classic reversal patterns identified automatically</p>
+<p><strong>Signal Interpretation:</strong><br />
+- Pattern at zone + other confirmations = Enhanced setup<br />
+- Pattern alone = Lower confidence<br />
+- Pattern + confluence = Higher confidence</p>
+<p><strong>Example:</strong> Shooting Star at supply zone + TD 9 red = Multiple bearish indications.</p>
+<hr />
+<h3 id="system-10-meta-tools-integration-layer">System 10: Meta Tools — Integration Layer<a class="headerlink" href="#system-10-meta-tools-integration-layer" title="Permanent link">&para;</a></h3>
+<p><strong>What It Does:</strong><br />
+- Behind-the-scenes system coordination<br />
+- Ensures all systems work in harmony<br />
+- Optimizes performance with multiple systems active</p>
+<p><strong>Functionality:</strong><br />
+- Prevents signal conflicts<br />
+- Manages display priorities<br />
+- Coordinates alert timing</p>
+<p><strong>Example:</strong> When all systems align (Regime + TD + Squeeze + Zone + Pattern) = Elite confluence characteristics.</p>
+
+<p><strong>Remember:</strong> More systems agreeing doesn't always mean better—sometimes 3 strong confirmations outweigh 7 weak ones. Prioritize quality alignment (momentum + structure + timing) over quantity of active systems.</p>
+
+<!-- 📸 SCREENSHOT NEEDED - Omnideck Key Systems - Regime Box and TD Sequential Examples
+     What to show: Chart showing Regime Box (colored box overlay) AND TD Sequential countdown numbers
+     Setup: Omnideck with Regime Box and TD Sequential enabled
+     Label/Annotate: Point to Regime Box color, point to TD count numbers (8, 9, 13)
+     File name suggestion: omnideck-regime-box-td-sequential.png
+-->
+<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
+  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
+  <p style="margin: 0; color: #424242;"><strong>Omnideck Key Systems - Regime Box and TD Sequential Examples</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a chart showing Regime Box and TD Sequential working together on a live chart.</p>
+</div>
+
+<hr />
+
+<div class="knowledge-check"
+     data-quiz-id="omnideck-10-systems"
+     data-correct-answer="c"
+     data-correct-feedback="✓ Correct! Omnideck integrates exactly 10 distinct systems: TD Sequential, Squeeze Detector, Liquidity Sweeps, EMA Trio, SuperTrend, BMSB, Regime Box, Supply/Demand Zones, Candlestick Patterns, and Meta Tools. Each can be toggled on or off independently to customize your analysis workflow."
+     data-incorrect-feedback="Not quite. Review the '10 Systems Explained' section above. Count all the numbered systems from System 1 (TD Sequential) through System 10 (Meta Tools). Each system serves a distinct purpose in the analysis framework. Try again!">
+  <h4>✅ Knowledge Check</h4>
+  <p><strong>Question:</strong> How many distinct analysis systems does Omnideck integrate into one indicator?</p>
+
+  <form class="quiz-form">
+    <label><input type="radio" name="q1" value="a"> 5 systems (one for each layer)</label>
+    <label><input type="radio" name="q1" value="b"> 7 systems (traditional technical indicators)</label>
+    <label><input type="radio" name="q1" value="c"> 10 systems (each independently toggleable)</label>
+    <label><input type="radio" name="q1" value="d"> 12 systems (including advanced features)</label>
+  </form>
+
+  <button class="check-answer-btn">Check Answer</button>
+  <div class="quiz-feedback" style="display:none;"></div>
+</div>
+
+<hr />
+<h2 id="analysis-framework">📚 Analysis Framework <span class="skill-badge skill-badge--advanced" data-tooltip="Requires deep understanding of multiple systems">Advanced</span><a class="headerlink" href="#analysis-framework" title="Permanent link">&para;</a></h2>
+<h3 id="hierarchical-analysis-approach">Hierarchical Analysis Approach<a class="headerlink" href="#hierarchical-analysis-approach" title="Permanent link">&para;</a></h3>
+<p><strong>Common Evaluation Order:</strong></p>
+<p><strong>Step 1: Regime Box (Directional Bias)</strong><br />
+- Check background color<br />
+- Green = Long bias context<br />
+- Red = Short bias context<br />
+- Gray = Selective conditions</p>
+<p><strong>Step 2: Trend Structure (EMA Trio / BMSB / SuperTrend)</strong><br />
+- Identify trend direction<br />
+- Check EMA alignment<br />
+- Verify BMSB/SuperTrend confirmation</p>
+<p><strong>Step 3: Entry Timing (TD / Squeeze / Sweeps)</strong><br />
+- Look for exhaustion (TD 9)<br />
+- Check for breakout (Squeeze arrow)<br />
+- Monitor liquidity sweeps (LL/HH tags)</p>
+<p><strong>Step 4: Zone Confirmation (Supply/Demand + Patterns)</strong><br />
+- Check if signal at quality zone<br />
+- Look for candlestick pattern confluence<br />
+- Higher confluence at ⭐⭐⭐ zones</p>
+<h3 id="example-analysis-sequence">Example Analysis Sequence<a class="headerlink" href="#example-analysis-sequence" title="Permanent link">&para;</a></h3>
+<pre><code>1. Regime = Green (bullish bias)
+2. Price above BMSB (uptrend confirmed)
+3. TD 9 green (oversold)
+4. Squeeze arrow fires up (breakout)
+5. At ⭐⭐⭐ demand zone (high quality support)
+= High confluence setup characteristics
+</code></pre>
+<p><em>Analysis framework provides structure. Individual application varies.</em></p>
+<hr />
+
+<div class="knowledge-check"
+     data-quiz-id="omnideck-progressive-learning"
+     data-correct-answer="a"
+     data-correct-feedback="✓ Correct! The recommended progressive learning path suggests starting with 4 foundational systems in weeks 1-2: TD Sequential (exhaustion signals), Squeeze Detector (breakout arrows), EMA Trio (trend context), and Regime Box (bias filter). This allows you to master core concepts before adding complexity with additional systems."
+     data-incorrect-feedback="Not quite. Review the 'Progressive Learning Path' section under Settings. It recommends a gradual approach starting with the most fundamental systems. Enabling all 10 systems immediately can be overwhelming. Try again!">
+  <h4>✅ Knowledge Check</h4>
+  <p><strong>Question:</strong> What is the recommended number of Omnideck systems to start with during the first 1-2 weeks?</p>
+
+  <form class="quiz-form">
+    <label><input type="radio" name="q2" value="a"> 4 systems (TD Sequential, Squeeze, EMA Trio, Regime Box)</label>
+    <label><input type="radio" name="q2" value="b"> All 10 systems enabled from day one</label>
+    <label><input type="radio" name="q2" value="c"> Just 1 system at a time to avoid confusion</label>
+    <label><input type="radio" name="q2" value="d"> 7 systems (excluding advanced features)</label>
+  </form>
+
+  <button class="check-answer-btn">Check Answer</button>
+  <div class="quiz-feedback" style="display:none;"></div>
+</div>
+
+<hr />
+<h2 id="alert-configuration">🔔 Alert Configuration <span class="skill-badge skill-badge--beginner" data-tooltip="Easy to set up alerts">Beginner Friendly</span><a class="headerlink" href="#alert-configuration" title="Permanent link">&para;</a></h2>
+<p><strong>Available Alerts:</strong></p>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Alert Types</th>
+<th>Trigger Conditions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TD Sequential</strong></td>
+<td>Count 9 reached</td>
+<td>Green 9 or Red 9 appears</td>
+</tr>
+<tr>
+<td><strong>Squeeze</strong></td>
+<td>Breakout fired</td>
+<td>Arrow appears (up or down)</td>
+</tr>
+<tr>
+<td><strong>Liquidity Sweeps</strong></td>
+<td>Sweep detected</td>
+<td>LL or HH tag appears</td>
+</tr>
+<tr>
+<td><strong>EMA Trio</strong></td>
+<td>Cross occurred</td>
+<td>GC, DC, or PB signal</td>
+</tr>
+<tr>
+<td><strong>SuperTrend</strong></td>
+<td>Trend flip</td>
+<td>Ribbon color changes</td>
+</tr>
+<tr>
+<td><strong>BMSB</strong></td>
+<td>Touch/Break</td>
+<td>Price interaction with band</td>
+</tr>
+<tr>
+<td><strong>Regime Box</strong></td>
+<td>Regime change</td>
+<td>Background color flips</td>
+</tr>
+<tr>
+<td><strong>S/D Zones</strong></td>
+<td>Zone touch</td>
+<td>Price reaches zone boundary</td>
+</tr>
+<tr>
+<td><strong>Patterns</strong></td>
+<td>Pattern formed</td>
+<td>Any of 16 patterns detected</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Alert Setup:</strong><br />
+- Each system has independent alert toggles<br />
+- Multiple alerts can be enabled simultaneously<br />
+- Alerts fire once per signal occurrence</p>
+<hr />
+
+<div class="sp-callout sp-callout--summary">
+  <div class="sp-callout__title">What You've Learned</div>
+  <ul>
+    <li><strong>10-in-1 System:</strong> Omnideck combines TD Sequential, Squeeze Detector, Liquidity Sweeps, EMA Trio, SuperTrend, BMSB, Regime Box, Supply/Demand Zones, Candlestick Patterns, and Meta Tools</li>
+    <li><strong>Progressive Learning:</strong> Start with 4 core systems (TD, Squeeze, EMA, Regime) in weeks 1-2, then add 2-3 more in weeks 3-4, customize in month 2+</li>
+    <li><strong>4-Layer Framework:</strong> Systems organized into Trend Layer, Entry Layer, Management Layer, and Meta Layer for coordinated analysis</li>
+    <li><strong>Each System Toggleable:</strong> All 10 systems can be enabled or disabled independently to match your trading style</li>
+    <li><strong>Hierarchical Analysis:</strong> Common evaluation order: Regime Box (bias) → EMA Trio (trend) → TD/Squeeze (timing) → Confluence check</li>
+    <li><strong>Elite Confluence:</strong> Highest probability setups occur when multiple systems align simultaneously at key zones</li>
+    <li><strong>Alert Flexibility:</strong> Alerts available for TD Sequential, Squeeze, and Liquidity Sweeps - can enable multiple simultaneously</li>
+  </ul>
+  <p><strong>Next Steps:</strong> Explore the <a href="../ref-workflow/">Trading Workflow Guide</a> to see how experienced traders combine Omnideck systems, or review the <a href="../how-to-alerts/">Alert Setup Guide</a> for detailed configuration.</p>
+</div>
+
+<hr />
+<h2 id="integration-with-other-indicators">🔗 Integration with Other Indicators<a class="headerlink" href="#integration-with-other-indicators" title="Permanent link">&para;</a></h2>
+
+<div class="sp-callout sp-callout--info">
+  <div class="sp-callout__title">💡 Omnideck Works Best in Combination</div>
+  <p>While Omnideck provides comprehensive multi-system analysis on its own, combining it with other Signal Pilot indicators creates even more powerful confluence setups. Here are proven integration workflows:</p>
+</div>
+
+<h3 id="omnideck-janus-atlas">Omnideck + Janus Atlas (Regime + Levels)<a class="headerlink" href="#omnideck-janus-atlas" title="Permanent link">&para;</a></h3>
+<p><strong>Workflow:</strong></p>
+<ol>
+<li><strong>Check Omnideck Regime Box</strong> → Identify current trend direction (bullish, bearish, or neutral regime)</li>
+<li><strong>Enable Janus Atlas levels</strong> → Focus on Daily/Weekly levels, POC, VWAP for structural zones</li>
+<li><strong>Look for regime + level confluence</strong> → Bullish regime + price at Daily Low support = high-probability long entry zone</li>
+<li><strong>Expected outcome:</strong> Regime context + structural levels = entries aligned with both trend and structure</li>
+</ol>
+<p><strong>Example:</strong> Omnideck shows bullish regime box → Price pulls back to Weekly Low + Daily VWAP confluence → Strong long setup in aligned trend</p>
+
+<h3 id="omnideck-pentarch">Omnideck + Pentarch (Multi-System + Timing)<a class="headerlink" href="#omnideck-pentarch" title="Permanent link">&para;</a></h3>
+<p><strong>Workflow:</strong></p>
+<ol>
+<li><strong>Omnideck shows bullish alignment</strong> → Multiple systems confirming uptrend (Regime Box, Pilot Line, Ichimoku Cloud)</li>
+<li><strong>Wait for <a href="../pentarch-v10/">Pentarch</a> signal</strong> → TD or IGN signal fires during pullback in bullish regime</li>
+<li><strong>Regime alignment + timing signal = powerful entry</strong> → Trend-aligned reversal signal with multi-system confirmation</li>
+<li><strong>Expected outcome:</strong> <a href="../pentarch-v10/">Pentarch</a> provides precise timing within Omnideck's broader trend context</li>
+</ol>
+<p><strong>Example:</strong> Omnideck bullish regime + Pilot Line rising + Cloud green → <a href="../pentarch-v10/">Pentarch</a> IGN signal fires = trend-aligned entry with perfect timing</p>
+
+<h3 id="omnideck-volume-oracle">Omnideck + Volume Oracle (TD Sequential + Volume)<a class="headerlink" href="#omnideck-volume-oracle" title="Permanent link">&para;</a></h3>
+<p><strong>Workflow:</strong></p>
+<ol>
+<li><strong>Omnideck TD Sequential fires buy/sell signal</strong> → Count completes (bar 13) signaling potential exhaustion</li>
+<li><strong>Check <a href="../volume-oracle-v10/">Volume Oracle</a> for confirmation</strong> → Look for volume spike at TD completion bar</li>
+<li><strong>TD signal + volume spike = validated exhaustion</strong> → High volume confirms institutional participation in reversal</li>
+<li><strong>Expected outcome:</strong> <a href="../volume-oracle-v10/">Volume Oracle</a> validates which TD Sequential signals are real vs. false</li>
+</ol>
+<p><strong>Example:</strong> Omnideck TD Sequential completes sell countdown (bar 13) → <a href="../volume-oracle-v10/">Volume Oracle</a> shows 3x volume spike = confirmed bearish exhaustion</p>
+
+<h3 id="omnideck-harmonic-oscillator">Omnideck + Harmonic Oscillator (Regime + Momentum)<a class="headerlink" href="#omnideck-harmonic-oscillator" title="Permanent link">&para;</a></h3>
+<p><strong>Workflow:</strong></p>
+<ol>
+<li><strong>Omnideck Regime Box shows trend</strong> → Identify bullish, bearish, or ranging regime</li>
+<li><strong>Check Harmonic Oscillator alignment</strong> → Oscillator should confirm regime (Bull signal in bullish regime, Bear in bearish regime)</li>
+<li><strong>Regime + momentum alignment = high conviction</strong> → Both trend and momentum pointing same direction</li>
+<li><strong>Conflicting signals = caution</strong> → Bullish regime + Bear oscillator = potential trend exhaustion, reduce size or wait</li>
+</ol>
+<p><strong>Example:</strong> Omnideck bullish regime → Harmonic Oscillator shows Bull signal → Full alignment for long entries. Omnideck bullish + Harmonic Bear = early warning of trend weakness</p>
+
+<div class="admonition tip">
+<p class="admonition-title">Pro Tip: The Multi-System Workflow</p>
+<p>For highest-probability setups, use <strong>Omnideck Regime Box (trend) + TD Sequential (timing) + Janus Atlas (levels) + Volume Oracle (confirmation)</strong>. Check regime first, wait for TD Sequential signal at key level, then confirm with volume spike. This multi-layer approach filters for only the strongest, most aligned opportunities.</p>
+<p><strong>See also:</strong> <a href="../ref-workflow/">Complete Trading Workflow Guide</a> for detailed multi-indicator strategies.</p>
+</div>
+
+<hr />
+<h2 id="common-mistakes-to-avoid">⚠️ Common Mistakes to Avoid<a class="headerlink" href="#common-mistakes-to-avoid" title="Permanent link">&para;</a></h2>
+
+<div class="sp-callout sp-callout--warning">
+  <div class="sp-callout__title">Learn from Common Pitfalls</div>
+  <p>These mistakes are frequently made by new Omnideck users. Avoid them to improve your results:</p>
+</div>
+
+<h3 id="mistake-1-enabling-all-10-systems-immediately">Mistake #1: Enabling All 10 Systems Immediately<a class="headerlink" href="#mistake-1-enabling-all-10-systems-immediately" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> Turning on all 10 systems at once creates chart overload. Too many lines, signals, and zones = visual clutter and analysis paralysis.</p>
+<p><strong>The Fix:</strong></p>
+<ul>
+<li>Start with 3-4 core systems: Regime Box, Pilot Line, TD Sequential, and one momentum system (Ichimoku or Supertrend)</li>
+<li>Master each system individually before adding more</li>
+<li>Gradually add systems as you understand how they interact</li>
+<li>Most traders settle on 4-6 systems they truly understand vs. all 10 half-understood</li>
+</ul>
+<p><strong>Remember:</strong> Less is more. 4 systems you deeply understand beat 10 systems you're confused by.</p>
+
+<h3 id="mistake-2-conflicting-signal-paralysis">Mistake #2: Analysis Paralysis from Conflicting Signals<a class="headerlink" href="#mistake-2-conflicting-signal-paralysis" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> Different systems sometimes give conflicting signals (TD Sequential buy while Pilot Line bearish). Beginners freeze, not knowing which signal to follow.</p>
+<p><strong>The Fix:</strong></p>
+<ul>
+<li>Use a hierarchical approach: <strong>Regime Box (trend context) > TD Sequential (timing) > Individual systems (confirmation)</strong></li>
+<li>If Regime Box is bullish, prioritize bullish signals from other systems</li>
+<li>Conflicting signals = market indecision → reduce position size or skip trade</li>
+<li>Wait for multi-system alignment (3+ systems agreeing) before acting</li>
+</ul>
+<p><strong>Remember:</strong> Conflicting signals aren't a problem—they're information. They tell you the market is uncertain. Trade only when systems align.</p>
+
+<h3 id="mistake-3-not-understanding-individual-systems">Mistake #3: Not Understanding Individual Systems First<a class="headerlink" href="#mistake-3-not-understanding-individual-systems" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> Jumping into Omnideck without understanding what TD Sequential, Ichimoku Cloud, or Supertrend actually do leads to misinterpreting signals and poor decisions.</p>
+<p><strong>The Fix:</strong></p>
+<ul>
+<li>Study each system independently: Research TD Sequential mechanics, Ichimoku components, Pivot Point calculation</li>
+<li>Enable one system at a time and trade it solo for 10-20 trades to learn its behavior</li>
+<li>Understand what each system measures: Trend (Regime Box, Pilot Line), Momentum (Ichimoku, Supertrend), Exhaustion (TD Sequential)</li>
+<li>Only combine systems after you understand each individually</li>
+</ul>
+<p><strong>Remember:</strong> You can't successfully combine systems you don't understand individually. Master 4 systems first.</p>
+
+<h3 id="mistake-4-ignoring-regime-box">Mistake #4: Ignoring the Regime Box (Trend Context)<a class="headerlink" href="#mistake-4-ignoring-regime-box" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> Trading counter-trend signals (taking TD Sequential buy in bearish regime) reduces win rate. The Regime Box shows overall trend—ignoring it is costly.</p>
+<p><strong>The Fix:</strong></p>
+<ul>
+<li><strong>Bullish Regime:</strong> Focus on long setups, buy dips, avoid shorts unless extreme reversal signals</li>
+<li><strong>Bearish Regime:</strong> Focus on short setups, sell rallies, avoid longs unless extreme reversal signals</li>
+<li><strong>Neutral Regime:</strong> Range-bound, trade both directions but with tighter stops and smaller size</li>
+<li>Always check Regime Box first before analyzing other systems</li>
+</ul>
+<p><strong>Remember:</strong> Regime Box is your trend filter. Trade WITH the regime, not against it.</p>
+
+<h3 id="mistake-5-over-relying-on-td-sequential">Mistake #5: Over-Relying on TD Sequential Alone<a class="headerlink" href="#mistake-5-over-relying-on-td-sequential" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> TD Sequential is powerful but not infallible. Trading every bar 13 completion without confirmation from other systems or price action leads to whipsaws.</p>
+<p><strong>The Fix:</strong></p>
+<ul>
+<li>TD Sequential signals exhaustion, not guaranteed reversal</li>
+<li>Wait for price confirmation: reversal candle pattern, volume spike, or support/resistance level</li>
+<li>Combine with Regime Box: TD buy in bullish regime = high probability. TD buy in bearish regime = lower probability</li>
+<li>Use TD Sequential as timing tool, not standalone strategy</li>
+</ul>
+<p><strong>Remember:</strong> TD Sequential is best used for timing entries WITHIN the broader trend shown by Regime Box and Pilot Line.</p>
+
+<h3 id="mistake-6-no-system-prioritization">Mistake #6: Treating All 10 Systems as Equally Important<a class="headerlink" href="#mistake-6-no-system-prioritization" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> Not all systems serve the same purpose. Beginners weight all signals equally, causing confusion when systems conflict.</p>
+<p><strong>The Fix:</strong></p>
+<ul>
+<li><strong>Trend Systems (primary):</strong> Regime Box, Pilot Line, Ichimoku Cloud → Establish directional bias</li>
+<li><strong>Timing Systems (secondary):</strong> TD Sequential, Pivot Points → Identify entry/exit points within trend</li>
+<li><strong>Momentum Systems (confirmation):</strong> Supertrend, Moving Averages → Confirm strength of moves</li>
+<li>Use trend systems to establish bias, timing systems for entries, momentum systems for confirmation</li>
+</ul>
+<p><strong>Remember:</strong> Prioritize trend context first, then use timing and momentum systems to refine entries. Hierarchy prevents confusion.</p>
+
+<div class="admonition info">
+<p class="admonition-title">Additional Resources</p>
+<p>For more trading best practices, see <a href="../ref-best-practices/">Best Practices &amp; Pro Tips</a>. For multi-system workflow examples, see <a href="../ref-workflow/">Trading Workflow Guide</a>.</p>
+</div>
+
+<hr />
+
+<!-- Advanced Learning Guide Callout -->
+<div class="advanced-learning-banner" style="
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 40px;
+    border-radius: 16px;
+    margin: 60px 0;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.2);
+">
+    <div style="font-size: 48px; margin-bottom: 16px;">📚</div>
+
+    <h2 style="
+        color: white;
+        font-size: 32px;
+        margin: 0 0 16px 0;
+        font-weight: 700;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    ">
+        Want to Master Omnideck?
+    </h2>
+
+    <p style="
+        color: rgba(255,255,255,0.95);
+        font-size: 18px;
+        margin: 0 0 28px 0;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.6;
+    ">
+        <strong>Advanced Learning Guide</strong> includes: Trading psychology, decision trees, common mistakes to avoid, and how to pair Omnideck with other indicators
+    </p>
+
+    <a href="learning.html" style="
+        display: inline-block;
+        background: white;
+        color: #667eea;
+        padding: 18px 48px;
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 20px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        transition: transform 0.2s, box-shadow 0.2s;
+        border: 2px solid white;
+    " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 30px rgba(0,0,0,0.2)';"
+       onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.15)';">
+        📖 Open Learning Guide →
+    </a>
+
+    <div style="
+        margin-top: 24px;
+        color: rgba(255,255,255,0.8);
+        font-size: 14px;
+    ">
+        ⏱️ 10-15 minute read
+    </div>
+</div>
+
+<hr />
+
+<h2 id="when-this-doesnt-work-well">🌫️ When This Doesn't Work Well<a class="headerlink" href="#when-this-doesnt-work-well" title="Permanent link">&para;</a></h2>
+
+<div class="sp-callout sp-callout--warning">
+  <div class="sp-callout__title">Understanding Reduced Reliability Conditions</div>
+  <p>Omnideck systems show reduced reliability or increased complexity in certain market conditions. Recognizing these environments helps set appropriate expectations:</p>
+</div>
+
+<h3 id="choppy-range-bound-markets">Choppy, Range-Bound Markets<a class="headerlink" href="#choppy-range-bound-markets" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> When price oscillates sideways in a narrow range with no clear trend, multiple Omnideck systems generate conflicting signals simultaneously.</p>
+<p><strong>What Happens:</strong> Regime Box shows neutral (gray), Pilot Line whipsaws back and forth, TD Sequential fires frequently in both directions, Supertrend flips repeatedly. Signal clarity decreases dramatically as different systems disagree.</p>
+<p><strong>Context:</strong> This isn't a flaw—it's Omnideck accurately reflecting market ambiguity. When the market has no clear direction, technical systems designed to follow trends naturally produce conflicting outputs. The conflict itself is information: stay out or reduce size.</p>
+
+<h3 id="too-many-systems-enabled-simultaneously">Too Many Systems Enabled Simultaneously<a class="headerlink" href="#too-many-systems-enabled-simultaneously" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> User enables all 10 systems at once on a single chart, especially on lower timeframes (5m, 15m).</p>
+<p><strong>What Happens:</strong> Visual overload makes it difficult to identify which signals matter. Too much information becomes noise rather than clarity. Analysis paralysis sets in—so many data points that decision-making becomes impossible.</p>
+<p><strong>Context:</strong> Omnideck provides 10 systems because different traders need different tools, not because everyone should use all 10 simultaneously. Most profitable users run 3-5 systems they deeply understand. More systems ≠ better decisions beyond a certain point.</p>
+
+<h3 id="td-sequential-in-strong-parabolic-trends">TD Sequential in Strong Parabolic Trends<a class="headerlink" href="#td-sequential-in-strong-parabolic-trends" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> During vertical price moves (especially in crypto, momentum stocks, or panic selling), TD Sequential counts complete but price continues without reversal.</p>
+<p><strong>What Happens:</strong> TD 13 buy/sell completions fire, suggesting exhaustion, but price momentum is so extreme that "exhaustion" lasts weeks or months. Multiple failed reversals occur before actual top/bottom forms.</p>
+<p><strong>Context:</strong> TD Sequential measures typical exhaustion patterns, but extraordinary trends (driven by narratives, short squeezes, or panic) can remain "exhausted" far longer than technical patterns suggest. Combine TD signals with Regime Box strength and <a href="../volume-oracle-v10/">Volume Oracle</a> climax patterns for confirmation.</p>
+
+<h3 id="major-news-fundamental-events">Major News & Fundamental Events<a class="headerlink" href="#major-news-fundamental-events" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> During earnings, Federal Reserve decisions, geopolitical crises, or regulatory announcements, price becomes driven by news rather than technical patterns.</p>
+<p><strong>What Happens:</strong> All Omnideck systems analyze price action, but they don't "know" about external catalysts. Price can gap through support/resistance levels shown by Pivot Points, ignore Ichimoku Cloud signals, or reverse violently despite all systems showing trend continuation.</p>
+<p><strong>Context:</strong> Technical analysis works best when price is driven by supply/demand dynamics and participant psychology. When fundamental news dominates, technical patterns temporarily lose predictive power. This affects all technical systems, not just Omnideck. Calendar awareness helps identify these periods.</p>
+
+<h3 id="very-low-timeframes-all-systems">Very Low Timeframes (1-Minute, 5-Minute) with Multiple Systems<a class="headerlink" href="#very-low-timeframes-all-systems" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> Using Omnideck on 1m or 5m charts with 5+ systems enabled, especially in low-volume environments.</p>
+<p><strong>What Happens:</strong> Systems fire constantly due to market microstructure noise (bid-ask spreads, algorithmic activity, small retail orders). Signal frequency increases but quality decreases. Stop losses get hit frequently before "legitimate" moves develop.</p>
+<p><strong>Context:</strong> Lower timeframes amplify noise exponentially. Systems like TD Sequential and Ichimoku Cloud work on any timeframe, but their signal-to-noise ratio degrades significantly below 15m. If you must trade lower timeframes, reduce number of systems enabled and confirm signals with higher timeframe context (1H, 4H).</p>
+
+<h3 id="individual-system-limitations">Individual System Inherent Limitations<a class="headerlink" href="#individual-system-limitations" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> Each of the 10 systems has specific market conditions where it underperforms:</p>
+<ul>
+<li><strong>TD Sequential:</strong> Weak in strong trending markets (premature exhaustion signals)</li>
+<li><strong>Pilot Line:</strong> Lags during sudden reversals (moving average-based)</li>
+<li><strong>Squeeze:</strong> Less effective in trending markets (designed for volatility expansion from consolidation)</li>
+<li><strong>Supertrend:</strong> Whipsaws in choppy markets (trend-following system in non-trending environment)</li>
+<li><strong>Pivot Points:</strong> Lose significance during strong momentum moves (support/resistance breaks)</li>
+<li><strong>BMSB:</strong> Can give late signals at extremes (mean reversion indicator in trending market)</li>
+</ul>
+<p><strong>What Happens:</strong> Relying on a single system during its weak condition produces poor results. For example, trading every TD Sequential signal during a parabolic bull run leads to multiple stopped-out short positions.</p>
+<p><strong>Context:</strong> This is why Omnideck provides 10 systems—no single system works in all conditions. The goal is to use systems that match current market structure (trend systems during trends, mean reversion systems during ranges, exhaustion systems at cycle turning points). System selection based on market context is as important as signal interpretation.</p>
+
+<div class="admonition tip">
+<p class="admonition-title">Recognizing Reduced Reliability Environments</p>
+<p><strong>Practical Identification:</strong></p>
+<ul>
+<li><strong>Regime Box neutral (gray) for extended periods:</strong> Market lacks directional conviction—reduce activity</li>
+<li><strong>3+ systems giving conflicting signals:</strong> Wait for alignment before acting</li>
+<li><strong>TD Sequential counts completing rapidly in both directions:</strong> Sign of choppy conditions</li>
+<li><strong>Supertrend flipping color multiple times within 10 bars:</strong> Indicates whipsaw environment</li>
+<li><strong>Chart feels cluttered/overwhelming:</strong> Too many systems enabled—disable 3-4 and focus on core systems</li>
+<li><strong>Economic calendar shows major events:</strong> Expect technical patterns to be overridden by news</li>
+</ul>
+<p><strong>Remember:</strong> Omnideck's multi-system approach is most powerful when systems confirm each other. When systems conflict significantly, that conflict is a signal to step aside—not to pick which system to trust. Wait for multi-system confluence (3+ systems aligned) for highest-probability setups.</p>
+</div>
+
+<hr />
+<h2 id="frequently-asked-questions">❓ Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permanent link">&para;</a></h2>
+<h3 id="q-should-i-enable-all-10-systems">Q: Should I enable all 10 systems?<a class="headerlink" href="#q-should-i-enable-all-10-systems" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Starting with 3-4 systems recommended to learn each properly. Systems can be added progressively based on individual approach.</p>
+<h3 id="q-does-it-slow-down-my-charts">Q: Does it slow down my charts?<a class="headerlink" href="#q-does-it-slow-down-my-charts" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> No. Omnideck optimized to run all systems efficiently. Minimal performance impact even with all 10 enabled.</p>
+<h3 id="q-can-i-customize-each-system">Q: Can I customize each system?<a class="headerlink" href="#q-can-i-customize-each-system" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Yes. Each system has individual settings available. Colors, sensitivity, display options all customizable.</p>
+<h3 id="q-what-timeframes-work">Q: What timeframes work?<a class="headerlink" href="#q-what-timeframes-work" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> All timeframes supported. System relevance varies by timeframe (e.g., TD Sequential works on all, but characteristics differ).</p>
+<h3 id="q-how-do-systems-interact">Q: How do systems interact?<a class="headerlink" href="#q-how-do-systems-interact" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Meta Tools layer ensures systems work harmoniously. No conflicts occur when multiple systems enabled.</p>
+<h3 id="q-can-i-use-just-one-system">Q: Can I use just one system?<a class="headerlink" href="#q-can-i-use-just-one-system" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Yes. Any system can be used standalone. Multi-system confluence provides additional context.</p>
+<h3 id="q-whats-the-difference-between-supertrend-and-regime-box">Q: What's the difference between SuperTrend and Regime Box?<a class="headerlink" href="#q-whats-the-difference-between-supertrend-and-regime-box" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> SuperTrend = ATR-based trend following. Regime Box = Multi-factor regime analysis. Both provide directional bias but use different methodologies.</p>
+<h3 id="q-do-zones-repaint">Q: Do zones repaint?<a class="headerlink" href="#q-do-zones-repaint" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> No. Supply/Demand zones drawn once conditions met, do not change retroactively.</p>
+<h3 id="q-can-i-export-system-signals">Q: Can I export system signals?<a class="headerlink" href="#q-can-i-export-system-signals" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Alerts provide signal notification compatible with TradingView alert system and webhooks.</p>
+<h3 id="q-works-with-other-signal-pilot-indicators">Q: Works with other Signal Pilot indicators?<a class="headerlink" href="#q-works-with-other-signal-pilot-indicators" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Yes. Designed for compatibility with entire suite. Can be combined with <a href="../pentarch-v10/">Pentarch</a>, <a href="../janus-atlas-v10/">Janus Atlas</a>, etc.</p>
+<hr />
+<h2 id="quick-reference-guide">📋 Quick Reference Guide<a class="headerlink" href="#quick-reference-guide" title="Permanent link">&para;</a></h2>
+<h3 id="system-quick-reference">System Quick Reference<a class="headerlink" href="#system-quick-reference" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Visual</th>
+<th>Bullish Signal</th>
+<th>Bearish Signal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TD Sequential</strong></td>
+<td>Numbers</td>
+<td>Green 9</td>
+<td>Red 9</td>
+</tr>
+<tr>
+<td><strong>Squeeze</strong></td>
+<td>Dots/Arrows</td>
+<td>Red dots → Green arrow</td>
+<td>Red dots → Red arrow</td>
+</tr>
+<tr>
+<td><strong>Liquidity Sweeps</strong></td>
+<td>Tags</td>
+<td>LL tag</td>
+<td>HH tag</td>
+</tr>
+<tr>
+<td><strong>EMA Trio</strong></td>
+<td>Lines</td>
+<td>Above all EMAs, GC</td>
+<td>Below all EMAs, DC</td>
+</tr>
+<tr>
+<td><strong>SuperTrend</strong></td>
+<td>Ribbon</td>
+<td>Green ribbon</td>
+<td>Red ribbon</td>
+</tr>
+<tr>
+<td><strong>BMSB</strong></td>
+<td>Band</td>
+<td>Touch + bounce</td>
+<td>Break below</td>
+</tr>
+<tr>
+<td><strong>Regime Box</strong></td>
+<td>Background</td>
+<td>Green</td>
+<td>Red</td>
+</tr>
+<tr>
+<td><strong>S/D Zones</strong></td>
+<td>Boxes</td>
+<td>At demand zone</td>
+<td>At supply zone</td>
+</tr>
+<tr>
+<td><strong>Patterns</strong></td>
+<td>Labels</td>
+<td>HAM, BE, etc</td>
+<td>SS, BRE, etc</td>
+</tr>
+</tbody>
+</table>
+<h3 id="recommended-system-combinations">Common System Combinations (Examples)<a class="headerlink" href="#recommended-system-combinations" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Trading Style</th>
+<th>Example Systems (4-5 total - educational)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Swing Trading</strong></td>
+<td>TD + EMA + Regime + Zones + Patterns</td>
+</tr>
+<tr>
+<td><strong>Day Trading</strong></td>
+<td>Squeeze + SuperTrend + BMSB + Regime + Sweeps</td>
+</tr>
+<tr>
+<td><strong>Scalping</strong></td>
+<td>TD + Squeeze + Regime + Sweeps + Patterns</td>
+</tr>
+<tr>
+<td><strong>Trend Following</strong></td>
+<td>EMA + SuperTrend + BMSB + Regime</td>
+</tr>
+<tr>
+<td><strong>Mean Reversion</strong></td>
+<td>TD + Zones + Regime + Patterns</td>
+</tr>
+</tbody>
+</table>
+<h3 id="confluence-levels">Confluence Levels<a class="headerlink" href="#confluence-levels" title="Permanent link">&para;</a></h3>
+<p><strong>Low Confluence:</strong> 1-2 systems align<br />
+<strong>Medium Confluence:</strong> 3-4 systems align<br />
+<strong>High Confluence:</strong> 5+ systems align</p>
+<p><em>Higher confluence = more factors supporting direction. Not a guarantee of outcome.</em></p>
+<hr />
+
+<div class="sp-callout sp-callout--reflection">
+  <div class="sp-callout__title">Reflection Check</div>
+  <p>Before using Omnideck in your trading, ask yourself:</p>
+  <ul>
+    <li>Can you name all 10 systems in Omnideck and explain what each one detects?</li>
+    <li>Have you started with the recommended 4-system foundation (TD, Squeeze, EMA Trio, Regime Box) before enabling more?</li>
+    <li>Do you understand the hierarchical analysis approach (check Regime Box first, then trend, then timing)?</li>
+    <li>Can you identify "elite confluence" setups where 5+ systems align simultaneously?</li>
+    <li>Have you successfully configured at least one Omnideck alert on TradingView?</li>
+  </ul>
+  <p><strong>If yes to all 5:</strong> You're ready for advanced Omnideck usage! See the <a href="../ref-workflow/">Workflow Guide</a> for multi-indicator strategies.<br>
+  <strong>If no to any:</strong> Review the relevant section above, or try the progressive learning path under Settings. Ask the chatbot (bottom right) for specific questions.</p>
+</div>
+
+<hr />
+<h2 id="support">📞 Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
+<p><strong>Technical Questions:</strong><br />
+support@signalpilot.io</p>
+<hr />
+<p><strong>Disclaimer:</strong> This indicator combines multiple technical analysis systems. All signals represent historical pattern detection based on various methodologies (exhaustion counting, volatility analysis, moving averages, volume zones, candlestick patterns). Individual interpretation, application, and outcomes vary. Past signal patterns do not guarantee future results. This is not financial advice.</p>
+                
+                
+                
+                
+                
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://x.com/signalpilot" target="_blank" rel="noopener" title="x.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Signalpilot" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.sections", "navigation.path", "content.code.copy", "search.suggest", "search.highlight", "content.tabs.link", "content.tooltips", "content.action.edit"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+
+
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+
+
+      
+        <script src="../js/timeago.min.js"></script>
+
+
+      
+        <script src="../js/timeago_mkdocs_material.js"></script>
+
+
+      
+        <script src="../assets/brand.js"></script>
+
+
+      
+        <script src="../assets/sp-bg.js"></script>
+
+
+      
+        <script src="../assets/keyword-highlighter.js"></script>
+
+
+      
+    
+      <script src="../assets/wheel-diagnostic.js"></script>
+      <script src="../assets/enhancements.js"></script>
+    <script src="assets/remove-tooltips.js"></script>
+    <script src="assets/bottom-sheet-nav.js"></script>
+      <script src="../assets/sticky-toc-scroll.js"></script>
+    <script src="../assets/components.js"></script>
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - JS
+       To disable: comment out this entire block
+       ======================================== -->
+  <script src="../js/feedback-system.js"></script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - JS -->
+
+  <!-- Meta-Learning & Accessibility Features -->
+  <script src="../js/keyboard-navigation.js"></script>
+  <script src="../js/text-sizing.js"></script>
+  <script src="../js/knowledge-checks.js"></script>
+
+      <!-- Signal Pilot Chatbot -->
+    <script src="/js/chatbot.js"></script>
+  
+
+
+
+
+
+
+
+  <!-- Custom Bottom Sheet Navigation Script -->
+  <script src="../assets/custom-bottom-sheet.js?v7"></script>
+</body>
+</html>
