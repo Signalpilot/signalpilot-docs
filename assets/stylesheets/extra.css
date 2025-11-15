@@ -4383,6 +4383,7 @@ a {
 /* ========================================
 /* ========================================
 /* ========================================
+/* ========================================
    FIX: Sidebar Navigation Overflow
    Prevent menu items from shifting left when Suite section is expanded
    ======================================== */
@@ -4393,8 +4394,8 @@ a {
   padding-left: 0 !important;
 }
 
-/* Apply padding ONLY to anchor links (not section header labels) */
-.md-nav__list .md-nav__item > a.md-nav__link {
+/* Apply consistent padding to BOTH anchors and labels at root level */
+.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link {
   padding-left: 1.2rem !important;
   padding-right: 1.2rem !important;
 }
