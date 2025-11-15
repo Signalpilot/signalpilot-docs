@@ -4384,26 +4384,12 @@ a {
 /* ========================================
 /* ========================================
 /* ========================================
-   FIX: Sidebar Navigation Overflow
-   Prevent menu items from shifting left when Suite section is expanded
+
+/* ========================================
+   FIX: Sidebar Navigation - Prevent text cutoff when Suite section expanded
    ======================================== */
 
-/* Fix left alignment for expanded sections */
-.md-nav[data-md-level="1"] .md-nav__list {
+/* Prevent nested navigation from creating extra left indentation */
+.md-sidebar--primary .md-nav__item .md-nav__list {
   margin-left: 0 !important;
-  padding-left: 0 !important;
-}
-
-/* Apply consistent padding to BOTH anchors and labels at root level */
-.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link {
-  padding-left: 1.2rem !important;
-  padding-right: 1.2rem !important;
-}
-
-/* Keep ellipsis working for long text */
-.md-nav__link .md-ellipsis {
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-  white-space: nowrap !important;
-  max-width: 100% !important;
 }
