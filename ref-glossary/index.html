@@ -1,10 +1,16 @@
 
+
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <meta name="mobile-web-app-capable" content="yes">
+      <meta name="theme-color" content="#667eea">
+      <meta name="format-detection" content="telephone=no">
       
         <meta name="description" content="Non-repainting, alert-ready TradingView indicators for any market/timeframe.">
       
@@ -13,24 +19,34 @@
         <link rel="canonical" href="https://docs.signalpilot.io/ref-glossary/">
       
       
+        <link rel="prev" href="../ref-non-repaint/">
       
+      
+        <link rel="next" href="../ref-troubleshooting/">
+      
+      
+      <!-- Favicons -->
+      <link rel="icon" type="image/x-icon" href="../favicon.ico">
+      <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
+      <link rel="icon" type="image/png" sizes="512x512" href="../favicon-512x512.png">
+
+      <!-- PWA Manifest -->
+      <link rel="manifest" href="../manifest.json">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
+    
+    
+      
+        <title>Glossary - Signal Pilot Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
       
         
-      
-      
-      <link rel="icon" href="../assets/watermark-monogram-color-transparent.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
-    
-    
-      
-        <title>Signal Pilot Glossary - Signal Pilot Docs</title>
-      
-    
-    
-      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
-      
-        
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -45,6 +61,7 @@
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -52,6 +69,9 @@
       <link rel="stylesheet" href="../css/timeago.css">
     
       <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../css/responsive-optimization.css">
+      <link rel="stylesheet" href="../css/content-overflow-fix.css">
+      <link rel="stylesheet" href="../css/mobile-layout-fixes.css">
     
       <link rel="stylesheet" href="../assets/brand.css">
     
@@ -61,7 +81,9 @@
     
       <link rel="stylesheet" href="../assets/interactive-code.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+
+
     
       
   
@@ -70,14 +92,89 @@
   
   
 
-<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-NZ05GV72K0"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-NZ05GV72K0",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-NZ05GV72K0",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-NZ05GV72K0"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-NZ05GV72K0",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-NZ05GV72K0",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+
   
     <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+
+
   
 
     
     
-  </head>
+    
+  <!-- Google Fonts: Gugi for brand consistency -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - CSS
+       To disable: comment out this entire block
+       ======================================== -->
+  <link rel="stylesheet" href="../css/feedback.css">
+  <link rel="stylesheet" href="../css/visual-enhancements.css">
+
+  <!-- Mermaid.js for diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'dark',
+      themeVariables: {
+        primaryColor: '#00bcd4',
+        primaryTextColor: '#fff',
+        primaryBorderColor: '#0097a7',
+        lineColor: '#00bcd4',
+        secondaryColor: '#ff5722',
+        tertiaryColor: '#4caf50',
+        fontSize: '18px',
+        fontFamily: 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+      },
+      flowchart: {
+        htmlLabels: true,
+        fontSize: 18
+      },
+      fontSize: 18
+    });
+  </script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - CSS -->
+
+  <!-- Meta-Learning & Accessibility Enhancements -->
+  <link rel="stylesheet" href="../css/skill-badges.css">
+  <link rel="stylesheet" href="../css/meta-learning.css">
+
+      <!-- Signal Pilot Chatbot CSS -->
+    <link rel="stylesheet" href="/css/chatbot.css">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.signalpilot.io/">
+    <meta property="og:title" content="Signal Pilot Documentation">
+    <meta property="og:description" content="Professional trading indicators for TradingView. Complete guides for Pentarch, Janus Atlas, Omnideck, and more.">
+    <meta property="og:image" content="https://docs.signalpilot.io/assets/images/preview.png">
+    <meta property="og:site_name" content="Signal Pilot Docs">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.signalpilot.io/">
+    <meta name="twitter:title" content="Signal Pilot Documentation">
+    <meta name="twitter:description" content="Professional trading indicators for TradingView. Complete guides for Pentarch, Janus Atlas, Omnideck, and more.">
+    <meta name="twitter:image" content="https://docs.signalpilot.io/assets/images/preview.png">
+
+
+  
+
+
+
+
+
+
+
+  <!-- Custom Bottom Sheet Navigation -->
+  <link rel="stylesheet" href="../css/hide-mkdocs-sidebar.css?v7">
+  <link rel="stylesheet" href="../css/custom-bottom-sheet.css?v7">
+</head>
   
   
     
@@ -96,7 +193,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#signal-pilot-glossary" class="md-skip">
+        <a href="#glossary" class="md-skip">
           Skip to content
         </a>
       
@@ -106,6 +203,24 @@
     </div>
     
     
+  <!-- Signal Pilot brand bar (keeps Material header & search intact) -->
+  <div class="sp-topnav">
+    <div class="sp-topnav__inner">
+      <a href="https://signalpilot.io" target="_blank" rel="noopener noreferrer" class="brand">
+        <span>Signal Pilot</span>
+      </a>
+      <nav class="sp-links" aria-label="Signal Pilot">
+        <a href="https://signalpilot.io/#why" target="_blank" rel="noopener noreferrer">Why</a>
+        <a href="https://signalpilot.io/#inside" target="_blank" rel="noopener noreferrer">What's inside</a>
+        <a href="https://education.signalpilot.io/" target="_blank" rel="noopener noreferrer">Education</a>
+        <a aria-current="page" href="https://docs.signalpilot.io/">Docs</a>
+        <a href="https://signalpilot.io/#pricing" target="_blank" rel="noopener noreferrer">Pricing</a>
+        <a href="https://signalpilot.io/#faq" target="_blank" rel="noopener noreferrer">FAQ</a>
+      </nav>
+    </div>
+  </div>
+
+  
       
 
   
@@ -114,12 +229,11 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="Signal Pilot Docs" class="md-header__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
       
-  <img src="../assets/watermark-monogram-color-transparent.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -131,7 +245,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Signal Pilot Glossary
+              Glossary
             
           </span>
         </div>
@@ -147,7 +261,7 @@
     <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
       </label>
     
   
@@ -157,7 +271,7 @@
     <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
       </label>
     
   
@@ -165,32 +279,32 @@
       
     
     
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+
+
     
     
     
-      
-      
-        <label class="md-header__button md-icon" for="__search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog">
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
       
@@ -209,14 +323,13 @@
     </div>
   </div>
 </div>
-      
     
     
       <div class="md-header__source">
         <a href="https://github.com/Signalpilot/signalpilot-docs" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     signalpilot-docs
@@ -228,6 +341,7 @@
   
 </header>
     
+
     <div class="md-container" data-md-component="container">
       
       
@@ -251,7 +365,6 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Signal Pilot Docs" class="md-nav__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
       
-  <img src="../assets/watermark-monogram-color-transparent.png" alt="logo">
 
     </a>
     Signal Pilot Docs
@@ -261,7 +374,7 @@
       <a href="https://github.com/Signalpilot/signalpilot-docs" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     signalpilot-docs
@@ -278,19 +391,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.md" class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Home
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -304,7 +410,6 @@
   
   
   
-    
     
     
     
@@ -324,16 +429,9 @@
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     🚀 Getting Started
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -342,11 +440,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    🚀 Getting Started
-  
-
+            🚀 Getting Started
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -357,19 +451,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../docs/start-here.md" class="md-nav__link">
+      <a href="../start-quick/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
-    👋 Start Here (Choose Your Path)
-  
-
-    
+    ⚡ Install & Configure
   </span>
-  
   
 
       </a>
@@ -385,19 +472,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../start-quick.md" class="md-nav__link">
+      <a href="../start-prerequisites/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
-    ⚡ Quick Start (5 min)
-  
-
-    
+    Prerequisites
   </span>
-  
   
 
       </a>
@@ -413,103 +493,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../docs/start-suite-overview.md" class="md-nav__link">
+      <a href="../start-onboarding/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
-    🔍 Suite Overview
-  
-
-    
+    Onboarding Checklist (7 days)
   </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../start-prerequisites.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    📋 Prerequisites
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../start-onboarding.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    📅 Onboarding Checklist (7 days)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/start-which-indicator.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Which Indicator Should I Start?
-  
-
-    
-  </span>
-  
   
 
       </a>
@@ -531,7 +520,6 @@
   
   
   
-    
     
     
     
@@ -551,16 +539,9 @@
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     📖 How-To Guides
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -569,11 +550,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    📖 How-To Guides
-  
-
+            📖 How-To Guides
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -584,19 +561,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-to-alerts.md" class="md-nav__link">
+      <a href="../how-to-alerts/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Set Up Alerts
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -612,19 +582,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-to-webhooks.md" class="md-nav__link">
+      <a href="../how-to-webhooks/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Use Webhooks
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -640,19 +603,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-to-screener.md" class="md-nav__link">
+      <a href="../how-to-screener/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Use Screener
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -674,7 +630,6 @@
   
   
   
-    
     
     
     
@@ -694,16 +649,9 @@
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     🚀 Suite (Latest)
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -712,11 +660,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    🚀 Suite (Latest)
-  
-
+            🚀 Suite (Latest)
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -727,19 +671,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../suite-index.md" class="md-nav__link">
+      <a href="../suite-index/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     📚 Suite Overview
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -758,16 +695,9 @@
       <a href="../pentarch-v10/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
-    Pentarch v1.0 — Five Cycle Events
-  
-
-    
+    Pentarch v1.0 — Reversal Events
   </span>
-  
   
 
       </a>
@@ -786,16 +716,9 @@
       <a href="../janus-atlas-v10/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Janus Atlas v1.0 — Levels System
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -814,16 +737,9 @@
       <a href="../omnideck-v10/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Omnideck v1.0 — Everything Indicator
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -842,16 +758,9 @@
       <a href="../augury-grid-v10/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Augury Grid v1.0 — Multi-Symbol Screener
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -867,19 +776,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../minimal-flow-v10/" class="md-nav__link">
+      <a href="../volume-oracle-v10/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
-    Volume Oracle v1.0 — Volume Intelligence System
-  
-
-    
+    Volume Oracle v1.0 — Volume Strategy
   </span>
-  
   
 
       </a>
@@ -898,16 +800,9 @@
       <a href="../harmonic-oscillator-v10/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Harmonic Oscillator v1.0 — Composite Momentum
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -926,16 +821,9 @@
       <a href="../plutus-flow-v10/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Plutus Flow v1.0 — Advanced OBV
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -955,9 +843,10 @@
       
   
   
+    
   
   
-    
+  
     
     
     
@@ -967,39 +856,28 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     📚 Reference
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    📚 Reference
-  
-
+            📚 Reference
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1010,19 +888,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../ref-workflow.md" class="md-nav__link">
+      <a href="../ref-workflow/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Trading Workflow (Bias → Timing)
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1038,19 +909,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../ref-comparison.md" class="md-nav__link">
+      <a href="../ref-comparison/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Indicator Comparison Guide
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1066,19 +930,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../ref-best-practices.md" class="md-nav__link">
+      <a href="../ref-best-practices/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Best Practices & Pro Tips
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1094,19 +951,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../ref-non-repaint.md" class="md-nav__link">
+      <a href="../ref-non-repaint/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Non-Repainting Policy
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1119,25 +969,628 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../ref-glossary.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
     
   
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
     Glossary
-  
-
-    
   </span>
   
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pentarch-signals-core-reversal-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Pentarch Signals (Core Reversal Events)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Pentarch Signals (Core Reversal Events)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#td-touchdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      TD (Touchdown)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ign-ignition" class="md-nav__link">
+    <span class="md-ellipsis">
+      IGN (Ignition)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wrn-warning" class="md-nav__link">
+    <span class="md-ellipsis">
+      WRN (Warning)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cap-climax" class="md-nav__link">
+    <span class="md-ellipsis">
+      CAP (Climax)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bdn-breakdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      BDN (Breakdown)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pilot-line-pl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pilot Line (PL)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regime-bar-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regime (Bar Colors)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nanoflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      NanoFlow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#janus-atlas-terms-levels-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      📍 Janus Atlas Terms (Levels System)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📍 Janus Atlas Terms (Levels System)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#support-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Support Level
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resistance-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resistance Level
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fvg-fair-value-gap" class="md-nav__link">
+    <span class="md-ellipsis">
+      FVG (Fair Value Gap)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ob-order-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      OB (Order Block)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breaker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breaker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swing-high-swing-low" class="md-nav__link">
+    <span class="md-ellipsis">
+      Swing High / Swing Low
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structure-market-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Structure &amp; Market Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Structure & Market Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bos-break-of-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      BOS (Break of Structure)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choch-change-of-character" class="md-nav__link">
+    <span class="md-ellipsis">
+      CHOCH (Change of Character)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#htf-higher-timeframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTF (Higher Timeframe)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ltf-lower-timeframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      LTF (Lower Timeframe)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confluence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confluence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bias
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#volume-momentum-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Volume &amp; Momentum Terms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 Volume & Momentum Terms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clx-climax" class="md-nav__link">
+    <span class="md-ellipsis">
+      CLX (Climax)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abs-absorption" class="md-nav__link">
+    <span class="md-ellipsis">
+      ABS (Absorption)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obv-on-balance-volume" class="md-nav__link">
+    <span class="md-ellipsis">
+      OBV (On-Balance Volume)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#divergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Divergence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#triad-bull-triad-bear" class="md-nav__link">
+    <span class="md-ellipsis">
+      Triad Bull / Triad Bear
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filter-regime-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎛️ Filter &amp; Regime Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎛️ Filter & Regime Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lok-long-ok" class="md-nav__link">
+    <span class="md-ellipsis">
+      LOK (Long OK)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sok-short-ok" class="md-nav__link">
+    <span class="md-ellipsis">
+      SOK (Short OK)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#squeeze" class="md-nav__link">
+    <span class="md-ellipsis">
+      Squeeze
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trading-execution-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Trading Execution Terms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Trading Execution Terms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bar-close-close-confirmed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bar Close / Close Confirmed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repainting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repainting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stop Loss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#riskreward-ratio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk/Reward Ratio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#position-sizing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Position Sizing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confluence-trading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confluence Trading
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indicator-specific-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      📈 Indicator-Specific Terms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📈 Indicator-Specific Terms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#omnideck" class="md-nav__link">
+    <span class="md-ellipsis">
+      Omnideck
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#augury-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Augury Grid
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volume-oracle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Volume Oracle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#harmonic-oscillator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Harmonic Oscillator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plutus-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plutus Flow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-trading-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 General Trading Terms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 General Trading Terms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#timeframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timeframe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#long-long-position" class="md-nav__link">
+    <span class="md-ellipsis">
+      Long / Long Position
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#short-short-position" class="md-nav__link">
+    <span class="md-ellipsis">
+      Short / Short Position
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pullback" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pullback
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breakout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breakout
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range-ranging-market" class="md-nav__link">
+    <span class="md-ellipsis">
+      Range / Ranging Market
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trend
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volatility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Volatility
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backtesting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backtesting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paper-trading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paper Trading
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Quick Links
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1150,47 +1603,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../ref-troubleshooting.md" class="md-nav__link">
+      <a href="../ref-troubleshooting/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Troubleshooting Guide
-  
-
-    
   </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/troubleshooting-installation.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Installation Troubleshooting
-  
-
-    
-  </span>
-  
   
 
       </a>
@@ -1212,7 +1630,6 @@
   
   
   
-    
     
     
     
@@ -1232,16 +1649,9 @@
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     ℹ️ About
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1250,11 +1660,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    ℹ️ About
-  
-
+            ℹ️ About
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1265,19 +1671,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../about-faq.md" class="md-nav__link">
+      <a href="../about-faq/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     FAQ
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1293,47 +1692,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../docs/about-system-requirements.md" class="md-nav__link">
+      <a href="../about-support/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
-    System Requirements
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../about-support.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
     Support & Access
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1349,19 +1713,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../about-changelog.md" class="md-nav__link">
+      <a href="../about-changelog/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Changelog (high level)
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1386,7 +1743,6 @@
     
     
     
-    
       
         
         
@@ -1403,16 +1759,9 @@
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     Website Tiles
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1421,11 +1770,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Website Tiles
-  
-
+            Website Tiles
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1436,19 +1781,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../_product-cards.md" class="md-nav__link">
+      <a href="../_settings-alerts/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Product Cards
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1491,84 +1829,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#quick-navigation" class="md-nav__link">
+  <a href="#pentarch-signals-core-reversal-events" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        🔤 Quick Navigation
-      
+      🎯 Pentarch Signals (Core Reversal Events)
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#a" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="A">
+    <nav class="md-nav" aria-label="🎯 Pentarch Signals (Core Reversal Events)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#accumulation" class="md-nav__link">
+  <a href="#td-touchdown" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Accumulation
-      
+      TD (Touchdown)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#alert" class="md-nav__link">
+  <a href="#ign-ignition" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Alert
-      
+      IGN (Ignition)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#anchored-vwap" class="md-nav__link">
+  <a href="#wrn-warning" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Anchored VWAP
-      
+      WRN (Warning)
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#b" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        B
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="B">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#bar-close-confirmation" class="md-nav__link">
+  <a href="#cap-climax" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Bar Close Confirmation
-      
+      CAP (Climax)
     </span>
   </a>
   
@@ -1577,20 +1877,34 @@
           <li class="md-nav__item">
   <a href="#bdn-breakdown" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        BDN (Breakdown)
-      
+      BDN (Breakdown)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#bos-break-of-structure" class="md-nav__link">
+  <a href="#pilot-line-pl" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        BOS (Break of Structure)
-      
+      Pilot Line (PL)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regime-bar-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regime (Bar Colors)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nanoflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      NanoFlow
     </span>
   </a>
   
@@ -1602,23 +1916,88 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#c" class="md-nav__link">
+  <a href="#janus-atlas-terms-levels-system" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        C
-      
+      📍 Janus Atlas Terms (Levels System)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="C">
+    <nav class="md-nav" aria-label="📍 Janus Atlas Terms (Levels System)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cap-climax" class="md-nav__link">
+  <a href="#support-level" class="md-nav__link">
     <span class="md-ellipsis">
+      Support Level
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resistance-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resistance Level
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fvg-fair-value-gap" class="md-nav__link">
+    <span class="md-ellipsis">
+      FVG (Fair Value Gap)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ob-order-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      OB (Order Block)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breaker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breaker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swing-high-swing-low" class="md-nav__link">
+    <span class="md-ellipsis">
+      Swing High / Swing Low
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
-        CAP (Climax)
-      
+        <li class="md-nav__item">
+  <a href="#structure-market-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Structure &amp; Market Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Structure & Market Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bos-break-of-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      BOS (Break of Structure)
     </span>
   </a>
   
@@ -1627,20 +2006,25 @@
           <li class="md-nav__item">
   <a href="#choch-change-of-character" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        CHoCH (Change of Character)
-      
+      CHOCH (Change of Character)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#cluster-level-cluster" class="md-nav__link">
+  <a href="#htf-higher-timeframe" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Cluster (Level Cluster)
-      
+      HTF (Higher Timeframe)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ltf-lower-timeframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      LTF (Lower Timeframe)
     </span>
   </a>
   
@@ -1649,9 +2033,16 @@
           <li class="md-nav__item">
   <a href="#confluence" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Confluence
-      
+      Confluence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bias
     </span>
   </a>
   
@@ -1663,402 +2054,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#d" class="md-nav__link">
+  <a href="#volume-momentum-terms" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        D
-      
+      🔄 Volume &amp; Momentum Terms
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="D">
+    <nav class="md-nav" aria-label="🔄 Volume & Momentum Terms">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#divergence" class="md-nav__link">
+  <a href="#clx-climax" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Divergence
-      
+      CLX (Climax)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#distribution" class="md-nav__link">
+  <a href="#abs-absorption" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Distribution
-      
+      ABS (Absorption)
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#e" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        E
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="E">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#early-cycle" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Early-Cycle
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#f" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        F
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="F">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#five-cycle-events" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Five Cycle Events
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#four-layer-detection" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Four-Layer Detection
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#g" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        G
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="G">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#grid-view" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Grid View
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#h" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        H
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="H">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#harmonic-oscillator" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Harmonic Oscillator
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#i" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        I
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="I">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ign-ignition" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        IGN (Ignition)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#j" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        J
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="J">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#janus-atlas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Janus Atlas
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#l" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        L
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="L">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#late-cycle" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Late-Cycle
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#level" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Level
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#m" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        M
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="M">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#market-cycle" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Market Cycle
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#market-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Market Structure
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#markup" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Markup
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#multi-asset-screening" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Multi-Asset Screening
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#n" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        N
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="N">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#nanoflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        NanoFlow
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#non-repainting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Non-Repainting
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#o" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        O
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="O">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#obv-on-balance-volume" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        OBV (On-Balance Volume)
-      
+      OBV (On-Balance Volume)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#omnideck" class="md-nav__link">
+  <a href="#divergence" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Omnideck
-      
+      Divergence
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#oscillator" class="md-nav__link">
+  <a href="#triad-bull-triad-bear" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Oscillator
-      
+      Triad Bull / Triad Bear
     </span>
   </a>
   
@@ -2070,67 +2114,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#p" class="md-nav__link">
+  <a href="#filter-regime-concepts" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        P
-      
+      🎛️ Filter &amp; Regime Concepts
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="P">
+    <nav class="md-nav" aria-label="🎛️ Filter & Regime Concepts">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#pentarch" class="md-nav__link">
+  <a href="#lok-long-ok" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Pentarch
-      
+      LOK (Long OK)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#pilot-line" class="md-nav__link">
+  <a href="#sok-short-ok" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Pilot Line
-      
+      SOK (Short OK)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#plutus-flow" class="md-nav__link">
+  <a href="#squeeze" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Plutus Flow
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#poc-point-of-control" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        POC (Point of Control)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#position-manager" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Position Manager
-      
+      Squeeze
     </span>
   </a>
   
@@ -2142,23 +2156,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#r" class="md-nav__link">
+  <a href="#trading-execution-terms" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        R
-      
+      🚀 Trading Execution Terms
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="R">
+    <nav class="md-nav" aria-label="🚀 Trading Execution Terms">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#regime-classification" class="md-nav__link">
+  <a href="#bar-close-close-confirmed" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Regime Classification
-      
+      Bar Close / Close Confirmed
     </span>
   </a>
   
@@ -2167,20 +2177,43 @@
           <li class="md-nav__item">
   <a href="#repainting" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Repainting
-      
+      Repainting
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#resistance" class="md-nav__link">
+  <a href="#stop-loss" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Resistance
-      
+      Stop Loss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#riskreward-ratio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk/Reward Ratio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#position-sizing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Position Sizing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confluence-trading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confluence Trading
     </span>
   </a>
   
@@ -2192,123 +2225,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#s" class="md-nav__link">
+  <a href="#indicator-specific-terms" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        S
-      
+      📈 Indicator-Specific Terms
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="S">
+    <nav class="md-nav" aria-label="📈 Indicator-Specific Terms">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#screener" class="md-nav__link">
+  <a href="#omnideck" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Screener
-      
+      Omnideck
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#support" class="md-nav__link">
+  <a href="#augury-grid" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Support
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#t" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        T
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="T">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#td-touchdown" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        TD (Touchdown)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#td-sequential" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        TD Sequential
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-trinity" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The Trinity
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#v" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        V
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="V">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vah-value-area-high" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        VAH (Value Area High)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#val-value-area-low" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        VAL (Value Area Low)
-      
+      Augury Grid
     </span>
   </a>
   
@@ -2317,75 +2255,25 @@
           <li class="md-nav__item">
   <a href="#volume-oracle" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Volume Oracle
-      
+      Volume Oracle
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#volume-profile" class="md-nav__link">
+  <a href="#harmonic-oscillator" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Volume Profile
-      
+      Harmonic Oscillator
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#volume-spike" class="md-nav__link">
+  <a href="#plutus-flow" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Volume Spike
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#volume-zone" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Volume Zone
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#volume-weighted" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Volume-Weighted
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#voting-system" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Voting System
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vwap-volume-weighted-average-price" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        VWAP (Volume-Weighted Average Price)
-      
+      Plutus Flow
     </span>
   </a>
   
@@ -2397,23 +2285,100 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#w" class="md-nav__link">
+  <a href="#general-trading-terms" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        W
-      
+      🔄 General Trading Terms
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="W">
+    <nav class="md-nav" aria-label="🔄 General Trading Terms">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#wrn-warning" class="md-nav__link">
+  <a href="#timeframe" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        WRN (Warning)
-      
+      Timeframe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#long-long-position" class="md-nav__link">
+    <span class="md-ellipsis">
+      Long / Long Position
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#short-short-position" class="md-nav__link">
+    <span class="md-ellipsis">
+      Short / Short Position
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pullback" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pullback
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breakout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breakout
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range-ranging-market" class="md-nav__link">
+    <span class="md-ellipsis">
+      Range / Ranging Market
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trend
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volatility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Volatility
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backtesting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backtesting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paper-trading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paper Trading
     </span>
   </a>
   
@@ -2425,22 +2390,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#related-resources" class="md-nav__link">
+  <a href="#quick-links" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        📚 Related Resources
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#support_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📞 Support
-      
+      🔗 Quick Links
     </span>
   </a>
   
@@ -2456,463 +2408,464 @@
           
           
             <div class="md-content" data-md-component="content">
-              
-                
-
-
-
-
-              
               <article class="md-content__inner md-typeset">
                 
-                  
-
+                  <!-- Reading time and last updated info -->
+<div class="md-content-meta" style="display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 1.5rem; padding: 0.75rem 1rem; background: color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent); border-radius: 8px; font-size: 0.9rem; color: var(--md-default-fg-color);">
+  
+    <span style="display: flex; align-items: center; gap: 0.4rem;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1.1rem; height: 1.1rem; fill: currentColor; opacity: 0.7;">
+        <path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/>
+      </svg>
+      <span style="opacity: 0.85;">Updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="October 31, 2025 01:38:02 UTC"><span class="timeago" datetime="2025-10-31T01:38:02+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="October 31, 2025 01:38:02 UTC">2025-10-31</span></span>
+    </span>
+  
 
   
-    <a href="https://github.com/Signalpilot/signalpilot-docs/edit/main/docs/ref-glossary/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
-    </a>
+    
+    
+    <span style="display: flex; align-items: center; gap: 0.4rem;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1.1rem; height: 1.1rem; fill: currentColor; opacity: 0.7;">
+        <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M16.2,16.2L11,13V7H12.5V12.2L17,14.9L16.2,16.2Z"/>
+      </svg>
+      <span style="opacity: 0.85;">14 min read</span>
+    </span>
   
-  
+</div>
 
-
-<h1 id="signal-pilot-glossary">Signal Pilot Glossary<a class="headerlink" href="#signal-pilot-glossary" title="Permanent link">&para;</a></h1>
-<p>Comprehensive definitions of terms used across Signal Pilot indicators and documentation.</p>
+<!-- Render the page content -->
+<h1 id="glossary">Glossary<a class="headerlink" href="#glossary" title="Permanent link">&para;</a></h1>
+<p>Complete reference of <span class="signal-pilot-brand">Signal Pilot</span> terms, signals, and trading concepts. Terms are organized alphabetically within categories.</p>
 <hr />
-<h2 id="quick-navigation">🔤 Quick Navigation<a class="headerlink" href="#quick-navigation" title="Permanent link">&para;</a></h2>
-<p><a href="#a">A</a> | <a href="#b">B</a> | <a href="#c">C</a> | <a href="#d">D</a> | <a href="#e">E</a> | <a href="#f">F</a> | <a href="#g">G</a> | <a href="#h">H</a> | <a href="#i">I</a> | <a href="#j">J</a> | <a href="#k">K</a> | <a href="#l">L</a> | <a href="#m">M</a> | <a href="#n">N</a> | <a href="#o">O</a> | <a href="#p">P</a> | <a href="#q">Q</a> | <a href="#r">R</a> | <a href="#s">S</a> | <a href="#t">T</a> | <a href="#u">U</a> | <a href="#v">V</a> | <a href="#w">W</a> | <a href="#x">X</a> | <a href="#y">Y</a> | <a href="#z">Z</a></p>
+<h2 id="pentarch-signals-core-reversal-events">🎯 Pentarch Signals (Core Reversal Events)<a class="headerlink" href="#pentarch-signals-core-reversal-events" title="Permanent link">&para;</a></h2>
+<h3 id="td-touchdown">TD (Touchdown)<a class="headerlink" href="#td-touchdown" title="Permanent link">&para;</a></h3>
+<p><strong>Type:</strong> Early-cycle warning signal
+<strong>Color:</strong> Blue 🔵
+<strong>Meaning:</strong> Indicates early-cycle reversal conditions
+<strong>Common Usage:</strong> Often viewed as preparation signal rather than entry trigger
+<strong>Typical Context:</strong> Appears during downtrends when momentum starts exhausting
+<strong>Next Signal:</strong> Usually followed by IGN if reversal develops</p>
+<p><strong>Usage Note:</strong> TD is typically interpreted as an advance warning signal. IGN often provides additional confirmation.</p>
 <hr />
-<h2 id="a">A<a class="headerlink" href="#a" title="Permanent link">&para;</a></h2>
-<h3 id="accumulation">Accumulation<a class="headerlink" href="#accumulation" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> A market phase where assets are bought steadily, typically after a decline. Price may consolidate or drift sideways as buying pressure builds.</p>
-<p><strong>Used in:</strong> <a href="../../pentarch-v10/">Pentarch</a> (TD signal indicates accumulation phase conditions)</p>
-<p><strong>Related terms:</strong> <a href="#distribution">Distribution</a>, <a href="#markup">Markup</a>, <a href="#market-cycle">Market Cycle</a></p>
+<h3 id="ign-ignition">IGN (Ignition)<a class="headerlink" href="#ign-ignition" title="Permanent link">&para;</a></h3>
+<p><strong>Type:</strong> Bullish reversal indication
+<strong>Color:</strong> Green 🟢
+<strong>Meaning:</strong> Indicates momentum breakout conditions
+<strong>Common Usage:</strong> Often used as potential long entry signal
+<strong>Typical Context:</strong> Appears after TD or standalone at strong support
+<strong>Risk Management:</strong> Common stop placement is below IGN candle low</p>
+<p><strong>Usage Note:</strong> Frequently used as primary long entry signal. Associated with higher conviction when appearing at key Janus levels.</p>
 <hr />
-<h3 id="alert">Alert<a class="headerlink" href="#alert" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> A notification triggered when specific indicator conditions occur. TradingView alerts can send notifications via email, SMS, webhook, or mobile app.</p>
-<p><strong>Used in:</strong> All Signal Pilot indicators</p>
-<p><strong>Configuration:</strong> Each indicator has customizable alert settings for different signal types.</p>
+<h3 id="wrn-warning">WRN (Warning)<a class="headerlink" href="#wrn-warning" title="Permanent link">&para;</a></h3>
+<p><strong>Type:</strong> Late-cycle warning signal
+<strong>Color:</strong> Yellow 🟡
+<strong>Meaning:</strong> Indicates weakening momentum
+<strong>Common Usage:</strong> Many traders tighten stops and monitor for potential exits
+<strong>Typical Context:</strong> Appears during uptrends when momentum begins fading
+<strong>Next Signal:</strong> May be followed by CAP if exhaustion develops</p>
+<p><strong>Usage Note:</strong> Often interpreted as preparation signal rather than immediate exit trigger. Used to anticipate potential late-cycle exhaustion.</p>
 <hr />
-<h3 id="anchored-vwap">Anchored VWAP<a class="headerlink" href="#anchored-vwap" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Volume-Weighted Average Price calculated from a specific starting point (anchor) rather than the current period. Common anchors include session open, major swing high/low, or significant event.</p>
-<p><strong>Used in:</strong> <a href="../../janus-atlas-v10/">Janus Atlas</a> (one of 39 level types)</p>
-<p><strong>Related terms:</strong> <a href="#vwap">VWAP</a>, <a href="#volume-weighted">Volume-Weighted</a></p>
-<hr />
-<h2 id="b">B<a class="headerlink" href="#b" title="Permanent link">&para;</a></h2>
-<h3 id="bar-close-confirmation">Bar Close Confirmation<a class="headerlink" href="#bar-close-confirmation" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> A detection methodology where signals only finalize when the current price bar completes. Prevents mid-bar signals that may disappear before bar close.</p>
-<p><strong>Used in:</strong> <a href="../../pentarch-v10/">Pentarch</a> (all signals confirm at bar close only)</p>
-<p><strong>Related terms:</strong> <a href="#repainting">Repainting</a>, <a href="#non-repainting">Non-Repainting</a></p>
+<h3 id="cap-climax">CAP (Climax)<a class="headerlink" href="#cap-climax" title="Permanent link">&para;</a></h3>
+<p><strong>Type:</strong> Bearish reversal warning
+<strong>Color:</strong> Red 🔴
+<strong>Meaning:</strong> Indicates late-cycle exhaustion conditions
+<strong>Educational Context:</strong> In educational materials, often shown as a potential consideration point for long positions or stop adjustment analysis
+<strong>Typical Context:</strong> Appears during late-cycle exhaustion after extended uptrends
+<strong>Risk Management Note:</strong> Associated with elevated risk conditions for long positions in educational examples</p>
+<p><strong>Educational Note:</strong> In trading education, CAP signals are commonly discussed as exit consideration points for long positions. Educational examples often illustrate profit-taking or stop adjustment concepts at this signal.</p>
 <hr />
 <h3 id="bdn-breakdown">BDN (Breakdown)<a class="headerlink" href="#bdn-breakdown" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Pentarch's fifth cycle event. Indicates conditions commonly associated with decline phase initiation after climax exhaustion.</p>
-<p><strong>Used in:</strong> <a href="../../pentarch-v10/">Pentarch</a></p>
-<p><strong>Default Color:</strong> Red</p>
-<p><strong>Related terms:</strong> <a href="#cap-climax">CAP</a>, <a href="#wrn-warning">WRN</a>, <a href="#five-cycle-events">Five Cycle Events</a></p>
+<p><strong>Type:</strong> Bearish reversal indication
+<strong>Color:</strong> Black ⚫
+<strong>Meaning:</strong> Indicates bearish breakdown conditions
+<strong>Educational Context:</strong> In educational materials, often shown as a long exit consideration or advanced short analysis point
+<strong>Typical Context:</strong> Indicates bearish reversal after CAP or standalone at resistance
+<strong>Risk Management Note:</strong> Educational examples commonly show stop placement concepts above BDN candle high for short positions</p>
+<p><strong>Educational Note:</strong> In trading education, BDN signals are commonly discussed as potential short consideration points or definitive long exit analysis. These are illustrative educational concepts only.</p>
 <hr />
+<h3 id="pilot-line-pl">Pilot Line (PL)<a class="headerlink" href="#pilot-line-pl" title="Permanent link">&para;</a></h3>
+<p><strong>Type:</strong> Trend indicator / reference line
+<strong>Visual:</strong> Thick colored line (green/red/orange) with semi-transparent ribbon
+<strong>Calculation:</strong> Double-smoothed EMA (34-period EMA, then 3-period EMA of result)
+<strong>Purpose:</strong> Primary trend filter and reference point for all event signals</p>
+<p><strong>Colors:</strong>
+- 🟢 <strong>Green:</strong> Strong uptrend (slope rising, momentum strong)
+- 🔴 <strong>Red:</strong> Strong downtrend (slope falling, momentum strong)
+- 🟠 <strong>Orange:</strong> Transitional phase (momentum easing or flat)</p>
+<p><strong>Function:</strong>
+- <strong>Distance Reference:</strong> All event signals measure distance from Pilot Line
+- <strong>Trend Filter:</strong> Shows current trend direction and strength
+- <strong>Dynamic Support/Resistance:</strong> Price tends to react at or near the line
+- <strong>Regime Component:</strong> One of 3 factors in regime determination</p>
+<p><strong>Common Usage:</strong> Price above green PL = bullish bias. Price below red PL = bearish bias. Orange PL = transitional/uncertain.</p>
+<p><strong>Non-Repainting:</strong> Updates only on confirmed bars (locked after bar close).</p>
+<hr />
+<h3 id="regime-bar-colors">Regime (Bar Colors)<a class="headerlink" href="#regime-bar-colors" title="Permanent link">&para;</a></h3>
+<p><strong>Type:</strong> Market structure classification system
+<strong>Visual:</strong> Candle body colors (green for bull regime, red for bear regime)
+<strong>Determination:</strong> 3-factor voting system requiring 2 of 3 votes
+<strong>Purpose:</strong> Shows current market structural state (bull or bear)</p>
+<p><strong>Voting Factors:</strong>
+1. <strong>EMA Structure:</strong> Is 34-period EMA above 55-period EMA? (+1 bull vote)
+2. <strong>Price vs Pilot Line:</strong> Is close above Pilot Line? (+1 bull vote)
+3. <strong>Slope Direction:</strong> Is Pilot Line sloping up? (+1 bull vote)</p>
+<p><strong>Regime States:</strong>
+- <strong>🟢 Bull Regime</strong> (Green candles): 2+ bull votes, sustained for 2-4 bars
+- <strong>🔴 Bear Regime</strong> (Red candles): 2+ bear votes, sustained for 2-4 bars</p>
+<p><strong>Function:</strong>
+- <strong>Trading Bias:</strong> Green regime → many traders look for longs; Red regime → many traders look for shorts
+- <strong>Signal Filter:</strong> Event signals are regime-aware (most require "correct" regime to fire)
+- <strong>Trend Confirmation:</strong> Long color streaks = strong trend; frequent changes = choppy market</p>
+<p><strong>Override:</strong> When event candles fire (TD/IGN/WRN/CAP/BDN), that specific candle shows event color instead of regime color.</p>
+<p><strong>Common Usage:</strong> Regime provides directional bias. Same price level has different implications depending on regime (support in green, resistance in red).</p>
+<hr />
+<h3 id="nanoflow">NanoFlow<a class="headerlink" href="#nanoflow" title="Permanent link">&para;</a></h3>
+<p><strong>Type:</strong> Micro-momentum indicator
+<strong>Visual:</strong> Small cross marks (green below lows, red above highs)
+<strong>Frequency:</strong> High (10-30 per day on 1H chart) vs main events (3-8 per day)
+<strong>Purpose:</strong> Shows micro-scale momentum shifts between main event signals</p>
+<p><strong>Conditions:</strong>
+- <strong>🟢 Bullish NanoFlow:</strong> Fast EMA (9) &gt; Slow EMA (21) + green candle + price &gt; Pilot Line
+- <strong>🔴 Bearish NanoFlow:</strong> Fast EMA (9) &lt; Slow EMA (21) + red candle + price &lt; Pilot Line</p>
+<p><strong>Function:</strong>
+- <strong>Trend Health:</strong> Many NanoFlow in same direction = healthy momentum
+- <strong>Event Confirmation:</strong> NanoFlow after event signal confirms momentum quality
+- <strong>Chop Detection:</strong> Rapidly flipping NanoFlow = choppy conditions
+- <strong>Early Warning:</strong> NanoFlow often shifts before main event signals</p>
+<p><strong>NOT a Trade Signal:</strong> NanoFlow is context/confirmation tool, not standalone entry trigger. Too sensitive for direct trading.</p>
+<p><strong>Common Usage:</strong> Use NanoFlow to validate quality of TD/IGN/WRN/CAP/BDN signals. Absence of expected NanoFlow suggests weak signal.</p>
+<p><strong>Non-Repainting:</strong> Renders only on confirmed bars.</p>
+<hr />
+<h2 id="janus-atlas-terms-levels-system">📍 Janus Atlas Terms (Levels System)<a class="headerlink" href="#janus-atlas-terms-levels-system" title="Permanent link">&para;</a></h2>
+<h3 id="support-level">Support Level<a class="headerlink" href="#support-level" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> Price level where buying pressure historically overcomes selling
+<strong>Visual:</strong> Horizontal line below current price
+<strong>Usage:</strong> Target for long entries, stop loss placement
+<strong>Strength:</strong> Determined by number of touches and reactions</p>
+<hr />
+<h3 id="resistance-level">Resistance Level<a class="headerlink" href="#resistance-level" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> Price level where selling pressure historically overcomes buying
+<strong>Visual:</strong> Horizontal line above current price
+<strong>Usage:</strong> Target for short entries or profit-taking
+<strong>Strength:</strong> Multiple rejections = stronger resistance</p>
+<hr />
+<h3 id="fvg-fair-value-gap">FVG (Fair Value Gap)<a class="headerlink" href="#fvg-fair-value-gap" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> Price gap created by imbalance between buyers and sellers
+<strong>Visual:</strong> Shaded rectangle on chart
+<strong>Behavior:</strong> Price often returns to "fill" the gap
+<strong>Trading:</strong> Entry zones when price returns to FVG
+<strong>Types:</strong> Bullish FVG (gap up), Bearish FVG (gap down)</p>
+<hr />
+<h3 id="ob-order-block">OB (Order Block)<a class="headerlink" href="#ob-order-block" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> Pre-impulse candle where large orders accumulated
+<strong>Visual:</strong> Highlighted candle or zone
+<strong>Behavior:</strong> Price often revisits OB before continuing
+<strong>Trading:</strong> High-probability entry zones
+<strong>Validity:</strong> Remains valid until price trades through and closes beyond</p>
+<hr />
+<h3 id="breaker">Breaker<a class="headerlink" href="#breaker" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> Order Block that has been invalidated
+<strong>Visual:</strong> OB marked as "breaker" after invalidation
+<strong>Behavior:</strong> Can act as opposite-direction entry zone
+<strong>Trading:</strong> Bullish OB becomes bearish breaker when broken down</p>
+<hr />
+<h3 id="swing-high-swing-low">Swing High / Swing Low<a class="headerlink" href="#swing-high-swing-low" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> Local peaks (high) or troughs (low) in price action
+<strong>Visual:</strong> Marked with labels on chart
+<strong>Usage:</strong> Reference points for structure breaks
+<strong>Importance:</strong> Key levels for BOS and CHOCH identification</p>
+<hr />
+<h2 id="structure-market-concepts">📊 Structure &amp; Market Concepts<a class="headerlink" href="#structure-market-concepts" title="Permanent link">&para;</a></h2>
 <h3 id="bos-break-of-structure">BOS (Break of Structure)<a class="headerlink" href="#bos-break-of-structure" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Price movement that breaks a recent swing high (bullish BOS) or swing low (bearish BOS), potentially indicating trend shift or continuation.</p>
-<p><strong>Used in:</strong> <a href="../../janus-atlas-v10/">Janus Atlas</a> (Market Structure labels)</p>
-<p><strong>Related terms:</strong> <a href="#choch-change-of-character">CHoCH</a>, <a href="#market-structure">Market Structure</a></p>
+<p><strong>Definition:</strong> Price breaks previous swing high (uptrend) or low (downtrend)
+<strong>Meaning:</strong> Trend continuation indicated
+<strong>Bullish BOS:</strong> Break above previous swing high
+<strong>Bearish BOS:</strong> Break below previous swing low
+<strong>Trading:</strong> Indicates trend strength, anticipate pullback entry</p>
 <hr />
-<h2 id="c">C<a class="headerlink" href="#c" title="Permanent link">&para;</a></h2>
-<h3 id="cap-climax">CAP (Climax)<a class="headerlink" href="#cap-climax" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Pentarch's fourth cycle event. Indicates conditions commonly associated with climax phase exhaustion characteristics.</p>
-<p><strong>Used in:</strong> <a href="../../pentarch-v10/">Pentarch</a></p>
-<p><strong>Default Color:</strong> Orange</p>
-<p><strong>Related terms:</strong> <a href="#wrn-warning">WRN</a>, <a href="#bdn-breakdown">BDN</a>, <a href="#five-cycle-events">Five Cycle Events</a></p>
+<h3 id="choch-change-of-character">CHOCH (Change of Character)<a class="headerlink" href="#choch-change-of-character" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> Structure break indicating potential trend reversal
+<strong>Meaning:</strong> Market character shifting from bull to bear or vice versa
+<strong>Bullish CHOCH:</strong> Low holds, breaks previous high
+<strong>Bearish CHOCH:</strong> High holds, breaks previous low
+<strong>Common Usage:</strong> Often viewed as early reversal warning where traders await signal development</p>
 <hr />
-<h3 id="choch-change-of-character">CHoCH (Change of Character)<a class="headerlink" href="#choch-change-of-character" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> A shift in market behavior, often identified by changes in swing patterns, momentum, or structure. May indicate potential trend change.</p>
-<p><strong>Used in:</strong> <a href="../../janus-atlas-v10/">Janus Atlas</a> (Market Structure labels)</p>
-<p><strong>Related terms:</strong> <a href="#bos-break-of-structure">BOS</a>, <a href="#market-structure">Market Structure</a></p>
+<h3 id="htf-higher-timeframe">HTF (Higher Timeframe)<a class="headerlink" href="#htf-higher-timeframe" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> Timeframe higher than your current chart
+<strong>Example:</strong> If on 1H, Daily is HTF
+<strong>Usage:</strong> Check HTF for bias, major levels, and trend direction
+<strong>Importance:</strong> HTF trumps LTF—trade with HTF bias</p>
 <hr />
-<h3 id="cluster-level-cluster">Cluster (Level Cluster)<a class="headerlink" href="#cluster-level-cluster" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Multiple price levels converging within a tight range (typically 1-3%). Level clusters often create stronger support/resistance zones than individual levels.</p>
-<p><strong>Used in:</strong> <a href="../../janus-atlas-v10/">Janus Atlas</a></p>
-<p><strong>Example:</strong> Daily High at 50,000 + Weekly High at 50,200 + Monthly VWAP at 50,100 = Cluster zone 50,000-50,200</p>
-<p><strong>Related terms:</strong> <a href="#confluence">Confluence</a>, <a href="#support">Support</a>, <a href="#resistance">Resistance</a></p>
+<h3 id="ltf-lower-timeframe">LTF (Lower Timeframe)<a class="headerlink" href="#ltf-lower-timeframe" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> Timeframe lower than your current chart
+<strong>Example:</strong> If on Daily, 4H is LTF
+<strong>Usage:</strong> Fine-tune entries within HTF structure
+<strong>Consideration:</strong> Can be noisy—commonly used for precision only</p>
 <hr />
 <h3 id="confluence">Confluence<a class="headerlink" href="#confluence" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Agreement between multiple independent indicators or analysis methods. Higher confluence typically associated with higher-probability setups.</p>
-<p><strong>Example:</strong> Pentarch IGN pattern + Janus Atlas support level + Volume Oracle spike = 3-factor confluence</p>
-<p><strong>Used in:</strong> All Signal Pilot indicators (Integration sections)</p>
-<p><strong>Related terms:</strong> <a href="#the-trinity">The Trinity</a>, <a href="#cluster-level-cluster">Cluster</a></p>
+<p><strong>Definition:</strong> Multiple signals or levels agreeing
+<strong>Examples:</strong>
+- IGN signal + major support level + bullish FVG
+- CAP signal + resistance + bearish OB</p>
+<p><strong>Importance:</strong> Higher probability trades
+<strong>Best Practice:</strong> Require 2-3 confluence factors minimum</p>
 <hr />
-<h2 id="d">D<a class="headerlink" href="#d" title="Permanent link">&para;</a></h2>
-<h3 id="divergence">Divergence<a class="headerlink" href="#divergence" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Disagreement between price action and an indicator. Bullish divergence: price makes lower low while indicator makes higher low. Bearish divergence: price makes higher high while indicator makes lower high.</p>
-<p><strong>Used in:</strong> <a href="../../plutus-flow-v10/">Plutus Flow</a> (divergence detection system)</p>
-<p><strong>Related terms:</strong> <a href="#obv-on-balance-volume">OBV</a>, <a href="#accumulation">Accumulation</a>, <a href="#distribution">Distribution</a></p>
+<h3 id="bias">Bias<a class="headerlink" href="#bias" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> Directional preference based on HTF analysis
+<strong>Bullish Bias:</strong> Looking for longs only
+<strong>Bearish Bias:</strong> Looking for shorts only
+<strong>Neutral Bias:</strong> No preference, stay out
+<strong>Source:</strong> Determined by HTF trend, structure, momentum</p>
 <hr />
-<h3 id="distribution">Distribution<a class="headerlink" href="#distribution" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> A market phase where assets are sold steadily, typically after a rally. Price may consolidate or drift sideways as selling pressure builds.</p>
-<p><strong>Used in:</strong> <a href="../../pentarch-v10/">Pentarch</a> (WRN signal indicates distribution phase conditions)</p>
-<p><strong>Related terms:</strong> <a href="#accumulation">Accumulation</a>, <a href="#markup">Markup</a>, <a href="#market-cycle">Market Cycle</a></p>
+<h2 id="volume-momentum-terms">🔄 Volume &amp; Momentum Terms<a class="headerlink" href="#volume-momentum-terms" title="Permanent link">&para;</a></h2>
+<h3 id="clx-climax">CLX (Climax)<a class="headerlink" href="#clx-climax" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> Large range candle with strong body
+<strong>Meaning:</strong> Aggressive directional move
+<strong>Visual:</strong> Highlighted climax candle
+<strong>Bullish CLX:</strong> Strong up move
+<strong>Bearish CLX:</strong> Strong down move
+<strong>Trading:</strong> Often precedes exhaustion or continuation</p>
 <hr />
-<h2 id="e">E<a class="headerlink" href="#e" title="Permanent link">&para;</a></h2>
-<h3 id="early-cycle">Early-Cycle<a class="headerlink" href="#early-cycle" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> The initial phases of a market cycle, typically accumulation and early markup. Pentarch's TD and IGN signals indicate early-cycle conditions.</p>
-<p><strong>Used in:</strong> <a href="../../pentarch-v10/">Pentarch</a></p>
-<p><strong>Related terms:</strong> <a href="#late-cycle">Late-Cycle</a>, <a href="#market-cycle">Market Cycle</a>, <a href="#td-touchdown">TD</a>, <a href="#ign-ignition">IGN</a></p>
+<h3 id="abs-absorption">ABS (Absorption)<a class="headerlink" href="#abs-absorption" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> Quiet range candle with opposing wick
+<strong>Meaning:</strong> One side absorbing other's pressure
+<strong>Visual:</strong> Small-bodied candle with notable wick
+<strong>Bullish ABS:</strong> Lower wick, bulls absorbing sells
+<strong>Bearish ABS:</strong> Upper wick, bears absorbing buys
+<strong>Trading:</strong> Potential reversal indication</p>
 <hr />
-<h2 id="f">F<a class="headerlink" href="#f" title="Permanent link">&para;</a></h2>
-<h3 id="five-cycle-events">Five Cycle Events<a class="headerlink" href="#five-cycle-events" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Pentarch's complete signal set: TD (Touchdown), IGN (Ignition), WRN (Warning), CAP (Climax), BDN (Breakdown). Represents progression through market cycle phases.</p>
-<p><strong>Used in:</strong> <a href="../../pentarch-v10/">Pentarch</a></p>
-<p><strong>Sequence:</strong> TD → IGN → WRN → CAP → BDN (complete cycle)</p>
-<p><strong>Related terms:</strong> <a href="#market-cycle">Market Cycle</a>, <a href="#early-cycle">Early-Cycle</a>, <a href="#late-cycle">Late-Cycle</a></p>
-<hr />
-<h3 id="four-layer-detection">Four-Layer Detection<a class="headerlink" href="#four-layer-detection" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Pentarch's methodology requiring four independent confirmations before signal appears: (1) Regime classification, (2) Pilot Line distance, (3) NanoFlow momentum, (4) Bar close confirmation.</p>
-<p><strong>Used in:</strong> <a href="../../pentarch-v10/">Pentarch</a></p>
-<p><strong>Related terms:</strong> <a href="#bar-close-confirmation">Bar Close Confirmation</a>, <a href="#non-repainting">Non-Repainting</a></p>
-<hr />
-<h2 id="g">G<a class="headerlink" href="#g" title="Permanent link">&para;</a></h2>
-<h3 id="grid-view">Grid View<a class="headerlink" href="#grid-view" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Augury Grid's tabular display showing multiple assets simultaneously with their respective Pentarch signals, Janus levels, and Volume Oracle data.</p>
-<p><strong>Used in:</strong> <a href="../../augury-grid-v10/">Augury Grid</a></p>
-<p><strong>Related terms:</strong> <a href="#multi-asset-screening">Multi-Asset Screening</a>, <a href="#screener">Screener</a></p>
-<hr />
-<h2 id="h">H<a class="headerlink" href="#h" title="Permanent link">&para;</a></h2>
-<h3 id="harmonic-oscillator">Harmonic Oscillator<a class="headerlink" href="#harmonic-oscillator" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Signal Pilot indicator using 7-oscillator voting system to generate consensus momentum signals: BUY, SELL, STRONG, NEUT.</p>
-<p><strong>Documentation:</strong> <a href="../../harmonic-oscillator-v10/">Harmonic Oscillator v1.0</a></p>
-<p><strong>Related terms:</strong> <a href="#voting-system">Voting System</a>, <a href="#oscillator">Oscillator</a></p>
-<hr />
-<h2 id="i">I<a class="headerlink" href="#i" title="Permanent link">&para;</a></h2>
-<h3 id="ign-ignition">IGN (Ignition)<a class="headerlink" href="#ign-ignition" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Pentarch's second cycle event. Indicates conditions commonly associated with markup phase beginning and bullish momentum breakout.</p>
-<p><strong>Used in:</strong> <a href="../../pentarch-v10/">Pentarch</a></p>
-<p><strong>Default Color:</strong> Teal</p>
-<p><strong>Related terms:</strong> <a href="#td-touchdown">TD</a>, <a href="#markup">Markup</a>, <a href="#early-cycle">Early-Cycle</a></p>
-<hr />
-<h2 id="j">J<a class="headerlink" href="#j" title="Permanent link">&para;</a></h2>
-<h3 id="janus-atlas">Janus Atlas<a class="headerlink" href="#janus-atlas" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Signal Pilot indicator mapping 39 different price level types across timeframes, sessions, volume analysis, and market structure.</p>
-<p><strong>Documentation:</strong> <a href="../../janus-atlas-v10/">Janus Atlas v1.0</a></p>
-<p><strong>Related terms:</strong> <a href="#level">Level</a>, <a href="#support">Support</a>, <a href="#resistance">Resistance</a>, <a href="#vwap">VWAP</a></p>
-<hr />
-<h2 id="l">L<a class="headerlink" href="#l" title="Permanent link">&para;</a></h2>
-<h3 id="late-cycle">Late-Cycle<a class="headerlink" href="#late-cycle" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> The final phases of a market cycle, typically distribution, climax, and decline. Pentarch's WRN, CAP, and BDN signals indicate late-cycle conditions.</p>
-<p><strong>Used in:</strong> <a href="../../pentarch-v10/">Pentarch</a></p>
-<p><strong>Related terms:</strong> <a href="#early-cycle">Early-Cycle</a>, <a href="#market-cycle">Market Cycle</a>, <a href="#wrn-warning">WRN</a>, <a href="#cap-climax">CAP</a></p>
-<hr />
-<h3 id="level">Level<a class="headerlink" href="#level" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> A specific price point where historical trading activity occurred, potentially causing future price reactions. Janus Atlas identifies 39 different level types.</p>
-<p><strong>Used in:</strong> <a href="../../janus-atlas-v10/">Janus Atlas</a></p>
-<p><strong>Types:</strong> Daily High/Low, Weekly High/Low, Monthly High/Low, VWAP, POC, VAH, VAL, Session levels, etc.</p>
-<p><strong>Related terms:</strong> <a href="#support">Support</a>, <a href="#resistance">Resistance</a>, <a href="#cluster-level-cluster">Cluster</a></p>
-<hr />
-<h2 id="m">M<a class="headerlink" href="#m" title="Permanent link">&para;</a></h2>
-<h3 id="market-cycle">Market Cycle<a class="headerlink" href="#market-cycle" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> The progression of market phases: accumulation → markup → distribution → climax → decline. Pentarch identifies position within this cycle.</p>
-<p><strong>Used in:</strong> <a href="../../pentarch-v10/">Pentarch</a></p>
-<p><strong>Phases:</strong> Accumulation (TD), Markup (IGN), Distribution (WRN), Climax (CAP), Decline (BDN)</p>
-<p><strong>Related terms:</strong> <a href="#five-cycle-events">Five Cycle Events</a>, <a href="#early-cycle">Early-Cycle</a>, <a href="#late-cycle">Late-Cycle</a></p>
-<hr />
-<h3 id="market-structure">Market Structure<a class="headerlink" href="#market-structure" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> The pattern of swing highs and swing lows that define trend direction and strength. Janus Atlas tracks structure breaks and changes.</p>
-<p><strong>Used in:</strong> <a href="../../janus-atlas-v10/">Janus Atlas</a> (Market Structure labels: HH, HL, LH, LL, BOS, CHoCH)</p>
-<p><strong>Related terms:</strong> <a href="#bos-break-of-structure">BOS</a>, <a href="#choch-change-of-character">CHoCH</a></p>
-<hr />
-<h3 id="markup">Markup<a class="headerlink" href="#markup" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> A market phase where price rises after accumulation, characterized by increasing momentum and participation.</p>
-<p><strong>Used in:</strong> <a href="../../pentarch-v10/">Pentarch</a> (IGN signal indicates markup phase beginning)</p>
-<p><strong>Related terms:</strong> <a href="#accumulation">Accumulation</a>, <a href="#distribution">Distribution</a>, <a href="#market-cycle">Market Cycle</a></p>
-<hr />
-<h3 id="multi-asset-screening">Multi-Asset Screening<a class="headerlink" href="#multi-asset-screening" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Simultaneous analysis of multiple symbols/markets to identify setups meeting specific criteria.</p>
-<p><strong>Used in:</strong> <a href="../../augury-grid-v10/">Augury Grid</a></p>
-<p><strong>Related terms:</strong> <a href="#grid-view">Grid View</a>, <a href="#screener">Screener</a></p>
-<hr />
-<h2 id="n">N<a class="headerlink" href="#n" title="Permanent link">&para;</a></h2>
-<h3 id="nanoflow">NanoFlow<a class="headerlink" href="#nanoflow" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Pentarch's momentum component oscillating between -100 and +100. Contributes to Four-Layer Detection System by validating momentum characteristics.</p>
-<p><strong>Used in:</strong> <a href="../../pentarch-v10/">Pentarch</a></p>
-<p><strong>Display:</strong> Separate panel below chart</p>
-<p><strong>Related terms:</strong> <a href="#four-layer-detection">Four-Layer Detection</a>, <a href="#oscillator">Oscillator</a></p>
-<hr />
-<h3 id="non-repainting">Non-Repainting<a class="headerlink" href="#non-repainting" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Indicator characteristic where confirmed signals never change retroactively. All Signal Pilot indicators are non-repainting (signals confirm at bar close and remain permanent).</p>
-<p><strong>Used in:</strong> All Signal Pilot indicators</p>
-<p><strong>Related terms:</strong> <a href="#repainting">Repainting</a>, <a href="#bar-close-confirmation">Bar Close Confirmation</a></p>
-<hr />
-<h2 id="o">O<a class="headerlink" href="#o" title="Permanent link">&para;</a></h2>
 <h3 id="obv-on-balance-volume">OBV (On-Balance Volume)<a class="headerlink" href="#obv-on-balance-volume" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Cumulative volume indicator adding volume on up-days and subtracting volume on down-days. Plutus Flow uses advanced OBV methodology for divergence detection.</p>
-<p><strong>Used in:</strong> <a href="../../plutus-flow-v10/">Plutus Flow</a></p>
-<p><strong>Related terms:</strong> <a href="#divergence">Divergence</a>, <a href="#volume-weighted">Volume-Weighted</a></p>
+<p><strong>Definition:</strong> Cumulative volume indicator
+<strong>Calculation:</strong> Add volume on up days, subtract on down days
+<strong>Usage:</strong> Indicates price trends
+<strong>Divergence:</strong> OBV trending opposite to price = warning
+<strong>Indicator:</strong> Plutus Flow is enhanced OBV</p>
 <hr />
-<h3 id="omnideck">Omnideck<a class="headerlink" href="#omnideck" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Signal Pilot's comprehensive all-in-one indicator containing 8 integrated systems: TD Sequential, VWAP, Oscillators, Volume Flow, Regime Classification, NanoFlow, Zones, and Levels.</p>
-<p><strong>Documentation:</strong> <a href="../../omnideck-v10/">Omnideck v1.0</a></p>
-<p><strong>Difficulty:</strong> Advanced (100+ hour learning curve)</p>
-<p><strong>Related terms:</strong> <a href="#td-sequential">TD Sequential</a>, <a href="#vwap">VWAP</a></p>
+<h3 id="divergence">Divergence<a class="headerlink" href="#divergence" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> Price and indicator moving in opposite directions
+<strong>Bullish Divergence:</strong> Price making lower lows, indicator making higher lows
+<strong>Bearish Divergence:</strong> Price making higher highs, indicator making lower highs
+<strong>Significance:</strong> Potential reversal warning
+<strong>Common Practice:</strong> Often combined with price signals (IGN, BDN) for confirmation</p>
 <hr />
-<h3 id="oscillator">Oscillator<a class="headerlink" href="#oscillator" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> A technical indicator that fluctuates between defined boundaries (e.g., 0-100), typically used to identify overbought/oversold conditions or momentum shifts.</p>
-<p><strong>Used in:</strong> <a href="../../harmonic-oscillator-v10/">Harmonic Oscillator</a> (7 oscillators: RSI, Stochastic, CCI, Williams %R, MFI, Ultimate Oscillator, ROC)</p>
-<p><strong>Related terms:</strong> <a href="#momentum">Momentum</a>, <a href="#voting-system">Voting System</a></p>
+<h3 id="triad-bull-triad-bear">Triad Bull / Triad Bear<a class="headerlink" href="#triad-bull-triad-bear" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> RSI-based composite momentum signal
+<strong>Triad Bull:</strong> RSI crosses up through envelope with bullish slope
+<strong>Triad Bear:</strong> RSI crosses down through envelope with bearish slope
+<strong>Components:</strong> Base RSI + Fast/Slow envelopes + slope checks
+<strong>Usage:</strong> Momentum indication for entries</p>
 <hr />
-<h2 id="p">P<a class="headerlink" href="#p" title="Permanent link">&para;</a></h2>
-<h3 id="pentarch">Pentarch<a class="headerlink" href="#pentarch" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Signal Pilot's cycle phase detection indicator. Identifies market position across five distinct cycle events (TD, IGN, WRN, CAP, BDN).</p>
-<p><strong>Documentation:</strong> <a href="../../pentarch-v10/">Pentarch v1.0</a></p>
-<p><strong>Related terms:</strong> <a href="#five-cycle-events">Five Cycle Events</a>, <a href="#market-cycle">Market Cycle</a></p>
+<h2 id="filter-regime-concepts">🎛️ Filter &amp; Regime Concepts<a class="headerlink" href="#filter-regime-concepts" title="Permanent link">&para;</a></h2>
+<h3 id="lok-long-ok">LOK (Long OK)<a class="headerlink" href="#lok-long-ok" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> Regime filter indicating long trades are favorable
+<strong>Criteria:</strong> Trend-qualified AND not in squeeze
+<strong>Visual:</strong> Green background or indicator state
+<strong>Common filtering approach:</strong> Many traders focus on IGN signals during LOK conditions
+<strong>Override:</strong> Experienced traders may trade against filter</p>
 <hr />
-<h3 id="pilot-line">Pilot Line<a class="headerlink" href="#pilot-line" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Pentarch's adaptive trend line serving as reference for signal distance calculations. Changes color based on regime classification.</p>
-<p><strong>Used in:</strong> <a href="../../pentarch-v10/">Pentarch</a></p>
-<p><strong>Colors:</strong> Blue (bearish regime), Green (bullish regime), Gray (neutral)</p>
-<p><strong>Related terms:</strong> <a href="#regime-classification">Regime Classification</a>, <a href="#four-layer-detection">Four-Layer Detection</a></p>
+<h3 id="sok-short-ok">SOK (Short OK)<a class="headerlink" href="#sok-short-ok" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> Regime filter indicating short trades are favorable
+<strong>Criteria:</strong> Trend-qualified AND not in squeeze
+<strong>Visual:</strong> Red background or indicator state
+<strong>Common filtering approach:</strong> Many traders focus on BDN signals during SOK conditions
+<strong>Override:</strong> Experienced traders may trade against filter</p>
 <hr />
-<h3 id="plutus-flow">Plutus Flow<a class="headerlink" href="#plutus-flow" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Signal Pilot's OBV-based divergence detection indicator. Tracks cumulative volume direction to identify accumulation/distribution and price-volume divergences.</p>
-<p><strong>Documentation:</strong> <a href="../../plutus-flow-v10/">Plutus Flow v1.0</a></p>
-<p><strong>Related terms:</strong> <a href="#obv-on-balance-volume">OBV</a>, <a href="#divergence">Divergence</a></p>
+<h3 id="squeeze">Squeeze<a class="headerlink" href="#squeeze" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> Low volatility period (tight Bollinger Bands)
+<strong>Visual:</strong> Narrowing bands, special indicator marking
+<strong>Meaning:</strong> Consolidation before potential breakout
+<strong>Common Approach:</strong> Trading during squeezes is often avoided; expansion phases are typically preferred
+<strong>After Squeeze:</strong> Often produces strong directional move</p>
 <hr />
-<h3 id="poc-point-of-control">POC (Point of Control)<a class="headerlink" href="#poc-point-of-control" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> The price level with highest traded volume during a specified period. Represents area of greatest acceptance/agreement.</p>
-<p><strong>Used in:</strong> <a href="../../janus-atlas-v10/">Janus Atlas</a> (one of 39 level types)</p>
-<p><strong>Related terms:</strong> <a href="#vah-value-area-high">VAH</a>, <a href="#val-value-area-low">VAL</a>, <a href="#volume-profile">Volume Profile</a></p>
-<hr />
-<h3 id="position-manager">Position Manager<a class="headerlink" href="#position-manager" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Volume Oracle's position tracking system. Displays entry price, breakeven line, and real-time P&amp;L on chart.</p>
-<p><strong>Used in:</strong> <a href="../../volume-oracle-v10/">Volume Oracle</a> (System 3)</p>
-<p><strong>Features:</strong> Live P&amp;L tracking, breakeven line, percentage/points display</p>
-<hr />
-<h2 id="r">R<a class="headerlink" href="#r" title="Permanent link">&para;</a></h2>
-<h3 id="regime-classification">Regime Classification<a class="headerlink" href="#regime-classification" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Pentarch's system for identifying market structure state: bullish, bearish, or neutral. First layer of Four-Layer Detection System.</p>
-<p><strong>Used in:</strong> <a href="../../pentarch-v10/">Pentarch</a>, <a href="../../omnideck-v10/">Omnideck</a></p>
-<p><strong>Visual:</strong> Candle body colors (Green=bullish, Red=bearish, Gray=neutral)</p>
-<p><strong>Related terms:</strong> <a href="#four-layer-detection">Four-Layer Detection</a>, <a href="#market-structure">Market Structure</a></p>
+<h2 id="trading-execution-terms">🚀 Trading Execution Terms<a class="headerlink" href="#trading-execution-terms" title="Permanent link">&para;</a></h2>
+<h3 id="bar-close-close-confirmed">Bar Close / Close Confirmed<a class="headerlink" href="#bar-close-close-confirmed" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> Signal that has finalized after candle closes
+<strong>Importance:</strong> Only closed-bar signals are reliable
+<strong>Alerts:</strong> Typically configured to "Once Per Bar Close"
+<strong>Intrabar vs Closed:</strong> Intrabar = preliminary, closed = confirmed</p>
 <hr />
 <h3 id="repainting">Repainting<a class="headerlink" href="#repainting" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Indicator behavior where historical signals change retroactively. <strong>Signal Pilot indicators do NOT repaint</strong> - all signals confirm at bar close and remain permanent.</p>
-<p><strong>Related terms:</strong> <a href="#non-repainting">Non-Repainting</a>, <a href="#bar-close-confirmation">Bar Close Confirmation</a></p>
+<p><strong>Definition:</strong> Indicator changing historical signals
+<strong><span class="signal-pilot-brand">Signal Pilot</span> Policy:</strong> NO repainting—signals are final on close
+<strong>Intrabar Changes:</strong> Normal and expected (not repainting)
+<strong>Historical Changes:</strong> Would be repainting (<span class="signal-pilot-brand">Signal Pilot</span> doesn't do this)</p>
 <hr />
-<h3 id="resistance">Resistance<a class="headerlink" href="#resistance" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> A price level where selling pressure historically exceeded buying pressure, potentially causing price to pause or reverse. Identified by Janus Atlas High levels.</p>
-<p><strong>Used in:</strong> <a href="../../janus-atlas-v10/">Janus Atlas</a></p>
-<p><strong>Related terms:</strong> <a href="#support">Support</a>, <a href="#level">Level</a>, <a href="#cluster-level-cluster">Cluster</a></p>
+<h3 id="stop-loss">Stop Loss<a class="headerlink" href="#stop-loss" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> Predetermined exit price to limit losses
+<strong>Placement:</strong>
+- Long: Below IGN candle or TD low
+- Short: Above BDN candle or CAP high</p>
+<p><strong>Movement:</strong> Commonly trailed up (longs) or down (shorts); moving toward entry increases risk
+<strong>Importance:</strong> Standard risk management practice in trading</p>
 <hr />
-<h2 id="s">S<a class="headerlink" href="#s" title="Permanent link">&para;</a></h2>
-<h3 id="screener">Screener<a class="headerlink" href="#screener" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Tool for filtering multiple assets based on specific criteria to identify trading opportunities.</p>
-<p><strong>Used in:</strong> <a href="../../augury-grid-v10/">Augury Grid</a></p>
-<p><strong>Related terms:</strong> <a href="#multi-asset-screening">Multi-Asset Screening</a>, <a href="#grid-view">Grid View</a></p>
+<h3 id="riskreward-ratio">Risk/Reward Ratio<a class="headerlink" href="#riskreward-ratio" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> Potential profit divided by potential loss
+<strong>Example:</strong> $200 risk for $600 profit = 3:1 R/R
+<strong>Minimum Recommended:</strong> 2:1
+<strong>Calculation:</strong> (Target - Entry) / (Entry - Stop)
+<strong>Common approach:</strong> Many traders seek favorable R/R ratios before entering positions</p>
 <hr />
-<h3 id="support">Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> A price level where buying pressure historically exceeded selling pressure, potentially causing price to pause or reverse. Identified by Janus Atlas Low levels.</p>
-<p><strong>Used in:</strong> <a href="../../janus-atlas-v10/">Janus Atlas</a></p>
-<p><strong>Related terms:</strong> <a href="#resistance">Resistance</a>, <a href="#level">Level</a>, <a href="#cluster-level-cluster">Cluster</a></p>
+<h3 id="position-sizing">Position Sizing<a class="headerlink" href="#position-sizing" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> How much capital to risk per trade
+<strong>Common Rules:</strong>
+- 1% rule: Risk 1% of account per trade
+- 2% rule: Risk 2% of account (aggressive)
+- Fixed dollar: Risk same $ amount each trade</p>
+<p><strong>Calculation:</strong> Account Size × Risk % ÷ (Entry - Stop) = Position Size</p>
 <hr />
-<h2 id="t">T<a class="headerlink" href="#t" title="Permanent link">&para;</a></h2>
-<h3 id="td-touchdown">TD (Touchdown)<a class="headerlink" href="#td-touchdown" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Pentarch's first cycle event. Indicates conditions commonly associated with accumulation phase beginning and oversold characteristics.</p>
-<p><strong>Used in:</strong> <a href="../../pentarch-v10/">Pentarch</a></p>
-<p><strong>Default Color:</strong> Purple</p>
-<p><strong>Related terms:</strong> <a href="#ign-ignition">IGN</a>, <a href="#accumulation">Accumulation</a>, <a href="#early-cycle">Early-Cycle</a></p>
+<h3 id="confluence-trading">Confluence Trading<a class="headerlink" href="#confluence-trading" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> Waiting for multiple signals to align
+<strong>Example Setup:</strong>
+- Pentarch IGN signal
+- At major Janus support level
+- In bullish FVG zone
+- Triad Bull signal
+- LOK active</p>
+<p><strong>Benefit:</strong> Much higher win rate
+<strong>Trade-off:</strong> Fewer opportunities</p>
 <hr />
-<h3 id="td-sequential">TD Sequential<a class="headerlink" href="#td-sequential" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Tom DeMark's sequential counting system for identifying potential exhaustion points. Omnideck includes full TD Sequential implementation.</p>
-<p><strong>Used in:</strong> <a href="../../omnideck-v10/">Omnideck</a></p>
-<p><strong>Counts:</strong> Setup (1-9), Countdown (1-13)</p>
-<p><strong>Related terms:</strong> <a href="#omnideck">Omnideck</a></p>
+<h2 id="indicator-specific-terms">📈 Indicator-Specific Terms<a class="headerlink" href="#indicator-specific-terms" title="Permanent link">&para;</a></h2>
+<h3 id="omnideck">Omnideck<a class="headerlink" href="#omnideck" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> All-in-one indicator combining all suite tools
+<strong>Includes:</strong> Pentarch + Janus + Volume Oracle + Harmonic + bias
+<strong>Benefit:</strong> Everything on one chart
+<strong>Use Case:</strong> Traders who want complete analysis</p>
 <hr />
-<h3 id="the-trinity">The Trinity<a class="headerlink" href="#the-trinity" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> The most popular Signal Pilot indicator combination: Pentarch + Janus Atlas + Volume Oracle. Provides cycle phase, price levels, and volume confirmation.</p>
-<p><strong>Components:</strong>
-1. <strong>Pentarch</strong> - Cycle phase identification
-2. <strong>Janus Atlas</strong> - Entry/exit levels
-3. <strong>Volume Oracle</strong> - Volume confirmation</p>
-<p><strong>Related terms:</strong> <a href="#confluence">Confluence</a>, <a href="#multi-indicator-analysis">Multi-Indicator Analysis</a></p>
-<hr />
-<h2 id="v">V<a class="headerlink" href="#v" title="Permanent link">&para;</a></h2>
-<h3 id="vah-value-area-high">VAH (Value Area High)<a class="headerlink" href="#vah-value-area-high" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> The upper boundary of the range containing 70% of traded volume during a specified period. Part of Volume Profile analysis.</p>
-<p><strong>Used in:</strong> <a href="../../janus-atlas-v10/">Janus Atlas</a> (one of 39 level types)</p>
-<p><strong>Related terms:</strong> <a href="#val-value-area-low">VAL</a>, <a href="#poc-point-of-control">POC</a>, <a href="#volume-profile">Volume Profile</a></p>
-<hr />
-<h3 id="val-value-area-low">VAL (Value Area Low)<a class="headerlink" href="#val-value-area-low" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> The lower boundary of the range containing 70% of traded volume during a specified period. Part of Volume Profile analysis.</p>
-<p><strong>Used in:</strong> <a href="../../janus-atlas-v10/">Janus Atlas</a> (one of 39 level types)</p>
-<p><strong>Related terms:</strong> <a href="#vah-value-area-high">VAH</a>, <a href="#poc-point-of-control">POC</a>, <a href="#volume-profile">Volume Profile</a></p>
+<h3 id="augury-grid">Augury Grid<a class="headerlink" href="#augury-grid" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> Multi-symbol screener table
+<strong>Function:</strong> Scans multiple symbols simultaneously
+<strong>Display:</strong> Table showing signals across watchlist
+<strong>Usage:</strong> Find opportunities across market</p>
 <hr />
 <h3 id="volume-oracle">Volume Oracle<a class="headerlink" href="#volume-oracle" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Signal Pilot's three-system volume analysis indicator combining Volume Flow, Volume Zones, and Position Manager.</p>
-<p><strong>Documentation:</strong> <a href="../../volume-oracle-v10/">Volume Oracle v1.0</a></p>
-<p><strong>Systems:</strong> (1) Volume Flow bars, (2) Volume Zones boxes, (3) Position Manager P&amp;L</p>
-<p><strong>Related terms:</strong> <a href="#volume-spike">Volume Spike</a>, <a href="#volume-zone">Volume Zone</a></p>
+<p><strong>Definition:</strong> Volume-based strategy indicator
+<strong>Focus:</strong> Order flow and volume patterns
+<strong>Signals:</strong> Volume-based moves
+<strong>Use With:</strong> Pentarch for confluence</p>
 <hr />
-<h3 id="volume-profile">Volume Profile<a class="headerlink" href="#volume-profile" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Analysis method showing volume distribution across price levels. Identifies POC (most traded price), VAH, and VAL.</p>
-<p><strong>Used in:</strong> <a href="../../janus-atlas-v10/">Janus Atlas</a> (POC, VAH, VAL levels)</p>
-<p><strong>Related terms:</strong> <a href="#poc-point-of-control">POC</a>, <a href="#vah-value-area-high">VAH</a>, <a href="#val-value-area-low">VAL</a></p>
+<h3 id="harmonic-oscillator">Harmonic Oscillator<a class="headerlink" href="#harmonic-oscillator" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> Composite momentum indicator
+<strong>Components:</strong> Multiple oscillators combined
+<strong>Usage:</strong> Momentum and divergence detection
+<strong>Benefit:</strong> Smoother than single oscillator</p>
 <hr />
-<h3 id="volume-spike">Volume Spike<a class="headerlink" href="#volume-spike" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Volume significantly above average (typically &gt;1.5x-2.0x). Volume Oracle highlights spikes to identify institutional participation.</p>
-<p><strong>Used in:</strong> <a href="../../volume-oracle-v10/">Volume Oracle</a></p>
-<p><strong>Thresholds:</strong> 1.5x (moderate), 2.0x (strong), 2.5x+ (very strong)</p>
-<p><strong>Related terms:</strong> <a href="#volume-flow">Volume Flow</a>, <a href="#volume-zone">Volume Zone</a></p>
+<h3 id="plutus-flow">Plutus Flow<a class="headerlink" href="#plutus-flow" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> Advanced On-Balance Volume indicator
+<strong>Enhancement:</strong> Traditional OBV with improvements
+<strong>Usage:</strong> Volume trend indication
+<strong>Divergence:</strong> Key feature for reversals</p>
 <hr />
-<h3 id="volume-zone">Volume Zone<a class="headerlink" href="#volume-zone" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Price range where significant volume accumulated. Volume Oracle displays zones as horizontal boxes on chart.</p>
-<p><strong>Used in:</strong> <a href="../../volume-oracle-v10/">Volume Oracle</a> (System 2)</p>
-<p><strong>Related terms:</strong> <a href="#volume-spike">Volume Spike</a>, <a href="#support">Support</a>, <a href="#resistance">Resistance</a></p>
+<h2 id="general-trading-terms">🔄 General Trading Terms<a class="headerlink" href="#general-trading-terms" title="Permanent link">&para;</a></h2>
+<h3 id="timeframe">Timeframe<a class="headerlink" href="#timeframe" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> Duration of each candle on chart
+<strong>Examples:</strong>
+- 5m = 5 minutes per candle
+- 1H = 1 hour per candle
+- 1D = 1 day per candle</p>
+<p><strong>Strategy:</strong> Use multiple timeframes for analysis</p>
 <hr />
-<h3 id="volume-weighted">Volume-Weighted<a class="headerlink" href="#volume-weighted" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Calculation method giving more weight to periods with higher volume. Used in VWAP and related indicators.</p>
-<p><strong>Used in:</strong> <a href="../../janus-atlas-v10/">Janus Atlas</a> (VWAP levels)</p>
-<p><strong>Related terms:</strong> <a href="#vwap">VWAP</a>, <a href="#anchored-vwap">Anchored VWAP</a></p>
+<h3 id="long-long-position">Long / Long Position<a class="headerlink" href="#long-long-position" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> Position taken expecting price to rise
+<strong>Typical Entry:</strong> Lower price levels
+<strong>Typical Exit:</strong> Higher price levels
+<strong>Profit Mechanism:</strong> Price increase
+<strong>Associated Signals:</strong> IGN (potential entry), CAP/BDN (potential exit)</p>
 <hr />
-<h3 id="voting-system">Voting System<a class="headerlink" href="#voting-system" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Harmonic Oscillator's methodology where 7 independent oscillators each "vote" bullish or bearish. Signal generated based on consensus (3+ votes).</p>
-<p><strong>Used in:</strong> <a href="../../harmonic-oscillator-v10/">Harmonic Oscillator</a></p>
-<p><strong>Signals:</strong>
-- 3+ bullish votes = BUY
-- 3+ bearish votes = SELL
-- 5+ votes same direction = STRONG
-- &lt;3 votes either way = NEUT (neutral)</p>
-<p><strong>Related terms:</strong> <a href="#oscillator">Oscillator</a>, <a href="#harmonic-oscillator">Harmonic Oscillator</a></p>
+<h3 id="short-short-position">Short / Short Position<a class="headerlink" href="#short-short-position" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> Position taken expecting price to fall
+<strong>Typical Entry:</strong> Higher price levels
+<strong>Typical Exit:</strong> Lower price levels
+<strong>Profit Mechanism:</strong> Price decrease
+<strong>Associated Signals:</strong> BDN (potential entry), IGN (potential exit)</p>
 <hr />
-<h3 id="vwap-volume-weighted-average-price">VWAP (Volume-Weighted Average Price)<a class="headerlink" href="#vwap-volume-weighted-average-price" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Average price weighted by volume. Represents the mean price at which an asset traded during the period, giving more importance to high-volume price levels.</p>
-<p><strong>Used in:</strong> <a href="../../janus-atlas-v10/">Janus Atlas</a> (Daily, Weekly, Monthly VWAP levels), <a href="../../omnideck-v10/">Omnideck</a></p>
-<p><strong>Related terms:</strong> <a href="#anchored-vwap">Anchored VWAP</a>, <a href="#volume-weighted">Volume-Weighted</a></p>
+<h3 id="pullback">Pullback<a class="headerlink" href="#pullback" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> Temporary price retracement within larger trend
+<strong>Appearance:</strong> Small counter-trend move
+<strong>Opportunity:</strong> Entry point in direction of larger trend
+<strong>Common Approach:</strong> Often involves awaiting pullback to key level combined with reversal signal</p>
 <hr />
-<h2 id="w">W<a class="headerlink" href="#w" title="Permanent link">&para;</a></h2>
-<h3 id="wrn-warning">WRN (Warning)<a class="headerlink" href="#wrn-warning" title="Permanent link">&para;</a></h3>
-<p><strong>Definition:</strong> Pentarch's third cycle event. Indicates conditions commonly associated with distribution phase and momentum weakening characteristics.</p>
-<p><strong>Used in:</strong> <a href="../../pentarch-v10/">Pentarch</a></p>
-<p><strong>Default Color:</strong> Yellow</p>
-<p><strong>Related terms:</strong> <a href="#cap-climax">CAP</a>, <a href="#distribution">Distribution</a>, <a href="#late-cycle">Late-Cycle</a></p>
+<h3 id="breakout">Breakout<a class="headerlink" href="#breakout" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> Price moving beyond established support/resistance
+<strong>Types:</strong> Support breakout (bearish), resistance breakout (bullish)
+<strong>Volume:</strong> Typically increases on valid breakouts
+<strong>False Breakout:</strong> Returns inside range quickly
+<strong>Confirmation:</strong> Many traders look for close beyond level to confirm breakout validity</p>
 <hr />
-<h2 id="related-resources">📚 Related Resources<a class="headerlink" href="#related-resources" title="Permanent link">&para;</a></h2>
+<h3 id="range-ranging-market">Range / Ranging Market<a class="headerlink" href="#range-ranging-market" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> Price moving sideways between support and resistance
+<strong>Characteristics:</strong> No clear trend, oscillating
+<strong>Common Approaches:</strong> Support/resistance-based range trading strategies
+<strong>Pentarch Performance:</strong> Fewer signals (awaiting reversal conditions)
+<strong>Breakout Monitoring:</strong> Traders commonly await breakout before applying trending strategies</p>
+<hr />
+<h3 id="trend">Trend<a class="headerlink" href="#trend" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> Sustained directional price movement
+<strong>Uptrend:</strong> Higher highs and higher lows
+<strong>Downtrend:</strong> Lower highs and lower lows
+<strong>Identify:</strong> Use HTF for overall trend
+<strong>Trade:</strong> With trend = higher probability</p>
+<hr />
+<h3 id="volatility">Volatility<a class="headerlink" href="#volatility" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> Degree of price fluctuation
+<strong>High Volatility:</strong> Large price swings
+<strong>Low Volatility:</strong> Small price movements
+<strong>Impact on Signals:</strong> Higher volatility = more signals
+<strong>Measurement:</strong> ATR, Bollinger Band width</p>
+<hr />
+<h3 id="backtesting">Backtesting<a class="headerlink" href="#backtesting" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> Testing strategy on historical data
+<strong>Purpose:</strong> Evaluate strategy before live trading
+<strong>Method:</strong> Apply rules to past price action
+<strong>Limitation:</strong> Past performance ≠ future results
+<strong>Best Practice:</strong> Paper trade after backtesting</p>
+<hr />
+<h3 id="paper-trading">Paper Trading<a class="headerlink" href="#paper-trading" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> Simulated trading with fake money
+<strong>Purpose:</strong> Practice without financial risk
+<strong>Duration:</strong> Until consistently profitable
+<strong>Platforms:</strong> TradingView, broker simulators
+<strong>Requirement:</strong> Treat it like real money mentally</p>
+<hr />
+<div class="sp-callout sp-callout--summary">
+  <div class="sp-callout__title">What You've Learned</div>
+  <ul>
+    <li><strong>Comprehensive Terminology Reference:</strong> This glossary covers all Signal Pilot Suite terminology - from cycle signals (TD, IGN, WRN, CAP, BDN) through technical concepts (HTF, LTF, confluence) to trading fundamentals (backtesting, paper trading, risk management)</li>
+    <li><strong>Signal Types Clarified:</strong> Five Pentarch cycle signals defined with contexts - TD (accumulation/early cycle), IGN (markup/early cycle), WRN (distribution/late cycle), CAP (climax/late cycle), and BDN (decline/late cycle)</li>
+    <li><strong>Timeframe Terminology:</strong> HTF (Higher Timeframe) shows overall trend context, LTF (Lower Timeframe) provides precise entry timing, and MTF (Multi-Timeframe Analysis) combines both for confluence confirmation</li>
+    <li><strong>Level Types Explained:</strong> Janus Atlas level categories include timeframe levels (daily/weekly/monthly highs and lows), session levels (Asia, London, New York), volume levels (VWAP, POC, VAH, VAL), and market structure levels</li>
+    <li><strong>Non-Repainting Defined:</strong> Signals that confirm at bar close and never change retroactively - critical for reliable backtesting, alert setup, and live trading confidence</li>
+    <li><strong>Trading Fundamentals:</strong> Key concepts like confluence (multiple signals aligning), breakout (price moving beyond support/resistance), volatility (price fluctuation degree), and risk management (position sizing, stop placement)</li>
+    <li><strong>Quick Reference Format:</strong> Each term includes definition, context, examples, and related concepts for immediate understanding and practical application</li>
+  </ul>
+  <p><strong>Next Steps:</strong> Review <a href="../ref-troubleshooting/">Troubleshooting Guide</a> for common issues, or explore <a href="../ref-workflow/">Trading Workflow Guide</a> to see terminology in action.</p>
+</div>
+<hr />
+<h2 id="quick-links">🔗 Quick Links<a class="headerlink" href="#quick-links" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../ref-comparison/indicator-comparison/">Indicator Comparison Guide</a> - Choose the right indicator</li>
-<li><a href="../start-learning-path/">Learning Paths</a> - Structured learning roadmap</li>
-<li><a href="../start-quickstart/index.md">Quick Start Guide</a> - Get started in 5 minutes</li>
-<li><a href="../ref-workflow/index.md">Workflow Examples</a> - Real-world usage scenarios</li>
+<li><a href="../about-faq/">FAQ</a> - Common questions</li>
+<li><a href="../ref-troubleshooting/">Troubleshooting</a> - Fix issues</li>
+<li><a href="../start-quick/">Quick Start</a> - Beginner guide</li>
+<li><a href="../ref-workflow/">Workflow</a> - Complete trading process</li>
+<li><a href="../ref-best-practices/">Best Practices</a> - Pro tips</li>
 </ul>
-<hr />
-<h2 id="support_1">📞 Support<a class="headerlink" href="#support_1" title="Permanent link">&para;</a></h2>
-<p>Can't find a term? <strong>support@signalpilot.io</strong></p>
-<hr />
-<p><strong>Last Updated:</strong> January 2025</p>
-
-
-
-
-
-
-
-  
-    
-  
-  
-    
-  
-
-
-  <aside class="md-source-file">
-    
-      
-  <span class="md-source-file__fact">
-    <span class="md-icon" title="Last update">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
-    </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 11, 2025 11:15:13 UTC"><span class="timeago" datetime="2025-11-11T11:15:13+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 11, 2025 11:15:13 UTC">2025-11-11</span>
-  </span>
-
-    
-    
-      
-  <span class="md-source-file__fact">
-    <span class="md-icon" title="Created">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
-    </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 10, 2025 02:25:21 UTC"><span class="timeago" datetime="2025-11-10T02:25:21+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 10, 2025 02:25:21 UTC">2025-11-10</span>
-  </span>
-
-    
-    
-    
-  </aside>
-
-
-  
-
-
-
-  <form class="md-feedback" name="feedback" hidden>
-    <fieldset>
-      <legend class="md-feedback__title">
-        Was this page helpful?
-      </legend>
-      <div class="md-feedback__inner">
-        <div class="md-feedback__list">
-          
-            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
-            </button>
-          
-            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"/></svg>
-            </button>
-          
-        </div>
-        <div class="md-feedback__note">
-          
-            <div data-md-value="1" hidden>
-              
-              
-                
-              
-              
-              
-                
-                
-              
-              Thanks for your feedback!
-            </div>
-          
-            <div data-md-value="0" hidden>
-              
-              
-                
-              
-              
-              
-                
-                
-              
-              Thanks for your feedback! Help us improve by <a href="https://github.com/Signalpilot/signalpilot-docs/issues/new" target="_blank" rel="noopener">reporting an issue</a>.
-            </div>
-          
-        </div>
-      </div>
-    </fieldset>
-  </form>
-
-
+<p><strong>Additional assistance:</strong> <a href="../about-support/">Contact Support</a> is available</p>
                 
               </article>
             </div>
           
           
-  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+
 
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+
+
         </div>
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
   Back to top
 </button>
         
@@ -2932,8 +2885,7 @@
   
 </div>
       
-        
-<div class="md-social">
+        <div class="md-social">
   
     
     
@@ -2943,7 +2895,7 @@
       
     
     <a href="https://x.com/signalpilot" target="_blank" rel="noopener" title="x.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M357.2 48h70.6L273.6 224.2 455 464H313L201.7 318.6 74.5 464H3.8l164.9-188.5L-5.2 48h145.6l100.5 132.9zm-24.8 373.8h39.1L119.1 88h-42z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"/></svg>
     </a>
   
     
@@ -2954,7 +2906,7 @@
       
     
     <a href="https://github.com/Signalpilot" target="_blank" rel="noopener" title="github.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
     </a>
   
 </div>
@@ -2969,24 +2921,65 @@
     </div>
     
     
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.sections", "navigation.path", "content.code.copy", "search.suggest", "search.highlight", "content.tabs.link", "content.tooltips", "content.action.edit"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+
+
     
-      
-      
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.top", "navigation.sections", "navigation.path", "content.code.copy", "search.suggest", "search.highlight", "content.tabs.link", "content.tooltips", "content.action.edit"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
-    
-      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+
+
       
         <script src="../js/timeago.min.js"></script>
+
+
       
         <script src="../js/timeago_mkdocs_material.js"></script>
+
+
       
         <script src="../assets/brand.js"></script>
+
+
       
         <script src="../assets/sp-bg.js"></script>
+
+
       
         <script src="../assets/keyword-highlighter.js"></script>
+
+
       
     
-  </body>
+      <script src="../assets/wheel-diagnostic.js"></script>
+      <script src="../assets/enhancements.js"></script>
+    <script src="assets/remove-tooltips.js"></script>
+    <script src="assets/bottom-sheet-nav.js"></script>
+      <script src="../assets/sticky-toc-scroll.js"></script>
+    <script src="../assets/components.js"></script>
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - JS
+       To disable: comment out this entire block
+       ======================================== -->
+  <script src="../js/feedback-system.js"></script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - JS -->
+
+  <!-- Meta-Learning & Accessibility Features -->
+  <script src="../js/keyboard-navigation.js"></script>
+  <script src="../js/text-sizing.js"></script>
+  <script src="../js/knowledge-checks.js"></script>
+
+      <!-- Signal Pilot Chatbot -->
+    <script src="/js/chatbot.js"></script>
+  
+
+
+
+
+
+
+
+  <!-- Custom Bottom Sheet Navigation Script -->
+  <script src="../assets/custom-bottom-sheet.js?v7"></script>
+</body>
 </html>

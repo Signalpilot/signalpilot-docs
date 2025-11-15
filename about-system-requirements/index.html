@@ -1,25 +1,41 @@
 
+
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <meta name="mobile-web-app-capable" content="yes">
+      <meta name="theme-color" content="#667eea">
+      <meta name="format-detection" content="telephone=no">
       
-        <meta name="description" content="Non-repainting, alert-ready TradingView indicators for any market/timeframe.">
+        <meta name="description" content="Everything you need to run Signal Pilot indicators smoothly. Platform requirements, device compatibility, and performance considerations.">
       
       
       
         <link rel="canonical" href="https://docs.signalpilot.io/about-system-requirements/">
       
       
+        <link rel="prev" href="../about-changelog/">
+
+
+        <link rel="next" href="../about-faq/">
       
       
-        
-      
-      
-      <link rel="icon" href="../assets/watermark-monogram-color-transparent.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <!-- Favicons -->
+      <link rel="icon" type="image/x-icon" href="../favicon.ico">
+      <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
+      <link rel="icon" type="image/png" sizes="512x512" href="../favicon-512x512.png">
+
+      <!-- PWA Manifest -->
+      <link rel="manifest" href="../manifest.json">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
     
     
       
@@ -27,10 +43,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -45,6 +61,7 @@
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -52,6 +69,9 @@
       <link rel="stylesheet" href="../css/timeago.css">
     
       <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../css/responsive-optimization.css">
+      <link rel="stylesheet" href="../css/content-overflow-fix.css">
+      <link rel="stylesheet" href="../css/mobile-layout-fixes.css">
     
       <link rel="stylesheet" href="../assets/brand.css">
     
@@ -61,7 +81,9 @@
     
       <link rel="stylesheet" href="../assets/interactive-code.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+
+
     
       
   
@@ -70,14 +92,89 @@
   
   
 
-<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-NZ05GV72K0"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-NZ05GV72K0",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-NZ05GV72K0",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-NZ05GV72K0"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-NZ05GV72K0",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-NZ05GV72K0",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+
   
     <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+
+
   
 
     
     
-  </head>
+    
+  <!-- Google Fonts: Gugi for brand consistency -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - CSS
+       To disable: comment out this entire block
+       ======================================== -->
+  <link rel="stylesheet" href="../css/feedback.css">
+  <link rel="stylesheet" href="../css/visual-enhancements.css">
+
+  <!-- Mermaid.js for diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'dark',
+      themeVariables: {
+        primaryColor: '#00bcd4',
+        primaryTextColor: '#fff',
+        primaryBorderColor: '#0097a7',
+        lineColor: '#00bcd4',
+        secondaryColor: '#ff5722',
+        tertiaryColor: '#4caf50',
+        fontSize: '18px',
+        fontFamily: 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+      },
+      flowchart: {
+        htmlLabels: true,
+        fontSize: 18
+      },
+      fontSize: 18
+    });
+  </script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - CSS -->
+
+  <!-- Meta-Learning & Accessibility Enhancements -->
+  <link rel="stylesheet" href="../css/skill-badges.css">
+  <link rel="stylesheet" href="../css/meta-learning.css">
+
+      <!-- Signal Pilot Chatbot CSS -->
+    <link rel="stylesheet" href="/css/chatbot.css">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.signalpilot.io/">
+    <meta property="og:title" content="System Requirements - Signal Pilot Docs">
+    <meta property="og:description" content="Everything you need to run Signal Pilot indicators smoothly. Platform requirements, device compatibility, and performance considerations.">
+    <meta property="og:image" content="https://docs.signalpilot.io/assets/images/preview.png">
+    <meta property="og:site_name" content="Signal Pilot Docs">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.signalpilot.io/">
+    <meta name="twitter:title" content="System Requirements - Signal Pilot Docs">
+    <meta name="twitter:description" content="Everything you need to run Signal Pilot indicators smoothly. Platform requirements, device compatibility, and performance considerations.">
+    <meta name="twitter:image" content="https://docs.signalpilot.io/assets/images/preview.png">
+
+
+  
+
+
+
+
+
+
+
+  <!-- Custom Bottom Sheet Navigation -->
+  <link rel="stylesheet" href="../css/hide-mkdocs-sidebar.css?v7">
+  <link rel="stylesheet" href="../css/custom-bottom-sheet.css?v7">
+</head>
   
   
     
@@ -96,7 +193,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#system-requirements" class="md-skip">
+        <a href="#quick-start-getting-your-first-signal-in-5-minutes" class="md-skip">
           Skip to content
         </a>
       
@@ -106,6 +203,24 @@
     </div>
     
     
+  <!-- Signal Pilot brand bar (keeps Material header & search intact) -->
+  <div class="sp-topnav">
+    <div class="sp-topnav__inner">
+      <a href="https://signalpilot.io" target="_blank" rel="noopener noreferrer" class="brand">
+        <span>Signal Pilot</span>
+      </a>
+      <nav class="sp-links" aria-label="Signal Pilot">
+        <a href="https://signalpilot.io/#why" target="_blank" rel="noopener noreferrer">Why</a>
+        <a href="https://signalpilot.io/#inside" target="_blank" rel="noopener noreferrer">What's inside</a>
+        <a href="https://education.signalpilot.io/" target="_blank" rel="noopener noreferrer">Education</a>
+        <a aria-current="page" href="https://docs.signalpilot.io/">Docs</a>
+        <a href="https://signalpilot.io/#pricing" target="_blank" rel="noopener noreferrer">Pricing</a>
+        <a href="https://signalpilot.io/#faq" target="_blank" rel="noopener noreferrer">FAQ</a>
+      </nav>
+    </div>
+  </div>
+
+  
       
 
   
@@ -114,12 +229,11 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="Signal Pilot Docs" class="md-header__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
       
-  <img src="../assets/watermark-monogram-color-transparent.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -131,7 +245,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              System Requirements
+              Quick Start - Get Your First Signal in 5 Minutes
             
           </span>
         </div>
@@ -147,7 +261,7 @@
     <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
       </label>
     
   
@@ -157,7 +271,7 @@
     <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
       </label>
     
   
@@ -165,32 +279,32 @@
       
     
     
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+
+
     
     
     
-      
-      
-        <label class="md-header__button md-icon" for="__search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog">
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
       
@@ -209,14 +323,13 @@
     </div>
   </div>
 </div>
-      
     
     
       <div class="md-header__source">
         <a href="https://github.com/Signalpilot/signalpilot-docs" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     signalpilot-docs
@@ -228,6 +341,7 @@
   
 </header>
     
+
     <div class="md-container" data-md-component="container">
       
       
@@ -251,7 +365,6 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Signal Pilot Docs" class="md-nav__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo">
       
-  <img src="../assets/watermark-monogram-color-transparent.png" alt="logo">
 
     </a>
     Signal Pilot Docs
@@ -261,7 +374,7 @@
       <a href="https://github.com/Signalpilot/signalpilot-docs" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     signalpilot-docs
@@ -278,19 +391,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.md" class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Home
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -302,9 +408,10 @@
       
   
   
+    
   
   
-    
+  
     
     
     
@@ -314,39 +421,28 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     🚀 Getting Started
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    🚀 Getting Started
-  
-
+            🚀 Getting Started
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -354,22 +450,373 @@
                 
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ⚡ Install & Configure
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    ⚡ Install & Configure
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-can-be-learned" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 What Can Be Learned
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-install-pentarch-1-minute" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Install Pentarch (1 minute)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1: Install Pentarch (1 minute)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#on-tradingview" class="md-nav__link">
+    <span class="md-ellipsis">
+      On TradingView:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-learn-the-5-signals-2-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Learn the 5 Signals (2 minutes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Learn the 5 Signals (2 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-early-cycle-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Early-Cycle Signals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-late-cycle-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Late-Cycle Signals
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-set-up-your-first-alert-1-minute" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Set Up Your First Alert (1 minute)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3: Set Up Your First Alert (1 minute)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commonly-monitored-alerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commonly Monitored Alerts:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-example-trade-illustration-1-minute" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Example Trade Illustration (1 minute)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 4: Example Trade Illustration (1 minute)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-bitcoin-long-trade-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Bitcoin Long Trade Scenario
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Quick Reference Cheat Sheet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-mistakes" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚫 Common Mistakes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚫 Common Mistakes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mistake-1-entering-on-td-blue-signal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #1: Entering on TD (Blue Signal)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-2-not-using-once-per-bar-close-for-alerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #2: Not Using "Once Per Bar Close" for Alerts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-3-trading-without-stop-losses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #3: Trading Without Stop Losses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-4-ignoring-key-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #4: Ignoring Key Levels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-5-using-too-low-timeframe-initially" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #5: Using Too Low Timeframe Initially
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-6-revenge-trading-after-a-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #6: Revenge Trading After a Loss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-7-risking-too-much-per-trade" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #7: Risking Too Much Per Trade
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-8-expecting-100-win-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #8: Expecting 100% Win Rate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-9-not-paper-trading-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #9: Not Paper Trading First
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-10-overcomplicating-with-too-many-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #10: Overcomplicating with Too Many Indicators
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ What's Next?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ What's Next?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#master-pentarch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Master Pentarch:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add Levels:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complete-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete System:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      💡 Common Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#need-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      🆘 Need Help?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-has-been-learned" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎉 What Has Been Learned:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
-      <a href="../docs/start-here.md" class="md-nav__link">
+      <a href="../start-prerequisites/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
-    👋 Start Here (Choose Your Path)
-  
-
-    
+    Prerequisites
   </span>
-  
   
 
       </a>
@@ -385,131 +832,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../start-quick.md" class="md-nav__link">
+      <a href="../start-onboarding/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
-    ⚡ Quick Start (5 min)
-  
-
-    
+    Onboarding Checklist (7 days)
   </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/start-suite-overview.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    🔍 Suite Overview
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../start-prerequisites.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    📋 Prerequisites
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../start-onboarding.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    📅 Onboarding Checklist (7 days)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/start-which-indicator.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Which Indicator Should I Start?
-  
-
-    
-  </span>
-  
   
 
       </a>
@@ -531,7 +859,6 @@
   
   
   
-    
     
     
     
@@ -551,16 +878,9 @@
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     📖 How-To Guides
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -569,11 +889,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    📖 How-To Guides
-  
-
+            📖 How-To Guides
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -584,19 +900,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-to-alerts.md" class="md-nav__link">
+      <a href="../how-to-alerts/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Set Up Alerts
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -612,19 +921,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-to-webhooks.md" class="md-nav__link">
+      <a href="../how-to-webhooks/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Use Webhooks
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -640,19 +942,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-to-screener.md" class="md-nav__link">
+      <a href="../how-to-screener/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Use Screener
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -674,7 +969,6 @@
   
   
   
-    
     
     
     
@@ -694,16 +988,9 @@
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     🚀 Suite (Latest)
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -712,11 +999,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    🚀 Suite (Latest)
-  
-
+            🚀 Suite (Latest)
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -727,19 +1010,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../suite-index.md" class="md-nav__link">
+      <a href="../suite-index/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     📚 Suite Overview
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -758,16 +1034,9 @@
       <a href="../pentarch-v10/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
-    Pentarch v1.0 — Five Cycle Events
-  
-
-    
+    Pentarch v1.0 — Reversal Events
   </span>
-  
   
 
       </a>
@@ -786,16 +1055,9 @@
       <a href="../janus-atlas-v10/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Janus Atlas v1.0 — Levels System
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -814,16 +1076,9 @@
       <a href="../omnideck-v10/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Omnideck v1.0 — Everything Indicator
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -842,16 +1097,9 @@
       <a href="../augury-grid-v10/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Augury Grid v1.0 — Multi-Symbol Screener
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -867,19 +1115,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../minimal-flow-v10/" class="md-nav__link">
+      <a href="../volume-oracle-v10/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
-    Volume Oracle v1.0 — Volume Intelligence System
-  
-
-    
+    Volume Oracle v1.0 — Volume Strategy
   </span>
-  
   
 
       </a>
@@ -898,16 +1139,9 @@
       <a href="../harmonic-oscillator-v10/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Harmonic Oscillator v1.0 — Composite Momentum
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -926,16 +1160,9 @@
       <a href="../plutus-flow-v10/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Plutus Flow v1.0 — Advanced OBV
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -957,7 +1184,6 @@
   
   
   
-    
     
     
     
@@ -977,16 +1203,9 @@
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     📚 Reference
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -995,11 +1214,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    📚 Reference
-  
-
+            📚 Reference
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1010,19 +1225,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../ref-workflow.md" class="md-nav__link">
+      <a href="../ref-workflow/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Trading Workflow (Bias → Timing)
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1038,19 +1246,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../ref-comparison.md" class="md-nav__link">
+      <a href="../ref-comparison/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Indicator Comparison Guide
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1066,19 +1267,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../ref-best-practices.md" class="md-nav__link">
+      <a href="../ref-best-practices/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Best Practices & Pro Tips
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1094,19 +1288,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../ref-non-repaint.md" class="md-nav__link">
+      <a href="../ref-non-repaint/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Non-Repainting Policy
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1122,19 +1309,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../ref-glossary.md" class="md-nav__link">
+      <a href="../ref-glossary/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Glossary
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1150,47 +1330,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../ref-troubleshooting.md" class="md-nav__link">
+      <a href="../ref-troubleshooting/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Troubleshooting Guide
-  
-
-    
   </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/troubleshooting-installation.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Installation Troubleshooting
-  
-
-    
-  </span>
-  
   
 
       </a>
@@ -1212,7 +1357,6 @@
   
   
   
-    
     
     
     
@@ -1232,16 +1376,9 @@
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     ℹ️ About
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1250,11 +1387,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    ℹ️ About
-  
-
+            ℹ️ About
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1265,19 +1398,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../about-faq.md" class="md-nav__link">
+      <a href="../about-faq/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     FAQ
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1293,47 +1419,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../docs/about-system-requirements.md" class="md-nav__link">
+      <a href="../about-support/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
-    System Requirements
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../about-support.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
     Support & Access
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1349,19 +1440,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../about-changelog.md" class="md-nav__link">
+      <a href="../about-changelog/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Changelog (high level)
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1386,7 +1470,6 @@
     
     
     
-    
       
         
         
@@ -1403,16 +1486,9 @@
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
             
   
-  
   <span class="md-ellipsis">
-    
-  
     Website Tiles
-  
-
-    
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1421,11 +1497,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Website Tiles
-  
-
+            Website Tiles
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1436,19 +1508,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../_product-cards.md" class="md-nav__link">
+      <a href="../_settings-alerts/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    
-  
     Product Cards
-  
-
-    
   </span>
-  
   
 
       </a>
@@ -1491,23 +1556,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#platform-requirements" class="md-nav__link">
+  <a href="#what-can-be-learned" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        🖥️ Platform Requirements
-      
+      🎯 What Can Be Learned
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🖥️ Platform Requirements">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-install-pentarch-1-minute" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Install Pentarch (1 minute)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1: Install Pentarch (1 minute)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#tradingview-account" class="md-nav__link">
+  <a href="#on-tradingview" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        TradingView Account
-      
+      On TradingView:
     </span>
   </a>
   
@@ -1519,34 +1589,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#device-compatibility" class="md-nav__link">
+  <a href="#step-2-learn-the-5-signals-2-minutes" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        💻 Device Compatibility
-      
+      Step 2: Learn the 5 Signals (2 minutes)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="💻 Device Compatibility">
+    <nav class="md-nav" aria-label="Step 2: Learn the 5 Signals (2 minutes)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#desktoplaptop" class="md-nav__link">
+  <a href="#the-early-cycle-signals" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Desktop/Laptop
-      
+      The Early-Cycle Signals
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#mobile-tablet" class="md-nav__link">
+  <a href="#the-late-cycle-signals" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Mobile &amp; Tablet
-      
+      The Late-Cycle Signals
     </span>
   </a>
   
@@ -1558,34 +1622,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#performance-considerations" class="md-nav__link">
+  <a href="#step-3-set-up-your-first-alert-1-minute" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        📊 Performance Considerations
-      
+      Step 3: Set Up Your First Alert (1 minute)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📊 Performance Considerations">
+    <nav class="md-nav" aria-label="Step 3: Set Up Your First Alert (1 minute)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#chart-performance" class="md-nav__link">
+  <a href="#commonly-monitored-alerts" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Chart Performance
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#specific-indicator-performance" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Specific Indicator Performance
-      
+      Commonly Monitored Alerts:
     </span>
   </a>
   
@@ -1597,34 +1646,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#internet-connection" class="md-nav__link">
+  <a href="#step-4-example-trade-illustration-1-minute" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        🌐 Internet Connection
-      
+      Step 4: Example Trade Illustration (1 minute)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🌐 Internet Connection">
+    <nav class="md-nav" aria-label="Step 4: Example Trade Illustration (1 minute)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#minimum-requirements" class="md-nav__link">
+  <a href="#example-bitcoin-long-trade-scenario" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Minimum Requirements
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#for-real-time-trading" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        For Real-Time Trading
-      
+      Example: Bitcoin Long Trade Scenario
     </span>
   </a>
   
@@ -1636,34 +1670,109 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#alert-notifications" class="md-nav__link">
+  <a href="#quick-reference-cheat-sheet" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        📱 Alert Notifications
-      
+      📋 Quick Reference Cheat Sheet
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📱 Alert Notifications">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-mistakes" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚫 Common Mistakes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚫 Common Mistakes">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#mobile-push-notifications" class="md-nav__link">
+  <a href="#mistake-1-entering-on-td-blue-signal" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Mobile Push Notifications
-      
+      Mistake #1: Entering on TD (Blue Signal)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#email-alerts" class="md-nav__link">
+  <a href="#mistake-2-not-using-once-per-bar-close-for-alerts" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Email Alerts
-      
+      Mistake #2: Not Using "Once Per Bar Close" for Alerts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-3-trading-without-stop-losses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #3: Trading Without Stop Losses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-4-ignoring-key-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #4: Ignoring Key Levels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-5-using-too-low-timeframe-initially" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #5: Using Too Low Timeframe Initially
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-6-revenge-trading-after-a-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #6: Revenge Trading After a Loss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-7-risking-too-much-per-trade" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #7: Risking Too Much Per Trade
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-8-expecting-100-win-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #8: Expecting 100% Win Rate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-9-not-paper-trading-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #9: Not Paper Trading First
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistake-10-overcomplicating-with-too-many-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mistake #10: Overcomplicating with Too Many Indicators
     </span>
   </a>
   
@@ -1675,23 +1784,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#browser-extensions-ad-blockers" class="md-nav__link">
+  <a href="#whats-next" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        🔧 Browser Extensions &amp; Ad Blockers
-      
+      ✅ What's Next?
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔧 Browser Extensions &amp; Ad Blockers">
+    <nav class="md-nav" aria-label="✅ What's Next?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#compatible" class="md-nav__link">
+  <a href="#master-pentarch" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Compatible
-      
+      Master Pentarch:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add Levels:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complete-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete System:
     </span>
   </a>
   
@@ -1703,228 +1826,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#data-storage" class="md-nav__link">
+  <a href="#common-best-practices" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        💾 Data &amp; Storage
-      
+      💡 Common Best Practices
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="💾 Data &amp; Storage">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#browser-storage" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Browser Storage
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#offline-usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Offline Usage
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#regional-availability" class="md-nav__link">
+  <a href="#need-help" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        🌍 Regional Availability
-      
+      🆘 Need Help?
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="🌍 Regional Availability">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tradingview-platform-availability" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        TradingView Platform Availability
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#security-requirements" class="md-nav__link">
+  <a href="#what-has-been-learned" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        🔐 Security Requirements
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔐 Security Requirements">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#account-security" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Account Security
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-compatibility-check" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ⚡ Quick Compatibility Check
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="⚡ Quick Compatibility Check">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#youre-ready-if" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ✅ You're Ready If:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#upgrade-recommended-if" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ⚠️ Upgrade Recommended If:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#common-questions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ❓ Common Questions
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="❓ Common Questions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#q-do-i-need-tradingview-propremium-to-use-signal-pilot" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Q: Do I need TradingView Pro/Premium to use Signal Pilot?
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#q-will-signal-pilot-slow-down-my-charts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Q: Will Signal Pilot slow down my charts?
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#q-can-i-use-signal-pilot-on-my-phone" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Q: Can I use Signal Pilot on my phone?
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#q-what-if-i-have-a-slow-internet-connection" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Q: What if I have a slow internet connection?
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#q-does-signal-pilot-work-on-maclinux" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Q: Does Signal Pilot work on Mac/Linux?
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#q-can-i-use-signal-pilot-without-tradingview" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Q: Can I use Signal Pilot without TradingView?
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🚀 Next Steps
-      
+      🎉 What Has Been Learned:
     </span>
   </a>
   
@@ -1940,33 +1862,19 @@
           
           
             <div class="md-content" data-md-component="content">
-              
-                
-
-
-
-
-              
               <article class="md-content__inner md-typeset">
-                
-                  
+<h1 id="system-requirements">System Requirements</h1>
 
-
-  
-    <a href="https://github.com/Signalpilot/signalpilot-docs/edit/main/docs/about-system-requirements.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
-    </a>
-  
-  
-
-
-<h1 id="system-requirements">System Requirements<a class="headerlink" href="#system-requirements" title="Permanent link">&para;</a></h1>
 <p>Everything you need to run Signal Pilot indicators smoothly.</p>
+
 <hr />
-<h2 id="platform-requirements">🖥️ Platform Requirements<a class="headerlink" href="#platform-requirements" title="Permanent link">&para;</a></h2>
-<h3 id="tradingview-account">TradingView Account<a class="headerlink" href="#tradingview-account" title="Permanent link">&para;</a></h3>
+
+<h2 id="platform-requirements">🖥️ Platform Requirements</h2>
+
+<h3 id="tradingview-account">TradingView Account</h3>
+
 <p><strong>Required:</strong> TradingView account (any tier)</p>
+
 <table>
 <thead>
 <tr>
@@ -2003,66 +1911,103 @@
 </tr>
 </tbody>
 </table>
+
 <p><strong>Recommendation:</strong> Essential or higher if using multiple Signal Pilot indicators simultaneously (e.g., The Trinity = 3 indicators).</p>
+
 <hr />
-<h2 id="device-compatibility">💻 Device Compatibility<a class="headerlink" href="#device-compatibility" title="Permanent link">&para;</a></h2>
-<h3 id="desktoplaptop">Desktop/Laptop<a class="headerlink" href="#desktoplaptop" title="Permanent link">&para;</a></h3>
-<p><strong>Supported Browsers:</strong>
-- ✅ Chrome (Recommended)
-- ✅ Firefox
-- ✅ Safari
-- ✅ Edge
-- ✅ Brave</p>
-<p><strong>Operating Systems:</strong>
-- ✅ Windows 10/11
-- ✅ macOS 10.15+
-- ✅ Linux (Ubuntu, Fedora, etc.)</p>
-<p><strong>Minimum Specs:</strong>
-- <strong>RAM:</strong> 4GB (8GB recommended for multiple indicators)
-- <strong>Processor:</strong> Any modern dual-core CPU
-- <strong>Internet:</strong> Stable broadband connection (5+ Mbps)</p>
+
+<h2 id="device-compatibility">💻 Device Compatibility</h2>
+
+<h3 id="desktoplaptop">Desktop/Laptop</h3>
+
+<p><strong>Supported Browsers:</strong></p>
+<ul>
+<li>✅ Chrome (Recommended)</li>
+<li>✅ Firefox</li>
+<li>✅ Safari</li>
+<li>✅ Edge</li>
+<li>✅ Brave</li>
+</ul>
+
+<p><strong>Operating Systems:</strong></p>
+<ul>
+<li>✅ Windows 10/11</li>
+<li>✅ macOS 10.15+</li>
+<li>✅ Linux (Ubuntu, Fedora, etc.)</li>
+</ul>
+
+<p><strong>Minimum Specs:</strong></p>
+<ul>
+<li><strong>RAM:</strong> 4GB (8GB recommended for multiple indicators)</li>
+<li><strong>Processor:</strong> Any modern dual-core CPU</li>
+<li><strong>Internet:</strong> Stable broadband connection (5+ Mbps)</li>
+</ul>
+
 <hr />
-<h3 id="mobile-tablet">Mobile &amp; Tablet<a class="headerlink" href="#mobile-tablet" title="Permanent link">&para;</a></h3>
-<p><strong>TradingView Mobile App:</strong>
-- ✅ iOS 13+ (iPhone, iPad)
-- ✅ Android 8.0+</p>
-<p><strong>Functionality:</strong>
-- ✅ View indicators and signals
-- ✅ Receive alert notifications
-- ⚠️ Limited customization compared to desktop
-- ⚠️ Best for monitoring, not deep analysis</p>
+
+<h3 id="mobile-tablet">Mobile & Tablet</h3>
+
+<p><strong>TradingView Mobile App:</strong></p>
+<ul>
+<li>✅ iOS 13+ (iPhone, iPad)</li>
+<li>✅ Android 8.0+</li>
+</ul>
+
+<p><strong>Functionality:</strong></p>
+<ul>
+<li>✅ View indicators and signals</li>
+<li>✅ Receive alert notifications</li>
+<li>⚠️ Limited customization compared to desktop</li>
+<li>⚠️ Best for monitoring, not deep analysis</li>
+</ul>
+
 <p><strong>Recommendation:</strong> Use desktop for setup and analysis, mobile for monitoring and alerts.</p>
+
 <hr />
-<h2 id="performance-considerations">📊 Performance Considerations<a class="headerlink" href="#performance-considerations" title="Permanent link">&para;</a></h2>
-<h3 id="chart-performance">Chart Performance<a class="headerlink" href="#chart-performance" title="Permanent link">&para;</a></h3>
+
+<h2 id="performance-considerations">📊 Performance Considerations</h2>
+
+<h3 id="chart-performance">Chart Performance</h3>
+
 <p><strong>Factors Affecting Speed:</strong></p>
+
 <ol>
 <li><strong>Number of Indicators</strong></li>
+</ol>
+<ul>
 <li>1-2 indicators: Excellent performance</li>
 <li>3-4 indicators: Good performance</li>
-<li>
-<p>5+ indicators: May slow rendering on older devices</p>
-</li>
-<li>
-<p><strong>Bars Loaded</strong></p>
-</li>
+<li>5+ indicators: May slow rendering on older devices</li>
+</ul>
+
+<ol>
+<li><strong>Bars Loaded</strong></li>
+</ol>
+<ul>
 <li>Default: 20,000 bars</li>
 <li>Recommended: 5,000-10,000 bars for faster performance</li>
-<li>
-<p>Settings → Chart Settings → Bars Back to Load</p>
-</li>
-<li>
-<p><strong>Timeframe</strong></p>
-</li>
+<li>Settings → Chart Settings → Bars Back to Load</li>
+</ul>
+
+<ol>
+<li><strong>Timeframe</strong></li>
+</ol>
+<ul>
 <li>Lower timeframes (1m, 5m): More data = slower</li>
 <li>Higher timeframes (4H, Daily): Less data = faster</li>
-</ol>
-<p><strong>Performance Tips:</strong>
-- Use <a href="../advanced/performance-optimization.md">Performance Optimization Guide</a> for detailed settings
-- Close unused charts/indicators
-- Enable hardware acceleration in browser settings</p>
+</ul>
+
+<p><strong>Performance Tips:</strong></p>
+<ul>
+<li>Use <a href="../ref-troubleshooting/">Troubleshooting Guide</a> for performance settings</li>
+<li>Close unused charts/indicators</li>
+<li>Enable hardware acceleration in browser settings</li>
+</ul>
+
 <hr />
-<h3 id="specific-indicator-performance">Specific Indicator Performance<a class="headerlink" href="#specific-indicator-performance" title="Permanent link">&para;</a></h3>
+
+<h3 id="specific-indicator-performance">Specific Indicator Performance</h3>
+
 <table>
 <thead>
 <tr>
@@ -2109,236 +2054,222 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Optimization:</strong> See <a href="../advanced/performance-optimization.md">Performance Optimization Guide</a></p>
+
+<p><strong>Optimization:</strong> See <a href="../ref-troubleshooting/">Troubleshooting Guide</a> for performance tips</p>
+
 <hr />
-<h2 id="internet-connection">🌐 Internet Connection<a class="headerlink" href="#internet-connection" title="Permanent link">&para;</a></h2>
-<h3 id="minimum-requirements">Minimum Requirements<a class="headerlink" href="#minimum-requirements" title="Permanent link">&para;</a></h3>
+
+<h2 id="internet-connection">🌐 Internet Connection</h2>
+
+<h3 id="minimum-requirements">Minimum Requirements</h3>
+
 <ul>
 <li><strong>Speed:</strong> 5 Mbps download (broadband)</li>
 <li><strong>Stability:</strong> Consistent connection (no frequent drops)</li>
 <li><strong>Type:</strong> Any (cable, fiber, DSL, 4G/5G mobile)</li>
 </ul>
-<h3 id="for-real-time-trading">For Real-Time Trading<a class="headerlink" href="#for-real-time-trading" title="Permanent link">&para;</a></h3>
+
+<h3 id="for-real-time-trading">For Real-Time Trading</h3>
+
 <ul>
 <li><strong>Recommended:</strong> 25+ Mbps for real-time data without lag</li>
-<li><strong>Latency:</strong> &lt;100ms ping to TradingView servers</li>
+<li><strong>Latency:</strong> <100ms ping to TradingView servers</li>
 <li><strong>Mobile Data:</strong> 4G LTE or 5G (3G not recommended)</li>
 </ul>
+
 <p><strong>Note:</strong> Signal Pilot indicators calculate based on data TradingView provides. Connection quality affects data timeliness, not indicator accuracy.</p>
+
 <hr />
-<h2 id="alert-notifications">📱 Alert Notifications<a class="headerlink" href="#alert-notifications" title="Permanent link">&para;</a></h2>
-<h3 id="mobile-push-notifications">Mobile Push Notifications<a class="headerlink" href="#mobile-push-notifications" title="Permanent link">&para;</a></h3>
-<p><strong>Requirements:</strong>
-- TradingView mobile app installed
-- Account logged in on mobile device
-- Alerts configured on desktop or mobile</p>
-<p><strong>Works On:</strong>
-- ✅ iOS (iPhone, iPad)
-- ✅ Android phones/tablets
-- ✅ Even when app is closed (background notifications)</p>
-<h3 id="email-alerts">Email Alerts<a class="headerlink" href="#email-alerts" title="Permanent link">&para;</a></h3>
-<p><strong>Requirements:</strong>
-- Valid email address on TradingView account
-- Email alerts enabled in TradingView settings</p>
-<p><strong>Free Tier Limitations:</strong>
-- Free accounts: Limited alert capacity
-- Paid accounts: More simultaneous active alerts</p>
+
+<h2 id="alert-notifications">📱 Alert Notifications</h2>
+
+<h3 id="mobile-push-notifications">Mobile Push Notifications</h3>
+
+<p><strong>Requirements:</strong></p>
+<ul>
+<li>TradingView mobile app installed</li>
+<li>Account logged in on mobile device</li>
+<li>Alerts configured on desktop or mobile</li>
+</ul>
+
+<p><strong>Works On:</strong></p>
+<ul>
+<li>✅ iOS (iPhone, iPad)</li>
+<li>✅ Android phones/tablets</li>
+<li>✅ Even when app is closed (background notifications)</li>
+</ul>
+
+<h3 id="email-alerts">Email Alerts</h3>
+
+<p><strong>Requirements:</strong></p>
+<ul>
+<li>Valid email address on TradingView account</li>
+<li>Email alerts enabled in TradingView settings</li>
+</ul>
+
+<p><strong>Free Tier Limitations:</strong></p>
+<ul>
+<li>Free accounts: Limited alert capacity</li>
+<li>Paid accounts: More simultaneous active alerts</li>
+</ul>
+
 <hr />
-<h2 id="browser-extensions-ad-blockers">🔧 Browser Extensions &amp; Ad Blockers<a class="headerlink" href="#browser-extensions-ad-blockers" title="Permanent link">&para;</a></h2>
-<h3 id="compatible">Compatible<a class="headerlink" href="#compatible" title="Permanent link">&para;</a></h3>
+
+<h2 id="browser-extensions-ad-blockers">🔧 Browser Extensions & Ad Blockers</h2>
+
+<h3 id="compatible">Compatible</h3>
+
 <p>Most browser extensions work fine, but some may interfere:</p>
-<p><strong>Known Issues:</strong>
-- ⚠️ Aggressive ad blockers may block TradingView scripts
-- ⚠️ Privacy extensions (Privacy Badger, uBlock Origin) may need whitelisting</p>
-<p><strong>If Indicator Not Loading:</strong>
-1. Disable ad blocker for TradingView.com
-2. Whitelist TradingView in privacy extensions
-3. Try incognito/private mode (extensions usually disabled)
-4. Clear browser cache and cookies</p>
+
+<p><strong>Known Issues:</strong></p>
+<ul>
+<li>⚠️ Aggressive ad blockers may block TradingView scripts</li>
+<li>⚠️ Privacy extensions (Privacy Badger, uBlock Origin) may need whitelisting</li>
+</ul>
+
+<p><strong>If Indicator Not Loading:</strong></p>
+<ol>
+<li>Disable ad blocker for TradingView.com</li>
+<li>Whitelist TradingView in privacy extensions</li>
+<li>Try incognito/private mode (extensions usually disabled)</li>
+<li>Clear browser cache and cookies</li>
+</ol>
+
 <hr />
-<h2 id="data-storage">💾 Data &amp; Storage<a class="headerlink" href="#data-storage" title="Permanent link">&para;</a></h2>
-<h3 id="browser-storage">Browser Storage<a class="headerlink" href="#browser-storage" title="Permanent link">&para;</a></h3>
-<p>Signal Pilot indicators use TradingView's storage system:
-- Settings saved automatically per chart
-- Templates saved to TradingView account
-- No local storage required</p>
-<h3 id="offline-usage">Offline Usage<a class="headerlink" href="#offline-usage" title="Permanent link">&para;</a></h3>
-<p><strong>Not Supported:</strong> Signal Pilot indicators require active TradingView connection
-- Cannot use offline
-- Cannot save for offline analysis
-- Requires internet for real-time calculations</p>
+
+<h2 id="data-storage">💾 Data & Storage</h2>
+
+<h3 id="browser-storage">Browser Storage</h3>
+
+<p>Signal Pilot indicators use TradingView's storage system:</p>
+<ul>
+<li>Settings saved automatically per chart</li>
+<li>Templates saved to TradingView account</li>
+<li>No local storage required</li>
+</ul>
+
+<h3 id="offline-usage">Offline Usage</h3>
+
+<p><strong>Not Supported:</strong> Signal Pilot indicators require active TradingView connection</p>
+<ul>
+<li>Cannot use offline</li>
+<li>Cannot save for offline analysis</li>
+<li>Requires internet for real-time calculations</li>
+</ul>
+
 <hr />
-<h2 id="regional-availability">🌍 Regional Availability<a class="headerlink" href="#regional-availability" title="Permanent link">&para;</a></h2>
-<h3 id="tradingview-platform-availability">TradingView Platform Availability<a class="headerlink" href="#tradingview-platform-availability" title="Permanent link">&para;</a></h3>
-<p>Signal Pilot works wherever TradingView is accessible:
-- ✅ North America
-- ✅ Europe
-- ✅ Asia-Pacific
-- ✅ Latin America
-- ✅ Middle East
-- ✅ Africa</p>
+
+<h2 id="regional-availability">🌍 Regional Availability</h2>
+
+<h3 id="tradingview-platform-availability">TradingView Platform Availability</h3>
+
+<p>Signal Pilot works wherever TradingView is accessible:</p>
+<ul>
+<li>✅ North America</li>
+<li>✅ Europe</li>
+<li>✅ Asia-Pacific</li>
+<li>✅ Latin America</li>
+<li>✅ Middle East</li>
+<li>✅ Africa</li>
+</ul>
+
 <p><strong>Restrictions:</strong> Some regions may have limited TradingView access due to local regulations. Check TradingView.com availability in your region.</p>
+
 <hr />
-<h2 id="security-requirements">🔐 Security Requirements<a class="headerlink" href="#security-requirements" title="Permanent link">&para;</a></h2>
-<h3 id="account-security">Account Security<a class="headerlink" href="#account-security" title="Permanent link">&para;</a></h3>
-<p><strong>Recommended:</strong>
-- Two-factor authentication (2FA) enabled on TradingView
-- Strong password (12+ characters)
-- Unique password (not reused from other sites)</p>
+
+<h2 id="security-requirements">🔐 Security Requirements</h2>
+
+<h3 id="account-security">Account Security</h3>
+
+<p><strong>Recommended:</strong></p>
+<ul>
+<li>Two-factor authentication (2FA) enabled on TradingView</li>
+<li>Strong password (12+ characters)</li>
+<li>Unique password (not reused from other sites)</li>
+</ul>
+
 <p><strong>Note:</strong> Signal Pilot indicators run within TradingView's secure environment. No separate login required.</p>
+
 <hr />
-<h2 id="quick-compatibility-check">⚡ Quick Compatibility Check<a class="headerlink" href="#quick-compatibility-check" title="Permanent link">&para;</a></h2>
-<h3 id="youre-ready-if">✅ You're Ready If:<a class="headerlink" href="#youre-ready-if" title="Permanent link">&para;</a></h3>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Have TradingView account (any tier)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Modern browser (Chrome, Firefox, Safari, Edge)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Stable internet connection (5+ Mbps)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Device made in last 5-7 years</li>
+
+<h2 id="quick-compatibility-check">⚡ Quick Compatibility Check</h2>
+
+<h3 id="youre-ready-if">✅ You're Ready If:</h3>
+<ul>
+<li>[ ] Have TradingView account (any tier)</li>
+<li>[ ] Modern browser (Chrome, Firefox, Safari, Edge)</li>
+<li>[ ] Stable internet connection (5+ Mbps)</li>
+<li>[ ] Device made in last 5-7 years</li>
 </ul>
-<h3 id="upgrade-recommended-if">⚠️ Upgrade Recommended If:<a class="headerlink" href="#upgrade-recommended-if" title="Permanent link">&para;</a></h3>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Using TradingView Free tier + want to use 3+ indicators simultaneously → Upgrade to Essential</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Computer slower than expected → See <a href="../advanced/performance-optimization.md">Performance Optimization</a></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Mobile-only user → Get desktop access for full functionality</li>
+
+<h3 id="upgrade-recommended-if">⚠️ Upgrade Recommended If:</h3>
+<ul>
+<li>[ ] Using TradingView Free tier + want to use 3+ indicators simultaneously → Upgrade to Essential</li>
+<li>[ ] Computer slower than expected → See <a href="../ref-troubleshooting/">Performance Troubleshooting</a></li>
+<li>[ ] Mobile-only user → Get desktop access for full functionality</li>
 </ul>
+
 <hr />
-<h2 id="common-questions">❓ Common Questions<a class="headerlink" href="#common-questions" title="Permanent link">&para;</a></h2>
-<h3 id="q-do-i-need-tradingview-propremium-to-use-signal-pilot">Q: Do I need TradingView Pro/Premium to use Signal Pilot?<a class="headerlink" href="#q-do-i-need-tradingview-propremium-to-use-signal-pilot" title="Permanent link">&para;</a></h3>
+
+<h2 id="common-questions">❓ Common Questions</h2>
+
+<h3 id="q-do-i-need-tradingview-propremium-to-use-signal-pilot">Q: Do I need TradingView Pro/Premium to use Signal Pilot?</h3>
 <p><strong>A:</strong> No. Signal Pilot works on all TradingView tiers, including Free. However, Free tier limits you to 3 indicators per chart. Essential ($14.95/mo) allows 5 indicators, recommended if using The Trinity (3 indicators).</p>
-<h3 id="q-will-signal-pilot-slow-down-my-charts">Q: Will Signal Pilot slow down my charts?<a class="headerlink" href="#q-will-signal-pilot-slow-down-my-charts" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> Minimal impact with 1-3 indicators. Performance depends on your device, number of indicators active, and bars loaded. See <a href="../advanced/performance-optimization.md">Performance Guide</a> for optimization.</p>
-<h3 id="q-can-i-use-signal-pilot-on-my-phone">Q: Can I use Signal Pilot on my phone?<a class="headerlink" href="#q-can-i-use-signal-pilot-on-my-phone" title="Permanent link">&para;</a></h3>
+
+<h3 id="q-will-signal-pilot-slow-down-my-charts">Q: Will Signal Pilot slow down my charts?</h3>
+<p><strong>A:</strong> Minimal impact with 1-3 indicators. Performance depends on your device, number of indicators active, and bars loaded. See <a href="../ref-troubleshooting/">Troubleshooting Guide</a> for optimization tips.</p>
+
+<h3 id="q-can-i-use-signal-pilot-on-my-phone">Q: Can I use Signal Pilot on my phone?</h3>
 <p><strong>A:</strong> Yes. Signal Pilot indicators work on TradingView mobile app (iOS/Android). Functionality is viewable but customization is limited compared to desktop. Best for monitoring, not primary analysis.</p>
-<h3 id="q-what-if-i-have-a-slow-internet-connection">Q: What if I have a slow internet connection?<a class="headerlink" href="#q-what-if-i-have-a-slow-internet-connection" title="Permanent link">&para;</a></h3>
+
+<h3 id="q-what-if-i-have-a-slow-internet-connection">Q: What if I have a slow internet connection?</h3>
 <p><strong>A:</strong> Minimum 5 Mbps recommended. Slower connections may cause delayed data updates from TradingView, but won't affect indicator calculations. Indicators work with the data TradingView provides.</p>
-<h3 id="q-does-signal-pilot-work-on-maclinux">Q: Does Signal Pilot work on Mac/Linux?<a class="headerlink" href="#q-does-signal-pilot-work-on-maclinux" title="Permanent link">&para;</a></h3>
+
+<h3 id="q-does-signal-pilot-work-on-maclinux">Q: Does Signal Pilot work on Mac/Linux?</h3>
 <p><strong>A:</strong> Yes. Signal Pilot runs in your browser on TradingView.com, so any operating system with a modern browser works (Windows, macOS, Linux, ChromeOS, etc.).</p>
-<h3 id="q-can-i-use-signal-pilot-without-tradingview">Q: Can I use Signal Pilot without TradingView?<a class="headerlink" href="#q-can-i-use-signal-pilot-without-tradingview" title="Permanent link">&para;</a></h3>
+
+<h3 id="q-can-i-use-signal-pilot-without-tradingview">Q: Can I use Signal Pilot without TradingView?</h3>
 <p><strong>A:</strong> No. Signal Pilot indicators are built for the TradingView platform exclusively. TradingView account required (free tier acceptable).</p>
+
 <hr />
-<h2 id="next-steps">🚀 Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+
+<h2 id="next-steps">🚀 Next Steps</h2>
+
 <p><strong>Ready to get started?</strong></p>
+
 <ol>
 <li>Verify you meet requirements above ✅</li>
 <li>Choose which indicator to start with: <a href="../start-which-indicator/">Which Indicator Should I Start?</a></li>
-<li>Follow installation guide: <a href="#">Installation</a> <em>(link to installation guide)</em></li>
-<li>Bookmark quick references: <a href="../ref-cheatsheets/all-indicators-at-a-glance/">All Indicators At-A-Glance</a></li>
-<li>Join the community: <a href="../community/index.md">Community</a></li>
+<li>Follow installation guide: <a href="../troubleshooting-installation/">Installation Guide</a></li>
+<li>Bookmark quick references: <a href="../ref-cheatsheets-at-a-glance/">All Indicators At-A-Glance</a></li>
+<li>Join the community: <a href="../about-support/">Support & Community</a></li>
 </ol>
+
 <hr />
-<p><strong>Need Help?</strong>
-- Installation issues: <a href="../troubleshooting-installation/">Installation Troubleshooting</a>
-- Performance issues: <a href="../advanced/performance-optimization.md">Performance Optimization</a>
-- Technical support: support@signalpilot.io</p>
 
+<p><strong>Need Help?</strong></p>
+<ul>
+<li>Installation issues: <a href="../troubleshooting-installation/">Installation Troubleshooting</a></li>
+<li>Performance issues: <a href="../ref-troubleshooting/">Performance Troubleshooting</a></li>
+<li>Technical support: support@signalpilot.io</li>
+</ul>
 
-
-
-
-
-
-  
-    
-  
-  
-    
-  
-
-
-  <aside class="md-source-file">
-    
-      
-  <span class="md-source-file__fact">
-    <span class="md-icon" title="Last update">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
-    </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 10, 2025 20:20:46 UTC"><span class="timeago" datetime="2025-11-10T20:20:46+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 10, 2025 20:20:46 UTC">2025-11-10</span>
-  </span>
-
-    
-    
-      
-  <span class="md-source-file__fact">
-    <span class="md-icon" title="Created">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
-    </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="November 10, 2025 02:25:21 UTC"><span class="timeago" datetime="2025-11-10T02:25:21+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="November 10, 2025 02:25:21 UTC">2025-11-10</span>
-  </span>
-
-    
-    
-    
-  </aside>
-
-
-  
-
-
-
-  <form class="md-feedback" name="feedback" hidden>
-    <fieldset>
-      <legend class="md-feedback__title">
-        Was this page helpful?
-      </legend>
-      <div class="md-feedback__inner">
-        <div class="md-feedback__list">
-          
-            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
-            </button>
-          
-            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"/></svg>
-            </button>
-          
-        </div>
-        <div class="md-feedback__note">
-          
-            <div data-md-value="1" hidden>
-              
-              
-                
-              
-              
-              
-                
-                
-              
-              Thanks for your feedback!
-            </div>
-          
-            <div data-md-value="0" hidden>
-              
-              
-                
-              
-              
-              
-                
-                
-              
-              Thanks for your feedback! Help us improve by <a href="https://github.com/Signalpilot/signalpilot-docs/issues/new" target="_blank" rel="noopener">reporting an issue</a>.
-            </div>
-          
-        </div>
-      </div>
-    </fieldset>
-  </form>
-
-
-                
-              </article>
+</article>
             </div>
           
           
-  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+
 
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+
+
         </div>
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
   Back to top
 </button>
         
@@ -2358,8 +2289,7 @@
   
 </div>
       
-        
-<div class="md-social">
+        <div class="md-social">
   
     
     
@@ -2369,7 +2299,7 @@
       
     
     <a href="https://x.com/signalpilot" target="_blank" rel="noopener" title="x.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M357.2 48h70.6L273.6 224.2 455 464H313L201.7 318.6 74.5 464H3.8l164.9-188.5L-5.2 48h145.6l100.5 132.9zm-24.8 373.8h39.1L119.1 88h-42z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"/></svg>
     </a>
   
     
@@ -2380,7 +2310,7 @@
       
     
     <a href="https://github.com/Signalpilot" target="_blank" rel="noopener" title="github.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
     </a>
   
 </div>
@@ -2395,24 +2325,65 @@
     </div>
     
     
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.sections", "navigation.path", "content.code.copy", "search.suggest", "search.highlight", "content.tabs.link", "content.tooltips", "content.action.edit"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+
+
     
-      
-      
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.top", "navigation.sections", "navigation.path", "content.code.copy", "search.suggest", "search.highlight", "content.tabs.link", "content.tooltips", "content.action.edit"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
-    
-      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+
+
       
         <script src="../js/timeago.min.js"></script>
+
+
       
         <script src="../js/timeago_mkdocs_material.js"></script>
+
+
       
         <script src="../assets/brand.js"></script>
+
+
       
         <script src="../assets/sp-bg.js"></script>
+
+
       
         <script src="../assets/keyword-highlighter.js"></script>
+
+
       
     
-  </body>
+      <script src="../assets/wheel-diagnostic.js"></script>
+      <script src="../assets/enhancements.js"></script>
+    <script src="assets/remove-tooltips.js"></script>
+    <script src="assets/bottom-sheet-nav.js"></script>
+      <script src="../assets/sticky-toc-scroll.js"></script>
+    <script src="../assets/components.js"></script>
+    <!-- ========================================
+       SIGNAL PILOT ENHANCEMENTS - JS
+       To disable: comment out this entire block
+       ======================================== -->
+  <script src="../js/feedback-system.js"></script>
+  <!-- END SIGNAL PILOT ENHANCEMENTS - JS -->
+
+  <!-- Meta-Learning & Accessibility Features -->
+  <script src="../js/keyboard-navigation.js"></script>
+  <script src="../js/text-sizing.js"></script>
+  <script src="../js/knowledge-checks.js"></script>
+
+      <!-- Signal Pilot Chatbot -->
+    <script src="/js/chatbot.js"></script>
+  
+
+
+
+
+
+
+
+  <!-- Custom Bottom Sheet Navigation Script -->
+  <script src="../assets/custom-bottom-sheet.js?v7"></script>
+</body>
 </html>

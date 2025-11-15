@@ -1,0 +1,741 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Volume Oracle v1.0 - Advanced Learning Guide - Signal Pilot Docs</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <meta name="theme-color" content="#10b981">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.signalpilot.io/volume-oracle-v10/learning.html">
+    <meta property="og:title" content="Volume Oracle v1.0 - Advanced Learning Guide">
+    <meta property="og:description" content="Follow institutional money flow, master smart money strategies, institutional flow tracking, and position psychology. Complete learning guide for Volume Oracle.">
+    <meta property="og:image" content="https://docs.signalpilot.io/assets/images/preview.png">
+    <meta property="og:site_name" content="Signal Pilot Docs">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.signalpilot.io/volume-oracle-v10/learning.html">
+    <meta name="twitter:title" content="Volume Oracle v1.0 - Advanced Learning Guide">
+    <meta name="twitter:description" content="Follow institutional money flow, master smart money strategies, institutional flow tracking, and position psychology. Complete learning guide for Volume Oracle.">
+    <meta name="twitter:image" content="https://docs.signalpilot.io/assets/images/preview.png">
+
+    <!-- Material for MkDocs stylesheets -->
+    <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+    <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+    <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+
+    <!-- Signal Pilot custom CSS -->
+    <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+    <link rel="stylesheet" href="../assets/brand.css">
+    <link rel="stylesheet" href="../assets/aurora.css">
+    <link rel="stylesheet" href="../assets/responsive-optimization.css">
+    <link rel="stylesheet" href="../assets/content-overflow-fix.css">
+
+    <!-- Learning page custom styles -->
+    <style>
+        /* Smaller base font for learning content */
+        .md-typeset {
+            font-size: 0.875rem; /* 14px */
+            line-height: 1.6;
+        }
+
+        .md-typeset h1 {
+            font-size: 1.75em;
+            font-weight: 400;
+        }
+
+        .md-typeset h2 {
+            font-size: 1.35em;
+            font-weight: 400;
+            padding-bottom: 0.3em;
+            border-bottom: 2px solid rgba(6, 182, 212, 0.3);
+        }
+
+        .md-typeset h3 {
+            font-size: 1.15em;
+            font-weight: 400;
+        }
+
+        .md-typeset p {
+            font-size: 1em;
+            margin: 1em 0;
+        }
+
+        /* Hero section with gradient */
+        .learning-hero, .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            border-radius: 12px;
+            margin: 2rem 0 3rem;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .learning-hero-icon, .hero-icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+        }
+
+        .learning-hero h1, .hero h1 {
+            color: white !important;
+            font-size: 1.75em !important;
+            margin: 0 0 1rem 0 !important;
+            border: none !important;
+            padding: 0 !important;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .learning-hero p, .hero p {
+            color: rgba(255,255,255,0.95) !important;
+            font-size: 1em !important;
+            margin: 0 !important;
+        }
+
+        /* Challenge boxes */
+        .challenge-box {
+            background: rgba(6, 182, 212, 0.08);
+            border-left: 4px solid #06b6d4;
+            padding: 1.8rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .challenge-box h3 {
+            color: #06b6d4;
+            margin-top: 0 !important;
+        }
+
+        /* Mistake boxes */
+        .mistake-box {
+            background: rgba(6, 182, 212, 0.08);
+            border-left: 4px solid #ef4444;
+            padding: 1.8rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .mistake-box h3 {
+            color: #ef4444;
+            margin-top: 0 !important;
+        }
+
+        /* Decision tree */
+        .decision-tree {
+            background: var(--md-code-bg-color);
+            padding: 2rem;
+            border-radius: 8px;
+            font-family: var(--md-code-font);
+            font-size: 0.95em;
+            line-height: 1.5;
+            overflow-x: auto;
+            margin: 2rem 0;
+            border: 2px solid rgba(6, 182, 212, 0.2);
+        }
+
+        /* Info callouts */
+        .info-box, .sp-callout, .sp-callout--info, .quick-rules, .intro-box, .flow-explanation, .divergence-types, .workflow-box, .tree-usage {
+            background: rgba(6, 182, 212, 0.08);
+            border-left: 4px solid #06b6d4;
+            padding: 1.8rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .info-box h3, .sp-callout h3, .quick-rules h3 {
+            color: #06b6d4;
+            margin-top: 0 !important;
+        }
+
+        /* Pairing section */
+        .pairing-section {
+            background: rgba(6, 182, 212, 0.05);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            padding: 1.8rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .pairing-section h3 {
+            color: #06b6d4;
+            margin-top: 0 !important;
+        }
+
+        /* Visual dividers */
+        .visual-divider {
+            text-align: center;
+            margin: 3rem 0;
+            font-size: 2.5rem;
+            opacity: 0.3;
+        }
+
+        /* Back link styling */
+        .back-to-docs, .back-link {
+            display: inline-block;
+            margin: 2rem 0;
+            padding: 0.8rem 1.5rem;
+            background: rgba(100, 100, 200, 0.1);
+            border: 1px solid #10b981;
+            color: #06b6d4;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .back-to-docs:hover, .back-link:hover {
+            background: rgba(16, 185, 129, 0.2);
+            transform: translateX(-4px);
+        }
+    </style>
+</head>
+
+<body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan">
+
+<input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+<input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+    <a href="#content" class="md-skip">Skip to content</a>
+</div>
+<div data-md-component="announce"></div>
+
+<!-- Signal Pilot brand bar -->
+<div class="sp-topnav">
+    <div class="sp-topnav__inner">
+        <a href="https://signalpilot.io" target="_blank" rel="noopener noreferrer" class="brand">
+            <span>Signal Pilot</span>
+        </a>
+        <nav class="sp-links" aria-label="Signal Pilot">
+            <a href="https://signalpilot.io/#why" target="_blank" rel="noopener noreferrer">Why</a>
+            <a href="https://signalpilot.io/#inside" target="_blank" rel="noopener noreferrer">What's inside</a>
+            <a href="https://education.signalpilot.io/" target="_blank" rel="noopener noreferrer">Education</a>
+            <a aria-current="page" href="https://docs.signalpilot.io/">Docs</a>
+            <a href="https://signalpilot.io/#pricing" target="_blank" rel="noopener noreferrer">Pricing</a>
+            <a href="https://signalpilot.io/#faq" target="_blank" rel="noopener noreferrer">FAQ</a>
+        </nav>
+    </div>
+</div>
+
+<header class="md-header md-header--shadow" data-md-component="header">
+    <nav class="md-header__inner md-grid" aria-label="Header">
+        <a href=".." title="Signal Pilot Docs" class="md-header__button md-logo" aria-label="Signal Pilot Docs" data-md-component="logo"></a>
+        <label class="md-header__button md-icon" for="__drawer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+        </label>
+        <div class="md-header__title" data-md-component="header-title">
+            <div class="md-header__ellipsis">
+                <div class="md-header__topic">
+                    <span class="md-ellipsis">Signal Pilot Docs</span>
+                </div>
+                <div class="md-header__topic" data-md-component="header-topic">
+                    <span class="md-ellipsis">Learning Guides</span>
+                </div>
+            </div>
+        </div>
+        
+        <form class="md-header__option" data-md-component="palette">
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_0">
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_1">
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+        </form>
+        
+        <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+        
+        <label class="md-header__button md-icon" for="__search">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+            <label class="md-search__overlay" for="__search"></label>
+            <div class="md-search__inner" role="search">
+                <form class="md-search__form" name="search">
+                    <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+                    <label class="md-search__icon md-icon" for="__search">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+                    </label>
+                    <nav class="md-search__options" aria-label="Search">
+                        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+                        </button>
+                    </nav>
+                    <div class="md-search__suggest" data-md-component="search-suggest"></div>
+                </form>
+                <div class="md-search__output">
+                    <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+                        <div class="md-search-result" data-md-component="search-result">
+                            <div class="md-search-result__meta">Initializing search</div>
+                            <ol class="md-search-result__list" role="presentation"></ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="md-header__source">
+            <a href="https://github.com/Signalpilot/signalpilot-docs" title="Go to repository" class="md-source" data-md-component="source">
+                <div class="md-source__icon md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+                </div>
+                <div class="md-source__repository">signalpilot-docs</div>
+            </a>
+        </div>
+    </nav>
+</header>
+
+<div class="md-container" data-md-component="container">
+        <main class="md-main" data-md-component="main">
+            <div class="md-main__inner md-grid">
+                <div class="md-content" data-md-component="content">
+                <article class="md-content__inner md-typeset">
+                    <a href="index.html" class="back-link">← Back to Volume Oracle Documentation</a>
+
+                    <div class="hero">
+                        <div class="hero-icon">📊</div>
+                        <h1>Volume Oracle v1.0<br/>Advanced Learning Guide</h1>
+                        <p>Follow the Smart Money • Institutional Flow • Position Tracking Psychology</p>
+                        <p style="margin-top: 1rem !important; font-size: 1em !important; opacity: 0.9;">⏱️ Reading Time: 14 minutes</p>
+                    </div>
+
+                    <div class="intro-box">
+                        <strong>💰 The Secret Retail Traders Miss:</strong> When Volume Flow turns green, they buy instantly. Price keeps dropping. <em>"Why isn't this working?!"</em> Because green Flow means <strong>institutions are accumulating</strong>, not that price will immediately rise. Smart money buys <em>while</em> price falls. This guide teaches you to read institutional behavior correctly and avoid the psychological traps that make retail traders exit right before the move.
+                    </div>
+
+                    <div class="flow-explanation">
+                        <h3>🎯 Understanding What Volume Flow Actually Tells You</h3>
+                        <p><strong>Flow Color ≠ Immediate Price Direction</strong></p>
+                        <ul>
+                            <li>🟢 <strong>Green Flow:</strong> Institutions are <em>accumulating</em> (buying). Often happens DURING price drops.</li>
+                            <li>🔴 <strong>Red Flow:</strong> Institutions are <em>distributing</em> (selling). Often happens DURING price rises.</li>
+                            <li>⚪ <strong>Neutral Flow:</strong> No clear institutional bias. Wait for direction.</li>
+                        </ul>
+                        <p><strong>Key Insight:</strong> Smart money accumulates during weakness, distributes during strength. Flow shows <em>preparation</em>, not <em>execution</em>.</p>
+                    </div>
+
+                    <div class="visual-divider">🚀</div>
+
+                    <h2>🚀 Your First Signal in 5 Minutes</h2>
+
+                    <div class="info-box" style="background: rgba(6, 182, 212, 0.08); border-left-color: #22c55e;">
+                        <h3 style="color: #22c55e; margin-top: 0;">Never used Volume Oracle before? Start here.</h3>
+
+                        <p><strong>Step 1: Enable the Indicator</strong><br>
+                        Load Volume Oracle on any timeframe (Daily recommended for beginners). The main component is the Volume Flow color bar.</p>
+
+                        <p><strong>Step 2: Wait for Strong Flow + Price Divergence</strong><br>
+                        Look for green flow (institutional buying) DURING price decline, or red flow (institutional selling) DURING price rise.</p>
+
+                        <p><strong>Step 3: Check for Accumulation/Distribution Phase</strong><br>
+                        • Green flow for 3+ days while price consolidates or drops = accumulation<br>
+                        • Red flow for 3+ days while price consolidates or rises = distribution</p>
+
+                        <p><strong>Step 4: Wait for Price Confirmation</strong><br>
+                        Don't trade flow color alone. Wait for:<br>
+                        • Green flow + price makes higher low = Enter long<br>
+                        • Red flow + price makes lower high = Enter short</p>
+
+                        <p><strong>Step 5: Set Stop</strong><br>
+                        Place stop beyond the consolidation range or recent swing point</p>
+
+                        <hr style="margin: 1.5rem 0; opacity: 0.2;">
+
+                        <p><strong>Example: SPY Daily Chart</strong></p>
+                        <ul>
+                            <li>Price dropping: $450 → $445 → $443</li>
+                            <li>Volume Flow turns green on day 2 ✅ (institutions accumulating)</li>
+                            <li>Flow stays green for 5 days while price consolidates $442-$445 ✅</li>
+                            <li>Day 6: Price breaks above $446 (higher low confirmed) ✅</li>
+                            <li>Entry: Long at $446.50 (price confirmation received)</li>
+                            <li>Stop: $441.50 (below consolidation range)</li>
+                        </ul>
+
+                        <p style="margin-bottom: 0;"><em>Never trade flow color alone. Green flow can persist for days while price falls. Wait for price structure to confirm institutional intent.</em></p>
+                    </div>
+
+                    <div class="visual-divider">📋</div>
+
+                    <h2>📋 The 3-2-1 Rule for Volume Oracle</h2>
+
+                    <div class="info-box" style="background: rgba(6, 182, 212, 0.08); border-left-color: #a855f7;">
+                        <h3 style="color: #a855f7; margin-top: 0;">Memorize This Framework</h3>
+
+                        <p><strong>3 Things to ALWAYS Check:</strong></p>
+                        <ul>
+                            <li>✅ <strong>Flow Color:</strong> Green (accumulation) or Red (distribution) for 3+ bars</li>
+                            <li>✅ <strong>Price Confirmation:</strong> Wait for structure change (higher low for green, lower high for red)</li>
+                            <li>✅ <strong>Volume Context:</strong> Check if volume is increasing during flow (stronger signal)</li>
+                        </ul>
+
+                        <p><strong>2 Things to NEVER Do:</strong></p>
+                        <ul>
+                            <li>❌ <strong>Never trade flow color alone</strong> (need price confirmation first)</li>
+                            <li>❌ <strong>Never expect immediate price move</strong> (accumulation/distribution takes time)</li>
+                        </ul>
+
+                        <p><strong>1 Golden Rule:</strong></p>
+                        <p style="font-size: 1.15em; padding: 1rem; background: rgba(34, 139, 34, 0.15); border-radius: 6px; margin-bottom: 0;">
+                            📌 <strong>Flow shows preparation. Price shows execution. Trade when both align.</strong><br>
+                            <em style="font-size: 0.9em;">Green flow tells you institutions are buying. Price breakout tells you they're ready to push it higher. Wait for both.</em>
+                        </p>
+                    </div>
+
+                    <div class="visual-divider">🧠</div>
+
+                    <h2>🧠 Volume Trading Psychology: The 3 Critical Challenges</h2>
+
+                    <div class="challenge-box">
+                        <h3>🟢 Challenge 1: Trusting Volume Flow Color Without Price Confirmation</h3>
+                        <p><strong>What Happens:</strong> Volume Flow turns bright green (bullish institutional accumulation). You immediately buy, thinking "Smart money is buying!" Over the next 3 days, price drops another 4%. Flow stays green the entire time. You're confused and frustrated: <em>"Flow is green but price is falling! This doesn't make sense!"</em></p>
+
+                        <p><strong>Why This Happens:</strong> You're confusing <strong>accumulation</strong> (what institutions are doing) with <strong>immediate price direction</strong> (what you want to happen). Institutions accumulate <em>over time</em>, often during price declines. They're patient buyers.</p>
+
+                        <p><strong>The Fix:</strong> Volume Flow shows accumulation/distribution phase, not immediate price direction. Green Flow in downtrend = smart money accumulating, but price may continue falling before reversing. <strong>Wait for price confirmation</strong> (higher low, structure break, consolidation end) before entering.</p>
+
+                        <p><strong>Mental Script:</strong> <em>"Flow color + price action alignment = trade. Flow alone = observation, not entry signal."</em></p>
+                    </div>
+
+                    <div class="challenge-box">
+                        <h3>🚫 Challenge 2: Ignoring Position Manager Warnings</h3>
+                        <p><strong>What Happens:</strong> You're in a long position. Position Manager displays red "TRAPPED LONG" label. You think: <em>"I believe in this trade. My analysis says it should go up."</em> You hold stubbornly. Price drops another 5% over the next 2 days. Position Manager was warning you about institutional exits, but ego got in the way.</p>
+
+                        <p><strong>Why This Happens:</strong> Confirmation bias and ego. You don't want to admit you might be wrong. You rationalize: "The indicator must be wrong this time."</p>
+
+                        <p><strong>The Fix:</strong> Position Manager tracks institutional behavior—entry zones and exit zones. When it shows "trapped" signals, it's detecting institutional exits <strong>before</strong> retail traders notice. Listen to these warnings. Reassess your position immediately. Exit or tighten stops significantly.</p>
+
+                        <p><strong>Mental Script:</strong> <em>"When Position Manager says trapped, I reassess immediately. Ego costs money. Data saves it."</em></p>
+                    </div>
+
+                    <div class="challenge-box">
+                        <h3>📈 Challenge 3: Trading Volume Spikes Without Context</h3>
+                        <p><strong>What Happens:</strong> You see a massive volume spike—5x average volume on a single bar. You think: <em>"Big move coming! I need to get in!"</em> You enter immediately. Price chops sideways for a week, then slowly drifts lower. The volume spike was institutional <strong>distribution</strong> (selling into strength), not accumulation.</p>
+
+                        <p><strong>Why This Happens:</strong> You see volume and assume "big volume = big move up." But volume doesn't indicate direction—it indicates participation.</p>
+
+                        <p><strong>The Fix:</strong> Volume spikes need <strong>Flow color context</strong>:</p>
+                        <ul>
+                            <li>✅ <strong>Volume spike + green Flow:</strong> Accumulation (bullish) - institutions buying aggressively</li>
+                            <li>❌ <strong>Volume spike + red Flow:</strong> Distribution (bearish) - institutions selling into demand</li>
+                            <li>⚪ <strong>Volume spike + neutral Flow:</strong> Wait for Flow direction confirmation</li>
+                        </ul>
+
+                        <p><strong>Mental Script:</strong> <em>"Volume spike + Flow green = bullish. Volume spike + Flow red = bearish. Volume alone = wait for context."</em></p>
+                    </div>
+
+                    <div class="visual-divider">✅</div>
+
+                    <h2>✅ Your First 3 Trades - Verification Checklist</h2>
+
+                    <div class="info-box" style="background: rgba(6, 182, 212, 0.08); border-left-color: #22c55e;">
+                        <h3 style="color: #22c55e; margin-top: 0;">Print This and Keep it Visible While Trading</h3>
+
+                        <p><strong>Before Every Trade, Verify:</strong></p>
+                        <div style="background: rgba(0,0,0,0.2); padding: 1.5rem; border-radius: 8px; font-family: var(--md-code-font);">
+                            <p><strong>Trade #_____ (Date: ______)</strong></p>
+                            <ul style="list-style: none; padding-left: 0;">
+                                <li>☐ <strong>Flow color confirmed</strong> (green or red for 3+ bars)</li>
+                                <li>☐ <strong>Price confirmation waited for</strong> (higher low for green, lower high for red)</li>
+                                <li>☐ <strong>Volume context checked</strong> (increasing volume during flow = stronger)</li>
+                                <li>☐ <strong>Not trading flow alone</strong> (have price structure confirmation)</li>
+                                <li>☐ <strong>Stop placed beyond range</strong> (below consolidation or swing low)</li>
+                                <li>☐ <strong>Position sized correctly</strong> (max 1% account risk)</li>
+                                <li>☐ <strong>No expectation of immediate move</strong> (accumulation/distribution takes time)</li>
+                            </ul>
+                        </div>
+
+                        <hr style="margin: 1.5rem 0; opacity: 0.2;">
+
+                        <p><strong>After Your First 3 Trades, Review:</strong></p>
+                        <ul>
+                            <li>Did I wait for price confirmation on all trades? <strong>Y / N</strong></li>
+                            <li>Did I trade flow color alone without waiting? <strong>Y / N</strong></li>
+                            <li>Which checklist item did I skip most often? <strong>_______________</strong></li>
+                            <li>Win rate so far: <strong>___/3</strong></li>
+                            <li>Did I get frustrated waiting for price to confirm flow? <strong>Y / N</strong></li>
+                        </ul>
+
+                        <p style="margin-bottom: 0;"><strong>Common Beginner Mistake:</strong> Trading flow color changes instantly without price confirmation. Green flow can last 5-7 days before price finally breaks out. Patience is the key—institutions accumulate slowly, you must too.</p>
+                    </div>
+
+                    <div class="visual-divider">🚫</div>
+
+                    <h2>🚫 Top 5 Mistakes That Kill Volume Traders</h2>
+
+                    <div class="mistake-box">
+                        <h3>Mistake #1: Trading Volume Flow Color Changes Without Price Confirmation</h3>
+                        <p><strong>What Happens:</strong> Flow turns green. You buy instantly without waiting for price to confirm. Price continues dropping for 2 days. Flow stayed green, but price ignored institutional accumulation initially because they're buying <em>slowly</em> over time.</p>
+
+                        <p><strong>The Fix:</strong> Flow shows institutional <strong>positioning</strong>, not immediate price action. Wait for price to confirm Flow direction before entering:</p>
+                        <ul>
+                            <li>✅ <strong>Green Flow + price forms higher low:</strong> Accumulation confirmed, buy</li>
+                            <li>✅ <strong>Red Flow + price forms lower high:</strong> Distribution confirmed, short</li>
+                            <li>❌ <strong>Green Flow + price still making lower lows:</strong> Wait, accumulation not yet reflected in price</li>
+                        </ul>
+                        <p><strong>Flow + price alignment = signal.</strong> Flow alone = watching, not trading.</p>
+                    </div>
+
+                    <div class="mistake-box">
+                        <h3>Mistake #2: Ignoring "Trapped Long/Short" Signals from Position Manager</h3>
+                        <p><strong>What Happens:</strong> Position Manager shows red "TRAPPED LONG" label on your position. You ignore it, thinking <em>"It'll bounce back. My stop is fine."</em> Price drops another 8% as institutions complete their exit. You finally exit at a major loss.</p>
+
+                        <p><strong>The Fix:</strong> "Trapped" signals detect institutional exits <strong>before</strong> retail notices. When Position Manager warns:</p>
+                        <ul>
+                            <li>Reassess your thesis immediately</li>
+                            <li>Check higher timeframe for confirmation</li>
+                            <li>Consider exiting or moving stop to breakeven</li>
+                            <li>At minimum, reduce position size</li>
+                        </ul>
+                        <p>Position Manager sees what retail doesn't: institutional order flow shifting. Trust it over your hope.</p>
+                    </div>
+
+                    <div class="mistake-box">
+                        <h3>Mistake #3: Trading Volume Spikes Without Flow Context</h3>
+                        <p><strong>What Happens:</strong> Massive volume bar appears—10x average. You enter immediately thinking <em>"Big money moving in!"</em> Price chops sideways then drops. The spike was distribution (institutions selling), not accumulation (institutions buying).</p>
+
+                        <p><strong>The Fix:</strong> <strong>NEVER trade volume spikes in isolation.</strong> Always check Flow color:</p>
+                        <ul>
+                            <li>🟢 <strong>Spike + Green Flow:</strong> Bullish accumulation - institutions buying aggressively</li>
+                            <li>🔴 <strong>Spike + Red Flow:</strong> Bearish distribution - institutions dumping on retail</li>
+                            <li>⚪ <strong>Spike + Neutral Flow:</strong> Inconclusive - could be either, wait for clarity</li>
+                        </ul>
+                    </div>
+
+                    <div class="mistake-box">
+                        <h3>Mistake #4: Confusing Flow Zones with Support/Resistance Levels</h3>
+                        <p><strong>What Happens:</strong> You see Flow zones on your chart (colored horizontal bands showing accumulation/distribution areas). You treat them like traditional support/resistance: <em>"Price is at the zone bottom, time to buy!"</em> Price breaks through the zone easily and continues dropping.</p>
+
+                        <p><strong>The Fix:</strong> Flow zones show <strong>WHERE institutions acted historically</strong>, not <strong>IF price will hold</strong>. They're informational, not barriers:</p>
+                        <ul>
+                            <li>Zones show past accumulation/distribution areas</li>
+                            <li>Use zones for <strong>context</strong> about institutional behavior</li>
+                            <li><strong>Don't use zones as stop-loss levels</strong>—they're not support/resistance</li>
+                            <li>Combine zones with actual price levels (Janus Atlas) for entries</li>
+                        </ul>
+                    </div>
+
+                    <div class="mistake-box">
+                        <h3>Mistake #5: Expecting Immediate Price Reaction to Flow Changes</h3>
+                        <p><strong>What Happens:</strong> Flow turns green (bullish). You buy. Price continues declining for 3 days straight. You think: <em>"This indicator doesn't work! Green Flow but price is falling!"</em> You exit frustrated. Two days later, price rallies 12%.</p>
+
+                        <p><strong>Why This Happens:</strong> You expect instant gratification. But institutional accumulation is a <strong>process</strong>, not an event.</p>
+
+                        <p><strong>The Fix:</strong> Institutional accumulation (green Flow) often occurs <strong>DURING price declines</strong>. Smart money buys the dip over days or weeks, accumulating slowly:</p>
+                        <ul>
+                            <li>Green Flow = accumulation <strong>phase</strong>, not instant reversal signal</li>
+                            <li>Institutions are patient—they accumulate while retail panics</li>
+                            <li>Price reverses when accumulation completes and retail capitulates</li>
+                            <li>Be patient: Flow + price confirmation + time = trade</li>
+                        </ul>
+                    </div>
+
+                    <div class="visual-divider">❓</div>
+
+                    <h2>❓ Top 10 Questions from New Users</h2>
+
+                    <div class="info-box">
+                        <h3 style="margin-top: 0;">Quick Answers to Common Confusion</h3>
+
+                        <p><strong>Q1: Flow turned green but price is still falling. What's wrong?</strong><br>
+                        A: Nothing's wrong. Green flow = institutions accumulating. They buy slowly over days/weeks. Price may fall while they accumulate. Wait for price confirmation (higher low) before entering.</p>
+
+                        <p><strong>Q2: How long should I wait for price to confirm flow?</strong><br>
+                        A: Usually 3-7 bars (days on daily chart). If flow is green for 10+ bars with no price confirmation, the signal may be weakening or institutions changed their mind.</p>
+
+                        <p><strong>Q3: Can I trade flow color changes alone without price?</strong><br>
+                        A: Not recommended. Flow shows institutional positioning, not immediate price action. You need price structure change (higher low, lower high) to confirm they're ready to move.</p>
+
+                        <p><strong>Q4: What if flow turns neutral after being green?</strong><br>
+                        A: Institutions stopped accumulating. If price hasn't confirmed yet, skip the trade. If you're already in, consider tightening stop or exiting.</p>
+
+                        <p><strong>Q5: Is red flow always bearish?</strong><br>
+                        A: Red flow means distribution (selling). But if price is in strong uptrend, it might just be profit-taking. Wait for price to make lower high before shorting.</p>
+
+                        <p><strong>Q6: Can I use Volume Oracle on intraday charts (1H, 15M)?</strong><br>
+                        A: Yes, but daily charts are most reliable. Intraday flow changes more frequently and has more false signals. Start with daily, then experiment with 4H.</p>
+
+                        <p><strong>Q7: What's better: volume spike or flow color?</strong><br>
+                        A: Flow color is more important. Volume spike without flow direction = noise. Green flow + volume spike = strong institutional buying. Red flow + volume spike = strong institutional selling.</p>
+
+                        <p><strong>Q8: Flow has been green for 20 days. Is it still valid?</strong><br>
+                        A: If price has already confirmed and rallied, you're late. If price still hasn't confirmed after 20 days, institutions may have given up. Look for fresher signals (3-7 days of flow).</p>
+
+                        <p><strong>Q9: Can institutions fake the flow signals?</strong><br>
+                        A: Volume Oracle measures actual volume flow, not intent. Institutions can change their mind mid-accumulation, which is why you wait for price confirmation before trusting the flow.</p>
+
+                        <p><strong>Q10: My win rate with Volume Oracle is 40%. What am I doing wrong?</strong><br>
+                        A: Most likely: (1) Trading flow alone without price confirmation, (2) Not waiting 3+ bars of consistent flow, (3) Expecting immediate moves (accumulation takes time). Review your last 20 trades against the checklist.</p>
+                    </div>
+
+                    <div class="visual-divider">📄</div>
+
+                    <h2>📄 Printable Quick Reference Cheat Sheet</h2>
+
+                    <div class="decision-tree" style="background: rgba(6, 182, 212, 0.05); border: 2px solid #228b22;">
+<pre style="font-size: 0.9em; line-height: 1.6;">
+┌────────────────────────────────────────────────────────────────┐
+│             VOLUME ORACLE QUICK REFERENCE                      │
+│                    (Save or Print This)                        │
+├────────────────────────────────────────────────────────────────┤
+│                                                                │
+│  ✅ GOOD SETUP REQUIREMENTS:                                   │
+│     • Flow color consistent for 3+ bars                       │
+│     • Price confirmation received (higher low/lower high)     │
+│     • Volume increasing during flow (stronger signal)         │
+│     • Patience maintained (no immediate move expectation)     │
+│                                                                │
+│  ❌ SKIP IF:                                                   │
+│     • Flow color just for 1-2 bars (not consistent)          │
+│     • No price confirmation yet (still waiting)               │
+│     • Flow has been active 15+ bars without price move        │
+│     • Neutral flow (no clear institutional bias)              │
+│                                                                │
+│  🟢 GREEN FLOW (Accumulation):                                 │
+│     • Institutions are BUYING                                 │
+│     • Often happens DURING price drops                        │
+│     • Wait for higher low before entering long               │
+│     • Stop below accumulation range                           │
+│                                                                │
+│  🔴 RED FLOW (Distribution):                                   │
+│     • Institutions are SELLING                                │
+│     • Often happens DURING price rises                        │
+│     • Wait for lower high before entering short              │
+│     • Stop above distribution range                           │
+│                                                                │
+│  ⚪ NEUTRAL FLOW:                                               │
+│     • No clear institutional bias                             │
+│     • Wait for flow to turn green or red                      │
+│     • Don't trade during neutral periods                      │
+│                                                                │
+│  🎯 POSITION SIZING:                                           │
+│     • Max 1% risk per volume trade                            │
+│     • Max 2 volume positions open at once                     │
+│     • Stop beyond consolidation range or swing point          │
+│                                                                │
+│  ⏱️ TIMING:                                                     │
+│     • Flow typically persists 3-7 bars before price confirms  │
+│     • If 10+ bars with no confirmation, signal weakening      │
+│     • Institutions accumulate/distribute slowly (be patient)  │
+│                                                                │
+│  🎓 THE 3-2-1 RULE:                                            │
+│     3 Always Check: Flow color, Price confirmation, Volume    │
+│     2 Never Do: Trade flow alone, Expect immediate moves      │
+│     1 Golden Rule: Flow = preparation, Price = execution      │
+│                                                                │
+│  💡 KEY INSIGHT:                                               │
+│     Smart money buys when price falls (green flow in decline) │
+│     Smart money sells when price rises (red flow in rally)    │
+│     They accumulate slowly, distribute slowly                 │
+│     Retail does the opposite—that's why retail loses          │
+│                                                                │
+└────────────────────────────────────────────────────────────────┘
+
+       Keep this visible on your second monitor while trading!
+</pre>
+                    </div>
+
+                    <div class="visual-divider">🎓</div>
+
+                    <h2>🎓 Your Learning Journey - Success Milestones</h2>
+
+                    <div class="info-box" style="background: rgba(6, 182, 212, 0.08); border-left-color: #a855f7;">
+                        <h3 style="color: #a855f7; margin-top: 0;">You're Progressing When You See These Signs</h3>
+
+                        <p><strong>📅 Week 1: Recognition Phase</strong></p>
+                        <ul>
+                            <li>✅ You understand flow color ≠ immediate price direction</li>
+                            <li>✅ You can identify when flow has been consistent for 3+ bars</li>
+                            <li>✅ You're waiting for price confirmation (not jumping on flow changes)</li>
+                            <li>✅ You understand green flow during price drop = accumulation</li>
+                            <li>✅ You're comfortable not entering until price structure changes</li>
+                        </ul>
+
+                        <p><strong>📅 Week 2-4: Execution Phase</strong></p>
+                        <ul>
+                            <li>✅ You automatically wait 3+ bars of consistent flow before considering trade</li>
+                            <li>✅ You can spot accumulation/distribution phases forming</li>
+                            <li>✅ Your entries wait for price confirmation (higher low, lower high)</li>
+                            <li>✅ You're no longer frustrated when flow persists without immediate price move</li>
+                            <li>✅ You're trading 2-4 volume signals per month (not overtrading)</li>
+                        </ul>
+
+                        <p><strong>📅 Month 2+: Mastery Phase</strong></p>
+                        <ul>
+                            <li>✅ Win rate stabilizing around 55-70% (volume trades have high accuracy)</li>
+                            <li>✅ You can predict when accumulation phase is ending (flow + price structure)</li>
+                            <li>✅ You're combining Volume Oracle with other indicators (Janus levels, Pentarch cycles)</li>
+                            <li>✅ You understand institutional psychology (buy weakness, sell strength)</li>
+                            <li>✅ You trust the process even when waiting 5-7 days for confirmation</li>
+                        </ul>
+
+                        <hr style="margin: 1.5rem 0; opacity: 0.2;">
+
+                        <p><strong>🚨 Warning Signs (You Need to Review the Guide):</strong></p>
+                        <ul>
+                            <li>❌ You're trading flow color changes immediately without waiting</li>
+                            <li>❌ You're getting frustrated when green flow persists during price drops</li>
+                            <li>❌ You're trading neutral flow (no clear institutional bias)</li>
+                            <li>❌ You're taking >8 volume signals per month (overtrading)</li>
+                            <li>❌ Win rate below 45% after 15+ trades</li>
+                        </ul>
+
+                        <p style="margin-bottom: 0;"><strong>Remember:</strong> Institutions are patient. They accumulate slowly during weakness, distribute slowly during strength. Green flow in decline doesn't mean "going up tomorrow"—it means "smart money is buying here." You must wait for price to confirm their accumulation is complete. Patience + confirmation = profitable volume trading.</p>
+                    </div>
+
+                    <div class="visual-divider">🔗</div>
+
+                    <h2>🔗 Synergy: Pairing Volume Oracle with Other Indicators</h2>
+
+                    <div class="pairing-section">
+                        <h3>🎯 High Synergy Combinations</h3>
+                        <ul>
+                            <li><strong>+ Pentarch:</strong> Institutional flow + TD Sequential = volume-confirmed cycle signals. You know smart money is participating at cycle extremes.</li>
+                            <li><strong>+ Omnideck:</strong> Volume Flow + multi-system alignment = institutional participation validation. When systems align AND institutions participate, confidence soars.</li>
+                            <li><strong>+ Janus Atlas:</strong> Flow zones + level clusters = see accumulation/distribution at key price levels. Know where institutions accumulated and where they might defend.</li>
+                        </ul>
+
+                        <h3>🎲 Common Trading Combinations</h3>
+                        <ul>
+                            <li><strong>Volume Flow green + Pentarch TD 9 Buy</strong> → Institutional accumulation at cycle low (high probability reversal)</li>
+                            <li><strong>Volume Flow red + Janus resistance cluster</strong> → Distribution at tested resistance (rejection likely)</li>
+                            <li><strong>Position Manager "trapped long" + Omnideck Regime red</strong> → Multi-indicator exit signal (institutions leaving)</li>
+                        </ul>
+
+                        <h3>💡 Why These Pair Well</h3>
+                        <p>Volume Oracle answers <strong>WHO</strong> is acting (institutions vs retail) and <strong>WHERE</strong> (entry/exit zones). Pentarch/Omnideck answer <strong>WHEN</strong> to act (timing and cycles). Janus answers <strong>AT WHAT PRICE</strong> (levels).</p>
+
+                        <p>Combining participant analysis (Volume Oracle) with timing (Pentarch/Omnideck) and levels (Janus) creates complete setups: <strong>the right players, at the right time, at the right price.</strong></p>
+                    </div>
+
+                    <hr />
+
+                    <div class="footer-section">
+                        <p>📊 <strong>Ready to follow the smart money?</strong></p>
+                        <a href="index.html" class="back-link">← Back to Volume Oracle Documentation</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
