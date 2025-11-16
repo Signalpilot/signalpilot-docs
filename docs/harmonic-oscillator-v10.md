@@ -329,6 +329,17 @@ Additional resources available:
 
 ---
 
+## See Also
+
+**Related Pages:**
+- [Janus Atlas v1.0](janus-atlas-v10.md) - Combine momentum signals with key structural levels
+- [Omnideck v1.0](omnideck-v10.md) - All-in-one indicator including Harmonic Oscillator
+- [Best Practices & Pro Tips](../ref-best-practices.md) - Advanced strategies for momentum trading
+- [How to Set Up Alerts](../how-to-alerts.md) - Get notified on consensus signals
+- [Trading Workflow](../ref-workflow.md) - How momentum fits into complete trading system
+
+---
+
 **Summary:** Harmonic Oscillator displays when MACD, RSI, and StochRSI achieve consensus. 2 or 3 component agreement = Potential high probability signal. Divergence addition = Potential elite probability signal.
 
 **Vote consensus with extreme zone focus** 🎯

@@ -314,4 +314,15 @@ Help is available at:
 
 ---
 
+## See Also
+
+**Related Pages:**
+- [Volume Oracle v1.0](minimal-flow-v10.md) - Complementary volume intelligence system
+- [Janus Atlas v1.0](janus-atlas-v10.md) - Combine divergences with key structural levels
+- [Omnideck v1.0](omnideck-v10.md) - All-in-one indicator including OBV analysis
+- [How to Set Up Alerts](../how-to-alerts.md) - Get notified on divergences and crosses
+- [Trading Workflow](../ref-workflow.md) - How OBV fits into complete trading system
+
+---
+
 **Important consideration:** Plutus Flow shows where smart money may be accumulating or distributing. When OBV and price disagree (potential divergence) = Potential major move coming. Can be combined with levels for highest probability.
