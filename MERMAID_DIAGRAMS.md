@@ -162,33 +162,31 @@ graph TD
 **Use in:** `volume-oracle-v10/index.html` (Volume Oracle)
 
 ```mermaid
-stateDiagram-v2
-    [*] --> NoPosition: Waiting
+graph TD
+    Start([No Position<br/>Waiting]) --> Signal{VBS Signal?}
 
-    NoPosition --> LongPosition: VBS+ Signal<br/>(Volume-Based Signal Long)
-    NoPosition --> ShortPosition: VBS- Signal<br/>(Volume-Based Signal Short)
+    Signal -->|VBS+<br/>Volume-Based Signal Long| Long[Long Position Opened]
+    Signal -->|VBS-<br/>Volume-Based Signal Short| Short[Short Position Opened]
 
-    LongPosition --> Tracking: Position Opened
-    Tracking --> ProfitCalc: Real-time P&L
-    ProfitCalc --> ExitTarget: Show Target Line
+    Long --> Track1[Position Tracking<br/><small>• Entry price recorded<br/>• Real-time P&L<br/>• Risk/Reward calculated</small>]
+    Short --> Track2[Position Tracking<br/><small>• Entry price recorded<br/>• Real-time P&L<br/>• Risk/Reward calculated</small>]
 
-    ExitTarget --> NoPosition: VBS- Exit Signal
-    ExitTarget --> NoPosition: Manual Exit
+    Track1 --> Target1[Exit Target Line Shown]
+    Track2 --> Target2[Exit Target Line Shown]
 
-    ShortPosition --> Tracking2: Position Opened
-    Tracking2 --> ProfitCalc2: Real-time P&L
-    ProfitCalc2 --> ExitTarget2: Show Target Line
+    Target1 --> Exit1{Exit Condition?}
+    Target2 --> Exit2{Exit Condition?}
 
-    ExitTarget2 --> NoPosition: VBS+ Exit Signal
-    ExitTarget2 --> NoPosition: Manual Exit
+    Exit1 -->|VBS- Signal<br/>or Manual Exit| Start
+    Exit2 -->|VBS+ Signal<br/>or Manual Exit| Start
 
-    note right of Tracking
-        Features:
-        - Entry price recorded
-        - Unrealized P&L displayed
-        - Risk/Reward calculated
-        - Exit target shown
-    end note
+    style Start fill:#37474f,color:#fff,stroke:#263238,stroke-width:3px
+    style Long fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
+    style Short fill:#f44336,color:#fff,stroke:#d32f2f,stroke-width:3px
+    style Track1 fill:#00bcd4,color:#fff
+    style Track2 fill:#00bcd4,color:#fff
+    style Target1 fill:#ff9800,color:#fff
+    style Target2 fill:#ff9800,color:#fff
 ```
 
 ---
@@ -279,33 +277,40 @@ graph TB
 **Use in:** `janus-atlas-v10/index.html`
 
 ```mermaid
-mindmap
-  root((Janus Atlas<br/>39 Level Types))
-    VWAP<br/><small>Volume Weighted Avg Price</small>
-      Daily VWAP
-      Weekly VWAP
-      Monthly VWAP
-      Custom Period
-    Volume Profile
-      POC<br/><small>Point of Control</small>
-      VAH<br/><small>Value Area High</small>
-      VAL<br/><small>Value Area Low</small>
-      Value Area
-    Sessions
-      Asia High/Low
-      London High/Low
-      NY High/Low
-      Custom Session
-    Market Structure
-      BOS<br/><small>Break of Structure</small>
-      CHoCH<br/><small>Change of Character</small>
-      Swing High/Low
-      Liquidity Sweeps
-    Classic Levels
-      Daily/Weekly/Monthly H/L
-      Pivot Points
-      Fibonacci Levels
-      Round Numbers
+graph TD
+    Root[Janus Atlas<br/>39 Level Types] --> Cat1[VWAP Family]
+    Root --> Cat2[Volume Profile]
+    Root --> Cat3[Sessions]
+    Root --> Cat4[Market Structure]
+    Root --> Cat5[Classic Levels]
+
+    Cat1 --> V1[Daily/Weekly/Monthly VWAP<br/><small>Volume Weighted Avg Price</small>]
+    Cat1 --> V2[Custom Period VWAP]
+
+    Cat2 --> VP1[POC - Point of Control]
+    Cat2 --> VP2[VAH - Value Area High]
+    Cat2 --> VP3[VAL - Value Area Low]
+    Cat2 --> VP4[Value Area Range]
+
+    Cat3 --> S1[Asia/London/NY Sessions]
+    Cat3 --> S2[Custom Session H/L]
+
+    Cat4 --> MS1[BOS - Break of Structure]
+    Cat4 --> MS2[CHoCH - Change of Character]
+    Cat4 --> MS3[Swing High/Low Points]
+    Cat4 --> MS4[Liquidity Sweeps]
+
+    Cat5 --> CL1[Daily/Weekly/Monthly H/L]
+    Cat5 --> CL2[Pivot Points]
+    Cat5 --> CL3[Fibonacci Levels]
+    Cat5 --> CL4[Round Numbers]
+
+    style Root fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:3px
+    style Cat1 fill:#00bcd4,color:#fff
+    style Cat2 fill:#4caf50,color:#fff
+    style Cat3 fill:#ff9800,color:#fff
+    style Cat4 fill:#2196f3,color:#fff
+    style Cat5 fill:#f44336,color:#fff
 ```
 
 ---
@@ -390,23 +395,18 @@ graph TD
 **Use in:** `ref-configuration-recipes/index.html`
 
 ```mermaid
-graph LR
+graph TD
     Start[Choose Trading Style] --> S1{Timeframe?}
 
-    S1 -->|1-15min| Scalper[Scalper Setup]
-    S1 -->|15min-1H| Day[Day Trader Setup]
-    S1 -->|4H-Daily| Swing[Swing Trader Setup]
-    S1 -->|Daily-Weekly| Position[Position Trader Setup]
+    S1 -->|1-15min| Scalper[Scalper Setup<br/><small>High Frequency: 20-50 signals/week</small>]
+    S1 -->|15min-1H| Day[Day Trader Setup<br/><small>Medium Frequency: 5-15 signals/week</small>]
+    S1 -->|4H-Daily| Swing[Swing Trader Setup<br/><small>Low Frequency: 2-8 signals/week</small>]
+    S1 -->|Daily-Weekly| Position[Position Trader Setup<br/><small>Very Low Frequency: 1-4 signals/month</small>]
 
-    Scalper --> Freq1[High Frequency<br/>20-50 signals/week]
-    Day --> Freq2[Medium Frequency<br/>5-15 signals/week]
-    Swing --> Freq3[Low Frequency<br/>2-8 signals/week]
-    Position --> Freq4[Very Low Frequency<br/>1-4 signals/month]
-
-    Freq1 --> Apply[Apply Configuration]
-    Freq2 --> Apply
-    Freq3 --> Apply
-    Freq4 --> Apply
+    Scalper --> Apply[Apply Configuration]
+    Day --> Apply
+    Swing --> Apply
+    Position --> Apply
 
     Apply --> Backtest[Backtest on<br/>Historical Data]
     Backtest --> Optimize[Optimize if Needed]
