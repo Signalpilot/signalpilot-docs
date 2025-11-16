@@ -17,6 +17,13 @@
     display: none !important;
   }
 
+  /* Hide custom bottom sheet navigation (mobile menu) */
+  .custom-nav-button,
+  .custom-nav-overlay,
+  .custom-bottom-sheet {
+    display: none !important;
+  }
+
   /* Hide feedback widget */
   .md-feedback,
   form {
