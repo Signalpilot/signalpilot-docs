@@ -605,6 +605,17 @@ Additional resources available:
 
 ---
 
+## See Also
+
+**Related Pages:**
+- [Janus Atlas v1.0](janus-atlas-v10.md) - Combine cycle timing with key structural levels
+- [Omnideck v1.0](omnideck-v10.md) - All-in-one indicator including Pentarch signals
+- [Pentarch Quick Reference](ref-cheatsheets/pentarch-quick-reference.md) - One-page signal cheatsheet
+- [How to Set Up Alerts](../how-to-alerts.md) - Never miss a cycle event signal
+- [Trading Workflow](../ref-workflow.md) - How Pentarch fits into complete trading system
+
+---
+
 **Summary:** Pentarch identifies cycle position across five events (TD → IGN → WRN → CAP → BDN). Four-layer detection system confirms at bar close before signals fire. When combined with Janus Atlas for structural levels, cycle event quality often improves.
 
 **When you see where you are in the cycle, timing becomes clearer. Risk becomes manageable. Noise becomes filterable.** 🎯
