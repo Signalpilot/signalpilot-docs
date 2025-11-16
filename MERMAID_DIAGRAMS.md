@@ -163,30 +163,28 @@ graph TD
 
 ```mermaid
 graph TD
-    Start([No Position<br/>Waiting]) --> Signal{VBS Signal?}
+    Start([No Position]) --> Signal{VBS Signal?}
 
-    Signal -->|VBS+<br/>Volume-Based Signal Long| Long[Long Position Opened]
-    Signal -->|VBS-<br/>Volume-Based Signal Short| Short[Short Position Opened]
+    Signal -->|VBS+ Long| Long[Long Position<br/><small>Entry Recorded</small>]
+    Signal -->|VBS- Short| Short[Short Position<br/><small>Entry Recorded</small>]
 
-    Long --> Track1[Position Tracking<br/><small>• Entry price recorded<br/>• Real-time P&L<br/>• Risk/Reward calculated</small>]
-    Short --> Track2[Position Tracking<br/><small>• Entry price recorded<br/>• Real-time P&L<br/>• Risk/Reward calculated</small>]
+    Long --> Track1[Position Tracking<br/><small>Real-time P&L</small>]
+    Short --> Track2[Position Tracking<br/><small>Real-time P&L</small>]
 
-    Track1 --> Target1[Exit Target Line Shown]
-    Track2 --> Target2[Exit Target Line Shown]
+    Track1 --> Exit1{Exit?}
+    Track2 --> Exit2{Exit?}
 
-    Target1 --> Exit1{Exit Condition?}
-    Target2 --> Exit2{Exit Condition?}
+    Exit1 -->|VBS- or Manual| Close[Position Closed]
+    Exit2 -->|VBS+ or Manual| Close
 
-    Exit1 -->|VBS- Signal<br/>or Manual Exit| Start
-    Exit2 -->|VBS+ Signal<br/>or Manual Exit| Start
+    Close --> Start
 
     style Start fill:#37474f,color:#fff,stroke:#263238,stroke-width:3px
     style Long fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
-    style Short fill:#f44336,color:#fff,stroke:#d32f2f,stroke-width:3px
+    style Short fill:#f44336,color:#fff,stroke:#c62828,stroke-width:3px
     style Track1 fill:#00bcd4,color:#fff
     style Track2 fill:#00bcd4,color:#fff
-    style Target1 fill:#ff9800,color:#fff
-    style Target2 fill:#ff9800,color:#fff
+    style Close fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:3px
 ```
 
 ---
