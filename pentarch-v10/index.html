@@ -2203,26 +2203,19 @@ graph LR
   <div class="sp-callout__title">📊 Visual Guide: Signal Sequence Flow</div>
   <p style="margin-bottom: 1.5rem;">How the 5 cycle events progress from early accumulation to late breakdown:</p>
   <div class="mermaid" role="img" aria-label="Pentarch signal sequence flowchart">
-graph LR
-    Start([📊 Market Cycle Begins]) --> TD
+graph TD
+    Start([📊 Market Cycle Begins])
 
-    TD[TD Signal<br/>🟦 ACCUMULATION<br/>Early Cycle]
-    TD --> |"Trend Exhausting"|IGN
+    Start --> TD[🟦 TD - ACCUMULATION<br/>Early Cycle / Trend Exhausting]
+    TD --> IGN[🟩 IGN - IGNITION<br/>Reversal Starting / New Trend Developing]
+    IGN --> WRN[🟨 WRN - WARNING<br/>Late Cycle Approaching / Trend Maturing]
+    WRN --> CAP[🟧 CAP - CAPITULATION<br/>Climax/Exhaustion / Trend Ending]
+    CAP --> BDN[🟥 BDN - BREAKDOWN<br/>Trend Breakdown / Cycle Complete]
 
-    IGN[IGN Signal<br/>🟩 IGNITION<br/>Reversal Starting]
-    IGN --> |"New Trend Developing"|WRN
+    BDN -.->|"May Reverse"| Start
 
-    WRN[WRN Signal<br/>🟨 WARNING<br/>Late Cycle Approaching]
-    WRN --> |"Trend Maturing"|CAP
-
-    CAP[CAP Signal<br/>🟧 CAPITULATION<br/>Climax/Exhaustion]
-    CAP --> |"Trend Ending"|BDN
-
-    BDN[BDN Signal<br/>🟥 BREAKDOWN<br/>Trend Breakdown]
-    BDN --> |"Cycle Complete<br/>May Reverse"|Start
-
-    TD -.->|"Partial Sequence<br/>(Common)"| WRN
-    IGN -.->|"Partial Sequence<br/>(Common)"| CAP
+    TD -.->|"Common:<br/>Partial Sequence"| WRN
+    IGN -.->|"Common:<br/>Partial Sequence"| CAP
 
     style Start fill:#37474f,color:#fff,stroke:#263238,stroke-width:3px
     style TD fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:3px
@@ -2234,6 +2227,11 @@ graph LR
   <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.85;">
     <strong>Note:</strong> Complete 5-event cycles (TD→IGN→WRN→CAP→BDN) are rare. Partial sequences (TD→IGN or WRN→CAP) are more common and still valuable for trading.
   </p>
+  <div style="margin-top: 1rem; padding: 0.75rem; background: rgba(55, 71, 79, 0.1); border-radius: 4px; font-size: 0.85rem;">
+    <strong>📖 Legend:</strong><br/>
+    <span style="display: inline-block; margin-right: 1.5rem;">━━━ Solid arrows = Sequential progression</span>
+    <span style="display: inline-block;">- - - Dotted arrows = Common partial sequences</span>
+  </div>
 </div>
 
 <!-- 📸 SCREENSHOT NEEDED - Pentarch Complete Signal Sequence Example
@@ -2522,6 +2520,11 @@ graph TD
   <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
     <strong>How to read:</strong> Price data flows through four independent validation layers.
     Only when all four layers confirm simultaneously at bar close does a signal appear.
+  </p>
+  <p style="margin-top: 0.75rem; font-size: 0.9rem; padding: 0.75rem; background: rgba(0, 188, 212, 0.1); border-left: 3px solid #00bcd4; border-radius: 4px;">
+    <strong>⚡ Layer Priority:</strong> Layer 1 (Regime Classification) is the <strong>most critical filter</strong>.
+    If Layer 1 fails, the signal is rejected regardless of other layers.
+    Think of it as a sequential gating system: Regime → Distance → Momentum → Confirmation.
   </p>
 </div>
 

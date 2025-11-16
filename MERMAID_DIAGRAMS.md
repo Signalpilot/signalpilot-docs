@@ -31,22 +31,23 @@ markdown_extensions:
 graph TD
     A[Price Data] --> B[Four-Layer Detection System]
 
-    B --> C{Layer 1:<br/>Setup Count}
-    B --> D{Layer 2:<br/>TDST Breaks}
-    B --> E{Layer 3:<br/>Risk Lines}
-    B --> F{Layer 4:<br/>Regime Filter}
+    B --> C{Layer 1:<br/>Regime Classification<br/><small>MOST CRITICAL</small>}
+    B --> D{Layer 2:<br/>Pilot Line Distance}
+    B --> E{Layer 3:<br/>NanoFlow Momentum}
+    B --> F{Layer 4:<br/>Bar Close Confirmation}
 
     C --> G[Signal Conditions Met]
     D --> G
     E --> G
     F --> G
 
-    G --> H{Close Confirmed?}
+    G --> H{All Layers<br/>Confirmed at<br/>Bar Close?}
     H -->|Yes| I[🟢 Signal Fires]
-    H -->|No| J[⏳ Wait for Close]
+    H -->|No| J[⏳ Wait for Next Bar]
 
     I --> K[Alert Sent]
 
+    style C fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:4px
     style I fill:#4caf50,color:#fff
     style J fill:#ff9800,color:#fff
     style K fill:#00bcd4,color:#fff
@@ -124,31 +125,34 @@ sequenceDiagram
 **Use in:** `harmonic-oscillator-v10/index.html`
 
 ```mermaid
-graph LR
-    A[Market Data] --> B[MACD]
-    A --> C[RSI]
-    A --> D[StochRSI]
+graph TD
+    A[Market Data] --> B1[RSI Triple Envelope<br/><small>7/14/28 periods</small>]
+    A --> B2[MACD Histogram<br/><small>12/26/9 settings</small>]
+    A --> B3[Stochastic RSI<br/><small>14/14/3/3 settings</small>]
+    A --> B4[Volume Oscillator<br/><small>Short/Long periods</small>]
+    A --> B5[Divergence Detector<br/><small>Price vs Oscillators</small>]
 
-    B --> E{MACD Vote}
-    C --> F{RSI Vote}
-    D --> G{StochRSI Vote}
+    B1 --> H[Democratic<br/>Voting System<br/><small>5 Oscillators</small>]
+    B2 --> H
+    B3 --> H
+    B4 --> H
+    B5 --> H
 
-    E --> H[Democratic<br/>Voting System]
-    F --> H
-    G --> H
+    H --> I{Vote Threshold}
 
-    H --> I{Signal Mode?}
+    I -->|4-5 votes| J[STRONG Bull/Bear]
+    I -->|3 votes| K[BULL/BEAR]
+    I -->|Less than 3| L[NEUT - Neutral]
 
-    I -->|Conservative| J[Require 3 votes]
-    I -->|Balanced| K[Require 2 votes]
-    I -->|Aggressive| L[Require 1 vote]
-
-    J --> M[🟢 Signal Output]
+    J --> M[Signal Output]
     K --> M
     L --> M
 
     style H fill:#ff9800,color:#fff
-    style M fill:#4caf50,color:#fff
+    style J fill:#4caf50,color:#fff
+    style K fill:#2196f3,color:#fff
+    style L fill:#9e9e9e,color:#fff
+    style M fill:#00bcd4,color:#fff
 ```
 
 ---
@@ -161,8 +165,8 @@ graph LR
 stateDiagram-v2
     [*] --> NoPosition: Waiting
 
-    NoPosition --> LongPosition: VBS+ Signal
-    NoPosition --> ShortPosition: VBS- Signal
+    NoPosition --> LongPosition: VBS+ Signal<br/>(Volume-Based Signal Long)
+    NoPosition --> ShortPosition: VBS- Signal<br/>(Volume-Based Signal Short)
 
     LongPosition --> Tracking: Position Opened
     Tracking --> ProfitCalc: Real-time P&L
@@ -237,25 +241,25 @@ graph TD
 ```mermaid
 graph TB
     subgraph "Trend Layer"
-        T1[EMA Trio]
-        T2[SuperTrend]
-        T3[BMSB]
+        T1[EMA Trio<br/><small>Moving Averages</small>]
+        T2[SuperTrend<br/><small>Trend Ribbon</small>]
+        T3[BMSB<br/><small>Bull Market Support Band<br/>20 SMA + 21 EMA</small>]
     end
 
     subgraph "Entry Layer"
-        E1[TD Sequential]
-        E2[Squeeze Detector]
-        E3[Candlestick Patterns]
+        E1[TD Sequential<br/><small>Exhaustion Counter</small>]
+        E2[Squeeze Detector<br/><small>Breakout Detection</small>]
+        E3[Candlestick Patterns<br/><small>16 Classic Patterns</small>]
     end
 
     subgraph "Management Layer"
-        M1[Regime Box]
-        M2[Supply/Demand Zones]
-        M3[Liquidity Sweeps]
+        M1[Regime Box<br/><small>Market Mood Background</small>]
+        M2[Supply/Demand Zones<br/><small>Institutional Levels</small>]
+        M3[Liquidity Sweeps<br/><small>Stop Hunt Detection</small>]
     end
 
     subgraph "Meta Layer"
-        META[System Integration]
+        META[System Integration<br/><small>10 Systems Combined</small>]
     end
 
     T1 & T2 & T3 --> META
@@ -277,15 +281,15 @@ graph TB
 ```mermaid
 mindmap
   root((Janus Atlas<br/>39 Level Types))
-    VWAP
+    VWAP<br/><small>Volume Weighted Avg Price</small>
       Daily VWAP
       Weekly VWAP
       Monthly VWAP
       Custom Period
     Volume Profile
-      POC
-      VAH
-      VAL
+      POC<br/><small>Point of Control</small>
+      VAH<br/><small>Value Area High</small>
+      VAL<br/><small>Value Area Low</small>
       Value Area
     Sessions
       Asia High/Low
@@ -293,8 +297,8 @@ mindmap
       NY High/Low
       Custom Session
     Market Structure
-      BOS
-      CHoCH
+      BOS<br/><small>Break of Structure</small>
+      CHoCH<br/><small>Change of Character</small>
       Swing High/Low
       Liquidity Sweeps
     Classic Levels
@@ -312,7 +316,7 @@ mindmap
 
 ```mermaid
 graph TD
-    A[Price & Volume Data] --> B[OBV Calculation]
+    A[Price & Volume Data] --> B[OBV Calculation<br/><small>On-Balance Volume</small>]
 
     B --> C[Adaptive Smoothing]
 
@@ -325,7 +329,7 @@ graph TD
     F --> H
     G --> H
 
-    H --> I{Analysis}
+    H --> I{OBV Analysis}
 
     I --> J[OBV Direction]
     I --> K[Divergences]
