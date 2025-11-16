@@ -1865,6 +1865,36 @@
               <article class="md-content__inner md-typeset">
 <h1>Plutus Flow v1.0 Quick Reference</h1>
 
+<style>
+.print-pdf-button {
+  display: inline-block;
+  margin: 1rem 0 1.5rem 0;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #00bcd4 0%, #00acc1 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 188, 212, 0.3);
+}
+
+.print-pdf-button:hover {
+  background: linear-gradient(135deg, #00acc1 0%, #0097a7 100%);
+  box-shadow: 0 4px 12px rgba(0, 188, 212, 0.5);
+  transform: translateY(-2px);
+}
+
+.print-pdf-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 188, 212, 0.4);
+}
+</style>
+
+<button onclick="window.print()" class="print-pdf-button">🖨️ Print to PDF</button>
+
 <p><strong>One-page cheat sheet for OBV divergence detection</strong></p>
 
 <hr />
