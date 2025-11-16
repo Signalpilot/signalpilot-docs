@@ -2157,37 +2157,32 @@
     <p style="margin-bottom: 1rem;">Volume Oracle tracks positions from entry to exit with real-time P&L:</p>
     <div class="mermaid">
 graph TD
-    Start[📊 No Active Position<br/>Monitoring Market] --> Signal{VBS Signal<br/>Detected?}
+    Start([No Position]) --> Signal{VBS Signal?}
 
-    Signal -->|VBS+ Bullish| Long[🟢 LONG POSITION OPENED<br/>Entry Price Recorded]
-    Signal -->|VBS- Bearish| Short[🔴 SHORT POSITION OPENED<br/>Entry Price Recorded]
+    Signal -->|VBS+ Long| Long[Long Position<br/><small>Entry Recorded</small>]
+    Signal -->|VBS- Short| Short[Short Position<br/><small>Entry Recorded</small>]
 
-    Long --> TrackLong[REAL-TIME TRACKING<br/>📈 P&L Updates Every Bar<br/>📍 Target Line Displayed<br/>⚖️ Risk/Reward Calculated]
-    Short --> TrackShort[REAL-TIME TRACKING<br/>📉 P&L Updates Every Bar<br/>📍 Target Line Displayed<br/>⚖️ Risk/Reward Calculated]
+    Long --> Track1[Position Tracking<br/><small>Real-time P&L</small>]
+    Short --> Track2[Position Tracking<br/><small>Real-time P&L</small>]
 
-    TrackLong --> ExitLong{Exit Condition?}
-    TrackShort --> ExitShort{Exit Condition?}
+    Track1 --> Exit1{Exit?}
+    Track2 --> Exit2{Exit?}
 
-    ExitLong -->|VBS- Opposite Signal| Close1[✅ Position Closed<br/>Final P&L Recorded]
-    ExitLong -->|Manual Close| Close1
+    Exit1 -->|VBS- or Manual| Close[Position Closed]
+    Exit2 -->|VBS+ or Manual| Close
 
-    ExitShort -->|VBS+ Opposite Signal| Close2[✅ Position Closed<br/>Final P&L Recorded]
-    ExitShort -->|Manual Close| Close2
-
-    Close1 --> Start
-    Close2 --> Start
+    Close --> Start
 
     style Start fill:#37474f,color:#fff,stroke:#263238,stroke-width:3px
     style Long fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
     style Short fill:#f44336,color:#fff,stroke:#c62828,stroke-width:3px
-    style TrackLong fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:2px
-    style TrackShort fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:2px
-    style Close1 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:3px
-    style Close2 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:3px
-    style Signal fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:3px
-    style ExitLong fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:2px
-    style ExitShort fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:2px
+    style Track1 fill:#00bcd4,color:#fff
+    style Track2 fill:#00bcd4,color:#fff
+    style Close fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:3px
     </div>
+    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.85;">
+      <strong>Features:</strong> Entry price recorded • Real-time P&L updates every bar • Target line displayed • Risk/reward calculated • Manual or signal-based exit
+    </p>
   </div>
 </div>
 
@@ -2198,17 +2193,17 @@ graph TD
     <p style="margin-bottom: 1rem;">Volume Oracle combines three independent analysis systems:</p>
     <div class="mermaid">
 graph TD
-    Data[📊 Market Data Input<br/>Price + Volume] --> Oracle[VOLUME ORACLE<br/>3 Independent Systems]
+    Data[Market Data<br/><small>Price + Volume</small>] --> Oracle[Volume Oracle]
 
-    Oracle --> VF[SYSTEM 1: VOLUME FLOW]
-    Oracle --> VZ[SYSTEM 2: VOLUME ZONES]
-    Oracle --> PM[SYSTEM 3: POSITION MANAGER]
+    Oracle --> VF[System 1<br/>Volume Flow]
+    Oracle --> VZ[System 2<br/>Volume Zones]
+    Oracle --> PM[System 3<br/>Position Manager]
 
-    VF --> VF_Out[🟢🔴 Color-Coded Volume Bars<br/>Green = Buying Pressure<br/>Red = Selling Pressure]
-    VZ --> VZ_Out[📦 Horizontal Zone Boxes<br/>High-Volume Consolidation Areas<br/>Key Price Ranges]
-    PM --> PM_Out[📍 Position Tracking Lines<br/>Entry Price Reference<br/>Real-Time P&L Display]
+    VF --> VF_Out[Color-Coded Bars<br/><small>Green/Red Volume</small>]
+    VZ --> VZ_Out[Zone Boxes<br/><small>High-Volume Areas</small>]
+    PM --> PM_Out[Tracking Lines<br/><small>Entry + P&L</small>]
 
-    VF_Out --> Chart[📈 Unified Chart Display]
+    VF_Out --> Chart[Chart Display]
     VZ_Out --> Chart
     PM_Out --> Chart
 
@@ -2217,10 +2212,10 @@ graph TD
     style VF fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
     style VZ fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:3px
     style PM fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:3px
-    style Chart fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:4px
+    style Chart fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:3px
     </div>
-    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
-      <strong>How to read:</strong> Three independent systems analyze the same market data. Each system displays different visual elements on the chart. All three can be used together or individually.
+    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.85;">
+      <strong>How it works:</strong> Three independent systems analyze market data. Volume Flow shows buying/selling pressure. Volume Zones mark consolidation areas. Position Manager tracks P&L. All three display on one chart.
     </p>
   </div>
 </div>
