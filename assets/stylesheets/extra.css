@@ -4396,3 +4396,11 @@ a {
 .md-sidebar--primary .md-nav__item .md-nav__list {
   margin-left: 0 !important;
 }
+
+/* Add proper padding to nested navigation links on desktop to prevent text cutoff */
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--primary .md-nav__item .md-nav .md-nav__link {
+    padding-left: 1rem !important;
+    padding-right: 0.5rem !important;
+  }
+}
