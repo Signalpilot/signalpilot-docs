@@ -2266,7 +2266,7 @@
 
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
   <div class="sp-callout__title">🎯 Quick Selection Guide</div>
-  <div class="mermaid">
+  <div class="mermaid mermaid-comparison-small">
 flowchart TB
     Start["📊 CHOOSE YOUR INDICATOR<br/>Based on Your Primary Goal"]
 
@@ -2297,6 +2297,20 @@ flowchart TB
     style P4 fill:#2196f3,stroke:#2196f3,stroke-width:3px,color:#fff
     style P5 fill:#ff9800,stroke:#ff9800,stroke-width:3px,color:#fff
   </div>
+  <style>
+    /* Reduce font size for comparison diagram */
+    .mermaid-comparison-small svg {
+      font-size: 12px !important;
+    }
+    .mermaid-comparison-small .nodeLabel {
+      font-size: 0.85em !important;
+    }
+    @media (max-width: 768px) {
+      .mermaid-comparison-small svg {
+        font-size: 11px !important;
+      }
+    }
+  </style>
   <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
     <strong>How to read:</strong> This vertical guide shows all five indicators in order.
     Pick the one that matches your primary trading goal.
