@@ -785,6 +785,9 @@ body::before {
 /* Fix for sidebar navigation text truncation - ensure ellipsis works properly */
 .md-nav__link .md-ellipsis {
   white-space: nowrap !important; /* Required for text-overflow: ellipsis to work */
+  overflow: hidden !important; /* Hide overflowing text */
+  text-overflow: ellipsis !important; /* Show ... when text is cut off */
+  display: block !important; /* Required for overflow to work */
 }
 
 /* ========================================
