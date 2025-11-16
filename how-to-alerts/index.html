@@ -2068,26 +2068,34 @@ graph TD
 <hr />
 <h3 id="2-step-2-select-indicator">2️⃣ Step 2: Select Indicator<a class="headerlink" href="#2-step-2-select-indicator" title="Permanent link">&para;</a></h3>
 <p><strong>The Condition dropdown</strong> displays available <span class="signal-pilot-brand">Signal Pilot</span> indicators.</p>
-<p>Examples:
-- "Pentarch v1.0"
-- "Omnideck v1.0"
-- "Janus Atlas v1.0"</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>"Pentarch v1.0"</li>
+<li>"Omnideck v1.0"</li>
+<li>"Janus Atlas v1.0"</li>
+</ul>
 <p><strong>Note:</strong> Add the indicator to the chart before creating the alert.</p>
 <hr />
 <h3 id="3-step-3-choose-event">3️⃣ Step 3: Choose Event<a class="headerlink" href="#3-step-3-choose-event" title="Permanent link">&para;</a></h3>
 <p><strong>The Event dropdown</strong> displays available signals for the selected indicator.</p>
-<p><strong>Common Pentarch events:</strong>
-- <code>IGN Event</code> - Indicates potential bullish reversal
-- <code>CAP Event</code> - Indicates exhaustion conditions
-- <code>BDN Event</code> - Indicates potential bearish breakdown
-- <code>TD Event</code> - Early-cycle warning
-- <code>WRN Event</code> - Late-cycle warning</p>
-<p><strong>Common Janus events:</strong>
-- <code>New Support Level</code>
-- <code>New Resistance Level</code>
-- <code>FVG Created</code></p>
-<p><strong>Common Omnideck events:</strong>
-- (Includes all Pentarch events plus more)</p>
+<p><strong>Common Pentarch events:</strong></p>
+<ul>
+<li><code>IGN Event</code> - Indicates potential bullish reversal</li>
+<li><code>CAP Event</code> - Indicates exhaustion conditions</li>
+<li><code>BDN Event</code> - Indicates potential bearish breakdown</li>
+<li><code>TD Event</code> - Early-cycle warning</li>
+<li><code>WRN Event</code> - Late-cycle warning</li>
+</ul>
+<p><strong>Common Janus events:</strong></p>
+<ul>
+<li><code>New Support Level</code></li>
+<li><code>New Resistance Level</code></li>
+<li><code>FVG Created</code></li>
+</ul>
+<p><strong>Common Omnideck events:</strong></p>
+<ul>
+<li>(Includes all Pentarch events plus more)</li>
+</ul>
 <!-- SCREENSHOT NEEDED: Alert dialog showing condition dropdown menu with Signal Pilot indicator options and event selection -->
 <div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
   <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
@@ -2098,19 +2106,25 @@ graph TD
 <h3 id="4-step-4-configure-options-critical">4️⃣ Step 4: Configure Options (CRITICAL)<a class="headerlink" href="#4-step-4-configure-options-critical" title="Permanent link">&para;</a></h3>
 <p><span style="color: #dc2626; font-weight: 600;">⚠️ Most Important Step</span></p>
 <p><strong>Options</strong> → Select the <strong>"Once Per Bar Close"</strong> setting.</p>
-<p>This is the <strong>most important setting</strong>:
-- ✅ Alerts only fire when the signal is CONFIRMED (bar closed)
-- ✅ No disappearing signals
-- ✅ No repainting
-- ❌ WITHOUT this: False intrabar alerts will occur</p>
-<p><strong>Expiration:</strong>
-- "Don't expire" creates permanent alerts
-- Set an expiration date for temporary alerts</p>
-<p><strong>Actions:</strong>
-- ✅ "Notify on App" enables mobile notifications
-- ✅ "Show Popup" enables desktop notifications
-- ✅ "Send Email" enables email notifications (optional)
-- ✅ "Webhook URL" enables automation (optional)</p>
+<p>This is the <strong>most important setting</strong>:</p>
+<ul>
+<li>✅ Alerts only fire when the signal is CONFIRMED (bar closed)</li>
+<li>✅ No disappearing signals</li>
+<li>✅ No repainting</li>
+<li>❌ WITHOUT this: False intrabar alerts will occur</li>
+</ul>
+<p><strong>Expiration:</strong></p>
+<ul>
+<li>"Don't expire" creates permanent alerts</li>
+<li>Set an expiration date for temporary alerts</li>
+</ul>
+<p><strong>Actions:</strong></p>
+<ul>
+<li>✅ "Notify on App" enables mobile notifications</li>
+<li>✅ "Show Popup" enables desktop notifications</li>
+<li>✅ "Send Email" enables email notifications (optional)</li>
+<li>✅ "Webhook URL" enables automation (optional)</li>
+</ul>
 <!-- SCREENSHOT NEEDED: Alert options panel highlighting the "Once Per Bar Close" setting and other alert configuration options -->
 <div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
   <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
