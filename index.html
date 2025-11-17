@@ -654,11 +654,12 @@
           localStorage.setItem('sp_lang', lang.code);
 
           if (lang.code === 'en') {
-            // Reset to English - clear everything
+            // Reset to English - clear everything including localStorage
+            localStorage.removeItem('sp_lang');
             document.documentElement.lang = 'en';
             document.documentElement.dir = 'ltr';
-            // Force hard reload
-            window.location.href = window.location.pathname + window.location.search;
+            // Force complete reload bypassing cache
+            window.location.replace(window.location.pathname + '?t=' + Date.now());
           } else {
             // Set new language
             const target = (lang.code === 'zh') ? 'zh-CN' : lang.code;
@@ -675,8 +676,8 @@
             document.documentElement.lang = target;
             document.documentElement.dir = (lang.code === 'ar') ? 'rtl' : 'ltr';
 
-            // Force hard reload with cache bypass
-            window.location.href = window.location.pathname + window.location.search;
+            // Force complete reload bypassing cache - critical for GT to reinitialize
+            window.location.replace(window.location.pathname + '?t=' + Date.now());
           }
         });
         langMenu.appendChild(btn);
@@ -716,8 +717,43 @@
         }
       });
 
+      // Language flag map
+      const flagMap = {
+        'en': '🇬🇧',
+        'es': '🇪🇸',
+        'fr': '🇫🇷',
+        'de': '🇩🇪',
+        'pt': '🇵🇹',
+        'ja': '🇯🇵',
+        'zh': '🇨🇳',
+        'ko': '🇰🇷',
+        'ru': '🇷🇺',
+        'it': '🇮🇹',
+        'nl': '🇳🇱',
+        'pl': '🇵🇱',
+        'tr': '🇹🇷',
+        'ar': '🇸🇦',
+        'hi': '🇮🇳',
+        'id': '🇮🇩',
+        'th': '🇹🇭',
+        'vi': '🇻🇳'
+      };
+
+      // Update button flag to show current language
+      function updateButtonFlag(langCode) {
+        const flag = flagMap[langCode] || '🌐';
+        const btnSpan = langBtn.querySelector('span');
+        if (btnSpan) {
+          btnSpan.textContent = flag;
+        }
+      }
+
       // Load saved language on page load
-      const savedLang = localStorage.getItem('sp_lang');
+      const savedLang = localStorage.getItem('sp_lang') || 'en';
+
+      // Update button to show current language flag
+      updateButtonFlag(savedLang);
+
       if (savedLang && savedLang !== 'en') {
         const target = (savedLang === 'zh') ? 'zh-CN' : savedLang;
         const val = '/en/' + target;
