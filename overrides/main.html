@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'es,fr,de,pt,ja,zh-CN,zh-TW,ko,ru,it,nl,pl,tr,ar,hi,id,th,vi',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <style>
+    /* Google Translate widget styling to match Material theme */
+    #google_translate_element {
+      padding: 8px 12px;
+      border-radius: 4px;
+      background-color: rgba(0, 150, 136, 0.1); /* Teal with transparency */
+      display: inline-block;
+      margin: 8px 0;
+    }
+
+    /* Dark mode adjustments */
+    [data-md-color-scheme="slate"] #google_translate_element {
+      background-color: rgba(0, 229, 255, 0.08); /* Cyan with transparency for dark mode */
+    }
+
+    /* Hide Google Translate banner */
+    .goog-te-banner-frame.skiptranslate {
+      display: none !important;
+    }
+
+    body {
+      top: 0px !important;
+    }
+
+    /* Style the select dropdown to match theme */
+    .goog-te-combo {
+      background-color: var(--md-default-bg-color);
+      color: var(--md-default-fg-color);
+      border: 1px solid var(--md-primary-fg-color);
+      border-radius: 4px;
+      padding: 4px 8px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    /* Container for translate widget in header */
+    .md-header__translate {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      padding-right: 12px;
+    }
+
+    @media screen and (max-width: 76.1875em) {
+      #google_translate_element {
+        padding: 4px 8px;
+        margin: 4px 0;
+      }
+    }
+  </style>
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  <div class="md-header__translate">
+    <div id="google_translate_element"></div>
+  </div>
+{% endblock %}
