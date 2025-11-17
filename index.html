@@ -317,20 +317,43 @@
       color: #000;
     }
 
-    /* Hide Google Translate banner */
+    /* Google Translate Banner Killer - Hide the ugly white banner */
     .goog-te-banner-frame.skiptranslate {
       display: none !important;
     }
 
-    body {
-      top: 0px !important;
+    body > .skiptranslate {
+      display: none !important;
     }
 
-    /* Hidden container for Google Translate */
+    /* Prevent Google Translate from pushing page down */
+    body {
+      top: 0 !important;
+      position: relative !important;
+    }
+
+    /* Fix Google Translate font wrappers - make them invisible */
+    font {
+      font-size: inherit !important;
+      line-height: inherit !important;
+      pointer-events: none !important;
+      color: inherit !important;
+      background: transparent !important;
+      font-family: inherit !important;
+    }
+
+    /* Prevent Google Translate from breaking clicks */
+    #google_translate_element font,
+    #google_translate_element span {
+      pointer-events: none !important;
+    }
+
+    /* Hidden container for Google Translate widget */
     #google_translate_container {
       position: absolute;
       left: -9999px;
       visibility: hidden;
+      aria-hidden: true;
     }
 
     @media screen and (max-width: 76.1875em) {
@@ -576,21 +599,44 @@
         btn.setAttribute('data-lang', lang.code);
         btn.textContent = lang.name;
         btn.addEventListener('click', function() {
-          const target = (lang.code === 'zh') ? 'zh-CN' : lang.code;
-          const val = '/en/' + target;
+          // Helper function to delete cookies
+          function deleteCookie(name) {
+            document.cookie = name + '=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+            document.cookie = name + '=; path=/; domain=' + location.hostname + '; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+            document.cookie = name + '=; path=/; domain=.' + location.hostname.replace(/^www\./, '') + '; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+          }
 
-          // Set Google Translate cookie
-          document.cookie = 'googtrans=' + val + '; path=/; max-age=31536000';
+          // Clear all Google Translate cookies first
+          deleteCookie('googtrans');
+          deleteCookie('googtrans_bak');
 
-          // Update page language attributes
-          document.documentElement.lang = target;
-          document.documentElement.dir = (lang.code === 'ar') ? 'rtl' : 'ltr';
-
-          // Save preference
+          // Save preference first
           localStorage.setItem('sp_lang', lang.code);
 
-          // Reload page to apply translation
-          location.reload();
+          if (lang.code === 'en') {
+            // Reset to English - clear everything
+            document.documentElement.lang = 'en';
+            document.documentElement.dir = 'ltr';
+            location.reload();
+          } else {
+            // Set new language
+            const target = (lang.code === 'zh') ? 'zh-CN' : lang.code;
+            const val = '/en/' + target;
+
+            // Set Google Translate cookies
+            document.cookie = 'googtrans=' + val + '; path=/; max-age=31536000';
+
+            // Also try with domain
+            const domain = '.' + location.hostname.replace(/^www\./, '');
+            document.cookie = 'googtrans=' + val + '; path=/; domain=' + domain + '; max-age=31536000';
+
+            // Update page attributes
+            document.documentElement.lang = target;
+            document.documentElement.dir = (lang.code === 'ar') ? 'rtl' : 'ltr';
+
+            // Reload to apply translation
+            location.reload();
+          }
         });
         langMenu.appendChild(btn);
       });
@@ -634,9 +680,26 @@
       if (savedLang && savedLang !== 'en') {
         const target = (savedLang === 'zh') ? 'zh-CN' : savedLang;
         const val = '/en/' + target;
+
+        // Set cookie with path
         document.cookie = 'googtrans=' + val + '; path=/; max-age=31536000';
+
+        // Also set with domain
+        const domain = '.' + location.hostname.replace(/^www\./, '');
+        document.cookie = 'googtrans=' + val + '; path=/; domain=' + domain + '; max-age=31536000';
+
+        // Update page attributes
         document.documentElement.lang = target;
         document.documentElement.dir = (savedLang === 'ar') ? 'rtl' : 'ltr';
+
+        // Load Google Translate script if not already loaded
+        if (!window.__gte_loading && !window.google) {
+          window.__gte_loading = true;
+          const s = document.createElement('script');
+          s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+          s.async = true;
+          document.head.appendChild(s);
+        }
       }
     })();
     </script>
