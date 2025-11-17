@@ -187,6 +187,8 @@ graph TD
     style Close fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:3px
 ```
 
+**Legend:** VBS = Volume Based Signal (VBS+ = bullish, VBS- = bearish)
+
 ---
 
 ## 6. TRADING WORKFLOW (BIAS → TIMING)
