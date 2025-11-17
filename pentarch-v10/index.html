@@ -2071,39 +2071,6 @@ Signals appear only when all four layers align.</p>
   <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a chart showing all five signal types (TD, IGN, WRN, CAP, BDN) labeled on a live Bitcoin or S&P 500 chart.</p>
 </div>
 
-<h3 id="signal-flow-visual">📊 Signal Flow Visualization</h3>
-
-<p>The five Pentarch signals typically appear in a cyclical sequence as markets move through different phases. Here's how signals progress through a complete market cycle:</p>
-
-<div class="mermaid">
-graph TD
-    Start([📊 Market Cycle Begins]) --> TD
-    TD[TD Signal<br/>🟦 ACCUMULATION<br/>Early Cycle Bottom] --> IGN
-    IGN[IGN Signal<br/>🟩 IGNITION<br/>Reversal Starting] --> WRN
-    WRN[WRN Signal<br/>🟨 WARNING<br/>Late Cycle Peak] --> CAP
-    CAP[CAP Signal<br/>🟧 CAPITULATION<br/>Distribution Climax] --> BDN
-    BDN[BDN Signal<br/>🟥 BREAKDOWN<br/>Trend Breakdown] --> Start
-
-    style TD fill:#9C27B0,stroke:#7B1FA2,stroke-width:3px,color:#fff
-    style IGN fill:#00BCD4,stroke:#0097A7,stroke-width:3px,color:#fff
-    style WRN fill:#FFC107,stroke:#FFA000,stroke-width:3px,color:#000
-    style CAP fill:#FF5722,stroke:#E64A19,stroke-width:3px,color:#fff
-    style BDN fill:#F44336,stroke:#C62828,stroke-width:3px,color:#fff
-    style Start fill:#424242,stroke:#212121,stroke-width:2px,color:#fff
-</div>
-
-<div class="admonition tip">
-<p class="admonition-title">💡 How to Read This Flow</p>
-<ul>
-<li><strong>TD (Touchdown):</strong> Appears during accumulation phase - early cycle bottom conditions</li>
-<li><strong>IGN (Ignition):</strong> Signals reversal starting - momentum shifting upward</li>
-<li><strong>WRN (Warning):</strong> Appears at late cycle peaks - distribution phase beginning</li>
-<li><strong>CAP (Capitulation):</strong> Distribution climax - selling exhaustion</li>
-<li><strong>BDN (Breakdown):</strong> Trend breakdown confirmed - cycle reset</li>
-</ul>
-<p><strong>Important:</strong> Not every cycle includes all five signals. Some cycles may skip signals. This diagram shows the typical progression when all signals appear.</p>
-</div>
-
 <hr />
 <h2 id="settings">⚙️ Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h2>
 <p>Available configuration options:</p>
