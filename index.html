@@ -621,43 +621,62 @@
         btn.setAttribute('data-lang', lang.code);
         btn.textContent = lang.name;
         btn.addEventListener('click', function() {
-          // Helper function to delete cookies
+          // Helper function to delete cookies more aggressively
           function deleteCookie(name) {
-            document.cookie = name + '=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';
-            document.cookie = name + '=; path=/; domain=' + location.hostname + '; expires=Thu, 01 Jan 1970 00:00:00 GMT';
-            document.cookie = name + '=; path=/; domain=.' + location.hostname.replace(/^www\./, '') + '; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+            const paths = ['/', location.pathname];
+            const domains = [
+              '',
+              location.hostname,
+              '.' + location.hostname,
+              '.' + location.hostname.replace(/^www\./, '')
+            ];
+
+            paths.forEach(path => {
+              domains.forEach(domain => {
+                const domainStr = domain ? '; domain=' + domain : '';
+                document.cookie = name + '=; path=' + path + domainStr + '; expires=Thu, 01 Jan 1970 00:00:00 GMT; max-age=0';
+              });
+            });
           }
 
-          // Clear all Google Translate cookies first
+          // Clear ALL Google Translate cookies and storage
           deleteCookie('googtrans');
           deleteCookie('googtrans_bak');
+          deleteCookie('googtrans_temp');
 
-          // Save preference first
+          // Clear session storage
+          try {
+            sessionStorage.removeItem('googtrans');
+            sessionStorage.removeItem('google_translate_status');
+          } catch(e) {}
+
+          // Save preference
           localStorage.setItem('sp_lang', lang.code);
 
           if (lang.code === 'en') {
             // Reset to English - clear everything
             document.documentElement.lang = 'en';
             document.documentElement.dir = 'ltr';
-            location.reload();
+            // Force hard reload
+            window.location.href = window.location.pathname + window.location.search;
           } else {
             // Set new language
             const target = (lang.code === 'zh') ? 'zh-CN' : lang.code;
             const val = '/en/' + target;
 
-            // Set Google Translate cookies
+            // Set Google Translate cookies with multiple domain variations
             document.cookie = 'googtrans=' + val + '; path=/; max-age=31536000';
+            document.cookie = 'googtrans=' + val + '; path=/; domain=' + location.hostname + '; max-age=31536000';
 
-            // Also try with domain
-            const domain = '.' + location.hostname.replace(/^www\./, '');
-            document.cookie = 'googtrans=' + val + '; path=/; domain=' + domain + '; max-age=31536000';
+            const baseDomain = '.' + location.hostname.replace(/^www\./, '');
+            document.cookie = 'googtrans=' + val + '; path=/; domain=' + baseDomain + '; max-age=31536000';
 
             // Update page attributes
             document.documentElement.lang = target;
             document.documentElement.dir = (lang.code === 'ar') ? 'rtl' : 'ltr';
 
-            // Reload to apply translation
-            location.reload();
+            // Force hard reload with cache bypass
+            window.location.href = window.location.pathname + window.location.search;
           }
         });
         langMenu.appendChild(btn);
