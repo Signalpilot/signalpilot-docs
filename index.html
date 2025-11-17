@@ -223,31 +223,95 @@
   <link rel="stylesheet" href="css/hide-mkdocs-sidebar.css?v7">
   <link rel="stylesheet" href="css/custom-bottom-sheet.css?v7">
 
-  <!-- Google Translate Widget -->
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'es,fr,de,pt,ja,zh-CN,zh-TW,ko,ru,it,nl,pl,tr,ar,hi,id,th,vi',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-        autoDisplay: false
-      }, 'google_translate_element');
-    }
-  </script>
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <!-- Google Translate - Beautiful Dropdown Implementation -->
   <style>
-    /* Google Translate widget styling */
-    #google_translate_element {
-      padding: 6px 10px;
+    /* Language toggle button */
+    #langToggle {
+      flex-shrink: 0;
+      position: relative;
+      z-index: 68 !important;
+      padding: 0.4rem 0.6rem !important;
+      font-size: 0.85rem !important;
+      min-width: 44px;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      background: transparent;
+      border: none;
+      color: var(--md-default-fg-color);
+      cursor: pointer;
       border-radius: 4px;
-      background-color: rgba(0, 150, 136, 0.08);
-      display: inline-block;
-      margin: 0 8px;
+      transition: background-color 0.2s ease;
     }
 
-    /* Dark mode adjustments */
-    [data-md-color-scheme="slate"] #google_translate_element {
-      background-color: rgba(0, 229, 255, 0.08);
+    #langToggle:hover {
+      background-color: rgba(0, 150, 136, 0.1);
+    }
+
+    [data-md-color-scheme="slate"] #langToggle:hover {
+      background-color: rgba(0, 229, 255, 0.1);
+    }
+
+    /* Language dropdown menu */
+    .lang-dropdown-menu {
+      position: fixed !important;
+      top: 70px;
+      right: 20px;
+      background: rgba(30, 41, 59, 0.98);
+      border: 2px solid rgba(0, 229, 255, 0.3);
+      border-radius: 12px;
+      padding: 0.5rem;
+      min-width: 200px;
+      max-height: 500px;
+      overflow-y: auto;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+      z-index: 999999 !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+      transform: translateY(-10px);
+      transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+      display: flex !important;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    [data-md-color-scheme="default"] .lang-dropdown-menu {
+      background: rgba(255, 255, 255, 0.98);
+      border-color: rgba(0, 150, 136, 0.3);
+    }
+
+    .lang-dropdown-menu.active {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: translateY(0) !important;
+    }
+
+    .lang-dropdown-menu button {
+      padding: 0.6rem 0.9rem;
+      background: transparent;
+      border: none;
+      border-radius: 8px;
+      color: rgba(255, 255, 255, 0.85);
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-size: 0.9rem;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+    }
+
+    [data-md-color-scheme="default"] .lang-dropdown-menu button {
+      color: rgba(0, 0, 0, 0.85);
+    }
+
+    .lang-dropdown-menu button:hover {
+      background: rgba(0, 229, 255, 0.15);
+      color: #fff;
+    }
+
+    [data-md-color-scheme="default"] .lang-dropdown-menu button:hover {
+      background: rgba(0, 150, 136, 0.15);
+      color: #000;
     }
 
     /* Hide Google Translate banner */
@@ -259,25 +323,25 @@
       top: 0px !important;
     }
 
-    /* Style the select dropdown */
-    .goog-te-combo {
-      background-color: rgba(255, 255, 255, 0.1);
-      color: inherit;
-      border: 1px solid rgba(0, 150, 136, 0.3);
-      border-radius: 4px;
-      padding: 4px 8px;
-      font-family: 'Roboto', sans-serif;
-      font-size: 13px;
-    }
-
-    [data-md-color-scheme="slate"] .goog-te-combo {
-      border-color: rgba(0, 229, 255, 0.3);
+    /* Hidden container for Google Translate */
+    #google_translate_container {
+      position: absolute;
+      left: -9999px;
+      visibility: hidden;
     }
 
     @media screen and (max-width: 76.1875em) {
-      #google_translate_element {
-        padding: 4px 6px;
-        margin: 0 4px;
+      .lang-dropdown-menu {
+        right: 10px;
+        min-width: 180px;
+        top: 60px;
+      }
+
+      #langToggle {
+        padding: 0.3rem !important;
+        font-size: 0.8rem !important;
+        min-width: 40px;
+        min-height: 40px;
       }
     }
   </style>
@@ -442,13 +506,137 @@
 </a>
       </div>
 
-      <!-- Google Translate Widget -->
-      <div id="google_translate_element"></div>
+      <!-- Language Selector -->
+      <button id="langToggle" class="md-header__button md-icon" type="button" aria-label="Select language" title="Select language">
+        <span>🌐</span>
+      </button>
 
   </nav>
 
 </header>
-    
+
+    <!-- Hidden Google Translate container -->
+    <div id="google_translate_container" aria-hidden="true"></div>
+
+    <script>
+    /* Google Translate - Beautiful Dropdown Implementation */
+    (function() {
+      // Google Translate initialization
+      window.googleTranslateElementInit = function() {
+        if (!window.google || !google.translate || !google.translate.TranslateElement) {
+          return;
+        }
+        const container = document.getElementById('google_translate_container');
+        if (!container) return;
+
+        try {
+          new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'es,fr,de,pt,ja,zh-CN,zh-TW,ko,ru,it,nl,pl,tr,ar,hi,id,th,vi',
+            autoDisplay: false
+          }, 'google_translate_container');
+        } catch (error) {
+          console.error('Google Translate failed to initialize:', error);
+        }
+      };
+
+      // Create language dropdown menu
+      const langBtn = document.getElementById('langToggle');
+      if (!langBtn) return;
+
+      const langMenu = document.createElement('div');
+      langMenu.className = 'lang-dropdown-menu';
+
+      const languages = [
+        { code: 'en', name: 'English' },
+        { code: 'es', name: 'Español' },
+        { code: 'fr', name: 'Français' },
+        { code: 'de', name: 'Deutsch' },
+        { code: 'pt', name: 'Português' },
+        { code: 'ja', name: '日本語' },
+        { code: 'zh', name: '中文' },
+        { code: 'ko', name: '한국어' },
+        { code: 'ru', name: 'Русский' },
+        { code: 'it', name: 'Italiano' },
+        { code: 'nl', name: 'Nederlands' },
+        { code: 'pl', name: 'Polski' },
+        { code: 'tr', name: 'Türkçe' },
+        { code: 'ar', name: 'العربية' },
+        { code: 'hi', name: 'हिन्दी' },
+        { code: 'id', name: 'Bahasa Indonesia' },
+        { code: 'th', name: 'ไทย' },
+        { code: 'vi', name: 'Tiếng Việt' }
+      ];
+
+      languages.forEach(lang => {
+        const btn = document.createElement('button');
+        btn.setAttribute('data-lang', lang.code);
+        btn.textContent = lang.name;
+        btn.addEventListener('click', function() {
+          const target = (lang.code === 'zh') ? 'zh-CN' : lang.code;
+          const val = '/en/' + target;
+
+          // Set Google Translate cookie
+          document.cookie = 'googtrans=' + val + '; path=/; max-age=31536000';
+
+          // Update page language attributes
+          document.documentElement.lang = target;
+          document.documentElement.dir = (lang.code === 'ar') ? 'rtl' : 'ltr';
+
+          // Save preference
+          localStorage.setItem('sp_lang', lang.code);
+
+          // Reload page to apply translation
+          location.reload();
+        });
+        langMenu.appendChild(btn);
+      });
+
+      document.body.appendChild(langMenu);
+
+      // Toggle dropdown
+      function open() {
+        langMenu.classList.add('active');
+        langBtn.setAttribute('aria-expanded', 'true');
+      }
+
+      function close() {
+        langMenu.classList.remove('active');
+        langBtn.setAttribute('aria-expanded', 'false');
+      }
+
+      langBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        langMenu.classList.contains('active') ? close() : open();
+
+        // Load Google Translate on first click
+        if (!window.__gte_loading && !window.google) {
+          window.__gte_loading = true;
+          const s = document.createElement('script');
+          s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+          s.async = true;
+          document.head.appendChild(s);
+        }
+      });
+
+      // Close on outside click
+      document.addEventListener('click', function(e) {
+        if (!langMenu.contains(e.target) && e.target !== langBtn) {
+          close();
+        }
+      });
+
+      // Load saved language on page load
+      const savedLang = localStorage.getItem('sp_lang');
+      if (savedLang && savedLang !== 'en') {
+        const target = (savedLang === 'zh') ? 'zh-CN' : savedLang;
+        const val = '/en/' + target;
+        document.cookie = 'googtrans=' + val + '; path=/; max-age=31536000';
+        document.documentElement.lang = target;
+        document.documentElement.dir = (savedLang === 'ar') ? 'rtl' : 'ltr';
+      }
+    })();
+    </script>
 
     <div class="md-container" data-md-component="container">
       
