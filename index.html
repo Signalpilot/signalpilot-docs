@@ -222,6 +222,65 @@
   <!-- Custom Bottom Sheet Navigation -->
   <link rel="stylesheet" href="css/hide-mkdocs-sidebar.css?v7">
   <link rel="stylesheet" href="css/custom-bottom-sheet.css?v7">
+
+  <!-- Google Translate Widget -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'es,fr,de,pt,ja,zh-CN,zh-TW,ko,ru,it,nl,pl,tr,ar,hi,id,th,vi',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <style>
+    /* Google Translate widget styling */
+    #google_translate_element {
+      padding: 6px 10px;
+      border-radius: 4px;
+      background-color: rgba(0, 150, 136, 0.08);
+      display: inline-block;
+      margin: 0 8px;
+    }
+
+    /* Dark mode adjustments */
+    [data-md-color-scheme="slate"] #google_translate_element {
+      background-color: rgba(0, 229, 255, 0.08);
+    }
+
+    /* Hide Google Translate banner */
+    .goog-te-banner-frame.skiptranslate {
+      display: none !important;
+    }
+
+    body {
+      top: 0px !important;
+    }
+
+    /* Style the select dropdown */
+    .goog-te-combo {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: inherit;
+      border: 1px solid rgba(0, 150, 136, 0.3);
+      border-radius: 4px;
+      padding: 4px 8px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 13px;
+    }
+
+    [data-md-color-scheme="slate"] .goog-te-combo {
+      border-color: rgba(0, 229, 255, 0.3);
+    }
+
+    @media screen and (max-width: 76.1875em) {
+      #google_translate_element {
+        padding: 4px 6px;
+        margin: 0 4px;
+      }
+    }
+  </style>
 </head>
   
   
@@ -382,9 +441,12 @@
   </div>
 </a>
       </div>
-    
+
+      <!-- Google Translate Widget -->
+      <div id="google_translate_element"></div>
+
   </nav>
-  
+
 </header>
     
 
