@@ -11,21 +11,123 @@
         autoDisplay: false
       }, 'google_translate_element');
     }
+
+    // Language configuration with flags
+    const languages = [
+      { code: 'en', name: 'English', flag: '🇬🇧' },
+      { code: 'es', name: 'Español', flag: '🇪🇸' },
+      { code: 'fr', name: 'Français', flag: '🇫🇷' },
+      { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+      { code: 'pt', name: 'Português', flag: '🇵🇹' },
+      { code: 'ja', name: '日本語', flag: '🇯🇵' },
+      { code: 'zh-CN', name: '简体中文', flag: '🇨🇳' },
+      { code: 'zh-TW', name: '繁體中文', flag: '🇹🇼' },
+      { code: 'ko', name: '한국어', flag: '🇰🇷' },
+      { code: 'ru', name: 'Русский', flag: '🇷🇺' },
+      { code: 'it', name: 'Italiano', flag: '🇮🇹' },
+      { code: 'nl', name: 'Nederlands', flag: '🇳🇱' },
+      { code: 'pl', name: 'Polski', flag: '🇵🇱' },
+      { code: 'tr', name: 'Türkçe', flag: '🇹🇷' },
+      { code: 'ar', name: 'العربية', flag: '🇸🇦' },
+      { code: 'hi', name: 'हिन्दी', flag: '🇮🇳' },
+      { code: 'id', name: 'Bahasa Indonesia', flag: '🇮🇩' },
+      { code: 'th', name: 'ไทย', flag: '🇹🇭' },
+      { code: 'vi', name: 'Tiếng Việt', flag: '🇻🇳' }
+    ];
+
+    function clearGoogleTranslate() {
+      // Clear all Google Translate cookies
+      const cookies = document.cookie.split(";");
+      for (let cookie of cookies) {
+        const eqPos = cookie.indexOf("=");
+        const name = eqPos > -1 ? cookie.substr(0, eqPos).trim() : cookie.trim();
+        if (name.includes('googtrans') || name.includes('google')) {
+          document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
+          document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=" + window.location.hostname;
+          document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=." + window.location.hostname;
+        }
+      }
+
+      // Clear localStorage
+      try {
+        Object.keys(localStorage).forEach(key => {
+          if (key.includes('google') || key.includes('trans')) {
+            localStorage.removeItem(key);
+          }
+        });
+      } catch (e) {}
+
+      // Clear sessionStorage
+      try {
+        Object.keys(sessionStorage).forEach(key => {
+          if (key.includes('google') || key.includes('trans')) {
+            sessionStorage.removeItem(key);
+          }
+        });
+      } catch (e) {}
+    }
+
+    function changeLanguage(langCode) {
+      // Clear all translate state first
+      clearGoogleTranslate();
+
+      if (langCode === 'en') {
+        // For English, just reload without any translation
+        window.location.href = window.location.pathname + window.location.search;
+        return;
+      }
+
+      // Set the language cookie for Google Translate
+      const langPair = '/en/' + langCode;
+      document.cookie = 'googtrans=' + langPair + ';path=/;domain=' + window.location.hostname;
+      document.cookie = 'googtrans=' + langPair + ';path=/;domain=.' + window.location.hostname;
+      document.cookie = 'googtrans=' + langPair + ';path=/';
+
+      // Force a complete page reload to apply the translation
+      window.location.href = window.location.pathname + window.location.search + '#googtrans(' + langPair + ')';
+      window.location.reload(true);
+    }
+
+    function getCurrentLanguage() {
+      const cookies = document.cookie.split(';');
+      for (let cookie of cookies) {
+        const parts = cookie.trim().split('=');
+        if (parts[0] === 'googtrans') {
+          const langPair = parts[1];
+          const match = langPair.match(/\/en\/([a-zA-Z-]+)/);
+          return match ? match[1] : 'en';
+        }
+      }
+
+      // Check URL hash
+      const hash = window.location.hash;
+      if (hash.includes('googtrans')) {
+        const match = hash.match(/googtrans\(\/en\/([a-zA-Z-]+)\)/);
+        return match ? match[1] : 'en';
+      }
+
+      return 'en';
+    }
+
+    function updateLanguageSelector() {
+      const currentLang = getCurrentLanguage();
+      const selector = document.getElementById('language-selector-button');
+      if (selector) {
+        const lang = languages.find(l => l.code === currentLang) || languages[0];
+        selector.innerHTML = lang.flag + ' <span class="lang-name">' + lang.name + '</span>';
+      }
+    }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      updateLanguageSelector();
+    });
   </script>
   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <style>
-    /* Google Translate widget styling to match Material theme */
+    /* Hide the default Google Translate widget */
     #google_translate_element {
-      padding: 8px 12px;
-      border-radius: 4px;
-      background-color: rgba(0, 150, 136, 0.1); /* Teal with transparency */
-      display: inline-block;
-      margin: 8px 0;
-    }
-
-    /* Dark mode adjustments */
-    [data-md-color-scheme="slate"] #google_translate_element {
-      background-color: rgba(0, 229, 255, 0.08); /* Cyan with transparency for dark mode */
+      display: none !important;
     }
 
     /* Hide Google Translate banner */
@@ -37,14 +139,83 @@
       top: 0px !important;
     }
 
-    /* Style the select dropdown to match theme */
-    .goog-te-combo {
+    /* Custom language selector styling */
+    .language-selector {
+      position: relative;
+      display: inline-block;
+    }
+
+    .language-selector-button {
       background-color: var(--md-default-bg-color);
       color: var(--md-default-fg-color);
       border: 1px solid var(--md-primary-fg-color);
       border-radius: 4px;
-      padding: 4px 8px;
+      padding: 6px 12px;
       font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .language-selector-button:hover {
+      background-color: var(--md-primary-fg-color--light);
+    }
+
+    .language-selector-button .lang-name {
+      display: inline;
+    }
+
+    @media screen and (max-width: 76.1875em) {
+      .language-selector-button .lang-name {
+        display: none;
+      }
+    }
+
+    .language-dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      margin-top: 4px;
+      background-color: var(--md-default-bg-color);
+      border: 1px solid var(--md-primary-fg-color);
+      border-radius: 4px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      min-width: 200px;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+
+    .language-selector:hover .language-dropdown,
+    .language-dropdown:hover {
+      display: block;
+    }
+
+    .language-option {
+      padding: 8px 12px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      transition: background-color 0.2s ease;
+    }
+
+    .language-option:hover {
+      background-color: var(--md-primary-fg-color--light);
+    }
+
+    .language-option.active {
+      background-color: rgba(0, 150, 136, 0.1);
+      font-weight: 500;
+    }
+
+    [data-md-color-scheme="slate"] .language-option.active {
+      background-color: rgba(0, 229, 255, 0.08);
     }
 
     /* Container for translate widget in header */
@@ -54,13 +225,6 @@
       margin-left: auto;
       padding-right: 12px;
     }
-
-    @media screen and (max-width: 76.1875em) {
-      #google_translate_element {
-        padding: 4px 8px;
-        margin: 4px 0;
-      }
-    }
   </style>
 {% endblock %}
 
@@ -68,5 +232,69 @@
   {{ super() }}
   <div class="md-header__translate">
     <div id="google_translate_element"></div>
+    <div class="language-selector">
+      <div class="language-selector-button" id="language-selector-button">
+        🇬🇧 <span class="lang-name">English</span>
+      </div>
+      <div class="language-dropdown">
+        <div class="language-option" onclick="changeLanguage('en')">
+          🇬🇧 English
+        </div>
+        <div class="language-option" onclick="changeLanguage('es')">
+          🇪🇸 Español
+        </div>
+        <div class="language-option" onclick="changeLanguage('fr')">
+          🇫🇷 Français
+        </div>
+        <div class="language-option" onclick="changeLanguage('de')">
+          🇩🇪 Deutsch
+        </div>
+        <div class="language-option" onclick="changeLanguage('pt')">
+          🇵🇹 Português
+        </div>
+        <div class="language-option" onclick="changeLanguage('ja')">
+          🇯🇵 日本語
+        </div>
+        <div class="language-option" onclick="changeLanguage('zh-CN')">
+          🇨🇳 简体中文
+        </div>
+        <div class="language-option" onclick="changeLanguage('zh-TW')">
+          🇹🇼 繁體中文
+        </div>
+        <div class="language-option" onclick="changeLanguage('ko')">
+          🇰🇷 한국어
+        </div>
+        <div class="language-option" onclick="changeLanguage('ru')">
+          🇷🇺 Русский
+        </div>
+        <div class="language-option" onclick="changeLanguage('it')">
+          🇮🇹 Italiano
+        </div>
+        <div class="language-option" onclick="changeLanguage('nl')">
+          🇳🇱 Nederlands
+        </div>
+        <div class="language-option" onclick="changeLanguage('pl')">
+          🇵🇱 Polski
+        </div>
+        <div class="language-option" onclick="changeLanguage('tr')">
+          🇹🇷 Türkçe
+        </div>
+        <div class="language-option" onclick="changeLanguage('ar')">
+          🇸🇦 العربية
+        </div>
+        <div class="language-option" onclick="changeLanguage('hi')">
+          🇮🇳 हिन्दी
+        </div>
+        <div class="language-option" onclick="changeLanguage('id')">
+          🇮🇩 Bahasa Indonesia
+        </div>
+        <div class="language-option" onclick="changeLanguage('th')">
+          🇹🇭 ไทย
+        </div>
+        <div class="language-option" onclick="changeLanguage('vi')">
+          🇻🇳 Tiếng Việt
+        </div>
+      </div>
+    </div>
   </div>
 {% endblock %}
