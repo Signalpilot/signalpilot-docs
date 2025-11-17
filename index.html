@@ -332,9 +332,9 @@
       position: relative !important;
     }
 
-    /* Fix Google Translate font wrappers - make them invisible */
+    /* Fix Google Translate font wrappers - match site styling */
     font {
-      font-size: 0.85em !important;
+      font-size: 1em !important;
       line-height: inherit !important;
       pointer-events: none !important;
       color: inherit !important;
@@ -354,6 +354,28 @@
       left: -9999px;
       visibility: hidden;
       aria-hidden: true;
+    }
+
+    /* Fix sidebar overflow with translated text */
+    .md-nav__item,
+    .md-nav__link {
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+    }
+
+    .md-nav__list .md-nav__item {
+      word-wrap: break-word !important;
+      overflow-wrap: break-word !important;
+    }
+
+    /* Prevent sidebar from overflowing to the right */
+    .md-sidebar__scrollwrap {
+      overflow-x: hidden !important;
+    }
+
+    .md-nav__link font {
+      display: inline !important;
+      white-space: normal !important;
     }
 
     @media screen and (max-width: 76.1875em) {
