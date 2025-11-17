@@ -8,12 +8,13 @@ This page provides a comprehensive overview of all Signal Pilot indicators to he
 
 ### 1. Pentarch v1.0 — Reversal & Timing Signals
 
-**What it does:** Identifies potential cycle reversal events using TD Sequential methodology with 5 distinct signal types.
+**What it does:** Identifies cycle position across five distinct events: accumulation, markup, distribution, climax, and decline phases.
 
 **Best for:** Timing entries and exits, catching potential trend reversals, cycle-based trading
 
 **Key Features:**
-- 5 signal types (TD 9, TD 13, IGN, Perfection, Price Flip)
+- 5 cycle event signals (TD, IGN, WRN, CAP, BDN)
+- Four-layer detection system with close-confirmed signals
 - Non-repainting confirmations
 - Works on any timeframe and market
 
@@ -38,14 +39,14 @@ This page provides a comprehensive overview of all Signal Pilot indicators to he
 
 ### 3. Harmonic Oscillator v1.0 — Momentum Voting System
 
-**What it does:** Combines 5 oscillators (RSI, Stochastic, CCI, Williams %R, MFI) with voting consensus for divergence detection.
+**What it does:** Combines 3 oscillators (MACD, RSI, StochRSI) with volume and divergence analysis into a 5-factor voting system for high-conviction signals.
 
 **Best for:** Momentum analysis, divergence trading, overbought/oversold confirmation
 
 **Key Features:**
-- 5-oscillator voting system
-- Automatic divergence detection
-- Consensus-based signals
+- 5-factor voting system (3 oscillators + volume + divergence)
+- Automatic divergence detection (regular and hidden)
+- Consensus-based signals with adjustable voting thresholds
 
 [Learn More →](../harmonic-oscillator-v10/)
 

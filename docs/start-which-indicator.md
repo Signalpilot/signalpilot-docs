@@ -9,7 +9,7 @@ Choose the right Signal Pilot indicator for your experience level, trading style
 ### Choose Your Path:
 
 **👋 I'm Brand New to Technical Indicators**
-→ Start with: **[Janus Atlas](../REVISED_DOCS_JANUS_ATLAS.md)** ([Quick Reference](ref-cheatsheets/janus-atlas-levels-guide.md)) + **[Volume Oracle](../REVISED_DOCS_VOLUME_ORACLE.md)** ([Quick Reference](ref-cheatsheets/volume-oracle-quick-reference.md))
+→ Start with: **[Janus Atlas](janus-atlas-v10.md)** ([Quick Reference](ref-cheatsheets/janus-atlas-levels-guide.md)) + **[Volume Oracle](minimal-flow-v10.md)** ([Quick Reference](ref-cheatsheets/volume-oracle-quick-reference.md))
 - **Why:** Simplest concepts (support/resistance + volume)
 - **Learning time:** 8-10 hours combined
 - **First signal:** Within minutes of loading
@@ -17,7 +17,7 @@ Choose the right Signal Pilot indicator for your experience level, trading style
 ---
 
 **📈 I Want to Understand Market Cycles**
-→ Start with: **[Pentarch](../REVISED_DOCS_PENTARCH.md)** ([Quick Reference](ref-cheatsheets/pentarch-quick-reference.md))
+→ Start with: **[Pentarch](pentarch-v10.md)** ([Quick Reference](ref-cheatsheets/pentarch-quick-reference.md))
 - **Why:** Identifies where you are in market cycle (accumulation → distribution)
 - **Learning time:** 10-60 hours (pattern recognition required)
 - **First signal:** Within 1-7 days
@@ -25,7 +25,7 @@ Choose the right Signal Pilot indicator for your experience level, trading style
 ---
 
 **⚡ I Want the Most Popular Combination**
-→ Start with: **The Trinity** ([Pentarch](../REVISED_DOCS_PENTARCH.md) + [Janus Atlas](../REVISED_DOCS_JANUS_ATLAS.md) + [Volume Oracle](../REVISED_DOCS_VOLUME_ORACLE.md)) — [See all cheat sheets](ref-cheatsheets/all-indicators-at-a-glance.md)
+→ Start with: **The Trinity** ([Pentarch](pentarch-v10.md) + [Janus Atlas](janus-atlas-v10.md) + [Volume Oracle](minimal-flow-v10.md)) — [See all cheat sheets](ref-cheatsheets/all-indicators-at-a-glance.md)
 - **Why:** Most comprehensive setup, covers all bases
 - **Learning time:** 45-100 hours total
 - **Path:** Learn Janus (2 weeks) → Volume (1 week) → Pentarch (4-6 weeks)
@@ -33,7 +33,7 @@ Choose the right Signal Pilot indicator for your experience level, trading style
 ---
 
 **🔬 I Want Everything in One Indicator**
-→ Start with: **[Omnideck](../REVISED_DOCS_OMNIDECK.md)** ([Quick Reference](ref-cheatsheets/omnideck-quick-reference.md))
+→ Start with: **[Omnideck](omnideck-v10.md)** ([Quick Reference](ref-cheatsheets/omnideck-quick-reference.md))
 - **Why:** 8 systems in one indicator, all-in-one analysis
 - **Learning time:** 100+ hours (advanced)
 - **Note:** Not recommended as first indicator—master simpler ones first
@@ -41,7 +41,7 @@ Choose the right Signal Pilot indicator for your experience level, trading style
 ---
 
 **📊 I Want to Scan Multiple Assets**
-→ Start with: **[Augury Grid](../REVISED_DOCS_AUGURY_GRID.md)** ([Quick Reference](ref-cheatsheets/augury-grid-quick-reference.md))
+→ Start with: **[Augury Grid](augury-grid-v10.md)** ([Quick Reference](ref-cheatsheets/augury-grid-quick-reference.md))
 - **Why:** Monitor 30-40 symbols simultaneously for exhaustion signals
 - **Learning time:** 12-50 hours
 - **Best used with:** Pentarch or Janus for detailed analysis on selected assets
@@ -103,7 +103,7 @@ graph TD
 ### Question 2: What's your primary trading style?
 
 **A) Scalping** (seconds to minutes, many trades per day)
-→ Recommended: [Volume Oracle](../REVISED_DOCS_VOLUME_ORACLE.md) + [Harmonic Oscillator](../REVISED_DOCS_HARMONIC_OSCILLATOR.md) ([Quick Reference](ref-cheatsheets/harmonic-oscillator-quick-reference.md))
+→ Recommended: [Volume Oracle](minimal-flow-v10.md) + [Harmonic Oscillator](harmonic-oscillator-v10.md) ([Quick Reference](ref-cheatsheets/harmonic-oscillator-quick-reference.md))
 → Timeframes: 1m-5m
 
 **B) Day Trading** (minutes to hours, close all by EOD)
@@ -135,7 +135,7 @@ graph TD
 → Recommended: **Harmonic Oscillator** (BUY/SELL/STRONG/NEUT)
 
 **E) Spot divergences**
-→ Recommended: **[Plutus Flow](../REVISED_DOCS_PLUTUS_FLOW.md)** ([Quick Reference](ref-cheatsheets/plutus-flow-quick-reference.md)) (OBV divergence detection)
+→ Recommended: **[Plutus Flow](plutus-flow-v10.md)** ([Quick Reference](ref-cheatsheets/plutus-flow-quick-reference.md)) (OBV divergence detection)
 
 **F) Scan multiple assets quickly**
 → Recommended: **Augury Grid** (multi-symbol screener)
