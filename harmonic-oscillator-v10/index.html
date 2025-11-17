@@ -2056,46 +2056,6 @@
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
   <div class="sp-callout__icon">📊</div>
   <div class="sp-callout__content">
-    <h4>How the Voting System Works</h4>
-    <p style="margin-bottom: 1rem;">Five independent components vote democratically to generate consensus signals. The composite oscillator contributes 3 votes:</p>
-    <div class="mermaid">
-graph TD
-    Data[📊 Market Data Input] --> Oscillators[COMPOSITE OSCILLATOR<br/>3 of 5 Votes]
-
-    Oscillators --> MACD[1️⃣ MACD<br/>Trend & Momentum]
-    Oscillators --> RSI[2️⃣ RSI<br/>Triple Envelope]
-    Oscillators --> Stoch[3️⃣ Stochastic RSI<br/>Oversold/Overbought]
-
-    MACD --> Voting[VOTE CONTRIBUTION<br/>3 Votes from Oscillators<br/>+2 from Volume & Divergence]
-    RSI --> Voting
-    Stoch --> Voting
-
-    Voting --> Threshold{Vote Count}
-
-    Threshold -->|3 Votes| Signal[🟢 BULL or BEAR<br/>Moderate Confidence]
-    Threshold -->|4-5 Votes| Strong[⭐ STRONG<br/>Maximum Confidence]
-    Threshold -->|0-2 Votes| Neutral[⚪ NEUT<br/>No Clear Consensus]
-
-    style Data fill:#37474f,color:#fff,stroke:#263238,stroke-width:3px
-    style Oscillators fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:3px
-    style Voting fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:3px
-    style Threshold fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:3px
-    style Signal fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
-    style Strong fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:4px
-    style Neutral fill:#757575,color:#fff,stroke:#616161,stroke-width:2px
-    style MACD fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:2px
-    style RSI fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:2px
-    style Stoch fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:2px
-    </div>
-    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
-      <strong>Note:</strong> This diagram shows the 3-oscillator component. See the full 5-component system below, which includes Volume and Divergence votes.
-    </p>
-  </div>
-</div>
-
-<div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
-  <div class="sp-callout__icon">📊</div>
-  <div class="sp-callout__content">
     <h4>Five-Component Voting System</h4>
     <p style="margin-bottom: 1rem;">Five independent components analyze market conditions and vote. Maximum 5 votes total (displayed as "X/5" in signals):</p>
     <div class="mermaid">
