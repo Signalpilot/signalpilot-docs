@@ -231,7 +231,7 @@
       position: relative;
       z-index: 68 !important;
       padding: 0.4rem 0.6rem !important;
-      font-size: 0.85rem !important;
+      font-size: 1.3rem !important;
       min-width: 44px;
       display: inline-flex !important;
       align-items: center !important;
@@ -242,14 +242,17 @@
       cursor: pointer;
       border-radius: 4px;
       transition: background-color 0.2s ease;
+      opacity: 0.85;
     }
 
     #langToggle:hover {
       background-color: rgba(0, 150, 136, 0.1);
+      opacity: 1;
     }
 
     [data-md-color-scheme="slate"] #langToggle:hover {
       background-color: rgba(0, 229, 255, 0.1);
+      opacity: 1;
     }
 
     /* Language dropdown menu */
@@ -548,24 +551,24 @@
       langMenu.className = 'lang-dropdown-menu';
 
       const languages = [
-        { code: 'en', name: 'English' },
-        { code: 'es', name: 'Español' },
-        { code: 'fr', name: 'Français' },
-        { code: 'de', name: 'Deutsch' },
-        { code: 'pt', name: 'Português' },
-        { code: 'ja', name: '日本語' },
-        { code: 'zh', name: '中文' },
-        { code: 'ko', name: '한국어' },
-        { code: 'ru', name: 'Русский' },
-        { code: 'it', name: 'Italiano' },
-        { code: 'nl', name: 'Nederlands' },
-        { code: 'pl', name: 'Polski' },
-        { code: 'tr', name: 'Türkçe' },
-        { code: 'ar', name: 'العربية' },
-        { code: 'hi', name: 'हिन्दी' },
-        { code: 'id', name: 'Bahasa Indonesia' },
-        { code: 'th', name: 'ไทย' },
-        { code: 'vi', name: 'Tiếng Việt' }
+        { code: 'en', name: '🇬🇧 English' },
+        { code: 'es', name: '🇪🇸 Español' },
+        { code: 'fr', name: '🇫🇷 Français' },
+        { code: 'de', name: '🇩🇪 Deutsch' },
+        { code: 'pt', name: '🇵🇹 Português' },
+        { code: 'ja', name: '🇯🇵 日本語' },
+        { code: 'zh', name: '🇨🇳 中文' },
+        { code: 'ko', name: '🇰🇷 한국어' },
+        { code: 'ru', name: '🇷🇺 Русский' },
+        { code: 'it', name: '🇮🇹 Italiano' },
+        { code: 'nl', name: '🇳🇱 Nederlands' },
+        { code: 'pl', name: '🇵🇱 Polski' },
+        { code: 'tr', name: '🇹🇷 Türkçe' },
+        { code: 'ar', name: '🇸🇦 العربية' },
+        { code: 'hi', name: '🇮🇳 हिन्दी' },
+        { code: 'id', name: '🇮🇩 Bahasa Indonesia' },
+        { code: 'th', name: '🇹🇭 ไทย' },
+        { code: 'vi', name: '🇻🇳 Tiếng Việt' }
       ];
 
       languages.forEach(lang => {
