@@ -2095,33 +2095,40 @@
     <h4>39 Level Types at a Glance</h4>
     <p style="margin-bottom: 1rem;">Janus Atlas organizes 39 different level types into five main categories:</p>
     <div class="mermaid">
-mindmap
-  root((Janus Atlas<br/>39 Level Types))
-    VWAP
-      Daily VWAP
-      Weekly VWAP
-      Monthly VWAP
-      Custom Period
-    Volume Profile
-      POC
-      VAH
-      VAL
-      Value Area
-    Sessions
-      Asia High/Low
-      London High/Low
-      NY High/Low
-      Custom Session
-    Market Structure
-      BOS
-      CHoCH
-      Swing High/Low
-      Liquidity Sweeps
-    Classic Levels
-      Daily/Weekly/Monthly H/L
-      Pivot Points
-      Fibonacci Levels
-      Round Numbers
+graph TD
+    Root[Janus Atlas<br/>39 Level Types] --> Cat1[VWAP Family]
+    Root --> Cat2[Volume Profile]
+    Root --> Cat3[Sessions]
+    Root --> Cat4[Market Structure]
+    Root --> Cat5[Classic Levels]
+
+    Cat1 --> V1[Daily/Weekly/Monthly VWAP<br/><small>Volume Weighted Avg Price</small>]
+    Cat1 --> V2[Custom Period VWAP]
+
+    Cat2 --> VP1[POC - Point of Control]
+    Cat2 --> VP2[VAH - Value Area High]
+    Cat2 --> VP3[VAL - Value Area Low]
+    Cat2 --> VP4[Value Area Range]
+
+    Cat3 --> S1[Asia/London/NY Sessions]
+    Cat3 --> S2[Custom Session H/L]
+
+    Cat4 --> MS1[BOS - Break of Structure]
+    Cat4 --> MS2[CHoCH - Change of Character]
+    Cat4 --> MS3[Swing High/Low Points]
+    Cat4 --> MS4[Liquidity Sweeps]
+
+    Cat5 --> CL1[Daily/Weekly/Monthly H/L]
+    Cat5 --> CL2[Pivot Points]
+    Cat5 --> CL3[Fibonacci Levels]
+    Cat5 --> CL4[Round Numbers]
+
+    style Root fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:3px
+    style Cat1 fill:#00bcd4,color:#fff
+    style Cat2 fill:#4caf50,color:#fff
+    style Cat3 fill:#ff9800,color:#fff
+    style Cat4 fill:#2196f3,color:#fff
+    style Cat5 fill:#f44336,color:#fff
     </div>
   </div>
 </div>
