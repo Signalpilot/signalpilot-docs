@@ -650,35 +650,17 @@
             sessionStorage.removeItem('google_translate_status');
           } catch(e) {}
 
-          // Save preference
-          localStorage.setItem('sp_lang', lang.code);
-
+          // Save preference ONLY - don't set cookies before reload
           if (lang.code === 'en') {
-            // Reset to English - clear everything including localStorage
             localStorage.removeItem('sp_lang');
-            document.documentElement.lang = 'en';
-            document.documentElement.dir = 'ltr';
-            // Force complete reload bypassing cache
-            window.location.replace(window.location.pathname + '?t=' + Date.now());
           } else {
-            // Set new language
-            const target = (lang.code === 'zh') ? 'zh-CN' : lang.code;
-            const val = '/en/' + target;
-
-            // Set Google Translate cookies with multiple domain variations
-            document.cookie = 'googtrans=' + val + '; path=/; max-age=31536000';
-            document.cookie = 'googtrans=' + val + '; path=/; domain=' + location.hostname + '; max-age=31536000';
-
-            const baseDomain = '.' + location.hostname.replace(/^www\./, '');
-            document.cookie = 'googtrans=' + val + '; path=/; domain=' + baseDomain + '; max-age=31536000';
-
-            // Update page attributes
-            document.documentElement.lang = target;
-            document.documentElement.dir = (lang.code === 'ar') ? 'rtl' : 'ltr';
-
-            // Force complete reload bypassing cache - critical for GT to reinitialize
-            window.location.replace(window.location.pathname + '?t=' + Date.now());
+            localStorage.setItem('sp_lang', lang.code);
           }
+
+          // Force complete reload - cookies will be set fresh on page load
+          setTimeout(function() {
+            window.location.href = window.location.pathname + '?lang=' + lang.code + '&t=' + Date.now();
+          }, 100);
         });
         langMenu.appendChild(btn);
       });
@@ -748,8 +730,15 @@
         }
       }
 
-      // Load saved language on page load
-      const savedLang = localStorage.getItem('sp_lang') || 'en';
+      // Get language from URL parameter or localStorage
+      const urlParams = new URLSearchParams(window.location.search);
+      const urlLang = urlParams.get('lang');
+      const savedLang = urlLang || localStorage.getItem('sp_lang') || 'en';
+
+      // Clean URL if it has lang parameter (remove query string after reading)
+      if (urlLang && window.history && window.history.replaceState) {
+        window.history.replaceState({}, document.title, window.location.pathname);
+      }
 
       // Update button to show current language flag
       updateButtonFlag(savedLang);
@@ -758,10 +747,10 @@
         const target = (savedLang === 'zh') ? 'zh-CN' : savedLang;
         const val = '/en/' + target;
 
-        // Set cookie with path
+        // Set cookies FRESH on page load with all domain variations
         document.cookie = 'googtrans=' + val + '; path=/; max-age=31536000';
+        document.cookie = 'googtrans=' + val + '; path=/; domain=' + location.hostname + '; max-age=31536000';
 
-        // Also set with domain
         const domain = '.' + location.hostname.replace(/^www\./, '');
         document.cookie = 'googtrans=' + val + '; path=/; domain=' + domain + '; max-age=31536000';
 
@@ -769,12 +758,15 @@
         document.documentElement.lang = target;
         document.documentElement.dir = (savedLang === 'ar') ? 'rtl' : 'ltr';
 
-        // Load Google Translate script if not already loaded
+        // Load Google Translate script AFTER cookies are set
         if (!window.__gte_loading && !window.google) {
           window.__gte_loading = true;
           const s = document.createElement('script');
           s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
           s.async = true;
+          s.onload = function() {
+            console.log('Google Translate loaded for language:', savedLang);
+          };
           document.head.appendChild(s);
         }
       }
