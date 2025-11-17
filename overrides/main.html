@@ -36,27 +36,75 @@
     ];
 
     function changeLanguage(langCode) {
-      // Wait for Google Translate to be ready
+      console.log('Attempting to change language to:', langCode);
+
+      // Method 1: Try to find and trigger the Google Translate select element
+      var attempts = 0;
+      var maxAttempts = 50; // 5 seconds total
+
       var checkInterval = setInterval(function() {
+        attempts++;
+
+        // Look for the select element in multiple ways
         var selectElement = document.querySelector('.goog-te-combo');
+
+        // Also try looking inside iframes
+        if (!selectElement) {
+          var iframes = document.querySelectorAll('iframe');
+          for (var i = 0; i < iframes.length; i++) {
+            try {
+              var iframeDoc = iframes[i].contentDocument || iframes[i].contentWindow.document;
+              selectElement = iframeDoc.querySelector('.goog-te-combo');
+              if (selectElement) break;
+            } catch(e) {
+              // Cross-origin iframe, skip
+            }
+          }
+        }
+
         if (selectElement) {
+          console.log('Found Google Translate select element');
           clearInterval(checkInterval);
 
-          // Set the value and trigger change
+          // Set the value
           selectElement.value = langCode;
-          selectElement.dispatchEvent(new Event('change'));
+
+          // Trigger change event in multiple ways to ensure it fires
+          var event = new Event('change', { bubbles: true, cancelable: true });
+          selectElement.dispatchEvent(event);
+
+          // Also try the input event
+          var inputEvent = new Event('input', { bubbles: true, cancelable: true });
+          selectElement.dispatchEvent(inputEvent);
+
+          // Trigger click as well
+          var clickEvent = new Event('click', { bubbles: true, cancelable: true });
+          selectElement.dispatchEvent(clickEvent);
+
+          console.log('Language change triggered');
 
           // Update our custom selector
           setTimeout(function() {
             updateLanguageSelector();
-          }, 100);
+          }, 500);
+        } else if (attempts >= maxAttempts) {
+          clearInterval(checkInterval);
+          console.log('Could not find Google Translate element, using fallback method');
+
+          // Fallback: Use cookie method and reload
+          if (langCode === 'en') {
+            // Clear translation cookies
+            document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+            document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=' + window.location.hostname;
+            window.location.reload();
+          } else {
+            var langPair = '/en/' + langCode;
+            document.cookie = 'googtrans=' + langPair + '; path=/';
+            document.cookie = 'googtrans=' + langPair + '; path=/; domain=' + window.location.hostname;
+            window.location.reload();
+          }
         }
       }, 100);
-
-      // Timeout after 5 seconds
-      setTimeout(function() {
-        clearInterval(checkInterval);
-      }, 5000);
     }
 
     function getCurrentLanguage() {
@@ -98,13 +146,31 @@
       }
     }
 
+    // Debug function to check Google Translate status
+    function debugGoogleTranslate() {
+      console.log('=== Google Translate Debug ===');
+      console.log('GT Element:', document.getElementById('google_translate_element'));
+      console.log('GT Select:', document.querySelector('.goog-te-combo'));
+      console.log('GT Iframes:', document.querySelectorAll('iframe.goog-te-menu-frame'));
+      console.log('Current cookies:', document.cookie);
+      console.log('Current language:', getCurrentLanguage());
+    }
+
+    // Make debug function available globally
+    window.debugGoogleTranslate = debugGoogleTranslate;
+
     // Initialize on page load and update periodically to catch GT changes
     document.addEventListener('DOMContentLoaded', function() {
+      console.log('Page loaded, initializing language selector');
+
       // Initial update
       setTimeout(updateLanguageSelector, 500);
 
       // Update again after GT is fully loaded
       setTimeout(updateLanguageSelector, 2000);
+
+      // Debug after 3 seconds
+      setTimeout(debugGoogleTranslate, 3000);
 
       // Watch for changes in the GT widget
       var observer = new MutationObserver(function() {
@@ -125,13 +191,19 @@
   </script>
   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <style>
-    /* Hide the default Google Translate widget visually but keep it in DOM */
+    /* Hide the default Google Translate widget visually but keep it functional */
     #google_translate_element {
-      position: absolute;
-      left: -9999px;
-      width: 1px;
-      height: 1px;
+      opacity: 0;
+      width: 0;
+      height: 0;
       overflow: hidden;
+      pointer-events: none;
+    }
+
+    /* Make sure the select element is still accessible */
+    #google_translate_element .goog-te-combo {
+      position: absolute;
+      opacity: 0;
     }
 
     /* Hide Google Translate banner */
