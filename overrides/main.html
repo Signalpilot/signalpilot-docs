@@ -2,61 +2,11 @@
 
 {% block extrahead %}
   {{ super() }}
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement(
-        {
-          pageLanguage: 'en',
-          includedLanguages: 'es,fr,de,pt,ja,zh-CN,zh-TW,ko,ru,it,nl,pl,tr,ar,hi,id,th,vi',
-          autoDisplay: false
-        },
-        'google_translate_element'
-      );
-    }
-  </script>
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-  <style>
-    /* Hide Google Translate banner */
-    .goog-te-banner-frame.skiptranslate {
-      display: none !important;
-    }
-
-    body {
-      top: 0px !important;
-    }
-
-    /* Container for translate widget in header */
-    .md-header__translate {
-      display: flex;
-      align-items: center;
-      margin-left: auto;
-      padding-right: 12px;
-    }
-
-    /* Basic styling for the widget */
-    #google_translate_element {
-      background: var(--md-default-bg-color);
-      padding: 4px 8px;
-      border-radius: 4px;
-    }
-
-    /* Style the dropdown */
-    .goog-te-combo {
-      background: var(--md-default-bg-color) !important;
-      color: var(--md-default-fg-color) !important;
-      border: 1px solid var(--md-primary-fg-color) !important;
-      border-radius: 4px !important;
-      padding: 4px 8px !important;
-      font-family: 'Roboto', sans-serif !important;
-      cursor: pointer !important;
-    }
-  </style>
 {% endblock %}
 
 {% block header %}
   {{ super() }}
   <div class="md-header__translate">
-    <div id="google_translate_element"></div>
   </div>
 {% endblock %}
