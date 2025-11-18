@@ -178,6 +178,216 @@
 
 </header>
 
+    <!-- Hidden Google Translate container -->
+    <div id="google_translate_container" aria-hidden="true"></div>
+
+    <script>
+    /* Google Translate - Beautiful Dropdown Implementation */
+    (function() {
+      // Google Translate initialization
+      window.googleTranslateElementInit = function() {
+        if (!window.google || !google.translate || !google.translate.TranslateElement) {
+          return;
+        }
+        const container = document.getElementById('google_translate_container');
+        if (!container) return;
+
+        try {
+          new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'es,fr,de,pt,ja,zh-CN,zh-TW,ko,ru,it,nl,pl,tr,ar,hi,id,th,vi',
+            autoDisplay: false
+          }, 'google_translate_container');
+        } catch (error) {
+          console.error('Google Translate failed to initialize:', error);
+        }
+      };
+
+      // Create language dropdown menu
+      const langBtn = document.getElementById('langToggle');
+      if (!langBtn) return;
+
+      const langMenu = document.createElement('div');
+      langMenu.className = 'lang-dropdown-menu';
+
+      const languages = [
+        { code: 'en', name: '🇬🇧 English' },
+        { code: 'es', name: '🇪🇸 Español' },
+        { code: 'fr', name: '🇫🇷 Français' },
+        { code: 'de', name: '🇩🇪 Deutsch' },
+        { code: 'pt', name: '🇵🇹 Português' },
+        { code: 'ja', name: '🇯🇵 日本語' },
+        { code: 'zh', name: '🇨🇳 中文' },
+        { code: 'ko', name: '🇰🇷 한국어' },
+        { code: 'ru', name: '🇷🇺 Русский' },
+        { code: 'it', name: '🇮🇹 Italiano' },
+        { code: 'nl', name: '🇳🇱 Nederlands' },
+        { code: 'pl', name: '🇵🇱 Polski' },
+        { code: 'tr', name: '🇹🇷 Türkçe' },
+        { code: 'ar', name: '🇸🇦 العربية' },
+        { code: 'hi', name: '🇮🇳 हिन्दी' },
+        { code: 'id', name: '🇮🇩 Bahasa Indonesia' },
+        { code: 'th', name: '🇹🇭 ไทย' },
+        { code: 'vi', name: '🇻🇳 Tiếng Việt' }
+      ];
+
+      languages.forEach(lang => {
+        const btn = document.createElement('button');
+        btn.setAttribute('data-lang', lang.code);
+        btn.textContent = lang.name;
+        btn.addEventListener('click', function() {
+          // Helper function to delete cookies more aggressively
+          function deleteCookie(name) {
+            const paths = ['/', location.pathname];
+            const domains = [
+              '',
+              location.hostname,
+              '.' + location.hostname,
+              '.' + location.hostname.replace(/^www\./, '')
+            ];
+
+            paths.forEach(path => {
+              domains.forEach(domain => {
+                const domainStr = domain ? '; domain=' + domain : '';
+                document.cookie = name + '=; path=' + path + domainStr + '; expires=Thu, 01 Jan 1970 00:00:00 GMT; max-age=0';
+              });
+            });
+          }
+
+          // Clear ALL Google Translate cookies and storage
+          deleteCookie('googtrans');
+          deleteCookie('googtrans_bak');
+          deleteCookie('googtrans_temp');
+
+          // Clear session storage
+          try {
+            sessionStorage.removeItem('googtrans');
+            sessionStorage.removeItem('google_translate_status');
+          } catch(e) {}
+
+          // Save preference ONLY - don't set cookies before reload
+          if (lang.code === 'en') {
+            localStorage.removeItem('sp_lang');
+          } else {
+            localStorage.setItem('sp_lang', lang.code);
+          }
+
+          // Force complete reload - cookies will be set fresh on page load
+          setTimeout(function() {
+            window.location.href = window.location.pathname + '?lang=' + lang.code + '&t=' + Date.now();
+          }, 100);
+        });
+        langMenu.appendChild(btn);
+      });
+
+      document.body.appendChild(langMenu);
+
+      // Toggle dropdown
+      function open() {
+        langMenu.classList.add('active');
+        langBtn.setAttribute('aria-expanded', 'true');
+      }
+
+      function close() {
+        langMenu.classList.remove('active');
+        langBtn.setAttribute('aria-expanded', 'false');
+      }
+
+      langBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        langMenu.classList.contains('active') ? close() : open();
+
+        // Load Google Translate on first click
+        if (!window.__gte_loading && !window.google) {
+          window.__gte_loading = true;
+          const s = document.createElement('script');
+          s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+          s.async = true;
+          document.head.appendChild(s);
+        }
+      });
+
+      // Close on outside click
+      document.addEventListener('click', function(e) {
+        if (!langMenu.contains(e.target) && e.target !== langBtn) {
+          close();
+        }
+      });
+
+      // Language flag map
+      const flagMap = {
+        'en': '🇬🇧',
+        'es': '🇪🇸',
+        'fr': '🇫🇷',
+        'de': '🇩🇪',
+        'pt': '🇵🇹',
+        'ja': '🇯🇵',
+        'zh': '🇨🇳',
+        'ko': '🇰🇷',
+        'ru': '🇷🇺',
+        'it': '🇮🇹',
+        'nl': '🇳🇱',
+        'pl': '🇵🇱',
+        'tr': '🇹🇷',
+        'ar': '🇸🇦',
+        'hi': '🇮🇳',
+        'id': '🇮🇩',
+        'th': '🇹🇭',
+        'vi': '🇻🇳'
+      };
+
+      // Update button flag to show current language
+      function updateButtonFlag(langCode) {
+        const flag = flagMap[langCode] || '🌐';
+        const btnSpan = langBtn.querySelector('span');
+        if (btnSpan) {
+          btnSpan.textContent = flag;
+        }
+      }
+
+      // Get language from URL parameter or localStorage
+      const urlParams = new URLSearchParams(window.location.search);
+      const urlLang = urlParams.get('lang');
+      const savedLang = urlLang || localStorage.getItem('sp_lang') || 'en';
+
+      // Clean URL if it has lang parameter (remove query string after reading)
+      if (urlLang && window.history && window.history.replaceState) {
+        window.history.replaceState({}, document.title, window.location.pathname);
+      }
+
+      // Update button to show current language flag
+      updateButtonFlag(savedLang);
+
+      if (savedLang && savedLang !== 'en') {
+        const target = (savedLang === 'zh') ? 'zh-CN' : savedLang;
+        const val = '/en/' + target;
+
+        // Set cookies FRESH on page load with all domain variations
+        document.cookie = 'googtrans=' + val + '; path=/; max-age=31536000';
+        document.cookie = 'googtrans=' + val + '; path=/; domain=' + location.hostname + '; max-age=31536000';
+
+        const domain = '.' + location.hostname.replace(/^www\./, '');
+        document.cookie = 'googtrans=' + val + '; path=/; domain=' + domain + '; max-age=31536000';
+
+        // Update page attributes
+        document.documentElement.lang = target;
+        document.documentElement.dir = (savedLang === 'ar') ? 'rtl' : 'ltr';
+
+        // Load Google Translate script AFTER cookies are set
+        if (!window.__gte_loading && !window.google) {
+          window.__gte_loading = true;
+          const s = document.createElement('script');
+          s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+          s.async = true;
+          s.onload = function() {
+            console.log('Google Translate loaded for language:', savedLang);
+          };
+          document.head.appendChild(s);
+        }
+      }
+    })();
+    </script>
+
     <div class="md-container" data-md-component="container">
 
       <main class="md-main" data-md-component="main">
