@@ -4,77 +4,139 @@
   <!-- Homepage -->
   <url>
     <loc>https://docs.signalpilot.io/</loc>
-    <lastmod>2025-11-02</lastmod>
+    <lastmod>2024-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Product Documentation -->
+  <!-- Product Documentation - Main Pages -->
   <url>
     <loc>https://docs.signalpilot.io/pentarch-v10/</loc>
-    <lastmod>2025-11-02</lastmod>
+    <lastmod>2024-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://docs.signalpilot.io/janus-atlas-v10/</loc>
-    <lastmod>2025-11-02</lastmod>
+    <lastmod>2024-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://docs.signalpilot.io/omnideck-v10/</loc>
-    <lastmod>2025-11-02</lastmod>
+    <lastmod>2024-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://docs.signalpilot.io/augury-grid-v10/</loc>
-    <lastmod>2025-11-02</lastmod>
+    <lastmod>2024-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://docs.signalpilot.io/volume-oracle-v10/</loc>
-    <lastmod>2025-11-02</lastmod>
+    <lastmod>2024-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://docs.signalpilot.io/harmonic-oscillator-v10/</loc>
-    <lastmod>2025-11-02</lastmod>
+    <lastmod>2024-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://docs.signalpilot.io/plutus-flow-v10/</loc>
-    <lastmod>2025-11-02</lastmod>
+    <lastmod>2024-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Getting Started -->
+  <!-- Product Documentation - Learning Pages -->
   <url>
-    <loc>https://docs.signalpilot.io/start-quick/</loc>
-    <lastmod>2025-11-02</lastmod>
+    <loc>https://docs.signalpilot.io/pentarch-v10/learning.html</loc>
+    <lastmod>2024-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://docs.signalpilot.io/start-quickstart/</loc>
-    <lastmod>2025-11-02</lastmod>
+    <loc>https://docs.signalpilot.io/janus-atlas-v10/learning.html</loc>
+    <lastmod>2024-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://docs.signalpilot.io/omnideck-v10/learning.html</loc>
+    <lastmod>2024-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://docs.signalpilot.io/augury-grid-v10/learning.html</loc>
+    <lastmod>2024-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://docs.signalpilot.io/volume-oracle-v10/learning.html</loc>
+    <lastmod>2024-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://docs.signalpilot.io/harmonic-oscillator-v10/learning.html</loc>
+    <lastmod>2024-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://docs.signalpilot.io/plutus-flow-v10/learning.html</loc>
+    <lastmod>2024-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Getting Started -->
+  <url>
+    <loc>https://docs.signalpilot.io/start-here/</loc>
+    <lastmod>2024-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://docs.signalpilot.io/start-quick/</loc>
+    <lastmod>2024-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.signalpilot.io/start-prerequisites/</loc>
-    <lastmod>2025-11-02</lastmod>
+    <lastmod>2024-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.signalpilot.io/start-onboarding/</loc>
-    <lastmod>2025-11-02</lastmod>
+    <lastmod>2024-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://docs.signalpilot.io/start-suite-overview/</loc>
+    <lastmod>2024-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://docs.signalpilot.io/start-which-indicator/</loc>
+    <lastmod>2024-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://docs.signalpilot.io/start-learning-path/</loc>
+    <lastmod>2024-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -82,63 +144,107 @@
   <!-- How-To Guides -->
   <url>
     <loc>https://docs.signalpilot.io/how-to-alerts/</loc>
-    <lastmod>2025-11-02</lastmod>
+    <lastmod>2024-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://docs.signalpilot.io/how-to-screener/</loc>
-    <lastmod>2025-11-02</lastmod>
+    <lastmod>2024-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://docs.signalpilot.io/how-to-webhooks/</loc>
-    <lastmod>2025-11-02</lastmod>
+    <lastmod>2024-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Reference -->
+  <!-- Reference - Cheatsheets -->
   <url>
-    <loc>https://docs.signalpilot.io/_settings-alerts/</loc>
-    <lastmod>2025-11-02</lastmod>
+    <loc>https://docs.signalpilot.io/ref-cheatsheets-at-a-glance/</loc>
+    <lastmod>2024-11-18</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://docs.signalpilot.io/ref-cheatsheets-pentarch/</loc>
+    <lastmod>2024-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://docs.signalpilot.io/ref-cheatsheets-janus/</loc>
+    <lastmod>2024-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://docs.signalpilot.io/ref-cheatsheets-omnideck/</loc>
+    <lastmod>2024-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://docs.signalpilot.io/ref-cheatsheets-augury-grid/</loc>
+    <lastmod>2024-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://docs.signalpilot.io/ref-cheatsheets-volume-oracle/</loc>
+    <lastmod>2024-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://docs.signalpilot.io/ref-cheatsheets-harmonic/</loc>
+    <lastmod>2024-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://docs.signalpilot.io/ref-cheatsheets-plutus/</loc>
+    <lastmod>2024-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Reference - General -->
+  <url>
     <loc>https://docs.signalpilot.io/ref-glossary/</loc>
-    <lastmod>2025-11-02</lastmod>
+    <lastmod>2024-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://docs.signalpilot.io/ref-best-practices/</loc>
-    <lastmod>2025-11-02</lastmod>
+    <lastmod>2024-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://docs.signalpilot.io/ref-troubleshooting/</loc>
-    <lastmod>2025-11-02</lastmod>
+    <lastmod>2024-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://docs.signalpilot.io/ref-non-repaint/</loc>
-    <lastmod>2025-11-02</lastmod>
+    <lastmod>2024-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://docs.signalpilot.io/ref-workflow/</loc>
-    <lastmod>2025-11-02</lastmod>
+    <lastmod>2024-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://docs.signalpilot.io/ref-comparison/</loc>
-    <lastmod>2025-11-02</lastmod>
+    <lastmod>2024-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -146,37 +252,63 @@
   <!-- About -->
   <url>
     <loc>https://docs.signalpilot.io/about-faq/</loc>
-    <lastmod>2025-11-02</lastmod>
+    <lastmod>2024-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.signalpilot.io/about-support/</loc>
-    <lastmod>2025-11-02</lastmod>
+    <lastmod>2024-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://docs.signalpilot.io/about-changelog/</loc>
-    <lastmod>2025-11-02</lastmod>
+    <lastmod>2024-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
-
-  <!-- Compliance -->
   <url>
-    <loc>https://docs.signalpilot.io/compliance-language-guide/</loc>
-    <lastmod>2025-11-02</lastmod>
+    <loc>https://docs.signalpilot.io/about-system-requirements/</loc>
+    <lastmod>2024-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
-  <!-- Suite Index -->
+  <!-- Compliance & Configuration -->
   <url>
-    <loc>https://docs.signalpilot.io/suite-index/</loc>
-    <lastmod>2025-11-02</lastmod>
+    <loc>https://docs.signalpilot.io/compliance-language-guide/</loc>
+    <lastmod>2024-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://docs.signalpilot.io/configuration-wizard/</loc>
+    <lastmod>2024-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <!-- Suite Index & Search -->
+  <url>
+    <loc>https://docs.signalpilot.io/suite-index/</loc>
+    <lastmod>2024-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://docs.signalpilot.io/search-guide/</loc>
+    <lastmod>2024-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Troubleshooting -->
+  <url>
+    <loc>https://docs.signalpilot.io/troubleshooting-installation/</loc>
+    <lastmod>2024-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
 </urlset>
