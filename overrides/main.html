@@ -3,108 +3,21 @@
 {% block extrahead %}
   {{ super() }}
   <script type="text/javascript">
-    // Initialize Google Translate (hidden, for backend translation)
     function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'es,fr,de,pt,ja,zh-CN,zh-TW,ko,ru,it,nl,pl,tr,ar,hi,id,th,vi'
-      }, 'google_translate_element');
-    }
-
-    // Simple, direct language switching
-    function switchLanguage(langCode) {
-      // Clear existing Google Translate cookies
-      var domain = window.location.hostname;
-      var cookieOptions = [
-        'path=/',
-        'path=/; domain=' + domain,
-        'path=/; domain=.' + domain
-      ];
-
-      // Clear old cookies
-      cookieOptions.forEach(function(opts) {
-        document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; ' + opts;
-      });
-
-      if (langCode === 'en') {
-        // For English, just clear cookies and reload
-        window.location.href = window.location.pathname + window.location.search;
-      } else {
-        // Set the language cookie
-        var langPair = '/en/' + langCode;
-        cookieOptions.forEach(function(opts) {
-          document.cookie = 'googtrans=' + langPair + '; ' + opts;
-        });
-
-        // Reload the page to apply translation
-        window.location.href = window.location.pathname + window.location.search;
-      }
-    }
-
-    // Get current language from cookie
-    function getCurrentLanguage() {
-      var cookies = document.cookie.split(';');
-      for (var i = 0; i < cookies.length; i++) {
-        var cookie = cookies[i].trim();
-        if (cookie.indexOf('googtrans=') === 0) {
-          var value = cookie.substring(10);
-          var match = value.match(/\/en\/([a-zA-Z-]+)/);
-          if (match) return match[1];
-        }
-      }
-      return 'en';
-    }
-
-    // Update the current language display
-    function updateCurrentLanguage() {
-      var currentLang = getCurrentLanguage();
-      var button = document.getElementById('current-language-btn');
-
-      var flags = {
-        'en': '🇬🇧', 'es': '🇪🇸', 'fr': '🇫🇷', 'de': '🇩🇪', 'pt': '🇵🇹',
-        'ja': '🇯🇵', 'zh-CN': '🇨🇳', 'zh-TW': '🇹🇼', 'ko': '🇰🇷', 'ru': '🇷🇺',
-        'it': '🇮🇹', 'nl': '🇳🇱', 'pl': '🇵🇱', 'tr': '🇹🇷', 'ar': '🇸🇦',
-        'hi': '🇮🇳', 'id': '🇮🇩', 'th': '🇹🇭', 'vi': '🇻🇳'
-      };
-
-      var names = {
-        'en': 'EN', 'es': 'ES', 'fr': 'FR', 'de': 'DE', 'pt': 'PT',
-        'ja': 'JA', 'zh-CN': 'ZH', 'zh-TW': 'TW', 'ko': 'KO', 'ru': 'RU',
-        'it': 'IT', 'nl': 'NL', 'pl': 'PL', 'tr': 'TR', 'ar': 'AR',
-        'hi': 'HI', 'id': 'ID', 'th': 'TH', 'vi': 'VI'
-      };
-
-      if (button) {
-        button.innerHTML = '<span class="lang-flag">' + (flags[currentLang] || '🌐') + '</span>' +
-                          '<span class="lang-code">' + (names[currentLang] || 'EN') + '</span>' +
-                          '<span class="lang-arrow">▼</span>';
-      }
-
-      // Highlight active language in dropdown
-      var allOptions = document.querySelectorAll('.lang-option');
-      allOptions.forEach(function(option) {
-        option.classList.remove('active');
-        if (option.getAttribute('data-lang') === currentLang) {
-          option.classList.add('active');
-        }
-      });
-    }
-
-    // Initialize on page load
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', updateCurrentLanguage);
-    } else {
-      updateCurrentLanguage();
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: 'en',
+          includedLanguages: 'es,fr,de,pt,ja,zh-CN,zh-TW,ko,ru,it,nl,pl,tr,ar,hi,id,th,vi',
+          autoDisplay: false
+        },
+        'google_translate_element'
+      );
     }
   </script>
   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   <style>
-    /* Hide Google Translate widget completely */
-    #google_translate_element {
-      display: none !important;
-    }
-
+    /* Hide Google Translate banner */
     .goog-te-banner-frame.skiptranslate {
       display: none !important;
     }
@@ -113,136 +26,30 @@
       top: 0px !important;
     }
 
-    /* Language selector container */
+    /* Container for translate widget in header */
     .md-header__translate {
       display: flex;
       align-items: center;
       margin-left: auto;
       padding-right: 12px;
-      position: relative;
     }
 
-    /* Language selector button */
-    .lang-selector-btn {
-      display: flex;
-      align-items: center;
-      gap: 6px;
+    /* Basic styling for the widget */
+    #google_translate_element {
       background: var(--md-default-bg-color);
-      border: 1px solid var(--md-primary-fg-color);
+      padding: 4px 8px;
       border-radius: 4px;
-      padding: 6px 10px;
-      cursor: pointer;
-      font-family: 'Roboto', sans-serif;
-      font-size: 14px;
-      color: var(--md-default-fg-color);
-      transition: background-color 0.2s;
     }
 
-    .lang-selector-btn:hover {
-      background: var(--md-accent-fg-color--transparent);
-    }
-
-    .lang-flag {
-      font-size: 18px;
-      line-height: 1;
-    }
-
-    .lang-code {
-      font-weight: 500;
-      min-width: 22px;
-    }
-
-    .lang-arrow {
-      font-size: 10px;
-      opacity: 0.6;
-    }
-
-    /* Language dropdown */
-    .lang-dropdown {
-      display: none;
-      position: absolute;
-      top: calc(100% + 4px);
-      right: 0;
-      background: var(--md-default-bg-color);
-      border: 1px solid var(--md-primary-fg-color);
-      border-radius: 4px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      min-width: 200px;
-      max-height: 400px;
-      overflow-y: auto;
-      z-index: 1000;
-    }
-
-    .lang-selector:hover .lang-dropdown {
-      display: block;
-    }
-
-    /* Language option */
-    .lang-option {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 14px;
-      cursor: pointer;
-      transition: background-color 0.2s;
-      border: none;
-      background: none;
-      width: 100%;
-      text-align: left;
-      color: var(--md-default-fg-color);
-      font-family: 'Roboto', sans-serif;
-      font-size: 14px;
-    }
-
-    .lang-option:hover {
-      background: var(--md-accent-fg-color--transparent);
-    }
-
-    .lang-option.active {
-      background: rgba(0, 150, 136, 0.1);
-      font-weight: 500;
-    }
-
-    [data-md-color-scheme="slate"] .lang-option.active {
-      background: rgba(0, 229, 255, 0.08);
-    }
-
-    .lang-option-flag {
-      font-size: 20px;
-      flex-shrink: 0;
-    }
-
-    .lang-option-name {
-      flex: 1;
-    }
-
-    /* Mobile adjustments */
-    @media screen and (max-width: 76.1875em) {
-      .lang-code {
-        display: none;
-      }
-
-      .lang-flag {
-        font-size: 20px;
-      }
-
-      .lang-selector-btn {
-        padding: 6px 8px;
-      }
-    }
-
-    /* Scrollbar styling for dropdown */
-    .lang-dropdown::-webkit-scrollbar {
-      width: 6px;
-    }
-
-    .lang-dropdown::-webkit-scrollbar-track {
-      background: var(--md-default-bg-color);
-    }
-
-    .lang-dropdown::-webkit-scrollbar-thumb {
-      background: var(--md-primary-fg-color);
-      border-radius: 3px;
+    /* Style the dropdown */
+    .goog-te-combo {
+      background: var(--md-default-bg-color) !important;
+      color: var(--md-default-fg-color) !important;
+      border: 1px solid var(--md-primary-fg-color) !important;
+      border-radius: 4px !important;
+      padding: 4px 8px !important;
+      font-family: 'Roboto', sans-serif !important;
+      cursor: pointer !important;
     }
   </style>
 {% endblock %}
@@ -251,90 +58,5 @@
   {{ super() }}
   <div class="md-header__translate">
     <div id="google_translate_element"></div>
-    <div class="lang-selector">
-      <button class="lang-selector-btn" id="current-language-btn" aria-label="Select language">
-        <span class="lang-flag">🇬🇧</span>
-        <span class="lang-code">EN</span>
-        <span class="lang-arrow">▼</span>
-      </button>
-      <div class="lang-dropdown">
-        <button class="lang-option" data-lang="en" onclick="switchLanguage('en')">
-          <span class="lang-option-flag">🇬🇧</span>
-          <span class="lang-option-name">English</span>
-        </button>
-        <button class="lang-option" data-lang="es" onclick="switchLanguage('es')">
-          <span class="lang-option-flag">🇪🇸</span>
-          <span class="lang-option-name">Español</span>
-        </button>
-        <button class="lang-option" data-lang="fr" onclick="switchLanguage('fr')">
-          <span class="lang-option-flag">🇫🇷</span>
-          <span class="lang-option-name">Français</span>
-        </button>
-        <button class="lang-option" data-lang="de" onclick="switchLanguage('de')">
-          <span class="lang-option-flag">🇩🇪</span>
-          <span class="lang-option-name">Deutsch</span>
-        </button>
-        <button class="lang-option" data-lang="pt" onclick="switchLanguage('pt')">
-          <span class="lang-option-flag">🇵🇹</span>
-          <span class="lang-option-name">Português</span>
-        </button>
-        <button class="lang-option" data-lang="ja" onclick="switchLanguage('ja')">
-          <span class="lang-option-flag">🇯🇵</span>
-          <span class="lang-option-name">日本語</span>
-        </button>
-        <button class="lang-option" data-lang="zh-CN" onclick="switchLanguage('zh-CN')">
-          <span class="lang-option-flag">🇨🇳</span>
-          <span class="lang-option-name">简体中文</span>
-        </button>
-        <button class="lang-option" data-lang="zh-TW" onclick="switchLanguage('zh-TW')">
-          <span class="lang-option-flag">🇹🇼</span>
-          <span class="lang-option-name">繁體中文</span>
-        </button>
-        <button class="lang-option" data-lang="ko" onclick="switchLanguage('ko')">
-          <span class="lang-option-flag">🇰🇷</span>
-          <span class="lang-option-name">한국어</span>
-        </button>
-        <button class="lang-option" data-lang="ru" onclick="switchLanguage('ru')">
-          <span class="lang-option-flag">🇷🇺</span>
-          <span class="lang-option-name">Русский</span>
-        </button>
-        <button class="lang-option" data-lang="it" onclick="switchLanguage('it')">
-          <span class="lang-option-flag">🇮🇹</span>
-          <span class="lang-option-name">Italiano</span>
-        </button>
-        <button class="lang-option" data-lang="nl" onclick="switchLanguage('nl')">
-          <span class="lang-option-flag">🇳🇱</span>
-          <span class="lang-option-name">Nederlands</span>
-        </button>
-        <button class="lang-option" data-lang="pl" onclick="switchLanguage('pl')">
-          <span class="lang-option-flag">🇵🇱</span>
-          <span class="lang-option-name">Polski</span>
-        </button>
-        <button class="lang-option" data-lang="tr" onclick="switchLanguage('tr')">
-          <span class="lang-option-flag">🇹🇷</span>
-          <span class="lang-option-name">Türkçe</span>
-        </button>
-        <button class="lang-option" data-lang="ar" onclick="switchLanguage('ar')">
-          <span class="lang-option-flag">🇸🇦</span>
-          <span class="lang-option-name">العربية</span>
-        </button>
-        <button class="lang-option" data-lang="hi" onclick="switchLanguage('hi')">
-          <span class="lang-option-flag">🇮🇳</span>
-          <span class="lang-option-name">हिन्दी</span>
-        </button>
-        <button class="lang-option" data-lang="id" onclick="switchLanguage('id')">
-          <span class="lang-option-flag">🇮🇩</span>
-          <span class="lang-option-name">Bahasa Indonesia</span>
-        </button>
-        <button class="lang-option" data-lang="th" onclick="switchLanguage('th')">
-          <span class="lang-option-flag">🇹🇭</span>
-          <span class="lang-option-name">ไทย</span>
-        </button>
-        <button class="lang-option" data-lang="vi" onclick="switchLanguage('vi')">
-          <span class="lang-option-flag">🇻🇳</span>
-          <span class="lang-option-name">Tiếng Việt</span>
-        </button>
-      </div>
-    </div>
   </div>
 {% endblock %}
