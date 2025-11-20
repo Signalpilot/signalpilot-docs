@@ -137,8 +137,11 @@
           height: auto !important;
           max-height: calc(100vh - 16rem) !important;
         }
-        .md-search__inner {
+        .md-search {
           z-index: 9999 !important;
+        }
+        .md-search__inner {
+          z-index: 10000 !important;
         }
       `;
       document.head.appendChild(fixStyle);
