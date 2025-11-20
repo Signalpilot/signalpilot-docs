@@ -123,28 +123,27 @@
 
     console.log('[Custom Search] Displayed', results.length, 'results for:', query);
 
-    // FIX: Force search output containers to have height using !important
-    setTimeout(() => {
-      const scrollWrap = document.querySelector('.md-search__scrollwrap');
-      const output = document.querySelector('.md-search__output');
-      const searchInner = document.querySelector('.md-search__inner');
-
-      if (scrollWrap) {
-        scrollWrap.style.setProperty('height', 'auto', 'important');
-        scrollWrap.style.setProperty('max-height', 'calc(100vh - 16rem)', 'important');
-      }
-
-      if (output) {
-        output.style.setProperty('height', 'auto', 'important');
-        output.style.setProperty('min-height', '200px', 'important');
-      }
-
-      if (searchInner) {
-        searchInner.style.setProperty('z-index', '9999', 'important');
-      }
-
-      console.log('[Custom Search] Applied height fixes');
-    }, 50);
+    // FIX: Inject CSS to force search containers to be visible
+    let fixStyle = document.getElementById('sp-search-fix');
+    if (!fixStyle) {
+      fixStyle = document.createElement('style');
+      fixStyle.id = 'sp-search-fix';
+      fixStyle.textContent = `
+        .md-search__output {
+          height: auto !important;
+          min-height: 300px !important;
+        }
+        .md-search__scrollwrap {
+          height: auto !important;
+          max-height: calc(100vh - 16rem) !important;
+        }
+        .md-search__inner {
+          z-index: 9999 !important;
+        }
+      `;
+      document.head.appendChild(fixStyle);
+      console.log('[Custom Search] Injected CSS fix');
+    }
 
     // DEBUG: Check visibility
     setTimeout(() => {
