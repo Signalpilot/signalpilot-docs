@@ -124,17 +124,27 @@
     console.log('[Custom Search] Displayed', results.length, 'results for:', query);
 
     // FIX: Force search output containers to have height using !important
-    const scrollWrap = document.querySelector('.md-search__scrollwrap');
-    const output = document.querySelector('.md-search__output');
+    setTimeout(() => {
+      const scrollWrap = document.querySelector('.md-search__scrollwrap');
+      const output = document.querySelector('.md-search__output');
+      const searchInner = document.querySelector('.md-search__inner');
 
-    if (scrollWrap) {
-      scrollWrap.style.setProperty('height', 'auto', 'important');
-      scrollWrap.style.setProperty('max-height', 'calc(100vh - 16rem)', 'important');
-    }
+      if (scrollWrap) {
+        scrollWrap.style.setProperty('height', 'auto', 'important');
+        scrollWrap.style.setProperty('max-height', 'calc(100vh - 16rem)', 'important');
+      }
 
-    if (output) {
-      output.style.setProperty('height', 'auto', 'important');
-    }
+      if (output) {
+        output.style.setProperty('height', 'auto', 'important');
+        output.style.setProperty('min-height', '200px', 'important');
+      }
+
+      if (searchInner) {
+        searchInner.style.setProperty('z-index', '9999', 'important');
+      }
+
+      console.log('[Custom Search] Applied height fixes');
+    }, 50);
 
     // DEBUG: Check visibility
     setTimeout(() => {
