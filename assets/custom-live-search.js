@@ -130,18 +130,62 @@
       if (resultItems.length > 0) {
         const firstItem = resultItems[0];
         const styles = window.getComputedStyle(firstItem);
+        const rect = firstItem.getBoundingClientRect();
+
         console.log('[Custom Search] First result CSS:', {
           display: styles.display,
           opacity: styles.opacity,
           visibility: styles.visibility,
-          height: styles.height
+          height: styles.height,
+          zIndex: styles.zIndex
+        });
+
+        console.log('[Custom Search] First result position:', {
+          top: rect.top,
+          left: rect.left,
+          bottom: rect.bottom,
+          right: rect.right,
+          width: rect.width,
+          height: rect.height,
+          isInViewport: rect.top >= 0 && rect.bottom <= window.innerHeight
         });
 
         // Check parents
         const scrollWrap = document.querySelector('.md-search__scrollwrap');
         const output = document.querySelector('.md-search__output');
-        if (scrollWrap) console.log('[Custom Search] Scrollwrap display:', window.getComputedStyle(scrollWrap).display);
-        if (output) console.log('[Custom Search] Output display:', window.getComputedStyle(output).display);
+        const searchModal = document.querySelector('.md-search');
+
+        if (scrollWrap) {
+          const swStyles = window.getComputedStyle(scrollWrap);
+          const swRect = scrollWrap.getBoundingClientRect();
+          console.log('[Custom Search] Scrollwrap:', {
+            display: swStyles.display,
+            height: swStyles.height,
+            maxHeight: swStyles.maxHeight,
+            overflow: swStyles.overflow,
+            position: swRect
+          });
+        }
+
+        if (output) {
+          const outStyles = window.getComputedStyle(output);
+          console.log('[Custom Search] Output:', {
+            display: outStyles.display,
+            height: outStyles.height
+          });
+        }
+
+        if (searchModal) {
+          const modalStyles = window.getComputedStyle(searchModal);
+          console.log('[Custom Search] Search modal:', {
+            display: modalStyles.display,
+            zIndex: modalStyles.zIndex
+          });
+        }
+
+        // Check what element is at the search result position
+        const elementAtPoint = document.elementFromPoint(rect.left + 10, rect.top + 10);
+        console.log('[Custom Search] Element covering results:', elementAtPoint);
       }
     }, 100);
   }
