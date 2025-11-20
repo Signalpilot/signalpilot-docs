@@ -123,6 +123,19 @@
 
     console.log('[Custom Search] Displayed', results.length, 'results for:', query);
 
+    // FIX: Force search output containers to have height
+    const scrollWrap = document.querySelector('.md-search__scrollwrap');
+    const output = document.querySelector('.md-search__output');
+
+    if (scrollWrap) {
+      scrollWrap.style.height = 'auto';
+      scrollWrap.style.maxHeight = 'calc(100vh - 16rem)';
+    }
+
+    if (output) {
+      output.style.height = 'auto';
+    }
+
     // DEBUG: Check visibility
     setTimeout(() => {
       const resultItems = document.querySelectorAll('.md-search-result__item');
