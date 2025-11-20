@@ -268,9 +268,12 @@
     // Wait for search component to be ready
     const searchInput = document.querySelector('.md-search__input');
     if (!searchInput) {
+      console.warn('[SP Search] Search input not found, retrying...');
       setTimeout(interceptSearch, 100);
       return;
     }
+
+    console.log('[SP Search] Search input found, attaching handlers');
 
     // Add custom search event handler with debouncing
     searchInput.addEventListener('input', function(e) {
@@ -278,12 +281,28 @@
 
       const query = e.target.value;
 
+      console.log(`[SP Search] Input event: "${query}" (${query.length} chars)`);
+
       if (query.length < SEARCH_CONFIG.minSearchLength) {
+        console.log('[SP Search] Query too short, skipping');
         return;
       }
 
       debounceTimer = setTimeout(() => {
+        console.log(`[SP Search] Processing query: "${query}"`);
         enhanceSearchUI(query);
+
+        // Check if results are present
+        setTimeout(() => {
+          const resultList = document.querySelector('.md-search-result__list');
+          const meta = document.querySelector('.md-search-result__meta');
+          if (resultList) {
+            console.log('[SP Search] Result list HTML:', resultList.innerHTML.substring(0, 200));
+          }
+          if (meta) {
+            console.log('[SP Search] Meta text:', meta.textContent);
+          }
+        }, 500);
       }, SEARCH_CONFIG.debounceDelay);
     });
 
@@ -301,15 +320,23 @@
   function observeSearchResults() {
     const searchResultContainer = document.querySelector('.md-search-result');
     if (!searchResultContainer) {
+      console.warn('[SP Search] Search result container not found, retrying...');
       setTimeout(observeSearchResults, 100);
       return;
     }
+
+    console.log('[SP Search] Observing search results container');
 
     // Use MutationObserver to watch for result updates
     const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
         if (mutation.type === 'childList' || mutation.type === 'characterData') {
+          console.log('[SP Search] Results changed, enhancing display');
           enhanceResultDisplay();
+
+          // Debug: Log result count
+          const results = document.querySelectorAll('.md-search-result__item');
+          console.log(`[SP Search] Found ${results.length} results to display`);
         }
       });
     });
