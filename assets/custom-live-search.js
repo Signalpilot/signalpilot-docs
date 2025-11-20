@@ -129,19 +129,42 @@
       fixStyle = document.createElement('style');
       fixStyle.id = 'sp-search-fix';
       fixStyle.textContent = `
+        /* Force search output to be visible */
         .md-search__output {
           height: auto !important;
           min-height: 300px !important;
+          display: block !important;
         }
+
+        /* Force scrollwrap to have height */
         .md-search__scrollwrap {
           height: auto !important;
           max-height: calc(100vh - 16rem) !important;
+          display: block !important;
         }
+
+        /* Boost z-index of entire search modal */
         .md-search {
           z-index: 9999 !important;
         }
+
         .md-search__inner {
           z-index: 10000 !important;
+          position: relative !important;
+        }
+
+        /* Make sure search overlay is visible */
+        .md-search__overlay {
+          z-index: 9998 !important;
+        }
+
+        /* Force result items to be visible */
+        .md-search-result {
+          display: block !important;
+        }
+
+        .md-search-result__list {
+          display: block !important;
         }
       `;
       document.head.appendChild(fixStyle);
