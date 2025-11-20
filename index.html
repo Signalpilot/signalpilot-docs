@@ -2374,6 +2374,28 @@ Trading and investing involve substantial risk of loss. You should consult with 
         searchResultList.innerHTML = results.map(doc => createResultHTML(doc, query)).join('');
 
         console.log('[Custom Search] Displayed', results.length, 'results for:', query);
+
+        // DEBUG: Check visibility
+        setTimeout(() => {
+          const resultItems = document.querySelectorAll('.md-search-result__item');
+          console.log('[Custom Search] Result items in DOM:', resultItems.length);
+          if (resultItems.length > 0) {
+            const firstItem = resultItems[0];
+            const styles = window.getComputedStyle(firstItem);
+            console.log('[Custom Search] First result CSS:', {
+              display: styles.display,
+              opacity: styles.opacity,
+              visibility: styles.visibility,
+              height: styles.height
+            });
+
+            // Check parents
+            const scrollWrap = document.querySelector('.md-search__scrollwrap');
+            const output = document.querySelector('.md-search__output');
+            if (scrollWrap) console.log('[Custom Search] Scrollwrap display:', window.getComputedStyle(scrollWrap).display);
+            if (output) console.log('[Custom Search] Output display:', window.getComputedStyle(output).display);
+          }
+        }, 100);
       }
 
       // Handle search input
