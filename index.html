@@ -1575,29 +1575,39 @@
           
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
-                
-                  <!-- Reading time and last updated info -->
-<div class="md-content-meta" style="display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 1.5rem; padding: 0.75rem 1rem; background: color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent); border-radius: 8px; font-size: 0.9rem; color: var(--md-default-fg-color);">
-  
-    <span style="display: flex; align-items: center; gap: 0.4rem;">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1.1rem; height: 1.1rem; fill: currentColor; opacity: 0.7;">
-        <path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/>
-      </svg>
-      <span style="opacity: 0.85;">Updated <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="October 31, 2025 01:38:02 UTC"><span class="timeago" datetime="2025-10-31T01:38:02+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="October 31, 2025 01:38:02 UTC">2025-10-31</span></span>
-    </span>
-  
 
-  
-    
-    
-    <span style="display: flex; align-items: center; gap: 0.4rem;">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1.1rem; height: 1.1rem; fill: currentColor; opacity: 0.7;">
-        <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M16.2,16.2L11,13V7H12.5V12.2L17,14.9L16.2,16.2Z"/>
-      </svg>
-      <span style="opacity: 0.85;">13 min read</span>
+<!-- Real-time timestamp -->
+<div class="md-content-meta" style="display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 1.5rem; padding: 0.75rem 1rem; background: color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent); border-radius: 8px; font-size: 0.9rem; color: var(--md-default-fg-color);">
+  <span style="display: flex; align-items: center; gap: 0.4rem;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1.1rem; height: 1.1rem; fill: currentColor; opacity: 0.7;">
+      <path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/>
+    </svg>
+    <span style="opacity: 0.85;">
+      <span id="realtime-timestamp">Loading...</span>
     </span>
-  
+  </span>
 </div>
+
+<script>
+function updateTimestamp() {
+  const now = new Date();
+  const options = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: true
+  };
+  const formatted = now.toLocaleString('en-US', options);
+  document.getElementById('realtime-timestamp').textContent = formatted;
+}
+
+// Update immediately and then every second
+updateTimestamp();
+setInterval(updateTimestamp, 1000);
+</script>
 
 <!-- Render the page content -->
 <h1 id="signal-pilot-documentation"><span style="font-family: 'Gugi', system-ui, -apple-system, sans-serif; text-transform: uppercase; letter-spacing: 0.05em;">Signal Pilot Documentation</span><a class="headerlink" href="#signal-pilot-documentation" title="Permanent link">&para;</a></h1>
