@@ -123,17 +123,17 @@
 
     console.log('[Custom Search] Displayed', results.length, 'results for:', query);
 
-    // FIX: Force search output containers to have height
+    // FIX: Force search output containers to have height using !important
     const scrollWrap = document.querySelector('.md-search__scrollwrap');
     const output = document.querySelector('.md-search__output');
 
     if (scrollWrap) {
-      scrollWrap.style.height = 'auto';
-      scrollWrap.style.maxHeight = 'calc(100vh - 16rem)';
+      scrollWrap.style.setProperty('height', 'auto', 'important');
+      scrollWrap.style.setProperty('max-height', 'calc(100vh - 16rem)', 'important');
     }
 
     if (output) {
-      output.style.height = 'auto';
+      output.style.setProperty('height', 'auto', 'important');
     }
 
     // DEBUG: Check visibility
