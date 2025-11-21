@@ -166,6 +166,18 @@
         .md-search-result__list {
           display: block !important;
         }
+
+        /* CRITICAL: Lower main content z-index when search is open */
+        .md-search--active ~ .md-container .md-content,
+        .md-search--active ~ .md-container .md-main {
+          z-index: 1 !important;
+        }
+
+        /* Also target when search checkbox is checked */
+        #__search:checked ~ .md-container .md-content,
+        #__search:checked ~ .md-container .md-main {
+          z-index: 1 !important;
+        }
       `;
       document.head.appendChild(fixStyle);
       console.log('[Custom Search] Injected CSS fix');
