@@ -123,6 +123,16 @@
 
     console.log('[Custom Search] Displayed', results.length, 'results for:', query);
 
+    // FIX: Directly manipulate z-index of main content to prevent it from covering search
+    const mainContent = document.querySelector('.md-content');
+    const mdMain = document.querySelector('.md-main');
+    if (mainContent) {
+      mainContent.style.setProperty('z-index', '1', 'important');
+    }
+    if (mdMain) {
+      mdMain.style.setProperty('z-index', '1', 'important');
+    }
+
     // FIX: Inject CSS to force search containers to be visible
     let fixStyle = document.getElementById('sp-search-fix');
     if (!fixStyle) {
