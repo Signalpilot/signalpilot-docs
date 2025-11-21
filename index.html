@@ -1620,6 +1620,97 @@ Most indicators show signals. Signal Pilot shows cycles.
 Markets move in cycles. Every asset. Every timeframe. Most traders chase signals. Signal Pilot tracks structure.
 </p>
 
+<!-- Hero Search Bar -->
+<div id="sp-hero-search" style="position: relative; margin-bottom: 2rem; max-width: 600px;">
+  <div style="position: relative;">
+    <input
+      type="text"
+      id="sp-search-input"
+      placeholder="Search docs (pentarch, alerts, troubleshooting...)"
+      autocomplete="off"
+      style="width: 100%; padding: 1rem 1rem 1rem 3rem; font-size: 1.1rem; border: 2px solid var(--md-primary-fg-color); border-radius: 12px; background: var(--md-default-bg-color); color: var(--md-default-fg-color); outline: none; transition: all 0.2s;"
+    >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 1.25rem; height: 1.25rem; fill: var(--md-default-fg-color--light);">
+      <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/>
+    </svg>
+  </div>
+  <div id="sp-search-results" style="display: none; position: absolute; top: 100%; left: 0; right: 0; margin-top: 0.5rem; background: var(--md-default-bg-color); border: 1px solid var(--md-default-fg-color--lightest); border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); max-height: 400px; overflow-y: auto; z-index: 9999;"></div>
+</div>
+
+<script>
+(function() {
+  let searchIndex = null;
+  const input = document.getElementById('sp-search-input');
+  const resultsContainer = document.getElementById('sp-search-results');
+
+  // Load search index
+  fetch('/search/search_index.json')
+    .then(res => res.json())
+    .then(data => {
+      searchIndex = data.docs || [];
+      console.log('[Hero Search] Loaded', searchIndex.length, 'docs');
+    })
+    .catch(err => console.error('[Hero Search] Failed to load index:', err));
+
+  // Search function
+  function search(query) {
+    if (!searchIndex || query.length < 2) return [];
+    const q = query.toLowerCase();
+    return searchIndex
+      .filter(doc => {
+        const title = (doc.title || '').toLowerCase();
+        const text = (doc.text || '').toLowerCase();
+        return title.includes(q) || text.includes(q);
+      })
+      .map(doc => ({
+        ...doc,
+        score: (doc.title || '').toLowerCase().includes(q) ? 100 : 10,
+        isMain: !doc.location.includes('#')
+      }))
+      .sort((a, b) => (b.isMain ? 50 : 0) + b.score - (a.isMain ? 50 : 0) - a.score)
+      .slice(0, 10);
+  }
+
+  // Render results
+  function renderResults(results) {
+    if (results.length === 0) {
+      resultsContainer.innerHTML = '<div style="padding: 1rem; color: var(--md-default-fg-color--light);">No results found</div>';
+      return;
+    }
+    resultsContainer.innerHTML = results.map(doc => `
+      <a href="/${doc.location}" style="display: block; padding: 0.75rem 1rem; text-decoration: none; color: var(--md-default-fg-color); border-bottom: 1px solid var(--md-default-fg-color--lightest); transition: background 0.15s; ${doc.isMain ? 'background: rgba(52, 92, 255, 0.05); border-left: 3px solid var(--md-primary-fg-color);' : ''}">
+        <div style="font-weight: ${doc.isMain ? '600' : '500'}; color: ${doc.isMain ? 'var(--md-primary-fg-color)' : 'inherit'};">${doc.title}</div>
+        <div style="font-size: 0.85rem; color: var(--md-default-fg-color--light); margin-top: 0.25rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${(doc.text || '').substring(0, 80)}...</div>
+      </a>
+    `).join('');
+  }
+
+  // Event handlers
+  let timeout;
+  input.addEventListener('input', (e) => {
+    clearTimeout(timeout);
+    const query = e.target.value.trim();
+    if (query.length < 2) {
+      resultsContainer.style.display = 'none';
+      return;
+    }
+    timeout = setTimeout(() => {
+      const results = search(query);
+      renderResults(results);
+      resultsContainer.style.display = 'block';
+    }, 150);
+  });
+
+  input.addEventListener('focus', () => {
+    if (input.value.length >= 2) resultsContainer.style.display = 'block';
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('#sp-hero-search')) resultsContainer.style.display = 'none';
+  });
+})();
+</script>
+
 <div style="text-align: center; padding: 3rem 1.5rem; background: linear-gradient(135deg, #345CFF, #0aa1d5); border-radius: 20px; margin-bottom: 3rem; box-shadow: 0 8px 24px rgba(52, 92, 255, 0.3);">
   <h2 style="color: white; font-size: 2.2rem; margin-bottom: 1rem; font-family: var(--sp-brand-font);">The Complete Cycle System</h2>
   <p style="color: rgba(255,255,255,0.95); font-size: 1.2rem; margin-bottom: 1.5rem;">Close-confirmed cycle detection. Audited for zero repaint.</p>
