@@ -123,14 +123,19 @@
 
     console.log('[Custom Search] Displayed', results.length, 'results for:', query);
 
-    // FIX: Directly manipulate z-index of main content to prevent it from covering search
+    // FIX: Hide main content completely when showing search results
     const mainContent = document.querySelector('.md-content');
     const mdMain = document.querySelector('.md-main');
+    const mdContainer = document.querySelector('.md-container');
+
     if (mainContent) {
-      mainContent.style.setProperty('z-index', '1', 'important');
+      mainContent.style.setProperty('z-index', '-1', 'important');
     }
     if (mdMain) {
-      mdMain.style.setProperty('z-index', '1', 'important');
+      mdMain.style.setProperty('z-index', '-1', 'important');
+    }
+    if (mdContainer) {
+      mdContainer.style.setProperty('z-index', '-1', 'important');
     }
 
     // FIX: Inject CSS to force search containers to be visible
