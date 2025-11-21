@@ -1674,13 +1674,13 @@ Markets move in cycles. Every asset. Every timeframe. Most traders chase signals
   // Render results
   function renderResults(results) {
     if (results.length === 0) {
-      resultsContainer.innerHTML = '<div style="padding: 1rem; color: var(--md-default-fg-color--light);">No results found</div>';
+      resultsContainer.innerHTML = '<div style="padding: 1rem; color: #666;">No results found</div>';
       return;
     }
     resultsContainer.innerHTML = results.map(doc => `
-      <a href="/${doc.location}" style="display: block; padding: 0.75rem 1rem; text-decoration: none; color: var(--md-default-fg-color); border-bottom: 1px solid var(--md-default-fg-color--lightest); transition: background 0.15s; ${doc.isMain ? 'background: rgba(52, 92, 255, 0.05); border-left: 3px solid var(--md-primary-fg-color);' : ''}">
-        <div style="font-weight: ${doc.isMain ? '600' : '500'}; color: ${doc.isMain ? 'var(--md-primary-fg-color)' : 'inherit'};">${doc.title}</div>
-        <div style="font-size: 0.85rem; color: var(--md-default-fg-color--light); margin-top: 0.25rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${(doc.text || '').substring(0, 80)}...</div>
+      <a href="/${doc.location}" style="display: block; padding: 0.75rem 1rem; text-decoration: none; color: #333; border-bottom: 1px solid #eee; transition: background 0.15s; ${doc.isMain ? 'background: rgba(52, 92, 255, 0.1); border-left: 3px solid #345cff;' : ''}">
+        <div style="font-weight: ${doc.isMain ? '600' : '500'}; color: ${doc.isMain ? '#345cff' : '#222'};">${doc.title}</div>
+        <div style="font-size: 0.85rem; color: #666; margin-top: 0.25rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${(doc.text || '').substring(0, 80)}...</div>
       </a>
     `).join('');
   }
