@@ -12,7 +12,7 @@
       <meta name="theme-color" content="#667eea">
       <meta name="format-detection" content="telephone=no">
       
-        <meta name="description" content="One-page cheat sheet for all 39 Janus Atlas price levels. Configuration guide by trading style and level significance ranking.">
+        <meta name="description" content="One-page cheat sheet for all 50+ Janus Atlas price levels. Configuration guide by trading style and level significance ranking.">
       
       
       
@@ -151,7 +151,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://docs.signalpilot.io/">
     <meta property="og:title" content="Janus Atlas Level Types Guide - Signal Pilot Docs">
-    <meta property="og:description" content="One-page cheat sheet for all 39 Janus Atlas price levels. Configuration guide by trading style and level significance ranking.">
+    <meta property="og:description" content="One-page cheat sheet for all 50+ Janus Atlas price levels. Configuration guide by trading style and level significance ranking.">
     <meta property="og:image" content="https://docs.signalpilot.io/assets/images/preview.png">
     <meta property="og:site_name" content="Signal Pilot Docs">
 
@@ -159,7 +159,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://docs.signalpilot.io/">
     <meta name="twitter:title" content="Janus Atlas Level Types Guide - Signal Pilot Docs">
-    <meta name="twitter:description" content="One-page cheat sheet for all 39 Janus Atlas price levels. Configuration guide by trading style and level significance ranking.">
+    <meta name="twitter:description" content="One-page cheat sheet for all 50+ Janus Atlas price levels. Configuration guide by trading style and level significance ranking.">
     <meta name="twitter:image" content="https://docs.signalpilot.io/assets/images/preview.png">
 
 
@@ -1892,7 +1892,7 @@
 
 <button onclick="window.print()" class="print-pdf-button">🖨️ Print to PDF</button>
 
-<p><strong>One-page cheat sheet for all 39 price levels</strong></p>
+<p><strong>One-page cheat sheet for all 50+ price levels</strong></p>
 
 <hr />
 
@@ -2036,7 +2036,56 @@
 <li><strong>CHoCH</strong> - Change of Character</li>
 </ul>
 
-<p><strong>Total: 50+ Level Types</strong></p>
+<h3 id="opening-range-3-types">Opening Range (3 types)</h3>
+<ul>
+<li><strong>orH</strong> - Opening Range High</li>
+<li><strong>orL</strong> - Opening Range Low</li>
+<li><strong>orMid</strong> - Opening Range Midpoint</li>
+</ul>
+<p><em>Configurable duration (5-60 min). Creates session "launchpad" for breakout trading.</em></p>
+
+<h3 id="gap-levels-2-types">Gap Levels (2 types)</h3>
+<ul>
+<li><strong>gapH</strong> - Gap High (top of unfilled gap)</li>
+<li><strong>gapL</strong> - Gap Low (bottom of unfilled gap)</li>
+</ul>
+<p><em>Auto-clears when gaps are filled. Tracks overnight/weekend gaps.</em></p>
+
+<h3 id="killzones-visual">Killzones (Visual Feature)</h3>
+<ul>
+<li><strong>Asia Killzone</strong> - 8:00 PM - 12:00 AM ET</li>
+<li><strong>London Killzone</strong> - 2:00 AM - 5:00 AM ET</li>
+<li><strong>NY AM Killzone</strong> - 8:30 AM - 11:00 AM ET</li>
+<li><strong>NY Lunch</strong> - 12:00 PM - 1:30 PM ET</li>
+<li><strong>NY PM Killzone</strong> - 1:30 PM - 4:00 PM ET</li>
+</ul>
+<p><em>Background shading shows high-probability trading windows. Visual only, not price levels.</em></p>
+
+<h3 id="confluence-zones">Confluence Zones (Detection Feature)</h3>
+<p>Auto-detects when 2+ levels cluster within configurable threshold (default 0.5%).</p>
+<ul>
+<li>Highlights high-probability S/R zones</li>
+<li>Adjustable sensitivity</li>
+<li>Visual zone markers on chart</li>
+</ul>
+
+<h3 id="distance-table">Distance Table (Display Feature)</h3>
+<p>Real-time table showing distance from current price to key levels.</p>
+<ul>
+<li>Displays in points, %, or ticks</li>
+<li>Sortable by distance</li>
+<li>Customizable position on chart</li>
+</ul>
+
+<h3 id="custom-sessions">Custom Sessions</h3>
+<p>Define your own trading sessions with custom time ranges.</p>
+<ul>
+<li>Set custom start/end times</li>
+<li>Track H/L/O/C for any session</li>
+<li>Useful for specific market hours or strategies</li>
+</ul>
+
+<p><strong>Total: 50+ Level Types + Visual Features</strong></p>
 
 <hr />
 
