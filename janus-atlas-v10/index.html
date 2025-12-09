@@ -2215,8 +2215,49 @@ graph TD
 <td><strong>Market Structure</strong></td>
 <td>HH, HL, LH, LL, BOS, CHoCH</td>
 </tr>
+<tr>
+<td><strong>Opening Range</strong></td>
+<td>OR High, OR Low, OR Midpoint</td>
+</tr>
+<tr>
+<td><strong>Custom Sessions</strong></td>
+<td>Session 1 H/L, Session 2 H/L</td>
+</tr>
+<tr>
+<td><strong>Gap Levels</strong></td>
+<td>Gap High, Gap Low</td>
+</tr>
+<tr>
+<td><strong>Killzones</strong></td>
+<td>Asian, London Open, NY Open, London Close, Custom</td>
+</tr>
 </tbody>
 </table>
+
+<h3 id="settings-panel-organization">Settings Panel Organization (14 Groups)<a class="headerlink" href="#settings-panel-organization" title="Permanent link">&para;</a></h3>
+<p>The settings panel is organized into 14 logical groups for easy navigation:</p>
+<table>
+<thead>
+<tr><th>#</th><th>Group</th><th>What it Controls</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td><strong>Main Settings</strong></td><td>Global toggles, timezone, label style</td></tr>
+<tr><td>2</td><td><strong>Appearance</strong></td><td>Colors, line styles, label sizes</td></tr>
+<tr><td>3</td><td><strong>Daily Levels</strong></td><td>dH, dL, dO, dC, dMid toggles</td></tr>
+<tr><td>4</td><td><strong>Weekly Levels</strong></td><td>wH, wL, wO, wC, wMid toggles</td></tr>
+<tr><td>5</td><td><strong>Monthly Levels</strong></td><td>mH, mL, mO, mC, mMid toggles</td></tr>
+<tr><td>6</td><td><strong>Opening Range</strong></td><td>OR session, duration, levels</td></tr>
+<tr><td>7</td><td><strong>Killzones</strong></td><td>5 institutional time windows</td></tr>
+<tr><td>8</td><td><strong>Gap Levels</strong></td><td>Daily/weekend gaps, fill detection</td></tr>
+<tr><td>9</td><td><strong>Session Levels</strong></td><td>Asian, London, NY sessions</td></tr>
+<tr><td>10</td><td><strong>VWAP</strong></td><td>Daily, weekly, monthly, anchored</td></tr>
+<tr><td>11</td><td><strong>Volume Profile</strong></td><td>POC, VAH, VAL settings</td></tr>
+<tr><td>12</td><td><strong>Confluence Zones</strong></td><td>Auto-clustering settings</td></tr>
+<tr><td>13</td><td><strong>Distance Table</strong></td><td>Table position, sorting, display</td></tr>
+<tr><td>14</td><td><strong>Alerts</strong></td><td>57 individual alert toggles</td></tr>
+</tbody>
+</table>
+
 <h3 id="configuration-options">Configuration Options<a class="headerlink" href="#configuration-options" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -2420,6 +2461,196 @@ Structure: Strong uptrend characteristics
 </div>
 
 <hr />
+<h3 id="opening-range">⏱️ Opening Range (OR)<a class="headerlink" href="#opening-range" title="Permanent link">&para;</a></h3>
+<p><strong>What it does:</strong> Captures the high and low of the first X minutes of a trading session, creating a "launchpad" for the day.</p>
+<p><strong>What Displays:</strong><br />
+- <strong>orH</strong> - Opening Range High<br />
+- <strong>orL</strong> - Opening Range Low<br />
+- <strong>orMid</strong> - Opening Range Midpoint (optional)</p>
+<p><strong>Configuration:</strong></p>
+<table>
+<thead>
+<tr><th>Setting</th><th>Options</th><th>Default</th></tr>
+</thead>
+<tbody>
+<tr><td>Session</td><td>Regular, ETH, Custom</td><td>Regular</td></tr>
+<tr><td>Duration</td><td>5, 15, 30, 60 minutes</td><td>30 min</td></tr>
+<tr><td>Show Midpoint</td><td>On/Off</td><td>Off</td></tr>
+</tbody>
+</table>
+<p><strong>How to use:</strong><br />
+- Break above orH → Bullish bias for the day<br />
+- Break below orL → Bearish bias for the day<br />
+- Price holding within range → Wait for breakout<br />
+- orMid acts as intraday pivot point</p>
+<p><strong>Best for:</strong> Day traders, Opening Range Breakout (ORB) strategies</p>
+
+<!-- 📸 SCREENSHOT NEEDED - Opening Range on Chart
+     What to show: Chart showing OR High, OR Low, and OR Mid lines during first 30 minutes
+     Setup: Enable Opening Range with 30-minute duration
+     File name suggestion: janus-atlas-opening-range.png
+-->
+<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
+  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
+  <p style="margin: 0; color: #424242;"><strong>Opening Range Visualization</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">Shows OR High, OR Low, and optional midpoint on an intraday chart.</p>
+</div>
+
+<hr />
+<h3 id="killzones">🕐 Killzones<a class="headerlink" href="#killzones" title="Permanent link">&para;</a></h3>
+<p><strong>What it does:</strong> Highlights institutional trading windows with visual background shading. These are time periods when major market participants are most active.</p>
+<p><strong>Available Killzones:</strong></p>
+<table>
+<thead>
+<tr><th>Killzone</th><th>Default Time (ET)</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Asian</td><td>20:00-00:00</td><td>Tokyo/Sydney session overlap</td></tr>
+<tr><td>London Open</td><td>02:00-05:00</td><td>European market open</td></tr>
+<tr><td>New York Open</td><td>07:00-10:00</td><td>US market open</td></tr>
+<tr><td>London Close</td><td>10:00-12:00</td><td>European market close</td></tr>
+<tr><td>Custom</td><td>User-defined</td><td>Your own killzone</td></tr>
+</tbody>
+</table>
+<p><strong>Visual Display:</strong> Semi-transparent background shading during active killzone periods.</p>
+<p><strong>How to use:</strong><br />
+- Focus trading activity during killzone hours<br />
+- Look for level tests during high-activity windows<br />
+- Combine with session levels for confluence</p>
+<p><strong>Note:</strong> Killzones are purely visual time-based aids. They have no alerts since there's no price level to "touch."</p>
+
+<!-- 📸 SCREENSHOT NEEDED - Killzones Background Shading
+     What to show: Chart with killzone background shading during NY Open session
+     Setup: Enable NY Open killzone, show semi-transparent background
+     File name suggestion: janus-atlas-killzones.png
+-->
+<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
+  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
+  <p style="margin: 0; color: #424242;"><strong>Killzone Background Shading</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">Shows semi-transparent background highlighting during institutional trading windows.</p>
+</div>
+
+<hr />
+<h3 id="custom-sessions">🎯 Custom Sessions<a class="headerlink" href="#custom-sessions" title="Permanent link">&para;</a></h3>
+<p><strong>What it does:</strong> Define your own custom time windows with automatic High/Low/Open/Close tracking.</p>
+<p><strong>What Displays:</strong><br />
+- <strong>cs1H/cs1L</strong> - Custom Session 1 High/Low<br />
+- <strong>cs2H/cs2L</strong> - Custom Session 2 High/Low</p>
+<p><strong>Configuration per session:</strong></p>
+<ul>
+<li>Enable/Disable toggle</li>
+<li>Custom name (appears on labels)</li>
+<li>Start time (hour:minute)</li>
+<li>End time (hour:minute)</li>
+<li>Color customization</li>
+</ul>
+<p><strong>Use cases:</strong><br />
+- Track your local market hours<br />
+- Monitor specific trading windows (e.g., futures open)<br />
+- Create custom "power hours" tracking</p>
+
+<hr />
+<h3 id="gap-levels">📊 Gap Levels<a class="headerlink" href="#gap-levels" title="Permanent link">&para;</a></h3>
+<p><strong>What it does:</strong> Automatically detects and displays price gaps between sessions.</p>
+<p><strong>What Displays:</strong><br />
+- <strong>gapH</strong> - Gap High (top of gap)<br />
+- <strong>gapL</strong> - Gap Low (bottom of gap)</p>
+<p><strong>Gap Detection:</strong><br />
+- Daily gaps (overnight gaps)<br />
+- Weekend gaps (Friday close to Sunday open)<br />
+- Gap fill tracking (optional visual when gap fills)</p>
+<p><strong>How to use:</strong><br />
+- Gaps often act as magnets (price tends to fill gaps)<br />
+- Unfilled gaps = potential future targets<br />
+- Gap edges (gapH/gapL) act as support/resistance</p>
+<p><strong>Statistics:</strong> Most gaps fill within 1-3 trading sessions (historical observation, not guaranteed).</p>
+
+<!-- 📸 SCREENSHOT NEEDED - Gap Levels on Chart
+     What to show: Chart showing gap high/low lines with unfilled gap area
+     Setup: Enable Gap Levels, show a weekend or overnight gap
+     File name suggestion: janus-atlas-gap-levels.png
+-->
+<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
+  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
+  <p style="margin: 0; color: #424242;"><strong>Gap Levels Visualization</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">Shows gap high/low levels marking overnight or weekend price gaps.</p>
+</div>
+
+<hr />
+<h3 id="confluence-zones">🎯 Confluence Zones<a class="headerlink" href="#confluence-zones" title="Permanent link">&para;</a></h3>
+<p><strong>What it does:</strong> Automatically detects when multiple levels cluster within a tight price range, highlighting high-probability reaction zones.</p>
+<p><strong>How it works:</strong><br />
+- Scans all enabled levels for proximity<br />
+- When 3+ levels cluster within threshold → Zone highlighted<br />
+- Visual box/shading marks the confluence area</p>
+<p><strong>Configuration:</strong></p>
+<table>
+<thead>
+<tr><th>Setting</th><th>Description</th><th>Default</th></tr>
+</thead>
+<tbody>
+<tr><td>Enable Zones</td><td>Turn feature on/off</td><td>On</td></tr>
+<tr><td>Min Levels</td><td>Minimum levels to form zone</td><td>3</td></tr>
+<tr><td>Proximity %</td><td>How close levels must be</td><td>0.5%</td></tr>
+<tr><td>Zone Color</td><td>Highlight color</td><td>Purple</td></tr>
+</tbody>
+</table>
+<p><strong>Why it matters:</strong><br />
+- Single level touch = moderate probability<br />
+- 2 levels clustered = good probability<br />
+- 3+ levels clustered = high probability reaction zone</p>
+<p><strong>Example:</strong> Daily Low + Weekly VWAP + POC all within 0.3% = Strong confluence zone</p>
+
+<!-- 📸 SCREENSHOT NEEDED - Confluence Zone Highlight
+     What to show: Chart showing multiple levels clustering with highlighted zone
+     Setup: Enable Confluence Zones, show area where 3+ levels converge
+     File name suggestion: janus-atlas-confluence-zones.png
+-->
+<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
+  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
+  <p style="margin: 0; color: #424242;"><strong>Confluence Zone Detection</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">Shows automatic highlighting when 3+ levels cluster within a tight price range.</p>
+</div>
+
+<hr />
+<h3 id="distance-table">📋 Distance Table<a class="headerlink" href="#distance-table" title="Permanent link">&para;</a></h3>
+<p><strong>What it does:</strong> Displays a real-time table showing distance from current price to each enabled level.</p>
+<p><strong>Table columns:</strong></p>
+<ul>
+<li><strong>Level</strong> - Level name/abbreviation</li>
+<li><strong>Price</strong> - Exact price of level</li>
+<li><strong>Distance</strong> - Points/ticks away</li>
+<li><strong>Distance %</strong> - Percentage away from current price</li>
+</ul>
+<p><strong>Configuration:</strong></p>
+<table>
+<thead>
+<tr><th>Setting</th><th>Options</th><th>Default</th></tr>
+</thead>
+<tbody>
+<tr><td>Position</td><td>Top-Right, Top-Left, Bottom-Right, Bottom-Left</td><td>Top-Right</td></tr>
+<tr><td>Show Distance %</td><td>On/Off</td><td>On</td></tr>
+<tr><td>Sort By</td><td>Distance, Name, Type</td><td>Distance</td></tr>
+<tr><td>Max Rows</td><td>5, 10, 15, All</td><td>10</td></tr>
+</tbody>
+</table>
+<p><strong>How to use:</strong><br />
+- Quickly identify nearest levels<br />
+- Plan entries/exits based on level proximity<br />
+- Set alerts for levels within X% distance</p>
+
+<!-- 📸 SCREENSHOT NEEDED - Distance Table Display
+     What to show: Chart with distance table overlay showing nearest levels
+     Setup: Enable Distance Table, position top-right, show 10 rows
+     File name suggestion: janus-atlas-distance-table.png
+-->
+<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
+  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
+  <p style="margin: 0; color: #424242;"><strong>Distance Table Display</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">Shows the real-time table overlay displaying distance to all enabled levels.</p>
+</div>
+
+<hr />
 <h2 id="educational-example-bitcoin-november-2024">📖 Educational Example: Bitcoin (November 2024)<a class="headerlink" href="#educational-example-bitcoin-november-2024" title="Permanent link">&para;</a></h2>
 <p><em>(Historical observation for educational purposes only. Not financial advice. Past performance does not indicate future results.)</em></p>
 <p><strong>Chart: 4-Hour Timeframe</strong></p>
@@ -2527,25 +2758,120 @@ Interpretation: High confluence zone, stronger reactions observed
 <p><strong>Remember:</strong> Match level timeframes to your holding period—scalpers watch session levels, day traders watch daily levels, swing traders watch weekly/monthly. Using mismatched levels (daily levels on a 1-minute chart) creates noise and reduces effectiveness.</p>
 
 <hr />
-<h2 id="alert-configuration">🔔 Alert Configuration<a class="headerlink" href="#alert-configuration" title="Permanent link">&para;</a></h2>
-<p><strong>Alert Capabilities:</strong></p>
-<p>Janus Atlas can trigger alerts when price approaches or crosses specific levels.</p>
-<p><strong>Available Alert Types:</strong><br />
-- Price crossing level (above/below)<br />
-- Price within distance of level<br />
-- Multiple levels clustering<br />
-- Structure break (BOS/CHoCH)</p>
-<p><strong>Alert Setup:</strong><br />
-1. Open indicator settings<br />
-2. Navigate to alert section<br />
-3. Select desired level types for alerts<br />
-4. Set distance threshold<br />
-5. Configure notification preferences</p>
-<p><strong>Example Alert:</strong></p>
-<pre><code>Alert: &quot;Price crossed Daily VWAP&quot;
-Trigger: When price crosses above or below Daily VWAP line
-</code></pre>
-<p><em>Alerts provide level notification. Subsequent action determined by individual trading approach.</em></p>
+<h2 id="alert-configuration">🔔 Alert Configuration (57 Alerts)<a class="headerlink" href="#alert-configuration" title="Permanent link">&para;</a></h2>
+<p>Janus Atlas includes <strong>57 individual alerts</strong> organized into 5 categories. All alerts are under TradingView's 64-alert limit per indicator.</p>
+
+<h3 id="alerts-timeframe-levels">Timeframe Level Alerts (25)<a class="headerlink" href="#alerts-timeframe-levels" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr><th>Alert Name</th><th>Trigger</th></tr>
+</thead>
+<tbody>
+<tr><td><code>dH • Daily High</code></td><td>Daily High Touched</td></tr>
+<tr><td><code>dL • Daily Low</code></td><td>Daily Low Touched</td></tr>
+<tr><td><code>dO • Daily Open</code></td><td>Daily Open Touched</td></tr>
+<tr><td><code>dC • Daily Close</code></td><td>Previous Daily Close Touched</td></tr>
+<tr><td><code>dMid • Daily Mid</code></td><td>Daily Midpoint Touched</td></tr>
+<tr><td><code>wH • Weekly High</code></td><td>Weekly High Touched</td></tr>
+<tr><td><code>wL • Weekly Low</code></td><td>Weekly Low Touched</td></tr>
+<tr><td><code>wO • Weekly Open</code></td><td>Weekly Open Touched</td></tr>
+<tr><td><code>wC • Weekly Close</code></td><td>Previous Weekly Close Touched</td></tr>
+<tr><td><code>wMid • Weekly Mid</code></td><td>Weekly Midpoint Touched</td></tr>
+<tr><td><code>mH • Monthly High</code></td><td>Monthly High Touched</td></tr>
+<tr><td><code>mL • Monthly Low</code></td><td>Monthly Low Touched</td></tr>
+<tr><td><code>mO • Monthly Open</code></td><td>Monthly Open Touched</td></tr>
+<tr><td><code>mC • Monthly Close</code></td><td>Previous Monthly Close Touched</td></tr>
+<tr><td><code>mMid • Monthly Mid</code></td><td>Monthly Midpoint Touched</td></tr>
+<tr><td><code>qH • Quarterly High</code></td><td>Quarterly High Touched</td></tr>
+<tr><td><code>qL • Quarterly Low</code></td><td>Quarterly Low Touched</td></tr>
+<tr><td><code>qO • Quarterly Open</code></td><td>Quarterly Open Touched</td></tr>
+<tr><td><code>qC • Quarterly Close</code></td><td>Previous Quarterly Close Touched</td></tr>
+<tr><td><code>yH • Yearly High</code></td><td>Yearly High Touched</td></tr>
+<tr><td><code>yL • Yearly Low</code></td><td>Yearly Low Touched</td></tr>
+<tr><td><code>yO • Yearly Open</code></td><td>Yearly Open Touched</td></tr>
+<tr><td><code>yC • Yearly Close</code></td><td>Previous Yearly Close Touched</td></tr>
+<tr><td><code>pdH • Prev Day High</code></td><td>Previous Day High Touched</td></tr>
+<tr><td><code>pdL • Prev Day Low</code></td><td>Previous Day Low Touched</td></tr>
+</tbody>
+</table>
+
+<h3 id="alerts-session-levels">Session Level Alerts (12)<a class="headerlink" href="#alerts-session-levels" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr><th>Alert Name</th><th>Trigger</th></tr>
+</thead>
+<tbody>
+<tr><td><code>asH • Asian High</code></td><td>Asian Session High Touched</td></tr>
+<tr><td><code>asL • Asian Low</code></td><td>Asian Session Low Touched</td></tr>
+<tr><td><code>asO • Asian Open</code></td><td>Asian Session Open Touched</td></tr>
+<tr><td><code>asC • Asian Close</code></td><td>Asian Session Close Touched</td></tr>
+<tr><td><code>euH • London High</code></td><td>London Session High Touched</td></tr>
+<tr><td><code>euL • London Low</code></td><td>London Session Low Touched</td></tr>
+<tr><td><code>euO • London Open</code></td><td>London Session Open Touched</td></tr>
+<tr><td><code>euC • London Close</code></td><td>London Session Close Touched</td></tr>
+<tr><td><code>usH • NY High</code></td><td>NY Session High Touched</td></tr>
+<tr><td><code>usL • NY Low</code></td><td>NY Session Low Touched</td></tr>
+<tr><td><code>usO • NY Open</code></td><td>NY Session Open Touched</td></tr>
+<tr><td><code>usC • NY Close</code></td><td>NY Session Close Touched</td></tr>
+</tbody>
+</table>
+
+<h3 id="alerts-vwap-volume">VWAP & Volume Profile Alerts (10)<a class="headerlink" href="#alerts-vwap-volume" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr><th>Alert Name</th><th>Trigger</th></tr>
+</thead>
+<tbody>
+<tr><td><code>dVWAP • Daily VWAP</code></td><td>Daily VWAP Touched</td></tr>
+<tr><td><code>wVWAP • Weekly VWAP</code></td><td>Weekly VWAP Touched</td></tr>
+<tr><td><code>mVWAP • Monthly VWAP</code></td><td>Monthly VWAP Touched</td></tr>
+<tr><td><code>pdVWAP • Prev VWAP</code></td><td>Previous Day VWAP Touched</td></tr>
+<tr><td><code>POC • Point of Control</code></td><td>POC Level Touched</td></tr>
+<tr><td><code>VAH • Value Area High</code></td><td>VAH Level Touched</td></tr>
+<tr><td><code>VAL • Value Area Low</code></td><td>VAL Level Touched</td></tr>
+<tr><td><code>dPOC • Developing POC</code></td><td>Developing POC Touched</td></tr>
+<tr><td><code>dVAH • Dev VAH</code></td><td>Developing VAH Touched</td></tr>
+<tr><td><code>dVAL • Dev VAL</code></td><td>Developing VAL Touched</td></tr>
+</tbody>
+</table>
+
+<h3 id="alerts-new-features">New Feature Alerts (8)<a class="headerlink" href="#alerts-new-features" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr><th>Alert Name</th><th>Trigger</th></tr>
+</thead>
+<tbody>
+<tr><td><code>orH • OR High</code></td><td>Opening Range High Touched</td></tr>
+<tr><td><code>orL • OR Low</code></td><td>Opening Range Low Touched</td></tr>
+<tr><td><code>gapH • Gap High</code></td><td>Gap High Touched</td></tr>
+<tr><td><code>gapL • Gap Low</code></td><td>Gap Low Touched</td></tr>
+<tr><td><code>Gap Filled</code></td><td>Gap Has Been Filled</td></tr>
+<tr><td><code>cs1 • Custom Session 1</code></td><td>Custom Session 1 Level Touched</td></tr>
+<tr><td><code>cs2 • Custom Session 2</code></td><td>Custom Session 2 Level Touched</td></tr>
+<tr><td><code>Confluence Zone</code></td><td>Confluence Zone Detected (3+ levels)</td></tr>
+</tbody>
+</table>
+
+<h3 id="alerts-market-structure">Market Structure Alerts (2)<a class="headerlink" href="#alerts-market-structure" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr><th>Alert Name</th><th>Trigger</th></tr>
+</thead>
+<tbody>
+<tr><td><code>BOS • Break of Structure</code></td><td>Break of Structure Detected</td></tr>
+<tr><td><code>CHoCH • Change of Character</code></td><td>Change of Character Detected</td></tr>
+</tbody>
+</table>
+
+<p><strong>Alert Setup:</strong></p>
+<ol>
+<li>Open indicator settings → Navigate to "Alerts" group (#14)</li>
+<li>Enable alerts for desired levels (each has individual toggle)</li>
+<li>In TradingView, click "Alert" → Select Janus Atlas condition</li>
+<li>Configure notification method (popup, email, webhook, mobile)</li>
+</ol>
+
+<p><strong>Note:</strong> Killzones do NOT have alerts - they are purely visual time-based aids.</p>
 
 <hr />
 <h2 id="integration-with-other-indicators">🔗 Integration with Other Indicators<a class="headerlink" href="#integration-with-other-indicators" title="Permanent link">&para;</a></h2>
@@ -2805,6 +3131,22 @@ Trigger: When price crosses above or below Daily VWAP line
 <p><strong>A:</strong> Yes. Compatible with stocks, futures, forex, crypto - any asset on TradingView.</p>
 <h3 id="q-how-often-do-levels-update">Q: How often do levels update?<a class="headerlink" href="#q-how-often-do-levels-update" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> Real-time for current period levels. Historical levels fixed once period closes.</p>
+
+<h3 id="q-why-dont-killzones-have-alerts">Q: Why don't Killzones have alerts?<a class="headerlink" href="#q-why-dont-killzones-have-alerts" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Killzones are time-based visual aids, not price levels. They highlight WHEN to trade (institutional activity windows), not WHERE. Since there's no price level to "touch," alerts don't apply.</p>
+
+<h3 id="q-whats-the-difference-between-opening-range-and-session-levels">Q: What's the difference between Opening Range and Session levels?<a class="headerlink" href="#q-whats-the-difference-between-opening-range-and-session-levels" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Opening Range captures only the first X minutes (e.g., 30 min), then freezes. Session levels track the entire session continuously. OR is for breakout direction, sessions are for full-day range.</p>
+
+<h3 id="q-how-does-confluence-zone-detection-work">Q: How does Confluence Zone detection work?<a class="headerlink" href="#q-how-does-confluence-zone-detection-work" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> The indicator scans all enabled levels and groups those within a configurable proximity (default 0.5%). When 3+ levels cluster together, a confluence zone is highlighted automatically.</p>
+
+<h3 id="q-what-is-the-distance-table">Q: What is the Distance Table?<a class="headerlink" href="#q-what-is-the-distance-table" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> A real-time overlay showing distance from current price to each enabled level. Helps quickly identify nearest support/resistance and plan entries based on level proximity.</p>
+
+<h3 id="q-how-many-alerts-are-available">Q: How many alerts are available?<a class="headerlink" href="#q-how-many-alerts-are-available" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> 57 individual alerts across 5 categories (Timeframe, Session, VWAP/Volume, New Features, Market Structure). All under TradingView's 64-alert limit.</p>
+
 <hr />
 <h2 id="quick-reference-guide">📋 Quick Reference Guide<a class="headerlink" href="#quick-reference-guide" title="Permanent link">&para;</a></h2>
 <h3 id="essential-levels-quick-reference">Essential Levels Quick Reference<a class="headerlink" href="#essential-levels-quick-reference" title="Permanent link">&para;</a></h3>
