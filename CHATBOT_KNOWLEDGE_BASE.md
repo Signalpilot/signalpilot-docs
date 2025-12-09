@@ -41,18 +41,22 @@ The SignalPilot Documentation chatbot has **comprehensive knowledge** of all doc
 ---
 
 ### **3. Janus Atlas v1.0**
-**Keywords:** janus, atlas, levels, vwap, poc, pivot, session
+**Keywords:** janus, atlas, levels, vwap, poc, pivot, session, fibonacci, fib, killzone, opening range
 **Link:** `../janus-atlas-v10/`
 **Covers:**
-- 39 level types
+- 50+ level types
 - VWAP (daily, weekly, monthly)
 - Volume Profile (POC, VAH, VAL)
 - Session levels, market structure
+- Opening Range, Killzones, Gap Levels
+- Fibonacci Levels (2 sets, 19 anchors, 6 fib levels)
+- Confluence Zones, Distance Table
 
 **Try asking:**
 - "What is Janus Atlas?"
 - "Tell me about VWAP levels"
 - "How do session levels work?"
+- "How do Fibonacci levels work?"
 
 ---
 
