@@ -64,6 +64,7 @@ Choose which systems to display based on your needs.`,
 • **Opening Range** - OR High, OR Low
 • **Killzones** - 5 institutional time windows
 • **Gap Levels** - Gap highs/lows
+• **Fibonacci Levels** - Auto-drawn fibs from any anchor
 
 **Best for:** Level traders, mean reversion, support/resistance`,
 
@@ -265,7 +266,7 @@ Visit **https://signalpilot.io/#pricing** for current pricing.
 
 **For reversal signals:** → **Pentarch** (5 cycle events)
 **For everything:** → **Omnideck** (10+ systems in one)
-**For levels:** → **Janus Atlas** (39 level types)
+**For levels:** → **Janus Atlas** (50+ level types)
 **For multi-symbol:** → **Augury Grid** (screener)
 **For volume:** → **Volume Oracle** (flow + zones)
 **For momentum:** → **Harmonic Oscillator** (composite)
@@ -398,7 +399,7 @@ The SignalPilot Suite includes 7 professional indicators:
 **Overlay Indicators:**
 • **Pentarch** - 5 reversal events (TD, IGN, WRN, CAP, BDN)
 • **Omnideck** - Everything indicator (10+ systems in one)
-• **Janus Atlas** - 39 level types across timeframes
+• **Janus Atlas** - 50+ level types across timeframes
 • **Augury Grid** - Multi-symbol screener (up to 40 symbols)
 
 **Panel Indicators:**
@@ -479,7 +480,7 @@ Type **"help"** to see all available topics!
             // Products (specific patterns first)
             { regex: /(pentarch|touchdown|ignition|td|ign|wrn|cap|bdn|reversal event)/i, key: 'pentarch' },
             { regex: /(omnideck|everything indicator|all.in.one)/i, key: 'omnideck' },
-            { regex: /(janus|atlas|levels|vwap|poc|pivot|session)/i, key: 'janus' },
+            { regex: /(janus|atlas|levels|vwap|poc|pivot|session|fibonacci|fib|killzone|opening range)/i, key: 'janus' },
             { regex: /(augury|grid|screener|multi.symbol|watchlist|40 symbols)/i, key: 'augury' },
             { regex: /(volume oracle|minimal flow|volume flow|volume zone)/i, key: 'oracle' },
             { regex: /(harmonic|oscillator|nanoflow|kflow|enhanced rsi)/i, key: 'harmonic' },
