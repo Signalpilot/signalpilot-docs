@@ -92,7 +92,7 @@ Everything you need to run Signal Pilot indicators smoothly.
 | Indicator | Performance Impact | Notes |
 |-----------|-------------------|-------|
 | **Pentarch** | Low | Lightweight, minimal visual elements |
-| **Janus Atlas** | Medium | Increases with more levels enabled (39 max) |
+| **Janus Atlas** | Medium | Increases with more levels enabled (50+ available) |
 | **Volume Oracle** | Low-Medium | Depends on zone count (5-15 typical) |
 | **Omnideck** | High | 8 systems in one, disable unused systems |
 | **Augury Grid** | Medium | Monitoring 30-40 symbols simultaneously |

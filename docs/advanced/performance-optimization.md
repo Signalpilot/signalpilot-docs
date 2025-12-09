@@ -22,7 +22,7 @@ Maximize TradingView performance when using Signal Pilot indicators.
 ---
 
 ### 2. Reduce Janus Atlas Levels
-**Problem:** Enabling all 39 level types creates visual overload and performance hit
+**Problem:** Enabling all 50+ level types creates visual overload and performance hit
 
 **Solution:**
 - Start with 5 core levels only
@@ -32,7 +32,7 @@ Maximize TradingView performance when using Signal Pilot indicators.
 **Optimal Configuration:**
 - **Beginner:** 5-7 levels
 - **Intermediate:** 10-15 levels
-- **Advanced:** 15-25 levels (not all 39)
+- **Advanced:** 15-25 levels (not all 50+)
 
 ---
 
@@ -350,7 +350,7 @@ Omnideck allows disabling individual systems in settings
 
 **Basic Setup:**
 - [ ] Limit to 3-4 indicators per chart
-- [ ] Reduce Janus levels to 10-15 (not all 39)
+- [ ] Reduce Janus levels to 10-15 (not all 50+)
 - [ ] Set bars loaded to 5,000-10,000
 - [ ] Enable browser hardware acceleration
 

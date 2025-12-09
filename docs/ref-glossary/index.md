@@ -33,7 +33,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### Anchored VWAP
 **Definition:** Volume-Weighted Average Price calculated from a specific starting point (anchor) rather than the current period. Common anchors include session open, major swing high/low, or significant event.
 
-**Used in:** [Janus Atlas](../../janus-atlas-v10/) (one of 39 level types)
+**Used in:** [Janus Atlas](../../janus-atlas-v10/) (one of 50+ level types)
 
 **Related terms:** [VWAP](#vwap), [Volume-Weighted](#volume-weighted)
 
@@ -205,7 +205,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ## J
 
 ### Janus Atlas
-**Definition:** Signal Pilot indicator mapping 39 different price level types across timeframes, sessions, volume analysis, and market structure.
+**Definition:** Signal Pilot indicator mapping 50+ different price level types across timeframes, sessions, volume analysis, and market structure.
 
 **Documentation:** [Janus Atlas v1.0](../../janus-atlas-v10/)
 
@@ -225,7 +225,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ---
 
 ### Level
-**Definition:** A specific price point where historical trading activity occurred, potentially causing future price reactions. Janus Atlas identifies 39 different level types.
+**Definition:** A specific price point where historical trading activity occurred, potentially causing future price reactions. Janus Atlas identifies 50+ different level types.
 
 **Used in:** [Janus Atlas](../../janus-atlas-v10/)
 
@@ -362,7 +362,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### POC (Point of Control)
 **Definition:** The price level with highest traded volume during a specified period. Represents area of greatest acceptance/agreement.
 
-**Used in:** [Janus Atlas](../../janus-atlas-v10/) (one of 39 level types)
+**Used in:** [Janus Atlas](../../janus-atlas-v10/) (one of 50+ level types)
 
 **Related terms:** [VAH](#vah-value-area-high), [VAL](#val-value-area-low), [Volume Profile](#volume-profile)
 
@@ -467,7 +467,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### VAH (Value Area High)
 **Definition:** The upper boundary of the range containing 70% of traded volume during a specified period. Part of Volume Profile analysis.
 
-**Used in:** [Janus Atlas](../../janus-atlas-v10/) (one of 39 level types)
+**Used in:** [Janus Atlas](../../janus-atlas-v10/) (one of 50+ level types)
 
 **Related terms:** [VAL](#val-value-area-low), [POC](#poc-point-of-control), [Volume Profile](#volume-profile)
 
@@ -476,7 +476,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 ### VAL (Value Area Low)
 **Definition:** The lower boundary of the range containing 70% of traded volume during a specified period. Part of Volume Profile analysis.
 
-**Used in:** [Janus Atlas](../../janus-atlas-v10/) (one of 39 level types)
+**Used in:** [Janus Atlas](../../janus-atlas-v10/) (one of 50+ level types)
 
 **Related terms:** [VAH](#vah-value-area-high), [POC](#poc-point-of-control), [Volume Profile](#volume-profile)
 

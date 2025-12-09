@@ -115,9 +115,9 @@
 - 🔵 **STRONG** - 5+ oscillators agree (extreme)
 - ⚪ **NEUT** - Neutral (no consensus)
 
-### Janus Atlas (39 level types)
-- **Core 5:** dH, dL, WH, WL, AVWAP
-- **All 39:** Daily, Weekly, Monthly, Quarterly, Yearly, Session, VWAP, Volume Profile, Market Structure
+### Janus Atlas (50+ level types)
+- **Core 5:** dH, dL, wH, wL, dVWAP
+- **All 50+:** Daily, Weekly, Monthly, Quarterly, Yearly, Session, VWAP, Volume Profile, Market Structure, Opening Range, Killzones, Gap Levels
 
 ### Volume Oracle (3 systems)
 - **System 1:** Volume Flow (green/red bars)

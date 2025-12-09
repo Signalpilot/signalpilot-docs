@@ -24,12 +24,12 @@ This page provides a comprehensive overview of all Signal Pilot indicators to he
 
 ### 2. Janus Atlas v1.0 — Structure & Levels System
 
-**What it does:** Displays 39 different price levels including pivots, VWAP, session levels, and key zones with test count tracking.
+**What it does:** Displays 50+ different price levels including pivots, VWAP, session levels, and key zones with test count tracking.
 
 **Best for:** Level-based trading, support/resistance analysis, structure identification
 
 **Key Features:**
-- 39 customizable levels
+- 50+ customizable levels
 - Test count indicator (freshness tracking)
 - Cluster identification system
 

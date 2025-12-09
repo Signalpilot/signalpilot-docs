@@ -11,7 +11,7 @@ Can't find what you're looking for? This page provides direct links to the most 
 
 - **[All Indicators At-A-Glance](../ref-cheatsheets-at-a-glance/)** - Side-by-side comparison of all 7 indicators
 - **[Pentarch Quick Reference](../ref-cheatsheets-pentarch/)** - TD, IGN, WRN, CAP, BDN signals
-- **[Janus Atlas Levels Guide](../ref-cheatsheets-janus/)** - All 39 level types
+- **[Janus Atlas Levels Guide](../ref-cheatsheets-janus/)** - All 50+ level types
 - **[Volume Oracle Quick Reference](../ref-cheatsheets-volume-oracle/)** - VBS signals, 3 systems
 - **[Harmonic Oscillator Quick Reference](../ref-cheatsheets-harmonic/)** - BUY, SELL, STRONG, NEUT signals
 - **[Plutus Flow Quick Reference](../ref-cheatsheets-plutus/)** - OBV divergence detection
@@ -23,7 +23,7 @@ Can't find what you're looking for? This page provides direct links to the most 
 ## 📖 Full Indicator Documentation
 
 - **[Pentarch v1.0](../pentarch-v10/)** - Five cycle events (TD→IGN→WRN→CAP→BDN)
-- **[Janus Atlas v1.0](../janus-atlas-v10/)** - 39 price levels across timeframes
+- **[Janus Atlas v1.0](../janus-atlas-v10/)** - 50+ price levels across timeframes
 - **[Volume Oracle v1.0](../volume-oracle-v10/)** - Volume Flow, Zones, Position Manager
 - **[Harmonic Oscillator v1.0](../harmonic-oscillator-v10/)** - 5-oscillator consensus system
 - **[Plutus Flow v1.0](../plutus-flow-v10/)** - Smart OBV with divergence detection

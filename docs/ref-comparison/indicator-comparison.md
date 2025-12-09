@@ -42,7 +42,7 @@ graph TD
 | **Difficulty** | 🟡 Intermediate | 🟢 Beginner | 🔴 Advanced | 🟡 Intermediate | 🟢 Beginner | 🟢 Beginner | 🟡 Intermediate |
 | **Learning Time** | 10-60 hours | 8-50 hours | 100+ hours | 12-50 hours | 8-40 hours | 8-40 hours | 10-50 hours |
 | **Best Timeframes** | 15m - Weekly | All | 1H - Daily | 15m - Daily | 5m - Daily | 15m - Daily | 1H - Weekly |
-| **Signal Types** | 5 cycle events | 39 level types | Multiple systems | Grid patterns | Volume spikes/zones | 4 momentum signals | Divergences |
+| **Signal Types** | 5 cycle events | 50+ level types | Multiple systems | Grid patterns | Volume spikes/zones | 4 momentum signals | Divergences |
 | **Visual Complexity** | Low | Medium-High | Very High | Medium | Low-Medium | Low | Medium |
 | **Repainting** | ❌ No | ❌ No | ❌ No | ❌ No | ❌ No | ❌ No | ❌ No |
 | **Alerts Available** | ✅ Yes (5 types) | ✅ Yes (per level) | ✅ Yes (multiple) | ✅ Yes (grid) | ✅ Yes (volume) | ✅ Yes (4 types) | ✅ Yes (divergence) |
@@ -236,7 +236,7 @@ graph TD
 **Beginner → Intermediate → Advanced**
 
 1. **Start:** Janus Atlas (2 weeks)
-   - Master all 39 level types
+   - Master all 50+ level types
    - Multi-timeframe level analysis
    - Level clustering
 
