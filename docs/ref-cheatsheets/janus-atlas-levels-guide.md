@@ -8,11 +8,11 @@
 
 | Level | Abbr | Description | Use Case |
 |-------|------|-------------|----------|
-| Daily High | dH | Previous day's highest price | Intraday resistance |
-| Daily Low | dL | Previous day's lowest price | Intraday support |
-| Weekly High | WH | Previous week's highest price | Swing resistance |
-| Weekly Low | WL | Previous week's lowest price | Swing support |
-| Anchored VWAP | AVWAP | Volume-weighted avg from anchor | Dynamic S/R |
+| Daily High | dH | Today's highest price | Intraday resistance |
+| Daily Low | dL | Today's lowest price | Intraday support |
+| Weekly High | wH | This week's highest price | Swing resistance |
+| Weekly Low | wL | This week's lowest price | Swing support |
+| Daily VWAP | dVWAP | Volume-weighted avg price | Dynamic S/R |
 
 **Recommendation:** Master these 5 before enabling more levels
 
