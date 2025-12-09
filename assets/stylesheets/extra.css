@@ -1363,6 +1363,15 @@ body::before {
   color: var(--md-primary-fg-color);
 }
 
+/* Fix: Ensure strong in callouts/lists uses default text color, not accent */
+.sp-callout strong,
+.sp-callout ol strong,
+.sp-callout ul strong,
+.sp-callout li strong,
+.md-typeset .sp-callout strong {
+  color: inherit;
+}
+
 .md-typeset .grid.cards p {
   margin: 0.25rem 0;
 }
