@@ -51,7 +51,7 @@ class SignalPilotChatbot {
 
 Choose which systems to display based on your needs.`,
 
-            janus: `**Janus Atlas v1.0** displays 39 different level types across your chart.
+            janus: `**Janus Atlas v1.0** displays 50+ different level types across your chart.
 
 📄 [Read Full Documentation](../janus-atlas-v10/)
 
@@ -61,6 +61,9 @@ Choose which systems to display based on your needs.`,
 • **Session Levels** - Asia, London, NY
 • **Market Structure** - BOS, CHoCH, swings
 • **Classic Levels** - Pivots, highs/lows
+• **Opening Range** - OR High, OR Low
+• **Killzones** - 5 institutional time windows
+• **Gap Levels** - Gap highs/lows
 
 **Best for:** Level traders, mean reversion, support/resistance`,
 
