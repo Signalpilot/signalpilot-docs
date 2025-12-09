@@ -177,7 +177,7 @@ Community members will be able to share:
 **❌ Mistake #3:** Skipping paper trading
 **✅ Solution:** Practice 2-4 weeks before risking capital
 
-**❌ Mistake #4:** Enabling all 39 Janus levels
+**❌ Mistake #4:** Enabling all 50+ Janus levels
 **✅ Solution:** Start with 5 core levels
 
 **❌ Mistake #5:** Expecting 100% win rate

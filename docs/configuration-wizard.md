@@ -822,7 +822,7 @@ Time in trade: 2h 20min
 - Paper trade for 20-30 signals
 
 **Common Practices to Avoid:**
-- Enabling all 39 Janus levels tends to create visual overload
+- Enabling all 50+ Janus levels tends to create visual overload
 - Trading without proper confluence analysis often produces less favorable results
 - Adding more indicators prematurely often increases confusion
 

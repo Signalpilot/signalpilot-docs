@@ -225,7 +225,7 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    Start2[Start Here] --> Step2_1[Week 1-2: Janus Atlas<br/>Master All 39 Levels]
+    Start2[Start Here] --> Step2_1[Week 1-2: Janus Atlas<br/>Master All 50+ Levels]
     Step2_1 --> Milestone2_1{Milestone 1<br/>Complete?}
     Milestone2_1 -->|Yes| Step2_2[Week 3: Volume Oracle]
     Milestone2_1 -->|No| Step2_1
@@ -250,7 +250,7 @@ flowchart TD
 
 **Time Commitment:** 15-20 hours
 
-**Objective:** Master ALL 39 level types and multi-timeframe analysis
+**Objective:** Master ALL 50+ level types and multi-timeframe analysis
 
 #### Week 1: Core Levels (5 types)
 - [ ] Daily High/Low, Weekly High/Low, Anchored VWAP
@@ -264,7 +264,7 @@ flowchart TD
 - [ ] Market Structure (HH, HL, LH, LL, BOS, CHoCH)
 
 **Milestone 1:**
-- ✓ Can identify all 39 level types
+- ✓ Can identify all 50+ level types
 - ✓ Configured custom level setup for your trading style
 - ✓ Understand multi-timeframe level confluence
 

@@ -123,7 +123,7 @@ graph TD
 ### Question 3: What's your primary goal?
 
 **A) Find precise entry/exit levels**
-→ Recommended: **Janus Atlas** (39 price levels)
+→ Recommended: **Janus Atlas** (50+ price levels)
 
 **B) Identify market cycle phase**
 → Recommended: **Pentarch** (5 cycle events)
@@ -222,7 +222,7 @@ graph TD
 **Best Indicators:**
 - ✅ Volume Oracle (volume spikes for entry timing)
 - ✅ Harmonic Oscillator (quick momentum signals)
-- ⚠️ Janus Atlas (use session levels only, not all 39)
+- ⚠️ Janus Atlas (use session levels only, not all 50+)
 
 **Timeframes:** 1m, 5m
 **Combination:** Volume Oracle + Harmonic Oscillator
