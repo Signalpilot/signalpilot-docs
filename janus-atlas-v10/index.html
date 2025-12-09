@@ -2090,53 +2090,41 @@
   <div class="sp-callout__icon">📊</div>
   <div class="sp-callout__content">
     <h4>50+ Level Types at a Glance</h4>
-    <p style="margin-bottom: 1rem;">Janus Atlas organizes 50+ different level types into five main categories:</p>
-    <div class="mermaid">
-graph TD
-    Root[Janus Atlas<br/>50+ Level Types] --> Cat1[VWAP Family]
-    Root --> Cat2[Volume Profile]
-    Root --> Cat3[Sessions]
-    Root --> Cat4[Market Structure]
-    Root --> Cat5[Classic Levels]
+    <p style="margin-bottom: 1rem;">Janus Atlas organizes 50+ different level types into eight main categories:</p>
 
-    Cat1 --> V1[Daily/Weekly/Monthly VWAP<br/><small>Volume Weighted Avg Price</small>]
-    Cat1 --> V2[Custom Period VWAP]
+    <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+    <thead>
+    <tr style="background: rgba(6, 182, 212, 0.2);">
+      <th style="padding: 0.75rem; text-align: left; border-bottom: 2px solid #06b6d4;">Category</th>
+      <th style="padding: 0.75rem; text-align: left; border-bottom: 2px solid #06b6d4;">What's Included</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);"><strong>📈 Classic Levels</strong></td><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);">Daily/Weekly/Monthly/Quarterly/Yearly H/L/O/C, Pivot Points</td></tr>
+    <tr><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);"><strong>📊 VWAP Family</strong></td><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);">Daily/Weekly/Monthly VWAP, Previous Period VWAP</td></tr>
+    <tr><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);"><strong>📦 Volume Profile</strong></td><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);">POC, VAH, VAL, Developing POC</td></tr>
+    <tr><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);"><strong>🌐 Sessions</strong></td><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);">Asia/London/NY H/L/O/C, Custom Sessions</td></tr>
+    <tr><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);"><strong>🏗️ Market Structure</strong></td><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);">BOS, CHoCH, Swing High/Low</td></tr>
+    <tr><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);"><strong>⏱️ Opening Range</strong></td><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);">orH, orL, orMid (configurable 5-60 min duration)</td></tr>
+    <tr><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);"><strong>📊 Gap Levels</strong></td><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);">Gap High, Gap Low (auto-clear when filled)</td></tr>
+    <tr><td style="padding: 0.5rem;"><strong>🕐 Killzones</strong></td><td style="padding: 0.5rem;">Asia, London, NY AM, NY Lunch, NY PM (background shading)</td></tr>
+    </tbody>
+    </table>
 
-    Cat2 --> VP1[POC - Point of Control]
-    Cat2 --> VP2[VAH - Value Area High]
-    Cat2 --> VP3[VAL - Value Area Low]
-    Cat2 --> VP4[Value Area Range]
-
-    Cat3 --> S1[Asia/London/NY Sessions]
-    Cat3 --> S2[Custom Session H/L]
-
-    Cat4 --> MS1[BOS - Break of Structure]
-    Cat4 --> MS2[CHoCH - Change of Character]
-    Cat4 --> MS3[Swing High/Low Points]
-    Cat4 --> MS4[Liquidity Sweeps]
-
-    Cat5 --> CL1[Daily/Weekly/Monthly H/L]
-    Cat5 --> CL2[Pivot Points]
-    Cat5 --> CL3[Fibonacci Levels]
-    Cat5 --> CL4[Round Numbers]
-
-    style Root fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:3px
-    style Cat1 fill:#00bcd4,color:#fff
-    style Cat2 fill:#4caf50,color:#fff
-    style Cat3 fill:#ff9800,color:#fff
-    style Cat4 fill:#2196f3,color:#fff
-    style Cat5 fill:#f44336,color:#fff
-    </div>
+    <p style="margin-top: 1rem; font-size: 0.9em;"><strong>Plus:</strong> Confluence Zone detection, Distance Table display, 57 configurable alerts</p>
   </div>
 </div>
 
 <p>Janus Atlas displays price levels automatically on your chart. 50+ level types available, all can be toggled individually.</p>
 <p><strong>Level Categories:</strong><br />
-- <strong>Timeframe Levels:</strong> Daily, Weekly, Monthly highs/lows/opens/closes<br />
-- <strong>Session Levels:</strong> Asian, European, North American ranges<br />
-- <strong>VWAP Lines:</strong> Volume-weighted average prices (current and previous periods)<br />
-- <strong>Volume Profile:</strong> POC, VAH, VAL (point of control and value areas)<br />
-- <strong>Market Structure:</strong> Swing highs/lows, BOS, CHoCH labels</p>
+- <strong>Timeframe Levels:</strong> Daily, Weekly, Monthly, Quarterly, Yearly highs/lows/opens/closes<br />
+- <strong>Session Levels:</strong> Asian, European, North American ranges + Custom Sessions<br />
+- <strong>VWAP Lines:</strong> Volume-weighted average prices (D/W/M and previous periods)<br />
+- <strong>Volume Profile:</strong> POC, VAH, VAL, Developing POC<br />
+- <strong>Market Structure:</strong> Swing highs/lows, BOS, CHoCH labels<br />
+- <strong>Opening Range:</strong> Session high/low/mid for first X minutes<br />
+- <strong>Gap Levels:</strong> Overnight/weekend gap boundaries<br />
+- <strong>Killzones:</strong> High-probability session time windows (visual shading)</p>
 <p><strong>Visual Display:</strong> Lines and labels on chart showing level locations and names.</p>
 <p><strong>Timeframe Compatibility:</strong> Works on all timeframes.</p>
 
