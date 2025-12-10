@@ -2022,6 +2022,17 @@
 <li><strong>PrevVWAP</strong> - Previous Period VWAP</li>
 </ul>
 
+<h3 id="vwap-standard-deviation-bands">VWAP Standard Deviation Bands ⭐ NEW</h3>
+<p>±1σ and ±2σ bands around each VWAP showing price deviation from average.</p>
+<ul>
+<li><strong>d+1σ / d-1σ</strong> - Daily VWAP ±1 standard deviation</li>
+<li><strong>d+2σ / d-2σ</strong> - Daily VWAP ±2 standard deviation</li>
+<li><strong>w+1σ / w-1σ</strong> - Weekly VWAP bands</li>
+<li><strong>m+1σ / m-1σ</strong> - Monthly VWAP bands</li>
+<li><strong>q+1σ / q-1σ</strong> - Quarterly VWAP bands</li>
+</ul>
+<p><em>±1σ covers ~68% of price action, ±2σ covers ~95%. Use for mean reversion entries.</em></p>
+
 <h3 id="volume-profile-4-types">Volume Profile (4 types)</h3>
 <ul>
 <li><strong>POC</strong> - Point of Control (highest volume price)</li>
@@ -2050,6 +2061,21 @@
 <li><strong>gapL</strong> - Gap Low (bottom of unfilled gap)</li>
 </ul>
 <p><em>Auto-clears when gaps are filled. Tracks overnight/weekend gaps.</em></p>
+
+<h3 id="fair-value-gaps-fvg">Fair Value Gaps (FVG) ⭐ NEW</h3>
+<p>Detects price imbalances where market moved so fast it left a gap between candles.</p>
+<ul>
+<li><strong>Bullish FVG</strong> - Gap up (demand zone) - Green when below price</li>
+<li><strong>Bearish FVG</strong> - Gap down (supply zone) - Red when above price</li>
+</ul>
+<p><strong>Settings:</strong></p>
+<ul>
+<li>Max FVGs: 1-50 (default 10)</li>
+<li>Show: All / Unmitigated only</li>
+<li>Mitigation: Wick / Close</li>
+<li>Auto-lookback by timeframe (2 days on 15m, 1 month on Daily)</li>
+</ul>
+<p><em>FVGs are "magnets" - price tends to return to fill imbalances. Unmitigated = best entries.</em></p>
 
 <h3 id="killzones-visual">Killzones (Visual Feature)</h3>
 <ul>

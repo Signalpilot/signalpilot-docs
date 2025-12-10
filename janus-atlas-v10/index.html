@@ -846,6 +846,14 @@
 
 </li>
           <li class="md-nav__item">
+  <a href="#vwap-standard-deviation-bands" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 VWAP Standard Deviation Bands
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
   <a href="#volume-profile-poc-vah-val" class="md-nav__link">
     <span class="md-ellipsis">
       🎯 Volume Profile (POC, VAH, VAL)
@@ -889,6 +897,14 @@
   <a href="#gap-levels" class="md-nav__link">
     <span class="md-ellipsis">
       📊 Gap Levels
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#fair-value-gaps-fvg" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Fair Value Gaps (FVG)
     </span>
   </a>
 
@@ -1753,6 +1769,14 @@
 
 </li>
           <li class="md-nav__item">
+  <a href="#vwap-standard-deviation-bands" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 VWAP Standard Deviation Bands
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
   <a href="#volume-profile-poc-vah-val" class="md-nav__link">
     <span class="md-ellipsis">
       🎯 Volume Profile (POC, VAH, VAL)
@@ -1796,6 +1820,14 @@
   <a href="#gap-levels" class="md-nav__link">
     <span class="md-ellipsis">
       📊 Gap Levels
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#fair-value-gaps-fvg" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Fair Value Gaps (FVG)
     </span>
   </a>
 
@@ -2353,8 +2385,8 @@
 </tbody>
 </table>
 
-<h3 id="settings-panel-organization">Settings Panel Organization (15 Groups)<a class="headerlink" href="#settings-panel-organization" title="Permanent link">&para;</a></h3>
-<p>The settings panel is organized into 15 logical groups for easy navigation:</p>
+<h3 id="settings-panel-organization">Settings Panel Organization (16 Groups)<a class="headerlink" href="#settings-panel-organization" title="Permanent link">&para;</a></h3>
+<p>The settings panel is organized into 16 logical groups for easy navigation:</p>
 <table>
 <thead>
 <tr><th>#</th><th>Group</th><th>What it Controls</th></tr>
@@ -2369,12 +2401,13 @@
 <tr><td>7</td><td><strong>Killzones</strong></td><td>5 institutional time windows</td></tr>
 <tr><td>8</td><td><strong>Gap Levels</strong></td><td>Daily/weekend gaps, fill detection</td></tr>
 <tr><td>9</td><td><strong>Session Levels</strong></td><td>Asian, London, NY sessions</td></tr>
-<tr><td>10</td><td><strong>VWAP</strong></td><td>Daily, weekly, monthly, anchored</td></tr>
+<tr><td>10</td><td><strong>VWAP</strong></td><td>Daily, weekly, monthly, quarterly + bands (±1σ/±2σ)</td></tr>
 <tr><td>11</td><td><strong>Volume Profile</strong></td><td>POC, VAH, VAL settings</td></tr>
 <tr><td>12</td><td><strong>Fibonacci Levels</strong></td><td>2 Fib Sets, 19 anchors, 6 levels</td></tr>
-<tr><td>13</td><td><strong>Confluence Zones</strong></td><td>Auto-clustering settings</td></tr>
-<tr><td>14</td><td><strong>Distance Table</strong></td><td>Table position, sorting, display</td></tr>
-<tr><td>15</td><td><strong>Alerts</strong></td><td>57+ individual alert toggles</td></tr>
+<tr><td>13</td><td><strong>Fair Value Gaps</strong></td><td>FVG detection, mitigation, colors</td></tr>
+<tr><td>14</td><td><strong>Confluence Zones</strong></td><td>Auto-clustering settings</td></tr>
+<tr><td>15</td><td><strong>Distance Table</strong></td><td>Table position, sorting, display</td></tr>
+<tr><td>16</td><td><strong>Alerts</strong></td><td>57+ individual alert toggles</td></tr>
 </tbody>
 </table>
 
@@ -2531,6 +2564,47 @@
 - Price returns to VWAP (magnet effect observed)<br />
 - Institutional reference level</p>
 <p><strong>Example:</strong> Price spikes to $68,000, VWAP at $66,000 → Pullback to VWAP level observed.</p>
+<hr />
+<h3 id="vwap-standard-deviation-bands">📊 VWAP Standard Deviation Bands<a class="headerlink" href="#vwap-standard-deviation-bands" title="Permanent link">&para;</a></h3>
+<p><strong>What Displays:</strong><br />
+- Additional lines above and below each VWAP showing ±1σ and ±2σ deviation bands<br />
+- Labels: <code>d+1σ</code>, <code>d-1σ</code>, <code>d+2σ</code>, <code>d-2σ</code> (and same for w/m/q)</p>
+<p><strong>Level Definition:</strong><br />
+- Standard deviation bands around VWAP showing how far price has deviated from the volume-weighted average<br />
+- ±1σ covers ~68% of price action<br />
+- ±2σ covers ~95% of price action</p>
+<p><strong>Configuration:</strong></p>
+<table>
+<thead>
+<tr><th>Setting</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Daily VWAP + Bands</td><td>Toggle bands for Daily VWAP</td></tr>
+<tr><td>Weekly VWAP + Bands</td><td>Toggle bands for Weekly VWAP</td></tr>
+<tr><td>Monthly VWAP + Bands</td><td>Toggle bands for Monthly VWAP</td></tr>
+<tr><td>Quarterly VWAP + Bands</td><td>Toggle bands for Quarterly VWAP</td></tr>
+<tr><td>Show ±1σ</td><td>Enable first standard deviation bands</td></tr>
+<tr><td>Show ±2σ</td><td>Enable second standard deviation bands</td></tr>
+<tr><td>Band Color</td><td>Separate color picker from main VWAP line</td></tr>
+</tbody>
+</table>
+<p><strong>Characteristics:</strong><br />
+- <strong>Price at +2σ</strong> = Overbought, mean reversion likely<br />
+- <strong>Price at -2σ</strong> = Oversold, bounce likely<br />
+- <strong>Bands act as dynamic S/R</strong> that adapt to volatility<br />
+- <strong>Tighter bands</strong> = Low volatility environment<br />
+- <strong>Wider bands</strong> = High volatility environment</p>
+<p><strong>How traders use it:</strong><br />
+- Price at upper bands (+1σ/+2σ) = Look for shorts or profit-taking<br />
+- Price at lower bands (-1σ/-2σ) = Look for longs or bounces<br />
+- Price returning to VWAP = "Fair value" / mean reversion target</p>
+<p><strong>Labels:</strong><br />
+- <code>d+1σ</code> = Daily VWAP + 1 standard deviation (upper)<br />
+- <code>d-1σ</code> = Daily VWAP - 1 standard deviation (lower)<br />
+- <code>d+2σ</code> = Daily VWAP + 2 standard deviations (upper)<br />
+- <code>d-2σ</code> = Daily VWAP - 2 standard deviations (lower)<br />
+- Same pattern for weekly (<code>w</code>), monthly (<code>m</code>), quarterly (<code>q</code>)</p>
+<p><strong>Example:</strong> Bitcoin trading at Daily VWAP +2σ ($69,500) while VWAP is at $67,000 → Statistically extended, mean reversion back to VWAP is probable.</p>
 <hr />
 <h3 id="volume-profile-poc-vah-val">🎯 Volume Profile (POC, VAH, VAL)<a class="headerlink" href="#volume-profile-poc-vah-val" title="Permanent link">&para;</a></h3>
 <p><strong>What Displays:</strong><br />
@@ -2694,6 +2768,74 @@ Structure: Strong uptrend characteristics
   <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
   <p style="margin: 0; color: #424242;"><strong>Gap Levels Visualization</strong></p>
   <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">Shows gap high/low levels marking overnight or weekend price gaps.</p>
+</div>
+
+<hr />
+<h3 id="fair-value-gaps-fvg">📊 Fair Value Gaps (FVG)<a class="headerlink" href="#fair-value-gaps-fvg" title="Permanent link">&para;</a></h3>
+<p><strong>What it does:</strong> Detects price imbalances where market moved so fast it left a "gap" between non-adjacent candles.</p>
+<p><strong>What Displays:</strong><br />
+- Semi-transparent boxes highlighting price imbalances<br />
+- Colors change based on position relative to current price<br />
+- Green zones = Demand (FVG below price)<br />
+- Red zones = Supply (FVG above price)</p>
+<p><strong>Detection Logic:</strong><br />
+- <strong>Bullish FVG:</strong> Gap up where candle low &gt; candle[2] high (demand zone)<br />
+- <strong>Bearish FVG:</strong> Gap down where candle high &lt; candle[2] low (supply zone)</p>
+<p><strong>Configuration:</strong></p>
+<table>
+<thead>
+<tr><th>Setting</th><th>Options</th><th>Default</th></tr>
+</thead>
+<tbody>
+<tr><td>Bullish FVG</td><td>On/Off</td><td>On</td></tr>
+<tr><td>Bearish FVG</td><td>On/Off</td><td>On</td></tr>
+<tr><td>Max FVGs</td><td>1-50</td><td>10</td></tr>
+<tr><td>Show</td><td>All / Unmitigated</td><td>Unmitigated</td></tr>
+<tr><td>Mitigation</td><td>Wick / Close</td><td>Wick</td></tr>
+<tr><td>Extend Right</td><td>On/Off</td><td>On</td></tr>
+<tr><td>Demand Color</td><td>Color picker</td><td>Green (80%)</td></tr>
+<tr><td>Supply Color</td><td>Color picker</td><td>Red (80%)</td></tr>
+<tr><td>Mitigated Color</td><td>Color picker</td><td>Gray (70%)</td></tr>
+</tbody>
+</table>
+<p><strong>Key Features:</strong></p>
+<p><strong>1. Position-based coloring:</strong><br />
+- FVG below current price = Green (demand/support zone)<br />
+- FVG above current price = Red (supply/resistance zone)<br />
+- Colors update dynamically as price moves</p>
+<p><strong>2. Auto lookback by timeframe:</strong></p>
+<table>
+<thead>
+<tr><th>Timeframe</th><th>Lookback</th></tr>
+</thead>
+<tbody>
+<tr><td>1m - 15m</td><td>2 days</td></tr>
+<tr><td>30m - 1H</td><td>1 week</td></tr>
+<tr><td>2H - 4H</td><td>2 weeks</td></tr>
+<tr><td>Daily</td><td>1 month</td></tr>
+<tr><td>Weekly</td><td>3 months</td></tr>
+<tr><td>Monthly</td><td>6 months</td></tr>
+</tbody>
+</table>
+<p><strong>3. Mitigation modes:</strong><br />
+- <strong>Wick</strong> = FVG mitigated when any wick touches the gap<br />
+- <strong>Close</strong> = FVG mitigated when candle closes inside the gap (stricter)</p>
+<p><strong>How to use:</strong><br />
+- FVGs are "magnets" – price tends to return to fill imbalances<br />
+- Unmitigated FVGs = potential entry zones<br />
+- Green FVG below = buy zone / demand support<br />
+- Red FVG above = sell zone / supply resistance</p>
+<p><strong>Example:</strong> ES futures gaps up leaving a bullish FVG between 4,480-4,490. Price rallies to 4,520 then pulls back → Watch for bounce at 4,480-4,490 FVG zone (demand).</p>
+
+<!-- 📸 SCREENSHOT NEEDED - Fair Value Gaps on Chart
+     What to show: Chart showing bullish and bearish FVG zones with different colors
+     Setup: Enable FVG detection, show both demand (green) and supply (red) zones
+     File name suggestion: janus-atlas-fair-value-gaps.png
+-->
+<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
+  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
+  <p style="margin: 0; color: #424242;"><strong>Fair Value Gaps Visualization</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">Shows FVG zones with position-based coloring (green demand below price, red supply above price).</p>
 </div>
 
 <hr />
@@ -3339,6 +3481,39 @@ Interpretation: High confluence zone, stronger reactions observed
 
 <h3 id="q-why-does-my-chart-look-compressed">Q: Why does my chart look compressed when I enable Quarterly/Yearly levels?<a class="headerlink" href="#q-why-does-my-chart-look-compressed" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> Quarterly and Yearly highs/lows can be far from current price. TradingView auto-scales the chart to fit all visible levels, which compresses price action. For best results, use Quarterly/Yearly levels on 4H+ timeframe charts.</p>
+
+<h3 id="q-what-are-vwap-bands">Q: What are VWAP bands?<a class="headerlink" href="#q-what-are-vwap-bands" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Standard deviation bands around VWAP showing how far price has deviated from the average. ±1σ covers ~68% of price action, ±2σ covers ~95%. Price at +2σ indicates overbought conditions; price at -2σ indicates oversold conditions.</p>
+
+<h3 id="q-how-do-i-use-vwap-bands-for-trading">Q: How do I use VWAP bands for trading?<a class="headerlink" href="#q-how-do-i-use-vwap-bands-for-trading" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Price at upper bands (+1σ/+2σ) = overbought, look for shorts or profit-taking. Price at lower bands (-1σ/-2σ) = oversold, look for longs or bounces. Price returning to VWAP = "fair value" / mean reversion target.</p>
+
+<h3 id="q-why-enable-bands-on-daily-but-not-weekly">Q: Why enable bands on Daily VWAP but not Weekly?<a class="headerlink" href="#q-why-enable-bands-on-daily-but-not-weekly" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Daily bands are tighter and more relevant for intraday trades. Weekly/Monthly bands are wider and better for swing trades. Enable what fits your trading style.</p>
+
+<h3 id="q-what-do-the-vwap-band-labels-mean">Q: What do the VWAP band labels mean (d+1σ, w-2σ, etc.)?<a class="headerlink" href="#q-what-do-the-vwap-band-labels-mean" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> First letter = timeframe (d=daily, w=weekly, m=monthly, q=quarterly). Sign = above/below VWAP. Number = standard deviation level. Example: <code>d+1σ</code> = Daily VWAP + 1 standard deviation (upper band).</p>
+
+<h3 id="q-should-i-use-1-sigma-or-2-sigma-bands">Q: Should I use ±1σ or ±2σ bands?<a class="headerlink" href="#q-should-i-use-1-sigma-or-2-sigma-bands" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> ±1σ = more frequent touches, good for scalping. ±2σ = extreme levels, stronger reversal signals but less frequent. Many traders use both for layered analysis.</p>
+
+<h3 id="q-what-are-fair-value-gaps">Q: What are Fair Value Gaps (FVG)?<a class="headerlink" href="#q-what-are-fair-value-gaps" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> FVGs are price imbalances where market moved so fast it left a "gap" between non-adjacent candles. They represent unfilled orders and act as magnets—price tends to return to fill them.</p>
+
+<h3 id="q-why-did-my-fvg-change-color">Q: Why did my FVG change color?<a class="headerlink" href="#q-why-did-my-fvg-change-color" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Colors are position-based and update dynamically. FVG below current price = Green (demand zone). FVG above current price = Red (supply zone). As price moves, colors adjust accordingly.</p>
+
+<h3 id="q-whats-the-difference-between-wick-and-close-mitigation">Q: What's the difference between Wick and Close mitigation for FVG?<a class="headerlink" href="#q-whats-the-difference-between-wick-and-close-mitigation" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Wick = FVG mitigated when any wick touches the gap (more sensitive). Close = FVG mitigated only when candle closes inside the gap (stricter). Close mode preserves more FVGs for higher-probability setups.</p>
+
+<h3 id="q-why-dont-i-see-many-fvgs-on-daily">Q: Why don't I see many FVGs on Daily timeframe?<a class="headerlink" href="#q-why-dont-i-see-many-fvgs-on-daily" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> True FVGs (gaps between non-adjacent candles) are rarer on higher timeframes due to larger candle ranges. Try 15m-4H for more frequent FVG detection.</p>
+
+<h3 id="q-why-do-old-fvgs-disappear">Q: Why do old FVGs disappear?<a class="headerlink" href="#q-why-do-old-fvgs-disappear" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Auto-lookback removes old FVGs to keep the chart clean. Lookback adjusts automatically based on your timeframe (2 days on 15m, 1 month on Daily, 3 months on Weekly, etc.).</p>
+
+<h3 id="q-what-does-unmitigated-fvg-mean">Q: What does "Unmitigated" FVG mean?<a class="headerlink" href="#q-what-does-unmitigated-fvg-mean" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> An unmitigated FVG hasn't been touched/filled by price yet. These are the most relevant for trading as potential entry zones—price is more likely to revisit unfilled imbalances.</p>
 
 <hr />
 <h2 id="quick-reference-guide">📋 Quick Reference Guide<a class="headerlink" href="#quick-reference-guide" title="Permanent link">&para;</a></h2>
