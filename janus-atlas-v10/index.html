@@ -1292,6 +1292,38 @@
   </a>
 
 </li>
+          <li class="md-nav__item">
+  <a href="#q-whats-the-difference-between-fib-retracements-and-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Fib retracements vs extensions?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-when-should-i-use-fib-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: When should I use Fib extensions?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-what-does-the-confluence-zone-count-label-mean" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: What does the confluence count label mean?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-can-i-hide-the-confluence-count-label" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Can I hide the confluence count label?
+    </span>
+  </a>
+
+</li>
       </ul>
     </nav>
 
@@ -2378,6 +2410,38 @@
   </a>
 
 </li>
+          <li class="md-nav__item">
+  <a href="#q-whats-the-difference-between-fib-retracements-and-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Fib retracements vs extensions?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-when-should-i-use-fib-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: When should I use Fib extensions?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-what-does-the-confluence-zone-count-label-mean" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: What does the confluence count label mean?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-can-i-hide-the-confluence-count-label" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Can I hide the confluence count label?
+    </span>
+  </a>
+
+</li>
       </ul>
     </nav>
 
@@ -3166,11 +3230,12 @@ Structure: Strong uptrend characteristics
 
 <hr />
 <h3 id="confluence-zones">🎯 Confluence Zones<a class="headerlink" href="#confluence-zones" title="Permanent link">&para;</a></h3>
-<p><strong>What it does:</strong> Automatically detects when multiple levels cluster within a tight price range, highlighting high-probability reaction zones.</p>
+<p><strong>What it does:</strong> Automatically detects when multiple levels cluster within a tight price range, highlighting high-probability reaction zones with a count label.</p>
 <p><strong>How it works:</strong><br />
 - Scans all enabled levels for proximity<br />
 - When 3+ levels cluster within threshold → Zone highlighted<br />
-- Visual box/shading marks the confluence area</p>
+- Visual box/shading marks the confluence area<br />
+- <strong>Count label</strong> shows how many levels are clustered (e.g., "4 levels")</p>
 <p><strong>Configuration:</strong></p>
 <table>
 <thead>
@@ -3181,13 +3246,15 @@ Structure: Strong uptrend characteristics
 <tr><td>Min Levels</td><td>Minimum levels to form zone</td><td>3</td></tr>
 <tr><td>Proximity %</td><td>How close levels must be</td><td>0.5%</td></tr>
 <tr><td>Zone Color</td><td>Highlight color</td><td>Purple</td></tr>
+<tr><td>Show Label</td><td>Display count label on zone</td><td>On</td></tr>
 </tbody>
 </table>
 <p><strong>Why it matters:</strong><br />
 - Single level touch = moderate probability<br />
 - 2 levels clustered = good probability<br />
-- 3+ levels clustered = high probability reaction zone</p>
-<p><strong>Example:</strong> Daily Low + Weekly VWAP + POC all within 0.3% = Strong confluence zone</p>
+- 3+ levels clustered = high probability reaction zone<br />
+- <strong>Higher count = stronger zone</strong> (5+ levels is very significant)</p>
+<p><strong>Example:</strong> Daily Low + Weekly VWAP + POC all within 0.3% = Strong confluence zone displaying "3 levels"</p>
 
 <!-- 📸 SCREENSHOT NEEDED - Confluence Zone Highlight
      What to show: Chart showing multiple levels clustering with highlighted zone
@@ -3246,7 +3313,7 @@ Structure: Strong uptrend characteristics
 <ul>
 <li><strong>2 Independent Fib Sets</strong> - Display two anchors simultaneously (e.g., Daily + Weekly) with different colors</li>
 <li><strong>19 Anchor Options</strong> - Far more than just Daily H/L</li>
-<li><strong>6 Fib Levels</strong> - 0.236, 0.382, 0.5, 0.618, 0.786, 0.886 (each individually toggleable)</li>
+<li><strong>8 Fib Levels</strong> - 6 retracements (0.236-0.886) + 2 extensions (1.272, 1.618)</li>
 <li><strong>1 Grouped Alert</strong> - "Fib Level Touched" fires when ANY fib level is touched</li>
 </ul>
 
@@ -3267,33 +3334,42 @@ Structure: Strong uptrend characteristics
 <p><strong>Configuration:</strong></p>
 <table>
 <thead>
-<tr><th>Setting</th><th>Options</th><th>Default</th></tr>
+<tr><th>Level</th><th>Type</th><th>Default</th><th>Use</th></tr>
 </thead>
 <tbody>
-<tr><td>Fib Set 1</td><td>On/Off + Anchor selection + Color</td><td>Off</td></tr>
-<tr><td>Fib Set 2</td><td>On/Off + Anchor selection + Color</td><td>Off</td></tr>
-<tr><td>Level 0.236</td><td>On/Off</td><td>On</td></tr>
-<tr><td>Level 0.382</td><td>On/Off</td><td>On</td></tr>
-<tr><td>Level 0.5</td><td>On/Off</td><td>On</td></tr>
-<tr><td>Level 0.618</td><td>On/Off</td><td>On</td></tr>
-<tr><td>Level 0.786</td><td>On/Off</td><td>On</td></tr>
-<tr><td>Level 0.886</td><td>On/Off</td><td>On</td></tr>
+<tr><td>0.236</td><td>Retracement</td><td>On</td><td>Shallow pullback</td></tr>
+<tr><td>0.382</td><td>Retracement</td><td>On</td><td>Standard pullback</td></tr>
+<tr><td>0.5</td><td>Retracement</td><td>On</td><td>Mid-range</td></tr>
+<tr><td>0.618</td><td>Retracement</td><td>On</td><td>Golden ratio</td></tr>
+<tr><td>0.786</td><td>Retracement</td><td>On</td><td>Deep pullback</td></tr>
+<tr><td>0.886</td><td>Retracement</td><td>Off</td><td>Very deep pullback</td></tr>
+<tr><td>1.272</td><td>Extension</td><td>Off</td><td>First profit target</td></tr>
+<tr><td>1.618</td><td>Extension</td><td>Off</td><td>Golden target</td></tr>
 </tbody>
 </table>
 
-<p><strong>Most Important Levels:</strong> 0.382, 0.5, 0.618 (golden ratio levels)</p>
+<p><strong>Retracements vs Extensions:</strong><br />
+- <strong>Retracements (0.236-0.886)</strong> = INSIDE the range – used for entries on pullbacks<br />
+- <strong>Extensions (1.272, 1.618)</strong> = OUTSIDE the range – used for profit targets</p>
+
+<p><strong>Most Important Levels:</strong> 0.382, 0.5, 0.618 (golden ratio levels for entries), 1.618 (golden extension for targets)</p>
 
 <p><strong>How to use:</strong><br />
 - Enable Fib Set 1 with Daily H/L anchor for intraday retracement zones<br />
 - Add Fib Set 2 with Weekly H/L for multi-timeframe confluence<br />
 - Watch for price reactions at 0.382, 0.5, and 0.618 levels<br />
+- Use 1.272 and 1.618 extensions as take-profit targets after entering on a retracement<br />
 - Combine with other Janus levels for confluence</p>
+
+<p><strong>Pro tip:</strong> Use Fib Set 1 for retracements (0.236-0.786) and Fib Set 2 for extensions (1.272, 1.618 only) with different anchors.</p>
 
 <p><strong>FAQ:</strong></p>
 <ul>
 <li><strong>Why one grouped alert?</strong> TradingView's 64-alert limit per indicator. A grouped alert covers all fib levels efficiently.</li>
 <li><strong>Can I show two anchors at once?</strong> Yes! Use Fib Set 1 + Fib Set 2 with different anchors and colors.</li>
 <li><strong>Most important levels?</strong> 0.382, 0.5, 0.618 are the golden ratio levels traders watch most.</li>
+<li><strong>What's the difference between retracements and extensions?</strong> Retracements (0.236-0.886) are INSIDE the range for entries. Extensions (1.272, 1.618) are OUTSIDE the range for profit targets.</li>
+<li><strong>Why are extensions off by default?</strong> Most traders only need retracements. Extensions add lines that may clutter the chart for those not using them.</li>
 </ul>
 
 <!-- 📸 SCREENSHOT NEEDED - Fibonacci Levels on Chart
@@ -3840,6 +3916,18 @@ Interpretation: High confluence zone, stronger reactions observed
 
 <h3 id="q-what-does-unmitigated-fvg-mean">Q: What does "Unmitigated" FVG mean?<a class="headerlink" href="#q-what-does-unmitigated-fvg-mean" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> An unmitigated FVG hasn't been touched/filled by price yet. These are the most relevant for trading as potential entry zones—price is more likely to revisit unfilled imbalances.</p>
+
+<h3 id="q-whats-the-difference-between-fib-retracements-and-extensions">Q: What's the difference between Fib retracements and extensions?<a class="headerlink" href="#q-whats-the-difference-between-fib-retracements-and-extensions" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Retracements (0.236-0.886) are INSIDE the range—used for entries on pullbacks. Extensions (1.272, 1.618) are OUTSIDE the range—used for profit targets after price breaks the high/low.</p>
+
+<h3 id="q-when-should-i-use-fib-extensions">Q: When should I use Fib extensions?<a class="headerlink" href="#q-when-should-i-use-fib-extensions" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> After entering on a retracement, use extensions as take-profit levels. Price breaking above the high often targets 1.272 first, then 1.618.</p>
+
+<h3 id="q-what-does-the-confluence-zone-count-label-mean">Q: What does the confluence zone count label mean?<a class="headerlink" href="#q-what-does-the-confluence-zone-count-label-mean" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> The label (e.g., "4 levels") shows how many different levels from any source (HTF, Session, VWAP, etc.) are clustered within your proximity setting. Higher count = stronger support/resistance zone.</p>
+
+<h3 id="q-can-i-hide-the-confluence-count-label">Q: Can I hide the confluence count label?<a class="headerlink" href="#q-can-i-hide-the-confluence-count-label" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Yes, use the "Show Label" toggle in the Confluence settings to hide it if you prefer a cleaner look.</p>
 
 <hr />
 <h2 id="quick-reference-guide">📋 Quick Reference Guide<a class="headerlink" href="#quick-reference-guide" title="Permanent link">&para;</a></h2>
