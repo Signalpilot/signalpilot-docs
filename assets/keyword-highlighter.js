@@ -98,6 +98,11 @@
     return faqQuestionPatterns.some(pattern => pattern.test(trimmed));
   }
 
+  function isInsideTable(element) {
+    // Check if the element is inside a table cell
+    return element.closest('td, th') !== null;
+  }
+
   function highlightKeywords() {
     // Find all strong/bold elements in the content
     const strongElements = document.querySelectorAll('.md-typeset strong, .md-typeset b');
@@ -107,6 +112,12 @@
       if (element.dataset.kwProcessed) return;
 
       const text = element.textContent;
+
+      // SKIP if inside a table cell (tables use bold for labels, not keywords)
+      if (isInsideTable(element)) {
+        element.dataset.kwProcessed = 'true';
+        return;
+      }
 
       // SKIP if this is an indicator name
       if (isIndicatorName(text)) {
