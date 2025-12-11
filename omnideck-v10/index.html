@@ -2418,6 +2418,46 @@ graph TD
 </tbody>
 </table>
 
+<h3 id="default-settings">Default Settings (v1.3.1)<a class="headerlink" href="#default-settings" title="Permanent link">&para;</a></h3>
+<p><strong>ON by default (5):</strong></p>
+<table>
+<thead>
+<tr>
+<th>System/Setting</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>TD Sequential</td><td>Exhaustion counter signals</td></tr>
+<tr><td>Squeeze Detector</td><td>Volatility breakout arrows</td></tr>
+<tr><td>SuperTrend</td><td>Adaptive trend ribbon</td></tr>
+<tr><td>Regime Box</td><td>Market mood classifier</td></tr>
+<tr><td>Confluence Score</td><td>System alignment panel</td></tr>
+</tbody>
+</table>
+
+<p><strong>OFF by default (8):</strong></p>
+<table>
+<thead>
+<tr>
+<th>System/Setting</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Liquidity Sweeps</td><td>Stop hunt detection</td></tr>
+<tr><td>EMA Trio</td><td>Moving averages (50/100/200)</td></tr>
+<tr><td>BMSB</td><td>Bull Market Support Band</td></tr>
+<tr><td>Supply/Demand Zones</td><td>Institutional price zones</td></tr>
+<tr><td>Candlestick Patterns</td><td>RCS 16-pattern library</td></tr>
+<tr><td>Dynamic RCS Lookback</td><td>Timeframe-based sensitivity</td></tr>
+<tr><td>Show Alert Prefix</td><td>Alert message prefix toggle</td></tr>
+<tr><td>Auto Adjust Confluence</td><td>Automatic score calibration</td></tr>
+</tbody>
+</table>
+
+<p><em>Enable additional systems progressively as you become familiar with the core set.</em></p>
+
 <!-- 📸 SCREENSHOT NEEDED - Omnideck Settings Panel - 10 System Toggles
      What to show: Settings panel showing all 10 system on/off toggles
      Setup: Right-click Omnideck → Settings → System toggle section
@@ -2508,17 +2548,17 @@ graph TD
 <h3 id="system-2-squeeze-breakout-detector">System 2: Squeeze — Breakout Detector<a class="headerlink" href="#system-2-squeeze-breakout-detector" title="Permanent link">&para;</a></h3>
 <p><strong>Visual Display:</strong><br />
 - Red dots on candles = Volatility compression<br />
-- Green arrow ↑ = Bullish breakout<br />
-- Red arrow ↓ = Bearish breakdown</p>
+- Teal ▲ arrow = Bullish breakout<br />
+- Red ▼ arrow = Bearish breakdown</p>
 <p><strong>How It Works:</strong><br />
 - Monitors Bollinger Bands vs Keltner Channels<br />
 - Red dots = Bands inside Channels (squeeze forming)<br />
 - Arrow fires when bands expand (breakout)</p>
 <p><strong>Signal Interpretation:</strong><br />
 - Multiple red dots (3-5+) = Larger move potential<br />
-- Green arrow = Bullish breakout direction<br />
-- Red arrow = Bearish breakdown direction</p>
-<p><strong>Example:</strong> 5 red dots accumulate, green arrow fires at $102 → Bullish breakout detected.</p>
+- Teal ▲ arrow = Bullish breakout direction<br />
+- Red ▼ arrow = Bearish breakdown direction</p>
+<p><strong>Example:</strong> 5 red dots accumulate, teal ▲ arrow fires at $102 → Bullish breakout detected.</p>
 <hr />
 <h3 id="system-3-liquidity-sweeps-stop-hunt-detection">System 3: Liquidity Sweeps — Stop Hunt Detection<a class="headerlink" href="#system-3-liquidity-sweeps-stop-hunt-detection" title="Permanent link">&para;</a></h3>
 <p><strong>Visual Display:</strong><br />
@@ -2599,7 +2639,7 @@ graph TD
 <hr />
 <h3 id="system-9-candlestick-patterns-16-classic-patterns">System 9: Candlestick Patterns — 16 Classic Patterns (RCS Pattern Library)<a class="headerlink" href="#system-9-candlestick-patterns-16-classic-patterns" title="Permanent link">&para;</a></h3>
 <p><strong>Visual Display:</strong><br />
-- Labels like "HAM" (Hammer), "BE" (Bullish Engulfing), "SS" (Shooting Star)</p>
+- Labels like "HAM" (Hammer), "BUE" (Bull Engulfing), "SS" (Shooting Star)</p>
 <p><strong>RCS Pattern Library:</strong><br />
 16 classic reversal patterns identified automatically with on-chart labels:</p>
 
@@ -2628,13 +2668,13 @@ graph TD
 </tr>
 <tr>
 <td><strong>Bull Engulfing</strong></td>
-<td>BE</td>
+<td>BUE</td>
 <td>🟢 Bullish</td>
 <td>Green candle fully engulfs prior red</td>
 </tr>
 <tr>
 <td><strong>Bull Harami</strong></td>
-<td>BH</td>
+<td>BUH</td>
 <td>🟢 Bullish</td>
 <td>Small green inside prior large red</td>
 </tr>
@@ -2664,7 +2704,7 @@ graph TD
 </tr>
 <tr>
 <td><strong>Hanging Man</strong></td>
-<td>HM</td>
+<td>HGM</td>
 <td>🔴 Bearish</td>
 <td>Long lower wick, small body at top (bearish context)</td>
 </tr>
@@ -2676,13 +2716,13 @@ graph TD
 </tr>
 <tr>
 <td><strong>Bear Engulfing</strong></td>
-<td>BRE</td>
+<td>BEE</td>
 <td>🔴 Bearish</td>
 <td>Red candle fully engulfs prior green</td>
 </tr>
 <tr>
 <td><strong>Bear Harami</strong></td>
-<td>BRH</td>
+<td>BEH</td>
 <td>🔴 Bearish</td>
 <td>Small red inside prior large green</td>
 </tr>
@@ -2925,7 +2965,7 @@ graph TD
 <tr>
 <td><strong>RCS Patterns (16)</strong></td>
 <td>Individual pattern alerts</td>
-<td>HAM, BE, SS, BRE, R3M, 3WS, MS, TWB, F3M, 3BC, ES, TWT, PL, BH, DCC, BRH</td>
+<td>HAM, IH, BUE, BUH, R3M, 3WS, MS, TWB, HGM, SS, BEE, BEH, F3M, 3BC, ES, TWT</td>
 </tr>
 <tr>
 <td><strong>Confluence</strong></td>
@@ -3441,8 +3481,8 @@ graph TD
 <tr>
 <td><strong>Patterns</strong></td>
 <td>Labels</td>
-<td>HAM, BE, etc</td>
-<td>SS, BRE, etc</td>
+<td>HAM, BUE, etc</td>
+<td>SS, BEE, etc</td>
 </tr>
 </tbody>
 </table>
