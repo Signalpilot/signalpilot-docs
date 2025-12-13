@@ -1892,11 +1892,11 @@
 
 <button onclick="window.print()" class="print-pdf-button">🖨️ Print to PDF</button>
 
-<p><strong>One-page cheat sheet for volume analysis and position tracking</strong></p>
+<p><strong>One-page cheat sheet for regime detection, signals, and risk management</strong></p>
 
 <hr />
 
-<h2>🎯 The 3 Systems</h2>
+<h2>🎯 The 5 Systems</h2>
 
 <table>
 <thead>
@@ -1909,51 +1909,69 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>Volume Flow</strong></td>
-<td>🟢🔴 Volume Bars</td>
-<td>Buying/Selling Pressure</td>
-<td>Green bars = buying pressure, Red bars = selling pressure</td>
+<td><strong>Regime Detection</strong></td>
+<td>🟩🟥 Background Colors</td>
+<td>Market Phase</td>
+<td>Green = Accumulation, Red = Distribution, Gray = Neutral, Gold = Weakening</td>
 </tr>
 <tr>
-<td><strong>Volume Zones</strong></td>
-<td>📦 Horizontal Boxes</td>
-<td>High-Volume Areas</td>
-<td>Marks price levels with significant volume accumulation</td>
+<td><strong>Signal Generation</strong></td>
+<td>⬆️⬇️ BULL/BEAR Labels</td>
+<td>Entry Signals</td>
+<td>Signals with ⭐⭐⭐ quality ratings (80-100%, 60-79%, 40-59%)</td>
 </tr>
 <tr>
-<td><strong>Position Manager</strong></td>
-<td>📍 Entry Lines & P/L</td>
-<td>Real-Time Tracking</td>
-<td>Entry price, breakeven line, live profit/loss display</td>
+<td><strong>Risk Management</strong></td>
+<td>📍 Price Lines</td>
+<td>Trade Levels</td>
+<td>Auto-calculated Entry, Stop, T1, T2 with position sizing</td>
+</tr>
+<tr>
+<td><strong>HTF Confirmation</strong></td>
+<td>✅❌ Alignment Status</td>
+<td>Multi-Timeframe</td>
+<td>Checks if higher timeframe regime agrees with signal</td>
+</tr>
+<tr>
+<td><strong>Strategy Modes</strong></td>
+<td>⚙️ Mode Setting</td>
+<td>Trading Approach</td>
+<td>Trend Following, Mean Reversion, or Hybrid (default)</td>
 </tr>
 </tbody>
 </table>
 
 <hr />
 
-<h2>📊 VBS Signals (Volume-Based Signals)</h2>
+<h2>📊 Signal Quality Ratings</h2>
 
 <table>
 <thead>
 <tr>
-<th>Signal</th>
-<th>Color</th>
+<th>Rating</th>
+<th>Quality %</th>
 <th>Meaning</th>
 <th>Action</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>VBS+</strong></td>
-<td>🟢 Green</td>
-<td>Bullish Volume Spike</td>
-<td>Strong buying pressure detected → Watch for bullish continuation</td>
+<td><strong>⭐⭐⭐</strong></td>
+<td>80-100%</td>
+<td>High Quality</td>
+<td>Strong confluence → Full position size, high confidence</td>
 </tr>
 <tr>
-<td><strong>VBS-</strong></td>
-<td>🔴 Red</td>
-<td>Bearish Volume Spike</td>
-<td>Strong selling pressure detected → Watch for bearish continuation</td>
+<td><strong>⭐⭐</strong></td>
+<td>60-79%</td>
+<td>Medium Quality</td>
+<td>Good setup → Moderate position size</td>
+</tr>
+<tr>
+<td><strong>⭐</strong></td>
+<td>40-59%</td>
+<td>Lower Quality</td>
+<td>Caution → Reduced size or skip</td>
 </tr>
 </tbody>
 </table>
@@ -1962,18 +1980,19 @@
 
 <h2>⚡ Quick Interpretation Guide</h2>
 
-<h3>Volume Flow Patterns</h3>
+<h3>Regime Colors</h3>
 <ul>
-<li><strong>Green bars increasing:</strong> Bullish pressure building → Potential upward move</li>
-<li><strong>Red bars increasing:</strong> Bearish pressure building → Potential downward move</li>
-<li><strong>Volume spike at level:</strong> Significant interest → Key decision point</li>
+<li><strong>Green background:</strong> Accumulation regime → Favor BULL signals</li>
+<li><strong>Red background:</strong> Distribution regime → Favor BEAR signals</li>
+<li><strong>Gray background:</strong> Neutral regime → Wait for direction or be selective</li>
+<li><strong>Gold background:</strong> Weakening regime → Protect profits, tighten stops</li>
 </ul>
 
-<h3>Volume Zone Patterns</h3>
+<h3>HTF Alignment</h3>
 <ul>
-<li><strong>Price enters zone from below:</strong> Test of accumulation area → Watch for support</li>
-<li><strong>Price enters zone from above:</strong> Test of distribution area → Watch for resistance</li>
-<li><strong>Multiple zones clustered:</strong> High-conviction area → Strong support/resistance</li>
+<li><strong>BULL + HTF Aligned:</strong> Higher TF also in Accumulation → Higher probability</li>
+<li><strong>BEAR + HTF Aligned:</strong> Higher TF also in Distribution → Higher probability</li>
+<li><strong>Signal + HTF Not Aligned:</strong> Conflicting timeframes → Lower probability, reduce size</li>
 </ul>
 
 <hr />
@@ -1984,22 +2003,22 @@
 <ol>
 <li>✅ Pentarch cycle signal (TD, IGN, CAP, etc.)</li>
 <li>✅ Janus Atlas level within 1-2%</li>
-<li>✅ Volume Oracle VBS+ or VBS- signal</li>
+<li>✅ Volume Oracle BULL/BEAR ⭐⭐⭐ signal with HTF aligned</li>
 </ol>
 
-<p><strong>Example:</strong> Pentarch TD at Daily Low + VBS+ spike = Strong accumulation setup</p>
+<p><strong>Example:</strong> Pentarch TD at Daily Low + BULL ⭐⭐⭐ + HTF Aligned = Very high probability setup</p>
 
 <h3>With Janus Atlas</h3>
 <ul>
-<li>VBS+ at Daily/Weekly Low = Strong support confluence</li>
-<li>VBS- at Daily/Weekly High = Strong resistance confluence</li>
-<li>Volume Zone + Janus Level = High-probability reversal area</li>
+<li>BULL signal at Daily/Weekly Low = Strong support confluence</li>
+<li>BEAR signal at Daily/Weekly High = Strong resistance confluence</li>
+<li>Accumulation regime + Janus Level = High-probability reversal area</li>
 </ul>
 
 <h3>With Plutus Flow</h3>
 <ul>
-<li>Bullish divergence + VBS+ = Confirmation of reversal</li>
-<li>Bearish divergence + VBS- = Confirmation of top</li>
+<li>Bullish divergence + BULL signal = Confirmation of reversal</li>
+<li>Bearish divergence + BEAR signal = Confirmation of top</li>
 </ul>
 
 <hr />
@@ -2008,23 +2027,23 @@
 
 <h3>Scalping (1m-5m charts)</h3>
 <ul>
-<li>Enable: <strong>Volume Flow only</strong></li>
-<li>Disable: Volume Zones, Position Manager</li>
-<li>Smoothing: 3-5 periods (faster response)</li>
+<li>Strategy Mode: <strong>Trend Following</strong></li>
+<li>Focus on: ⭐⭐⭐ signals only</li>
+<li>HTF: Check 1H alignment</li>
 </ul>
 
 <h3>Day Trading (15m-1H charts)</h3>
 <ul>
-<li>Enable: <strong>All 3 systems</strong></li>
-<li>Volume Zones: 5-10 zones</li>
-<li>Smoothing: 9 periods (default)</li>
+<li>Strategy Mode: <strong>Hybrid</strong></li>
+<li>Focus on: ⭐⭐ and ⭐⭐⭐ signals</li>
+<li>Risk Amount: 1% per trade</li>
 </ul>
 
 <h3>Swing Trading (4H-Daily charts)</h3>
 <ul>
-<li>Enable: <strong>All 3 systems</strong></li>
-<li>Volume Zones: 8-15 zones</li>
-<li>Position Manager: Track multi-day positions</li>
+<li>Strategy Mode: <strong>Trend Following</strong></li>
+<li>Focus on: Regime strength >70%</li>
+<li>HTF: Daily/Weekly alignment</li>
 </ul>
 
 <hr />
@@ -2040,20 +2059,20 @@
 
 <h2>🔧 Troubleshooting</h2>
 
-<p><strong>"Volume bars all one color"</strong><br>
-→ Normal during strong trends<br>
-→ Green dominance = strong uptrend<br>
-→ Red dominance = strong downtrend</p>
+<p><strong>"Too many signals firing"</strong><br>
+→ Increase quality threshold (focus on ⭐⭐⭐ only)<br>
+→ Use Trend Following mode instead of Hybrid<br>
+→ Wait for HTF alignment before trading</p>
 
-<p><strong>"Too many volume zones"</strong><br>
-→ Reduce zone count in settings (try 5-8)<br>
-→ Increase minimum volume threshold<br>
-→ Focus on zones near current price</p>
+<p><strong>"Regime changing frequently"</strong><br>
+→ Normal during choppy markets<br>
+→ Consider higher timeframe for clearer regimes<br>
+→ Wait for regime strength >60% before trading</p>
 
-<p><strong>"Position Manager not tracking"</strong><br>
-→ Enable Position Manager in settings<br>
-→ Check that VBS signal fired (entry trigger)<br>
-→ Verify calculation method matches your needs</p>
+<p><strong>"Signals not appearing"</strong><br>
+→ Check that signals are enabled in settings<br>
+→ Verify regime is established (not gray/neutral)<br>
+→ Lower quality threshold if too restrictive</p>
 
 <hr />
 
@@ -2071,7 +2090,7 @@
 <tr>
 <td>1m-5m</td>
 <td>✅ Good</td>
-<td>Scalping, Volume Flow most useful</td>
+<td>Scalping, focus on ⭐⭐⭐ signals only</td>
 </tr>
 <tr>
 <td>15m</td>
@@ -2086,7 +2105,7 @@
 <tr>
 <td>4H</td>
 <td>⭐ Best</td>
-<td>Swing trading, clearest volume zones</td>
+<td>Swing trading, clearest regime detection</td>
 </tr>
 <tr>
 <td>Daily</td>
@@ -2096,37 +2115,37 @@
 <tr>
 <td>Weekly</td>
 <td>✅ Good</td>
-<td>Long-term, volume zones very reliable</td>
+<td>Long-term, regime very reliable</td>
 </tr>
 </tbody>
 </table>
 
 <hr />
 
-<h2>🎯 Volume Success Tips</h2>
+<h2>🎯 Volume Oracle Success Tips</h2>
 
 <ol>
-<li><strong>Price + Volume = Context</strong> — Volume confirms price moves</li>
-<li><strong>High volume at key levels = Conviction</strong> — More reliable than low-volume moves</li>
-<li><strong>Volume Zones act as magnets</strong> — Price tends to return to these areas</li>
-<li><strong>Combine with Janus levels</strong> — Volume Zone + Price Level = highest probability</li>
-<li><strong>Watch for divergences</strong> — Price up + Volume down = weakness</li>
+<li><strong>Regime First, Signal Second</strong> — Check regime color before acting on signals</li>
+<li><strong>Quality Matters</strong> — ⭐⭐⭐ signals have highest success rate</li>
+<li><strong>HTF Alignment = Confidence</strong> — Signals with HTF alignment are more reliable</li>
+<li><strong>Combine with Janus levels</strong> — Signal at key level = highest probability</li>
+<li><strong>Watch for Weakening (Gold)</strong> — Protect profits when regime turns gold</li>
 </ol>
 
 <hr />
 
 <h2>📖 Key Concepts</h2>
 
-<p><strong>Volume Flow:</strong> Measures buying vs selling pressure through volume analysis<br>
-<strong>Volume Zones:</strong> Areas where significant volume accumulated (support/resistance)<br>
-<strong>VBS Signals:</strong> Volume-Based Signals that fire on volume spikes<br>
-<strong>Position Manager:</strong> Real-time P/L tracking from entry to exit</p>
+<p><strong>Regime Detection:</strong> Background colors showing market phase (Accumulation/Distribution/Neutral/Weakening)<br>
+<strong>Signal Generation:</strong> BULL/BEAR entry signals with quality ratings (⭐ to ⭐⭐⭐)<br>
+<strong>Risk Management:</strong> Auto-calculated Entry, Stop, T1, T2 with position sizing<br>
+<strong>HTF Confirmation:</strong> Higher timeframe regime alignment check for signal validation</p>
 
 <hr />
 
 <h2>📞 Need Help?</h2>
 
-<p><strong>Full Documentation:</strong> <a href="../REVISED_DOCS_VOLUME_ORACLE/">Volume Oracle v1.0 Complete Guide</a><br>
+<p><strong>Full Documentation:</strong> <a href="../volume-oracle-v10/">Volume Oracle v1.0 Complete Guide</a><br>
 <strong>All Cheat Sheets:</strong> <a href="../ref-cheatsheets-at-a-glance/">All Indicators At-A-Glance</a><br>
 <strong>Support:</strong> support@signalpilot.io</p>
 
