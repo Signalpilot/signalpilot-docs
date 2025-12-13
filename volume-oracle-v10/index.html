@@ -2700,48 +2700,125 @@ Interpretation: Successful retest of broken level
 <p><em>This example demonstrates integrated three-system analysis. Individual interpretation and outcomes vary.</em></p>
 <hr />
 <h2 id="alert-configuration">🔔 Alert Configuration<a class="headerlink" href="#alert-configuration" title="Permanent link">&para;</a></h2>
-<p><strong>Available Alerts:</strong></p>
+<p><strong>Available Alerts (13 Total):</strong></p>
+
+<h3 id="entry-alerts">Entry Alerts</h3>
 <table>
 <thead>
 <tr>
-<th>Alert Type</th>
-<th>Trigger</th>
-<th>Notification</th>
+<th>Alert Name</th>
+<th>When It Fires</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>High Buying Volume</strong></td>
-<td>Large green volume bar appears</td>
-<td>"Volume Oracle: Strong buying detected"</td>
+<td><strong>🟢 BULL Signal</strong></td>
+<td>Bullish flow confirmed</td>
 </tr>
 <tr>
-<td><strong>High Selling Volume</strong></td>
-<td>Large red volume bar appears</td>
-<td>"Volume Oracle: Strong selling detected"</td>
+<td><strong>🔴 BEAR Signal</strong></td>
+<td>Bearish flow confirmed</td>
 </tr>
 <tr>
-<td><strong>Zone Touch</strong></td>
-<td>Price reaches volume zone</td>
-<td>"Volume Oracle: Price at volume zone"</td>
-</tr>
-<tr>
-<td><strong>Zone Break</strong></td>
-<td>Price breaks through zone</td>
-<td>"Volume Oracle: Volume zone broken"</td>
-</tr>
-<tr>
-<td><strong>P&amp;L Threshold</strong></td>
-<td>Position reaches % target</td>
-<td>"Volume Oracle: +5% profit target reached"</td>
-</tr>
-<tr>
-<td><strong>Breakeven Return</strong></td>
-<td>Price returns to entry</td>
-<td>"Volume Oracle: Back at breakeven"</td>
+<td><strong>⚡ ANY Signal</strong></td>
+<td>Either direction (bull or bear)</td>
 </tr>
 </tbody>
 </table>
+
+<h3 id="position-alerts">Position Alerts</h3>
+<table>
+<thead>
+<tr>
+<th>Alert Name</th>
+<th>When It Fires</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>🎯 Target 1 Hit</strong></td>
+<td>Price reaches T1</td>
+</tr>
+<tr>
+<td><strong>🔒 Breakeven</strong></td>
+<td>Stop moved to entry</td>
+</tr>
+<tr>
+<td><strong>⚠️ Exit Warning</strong></td>
+<td>Any exit condition triggered</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="regime-alerts">Regime Alerts</h3>
+<table>
+<thead>
+<tr>
+<th>Alert Name</th>
+<th>When It Fires</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>📈 Regime → Accumulation</strong></td>
+<td>Regime flips bullish</td>
+</tr>
+<tr>
+<td><strong>📉 Regime → Distribution</strong></td>
+<td>Regime flips bearish</td>
+</tr>
+<tr>
+<td><strong>⚖️ Regime → Neutral</strong></td>
+<td>Regime becomes neutral</td>
+</tr>
+<tr>
+<td><strong>🔄 Any Regime Change</strong></td>
+<td>Any regime flip</td>
+</tr>
+<tr>
+<td><strong>⚡ Regime Weakening</strong></td>
+<td>Regime losing strength</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="htf-alerts">HTF Alerts</h3>
+<table>
+<thead>
+<tr>
+<th>Alert Name</th>
+<th>When It Fires</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>✅ HTF Aligned</strong></td>
+<td>Timeframes align</td>
+</tr>
+<tr>
+<td><strong>❌ HTF Broke</strong></td>
+<td>Alignment lost</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="alert-message-data">Alert Message Data</h3>
+<p>Entry signal alerts include actionable trade data:</p>
+<pre><code>🟢 BULLISH FLOW | AAPL 15
+Quality: 82% | Regime: 67%
+Entry: 185.42 | Stop: 182.15
+T1: 188.69 | T2: 193.23
+Size: 47 units | Risk: $150</code></pre>
+
+<p><strong>Fields explained:</strong></p>
+<ul>
+<li><strong>Quality</strong> — Signal strength score (0-100%)</li>
+<li><strong>Regime</strong> — Current regime strength</li>
+<li><strong>Entry/Stop/T1/T2</strong> — Price levels</li>
+<li><strong>Size</strong> — Calculated position size in shares/contracts (Risk Amount ÷ Stop Distance)</li>
+<li><strong>Risk</strong> — Dollar amount at risk</li>
+</ul>
+
 <p><strong>Alert Setup:</strong><br />
 1. Open indicator settings<br />
 2. Navigate to alert section<br />
@@ -2758,7 +2835,7 @@ Interpretation: Successful retest of broken level
     <li><strong>Position Manager:</strong> Tracks your entry price and displays real-time P&L (profit/loss) percentage and dollar amount directly on the chart for active position monitoring</li>
     <li><strong>Independent System Control:</strong> Each of the three systems can be toggled on or off independently, allowing you to use only the components you need for your workflow</li>
     <li><strong>Non-Repainting Zones:</strong> Volume Zones confirm at bar close and remain fixed once formed - they never change retroactively for reliable support/resistance analysis</li>
-    <li><strong>Alert-Ready Configuration:</strong> Set TradingView alerts for strong buying/selling volume, zone touches, zone breaks, and P&L thresholds with customizable notification methods</li>
+    <li><strong>Comprehensive Alert System:</strong> 13 alerts across 4 categories (Entry, Position, Regime, HTF) with actionable trade data including quality score, regime strength, entry/stop/target levels, position size, and risk amount</li>
   </ul>
   <p><strong>Next Steps:</strong> Explore <a href="../plutus-flow-v10/">Plutus Flow v1.0</a> for alternative flow analysis methods, or see <a href="../how-to-alerts/">Alert Setup Guide</a> to configure volume-based notifications.</p>
 </div>
