@@ -822,9 +822,9 @@
     <nav class="md-nav" aria-label="📍 Level Type Descriptions">
       <ul class="md-nav__list">
           <li class="md-nav__item">
-  <a href="#timeframe-levels-dailyweeklymonthly" class="md-nav__link">
+  <a href="#timeframe-levels-dailyweeklymonthlyquarterlyyearly" class="md-nav__link">
     <span class="md-ellipsis">
-      📅 Timeframe Levels (Daily/Weekly/Monthly)
+      📅 Timeframe Levels (Daily/Weekly/Monthly/Quarterly/Yearly)
     </span>
   </a>
 
@@ -1940,9 +1940,9 @@
     <nav class="md-nav" aria-label="📍 Level Type Descriptions">
       <ul class="md-nav__list">
           <li class="md-nav__item">
-  <a href="#timeframe-levels-dailyweeklymonthly" class="md-nav__link">
+  <a href="#timeframe-levels-dailyweeklymonthlyquarterlyyearly" class="md-nav__link">
     <span class="md-ellipsis">
-      📅 Timeframe Levels (Daily/Weekly/Monthly)
+      📅 Timeframe Levels (Daily/Weekly/Monthly/Quarterly/Yearly)
     </span>
   </a>
 
@@ -2787,17 +2787,19 @@
 <tr><td>3</td><td><strong>Daily Levels</strong></td><td>dH, dL, dO, dC, dMid toggles</td></tr>
 <tr><td>4</td><td><strong>Weekly Levels</strong></td><td>wH, wL, wO, wC, wMid toggles</td></tr>
 <tr><td>5</td><td><strong>Monthly Levels</strong></td><td>mH, mL, mO, mC, mMid toggles</td></tr>
-<tr><td>6</td><td><strong>Opening Range</strong></td><td>OR session, duration, levels</td></tr>
-<tr><td>7</td><td><strong>Killzones</strong></td><td>5 institutional time windows</td></tr>
-<tr><td>8</td><td><strong>Gap Levels</strong></td><td>Daily/weekend gaps, fill detection</td></tr>
-<tr><td>9</td><td><strong>Session Levels</strong></td><td>Asian, London, NY sessions</td></tr>
-<tr><td>10</td><td><strong>VWAP</strong></td><td>Daily, weekly, monthly, quarterly + bands (±1σ/±2σ)</td></tr>
-<tr><td>11</td><td><strong>Volume Profile</strong></td><td>POC, VAH, VAL settings</td></tr>
-<tr><td>12</td><td><strong>Fibonacci Levels</strong></td><td>2 Fib Sets, 19 anchors, 8 levels (6 retracements + 2 extensions)</td></tr>
-<tr><td>13</td><td><strong>Fair Value Gaps</strong></td><td>FVG detection, mitigation, colors</td></tr>
-<tr><td>14</td><td><strong>Confluence Zones</strong></td><td>Auto-clustering settings, count label</td></tr>
-<tr><td>15</td><td><strong>Distance Table</strong></td><td>Table position, sorting, display</td></tr>
-<tr><td>16</td><td><strong>Alerts</strong></td><td>57+ individual alert toggles</td></tr>
+<tr><td>6</td><td><strong>Quarterly Levels</strong></td><td>QH, QL, QO, QC, QMid toggles</td></tr>
+<tr><td>7</td><td><strong>Yearly Levels</strong></td><td>YH, YL, YO, YC, YMid toggles</td></tr>
+<tr><td>8</td><td><strong>Opening Range</strong></td><td>OR session, duration, levels</td></tr>
+<tr><td>9</td><td><strong>Killzones</strong></td><td>5 institutional time windows</td></tr>
+<tr><td>10</td><td><strong>Gap Levels</strong></td><td>Daily/weekend gaps, fill detection</td></tr>
+<tr><td>11</td><td><strong>Session Levels</strong></td><td>Asian, London, NY sessions</td></tr>
+<tr><td>12</td><td><strong>VWAP</strong></td><td>Daily, weekly, monthly, quarterly + bands (±1σ/±2σ)</td></tr>
+<tr><td>13</td><td><strong>Volume Profile</strong></td><td>POC, VAH, VAL settings</td></tr>
+<tr><td>14</td><td><strong>Fibonacci Levels</strong></td><td>2 Fib Sets, 19 anchors, 8 levels (6 retracements + 2 extensions)</td></tr>
+<tr><td>15</td><td><strong>Fair Value Gaps</strong></td><td>FVG detection, mitigation, colors</td></tr>
+<tr><td>16</td><td><strong>Confluence Zones</strong></td><td>Auto-clustering settings, count label</td></tr>
+<tr><td>17</td><td><strong>Distance Table</strong></td><td>Table position, sorting, display</td></tr>
+<tr><td>18</td><td><strong>Alerts</strong></td><td>57+ individual alert toggles</td></tr>
 </tbody>
 </table>
 
@@ -2909,19 +2911,22 @@
 
 <hr />
 <h2 id="level-type-descriptions">📍 Level Type Descriptions <span class="skill-badge skill-badge--intermediate" data-tooltip="Understanding all level types">Intermediate</span><a class="headerlink" href="#level-type-descriptions" title="Permanent link">&para;</a></h2>
-<h3 id="timeframe-levels-dailyweeklymonthly">📅 Timeframe Levels (Daily/Weekly/Monthly)<a class="headerlink" href="#timeframe-levels-dailyweeklymonthly" title="Permanent link">&para;</a></h3>
+<h3 id="timeframe-levels-dailyweeklymonthlyquarterlyyearly">📅 Timeframe Levels (Daily/Weekly/Monthly/Quarterly/Yearly)<a class="headerlink" href="#timeframe-levels-dailyweeklymonthlyquarterlyyearly" title="Permanent link">&para;</a></h3>
 <p><strong>What Displays:</strong><br />
-- Lines labeled: dH, dL, WH, WL, MtH, MtL (plus opens, closes, midpoints)</p>
+- Lines labeled: dH, dL, WH, WL, MtH, MtL, QH, QL, YH, YL (plus opens, closes, midpoints)</p>
 <p><strong>Level Definitions:</strong><br />
 - <strong>Daily High/Low:</strong> Today's price range extremes<br />
 - <strong>Weekly High/Low:</strong> Current week's price range extremes<br />
 - <strong>Monthly High/Low:</strong> Current month's price range extremes<br />
+- <strong>Quarterly High/Low:</strong> Current quarter's price range extremes<br />
+- <strong>Yearly High/Low:</strong> Current year's price range extremes<br />
 - <strong>Opens:</strong> Period opening prices<br />
 - <strong>Midpoints:</strong> Calculated center of period range</p>
 <p><strong>Characteristics:</strong><br />
 - Price reactions occur at these levels<br />
 - Weekly levels show stronger reactions than daily<br />
-- Monthly levels show strongest reactions<br />
+- Monthly levels show stronger reactions than weekly<br />
+- Quarterly/Yearly levels show strongest reactions (major institutional reference points)<br />
 - Clusters of multiple levels indicate zones of interest</p>
 <p><strong>Example:</strong> Bitcoin declines to Weekly Low at $65,000 → Bounce reaction observed (support characteristics).</p>
 <hr />
@@ -3041,7 +3046,7 @@ Structure: Strong uptrend characteristics
 <div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
   <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
   <p style="margin: 0; color: #424242;"><strong>Janus Atlas Different Level Types Labeled on Chart</strong></p>
-  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a chart showing different level types clearly labeled (dH, dL, wH, wL, POC, VWAP, mH, mL, etc.).</p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a chart showing different level types clearly labeled (dH, dL, wH, wL, mH, mL, QH, QL, YH, YL, POC, VWAP, etc.).</p>
 </div>
 
 <hr />
@@ -3728,7 +3733,7 @@ Interpretation: High confluence zone, stronger reactions observed
 <p><strong>The Problem:</strong> Markets evolve. Yesterday's Daily High may be irrelevant today. Relying on outdated levels reduces effectiveness.</p>
 <p><strong>The Fix:</strong></p>
 <ul>
-<li>Janus Atlas automatically updates Daily/Weekly/Monthly levels → levels refresh with each new period</li>
+<li>Janus Atlas automatically updates Daily/Weekly/Monthly/Quarterly/Yearly levels → levels refresh with each new period</li>
 <li>Update Fibonacci swings regularly to reflect current market structure</li>
 <li>VWAP and POC levels recalculate dynamically → always current</li>
 <li>Review and adjust which levels are enabled weekly based on market conditions</li>
@@ -3961,6 +3966,18 @@ Interpretation: High confluence zone, stronger reactions observed
 <td>This month's range</td>
 </tr>
 <tr>
+<td><strong>Quarterly High/Low</strong></td>
+<td>QH, QL</td>
+<td>Swing/Position</td>
+<td>This quarter's range</td>
+</tr>
+<tr>
+<td><strong>Yearly High/Low</strong></td>
+<td>YH, YL</td>
+<td>Position</td>
+<td>This year's range</td>
+</tr>
+<tr>
 <td><strong>Daily VWAP</strong></td>
 <td>VWAP-D</td>
 <td>Day/Scalp</td>
@@ -4061,8 +4078,8 @@ Interpretation: High confluence zone, stronger reactions observed
 <div class="sp-callout sp-callout--summary">
   <div class="sp-callout__title">What You've Learned</div>
   <ul>
-    <li><strong>50+ Institutional Level Types:</strong> Janus Atlas displays comprehensive level mapping including timeframe levels (daily/weekly/monthly highs and lows), session levels (Asia, London, New York), volume levels (VWAP, POC, VAH, VAL), market structure levels (previous day opens/closes, midpoints), Opening Range, Killzones, Gap Levels, and Confluence Zones</li>
-    <li><strong>Level Categories:</strong> Four main categories - Timeframe Levels (dH, dL, WH, WL, MtH, MtL plus opens/closes/midpoints), Session Levels (Asia, London, NY highs/lows/opens/closes), Volume Levels (VWAP, POC, VAH, VAL with deviations), Market Structure Levels (previous periods and swing points)</li>
+    <li><strong>50+ Institutional Level Types:</strong> Janus Atlas displays comprehensive level mapping including timeframe levels (daily/weekly/monthly/quarterly/yearly highs and lows), session levels (Asia, London, New York), volume levels (VWAP, POC, VAH, VAL), market structure levels (previous day opens/closes, midpoints), Opening Range, Killzones, Gap Levels, and Confluence Zones</li>
+    <li><strong>Level Categories:</strong> Four main categories - Timeframe Levels (dH, dL, WH, WL, MtH, MtL, QH, QL, YH, YL plus opens/closes/midpoints), Session Levels (Asia, London, NY highs/lows/opens/closes), Volume Levels (VWAP, POC, VAH, VAL with deviations), Market Structure Levels (previous periods and swing points)</li>
     <li><strong>Customization Options:</strong> Toggle individual level types on/off based on trading style, adjust colors and line styles for visual clarity, control label display to reduce chart clutter, show/hide different timeframe levels</li>
     <li><strong>Level Cluster Recognition:</strong> High-probability trade zones occur where 3+ different level types converge at same price - combining timeframe level + volume level + session level creates strong confluence for support/resistance reactions</li>
     <li><strong>Trading Style Application:</strong> Scalpers focus on session levels and intraday VWAP (1m-15m timeframes), day traders use daily levels plus session highs/lows (15m-1H charts), swing traders prioritize weekly/monthly levels plus volume levels (4H-Daily), position traders combine all major levels (Daily-Weekly)</li>
