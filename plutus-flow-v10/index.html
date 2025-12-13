@@ -2357,6 +2357,60 @@ graph TD
 </tr>
 </tbody>
 </table>
+<h3 id="extreme-zone-detection-settings">Extreme Zone Detection Settings<a class="headerlink" href="#extreme-zone-detection-settings" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Options</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SP: Show extreme zone EXITS</strong></td>
+<td>On/Off</td>
+<td>On</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Extreme Zone Signals:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Dot Color</th>
+<th>Size</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Breach +2σ</strong></td>
+<td>White</td>
+<td>3px</td>
+<td>Flow entered overbought zone</td>
+</tr>
+<tr>
+<td><strong>Breach -2σ</strong></td>
+<td>White</td>
+<td>3px</td>
+<td>Flow entered oversold zone</td>
+</tr>
+<tr>
+<td><strong>Exit +2σ</strong></td>
+<td>Yellow</td>
+<td>2px</td>
+<td>Flow left overbought zone (potential reversal down)</td>
+</tr>
+<tr>
+<td><strong>Exit -2σ</strong></td>
+<td>Yellow</td>
+<td>2px</td>
+<td>Flow left oversold zone (potential reversal up)</td>
+</tr>
+</tbody>
+</table>
 
 <!-- 📸 SCREENSHOT NEEDED - Plutus Flow Settings - OBV and Ribbon Configuration
      What to show: Settings panel showing OBV calculation options and ribbon settings
@@ -2609,6 +2663,26 @@ Result: Bearish divergence detected
 <p><strong>Complete Cycle:</strong> Two divergences correctly identified transitions at both trend change points.</p>
 <p><em>This example demonstrates complete divergence cycle. Individual interpretation and outcomes vary.</em></p>
 <hr />
+<h2 id="extreme-zone-signals">📍 Extreme Zone Signals — Breach vs Exit<a class="headerlink" href="#extreme-zone-signals" title="Permanent link">&para;</a></h2>
+<p>Plutus Flow detects when OBV flow enters and exits the ±2σ (standard deviation) extreme zones, providing early warning of potential reversals.</p>
+
+<h3 id="breach-signals">Breach Signals (White Dots)</h3>
+<p><strong>What they mean:</strong> The market has entered an extreme state (overbought above +2σ, oversold below -2σ).</p>
+<p><strong>Important:</strong> Breach signals are <em>warnings</em>, not immediate action triggers. Markets can remain overbought or oversold for extended periods. A breach tells you conditions are stretched—not that reversal is imminent.</p>
+
+<h3 id="exit-signals">Exit Signals (Yellow Dots)</h3>
+<p><strong>What they mean:</strong> The extreme condition has ended. Flow has dropped back out of the overbought zone (Exit +2σ) or risen back out of the oversold zone (Exit -2σ).</p>
+<p><strong>Why they matter:</strong> Exit signals often align with actual reversal points and are more actionable than breach signals. When flow leaves an extreme zone, the stretched condition is unwinding.</p>
+
+<h3 id="breach-vs-exit-workflow">Recommended Workflow</h3>
+<ol>
+<li><strong>Breach dot appears</strong> → Prepare, tighten stops, watch for confirmation. Don't act immediately.</li>
+<li><strong>Exit dot appears</strong> → Consider entry in reversal direction. The extreme has ended.</li>
+<li><strong>Cross signal confirms</strong> → Higher confidence trade when ribbon or divergence confirms the reversal.</li>
+</ol>
+
+<p><strong>Example:</strong> Price rallying → White dot appears (breach +2σ) → Flow remains overbought for 5 bars → Yellow dot appears (exit +2σ) → Consider short entry as overbought condition ends.</p>
+<hr />
 <h2 id="alert-configuration">🔔 Alert Configuration<a class="headerlink" href="#alert-configuration" title="Permanent link">&para;</a></h2>
 <p><strong>Available Alerts:</strong></p>
 <table>
@@ -2645,6 +2719,16 @@ Result: Bearish divergence detected
 <td>OBV exceeds threshold</td>
 <td>"Plutus Flow: OBV breakout"</td>
 </tr>
+<tr>
+<td><strong>Exit +2σ Zone</strong></td>
+<td>Flow drops below +2σ after being above</td>
+<td>"SP: Plutus | Exit +2σ Zone"</td>
+</tr>
+<tr>
+<td><strong>Exit -2σ Zone</strong></td>
+<td>Flow rises above -2σ after being below</td>
+<td>"SP: Plutus | Exit -2σ Zone"</td>
+</tr>
 </tbody>
 </table>
 <p><strong>Alert Setup:</strong><br />
@@ -2661,6 +2745,7 @@ Result: Bearish divergence detected
     <li><strong>Accumulation vs Distribution:</strong> Rising OBV indicates accumulation (buying pressure building), falling OBV indicates distribution (selling pressure building), visible through the primary OBV line</li>
     <li><strong>Visual Trend Ribbons:</strong> Color-coded ribbon overlay (green for bullish volume trend, red for bearish volume trend) provides immediate visual context for OBV direction changes</li>
     <li><strong>Automated Divergence Alerts:</strong> System automatically identifies and labels bullish divergences (price declining while OBV rising) and bearish divergences (price rising while OBV falling)</li>
+    <li><strong>Extreme Zone Detection:</strong> White dots signal when flow enters ±2σ extreme zones (breach), yellow dots signal when flow exits those zones—often actionable reversal points</li>
     <li><strong>Separate Panel Display:</strong> Shows in dedicated panel below your price chart, keeping volume analysis separate from price action for cleaner chart organization</li>
     <li><strong>Universal Timeframe Support:</strong> Works on all timeframes from 1-minute to monthly charts, adapting OBV calculations to your chosen interval</li>
   </ul>
