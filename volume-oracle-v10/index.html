@@ -2160,7 +2160,7 @@
 
 <!-- Render the page content -->
 <h1 id="volume-oracle-v10-volume-intelligence-position-tracking">Volume Oracle v1.0 — Volume Intelligence System<a class="headerlink" href="#volume-oracle-v10-volume-intelligence-position-tracking" title="Permanent link">&para;</a></h1>
-<p>Three-system volume analysis indicator. Combines Volume Flow analysis, Volume Zone detection, and Position Manager tracking in single integrated tool.</p>
+<p>Advanced regime detection and signal generation indicator. Identifies Accumulation/Distribution phases, generates quality-rated BULL/BEAR signals, and provides automated risk management with position sizing, stops, and targets.</p>
 
 <div class="sp-callout sp-callout--success" style="margin: 2rem 0; border-left: 4px solid #4caf50;">
   <div class="sp-callout__icon">👋</div>
@@ -2179,17 +2179,18 @@
 
     <p><strong>What You'll See on Your Chart:</strong></p>
     <ul style="margin: 1rem 0;">
-      <li><strong>Volume Bars</strong> — Green (bullish volume) or Red (bearish volume) bars below your chart</li>
-      <li><strong>VBS Signals</strong> — Labels when Volume-Based Signals fire (VBS+ or VBS-)</li>
-      <li><strong>Volume Zones</strong> — Highlighted areas showing where lots of trading happened</li>
-      <li><strong>Position Tracking Lines</strong> — Reference lines showing your tracked price levels</li>
+      <li><strong>Volume Bars</strong> — Colored by market regime: Green (Accumulation), Red (Distribution), Gray (Neutral), Gold (Weakening)</li>
+      <li><strong>Background Tint</strong> — Light green or red showing current market regime</li>
+      <li><strong>Signal Labels</strong> — ↑ (BULL) or ↓ (BEAR) with quality stars (⭐⭐⭐)</li>
+      <li><strong>Regime Meter</strong> — Table showing regime state, strength %, and duration</li>
+      <li><strong>HTF Table</strong> — Higher timeframe confirmation status (optional)</li>
     </ul>
 
     <p><strong>How It Works (Simple Version):</strong></p>
     <ol>
-      <li><strong>Volume Flow</strong> watches buying vs selling pressure</li>
-      <li><strong>Volume Zones</strong> identifies price levels where significant trading occurred</li>
-      <li><strong>Position Manager</strong> tracks reference prices and calculates distance from those levels</li>
+      <li><strong>Regime Detection</strong> analyzes volume to identify Accumulation (bullish) or Distribution (bearish) phases</li>
+      <li><strong>Signal Generation</strong> fires BULL/BEAR signals when conditions align with quality ratings</li>
+      <li><strong>Risk Management</strong> auto-calculates position size, stop loss, and profit targets</li>
     </ol>
 
     <details style="margin-top: 1rem;">
@@ -2209,115 +2210,127 @@
 
     <p><strong>Beginner Starting Point:</strong></p>
     <ul>
-      <li><strong>Week 1:</strong> Just watch the volume bars. Notice when volume spikes during big price moves.</li>
-      <li><strong>Week 2:</strong> Pay attention to VBS signals (Volume-Based Signals) when they appear.</li>
-      <li><strong>Week 3:</strong> Start observing volume zones—notice how price often returns to these areas.</li>
-      <li><strong>Week 4+:</strong> Experiment with the Position Manager feature to track reference levels.</li>
+      <li><strong>Week 1:</strong> Watch the background color and volume bars. Green = Accumulation (bullish), Red = Distribution (bearish).</li>
+      <li><strong>Week 2:</strong> Pay attention to BULL (↑) and BEAR (↓) signals when they appear. Note the star ratings.</li>
+      <li><strong>Week 3:</strong> Start using the Regime Meter table to understand regime strength and duration.</li>
+      <li><strong>Week 4+:</strong> Enable HTF Confirmation to filter signals with higher timeframe alignment.</li>
     </ul>
   </div>
 </div>
 
 <hr />
 <h2 id="core-functionality">🎯 Core Functionality <span class="skill-badge skill-badge--intermediate" data-tooltip="Understanding of volume concepts helpful">Intermediate</span><a class="headerlink" href="#core-functionality" title="Permanent link">&para;</a></h2>
-<div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
-  <div class="sp-callout__icon">📊</div>
-  <div class="sp-callout__content">
-    <h4>Position Tracking State Machine</h4>
-    <p style="margin-bottom: 1rem;">Volume Oracle tracks positions from entry to exit with real-time P&L:</p>
-    <div class="mermaid">
-graph TD
-    Start([No Position]) --> Signal{VBS Signal?}
-
-    Signal -->|VBS+ Long| Long[Long Position<br/><small>Entry Recorded</small>]
-    Signal -->|VBS- Short| Short[Short Position<br/><small>Entry Recorded</small>]
-
-    Long --> Track1[Position Tracking<br/><small>Real-time P&L</small>]
-    Short --> Track2[Position Tracking<br/><small>Real-time P&L</small>]
-
-    Track1 --> Exit1{Exit?}
-    Track2 --> Exit2{Exit?}
-
-    Exit1 -->|VBS- or Manual| Close[Position Closed]
-    Exit2 -->|VBS+ or Manual| Close
-
-    Close --> Start
-
-    style Start fill:#37474f,color:#fff,stroke:#263238,stroke-width:3px
-    style Long fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
-    style Short fill:#f44336,color:#fff,stroke:#c62828,stroke-width:3px
-    style Track1 fill:#00bcd4,color:#fff
-    style Track2 fill:#00bcd4,color:#fff
-    style Close fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:3px
-    </div>
-    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.85;">
-      <strong>Legend:</strong> VBS = Volume Based Signal (VBS+ = bullish, VBS- = bearish)<br/>
-      <strong>Features:</strong> Entry price recorded • Real-time P&L updates every bar • Target line displayed • Risk/reward calculated • Manual or signal-based exit
-    </p>
-  </div>
-</div>
 
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
   <div class="sp-callout__icon">📊</div>
   <div class="sp-callout__content">
-    <h4>Three-System Architecture</h4>
-    <p style="margin-bottom: 1rem;">Volume Oracle combines three independent analysis systems:</p>
+    <h4>Volume Oracle Core Systems</h4>
+    <p style="margin-bottom: 1rem;">Volume Oracle analyzes market regime and generates quality-rated signals:</p>
     <div class="mermaid">
 graph TD
     Data[Market Data<br/><small>Price + Volume</small>] --> Oracle[Volume Oracle]
 
-    Oracle --> VF[System 1<br/>Volume Flow]
-    Oracle --> VZ[System 2<br/>Volume Zones]
-    Oracle --> PM[System 3<br/>Position Manager]
+    Oracle --> RD[Regime Detection<br/><small>Accumulation/Distribution</small>]
+    Oracle --> SG[Signal Generation<br/><small>BULL/BEAR + Quality</small>]
+    Oracle --> RM[Risk Management<br/><small>Auto Sizing + Stops</small>]
 
-    VF --> VF_Out[Color-Coded Bars<br/><small>Green/Red Volume</small>]
-    VZ --> VZ_Out[Zone Boxes<br/><small>High-Volume Areas</small>]
-    PM --> PM_Out[Tracking Lines<br/><small>Entry + P&L</small>]
+    RD --> RD_Out[Background Color<br/><small>Green/Red/Gray/Gold</small>]
+    SG --> SG_Out[Signal Labels<br/><small>↑/↓ with ⭐⭐⭐</small>]
+    RM --> RM_Out[Position Info<br/><small>Entry/Stop/Target</small>]
 
-    VF_Out --> Chart[Chart Display]
-    VZ_Out --> Chart
-    PM_Out --> Chart
+    RD_Out --> Chart[Chart Display]
+    SG_Out --> Chart
+    RM_Out --> Chart
 
     style Data fill:#37474f,color:#fff,stroke:#263238,stroke-width:3px
     style Oracle fill:#ff5722,color:#fff,stroke:#e64a19,stroke-width:3px
-    style VF fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
-    style VZ fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:3px
-    style PM fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:3px
+    style RD fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
+    style SG fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:3px
+    style RM fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:3px
     style Chart fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:3px
     </div>
     <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.85;">
-      <strong>How it works:</strong> Three independent systems analyze market data. Volume Flow shows buying/selling pressure. Volume Zones mark consolidation areas. Position Manager tracks P&L. All three display on one chart.
+      <strong>How it works:</strong> Regime Detection identifies market phase (Accumulation/Distribution). Signal Generation fires BULL/BEAR signals with quality ratings. Risk Management auto-calculates position size, stops, and targets.
     </p>
   </div>
 </div>
 
-<p>Volume Oracle provides three distinct systems working together:</p>
-<p><strong>System 1: Volume Flow</strong><br />
-- Analyzes buying vs selling pressure through volume<br />
-- Displays color-coded volume bars (green = buying, red = selling)<br />
-- Tracks cumulative volume momentum</p>
-<p><strong>System 2: Volume Zones</strong><br />
-- Identifies high-volume consolidation areas<br />
-- Marks zones where significant volume accumulated<br />
-- Displays as horizontal boxes on chart</p>
-<p><strong>System 3: Position Manager</strong><br />
-- Tracks entry price and current position P&amp;L<br />
-- Displays breakeven line and profit/loss metrics<br />
-- Updates in real-time with price movement</p>
-<p><strong>Unique Feature:</strong> Position Manager system provides live position tracking directly on chart, showing real-time profit/loss from marked entry.</p>
-<p><strong>Timeframe Compatibility:</strong> Works on all timeframes.</p>
+<h3 id="regime-detection">Regime Detection<a class="headerlink" href="#regime-detection" title="Permanent link">&para;</a></h3>
+<p><strong>What It Does:</strong> Identifies the current market phase using volume analysis, price velocity, trend strength, and divergence detection.</p>
+<p><strong>Regime States:</strong></p>
+<table>
+<thead>
+<tr><th>Regime</th><th>Background Color</th><th>Volume Bar Color</th><th>Meaning</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Accumulation</strong></td><td>Light Green</td><td>Green</td><td>Institutional buying phase — bullish bias</td></tr>
+<tr><td><strong>Distribution</strong></td><td>Light Red</td><td>Red</td><td>Institutional selling phase — bearish bias</td></tr>
+<tr><td><strong>Neutral</strong></td><td>None (Gray bars)</td><td>Gray</td><td>No clear regime — selective approach</td></tr>
+<tr><td><strong>Weakening</strong></td><td>Gold tint</td><td>Gold</td><td>Current regime losing strength — caution</td></tr>
+</tbody>
+</table>
 
-<p><strong>Remember:</strong> High volume at breakouts can signal institutional participation OR panic selling/buying. Volume spike + failed breakout (quick reversal) = false move. Volume spike + sustained follow-through = confirmed breakout. Always wait 2-3 bars after volume spike to confirm direction before acting.</p>
+<h3 id="signal-generation">Signal Generation<a class="headerlink" href="#signal-generation" title="Permanent link">&para;</a></h3>
+<p><strong>Signal Types:</strong></p>
+<ul>
+<li><strong>🟢 BULL Signal (↑)</strong> — Bullish conditions confirmed, potential long entry</li>
+<li><strong>🔴 BEAR Signal (↓)</strong> — Bearish conditions confirmed, potential short entry</li>
+</ul>
+<p><strong>Quality Ratings (⭐):</strong> Each signal receives a 0-100% quality score displayed as stars:</p>
+<table>
+<thead>
+<tr><th>Rating</th><th>Score</th><th>Meaning</th></tr>
+</thead>
+<tbody>
+<tr><td>⭐⭐⭐</td><td>80-100%</td><td>Elite quality — highest confidence</td></tr>
+<tr><td>⭐⭐</td><td>60-79%</td><td>Premium quality — good confidence</td></tr>
+<tr><td>⭐</td><td>40-59%</td><td>Standard quality — moderate confidence</td></tr>
+</tbody>
+</table>
+<p><strong>Quality Score Factors:</strong> Volume Z-score strength, flow consistency, trend alignment, regime strength</p>
 
-<!-- 📸 SCREENSHOT NEEDED - Volume Oracle - All 3 Systems (Volume Bars, Zones, Position Manager)
-     What to show: Chart showing green/red volume bars below, volume zones on price, position manager box
-     Setup: Volume Oracle with all 3 systems enabled
-     Label/Annotate: Point to volume bars, point to volume zones (horizontal bands), point to position info box
-     File name suggestion: volume-oracle-all-3-systems.png
+<h3 id="risk-management">Risk Management<a class="headerlink" href="#risk-management" title="Permanent link">&para;</a></h3>
+<p><strong>Auto-Calculated Levels:</strong></p>
+<ul>
+<li><strong>Position Size</strong> — Based on account size, risk %, and stop distance</li>
+<li><strong>Stop Loss</strong> — ATR-based calculation (default: 2.0× ATR)</li>
+<li><strong>Target 1 (T1)</strong> — First profit target (default: 1.5× ATR)</li>
+<li><strong>Target 2 (T2)</strong> — Extended profit target (default: 3.0× ATR)</li>
+</ul>
+<p><strong>Position Sizing Formula:</strong> <code>Position Size = Risk Amount ÷ Stop Distance</code></p>
+<p><strong>Example:</strong> $10,000 account × 1% risk = $100 risk. If stop is $50 away, position size = 2 units.</p>
+
+<h3 id="htf-confirmation">HTF Confirmation (Optional)<a class="headerlink" href="#htf-confirmation" title="Permanent link">&para;</a></h3>
+<p><strong>What It Does:</strong> Checks higher timeframes for regime alignment before firing signals.</p>
+<p><strong>HTF Table Display:</strong> Shows HTF1 and HTF2 regime state, strength %, and alignment status.</p>
+<p><strong>Benefit:</strong> Filters out signals that conflict with higher timeframe trend direction.</p>
+
+<h3 id="strategy-modes">Strategy Modes<a class="headerlink" href="#strategy-modes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr><th>Mode</th><th>Description</th><th>Best For</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Trend Following</strong></td><td>Signals align with regime direction</td><td>Trending markets, momentum traders</td></tr>
+<tr><td><strong>Mean Reversion</strong></td><td>Signals at regime extremes (fading)</td><td>Range-bound markets, contrarian traders</td></tr>
+<tr><td><strong>Hybrid</strong></td><td>Auto-adapts based on market conditions</td><td>Mixed conditions, flexible traders</td></tr>
+</tbody>
+</table>
+
+<p><strong>Timeframe Compatibility:</strong> Works on all timeframes. Signals confirm at bar close (non-repainting).</p>
+
+<p><strong>Remember:</strong> Signals fire only when multiple conditions align: volume spike detected, flow consistency confirmed, regime supports direction. Higher quality ratings = more factors aligned = higher confidence setup.</p>
+
+<!-- 📸 SCREENSHOT NEEDED - Volume Oracle Overview
+     What to show: Chart showing regime background (green/red), volume bars, BULL/BEAR signal with stars, regime meter table
+     Setup: Volume Oracle with signal visible, regime background on, regime meter enabled
+     Label/Annotate: Point to background color, signal label with stars, regime meter table, volume bars
+     File name suggestion: volume-oracle-overview.png
 -->
 <div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
   <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
-  <p style="margin: 0; color: #424242;"><strong>Volume Oracle - All 3 Systems (Volume Bars, Zones, Position Manager)</strong></p>
-  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a chart showing all three systems: green/red volume bars, volume zones, and position manager box.</p>
+  <p style="margin: 0; color: #424242;"><strong>Volume Oracle Overview</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a chart showing regime background colors, BULL/BEAR signals with quality stars, and the regime meter table.</p>
 </div>
 
 <hr />
