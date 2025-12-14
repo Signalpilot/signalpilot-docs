@@ -1822,7 +1822,7 @@ graph TD
 <ul>
 <li>Traders observe Pentarch events (IGN for potential longs, CAP for potential shorts)</li>
 <li>Event location is evaluated using Janus Atlas key levels</li>
-<li>Volume confirmation is assessed via Volume Oracle spike detection</li>
+<li>Volume confirmation is assessed via Volume Oracle regime detection</li>
 <li>Position entries often use Volume Oracle's position management system</li>
 <li>Exit targets commonly include next Janus level or opposite Pentarch event</li>
 </ul>
@@ -1848,12 +1848,12 @@ graph TD
 <p><strong>Janus Atlas (Session Levels + VWAP) + Volume Oracle + Pentarch (NanoFlow)</strong></p>
 <p><strong>Why it works:</strong>
 - <strong>Janus Atlas</strong> = Intraday levels (session highs/lows, VWAP)
-- <strong>Volume Oracle</strong> = Volume spike detection (scalping mode)
+- <strong>Volume Oracle</strong> = Regime detection + BULL/BEAR signals
 - <strong>Pentarch</strong> = NanoFlow crosses for micro-trends</p>
 <p><strong>Common workflow pattern:</strong></p>
 <ul>
 <li>Session levels are identified on Janus (Asian/Euro/NA ranges)</li>
-<li>Volume Oracle spikes are observed near session levels</li>
+<li>Volume Oracle regime and signals are observed near session levels</li>
 <li>Pentarch NanoFlow crosses are monitored for directional confirmation</li>
 <li>Entries often occur promptly when confluence appears</li>
 <li>Targets commonly include Daily VWAP or opposite session level</li>
@@ -2029,7 +2029,7 @@ Traders often evaluate setups when 2-3 alerts fire within 5 bars of each other.<
 <h3 id="scalping-5m-15m">Scalping (5m - 15m)<a class="headerlink" href="#scalping-5m-15m" title="Permanent link">&para;</a></h3>
 <p><strong>Use:</strong>
 - Janus Atlas (Session levels, VWAP)
-- Volume Oracle (volume spikes)
+- Volume Oracle (regime + signals)
 - Pentarch (NanoFlow crosses)</p>
 <p><strong>Less commonly used:</strong>
 - Harmonic/Plutus divergences (too slow)
