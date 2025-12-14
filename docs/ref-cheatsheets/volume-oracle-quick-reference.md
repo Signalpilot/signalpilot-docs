@@ -2,134 +2,163 @@
 
 **Interactive Cheat Sheet:** [View Full Volume Oracle Quick Reference →](../../ref-cheatsheets-volume-oracle/)
 
-Comprehensive guide to all 3 Volume Oracle systems: Volume Flow, Volume Zones, and Position Manager.
+Comprehensive guide to all 5 Volume Oracle systems: Regime Detection, Signal Generation, Risk Management, HTF Confirmation, and Strategy Modes.
 
 ## Volume Oracle Systems
 
-### System 1: Volume Flow (VBS)
-**What it shows:** Real-time volume bar strength
+### System 1: Regime Detection
+**What it shows:** Current market phase via background colors
 
-**Signals:**
-- **Green bars >1.5x** - Strong buying pressure
-- **Red bars >1.5x** - Strong selling pressure
-- **Gray bars** - Normal volume (no conviction)
+**Regime States:**
+- **Green background** - Accumulation (bullish phase)
+- **Red background** - Distribution (bearish phase)
+- **Gray background** - Neutral (no clear direction)
+- **Gold background** - Weakening (regime losing strength)
 
-**Use cases:**
-- Entry confirmation (look for spike when Pentarch TD appears)
-- Exit signals (volume drying up = momentum fading)
-- Scalping (quick volume spikes on 1m-5m charts)
+**Regime Strength (0-100%):**
+- 80-100%: Very strong - high confidence
+- 60-79%: Moderate - direction established
+- 40-59%: Weak - be cautious
+- 0-39%: Transitioning - wait for clarity
 
-**Spike Thresholds:**
-- Stocks: 1.5x average
-- Crypto: 1.3x average (more volatile)
-- Futures: 1.8x average (burst volume common)
+### System 2: Signal Generation
+**What it shows:** Entry signals with quality ratings
 
-### System 2: Volume Zones
-**What it shows:** Accumulation and distribution areas
+**Signal Types:**
+- **BULL Signal** - Bullish entry opportunity
+- **BEAR Signal** - Bearish entry opportunity
 
-**Zone Types:**
-- **Green zones** - Accumulation (institutional buying) = Support
-- **Red zones** - Distribution (institutional selling) = Resistance
-- **Zone strength** - Darker color = more volume = stronger level
+**Quality Ratings:**
+- **⭐⭐⭐** (80-100%) - High quality, strong confluence
+- **⭐⭐** (60-79%) - Medium quality, good setup
+- **⭐** (40-59%) - Lower quality, use caution
 
-**Use cases:**
-- Swing trading (multi-day support/resistance)
-- Position trading (weeks/months accumulation)
-- Confluence with Janus levels (zone + level = high probability)
+**Quality Factors:**
+- Regime alignment
+- Volume confirmation
+- HTF confirmation
+- Price structure
 
-**Common patterns:**
-- Price at accumulation zone + TD = strong support
-- Breaking through distribution zone = momentum shift
-- Zone buildup over weeks = major level forming
+### System 3: Risk Management
+**What it shows:** Auto-calculated trade levels
 
-### System 3: Position Manager
-**What it shows:** Real-time P&L tracking
+**Automatic Levels:**
+- **Entry** - Optimal entry price
+- **Stop Loss** - Risk-defined exit
+- **Target 1 (T1)** - First profit target
+- **Target 2 (T2)** - Extended target
 
-**Features:**
-- Position size calculator
-- Real-time profit/loss
-- Risk/reward display
-- Multiple position tracking
+**Position Sizing:**
+```
+Position Size = Risk Amount ÷ Stop Distance
+```
 
-**Use cases:**
-- Day trading stocks (track 3+ positions)
-- Scalping (quick P&L reference)
-- Risk management (see total exposure)
+**Example:**
+- Risk Amount: $150
+- Stop Distance: $3.27
+- Position Size: 46 shares
 
-**Settings:**
-- Entry price: Manual input
-- Stop loss: Automatic from chart
-- Position size: Based on risk %
+### System 4: HTF Confirmation
+**What it shows:** Higher timeframe alignment
 
-## Volume Oracle Limitations
+**HTF Alignment:**
+- **BULL + HTF Accumulation** = ✅ Aligned (stronger signal)
+- **BULL + HTF Distribution** = ❌ Not Aligned (weaker signal)
+- **BEAR + HTF Distribution** = ✅ Aligned (stronger signal)
+- **BEAR + HTF Accumulation** = ❌ Not Aligned (weaker signal)
 
-### Forex Spot: NO REAL VOLUME
-- Forex spot pairs show tick volume (not real volume)
-- **Solution:** Use currency futures (6E=EUR/USD, 6B=GBP/USD)
-- **Alternative:** Skip Volume Oracle, use Harmonic Oscillator instead
+**Timeframe Mapping:**
+| Your Chart | HTF Checked |
+|------------|-------------|
+| 5m         | 1H          |
+| 15m        | 4H          |
+| 1H         | Daily       |
+| 4H         | Weekly      |
 
-### Low-Volume Assets
-- Stocks <500K avg volume: Unreliable
-- Small-cap crypto: False signals common
-- **Solution:** Stick to high-liquidity assets
+### System 5: Strategy Modes
+**What it shows:** Trading approach selection
+
+**Mode Options:**
+- **Trend Following** - Signals only with established regime (trending markets)
+- **Mean Reversion** - Signals at regime extremes (ranging markets)
+- **Hybrid (Default)** - Adapts to current market conditions
+
+## Volume Oracle Alerts
+
+**13 Alerts in 4 Categories:**
+
+| Category | Alerts |
+|----------|--------|
+| Entry | BULL Signal, BEAR Signal, High-Quality Signal |
+| Position | T1 Hit, T2 Hit, Breakeven Moved |
+| Regime | Accumulation Start, Distribution Start, Regime Weakening |
+| HTF | HTF Aligned, HTF Conflict |
 
 ## Common Mistakes
 
-1. Using Volume Oracle on forex spot (no real volume data)
-2. Ignoring volume zones (only watching flow)
-3. Treating green bars as buy signals (need confluence)
-4. Using on low-volume assets (<500K avg volume)
-5. Not adjusting spike threshold by asset type
+1. Ignoring signal quality ratings (taking ⭐ signals same as ⭐⭐⭐)
+2. Trading against HTF regime (low-probability setups)
+3. Wrong strategy mode for market conditions
+4. Ignoring regime weakening warnings (gold background)
+5. Using on forex spot (tick volume only - use futures instead)
 
-## Volume Confirmation Workflow
+## Volume Oracle Workflow
 
-**Step 1:** Pentarch TD appears
-**Step 2:** Check Janus level (is TD at a level?)
-**Step 3:** Check Volume Oracle:
-- Volume spike >1.5x? (Confirmation)
-- Volume zone present? (Additional confluence)
-- No spike? (Lower probability - skip trade)
+**Step 1:** Check Regime
+- Green = Look for BULL signals
+- Red = Look for BEAR signals
+- Gray/Gold = Wait or reduce size
 
-**Result:** 3-factor confluence = high-probability setup
+**Step 2:** Wait for Signal
+- BULL or BEAR with quality rating
+- Higher stars = higher confidence
 
-## Quick Settings
+**Step 3:** Check HTF
+- Aligned = Full position
+- Not aligned = Reduced size or skip
+
+**Step 4:** Execute with Risk Management
+- Use auto-calculated Entry/Stop/Targets
+- Position size based on risk amount
+
+## Quick Settings by Style
 
 **Scalping (1m-5m):**
-- Enable: Volume Flow only
-- Disable: Zones (too slow)
-- Spike threshold: 1.5x
+- Strategy Mode: Trend Following
+- Focus on: ⭐⭐⭐ signals only
+- HTF: 1H alignment
 
 **Day Trading:**
-- Enable: All 3 systems
-- Volume Flow + Zones + Position Manager
-- Spike threshold: 1.3x crypto, 1.5x stocks
+- Strategy Mode: Hybrid
+- Focus on: ⭐⭐ and ⭐⭐⭐ signals
+- Risk: 1% per trade
 
 **Swing Trading:**
-- Enable: Zones primarily
-- Volume Flow: Secondary
-- Focus on: Multi-day accumulation zones
+- Strategy Mode: Trend Following
+- Focus on: Regime strength >70%
+- HTF: Daily/Weekly alignment
 
 ## Asset-Specific Notes
 
 **Stocks:**
 - Volume Oracle highly reliable
-- Position Manager essential for day trading
+- Risk Management essential for day trading
 - Works great for: SPY, QQQ, AAPL, MSFT, TSLA
 
 **Crypto:**
-- Lower spike threshold (1.3x) due to volatility
+- Use Hybrid mode (24/7 volatility)
 - 24/7 trading = consistent data
 - Works great for: BTC, ETH (avoid low-cap)
 
 **Futures:**
 - Clean volume data (very reliable)
-- Higher spike threshold (1.8x) for burst volume
-- Position Manager valuable for: ES, NQ
+- Trend Following mode for ES, NQ
+- Risk Management valuable for position sizing
 
 **Forex:**
-- ⚠️ DO NOT USE on spot pairs (no real volume)
-- ✅ USE on currency futures (6E, 6B, etc.)
-- Alternative: Harmonic Oscillator
+- ⚠️ Reduced reliability on spot pairs (tick volume only)
+- ✅ Works well on currency futures (6E, 6B, etc.)
+- Alternative: Harmonic Oscillator for spot forex
 
 ---
 
@@ -145,7 +174,7 @@ Comprehensive guide to all 3 Volume Oracle systems: Volume Flow, Volume Zones, a
 ## See Also
 
 **Related Pages:**
-- [Volume Oracle v1.0](../../minimal-flow-v10.md) - Complete indicator documentation
+- [Volume Oracle v1.0](../../volume-oracle-v10/) - Complete indicator documentation
 - [Pentarch Quick Reference](pentarch-quick-reference.md) - Combine volume with cycle detection
 - [How to Set Up Alerts](../../../how-to-alerts.md) - Get notified on volume signals
 - [Trading Workflow](../../ref-workflow.md) - How volume analysis fits into complete system
@@ -153,4 +182,4 @@ Comprehensive guide to all 3 Volume Oracle systems: Volume Flow, Volume Zones, a
 
 ---
 
-**Last Updated:** January 2025
+**Last Updated:** December 2025
