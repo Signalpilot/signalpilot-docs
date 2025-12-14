@@ -2199,35 +2199,50 @@
     <h4>Volume Oracle Core Systems</h4>
     <p style="margin-bottom: 1rem;">Volume Oracle combines 5 integrated systems for complete trade analysis:</p>
     <div class="mermaid">
-graph TD
-    Data[Market Data<br/><small>Price + Volume</small>] --> Oracle[Volume Oracle]
+graph LR
+    subgraph Input
+        Data[Market Data]
+    end
 
-    Oracle --> RD[System 1: Regime Detection<br/><small>Accumulation/Distribution</small>]
-    Oracle --> SG[System 2: Signal Generation<br/><small>BULL/BEAR + Quality</small>]
-    Oracle --> RM[System 3: Risk Management<br/><small>Auto Sizing + Stops</small>]
-    Oracle --> HTF[System 4: HTF Confirmation<br/><small>Higher Timeframe Check</small>]
-    Oracle --> SM[System 5: Strategy Modes<br/><small>Trend/Reversion/Hybrid</small>]
+    Data --> Oracle[Volume Oracle]
 
-    RD --> RD_Out[Background Color<br/><small>Green/Red/Gray/Gold</small>]
-    SG --> SG_Out[Signal Labels<br/><small>↑/↓ with ⭐⭐⭐</small>]
-    RM --> RM_Out[Position Info<br/><small>Entry/Stop/Target</small>]
-    HTF --> HTF_Out[Alignment Status<br/><small>Aligned/Not Aligned</small>]
-    SM --> SM_Out[Mode Active<br/><small>Trading Approach</small>]
+    subgraph Systems[5 Core Systems]
+        direction TB
+        RD[1. Regime Detection]
+        SG[2. Signal Generation]
+        RM[3. Risk Management]
+        HTF[4. HTF Confirmation]
+        SM[5. Strategy Modes]
+    end
 
-    RD_Out --> Chart[Chart Display]
-    SG_Out --> Chart
-    RM_Out --> Chart
-    HTF_Out --> Chart
-    SM_Out --> Chart
+    Oracle --> RD
+    Oracle --> SG
+    Oracle --> RM
+    Oracle --> HTF
+    Oracle --> SM
 
-    style Data fill:#37474f,color:#fff,stroke:#263238,stroke-width:3px
-    style Oracle fill:#ff5722,color:#fff,stroke:#e64a19,stroke-width:3px
-    style RD fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
-    style SG fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:3px
-    style RM fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:3px
-    style HTF fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:3px
-    style SM fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:3px
-    style Chart fill:#607d8b,color:#fff,stroke:#455a64,stroke-width:3px
+    subgraph Output[Chart Display]
+        direction TB
+        O1[Background Colors]
+        O2[BULL/BEAR Labels]
+        O3[Entry/Stop/Targets]
+        O4[HTF Status]
+        O5[Mode Indicator]
+    end
+
+    RD --> O1
+    SG --> O2
+    RM --> O3
+    HTF --> O4
+    SM --> O5
+
+    style Data fill:#37474f,color:#fff,stroke:#263238
+    style Oracle fill:#ff5722,color:#fff,stroke:#e64a19
+    style RD fill:#4caf50,color:#fff,stroke:#388e3c
+    style SG fill:#2196f3,color:#fff,stroke:#1976d2
+    style RM fill:#9c27b0,color:#fff,stroke:#7b1fa2
+    style HTF fill:#00bcd4,color:#fff,stroke:#0097a7
+    style SM fill:#ff9800,color:#fff,stroke:#f57c00
     </div>
     <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.85;">
       <strong>How it works:</strong> Regime Detection identifies market phase. Signal Generation fires BULL/BEAR signals with quality ratings. Risk Management calculates position size and levels. HTF Confirmation validates against higher timeframe. Strategy Modes adapt to market conditions.
