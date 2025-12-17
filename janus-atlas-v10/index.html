@@ -2635,18 +2635,18 @@
     </thead>
     <tbody>
     <tr><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);"><strong>📈 Classic Levels</strong></td><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);">Daily/Weekly/Monthly/Quarterly/Yearly H/L/O/C, Pivot Points</td></tr>
-    <tr><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);"><strong>📊 VWAP Family</strong></td><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);">Daily/Weekly/Monthly VWAP, Previous Period VWAP</td></tr>
-    <tr><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);"><strong>📦 Volume Profile</strong></td><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);">POC, VAH, VAL, Developing POC</td></tr>
+    <tr><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);"><strong>📊 VWAP Family</strong></td><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);">Daily/Weekly/Monthly/Quarterly/Yearly VWAP + Previous Period VWAPs</td></tr>
+    <tr><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);"><strong>📦 Volume Profile</strong></td><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);">Daily/Weekly/Monthly/Quarterly/Yearly POC, VAH, VAL</td></tr>
     <tr><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);"><strong>🌐 Sessions</strong></td><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);">Asia/London/NY H/L/O/C, Custom Sessions</td></tr>
     <tr><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);"><strong>🏗️ Market Structure</strong></td><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);">BOS, CHoCH, Swing High/Low</td></tr>
     <tr><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);"><strong>⏱️ Opening Range</strong></td><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);">orH, orL, orMid (configurable 5-60 min duration)</td></tr>
     <tr><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);"><strong>📊 Gap Levels</strong></td><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);">Gap High, Gap Low (auto-clear when filled)</td></tr>
     <tr><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);"><strong>🕐 Killzones</strong></td><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);">Asia, London, NY AM, NY Lunch, NY PM (background shading)</td></tr>
-    <tr><td style="padding: 0.5rem;"><strong>📐 Fibonacci Levels</strong></td><td style="padding: 0.5rem;">8 fib levels (6 retracements + 2 extensions) from 19 anchor options, 2 independent sets</td></tr>
+    <tr><td style="padding: 0.5rem;"><strong>📐 Fibonacci Levels</strong></td><td style="padding: 0.5rem;">8 fib levels (6 retracements + 2 extensions) from 20 anchor options, 2 independent sets</td></tr>
     </tbody>
     </table>
 
-    <p style="margin-top: 1rem; font-size: 0.9em;"><strong>Plus:</strong> Confluence Zone detection, Distance Table display, 61 configurable alerts</p>
+    <p style="margin-top: 1rem; font-size: 0.9em;"><strong>Plus:</strong> Confluence Zone detection, Distance Table display, 48 configurable alerts</p>
   </div>
 </div>
 
@@ -2654,13 +2654,13 @@
 <p><strong>Level Categories:</strong><br />
 - <strong>Timeframe Levels:</strong> Daily, Weekly, Monthly, Quarterly, Yearly highs/lows/opens/closes<br />
 - <strong>Session Levels:</strong> Asian, European, North American ranges + Custom Sessions<br />
-- <strong>VWAP Lines:</strong> Volume-weighted average prices (D/W/M and previous periods)<br />
-- <strong>Volume Profile:</strong> POC, VAH, VAL, Developing POC<br />
+- <strong>VWAP Lines:</strong> Volume-weighted average prices (D/W/M/Q/Y and previous periods)<br />
+- <strong>Volume Profile:</strong> POC, VAH, VAL (Daily, Weekly, Monthly, Quarterly, Yearly)<br />
 - <strong>Market Structure:</strong> Swing highs/lows, BOS, CHoCH labels<br />
 - <strong>Opening Range:</strong> Session high/low/mid for first X minutes<br />
 - <strong>Gap Levels:</strong> Overnight/weekend gap boundaries<br />
 - <strong>Killzones:</strong> High-probability session time windows (visual shading)<br />
-- <strong>Fibonacci Levels:</strong> Auto-drawn retracement levels from 19 anchor options</p>
+- <strong>Fibonacci Levels:</strong> Auto-drawn retracement levels from 20 anchor options (incl. Prev Year H/L)</p>
 <p><strong>Visual Display:</strong> Lines and labels on chart showing level locations and names.</p>
 <p><strong>Timeframe Compatibility:</strong> Works on all timeframes.</p>
 
@@ -2742,11 +2742,11 @@
 </tr>
 <tr>
 <td><strong>VWAP</strong></td>
-<td>Daily, Weekly, Monthly (current + previous)</td>
+<td>Daily, Weekly, Monthly, Quarterly, Yearly (current + previous)</td>
 </tr>
 <tr>
 <td><strong>Volume Profile</strong></td>
-<td>POC, VAH, VAL, Developing POC</td>
+<td>Daily, Weekly, Monthly, Quarterly, Yearly POC/VAH/VAL</td>
 </tr>
 <tr>
 <td><strong>Market Structure</strong></td>
@@ -2770,20 +2770,20 @@
 </tr>
 <tr>
 <td><strong>Fibonacci Levels</strong></td>
-<td>0.236, 0.382, 0.5, 0.618, 0.786, 0.886 (from 19 anchor options)</td>
+<td>0.236, 0.382, 0.5, 0.618, 0.786, 0.886 (from 20 anchor options)</td>
 </tr>
 </tbody>
 </table>
 
-<h3 id="settings-panel-organization">Settings Panel Organization (16 Groups)<a class="headerlink" href="#settings-panel-organization" title="Permanent link">&para;</a></h3>
-<p>The settings panel is organized into 16 logical groups for easy navigation:</p>
+<h3 id="settings-panel-organization">Settings Panel Organization (19 Groups)<a class="headerlink" href="#settings-panel-organization" title="Permanent link">&para;</a></h3>
+<p>The settings panel is organized into 19 logical groups for easy navigation:</p>
 <table>
 <thead>
 <tr><th>#</th><th>Group</th><th>What it Controls</th></tr>
 </thead>
 <tbody>
-<tr><td>1</td><td><strong>Main Settings</strong></td><td>Global toggles, timezone, label style</td></tr>
-<tr><td>2</td><td><strong>Appearance</strong></td><td>Colors, line styles, label sizes</td></tr>
+<tr><td>1</td><td><strong>Controls</strong></td><td>Feature toggles with alert info tooltips (hover for details)</td></tr>
+<tr><td>2</td><td><strong>Appearance</strong></td><td>Colors, line styles, label sizes, Label Style (Box/Text Only)</td></tr>
 <tr><td>3</td><td><strong>Daily Levels</strong></td><td>dH, dL, dO, dC, dMid toggles</td></tr>
 <tr><td>4</td><td><strong>Weekly Levels</strong></td><td>wH, wL, wO, wC, wMid toggles</td></tr>
 <tr><td>5</td><td><strong>Monthly Levels</strong></td><td>mH, mL, mO, mC, mMid toggles</td></tr>
@@ -2793,13 +2793,14 @@
 <tr><td>9</td><td><strong>Killzones</strong></td><td>5 institutional time windows</td></tr>
 <tr><td>10</td><td><strong>Gap Levels</strong></td><td>Daily/weekend gaps, fill detection</td></tr>
 <tr><td>11</td><td><strong>Session Levels</strong></td><td>Asian, London, NY sessions</td></tr>
-<tr><td>12</td><td><strong>VWAP</strong></td><td>Daily, weekly, monthly, quarterly + bands (±1σ/±2σ)</td></tr>
-<tr><td>13</td><td><strong>Volume Profile</strong></td><td>POC, VAH, VAL settings</td></tr>
-<tr><td>14</td><td><strong>Fibonacci Levels</strong></td><td>2 Fib Sets, 19 anchors, 8 levels (6 retracements + 2 extensions)</td></tr>
+<tr><td>12</td><td><strong>VWAP</strong></td><td>Daily, weekly, monthly, quarterly, yearly + bands (±1σ/±2σ) + previous periods</td></tr>
+<tr><td>13</td><td><strong>Volume Profile</strong></td><td>Daily, weekly, monthly, quarterly, yearly POC/VAH/VAL settings</td></tr>
+<tr><td>14</td><td><strong>Fibonacci Levels</strong></td><td>2 Fib Sets, 20 anchors (incl. Prev Year H/L), 8 levels</td></tr>
 <tr><td>15</td><td><strong>Fair Value Gaps</strong></td><td>FVG detection, mitigation, colors</td></tr>
 <tr><td>16</td><td><strong>Confluence Zones</strong></td><td>Auto-clustering settings, count label</td></tr>
-<tr><td>17</td><td><strong>Distance Table</strong></td><td>Table position, sorting, display</td></tr>
-<tr><td>18</td><td><strong>Alerts</strong></td><td>57+ individual alert toggles</td></tr>
+<tr><td>17</td><td><strong>Previous Periods</strong></td><td>PD, PW, PM, PQ, PY (O/H/L/Mid)</td></tr>
+<tr><td>18</td><td><strong>Distance Table</strong></td><td>Table position, sorting, display</td></tr>
+<tr><td>19</td><td><strong>Alerts</strong></td><td>48 selectable alerts (34 individual + 14 grouped)</td></tr>
 </tbody>
 </table>
 
@@ -2833,6 +2834,46 @@
 <td>Multiple presets available</td>
 <td>Scheme 1</td>
 </tr>
+<tr>
+<td><strong>Label Style</strong></td>
+<td>Box / Text Only</td>
+<td>Box</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="label-style-option">Label Style Option<a class="headerlink" href="#label-style-option" title="Permanent link">&para;</a></h3>
+<p>Controls how level labels appear on the chart:</p>
+<table>
+<thead>
+<tr><th>Option</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Box</strong> (default)</td><td>Arrow-style label with background color</td></tr>
+<tr><td><strong>Text Only</strong></td><td>Clean minimal text without box or arrow</td></tr>
+</tbody>
+</table>
+<p><strong>Location:</strong> Settings → Appearance → Label Style</p>
+
+<h3 id="control-tooltips">Control Tooltips (Alert Info)<a class="headerlink" href="#control-tooltips" title="Permanent link">&para;</a></h3>
+<p>Each feature toggle in the Controls section now has a tooltip explaining what alerts are available. <strong>Hover over any toggle</strong> to see its alert info:</p>
+<table>
+<thead>
+<tr><th>Toggle</th><th>Tooltip (Alert Info)</th></tr>
+</thead>
+<tbody>
+<tr><td>HTF Levels</td><td>"Alerts: Individual for D/W (dO, dH, dL, wO, wH, wL, moO, moH, moL). Grouped for M/Q/Y."</td></tr>
+<tr><td>Session Levels</td><td>"Alerts: Grouped as 'Sessions (Asia/Euro/NY O/H/L)' - covers all 9 session levels."</td></tr>
+<tr><td>Custom Sessions</td><td>"Alerts: Grouped as 'Custom Sessions (CS1/CS2 H/L)'."</td></tr>
+<tr><td>Opening Range</td><td>"Alerts: Individual (orH, orL)."</td></tr>
+<tr><td>Gap Levels</td><td>"Alerts: Individual (gapH, gapL, Gap Filled)."</td></tr>
+<tr><td>VWAP Levels</td><td>"Alerts: Individual for D/W (dVWAP, wVWAP, pdVWAP). Grouped for M/Q/Y and prev periods."</td></tr>
+<tr><td>Volume Profile</td><td>"Alerts: Individual for D/W (dPOC, dVAH, dVAL, wPOC, wVAH, wVAL). Grouped for M/Q/Y."</td></tr>
+<tr><td>Previous Periods</td><td>"Alerts: Individual for PD (pdO, pdH, pdL). Grouped for PW/PM/PQ/PY."</td></tr>
+<tr><td>Fibonacci Levels</td><td>"Alerts: Grouped as 'Fib Level Touched' - fires when any enabled fib is touched."</td></tr>
+<tr><td>Confluence Zones</td><td>"Alerts: 'Confluence Zone' - fires when multiple levels cluster together."</td></tr>
+<tr><td>Market Structure</td><td>"Alerts: Individual (CHoCH 🟢/🔴, BOS 🟢/🔴)."</td></tr>
+<tr><td>Fair Value Gaps</td><td>"Alerts: Individual (FVG 🟢 Bullish, FVG 🔴 Bearish)."</td></tr>
 </tbody>
 </table>
 
@@ -2947,8 +2988,8 @@
 <hr />
 <h3 id="vwap-lines-volume-weighted-average-price">💰 VWAP Lines (Volume-Weighted Average Price)<a class="headerlink" href="#vwap-lines-volume-weighted-average-price" title="Permanent link">&para;</a></h3>
 <p><strong>What Displays:</strong><br />
-- Lines labeled: VWAP-D (daily), VWAP-W (weekly), VWAP-M (monthly)<br />
-- Also shows previous period VWAP: pVWAP-D, pVWAP-W, pVWAP-M</p>
+- Lines labeled: VWAP-D (daily), VWAP-W (weekly), VWAP-M (monthly), VWAP-Q (quarterly), VWAP-Y (yearly)<br />
+- Also shows previous period VWAP: pVWAP-D, pVWAP-W, pVWAP-M, pVWAP-Q, pVWAP-Y</p>
 <p><strong>Level Definition:</strong><br />
 - VWAP = Volume-weighted average price<br />
 - Represents "true average" where most volume traded<br />
@@ -2978,6 +3019,8 @@
 <tr><td>Weekly VWAP + Bands</td><td>Toggle bands for Weekly VWAP</td></tr>
 <tr><td>Monthly VWAP + Bands</td><td>Toggle bands for Monthly VWAP</td></tr>
 <tr><td>Quarterly VWAP + Bands</td><td>Toggle bands for Quarterly VWAP</td></tr>
+<tr><td>Yearly VWAP + Bands</td><td>Toggle bands for Yearly VWAP (yVWAP)</td></tr>
+<tr><td>Show Previous Period</td><td>Toggle previous period VWAPs (pyVWAP, etc.)</td></tr>
 <tr><td>Show ±1σ</td><td>Enable first standard deviation bands</td></tr>
 <tr><td>Show ±2σ</td><td>Enable second standard deviation bands</td></tr>
 <tr><td>Band Color</td><td>Separate color picker from main VWAP line</td></tr>
@@ -2998,7 +3041,11 @@
 - <code>d-1σ</code> = Daily VWAP - 1 standard deviation (lower)<br />
 - <code>d+2σ</code> = Daily VWAP + 2 standard deviations (upper)<br />
 - <code>d-2σ</code> = Daily VWAP - 2 standard deviations (lower)<br />
-- Same pattern for weekly (<code>w</code>), monthly (<code>m</code>), quarterly (<code>q</code>)</p>
+- Same pattern for weekly (<code>w</code>), monthly (<code>m</code>), quarterly (<code>q</code>), yearly (<code>y</code>)</p>
+<p><strong>Yearly VWAP (yVWAP):</strong><br />
+- Volume-weighted average price anchored to the calendar year<br />
+- Institutional reference for long-term mean reversion<br />
+- Use case: Major S/R for position traders and macro analysis</p>
 <p><strong>Example:</strong> Bitcoin trading at Daily VWAP +2σ ($69,500) while VWAP is at $67,000 → Statistically extended, mean reversion back to VWAP is probable.</p>
 <hr />
 <h3 id="volume-profile-poc-vah-val">🎯 Volume Profile (POC, VAH, VAL)<a class="headerlink" href="#volume-profile-poc-vah-val" title="Permanent link">&para;</a></h3>
@@ -3010,11 +3057,26 @@
 - <strong>POC:</strong> Price level with highest traded volume (strongest magnet effect)<br />
 - <strong>VAH:</strong> Top of value area (standard 70% of volume above VAL)<br />
 - <strong>VAL:</strong> Bottom of value area (standard 70% of volume below VAH)</p>
+<p><strong>Available Timeframes:</strong></p>
+<table>
+<thead>
+<tr><th>Timeframe</th><th>Labels</th><th>Use Case</th></tr>
+</thead>
+<tbody>
+<tr><td>Daily</td><td>dPOC, dVAH, dVAL</td><td>Day trading, intraday levels</td></tr>
+<tr><td>Weekly</td><td>wPOC, wVAH, wVAL</td><td>Swing trading, multi-day levels</td></tr>
+<tr><td>Monthly</td><td>mPOC, mVAH, mVAL</td><td>Position trading, monthly context</td></tr>
+<tr><td>Quarterly</td><td>qPOC, qVAH, qVAL</td><td>Longer-term institutional reference</td></tr>
+<tr><td>Yearly</td><td>yPOC, yVAH, yVAL</td><td>Major S/R for macro analysis</td></tr>
+</tbody>
+</table>
 <p><strong>Characteristics:</strong><br />
 - POC acts as strong magnet (repeated price returns observed)<br />
 - Above VAH = Extended above fair value<br />
 - Below VAL = Extended below fair value<br />
 - Value area contains "fair value" zone</p>
+<p><strong>Quarterly &amp; Yearly Volume Profile:</strong><br />
+Identifies where the majority of trading volume occurred over longer periods. Use case: Institutional reference for position traders and macro analysis.</p>
 <p><strong>Example:</strong> Price at $69,000, POC at $67,000 → Pullback to POC observed (magnet effect).</p>
 <hr />
 <h3 id="market-structure-swing-points-breaks">📈 Market Structure (Swing Points &amp; Breaks)<a class="headerlink" href="#market-structure-swing-points-breaks" title="Permanent link">&para;</a></h3>
@@ -3317,7 +3379,7 @@ Structure: Strong uptrend characteristics
 <p><strong>Key Features:</strong></p>
 <ul>
 <li><strong>2 Independent Fib Sets</strong> - Display two anchors simultaneously (e.g., Daily + Weekly) with different colors</li>
-<li><strong>19 Anchor Options</strong> - Far more than just Daily H/L</li>
+<li><strong>20 Anchor Options</strong> - Far more than just Daily H/L (including Prev Year H/L)</li>
 <li><strong>8 Fib Levels</strong> - 6 retracements (0.236-0.886) + 2 extensions (1.272, 1.618)</li>
 <li><strong>1 Grouped Alert</strong> - "Fib Level Touched" fires when ANY fib level is touched</li>
 </ul>
@@ -3329,7 +3391,7 @@ Structure: Strong uptrend characteristics
 </thead>
 <tbody>
 <tr><td>Current Period</td><td>Daily, Weekly, Monthly, Quarterly, Yearly H/L</td></tr>
-<tr><td>Previous Period</td><td>Prev Day, Prev Week, Prev Month, Prev Quarter H/L</td></tr>
+<tr><td>Previous Period</td><td>Prev Day, Prev Week, Prev Month, Prev Quarter, Prev Year H/L</td></tr>
 <tr><td>Day-Specific</td><td>Monday, Wednesday, Friday H/L</td></tr>
 <tr><td>Sessions</td><td>Asian, Euro, NY Session H/L</td></tr>
 <tr><td>Custom/Other</td><td>Opening Range, Custom Session 1, Custom Session 2, Gap H/L</td></tr>
@@ -3497,84 +3559,61 @@ Interpretation: High confluence zone, stronger reactions observed
 <p><strong>Remember:</strong> Match level timeframes to your holding period—scalpers watch session levels, day traders watch daily levels, swing traders watch weekly/monthly. Using mismatched levels (daily levels on a 1-minute chart) creates noise and reduces effectiveness.</p>
 
 <hr />
-<h2 id="alert-configuration">🔔 Alert Configuration (61 Alerts)<a class="headerlink" href="#alert-configuration" title="Permanent link">&para;</a></h2>
-<p>Janus Atlas includes <strong>61 individual alerts</strong> organized into 5 categories. All alerts are under TradingView's 64-alert limit per indicator.</p>
+<h2 id="alert-configuration">🔔 Alert Configuration (48 Alerts)<a class="headerlink" href="#alert-configuration" title="Permanent link">&para;</a></h2>
+<p>Janus Atlas provides <strong>48 selectable alerts</strong> organized into two categories: <strong>Individual Alerts (34)</strong> for specific levels most traders actively trade around, and <strong>Grouped Alerts (14)</strong> for context levels grouped by category.</p>
 
-<h3 id="alerts-timeframe-levels">Timeframe Level Alerts (25)<a class="headerlink" href="#alerts-timeframe-levels" title="Permanent link">&para;</a></h3>
+<h3 id="alerts-individual">Individual Alerts (34)<a class="headerlink" href="#alerts-individual" title="Permanent link">&para;</a></h3>
+<p>Specific levels most traders actively trade around. Each fires for one exact level.</p>
+
+<h4>Previous Day (3)</h4>
 <table>
 <thead>
 <tr><th>Alert Name</th><th>Trigger</th></tr>
 </thead>
 <tbody>
-<tr><td><code>dH • Daily High</code></td><td>Daily High Touched</td></tr>
-<tr><td><code>dL • Daily Low</code></td><td>Daily Low Touched</td></tr>
-<tr><td><code>dO • Daily Open</code></td><td>Daily Open Touched</td></tr>
-<tr><td><code>dC • Daily Close</code></td><td>Previous Daily Close Touched</td></tr>
-<tr><td><code>dMid • Daily Mid</code></td><td>Daily Midpoint Touched</td></tr>
-<tr><td><code>wH • Weekly High</code></td><td>Weekly High Touched</td></tr>
-<tr><td><code>wL • Weekly Low</code></td><td>Weekly Low Touched</td></tr>
-<tr><td><code>wO • Weekly Open</code></td><td>Weekly Open Touched</td></tr>
-<tr><td><code>wC • Weekly Close</code></td><td>Previous Weekly Close Touched</td></tr>
-<tr><td><code>wMid • Weekly Mid</code></td><td>Weekly Midpoint Touched</td></tr>
-<tr><td><code>mH • Monthly High</code></td><td>Monthly High Touched</td></tr>
-<tr><td><code>mL • Monthly Low</code></td><td>Monthly Low Touched</td></tr>
-<tr><td><code>mO • Monthly Open</code></td><td>Monthly Open Touched</td></tr>
-<tr><td><code>mC • Monthly Close</code></td><td>Previous Monthly Close Touched</td></tr>
-<tr><td><code>mMid • Monthly Mid</code></td><td>Monthly Midpoint Touched</td></tr>
-<tr><td><code>qH • Quarterly High</code></td><td>Quarterly High Touched</td></tr>
-<tr><td><code>qL • Quarterly Low</code></td><td>Quarterly Low Touched</td></tr>
-<tr><td><code>qO • Quarterly Open</code></td><td>Quarterly Open Touched</td></tr>
-<tr><td><code>qC • Quarterly Close</code></td><td>Previous Quarterly Close Touched</td></tr>
-<tr><td><code>yH • Yearly High</code></td><td>Yearly High Touched</td></tr>
-<tr><td><code>yL • Yearly Low</code></td><td>Yearly Low Touched</td></tr>
-<tr><td><code>yO • Yearly Open</code></td><td>Yearly Open Touched</td></tr>
-<tr><td><code>yC • Yearly Close</code></td><td>Previous Yearly Close Touched</td></tr>
+<tr><td><code>pdO • Prev Day Open</code></td><td>Previous Day Open Touched</td></tr>
 <tr><td><code>pdH • Prev Day High</code></td><td>Previous Day High Touched</td></tr>
 <tr><td><code>pdL • Prev Day Low</code></td><td>Previous Day Low Touched</td></tr>
 </tbody>
 </table>
 
-<h3 id="alerts-session-levels">Session Level Alerts (12)<a class="headerlink" href="#alerts-session-levels" title="Permanent link">&para;</a></h3>
+<h4>Daily (3)</h4>
 <table>
 <thead>
 <tr><th>Alert Name</th><th>Trigger</th></tr>
 </thead>
 <tbody>
-<tr><td><code>asH • Asian High</code></td><td>Asian Session High Touched</td></tr>
-<tr><td><code>asL • Asian Low</code></td><td>Asian Session Low Touched</td></tr>
-<tr><td><code>asO • Asian Open</code></td><td>Asian Session Open Touched</td></tr>
-<tr><td><code>asC • Asian Close</code></td><td>Asian Session Close Touched</td></tr>
-<tr><td><code>euH • London High</code></td><td>London Session High Touched</td></tr>
-<tr><td><code>euL • London Low</code></td><td>London Session Low Touched</td></tr>
-<tr><td><code>euO • London Open</code></td><td>London Session Open Touched</td></tr>
-<tr><td><code>euC • London Close</code></td><td>London Session Close Touched</td></tr>
-<tr><td><code>usH • NY High</code></td><td>NY Session High Touched</td></tr>
-<tr><td><code>usL • NY Low</code></td><td>NY Session Low Touched</td></tr>
-<tr><td><code>usO • NY Open</code></td><td>NY Session Open Touched</td></tr>
-<tr><td><code>usC • NY Close</code></td><td>NY Session Close Touched</td></tr>
+<tr><td><code>dO • Daily Open</code></td><td>Daily Open Touched</td></tr>
+<tr><td><code>dH • Daily High</code></td><td>Daily High Touched</td></tr>
+<tr><td><code>dL • Daily Low</code></td><td>Daily Low Touched</td></tr>
 </tbody>
 </table>
 
-<h3 id="alerts-vwap-volume">VWAP & Volume Profile Alerts (10)<a class="headerlink" href="#alerts-vwap-volume" title="Permanent link">&para;</a></h3>
+<h4>Weekly (3)</h4>
 <table>
 <thead>
 <tr><th>Alert Name</th><th>Trigger</th></tr>
 </thead>
 <tbody>
-<tr><td><code>dVWAP • Daily VWAP</code></td><td>Daily VWAP Touched</td></tr>
-<tr><td><code>wVWAP • Weekly VWAP</code></td><td>Weekly VWAP Touched</td></tr>
-<tr><td><code>mVWAP • Monthly VWAP</code></td><td>Monthly VWAP Touched</td></tr>
-<tr><td><code>pdVWAP • Prev VWAP</code></td><td>Previous Day VWAP Touched</td></tr>
-<tr><td><code>POC • Point of Control</code></td><td>POC Level Touched</td></tr>
-<tr><td><code>VAH • Value Area High</code></td><td>VAH Level Touched</td></tr>
-<tr><td><code>VAL • Value Area Low</code></td><td>VAL Level Touched</td></tr>
-<tr><td><code>dPOC • Developing POC</code></td><td>Developing POC Touched</td></tr>
-<tr><td><code>dVAH • Dev VAH</code></td><td>Developing VAH Touched</td></tr>
-<tr><td><code>dVAL • Dev VAL</code></td><td>Developing VAL Touched</td></tr>
+<tr><td><code>wO • Weekly Open</code></td><td>Weekly Open Touched</td></tr>
+<tr><td><code>wH • Weekly High</code></td><td>Weekly High Touched</td></tr>
+<tr><td><code>wL • Weekly Low</code></td><td>Weekly Low Touched</td></tr>
 </tbody>
 </table>
 
-<h3 id="alerts-new-features">New Feature Alerts (8)<a class="headerlink" href="#alerts-new-features" title="Permanent link">&para;</a></h3>
+<h4>Monday (3)</h4>
+<table>
+<thead>
+<tr><th>Alert Name</th><th>Trigger</th></tr>
+</thead>
+<tbody>
+<tr><td><code>moO • Monday Open</code></td><td>Monday Open Touched</td></tr>
+<tr><td><code>moH • Monday High</code></td><td>Monday High Touched</td></tr>
+<tr><td><code>moL • Monday Low</code></td><td>Monday Low Touched</td></tr>
+</tbody>
+</table>
+
+<h4>Opening Range (2)</h4>
 <table>
 <thead>
 <tr><th>Alert Name</th><th>Trigger</th></tr>
@@ -3582,32 +3621,134 @@ Interpretation: High confluence zone, stronger reactions observed
 <tbody>
 <tr><td><code>orH • OR High</code></td><td>Opening Range High Touched</td></tr>
 <tr><td><code>orL • OR Low</code></td><td>Opening Range Low Touched</td></tr>
-<tr><td><code>gapH • Gap High</code></td><td>Gap High Touched</td></tr>
-<tr><td><code>gapL • Gap Low</code></td><td>Gap Low Touched</td></tr>
-<tr><td><code>Gap Filled</code></td><td>Gap Has Been Filled</td></tr>
-<tr><td><code>cs1 • Custom Session 1</code></td><td>Custom Session 1 Level Touched</td></tr>
-<tr><td><code>cs2 • Custom Session 2</code></td><td>Custom Session 2 Level Touched</td></tr>
-<tr><td><code>Confluence Zone</code></td><td>Confluence Zone Detected (3+ levels)</td></tr>
 </tbody>
 </table>
 
-<h3 id="alerts-market-structure">Market Structure Alerts (2)<a class="headerlink" href="#alerts-market-structure" title="Permanent link">&para;</a></h3>
+<h4>VWAP (3)</h4>
 <table>
 <thead>
 <tr><th>Alert Name</th><th>Trigger</th></tr>
 </thead>
 <tbody>
-<tr><td><code>BOS • Break of Structure</code></td><td>Break of Structure Detected</td></tr>
-<tr><td><code>CHoCH • Change of Character</code></td><td>Change of Character Detected</td></tr>
+<tr><td><code>dVWAP • Daily VWAP</code></td><td>Daily VWAP Touched</td></tr>
+<tr><td><code>wVWAP • Weekly VWAP</code></td><td>Weekly VWAP Touched</td></tr>
+<tr><td><code>pdVWAP • Prev Day VWAP</code></td><td>Previous Day VWAP Touched</td></tr>
 </tbody>
 </table>
 
-<p><strong>Alert Setup:</strong></p>
+<h4>Daily Volume Profile (3)</h4>
+<table>
+<thead>
+<tr><th>Alert Name</th><th>Trigger</th></tr>
+</thead>
+<tbody>
+<tr><td><code>dPOC • Daily POC</code></td><td>Daily POC Touched</td></tr>
+<tr><td><code>dVAH • Daily VAH</code></td><td>Daily VAH Touched</td></tr>
+<tr><td><code>dVAL • Daily VAL</code></td><td>Daily VAL Touched</td></tr>
+</tbody>
+</table>
+
+<h4>Weekly Volume Profile (3)</h4>
+<table>
+<thead>
+<tr><th>Alert Name</th><th>Trigger</th></tr>
+</thead>
+<tbody>
+<tr><td><code>wPOC • Weekly POC</code></td><td>Weekly POC Touched</td></tr>
+<tr><td><code>wVAH • Weekly VAH</code></td><td>Weekly VAH Touched</td></tr>
+<tr><td><code>wVAL • Weekly VAL</code></td><td>Weekly VAL Touched</td></tr>
+</tbody>
+</table>
+
+<h4>Gap (3)</h4>
+<table>
+<thead>
+<tr><th>Alert Name</th><th>Trigger</th></tr>
+</thead>
+<tbody>
+<tr><td><code>gapH • Gap High</code></td><td>Gap High Touched</td></tr>
+<tr><td><code>gapL • Gap Low</code></td><td>Gap Low Touched</td></tr>
+<tr><td><code>Gap Filled</code></td><td>Gap Has Been Filled</td></tr>
+</tbody>
+</table>
+
+<h4>Market Structure (4)</h4>
+<table>
+<thead>
+<tr><th>Alert Name</th><th>Trigger</th></tr>
+</thead>
+<tbody>
+<tr><td><code>CHoCH • Bullish</code></td><td>Bullish Change of Character Detected</td></tr>
+<tr><td><code>CHoCH • Bearish</code></td><td>Bearish Change of Character Detected</td></tr>
+<tr><td><code>BOS • Bullish</code></td><td>Bullish Break of Structure Detected</td></tr>
+<tr><td><code>BOS • Bearish</code></td><td>Bearish Break of Structure Detected</td></tr>
+</tbody>
+</table>
+
+<h4>FVG (2)</h4>
+<table>
+<thead>
+<tr><th>Alert Name</th><th>Trigger</th></tr>
+</thead>
+<tbody>
+<tr><td><code>FVG • Bullish</code></td><td>Bullish Fair Value Gap Detected</td></tr>
+<tr><td><code>FVG • Bearish</code></td><td>Bearish Fair Value Gap Detected</td></tr>
+</tbody>
+</table>
+
+<h4>Other (2)</h4>
+<table>
+<thead>
+<tr><th>Alert Name</th><th>Trigger</th></tr>
+</thead>
+<tbody>
+<tr><td><code>Fib Level Touched</code></td><td>Any Enabled Fib Level Touched</td></tr>
+<tr><td><code>Confluence Zone</code></td><td>Confluence Zone Detected (3+ levels)</td></tr>
+</tbody>
+</table>
+
+<h3 id="alerts-grouped">Grouped Alerts (14)<a class="headerlink" href="#alerts-grouped" title="Permanent link">&para;</a></h3>
+<p>Context levels grouped by category. One alert covers multiple related levels.</p>
+
+<table>
+<thead>
+<tr><th>Alert Name</th><th>Covers</th></tr>
+</thead>
+<tbody>
+<tr><td><code>Monthly (mO, mH, mL)</code></td><td>Monthly Open, High, Low</td></tr>
+<tr><td><code>Quarterly (qO, qH, qL)</code></td><td>Quarterly Open, High, Low</td></tr>
+<tr><td><code>Yearly (yO, yH, yL)</code></td><td>Yearly Open, High, Low</td></tr>
+<tr><td><code>Sessions (Asia/Euro/NY O/H/L)</code></td><td>All 9 session levels</td></tr>
+<tr><td><code>Custom Sessions (CS1/CS2 H/L)</code></td><td>CS1 H/L, CS2 H/L</td></tr>
+<tr><td><code>Prev Week (pwO, pwH, pwL)</code></td><td>Previous Week O/H/L</td></tr>
+<tr><td><code>Prev Month (pmO, pmH, pmL)</code></td><td>Previous Month O/H/L</td></tr>
+<tr><td><code>Prev Quarter (pqO, pqH, pqL)</code></td><td>Previous Quarter O/H/L</td></tr>
+<tr><td><code>Prev Year (pyO, pyH, pyL)</code></td><td>Previous Year O/H/L</td></tr>
+<tr><td><code>HTF VWAP (mVWAP, qVWAP, yVWAP)</code></td><td>Monthly, Quarterly, Yearly VWAP</td></tr>
+<tr><td><code>Prev VWAP (pwVWAP, pmVWAP, pqVWAP, pyVWAP)</code></td><td>All previous period VWAPs</td></tr>
+<tr><td><code>Monthly VP (mPOC, mVAH, mVAL)</code></td><td>Monthly POC, VAH, VAL</td></tr>
+<tr><td><code>Quarterly VP (qPOC, qVAH, qVAL)</code></td><td>Quarterly POC, VAH, VAL</td></tr>
+<tr><td><code>Yearly VP (yPOC, yVAH, yVAL)</code></td><td>Yearly POC, VAH, VAL</td></tr>
+</tbody>
+</table>
+
+<p><strong>Note:</strong> Grouped alerts fire when ANY level in that category is touched.</p>
+
+<h3 id="finding-alert-info">Finding Alert Info<a class="headerlink" href="#finding-alert-info" title="Permanent link">&para;</a></h3>
+<p>Hover over any toggle in <strong>Controls</strong> to see what alerts that feature provides via tooltip.</p>
+
+<h3 id="alert-setup">Alert Setup<a class="headerlink" href="#alert-setup" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Open indicator settings → Navigate to "Alerts" group (#14)</li>
-<li>Enable alerts for desired levels (each has individual toggle)</li>
-<li>In TradingView, click "Alert" → Select Janus Atlas condition</li>
+<li>Right-click on chart → "Add Alert"</li>
+<li>Condition: Select "SP: Janus Atlas"</li>
+<li>Choose alert from dropdown:
+   <ul>
+   <li><strong>Individual alerts</strong> (e.g., <code>pdH • Prev Day High</code>) for specific levels</li>
+   <li><strong>Grouped alerts</strong> (e.g., <code>Monthly (mO, mH, mL)</code>) for category coverage</li>
+   </ul>
+</li>
 <li>Configure notification method (popup, email, webhook, mobile)</li>
+<li>Create alert</li>
 </ol>
 
 <p><strong>Note:</strong> Killzones do NOT have alerts - they are purely visual time-based aids.</p>
@@ -3884,7 +4025,7 @@ Interpretation: High confluence zone, stronger reactions observed
 <p><strong>A:</strong> A real-time overlay showing distance from current price to each enabled level. Helps quickly identify nearest support/resistance and plan entries based on level proximity.</p>
 
 <h3 id="q-how-many-alerts-are-available">Q: How many alerts are available?<a class="headerlink" href="#q-how-many-alerts-are-available" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> 61 individual alerts across 5 categories (Timeframe, Session, VWAP/Volume, New Features, Market Structure). All under TradingView's 64-alert limit.</p>
+<p><strong>A:</strong> 48 selectable alerts organized into Individual Alerts (34) and Grouped Alerts (14). Individual alerts fire for specific levels most traders actively trade around. Grouped alerts cover multiple related levels efficiently. All under TradingView's 64-alert limit.</p>
 
 <h3 id="q-why-does-my-chart-look-compressed">Q: Why does my chart look compressed when I enable Quarterly/Yearly levels?<a class="headerlink" href="#q-why-does-my-chart-look-compressed" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> Quarterly and Yearly highs/lows can be far from current price. TradingView auto-scales the chart to fit all visible levels, which compresses price action. For best results, use Quarterly/Yearly levels on 4H+ timeframe charts.</p>
@@ -4102,6 +4243,21 @@ Interpretation: High confluence zone, stronger reactions observed
   <p><strong>If yes to all 4:</strong> You're ready to use Janus Atlas effectively! See <a href="../ref-workflow/">Workflow Guide</a> for combination strategies.<br>
   <strong>If no to any:</strong> Review the <a href="#level-type-descriptions">Level Type Descriptions</a> and <a href="#level-usage-by-trading-style">Level Usage by Trading Style</a> sections above.</p>
 </div>
+
+<hr />
+<h2 id="technical-notes">📊 Technical Notes<a class="headerlink" href="#technical-notes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr><th>Specification</th><th>Value</th><th>Notes</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Plot Count</strong></td><td>50</td><td>Within TradingView's 64-plot limit per indicator</td></tr>
+<tr><td><strong>Total Alerts</strong></td><td>48</td><td>34 individual + 14 grouped alerts</td></tr>
+<tr><td><strong>Total Lines</strong></td><td>~1,950</td><td>Approximate code lines</td></tr>
+<tr><td><strong>Level Types</strong></td><td>50+</td><td>Across all categories</td></tr>
+<tr><td><strong>Anchor Options</strong></td><td>20</td><td>For Fibonacci sets</td></tr>
+</tbody>
+</table>
 
 <hr />
 <h2 id="support">📞 Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
