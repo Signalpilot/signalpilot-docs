@@ -106,7 +106,6 @@ nav:
     - "📋 Prerequisites": start-prerequisites.md
     - "📅 Onboarding Checklist (7 days)": start-onboarding.md
     - "Which Indicator Should I Start?": docs/start-which-indicator.md
-    - "📚 Learning Path": docs/start-learning-path/index.md
 
   - "📖 How-To Guides":
     - "Set Up Alerts": how-to-alerts.md
