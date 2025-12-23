@@ -1940,9 +1940,9 @@
 <tbody>
 <tr>
 <td><strong>Regime Detection</strong></td>
-<td>🟩🟥 Background Colors</td>
+<td>🟩🟥 Background + Meter</td>
 <td>Market Phase</td>
-<td>Green = Accumulation, Red = Distribution, Gray = Neutral, Gold = Weakening</td>
+<td>Green = Accumulation, Red = Distribution, Gray = Neutral, Gold = Weakening. Regime Meter shows state, strength, health, confirmation counter, flow, duration</td>
 </tr>
 <tr>
 <td><strong>Signal Generation</strong></td>
@@ -2016,6 +2016,38 @@
 <li><strong>Red background:</strong> Distribution regime → Favor BEAR signals</li>
 <li><strong>Gray background:</strong> Neutral regime → Wait for direction or be selective</li>
 <li><strong>Gold background:</strong> Weakening regime → Protect profits, tighten stops</li>
+</ul>
+
+<h3>Regime Meter Table (6 Rows)</h3>
+<table>
+<thead><tr><th>Row</th><th>Shows</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><strong>State</strong></td><td>Current regime</td><td>Accumulation, Distribution, Neutral</td></tr>
+<tr><td><strong>Strength</strong></td><td>Regime strength %</td><td>78%</td></tr>
+<tr><td><strong>Health</strong></td><td>Leading indicator status</td><td>✓ STRONG, ⚠️ FADING, 🔴 CRITICAL</td></tr>
+<tr><td><strong>Confirm</strong></td><td>Confirmation counter</td><td>↑4 (4 bars confirming)</td></tr>
+<tr><td><strong>Flow</strong></td><td>Flow direction</td><td>Bullish, Bearish, Mixed</td></tr>
+<tr><td><strong>Duration</strong></td><td>Bars in regime</td><td>23 bars</td></tr>
+</tbody>
+</table>
+
+<h3>Health Status (Leading Indicators)</h3>
+<ul>
+<li><strong>✓ STRONG:</strong> Regime healthy → Trade with confidence</li>
+<li><strong>⚠️ FADING:</strong> Early warning → Monitor closely</li>
+<li><strong>🟠 WEAKENING:</strong> Regime deteriorating → Tighten stops</li>
+<li><strong>🔴 CRITICAL:</strong> Regime about to flip → Exit warning triggered</li>
+</ul>
+<p><strong>Leading indicators:</strong> Momentum Fading, Flow Deteriorating, Volume Drying Up</p>
+
+<h3>Volume Bar Coloring</h3>
+<ul>
+<li><strong>Bright Green:</strong> Accumulation >70% (strong buying)</li>
+<li><strong>Soft Green:</strong> Accumulation 50-70% (moderate buying)</li>
+<li><strong>Bright Red:</strong> Distribution >70% (strong selling)</li>
+<li><strong>Soft Red:</strong> Distribution 50-70% (moderate selling)</li>
+<li><strong>Gold/Amber:</strong> Weakening regime (caution)</li>
+<li><strong>Gray:</strong> Neutral <50% (no clear direction)</li>
 </ul>
 
 <h3>HTF Alignment</h3>
@@ -2157,9 +2189,10 @@
 <ol>
 <li><strong>Regime First, Signal Second</strong> — Check regime color before acting on signals</li>
 <li><strong>Quality Matters</strong> — ⭐⭐⭐ signals have highest success rate</li>
+<li><strong>Check Health Status</strong> — Monitor for FADING/WEAKENING/CRITICAL warnings early</li>
 <li><strong>HTF Alignment = Confidence</strong> — Signals with HTF alignment are more reliable</li>
 <li><strong>Combine with Janus levels</strong> — Signal at key level = highest probability</li>
-<li><strong>Watch for Weakening (Gold)</strong> — Protect profits when regime turns gold</li>
+<li><strong>Watch Confirmation Counter</strong> — ↑4+ building = regime change may be coming</li>
 </ol>
 
 <hr />
@@ -2167,6 +2200,9 @@
 <h2>📖 Key Concepts</h2>
 
 <p><strong>Regime Detection:</strong> Background colors showing market phase (Accumulation/Distribution/Neutral/Weakening)<br>
+<strong>Regime Meter:</strong> 6-row table (State, Strength, Health, Confirm, Flow, Duration) for complete regime info<br>
+<strong>Health Status:</strong> Leading indicators (STRONG/FADING/WEAKENING/CRITICAL) that warn before exits trigger<br>
+<strong>Confirmation Counter:</strong> Shows consecutive bars building toward regime change (↑4 = 4 bars confirming)<br>
 <strong>Signal Generation:</strong> BULL/BEAR entry signals with quality ratings (⭐ to ⭐⭐⭐)<br>
 <strong>Risk Management:</strong> Auto-calculated Entry, Stop, T1, T2 with position sizing<br>
 <strong>HTF Confirmation:</strong> Higher timeframe regime alignment check for signal validation</p>
