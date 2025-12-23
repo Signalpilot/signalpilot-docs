@@ -2494,6 +2494,14 @@
 <li><strong>System 4:</strong> HTF Confirmation (higher timeframe alignment)</li>
 <li><strong>System 5:</strong> Strategy Modes (Trend Following/Mean Reversion/Hybrid)</li>
 </ul>
+<p><strong>Key Features:</strong></p>
+<ul>
+<li><strong>Regime Meter:</strong> 6-row table (State, Strength, Health, Confirm, Flow, Duration)</li>
+<li><strong>Health Status:</strong> Leading indicators (STRONG/FADING/WEAKENING/CRITICAL)</li>
+<li><strong>Confirmation Counter:</strong> Shows bars building toward regime change (↑4)</li>
+<li><strong>Volume Bar Coloring:</strong> Intensity varies with regime strength</li>
+<li><strong>17 Alerts:</strong> Entry, Position, Regime, Health, HTF categories</li>
+</ul>
 
 <h3 id="plutus-flow-divergences">Plutus Flow (divergences)</h3>
 <ul>
@@ -2669,6 +2677,28 @@ Pilot Line Colors:
 🔴 Red   = Distribution regime (bearish)
 ⚪ Gray  = Neutral regime (no direction)
 🟡 Gold  = Weakening regime (trend fading)
+
+Regime Meter Table (6 rows):
+State    | Accumulation, Distribution, Neutral
+Strength | 78% (regime strength)
+Health   | ✓ STRONG, ⚠️ FADING, 🔴 CRITICAL
+Confirm  | ↑4 (bars confirming)
+Flow     | Bullish, Bearish, Mixed
+Duration | 23 bars
+
+Health Status (Leading Indicators):
+✓ STRONG     = Regime healthy
+⚠️ FADING    = Early warning
+🟠 WEAKENING = Tighten stops
+🔴 CRITICAL  = Exit warning
+
+Volume Bar Coloring:
+Bright Green = Accumulation >70%
+Soft Green   = Accumulation 50-70%
+Bright Red   = Distribution >70%
+Soft Red     = Distribution 50-70%
+Gold/Amber   = Weakening regime
+Gray         = Neutral <50%
 
 Signal Quality Ratings:
 ⭐⭐⭐ = High quality (80-100%)
