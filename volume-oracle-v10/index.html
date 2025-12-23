@@ -957,7 +957,7 @@
           <li class="md-nav__item">
   <a href="#health-status-leading-indicators" class="md-nav__link">
     <span class="md-ellipsis">
-      Health Status (Leading Indicators)
+      Health Status (Early Warnings)
     </span>
   </a>
 
@@ -1860,7 +1860,7 @@
           <li class="md-nav__item">
   <a href="#health-status-leading-indicators" class="md-nav__link">
     <span class="md-ellipsis">
-      Health Status (Leading Indicators)
+      Health Status (Early Warnings)
     </span>
   </a>
 
@@ -2661,80 +2661,80 @@ graph LR
 - Potential regime change approaching</p>
 
 <h3 id="regime-confirmation">Regime Confirmation<a class="headerlink" href="#regime-confirmation" title="Permanent link">&para;</a></h3>
-<p><strong>Smarter Regime Detection:</strong> Regime changes require <strong>2 consecutive bars</strong> above threshold AND <strong>above-average volume</strong> to confirm. This reduces false flips by filtering out noise and low-conviction moves.</p>
-<p><strong>Why It Matters:</strong> Multi-bar confirmation + volume validation = fewer false signals.</p>
+<p><strong>How It Works:</strong> The regime won't flip until <strong>2 bars in a row</strong> confirm the change AND volume is above average.</p>
+<p><strong>Why It Matters:</strong> Fewer fake-outs. More reliable signals.</p>
 
 <h3 id="multi-level-warning-system">Multi-Level Warning System<a class="headerlink" href="#multi-level-warning-system" title="Permanent link">&para;</a></h3>
-<p>Four-stage warning progression for regime health:</p>
+<p>Four warning stages tell you when a regime is getting weak:</p>
 <table>
-<thead><tr><th>Status</th><th>Meaning</th><th>Action</th></tr></thead>
+<thead><tr><th>Status</th><th>What It Means</th><th>What To Do</th></tr></thead>
 <tbody>
-<tr><td><strong>✓ STRONG</strong></td><td>Regime is healthy</td><td>Trade with confidence</td></tr>
-<tr><td><strong>📉 FADING</strong></td><td>Early warning — regime losing momentum</td><td>Tighten stops</td></tr>
-<tr><td><strong>⚡ WEAKENING</strong></td><td>Moderate warning — prepare for potential flip</td><td>Consider reducing position</td></tr>
-<tr><td><strong>⚠️ CRITICAL</strong></td><td>Urgent — regime about to flip</td><td>Exit warning triggered</td></tr>
+<tr><td><strong>✓ STRONG</strong></td><td>Regime is solid</td><td>Trade normally</td></tr>
+<tr><td><strong>📉 FADING</strong></td><td>Trend is slowing down</td><td>Tighten stops</td></tr>
+<tr><td><strong>⚡ WEAKENING</strong></td><td>Trend may flip soon</td><td>Reduce position size</td></tr>
+<tr><td><strong>⚠️ CRITICAL</strong></td><td>Trend about to flip</td><td>Consider exiting</td></tr>
 </tbody>
 </table>
 
-<h3 id="health-status-leading-indicators">Health Status (Leading Indicators)<a class="headerlink" href="#health-status-leading-indicators" title="Permanent link">&para;</a></h3>
-<p>New "Health" indicator combines three leading signals that detect problems <strong>before</strong> traditional exits trigger:</p>
+<h3 id="health-status-leading-indicators">Health Status (Early Warnings)<a class="headerlink" href="#health-status-leading-indicators" title="Permanent link">&para;</a></h3>
+<p>Three signals that warn you <strong>before</strong> the regime flips:</p>
 <table>
-<thead><tr><th>Indicator</th><th>What It Detects</th></tr></thead>
+<thead><tr><th>Warning</th><th>What's Happening</th></tr></thead>
 <tbody>
-<tr><td><strong>Momentum Fading</strong></td><td>Price velocity is decelerating</td></tr>
-<tr><td><strong>Flow Deteriorating</strong></td><td>Directional consensus weakening</td></tr>
-<tr><td><strong>Volume Drying Up</strong></td><td>Participation dropping significantly</td></tr>
+<tr><td><strong>Momentum Fading</strong></td><td>Price is slowing down</td></tr>
+<tr><td><strong>Flow Deteriorating</strong></td><td>Buyers and sellers are mixed</td></tr>
+<tr><td><strong>Volume Drying Up</strong></td><td>Trading activity is dropping</td></tr>
 </tbody>
 </table>
-<p><strong>Health Status Display:</strong></p>
+<p><strong>Health Status Colors:</strong></p>
 <table>
-<thead><tr><th>Status</th><th>Meaning</th><th>Warnings Active</th></tr></thead>
+<thead><tr><th>Color</th><th>Meaning</th><th>Warnings</th></tr></thead>
 <tbody>
-<tr><td><strong>🟢 HEALTHY</strong></td><td>No problems detected</td><td>0 warnings</td></tr>
-<tr><td><strong>🟡 WATCH</strong></td><td>Minor concern</td><td>1 warning</td></tr>
-<tr><td><strong>🟠 CAUTION</strong></td><td>Multiple concerns</td><td>2 warnings</td></tr>
-<tr><td><strong>🔴 DANGER</strong></td><td>Serious deterioration</td><td>3+ warnings</td></tr>
+<tr><td><strong>🟢 HEALTHY</strong></td><td>All good</td><td>0</td></tr>
+<tr><td><strong>🟡 WATCH</strong></td><td>Small concern</td><td>1</td></tr>
+<tr><td><strong>🟠 CAUTION</strong></td><td>Getting risky</td><td>2</td></tr>
+<tr><td><strong>🔴 DANGER</strong></td><td>Big trouble</td><td>3</td></tr>
 </tbody>
 </table>
 
 <h3 id="confirmation-counter">Confirmation Counter<a class="headerlink" href="#confirmation-counter" title="Permanent link">&para;</a></h3>
-<p>Shows how many consecutive bars have been building toward a regime change:</p>
+<p>Shows how many bars are building toward a regime change:</p>
 <ul>
-<li><code>↑4</code> = 4 bars confirming accumulation</li>
-<li><code>↓2</code> = 2 bars confirming distribution</li>
-<li><code>...</code> = No confirmation building</li>
+<li><code>↑4</code> = 4 bars pointing to buying (accumulation)</li>
+<li><code>↓2</code> = 2 bars pointing to selling (distribution)</li>
+<li><code>...</code> = Nothing building yet</li>
 </ul>
-<p>This helps you understand regime stability at a glance.</p>
+<p>Higher numbers = regime change more likely.</p>
 
 <h3 id="volume-bar-coloring">Volume Bar Coloring<a class="headerlink" href="#volume-bar-coloring" title="Permanent link">&para;</a></h3>
-<p>Volume bars show <strong>granular colors</strong> based on regime strength:</p>
+<p>Volume bar colors show how strong the regime is:</p>
 <table>
-<thead><tr><th>Bar Color</th><th>Condition</th><th>Meaning</th></tr></thead>
+<thead><tr><th>Color</th><th>When</th><th>Meaning</th></tr></thead>
 <tbody>
-<tr><td><strong>Bright Green</strong></td><td>Accumulation &gt;70%</td><td>Strong buying pressure</td></tr>
-<tr><td><strong>Soft Green</strong></td><td>Accumulation 50-70%</td><td>Moderate buying</td></tr>
-<tr><td><strong>Bright Red</strong></td><td>Distribution &gt;70%</td><td>Strong selling pressure</td></tr>
-<tr><td><strong>Soft Red</strong></td><td>Distribution 50-70%</td><td>Moderate selling</td></tr>
-<tr><td><strong>Gold/Amber</strong></td><td>Weakening regime</td><td>Caution - transition likely</td></tr>
-<tr><td><strong>Gray</strong></td><td>Neutral &lt;50%</td><td>No clear direction</td></tr>
+<tr><td><strong>Bright Green</strong></td><td>Buying &gt;70%</td><td>Strong buyers</td></tr>
+<tr><td><strong>Soft Green</strong></td><td>Buying 50-70%</td><td>Moderate buyers</td></tr>
+<tr><td><strong>Bright Red</strong></td><td>Selling &gt;70%</td><td>Strong sellers</td></tr>
+<tr><td><strong>Soft Red</strong></td><td>Selling 50-70%</td><td>Moderate sellers</td></tr>
+<tr><td><strong>Gold</strong></td><td>Weakening</td><td>Be careful</td></tr>
+<tr><td><strong>Gray</strong></td><td>Neutral</td><td>No clear direction</td></tr>
 </tbody>
 </table>
-<p>Bar intensity varies with regime strength, giving instant visual feedback on conviction.</p>
+<p>Brighter color = stronger signal.</p>
 
 <h3 id="regime-meter-table">Regime Meter Table<a class="headerlink" href="#regime-meter-table" title="Permanent link">&para;</a></h3>
-<p>The Regime Meter displays a compact 6-row table in the top-right corner:</p>
+<p>A small table in the corner shows 6 things at once:</p>
 <table>
-<thead><tr><th>Row</th><th>Shows</th><th>Example</th></tr></thead>
+<thead><tr><th>Row</th><th>What It Shows</th><th>Example</th></tr></thead>
 <tbody>
 <tr><td><strong>State</strong></td><td>Current regime</td><td>Accumulation, Distribution, Neutral</td></tr>
-<tr><td><strong>Strength</strong></td><td>Regime strength %</td><td>78%</td></tr>
-<tr><td><strong>Health</strong></td><td>Leading indicator status</td><td>✓ STRONG, ⚠️ FADING</td></tr>
-<tr><td><strong>Confirm</strong></td><td>Confirmation counter</td><td>↑4 (4 bars confirming)</td></tr>
-<tr><td><strong>Flow</strong></td><td>Flow direction</td><td>Bullish, Bearish, Mixed</td></tr>
-<tr><td><strong>Duration</strong></td><td>Bars in current regime</td><td>23 bars</td></tr>
+<tr><td><strong>Strength</strong></td><td>How strong (0-100%)</td><td>78%</td></tr>
+<tr><td><strong>Health</strong></td><td>Early warning status</td><td>✓ STRONG, ⚠️ FADING</td></tr>
+<tr><td><strong>Confirm</strong></td><td>Bars building</td><td>↑4 (4 bars)</td></tr>
+<tr><td><strong>Flow</strong></td><td>Buy/sell direction</td><td>Bullish, Bearish, Mixed</td></tr>
+<tr><td><strong>Duration</strong></td><td>How long in this regime</td><td>23 bars</td></tr>
 </tbody>
 </table>
-<p><strong>Reading the Meter:</strong> Green rows = healthy, Gold = caution, Red = warning. Check Health row first for early exit signals.</p>
+<p><strong>Quick tip:</strong> Check Health first — it warns you before exits trigger.</p>
 
 <h3 id="regime-strength">Regime Strength<a class="headerlink" href="#regime-strength" title="Permanent link">&para;</a></h3>
 <p><strong>Strength displayed as percentage (0-100%):</strong></p>
