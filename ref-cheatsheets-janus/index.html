@@ -1922,7 +1922,7 @@
 
 <button onclick="window.print()" class="print-pdf-button">🖨️ Print to PDF</button>
 
-<p><strong>One-page cheat sheet for all 50+ price levels</strong></p>
+<p><strong>One-page cheat sheet for all 60+ price levels</strong></p>
 
 <hr />
 
@@ -1975,7 +1975,7 @@
 
 <hr />
 
-<h2 id="all-50-level-types">📊 All 50+ Level Types</h2>
+<h2 id="all-60-level-types">📊 All 60+ Level Types</h2>
 
 <h3 id="daily-levels-5-types">Daily Levels (5 types)</h3>
 <ul>
@@ -2044,12 +2044,18 @@
 <li><strong>NAC</strong> - North American Session Close</li>
 </ul>
 
-<h3 id="vwap-lines-4-types">VWAP Lines (4 types)</h3>
+<h3 id="vwap-lines-12-types">VWAP Lines (12 types)</h3>
 <ul>
-<li><strong>DVWAP</strong> - Daily VWAP</li>
-<li><strong>WVWAP</strong> - Weekly VWAP</li>
-<li><strong>MVWAP</strong> - Monthly VWAP</li>
-<li><strong>PrevVWAP</strong> - Previous Period VWAP</li>
+<li><strong>dVWAP</strong> - Daily VWAP</li>
+<li><strong>wVWAP</strong> - Weekly VWAP</li>
+<li><strong>mVWAP</strong> - Monthly VWAP</li>
+<li><strong>qVWAP</strong> - Quarterly VWAP</li>
+<li><strong>yVWAP</strong> - Yearly VWAP ⭐ NEW</li>
+<li><strong>pdVWAP</strong> - Previous Day VWAP</li>
+<li><strong>pwVWAP</strong> - Previous Week VWAP</li>
+<li><strong>pmVWAP</strong> - Previous Month VWAP</li>
+<li><strong>pqVWAP</strong> - Previous Quarter VWAP</li>
+<li><strong>pyVWAP</strong> - Previous Year VWAP ⭐ NEW</li>
 </ul>
 
 <h3 id="vwap-standard-deviation-bands">VWAP Standard Deviation Bands ⭐ NEW</h3>
@@ -2063,13 +2069,27 @@
 </ul>
 <p><em>±1σ covers ~68% of price action, ±2σ covers ~95%. Use for mean reversion entries.</em></p>
 
-<h3 id="volume-profile-4-types">Volume Profile (4 types)</h3>
+<h3 id="volume-profile-15-types">Volume Profile (15 types)</h3>
 <ul>
-<li><strong>POC</strong> - Point of Control (highest volume price)</li>
-<li><strong>VAH</strong> - Value Area High (70% volume upper bound)</li>
-<li><strong>VAL</strong> - Value Area Low (70% volume lower bound)</li>
-<li><strong>DevPOC</strong> - Developing POC (real-time)</li>
+<li><strong>dPOC / dVAH / dVAL</strong> - Daily POC, Value Area High/Low</li>
+<li><strong>wPOC / wVAH / wVAL</strong> - Weekly POC, Value Area High/Low</li>
+<li><strong>mPOC / mVAH / mVAL</strong> - Monthly POC, Value Area High/Low</li>
+<li><strong>qPOC / qVAH / qVAL</strong> - Quarterly POC, Value Area High/Low ⭐ NEW</li>
+<li><strong>yPOC / yVAH / yVAL</strong> - Yearly POC, Value Area High/Low ⭐ NEW</li>
 </ul>
+
+<h3 id="naked-poc-npoc">Naked POC (nPOC) ⭐ NEW</h3>
+<p>Previous session POC levels that price hasn't touched yet. They act as "magnets".</p>
+<ul>
+<li><strong>dnPOC1, dnPOC2...</strong> - Daily Naked POCs (most recent = 1)</li>
+<li><strong>wnPOC1, wnPOC2...</strong> - Weekly Naked POCs</li>
+</ul>
+<p><strong>Settings:</strong></p>
+<ul>
+<li>Daily nPOC Count: 1-10 (default 5)</li>
+<li>Weekly nPOC Count: 1-5 (default 3)</li>
+</ul>
+<p><em>When price wicks through an nPOC, it's "filled" and removed. Unfilled nPOCs = targets.</em></p>
 
 <h3 id="market-structure-2-types">Market Structure (2 types)</h3>
 <ul>
