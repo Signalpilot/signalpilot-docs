@@ -2835,7 +2835,7 @@
 <tr><td>16</td><td><strong>Confluence Zones</strong></td><td>Auto-clustering settings, count label</td></tr>
 <tr><td>17</td><td><strong>Previous Periods</strong></td><td>PD, PW, PM, PQ, PY (O/H/L/Mid)</td></tr>
 <tr><td>18</td><td><strong>Distance Table</strong></td><td>Table position, sorting, display</td></tr>
-<tr><td>19</td><td><strong>Alerts</strong></td><td>48 selectable alerts (34 individual + 14 grouped)</td></tr>
+<tr><td>19</td><td><strong>Alerts</strong></td><td>50 selectable alerts (36 individual + 14 grouped)</td></tr>
 </tbody>
 </table>
 
@@ -2889,6 +2889,57 @@
 </tbody>
 </table>
 <p><strong>Location:</strong> Settings → Appearance → Label Style</p>
+
+<h3 id="visual-defaults-v10">Visual Defaults (v1.0 Changes)<a class="headerlink" href="#visual-defaults-v10" title="Permanent link">&para;</a></h3>
+<p><strong>Default Colors → Neutral Gray:</strong><br />
+All level colors now default to <strong>gray</strong> for a clean, professional look out of the box:</p>
+<ul>
+<li>HTF Levels, Sessions, Custom Sessions</li>
+<li>Opening Range, Gap, VWAP, Bands</li>
+<li>POC, VAH, VAL, nPOC</li>
+<li>Previous Periods, Fibonacci, Confluence Zone</li>
+</ul>
+<p><strong>Kept semantic colors:</strong></p>
+<ul>
+<li>Market Structure (blue/red for highs/lows, green/red for bull/bear)</li>
+<li>FVG (green demand, red supply)</li>
+<li>Killzones (distinct colors for bgcolor backgrounds)</li>
+</ul>
+<p><strong>Transparency Tiers:</strong></p>
+<table>
+<thead>
+<tr><th>Tier</th><th>Transparency</th><th>Usage</th></tr>
+</thead>
+<tbody>
+<tr><td>Primary</td><td>40%</td><td>POC, nPOC, VWAP, OR, Gap</td></tr>
+<tr><td>Secondary</td><td>55%</td><td>HTF, Sessions, PP, VAH/VAL, Fib</td></tr>
+<tr><td>Background</td><td>75%</td><td>VWAP Bands, Confluence Zone, Mitigated FVG</td></tr>
+</tbody>
+</table>
+<p><strong>Line Styles:</strong></p>
+<ul>
+<li>All lines now default to <strong>Dashed</strong> (was mixed Solid/Dashed)</li>
+<li>All line style inputs include <strong>Dotted</strong> option: <code>["Solid", "Dashed", "Dotted"]</code></li>
+</ul>
+
+<h3 id="default-toggles-v10">Default Toggles (v1.0 Changes)<a class="headerlink" href="#default-toggles-v10" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr><th>Setting</th><th>Old Default</th><th>New Default</th></tr>
+</thead>
+<tbody>
+<tr><td>Session Levels</td><td>ON</td><td><strong>OFF</strong></td></tr>
+<tr><td>Weekly H/L</td><td>OFF</td><td><strong>ON</strong></td></tr>
+<tr><td>Session H/L (AS/EU/NA)</td><td>OFF</td><td><strong>ON</strong> (when enabled)</td></tr>
+<tr><td>Label Combine %</td><td>0.1%</td><td><strong>0.15%</strong></td></tr>
+</tbody>
+</table>
+<p><strong>New default experience:</strong></p>
+<ul>
+<li>HTF ON → Shows Daily H/L + Weekly H/L (4 levels)</li>
+<li>Sessions OFF → Clean start, user opts in</li>
+<li>Market Structure ON → Compact labels</li>
+</ul>
 
 <h3 id="control-tooltips">Control Tooltips (Alert Info)<a class="headerlink" href="#control-tooltips" title="Permanent link">&para;</a></h3>
 <p>Each feature toggle in the Controls section now has a tooltip explaining what alerts are available. <strong>Hover over any toggle</strong> to see its alert info:</p>
@@ -3113,6 +3164,37 @@
 <p><strong>Quarterly &amp; Yearly Volume Profile:</strong><br />
 Identifies where the majority of trading volume occurred over longer periods. Use case: Institutional reference for position traders and macro analysis.</p>
 <p><strong>Example:</strong> Price at $69,000, POC at $67,000 → Pullback to POC observed (magnet effect).</p>
+<hr />
+<h3 id="naked-poc-npoc">🧲 Naked POC (nPOC)<a class="headerlink" href="#naked-poc-npoc" title="Permanent link">&para;</a></h3>
+<p><strong>What Displays:</strong><br />
+Lines labeled <code>dnPOC1</code>, <code>dnPOC2</code>, <code>wnPOC1</code>, etc.</p>
+<p><strong>What it is:</strong><br />
+Previous session POC levels that price hasn't touched yet. They act as "magnets" because high-volume areas tend to attract price back.</p>
+<p><strong>Settings:</strong></p>
+<table>
+<thead>
+<tr><th>Input</th><th>Default</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Daily nPOC</td><td>Off</td><td>Show previous daily POCs not yet touched</td></tr>
+<tr><td>Count</td><td>5</td><td>Number of daily nPOCs to track (1-10)</td></tr>
+<tr><td>Weekly nPOC</td><td>Off</td><td>Show previous weekly POCs not yet touched</td></tr>
+<tr><td>Count</td><td>3</td><td>Number of weekly nPOCs to track (1-5)</td></tr>
+<tr><td>nPOC Color</td><td>Gray</td><td>Color for nPOC lines</td></tr>
+</tbody>
+</table>
+<p><strong>How it works:</strong><br />
+1. When a new day/week starts, the previous session's POC is saved<br />
+2. Each saved POC is monitored for price touches<br />
+3. When price wicks through the level, the nPOC is "filled" and removed<br />
+4. Remaining nPOCs continue displaying until touched</p>
+<p><strong>Labels:</strong> <code>dnPOC1</code>, <code>dnPOC2</code>, etc. (most recent = 1, oldest = highest number)</p>
+<p><strong>Why it matters:</strong><br />
+- Naked POCs are unfilled magnets - price tends to return to them<br />
+- Multiple nPOCs at similar levels = stronger attraction zone<br />
+- When price fills an nPOC, it often reverses or consolidates</p>
+<p><strong>Use Case:</strong> Trade towards unfilled nPOCs as targets, or use them as S/R zones.</p>
+<p><strong>Example:</strong> Yesterday's POC at $67,500 wasn't touched today → Shows as <code>dnPOC1</code> → Price often gravitates back to fill it.</p>
 <hr />
 <h3 id="market-structure-swing-points-breaks">📈 Market Structure (Swing Points &amp; Breaks)<a class="headerlink" href="#market-structure-swing-points-breaks" title="Permanent link">&para;</a></h3>
 <p><strong>What Displays:</strong><br />
@@ -3594,10 +3676,10 @@ Interpretation: High confluence zone, stronger reactions observed
 <p><strong>Remember:</strong> Match level timeframes to your holding period—scalpers watch session levels, day traders watch daily levels, swing traders watch weekly/monthly. Using mismatched levels (daily levels on a 1-minute chart) creates noise and reduces effectiveness.</p>
 
 <hr />
-<h2 id="alert-configuration">🔔 Alert Configuration (48 Alerts)<a class="headerlink" href="#alert-configuration" title="Permanent link">&para;</a></h2>
-<p>Janus Atlas provides <strong>48 selectable alerts</strong> organized into two categories: <strong>Individual Alerts (34)</strong> for specific levels most traders actively trade around, and <strong>Grouped Alerts (14)</strong> for context levels grouped by category.</p>
+<h2 id="alert-configuration">🔔 Alert Configuration (50 Alerts)<a class="headerlink" href="#alert-configuration" title="Permanent link">&para;</a></h2>
+<p>Janus Atlas provides <strong>50 selectable alerts</strong> organized into two categories: <strong>Individual Alerts (36)</strong> for specific levels most traders actively trade around, and <strong>Grouped Alerts (14)</strong> for context levels grouped by category.</p>
 
-<h3 id="alerts-individual">Individual Alerts (34)<a class="headerlink" href="#alerts-individual" title="Permanent link">&para;</a></h3>
+<h3 id="alerts-individual">Individual Alerts (36)<a class="headerlink" href="#alerts-individual" title="Permanent link">&para;</a></h3>
 <p>Specific levels most traders actively trade around. Each fires for one exact level.</p>
 
 <h4>Previous Day (3)</h4>
@@ -3742,6 +3824,17 @@ Interpretation: High confluence zone, stronger reactions observed
 </tbody>
 </table>
 
+<h4>Naked POC (2)</h4>
+<table>
+<thead>
+<tr><th>Alert Name</th><th>Trigger</th></tr>
+</thead>
+<tbody>
+<tr><td><code>dnPOC • Daily Naked POC</code></td><td>Daily Naked POC Touched</td></tr>
+<tr><td><code>wnPOC • Weekly Naked POC</code></td><td>Weekly Naked POC Touched</td></tr>
+</tbody>
+</table>
+
 <h3 id="alerts-grouped">Grouped Alerts (14)<a class="headerlink" href="#alerts-grouped" title="Permanent link">&para;</a></h3>
 <p>Context levels grouped by category. One alert covers multiple related levels.</p>
 
@@ -3841,6 +3934,33 @@ Interpretation: High confluence zone, stronger reactions observed
 <p>For highest-probability setups, combine <strong>Janus Atlas (levels) + <a href="../pentarch-v10/">Pentarch</a> (timing) + <a href="../volume-oracle-v10/">Volume Oracle</a> (regime confirmation)</strong>. Look for 3+ Janus levels clustering in a zone, wait for <a href="../pentarch-v10/">Pentarch</a> signal, then confirm with aligned regime (Accumulation for longs, Distribution for shorts). This triple-confluence approach filters for only the strongest opportunities.</p>
 <p><strong>See also:</strong> <a href="../ref-workflow/">Complete Trading Workflow Guide</a> for detailed multi-indicator strategies.</p>
 </div>
+
+<hr />
+<h2 id="input-tooltips-reference">📝 Input Tooltips Reference<a class="headerlink" href="#input-tooltips-reference" title="Permanent link">&para;</a></h2>
+<p>Hover over these inputs in settings to see helpful descriptions:</p>
+<table>
+<thead>
+<tr><th>Input</th><th>Tooltip Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Killzones</td><td>Background shading for high-volume trading windows</td></tr>
+<tr><td>Distance Table</td><td>Shows nearest levels above/below current price</td></tr>
+<tr><td>Show Price on Labels</td><td>Append price to level labels (e.g. 'dH • 88500')</td></tr>
+<tr><td>Label Spacing</td><td>Vertical offset between stacked labels</td></tr>
+<tr><td>VP Resolution</td><td>Number of price bins for volume distribution</td></tr>
+<tr><td>OR Duration</td><td>How long after session open to track the OR</td></tr>
+<tr><td>Gap Min Size</td><td>Minimum gap size as % of price to display</td></tr>
+<tr><td>Mark Gap Fill</td><td>Show visual indicator when price fills the gap</td></tr>
+<tr><td>Confluence Min Levels</td><td>How many levels must cluster together</td></tr>
+<tr><td>Confluence Proximity</td><td>Maximum distance between levels to be clustered</td></tr>
+<tr><td>MS Pivot Lookback</td><td>Bars to look back for swing detection</td></tr>
+<tr><td>MS Min Swing</td><td>Minimum swing size as % to qualify as structure</td></tr>
+<tr><td>MS Swing Offset</td><td>Vertical offset for HH/HL/LH/LL labels</td></tr>
+<tr><td>MS Break Offset</td><td>Vertical offset for BOS/CHoCH labels</td></tr>
+<tr><td>FVG Max Count</td><td>Maximum number of FVG boxes to display</td></tr>
+<tr><td>Table Levels</td><td>Number of nearest levels in distance table</td></tr>
+</tbody>
+</table>
 
 <hr />
 <h2 id="common-mistakes-to-avoid">⚠️ Common Mistakes to Avoid<a class="headerlink" href="#common-mistakes-to-avoid" title="Permanent link">&para;</a></h2>
@@ -4060,7 +4180,7 @@ Interpretation: High confluence zone, stronger reactions observed
 <p><strong>A:</strong> A real-time overlay showing distance from current price to each enabled level. Helps quickly identify nearest support/resistance and plan entries based on level proximity.</p>
 
 <h3 id="q-how-many-alerts-are-available">Q: How many alerts are available?<a class="headerlink" href="#q-how-many-alerts-are-available" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> 48 selectable alerts organized into Individual Alerts (34) and Grouped Alerts (14). Individual alerts fire for specific levels most traders actively trade around. Grouped alerts cover multiple related levels efficiently. All under TradingView's 64-alert limit.</p>
+<p><strong>A:</strong> 50 selectable alerts organized into Individual Alerts (36) and Grouped Alerts (14). Individual alerts fire for specific levels most traders actively trade around. Grouped alerts cover multiple related levels efficiently. All under TradingView's 64-alert limit.</p>
 
 <h3 id="q-why-does-my-chart-look-compressed">Q: Why does my chart look compressed when I enable Quarterly/Yearly levels?<a class="headerlink" href="#q-why-does-my-chart-look-compressed" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> Quarterly and Yearly highs/lows can be far from current price. TradingView auto-scales the chart to fit all visible levels, which compresses price action. For best results, use Quarterly/Yearly levels on 4H+ timeframe charts.</p>
@@ -4287,7 +4407,7 @@ Interpretation: High confluence zone, stronger reactions observed
 </thead>
 <tbody>
 <tr><td><strong>Plot Count</strong></td><td>50</td><td>Within TradingView's 64-plot limit per indicator</td></tr>
-<tr><td><strong>Total Alerts</strong></td><td>48</td><td>34 individual + 14 grouped alerts</td></tr>
+<tr><td><strong>Total Alerts</strong></td><td>50</td><td>36 individual + 14 grouped alerts</td></tr>
 <tr><td><strong>Total Lines</strong></td><td>~1,950</td><td>Approximate code lines</td></tr>
 <tr><td><strong>Level Types</strong></td><td>50+</td><td>Across all categories</td></tr>
 <tr><td><strong>Anchor Options</strong></td><td>20</td><td>For Fibonacci sets</td></tr>
