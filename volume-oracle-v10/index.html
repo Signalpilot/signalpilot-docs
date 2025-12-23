@@ -2184,7 +2184,7 @@
       <li><strong>Volume Bars</strong> — Colored by market regime: Green (Accumulation), Red (Distribution), Gray (Neutral), Gold (Weakening)</li>
       <li><strong>Background Tint</strong> — Light green or red showing current market regime</li>
       <li><strong>Signal Labels</strong> — ↑ (BULL) or ↓ (BEAR) with quality stars (⭐⭐⭐)</li>
-      <li><strong>Regime Meter</strong> — Table showing regime state, strength %, and duration</li>
+      <li><strong>Regime Meter</strong> — Compact 6-row table showing state, strength, health, confirmation, flow, and duration</li>
       <li><strong>HTF Table</strong> — Higher timeframe confirmation status (optional)</li>
     </ul>
 
@@ -2561,6 +2561,83 @@ graph LR
 - Current regime losing strength<br />
 - Divergence between price and volume<br />
 - Potential regime change approaching</p>
+
+<h3 id="regime-confirmation">Regime Confirmation<a class="headerlink" href="#regime-confirmation" title="Permanent link">&para;</a></h3>
+<p><strong>Smarter Regime Detection:</strong> Regime changes require <strong>2 consecutive bars</strong> above threshold AND <strong>above-average volume</strong> to confirm. This reduces false flips by filtering out noise and low-conviction moves.</p>
+<p><strong>Why It Matters:</strong> Multi-bar confirmation + volume validation = fewer false signals.</p>
+
+<h3 id="multi-level-warning-system">Multi-Level Warning System<a class="headerlink" href="#multi-level-warning-system" title="Permanent link">&para;</a></h3>
+<p>Four-stage warning progression for regime health:</p>
+<table>
+<thead><tr><th>Status</th><th>Meaning</th><th>Action</th></tr></thead>
+<tbody>
+<tr><td><strong>✓ STRONG</strong></td><td>Regime is healthy</td><td>Trade with confidence</td></tr>
+<tr><td><strong>📉 FADING</strong></td><td>Early warning — regime losing momentum</td><td>Tighten stops</td></tr>
+<tr><td><strong>⚡ WEAKENING</strong></td><td>Moderate warning — prepare for potential flip</td><td>Consider reducing position</td></tr>
+<tr><td><strong>⚠️ CRITICAL</strong></td><td>Urgent — regime about to flip</td><td>Exit warning triggered</td></tr>
+</tbody>
+</table>
+
+<h3 id="health-status-leading-indicators">Health Status (Leading Indicators)<a class="headerlink" href="#health-status-leading-indicators" title="Permanent link">&para;</a></h3>
+<p>New "Health" indicator combines three leading signals that detect problems <strong>before</strong> traditional exits trigger:</p>
+<table>
+<thead><tr><th>Indicator</th><th>What It Detects</th></tr></thead>
+<tbody>
+<tr><td><strong>Momentum Fading</strong></td><td>Price velocity is decelerating</td></tr>
+<tr><td><strong>Flow Deteriorating</strong></td><td>Directional consensus weakening</td></tr>
+<tr><td><strong>Volume Drying Up</strong></td><td>Participation dropping significantly</td></tr>
+</tbody>
+</table>
+<p><strong>Health Status Display:</strong></p>
+<table>
+<thead><tr><th>Status</th><th>Meaning</th><th>Warnings Active</th></tr></thead>
+<tbody>
+<tr><td><strong>🟢 HEALTHY</strong></td><td>No problems detected</td><td>0 warnings</td></tr>
+<tr><td><strong>🟡 WATCH</strong></td><td>Minor concern</td><td>1 warning</td></tr>
+<tr><td><strong>🟠 CAUTION</strong></td><td>Multiple concerns</td><td>2 warnings</td></tr>
+<tr><td><strong>🔴 DANGER</strong></td><td>Serious deterioration</td><td>3+ warnings</td></tr>
+</tbody>
+</table>
+
+<h3 id="confirmation-counter">Confirmation Counter<a class="headerlink" href="#confirmation-counter" title="Permanent link">&para;</a></h3>
+<p>Shows how many consecutive bars have been building toward a regime change:</p>
+<ul>
+<li><code>↑4</code> = 4 bars confirming accumulation</li>
+<li><code>↓2</code> = 2 bars confirming distribution</li>
+<li><code>...</code> = No confirmation building</li>
+</ul>
+<p>This helps you understand regime stability at a glance.</p>
+
+<h3 id="volume-bar-coloring">Volume Bar Coloring<a class="headerlink" href="#volume-bar-coloring" title="Permanent link">&para;</a></h3>
+<p>Volume bars show <strong>granular colors</strong> based on regime strength:</p>
+<table>
+<thead><tr><th>Bar Color</th><th>Condition</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td><strong>Bright Green</strong></td><td>Accumulation &gt;70%</td><td>Strong buying pressure</td></tr>
+<tr><td><strong>Soft Green</strong></td><td>Accumulation 50-70%</td><td>Moderate buying</td></tr>
+<tr><td><strong>Bright Red</strong></td><td>Distribution &gt;70%</td><td>Strong selling pressure</td></tr>
+<tr><td><strong>Soft Red</strong></td><td>Distribution 50-70%</td><td>Moderate selling</td></tr>
+<tr><td><strong>Gold/Amber</strong></td><td>Weakening regime</td><td>Caution - transition likely</td></tr>
+<tr><td><strong>Gray</strong></td><td>Neutral &lt;50%</td><td>No clear direction</td></tr>
+</tbody>
+</table>
+<p>Bar intensity varies with regime strength, giving instant visual feedback on conviction.</p>
+
+<h3 id="regime-meter-table">Regime Meter Table<a class="headerlink" href="#regime-meter-table" title="Permanent link">&para;</a></h3>
+<p>The Regime Meter displays a compact 6-row table in the top-right corner:</p>
+<table>
+<thead><tr><th>Row</th><th>Shows</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><strong>State</strong></td><td>Current regime</td><td>Accumulation, Distribution, Neutral</td></tr>
+<tr><td><strong>Strength</strong></td><td>Regime strength %</td><td>78%</td></tr>
+<tr><td><strong>Health</strong></td><td>Leading indicator status</td><td>✓ STRONG, ⚠️ FADING</td></tr>
+<tr><td><strong>Confirm</strong></td><td>Confirmation counter</td><td>↑4 (4 bars confirming)</td></tr>
+<tr><td><strong>Flow</strong></td><td>Flow direction</td><td>Bullish, Bearish, Mixed</td></tr>
+<tr><td><strong>Duration</strong></td><td>Bars in current regime</td><td>23 bars</td></tr>
+</tbody>
+</table>
+<p><strong>Reading the Meter:</strong> Green rows = healthy, Gold = caution, Red = warning. Check Health row first for early exit signals.</p>
+
 <h3 id="regime-strength">Regime Strength<a class="headerlink" href="#regime-strength" title="Permanent link">&para;</a></h3>
 <p><strong>Strength displayed as percentage (0-100%):</strong></p>
 <table>
@@ -2802,7 +2879,7 @@ Position Size: $150 ÷ $3.27 = 46 shares
 <p><em>This example demonstrates integrated three-system analysis. Individual interpretation and outcomes vary.</em></p>
 <hr />
 <h2 id="alert-configuration">🔔 Alert Configuration<a class="headerlink" href="#alert-configuration" title="Permanent link">&para;</a></h2>
-<p><strong>Available Alerts (13 Total):</strong></p>
+<p><strong>Available Alerts (17 Total):</strong></p>
 
 <h3 id="entry-alerts">Entry Alerts</h3>
 <table>
@@ -2884,6 +2961,34 @@ Position Size: $150 ÷ $3.27 = 46 shares
 </tbody>
 </table>
 
+<h3 id="health-alerts">Health Alerts (Leading Indicators)</h3>
+<table>
+<thead>
+<tr>
+<th>Alert Name</th>
+<th>When It Fires</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>📉 Momentum Fading</strong></td>
+<td>Price momentum declining while regime active</td>
+</tr>
+<tr>
+<td><strong>📉 Flow Deteriorating</strong></td>
+<td>Buy/sell flow ratio weakening</td>
+</tr>
+<tr>
+<td><strong>📉 Volume Drying Up</strong></td>
+<td>Volume declining below average</td>
+</tr>
+<tr>
+<td><strong>🟠 Multiple Warnings</strong></td>
+<td>2+ health indicators flagged simultaneously</td>
+</tr>
+</tbody>
+</table>
+
 <h3 id="htf-alerts">HTF Alerts</h3>
 <table>
 <thead>
@@ -2937,7 +3042,7 @@ Size: 47 shares | Risk: $150</code></pre>
     <li><strong>Risk Management:</strong> Automatic calculation of Entry, Stop, T1, T2 levels with position sizing based on your configured risk amount (Position Size = Risk ÷ Stop Distance)</li>
     <li><strong>HTF Confirmation:</strong> Checks if higher timeframe regime agrees with signal direction for additional confluence</li>
     <li><strong>Strategy Modes:</strong> Three trading approaches (Trend Following, Mean Reversion, Hybrid) to match different market conditions</li>
-    <li><strong>Comprehensive Alert System:</strong> 13 alerts across 4 categories (Entry, Position, Regime, HTF) with actionable trade data including quality score, regime strength, entry/stop/target levels, position size, and risk amount</li>
+    <li><strong>Comprehensive Alert System:</strong> 17 alerts across 5 categories (Entry, Position, Regime, Health, HTF) with actionable trade data including quality score, regime strength, entry/stop/target levels, position size, and risk amount</li>
   </ul>
   <p><strong>Next Steps:</strong> Explore <a href="../plutus-flow-v10/">Plutus Flow v1.0</a> for alternative flow analysis methods, or see <a href="../how-to-alerts/">Alert Setup Guide</a> to configure volume-based notifications.</p>
 </div>
@@ -3310,7 +3415,7 @@ Size: 47 shares | Risk: $150</code></pre>
 <h3 id="q-can-i-customize-risk-levels">Q: Can I customize the risk levels?<a class="headerlink" href="#q-can-i-customize-risk-levels" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> Yes. Configure Risk Amount (dollars per trade) and R:R Ratio (for target calculation) in settings. Entry, Stop, T1, T2 are then calculated automatically.</p>
 <h3 id="q-how-do-alerts-work">Q: How do alerts work?<a class="headerlink" href="#q-how-do-alerts-work" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> 13 alerts across 4 categories: Entry (BULL/BEAR signals), Position (T1 hit, breakeven), Regime (changes, weakening), HTF (alignment changes). Alerts include quality score, regime strength, and trade levels.</p>
+<p><strong>A:</strong> 17 alerts across 5 categories: Entry (BULL/BEAR signals), Position (T1 hit, breakeven), Regime (changes, weakening), Health (momentum fading, flow deteriorating, volume drying up, multiple warnings), HTF (alignment changes). Alerts include quality score, regime strength, and trade levels.</p>
 <h3 id="q-does-volume-oracle-work-on-all-assets">Q: Does Volume Oracle work on all assets?<a class="headerlink" href="#q-does-volume-oracle-work-on-all-assets" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> Yes, on assets with real volume data (stocks, futures, crypto). For forex spot (tick volume only), regime detection is less reliable - consider using Harmonic Oscillator instead.</p>
 <hr />
