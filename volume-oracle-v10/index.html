@@ -939,6 +939,54 @@
 
 </li>
           <li class="md-nav__item">
+  <a href="#regime-confirmation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regime Confirmation
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#multi-level-warning-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-Level Warning System
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#health-status-leading-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Health Status (Leading Indicators)
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#confirmation-counter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confirmation Counter
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#volume-bar-coloring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Volume Bar Coloring
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#regime-meter-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regime Meter Table
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
   <a href="#regime-strength" class="md-nav__link">
     <span class="md-ellipsis">
       Regime Strength
@@ -1794,6 +1842,54 @@
 
 </li>
           <li class="md-nav__item">
+  <a href="#regime-confirmation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regime Confirmation
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#multi-level-warning-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-Level Warning System
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#health-status-leading-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Health Status (Leading Indicators)
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#confirmation-counter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confirmation Counter
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#volume-bar-coloring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Volume Bar Coloring
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#regime-meter-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regime Meter Table
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
   <a href="#regime-strength" class="md-nav__link">
     <span class="md-ellipsis">
       Regime Strength
@@ -2258,14 +2354,16 @@ graph LR
 
     subgraph Output[Chart Display]
         direction TB
-        O1[Background Colors]
+        O1[Background Colors + Regime Meter]
         O2[BULL/BEAR Labels]
         O3[Entry/Stop/Targets]
         O4[HTF Status]
         O5[Mode Indicator]
+        O6[Health Status + Alerts]
     end
 
     RD --> O1
+    RD --> O6
     SG --> O2
     RM --> O3
     HTF --> O4
@@ -2280,7 +2378,7 @@ graph LR
     style SM fill:#ff9800,color:#fff,stroke:#f57c00
     </div>
     <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.85;">
-      <strong>How it works:</strong> Regime Detection identifies market phase. Signal Generation fires BULL/BEAR signals with quality ratings. Risk Management calculates position size and levels. HTF Confirmation validates against higher timeframe. Strategy Modes adapt to market conditions.
+      <strong>How it works:</strong> Regime Detection identifies market phase with Health Status leading indicators and Confirmation Counter. Signal Generation fires BULL/BEAR signals with quality ratings. Risk Management calculates position size and levels. HTF Confirmation validates against higher timeframe. Strategy Modes adapt to market conditions.
     </p>
   </div>
 </div>
