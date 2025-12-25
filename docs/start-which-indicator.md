@@ -398,7 +398,7 @@ graph TD
 **Still unsure?**
 - Compare all indicators: [Indicator Comparison](ref-comparison/indicator-comparison.md)
 - Check system requirements: [System Requirements](about-system-requirements.md)
-- Read the FAQ: [FAQ](about-faq/index.html)
+- Read the FAQ: [FAQ](../about-faq/)
 
 ---
 

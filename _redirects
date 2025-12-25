@@ -1,0 +1,21 @@
+# Signal Pilot Docs - URL Redirects
+# These redirects fix 404 errors from Google Search Console
+
+# Old URL patterns that have been restructured or removed
+/start-quickstart/*               /start-quick/                     301
+/start-quickstart                 /start-quick/                     301
+
+# Nested FAQ path that was incorrectly linked
+/start-which-indicator/about-faq/*    /about-faq/                   301
+/start-which-indicator/about-faq      /about-faq/                   301
+
+# Key levels suite - redirect to Janus Atlas (the levels indicator)
+/sp-key-levels-suite/*            /janus-atlas-v10/                 301
+/sp-key-levels-suite              /janus-atlas-v10/                 301
+
+# Compliance language guide - redirect to FAQ (contains compliance info)
+/compliance-language-guide/*      /about-faq/                       301
+/compliance-language-guide        /about-faq/                       301
+
+# Old configuration recipes directory path
+/ref-configuration-recipes/CONTENT.md    /ref-configuration-recipes/   301
