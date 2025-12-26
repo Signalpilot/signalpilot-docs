@@ -545,7 +545,7 @@ Feeling stuck? You can switch paths:
 **Other Resources:**
 - [Indicator Comparison Guide](../ref-comparison/indicator-comparison.md)
 - [Glossary](../ref-glossary/index.md)
-- [Quick Start Guide](../start-quickstart/index.md)
+- [Quick Start Guide](../../start-quick/)
 
 ---
 

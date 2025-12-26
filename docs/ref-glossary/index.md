@@ -572,7 +572,7 @@ Comprehensive definitions of terms used across Signal Pilot indicators and docum
 
 - [Indicator Comparison Guide](../ref-comparison/indicator-comparison.md) - Choose the right indicator
 - [Learning Paths](../start-learning-path/index.md) - Structured learning roadmap
-- [Quick Start Guide](../start-quickstart/index.md) - Get started in 5 minutes
+- [Quick Start Guide](../../start-quick/) - Get started in 5 minutes
 - [Workflow Examples](../ref-workflow/index.md) - Real-world usage scenarios
 
 ---
