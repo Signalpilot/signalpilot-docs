@@ -2243,9 +2243,9 @@
     <p><strong>Beginner Starting Point:</strong></p>
     <ul>
       <li><strong>Week 1:</strong> Just observe the OBV line. Notice if it's trending up or down.</li>
-      <li><strong>Week 2:</strong> Watch the colored ribbons—see how they change from green to red and back.</li>
-      <li><strong>Week 3:</strong> Start noticing divergence labels when they appear.</li>
-      <li><strong>Week 4+:</strong> Experiment with different smoothing levels in settings (Level 3 is default and recommended).</li>
+      <li><strong>Week 2:</strong> Watch the colored ribbon—see how it changes from green to red and back.</li>
+      <li><strong>Week 3:</strong> Start noticing divergence labels (Bull Div, Bear Div) when they appear.</li>
+      <li><strong>Week 4+:</strong> Watch for cross signals (green/red dots) and extreme zone exits (yellow dots).</li>
     </ul>
   </div>
 </div>
@@ -2261,57 +2261,61 @@
   <div class="sp-callout__icon">📊</div>
   <div class="sp-callout__content">
     <h4>How Plutus Flow Works</h4>
-    <p style="margin-bottom: 1rem;">Three-layer analysis of On-Balance Volume:</p>
+    <p style="margin-bottom: 1rem;">Four-layer analysis of On-Balance Volume:</p>
     <div class="mermaid">
 graph TD
     Input[📊 Price & Volume Data] --> OBV[PLUTUS FLOW<br/>On-Balance Volume Analysis]
 
-    OBV --> Layer1[LAYER 1: OBV CALCULATION<br/>Cumulative Volume Tracking]
+    OBV --> Layer1[LAYER 1: OBV LINE<br/>Cumulative Volume Tracking]
 
-    Layer1 --> Smooth{Adaptive Smoothing<br/>User Configurable}
+    Layer1 --> Layer2[LAYER 2: TREND RIBBON<br/>OBV vs 20-SMA Basis]
 
-    Smooth -->|Fast Response| S1[Level 1-2<br/>More Signals<br/>Higher Sensitivity]
-    Smooth -->|Balanced| S2[Level 3 ⭐<br/>Default Setting<br/>Recommended]
-    Smooth -->|Slow Response| S3[Level 4-5<br/>Clean Trends<br/>Lower Noise]
+    Layer2 --> RibbonColor{Ribbon Color}
+    RibbonColor -->|OBV > Basis| Green[🟢 Green Ribbon<br/>Bullish Flow]
+    RibbonColor -->|OBV < Basis| Red[🔴 Red Ribbon<br/>Bearish Flow]
 
-    S1 --> Layer2[LAYER 2: TREND RIBBONS<br/>Color-Coded Visualization]
-    S2 --> Layer2
-    S3 --> Layer2
+    Layer2 --> Layer3[LAYER 3: STATISTICAL BANDS<br/>±2σ Extreme Zones]
 
-    Layer2 --> Ribbons[🟢 Green = Bullish Trend<br/>🔴 Red = Bearish Trend<br/>Visual Context Layer]
+    Layer3 --> Signals{Signal Dots}
+    Signals -->|Cross| CrossDots[🟢 Cross Up / 🔴 Cross Down<br/>OBV crossed basis]
+    Signals -->|Breach| BreachDots[⚪ White Dot<br/>Entered extreme zone]
+    Signals -->|Exit| ExitDots[🟡 Yellow Dot<br/>Left extreme zone]
 
-    Ribbons --> Layer3[LAYER 3: DIVERGENCE DETECTION<br/>Price vs OBV Analysis]
+    Layer3 --> Layer4[LAYER 4: DIVERGENCE DETECTION<br/>Price vs OBV Disagreement]
 
-    Layer3 --> Output[📈 Complete Display<br/>OBV Line + Ribbons + Labels]
+    Layer4 --> DivLabels[Bull Div / Bear Div<br/>Bull Hid / Bear Hid]
 
     style Input fill:#37474f,color:#fff,stroke:#263238,stroke-width:3px
     style OBV fill:#ff5722,color:#fff,stroke:#e64a19,stroke-width:3px
     style Layer1 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:3px
-    style Smooth fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:3px
     style Layer2 fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:3px
-    style Layer3 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:3px
-    style Output fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:4px
-    style S2 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:3px
+    style Layer3 fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:3px
+    style Layer4 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:3px
+    style DivLabels fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
     </div>
     <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
-      <strong>How to read:</strong> Data flows top to bottom through 3 layers. Smoothing level (1-5) adjusts sensitivity at Layer 1. Level 3 (⭐) is the default balanced setting.
+      <strong>How to read:</strong> Data flows through 4 layers. Ribbon shows OBV vs 20-SMA. Dots signal crossovers and extreme zone events. Labels show divergences.
     </p>
   </div>
 </div>
 
-<p>Plutus Flow calculates On-Balance Volume and adds three analytical layers:</p>
+<p>Plutus Flow calculates On-Balance Volume and adds four analytical layers:</p>
 <p><strong>Layer 1: OBV Line</strong><br />
 - Classic OBV calculation (cumulative volume based on price direction)<br />
 - Displays as primary line in indicator panel<br />
 - Rising OBV = accumulation, Falling OBV = distribution</p>
-<p><strong>Layer 2: Trend Ribbons</strong><br />
-- Moving averages of OBV create colored ribbon<br />
-- Green ribbon = bullish volume trend<br />
-- Red ribbon = bearish volume trend<br />
-- Provides visual context for OBV direction</p>
-<p><strong>Layer 3: Divergence Detection</strong><br />
+<p><strong>Layer 2: Trend Ribbon</strong><br />
+- OBV line compared to 20-period SMA basis<br />
+- Green ribbon = OBV above basis (bullish flow)<br />
+- Red ribbon = OBV below basis (bearish flow)<br />
+- Cross dots appear when OBV crosses the basis</p>
+<p><strong>Layer 3: Statistical Bands (±2σ)</strong><br />
+- Upper/lower bands at ±2 standard deviations<br />
+- White dots = entered extreme zone (breach)<br />
+- Yellow dots = left extreme zone (exit signal)</p>
+<p><strong>Layer 4: Divergence Detection</strong><br />
 - Automatically identifies price-OBV divergences<br />
-- Labels appear: "Bull Div" or "Bear Div"<br />
+- Labels: Bull Div, Bear Div, Bull Hid, Bear Hid<br />
 - Highlights when price and volume disagree</p>
 <p><strong>Display Location:</strong> Separate panel below price chart</p>
 <p><strong>Timeframe Compatibility:</strong> Works on all timeframes.</p>
