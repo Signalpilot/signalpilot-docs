@@ -245,23 +245,90 @@ article img {
 .mermaid {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  width: 100%;
+  min-height: 300px;
 }
 
-@media screen and (max-width: 768px) {
+.mermaid svg {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  min-width: 280px;
+}
+
+/* Desktop and large tablets */
+@media screen and (min-width: 1025px) {
+  .mermaid svg {
+    min-height: 400px;
+  }
+}
+
+/* Tablets */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .mermaid {
-    font-size: 12px;
+    font-size: 14px;
     padding: 1rem 0;
   }
 
   .mermaid svg {
-    max-width: 100%;
-    height: auto;
+    min-height: 350px;
   }
 }
 
+/* Small tablets and large phones */
+@media screen and (max-width: 768px) {
+  .mermaid {
+    font-size: 13px;
+    padding: 1rem 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+
+  .mermaid svg {
+    min-width: 500px;
+    min-height: 320px;
+  }
+
+  /* Allow pinch-to-zoom on mobile for diagrams */
+  .sp-callout .mermaid {
+    touch-action: pan-x pan-y pinch-zoom;
+  }
+}
+
+/* Small phones */
 @media screen and (max-width: 480px) {
   .mermaid {
-    font-size: 10px;
+    font-size: 12px;
+    padding: 0.75rem 0;
+    margin: 0 -0.5rem;
+    width: calc(100% + 1rem);
+  }
+
+  .mermaid svg {
+    min-width: 450px;
+    min-height: 300px;
+  }
+
+  /* Add scroll indicator for diagrams */
+  .sp-callout .mermaid::after {
+    content: "← Scroll to see full diagram →";
+    display: block;
+    text-align: center;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 8px 0 0 0;
+    font-style: italic;
+  }
+}
+
+/* Very small phones (280-360px) */
+@media screen and (max-width: 360px) {
+  .mermaid {
+    font-size: 11px;
+  }
+
+  .mermaid svg {
+    min-width: 400px;
   }
 }
 
