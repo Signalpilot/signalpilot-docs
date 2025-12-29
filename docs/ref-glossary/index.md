@@ -2,11 +2,6 @@
 
 Comprehensive definitions of terms used across Signal Pilot indicators and documentation.
 
-<div class="admonition tip" style="background: linear-gradient(135deg, rgba(6, 182, 212, 0.15), rgba(139, 92, 246, 0.15)); border-left: 4px solid #06b6d4;">
-<p class="admonition-title" style="color: #06b6d4; font-weight: 600;">📱 Looking for the Complete Visual Guide?</p>
-<p><a href="complete-glossary/" style="color: #06b6d4; font-weight: 600; text-decoration: none;">→ Complete Glossary</a> — Every indicator, visual element, color, signal, and trading term with mobile-friendly tables and quick reference cards. Perfect for learning and explaining concepts.</p>
-</div>
-
 ---
 
 ## 🔤 Quick Navigation
