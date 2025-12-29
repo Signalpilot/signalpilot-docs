@@ -2036,31 +2036,46 @@
 
 <hr />
 
-<h2>⚙️ Recommended Settings</h2>
+<h2>⚙️ Settings (Only 5)</h2>
 
-<h3>Smoothing Level 1-2 (Fast Response)</h3>
-<ul>
-<li>More sensitive to changes</li>
-<li>Divergences detected earlier</li>
-<li>More noise, more false signals</li>
-<li>Best for: Scalping, fast timeframes (1m-15m)</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Setting</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SP: Calculation</td>
+<td>HTF timeframe</td>
+<td>blank</td>
+</tr>
+<tr>
+<td>SP: Calculation</td>
+<td>HTF trend filter</td>
+<td>blank</td>
+</tr>
+<tr>
+<td>SP: Divergence</td>
+<td>Min price swing (x ATR14)</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>SP: Visuals</td>
+<td>Show divergence labels</td>
+<td>ON</td>
+</tr>
+<tr>
+<td>SP: Visuals</td>
+<td>Show extreme zone exits</td>
+<td>ON</td>
+</tr>
+</tbody>
+</table>
 
-<h3>Smoothing Level 3 (Balanced - Default) ⭐</h3>
-<ul>
-<li>Good balance of sensitivity vs noise</li>
-<li>Recommended for most traders</li>
-<li>Clear divergence signals</li>
-<li>Best for: Day trading, swing trading (1H-Daily)</li>
-</ul>
-
-<h3>Smoothing Level 4-5 (Clean Trends)</h3>
-<ul>
-<li>Very smooth OBV line</li>
-<li>Fewer divergences, higher quality</li>
-<li>Less responsive to short-term moves</li>
-<li>Best for: Position trading, Weekly charts</li>
-</ul>
+<p><strong>Default settings work for most traders.</strong></p>
 
 <hr />
 
@@ -2076,19 +2091,18 @@
 <h2>🔧 Troubleshooting</h2>
 
 <p><strong>"OBV line very choppy"</strong><br>
-→ Increase smoothing level (try Level 4 or 5)<br>
 → Asset may have erratic volume<br>
 → Use higher timeframe for cleaner signal</p>
 
 <p><strong>"No divergence signals appearing"</strong><br>
 → Divergences are rare (normal)<br>
 → Price and volume are in agreement (healthy trend)<br>
-→ Lower smoothing level for earlier detection</p>
+→ Check "Show divergence labels" is ON in settings</p>
 
 <p><strong>"Divergence appeared but no reversal"</strong><br>
 → Divergences show weakness, not guaranteed reversals<br>
 → Combine with Pentarch/Janus for confirmation<br>
-→ Wait for trend ribbons to change color</p>
+→ Wait for cross signal (green/red dot) as confirmation</p>
 
 <hr />
 
@@ -2106,12 +2120,12 @@
 <tr>
 <td>1m-5m</td>
 <td>⚠️ Noisy</td>
-<td>Choppy OBV, use Level 1-2 smoothing</td>
+<td>Choppy OBV, use HTF filter</td>
 </tr>
 <tr>
 <td>15m</td>
 <td>✅ Good</td>
-<td>Day trading, Level 3 smoothing works well</td>
+<td>Day trading, clear signals</td>
 </tr>
 <tr>
 <td>1H</td>
@@ -2154,8 +2168,9 @@
 
 <p><strong>OBV (On-Balance Volume):</strong> Cumulative volume indicator showing buying vs selling pressure<br>
 <strong>Divergence:</strong> When price and OBV move in opposite directions (early reversal signal)<br>
-<strong>Trend Ribbons:</strong> Background color showing current volume trend direction<br>
-<strong>Smoothing Levels:</strong> 1-5 scale adjusting OBV sensitivity (3 = default)</p>
+<strong>Trend Ribbon:</strong> Green = OBV above 20-SMA (bullish), Red = OBV below 20-SMA (bearish)<br>
+<strong>Cross Signals:</strong> Green dot = OBV crossed above basis, Red dot = OBV crossed below<br>
+<strong>Extreme Zones:</strong> White dot = entered ±2σ zone, Yellow dot = exited zone (actionable)</p>
 
 <hr />
 

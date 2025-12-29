@@ -2415,36 +2415,36 @@
 <table>
 <thead>
 <tr>
+<th>Group</th>
 <th>Setting</th>
-<th>Range</th>
 <th>Default</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>OBV Smoothing</strong></td>
-<td>1-50</td>
-<td>1 (raw)</td>
+<td><strong>SP: Calculation</strong></td>
+<td>HTF timeframe</td>
+<td>blank</td>
 </tr>
 <tr>
-<td><strong>Divergence Lookback</strong></td>
-<td>10-100 bars</td>
-<td>50 bars</td>
+<td><strong>SP: Calculation</strong></td>
+<td>HTF trend filter</td>
+<td>blank</td>
 </tr>
 <tr>
-<td><strong>Sensitivity</strong></td>
-<td>Low, Medium, High</td>
-<td>Medium</td>
+<td><strong>SP: Divergence</strong></td>
+<td>Min price swing (x ATR14)</td>
+<td>0.0</td>
 </tr>
 <tr>
-<td><strong>Display Mode</strong></td>
-<td>Line, Histogram, Both</td>
-<td>Line</td>
+<td><strong>SP: Visuals</strong></td>
+<td>Show divergence labels</td>
+<td>ON</td>
 </tr>
 <tr>
-<td><strong>Divergence Lines</strong></td>
-<td>Show/Hide</td>
-<td>Enabled</td>
+<td><strong>SP: Visuals</strong></td>
+<td>Show extreme zone exits</td>
+<td>ON</td>
 </tr>
 </tbody>
 </table>
@@ -2516,30 +2516,50 @@
 <table>
 <thead>
 <tr>
-<th>Alert Type</th>
-<th>Trigger Condition</th>
+<th>Alert Name</th>
+<th>Trigger</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Bullish Regular Divergence</td>
-<td>Lower low in price, higher low in OBV</td>
+<td>Cross Up</td>
+<td>OBV crosses above basis</td>
 </tr>
 <tr>
-<td>Bearish Regular Divergence</td>
-<td>Higher high in price, lower high in OBV</td>
+<td>Cross Down</td>
+<td>OBV crosses below basis</td>
 </tr>
 <tr>
-<td>Bullish Hidden Divergence</td>
-<td>Higher low in price, lower low in OBV</td>
+<td>Breach +2s</td>
+<td>Flow enters overbought zone</td>
 </tr>
 <tr>
-<td>Bearish Hidden Divergence</td>
-<td>Lower high in price, higher high in OBV</td>
+<td>Breach -2s</td>
+<td>Flow enters oversold zone</td>
 </tr>
 <tr>
-<td>OBV Trend Change</td>
-<td>OBV crosses zero or changes slope significantly</td>
+<td>Exit +2s</td>
+<td>Flow leaves overbought zone</td>
+</tr>
+<tr>
+<td>Exit -2s</td>
+<td>Flow leaves oversold zone</td>
+</tr>
+<tr>
+<td>Bull Div</td>
+<td>Regular bullish divergence detected</td>
+</tr>
+<tr>
+<td>Bear Div</td>
+<td>Regular bearish divergence detected</td>
+</tr>
+<tr>
+<td>Bull Hid</td>
+<td>Hidden bullish divergence detected</td>
+</tr>
+<tr>
+<td>Bear Hid</td>
+<td>Hidden bearish divergence detected</td>
 </tr>
 </tbody>
 </table>
