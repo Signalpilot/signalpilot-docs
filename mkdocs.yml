@@ -128,7 +128,9 @@ nav:
     - "Configuration Recipes": ref-configuration-recipes.md
     - "Best Practices & Pro Tips": ref-best-practices.md
     - "Non-Repainting Policy": ref-non-repaint.md
-    - "Glossary": ref-glossary.md
+    - "Glossary":
+      - "Complete Glossary (All Terms)": docs/ref-glossary/complete-glossary.md
+      - "Quick Reference (A-Z)": ref-glossary.md
     - "Troubleshooting Guide": ref-troubleshooting.md
     - "Installation Troubleshooting": docs/troubleshooting-installation.md
 
