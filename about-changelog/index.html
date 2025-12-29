@@ -1496,14 +1496,14 @@
 <h4><a href="../plutus-flow-v10/">Plutus Flow v1.0</a> — Advanced OBV</h4>
 <p><strong>What Changed:</strong></p>
 <ul>
-<li>Advanced On-Balance Volume (OBV) with CVD (Cumulative Volume Delta) divergence detection</li>
-<li>New EVR (Extreme Volume Rejection) indicator for potential exhaustion signals</li>
-<li>FlipGuard integration for potential breakout confirmation</li>
-<li>Enhanced divergence detection with customizable lookback periods</li>
-<li>Visual flow direction indicators</li>
-<li>Improved alert system for divergence events</li>
+<li>Advanced On-Balance Volume (OBV) with trend ribbon (OBV vs 20-SMA basis)</li>
+<li>Divergence detection with labels (Bull Div, Bear Div, Bull Hid, Bear Hid)</li>
+<li>Exit detection — yellow dots when flow leaves ±2σ extreme zones</li>
+<li>Cross signals — green/red dots on OBV/basis crossovers</li>
+<li>Statistical bands (±2σ) for overbought/oversold detection</li>
+<li>Simplified settings for cleaner UI</li>
 </ul>
-<p><strong>Key Features:</strong> OBV analysis, divergence detection, volume exhaustion signals, flow confirmation</p>
+<p><strong>Key Features:</strong> OBV analysis, divergence detection, cross signals, extreme zone exits, HTF filtering</p>
 <h3 id="oscillators">Oscillators<a class="headerlink" href="#oscillators" title="Permanent link">&para;</a></h3>
 <h4><a href="../harmonic-oscillator-v10/">Harmonic Oscillator v1.0</a> — Composite Momentum</h4>
 <p><strong>What Changed:</strong></p>

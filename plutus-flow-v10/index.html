@@ -241,9 +241,9 @@
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
-            
+
               Plutus Flow v1.0 — Advanced OBV
-            
+
           </span>
         </div>
       </div>
@@ -862,14 +862,14 @@
   <span class="md-ellipsis">
     Plutus Flow v1.0 — Advanced OBV
   </span>
-  
+
 
           <span class="md-nav__icon md-icon"></span>
         </label>
-      
+
       <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
+
+
   <span class="md-ellipsis">
     Plutus Flow v1.0 — Advanced OBV
   </span>
@@ -2391,114 +2391,50 @@ graph TD
 <p><em>This example demonstrates divergence detection. Individual interpretation and outcomes vary.</em></p>
 <hr />
 <h2 id="settings">⚙️ Settings <span class="skill-badge skill-badge--beginner" data-tooltip="Simple configuration options">Beginner Friendly</span><a class="headerlink" href="#settings" title="Permanent link">&para;</a></h2>
-<h3 id="obv-calculation-settings">OBV Calculation Settings<a class="headerlink" href="#obv-calculation-settings" title="Permanent link">&para;</a></h3>
+<p>Plutus Flow has only <strong>5 settings</strong> for simplicity:</p>
 <table>
 <thead>
 <tr>
+<th>Group</th>
 <th>Setting</th>
-<th>Options</th>
 <th>Default</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>OBV Source</strong></td>
-<td>Close, HL/2, HLC/3, OHLC/4</td>
-<td>Close</td>
+<td><strong>SP: Calculation</strong></td>
+<td>HTF timeframe</td>
+<td>blank</td>
+<td>Calculate OBV on higher timeframe. Blank = use chart timeframe.</td>
 </tr>
 <tr>
-<td><strong>Smoothing</strong></td>
-<td>None, SMA, EMA</td>
-<td>None</td>
+<td><strong>SP: Calculation</strong></td>
+<td>HTF trend filter</td>
+<td>blank</td>
+<td>Only allow cross signals aligned with HTF trend direction. Blank = off.</td>
 </tr>
 <tr>
-<td><strong>Smoothing Period</strong></td>
-<td>1-50</td>
-<td>14</td>
+<td><strong>SP: Divergence</strong></td>
+<td>Min price swing (x ATR14)</td>
+<td>0.0</td>
+<td>Filter out small divergences. 0 = show all divergences.</td>
+</tr>
+<tr>
+<td><strong>SP: Visuals</strong></td>
+<td>Show divergence labels</td>
+<td>ON</td>
+<td>Display "Bull Div" / "Bear Div" / "Bull Hid" / "Bear Hid" labels</td>
+</tr>
+<tr>
+<td><strong>SP: Visuals</strong></td>
+<td>Show extreme zone exits</td>
+<td>ON</td>
+<td>Display yellow dots when flow leaves ±2σ zones</td>
 </tr>
 </tbody>
 </table>
-<h3 id="trend-ribbon-settings">Trend Ribbon Settings<a class="headerlink" href="#trend-ribbon-settings" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Setting</th>
-<th>Options</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Fast MA Period</strong></td>
-<td>5-50</td>
-<td>20</td>
-</tr>
-<tr>
-<td><strong>Slow MA Period</strong></td>
-<td>10-100</td>
-<td>50</td>
-</tr>
-<tr>
-<td><strong>Ribbon Display</strong></td>
-<td>On/Off</td>
-<td>On</td>
-</tr>
-<tr>
-<td><strong>Color Scheme</strong></td>
-<td>Multiple palettes</td>
-<td>Green/Red</td>
-</tr>
-</tbody>
-</table>
-<h3 id="divergence-detection-settings">Divergence Detection Settings<a class="headerlink" href="#divergence-detection-settings" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Setting</th>
-<th>Options</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Lookback Period</strong></td>
-<td>5-50 bars</td>
-<td>14</td>
-</tr>
-<tr>
-<td><strong>Sensitivity</strong></td>
-<td>Low, Medium, High</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td><strong>Label Display</strong></td>
-<td>On/Off</td>
-<td>On</td>
-</tr>
-<tr>
-<td><strong>Alert Toggle</strong></td>
-<td>On/Off</td>
-<td>On</td>
-</tr>
-</tbody>
-</table>
-<h3 id="extreme-zone-detection-settings">Extreme Zone Detection Settings<a class="headerlink" href="#extreme-zone-detection-settings" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Setting</th>
-<th>Options</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>SP: Show extreme zone EXITS</strong></td>
-<td>On/Off</td>
-<td>On</td>
-</tr>
-</tbody>
-</table>
+<p><strong>Default settings work for most traders.</strong></p>
 <p><strong>Extreme Zone Signals:</strong></p>
 <table>
 <thead>
@@ -2604,55 +2540,50 @@ Interpretation: Bullish divergence (see Layer 3)
 </div>
 
 <hr />
-<h2 id="layer-2-trend-ribbons">📊 Layer 2: Trend Ribbons<a class="headerlink" href="#layer-2-trend-ribbons" title="Permanent link">&para;</a></h2>
+<h2 id="layer-2-trend-ribbons">📊 Layer 2: Trend Ribbon<a class="headerlink" href="#layer-2-trend-ribbons" title="Permanent link">&para;</a></h2>
 <h3 id="ribbon-construction">Ribbon Construction<a class="headerlink" href="#ribbon-construction" title="Permanent link">&para;</a></h3>
-<p><strong>Components:</strong><br />
-- Fast Moving Average of OBV (default: 20-period)<br />
-- Slow Moving Average of OBV (default: 50-period)</p>
-<p><strong>Color Logic:</strong><br />
-- <strong>Green Ribbon:</strong> Fast MA above Slow MA (bullish volume trend)<br />
-- <strong>Red Ribbon:</strong> Fast MA below Slow MA (bearish volume trend)</p>
-<h3 id="ribbon-width">Ribbon Width<a class="headerlink" href="#ribbon-width" title="Permanent link">&para;</a></h3>
-<p><strong>Ribbon Spacing:</strong><br />
-- Wide ribbon: Large separation between Fast and Slow MA (strong trend)<br />
-- Narrow ribbon: Small separation (weak trend or transition)</p>
+<p>The ribbon shows the relationship between the OBV line and its 20-period Simple Moving Average (basis line).</p>
+<table>
+<thead>
+<tr>
+<th>Ribbon Color</th>
+<th>Condition</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Green fill</strong></td>
+<td>OBV line above 20-SMA basis</td>
+<td>Bullish flow — accumulation</td>
+</tr>
+<tr>
+<td><strong>Red fill</strong></td>
+<td>OBV line below 20-SMA basis</td>
+<td>Bearish flow — distribution</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> There is no Fast/Slow MA system. The ribbon simply shows OBV vs its 20-period moving average.</p>
 <h3 id="ribbon-patterns">Ribbon Patterns<a class="headerlink" href="#ribbon-patterns" title="Permanent link">&para;</a></h3>
-<p><strong>Pattern 1: Expanding Green Ribbon</strong></p>
-<pre><code>Fast MA pulling away above Slow MA
-Interpretation: Strengthening bullish volume trend
+<p><strong>Pattern 1: OBV Crosses Above Basis (Green)</strong></p>
+<pre><code>OBV line crosses above 20-SMA
+Signal: Green dot (3px) — Cross Up
+Interpretation: Volume trend shift to bullish
 </code></pre>
-<p><strong>Pattern 2: Narrowing Green Ribbon</strong></p>
-<pre><code>Fast MA approaching Slow MA from above
-Interpretation: Weakening bullish volume trend
+<p><strong>Pattern 2: OBV Crosses Below Basis (Red)</strong></p>
+<pre><code>OBV line crosses below 20-SMA
+Signal: Red dot (3px) — Cross Down
+Interpretation: Volume trend shift to bearish
 </code></pre>
-<p><strong>Pattern 3: Ribbon Color Flip (Red to Green)</strong></p>
-<pre><code>Fast MA crosses above Slow MA
-Interpretation: Volume trend shift from bearish to bullish
-</code></pre>
-<p><strong>Pattern 4: Ribbon Color Flip (Green to Red)</strong></p>
-<pre><code>Fast MA crosses below Slow MA
-Interpretation: Volume trend shift from bullish to bearish
-</code></pre>
-
-<!-- 📸 SCREENSHOT NEEDED - Plutus Flow Ribbon Width Changes (Trend Strength)
-     What to show: Chart showing ribbon width progression: narrow → wide → narrow
-     Setup: Find example where trend strengthens (wide ribbons) then weakens (narrow)
-     Label/Annotate: Label "Weak Trend" (narrow), "Strong Trend" (wide), "Weakening" (narrowing again)
-     File name suggestion: plutus-flow-ribbon-width-changes.png
--->
-<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
-  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
-  <p style="margin: 0; color: #424242;"><strong>Plutus Flow Ribbon Width Changes (Trend Strength)</strong></p>
-  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a chart showing how ribbon width indicates trend strength (narrow → wide → narrow).</p>
-</div>
 
 <h3 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h3>
 <p><strong>Bitcoin Volume Trend:</strong><br />
-- OBV Fast MA (20): 145M<br />
-- OBV Slow MA (50): 138M<br />
-- Ribbon: Green (Fast &gt; Slow)<br />
-- Ribbon Width: 7M (moderate)</p>
-<p><strong>Interpretation:</strong> Bullish volume trend present with moderate strength.</p>
+- OBV Line: 145M<br />
+- 20-SMA Basis: 138M<br />
+- Ribbon: Green (OBV above basis)<br />
+- Spread: 7M above basis</p>
+<p><strong>Interpretation:</strong> Bullish volume trend — OBV is above its moving average, indicating accumulation.</p>
 <hr />
 <h2 id="layer-3-divergence-detection">📊 Layer 3: Divergence Detection<a class="headerlink" href="#layer-3-divergence-detection" title="Permanent link">&para;</a></h2>
 <h3 id="bullish-divergence">Bullish Divergence<a class="headerlink" href="#bullish-divergence" title="Permanent link">&para;</a></h3>
@@ -2680,15 +2611,16 @@ OBV:   150M → 155M → 153M (lower high at second peak)
 Result: Bearish divergence detected
 </code></pre>
 <h3 id="hidden-divergence">Hidden Divergence<a class="headerlink" href="#hidden-divergence" title="Permanent link">&para;</a></h3>
-<p><strong>Hidden Bullish Divergence:</strong><br />
+<p><strong>Hidden Bullish Divergence (Bull Hid):</strong><br />
 - Price: Higher Low (HL)<br />
 - OBV: Lower Low (LL)<br />
-- Interpretation: Continuation pattern in uptrend</p>
-<p><strong>Hidden Bearish Divergence:</strong><br />
+- Label: "Bull Hid" (teal background)<br />
+- Interpretation: Continuation pattern — uptrend expected to continue</p>
+<p><strong>Hidden Bearish Divergence (Bear Hid):</strong><br />
 - Price: Lower High (LH)<br />
 - OBV: Higher High (HH)<br />
-- Interpretation: Continuation pattern in downtrend</p>
-<p><em>Hidden divergences detected when enabled in settings.</em></p>
+- Label: "Bear Hid" (pink background)<br />
+- Interpretation: Continuation pattern — downtrend expected to continue</p>
 <h3 id="divergence-confirmation">Divergence Confirmation<a class="headerlink" href="#divergence-confirmation" title="Permanent link">&para;</a></h3>
 <p><strong>Stronger Divergence Signals Include:</strong><br />
 - Ribbon color flip accompanying divergence<br />
@@ -2813,66 +2745,70 @@ Result: Bearish divergence detected
 <table>
 <thead>
 <tr>
-<th>Alert Type</th>
+<th>Alert Name</th>
 <th>Trigger</th>
-<th>Notification</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Bullish Divergence</strong></td>
-<td>Bull Div detected</td>
-<td>"Plutus Flow: Bullish divergence"</td>
+<td><strong>Cross Up</strong></td>
+<td>OBV crosses above basis</td>
 </tr>
 <tr>
-<td><strong>Bearish Divergence</strong></td>
-<td>Bear Div detected</td>
-<td>"Plutus Flow: Bearish divergence"</td>
+<td><strong>Cross Down</strong></td>
+<td>OBV crosses below basis</td>
 </tr>
 <tr>
-<td><strong>Ribbon Flip Green</strong></td>
-<td>Trend turns bullish</td>
-<td>"Plutus Flow: Volume trend bullish"</td>
+<td><strong>Breach +2s</strong></td>
+<td>Flow enters overbought zone</td>
 </tr>
 <tr>
-<td><strong>Ribbon Flip Red</strong></td>
-<td>Trend turns bearish</td>
-<td>"Plutus Flow: Volume trend bearish"</td>
+<td><strong>Breach -2s</strong></td>
+<td>Flow enters oversold zone</td>
 </tr>
 <tr>
-<td><strong>OBV Breakout</strong></td>
-<td>OBV exceeds threshold</td>
-<td>"Plutus Flow: OBV breakout"</td>
+<td><strong>Exit +2s</strong></td>
+<td>Flow leaves overbought zone</td>
 </tr>
 <tr>
-<td><strong>Exit +2σ Zone</strong></td>
-<td>Flow drops below +2σ after being above</td>
-<td>"SP: Plutus | Exit +2σ Zone"</td>
+<td><strong>Exit -2s</strong></td>
+<td>Flow leaves oversold zone</td>
 </tr>
 <tr>
-<td><strong>Exit -2σ Zone</strong></td>
-<td>Flow rises above -2σ after being below</td>
-<td>"SP: Plutus | Exit -2σ Zone"</td>
+<td><strong>Bull Div</strong></td>
+<td>Regular bullish divergence detected</td>
+</tr>
+<tr>
+<td><strong>Bear Div</strong></td>
+<td>Regular bearish divergence detected</td>
+</tr>
+<tr>
+<td><strong>Bull Hid</strong></td>
+<td>Hidden bullish divergence detected</td>
+</tr>
+<tr>
+<td><strong>Bear Hid</strong></td>
+<td>Hidden bearish divergence detected</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Alert Setup:</strong><br />
-1. Open indicator settings<br />
-2. Navigate to alert section<br />
-3. Enable desired alert types<br />
-4. Configure notification method (popup, email, webhook)</p>
+1. Click the alarm icon on the indicator<br />
+2. Select "Plutus Flow"<br />
+3. Choose your alert condition<br />
+4. Set to "Once Per Bar Close"</p>
 <hr />
 <div class="sp-callout sp-callout--summary">
   <div class="sp-callout__title">What You've Learned</div>
   <ul>
-    <li><strong>Enhanced On-Balance Volume:</strong> Plutus Flow builds on classic OBV methodology by adding trend ribbons and automated divergence detection for comprehensive volume flow analysis</li>
-    <li><strong>Three-Layer Analysis:</strong> Combines OBV Line (cumulative volume trend), Trend Ribbons (moving averages showing bullish/bearish volume direction), and Divergence Detection (price-volume disagreement identification)</li>
-    <li><strong>Accumulation vs Distribution:</strong> Rising OBV indicates accumulation (buying pressure building), falling OBV indicates distribution (selling pressure building), visible through the primary OBV line</li>
-    <li><strong>Visual Trend Ribbons:</strong> Color-coded ribbon overlay (green for bullish volume trend, red for bearish volume trend) provides immediate visual context for OBV direction changes</li>
-    <li><strong>Automated Divergence Alerts:</strong> System automatically identifies and labels bullish divergences (price declining while OBV rising) and bearish divergences (price rising while OBV falling)</li>
-    <li><strong>Extreme Zone Detection:</strong> White dots signal when flow enters ±2σ extreme zones (breach), yellow dots signal when flow exits those zones—often actionable reversal points</li>
-    <li><strong>Separate Panel Display:</strong> Shows in dedicated panel below your price chart, keeping volume analysis separate from price action for cleaner chart organization</li>
-    <li><strong>Universal Timeframe Support:</strong> Works on all timeframes from 1-minute to monthly charts, adapting OBV calculations to your chosen interval</li>
+    <li><strong>Enhanced On-Balance Volume:</strong> Plutus Flow builds on classic OBV methodology by adding trend ribbon, statistical bands, and automated divergence detection</li>
+    <li><strong>Four-Layer Analysis:</strong> Combines OBV Line, Trend Ribbon (OBV vs 20-SMA basis), Statistical Bands (±2σ extreme zones), and Divergence Detection</li>
+    <li><strong>Accumulation vs Distribution:</strong> Rising OBV indicates accumulation (buying pressure), falling OBV indicates distribution (selling pressure)</li>
+    <li><strong>Visual Trend Ribbon:</strong> Green ribbon = OBV above 20-SMA (bullish flow), Red ribbon = OBV below 20-SMA (bearish flow)</li>
+    <li><strong>Divergence Labels:</strong> Bull Div (green), Bear Div (red), Bull Hid (teal), Bear Hid (pink) — automatically detected and labeled</li>
+    <li><strong>Extreme Zone Detection:</strong> White dots = entered ±2σ zone (breach/warning), Yellow dots = exited zone (actionable reversal signal)</li>
+    <li><strong>Cross Signals:</strong> Green dot = OBV crossed above basis, Red dot = OBV crossed below basis</li>
+    <li><strong>Universal Timeframe Support:</strong> Works on all timeframes from 1-minute to monthly charts</li>
   </ul>
   <p><strong>Next Steps:</strong> Review <a href="../volume-oracle-v10/">Volume Oracle v1.0</a> for alternative volume analysis methods, or explore <a href="../ref-workflow/">Trading Workflow Guide</a> to learn how to combine volume indicators with other Signal Pilot tools.</p>
 </div>
@@ -3337,30 +3273,30 @@ Result: Bearish divergence detected
 <thead>
 <tr>
 <th>Ribbon Color</th>
-<th>Fast MA vs Slow MA</th>
+<th>OBV vs 20-SMA</th>
 <th>Volume Trend</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Green</strong></td>
-<td>Fast &gt; Slow</td>
+<td>OBV above basis</td>
 <td>Bullish</td>
 </tr>
 <tr>
 <td><strong>Red</strong></td>
-<td>Fast &lt; Slow</td>
+<td>OBV below basis</td>
 <td>Bearish</td>
 </tr>
 <tr>
-<td><strong>Wide Gap</strong></td>
-<td>Large separation</td>
-<td>Strong trend</td>
+<td><strong>Cross Up (dot)</strong></td>
+<td>OBV crossed above</td>
+<td>Trend shift bullish</td>
 </tr>
 <tr>
-<td><strong>Narrow Gap</strong></td>
-<td>Small separation</td>
-<td>Weak trend</td>
+<td><strong>Cross Down (dot)</strong></td>
+<td>OBV crossed below</td>
+<td>Trend shift bearish</td>
 </tr>
 </tbody>
 </table>
@@ -3436,6 +3372,29 @@ support@signalpilot.io</p>
     <p style="margin:.5rem 0 0;font-size:.9rem;color:var(--text-muted)">Master the fundamentals of volume-at-price analysis</p>
   </a>
 </div>
+<hr />
+<h2 id="recent-updates">📋 Recent Updates<a class="headerlink" href="#recent-updates" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes">Bug Fixes</h3>
+<ul>
+<li><strong>Fixed divergence detection</strong> — labels now appear correctly</li>
+<li><strong>Fixed pivot value storage</strong> — was storing null values</li>
+<li><strong>Fixed divergence logic</strong> — Regular/Hidden were swapped</li>
+</ul>
+<h3 id="new-features">New Features</h3>
+<ul>
+<li><strong>Exit detection</strong> — yellow dots when flow leaves extreme zones</li>
+<li><strong>Divergence labels</strong> — visible "Bull Div" / "Bear Div" / "Bull Hid" / "Bear Hid" text</li>
+</ul>
+<h3 id="removed">Removed</h3>
+<ul>
+<li>All "SP: Quality" settings (FlipGuard, Z-gate, Robust extremes, Sequence window)</li>
+<li>These are now hardcoded internally for simplicity</li>
+</ul>
+<h3 id="simplified">Simplified</h3>
+<ul>
+<li>Settings reduced from 14 to 5</li>
+<li>Cleaner UI for end users</li>
+</ul>
 <hr />
 <h2 id="see-also">See Also<a class="headerlink" href="#see-also" title="Permanent link">&para;</a></h2>
 <p><strong>Related Pages:</strong><br />
