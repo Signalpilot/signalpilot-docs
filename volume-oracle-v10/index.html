@@ -2711,15 +2711,27 @@ graph LR
 <table>
 <thead><tr><th>Color</th><th>When</th><th>Meaning</th></tr></thead>
 <tbody>
-<tr><td><strong>Bright Green</strong></td><td>Buying &gt;70%</td><td>Strong buyers</td></tr>
-<tr><td><strong>Soft Green</strong></td><td>Buying 50-70%</td><td>Moderate buyers</td></tr>
-<tr><td><strong>Bright Red</strong></td><td>Selling &gt;70%</td><td>Strong sellers</td></tr>
-<tr><td><strong>Soft Red</strong></td><td>Selling 50-70%</td><td>Moderate sellers</td></tr>
-<tr><td><strong>Gold</strong></td><td>Weakening</td><td>Be careful</td></tr>
+<tr><td><strong>Bright Green</strong></td><td>Bull signal</td><td>Strong buyers</td></tr>
+<tr><td><strong>Bright Red</strong></td><td>Bear signal</td><td>Strong sellers</td></tr>
+<tr><td><strong>Green (varies)</strong></td><td>Accumulation</td><td>Darker = stronger</td></tr>
+<tr><td><strong>Red (varies)</strong></td><td>Distribution</td><td>Darker = stronger</td></tr>
+<tr><td><strong>Gold</strong></td><td>Weakening confirmed (3+ bars)</td><td>FADING or WEAKENING status</td></tr>
+<tr><td><strong>Orange</strong></td><td>Critical confirmed (3+ bars)</td><td>About to flip</td></tr>
 <tr><td><strong>Gray</strong></td><td>Neutral</td><td>No clear direction</td></tr>
 </tbody>
 </table>
-<p>Brighter color = stronger signal.</p>
+
+<h4 id="weakening-color-confirmation">Weakening Color Confirmation<a class="headerlink" href="#weakening-color-confirmation" title="Permanent link">&para;</a></h4>
+<p>Weakening colors (gold/orange bars and yellow background) require <strong>3 consecutive bars</strong> in a weakening state before displaying. This prevents visual flip-flopping on choppy price action.</p>
+<table>
+<thead><tr><th>Element</th><th>When It Updates</th></tr></thead>
+<tbody>
+<tr><td>Table status</td><td><strong>Immediately</strong> — shows FADING/WEAKENING/CRITICAL on first bar</td></tr>
+<tr><td>Bar colors</td><td><strong>After 3 bars</strong> — only changes when weakening is confirmed</td></tr>
+<tr><td>Background</td><td><strong>After 3 bars</strong> — same as bar colors</td></tr>
+</tbody>
+</table>
+<p><strong>Why:</strong> Early warning in the table, stable visuals on the chart. Users get alerted quickly but aren't distracted by single-bar noise.</p>
 
 <h3 id="regime-meter-table">Regime Meter Table<a class="headerlink" href="#regime-meter-table" title="Permanent link">&para;</a></h3>
 <p>A small table in the corner shows 6 things at once:</p>
@@ -3509,7 +3521,7 @@ Size: 47 shares | Risk: $150</code></pre>
 <h3 id="q-which-strategy-mode-should-i-use">Q: Which strategy mode should I use?<a class="headerlink" href="#q-which-strategy-mode-should-i-use" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> Trend Following for trending markets, Mean Reversion for ranging markets, Hybrid (default) if unsure. Match the mode to current market conditions.</p>
 <h3 id="q-what-does-regime-weakening-mean">Q: What does Regime Weakening (gold) mean?<a class="headerlink" href="#q-what-does-regime-weakening-mean" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> Gold background indicates the current regime is losing strength. This is a warning that a regime change may be approaching. Consider tightening stops or taking profits.</p>
+<p><strong>A:</strong> Gold background indicates the current regime is losing strength. This is a warning that a regime change may be approaching. Consider tightening stops or taking profits. Note: The table status (FADING/WEAKENING/CRITICAL) updates immediately, but bar colors and background require <strong>3 consecutive bars</strong> to confirm before changing — this prevents visual flip-flopping on choppy price action.</p>
 <h3 id="q-can-i-customize-risk-levels">Q: Can I customize the risk levels?<a class="headerlink" href="#q-can-i-customize-risk-levels" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> Yes. Configure Risk Amount (dollars per trade) and R:R Ratio (for target calculation) in settings. Entry, Stop, T1, T2 are then calculated automatically.</p>
 <h3 id="q-how-do-alerts-work">Q: How do alerts work?<a class="headerlink" href="#q-how-do-alerts-work" title="Permanent link">&para;</a></h3>
