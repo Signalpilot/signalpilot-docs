@@ -2040,15 +2040,33 @@
 </ul>
 <p><strong>Warning types:</strong> Price slowing, Buyers/sellers mixed, Volume dropping</p>
 
+<h3>Weakening Color Confirmation</h3>
+<p>Weakening colors (gold/orange bars and yellow background) require <strong>3 consecutive bars</strong> in a weakening state before displaying. This prevents visual flip-flopping on choppy price action.</p>
+
+<table>
+<thead><tr><th>Element</th><th>When It Updates</th></tr></thead>
+<tbody>
+<tr><td>Table status</td><td><strong>Immediately</strong> — shows FADING/WEAKENING/CRITICAL on first bar</td></tr>
+<tr><td>Bar colors</td><td><strong>After 3 bars</strong> — only changes when weakening is confirmed</td></tr>
+<tr><td>Background</td><td><strong>After 3 bars</strong> — same as bar colors</td></tr>
+</tbody>
+</table>
+
+<p><strong>Why:</strong> Early warning in the table, stable visuals on the chart. Users get alerted quickly but aren't distracted by single-bar noise.</p>
+
 <h3>Volume Bar Coloring</h3>
-<ul>
-<li><strong>Bright Green:</strong> Strong buyers (&gt;70%)</li>
-<li><strong>Soft Green:</strong> Moderate buyers (50-70%)</li>
-<li><strong>Bright Red:</strong> Strong sellers (&gt;70%)</li>
-<li><strong>Soft Red:</strong> Moderate sellers (50-70%)</li>
-<li><strong>Gold:</strong> Weakening (be careful)</li>
-<li><strong>Gray:</strong> No clear direction</li>
-</ul>
+<table>
+<thead><tr><th>Bar Color</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td><strong>Bright Green</strong></td><td>Bull signal</td></tr>
+<tr><td><strong>Bright Red</strong></td><td>Bear signal</td></tr>
+<tr><td><strong>Green (varies)</strong></td><td>Accumulation (darker = stronger)</td></tr>
+<tr><td><strong>Red (varies)</strong></td><td>Distribution (darker = stronger)</td></tr>
+<tr><td><strong>Gold</strong></td><td>Weakening confirmed (3+ bars) — FADING or WEAKENING status</td></tr>
+<tr><td><strong>Orange</strong></td><td>Critical confirmed (3+ bars) — about to flip</td></tr>
+<tr><td><strong>Gray</strong></td><td>Neutral</td></tr>
+</tbody>
+</table>
 
 <h3>HTF Alignment</h3>
 <ul>
