@@ -53,18 +53,28 @@ Omnideck is the **ultimate all-in-one indicator** - 10 professional trading syst
 <span style="color: #a855f7; font-weight: 600;">🎯 Smart Money Detection - Liquidity Grabs</span>
 
 **What you see:**
-- **LL tag** = Lower Low sweep (potential fake breakdown)
-- **HH tag** = Higher High sweep (potential fake breakout)
+- **💧 Water droplet** (below candle) = Bull Sweep - liquidity grabbed below, reversal up expected
+- **🩸 Blood drop** (above candle) = Bear Sweep - liquidity grabbed above, reversal down expected
+
+Clean visual design - just the emoji marker with small ATR-based offset (no overlapping with candles).
 
 **What it means:**
 - Price spiked to grab stops, then immediately reversed
-- Classic "trap" move pattern
+- Classic "trap" move where smart money hunts liquidity
+- 💧 = "Grabbing liquidity" below (bulls taking over)
+- 🩸 = "Bears got bled out" above (bears taking over)
+
+**Detection Logic:**
+- Scans 12-bar lookback for recent highs/lows
+- Triggers when price breaks the level then closes back inside
+- Requires rejection wick ≥55% of candle range (filters out weak signals)
+- **Non-repainting** (confirmed bars only)
 
 **Common interpretation:**
-- **LL sweep** → Potential bullish reversal signal (stop hunt completed)
-- **HH sweep** → Potential bearish reversal signal (fake breakout)
+- **💧 Bull Sweep** → Bullish reversal signal (stop hunt completed below)
+- **🩸 Bear Sweep** → Bearish reversal signal (fake breakout above)
 
-**Example:** Price drops to $98 (LL tag), immediately bounces to $102 → Classic stop hunt pattern, potential long signal
+**Example:** Price drops to $98 (💧 appears), immediately bounces to $102 → Classic stop hunt pattern, potential long signal
 
 ---
 
@@ -218,11 +228,11 @@ Signals at key zones are commonly prioritized.
 - **Regime Box** = Red (bearish... but check for reversal)
 - **TD Sequential** = Green 9 (oversold exhaustion)
 - **Demand Zone** ⭐⭐⭐ at $63,500
-- **Liquidity Sweep** = LL tag at $63,200
+- **Liquidity Sweep** = 💧 at $63,200 (bull sweep detected)
 - **Hammer** pattern forms
 
 **The Trade:**
-1. Price sweeps $63,200 (LL liquidity sweep)
+1. Price sweeps $63,200 (💧 bull sweep appears)
 2. Bounces into demand zone
 3. TD shows green 9 (exhaustion)
 4. Hammer indicates potential reversal
@@ -264,8 +274,10 @@ Customization available, clean visual presentation recommended
 2. **TD Sell 9** = Overbought exhaustion
 3. **Squeeze Break Up** = Bullish explosion
 4. **Squeeze Break Down** = Bearish explosion
-5. **Golden Cross** = Major bullish signal
-6. **Death Cross** = Major bearish signal
+5. **SP:SWEEP_BULL** = Bullish liquidity sweep (💧)
+6. **SP:SWEEP_BEAR** = Bearish liquidity sweep (🩸)
+7. **Golden Cross** = Major bullish signal
+8. **Death Cross** = Major bearish signal
 
 **Configuration steps:**
 1. Alarm icon is clicked
@@ -332,8 +344,8 @@ Customization available, clean visual presentation recommended
 | TD Sequential | Red 9 | Potential short signal (overbought) |
 | Squeeze | Green arrow ↑ | Potential long entry (breakout up) |
 | Squeeze | Red arrow ↓ | Potential short entry (breakdown) |
-| Liquidity Sweep | LL tag | Potential long signal (fake breakdown) |
-| Liquidity Sweep | HH tag | Potential short signal (fake breakout) |
+| Liquidity Sweep | 💧 Water droplet | Bull sweep - potential long (stop hunt below) |
+| Liquidity Sweep | 🩸 Blood drop | Bear sweep - potential short (fake breakout) |
 | EMA Trio | Golden Cross | Bullish bias typical |
 | EMA Trio | Death Cross | Bearish bias typical |
 | SuperTrend | Green ribbon | Long bias common |
