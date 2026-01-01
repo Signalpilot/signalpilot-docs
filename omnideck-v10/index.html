@@ -2396,7 +2396,7 @@ graph TD
 <p><strong>The 10 Systems Available:</strong><br />
 1. TD Sequential - Exhaustion counter (9-count system)<br />
 2. Squeeze Detector - Volatility breakout arrows<br />
-3. Liquidity Sweeps - Stop hunt detection (LL/HH tags)<br />
+3. Liquidity Sweeps - Stop hunt detection (💧/🩸 emojis)<br />
 4. EMA Trio - Three moving averages (50/100/200)<br />
 5. SuperTrend - Trend ribbon (green/red)<br />
 6. BMSB - Bull Market Support Band (20 SMA + 21 EMA)<br />
@@ -2651,26 +2651,29 @@ graph TD
 <hr />
 <h3 id="system-3-liquidity-sweeps-stop-hunt-detection">System 3: Liquidity Sweeps — Stop Hunt Detection<a class="headerlink" href="#system-3-liquidity-sweeps-stop-hunt-detection" title="Permanent link">&para;</a></h3>
 <p><strong>Visual Display:</strong><br />
-- LL tag = Lower Low sweep (potential fake breakdown)<br />
-- HH tag = Higher High sweep (potential fake breakout)</p>
+- 💧 Water droplet (below candle) = Bull Sweep - liquidity grabbed below, reversal up expected<br />
+- 🩸 Blood drop (above candle) = Bear Sweep - liquidity grabbed above, reversal down expected</p>
+<p>Clean visual design - just the emoji marker with small ATR-based offset (no overlapping with candles).</p>
 <p><strong>How It Works:</strong><br />
-- Detects when price spikes to new high/low then immediately reverses<br />
-- Identifies stop hunt / liquidity grab patterns</p>
+- Scans 12-bar lookback for recent highs/lows<br />
+- Triggers when price breaks the level then closes back inside<br />
+- Requires rejection wick ≥55% of candle range (filters out weak signals)<br />
+- Non-repainting (confirmed bars only)</p>
 <p><strong>Signal Interpretation:</strong><br />
-- LL sweep = Stops triggered below support, reversal potential<br />
-- HH sweep = Stops triggered above resistance, reversal potential</p>
-<p><strong>Example:</strong> Price drops to $98 (LL tag), immediately bounces to $102 → Stop hunt pattern detected.</p>
+- 💧 Bull Sweep → Bullish reversal signal (stop hunt completed below)<br />
+- 🩸 Bear Sweep → Bearish reversal signal (fake breakout above)</p>
+<p><strong>Example:</strong> Price drops to $98 (💧 appears), immediately bounces to $102 → Stop hunt pattern detected.</p>
 
 <!-- 📸 SCREENSHOT NEEDED - Omnideck Liquidity Sweeps
-     What to show: Chart showing LL and HH tags marking liquidity sweep patterns
-     Setup: Omnideck with Liquidity Sweeps enabled, show both LL (lower low sweep) and HH (higher high sweep) examples
-     Label/Annotate: Point to LL tag below a wick, HH tag above a wick, show the reversal after sweep
+     What to show: Chart showing 💧 and 🩸 emojis marking liquidity sweep patterns
+     Setup: Omnideck with Liquidity Sweeps enabled, show both 💧 (bull sweep) and 🩸 (bear sweep) examples
+     Label/Annotate: Point to 💧 below a wick, 🩸 above a wick, show the reversal after sweep
      File name suggestion: omnideck-liquidity-sweeps.png
 -->
 <div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
   <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
-  <p style="margin: 0; color: #424242;"><strong>Liquidity Sweeps (LL/HH Tags)</strong></p>
-  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a chart showing LL (Lower Low) and HH (Higher High) sweep tags marking stop hunt patterns.</p>
+  <p style="margin: 0; color: #424242;"><strong>Liquidity Sweeps (💧/🩸 Emojis)</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a chart showing 💧 (Bull Sweep) and 🩸 (Bear Sweep) emoji markers indicating stop hunt patterns.</p>
 </div>
 
 <hr />
@@ -3040,7 +3043,7 @@ graph TD
 <p><strong>Step 3: Entry Timing (TD / Squeeze / Sweeps)</strong><br />
 - Look for exhaustion (TD 9)<br />
 - Check for breakout (Squeeze arrow)<br />
-- Monitor liquidity sweeps (LL/HH tags)</p>
+- Monitor liquidity sweeps (💧/🩸 emojis)</p>
 <p><strong>Step 4: Zone Confirmation (Supply/Demand + Patterns)</strong><br />
 - Check if signal at quality zone<br />
 - Look for candlestick pattern confluence<br />
@@ -3100,7 +3103,7 @@ graph TD
 <tr>
 <td><strong>Liquidity Sweeps</strong></td>
 <td>Sweep detected</td>
-<td>LL or HH tag appears</td>
+<td>💧 or 🩸 emoji appears</td>
 </tr>
 <tr>
 <td><strong>EMA Trio</strong></td>
@@ -3636,9 +3639,9 @@ graph TD
 </tr>
 <tr>
 <td><strong>Liquidity Sweeps</strong></td>
-<td>Tags</td>
-<td>LL tag</td>
-<td>HH tag</td>
+<td>Emojis</td>
+<td>💧 Water droplet</td>
+<td>🩸 Blood drop</td>
 </tr>
 <tr>
 <td><strong>EMA Trio</strong></td>
