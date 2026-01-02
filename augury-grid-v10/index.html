@@ -39,7 +39,7 @@
     
     
       
-        <title>Augury Grid v1.0 — Multi-Symbol Screener - Signal Pilot Docs</title>
+        <title>Augury Grid v1.0 — Multi-Timeframe Signal Scanner - Signal Pilot Docs</title>
       
     
     
@@ -150,16 +150,16 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://docs.signalpilot.io/">
-    <meta property="og:title" content="Augury Grid v1.0 — Multi-Symbol Screener">
-    <meta property="og:description" content="Multi-symbol scanner with MACD confluence scoring. Monitor up to 8 symbols simultaneously with integrated trend, momentum, and signal detection.">
+    <meta property="og:title" content="Augury Grid v1.0 — Multi-Timeframe Signal Scanner">
+    <meta property="og:description" content="Professional multi-timeframe signal scanner. 7 symbols × 3 timeframes = 21 scans with automatic position management, lifecycle tracking, and quality ratings.">
     <meta property="og:image" content="https://docs.signalpilot.io/assets/images/preview.png">
     <meta property="og:site_name" content="Signal Pilot Docs">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://docs.signalpilot.io/">
-    <meta name="twitter:title" content="Augury Grid v1.0 — Multi-Symbol Screener">
-    <meta name="twitter:description" content="Multi-symbol scanner with MACD confluence scoring. Monitor up to 8 symbols simultaneously with integrated trend, momentum, and signal detection.">
+    <meta name="twitter:title" content="Augury Grid v1.0 — Multi-Timeframe Signal Scanner">
+    <meta name="twitter:description" content="Professional multi-timeframe signal scanner. 7 symbols × 3 timeframes = 21 scans with automatic position management, lifecycle tracking, and quality ratings.">
     <meta name="twitter:image" content="https://docs.signalpilot.io/assets/images/preview.png">
 
 
@@ -194,7 +194,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#augury-grid-v10-scan-8-symbols-at-once" class="md-skip">
+        <a href="#augury-grid-v10-multi-timeframe-signal-scanner" class="md-skip">
           Skip to content
         </a>
       
@@ -243,7 +243,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Augury Grid v1.0 — Multi-Symbol Screener
+              Augury Grid v1.0 — Multi-Timeframe Signal Scanner
             
           </span>
         </div>
@@ -798,7 +798,7 @@
           
   
   <span class="md-ellipsis">
-    Augury Grid v1.0 — Multi-Symbol Screener
+    Augury Grid v1.0 — Multi-Timeframe Signal Scanner
   </span>
   
 
@@ -809,7 +809,7 @@
         
   
   <span class="md-ellipsis">
-    Augury Grid v1.0 — Multi-Symbol Screener
+    Augury Grid v1.0 — Multi-Timeframe Signal Scanner
   </span>
   
 
@@ -1157,9 +1157,9 @@
     <nav class="md-nav" aria-label="📋 Quick Reference Guide">
       <ul class="md-nav__list">
           <li class="md-nav__item">
-  <a href="#grid-display-legend" class="md-nav__link">
+  <a href="#table-display-legend" class="md-nav__link">
     <span class="md-ellipsis">
-      Grid Display Legend
+      Table Display Legend
     </span>
   </a>
 
@@ -1978,9 +1978,9 @@
     <nav class="md-nav" aria-label="📋 Quick Reference Guide">
       <ul class="md-nav__list">
           <li class="md-nav__item">
-  <a href="#grid-display-legend" class="md-nav__link">
+  <a href="#table-display-legend" class="md-nav__link">
     <span class="md-ellipsis">
-      Grid Display Legend
+      Table Display Legend
     </span>
   </a>
 
@@ -2052,71 +2052,68 @@
 </div>
 
 <!-- Render the page content -->
-<h1 id="augury-grid-v10-multi-symbol-scanner">Augury Grid v1.0 — Multi-Symbol Screener<a class="headerlink" href="#augury-grid-v10-multi-symbol-scanner" title="Permanent link">&para;</a></h1>
-<p>Real-time scanner displaying MACD histogram crossovers with confluence filters across multiple assets simultaneously. Monitor up to 8 tickers from single dashboard view.</p>
+<h1 id="augury-grid-v10-multi-timeframe-signal-scanner">Augury Grid v1.0 — Multi-Timeframe Signal Scanner<a class="headerlink" href="#augury-grid-v10-multi-timeframe-signal-scanner" title="Permanent link">&para;</a></h1>
+<p><strong>7 symbols × 3 timeframes = 21 opportunities at a glance.</strong> Professional signal scanner with automatic position management, lifecycle tracking, and quality ratings. Signals that die when stopped out, so you don't hold losers.</p>
 
 <div class="sp-callout sp-callout--success" style="margin: 2rem 0; border-left: 4px solid #4caf50;">
   <div class="sp-callout__icon">👋</div>
   <div class="sp-callout__content">
     <h3 style="margin-top: 0;">New to Trading? Start Here</h3>
 
-    <p><strong>In Plain English:</strong> Instead of checking charts one-by-one to find signals, Augury Grid shows you 8 markets at once in a clean table format. Think of it like:</p>
+    <p><strong>In Plain English:</strong> Augury Grid scans 7 symbols across 3 timeframes simultaneously (21 total scans), ranks them by quality, and shows everything in one clean table. Think of it like:</p>
     <ul>
-      <li>A radar screen showing all nearby aircraft</li>
-      <li>A security monitor showing all camera feeds</li>
-      <li>A sports scoreboard showing all games</li>
+      <li>A command center showing all active opportunities</li>
+      <li>A leaderboard of the best setups right now</li>
+      <li>A position tracker that automatically manages entries, stops, and targets</li>
     </ul>
 
-    <p><strong>What You'll See:</strong></p>
-    <p>A grid/table showing multiple symbols with their current status:</p>
-    <ul style="margin: 1rem 0;">
-      <li><strong>Symbol Name</strong> (e.g., BTC, ETH, AAPL, SPY)</li>
-      <li><strong>Signal Direction</strong> (↑ Bullish or ↓ Bearish)</li>
-      <li><strong>Confluence Score</strong> (how many filters align)</li>
-      <li><strong>Take Profit Level (TP1)</strong> and current P&L</li>
-      <li><strong>Gauss Ribbon Status</strong> (trend filter)</li>
-    </ul>
+    <p><strong>What You'll See (9 Columns):</strong></p>
+    <table style="margin: 1rem 0; font-size: 0.9em;">
+      <tr><td><strong>#</strong></td><td>Rank (best scores first)</td></tr>
+      <tr><td><strong>Sym</strong></td><td>Symbol ticker (BTC, ETH, SPY...)</td></tr>
+      <tr><td><strong>TF</strong></td><td>Timeframe (15m, 4H, D)</td></tr>
+      <tr><td><strong>Bias</strong></td><td>Bull/Bear + star rating (★/★★/★★★)</td></tr>
+      <tr><td><strong>Age</strong></td><td>Time since signal (5h, 2d, etc.)</td></tr>
+      <tr><td><strong>Entry</strong></td><td>Entry price when signal fired</td></tr>
+      <tr><td><strong>SL</strong></td><td>Stop loss (ATR-based)</td></tr>
+      <tr><td><strong>TP</strong></td><td>Take profit levels (TP1/TP2)</td></tr>
+      <tr><td><strong>P&L</strong></td><td>Current profit/loss %</td></tr>
+    </table>
 
-    <p><strong>What Signals Does It Show?</strong></p>
-    <p>Augury Grid detects MACD histogram crossovers filtered by multiple confluence factors:</p>
+    <p><strong>Key Features:</strong></p>
     <ul>
-      <li><strong>↑ Bullish Signal</strong> = MACD histogram crosses above zero with confluence confirmation</li>
-      <li><strong>↓ Bearish Signal</strong> = MACD histogram crosses below zero with confluence confirmation</li>
-      <li><strong>Confluence Filters:</strong> ADX (trend strength), Higher Timeframe alignment, OBV (volume), RSI (momentum), Distance from moving average</li>
-      <li><strong>Score Display</strong> = Shows how many confluence factors align (higher = stronger signal)</li>
-      <li><strong>⚪ NO SIGNAL</strong> = MACD histogram hasn't crossed or confluence filters not met</li>
-    </ul>
-
-    <p><strong>Perfect For:</strong></p>
-    <ul>
-      <li>Scanning multiple crypto pairs quickly</li>
-      <li>Finding the strongest setups across stocks</li>
-      <li>Monitoring your watchlist without clicking through charts</li>
-      <li>Spotting which markets are showing signals RIGHT NOW</li>
+      <li><strong>Lifecycle Tracking</strong> — Signals "die" when SL is hit, automatically finding new opportunities</li>
+      <li><strong>Quality Ratings</strong> — ★ (basic), ★★ (good), ★★★ (excellent) based on 0-100 scoring</li>
+      <li><strong>Multi-Timeframe</strong> — Same symbol can appear on multiple TFs if signals are active</li>
+      <li><strong>Position Management</strong> — Entry, SL, TP1, TP2 calculated automatically using ATR</li>
+      <li><strong>Blocker Detection</strong> — Shows WHY there's no signal (waiting for MACD, wrong trend, etc.)</li>
     </ul>
 
     <details style="margin-top: 1rem;">
-      <summary style="cursor: pointer; font-weight: 600; color: #4caf50;">🎓 What's MACD histogram?</summary>
+      <summary style="cursor: pointer; font-weight: 600; color: #4caf50;">🎓 How is this different from the old scanner?</summary>
       <div style="padding-left: 1rem; margin-top: 0.5rem;">
-        <p>MACD (Moving Average Convergence Divergence) is a momentum indicator that shows the relationship between two moving averages. The histogram shows the difference between the MACD line and its signal line:</p>
+        <p><strong>Old approach:</strong> 8 symbols, 1 timeframe, simple X/5 confluence score, no position tracking.</p>
+        <p><strong>New Augury Grid:</strong></p>
         <ul>
-          <li><strong>Histogram crosses above zero</strong> = Bullish momentum developing</li>
-          <li><strong>Histogram crosses below zero</strong> = Bearish momentum developing</li>
+          <li>7 symbols × 3 timeframes = 21 simultaneous scans</li>
+          <li>Professional 0-100 scoring system with 15+ filters</li>
+          <li>Automatic Entry/SL/TP calculation</li>
+          <li>Real-time P&L tracking from entry</li>
+          <li>Signals expire when stopped out or stale (30 days)</li>
+          <li>8 preset symbol groups (Crypto, Forex, Indices, etc.)</li>
         </ul>
-        <p>Augury Grid doesn't just show raw MACD crosses—it adds <strong>confluence filters</strong> (ADX, HTF, OBV, RSI, distance) to show only the highest-probability setups.</p>
-        <p><strong>You don't need to understand the technical details!</strong> Augury Grid analyzes all the confluence factors and shows you a simple score and direction for each symbol.</p>
       </div>
     </details>
 
     <p><strong>Beginner Starting Point:</strong></p>
     <ol>
-      <li><strong>Start with 4-6 symbols</strong> you're familiar with (work up to all 8)</li>
-      <li><strong>Watch for ↑ Bullish or ↓ Bearish signals</strong> with high confluence scores</li>
-      <li><strong>Click any symbol</strong> in the grid to jump directly to that chart</li>
-      <li><strong>Use it as a filter</strong>—only look at charts showing active MACD crossover signals</li>
+      <li><strong>Choose a preset</strong> (Crypto Majors, US Indices, etc.) from the dropdown</li>
+      <li><strong>Look for ★★★ signals</strong> — these have the highest quality scores</li>
+      <li><strong>Check the P&L column</strong> — positive means price moved in signal direction</li>
+      <li><strong>Use Entry/SL/TP</strong> — these are your position management levels</li>
     </ol>
 
-    <p style="margin-top: 1rem;"><strong>💡 Pro Tip:</strong> Augury Grid is perfect for crypto traders monitoring 10+ pairs, or stock traders scanning their watchlist for MACD momentum shifts. It saves you from clicking through dozens of charts looking for setups.</p>
+    <p style="margin-top: 1rem;"><strong>💡 Pro Tip:</strong> The same symbol (like BTC) can appear multiple times if it has active signals on different timeframes. This is normal and powerful—you see the setup on 15m AND 4H simultaneously.</p>
   </div>
 </div>
 
@@ -2131,50 +2128,51 @@
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
   <div class="sp-callout__icon">📊</div>
   <div class="sp-callout__content">
-    <h4>Grid Scanning Workflow</h4>
-    <p style="margin-bottom: 1rem;">Augury Grid scans up to 8 symbols simultaneously and displays MACD confluence analysis:</p>
+    <h4>Multi-Timeframe Scanning Architecture</h4>
+    <p style="margin-bottom: 1rem;">Augury Grid scans 7 symbols across 3 timeframes = 21 simultaneous scans:</p>
     <div class="mermaid">
 graph TD
-    Config[📊 Configure Up To 8 Symbols] --> Scanner[AUGURY GRID SCANNER<br/>Monitors All Symbols]
+    Preset[📊 Symbol Preset<br/>7 Symbols Selected] --> Scanner[AUGURY GRID SCANNER]
 
-    Scanner --> S1[1️⃣ Symbol 1<br/>MACD + Confluence Analysis]
-    S1 --> S2[2️⃣ Symbol 2<br/>MACD + Confluence Analysis]
-    S2 --> S3[3️⃣ Symbol 3<br/>MACD + Confluence Analysis]
-    S3 --> S4[4️⃣ Symbol 4<br/>MACD + Confluence Analysis]
-    S4 --> S5[5️⃣ Symbol 5<br/>MACD + Confluence Analysis]
-    S5 --> S6[6️⃣ Symbol 6<br/>MACD + Confluence Analysis]
-    S6 --> S7[7️⃣ Symbol 7<br/>MACD + Confluence Analysis]
-    S7 --> S8[8️⃣ Symbol 8<br/>MACD + Confluence Analysis]
+    Scanner --> TF1[⏱️ TIMEFRAME 1<br/>e.g., 15m]
+    Scanner --> TF2[⏱️ TIMEFRAME 2<br/>e.g., 4H]
+    Scanner --> TF3[⏱️ TIMEFRAME 3<br/>e.g., Daily]
 
-    S8 --> Display[GRID DISPLAY<br/>All Symbols Visible at Once]
+    TF1 --> Scan1[7 Symbols Scanned<br/>MACD + 15 Filters]
+    TF2 --> Scan2[7 Symbols Scanned<br/>MACD + 15 Filters]
+    TF3 --> Scan3[7 Symbols Scanned<br/>MACD + 15 Filters]
 
-    Display --> Results{Symbol Status}
+    Scan1 --> Rank[RANKING ENGINE<br/>Score 0-100]
+    Scan2 --> Rank
+    Scan3 --> Rank
 
-    Results --> Bullish[↑ BULLISH SIGNAL<br/>MACD Cross + Score<br/>TP1 & P/L]
-    Results --> Bearish[↓ BEARISH SIGNAL<br/>MACD Cross + Score<br/>TP1 & P/L]
-    Results --> Neutral[⚪ NO SIGNAL<br/>No MACD Crossover<br/>Waiting]
+    Rank --> Table[TABLE DISPLAY<br/>Best Scores First]
 
-    style Config fill:#37474f,color:#fff,stroke:#263238,stroke-width:3px
+    Table --> Active[✅ ACTIVE SIGNAL<br/>Entry/SL/TP/P&L<br/>★★★ Quality Rating]
+    Table --> Blocker[⏳ NO SIGNAL<br/>Shows Blocker Reason<br/>MACD/Trend/ADX/etc.]
+
+    style Preset fill:#37474f,color:#fff,stroke:#263238,stroke-width:3px
     style Scanner fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:3px
-    style Display fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:3px
-    style Results fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:3px
-    style Bullish fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
-    style Bearish fill:#f44336,color:#fff,stroke:#c62828,stroke-width:3px
-    style Neutral fill:#757575,color:#fff,stroke:#616161,stroke-width:2px
+    style Rank fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:3px
+    style Table fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:3px
+    style Active fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
+    style Blocker fill:#757575,color:#fff,stroke:#616161,stroke-width:2px
     </div>
   </div>
 </div>
 
-<p>Augury Grid displays MACD histogram crossover signals with confluence filtering for multiple symbols on one screen. Each symbol shows current signal direction, confluence score, TP1, P&L, and Gauss Ribbon status.</p>
-<p><strong>Display Format:</strong> Organized grid showing ticker symbols with their MACD signal direction (↑/↓), confluence score, and performance metrics.</p>
-<p><strong>Monitoring Capacity:</strong> Up to 8 symbols can be tracked simultaneously.</p>
-<p><strong>Signal Detection:</strong> Uses MACD histogram crossovers filtered by ADX, higher timeframe alignment, OBV, RSI, and distance metrics to identify high-probability momentum shifts.</p>
-<p><strong>Timeframe Compatibility:</strong> Works on all timeframes. All tracked symbols use the same timeframe as the chart.</p>
+<p>Augury Grid is a professional signal scanner that monitors 7 symbols across 3 timeframes simultaneously (21 total scans). Each potential signal passes through MACD detection plus 15 confluence filters, receiving a quality score from 0-100.</p>
+
+<p><strong>Architecture:</strong> 7 symbols × 3 timeframes = 21 simultaneous scans, ranked by quality score.</p>
+<p><strong>Display Format:</strong> Professional table with 9 columns: Rank, Symbol, Timeframe, Bias (with stars), Age, Entry, SL, TP, P&L.</p>
+<p><strong>Signal Detection:</strong> MACD histogram crossovers filtered by 15+ confluence factors including ADX, trend alignment, EMA200, RSI, volume, and momentum.</p>
+<p><strong>Position Management:</strong> Automatic Entry/SL/TP calculation using ATR-based distances.</p>
+<p><strong>Lifecycle Tracking:</strong> Signals automatically expire when SL is hit or after 30 days, then system finds new opportunities.</p>
 
 <!-- 📸 SCREENSHOT NEEDED - Augury Grid Multi-Symbol Scanner - Full Table View
      What to show: Complete Augury Grid table showing 10-15 symbols with signals and scores
      Setup: Augury Grid enabled with your watchlist, show symbols with mix of bullish/bearish signals
-     Label/Annotate: Box around high-confluence signals (4/5 or 5/5 scores)
+     Label/Annotate: Box around high-quality signals (★★★ ratings)
      File name suggestion: augury-grid-full-table.png
 -->
 <div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
@@ -2184,113 +2182,312 @@ graph TD
 </div>
 
 <hr />
-<h2 id="educational-example-grid-view-november-2024">📊 Educational Example: Grid View (November 2024)<a class="headerlink" href="#educational-example-grid-view-november-2024" title="Permanent link">&para;</a></h2>
+<h2 id="educational-example-table-view">📊 Educational Example: Table View (January 2026)<a class="headerlink" href="#educational-example-table-view" title="Permanent link">&para;</a></h2>
 <p><em>(Historical observation for educational purposes only. Not financial advice. Past performance does not indicate future results.)</em></p>
-<p><strong>Example Dashboard Snapshot:</strong></p>
+<p><strong>Example Dashboard Snapshot (Crypto Majors Preset):</strong></p>
 <table>
 <thead>
 <tr>
-<th>Symbol</th>
-<th>Signal</th>
-<th>Score</th>
-<th>TP1</th>
+<th>#</th>
+<th>Sym</th>
+<th>TF</th>
+<th>Bias</th>
+<th>Age</th>
+<th>Entry</th>
+<th>SL</th>
+<th>TP</th>
 <th>P&L</th>
-<th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>BTC/USD</td>
-<td>↑ Bullish</td>
-<td>4/5</td>
-<td>$65,200</td>
-<td>+2.3%</td>
-<td>Strong confluence</td>
+<td>1</td>
+<td>SOL</td>
+<td>4H</td>
+<td>Bull ★★★</td>
+<td>2d</td>
+<td>$185.20</td>
+<td>$178.50</td>
+<td>$195.00</td>
+<td>+4.2%</td>
 </tr>
 <tr>
-<td>ETH/USD</td>
-<td>↑ Bullish</td>
-<td>5/5</td>
-<td>$3,580</td>
+<td>2</td>
+<td>ETH</td>
+<td>D</td>
+<td>Bull ★★★</td>
+<td>5d</td>
+<td>$3,280</td>
+<td>$3,150</td>
+<td>$3,480</td>
 <td>+3.1%</td>
-<td>All filters aligned</td>
 </tr>
 <tr>
-<td>SPY</td>
-<td>↓ Bearish</td>
-<td>3/5</td>
-<td>$432</td>
-<td>-1.2%</td>
-<td>Moderate confluence</td>
+<td>3</td>
+<td>BTC</td>
+<td>15m</td>
+<td>Bull ★★</td>
+<td>5h</td>
+<td>$94,200</td>
+<td>$93,100</td>
+<td>$96,000</td>
+<td>+1.8%</td>
 </tr>
 <tr>
-<td>QQQ</td>
+<td>4</td>
+<td>BTC</td>
+<td>4H</td>
+<td>Bull ★★</td>
+<td>1d</td>
+<td>$93,500</td>
+<td>$91,800</td>
+<td>$96,500</td>
+<td>+2.5%</td>
+</tr>
+<tr>
+<td>5</td>
+<td>XRP</td>
+<td>D</td>
+<td>Bear ★</td>
+<td>3d</td>
+<td>$2.35</td>
+<td>$2.48</td>
+<td>$2.18</td>
+<td>-2.1%</td>
+</tr>
+<tr>
+<td>6</td>
+<td>ADA</td>
+<td>15m</td>
+<td>⏳ MACD</td>
 <td>—</td>
 <td>—</td>
 <td>—</td>
 <td>—</td>
-<td>No crossover</td>
+<td>—</td>
 </tr>
 <tr>
-<td>AAPL</td>
-<td>↓ Bearish</td>
-<td>4/5</td>
-<td>$168</td>
-<td>-0.8%</td>
-<td>Strong confluence</td>
-</tr>
-<tr>
-<td>TSLA</td>
-<td>↑ Bullish</td>
-<td>2/5</td>
-<td>$248</td>
-<td>+0.5%</td>
-<td>Weak confluence</td>
+<td>7</td>
+<td>DOGE</td>
+<td>4H</td>
+<td>💀 SL Hit</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Pattern Observed:</strong> ETH/USD showed perfect 5/5 confluence score while BTC/USD had strong 4/5, allowing simultaneous monitoring of multiple high-probability MACD momentum shifts across different assets.</p>
-<p><em>This example demonstrates grid monitoring capability. Individual interpretation and outcomes vary.</em></p>
-
-<p><strong>Remember:</strong> Notice in the example above that TSLA's 2/5 confluence gained +0.5% while ETH's 5/5 gained +3.1%. Confluence scores indicate probability, not certainty. Focus your limited attention and capital on 4/5 and 5/5 signals—low confluence signals occasionally work but aren't worth the opportunity cost of missing stronger setups.</p>
+<p><strong>Key Observations:</strong></p>
+<ul>
+<li><strong>BTC appears twice</strong> — Active signals on both 15m and 4H timeframes (this is normal and powerful)</li>
+<li><strong>SOL ★★★ ranked #1</strong> — Highest quality score (95+) puts it at the top</li>
+<li><strong>XRP is bearish</strong> — Short signal with SL above entry, TP below</li>
+<li><strong>ADA shows ⏳ MACD</strong> — No signal yet, waiting for MACD crossover</li>
+<li><strong>DOGE shows 💀 SL Hit</strong> — Previous signal stopped out, scanning for new opportunity</li>
+</ul>
+<p><em>This example demonstrates the multi-timeframe scanning and lifecycle tracking. Individual interpretation and outcomes vary.</em></p>
 
 <hr />
-<h2 id="settings">⚙️ Settings <span class="skill-badge skill-badge--beginner" data-tooltip="Simple configuration options">Beginner Friendly</span><a class="headerlink" href="#settings" title="Permanent link">&para;</a></h2>
-<h3 id="symbol-configuration">Symbol Configuration<a class="headerlink" href="#symbol-configuration" title="Permanent link">&para;</a></h3>
-<p><strong>Watchlist Setup:</strong></p>
-<p>Add symbols to monitor in settings panel. Up to 8 symbols can be tracked.</p>
-<p><strong>Symbol Entry:</strong><br />
-- Enter ticker symbols separated by commas<br />
-- Example: <code>BTC/USD, ETH/USD, SPY, QQQ, AAPL, TSLA</code><br />
-- Symbols must be available on TradingView</p>
-<p><strong>Watchlist Presets:</strong></p>
+<h2 id="symbol-presets">📈 Symbol Presets<a class="headerlink" href="#symbol-presets" title="Permanent link">&para;</a></h2>
+<p>Augury Grid includes 8 built-in symbol presets plus a custom option. Select from the dropdown in settings:</p>
 <table>
 <thead>
 <tr>
-<th>Preset Type</th>
-<th>Example Symbols</th>
+<th>Preset</th>
+<th>Description</th>
+<th>Exchange</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Crypto</strong></td>
-<td>BTC/USD, ETH/USD, SOL/USD, ADA/USD, XRP/USD</td>
+<td><strong>Crypto Majors (Binance)</strong></td>
+<td>BTC, ETH, SOL, XRP, ADA, DOGE, AVAX</td>
+<td>Binance</td>
 </tr>
 <tr>
-<td><strong>Major Indices</strong></td>
-<td>SPY, QQQ, DIA, IWM, VIX</td>
+<td><strong>Crypto Majors (Bybit)</strong></td>
+<td>BTC, ETH, SOL, XRP, ADA, DOGE, AVAX</td>
+<td>Bybit</td>
 </tr>
 <tr>
-<td><strong>Tech Stocks</strong></td>
-<td>AAPL, MSFT, GOOGL, AMZN, NVDA, TSLA</td>
+<td><strong>Altcoins (Binance)</strong></td>
+<td>LINK, DOT, MATIC, UNI, ATOM, FTM, NEAR</td>
+<td>Binance</td>
 </tr>
 <tr>
-<td><strong>Forex Majors</strong></td>
-<td>EUR/USD, GBP/USD, USD/JPY, AUD/USD</td>
+<td><strong>Meme Coins (Binance)</strong></td>
+<td>DOGE, SHIB, PEPE, FLOKI, BONK, WIF, MEME</td>
+<td>Binance</td>
+</tr>
+<tr>
+<td><strong>Forex Majors (OANDA)</strong></td>
+<td>EUR/USD, GBP/USD, USD/JPY, AUD/USD, USD/CAD, NZD/USD, USD/CHF</td>
+<td>OANDA</td>
+</tr>
+<tr>
+<td><strong>US Indices</strong></td>
+<td>SPY, QQQ, DIA, IWM, VIX, XLF, XLE</td>
+<td>Various</td>
+</tr>
+<tr>
+<td><strong>US Tech Giants</strong></td>
+<td>AAPL, MSFT, GOOGL, AMZN, NVDA, META, TSLA</td>
+<td>NASDAQ</td>
+</tr>
+<tr>
+<td><strong>Commodities</strong></td>
+<td>GC (Gold), SI (Silver), CL (Oil), NG (Gas), HG (Copper), ZW (Wheat), ZC (Corn)</td>
+<td>CME</td>
+</tr>
+<tr>
+<td><strong>Custom</strong></td>
+<td>Your own 7 symbols</td>
+<td>Any</td>
 </tr>
 </tbody>
 </table>
-<h3 id="display-configuration">Display Configuration<a class="headerlink" href="#display-configuration" title="Permanent link">&para;</a></h3>
+
+<div class="admonition warning" style="border-left: 5px solid #ff9800; background: #fff3e0; padding: 1rem; margin: 1.5rem 0;">
+  <p class="admonition-title" style="font-weight: bold; color: #e65100; margin: 0 0 0.5rem 0;">⚠️ Custom Symbols Warning</p>
+  <p style="margin: 0; color: #424242;">When using Custom preset, <strong>all 7 symbols must be from the SAME exchange</strong> (e.g., all Binance or all NASDAQ). Mixing exchanges causes TradingView memory issues.</p>
+</div>
+
+<hr />
+<h2 id="lifecycle-system">🔄 Signal Lifecycle System<a class="headerlink" href="#lifecycle-system" title="Permanent link">&para;</a></h2>
+<p>Augury Grid signals have a lifecycle—they're born, live, and die. This prevents you from holding stale positions:</p>
+
+<h3 id="signal-birth">Signal Birth<a class="headerlink" href="#signal-birth" title="Permanent link">&para;</a></h3>
+<p>A signal fires when:</p>
+<ol>
+<li>MACD histogram crossover occurs (above zero = bullish, below zero = bearish)</li>
+<li>All 12 "hard filters" pass (trend, EMA200, ADX, RSI, volume, momentum, etc.)</li>
+<li>Quality score ≥ 70 (minimum threshold)</li>
+</ol>
+<p>At birth, Entry/SL/TP are locked in based on current price and ATR.</p>
+
+<h3 id="signal-life">Signal Life<a class="headerlink" href="#signal-life" title="Permanent link">&para;</a></h3>
+<p>While active, the signal:</p>
+<ul>
+<li>Tracks real-time P&L from entry price</li>
+<li>Displays Age (how long since signal fired)</li>
+<li>Shows quality rating (★/★★/★★★)</li>
+<li>Remains ranked by quality score</li>
+</ul>
+
+<h3 id="signal-death">Signal Death<a class="headerlink" href="#signal-death" title="Permanent link">&para;</a></h3>
+<p>A signal dies when:</p>
+<ul>
+<li><strong>💀 SL Hit</strong> — Price reached stop loss (signal failed)</li>
+<li><strong>💀 Stale</strong> — Signal is &gt;30 days old (expired)</li>
+<li><strong>New opposite signal</strong> — Bullish replaced by bearish (or vice versa)</li>
+</ul>
+<p>When a signal dies, Augury Grid immediately scans for a new opportunity on that symbol/timeframe combination.</p>
+
+<hr />
+<h2 id="blocker-detection">⏳ Blocker Detection (Why No Signal?)<a class="headerlink" href="#blocker-detection" title="Permanent link">&para;</a></h2>
+<p>When there's no active signal, Augury Grid shows you exactly WHY with blocker codes:</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+<th>What to Do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>⏳ MACD</strong></td>
+<td>Waiting for MACD crossover</td>
+<td>No momentum shift yet—wait</td>
+</tr>
+<tr>
+<td><strong>⏳ Trend</strong></td>
+<td>Wrong trend direction</td>
+<td>Trend doesn't support the signal</td>
+</tr>
+<tr>
+<td><strong>⏳ EMA200</strong></td>
+<td>Below/above 200 EMA</td>
+<td>Major trend filter not aligned</td>
+</tr>
+<tr>
+<td><strong>⏳ ADX</strong></td>
+<td>ADX too low (&lt;20)</td>
+<td>No trend strength—choppy market</td>
+</tr>
+<tr>
+<td><strong>⏳ RSI</strong></td>
+<td>RSI at extreme</td>
+<td>Overbought/oversold—wait for pullback</td>
+</tr>
+<tr>
+<td><strong>⏳ Volume</strong></td>
+<td>No volume spike</td>
+<td>Insufficient volume confirmation</td>
+</tr>
+<tr>
+<td><strong>⏳ Momentum</strong></td>
+<td>Momentum not aligned</td>
+<td>Other momentum filters disagree</td>
+</tr>
+<tr>
+<td><strong>💀 SL Hit</strong></td>
+<td>Previous signal stopped out</td>
+<td>Scanning for new opportunity</td>
+</tr>
+<tr>
+<td><strong>💀 Stale</strong></td>
+<td>Signal too old (&gt;30 days)</td>
+<td>Expired—scanning for fresh signal</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+<h2 id="quality-rating-system">⭐ Quality Rating System<a class="headerlink" href="#quality-rating-system" title="Permanent link">&para;</a></h2>
+<p>Each signal receives a 0-100 quality score, displayed as star ratings:</p>
+<table>
+<thead>
+<tr>
+<th>Rating</th>
+<th>Score Range</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>★</strong></td>
+<td>70-84</td>
+<td>Basic signal — meets minimum requirements</td>
+</tr>
+<tr>
+<td><strong>★★</strong></td>
+<td>85-94</td>
+<td>Good signal — multiple confluence factors aligned</td>
+</tr>
+<tr>
+<td><strong>★★★</strong></td>
+<td>95-100</td>
+<td>Excellent signal — rare, high-probability setup</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Bonus factors that increase score:</strong></p>
+<ul>
+<li><strong>ADX Rising</strong> — Trend strengthening (+10 pts)</li>
+<li><strong>RSI Mid-Range</strong> — RSI between 40-60 (+10 pts)</li>
+<li><strong>Histogram Growing</strong> — MACD histogram expanding (+8 pts)</li>
+</ul>
+
+<p><strong>Note:</strong> Signals below 70 are filtered out automatically. You only see quality setups.</p>
+
+<hr />
+<h2 id="settings">⚙️ Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h2>
+
+<h3 id="display-settings">📱 Display Settings<a class="headerlink" href="#display-settings" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -2301,331 +2498,216 @@ graph TD
 </thead>
 <tbody>
 <tr>
-<td><strong>Grid Layout</strong></td>
-<td>4×10, 5×8, 8×5, 10×4</td>
-<td>5×8</td>
+<td><strong>Mobile Mode</strong></td>
+<td>On/Off</td>
+<td>Off</td>
 </tr>
 <tr>
-<td><strong>Signal Alerts</strong></td>
-<td>Individual on/off per symbol</td>
-<td>All enabled</td>
+<td><strong>Text Size</strong></td>
+<td>Tiny, Small, Normal, Large</td>
+<td>Normal</td>
 </tr>
 <tr>
-<td><strong>Count Display</strong></td>
-<td>Show numbers or icons</td>
-<td>Numbers</td>
+<td><strong>Position</strong></td>
+<td>Top Left, Top Right, Bottom Left, Bottom Right</td>
+<td>Top Right</td>
 </tr>
 <tr>
-<td><strong>Color Scheme</strong></td>
-<td>Multiple palettes</td>
-<td>Scheme 1</td>
+<td><strong>Abbreviate Text</strong></td>
+<td>On/Off</td>
+<td>Off</td>
 </tr>
 </tbody>
 </table>
 
-<!-- 📸 SCREENSHOT NEEDED - Augury Grid Settings - Symbol Configuration
-     What to show: TradingView settings panel showing symbol input fields
-     Setup: Right-click Augury Grid → Settings → Symbol configuration section
-     Label/Annotate: Highlight symbol format examples (BINANCE:BTCUSDT, NASDAQ:AAPL, etc.)
-     File name suggestion: augury-grid-settings-symbols.png
--->
-<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
-  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
-  <p style="margin: 0; color: #424242;"><strong>Augury Grid Settings - Symbol Configuration</strong></p>
-  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a screenshot of the TradingView settings panel showing symbol input fields and format examples.</p>
-</div>
+<h3 id="column-visibility">📊 Column Visibility<a class="headerlink" href="#column-visibility" title="Permanent link">&para;</a></h3>
+<p>Toggle each column on/off:</p>
+<ul>
+<li># (Rank)</li>
+<li>Sym (Symbol)</li>
+<li>TF (Timeframe)</li>
+<li>Bias (Direction + Stars)</li>
+<li>Age</li>
+<li>Entry</li>
+<li>SL (Stop Loss)</li>
+<li>TP (Take Profit)</li>
+<li>P&L (Profit/Loss)</li>
+</ul>
 
-<hr />
-<h2 id="td-sequential-in-grid-format">🔢 MACD Confluence Scanner in Grid Format<a class="headerlink" href="#td-sequential-in-grid-format" title="Permanent link">&para;</a></h2>
-<h3 id="visual-display-elements">Visual Display Elements<a class="headerlink" href="#visual-display-elements" title="Permanent link">&para;</a></h3>
-<p><strong>Signal Direction:</strong><br />
-- <strong>↑ Bullish:</strong> MACD histogram crossed above zero with confluence<br />
-- <strong>↓ Bearish:</strong> MACD histogram crossed below zero with confluence<br />
-- <strong>Neutral (—):</strong> No MACD crossover or insufficient confluence</p>
-<p><strong>Performance Metrics:</strong><br />
-- <strong>Score (X/5):</strong> Number of confluence filters aligned (ADX, HTF, OBV, RSI, Distance)<br />
-- <strong>TP1:</strong> Calculated take-profit level based on signal<br />
-- <strong>P&L (%):</strong> Current profit/loss from signal entry<br />
-- <strong>Gauss Ribbon:</strong> Trend filter status</p>
-<h3 id="grid-cell-information">Grid Cell Information<a class="headerlink" href="#grid-cell-information" title="Permanent link">&para;</a></h3>
-<p>Each symbol cell displays:<br />
-1. <strong>Ticker Symbol</strong> - Asset identifier<br />
-2. <strong>Signal Direction</strong> - ↑ Bullish, ↓ Bearish, or — (neutral)<br />
-3. <strong>Confluence Score</strong> - X/5 rating showing filter alignment<br />
-4. <strong>TP1 & P&L</strong> - Target price and current performance<br />
-5. <strong>Color Coding</strong> - Visual identification of bullish (green) or bearish (red) signals</p>
-<p><strong>Example Cell:</strong></p>
-<pre><code>ETH/USD
-↑ Bullish | Score: 5/5
-TP1: $3,580 | P&L: +3.1%
-</code></pre>
-
-<!-- 📸 SCREENSHOT NEEDED - Augury Grid Single Row Annotated - Column Explanation
-     What to show: Zoomed-in view of ONE grid row (e.g., BTCUSDT) showing all columns
-     Setup: Screenshot just one row from the grid
-     Label/Annotate: Arrow pointing to each column with label (Symbol | Signal ↑ | Score 5/5 | TP1 | P&L +2.5%)
-     File name suggestion: augury-grid-row-annotated.png
--->
-<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
-  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
-  <p style="margin: 0; color: #424242;"><strong>Augury Grid Single Row Annotated - Column Explanation</strong></p>
-  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a zoomed-in view of one grid row showing all columns explained (Symbol, Signal, Score, TP1, P&L).</p>
-</div>
-
-<hr />
-<h2 id="educational-example-crypto-market-scan-december-2024">📖 Educational Example: Crypto Market Scan (December 2024)<a class="headerlink" href="#educational-example-crypto-market-scan-december-2024" title="Permanent link">&para;</a></h2>
-<p><em>(Historical observation for educational purposes only. Not financial advice. Past performance does not indicate future results.)</em></p>
-<p><strong>Timeframe:</strong> 4-Hour Chart</p>
-<p><strong>Watchlist:</strong> Top 10 cryptocurrencies by market cap</p>
-<p><strong>Scan Results at 8:00 AM:</strong></p>
+<h3 id="filter-settings">⚡ Filter Settings<a class="headerlink" href="#filter-settings" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Rank</th>
-<th>Symbol</th>
-<th>Signal</th>
-<th>Score</th>
-<th>Price</th>
-<th>TP1</th>
-<th>P&L</th>
+<th>Setting</th>
+<th>Description</th>
+<th>Default</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td>BTC/USD</td>
-<td>↑ Bullish</td>
-<td>4/5</td>
-<td>$63,200</td>
-<td>$66,500</td>
-<td>+1.8%</td>
+<td><strong>Min Score</strong></td>
+<td>Minimum quality score to display</td>
+<td>70</td>
 </tr>
 <tr>
-<td>2</td>
-<td>ETH/USD</td>
-<td>↑ Bullish</td>
-<td>5/5</td>
-<td>$3,420</td>
-<td>$3,650</td>
-<td>+2.4%</td>
-</tr>
-<tr>
-<td>3</td>
-<td>BNB/USD</td>
-<td>—</td>
-<td>—</td>
-<td>$310</td>
-<td>—</td>
-<td>—</td>
-</tr>
-<tr>
-<td>4</td>
-<td>SOL/USD</td>
-<td>↑ Bullish</td>
-<td>4/5</td>
-<td>$98</td>
-<td>$105</td>
-<td>+2.1%</td>
-</tr>
-<tr>
-<td>5</td>
-<td>XRP/USD</td>
-<td>↓ Bearish</td>
-<td>3/5</td>
-<td>$0.62</td>
-<td>$0.58</td>
-<td>-1.2%</td>
-</tr>
-<tr>
-<td>6</td>
-<td>ADA/USD</td>
-<td>↑ Bullish</td>
-<td>3/5</td>
-<td>$0.58</td>
-<td>$0.62</td>
-<td>+0.9%</td>
-</tr>
-<tr>
+<td><strong>Show Top N</strong></td>
+<td>Maximum rows to display</td>
 <td>7</td>
-<td>AVAX/USD</td>
-<td>↑ Bullish</td>
-<td>5/5</td>
-<td>$35</td>
-<td>$38</td>
-<td>+3.2%</td>
-</tr>
-<tr>
-<td>8</td>
-<td>DOT/USD</td>
-<td>—</td>
-<td>—</td>
-<td>$7.20</td>
-<td>—</td>
-<td>—</td>
-</tr>
-<tr>
-<td>9</td>
-<td>MATIC/USD</td>
-<td>↓ Bearish</td>
-<td>4/5</td>
-<td>$0.89</td>
-<td>$0.82</td>
-<td>-2.1%</td>
-</tr>
-<tr>
-<td>10</td>
-<td>LINK/USD</td>
-<td>↑ Bullish</td>
-<td>2/5</td>
-<td>$14.50</td>
-<td>$15.20</td>
-<td>+0.5%</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Multi-Signal Detection:</strong> Three symbols (BTC, SOL, AVAX) showed bullish MACD signals with strong 4-5/5 confluence scores, indicating broad bullish momentum across major cryptocurrencies. ETH and AVAX both showed perfect 5/5 confluence.</p>
-<p><strong>Outcome Observed:</strong> All high-confluence bullish signals (ETH 5/5, AVAX 5/5, BTC 4/5) preceded price increases over following 24-48 hours.</p>
-<p><em>This example demonstrates simultaneous multi-symbol monitoring. Individual interpretation and outcomes vary.</em></p>
+
+<h3 id="target-settings">🎯 Target Settings<a class="headerlink" href="#target-settings" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SL ×ATR</strong></td>
+<td>Stop loss distance in ATR multiples</td>
+<td>1.5</td>
+</tr>
+<tr>
+<td><strong>TP1 ×ATR</strong></td>
+<td>First take profit distance</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td><strong>TP2 ×ATR</strong></td>
+<td>Runner take profit distance</td>
+<td>3.0</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="timeframe-settings">⏱️ Timeframe Settings<a class="headerlink" href="#timeframe-settings" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TF 1</strong></td>
+<td>First timeframe (scalp/intraday)</td>
+<td>15m</td>
+</tr>
+<tr>
+<td><strong>TF 2</strong></td>
+<td>Second timeframe (swing)</td>
+<td>4H</td>
+</tr>
+<tr>
+<td><strong>TF 3</strong></td>
+<td>Third timeframe (position)</td>
+<td>D</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="symbol-preset-settings">📈 Symbol Preset<a class="headerlink" href="#symbol-preset-settings" title="Permanent link">&para;</a></h3>
+<p>Dropdown with 9 options: 8 presets + Custom (see Symbol Presets section above)</p>
+
+<h3 id="custom-symbol-settings">📝 Custom Symbols<a class="headerlink" href="#custom-symbol-settings" title="Permanent link">&para;</a></h3>
+<p>When Preset = Custom, you can enter 7 custom symbols. Enter full TradingView format:</p>
+<ul>
+<li>Crypto: <code>BINANCE:BTCUSDT</code></li>
+<li>Stocks: <code>NASDAQ:AAPL</code></li>
+<li>Forex: <code>OANDA:EURUSD</code></li>
+</ul>
+
 <hr />
-<h2 id="scanning-strategies">🎯 Scanning Strategies <span class="skill-badge skill-badge--intermediate" data-tooltip="Requires understanding of market scanning">Intermediate</span><a class="headerlink" href="#scanning-strategies" title="Permanent link">&para;</a></h2>
-<h3 id="strategy-1-broad-market-scan">Strategy 1: Broad Market Scan<a class="headerlink" href="#strategy-1-broad-market-scan" title="Permanent link">&para;</a></h3>
-<p><strong>Approach:</strong><br />
-- Fill all 8 symbol slots with diverse assets across sectors<br />
-- Scan for any bullish (↑) or bearish (↓) MACD signals with high confluence scores<br />
-- Focus attention on symbols showing 4/5 or 5/5 confluence</p>
-<p><strong>Use Case:</strong> Opportunity discovery across diverse markets</p>
-<p><strong>Example Watchlist:</strong> Major indices, sector ETFs, top crypto, forex pairs, commodities</p>
-<h3 id="strategy-2-sector-rotation-scan">Strategy 2: Sector Rotation Scan<a class="headerlink" href="#strategy-2-sector-rotation-scan" title="Permanent link">&para;</a></h3>
-<p><strong>Approach:</strong><br />
-- Monitor 10-15 symbols within specific sector<br />
-- Compare relative confluence scores and momentum direction<br />
-- Identify sector-wide momentum patterns</p>
-<p><strong>Use Case:</strong> Sector-specific analysis and comparison</p>
-<p><strong>Example Watchlist:</strong> All semiconductor stocks (NVDA, AMD, INTC, TSM, AVGO, QCOM, MU, etc.)</p>
-<h3 id="strategy-3-correlation-scan">Strategy 3: Correlation Scan<a class="headerlink" href="#strategy-3-correlation-scan" title="Permanent link">&para;</a></h3>
-<p><strong>Approach:</strong><br />
-- Monitor related assets (e.g., BTC + major altcoins)<br />
-- Observe if MACD signals appear simultaneously or in sequence<br />
-- Identify correlation patterns in momentum shifts</p>
-<p><strong>Use Case:</strong> Understanding market leadership and correlation</p>
-<p><strong>Example Watchlist:</strong> BTC/USD + top 15 altcoins</p>
-<h3 id="strategy-4-portfolio-monitor">Strategy 4: Portfolio Monitor<a class="headerlink" href="#strategy-4-portfolio-monitor" title="Permanent link">&para;</a></h3>
-<p><strong>Approach:</strong><br />
-- Track symbols in current portfolio holdings<br />
-- Monitor for MACD momentum shifts on held positions<br />
-- Use confluence scores as position management reference</p>
-<p><strong>Use Case:</strong> Portfolio-level awareness of momentum changes</p>
-<p><strong>Example Watchlist:</strong> Personal holdings (stocks, crypto, etc.)</p>
+<h2 id="mobile-mode">📱 Mobile Mode<a class="headerlink" href="#mobile-mode" title="Permanent link">&para;</a></h2>
+<p>One-click toggle for phone-friendly display:</p>
+<ul>
+<li><strong>Tiny text</strong> — Maximum information density</li>
+<li><strong>Bottom right position</strong> — Doesn't block price action</li>
+<li><strong>All columns visible</strong> — Full data at a glance</li>
+<li><strong>5 rows displayed</strong> — Top opportunities only</li>
+</ul>
+<p><strong>Use case:</strong> Quick glance at positions while away from desk. Perfect for monitoring trades during breaks or commute.</p>
 <hr />
 <h2 id="alert-configuration">🔔 Alert Configuration<a class="headerlink" href="#alert-configuration" title="Permanent link">&para;</a></h2>
-<p><strong>Multi-Symbol Alert System:</strong></p>
-<p>Augury Grid can trigger alerts when any tracked symbol generates a MACD crossover signal with confluence confirmation.</p>
-<p><strong>Available Alert Types:</strong></p>
+<p><strong>Available Alerts:</strong></p>
 <table>
 <thead>
 <tr>
 <th>Alert</th>
 <th>Trigger</th>
-<th>Notification</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Any Bullish Signal</strong></td>
-<td>Any tracked symbol shows bullish MACD crossover</td>
-<td>"Symbol XYZ: Bullish signal (Score: 5/5)"</td>
+<td>Any symbol on any timeframe fires bullish signal</td>
 </tr>
 <tr>
 <td><strong>Any Bearish Signal</strong></td>
-<td>Any tracked symbol shows bearish MACD crossover</td>
-<td>"Symbol XYZ: Bearish signal (Score: 4/5)"</td>
+<td>Any symbol on any timeframe fires bearish signal</td>
 </tr>
 <tr>
-<td><strong>Specific Symbol</strong></td>
-<td>Individual symbol alerts</td>
-<td>"BTC/USD: Bullish signal (Score: 5/5)"</td>
+<td><strong>Any Signal</strong></td>
+<td>Combined — any bull or bear signal</td>
 </tr>
 <tr>
-<td><strong>High Confluence Only</strong></td>
-<td>Only signals with 4/5 or 5/5 scores</td>
-<td>"ETH/USD: High-probability bullish (5/5)"</td>
+<td><strong>Symbol 1 Any Signal</strong></td>
+<td>First symbol in list fires any signal</td>
 </tr>
 <tr>
-<td><strong>Multiple Simultaneous</strong></td>
-<td>3+ symbols signal at once</td>
-<td>"Multiple signals: BTC, ETH, SOL"</td>
+<td><strong>Symbol 2 Any Signal</strong></td>
+<td>Second symbol in list fires any signal</td>
+</tr>
+<tr>
+<td><strong>Symbol 3 Any Signal</strong></td>
+<td>Third symbol in list fires any signal</td>
+</tr>
+<tr>
+<td><strong>Symbol 4 Any Signal</strong></td>
+<td>Fourth symbol in list fires any signal</td>
+</tr>
+<tr>
+<td><strong>Symbol 5 Any Signal</strong></td>
+<td>Fifth symbol in list fires any signal</td>
+</tr>
+<tr>
+<td><strong>Symbol 6 Any Signal</strong></td>
+<td>Sixth symbol in list fires any signal</td>
+</tr>
+<tr>
+<td><strong>Symbol 7 Any Signal</strong></td>
+<td>Seventh symbol in list fires any signal</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Alert Setup:</strong><br />
-1. Open indicator settings<br />
-2. Navigate to alert section<br />
-3. Enable "Any Bullish Signal" or "Any Bearish Signal"<br />
-4. Optional: Set minimum confluence score threshold (e.g., 4/5 or higher only)<br />
-5. Optional: Enable specific symbol alerts<br />
-6. Configure notification preferences (popup, email, webhook)</p>
-<p><strong>Alert Advantages:</strong><br />
-- No need to watch grid constantly<br />
-- Immediate notification when high-confluence MACD signals appear<br />
-- Can monitor all 8 symbols with single alert configuration<br />
-- Filter by confluence score to reduce noise</p>
-<hr />
-<h2 id="grid-update-behavior">🔄 Grid Update Behavior<a class="headerlink" href="#grid-update-behavior" title="Permanent link">&para;</a></h2>
-<p><strong>Real-Time Updates:</strong></p>
-<p>The grid updates at bar close for the active timeframe.</p>
-<p><strong>Update Frequency:</strong><br />
-- 5-minute chart: Updates every 5 minutes<br />
-- 1-hour chart: Updates every hour<br />
-- Daily chart: Updates at daily close</p>
-<p><strong>Signal Generation:</strong></p>
-<p>MACD signals generate when histogram crosses zero with confluence confirmation:<br />
-- Bullish signal: MACD histogram crosses above zero + confluence filters<br />
-- Bearish signal: MACD histogram crosses below zero + confluence filters</p>
-<p><strong>Signal Persistence:</strong></p>
-<p>MACD signals remain displayed until:<br />
-- Histogram crosses back in opposite direction<br />
-- New crossover signal begins<br />
-- Confluence score updates in real-time as filters change</p>
-<hr />
-<h2 id="interpreting-grid-patterns">📚 Interpreting Grid Patterns<a class="headerlink" href="#interpreting-grid-patterns" title="Permanent link">&para;</a></h2>
-<h3 id="pattern-1-broad-market-exhaustion">Pattern 1: Broad Market Momentum<a class="headerlink" href="#pattern-1-broad-market-exhaustion" title="Permanent link">&para;</a></h3>
-<p><strong>Observation:</strong><br />
-Multiple symbols (5+) show bullish or bearish MACD signals with high confluence (4-5/5) simultaneously across same sector or asset class.</p>
-<p><strong>Interpretation:</strong><br />
-Sector-wide or market-wide momentum shift in progress.</p>
-<p><strong>Example:</strong> 8 out of 10 tech stocks showing bearish signals with 4-5/5 scores → Broad tech sector momentum reversal characteristics.</p>
-<h3 id="pattern-2-divergent-signals">Pattern 2: Divergent Signals<a class="headerlink" href="#pattern-2-divergent-signals" title="Permanent link">&para;</a></h3>
-<p><strong>Observation:</strong><br />
-Some symbols show bullish signals while related symbols show bearish signals.</p>
-<p><strong>Interpretation:</strong><br />
-Divergence in momentum direction within sector or asset class.</p>
-<p><strong>Example:</strong> BTC showing bullish 5/5 signal, ETH showing bearish 4/5 signal → Divergent momentum between major crypto assets.</p>
-<h3 id="pattern-3-sequential-cascade">Pattern 3: Sequential Cascade<a class="headerlink" href="#pattern-3-sequential-cascade" title="Permanent link">&para;</a></h3>
-<p><strong>Observation:</strong><br />
-MACD signals appear across related symbols in sequence over time rather than simultaneously.</p>
-<p><strong>Interpretation:</strong><br />
-Potential leadership or lagging pattern within sector.</p>
-<p><strong>Example:</strong> Tech mega-caps signal first (AAPL, MSFT), then mid-caps signal days later → Potential cascade pattern in momentum shifts.</p>
-<h3 id="pattern-4-isolated-signal">Pattern 4: Isolated High-Probability Signal<a class="headerlink" href="#pattern-4-isolated-signal" title="Permanent link">&para;</a></h3>
-<p><strong>Observation:</strong><br />
-One symbol shows signal with 5/5 confluence while all others remain neutral or show low-confluence signals.</p>
-<p><strong>Interpretation:</strong><br />
-Asset-specific momentum shift with exceptional confluence rather than broad market pattern.</p>
-<p><strong>Example:</strong> Single stock shows bullish 5/5 signal while entire sector neutral → Isolated high-probability setup characteristics.</p>
+1. Right-click the indicator → Create Alert<br />
+2. Select "Augury Grid" from the dropdown<br />
+3. Choose your alert condition (e.g., "Any Bullish Signal")<br />
+4. Set to "Once Per Bar Close"<br />
+5. Configure notification preferences (popup, email, webhook)</p>
+
 <hr />
 <div class="sp-callout sp-callout--summary">
   <div class="sp-callout__title">What You've Learned</div>
   <ul>
-    <li><strong>Multi-Symbol Monitoring:</strong> Augury Grid simultaneously tracks up to 8 symbols on a single chart, providing real-time MACD histogram crossovers with confluence scores across your watchlist</li>
-    <li><strong>MACD Confluence Methodology:</strong> Displays bullish (↑) and bearish (↓) MACD histogram crossovers filtered by 5 confluence factors: ADX (trend strength), Higher Timeframe alignment, OBV (volume), RSI (momentum), and Distance from moving average</li>
-    <li><strong>Performance Metrics:</strong> Each symbol displays Signal Direction, Confluence Score (X/5), Take Profit level (TP1), current P&L percentage, and Gauss Ribbon status for comprehensive signal evaluation</li>
-    <li><strong>Customizable Symbol Lists:</strong> Configure any combination of stocks, crypto, forex, futures, or commodities - symbols don't need to be from the same market or asset class</li>
-    <li><strong>Alert-Ready Scanning:</strong> Set TradingView alerts for any symbol in the grid to receive instant notifications when high-confluence MACD crossover signals appear</li>
-    <li><strong>Pattern Recognition:</strong> Identify broad market momentum (multiple symbols signaling together with high confluence), divergent signals (conflicting directions), and isolated high-probability setups (5/5 confluence scores)</li>
-    <li><strong>Grid Layout:</strong> 8-symbol grid optimized for monitoring needs and screen space</li>
-    <li><strong>Efficient Performance:</strong> Optimized to handle all 8 symbols without performance degradation, with continuous real-time updates visible directly on your chart</li>
+    <li><strong>Multi-Timeframe Architecture:</strong> 7 symbols × 3 timeframes = 21 simultaneous scans, all ranked by quality score</li>
+    <li><strong>Professional Position Management:</strong> Automatic Entry/SL/TP calculation using ATR-based distances for every signal</li>
+    <li><strong>Signal Lifecycle:</strong> Signals are born when filters pass, live while tracking P&L, and die when SL is hit or expired</li>
+    <li><strong>Quality Rating System:</strong> 0-100 scoring displayed as ★/★★/★★★ — only 70+ signals are shown</li>
+    <li><strong>Blocker Detection:</strong> When no signal, you see exactly WHY (⏳ MACD, ⏳ Trend, 💀 SL Hit, etc.)</li>
+    <li><strong>8 Symbol Presets:</strong> Crypto, Altcoins, Meme Coins, Forex, Indices, Tech, Commodities + Custom</li>
+    <li><strong>Mobile Mode:</strong> One-click optimization for phone-friendly viewing</li>
+    <li><strong>Real-Time P&L:</strong> Track profit/loss from entry for every active signal</li>
   </ul>
-  <p><strong>Next Steps:</strong> Review the <a href="../how-to-screener/">Screener How-To Guide</a> for practical workflow examples, or explore <a href="../how-to-alerts/">Alert Setup Guide</a> to configure notifications for your watchlist symbols.</p>
+  <p><strong>Next Steps:</strong> Review the <a href="../how-to-alerts/">Alert Setup Guide</a> to configure notifications for your watchlist symbols.</p>
 </div>
 
 <hr />
@@ -2639,50 +2721,50 @@ Asset-specific momentum shift with exceptional confluence rather than broad mark
 <h3 id="augury-grid-pentarch">Augury Grid → <a href="../pentarch-v10/">Pentarch</a> (Deep Timing Analysis)<a class="headerlink" href="#augury-grid-pentarch" title="Permanent link">&para;</a></h3>
 <p><strong>Workflow:</strong></p>
 <ol>
-<li><strong>Grid shows 4/5 or 5/5 confluence</strong> → Symbol passes initial filter with high multi-indicator agreement</li>
+<li><strong>Grid shows ★★ or ★★★ signal</strong> → Symbol passes quality filter with high score</li>
 <li><strong>Click symbol to open individual chart</strong> → Review full chart with <a href="../pentarch-v10/">Pentarch</a> signals visible</li>
 <li><strong>Check <a href="../pentarch-v10/">Pentarch</a> signal type</strong> → TD/IGN (early cycle) = higher priority than BDN (late cycle)</li>
 <li><strong>Confirm signal freshness</strong> → Signal fired in last 1-3 bars = timely entry opportunity</li>
-<li><strong>Expected outcome:</strong> Grid filters watchlist → <a href="../pentarch-v10/">Pentarch</a> provides precise entry timing on filtered symbols</li>
+<li><strong>Expected outcome:</strong> Grid filters across 21 scans → <a href="../pentarch-v10/">Pentarch</a> provides precise entry timing</li>
 </ol>
-<p><strong>Example:</strong> Augury Grid shows SPY with 5/5 bullish confluence → Open SPY chart → <a href="../pentarch-v10/">Pentarch</a> IGN signal just fired 2 bars ago = high-probability long setup</p>
+<p><strong>Example:</strong> Augury Grid shows SOL ★★★ bullish on 4H → Open SOL chart → <a href="../pentarch-v10/">Pentarch</a> IGN signal just fired = high-probability long setup</p>
 
 <h3 id="augury-grid-janus-atlas">Augury Grid → <a href="../janus-atlas-v10/">Janus Atlas</a> (Level Confluence)<a class="headerlink" href="#augury-grid-janus-atlas" title="Permanent link">&para;</a></h3>
 <p><strong>Workflow:</strong></p>
 <ol>
-<li><strong>Grid shows high confluence symbol</strong> → 4/5 or 5/5 bullish/bearish signal appears</li>
+<li><strong>Grid shows high-quality signal</strong> → ★★ or ★★★ bullish/bearish signal appears</li>
 <li><strong>Open individual chart with <a href="../janus-atlas-v10/">Janus Atlas</a></strong> → Check if price is at key support/resistance level</li>
 <li><strong>Look for level confluence</strong> → Daily Low + Weekly Low + VWAP clustering = structural confluence</li>
-<li><strong>Grid confluence + level confluence = highest probability</strong> → Multi-system + structural alignment</li>
+<li><strong>Grid quality + level confluence = highest probability</strong> → Multi-system + structural alignment</li>
 <li><strong>Expected outcome:</strong> Grid identifies momentum + levels provide structure = complete setup analysis</li>
 </ol>
-<p><strong>Example:</strong> Grid shows AAPL 4/5 bearish → Open chart → Price at Daily High + Weekly resistance + 1.618 Fib = strong short confluence</p>
+<p><strong>Example:</strong> Grid shows AAPL ★★ bearish on D → Open chart → Price at Daily High + Weekly resistance = strong short confluence</p>
 
 <h3 id="augury-grid-volume-oracle">Augury Grid → <a href="../volume-oracle-v10/">Volume Oracle</a> (Regime Confirmation)<a class="headerlink" href="#augury-grid-volume-oracle" title="Permanent link">&para;</a></h3>
 <p><strong>Workflow:</strong></p>
 <ol>
-<li><strong>Grid highlights symbol with confluence</strong> → Multiple indicators aligning (3/5, 4/5, or 5/5)</li>
+<li><strong>Grid highlights symbol with quality signal</strong> → ★★ or ★★★ rating</li>
 <li><strong>Open chart and check <a href="../volume-oracle-v10/">Volume Oracle</a> regime</strong> → Is the regime aligned with the grid signal direction?</li>
 <li><strong>Aligned regime = signal validation</strong> → Bullish grid signal + Accumulation regime = institutional backing confirmed</li>
 <li><strong>Conflicting regime = proceed with caution</strong> → Bullish grid signal + Distribution regime may lack follow-through</li>
 <li><strong>Expected outcome:</strong> <a href="../volume-oracle-v10/">Volume Oracle</a> regime validates which grid signals have institutional support</li>
 </ol>
-<p><strong>Example:</strong> Grid shows TSLA 5/5 bullish → <a href="../volume-oracle-v10/">Volume Oracle</a> shows Accumulation regime (green, 78%) = confirmed institutional buying</p>
+<p><strong>Example:</strong> Grid shows TSLA ★★★ bullish → <a href="../volume-oracle-v10/">Volume Oracle</a> shows Accumulation regime (green, 78%) = confirmed institutional buying</p>
 
 <h3 id="augury-grid-omnideck">Augury Grid → <a href="../omnideck-v10/">Omnideck</a> (Multi-System Validation)<a class="headerlink" href="#augury-grid-omnideck" title="Permanent link">&para;</a></h3>
 <p><strong>Workflow:</strong></p>
 <ol>
-<li><strong>Grid shows directional confluence</strong> → Bullish or bearish signal with 4/5+ agreement</li>
+<li><strong>Grid shows directional signal</strong> → Bullish or bearish with ★★+ quality</li>
 <li><strong>Open chart with <a href="../omnideck-v10/">Omnideck</a></strong> → Check Regime Box for trend context</li>
 <li><strong><a href="../omnideck-v10/">Omnideck</a> confirms grid direction</strong> → Grid bullish + <a href="../omnideck-v10/">Omnideck</a> bullish regime = trend alignment</li>
 <li><strong><a href="../omnideck-v10/">Omnideck</a> conflicts with grid</strong> → Grid bullish + <a href="../omnideck-v10/">Omnideck</a> bearish regime = counter-trend, skip or reduce size</li>
 <li><strong>Expected outcome:</strong> <a href="../omnideck-v10/">Omnideck</a> provides broader trend context for grid-filtered opportunities</li>
 </ol>
-<p><strong>Example:</strong> Grid shows QQQ 4/5 bullish → <a href="../omnideck-v10/">Omnideck</a> shows bullish regime box + TD Sequential in buy zone = aligned long setup</p>
+<p><strong>Example:</strong> Grid shows QQQ ★★ bullish on 15m → <a href="../omnideck-v10/">Omnideck</a> shows bullish regime box = aligned long setup</p>
 
 <div class="admonition tip">
-<p class="admonition-title">Pro Tip: The Grid Filter Workflow</p>
-<p>Use Augury Grid as your first filter: <strong>Grid (4/5+ confluence) → <a href="../pentarch-v10/">Pentarch</a> (timing) → <a href="../janus-atlas-v10/">Janus Atlas</a> (levels) → <a href="../volume-oracle-v10/">Volume Oracle</a> (regime confirmation)</strong>. Let the grid do the heavy lifting across your watchlist, then confirm with aligned Volume Oracle regime before entering. This systematic approach saves time and ensures institutional backing for each trade.</p>
+<p class="admonition-title">Pro Tip: The Multi-Timeframe Filter Workflow</p>
+<p>Use Augury Grid as your first filter: <strong>Grid (★★+ quality) → <a href="../pentarch-v10/">Pentarch</a> (timing) → <a href="../janus-atlas-v10/">Janus Atlas</a> (levels) → <a href="../volume-oracle-v10/">Volume Oracle</a> (regime confirmation)</strong>. The grid scans 21 symbol/timeframe combinations at once, ranking by quality score. Focus on ★★★ signals first, then confirm with aligned Volume Oracle regime before entering.</p>
 <p><strong>See also:</strong> <a href="../ref-workflow/">Complete Trading Workflow Guide</a> for detailed multi-indicator strategies.</p>
 </div>
 
@@ -2698,23 +2780,23 @@ Asset-specific momentum shift with exceptional confluence rather than broad mark
 <p><strong>The Problem:</strong> Not giving enough attention to each symbol in the grid. Ignoring symbols or rushing analysis = missed signals or poor decisions.</p>
 <p><strong>The Fix:</strong></p>
 <ul>
-<li>Start with 4-6 high-quality, liquid symbols you understand well</li>
+<li>Start with 4-5 high-quality, liquid symbols you understand well</li>
 <li>Focus on symbols with strong trends, high volume, and clear technical patterns</li>
-<li>Use all 8 slots only when comfortable monitoring that many</li>
+<li>Use all 7 slots only when comfortable monitoring 21 scans (7×3 timeframes)</li>
 <li>Quality over quantity: fewer well-analyzed symbols is better</li>
 </ul>
-<p><strong>Remember:</strong> Successful traders focus deeply on a small watchlist. Master the 8-symbol grid before anything else.</p>
+<p><strong>Remember:</strong> Successful traders focus deeply on a small watchlist. Master the 7-symbol scanner before expanding.</p>
 
-<h3 id="mistake-2-trading-every-signal">Mistake #2: Trading Every Grid Signal<a class="headerlink" href="#mistake-2-trading-every-signal" title="Permanent link">&para;</a></h3>
-<p><strong>The Problem:</strong> Not all confluence scores are equal. Trading 2/5 or 3/5 signals reduces win rate. Only the highest-confluence setups (4/5, 5/5) deserve action.</p>
+<h3 id="mistake-2-trading-every-signal">Mistake #2: Trading Every Signal<a class="headerlink" href="#mistake-2-trading-every-signal" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> Not all quality ratings are equal. Trading ★ signals reduces win rate. Only the highest-quality setups (★★★) deserve immediate action.</p>
 <p><strong>The Fix:</strong></p>
 <ul>
-<li><strong>5/5 confluence:</strong> All five systems agree → highest priority, strongest setups</li>
-<li><strong>4/5 confluence:</strong> Four systems agree → high quality, worth investigating</li>
-<li><strong>3/5 confluence:</strong> Moderate agreement → proceed with caution, need additional confirmation</li>
-<li><strong>2/5 or less:</strong> Low agreement → skip these signals, wait for better confluence</li>
+<li><strong>★★★ (70-100):</strong> Premium quality → highest priority, strongest setups</li>
+<li><strong>★★ (40-69):</strong> Good quality → worth investigating with additional confirmation</li>
+<li><strong>★ (0-39):</strong> Low quality → skip these signals, wait for better opportunities</li>
+<li><strong>Blocked (⏳/💀):</strong> Filter failed or signal died → never trade these</li>
 </ul>
-<p><strong>Remember:</strong> Only trade 4/5 and 5/5 confluence signals. Let 2/5 and 3/5 signals pass—patience improves results.</p>
+<p><strong>Remember:</strong> Focus on ★★★ signals. Let ★ signals pass—patience improves results.</p>
 
 <h3 id="mistake-3-skipping-individual-chart-analysis">Mistake #3: Skipping Individual Chart Analysis<a class="headerlink" href="#mistake-3-skipping-individual-chart-analysis" title="Permanent link">&para;</a></h3>
 <p><strong>The Problem:</strong> The grid is a filter, not a final trading decision. Entering trades based solely on grid confluence without reviewing the actual chart leads to poor entries and missed context.</p>
@@ -2727,16 +2809,16 @@ Asset-specific momentum shift with exceptional confluence rather than broad mark
 </ul>
 <p><strong>Remember:</strong> Grid = screener, not strategy. Use it to filter your watchlist, then perform full chart analysis before trading.</p>
 
-<h3 id="mistake-4-ignoring-confluence-scores">Mistake #4: Ignoring the Confluence Score Numbers<a class="headerlink" href="#mistake-4-ignoring-confluence-scores" title="Permanent link">&para;</a></h3>
-<p><strong>The Problem:</strong> Treating all green (bullish) or red (bearish) signals equally, regardless of confluence score. A 2/5 bullish signal is far weaker than a 5/5 bullish signal.</p>
+<h3 id="mistake-4-ignoring-quality-ratings">Mistake #4: Ignoring the Quality Rating<a class="headerlink" href="#mistake-4-ignoring-quality-ratings" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> Treating all bullish or bearish signals equally, regardless of quality score. A ★ bullish signal is far weaker than a ★★★ bullish signal.</p>
 <p><strong>The Fix:</strong></p>
 <ul>
-<li>Always check the confluence number: 5/5 > 4/5 > 3/5 > 2/5</li>
-<li>Prioritize your attention: Review 5/5 signals first, then 4/5, then 3/5</li>
-<li>Set alerts only for 4/5 and 5/5 signals to reduce noise</li>
-<li>Higher confluence = higher probability, simpler decision-making</li>
+<li>Always check the star rating: ★★★ > ★★ > ★</li>
+<li>Prioritize your attention: Review ★★★ signals first, then ★★</li>
+<li>Set alerts only for ★★/★★★ signals to reduce noise</li>
+<li>Higher quality score = higher probability, simpler decision-making</li>
 </ul>
-<p><strong>Remember:</strong> The number matters more than the color. A 5/5 signal deserves immediate attention; a 2/5 signal can be ignored.</p>
+<p><strong>Remember:</strong> The stars matter more than the direction. A ★★★ signal deserves immediate attention; a ★ signal can wait.</p>
 
 <h3 id="mistake-5-wrong-timeframe-for-trading-style">Mistake #5: Using Wrong Timeframe for Your Trading Style<a class="headerlink" href="#mistake-5-wrong-timeframe-for-trading-style" title="Permanent link">&para;</a></h3>
 <p><strong>The Problem:</strong> Day traders using Daily charts on the grid, or swing traders using 5-minute charts. Timeframe mismatch leads to irrelevant signals and poor results.</p>
@@ -2815,15 +2897,17 @@ Asset-specific momentum shift with exceptional confluence rather than broad mark
 
 <h3 id="broad-choppy-market-conditions">Broad Choppy Market Conditions (Market-Wide Indecision)<a class="headerlink" href="#broad-choppy-market-conditions" title="Permanent link">&para;</a></h3>
 <p><strong>The Condition:</strong> When overall market environment (SPY, QQQ, or sector indices) is sideways/choppy, most stocks/assets in your watchlist exhibit similar indecisive behavior.</p>
-<p><strong>What Happens:</strong> Grid shows mostly 2/5 and 3/5 confluence scores across all symbols. Few 4/5 or 5/5 signals appear. Symbols that do signal often flip from Bullish to Neutral to Bearish within 5-10 bars. P&L percentages hover around ±1-2%, showing no sustained follow-through. Win rate drops because even "good" setups lack the broader market momentum to follow through.</p>
+<p><strong>What Happens:</strong> Grid shows mostly ★ and ★★ quality ratings across all symbols. Few ★★★ signals appear. Symbols that do signal often flip from Bullish to Neutral to Bearish within 5-10 bars. P&L percentages hover around ±1-2%, showing no sustained follow-through. Win rate drops because even "good" setups lack the broader market momentum to follow through.</p>
 <p><strong>Context:</strong> Augury Grid analyzes individual symbol momentum via MACD and confluence factors. But individual symbols are influenced by overall market sentiment. During broad market choppy periods (VIX elevated but direction unclear, major indices range-bound), even stocks with strong individual confluence struggle to trend. This isn't Augury failing—it's accurately showing that momentum exists but lacks supporting market context. Best practice: Check SPY/QQQ regime first using <a href="../pentarch-v10/">Pentarch</a> or <a href="../omnideck-v10/">Omnideck</a>. If broader market shows neutral/choppy regime, treat Augury signals with higher skepticism. Trade smaller size or wait for market clarity. When overall market is trending (clear bull or bear regime), Augury signals become significantly more reliable.</p>
 
-<h3 id="low-confluence-score-signals">Trading Low Confluence Score Signals (2/5, 3/5)<a class="headerlink" href="#low-confluence-score-signals" title="Permanent link">&lgrid-analysis shows various outcomes. Observation suggests higher confluence correlates with more sustained moves, but no threshold guarantees specific results.</p>
-<p><strong>Context:</strong> Confluence scores measure how many supporting factors align with the MACD crossover. Higher scores (4/5, 5/5) indicate: price action agrees, volume supports the move, higher timeframe aligns, momentum is strong, and structure confirms direction. Lower scores (2/5, 3/5) mean several factors are missing or conflicting. A 2/5 signal might have MACD crossover + volume, but price action is weak, higher timeframe disagrees, and momentum is shallow. This doesn't mean the 2/5 signal will definitely fail, but historical observation shows fewer 2/5 signals produce sustained follow-through compared to 4/5 signals. Notice in examples throughout this documentation: focus consistently emphasizes 4/5 and 5/5 signals. This isn't arbitrary—it reflects that higher confluence matters. Best practice: If capital is limited, focus exclusively on 4/5 and 5/5 signals. If monitoring capacity is limited, set alerts only for highest-confluence setups. Think of 2/5 and 3/5 as "educational signals"—they show potential, but shouldn't compete for attention with higher-quality 4/5 and 5/5 opportunities.</p>
+<h3 id="low-quality-signals">Trading Low Quality Signals (★)<a class="headerlink" href="#low-quality-signals" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> Focusing on ★ (0-39) quality signals instead of waiting for ★★★ (70-100) setups.</p>
+<p><strong>What Happens:</strong> Lower win rate, more stopped-out trades (💀 SL Hit), and reduced confidence in the system.</p>
+<p><strong>Context:</strong> Quality scores measure how many supporting factors align with the signal. Higher scores (★★★) indicate: MACD confirms, trend filter passes, no blockers active, and momentum is strong. Lower scores (★) mean several factors are weak or conflicting. A ★ signal might have the bias correct, but lacks the supporting confirmation to sustain the move. This doesn't mean ★ signals always fail, but observation shows fewer ★ signals produce sustained follow-through compared to ★★★ signals. Best practice: If capital is limited, focus exclusively on ★★★ signals. If monitoring capacity is limited, set alerts only for ★★/★★★ quality. Think of ★ signals as "educational"—they show potential, but shouldn't compete for attention with ★★★ opportunities.</p>
 
 <h3 id="whipsaw-transition-periods">Whipsaw & Transition Periods<a class="headerlink" href="#whipsaw-transition-periods" title="Permanent link">&para;</a></h3>
 <p><strong>The Condition:</strong> Individual symbols transitioning between regimes—moving from downtrend to consolidation to uptrend, or vice versa.</p>
-<p><strong>What Happens:</strong> Grid shows signal instability: Symbol X fires Bullish 5/5 → 3 bars later flips to Neutral → 5 bars later fires Bearish 4/5 → then back to Neutral. Confluence scores fluctuate rapidly. P&L shows +3%, -2%, +1%, -1% oscillating pattern. This happens because MACD is centered around zero crossover, and during transitions, the histogram oscillates around the zero line without committing to either direction.</p>
+<p><strong>What Happens:</strong> Grid shows signal instability: Symbol fires Bullish ★★★ → 3 bars later shows 💀 SL Hit → 5 bars later fires Bearish ★★ → then shows ⏳ Trend blocker. Quality ratings fluctuate rapidly. P&L shows +3%, -2%, +1%, -1% oscillating pattern. This happens because MACD is centered around zero crossover, and during transitions, the histogram oscillates around the zero line without committing to either direction.</p>
 <p><strong>Context:</strong> MACD-based systems (like Augury Grid) excel at identifying momentum within established trends. They struggle during regime transitions when momentum itself is unstable. During these periods, the histogram crosses zero multiple times in both directions as the market "decides" which way to trend. These whipsaws are inherent to zero-crossing methodologies. Best practice: When you see a symbol flip signals 3+ times within 20 bars, that symbol is in transition—remove it from active consideration temporarily. Revisit it after 10-15 bars to see if regime has stabilized. Or combine with <a href="../pentarch-v10/">Pentarch</a>: only trade Augury signals when Pentarch regime bars show clear color (green or red, not gray) for the same symbol. This filters out symbols in transition.</p>
 
 <h3 id="mismatched-timeframe-strategy">Mismatched Timeframe & Trading Strategy<a class="headerlink" href="#mismatched-timeframe-strategy" title="Permanent link">&para;</a></h3>
@@ -2837,24 +2921,24 @@ Asset-specific momentum shift with exceptional confluence rather than broad mark
 
 <h3 id="highly-correlated-watchlist">Highly Correlated Watchlist (All Symbols Move Together)<a class="headerlink" href="#highly-correlated-watchlist" title="Permanent link">&para;</a></h3>
 <p><strong>The Condition:</strong> Watchlist contains symbols that are highly correlated—they all move together (e.g., all tech stocks, all crypto, all oil stocks).</p>
-<p><strong>What Happens:</strong> Grid shows "diversification illusion." When tech sector rallies, all 30 symbols in watchlist flash Bullish 5/5 simultaneously. Feels like 30 opportunities, but it's really ONE opportunity (tech sector) expressed through 30 symbols. When sector reverses, all 30 flip Bearish together. No true diversification. Risk concentration masked by symbol count.</p>
-<p><strong>Context:</strong> Augury Grid's value is finding THE BEST opportunities across a diversified watchlist. If all symbols are correlated, the grid just amplifies sector moves without adding information. A watchlist of AAPL, MSFT, GOOGL, META, NVDA, AMD, TSLA (all high-beta tech) will show nearly identical signals. This defeats the purpose of multi-symbol scanning. Better watchlist design: Mix sectors (tech, healthcare, energy, financials, consumer), mix asset classes (stocks, crypto, commodities), mix market caps (large-cap, mid-cap, small-cap). When tech gives Bullish 5/5, healthcare might show Bearish 5/5, and energy shows Neutral. THIS is useful—it shows WHERE opportunity is rotating. If your grid shows all symbols firing same signal simultaneously, your watchlist is too correlated. Diversify symbol selection.</p>
+<p><strong>What Happens:</strong> Grid shows "diversification illusion." When tech sector rallies, all 7 symbols flash Bullish ★★★ simultaneously across all timeframes. Feels like 21 opportunities, but it's really ONE opportunity (tech sector) expressed through 7 correlated symbols. When sector reverses, all flip Bearish together. No true diversification. Risk concentration masked by symbol count.</p>
+<p><strong>Context:</strong> Augury Grid's value is finding THE BEST opportunities across a diversified watchlist. If all symbols are correlated, the grid just amplifies sector moves without adding information. A watchlist of AAPL, MSFT, GOOGL, META, NVDA, AMD, TSLA (all high-beta tech) will show nearly identical signals. This defeats the purpose of multi-symbol scanning. Better watchlist design: Mix sectors (tech, healthcare, energy, financials, consumer), mix asset classes (stocks, crypto, commodities), mix market caps (large-cap, mid-cap, small-cap). When tech gives Bullish ★★★, healthcare might show Bearish ★★★, and energy shows Neutral. THIS is useful—it shows WHERE opportunity is rotating. If your grid shows all symbols firing same signal simultaneously, your watchlist is too correlated. Diversify symbol selection.</p>
 
 <h3 id="low-liquidity-symbols">Low Liquidity & Thinly Traded Symbols<a class="headerlink" href="#low-liquidity-symbols" title="Permanent link">&para;</a></h3>
 <p><strong>The Condition:</strong> Including penny stocks, micro-cap altcoins, or illiquid futures contracts in your watchlist.</p>
-<p><strong>What Happens:</strong> Signals appear (MACD crossover is valid), but price action is erratic. A Bullish 5/5 fires, but the bid-ask spread is 5%. Price gaps intraday due to lack of buyers. Slippage eats most of theoretical profit. P&L shows +8% but actual fill is at +3% due to liquidity issues.</p>
-<p><strong>Context:</strong> Augury Grid analyzes momentum mathematically (MACD calculations). It doesn't "know" about liquidity, bid-ask spreads, or average daily volume. A $0.50 penny stock can show perfect 5/5 confluence, but if daily volume is only 10,000 shares, entering a 5,000-share position moves the market against you. MACD confluence works best on liquid instruments where your order doesn't materially impact price. Best practice: Pre-filter your watchlist by liquidity before adding to Augury Grid. For stocks: minimum $5M average daily volume. For crypto: minimum $50M daily volume (on the specific exchange you trade). For futures: use front-month contracts with high open interest. Grid shows technical signals; you must ensure those signals are tradeable with acceptable slippage.</p>
+<p><strong>What Happens:</strong> Signals appear (MACD crossover is valid), but price action is erratic. A Bullish ★★★ fires, but the bid-ask spread is 5%. Price gaps intraday due to lack of buyers. Slippage eats most of theoretical profit. P&L shows +8% but actual fill is at +3% due to liquidity issues.</p>
+<p><strong>Context:</strong> Augury Grid analyzes momentum mathematically (MACD calculations). It doesn't "know" about liquidity, bid-ask spreads, or average daily volume. A $0.50 penny stock can show ★★★ quality, but if daily volume is only 10,000 shares, entering a 5,000-share position moves the market against you. MACD-based signals work best on liquid instruments where your order doesn't materially impact price. Best practice: Pre-filter your watchlist by liquidity before adding to Augury Grid. For stocks: minimum $5M average daily volume. For crypto: minimum $50M daily volume (on the specific exchange you trade). For futures: use front-month contracts with high open interest. Grid shows technical signals; you must ensure those signals are tradeable with acceptable slippage.</p>
 
 <h3 id="ignoring-individual-chart-context">Using Grid Signals Without Individual Chart Confirmation<a class="headerlink" href="#ignoring-individual-chart-context" title="Permanent link">&para;</a></h3>
 <p><strong>The Condition:</strong> Trading directly from grid signals without pulling up individual charts to verify setup quality.</p>
-<p><strong>What Happens:</strong> Grid shows AAPL Bullish 5/5. You enter immediately. Pull up AAPL chart afterward and realize: it's at major resistance (<a href="../janus-atlas-v10/">Janus Atlas</a> Weekly High), volume is below average (<a href="../volume-oracle-v10/">Volume Oracle</a> shows this), and it just had 3 failed bullish attempts at this level. The 5/5 signal is technically valid, but context makes it low-probability. Trade fails.</p>
-<p><strong>Context:</strong> Augury Grid is a screener—its job is to surface candidates worth investigating, not to provide complete trade analysis. The grid analyzes MACD confluence across multiple symbols efficiently. But it doesn't check: support/resistance context, volume quality, recent failed attempts, higher timeframe alignment, news events, earnings dates, sector rotation. These require individual chart analysis. Best practice workflow: (1) Grid identifies candidates (4/5 and 5/5 signals), (2) Pull up individual chart for top 3-5 candidates, (3) Check <a href="../janus-atlas-v10/">Janus Atlas</a> levels (are we at major support/resistance?), (4) Check <a href="../volume-oracle-v10/">Volume Oracle</a> (is volume supporting this move?), (5) Check <a href="../pentarch-v10/">Pentarch</a> (does regime support this direction?), (6) THEN decide to enter. Grid narrows 40 symbols to 5 candidates. You narrow 5 candidates to 1-2 actual trades. That's the workflow.</p>
+<p><strong>What Happens:</strong> Grid shows AAPL Bullish ★★★. You enter immediately. Pull up AAPL chart afterward and realize: it's at major resistance (<a href="../janus-atlas-v10/">Janus Atlas</a> Weekly High), volume is below average (<a href="../volume-oracle-v10/">Volume Oracle</a> shows this), and it just had 3 failed bullish attempts at this level. The ★★★ signal is technically valid, but context makes it low-probability. Trade fails.</p>
+<p><strong>Context:</strong> Augury Grid is a screener—its job is to surface candidates worth investigating, not to provide complete trade analysis. The grid analyzes signals across 7 symbols × 3 timeframes efficiently. But it doesn't check: support/resistance context, volume quality, recent failed attempts, news events, earnings dates, sector rotation. These require individual chart analysis. Best practice workflow: (1) Grid identifies candidates (★★★ signals), (2) Pull up individual chart for top candidates, (3) Check <a href="../janus-atlas-v10/">Janus Atlas</a> levels (are we at major support/resistance?), (4) Check <a href="../volume-oracle-v10/">Volume Oracle</a> (is volume supporting this move?), (5) Check <a href="../pentarch-v10/">Pentarch</a> (does regime support this direction?), (6) THEN decide to enter. Grid surfaces 21 scans. You narrow to 1-2 actual trades. That's the workflow.</p>
 
 <div class="admonition tip">
 <p class="admonition-title">Recognizing Reduced Reliability Environments</p>
 <p><strong>Practical Identification:</strong></p>
 <ul>
-<li><strong>Entire grid showing mostly 2/5 and 3/5 scores:</strong> Broad market chop—reduce activity or trade higher confluence only</li>
+<li><strong>Entire table showing mostly ★ and ★★ ratings:</strong> Broad market chop—wait for ★★★ signals only</li>
 <li><strong>SPY/QQQ showing neutral/gray on <a href="../pentarch-v10/">Pentarch</a>:</strong> Market lacks direction—Augury signals less reliable</li>
 <li><strong>Multiple symbols flipping signals within 10 bars:</strong> Whipsaw environment—wait for stabilization</li>
 <li><strong>All symbols in watchlist fire same signal simultaneously:</strong> Watchlist too correlated—diversify</li>
@@ -2862,46 +2946,53 @@ Asset-specific momentum shift with exceptional confluence rather than broad mark
 <li><strong>Symbol volume under $5M daily (stocks) or $50M (crypto):</strong> Liquidity concerns—remove from watchlist</li>
 <li><strong>Trading from grid without checking individual charts:</strong> Missing context—verify setups individually</li>
 </ul>
-<p><strong>Remember:</strong> Augury Grid's strength is efficiency—scanning 8 symbols simultaneously to find momentum shifts. Its weakness is context—it doesn't know about support/resistance, volume quality, broader market regime, or individual symbol liquidity. The grid finds candidates. You validate candidates. Best results come from combining Augury's scanning efficiency with individual chart analysis using <a href="../janus-atlas-v10/">Janus Atlas</a> (levels), <a href="../volume-oracle-v10/">Volume Oracle</a> (volume confirmation), and <a href="../pentarch-v10/">Pentarch</a> (regime context). Grid → Candidates → Validation → Trade. That's the complete workflow.</p>
+<p><strong>Remember:</strong> Augury Grid's strength is efficiency—scanning 7 symbols × 3 timeframes (21 scans) simultaneously to find momentum shifts. Its weakness is context—it doesn't know about support/resistance, volume quality, broader market regime, or individual symbol liquidity. The grid finds candidates. You validate candidates. Best results come from combining Augury's scanning efficiency with individual chart analysis using <a href="../janus-atlas-v10/">Janus Atlas</a> (levels), <a href="../volume-oracle-v10/">Volume Oracle</a> (volume confirmation), and <a href="../pentarch-v10/">Pentarch</a> (regime context). Grid → Candidates → Validation → Trade. That's the complete workflow.</p>
 </div>
 
 <hr />
 <h2 id="frequently-asked-questions">❓ Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permanent link">&para;</a></h2>
-<h3 id="q-how-many-symbols-should-i-monitor">Q: How many symbols should I monitor?<a class="headerlink" href="#q-how-many-symbols-should-i-monitor" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> The grid supports up to 8 symbols. Start with 4-6 symbols you know well, then expand to all 8 as you get comfortable. Quality of attention matters more than quantity.</p>
-<h3 id="q-can-i-use-different-timeframes-for-different-symbols">Q: Can I use different timeframes for different symbols?<a class="headerlink" href="#q-can-i-use-different-timeframes-for-different-symbols" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> No. All symbols in grid use the timeframe of the active chart. To scan multiple timeframes, open multiple chart windows with Augury Grid on each.</p>
-<h3 id="q-do-symbols-need-to-be-from-same-market">Q: Do symbols need to be from same market?<a class="headerlink" href="#q-do-symbols-need-to-be-from-same-market" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> No. Can mix any asset types available on TradingView (stocks, crypto, forex, futures, indices, commodities, etc.)</p>
-<h3 id="q-what-happens-if-a-symbol-has-no-data">Q: What happens if a symbol has no data?<a class="headerlink" href="#q-what-happens-if-a-symbol-has-no-data" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> Cell displays "No Data" message. Symbol may be unavailable on current TradingView plan or exchange.</p>
-<h3 id="q-can-i-save-multiple-watchlists">Q: Can I save multiple watchlists?<a class="headerlink" href="#q-can-i-save-multiple-watchlists" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> Yes. Save different indicator configurations with different symbol lists. Switch between saved templates as needed.</p>
-<h3 id="q-does-grid-slow-down-performance">Q: Does grid slow down performance?<a class="headerlink" href="#q-does-grid-slow-down-performance" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> Minimal impact. Optimized to efficiently monitor up to 8 symbols without performance degradation.</p>
-<h3 id="q-can-other-users-see-my-watchlist">Q: Can other users see my watchlist?<a class="headerlink" href="#q-can-other-users-see-my-watchlist" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> No. Symbol lists stored in personal indicator settings, not visible to others.</p>
-<h3 id="q-how-is-this-different-from-tradingviews-native-screener">Q: How is this different from TradingView's native screener?<a class="headerlink" href="#q-how-is-this-different-from-tradingviews-native-screener" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> Augury Grid displays on chart with continuous real-time updates, while native screener requires manual refresh and opens separately. Grid format provides at-a-glance monitoring of MACD confluence methodology with live performance metrics (TP1, P&L).</p>
-<h3 id="q-can-i-export-grid-data">Q: Can I export grid data?<a class="headerlink" href="#q-can-i-export-grid-data" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> Grid data can be captured via TradingView alert webhooks. Each alert includes symbol and signal type data.</p>
+
+<h3 id="q-why-do-i-see-same-symbol-twice">Q: Why do I see the same symbol twice?<a class="headerlink" href="#q-why-do-i-see-same-symbol-twice" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> This means the symbol has active signals on different timeframes. For example, BTC might show on both 15m and 4H rows because it has quality signals on both. This is powerful—you see setups across multiple timeframes simultaneously.</p>
+
+<h3 id="q-what-does-sl-hit-mean">Q: What does 💀 SL Hit mean?<a class="headerlink" href="#q-what-does-sl-hit-mean" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> The previous signal was stopped out (price hit the stop loss). The system is now scanning for a new opportunity on that symbol/timeframe. This is the lifecycle system in action—signals die when they fail, preventing you from holding losing positions.</p>
+
+<h3 id="q-why-are-all-my-signals-three-stars">Q: Why are all my signals ★★★?<a class="headerlink" href="#q-why-are-all-my-signals-three-stars" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> ★★★ signals (95+ score) are rare but not impossible. If you see many, it means market conditions are favorable with strong trend, momentum, and volume alignment. This is a good thing! However, if literally ALL signals are ★★★, check that the Min Score filter isn't set too high.</p>
+
+<h3 id="q-can-i-change-the-3-timeframes">Q: Can I change the 3 timeframes?<a class="headerlink" href="#q-can-i-change-the-3-timeframes" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Yes. In Settings → Timeframe Settings, you can change TF 1, TF 2, and TF 3 to any timeframe (e.g., 1m, 5m, 15m, 1H, 4H, D, W). Default is 15m/4H/D for scalp/swing/position trading coverage.</p>
+
+<h3 id="q-why-must-symbols-be-from-same-exchange">Q: Why must custom symbols be from the same exchange?<a class="headerlink" href="#q-why-must-symbols-be-from-same-exchange" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> TradingView memory limits. When scanning 7 symbols × 3 timeframes (21 scans), requesting data from multiple exchanges simultaneously can exceed memory allocation and cause the indicator to fail. Presets are designed to work within these limits. For custom symbols, stick to one exchange.</p>
+
+<h3 id="q-what-does-waiting-macd-mean">Q: What does ⏳ MACD mean?<a class="headerlink" href="#q-what-does-waiting-macd-mean" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> No MACD histogram crossover has occurred yet. The system is waiting for the histogram to cross above zero (bullish) or below zero (bearish). Other filters may be ready, but without the core MACD crossover, no signal fires.</p>
+
+<h3 id="q-how-is-entry-sl-tp-calculated">Q: How is Entry/SL/TP calculated?<a class="headerlink" href="#q-how-is-entry-sl-tp-calculated" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> When a signal fires, Entry is locked at current price. SL is placed at Entry ± (ATR × SL multiplier). TP1 and TP2 are placed at Entry ± (ATR × TP multipliers). Default multipliers: SL=1.5×ATR, TP1=2.0×ATR, TP2=3.0×ATR. Adjust in Settings.</p>
+
 <h3 id="q-does-it-work-on-mobile">Q: Does it work on mobile?<a class="headerlink" href="#q-does-it-work-on-mobile" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> Yes. Grid layout adapts to screen size. Mobile displays fewer symbols per row for readability.</p>
+<p><strong>A:</strong> Yes. Enable Mobile Mode in settings for optimized phone display: tiny text, bottom-right position, all columns visible, 5 rows shown. Perfect for quick position checks.</p>
+
+<h3 id="q-can-i-export-signal-data">Q: Can I export signal data?<a class="headerlink" href="#q-can-i-export-signal-data" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Yes, via TradingView alert webhooks. Set up alerts (Any Bullish Signal, Any Bearish Signal) with webhook notifications to receive JSON data including symbol, timeframe, direction, and score.</p>
 <hr />
 
 <div class="knowledge-check"
-     data-quiz-id="augury-grid-filters"
-     data-correct-answer="c"
-     data-correct-feedback="✓ Correct! Augury Grid uses exactly five confluence filters: ADX (trend strength ≥20), HTF (higher timeframe confirmation), OBV (volume validation), RSI (regime check), and Distance (extension threshold). Only MACD histogram crossovers that pass all enabled filters generate signals. This multi-filter approach significantly reduces false signals compared to raw MACD crossovers."
-     data-incorrect-feedback="Not quite. Review the Confluence Filtering System section above. Count how many independent filters validate each signal before it appears on the grid. Each filter serves as a separate confirmation checkpoint. Try again!">
+     data-quiz-id="augury-grid-architecture"
+     data-correct-answer="b"
+     data-correct-feedback="✓ Correct! Augury Grid scans 7 symbols × 3 timeframes = 21 opportunities simultaneously. Each scan checks MACD and Trend filters, calculates a 0-100 quality score displayed as stars, and tracks Entry/SL/TP using ATR-based position management."
+     data-incorrect-feedback="Not quite. Review the How It Works section above. Augury Grid uses 7 symbol slots and 3 timeframes per symbol. Try again!">
   <h4>✅ Knowledge Check</h4>
-  <p><strong>Question:</strong> How many confluence filters does Augury Grid use to validate MACD histogram crossover signals?</p>
+  <p><strong>Question:</strong> How many total scans does Augury Grid perform simultaneously?</p>
 
   <form class="quiz-form">
-    <label><input type="radio" name="q1" value="a"> Three filters (ADX, HTF, OBV)</label>
-    <label><input type="radio" name="q1" value="b"> Four filters (ADX, HTF, OBV, RSI)</label>
-    <label><input type="radio" name="q1" value="c"> Five filters (ADX, HTF, OBV, RSI, Distance)</label>
-    <label><input type="radio" name="q1" value="d"> Six filters (ADX, HTF, OBV, RSI, Distance, Volume)</label>
+    <label><input type="radio" name="q1" value="a"> 7 scans (7 symbols × 1 timeframe)</label>
+    <label><input type="radio" name="q1" value="b"> 21 scans (7 symbols × 3 timeframes)</label>
+    <label><input type="radio" name="q1" value="c"> 24 scans (8 symbols × 3 timeframes)</label>
+    <label><input type="radio" name="q1" value="d"> 35 scans (7 symbols × 5 timeframes)</label>
   </form>
 
   <button class="check-answer-btn">Check Answer</button>
@@ -2910,73 +3001,115 @@ Asset-specific momentum shift with exceptional confluence rather than broad mark
 
 <hr />
 <h2 id="quick-reference-guide">📋 Quick Reference Guide<a class="headerlink" href="#quick-reference-guide" title="Permanent link">&para;</a></h2>
-<h3 id="grid-display-legend">Grid Display Legend<a class="headerlink" href="#grid-display-legend" title="Permanent link">&para;</a></h3>
+<h3 id="table-display-legend">Table Display Legend<a class="headerlink" href="#table-display-legend" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Display</th>
+<th>Column</th>
 <th>Meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>↑ Bullish</strong></td>
-<td>MACD histogram crossed above zero with confluence</td>
+<td><strong>#</strong></td>
+<td>Row number (1-21 possible scans)</td>
 </tr>
 <tr>
-<td><strong>↓ Bearish</strong></td>
-<td>MACD histogram crossed below zero with confluence</td>
+<td><strong>Sym</strong></td>
+<td>Symbol being scanned</td>
 </tr>
 <tr>
-<td><strong>Score: 5/5</strong></td>
-<td>All confluence filters aligned (highest probability)</td>
+<td><strong>TF</strong></td>
+<td>Timeframe (e.g., 15m, 1H, 4H)</td>
 </tr>
 <tr>
-<td><strong>Score: 4/5</strong></td>
-<td>Strong confluence (4 of 5 filters aligned)</td>
+<td><strong>Bias</strong></td>
+<td>↑ Bullish (green) or ↓ Bearish (red)</td>
 </tr>
 <tr>
-<td><strong>Score: 3/5</strong></td>
-<td>Moderate confluence (3 of 5 filters aligned)</td>
+<td><strong>Age</strong></td>
+<td>Bars since signal birth</td>
 </tr>
 <tr>
-<td><strong>TP1</strong></td>
-<td>Calculated take-profit target level</td>
+<td><strong>Entry</strong></td>
+<td>Signal entry price</td>
 </tr>
 <tr>
-<td><strong>P&L (%)</strong></td>
-<td>Current profit/loss from signal entry</td>
+<td><strong>SL</strong></td>
+<td>Stop-loss level (ATR-based)</td>
 </tr>
 <tr>
-<td><strong>Neutral (—)</strong></td>
-<td>No MACD crossover or insufficient confluence</td>
+<td><strong>TP</strong></td>
+<td>Take-profit target (ATR-based)</td>
+</tr>
+<tr>
+<td><strong>P&L</strong></td>
+<td>Current profit/loss percentage</td>
+</tr>
+<tr>
+<td><strong>★★★</strong></td>
+<td>Premium quality (70-100 score)</td>
+</tr>
+<tr>
+<td><strong>★★</strong></td>
+<td>Good quality (40-69 score)</td>
+</tr>
+<tr>
+<td><strong>★</strong></td>
+<td>Low quality (0-39 score)</td>
+</tr>
+<tr>
+<td><strong>⏳ MACD</strong></td>
+<td>MACD filter blocking signal</td>
+</tr>
+<tr>
+<td><strong>⏳ Trend</strong></td>
+<td>Trend filter blocking signal</td>
+</tr>
+<tr>
+<td><strong>💀 SL Hit</strong></td>
+<td>Stop-loss hit, signal dead</td>
+</tr>
+<tr>
+<td><strong>💀 Stale</strong></td>
+<td>Signal too old, expired</td>
 </tr>
 </tbody>
 </table>
-<h3 id="recommended-watchlist-sizes">Common Watchlist Sizes (Examples)<a class="headerlink" href="#recommended-watchlist-sizes" title="Permanent link">&para;</a></h3>
+<h3 id="symbol-presets-summary">Symbol Presets Summary<a class="headerlink" href="#symbol-presets-summary" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Purpose</th>
-<th>Symbols</th>
-<th>Layout</th>
+<th>Preset</th>
+<th>Focus</th>
+<th>Total Scans</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Focused Analysis</strong></td>
-<td>10-15</td>
-<td>5×3 or 4×4</td>
+<td><strong>FAANG</strong></td>
+<td>Tech giants (AAPL, MSFT, etc.)</td>
+<td>7×3 = 21</td>
 </tr>
 <tr>
-<td><strong>Sector Scan</strong></td>
-<td>15-25</td>
-<td>5×5 or 8×3</td>
+<td><strong>Crypto</strong></td>
+<td>Major coins (BTC, ETH, etc.)</td>
+<td>7×3 = 21</td>
 </tr>
 <tr>
-<td><strong>Broad Market</strong></td>
-<td>25-40</td>
-<td>8×5 or 10×4</td>
+<td><strong>Forex</strong></td>
+<td>Major pairs (EUR/USD, etc.)</td>
+<td>7×3 = 21</td>
+</tr>
+<tr>
+<td><strong>Indices</strong></td>
+<td>Market indices (SPY, QQQ, etc.)</td>
+<td>7×3 = 21</td>
+</tr>
+<tr>
+<td><strong>Custom</strong></td>
+<td>Your own 7 symbols</td>
+<td>7×3 = 21</td>
 </tr>
 </tbody>
 </table>
@@ -3002,13 +3135,13 @@ USD/CAD, USD/CHF, NZD/USD, EUR/GBP
 <div class="sp-callout sp-callout--summary">
   <div class="sp-callout__title">What You've Learned</div>
   <ul>
-    <li><strong>Multi-Symbol Scanning System:</strong> Augury Grid displays MACD histogram crossover signals across up to 8 symbols simultaneously in a grid layout, enabling instant identification of momentum shifts across multiple markets at once</li>
-    <li><strong>Five Confluence Filters:</strong> Each signal is filtered through ADX (trend strength ≥20), HTF (higher timeframe confirmation), OBV (volume validation), RSI (regime check), and Distance (extension threshold) - only crossovers passing all enabled filters generate signals</li>
-    <li><strong>Grid Layout Options:</strong> 8-symbol grid layout optimized for your screen size and trading focus</li>
-    <li><strong>Signal Display:</strong> Green arrows indicate bullish MACD histogram crossovers (momentum turning positive), red arrows show bearish crossovers (momentum turning negative) - signal strength determined by number of confluence filters passed</li>
-    <li><strong>Watchlist Templates:</strong> Pre-configured symbol lists optimized for different markets - Crypto Major (BTC, ETH, SOL), US Indices (SPY, QQQ, DIA), Tech Giants (AAPL, MSFT, GOOGL), Forex Majors (EUR/USD, GBP/USD)</li>
-    <li><strong>Trading Style Application:</strong> Scalpers use 3×3 grids with aggressive filtering on 1m-5m charts, day traders employ 5×4 grids with balanced filters on 15m-1H timeframes, swing traders utilize 8×5 grids with conservative filters on 4H-Daily charts</li>
-    <li><strong>Alert Integration:</strong> Configure "Any alert() function call" alerts in TradingView to receive notifications when any symbol in your grid generates a filtered crossover signal - enables hands-free multi-symbol monitoring</li>
+    <li><strong>Multi-Timeframe Scanning:</strong> Augury Grid scans 7 symbols × 3 timeframes = 21 opportunities simultaneously in a table layout, enabling instant identification of signals across multiple markets and timeframes</li>
+    <li><strong>Signal Lifecycle System:</strong> Signals are born when filters pass, live while valid (tracking Age, Entry, SL, TP, P&L), and die when stopped out (💀 SL Hit) or stale (💀 Stale) — never showing losers as active</li>
+    <li><strong>Quality Rating System:</strong> Each signal displays a 0-100 quality score as stars (★/★★/★★★) — focus on ★★★ (70-100) for highest probability setups</li>
+    <li><strong>Blocker Detection:</strong> The ⏳ MACD and ⏳ Trend codes show WHY a signal is blocked, enabling you to wait for confirmation rather than guess</li>
+    <li><strong>Symbol Presets:</strong> 8 pre-configured symbol sets (FAANG, Crypto, Forex, Indices, etc.) plus Custom mode for your own 7 symbols</li>
+    <li><strong>ATR-Based Position Management:</strong> Automatic Entry/SL/TP calculation using ATR, displayed in the table for each active signal</li>
+    <li><strong>Alert Integration:</strong> 10 alert types including Symbol 1-7 individual alerts for targeted notifications per symbol slot</li>
   </ul>
   <p><strong>Next Steps:</strong> Review <a href="../ref-workflow/">Trading Workflow Guide</a> to learn how to combine Augury Grid signals with other indicators, or explore <a href="../ref-comparison/">Indicator Comparison</a> to see how Augury Grid complements the Signal Pilot suite.</p>
 </div>
@@ -3019,11 +3152,11 @@ USD/CAD, USD/CHF, NZD/USD, EUR/GBP
   <div class="sp-callout__title">Reflection Check</div>
   <p>Before using Augury Grid in your trading, ask yourself:</p>
   <ul>
-    <li>Can you explain how Augury Grid scans multiple symbols simultaneously and displays MACD histogram signals?</li>
-    <li>Do you understand the five confluence filters (ADX, HTF, OBV, RSI, Distance) and how they reduce false signals?</li>
-    <li>Have you configured a watchlist with appropriate symbols for your trading style (crypto, forex, stocks, or indices)?</li>
-    <li>Can you interpret the grid layout and identify which symbols are showing bullish/bearish crossovers at a glance?</li>
-    <li>Do you understand that Augury Grid displays filtered momentum signals across symbols, not trading instructions, and requires your own analysis?</li>
+    <li>Can you explain how Augury Grid scans 7 symbols × 3 timeframes = 21 opportunities simultaneously?</li>
+    <li>Do you understand the lifecycle system (birth → life → death) and what 💀 SL Hit means?</li>
+    <li>Have you selected a Symbol Preset or configured Custom symbols appropriate for your trading style?</li>
+    <li>Can you interpret the table display and identify which signals are ★★★ quality at a glance?</li>
+    <li>Do you understand that Augury Grid displays filtered signals, not trading instructions, and requires your own analysis?</li>
   </ul>
   <p><strong>If yes to all 5:</strong> You're ready to use Augury Grid! Explore the <a href="../ref-workflow/">Workflow Guide</a> to learn multi-symbol scanning strategies.<br>
   <strong>If no to any:</strong> Review the relevant section above or use the chatbot (bottom right) to ask specific questions.</p>
@@ -3054,7 +3187,7 @@ support@signalpilot.io</p>
 - <a href="../volume-oracle-v10/">Volume Oracle v1.0</a> - Volume intelligence in screener<br />
 - <a href="../ref-cheatsheets-at-a-glance/">All Indicators At A Glance</a> - Quick reference for all screened indicators</p>
 <hr />
-<p><strong>Disclaimer:</strong> This indicator displays MACD histogram crossover signals with confluence filtering across multiple symbols simultaneously. All signals represent momentum analysis based on MACD histogram crossovers combined with ADX, higher timeframe, OBV, RSI, and distance filters. Individual interpretation, application, and outcomes vary. Past signal patterns do not guarantee future results. This is not financial advice.</p>
+<p><strong>Disclaimer:</strong> This indicator displays signals across 7 symbols × 3 timeframes simultaneously with quality scoring and position management. All signals represent momentum analysis based on MACD detection, trend filtering, and 0-100 quality scoring displayed as stars. Individual interpretation, application, and outcomes vary. Past signal patterns do not guarantee future results. This is not financial advice.</p>
                 
                 
                 
