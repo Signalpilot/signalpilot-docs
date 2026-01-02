@@ -151,7 +151,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://docs.signalpilot.io/">
     <meta property="og:title" content="Harmonic Oscillator v1.0 — Composite Momentum">
-    <meta property="og:description" content="Five-component voting system combining MACD, RSI, Stochastic RSI, Volume, and Divergence. Advanced momentum detection with consensus-based signals.">
+    <meta property="og:description" content="Seven-component voting system with composite oscillator and regime detection. Multi-factor momentum consensus with TRENDING/BIAS/RANGING classification.">
     <meta property="og:image" content="https://docs.signalpilot.io/assets/images/preview.png">
     <meta property="og:site_name" content="Signal Pilot Docs">
 
@@ -159,7 +159,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://docs.signalpilot.io/">
     <meta name="twitter:title" content="Harmonic Oscillator v1.0 — Composite Momentum">
-    <meta name="twitter:description" content="Five-component voting system combining MACD, RSI, Stochastic RSI, Volume, and Divergence. Advanced momentum detection with consensus-based signals.">
+    <meta name="twitter:description" content="Seven-component voting system with composite oscillator and regime detection. Multi-factor momentum consensus with TRENDING/BIAS/RANGING classification.">
     <meta name="twitter:image" content="https://docs.signalpilot.io/assets/images/preview.png">
 
 
@@ -928,42 +928,34 @@
 </li>
 
         <li class="md-nav__item">
-  <a href="#the-four-signal-types" class="md-nav__link">
+  <a href="#regime-classification" class="md-nav__link">
     <span class="md-ellipsis">
-      🔢 The Four Signal Types
+      🔢 Regime Classification
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="🔢 The Four Signal Types">
+
+    <nav class="md-nav" aria-label="🔢 Regime Classification">
       <ul class="md-nav__list">
           <li class="md-nav__item">
-  <a href="#buy-signal" class="md-nav__link">
+  <a href="#trending-regime" class="md-nav__link">
     <span class="md-ellipsis">
-      🟢 Bull Signal
+      📈 TRENDING Regime
     </span>
   </a>
 
 </li>
           <li class="md-nav__item">
-  <a href="#sell-signal" class="md-nav__link">
+  <a href="#bias-regime" class="md-nav__link">
     <span class="md-ellipsis">
-      🔴 Bear Signal
+      📊 BIAS Regime
     </span>
   </a>
 
 </li>
           <li class="md-nav__item">
-  <a href="#strong-signal" class="md-nav__link">
+  <a href="#ranging-regime" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚡ STRONG Signal
-    </span>
-  </a>
-
-</li>
-          <li class="md-nav__item">
-  <a href="#neut-signal" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚪ NEUT Signal
+      ↔️ RANGING Regime
     </span>
   </a>
 
@@ -1013,50 +1005,50 @@
 </li>
 
         <li class="md-nav__item">
-  <a href="#signal-interpretation-patterns" class="md-nav__link">
+  <a href="#regime-interpretation-patterns" class="md-nav__link">
     <span class="md-ellipsis">
-      🎯 Signal Interpretation Patterns
+      🎯 Regime Interpretation Patterns
     </span>
   </a>
   
     <nav class="md-nav" aria-label="🎯 Signal Interpretation Patterns">
       <ul class="md-nav__list">
           <li class="md-nav__item">
-  <a href="#pattern-1-buy-strong-bullish-progression" class="md-nav__link">
+  <a href="#pattern-1-bias-trending-progression" class="md-nav__link">
     <span class="md-ellipsis">
-      Pattern 1: Bull → STRONG Bullish Progression
+      Pattern 1: BIAS → TRENDING Progression
     </span>
   </a>
 
 </li>
           <li class="md-nav__item">
-  <a href="#pattern-2-direct-strong-signal" class="md-nav__link">
+  <a href="#pattern-2-direct-trending-regime" class="md-nav__link">
     <span class="md-ellipsis">
-      Pattern 2: Direct STRONG Signal
+      Pattern 2: Direct TRENDING Regime
     </span>
   </a>
 
 </li>
           <li class="md-nav__item">
-  <a href="#pattern-3-buysell-neut-transition" class="md-nav__link">
+  <a href="#pattern-3-bias-ranging-transition" class="md-nav__link">
     <span class="md-ellipsis">
-      Pattern 3: Bull/Bear → NEUT Transition
+      Pattern 3: BIAS → RANGING Transition
     </span>
   </a>
 
 </li>
           <li class="md-nav__item">
-  <a href="#pattern-4-neut-buysell-emergence" class="md-nav__link">
+  <a href="#pattern-4-ranging-bias-emergence" class="md-nav__link">
     <span class="md-ellipsis">
-      Pattern 4: NEUT → Bull/Bear Emergence
+      Pattern 4: RANGING → BIAS Emergence
     </span>
   </a>
 
 </li>
           <li class="md-nav__item">
-  <a href="#pattern-5-signal-clusters" class="md-nav__link">
+  <a href="#pattern-5-regime-clusters" class="md-nav__link">
     <span class="md-ellipsis">
-      Pattern 5: Signal Clusters
+      Pattern 5: Regime Clusters
     </span>
   </a>
 
@@ -1112,33 +1104,33 @@
     <nav class="md-nav" aria-label="❓ Frequently Asked Questions">
       <ul class="md-nav__list">
           <li class="md-nav__item">
-  <a href="#q-why-use-five-oscillators-instead-of-one" class="md-nav__link">
+  <a href="#q-why-use-seven-components-instead-of-one" class="md-nav__link">
     <span class="md-ellipsis">
-      Q: Why use five oscillators instead of one?
+      Q: Why use seven components instead of one?
     </span>
   </a>
 
 </li>
           <li class="md-nav__item">
-  <a href="#q-can-i-disable-specific-oscillators" class="md-nav__link">
+  <a href="#q-can-i-disable-specific-components" class="md-nav__link">
     <span class="md-ellipsis">
-      Q: Can I disable specific oscillators?
+      Q: Can I disable specific components?
     </span>
   </a>
 
 </li>
           <li class="md-nav__item">
-  <a href="#q-what-if-all-oscillators-are-neutral" class="md-nav__link">
+  <a href="#q-what-causes-ranging-regime" class="md-nav__link">
     <span class="md-ellipsis">
-      Q: What if all oscillators are neutral?
+      Q: What causes the RANGING regime?
     </span>
   </a>
 
 </li>
           <li class="md-nav__item">
-  <a href="#q-how-does-this-differ-from-looking-at-five-separate-indicators" class="md-nav__link">
+  <a href="#q-how-does-this-differ-from-separate-indicators" class="md-nav__link">
     <span class="md-ellipsis">
-      Q: How does this differ from looking at five separate indicators?
+      Q: How does this differ from looking at seven separate indicators?
     </span>
   </a>
 
@@ -1152,41 +1144,41 @@
 
 </li>
           <li class="md-nav__item">
-  <a href="#q-what-vote-threshold-should-i-use" class="md-nav__link">
+  <a href="#q-what-is-the-composite-oscillator" class="md-nav__link">
     <span class="md-ellipsis">
-      Q: What vote threshold should I use?
+      Q: What is the composite oscillator?
     </span>
   </a>
 
 </li>
           <li class="md-nav__item">
-  <a href="#q-do-strong-signals-perform-better-than-regular-buysell" class="md-nav__link">
+  <a href="#q-do-trending-signals-perform-better-than-bias" class="md-nav__link">
     <span class="md-ellipsis">
-      Q: Do STRONG signals perform better than regular Bull/Bear?
+      Q: Do TRENDING signals perform better than BIAS?
     </span>
   </a>
 
 </li>
           <li class="md-nav__item">
-  <a href="#q-can-i-see-individual-oscillator-readings" class="md-nav__link">
+  <a href="#q-can-i-see-the-composite-oscillator" class="md-nav__link">
     <span class="md-ellipsis">
-      Q: Can I see individual oscillator readings?
+      Q: Can I see the composite oscillator?
     </span>
   </a>
 
 </li>
           <li class="md-nav__item">
-  <a href="#q-what-causes-neut-signals" class="md-nav__link">
+  <a href="#q-what-do-the-vote-counts-mean" class="md-nav__link">
     <span class="md-ellipsis">
-      Q: What causes NEUT signals?
+      Q: What do the vote counts (X/7) mean?
     </span>
   </a>
 
 </li>
           <li class="md-nav__item">
-  <a href="#q-how-many-signals-appear-on-average" class="md-nav__link">
+  <a href="#q-how-many-regime-changes-appear-on-average" class="md-nav__link">
     <span class="md-ellipsis">
-      Q: How many signals appear on average?
+      Q: How many regime changes appear on average?
     </span>
   </a>
 
@@ -1714,42 +1706,34 @@
 </li>
 
         <li class="md-nav__item">
-  <a href="#the-four-signal-types" class="md-nav__link">
+  <a href="#regime-classification" class="md-nav__link">
     <span class="md-ellipsis">
-      🔢 The Four Signal Types
+      🔢 Regime Classification
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="🔢 The Four Signal Types">
+
+    <nav class="md-nav" aria-label="🔢 Regime Classification">
       <ul class="md-nav__list">
           <li class="md-nav__item">
-  <a href="#buy-signal" class="md-nav__link">
+  <a href="#trending-regime" class="md-nav__link">
     <span class="md-ellipsis">
-      🟢 Bull Signal
+      📈 TRENDING Regime
     </span>
   </a>
 
 </li>
           <li class="md-nav__item">
-  <a href="#sell-signal" class="md-nav__link">
+  <a href="#bias-regime" class="md-nav__link">
     <span class="md-ellipsis">
-      🔴 Bear Signal
+      📊 BIAS Regime
     </span>
   </a>
 
 </li>
           <li class="md-nav__item">
-  <a href="#strong-signal" class="md-nav__link">
+  <a href="#ranging-regime" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚡ STRONG Signal
-    </span>
-  </a>
-
-</li>
-          <li class="md-nav__item">
-  <a href="#neut-signal" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚪ NEUT Signal
+      ↔️ RANGING Regime
     </span>
   </a>
 
@@ -1799,50 +1783,50 @@
 </li>
 
         <li class="md-nav__item">
-  <a href="#signal-interpretation-patterns" class="md-nav__link">
+  <a href="#regime-interpretation-patterns" class="md-nav__link">
     <span class="md-ellipsis">
-      🎯 Signal Interpretation Patterns
+      🎯 Regime Interpretation Patterns
     </span>
   </a>
   
     <nav class="md-nav" aria-label="🎯 Signal Interpretation Patterns">
       <ul class="md-nav__list">
           <li class="md-nav__item">
-  <a href="#pattern-1-buy-strong-bullish-progression" class="md-nav__link">
+  <a href="#pattern-1-bias-trending-progression" class="md-nav__link">
     <span class="md-ellipsis">
-      Pattern 1: Bull → STRONG Bullish Progression
+      Pattern 1: BIAS → TRENDING Progression
     </span>
   </a>
 
 </li>
           <li class="md-nav__item">
-  <a href="#pattern-2-direct-strong-signal" class="md-nav__link">
+  <a href="#pattern-2-direct-trending-regime" class="md-nav__link">
     <span class="md-ellipsis">
-      Pattern 2: Direct STRONG Signal
+      Pattern 2: Direct TRENDING Regime
     </span>
   </a>
 
 </li>
           <li class="md-nav__item">
-  <a href="#pattern-3-buysell-neut-transition" class="md-nav__link">
+  <a href="#pattern-3-bias-ranging-transition" class="md-nav__link">
     <span class="md-ellipsis">
-      Pattern 3: Bull/Bear → NEUT Transition
+      Pattern 3: BIAS → RANGING Transition
     </span>
   </a>
 
 </li>
           <li class="md-nav__item">
-  <a href="#pattern-4-neut-buysell-emergence" class="md-nav__link">
+  <a href="#pattern-4-ranging-bias-emergence" class="md-nav__link">
     <span class="md-ellipsis">
-      Pattern 4: NEUT → Bull/Bear Emergence
+      Pattern 4: RANGING → BIAS Emergence
     </span>
   </a>
 
 </li>
           <li class="md-nav__item">
-  <a href="#pattern-5-signal-clusters" class="md-nav__link">
+  <a href="#pattern-5-regime-clusters" class="md-nav__link">
     <span class="md-ellipsis">
-      Pattern 5: Signal Clusters
+      Pattern 5: Regime Clusters
     </span>
   </a>
 
@@ -1898,33 +1882,33 @@
     <nav class="md-nav" aria-label="❓ Frequently Asked Questions">
       <ul class="md-nav__list">
           <li class="md-nav__item">
-  <a href="#q-why-use-five-oscillators-instead-of-one" class="md-nav__link">
+  <a href="#q-why-use-seven-components-instead-of-one" class="md-nav__link">
     <span class="md-ellipsis">
-      Q: Why use five oscillators instead of one?
+      Q: Why use seven components instead of one?
     </span>
   </a>
 
 </li>
           <li class="md-nav__item">
-  <a href="#q-can-i-disable-specific-oscillators" class="md-nav__link">
+  <a href="#q-can-i-disable-specific-components" class="md-nav__link">
     <span class="md-ellipsis">
-      Q: Can I disable specific oscillators?
+      Q: Can I disable specific components?
     </span>
   </a>
 
 </li>
           <li class="md-nav__item">
-  <a href="#q-what-if-all-oscillators-are-neutral" class="md-nav__link">
+  <a href="#q-what-causes-ranging-regime" class="md-nav__link">
     <span class="md-ellipsis">
-      Q: What if all oscillators are neutral?
+      Q: What causes the RANGING regime?
     </span>
   </a>
 
 </li>
           <li class="md-nav__item">
-  <a href="#q-how-does-this-differ-from-looking-at-five-separate-indicators" class="md-nav__link">
+  <a href="#q-how-does-this-differ-from-separate-indicators" class="md-nav__link">
     <span class="md-ellipsis">
-      Q: How does this differ from looking at five separate indicators?
+      Q: How does this differ from looking at seven separate indicators?
     </span>
   </a>
 
@@ -1938,41 +1922,41 @@
 
 </li>
           <li class="md-nav__item">
-  <a href="#q-what-vote-threshold-should-i-use" class="md-nav__link">
+  <a href="#q-what-is-the-composite-oscillator" class="md-nav__link">
     <span class="md-ellipsis">
-      Q: What vote threshold should I use?
+      Q: What is the composite oscillator?
     </span>
   </a>
 
 </li>
           <li class="md-nav__item">
-  <a href="#q-do-strong-signals-perform-better-than-regular-buysell" class="md-nav__link">
+  <a href="#q-do-trending-signals-perform-better-than-bias" class="md-nav__link">
     <span class="md-ellipsis">
-      Q: Do STRONG signals perform better than regular Bull/Bear?
+      Q: Do TRENDING signals perform better than BIAS?
     </span>
   </a>
 
 </li>
           <li class="md-nav__item">
-  <a href="#q-can-i-see-individual-oscillator-readings" class="md-nav__link">
+  <a href="#q-can-i-see-the-composite-oscillator" class="md-nav__link">
     <span class="md-ellipsis">
-      Q: Can I see individual oscillator readings?
+      Q: Can I see the composite oscillator?
     </span>
   </a>
 
 </li>
           <li class="md-nav__item">
-  <a href="#q-what-causes-neut-signals" class="md-nav__link">
+  <a href="#q-what-do-the-vote-counts-mean" class="md-nav__link">
     <span class="md-ellipsis">
-      Q: What causes NEUT signals?
+      Q: What do the vote counts (X/7) mean?
     </span>
   </a>
 
 </li>
           <li class="md-nav__item">
-  <a href="#q-how-many-signals-appear-on-average" class="md-nav__link">
+  <a href="#q-how-many-regime-changes-appear-on-average" class="md-nav__link">
     <span class="md-ellipsis">
-      Q: How many signals appear on average?
+      Q: How many regime changes appear on average?
     </span>
   </a>
 
@@ -2066,8 +2050,8 @@
 </div>
 
 <!-- Render the page content -->
-<h1 id="harmonic-oscillator-v10-five-oscillator-consensus-system">Harmonic Oscillator v1.0 — Composite Momentum<a class="headerlink" href="#harmonic-oscillator-v10-five-oscillator-consensus-system" title="Permanent link">&para;</a></h1>
-<p>Momentum indicator combining five technical oscillators into unified signal system. Displays Bull, Bear, NEUT, and STRONG signals based on multi-oscillator agreement.</p>
+<h1 id="harmonic-oscillator-v10-seven-component-consensus-system">Harmonic Oscillator v1.0 — Composite Momentum<a class="headerlink" href="#harmonic-oscillator-v10-seven-component-consensus-system" title="Permanent link">&para;</a></h1>
+<p>Seven-component voting system with composite oscillator and regime detection. Displays vote count (X/7) and regime classification (TRENDING/BIAS/RANGING) based on multi-factor consensus.</p>
 
 <div class="sp-callout sp-callout--success" style="margin: 2rem 0; border-left: 4px solid #4caf50;">
   <div class="sp-callout__icon">👋</div>
@@ -2081,30 +2065,33 @@
       <li><strong>Weak momentum</strong> = Prices drifting slowly or sideways (trend may be ending)</li>
     </ul>
 
-    <p><strong>In Plain English:</strong> Harmonic Oscillator combines 5 different momentum measurements and gives you ONE simple answer about market momentum. Instead of studying 5 separate indicators, you get one clear signal.</p>
+    <p><strong>In Plain English:</strong> Harmonic Oscillator combines 7 different momentum measurements into a composite oscillator and gives you ONE clear answer about market conditions. Instead of studying 7 separate indicators, you get one regime classification.</p>
 
     <p><strong>What You'll See on Your Chart:</strong></p>
-    <p>Labels showing momentum consensus:</p>
+    <p>Status panel showing regime and vote count:</p>
     <ul style="margin: 1rem 0;">
-      <li><strong>🟢 BULL</strong> = Bullish momentum detected (upward pressure)</li>
-      <li><strong>🔴 BEAR</strong> = Bearish momentum detected (downward pressure)</li>
-      <li><strong>⚪ NEUT</strong> = Neutral momentum (no clear direction)</li>
-      <li><strong>⭐ STRONG</strong> = Extra-strong momentum (high confidence signal)</li>
+      <li><strong>📈 TRENDING▲/▼</strong> = Strong directional momentum confirmed by multiple factors</li>
+      <li><strong>📊 BIAS▲/▼</strong> = Moderate directional lean</li>
+      <li><strong>↔️ RANGING</strong> = Neutral/sideways conditions</li>
+      <li><strong>Vote Count (X/7)</strong> = How many components agree on direction</li>
     </ul>
 
     <p><strong>How the "Voting" Works (Simple Version):</strong></p>
-    <p>Imagine 5 expert analysts looking at your chart. Each one checks different momentum aspects:</p>
+    <p>Imagine 7 expert analysts looking at your chart. Each one checks different momentum aspects:</p>
     <ol>
-      <li><strong>Analyst 1:</strong> Checks trend direction (MACD)</li>
-      <li><strong>Analyst 2:</strong> Checks overbought/oversold levels (RSI)</li>
-      <li><strong>Analyst 3:</strong> Checks momentum extremes (Stochastic RSI)</li>
-      <li><strong>Analyst 4:</strong> Checks volume patterns</li>
-      <li><strong>Analyst 5:</strong> Checks if indicators disagree with price (divergences)</li>
+      <li><strong>Analyst 1:</strong> Checks momentum-aware RSI</li>
+      <li><strong>Analyst 2:</strong> Checks smoothed stochastic with slope</li>
+      <li><strong>Analyst 3:</strong> Checks MACD histogram acceleration</li>
+      <li><strong>Analyst 4:</strong> Checks EMA trend position and slope</li>
+      <li><strong>Analyst 5:</strong> Checks rate of change momentum</li>
+      <li><strong>Analyst 6:</strong> Checks confirming volume</li>
+      <li><strong>Analyst 7:</strong> Checks divergence zones</li>
     </ol>
     <ul>
-      <li>When 3+ analysts agree → you get a signal</li>
-      <li>When 4-5 analysts agree → you get a STRONG signal</li>
-      <li>When 0-2 analysts agree → NEUTRAL (wait for clearer picture)</li>
+      <li>Vote count shown as X/7 in status panel</li>
+      <li>5+ votes = High consensus</li>
+      <li>3-4 votes = Moderate consensus</li>
+      <li>0-2 votes = Low consensus</li>
     </ul>
 
     <p><strong>You Don't Need to Know HOW Each Analyst Thinks!</strong> Just trust the consensus vote. That's the power of this indicator—it does the complex analysis for you.</p>
@@ -2125,9 +2112,9 @@
 
     <p><strong>Beginner Starting Point:</strong></p>
     <ul>
-      <li><strong>Week 1:</strong> Just watch the signals appear. Notice when BULL/BEAR labels show up.</li>
-      <li><strong>Week 2:</strong> Pay special attention to STRONG signals (4-5 vote consensus).</li>
-      <li><strong>Week 3:</strong> Start noticing momentum shifts—when signals change from BULL to NEUT to BEAR.</li>
+      <li><strong>Week 1:</strong> Watch the status panel. Notice regime labels (TRENDING/BIAS/RANGING) and vote counts.</li>
+      <li><strong>Week 2:</strong> Pay attention to high consensus (5+ of 7 votes) — these indicate strong agreement.</li>
+      <li><strong>Week 3:</strong> Notice regime transitions — when TRENDING shifts to RANGING or BIAS flips direction.</li>
     </ul>
   </div>
 </div>
@@ -2142,29 +2129,35 @@
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
   <div class="sp-callout__icon">📊</div>
   <div class="sp-callout__content">
-    <h4>Five-Component Voting System</h4>
-    <p style="margin-bottom: 1rem;">Five independent components analyze market conditions and vote. Maximum 5 votes total (displayed as "X/5" in signals):</p>
+    <h4>Seven-Component Voting System</h4>
+    <p style="margin-bottom: 1rem;">Seven independent components analyze market conditions and vote. Vote count displayed as "X/7" in status panel:</p>
     <div class="mermaid">
 graph TD
-    Data[📊 Market Data<br/>Price + Volume] --> Voters[FIVE INDEPENDENT VOTERS]
+    Data[📊 Market Data<br/>Price + Volume] --> Voters[SEVEN INDEPENDENT VOTERS]
 
-    Voters --> V1[1️⃣ MACD VOTE<br/>Crossover Signals]
-    Voters --> V2[2️⃣ RSI VOTE<br/>Envelope Zones]
-    Voters --> V3[3️⃣ STOCHASTIC RSI VOTE<br/>Extreme Zones]
-    Voters --> V4[4️⃣ VOLUME VOTE<br/>Delta Patterns]
-    Voters --> V5[5️⃣ DIVERGENCE VOTE<br/>Price vs Oscillator]
+    Voters --> V1[1️⃣ RSI<br/>Momentum-Aware]
+    Voters --> V2[2️⃣ STOCHASTIC RSI<br/>Slope Analysis]
+    Voters --> V3[3️⃣ MACD<br/>Histogram Acceleration]
+    Voters --> V4[4️⃣ EMA TREND<br/>Position + Slope]
+    Voters --> V5[5️⃣ MOMENTUM<br/>Rate of Change]
+    Voters --> V6[6️⃣ VOLUME<br/>Confirmation]
+    Voters --> V7[7️⃣ DIVERGENCE<br/>Zone Detection]
 
     V1 --> Counter[VOTE COUNTER<br/>Tallies All Votes]
     V2 --> Counter
     V3 --> Counter
     V4 --> Counter
     V5 --> Counter
+    V6 --> Counter
+    V7 --> Counter
 
-    Counter --> Result{How Many<br/>Votes?}
+    Counter --> Composite[COMPOSITE<br/>OSCILLATOR]
 
-    Result -->|0-2 Votes| Neutral[⚪ NEUTRAL<br/>Not Enough Consensus]
-    Result -->|3 Votes| Signal[🟢 SIGNAL<br/>Moderate Confidence]
-    Result -->|4-5 Votes| Strong[⭐ STRONG SIGNAL<br/>High Confidence]
+    Composite --> Regime{REGIME<br/>CLASSIFICATION}
+
+    Regime -->|Strong Direction| Trending[📈 TRENDING<br/>Confirmed Momentum]
+    Regime -->|Moderate Lean| Bias[📊 BIAS<br/>Directional Lean]
+    Regime -->|Neutral Zone| Ranging[↔️ RANGING<br/>Sideways]
 
     style Data fill:#37474f,color:#fff,stroke:#263238,stroke-width:3px
     style Voters fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:3px
@@ -2172,46 +2165,50 @@ graph TD
     style V2 fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:2px
     style V3 fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:2px
     style V4 fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:2px
-    style V5 fill:#ff5722,color:#fff,stroke:#e64a19,stroke-width:2px
+    style V5 fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:2px
+    style V6 fill:#ff5722,color:#fff,stroke:#e64a19,stroke-width:2px
+    style V7 fill:#ff5722,color:#fff,stroke:#e64a19,stroke-width:2px
     style Counter fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:3px
-    style Result fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:3px
-    style Neutral fill:#757575,color:#fff,stroke:#616161,stroke-width:2px
-    style Signal fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
-    style Strong fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:4px
+    style Composite fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:3px
+    style Regime fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
+    style Trending fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:4px
+    style Bias fill:#81c784,color:#fff,stroke:#66bb6a,stroke-width:3px
+    style Ranging fill:#757575,color:#fff,stroke:#616161,stroke-width:2px
     </div>
     <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
-      <strong>How to read:</strong> Composite oscillator (MACD, RSI, Stochastic RSI) generates 3 votes. Volume and Divergence add 2 more votes. Total possible: 5 votes. 3+ = signal, 4-5 = strong.
+      <strong>How to read:</strong> 7 components vote bullish/bearish/neutral. Votes feed into composite oscillator. Regime classification based on composite level and multi-factor confirmation.
     </p>
   </div>
 </div>
 
-<!-- 📸 SCREENSHOT NEEDED - Harmonic Oscillator Signal Types (Bull, Bear, NEUT, STRONG)
-     What to show: Oscillator panel showing each signal type at different time periods
-     Setup: Find chart section showing signal transitions over time
-     Label/Annotate: Label each signal type where it appears (Bull=green, Bear=red, NEUT=gray, STRONG=bright green/red)
-     File name suggestion: harmonic-oscillator-signals-labeled.png
+<!-- 📸 SCREENSHOT NEEDED - Harmonic Oscillator Status Panel and Composite Oscillator
+     What to show: Oscillator panel showing composite line, regime label, and vote count
+     Setup: Find chart section showing regime transitions over time
+     Label/Annotate: Label regime states (TRENDING, BIAS, RANGING) and vote counts
+     File name suggestion: harmonic-oscillator-status-panel.png
 -->
 <div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
   <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
-  <p style="margin: 0; color: #424242;"><strong>Harmonic Oscillator Signal Types (Bull, Bear, NEUT, STRONG)</strong></p>
-  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add an oscillator panel showing all four signal types clearly labeled over time.</p>
+  <p style="margin: 0; color: #424242;"><strong>Harmonic Oscillator Status Panel and Composite Oscillator</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add an oscillator panel showing composite line, regime classification, and vote count.</p>
 </div>
 
-<p>Harmonic Oscillator combines multiple momentum components into a unified voting system. Five independent voters analyze market conditions and generate consensus signals.</p>
-<p><strong>The Five Voting Components:</strong><br />
-1. <strong>MACD Vote</strong> - Fires when MACD crosses signal line and passes ADX/momentum gating<br />
-2. <strong>RSI Vote</strong> - Fires when price enters triple RSI envelope zones (7/14/28 period trend-following)<br />
-3. <strong>Stochastic RSI Vote</strong> - Fires on K/D crossovers in extreme zones<br />
-4. <strong>Volume Vote</strong> - Fires based on volume delta patterns<br />
-5. <strong>Divergence Vote</strong> - Fires when price/oscillator divergences form</p>
-<p><strong>Voting System:</strong> Each component votes bullish, bearish, or neutral. Signals appear based on vote counts:</p>
+<p>Harmonic Oscillator combines seven momentum components into a unified voting system with composite oscillator output and regime classification.</p>
+<p><strong>The Seven Voting Components:</strong><br />
+1. <strong>RSI</strong> — Momentum-aware RSI with directional confirmation<br />
+2. <strong>Stochastic RSI</strong> — Smoothed stochastic with slope analysis<br />
+3. <strong>MACD</strong> — Histogram acceleration detection (not just direction)<br />
+4. <strong>EMA Trend</strong> — Price position relative to trend with slope confirmation<br />
+5. <strong>Momentum</strong> — Rate of change analysis<br />
+6. <strong>Volume</strong> — Confirming volume on directional candles<br />
+7. <strong>Divergence Zone</strong> — Extreme zone detection with price confirmation</p>
+<p><strong>Regime Classification:</strong> Based on composite oscillator level and multi-factor consensus:</p>
 <ul>
-<li><strong>Bull Signal:</strong> 3+ components vote bullish</li>
-<li><strong>Bear Signal:</strong> 3+ components vote bearish</li>
-<li><strong>STRONG Signal:</strong> 4-5 components vote same direction (enhanced agreement)</li>
-<li><strong>NEUT Signal:</strong> 0-2 votes (no clear agreement)</li>
+<li><strong>TRENDING▲/▼:</strong> Strong directional momentum confirmed by multiple factors</li>
+<li><strong>BIAS▲/▼:</strong> Moderate directional lean</li>
+<li><strong>RANGING:</strong> Neutral/sideways conditions</li>
 </ul>
-<p><strong>Visual Display:</strong> Signal labels appear below (Bull/STRONG bullish) or above (Bear/STRONG bearish) candles at bar close. Vote count shown as "X/5".</p>
+<p><strong>Visual Display:</strong> Status panel shows regime + direction arrow, vote count (X/7), and individual component states.</p>
 <p><strong>Timeframe Compatibility:</strong> Works on all timeframes.</p>
 
 <!-- 📸 SCREENSHOT NEEDED - Harmonic Oscillator Panel Below Price Chart
@@ -2235,86 +2232,51 @@ graph TD
 <tr>
 <th>Date/Time</th>
 <th>Price</th>
-<th>Component Votes</th>
-<th>Signal</th>
-<th>Analysis</th>
+<th>Votes</th>
+<th>Composite</th>
+<th>Regime</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Nov 5, 8pm</td>
 <td>$63,500</td>
-<td>MACD: Bullish, RSI: Bullish, StochRSI: Bullish, Volume: Neutral, Divergence: Bullish</td>
-<td><strong>Bull</strong></td>
-<td>4 of 5 vote bullish</td>
+<td>5/7 Bull</td>
+<td>62</td>
+<td><strong>BIAS▲</strong></td>
 </tr>
 <tr>
 <td>Nov 6, 4am</td>
 <td>$64,200</td>
-<td>All 5 components: Bullish</td>
-<td><strong>STRONG</strong></td>
-<td>Unanimous agreement</td>
+<td>7/7 Bull</td>
+<td>78</td>
+<td><strong>TRENDING▲</strong></td>
 </tr>
 <tr>
 <td>Nov 7, 12pm</td>
 <td>$67,800</td>
-<td>MACD: Bearish, RSI: Bearish, StochRSI: Bearish, Volume: Neutral, Divergence: Neutral</td>
-<td><strong>Bear</strong></td>
-<td>3 of 5 vote bearish</td>
+<td>5/7 Bear</td>
+<td>35</td>
+<td><strong>BIAS▼</strong></td>
 </tr>
 <tr>
 <td>Nov 8, 8am</td>
 <td>$66,100</td>
-<td>Votes split: 2 bullish, 2 bearish, 1 neutral</td>
-<td><strong>NEUT</strong></td>
-<td>No consensus</td>
+<td>3/7 mixed</td>
+<td>48</td>
+<td><strong>RANGING—</strong></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Pattern Observed:</strong> Bull signal at $63,500 preceded +$4,300 rally to $67,800 where Bear signal appeared.</p>
-<p><strong>Outcome:</strong> +6.8% move from Bull to Bear signal.</p>
-<p><em>This example demonstrates signal sequence. Individual interpretation and outcomes vary.</em></p>
+<p><strong>Pattern Observed:</strong> BIAS▲ at $63,500 preceded +$4,300 rally to $67,800 where BIAS▼ appeared.</p>
+<p><strong>Outcome:</strong> +6.8% move from bullish to bearish regime.</p>
+<p><em>This example demonstrates regime sequence. Individual interpretation and outcomes vary.</em></p>
 <hr />
 <h2 id="settings">⚙️ Settings <span class="skill-badge skill-badge--beginner" data-tooltip="Simple configuration options">Beginner Friendly</span><a class="headerlink" href="#settings" title="Permanent link">&para;</a></h2>
-<h3 id="oscillator-configuration">Component Configuration<a class="headerlink" href="#oscillator-configuration" title="Permanent link">&para;</a></h3>
-<p>Each of the five voting components can be customized individually:</p>
-<table>
-<thead>
-<tr>
-<th>Component</th>
-<th>Adjustable Parameters</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>MACD</strong></td>
-<td>Fast Period, Slow Period, Signal Period</td>
-<td>12, 26, 9</td>
-</tr>
-<tr>
-<td><strong>RSI Triple Envelope</strong></td>
-<td>Short Period, Medium Period, Long Period</td>
-<td>7, 14, 28</td>
-</tr>
-<tr>
-<td><strong>Stochastic RSI</strong></td>
-<td>%K Period, %D Period, RSI Length</td>
-<td>3, 3, 14</td>
-</tr>
-<tr>
-<td><strong>Volume Delta</strong></td>
-<td>Sensitivity, Threshold</td>
-<td>Auto, Auto</td>
-</tr>
-<tr>
-<td><strong>Divergence Detection</strong></td>
-<td>Lookback Periods, Min Pivot Distance</td>
-<td>5, 2</td>
-</tr>
-</tbody>
-</table>
-<h3 id="signal-configuration">Signal Configuration<a class="headerlink" href="#signal-configuration" title="Permanent link">&para;</a></h3>
+
+<p><strong>Note:</strong> Oscillator parameters are optimized internally and not user-adjustable.</p>
+
+<h3 id="core-settings">Core Settings<a class="headerlink" href="#core-settings" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -2325,124 +2287,194 @@ graph TD
 </thead>
 <tbody>
 <tr>
-<td><strong>Vote Threshold</strong></td>
-<td>3, 4, or 5 required votes</td>
-<td>3</td>
+<td><strong>Signal Mode</strong></td>
+<td>Conservative / Balanced / Aggressive</td>
+<td>Balanced</td>
 </tr>
 <tr>
-<td><strong>Strong Threshold</strong></td>
-<td>4 or 5 required votes</td>
-<td>4</td>
+<td><strong>Higher Timeframe Filter</strong></td>
+<td>On / Off</td>
+<td>Off</td>
 </tr>
 <tr>
-<td><strong>Signal Display</strong></td>
-<td>Labels on/off</td>
-<td>On</td>
-</tr>
-<tr>
-<td><strong>Alert Toggles</strong></td>
-<td>Individual signal alerts</td>
-<td>All enabled</td>
-</tr>
-</tbody>
-</table>
-<h3 id="display-options">Display Options<a class="headerlink" href="#display-options" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Setting</th>
-<th>Options</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Signal Labels</strong></td>
-<td>On chart or panel</td>
-<td>On chart</td>
-</tr>
-<tr>
-<td><strong>Oscillator Panel</strong></td>
-<td>Show/Hide individual oscillators</td>
-<td>Hidden</td>
-</tr>
-<tr>
-<td><strong>Color Scheme</strong></td>
-<td>Multiple palettes</td>
-<td>Scheme 1</td>
+<td><strong>HTF Timeframe</strong></td>
+<td>Timeframe selection</td>
+<td>4H</td>
 </tr>
 </tbody>
 </table>
 
-<!-- 📸 SCREENSHOT NEEDED - Harmonic Oscillator Settings - Component Configuration
-     What to show: Settings panel showing oscillator toggles and sensitivity settings
+<h3 id="display-settings">Display Settings<a class="headerlink" href="#display-settings" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Options</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Show Divergences</strong></td>
+<td>On / Off</td>
+<td>On</td>
+</tr>
+<tr>
+<td><strong>Show Consensus Meter</strong></td>
+<td>On / Off</td>
+<td>On</td>
+</tr>
+<tr>
+<td><strong>Show Status Panel</strong></td>
+<td>On / Off</td>
+<td>On</td>
+</tr>
+<tr>
+<td><strong>Show OB/OS Zone Fills</strong></td>
+<td>On / Off</td>
+<td>On</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="table-settings">Table Settings<a class="headerlink" href="#table-settings" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Options</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Table Position</strong></td>
+<td>9 options (Top Left through Bottom Right)</td>
+<td>Top Right</td>
+</tr>
+<tr>
+<td><strong>Table Font Size</strong></td>
+<td>Tiny / Small / Normal</td>
+<td>Small</td>
+</tr>
+<tr>
+<td><strong>Table Layout</strong></td>
+<td>Horizontal / Vertical</td>
+<td>Vertical</td>
+</tr>
+</tbody>
+</table>
+
+<!-- 📸 SCREENSHOT NEEDED - Harmonic Oscillator Settings Panel
+     What to show: Settings panel showing Signal Mode, HTF Filter, and Display options
      Setup: Right-click Harmonic Oscillator → Settings
-     Label/Annotate: Highlight the 5 oscillator component toggles (RSI, MACD, Stoch, Volume, Divergence)
+     Label/Annotate: Highlight core settings and display toggles
      File name suggestion: harmonic-oscillator-settings.png
 -->
 <div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
   <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
-  <p style="margin: 0; color: #424242;"><strong>Harmonic Oscillator Settings - Component Configuration</strong></p>
-  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a screenshot of the TradingView settings panel showing oscillator toggles and sensitivity settings.</p>
+  <p style="margin: 0; color: #424242;"><strong>Harmonic Oscillator Settings Panel</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a screenshot of the TradingView settings panel showing Signal Mode, display options, and table settings.</p>
 </div>
 
 <hr />
-<h2 id="the-four-signal-types">🔢 The Four Signal Types<a class="headerlink" href="#the-four-signal-types" title="Permanent link">&para;</a></h2>
-<h3 id="buy-signal">🟢 Bull Signal<a class="headerlink" href="#buy-signal" title="Permanent link">&para;</a></h3>
-<p><strong>Visual Display:</strong> "Bull" label below candle (green)</p>
-<p><strong>Voting Conditions:</strong><br />
-- 3 or more components indicate bullish momentum<br />
-- Maximum 2 components vote bearish or neutral<br />
-- Confirms at bar close</p>
-<p><strong>Interpretation:</strong> Multiple momentum components show bullish characteristics simultaneously.</p>
-<p><strong>Example:</strong> MACD bullish (crossed up), RSI bullish (in envelope), StochRSI bullish (K&gt;D), Volume neutral, Divergence neutral → 3 bullish votes = Bull signal</p>
-<hr />
-<h3 id="sell-signal">🔴 Bear Signal<a class="headerlink" href="#sell-signal" title="Permanent link">&para;</a></h3>
-<p><strong>Visual Display:</strong> "Bear" label above candle (red)</p>
-<p><strong>Voting Conditions:</strong><br />
-- 3 or more components indicate bearish momentum<br />
-- Maximum 2 components vote bullish or neutral<br />
-- Confirms at bar close</p>
-<p><strong>Interpretation:</strong> Multiple momentum components show bearish characteristics simultaneously.</p>
-<p><strong>Example:</strong> MACD bearish (crossed down), RSI bearish (in envelope), StochRSI bearish (K&lt;D), Volume bearish (negative delta), Divergence neutral → 4 bearish votes = Bear signal</p>
-<hr />
-<h3 id="strong-signal">⚡ STRONG Signal<a class="headerlink" href="#strong-signal" title="Permanent link">&para;</a></h3>
-<p><strong>Visual Display:</strong> "STRONG" label below candle (bright green) or above candle (bright red)</p>
-<p><strong>Voting Conditions:</strong><br />
-- 4 or 5 components agree on same direction<br />
-- Near-unanimous or unanimous consensus<br />
-- Enhanced agreement compared to regular Bull/Bear</p>
-<p><strong>Interpretation:</strong> Exceptional multi-component alignment indicating strong momentum consensus.</p>
-<p><strong>Example Bullish:</strong> All 5 components vote bullish → STRONG signal (green)</p>
-<p><strong>Example Bearish:</strong> 4 components vote bearish, 1 neutral → STRONG signal (red)</p>
-<hr />
-<h3 id="neut-signal">⚪ NEUT Signal<a class="headerlink" href="#neut-signal" title="Permanent link">&para;</a></h3>
-<p><strong>Visual Display:</strong> "NEUT" label on candle (gray)</p>
-<p><strong>Voting Conditions:</strong><br />
-- No clear majority (2 or fewer votes either direction)<br />
-- Components show divergent or conflicting readings<br />
-- Lack of momentum consensus</p>
-<p><strong>Interpretation:</strong> Components disagree on direction, suggesting choppy or transitional conditions.</p>
-<p><strong>Example:</strong> MACD neutral, RSI neutral, StochRSI bullish, Volume bearish, Divergence bearish → 2 bearish, 1 bullish, 2 neutral = NEUT signal</p>
+<h2 id="regime-classification">🔢 Regime Classification<a class="headerlink" href="#regime-classification" title="Permanent link">&para;</a></h2>
 
-<!-- 📸 SCREENSHOT NEEDED - Harmonic Oscillator Signal Transitions Over Time
-     What to show: Oscillator showing signal progression: Bull → STRONG → Bear → NEUT
-     Setup: Find historical example with clear signal changes
-     Label/Annotate: Number the transitions (1. Bull, 2. STRONG, 3. Bear) with timestamps
-     File name suggestion: harmonic-oscillator-signal-transitions.png
+<p>Harmonic Oscillator classifies market conditions into three regimes based on composite oscillator readings and multi-factor confirmation:</p>
+
+<h3 id="trending-regime">📈 TRENDING Regime<a class="headerlink" href="#trending-regime" title="Permanent link">&para;</a></h3>
+<p><strong>Status Panel Display:</strong> "TRENDING▲" (bullish) or "TRENDING▼" (bearish)</p>
+<p><strong>Conditions:</strong><br />
+- Strong directional momentum confirmed by multiple factors<br />
+- High vote consensus (typically 5+ of 7)<br />
+- Composite oscillator at directional extremes</p>
+<p><strong>Interpretation:</strong> Clear trending conditions with high-conviction directional momentum.</p>
+<hr />
+
+<h3 id="bias-regime">📊 BIAS Regime<a class="headerlink" href="#bias-regime" title="Permanent link">&para;</a></h3>
+<p><strong>Status Panel Display:</strong> "BIAS▲" (bullish lean) or "BIAS▼" (bearish lean)</p>
+<p><strong>Conditions:</strong><br />
+- Moderate directional lean present<br />
+- Mixed vote consensus (typically 3-4 of 7)<br />
+- Composite oscillator showing lean but not at extremes</p>
+<p><strong>Interpretation:</strong> Directional lean without full trend confirmation. Early trend or weakening trend.</p>
+<hr />
+
+<h3 id="ranging-regime">↔️ RANGING Regime<a class="headerlink" href="#ranging-regime" title="Permanent link">&para;</a></h3>
+<p><strong>Status Panel Display:</strong> "RANGING—"</p>
+<p><strong>Conditions:</strong><br />
+- No clear directional consensus<br />
+- Mixed or conflicting component votes<br />
+- Composite oscillator near neutral zone</p>
+<p><strong>Interpretation:</strong> Choppy or consolidating conditions. Components disagree on direction.</p>
+
+<!-- 📸 SCREENSHOT NEEDED - Harmonic Oscillator Regime Transitions Over Time
+     What to show: Oscillator showing regime progression: TRENDING → BIAS → RANGING
+     Setup: Find historical example with clear regime changes
+     Label/Annotate: Label regime states with timestamps and vote counts
+     File name suggestion: harmonic-oscillator-regime-transitions.png
 -->
 <div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
   <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
-  <p style="margin: 0; color: #424242;"><strong>Harmonic Oscillator Signal Transitions Over Time</strong></p>
-  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add an oscillator view showing signal progression over time (Bull → STRONG → Bear → NEUT).</p>
+  <p style="margin: 0; color: #424242;"><strong>Harmonic Oscillator Regime Transitions Over Time</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add an oscillator view showing regime progression over time (TRENDING → BIAS → RANGING).</p>
 </div>
+
+<hr />
+<h2 id="composite-oscillator">📊 Composite Oscillator<a class="headerlink" href="#composite-oscillator" title="Permanent link">&para;</a></h2>
+
+<p>The composite oscillator blends multiple momentum measurements into a single normalized line using proprietary statistical methods. This creates a smoother, more reliable momentum reading than any single oscillator.</p>
+
+<h3 id="visual-elements">Visual Elements<a class="headerlink" href="#visual-elements" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Composite Line</strong></td>
+<td>Main oscillator line (0-100 scale)</td>
+</tr>
+<tr>
+<td><strong>Signal Line</strong></td>
+<td>Smoothed reference for crossovers</td>
+</tr>
+<tr>
+<td><strong>Color</strong></td>
+<td>Green when bullish, red when bearish</td>
+</tr>
+<tr>
+<td><strong>Zone Fills</strong></td>
+<td>Overbought and oversold regions highlighted</td>
+</tr>
+<tr>
+<td><strong>Consensus Meter</strong></td>
+<td>Bar showing vote count visually</td>
+</tr>
+<tr>
+<td><strong>Divergence Labels</strong></td>
+<td>"▲ DIV" / "▼ DIV" when detected</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="status-panel">Status Panel<a class="headerlink" href="#status-panel" title="Permanent link">&para;</a></h3>
+<p>The status panel displays:</p>
+<ul>
+<li><strong>Regime + direction</strong> (TRENDING▲, BIAS▼, RANGING—)</li>
+<li><strong>Vote count</strong> (X/7)</li>
+<li><strong>Individual component states</strong></li>
+</ul>
 
 <hr />
 <h2 id="understanding-the-voting-system">📚 Understanding the Voting System <span class="skill-badge skill-badge--intermediate" data-tooltip="Understanding of multiple oscillators required">Intermediate</span><a class="headerlink" href="#understanding-the-voting-system" title="Permanent link">&para;</a></h2>
 
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
-  <div class="sp-callout__title">📊 Visual Guide: 5-Oscillator Voting System</div>
-  <p style="margin-bottom: 1.5rem;">How 5 oscillators vote together to create consensus signals:</p>
+  <div class="sp-callout__title">📊 Visual Guide: 7-Component Voting System</div>
+  <p style="margin-bottom: 1.5rem;">How 7 components vote together to determine regime and consensus:</p>
   <div class="mermaid" role="img" aria-label="Harmonic Oscillator voting system flowchart">
 graph TD
     Input[📊 Price & Volume Data] --> OSC1
@@ -2450,26 +2482,30 @@ graph TD
     Input --> OSC3
     Input --> OSC4
     Input --> OSC5
+    Input --> OSC6
+    Input --> OSC7
 
-    OSC1[RSI Triple Envelope<br/>7/14/28]
-    OSC2[MACD Histogram<br/>12/26/9]
-    OSC3[Stochastic RSI<br/>14/14/3/3]
-    OSC4[Volume Oscillator<br/>Short/Long]
-    OSC5[Divergence Detector<br/>Price vs Oscillators]
+    OSC1[RSI<br/>Momentum-Aware]
+    OSC2[Stochastic RSI<br/>Slope Analysis]
+    OSC3[MACD<br/>Histogram Acceleration]
+    OSC4[EMA Trend<br/>Position + Slope]
+    OSC5[Momentum<br/>Rate of Change]
+    OSC6[Volume<br/>Confirmation]
+    OSC7[Divergence<br/>Zone Detection]
 
     OSC1 --> Vote{Count<br/>Votes}
     OSC2 --> Vote
     OSC3 --> Vote
     OSC4 --> Vote
     OSC5 --> Vote
+    OSC6 --> Vote
+    OSC7 --> Vote
 
-    Vote --> Check{How Many<br/>Bullish Votes?}
+    Vote --> Regime{Regime<br/>Classification}
 
-    Check -->|"4-5 Bullish"| STRONG_BULL[🟢 STRONG Bull<br/>Maximum Agreement]
-    Check -->|"3 Bullish"| BULL[🟩 Bull<br/>Bullish Consensus]
-    Check -->|"2 Bullish<br/>2 Bearish<br/>1 Neutral"| NEUT[⚪ NEUT<br/>No Consensus]
-    Check -->|"3 Bearish"| BEAR[🟥 Bear<br/>Bearish Consensus]
-    Check -->|"4-5 Bearish"| STRONG_BEAR[🔴 STRONG Bear<br/>Maximum Agreement]
+    Regime -->|"5+ Votes"| Trending[📈 TRENDING<br/>High Consensus]
+    Regime -->|"3-4 Votes"| Bias[📊 BIAS<br/>Moderate Consensus]
+    Regime -->|"0-2 Votes"| Ranging[↔️ RANGING<br/>Low Consensus]
 
     style Input fill:#37474f,color:#fff,stroke:#263238,stroke-width:3px
     style OSC1 fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:2px
@@ -2477,237 +2513,325 @@ graph TD
     style OSC3 fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:2px
     style OSC4 fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:2px
     style OSC5 fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:2px
+    style OSC6 fill:#ff5722,color:#fff,stroke:#e64a19,stroke-width:2px
+    style OSC7 fill:#ff5722,color:#fff,stroke:#e64a19,stroke-width:2px
     style Vote fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:3px
-    style Check fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:3px
-    style STRONG_BULL fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:4px
-    style BULL fill:#81c784,color:#fff,stroke:#66bb6a,stroke-width:3px
-    style NEUT fill:#9e9e9e,color:#fff,stroke:#757575,stroke-width:2px
-    style BEAR fill:#e57373,color:#fff,stroke:#ef5350,stroke-width:3px
-    style STRONG_BEAR fill:#f44336,color:#fff,stroke:#d32f2f,stroke-width:4px
+    style Regime fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:3px
+    style Trending fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:4px
+    style Bias fill:#81c784,color:#fff,stroke:#66bb6a,stroke-width:3px
+    style Ranging fill:#757575,color:#fff,stroke:#616161,stroke-width:2px
   </div>
   <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.85;">
-    <strong>How it works:</strong> Each of the 5 oscillators "votes" bullish, bearish, or neutral based on its current reading. The Harmonic Oscillator aggregates these votes to create a consensus signal. 4-5 agreements = STRONG signal.
+    <strong>How it works:</strong> Each of the 7 components votes bullish, bearish, or neutral. Votes are tallied and combined with composite oscillator readings to determine regime classification.
   </p>
 </div>
 
-<h3 id="vote-assignment-logic">Vote Assignment Logic<a class="headerlink" href="#vote-assignment-logic" title="Permanent link">&para;</a></h3>
-<p>Each component "votes" based on its current reading:</p>
-<p><strong>RSI (Triple Envelope 7/14/28):</strong><br />
-- Bullish vote: Price enters bullish RSI envelope zone (trending above short-term RSI)<br />
-- Bearish vote: Price enters bearish RSI envelope zone (trending below short-term RSI)<br />
-- Neutral vote: RSI in middle range without clear trend-following signal</p>
-<p><strong>Stochastic RSI:</strong><br />
-- Bullish vote: %K crosses above %D in extreme oversold zone<br />
-- Bearish vote: %K crosses below %D in extreme overbought zone<br />
-- Neutral vote: No crossover in extreme zones</p>
-<p><strong>MACD:</strong><br />
-- Bullish vote: MACD crosses above signal line AND passes ADX/momentum gating<br />
-- Bearish vote: MACD crosses below signal line AND passes ADX/momentum gating<br />
-- Neutral vote: No cross or gates not satisfied</p>
-<p><strong>Volume Delta:</strong><br />
-- Bullish vote: Positive volume delta pattern (buying pressure exceeds selling)<br />
-- Bearish vote: Negative volume delta pattern (selling pressure exceeds buying)<br />
-- Neutral vote: Balanced volume flow without clear directional bias</p>
-<p><strong>Divergence Detection:</strong><br />
-- Bullish vote: Bullish divergence detected (price makes lower low, oscillator makes higher low)<br />
-- Bearish vote: Bearish divergence detected (price makes higher high, oscillator makes lower high)<br />
-- Neutral vote: No divergence detected in lookback period</p>
-<h3 id="agreement-threshold">Agreement Threshold<a class="headerlink" href="#agreement-threshold" title="Permanent link">&para;</a></h3>
-<p><strong>3-Vote Threshold (Default):</strong><br />
-- Most responsive setting<br />
-- More signals appear<br />
-- Requires simple majority (3 of 5)</p>
-<p><strong>4-Vote Threshold:</strong><br />
-- More selective<br />
-- Fewer signals, higher agreement requirement<br />
-- Requires strong majority (4 of 5)</p>
-<p><strong>5-Vote Threshold:</strong><br />
-- Most selective<br />
-- Rare signals, unanimous agreement required<br />
-- Only triggers when all oscillators align</p>
-<p><em>Threshold selection varies by individual approach. Higher thresholds provide fewer but higher-agreement signals.</em></p>
+<h3 id="the-seven-components">The Seven Components<a class="headerlink" href="#the-seven-components" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Component</th>
+<th>What It Measures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>RSI</strong></td>
+<td>Momentum-aware RSI with directional confirmation</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Stochastic RSI</strong></td>
+<td>Smoothed stochastic with slope analysis</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>MACD</strong></td>
+<td>Histogram acceleration (not just direction)</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>EMA Trend</strong></td>
+<td>Price position relative to trend with slope confirmation</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Momentum</strong></td>
+<td>Rate of change analysis</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Volume</strong></td>
+<td>Confirming volume on directional candles</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Divergence Zone</strong></td>
+<td>Extreme zone detection with price confirmation</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="consensus-levels">Consensus Levels<a class="headerlink" href="#consensus-levels" title="Permanent link">&para;</a></h3>
+<p><strong>High Consensus (5+ of 7):</strong> Strong multi-factor agreement. Typically corresponds to TRENDING regime.</p>
+<p><strong>Moderate Consensus (3-4 of 7):</strong> Partial agreement. Typically corresponds to BIAS regime.</p>
+<p><strong>Low Consensus (0-2 of 7):</strong> Components disagree. Typically corresponds to RANGING regime.</p>
 <hr />
 <h2 id="educational-example-sp-500-futures-january-2025">📖 Educational Example: S&amp;P 500 Futures (January 2025)<a class="headerlink" href="#educational-example-sp-500-futures-january-2025" title="Permanent link">&para;</a></h2>
 <p><em>(Historical observation for educational purposes only. Not financial advice. Past performance does not indicate future results.)</em></p>
-<p><strong>15-Minute Chart - Full Signal Sequence:</strong></p>
+<p><strong>15-Minute Chart - Full Regime Sequence:</strong></p>
 <table>
 <thead>
 <tr>
 <th>Time</th>
 <th>Price</th>
-<th>MACD</th>
-<th>RSI</th>
-<th>StochRSI</th>
-<th>Volume</th>
-<th>Divergence</th>
 <th>Votes</th>
-<th>Signal</th>
+<th>Composite</th>
+<th>Regime</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>9:30am</td>
 <td>4,720</td>
-<td>Bullish</td>
-<td>Bullish</td>
-<td>Neutral</td>
-<td>Bullish</td>
-<td>Bearish</td>
-<td>3 Bull</td>
-<td><strong>Bull</strong></td>
+<td>4/7 Bull</td>
+<td>58</td>
+<td><strong>BIAS▲</strong></td>
 </tr>
 <tr>
 <td>10:45am</td>
 <td>4,735</td>
-<td>Bullish</td>
-<td>Bullish</td>
-<td>Bullish</td>
-<td>Bullish</td>
-<td>Bullish</td>
-<td>5 Bull</td>
-<td><strong>STRONG</strong></td>
+<td>6/7 Bull</td>
+<td>72</td>
+<td><strong>TRENDING▲</strong></td>
 </tr>
 <tr>
 <td>1:15pm</td>
 <td>4,755</td>
-<td>Bearish</td>
-<td>Neutral</td>
-<td>Bearish</td>
-<td>Bearish</td>
-<td>Neutral</td>
-<td>3 Bear</td>
-<td><strong>Bear</strong></td>
+<td>5/7 Bear</td>
+<td>38</td>
+<td><strong>BIAS▼</strong></td>
 </tr>
 <tr>
 <td>2:30pm</td>
 <td>4,748</td>
-<td>Bearish</td>
-<td>Neutral</td>
-<td>Neutral</td>
-<td>Bullish</td>
-<td>Bearish</td>
-<td>2 Bear</td>
-<td><strong>NEUT</strong></td>
+<td>3/7 Bear</td>
+<td>45</td>
+<td><strong>RANGING—</strong></td>
 </tr>
 <tr>
 <td>3:45pm</td>
 <td>4,742</td>
-<td>Bearish</td>
-<td>Bearish</td>
-<td>Bearish</td>
-<td>Bearish</td>
-<td>Bearish</td>
-<td>5 Bear</td>
-<td><strong>STRONG</strong></td>
+<td>7/7 Bear</td>
+<td>22</td>
+<td><strong>TRENDING▼</strong></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Sequence Analysis:</strong></p>
 <ol>
 <li>
-<p><strong>Bull at 4,720:</strong> Three components agreed bullish (MACD, RSI, Volume). Entry conditions identified.</p>
+<p><strong>BIAS▲ at 4,720:</strong> Four components agreed bullish. Moderate bullish lean identified.</p>
 </li>
 <li>
-<p><strong>STRONG at 4,735:</strong> All five components aligned bullish. Maximum confidence conditions (+15 points from Bull).</p>
+<p><strong>TRENDING▲ at 4,735:</strong> Six components aligned bullish. Strong consensus conditions (+15 points from BIAS).</p>
 </li>
 <li>
-<p><strong>Bear at 4,755:</strong> Three oscillators shifted bearish. Momentum reversal detected (+35 points from Bull, +20 from STRONG).</p>
+<p><strong>BIAS▼ at 4,755:</strong> Components shifted bearish. Momentum reversal detected (+35 points from first BIAS, +20 from TRENDING).</p>
 </li>
 <li>
-<p><strong>NEUT at 4,748:</strong> Oscillators diverged, no clear consensus. Transitional period identified.</p>
+<p><strong>RANGING at 4,748:</strong> Components diverged, no clear consensus. Transitional period identified.</p>
 </li>
 <li>
-<p><strong>STRONG bearish at 4,742:</strong> All five oscillators aligned bearish. Strong downside momentum conditions.</p>
+<p><strong>TRENDING▼ at 4,742:</strong> All seven components aligned bearish. Strong downside momentum confirmed.</p>
 </li>
 </ol>
-<p><strong>Total Move:</strong> +35 points from Bull to Bear signal.</p>
-<p><em>This example demonstrates complete signal cycle. Individual interpretation and outcomes vary.</em></p>
+<p><strong>Total Move:</strong> +35 points from BIAS▲ to BIAS▼ regime.</p>
+<p><em>This example demonstrates complete regime cycle. Individual interpretation and outcomes vary.</em></p>
 <hr />
-<h2 id="signal-interpretation-patterns">🎯 Signal Interpretation Patterns<a class="headerlink" href="#signal-interpretation-patterns" title="Permanent link">&para;</a></h2>
-<h3 id="pattern-1-buy-strong-bullish-progression">Pattern 1: Bull → STRONG Bullish Progression<a class="headerlink" href="#pattern-1-buy-strong-bullish-progression" title="Permanent link">&para;</a></h3>
-<p><strong>Sequence:</strong> Bull signal followed by STRONG signal in same direction</p>
-<p><strong>Interpretation:</strong> Momentum strengthening, more oscillators joining bullish consensus</p>
-<p><strong>Example:</strong> 3 oscillators bullish (Bull) → 5 oscillators bullish (STRONG) = Momentum acceleration pattern</p>
+<h2 id="regime-interpretation-patterns">🎯 Regime Interpretation Patterns<a class="headerlink" href="#regime-interpretation-patterns" title="Permanent link">&para;</a></h2>
+<h3 id="pattern-1-bias-trending-progression">Pattern 1: BIAS → TRENDING Progression<a class="headerlink" href="#pattern-1-bias-trending-progression" title="Permanent link">&para;</a></h3>
+<p><strong>Sequence:</strong> BIAS regime followed by TRENDING regime in same direction</p>
+<p><strong>Interpretation:</strong> Momentum strengthening, more components joining consensus</p>
+<p><strong>Example:</strong> 4 components bullish (BIAS▲) → 6 components bullish (TRENDING▲) = Momentum acceleration pattern</p>
 <hr />
-<h3 id="pattern-2-direct-strong-signal">Pattern 2: Direct STRONG Signal<a class="headerlink" href="#pattern-2-direct-strong-signal" title="Permanent link">&para;</a></h3>
-<p><strong>Sequence:</strong> STRONG signal appears without preceding Bull/Bear</p>
-<p><strong>Interpretation:</strong> Rapid multi-oscillator alignment, immediate high-conviction conditions</p>
-<p><strong>Example:</strong> Neutral conditions → All oscillators suddenly align → STRONG signal = Swift momentum shift pattern</p>
+<h3 id="pattern-2-direct-trending-regime">Pattern 2: Direct TRENDING Regime<a class="headerlink" href="#pattern-2-direct-trending-regime" title="Permanent link">&para;</a></h3>
+<p><strong>Sequence:</strong> TRENDING regime appears without preceding BIAS</p>
+<p><strong>Interpretation:</strong> Rapid multi-component alignment, immediate high-conviction conditions</p>
+<p><strong>Example:</strong> RANGING conditions → All components suddenly align → TRENDING regime = Swift momentum shift pattern</p>
 <hr />
-<h3 id="pattern-3-buysell-neut-transition">Pattern 3: Bull/Bear → NEUT Transition<a class="headerlink" href="#pattern-3-buysell-neut-transition" title="Permanent link">&para;</a></h3>
-<p><strong>Sequence:</strong> Directional signal followed by NEUT</p>
+<h3 id="pattern-3-bias-ranging-transition">Pattern 3: BIAS → RANGING Transition<a class="headerlink" href="#pattern-3-bias-ranging-transition" title="Permanent link">&para;</a></h3>
+<p><strong>Sequence:</strong> Directional regime followed by RANGING</p>
 <p><strong>Interpretation:</strong> Consensus breaking down, momentum diverging</p>
-<p><strong>Example:</strong> Bear (3 bearish) → NEUT (oscillators diverge) = Momentum loss or consolidation pattern</p>
+<p><strong>Example:</strong> BIAS▼ → RANGING (components diverge) = Momentum loss or consolidation pattern</p>
 <hr />
-<h3 id="pattern-4-neut-buysell-emergence">Pattern 4: NEUT → Bull/Bear Emergence<a class="headerlink" href="#pattern-4-neut-buysell-emergence" title="Permanent link">&para;</a></h3>
-<p><strong>Sequence:</strong> NEUT signal followed by directional signal</p>
+<h3 id="pattern-4-ranging-bias-emergence">Pattern 4: RANGING → BIAS Emergence<a class="headerlink" href="#pattern-4-ranging-bias-emergence" title="Permanent link">&para;</a></h3>
+<p><strong>Sequence:</strong> RANGING regime followed by directional regime</p>
 <p><strong>Interpretation:</strong> Consensus forming after period of disagreement</p>
-<p><strong>Example:</strong> NEUT (choppy) → Bull (3+ bullish) = Direction emerging from neutral conditions</p>
+<p><strong>Example:</strong> RANGING (choppy) → BIAS▲ (4+ bullish) = Direction emerging from neutral conditions</p>
 <hr />
-<h3 id="pattern-5-signal-clusters">Pattern 5: Signal Clusters<a class="headerlink" href="#pattern-5-signal-clusters" title="Permanent link">&para;</a></h3>
-<p><strong>Sequence:</strong> Multiple signals in short time period</p>
-<p><strong>Interpretation:</strong> High volatility, oscillators responding to rapid price changes</p>
-<p><strong>Example:</strong> Bull → Bear → Bull within 1 hour = Choppy volatile conditions, whipsaw characteristics</p>
+<h3 id="pattern-5-regime-clusters">Pattern 5: Regime Clusters<a class="headerlink" href="#pattern-5-regime-clusters" title="Permanent link">&para;</a></h3>
+<p><strong>Sequence:</strong> Multiple regime changes in short time period</p>
+<p><strong>Interpretation:</strong> High volatility, components responding to rapid price changes</p>
+<p><strong>Example:</strong> BIAS▲ → BIAS▼ → BIAS▲ within 1 hour = Choppy volatile conditions, whipsaw characteristics</p>
 <hr />
 <h2 id="alert-configuration">🔔 Alert Configuration<a class="headerlink" href="#alert-configuration" title="Permanent link">&para;</a></h2>
-<p><strong>Available Alerts:</strong></p>
+<p><strong>14 Available Alerts:</strong></p>
+
+<h3>Divergence Alerts</h3>
 <table>
 <thead>
 <tr>
-<th>Alert Type</th>
-<th>Trigger Condition</th>
-<th>Notification</th>
+<th>Alert</th>
+<th>Trigger</th>
+<th>Use Case</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Bull Signal</strong></td>
-<td>3+ oscillators vote bullish</td>
-<td>"Harmonic: Bull signal"</td>
+<td><strong>Bullish Divergence</strong></td>
+<td>Bullish divergence detected on composite oscillator</td>
+<td>Potential reversal from oversold conditions</td>
 </tr>
 <tr>
-<td><strong>Bear Signal</strong></td>
-<td>3+ oscillators vote bearish</td>
-<td>"Harmonic: Bear signal"</td>
+<td><strong>Bearish Divergence</strong></td>
+<td>Bearish divergence detected on composite oscillator</td>
+<td>Potential reversal from overbought conditions</td>
 </tr>
 <tr>
-<td><strong>STRONG Bullish</strong></td>
-<td>4-5 oscillators vote bullish</td>
-<td>"Harmonic: STRONG bullish"</td>
-</tr>
-<tr>
-<td><strong>STRONG Bearish</strong></td>
-<td>4-5 oscillators vote bearish</td>
-<td>"Harmonic: STRONG bearish"</td>
-</tr>
-<tr>
-<td><strong>NEUT Signal</strong></td>
-<td>No clear consensus</td>
-<td>"Harmonic: NEUT signal"</td>
-</tr>
-<tr>
-<td><strong>Any Signal</strong></td>
-<td>Any of the four signal types</td>
-<td>"Harmonic: Signal detected"</td>
+<td><strong>Any Divergence</strong></td>
+<td>Either bullish or bearish divergence detected</td>
+<td>Universal divergence scanner</td>
 </tr>
 </tbody>
 </table>
+
+<h3>Crossover Alerts</h3>
+<table>
+<thead>
+<tr>
+<th>Alert</th>
+<th>Trigger</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bullish Crossover</strong></td>
+<td>Composite oscillator crosses above signal line</td>
+<td>Momentum shifting bullish</td>
+</tr>
+<tr>
+<td><strong>Bearish Crossover</strong></td>
+<td>Composite oscillator crosses below signal line</td>
+<td>Momentum shifting bearish</td>
+</tr>
+<tr>
+<td><strong>Any Crossover</strong></td>
+<td>Either bullish or bearish crossover detected</td>
+<td>Universal crossover scanner</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Extreme Zone Alerts</h3>
+<table>
+<thead>
+<tr>
+<th>Alert</th>
+<th>Trigger</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Extreme Overbought</strong></td>
+<td>Composite oscillator enters overbought zone</td>
+<td>Caution for extended moves, potential reversal setup</td>
+</tr>
+<tr>
+<td><strong>Extreme Oversold</strong></td>
+<td>Composite oscillator enters oversold zone</td>
+<td>Caution for extended moves, potential bounce setup</td>
+</tr>
+<tr>
+<td><strong>Exit Overbought</strong></td>
+<td>Composite oscillator exits overbought zone</td>
+<td>Bearish momentum confirmation</td>
+</tr>
+<tr>
+<td><strong>Exit Oversold</strong></td>
+<td>Composite oscillator exits oversold zone</td>
+<td>Bullish momentum confirmation</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Regime Change Alerts</h3>
+<table>
+<thead>
+<tr>
+<th>Alert</th>
+<th>Trigger</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Regime to Bullish</strong></td>
+<td>Regime classification changes to bullish (TRENDING▲ or BIAS▲)</td>
+<td>Market structure shifting bullish</td>
+</tr>
+<tr>
+<td><strong>Regime to Bearish</strong></td>
+<td>Regime classification changes to bearish (TRENDING▼ or BIAS▼)</td>
+<td>Market structure shifting bearish</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Consensus Alerts</h3>
+<table>
+<thead>
+<tr>
+<th>Alert</th>
+<th>Trigger</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>High Bull Consensus</strong></td>
+<td>5+ components vote bullish (5/7, 6/7, or 7/7)</td>
+<td>Strong bullish agreement across multiple factors</td>
+</tr>
+<tr>
+<td><strong>High Bear Consensus</strong></td>
+<td>5+ components vote bearish (5/7, 6/7, or 7/7)</td>
+<td>Strong bearish agreement across multiple factors</td>
+</tr>
+</tbody>
+</table>
+
 <p><strong>Alert Setup:</strong><br />
 1. Open indicator settings<br />
-2. Navigate to alert section<br />
-3. Enable desired signal alerts<br />
-4. Configure notification method (popup, email, webhook)</p>
+2. Navigate to Alerts section<br />
+3. Enable desired alerts<br />
+4. Set TradingView alert on the indicator<br />
+5. Configure notification method (popup, email, webhook, app)</p>
 <hr />
 <div class="sp-callout sp-callout--summary">
   <div class="sp-callout__title">What You've Learned</div>
   <ul>
-    <li><strong>Five-Component Voting System:</strong> Harmonic Oscillator combines MACD, RSI, Stochastic RSI, Volume, and Divergence detection into a democratic voting system that generates consensus signals</li>
-    <li><strong>Four Signal Types:</strong> Bull (3+ bullish votes), Bear (3+ bearish votes), STRONG (4-5 aligned votes showing enhanced agreement), and NEUT (no directional consensus)</li>
-    <li><strong>Consensus-Based Detection:</strong> Signals appear only when multiple oscillators agree, reducing single-indicator noise and false signals that occur when using isolated oscillators</li>
-    <li><strong>Divergence Integration:</strong> Built-in divergence detection acts as fifth voting component - bullish divergence adds bullish vote, bearish divergence adds bearish vote</li>
-    <li><strong>Customizable Thresholds:</strong> Adjust vote requirements from 3-vote threshold (more signals) to 4-vote or 5-vote thresholds (fewer but stronger consensus signals)</li>
-    <li><strong>Non-Repainting Signals:</strong> All signals confirm at bar close and never change retroactively - what you see is what you get for reliable backtesting and alert setup</li>
-    <li><strong>Optional Oscillator Panel:</strong> Enable panel view to see all five individual oscillator readings below your chart for deeper analysis of vote composition</li>
+    <li><strong>Seven-Component Voting System:</strong> Harmonic Oscillator combines RSI, Stochastic RSI, MACD, EMA Trend, Momentum, Volume, and Divergence Zone into a multi-factor voting system that generates consensus signals displayed as X/7</li>
+    <li><strong>Regime Classification:</strong> TRENDING▲/▼ (strong directional consensus), BIAS▲/▼ (moderate directional lean), and RANGING— (no clear consensus) provide instant market context</li>
+    <li><strong>Composite Oscillator:</strong> Proprietary 0-100 scale oscillator with signal line crossovers, divergence detection, and overbought/oversold zones</li>
+    <li><strong>Consensus-Based Detection:</strong> Signals appear only when multiple components agree, reducing single-indicator noise and false signals that occur when using isolated oscillators</li>
+    <li><strong>14 Alert Types:</strong> Divergence, crossover, extreme zone, regime change, and high-consensus alerts for comprehensive automation</li>
+    <li><strong>Non-Repainting Signals:</strong> All signals confirm at bar close and never change retroactively - reliable for backtesting and alert setup</li>
+    <li><strong>Visual Status Panel:</strong> Displays vote count, regime label, oscillator value, and signal line for at-a-glance market analysis</li>
   </ul>
   <p><strong>Next Steps:</strong> Explore <a href="../ref-workflow/">Trading Workflow Guide</a> to learn how to combine Harmonic Oscillator with other Signal Pilot indicators, or see <a href="../how-to-alerts/">Alert Setup Guide</a> for detailed notification configuration.</p>
 </div>
@@ -2723,47 +2847,47 @@ graph TD
 <h3 id="harmonic-oscillator-pentarch">Harmonic Oscillator + <a href="../pentarch-v10/">Pentarch</a> (Momentum + Timing)<a class="headerlink" href="#harmonic-oscillator-pentarch" title="Permanent link">&para;</a></h3>
 <p><strong>Workflow:</strong></p>
 <ol>
-<li><strong>Check Harmonic Oscillator state</strong> → Identify current momentum (Bull, Bear, STRONG, or NEUT)</li>
-<li><strong>Wait for <a href="../pentarch-v10/">Pentarch</a> signal alignment</strong> → Bull oscillator + TD/IGN signal = bullish confluence. Bear oscillator + CAP/WRN signal = bearish confluence</li>
-<li><strong>STRONG signal + <a href="../pentarch-v10/">Pentarch</a> = highest conviction</strong> → 5/5 oscillator agreement + timing signal = powerful setup</li>
+<li><strong>Check Harmonic Oscillator state</strong> → Identify current regime (TRENDING, BIAS, or RANGING) and vote count</li>
+<li><strong>Wait for <a href="../pentarch-v10/">Pentarch</a> signal alignment</strong> → Bullish regime + TD/IGN signal = bullish confluence. Bearish regime + CAP/WRN signal = bearish confluence</li>
+<li><strong>High consensus + <a href="../pentarch-v10/">Pentarch</a> = highest conviction</strong> → 6/7 or 7/7 component agreement + timing signal = powerful setup</li>
 <li><strong>Expected outcome:</strong> Momentum consensus + precise timing = entries with strong follow-through</li>
 </ol>
-<p><strong>Example:</strong> Harmonic Oscillator shows STRONG (5/5 bull) → <a href="../pentarch-v10/">Pentarch</a> IGN signal fires = maximum bullish confluence for long entry</p>
+<p><strong>Example:</strong> Harmonic Oscillator shows TRENDING▲ (6/7) → <a href="../pentarch-v10/">Pentarch</a> IGN signal fires = maximum bullish confluence for long entry</p>
 
 <h3 id="harmonic-oscillator-janus-atlas">Harmonic Oscillator + <a href="../janus-atlas-v10/">Janus Atlas</a> (Momentum at Levels)<a class="headerlink" href="#harmonic-oscillator-janus-atlas" title="Permanent link">&para;</a></h3>
 <p><strong>Workflow:</strong></p>
 <ol>
 <li><strong>Price approaches key <a href="../janus-atlas-v10/">Janus</a> level</strong> → Daily Low, Weekly support, or major Fibonacci level</li>
-<li><strong>Check Harmonic Oscillator for momentum shift</strong> → Look for transition from Bear → NEUT → Bull as price nears support</li>
+<li><strong>Check Harmonic Oscillator for regime shift</strong> → Look for transition from bearish → RANGING → bullish regime as price nears support</li>
 <li><strong>Momentum shift at level = reversal confirmation</strong> → Oscillator confirming support level with momentum change</li>
 <li><strong>Expected outcome:</strong> Structural levels validated by momentum shifts = high-probability bounces/reversals</li>
 </ol>
-<p><strong>Example:</strong> Price hits Daily Low + Weekly Low confluence → Harmonic Oscillator shifts from Bear to Bull = momentum-confirmed support bounce</p>
+<p><strong>Example:</strong> Price hits Daily Low + Weekly Low confluence → Harmonic Oscillator shifts from BIAS▼ to BIAS▲ = momentum-confirmed support bounce</p>
 
 <h3 id="harmonic-oscillator-volume-oracle">Harmonic Oscillator + <a href="../volume-oracle-v10/">Volume Oracle</a> (Momentum + Regime)<a class="headerlink" href="#harmonic-oscillator-volume-oracle" title="Permanent link">&para;</a></h3>
 <p><strong>Workflow:</strong></p>
 <ol>
-<li><strong>Harmonic Oscillator shows STRONG signal</strong> → All five oscillators voting same direction (5/5 consensus)</li>
+<li><strong>Harmonic Oscillator shows high consensus</strong> → 5+ components voting same direction (TRENDING regime)</li>
 <li><strong>Check <a href="../volume-oracle-v10/">Volume Oracle</a> regime for alignment</strong> → Is the regime supporting the momentum direction?</li>
-<li><strong>STRONG + aligned regime = institutional participation</strong> → Bull momentum + Accumulation regime = institutional buying confirmed</li>
-<li><strong>Conflicting regime with STRONG signal = caution</strong> → Momentum may lack follow-through without institutional backing</li>
+<li><strong>TRENDING + aligned regime = institutional participation</strong> → Bullish TRENDING + Accumulation regime = institutional buying confirmed</li>
+<li><strong>Conflicting regime with TRENDING signal = caution</strong> → Momentum may lack follow-through without institutional backing</li>
 <li><strong>Expected outcome:</strong> <a href="../volume-oracle-v10/">Volume Oracle</a> regime validates which momentum signals have institutional support</li>
 </ol>
-<p><strong>Example:</strong> Harmonic shows STRONG bull signal → <a href="../volume-oracle-v10/">Volume Oracle</a> shows Accumulation regime (green, 80%) = confirmed institutional buying momentum</p>
+<p><strong>Example:</strong> Harmonic shows TRENDING▲ (6/7) → <a href="../volume-oracle-v10/">Volume Oracle</a> shows Accumulation regime (green, 80%) = confirmed institutional buying momentum</p>
 
 <h3 id="harmonic-oscillator-omnideck">Harmonic Oscillator + <a href="../omnideck-v10/">Omnideck</a> (Momentum + Regime)<a class="headerlink" href="#harmonic-oscillator-omnideck" title="Permanent link">&para;</a></h3>
 <p><strong>Workflow:</strong></p>
 <ol>
 <li><strong>Check <a href="../omnideck-v10/">Omnideck</a> Regime Box first</strong> → Establish overall trend context (bullish, bearish, or neutral regime)</li>
-<li><strong>Align Harmonic signals with regime</strong> → Bull oscillator in bullish regime = trend continuation. Bear oscillator in bullish regime = potential pullback or reversal warning</li>
-<li><strong>Conflicting signals = early warning</strong> → Regime bullish + Harmonic turning Bear = possible trend exhaustion</li>
+<li><strong>Align Harmonic regime with Omnideck</strong> → Bullish Harmonic regime in bullish Omnideck regime = trend continuation. Bearish Harmonic in bullish Omnideck = potential pullback or reversal warning</li>
+<li><strong>Conflicting signals = early warning</strong> → Omnideck bullish + Harmonic turning bearish regime = possible trend exhaustion</li>
 <li><strong>Expected outcome:</strong> Harmonic Oscillator identifies momentum shifts WITHIN the broader regime context</li>
 </ol>
-<p><strong>Example:</strong> <a href="../omnideck-v10/">Omnideck</a> bullish regime + Pilot Line rising → Harmonic Bull signal = fully aligned long setup. <a href="../omnideck-v10/">Omnideck</a> bullish + Harmonic Bear = early weakness warning, tighten stops</p>
+<p><strong>Example:</strong> <a href="../omnideck-v10/">Omnideck</a> bullish regime + Pilot Line rising → Harmonic TRENDING▲ = fully aligned long setup. <a href="../omnideck-v10/">Omnideck</a> bullish + Harmonic BIAS▼ = early weakness warning, tighten stops</p>
 
 <div class="admonition tip">
 <p class="admonition-title">Pro Tip: The Momentum Confirmation Workflow</p>
-<p>For highest-probability setups, combine <strong>Harmonic Oscillator (momentum) + <a href="../pentarch-v10/">Pentarch</a> (timing) + <a href="../janus-atlas-v10/">Janus Atlas</a> (levels) + <a href="../volume-oracle-v10/">Volume Oracle</a> (regime confirmation)</strong>. Wait for Harmonic STRONG signal at key <a href="../janus-atlas-v10/">Janus</a> level, <a href="../pentarch-v10/">Pentarch</a> timing signal fires, aligned regime confirms institutional backing. This multi-layer confluence filters for only the strongest opportunities.</p>
+<p>For highest-probability setups, combine <strong>Harmonic Oscillator (momentum) + <a href="../pentarch-v10/">Pentarch</a> (timing) + <a href="../janus-atlas-v10/">Janus Atlas</a> (levels) + <a href="../volume-oracle-v10/">Volume Oracle</a> (regime confirmation)</strong>. Wait for Harmonic TRENDING regime at key <a href="../janus-atlas-v10/">Janus</a> level, <a href="../pentarch-v10/">Pentarch</a> timing signal fires, aligned regime confirms institutional backing. This multi-layer confluence filters for only the strongest opportunities.</p>
 <p><strong>See also:</strong> <a href="../ref-workflow/">Complete Trading Workflow Guide</a> for detailed multi-indicator strategies.</p>
 </div>
 
@@ -2775,58 +2899,58 @@ graph TD
   <p>These mistakes are frequently made by new Harmonic Oscillator users. Avoid them to improve your results:</p>
 </div>
 
-<h3 id="mistake-1-ignoring-neut-signals">Mistake #1: Ignoring NEUT Signals (Forcing Trades)<a class="headerlink" href="#mistake-1-ignoring-neut-signals" title="Permanent link">&para;</a></h3>
-<p><strong>The Problem:</strong> NEUT signals indicate oscillator disagreement or neutral momentum. Trading during NEUT periods forces entries when the market lacks directional conviction, leading to whipsaws.</p>
+<h3 id="mistake-1-ignoring-ranging-signals">Mistake #1: Ignoring RANGING Signals (Forcing Trades)<a class="headerlink" href="#mistake-1-ignoring-ranging-signals" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> RANGING— signals indicate component disagreement or neutral momentum. Trading during RANGING periods forces entries when the market lacks directional conviction, leading to whipsaws.</p>
 <p><strong>The Fix:</strong></p>
 <ul>
-<li><strong>NEUT = no trade signal</strong> → Wait for clear Bull (3/5+) or Bear (3/5+) consensus before acting</li>
-<li>NEUT periods often occur during consolidation, choppy ranges, or low-volume conditions</li>
-<li>Use NEUT as a filter: Don't force trades when oscillators can't agree on direction</li>
-<li>Patience during NEUT saves capital for high-probability Bull/Bear setups</li>
+<li><strong>RANGING = no trade signal</strong> → Wait for BIAS or TRENDING regime to emerge before acting</li>
+<li>RANGING periods often occur during consolidation, choppy ranges, or low-volume conditions</li>
+<li>Use RANGING as a filter: Don't force trades when components can't agree on direction</li>
+<li>Patience during RANGING saves capital for high-probability BIAS/TRENDING setups</li>
 </ul>
-<p><strong>Remember:</strong> NEUT is valuable information—it tells you to wait. The best traders know when NOT to trade.</p>
+<p><strong>Remember:</strong> RANGING is valuable information—it tells you to wait. The best traders know when NOT to trade.</p>
 
-<h3 id="mistake-2-confusing-strong-with-reversal">Mistake #2: Treating STRONG as Automatic Reversal Signal<a class="headerlink" href="#mistake-2-confusing-strong-with-reversal" title="Permanent link">&para;</a></h3>
-<p><strong>The Problem:</strong> STRONG signals (5/5 consensus) show extreme momentum, not guaranteed reversals. Beginners assume STRONG = "overbought/oversold, must reverse," but strong momentum can persist.</p>
+<h3 id="mistake-2-confusing-trending-with-reversal">Mistake #2: Treating TRENDING as Automatic Reversal Signal<a class="headerlink" href="#mistake-2-confusing-trending-with-reversal" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> TRENDING signals (6/7 or 7/7 consensus) show extreme momentum, not guaranteed reversals. Beginners assume TRENDING = "overbought/oversold, must reverse," but strong momentum can persist.</p>
 <p><strong>The Fix:</strong></p>
 <ul>
-<li>STRONG signals show maximum directional agreement, which can continue trending OR signal exhaustion</li>
+<li>TRENDING signals show maximum directional agreement, which can continue trending OR signal exhaustion</li>
 <li>Wait for price confirmation: reversal candle pattern, support/resistance level, or <a href="../pentarch-v10/">Pentarch</a> signal</li>
-<li>STRONG in trending market = continuation strength (don't fade it)</li>
-<li>STRONG at key level + volume spike + <a href="../pentarch-v10/">Pentarch</a> signal = higher-probability reversal</li>
+<li>TRENDING in trending market = continuation strength (don't fade it)</li>
+<li>TRENDING at key level + volume spike + <a href="../pentarch-v10/">Pentarch</a> signal = higher-probability reversal</li>
 </ul>
-<p><strong>Remember:</strong> STRONG means "strong momentum," not "imminent reversal." Combine with other confirmation before counter-trending.</p>
+<p><strong>Remember:</strong> TRENDING means "strong momentum," not "imminent reversal." Combine with other confirmation before counter-trending.</p>
 
 <h3 id="mistake-3-trading-oscillator-alone">Mistake #3: Trading Harmonic Oscillator in Isolation<a class="headerlink" href="#mistake-3-trading-oscillator-alone" title="Permanent link">&para;</a></h3>
 <p><strong>The Problem:</strong> Using oscillator signals without checking levels, volume, or broader trend context leads to poor entries and missed context clues.</p>
 <p><strong>The Fix:</strong></p>
 <ul>
-<li>Always combine with <a href="../janus-atlas-v10/">Janus Atlas</a>: Bull signal at support level > Bull signal at resistance</li>
-<li>Check <a href="../pentarch-v10/">Pentarch</a> for timing: Bull oscillator + TD/IGN signal = precise entry point</li>
+<li>Always combine with <a href="../janus-atlas-v10/">Janus Atlas</a>: Bullish regime at support level > Bullish regime at resistance</li>
+<li>Check <a href="../pentarch-v10/">Pentarch</a> for timing: Bullish regime + TD/IGN signal = precise entry point</li>
 <li>Verify with <a href="../volume-oracle-v10/">Volume Oracle</a>: Momentum shifts backed by volume have higher follow-through</li>
-<li>Use <a href="../omnideck-v10/">Omnideck</a> Regime Box for trend context: Trade Bull signals in bullish regimes for best results</li>
+<li>Use <a href="../omnideck-v10/">Omnideck</a> Regime Box for trend context: Trade bullish Harmonic regimes in bullish Omnideck regimes for best results</li>
 </ul>
 <p><strong>Remember:</strong> Harmonic Oscillator is a powerful filter, but it's not a complete strategy. Layer it with levels, timing, and volume.</p>
 
-<h3 id="mistake-4-over-trading-bull-bear-transitions">Mistake #4: Over-Trading Every Bull/Bear Transition<a class="headerlink" href="#mistake-4-over-trading-bull-bear-transitions" title="Permanent link">&para;</a></h3>
-<p><strong>The Problem:</strong> Not all Bull/Bear transitions are equal. Trading every 3/5 Bull signal reduces selectivity. The best setups require additional confluence.</p>
+<h3 id="mistake-4-over-trading-regime-transitions">Mistake #4: Over-Trading Every Regime Transition<a class="headerlink" href="#mistake-4-over-trading-regime-transitions" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> Not all regime transitions are equal. Trading every BIAS signal reduces selectivity. The best setups require additional confluence.</p>
 <p><strong>The Fix:</strong></p>
 <ul>
-<li><strong>3/5 Bull/Bear:</strong> Moderate agreement → needs additional confirmation (level, volume, Pentarch signal)</li>
-<li><strong>4/5 Bull/Bear:</strong> Strong agreement → high quality, worth acting on with confirmation</li>
-<li><strong>5/5 STRONG:</strong> Maximum consensus → highest priority, but still confirm with price action</li>
-<li>Prioritize 4/5 and 5/5 signals over 3/5 signals for better win rates</li>
+<li><strong>BIAS (4/7):</strong> Moderate agreement → needs additional confirmation (level, volume, Pentarch signal)</li>
+<li><strong>BIAS (5/7):</strong> Strong agreement → high quality, worth acting on with confirmation</li>
+<li><strong>TRENDING (6/7, 7/7):</strong> Maximum consensus → highest priority, but still confirm with price action</li>
+<li>Prioritize 5/7+ signals over 4/7 signals for better win rates</li>
 </ul>
-<p><strong>Remember:</strong> Higher oscillator consensus (4/5, 5/5) = higher probability. Be selective—trade quality over quantity.</p>
+<p><strong>Remember:</strong> Higher component consensus (5/7, 6/7, 7/7) = higher probability. Be selective—trade quality over quantity.</p>
 
-<h3 id="mistake-5-ignoring-oscillator-panel">Mistake #5: Not Using the Oscillator Panel for Context<a class="headerlink" href="#mistake-5-ignoring-oscillator-panel" title="Permanent link">&para;</a></h3>
-<p><strong>The Problem:</strong> Relying only on the main signal label without checking individual oscillator votes. The panel shows which oscillators are agreeing/disagreeing—valuable context for signal strength.</p>
+<h3 id="mistake-5-ignoring-status-panel">Mistake #5: Not Using the Status Panel for Context<a class="headerlink" href="#mistake-5-ignoring-status-panel" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> Relying only on the regime label without checking the composite oscillator and vote count. The status panel shows detailed context—valuable for signal strength assessment.</p>
 <p><strong>The Fix:</strong></p>
 <ul>
-<li>Enable the oscillator panel view to see all five individual oscillator readings</li>
-<li>Check vote distribution: All five green (STRONG bull) vs. three green + two neutral (3/5 Bull)</li>
-<li>Oscillators transitioning together = stronger signal than staggered transitions</li>
-<li>Panel helps identify early momentum shifts before main signal changes</li>
+<li>Enable the status panel view to see vote count, regime, oscillator value, and signal line</li>
+<li>Check vote distribution: 7/7 (TRENDING) vs. 4/7 (BIAS) shows different conviction levels</li>
+<li>Watch composite oscillator crossovers and divergences for early momentum shifts</li>
+<li>Panel helps identify regime changes before they fully develop</li>
 </ul>
 <p><strong>Remember:</strong> The panel provides transparency into the voting system. Use it to understand signal quality and anticipate changes.</p>
 
@@ -2895,87 +3019,87 @@ graph TD
 </div>
 
 <h3 id="choppy-sideways-ranging-markets">Choppy, Sideways, Ranging Markets<a class="headerlink" href="#choppy-sideways-ranging-markets" title="Permanent link">&para;</a></h3>
-<p><strong>The Condition:</strong> When price oscillates in a horizontal range with no clear directional trend, the five oscillators produce conflicting votes as momentum shifts back and forth every few bars.</p>
-<p><strong>What Happens:</strong> NEUT signals dominate the chart. When Bull or Bear signals do appear, they flip quickly (Bull → NEUT → Bear → NEUT) within 5-10 bars. Signal frequency increases but reliability decreases. Following these signals leads to whipsaws—entering long on Bull signal, getting stopped out, then seeing Bear signal that also fails.</p>
-<p><strong>Context:</strong> Oscillators measure momentum and rate of change. In sideways markets, there IS momentum (price moves up and down), but it's non-directional—momentum shifts from bullish to bearish repeatedly without follow-through. This isn't a failure—Harmonic is correctly identifying that momentum keeps shifting. The constant NEUT and rapid flips are the indicator telling you "this market lacks directional conviction, wait for clarity." Combine with <a href="../pentarch-v10/">Pentarch</a> regime bars or <a href="../omnideck-v10/">Omnideck</a> Regime Box—if those show neutral/gray simultaneously, skip trades until trend clarity emerges.</p>
+<p><strong>The Condition:</strong> When price oscillates in a horizontal range with no clear directional trend, the seven components produce conflicting votes as momentum shifts back and forth every few bars.</p>
+<p><strong>What Happens:</strong> RANGING— regime dominates the chart. When BIAS or TRENDING regimes do appear, they flip quickly (BIAS▲ → RANGING → BIAS▼ → RANGING) within 5-10 bars. Signal frequency increases but reliability decreases. Following these signals leads to whipsaws—entering long on bullish regime, getting stopped out, then seeing bearish regime that also fails.</p>
+<p><strong>Context:</strong> Components measure momentum and rate of change. In sideways markets, there IS momentum (price moves up and down), but it's non-directional—momentum shifts from bullish to bearish repeatedly without follow-through. This isn't a failure—Harmonic is correctly identifying that momentum keeps shifting. The constant RANGING and rapid flips are the indicator telling you "this market lacks directional conviction, wait for clarity." Combine with <a href="../pentarch-v10/">Pentarch</a> regime bars or <a href="../omnideck-v10/">Omnideck</a> Regime Box—if those show neutral/gray simultaneously, skip trades until trend clarity emerges.</p>
 
 <h3 id="very-low-timeframes-5m-1m">Very Low Timeframes (5-Minute, 1-Minute)<a class="headerlink" href="#very-low-timeframes-5m-1m" title="Permanent link">&para;</a></h3>
 <p><strong>The Condition:</strong> Using Harmonic Oscillator on 1m or 5m charts, especially in crypto or highly volatile stocks.</p>
-<p><strong>What Happens:</strong> Signal changes happen every 2-4 bars. Bull → Bear → Bull → NEUT in a 20-minute span. Oscillators react to microstructure noise (spoofing, HFT activity, bid-ask spreads) rather than meaningful momentum shifts. Impossible to trade effectively—by the time you enter on Bull signal, it's already flipping to NEUT.</p>
-<p><strong>Context:</strong> Oscillators use lookback periods (RSI: 14 bars, Stochastic RSI: 14 bars, MACD: 12/26 bars, etc.). On 1m charts, 14 bars = 14 minutes of data. Any price spike within those 14 minutes dramatically shifts oscillator readings, causing premature signal flips. On 1H charts, 14 bars = 14 hours of data—much more stable, less susceptible to single-candle noise. Recommended minimum timeframes: 15m for day traders, 1H for swing traders, 4H/Daily for position traders. Lower timeframes work technically but produce too many low-quality signals to be profitable.</p>
+<p><strong>What Happens:</strong> Regime changes happen every 2-4 bars. BIAS▲ → BIAS▼ → RANGING → BIAS▲ in a 20-minute span. Components react to microstructure noise (spoofing, HFT activity, bid-ask spreads) rather than meaningful momentum shifts. Impossible to trade effectively—by the time you enter on bullish regime, it's already flipping to RANGING.</p>
+<p><strong>Context:</strong> Components use various lookback periods for their calculations. On 1m charts, short lookback periods mean any price spike dramatically shifts component votes, causing premature regime changes. On 1H charts, the same lookback produces much more stable readings, less susceptible to single-candle noise. Recommended minimum timeframes: 15m for day traders, 1H for swing traders, 4H/Daily for position traders. Lower timeframes work technically but produce too many low-quality signals to be profitable.</p>
 
 <h3 id="regime-transitions-trend-changes">Regime Transitions & Trend Changes<a class="headerlink" href="#regime-transitions-trend-changes" title="Permanent link">&para;</a></h3>
 <p><strong>The Condition:</strong> During the actual moment when trends reverse—transitioning from established bull trend to new bear trend (or vice versa).</p>
-<p><strong>What Happens:</strong> Oscillators whipsaw during the transition. Example: Strong uptrend (Harmonic shows STRONG Bull) → Market tops → Harmonic flips to NEUT → Then Bear → Then NEUT again → Finally settles on Bear. During this 10-20 bar transition, signals are unreliable. You might enter short on first Bear signal, get stopped out when it flips back to NEUT, then watch price fall without you after signal finally stabilizes.</p>
-<p><strong>Context:</strong> Harmonic Oscillator excels at confirming established trends (strong Bull signals during clear uptrends). It struggles during the messy, ambiguous transition periods between trends. This is inherent to how oscillators work—they need several bars of new data to "confirm" the new trend. Early signals during transitions are provisional and frequently reverse. Best practice: Wait for 2-3 consecutive same-direction signals after a regime change before trusting the new direction. Or use <a href="../pentarch-v10/">Pentarch</a> TD/IGN signals for better timing during actual reversals, then use Harmonic for trend confirmation.</p>
+<p><strong>What Happens:</strong> Components whipsaw during the transition. Example: Strong uptrend (Harmonic shows TRENDING▲) → Market tops → Harmonic flips to RANGING → Then BIAS▼ → Then RANGING again → Finally settles on TRENDING▼. During this 10-20 bar transition, signals are unreliable. You might enter short on first bearish regime, get stopped out when it flips back to RANGING, then watch price fall without you after regime finally stabilizes.</p>
+<p><strong>Context:</strong> Harmonic Oscillator excels at confirming established trends (TRENDING regimes during clear directional moves). It struggles during the messy, ambiguous transition periods between trends. This is inherent to how the voting system works—components need several bars of new data to "confirm" the new trend. Early regimes during transitions are provisional and frequently reverse. Best practice: Wait for 2-3 consecutive same-direction regimes after a transition before trusting the new direction. Or use <a href="../pentarch-v10/">Pentarch</a> TD/IGN signals for better timing during actual reversals, then use Harmonic for trend confirmation.</p>
 
 <h3 id="strong-persistent-trends-overbought-oversold">Strong Persistent Trends (Overbought/Oversold Conditions)<a class="headerlink" href="#strong-persistent-trends-overbought-oversold" title="Permanent link">&para;</a></h3>
 <p><strong>The Condition:</strong> During parabolic moves or persistent one-directional trends, oscillators reach extreme readings (RSI 80+, Stochastic 90+) and stay there for weeks.</p>
-<p><strong>What Happens:</strong> Harmonic might flip from STRONG Bull to just Bull or even NEUT as oscillators max out, despite price continuing to rally. This can create premature "momentum weakening" signals that lead to exiting winning positions too early. Conversely, Bear signals may appear during strong uptrends when oscillators dip briefly, but price never actually reverses.</p>
-<p><strong>Context:</strong> Oscillators are designed to identify overbought/oversold conditions, but "overbought can stay overbought" during extraordinary trends. When oscillators hit extremes (RSI 85+), they can't go much higher even if buying pressure continues. Some oscillators will vote neutral or even bearish (due to overbought readings) while price keeps rising. This is why Harmonic uses a voting system—it softens single-oscillator extremes—but even the consensus can weaken during persistent trends. In strong trending markets, prioritize trend-following indicators (<a href="../omnideck-v10/">Omnideck</a> Pilot Line, <a href="../pentarch-v10/">Pentarch</a> regime bars) over oscillators. Use Harmonic for entry timing within the trend (buy dips on Bull signals during uptrends), not for trend reversal calls.</p>
+<p><strong>What Happens:</strong> Harmonic might flip from TRENDING▲ to just BIAS▲ or even RANGING as component readings max out, despite price continuing to rally. This can create premature "momentum weakening" signals that lead to exiting winning positions too early. Conversely, bearish regimes may appear during strong uptrends when components dip briefly, but price never actually reverses.</p>
+<p><strong>Context:</strong> Components measuring momentum can hit extreme readings, but "overbought can stay overbought" during extraordinary trends. When components hit extremes, they can't go much higher even if buying pressure continues. Some components will vote neutral or even bearish while price keeps rising. This is why Harmonic uses a voting system—it softens single-component extremes—but even the consensus can weaken during persistent trends. In strong trending markets, prioritize trend-following indicators (<a href="../omnideck-v10/">Omnideck</a> Pilot Line, <a href="../pentarch-v10/">Pentarch</a> regime bars) over oscillators. Use Harmonic for entry timing within the trend (buy dips on bullish regimes during uptrends), not for trend reversal calls.</p>
 
 <h3 id="sudden-gaps-news-driven-moves">Sudden Gaps & News-Driven Moves<a class="headerlink" href="#sudden-gaps-news-driven-moves" title="Permanent link">&para;</a></h3>
 <p><strong>The Condition:</strong> Price gaps 5-10% overnight due to earnings, news, or global events. Or intraday flash moves where price jumps 3-5% in one candle.</p>
-<p><strong>What Happens:</strong> Oscillators lag behind the move. Example: Price gaps down 8% on earnings miss, immediately oversold. Harmonic might still show Bull or NEUT from yesterday's data because oscillators use 14-20 bar lookback periods that include pre-gap bars. By the time Harmonic flips to Bear (3-5 bars later), the worst of the move is over and price is already consolidating or bouncing.</p>
-<p><strong>Context:</strong> All oscillators are lagging indicators—they calculate based on recent history. Gaps and flash moves create discontinuities where yesterday's data becomes instantly obsolete. Harmonic will eventually catch up (usually within 5-10 bars), but initial signals immediately after major gaps are unreliable because they're based on pre-gap momentum that no longer exists. After significant gaps or flash moves, wait 10-15 bars for oscillators to "digest" the new price level before trusting Harmonic signals. Or use non-lagging indicators like <a href="../janus-atlas-v10/">Janus Atlas</a> levels (which update in real-time) immediately post-gap.</p>
+<p><strong>What Happens:</strong> Components lag behind the move. Example: Price gaps down 8% on earnings miss, immediately oversold. Harmonic might still show BIAS▲ or RANGING from yesterday's data because components use lookback periods that include pre-gap bars. By the time Harmonic flips to BIAS▼ (3-5 bars later), the worst of the move is over and price is already consolidating or bouncing.</p>
+<p><strong>Context:</strong> All momentum components are lagging indicators—they calculate based on recent history. Gaps and flash moves create discontinuities where yesterday's data becomes instantly obsolete. Harmonic will eventually catch up (usually within 5-10 bars), but initial regimes immediately after major gaps are unreliable because they're based on pre-gap momentum that no longer exists. After significant gaps or flash moves, wait 10-15 bars for components to "digest" the new price level before trusting Harmonic regimes. Or use non-lagging indicators like <a href="../janus-atlas-v10/">Janus Atlas</a> levels (which update in real-time) immediately post-gap.</p>
 
 <h3 id="low-volatility-consolidation">Low Volatility Consolidation Periods<a class="headerlink" href="#low-volatility-consolidation" title="Permanent link">&para;</a></h3>
 <p><strong>The Condition:</strong> Price trades in an extremely tight range (1-2% range over multiple days/weeks) with minimal volatility. Common during summer doldrums, holidays, or post-earnings consolidation.</p>
-<p><strong>What Happens:</strong> Oscillators become hypersensitive to tiny moves. A 0.5% price increase in a 1% range generates Bull signals despite the move being statistically insignificant. Harmonic fires Bull and Bear signals on noise rather than meaningful momentum. Signal frequency might appear high, but no signals lead to substantial follow-through.</p>
-<p><strong>Context:</strong> Oscillators measure rate of change and momentum relative to recent price action. In low-volatility environments, even small moves represent large percentage changes from the narrow baseline. A 0.3% move becomes "significant momentum" when the last 10 bars only moved 0.1-0.2% each. These signals are technically valid but practically useless—they identify relative momentum shifts within a stagnant market. Combine with <a href="../volume-oracle-v10/">Volume Oracle</a>: if volume is below average and Harmonic is firing signals, you're likely in a low-volatility trap. Wait for volume expansion and price breakout from consolidation before trusting momentum signals.</p>
+<p><strong>What Happens:</strong> Components become hypersensitive to tiny moves. A 0.5% price increase in a 1% range generates bullish regimes despite the move being statistically insignificant. Harmonic fires regime changes on noise rather than meaningful momentum. Signal frequency might appear high, but no regimes lead to substantial follow-through.</p>
+<p><strong>Context:</strong> Components measure rate of change and momentum relative to recent price action. In low-volatility environments, even small moves represent large percentage changes from the narrow baseline. A 0.3% move becomes "significant momentum" when the last 10 bars only moved 0.1-0.2% each. These regimes are technically valid but practically useless—they identify relative momentum shifts within a stagnant market. Combine with <a href="../volume-oracle-v10/">Volume Oracle</a>: if volume is below average and Harmonic is firing regime changes, you're likely in a low-volatility trap. Wait for volume expansion and price breakout from consolidation before trusting momentum signals.</p>
 
 <div class="admonition tip">
 <p class="admonition-title">Recognizing Reduced Reliability Environments</p>
 <p><strong>Practical Identification:</strong></p>
 <ul>
-<li><strong>NEUT signals appearing 40%+ of the time:</strong> Market lacks directional momentum—reduce activity</li>
-<li><strong>Signals flipping every 3-5 bars:</strong> Timeframe too low or choppy conditions—use higher timeframe</li>
-<li><strong>Bull → NEUT → Bear → NEUT pattern within 10 bars:</strong> Regime transition—wait for stabilization</li>
-<li><strong>STRONG Bull signal but price barely moving:</strong> Low volatility environment—wait for expansion</li>
-<li><strong>Price continues trending but Harmonic weakens from STRONG to Bull:</strong> Oscillators at extremes—use trend indicators instead</li>
-<li><strong>Major gap or flash move just occurred:</strong> Wait 10+ bars for oscillators to recalibrate</li>
-<li><strong>Regime Box/Pentarch shows neutral while Harmonic shows Bull/Bear:</strong> Conflicting indicators—skip trade</li>
+<li><strong>RANGING appearing 40%+ of the time:</strong> Market lacks directional momentum—reduce activity</li>
+<li><strong>Regimes flipping every 3-5 bars:</strong> Timeframe too low or choppy conditions—use higher timeframe</li>
+<li><strong>BIAS▲ → RANGING → BIAS▼ → RANGING pattern within 10 bars:</strong> Market transition—wait for stabilization</li>
+<li><strong>TRENDING regime but price barely moving:</strong> Low volatility environment—wait for expansion</li>
+<li><strong>Price continues trending but Harmonic weakens from TRENDING to BIAS:</strong> Components at extremes—use trend indicators instead</li>
+<li><strong>Major gap or flash move just occurred:</strong> Wait 10+ bars for components to recalibrate</li>
+<li><strong>Regime Box/Pentarch shows neutral while Harmonic shows BIAS/TRENDING:</strong> Conflicting indicators—skip trade</li>
 </ul>
-<p><strong>Remember:</strong> Harmonic Oscillator measures momentum consensus across five oscillators. It tells you WHAT momentum currently exists, not WHETHER that momentum is sustainable or tradeable. Best results occur during trending markets with clear directional bias, on appropriate timeframes (15m+), after regimes have established. During transitions, ranges, and extremes, oscillators struggle—that's when you combine with trend-following indicators (<a href="../pentarch-v10/">Pentarch</a>, <a href="../omnideck-v10/">Omnideck</a>) and structural levels (<a href="../janus-atlas-v10/">Janus Atlas</a>) for confirmation.</p>
+<p><strong>Remember:</strong> Harmonic Oscillator measures momentum consensus across seven components. It tells you WHAT momentum currently exists, not WHETHER that momentum is sustainable or tradeable. Best results occur during trending markets with clear directional bias, on appropriate timeframes (15m+), after regimes have established. During transitions, ranges, and extremes, components struggle—that's when you combine with trend-following indicators (<a href="../pentarch-v10/">Pentarch</a>, <a href="../omnideck-v10/">Omnideck</a>) and structural levels (<a href="../janus-atlas-v10/">Janus Atlas</a>) for confirmation.</p>
 </div>
 
 <hr />
 <h2 id="frequently-asked-questions">❓ Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permanent link">&para;</a></h2>
-<h3 id="q-why-use-five-oscillators-instead-of-one">Q: Why use five oscillators instead of one?<a class="headerlink" href="#q-why-use-five-oscillators-instead-of-one" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> Multiple oscillators provide consensus view. Single oscillator may give false signal while others disagree. Multi-oscillator agreement reduces single-indicator noise.</p>
-<h3 id="q-can-i-disable-specific-oscillators">Q: Can I disable specific oscillators?<a class="headerlink" href="#q-can-i-disable-specific-oscillators" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> No. All five oscillators contribute to voting system. However, individual oscillator parameters can be adjusted to change vote behavior.</p>
-<h3 id="q-what-if-all-oscillators-are-neutral">Q: What if all oscillators are neutral?<a class="headerlink" href="#q-what-if-all-oscillators-are-neutral" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> NEUT signal appears, indicating lack of directional momentum across all measurements.</p>
-<h3 id="q-how-does-this-differ-from-looking-at-five-separate-indicators">Q: How does this differ from looking at five separate indicators?<a class="headerlink" href="#q-how-does-this-differ-from-looking-at-five-separate-indicators" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> Harmonic Oscillator automates agreement analysis. Manual monitoring of five indicators requires mental calculation of consensus. This indicator performs vote counting automatically and signals only when threshold met.</p>
+<h3 id="q-why-use-seven-components-instead-of-one">Q: Why use seven components instead of one?<a class="headerlink" href="#q-why-use-seven-components-instead-of-one" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Multiple components provide consensus view. Single indicator may give false signal while others disagree. Multi-component agreement reduces single-indicator noise and increases reliability.</p>
+<h3 id="q-can-i-disable-specific-components">Q: Can I disable specific components?<a class="headerlink" href="#q-can-i-disable-specific-components" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> No. All seven components contribute to the voting system. The system is designed to work as an integrated whole.</p>
+<h3 id="q-what-causes-ranging-regime">Q: What causes the RANGING regime?<a class="headerlink" href="#q-what-causes-ranging-regime" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Components showing divergent readings—some bullish, some bearish, some neutral. No directional consensus present. Occurs during choppy markets, consolidation, or transitional periods.</p>
+<h3 id="q-how-does-this-differ-from-separate-indicators">Q: How does this differ from looking at seven separate indicators?<a class="headerlink" href="#q-how-does-this-differ-from-separate-indicators" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Harmonic Oscillator automates agreement analysis and includes the proprietary composite oscillator. Manual monitoring of seven indicators requires mental calculation of consensus. This indicator performs vote counting automatically, generates regime classification, and provides crossover/divergence detection.</p>
 <h3 id="q-can-signals-repaint">Q: Can signals repaint?<a class="headerlink" href="#q-can-signals-repaint" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> No. All signals confirm at bar close and do not change retroactively.</p>
-<h3 id="q-what-vote-threshold-should-i-use">Q: What vote threshold should I use?<a class="headerlink" href="#q-what-vote-threshold-should-i-use" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> Depends on individual preference. 3-vote threshold (default) provides more signals with simple majority. 4-vote threshold provides fewer, higher-confidence signals. 5-vote threshold provides rare unanimous signals only.</p>
-<h3 id="q-do-strong-signals-perform-better-than-regular-buysell">Q: Do STRONG signals perform better than regular Bull/Bear?<a class="headerlink" href="#q-do-strong-signals-perform-better-than-regular-buysell" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> STRONG signals indicate higher oscillator agreement (4-5 vs 3). Historical observation shows various outcomes. No signal type guarantees specific results.</p>
-<h3 id="q-can-i-see-individual-oscillator-readings">Q: Can I see individual oscillator readings?<a class="headerlink" href="#q-can-i-see-individual-oscillator-readings" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> Yes. Enable "Oscillator Panel" in settings to display all five oscillators in separate panel below chart.</p>
-<h3 id="q-what-causes-neut-signals">Q: What causes NEUT signals?<a class="headerlink" href="#q-what-causes-neut-signals" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> Oscillators showing divergent readings - some bullish, some bearish, some neutral. No directional consensus present. Occurs during choppy markets, consolidation, or transitional periods.</p>
-<h3 id="q-how-many-signals-appear-on-average">Q: How many signals appear on average?<a class="headerlink" href="#q-how-many-signals-appear-on-average" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> Signal frequency varies by asset, timeframe, and market conditions. Volatile periods show more signals. Trending periods show fewer signals.</p>
+<p><strong>A:</strong> No. All signals and regime changes confirm at bar close and do not change retroactively.</p>
+<h3 id="q-what-is-the-composite-oscillator">Q: What is the composite oscillator?<a class="headerlink" href="#q-what-is-the-composite-oscillator" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> A proprietary 0-100 scale oscillator that synthesizes the seven component votes into a single smoothed value. It includes a signal line for crossover detection and overbought/oversold zones.</p>
+<h3 id="q-do-trending-signals-perform-better-than-bias">Q: Do TRENDING signals perform better than BIAS?<a class="headerlink" href="#q-do-trending-signals-perform-better-than-bias" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> TRENDING regimes indicate higher component agreement (6-7 vs 4-5 votes). Higher consensus generally correlates with stronger directional moves. No regime type guarantees specific results.</p>
+<h3 id="q-can-i-see-the-composite-oscillator">Q: Can I see the composite oscillator?<a class="headerlink" href="#q-can-i-see-the-composite-oscillator" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Yes. Enable "Show Oscillator" in display settings to see the composite oscillator, signal line, and extreme zones in a separate panel.</p>
+<h3 id="q-what-do-the-vote-counts-mean">Q: What do the vote counts (X/7) mean?<a class="headerlink" href="#q-what-do-the-vote-counts-mean" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> The vote count shows how many of the seven components agree on direction. Higher counts (6/7, 7/7) indicate stronger consensus. The count determines the regime: 6-7 = TRENDING, 4-5 = BIAS, 0-3 = RANGING.</p>
+<h3 id="q-how-many-regime-changes-appear-on-average">Q: How many regime changes appear on average?<a class="headerlink" href="#q-how-many-regime-changes-appear-on-average" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Regime frequency varies by asset, timeframe, and market conditions. Volatile periods show more regime changes. Strong trending periods show stable regimes with fewer changes.</p>
 <hr />
 
 <div class="knowledge-check"
-     data-quiz-id="harmonic-oscillator-strong"
+     data-quiz-id="harmonic-oscillator-trending"
      data-correct-answer="c"
-     data-correct-feedback="✓ Correct! STRONG signals require 4 or 5 votes out of 5 total votes. This represents maximum consensus across the voting components (MACD, RSI, Stochastic RSI, Volume, Divergence). Regular Bull/Bear signals require only 3 votes, while STRONG signals demand 4-5 votes for highest confidence. The higher vote threshold makes STRONG signals significantly more reliable for trade entries."
-     data-incorrect-feedback="Not quite. Review the Five-Component Voting System section above. Count how many votes are required for STRONG versus regular Bull/Bear signals. STRONG signals demand much higher consensus. Try again!">
+     data-correct-feedback="✓ Correct! TRENDING regime requires 6 or 7 votes out of 7 total components. This represents maximum consensus across all voting components (RSI, Stochastic RSI, MACD, EMA Trend, Momentum, Volume, Divergence Zone). BIAS signals require 4-5 votes, while TRENDING demands 6-7 votes for highest confidence."
+     data-incorrect-feedback="Not quite. Review the Seven-Component Voting System section above. Count how many votes are required for TRENDING versus BIAS regimes. TRENDING demands much higher consensus. Try again!">
   <h4>✅ Knowledge Check</h4>
-  <p><strong>Question:</strong> How many votes (out of 5 total) are required for a STRONG signal to appear on Harmonic Oscillator?</p>
+  <p><strong>Question:</strong> How many votes (out of 7 total) are required for a TRENDING regime to appear on Harmonic Oscillator?</p>
 
   <form class="quiz-form">
-    <label><input type="radio" name="q1" value="a"> 3 votes (same as regular signals)</label>
-    <label><input type="radio" name="q1" value="b"> 4 votes exactly</label>
-    <label><input type="radio" name="q1" value="c"> 4 or 5 votes</label>
-    <label><input type="radio" name="q1" value="d"> All 5 votes (unanimous)</label>
+    <label><input type="radio" name="q1" value="a"> 4 or 5 votes (same as BIAS)</label>
+    <label><input type="radio" name="q1" value="b"> 5 votes exactly</label>
+    <label><input type="radio" name="q1" value="c"> 6 or 7 votes</label>
+    <label><input type="radio" name="q1" value="d"> All 7 votes (unanimous)</label>
   </form>
 
   <button class="check-answer-btn">Check Answer</button>
@@ -2984,96 +3108,98 @@ graph TD
 
 <hr />
 <h2 id="quick-reference-guide">📋 Quick Reference Guide<a class="headerlink" href="#quick-reference-guide" title="Permanent link">&para;</a></h2>
-<h3 id="signal-summary">Signal Summary<a class="headerlink" href="#signal-summary" title="Permanent link">&para;</a></h3>
+<h3 id="regime-summary">Regime Summary<a class="headerlink" href="#regime-summary" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Signal</th>
-<th>Label Color</th>
+<th>Regime</th>
+<th>Label</th>
 <th>Votes Required</th>
 <th>Agreement Level</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Bull</strong></td>
+<td><strong>TRENDING▲</strong></td>
 <td>Green</td>
-<td>3+ bullish</td>
-<td>Simple majority</td>
+<td>6-7 bullish</td>
+<td>Strong consensus</td>
 </tr>
 <tr>
-<td><strong>Bear</strong></td>
+<td><strong>TRENDING▼</strong></td>
 <td>Red</td>
-<td>3+ bearish</td>
-<td>Simple majority</td>
+<td>6-7 bearish</td>
+<td>Strong consensus</td>
 </tr>
 <tr>
-<td><strong>STRONG</strong></td>
-<td>Bright green/red</td>
-<td>4-5 same direction</td>
-<td>Strong/unanimous</td>
+<td><strong>BIAS▲</strong></td>
+<td>Light green</td>
+<td>4-5 bullish</td>
+<td>Moderate lean</td>
 </tr>
 <tr>
-<td><strong>NEUT</strong></td>
+<td><strong>BIAS▼</strong></td>
+<td>Light red</td>
+<td>4-5 bearish</td>
+<td>Moderate lean</td>
+</tr>
+<tr>
+<td><strong>RANGING—</strong></td>
 <td>Gray</td>
-<td>&lt;3 either direction</td>
+<td>0-3 either direction</td>
 <td>No consensus</td>
 </tr>
 </tbody>
 </table>
 
-<p><strong>Remember:</strong> STRONG signals (4-5 aligned oscillators) carry significantly more weight than simple Bull/Bear signals (3 oscillators). Trade STRONG signals at key levels for highest probability setups. NEUT signals indicate waiting periods—patience is profitable.</p>
+<p><strong>Remember:</strong> TRENDING regimes (6-7 aligned components) carry significantly more weight than BIAS regimes (4-5 components). Trade TRENDING regimes at key levels for highest probability setups. RANGING indicates waiting periods—patience is profitable.</p>
 
-<h3 id="oscillator-quick-reference">Component Quick Reference<a class="headerlink" href="#oscillator-quick-reference" title="Permanent link">&para;</a></h3>
+<h3 id="component-quick-reference">Component Quick Reference<a class="headerlink" href="#component-quick-reference" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
 <th>Component</th>
-<th>Measures</th>
-<th>Bullish When</th>
-<th>Bearish When</th>
+<th>Function</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>MACD</strong></td>
-<td>Momentum with trend gating</td>
-<td>Crosses above signal + gates pass</td>
-<td>Crosses below signal + gates pass</td>
-</tr>
-<tr>
-<td><strong>RSI Triple Envelope</strong></td>
-<td>Trend-following momentum</td>
-<td>In bullish envelope zone</td>
-<td>In bearish envelope zone</td>
+<td><strong>RSI</strong></td>
+<td>Momentum strength measurement</td>
 </tr>
 <tr>
 <td><strong>Stochastic RSI</strong></td>
-<td>Extreme zone reversals</td>
-<td>%K crosses %D in oversold</td>
-<td>%K crosses %D in overbought</td>
+<td>Extreme zone detection</td>
 </tr>
 <tr>
-<td><strong>Volume Delta</strong></td>
-<td>Buying vs selling pressure</td>
-<td>Positive delta pattern</td>
-<td>Negative delta pattern</td>
+<td><strong>MACD</strong></td>
+<td>Trend-following momentum</td>
 </tr>
 <tr>
-<td><strong>Divergence</strong></td>
+<td><strong>EMA Trend</strong></td>
+<td>Price position relative to trend</td>
+</tr>
+<tr>
+<td><strong>Momentum</strong></td>
+<td>Rate of price change</td>
+</tr>
+<tr>
+<td><strong>Volume</strong></td>
+<td>Participation confirmation</td>
+</tr>
+<tr>
+<td><strong>Divergence Zone</strong></td>
 <td>Price/oscillator misalignment</td>
-<td>Bullish divergence detected</td>
-<td>Bearish divergence detected</td>
 </tr>
 </tbody>
 </table>
-<h3 id="common-signal-patterns">Common Signal Patterns<a class="headerlink" href="#common-signal-patterns" title="Permanent link">&para;</a></h3>
-<pre><code>Momentum Building:   Bull → STRONG (bullish)
-Momentum Fading:     Bull → NEUT
-Direction Emerging:  NEUT → Bull or Bear
-Momentum Reversal:   Bull → Bear (or vice versa)
-High Conviction:     Direct STRONG signal
-Whipsaw Conditions:  Rapid Bull ↔ Bear alternation
+<h3 id="common-regime-patterns">Common Regime Patterns<a class="headerlink" href="#common-regime-patterns" title="Permanent link">&para;</a></h3>
+<pre><code>Momentum Building:   BIAS▲ → TRENDING▲
+Momentum Fading:     TRENDING▲ → BIAS▲ → RANGING
+Direction Emerging:  RANGING → BIAS▲ or BIAS▼
+Momentum Reversal:   TRENDING▲ → TRENDING▼
+High Conviction:     Direct TRENDING regime
+Whipsaw Conditions:  Rapid BIAS▲ ↔ BIAS▼ alternation
 </code></pre>
 <hr />
 
@@ -3081,11 +3207,11 @@ Whipsaw Conditions:  Rapid Bull ↔ Bear alternation
   <div class="sp-callout__title">Reflection Check</div>
   <p>Before using Harmonic Oscillator in your trading, ask yourself:</p>
   <ul>
-    <li>Can you explain the five-component voting system (MACD, RSI, Stochastic RSI, Volume, Divergence) and how votes are tallied?</li>
-    <li>Do you understand the four signal types (Bull, Bear, STRONG, NEUT) and what vote thresholds trigger each?</li>
-    <li>Can you differentiate between a regular signal (3 votes) and a STRONG signal (4-5 votes) in terms of confidence level?</li>
-    <li>Have you observed how NEUT signals indicate transitional periods where patience is recommended?</li>
-    <li>Do you understand that Harmonic Oscillator displays multi-component momentum consensus, not trading instructions, and requires your own interpretation?</li>
+    <li>Can you explain the seven-component voting system and how votes determine regime classification?</li>
+    <li>Do you understand the three regime types (TRENDING, BIAS, RANGING) and what vote thresholds trigger each?</li>
+    <li>Can you differentiate between TRENDING (6-7 votes) and BIAS (4-5 votes) in terms of confidence level?</li>
+    <li>Do you understand the composite oscillator and how to use crossovers and divergences?</li>
+    <li>Have you observed how RANGING indicates transitional periods where patience is recommended?</li>
   </ul>
   <p><strong>If yes to all 5:</strong> You're ready to use Harmonic Oscillator! Explore the <a href="../ref-workflow/">Workflow Guide</a> to learn momentum confirmation strategies.<br>
   <strong>If no to any:</strong> Review the relevant section above or use the chatbot (bottom right) to ask specific questions.</p>
