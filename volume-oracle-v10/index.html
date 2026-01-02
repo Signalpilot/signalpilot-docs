@@ -2436,739 +2436,405 @@
      Label/Annotate: Point to background color, signal label with stars, regime meter table, volume bars
      File name suggestion: volume-oracle-overview.png
 -->
-<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
-  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
-  <p style="margin: 0; color: #424242;"><strong>Volume Oracle Overview</strong></p>
-  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a chart showing regime background colors, BULL/BEAR signals with quality stars, and the regime meter table.</p>
-</div>
-
 <hr />
-<h2 id="educational-example-regime-signal-december-2024">📊 Educational Example: Regime Detection & Signal (December 2024)<a class="headerlink" href="#educational-example-regime-signal-december-2024" title="Permanent link">&para;</a></h2>
-<p><em>(Historical observation for educational purposes only. Not financial advice. Past performance does not indicate future results.)</em></p>
-<p><strong>Scenario:</strong> Bitcoin regime shift and BULL signal at $64,000</p>
-<p><strong>Volume Oracle Display Sequence:</strong></p>
+<h2 id="the-regime-table">📊 The Regime Table<a class="headerlink" href="#the-regime-table" title="Permanent link">&para;</a></h2>
+<p>The regime table is your dashboard for regime status. Available in two layouts:</p>
+
+<h3 id="vertical-layout">Vertical Layout (Default)<a class="headerlink" href="#vertical-layout" title="Permanent link">&para;</a></h3>
+<pre style="background: #1a1a2e; padding: 1rem; border-radius: 8px; font-family: monospace; font-size: 0.85rem; overflow-x: auto;">
+┌──────────┬─────────────┐
+│ 📊       │ ACCUMULATION│
+├──────────┼─────────────┤
+│ 66%      │ 32h         │
+├──────────┼─────────────┤
+│ Status   │ ✓ STRONG    │
+├──────────┼─────────────┤
+│ Health   │ 🟢 HEALTHY  │
+├──────────┼─────────────┤
+│ Struct   │ ✓ ALIGNED   │
+├──────────┼─────────────┤
+│ Market   │ TRENDING    │
+├──────────┼─────────────┤
+│ Flip     │ ✓ STABLE    │
+└──────────┴─────────────┘</pre>
+
+<h3 id="horizontal-layout">Horizontal Layout<a class="headerlink" href="#horizontal-layout" title="Permanent link">&para;</a></h3>
+<pre style="background: #1a1a2e; padding: 1rem; border-radius: 8px; font-family: monospace; font-size: 0.85rem; overflow-x: auto;">
+┌────────────────┬──────┬──────┬──────────┬────┐
+│ 📊 ACCUMULATION│ 66%  │ 32h  │ STRONG ✓ │ 🟢 │
+├────────────────┼──────┼──────┼──────────┼────┤
+│ STRUCTURE ✓    │MARKET│FLIP  │ 0 flips  │    │
+│                │TREND▲│STABLE│          │    │
+└────────────────┴──────┴──────┴──────────┴────┘</pre>
+
+<h3 id="table-fields-explained">Table Fields Explained<a class="headerlink" href="#table-fields-explained" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
-<tr>
-<th>Time</th>
-<th>Price</th>
-<th>Regime</th>
-<th>Signal</th>
-<th>Display</th>
-</tr>
+<tr><th>Field</th><th>Values</th><th>Meaning</th></tr>
 </thead>
 <tbody>
-<tr>
-<td>Day 1</td>
-<td>$62,000</td>
-<td>Neutral</td>
-<td>—</td>
-<td>Gray background, gray volume bars</td>
-</tr>
-<tr>
-<td>Day 2</td>
-<td>$63,500</td>
-<td>Accumulation</td>
-<td>—</td>
-<td>Green background appears, green volume bars</td>
-</tr>
-<tr>
-<td>Day 3</td>
-<td>$64,000</td>
-<td>Accumulation</td>
-<td>🟢 BULL ⭐⭐⭐</td>
-<td>↑ label with 3 stars, entry $64,000, stop $62,500, T1 $65,500</td>
-</tr>
-<tr>
-<td>Day 4</td>
-<td>$65,500</td>
-<td>Accumulation</td>
-<td>T1 Hit</td>
-<td>Blue "T1" label appears</td>
-</tr>
-<tr>
-<td>Day 5</td>
-<td>$67,000</td>
-<td>Weakening</td>
-<td>⚠️ Exit</td>
-<td>Gold background, exit warning appears</td>
-</tr>
-</tbody>
-</table>
-<p><strong>What This Shows:</strong> Regime shifted from Neutral to Accumulation (bullish). BULL signal fired with ⭐⭐⭐ quality. Auto-calculated stop and target displayed. T1 hit triggered partial exit alert. Regime weakening triggered exit warning.</p>
-<p><em>This example demonstrates regime detection and signal generation. Individual outcomes vary.</em></p>
-<hr />
-<h2 id="settings">⚙️ Settings <span class="skill-badge skill-badge--beginner" data-tooltip="Simple configuration options">Beginner Friendly</span><a class="headerlink" href="#settings" title="Permanent link">&para;</a></h2>
-
-<h3 id="settings-overview">Settings Groups Overview<a class="headerlink" href="#settings-overview" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr><th>Group</th><th>Purpose</th></tr>
-</thead>
-<tbody>
-<tr><td><strong>1️⃣ Core Detection</strong></td><td>Volume spike and flow settings</td></tr>
-<tr><td><strong>2️⃣ Regime Detection</strong></td><td>Market phase identification</td></tr>
-<tr><td><strong>3️⃣ Risk Management</strong></td><td>Position sizing and targets</td></tr>
-<tr><td><strong>4️⃣ HTF Confirmation</strong></td><td>Higher timeframe alignment</td></tr>
-<tr><td><strong>5️⃣ Strategy Modes</strong></td><td>Trading approach selection</td></tr>
-<tr><td><strong>6️⃣ Display Options</strong></td><td>Visual elements on chart</td></tr>
+<tr><td><strong>Regime</strong></td><td>ACCUMULATION / DISTRIBUTION / NEUTRAL</td><td>Current institutional flow direction</td></tr>
+<tr><td><strong>Strength</strong></td><td>0-100%</td><td>How dominant is the current regime</td></tr>
+<tr><td><strong>Duration</strong></td><td>Hours (e.g., 32h)</td><td>How long regime has been active</td></tr>
+<tr><td><strong>Status</strong></td><td>STRONG ✓ / FADING ▼ / WEAK ▼ / CRIT ▼</td><td>Regime health indicator</td></tr>
+<tr><td><strong>Health</strong></td><td>🟢 🟡 🟠 🔴</td><td>Warning count (0/1/2/3+)</td></tr>
+<tr><td><strong>Structure</strong></td><td>✓ ALIGNED / ✗ CONFLICT / — UNCLEAR</td><td>Does price structure confirm regime?</td></tr>
+<tr><td><strong>Market</strong></td><td>TRENDING ▲ / NORMAL — / CHOPPY ▼</td><td>Market character based on flip frequency</td></tr>
+<tr><td><strong>Flip</strong></td><td>STABLE ✓ / → ACC 2/3 / → DIST 1/3</td><td>Is regime about to change?</td></tr>
 </tbody>
 </table>
 
-<h3 id="core-detection-settings">1️⃣ Core Detection Settings<a class="headerlink" href="#core-detection-settings" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr><th>Setting</th><th>Options</th><th>Default</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><strong>Z-Score Threshold</strong></td><td>1.0 - 4.0</td><td>2.0</td><td>Volume spike sensitivity (lower = more signals)</td></tr>
-<tr><td><strong>Flow Window</strong></td><td>5 - 50</td><td>20</td><td>Bars used for flow consistency calculation</td></tr>
-<tr><td><strong>Flow Ratio</strong></td><td>0.5 - 0.9</td><td>0.65</td><td>Required flow agreement percentage</td></tr>
-<tr><td><strong>Signal Cooldown</strong></td><td>10 - 100</td><td>45</td><td>Minimum bars between signals</td></tr>
-</tbody>
-</table>
-
-<h3 id="regime-detection-settings">2️⃣ Regime Detection Settings<a class="headerlink" href="#regime-detection-settings" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr><th>Setting</th><th>Options</th><th>Default</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><strong>Lookback Length</strong></td><td>10 - 100</td><td>50</td><td>Bars analyzed for regime detection</td></tr>
-<tr><td><strong>Sensitivity</strong></td><td>Conservative, Balanced, Aggressive</td><td>Balanced</td><td>Regime change responsiveness</td></tr>
-<tr><td><strong>Regime Cooldown</strong></td><td>5 - 50</td><td>20</td><td>Minimum bars before regime change</td></tr>
-<tr><td><strong>Early Warnings</strong></td><td>On/Off</td><td>On</td><td>Show regime weakening alerts</td></tr>
-<tr><td><strong>Auto-Adapt</strong></td><td>On/Off</td><td>On</td><td>Auto-adjust to market conditions</td></tr>
-</tbody>
-</table>
-
-<h3 id="risk-management-settings">3️⃣ Risk Management Settings<a class="headerlink" href="#risk-management-settings" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr><th>Setting</th><th>Options</th><th>Default</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><strong>Account Size</strong></td><td>Any value</td><td>10000</td><td>Your trading capital</td></tr>
-<tr><td><strong>Risk %</strong></td><td>0.1% - 5%</td><td>1%</td><td>Risk per trade as % of account</td></tr>
-<tr><td><strong>ATR Length</strong></td><td>5 - 50</td><td>14</td><td>ATR period for stop/target calculation</td></tr>
-<tr><td><strong>Stop Multiplier</strong></td><td>0.5× - 4×</td><td>2.0×</td><td>Stop distance as ATR multiple</td></tr>
-<tr><td><strong>T1 Multiplier</strong></td><td>0.5× - 4×</td><td>1.5×</td><td>Target 1 as ATR multiple</td></tr>
-<tr><td><strong>T2 Multiplier</strong></td><td>1× - 6×</td><td>3.0×</td><td>Target 2 as ATR multiple</td></tr>
-<tr><td><strong>Partial Exit %</strong></td><td>25% - 75%</td><td>50%</td><td>Position % to exit at T1</td></tr>
-<tr><td><strong>Trailing Stop</strong></td><td>On/Off</td><td>On</td><td>Enable trailing stop after T1</td></tr>
-<tr><td><strong>Breakeven</strong></td><td>On/Off</td><td>On</td><td>Move stop to entry after T1</td></tr>
-</tbody>
-</table>
-
-<h3 id="htf-confirmation-settings">4️⃣ HTF Confirmation Settings<a class="headerlink" href="#htf-confirmation-settings" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr><th>Setting</th><th>Options</th><th>Default</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><strong>Enable HTF</strong></td><td>On/Off</td><td>Off</td><td>Check higher timeframes</td></tr>
-<tr><td><strong>HTF 1</strong></td><td>Any timeframe</td><td>1H</td><td>First higher timeframe</td></tr>
-<tr><td><strong>HTF 2</strong></td><td>Any timeframe</td><td>4H</td><td>Second higher timeframe</td></tr>
-<tr><td><strong>Strict Filter</strong></td><td>On/Off</td><td>Off</td><td>Require both HTFs aligned</td></tr>
-<tr><td><strong>Min Strength</strong></td><td>0% - 100%</td><td>50%</td><td>Minimum HTF regime strength</td></tr>
-</tbody>
-</table>
-
-<h3 id="strategy-mode-settings">5️⃣ Strategy Mode Settings<a class="headerlink" href="#strategy-mode-settings" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr><th>Setting</th><th>Options</th><th>Default</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><strong>Strategy Mode</strong></td><td>Trend Following, Mean Reversion, Hybrid</td><td>Trend Following</td><td>Signal generation approach</td></tr>
-<tr><td><strong>MR Extremes</strong></td><td>1σ, 2σ, 3σ</td><td>2σ</td><td>Mean reversion threshold (MR mode only)</td></tr>
-</tbody>
-</table>
-
-<h3 id="display-options-settings">6️⃣ Display Options<a class="headerlink" href="#display-options-settings" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr><th>Setting</th><th>Options</th><th>Default</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><strong>Regime Background</strong></td><td>On/Off</td><td>On</td><td>Show colored background</td></tr>
-<tr><td><strong>Regime Meter</strong></td><td>On/Off</td><td>On</td><td>Show regime table (top-right)</td></tr>
-<tr><td><strong>HTF Table</strong></td><td>On/Off</td><td>On</td><td>Show HTF status (top-left)</td></tr>
-<tr><td><strong>Exit Warnings</strong></td><td>On/Off</td><td>On</td><td>Show ⚠️ exit alerts</td></tr>
-<tr><td><strong>Quality Stars</strong></td><td>On/Off</td><td>On</td><td>Show ⭐ on signals</td></tr>
-<tr><td><strong>Risk Labels</strong></td><td>On/Off</td><td>On</td><td>Show entry/stop/target on signals</td></tr>
-<tr><td><strong>Position Size</strong></td><td>On/Off</td><td>On</td><td>Show calculated position size</td></tr>
-</tbody>
-</table>
-
-<!-- 📸 SCREENSHOT NEEDED - Volume Oracle Settings Panel
-     What to show: Settings panel showing the 6 configuration groups
-     Setup: Right-click Volume Oracle → Settings
-     Label/Annotate: Highlight Core Detection, Regime, Risk Management, HTF, Strategy, Display sections
-     File name suggestion: volume-oracle-settings-panel.png
--->
-<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
-  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
-  <p style="margin: 0; color: #424242;"><strong>Volume Oracle Settings Panel</strong></p>
-  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a screenshot showing the six configuration groups in the settings panel.</p>
-</div>
-
-<hr />
-<h2 id="system-1-regime-detection">📊 System 1: Regime Detection<a class="headerlink" href="#system-1-regime-detection" title="Permanent link">&para;</a></h2>
-<h3 id="visual-display">Visual Display<a class="headerlink" href="#visual-display" title="Permanent link">&para;</a></h3>
-<p><strong>Chart Background:</strong> Colored background overlay on price chart</p>
-<p><strong>Color Coding:</strong><br />
-- <strong>Green background:</strong> Accumulation regime (bullish)<br />
-- <strong>Red background:</strong> Distribution regime (bearish)<br />
-- <strong>Gray background:</strong> Neutral regime (no clear direction)<br />
-- <strong>Gold background:</strong> Weakening regime (trend losing strength)</p>
-<p><strong>Opacity:</strong> Background intensity reflects regime strength (darker = stronger)</p>
-<h3 id="regime-detection-logic">Regime Detection Logic<a class="headerlink" href="#regime-detection-logic" title="Permanent link">&para;</a></h3>
-<p><strong>Accumulation (Green) Detected When:</strong><br />
-- Consistent buying pressure over multiple bars<br />
-- Volume increasing on up moves<br />
-- Price holding support levels</p>
-<p><strong>Distribution (Red) Detected When:</strong><br />
-- Consistent selling pressure over multiple bars<br />
-- Volume increasing on down moves<br />
-- Price failing at resistance levels</p>
-<p><strong>Neutral (Gray) When:</strong><br />
-- No clear directional bias<br />
-- Mixed volume signals<br />
-- Consolidation or low-conviction movement</p>
-<p><strong>Weakening (Gold) When:</strong><br />
-- Current regime losing strength<br />
-- Divergence between price and volume<br />
-- Potential regime change approaching</p>
-
-<h3 id="regime-confirmation">Regime Confirmation<a class="headerlink" href="#regime-confirmation" title="Permanent link">&para;</a></h3>
-<p><strong>How It Works:</strong> The regime won't flip until <strong>2 bars in a row</strong> confirm the change AND volume is above average.</p>
-<p><strong>Why It Matters:</strong> Fewer fake-outs. More reliable signals.</p>
-
-<h3 id="multi-level-warning-system">Multi-Level Warning System<a class="headerlink" href="#multi-level-warning-system" title="Permanent link">&para;</a></h3>
-<p>Four warning stages tell you when a regime is getting weak:</p>
-<table>
-<thead><tr><th>Status</th><th>What It Means</th><th>What To Do</th></tr></thead>
-<tbody>
-<tr><td><strong>✓ STRONG</strong></td><td>Regime is solid</td><td>Trade normally</td></tr>
-<tr><td><strong>📉 FADING</strong></td><td>Trend is slowing down</td><td>Tighten stops</td></tr>
-<tr><td><strong>⚡ WEAKENING</strong></td><td>Trend may flip soon</td><td>Reduce position size</td></tr>
-<tr><td><strong>⚠️ CRITICAL</strong></td><td>Trend about to flip</td><td>Consider exiting</td></tr>
-</tbody>
-</table>
-
-<h3 id="health-status-leading-indicators">Health Status (Early Warnings)<a class="headerlink" href="#health-status-leading-indicators" title="Permanent link">&para;</a></h3>
-<p>Three signals that warn you <strong>before</strong> the regime flips:</p>
-<table>
-<thead><tr><th>Warning</th><th>What's Happening</th></tr></thead>
-<tbody>
-<tr><td><strong>Momentum Fading</strong></td><td>Price is slowing down</td></tr>
-<tr><td><strong>Flow Deteriorating</strong></td><td>Buyers and sellers are mixed</td></tr>
-<tr><td><strong>Volume Drying Up</strong></td><td>Trading activity is dropping</td></tr>
-</tbody>
-</table>
-<p><strong>Health Status Colors:</strong></p>
-<table>
-<thead><tr><th>Color</th><th>Meaning</th><th>Warnings</th></tr></thead>
-<tbody>
-<tr><td><strong>🟢 HEALTHY</strong></td><td>All good</td><td>0</td></tr>
-<tr><td><strong>🟡 WATCH</strong></td><td>Small concern</td><td>1</td></tr>
-<tr><td><strong>🟠 CAUTION</strong></td><td>Getting risky</td><td>2</td></tr>
-<tr><td><strong>🔴 DANGER</strong></td><td>Big trouble</td><td>3</td></tr>
-</tbody>
-</table>
-
-<h3 id="confirmation-counter">Confirmation Counter<a class="headerlink" href="#confirmation-counter" title="Permanent link">&para;</a></h3>
-<p>Shows how many bars are building toward a regime change:</p>
+<h3 id="reading-the-table">Reading the Table<a class="headerlink" href="#reading-the-table" title="Permanent link">&para;</a></h3>
+<p><strong>Ideal Bullish Setup:</strong></p>
 <ul>
-<li><code>↑4</code> = 4 bars pointing to buying (accumulation)</li>
-<li><code>↓2</code> = 2 bars pointing to selling (distribution)</li>
-<li><code>...</code> = Nothing building yet</li>
-</ul>
-<p>Higher numbers = regime change more likely.</p>
-
-<h3 id="volume-bar-coloring">Volume Bar Coloring<a class="headerlink" href="#volume-bar-coloring" title="Permanent link">&para;</a></h3>
-<p>Volume bar colors show how strong the regime is:</p>
-<table>
-<thead><tr><th>Color</th><th>When</th><th>Meaning</th></tr></thead>
-<tbody>
-<tr><td><strong>Bright Green</strong></td><td>Buying &gt;70%</td><td>Strong buyers</td></tr>
-<tr><td><strong>Soft Green</strong></td><td>Buying 50-70%</td><td>Moderate buyers</td></tr>
-<tr><td><strong>Bright Red</strong></td><td>Selling &gt;70%</td><td>Strong sellers</td></tr>
-<tr><td><strong>Soft Red</strong></td><td>Selling 50-70%</td><td>Moderate sellers</td></tr>
-<tr><td><strong>Gold</strong></td><td>Weakening</td><td>Be careful</td></tr>
-<tr><td><strong>Gray</strong></td><td>Neutral</td><td>No clear direction</td></tr>
-</tbody>
-</table>
-<p>Brighter color = stronger signal.</p>
-
-<h3 id="regime-meter-table">Regime Meter Table<a class="headerlink" href="#regime-meter-table" title="Permanent link">&para;</a></h3>
-<p>A small table in the corner shows 6 things at once:</p>
-<table>
-<thead><tr><th>Row</th><th>What It Shows</th><th>Example</th></tr></thead>
-<tbody>
-<tr><td><strong>State</strong></td><td>Current regime</td><td>Accumulation, Distribution, Neutral</td></tr>
-<tr><td><strong>Strength</strong></td><td>How strong (0-100%)</td><td>78%</td></tr>
-<tr><td><strong>Health</strong></td><td>Early warning status</td><td>✓ STRONG, ⚠️ FADING</td></tr>
-<tr><td><strong>Confirm</strong></td><td>Bars building</td><td>↑4 (4 bars)</td></tr>
-<tr><td><strong>Flow</strong></td><td>Buy/sell direction</td><td>Bullish, Bearish, Mixed</td></tr>
-<tr><td><strong>Duration</strong></td><td>How long in this regime</td><td>23 bars</td></tr>
-</tbody>
-</table>
-<p><strong>Quick tip:</strong> Check Health first — it warns you before exits trigger.</p>
-
-<h3 id="regime-strength">Regime Strength<a class="headerlink" href="#regime-strength" title="Permanent link">&para;</a></h3>
-<p><strong>Strength displayed as percentage (0-100%):</strong></p>
-<table>
-<thead><tr><th>Strength</th><th>Interpretation</th><th>Action</th></tr></thead>
-<tbody>
-<tr><td><strong>80-100%</strong></td><td>Very strong regime</td><td>High confidence</td></tr>
-<tr><td><strong>60-79%</strong></td><td>Moderate regime</td><td>Direction established</td></tr>
-<tr><td><strong>40-59%</strong></td><td>Weak regime</td><td>Be cautious</td></tr>
-<tr><td><strong>0-39%</strong></td><td>Very weak/transitioning</td><td>Wait for clarity</td></tr>
-</tbody>
-</table>
-
-<!-- 📸 SCREENSHOT NEEDED - Volume Oracle Regime Detection
-     What to show: Chart with green/red/gold background showing regime states
-     Setup: Find chart transitioning between regimes
-     Label/Annotate: Point to background colors, regime strength percentage
-     File name suggestion: volume-oracle-regime-detection.png
--->
-<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
-  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
-  <p style="margin: 0; color: #424242;"><strong>Volume Oracle Regime Detection (Background Colors)</strong></p>
-  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a chart showing green/red/gold background colors indicating different market regimes.</p>
-</div>
-
-<hr />
-<h2 id="system-2-signal-generation">📊 System 2: Signal Generation<a class="headerlink" href="#system-2-signal-generation" title="Permanent link">&para;</a></h2>
-<h3 id="signal-types">Signal Types<a class="headerlink" href="#signal-types" title="Permanent link">&para;</a></h3>
-<p><strong>BULL Signal:</strong> Bullish entry opportunity detected<br />
-<strong>BEAR Signal:</strong> Bearish entry opportunity detected</p>
-<p>Signals appear as labels on the chart with direction and quality rating.</p>
-<h3 id="signal-quality-ratings">Signal Quality Ratings<a class="headerlink" href="#signal-quality-ratings" title="Permanent link">&para;</a></h3>
-<p>Every signal includes a quality score shown as stars:</p>
-<table>
-<thead><tr><th>Rating</th><th>Quality %</th><th>Interpretation</th></tr></thead>
-<tbody>
-<tr><td><strong>⭐⭐⭐</strong></td><td>80-100%</td><td>Elite quality — highest confidence</td></tr>
-<tr><td><strong>⭐⭐</strong></td><td>60-79%</td><td>Premium quality — good confidence</td></tr>
-<tr><td><strong>⭐</strong></td><td>40-59%</td><td>Standard quality — moderate confidence</td></tr>
-</tbody>
-</table>
-<h3 id="signal-components">Signal Components<a class="headerlink" href="#signal-components" title="Permanent link">&para;</a></h3>
-<p>Quality score calculated from multiple factors:</p>
-<ul>
-<li><strong>Regime alignment</strong> — Signal direction matching current regime?</li>
-<li><strong>Volume confirmation</strong> — Volume backing the move?</li>
-<li><strong>HTF confirmation</strong> — Higher timeframe agrees?</li>
-<li><strong>Price structure</strong> — Price at a logical level?</li>
-</ul>
-<h3 id="signal-display">Signal Display<a class="headerlink" href="#signal-display" title="Permanent link">&para;</a></h3>
-<p><strong>On-Chart Label Shows:</strong></p>
-<pre><code>🟢 BULL ⭐⭐⭐
-Quality: 85%
-</code></pre>
-
-<!-- 📸 SCREENSHOT NEEDED - Volume Oracle Signal with Quality Rating
-     What to show: BULL or BEAR signal label with star rating
-     Setup: Find a recent signal with visible quality score
-     Label/Annotate: Point to signal direction, star rating, quality percentage
-     File name suggestion: volume-oracle-signal-quality.png
--->
-<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
-  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
-  <p style="margin: 0; color: #424242;"><strong>Volume Oracle Signal with Quality Rating</strong></p>
-  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a chart showing a BULL/BEAR signal with star quality rating.</p>
-</div>
-
-<hr />
-<h2 id="system-3-risk-management">📊 System 3: Risk Management<a class="headerlink" href="#system-3-risk-management" title="Permanent link">&para;</a></h2>
-<h3 id="automatic-levels">Automatic Levels<a class="headerlink" href="#automatic-levels" title="Permanent link">&para;</a></h3>
-<p>When a signal fires, Volume Oracle automatically calculates:</p>
-<ul>
-<li><strong>Entry Price:</strong> Optimal entry level</li>
-<li><strong>Stop Loss:</strong> Risk-defined exit level</li>
-<li><strong>Target 1 (T1):</strong> First profit target</li>
-<li><strong>Target 2 (T2):</strong> Extended profit target</li>
-</ul>
-<h3 id="position-sizing">Position Sizing<a class="headerlink" href="#position-sizing" title="Permanent link">&para;</a></h3>
-<p><strong>Based on your configured risk amount:</strong></p>
-<pre><code>Position Size = Risk Amount ÷ Stop Distance
-</code></pre>
-<p><strong>Example:</strong></p>
-<pre><code>Risk Amount: $150
-Entry: $185.42
-Stop: $182.15
-Stop Distance: $3.27
-Position Size: $150 ÷ $3.27 = 46 shares
-</code></pre>
-<h3 id="risk-display">Risk Display<a class="headerlink" href="#risk-display" title="Permanent link">&para;</a></h3>
-<p><strong>On-Chart Labels Show:</strong></p>
-<table>
-<thead><tr><th>Element</th><th>Color</th><th>Purpose</th></tr></thead>
-<tbody>
-<tr><td><strong>Entry Line</strong></td><td>Blue</td><td>Entry price level</td></tr>
-<tr><td><strong>Stop Line</strong></td><td>Red</td><td>Stop loss level</td></tr>
-<tr><td><strong>T1 Line</strong></td><td>Green</td><td>First target</td></tr>
-<tr><td><strong>T2 Line</strong></td><td>Bright Green</td><td>Extended target</td></tr>
-</tbody>
-</table>
-<h3 id="risk-management-settings">Risk Management Settings<a class="headerlink" href="#risk-management-settings" title="Permanent link">&para;</a></h3>
-<table>
-<thead><tr><th>Setting</th><th>Description</th><th>Example</th></tr></thead>
-<tbody>
-<tr><td><strong>Risk Amount</strong></td><td>Dollar amount to risk per trade</td><td>$150</td></tr>
-<tr><td><strong>R:R Ratio</strong></td><td>Risk-to-reward for targets</td><td>1:2, 1:3</td></tr>
-<tr><td><strong>Auto-Breakeven</strong></td><td>Move stop to entry after T1</td><td>On/Off</td></tr>
-</tbody>
-</table>
-
-<!-- 📸 SCREENSHOT NEEDED - Volume Oracle Risk Management Display
-     What to show: Chart with Entry, Stop, T1, T2 lines and position size
-     Setup: Signal with all risk levels visible
-     Label/Annotate: Point to entry, stop, targets, and size calculation
-     File name suggestion: volume-oracle-risk-management.png
--->
-<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
-  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
-  <p style="margin: 0; color: #424242;"><strong>Volume Oracle Risk Management Display</strong></p>
-  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a chart showing entry, stop loss, and target lines with position size calculation.</p>
-</div>
-
-<hr />
-<h2 id="system-4-htf-confirmation">📊 System 4: HTF Confirmation<a class="headerlink" href="#system-4-htf-confirmation" title="Permanent link">&para;</a></h2>
-<h3 id="what-htf-confirmation-does">What HTF Confirmation Does<a class="headerlink" href="#what-htf-confirmation-does" title="Permanent link">&para;</a></h3>
-<p>Checks if the higher timeframe agrees with your signal direction:</p>
-<ul>
-<li><strong>HTF Aligned:</strong> Higher timeframe regime matches signal direction</li>
-<li><strong>HTF Not Aligned:</strong> Higher timeframe regime conflicts with signal</li>
-</ul>
-<h3 id="htf-alignment-logic">HTF Alignment Logic<a class="headerlink" href="#htf-alignment-logic" title="Permanent link">&para;</a></h3>
-<table>
-<thead><tr><th>Signal</th><th>HTF Regime</th><th>Status</th></tr></thead>
-<tbody>
-<tr><td>BULL</td><td>Accumulation</td><td>✅ Aligned</td></tr>
-<tr><td>BULL</td><td>Distribution</td><td>❌ Not Aligned</td></tr>
-<tr><td>BEAR</td><td>Distribution</td><td>✅ Aligned</td></tr>
-<tr><td>BEAR</td><td>Accumulation</td><td>❌ Not Aligned</td></tr>
-</tbody>
-</table>
-<h3 id="htf-timeframe-mapping">HTF Timeframe Mapping<a class="headerlink" href="#htf-timeframe-mapping" title="Permanent link">&para;</a></h3>
-<table>
-<thead><tr><th>Your Chart</th><th>HTF Checked</th></tr></thead>
-<tbody>
-<tr><td>5m</td><td>1H</td></tr>
-<tr><td>15m</td><td>4H</td></tr>
-<tr><td>1H</td><td>Daily</td></tr>
-<tr><td>4H</td><td>Weekly</td></tr>
-<tr><td>Daily</td><td>Weekly</td></tr>
-</tbody>
-</table>
-
-<!-- 📸 SCREENSHOT NEEDED - Volume Oracle HTF Confirmation
-     What to show: Signal with HTF alignment status visible
-     Setup: Find signal showing HTF aligned/not aligned indicator
-     Label/Annotate: Point to HTF status indicator, timeframe being checked
-     File name suggestion: volume-oracle-htf-confirmation.png
--->
-<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
-  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
-  <p style="margin: 0; color: #424242;"><strong>Volume Oracle HTF Confirmation</strong></p>
-  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a chart showing HTF alignment status on signals.</p>
-</div>
-
-<hr />
-<h2 id="system-5-strategy-modes">📊 System 5: Strategy Modes<a class="headerlink" href="#system-5-strategy-modes" title="Permanent link">&para;</a></h2>
-<h3 id="available-modes">Available Modes<a class="headerlink" href="#available-modes" title="Permanent link">&para;</a></h3>
-<p>Volume Oracle offers three strategy modes to match your trading style:</p>
-<h4>Trend Following Mode</h4>
-<p><strong>Best for:</strong> Trending markets, swing trades<br />
-<strong>Signals:</strong> Only fires when regime is established (Accumulation or Distribution)<br />
-<strong>Logic:</strong> Trade with the trend, avoid counter-trend entries</p>
-<h4>Mean Reversion Mode</h4>
-<p><strong>Best for:</strong> Range-bound markets, quick reversals<br />
-<strong>Signals:</strong> Fires at regime extremes (overbought/oversold)<br />
-<strong>Logic:</strong> Look for exhaustion and reversal opportunities</p>
-<h4>Hybrid Mode (Default)</h4>
-<p><strong>Best for:</strong> Mixed market conditions<br />
-<strong>Signals:</strong> Combines trend and reversal signals based on context<br />
-<strong>Logic:</strong> Adapts to current market structure automatically</p>
-<h3 id="mode-selection">Mode Selection<a class="headerlink" href="#mode-selection" title="Permanent link">&para;</a></h3>
-<table>
-<thead><tr><th>Market Condition</th><th>Recommended Mode</th></tr></thead>
-<tbody>
-<tr><td>Strong uptrend/downtrend</td><td>Trend Following</td></tr>
-<tr><td>Sideways/ranging</td><td>Mean Reversion</td></tr>
-<tr><td>Unsure/mixed</td><td>Hybrid</td></tr>
-</tbody>
-</table>
-
-<!-- 📸 SCREENSHOT NEEDED - Volume Oracle Strategy Mode Settings
-     What to show: Settings panel with strategy mode selection
-     Setup: Open indicator settings, show mode dropdown/options
-     Label/Annotate: Point to mode options (Trend Following, Mean Reversion, Hybrid)
-     File name suggestion: volume-oracle-strategy-modes.png
--->
-<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
-  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
-  <p style="margin: 0; color: #424242;"><strong>Volume Oracle Strategy Mode Settings</strong></p>
-  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a settings panel screenshot showing the three strategy mode options.</p>
-</div>
-
-<hr />
-<h2 id="educational-example-regime-signal-workflow">📖 Educational Example: Regime + Signal Workflow<a class="headerlink" href="#educational-example-regime-signal-workflow" title="Permanent link">&para;</a></h2>
-<p><em>(Historical observation for educational purposes only. Not financial advice. Past performance does not indicate future results.)</em></p>
-<p><strong>Asset:</strong> S&amp;P 500 Futures (ES)<br />
-<strong>Timeframe:</strong> 5-Minute Chart<br />
-<strong>Date:</strong> January 10, 2025</p>
-<h3 id="setup-conditions-1030-am">Setup Conditions (10:30 AM)<a class="headerlink" href="#setup-conditions-1030-am" title="Permanent link">&para;</a></h3>
-<p><strong>Regime Detection:</strong><br />
-- Green background visible (Accumulation regime)<br />
-- Regime strength: 72%<br />
-- Pattern: Established bullish regime for past hour</p>
-<p><strong>Signal Generation:</strong><br />
-- 🟢 BULL signal fires at 4,715<br />
-- Quality: ⭐⭐⭐ (85%)<br />
-- HTF: Aligned (1H also in Accumulation)</p>
-<p><strong>Risk Management:</strong><br />
-- Entry: 4,715<br />
-- Stop: 4,702 (13 pts risk)<br />
-- T1: 4,741 (26 pts, 2:1 R:R)<br />
-- Position Size: 11 contracts ($150 risk)</p>
-<h3 id="sequence-observed">Sequence Observed<a class="headerlink" href="#sequence-observed" title="Permanent link">&para;</a></h3>
-<table>
-<thead><tr><th>Time</th><th>Price</th><th>Regime</th><th>Event</th></tr></thead>
-<tbody>
-<tr><td>10:30</td><td>4,715</td><td>Green (72%)</td><td>🟢 BULL ⭐⭐⭐ signal - Entry</td></tr>
-<tr><td>10:45</td><td>4,722</td><td>Green (75%)</td><td>Regime strengthening</td></tr>
-<tr><td>11:15</td><td>4,735</td><td>Green (78%)</td><td>Approaching T1</td></tr>
-<tr><td>11:30</td><td>4,741</td><td>Green (74%)</td><td>🎯 T1 Hit - Partial exit</td></tr>
-<tr><td>12:00</td><td>4,738</td><td>Gold (58%)</td><td>⚠️ Regime Weakening alert</td></tr>
-<tr><td>12:30</td><td>4,732</td><td>Gray (45%)</td><td>Exit remaining - Regime fading</td></tr>
-</tbody>
-</table>
-<p><strong>Outcome:</strong> T1 hit at +26 points. Regime weakening alert triggered exit before pullback.</p>
-<p><strong>System Integration:</strong><br />
-- Regime Detection confirmed bullish environment (green background)<br />
-- Signal Generation provided entry with quality rating (⭐⭐⭐)<br />
-- Risk Management set automatic levels (entry/stop/T1)<br />
-- Regime Weakening alert signaled exit timing</p>
-<p><em>This example demonstrates integrated three-system analysis. Individual interpretation and outcomes vary.</em></p>
-<hr />
-<h2 id="alert-configuration">🔔 Alert Configuration<a class="headerlink" href="#alert-configuration" title="Permanent link">&para;</a></h2>
-<p><strong>Available Alerts (25 Total):</strong></p>
-
-<h3 id="entry-alerts">Entry Alerts (5)</h3>
-<table>
-<thead>
-<tr>
-<th>Alert Name</th>
-<th>When It Fires</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>🟢 BULL Signal</strong></td>
-<td>Bullish flow confirmed</td>
-</tr>
-<tr>
-<td><strong>🔴 BEAR Signal</strong></td>
-<td>Bearish flow confirmed</td>
-</tr>
-<tr>
-<td><strong>⚡ ANY Signal</strong></td>
-<td>Either direction (bull or bear)</td>
-</tr>
-<tr>
-<td><strong>⭐⭐⭐ High Quality Only</strong></td>
-<td>3-star signals only (80%+ quality)</td>
-</tr>
-<tr>
-<td><strong>🚫 Signal Blocked</strong></td>
-<td>Signal prevented by filter (cooldown, HTF, etc.)</td>
-</tr>
-</tbody>
-</table>
-
-<h3 id="position-alerts">Position Alerts (5)</h3>
-<table>
-<thead>
-<tr>
-<th>Alert Name</th>
-<th>When It Fires</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>🎯 Target 1 Hit</strong></td>
-<td>Price reaches T1</td>
-</tr>
-<tr>
-<td><strong>🎯 Target 2 Hit</strong></td>
-<td>Price reaches T2</td>
-</tr>
-<tr>
-<td><strong>🔒 Breakeven</strong></td>
-<td>Stop moved to entry</td>
-</tr>
-<tr>
-<td><strong>❌ Stop Loss Hit</strong></td>
-<td>Price hits stop level</td>
-</tr>
-<tr>
-<td><strong>⚠️ Exit Warning</strong></td>
-<td>Any exit condition triggered</td>
-</tr>
-</tbody>
-</table>
-
-<h3 id="regime-alerts">Regime Alerts (5)</h3>
-<table>
-<thead>
-<tr>
-<th>Alert Name</th>
-<th>When It Fires</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>📈 Regime → Accumulation</strong></td>
-<td>Regime flips bullish</td>
-</tr>
-<tr>
-<td><strong>📉 Regime → Distribution</strong></td>
-<td>Regime flips bearish</td>
-</tr>
-<tr>
-<td><strong>⚖️ Regime → Neutral</strong></td>
-<td>Regime becomes neutral</td>
-</tr>
-<tr>
-<td><strong>🔄 Any Regime Change</strong></td>
-<td>Any regime flip</td>
-</tr>
-<tr>
-<td><strong>⚡ Regime Weakening</strong></td>
-<td>Regime losing strength</td>
-</tr>
-</tbody>
-</table>
-
-<h3 id="health-alerts">Health Alerts (4)</h3>
-<table>
-<thead>
-<tr>
-<th>Alert Name</th>
-<th>When It Fires</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>📉 Momentum Fading</strong></td>
-<td>Price momentum declining while regime active</td>
-</tr>
-<tr>
-<td><strong>📉 Flow Deteriorating</strong></td>
-<td>Buy/sell flow ratio weakening</td>
-</tr>
-<tr>
-<td><strong>📉 Volume Drying Up</strong></td>
-<td>Volume declining below average</td>
-</tr>
-<tr>
-<td><strong>🟠 Multiple Warnings</strong></td>
-<td>2+ health indicators flagged simultaneously</td>
-</tr>
-</tbody>
-</table>
-
-<h3 id="htf-alerts">HTF Alerts (2)</h3>
-<table>
-<thead>
-<tr>
-<th>Alert Name</th>
-<th>When It Fires</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>✅ HTF Aligned</strong></td>
-<td>Timeframes align</td>
-</tr>
-<tr>
-<td><strong>❌ HTF Broke</strong></td>
-<td>Alignment lost</td>
-</tr>
-</tbody>
-</table>
-
-<h3 id="structure-alerts">Structure Alerts (4)</h3>
-<table>
-<thead>
-<tr>
-<th>Alert Name</th>
-<th>When It Fires</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>📈 Structure Bullish</strong></td>
-<td>HH/HL pattern confirmed (bullish structure)</td>
-</tr>
-<tr>
-<td><strong>📉 Structure Bearish</strong></td>
-<td>LH/LL pattern confirmed (bearish structure)</td>
-</tr>
-<tr>
-<td><strong>⚠️ Structure Conflict</strong></td>
-<td>Price structure disagrees with regime</td>
-</tr>
-<tr>
-<td><strong>✅ Structure Aligned</strong></td>
-<td>Price structure confirms regime direction</td>
-</tr>
-</tbody>
-</table>
-
-<h3 id="alert-message-data">Alert Message Data</h3>
-<p>Entry signal alerts include actionable trade data:</p>
-<pre><code>🟢 BULL ⭐⭐⭐ | AAPL 15m
-Quality: 82% | Regime: 67%
-Entry: 185.42 | Stop: 182.15
-T1: 188.69 | T2: 193.23
-Size: 47 shares | Risk: $150</code></pre>
-
-<p><strong>Fields explained:</strong></p>
-<ul>
-<li><strong>Quality</strong> — Signal strength score (0-100%)</li>
-<li><strong>Regime</strong> — Current regime strength</li>
-<li><strong>Entry/Stop/T1/T2</strong> — Price levels</li>
-<li><strong>Size</strong> — Calculated position size in shares/contracts (Risk Amount ÷ Stop Distance)</li>
-<li><strong>Risk</strong> — Dollar amount at risk</li>
+<li>Regime: ACCUMULATION</li>
+<li>Status: STRONG ✓</li>
+<li>Health: 🟢</li>
+<li>Structure: ✓ ALIGNED</li>
+<li>Market: TRENDING ▲</li>
+<li>Flip: STABLE ✓</li>
 </ul>
 
-<p><strong>Alert Setup:</strong><br />
-1. Open indicator settings<br />
-2. Navigate to alert section<br />
-3. Enable desired alert types<br />
-4. Set thresholds (quality minimum, regime strength)<br />
-5. Configure notification method</p>
+<p><strong>Warning Signs:</strong></p>
+<ul>
+<li>Status: FADING or WEAK → Regime losing strength</li>
+<li>Health: 🟠 or 🔴 → Multiple warning flags</li>
+<li>Structure: ✗ CONFLICT → Price disagrees with regime</li>
+<li>Market: CHOPPY → Unreliable signals</li>
+<li>Flip: → DIST 2/3 → About to flip bearish</li>
+</ul>
+
 <hr />
-<div class="sp-callout sp-callout--summary">
-  <div class="sp-callout__title">What You've Learned</div>
-  <ul>
-    <li><strong>Five-System Architecture:</strong> Volume Oracle combines Regime Detection, Signal Generation, Risk Management, HTF Confirmation, and Strategy Modes into a comprehensive trading system</li>
-    <li><strong>Regime Detection:</strong> Color-coded background overlays (green=Accumulation, red=Distribution, gray=Neutral, gold=Weakening) show the current market phase with strength percentage</li>
-    <li><strong>Signal Generation:</strong> BULL/BEAR signals with star quality ratings (⭐⭐⭐ = 80-100%, ⭐⭐ = 60-79%, ⭐ = 40-59%) based on regime alignment, volume confirmation, and HTF agreement</li>
-    <li><strong>Risk Management:</strong> Automatic calculation of Entry, Stop, T1, T2 levels with position sizing based on your configured risk amount (Position Size = Risk ÷ Stop Distance)</li>
-    <li><strong>HTF Confirmation:</strong> Checks if higher timeframe regime agrees with signal direction for additional confluence</li>
-    <li><strong>Strategy Modes:</strong> Three trading approaches (Trend Following, Mean Reversion, Hybrid) to match different market conditions</li>
-    <li><strong>Comprehensive Alert System:</strong> 25 alerts across 6 categories (Entry, Position, Regime, Health, HTF, Structure) with actionable trade data including quality score, regime strength, entry/stop/target levels, position size, and risk amount</li>
-  </ul>
-  <p><strong>Next Steps:</strong> Explore <a href="../plutus-flow-v10/">Plutus Flow v1.0</a> for alternative flow analysis methods, or see <a href="../how-to-alerts/">Alert Setup Guide</a> to configure volume-based notifications.</p>
-</div>
+<h2 id="backend-systems">📊 Backend Systems<a class="headerlink" href="#backend-systems" title="Permanent link">&para;</a></h2>
+<p>Volume Oracle includes five intelligent backend systems that work automatically:</p>
+
+<h3 id="market-structure-detection">1. Market Structure Detection<a class="headerlink" href="#market-structure-detection" title="Permanent link">&para;</a></h3>
+<p>Analyzes swing highs and lows to determine if price structure confirms or conflicts with the current regime.</p>
+<table>
+<thead>
+<tr><th>Structure</th><th>Meaning</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>BULLISH</strong></td><td>Uptrend structure (higher highs/lows)</td></tr>
+<tr><td><strong>BEARISH</strong></td><td>Downtrend structure (lower highs/lows)</td></tr>
+<tr><td><strong>MIXED</strong></td><td>Transitioning between states</td></tr>
+<tr><td><strong>UNCLEAR</strong></td><td>Ranging or choppy price action</td></tr>
+</tbody>
+</table>
+<p><strong>Impact:</strong> Signals receive quality bonus when structure aligns with regime direction, penalty when conflicting.</p>
+
+<h3 id="institutional-footprint-detection">2. Institutional Footprint Detection<a class="headerlink" href="#institutional-footprint-detection" title="Permanent link">&para;</a></h3>
+<p>Classifies volume bars by their characteristics to identify potential institutional activity:</p>
+<table>
+<thead>
+<tr><th>Type</th><th>Characteristics</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>MOMENTUM</strong></td><td>High volume with strong directional conviction</td></tr>
+<tr><td><strong>ABSORPTION</strong></td><td>High volume with price containment (supply/demand absorbed)</td></tr>
+<tr><td><strong>SPIKE</strong></td><td>Elevated volume without clear directional signature</td></tr>
+<tr><td><strong>NORMAL</strong></td><td>Typical volume activity</td></tr>
+</tbody>
+</table>
+<p><strong>Impact:</strong> Quality scoring adjusts based on footprint type alignment with signal direction.</p>
+
+<h3 id="regime-stability-index">3. Regime Stability Index<a class="headerlink" href="#regime-stability-index" title="Permanent link">&para;</a></h3>
+<p>Tracks regime flip frequency over a rolling window to characterize market conditions:</p>
+<table>
+<thead>
+<tr><th>Character</th><th>Meaning</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>TRENDING</strong></td><td>Stable regime, few recent flips</td></tr>
+<tr><td><strong>NORMAL</strong></td><td>Moderate regime stability</td></tr>
+<tr><td><strong>CHOPPY</strong></td><td>Frequent regime changes</td></tr>
+</tbody>
+</table>
+<p><strong>Impact:</strong> Signal quality expectations automatically adjust based on market character.</p>
+
+<h3 id="confluence-scoring">4. Confluence Scoring<a class="headerlink" href="#confluence-scoring" title="Permanent link">&para;</a></h3>
+<p>Evaluates how many independent factors support each signal:</p>
+<p><strong>Factors Evaluated:</strong></p>
+<ul>
+<li>Volume spike presence</li>
+<li>Flow direction match</li>
+<li>Structure agreement</li>
+<li>HTF alignment (if enabled)</li>
+<li>Footprint confirmation</li>
+<li>Market character</li>
+<li>Regime strength</li>
+</ul>
+<p><strong>Impact:</strong> Higher confluence = higher quality score. Signals with multiple confirming factors receive bonus points.</p>
+
+<h3 id="signal-density-tracking">5. Signal Density Tracking<a class="headerlink" href="#signal-density-tracking" title="Permanent link">&para;</a></h3>
+<p>Monitors signal frequency in recent bars to identify potentially choppy conditions.</p>
+<p><strong>Impact:</strong> When many signals cluster together, individual signal quality is reduced to reflect lower reliability in choppy markets.</p>
+
+<hr />
+<h2 id="settings">⚙️ Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h2>
+
+<h3 id="detection-settings">1️⃣ Detection<a class="headerlink" href="#detection-settings" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr><th>Setting</th><th>Default</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Volume spike threshold</strong></td><td>2.0</td><td>Higher = fewer signals, better quality</td></tr>
+<tr><td><strong>Signal cooldown (bars)</strong></td><td>45</td><td>Minimum bars between signals</td></tr>
+<tr><td><strong>Regime sensitivity</strong></td><td>Balanced</td><td>Conservative/Balanced/Aggressive</td></tr>
+<tr><td><strong>Auto-adapt to volatility</strong></td><td>✓ On</td><td>Adjusts thresholds automatically</td></tr>
+<tr><td><strong>Regime warnings</strong></td><td>✓ On</td><td>Show early warning when regime weakening</td></tr>
+</tbody>
+</table>
+
+<h3 id="risk-settings">2️⃣ Risk<a class="headerlink" href="#risk-settings" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr><th>Setting</th><th>Default</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Account size ($)</strong></td><td>10,000</td><td>For position sizing calculation</td></tr>
+<tr><td><strong>Risk per trade (%)</strong></td><td>1.0</td><td>% of account to risk</td></tr>
+<tr><td><strong>ATR length</strong></td><td>14</td><td>For stop/target calculations</td></tr>
+<tr><td><strong>Stop (ATR×)</strong></td><td>1.5</td><td>Stop loss distance</td></tr>
+<tr><td><strong>Target 1 (ATR×)</strong></td><td>2.0</td><td>First profit target</td></tr>
+<tr><td><strong>Target 2 (ATR×)</strong></td><td>3.5</td><td>Second profit target</td></tr>
+<tr><td><strong>Partial exit at T1 (%)</strong></td><td>50</td><td>Position % to close at T1</td></tr>
+<tr><td><strong>Trailing stop</strong></td><td>✓ On</td><td>Trail after T1 hit</td></tr>
+<tr><td><strong>Trailing (ATR×)</strong></td><td>1.0</td><td>Trailing stop distance</td></tr>
+<tr><td><strong>Breakeven (ATR×)</strong></td><td>1.0</td><td>When to move stop to BE</td></tr>
+</tbody>
+</table>
+
+<h3 id="multi-timeframe-settings">3️⃣ Multi-Timeframe<a class="headerlink" href="#multi-timeframe-settings" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr><th>Setting</th><th>Default</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Enable HTF filter</strong></td><td>Off</td><td>Require HTF alignment</td></tr>
+<tr><td><strong>HTF 1</strong></td><td>60 (1H)</td><td>Primary higher timeframe</td></tr>
+<tr><td><strong>Enable HTF 2</strong></td><td>Off</td><td>Second HTF filter</td></tr>
+<tr><td><strong>HTF 2</strong></td><td>240 (4H)</td><td>Secondary higher timeframe</td></tr>
+<tr><td><strong>Strict mode</strong></td><td>✓ On</td><td>Hide signals when HTF disagrees</td></tr>
+<tr><td><strong>Min HTF strength (%)</strong></td><td>40</td><td>Required HTF regime strength</td></tr>
+</tbody>
+</table>
+
+<h3 id="strategy-settings">4️⃣ Strategy<a class="headerlink" href="#strategy-settings" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr><th>Setting</th><th>Default</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Mode</strong></td><td>Trend Following</td><td>Trend Following / Mean Reversion / Hybrid</td></tr>
+<tr><td><strong>Mean reversion signals</strong></td><td>Off</td><td>Show counter-trend signals at extremes</td></tr>
+<tr><td><strong>MR threshold</strong></td><td>2.5</td><td>How extreme for MR signal</td></tr>
+</tbody>
+</table>
+
+<h3 id="display-settings">5️⃣ Display<a class="headerlink" href="#display-settings" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr><th>Setting</th><th>Default</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Regime table</strong></td><td>✓ On</td><td>Show regime dashboard</td></tr>
+<tr><td><strong>Regime background</strong></td><td>✓ On</td><td>Tint chart background</td></tr>
+<tr><td><strong>Exit warnings</strong></td><td>✓ On</td><td>Show ⚠️ labels</td></tr>
+<tr><td><strong>Quality stars</strong></td><td>✓ On</td><td>Show ⭐ on signals</td></tr>
+<tr><td><strong>T1/BE labels</strong></td><td>Off</td><td>Show management labels (clutters chart)</td></tr>
+<tr><td><strong>Risk in tooltips</strong></td><td>✓ On</td><td>Show stop/targets in tooltips</td></tr>
+<tr><td><strong>Size in tooltips</strong></td><td>✓ On</td><td>Show position size in tooltips</td></tr>
+<tr><td><strong>HTF table</strong></td><td>✓ On</td><td>Show HTF panel when enabled</td></tr>
+</tbody>
+</table>
+
+<h3 id="table-style-settings">6️⃣ Table Style<a class="headerlink" href="#table-style-settings" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr><th>Setting</th><th>Default</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Layout</strong></td><td>Vertical</td><td>Horizontal or Vertical</td></tr>
+<tr><td><strong>Position</strong></td><td>Bottom Right</td><td>9 position options</td></tr>
+<tr><td><strong>Text size</strong></td><td>Tiny</td><td>Tiny/Small/Normal/Large</td></tr>
+<tr><td><strong>Transparency</strong></td><td>85</td><td>0=solid, 100=invisible</td></tr>
+<tr><td><strong>Border</strong></td><td>1</td><td>Border width 0-3</td></tr>
+<tr><td><strong>Frame</strong></td><td>0</td><td>Outer frame 0-3</td></tr>
+<tr><td><strong>HTF position</strong></td><td>Bottom Center</td><td>HTF table position</td></tr>
+<tr><td><strong>HTF text size</strong></td><td>Tiny</td><td>HTF table text size</td></tr>
+</tbody>
+</table>
+
+<hr />
+<h2 id="alerts">🔔 Alerts (25 Total)<a class="headerlink" href="#alerts" title="Permanent link">&para;</a></h2>
+
+<h3 id="entry-alerts">Entry Alerts<a class="headerlink" href="#entry-alerts" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr><th>Alert</th><th>Fires When</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>🟢 BULL Signal</strong></td><td>Bullish flow signal generated</td></tr>
+<tr><td><strong>🔴 BEAR Signal</strong></td><td>Bearish flow signal generated</td></tr>
+<tr><td><strong>⚡ ANY Signal</strong></td><td>Either direction signal</td></tr>
+</tbody>
+</table>
+
+<h3 id="position-alerts">Position Alerts<a class="headerlink" href="#position-alerts" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr><th>Alert</th><th>Fires When</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>🎯 Target 1 Hit</strong></td><td>Price reaches T1</td></tr>
+<tr><td><strong>🔒 Breakeven</strong></td><td>Stop moved to entry</td></tr>
+<tr><td><strong>⚠️ Exit Warning</strong></td><td>Any exit condition triggered</td></tr>
+</tbody>
+</table>
+
+<h3 id="regime-alerts">Regime Alerts<a class="headerlink" href="#regime-alerts" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr><th>Alert</th><th>Fires When</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>📈 Regime → Accumulation</strong></td><td>Regime flips bullish</td></tr>
+<tr><td><strong>📉 Regime → Distribution</strong></td><td>Regime flips bearish</td></tr>
+<tr><td><strong>⚖️ Regime → Neutral</strong></td><td>Regime becomes neutral</td></tr>
+<tr><td><strong>🔄 Any Regime Change</strong></td><td>Any regime flip</td></tr>
+<tr><td><strong>⚡ Regime Weakening</strong></td><td>Regime losing strength</td></tr>
+</tbody>
+</table>
+
+<h3 id="structure-alerts">Structure Alerts (NEW)<a class="headerlink" href="#structure-alerts" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr><th>Alert</th><th>Fires When</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>📊 Structure Bullish</strong></td><td>HH/HL pattern detected</td></tr>
+<tr><td><strong>📊 Structure Bearish</strong></td><td>LH/LL pattern detected</td></tr>
+<tr><td><strong>⚠️ Structure Conflict</strong></td><td>Structure disagrees with regime</td></tr>
+</tbody>
+</table>
+
+<h3 id="footprint-alerts">Footprint Alerts (NEW)<a class="headerlink" href="#footprint-alerts" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr><th>Alert</th><th>Fires When</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>🏛️ Momentum Bar</strong></td><td>Institutional momentum detected</td></tr>
+<tr><td><strong>🏛️ Absorption Bar</strong></td><td>Institutional absorption detected</td></tr>
+</tbody>
+</table>
+
+<h3 id="market-alerts">Market Alerts (NEW)<a class="headerlink" href="#market-alerts" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr><th>Alert</th><th>Fires When</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>📈 Market Trending</strong></td><td>Low flip frequency detected</td></tr>
+<tr><td><strong>📉 Market Choppy</strong></td><td>High flip frequency detected</td></tr>
+</tbody>
+</table>
+
+<h3 id="confluence-alerts">Confluence Alert (NEW)<a class="headerlink" href="#confluence-alerts" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr><th>Alert</th><th>Fires When</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>🎯 High Confluence</strong></td><td>5+ factors align on signal</td></tr>
+</tbody>
+</table>
+
+<h3 id="htf-alerts">HTF Alerts<a class="headerlink" href="#htf-alerts" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr><th>Alert</th><th>Fires When</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>✅ HTF Aligned</strong></td><td>All timeframes agree</td></tr>
+<tr><td><strong>❌ HTF Broke</strong></td><td>Alignment lost</td></tr>
+</tbody>
+</table>
+
+<h3 id="alert-message-format">Alert Message Format<a class="headerlink" href="#alert-message-format" title="Permanent link">&para;</a></h3>
+<p>Entry signals include full trade data:</p>
+<pre style="background: #1a1a2e; padding: 1rem; border-radius: 8px; font-family: monospace; font-size: 0.85rem; overflow-x: auto;">
+🟢 BULLISH FLOW | BTCUSD 15m
+Quality: 82% ⭐⭐⭐ | Regime: 67%
+Entry: 94,250 | Stop: 93,100
+T1: 95,400 | T2: 97,700
+Size: 0.85 BTC | Risk: $100
+Structure: ✓ ALIGNED | Market: TRENDING</pre>
+
+<hr />
+<h2 id="how-to-use">📖 How to Use<a class="headerlink" href="#how-to-use" title="Permanent link">&para;</a></h2>
+
+<h3 id="step-1-check-regime">Step 1: Check Regime State<a class="headerlink" href="#step-1-check-regime" title="Permanent link">&para;</a></h3>
+<p>Before any trade, look at the regime table:</p>
+<table>
+<thead>
+<tr><th>Regime</th><th>Bias</th><th>Action</th></tr>
+</thead>
+<tbody>
+<tr><td>ACCUMULATION + STRONG</td><td>Bullish</td><td>Look for long signals</td></tr>
+<tr><td>DISTRIBUTION + STRONG</td><td>Bearish</td><td>Look for short signals</td></tr>
+<tr><td>NEUTRAL</td><td>None</td><td>Wait for clarity</td></tr>
+<tr><td>Any + FADING/WEAK</td><td>Caution</td><td>Reduce size or wait</td></tr>
+</tbody>
+</table>
+
+<h3 id="step-2-validate-structure">Step 2: Validate with Structure<a class="headerlink" href="#step-2-validate-structure" title="Permanent link">&para;</a></h3>
+<p>Check if price structure confirms regime:</p>
+<table>
+<thead>
+<tr><th>Structure</th><th>Regime</th><th>Action</th></tr>
+</thead>
+<tbody>
+<tr><td>✓ ALIGNED</td><td>Any</td><td>Full confidence</td></tr>
+<tr><td>— UNCLEAR</td><td>Any</td><td>Normal confidence</td></tr>
+<tr><td>✗ CONFLICT</td><td>Any</td><td>Reduced confidence, smaller size</td></tr>
+</tbody>
+</table>
+
+<h3 id="step-3-consider-market">Step 3: Consider Market Character<a class="headerlink" href="#step-3-consider-market" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr><th>Market</th><th>Action</th></tr>
+</thead>
+<tbody>
+<tr><td>TRENDING</td><td>Full position size</td></tr>
+<tr><td>NORMAL</td><td>Normal position size</td></tr>
+<tr><td>CHOPPY</td><td>Reduced size or skip</td></tr>
+</tbody>
+</table>
+
+<h3 id="step-4-wait-for-signal">Step 4: Wait for Signal<a class="headerlink" href="#step-4-wait-for-signal" title="Permanent link">&para;</a></h3>
+<p>When ↑ or ↓ signal appears:</p>
+<ol>
+<li>Check star rating (prefer ⭐⭐ or ⭐⭐⭐)</li>
+<li>Hover for tooltip (stop, targets, size)</li>
+<li>Verify regime still supports direction</li>
+<li>Enter if all factors align</li>
+</ol>
+
+<h3 id="step-5-manage-position">Step 5: Manage Position<a class="headerlink" href="#step-5-manage-position" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr><th>Label</th><th>Meaning</th><th>Action</th></tr>
+</thead>
+<tbody>
+<tr><td>T1</td><td>Target 1 hit</td><td>Take partial profit</td></tr>
+<tr><td>BE</td><td>Breakeven level</td><td>Move stop to entry</td></tr>
+<tr><td>⚠️</td><td>Exit warning</td><td>Prepare to exit</td></tr>
+</tbody>
+</table>
 
 <hr />
 <h2 id="integration-with-other-indicators">🔗 Integration with Other Indicators<a class="headerlink" href="#integration-with-other-indicators" title="Permanent link">&para;</a></h2>
@@ -3348,199 +3014,60 @@ Size: 47 shares | Risk: $150</code></pre>
 <p><strong>See also:</strong> <a href="../plutus-flow-v10/">Plutus Flow Documentation</a> for comparison from the other perspective.</p>
 
 <hr />
-<h2 id="common-mistakes-to-avoid">⚠️ Common Mistakes to Avoid<a class="headerlink" href="#common-mistakes-to-avoid" title="Permanent link">&para;</a></h2>
+<h2 id="common-mistakes">⚠️ Common Mistakes<a class="headerlink" href="#common-mistakes" title="Permanent link">&para;</a></h2>
 
-<div class="sp-callout sp-callout--warning">
-  <div class="sp-callout__title">Learn from Common Pitfalls</div>
-  <p>These mistakes are frequently made by new Volume Oracle users. Avoid them to improve your results:</p>
-</div>
+<h3 id="mistake-1-against-regime">Mistake #1: Trading Against Regime<a class="headerlink" href="#mistake-1-against-regime" title="Permanent link">&para;</a></h3>
+<p><strong>Wrong:</strong> Taking long signals in DISTRIBUTION regime</p>
+<p><strong>Right:</strong> Wait for regime flip or trade with regime direction</p>
 
-<h3 id="mistake-1-trading-every-signal">Mistake #1: Trading Every Signal Without Quality Check<a class="headerlink" href="#mistake-1-trading-every-signal" title="Permanent link">&para;</a></h3>
-<p><strong>The Problem:</strong> Not all signals are equal. A ⭐ (40-59% quality) signal is much weaker than a ⭐⭐⭐ (80-100%) signal. Trading every signal regardless of quality leads to poor results.</p>
-<p><strong>The Fix:</strong></p>
-<ul>
-<li><strong>⭐⭐⭐ signals (80-100%)</strong> → Full position size, high confidence</li>
-<li><strong>⭐⭐ signals (60-79%)</strong> → Reduced position size, moderate confidence</li>
-<li><strong>⭐ signals (40-59%)</strong> → Skip or very small size, low confidence</li>
-<li>Always check signal quality before entering a trade</li>
-</ul>
-<p><strong>Remember:</strong> Quality ratings exist for a reason. Higher quality = more confluence factors aligned = higher probability of success.</p>
+<h3 id="mistake-2-ignoring-structure">Mistake #2: Ignoring Structure Conflicts<a class="headerlink" href="#mistake-2-ignoring-structure" title="Permanent link">&para;</a></h3>
+<p><strong>Wrong:</strong> Full size when Structure shows ✗ CONFLICT</p>
+<p><strong>Right:</strong> Reduce size or skip when structure disagrees</p>
 
-<h3 id="mistake-2-ignoring-regime">Mistake #2: Ignoring the Regime Background<a class="headerlink" href="#mistake-2-ignoring-regime" title="Permanent link">&para;</a></h3>
-<p><strong>The Problem:</strong> Trading against the regime often leads to losses. A BULL signal during a Distribution (red) regime is fighting the trend.</p>
-<p><strong>The Fix:</strong></p>
-<ul>
-<li><strong>Green regime (Accumulation)</strong> → Favor BULL signals, be cautious with BEAR signals</li>
-<li><strong>Red regime (Distribution)</strong> → Favor BEAR signals, be cautious with BULL signals</li>
-<li><strong>Gray regime (Neutral)</strong> → Wait for regime clarity or use Mean Reversion mode</li>
-<li><strong>Gold regime (Weakening)</strong> → Prepare for regime change, reduce position sizes</li>
-</ul>
-<p><strong>Remember:</strong> The regime background tells you the market phase. Trade WITH the regime, not against it.</p>
+<h3 id="mistake-3-choppy-markets">Mistake #3: Trading in CHOPPY Markets<a class="headerlink" href="#mistake-3-choppy-markets" title="Permanent link">&para;</a></h3>
+<p><strong>Wrong:</strong> Normal size when Market shows CHOPPY</p>
+<p><strong>Right:</strong> Reduce size significantly or wait for TRENDING</p>
 
-<h3 id="mistake-3-ignoring-htf">Mistake #3: Not Checking HTF Confirmation<a class="headerlink" href="#mistake-3-ignoring-htf" title="Permanent link">&para;</a></h3>
-<p><strong>The Problem:</strong> A signal on your 15m chart might conflict with the 4H regime. Trading against the higher timeframe reduces probability.</p>
-<p><strong>The Fix:</strong></p>
-<ul>
-<li>Always check if HTF is Aligned before entering</li>
-<li><strong>HTF Aligned</strong> → Signal has higher timeframe support, proceed confidently</li>
-<li><strong>HTF Not Aligned</strong> → Signal is counter-trend on HTF, reduce size or skip</li>
-<li>The HTF alert will fire when alignment changes</li>
-</ul>
-<p><strong>Remember:</strong> Higher timeframe regimes are stronger. A 15m BULL signal is more likely to work if the 4H is also in Accumulation.</p>
+<h3 id="mistake-4-low-quality">Mistake #4: Chasing Low-Quality Signals<a class="headerlink" href="#mistake-4-low-quality" title="Permanent link">&para;</a></h3>
+<p><strong>Wrong:</strong> Trading every ⭐ signal</p>
+<p><strong>Right:</strong> Prefer ⭐⭐⭐ signals, be selective with ⭐</p>
 
-<h3 id="mistake-4-ignoring-regime-weakening">Mistake #4: Holding Through Regime Weakening<a class="headerlink" href="#mistake-4-ignoring-regime-weakening" title="Permanent link">&para;</a></h3>
-<p><strong>The Problem:</strong> When the background turns gold (Weakening), the current regime is losing strength. Many traders ignore this warning and hold until the regime fully flips.</p>
-<p><strong>The Fix:</strong></p>
-<ul>
-<li><strong>Gold background = warning sign</strong> → Regime is losing conviction</li>
-<li>Consider taking partial profits when regime weakens</li>
-<li>Tighten stops when you see the Regime Weakening alert</li>
-<li>Don't enter new positions during a weakening regime</li>
-</ul>
-<p><strong>Remember:</strong> The gold weakening phase is your warning. Use it to protect profits before the regime flips.</p>
-
-<h3 id="mistake-5-wrong-strategy-mode">Mistake #5: Using Wrong Strategy Mode for Market Conditions<a class="headerlink" href="#mistake-5-wrong-strategy-mode" title="Permanent link">&para;</a></h3>
-<p><strong>The Problem:</strong> Using Trend Following mode in a ranging market (or Mean Reversion in a trending market) leads to poor signal quality.</p>
-<p><strong>The Fix:</strong></p>
-<ul>
-<li><strong>Strong trend visible</strong> → Use Trend Following mode</li>
-<li><strong>Sideways/ranging market</strong> → Use Mean Reversion mode</li>
-<li><strong>Unsure or mixed</strong> → Use Hybrid mode (default)</li>
-<li>Switch modes when market conditions change</li>
-</ul>
-<p><strong>Remember:</strong> The Strategy Mode should match current market structure. Hybrid is safe if you're unsure.</p>
-
-<h3 id="mistake-6-ignoring-risk-levels">Mistake #6: Not Using the Auto-Calculated Risk Levels<a class="headerlink" href="#mistake-6-ignoring-risk-levels" title="Permanent link">&para;</a></h3>
-<p><strong>The Problem:</strong> Volume Oracle calculates Entry, Stop, T1, T2 for you. Ignoring these levels and placing arbitrary stops/targets reduces the system's effectiveness.</p>
-<p><strong>The Fix:</strong></p>
-<ul>
-<li>Use the calculated stop loss level (red line)</li>
-<li>Use T1 for first target (take partial profits)</li>
-<li>Consider moving stop to breakeven after T1 hit</li>
-<li>Configure your Risk Amount in settings for proper position sizing</li>
-</ul>
-<p><strong>Remember:</strong> The risk levels are calculated based on price structure. They're designed to give you proper risk:reward setups.</p>
-
-<div class="admonition info">
-<p class="admonition-title">Additional Resources</p>
-<p>For more trading best practices, see <a href="../ref-best-practices/">Best Practices &amp; Pro Tips</a>. For volume analysis workflows, see <a href="../ref-workflow/">Trading Workflow Guide</a>.</p>
-</div>
-
-<div class="advanced-learning-banner" style="
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-    padding: 40px;
-    border-radius: 16px;
-    margin: 60px 0;
-    text-align: center;
-    box-shadow: 0 10px 40px rgba(16, 185, 129, 0.3);
-    border: 3px solid rgba(255, 255, 255, 0.2);
-">
-    <div style="font-size: 48px; margin-bottom: 16px;">📊</div>
-
-    <h2 style="color: white; font-size: 32px; margin: 0 0 16px 0; font-weight: 700; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">
-        Follow the Smart Money, Not the Crowd
-    </h2>
-
-    <p style="color: rgba(255,255,255,0.95); font-size: 18px; max-width: 700px; margin: 0 auto 28px auto; line-height: 1.6;">
-        <strong>Advanced Learning Guide</strong> reveals: Why Accumulation regime doesn't mean "buy now," how to read Regime Weakening warnings before it's too late, the difference between regime detection and immediate price action, and when institutions are actually leaving (not when retail notices)
-    </p>
-
-    <a href="learning.html" style="
-        display: inline-block;
-        background: white;
-        color: #10b981;
-        padding: 18px 48px;
-        border-radius: 12px;
-        text-decoration: none;
-        font-weight: 700;
-        font-size: 18px;
-        transition: all 0.2s;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        border: 2px solid transparent;
-    " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)';">
-        💰 Open Learning Guide →
-    </a>
-
-    <div style="margin-top: 24px; color: rgba(255,255,255,0.85); font-size: 14px;">
-        ⏱️ 10-12 minute read
-    </div>
-</div>
+<h3 id="mistake-5-ignoring-warnings">Mistake #5: Ignoring Early Warnings<a class="headerlink" href="#mistake-5-ignoring-warnings" title="Permanent link">&para;</a></h3>
+<p><strong>Wrong:</strong> Holding full position when Status shows FADING</p>
+<p><strong>Right:</strong> Tighten stops or take profits when regime weakens</p>
 
 <hr />
 <h2 id="when-this-doesnt-work-well">🌫️ When This Doesn't Work Well<a class="headerlink" href="#when-this-doesnt-work-well" title="Permanent link">&para;</a></h2>
 
-<div class="sp-callout sp-callout--warning">
-  <div class="sp-callout__title">Understanding Reduced Reliability Conditions</div>
-  <p>Volume Oracle analysis shows reduced reliability in certain market conditions. Recognizing these environments helps set appropriate expectations:</p>
-</div>
+<h3 id="low-volume-sessions">Low Volume Sessions<a class="headerlink" href="#low-volume-sessions" title="Permanent link">&para;</a></h3>
+<p>Holiday trading, overnight sessions — regime detection less reliable when volume baseline is low.</p>
 
-<h3 id="extremely-low-volume-sessions">Extremely Low Volume Sessions<a class="headerlink" href="#extremely-low-volume-sessions" title="Permanent link">&para;</a></h3>
-<p><strong>The Condition:</strong> During major holidays (Christmas, Thanksgiving), extended weekends, or overnight sessions (especially for stocks/ETFs), volume drops to 10-30% of normal levels.</p>
-<p><strong>What Happens:</strong> Volume spikes become meaningless when baseline volume is already low. A 3x spike during overnight trading might represent 1/10th the volume of a normal day session move. Regime detection becomes unreliable when volume data isn't representative of institutional participation. Signals may fire but lack follow-through.</p>
-<p><strong>Context:</strong> Volume analysis works because volume represents participation and conviction. When total participation is minimal, volume metrics lose predictive power. It's like analyzing crowd behavior at an empty stadium—the signals exist but aren't statistically significant. Most effective volume analysis occurs during regular market hours when institutional participation is highest.</p>
+<h3 id="major-news-events">Major News Events<a class="headerlink" href="#major-news-events" title="Permanent link">&para;</a></h3>
+<p>Fed announcements, earnings — regime can flip multiple times in minutes. Wait for stabilization.</p>
 
-<h3 id="high-frequency-trading-environments">High-Frequency Trading Environments (24/7 Crypto)<a class="headerlink" href="#high-frequency-trading-environments" title="Permanent link">&para;</a></h3>
-<p><strong>The Condition:</strong> In crypto markets and some forex pairs, algorithmic high-frequency trading (HFT) and market makers create constant volume churn that isn't directional or intentional.</p>
-<p><strong>What Happens:</strong> Volume bars show constant high volume but without corresponding meaningful price movement. Volume spikes occur frequently (sometimes every 5-10 bars) due to HFT activity, not institutional positioning. Regime states may flip rapidly between Accumulation and Distribution. Signal-to-noise ratio drops—too many "significant" volume events for any to actually be significant.</p>
-<p><strong>Context:</strong> Volume Oracle analyzes volume as a measure of conviction and participation. In HFT-dominated environments, volume reflects algorithmic activity (spread capture, arbitrage, market making) rather than directional conviction. Traditional volume analysis assumptions (high volume = institutional interest) break down. This affects crypto exchanges more than stock markets due to 24/7 trading and lower regulatory oversight of HFT activity.</p>
+<h3 id="choppy-ranging-markets">Choppy/Ranging Markets<a class="headerlink" href="#choppy-ranging-markets" title="Permanent link">&para;</a></h3>
+<p>When Market shows CHOPPY frequently, signals have lower reliability. Consider waiting for trend.</p>
 
-<h3 id="major-news-earnings-events">Major News & Earnings Events<a class="headerlink" href="#major-news-earnings-events" title="Permanent link">&para;</a></h3>
-<p><strong>The Condition:</strong> Federal Reserve announcements, earnings reports, FDA approvals, or major geopolitical events cause volume to spike 10x-50x normal levels as news is digested.</p>
-<p><strong>What Happens:</strong> Volume Oracle correctly identifies the spike (which is real), but the spike's meaning is different from normal volume spikes. News-driven volume often shows initial panic/excitement that reverses within minutes as the market re-evaluates the news. Regime states shift rapidly during news events as volatility whipsaws price. Signals can fire and immediately move against you as the market reverses multiple times.</p>
-<p><strong>Context:</strong> Normal volume spikes indicate smart money positioning or institutional accumulation/distribution over time. News event volume represents reactive trading—everyone processing the same information simultaneously. The first volume spike is often panic, the second is repositioning, the third is rational evaluation. Volume Oracle measures the volume (which is accurate), but interpreting WHICH spike matters requires news context. Best practice: Wait 15-30 minutes after major news for volume patterns to stabilize before trusting Volume Oracle signals.</p>
-
-<h3 id="low-float-illiquid-assets">Low Float & Illiquid Assets<a class="headerlink" href="#low-float-illiquid-assets" title="Permanent link">&para;</a></h3>
-<p><strong>The Condition:</strong> Small-cap stocks, low-volume altcoins, or thinly traded assets where daily volume is minimal and a single large order moves price 5-10%.</p>
-<p><strong>What Happens:</strong> Every volume bar looks significant because baseline volume is so low. A single whale order or small fund taking a position appears as a massive volume spike, but it's just one participant, not broad institutional interest. Regime detection identifies apparent accumulation or distribution that represents just one entity's activity. Signals fire but price whipsaws easily because there's no depth of buyers/sellers defending levels.</p>
-<p><strong>Context:</strong> Volume Oracle assumes liquid markets where volume represents aggregate participation from hundreds or thousands of participants. In illiquid markets, volume might represent 5-10 participants. The analysis becomes less about "market conviction" and more about "who has a large position." This doesn't invalidate the tool, but changes interpretation: high volume in illiquid assets = specific participants positioning, not broad market agreement. Combine with order book depth analysis if available.</p>
-
-<h3 id="opening-closing-session-spikes">Opening & Closing Session Volume Spikes<a class="headerlink" href="#opening-closing-session-spikes" title="Permanent link">&para;</a></h3>
-<p><strong>The Condition:</strong> First 30 minutes after market open and last 30 minutes before close (especially last 10 minutes) show artificially elevated volume due to market-on-open orders, stop losses triggering, and closing auctions.</p>
-<p><strong>What Happens:</strong> Volume Oracle correctly identifies volume spikes, but these spikes are mechanical (index rebalancing, mutual fund closes, retail stop losses) rather than directional conviction. Regime shifts detected during opening/closing often lack significance during mid-session trading. Signals can be misleading—apparent selling pressure in last 5 minutes might be profit-taking, not bearish conviction.</p>
-<p><strong>Context:</strong> Not all volume is equal. Opening volume represents overnight news digestion + order backlogs. Closing volume represents fund closes + index rebalancing + retail MOC (market-on-close) orders. Neither necessarily predicts next-session direction. Most reliable volume analysis occurs during mid-session trading (10:30 AM - 3:30 PM ET for US stocks) when volume represents actual directional positioning rather than mechanical flows. Be cautious with signals generated entirely within first/last 30 minutes of session.</p>
-
-<h3 id="gap-days-overnight-gaps">Gap Days & Overnight Gaps<a class="headerlink" href="#gap-days-overnight-gaps" title="Permanent link">&para;</a></h3>
-<p><strong>The Condition:</strong> Price gaps 3-10% overnight due to news or international market moves, opening at a significantly different price level.</p>
-<p><strong>What Happens:</strong> Overnight gaps create discontinuities in volume analysis. Previous regime context may be invalidated when price opens far from the prior close. Signals generated pre-gap may no longer be relevant. The indicator needs time to establish new regime context at post-gap price levels.</p>
-<p><strong>Context:</strong> Volume Oracle analyzes continuous price-volume relationships to determine regime. Gaps create breaks in this continuity—price jumps instantly without transitional volume data. After significant gaps (3%+), allow time for new volume patterns to establish. Early post-gap signals may be less reliable until the indicator has processed sufficient data at the new price level. Best practice: Wait for first 15-30 minutes of post-gap trading before trusting Volume Oracle signals.</p>
-
-<div class="admonition tip">
-<p class="admonition-title">Recognizing Reduced Reliability Environments</p>
-<p><strong>Practical Identification:</strong></p>
-<ul>
-<li><strong>Volume below 40% of 20-day average:</strong> Low participation environment—signals less meaningful</li>
-<li><strong>Volume spikes every 3-5 bars:</strong> Likely HFT activity or news event volatility—wait for stabilization</li>
-<li><strong>Economic calendar shows major events within 30 minutes:</strong> Wait for post-news volume patterns to form</li>
-<li><strong>Asset's daily volume under $10M (stocks) or equivalent:</strong> Illiquid—volume analysis less reliable</li>
-<li><strong>Currently in first/last 30 minutes of session:</strong> Mechanical volume flows—use caution</li>
-<li><strong>Price gapped 5%+ overnight:</strong> Prior regime context may be invalidated, wait for new patterns</li>
-<li><strong>Crypto during low-activity hours (2-6 AM UTC):</strong> HFT dominance, low institutional participation</li>
-</ul>
-<p><strong>Remember:</strong> Volume Oracle measures what happened—high volume, regime shifts, signal generation. It doesn't tell you WHY volume occurred or WHETHER that volume is meaningful. Context determines meaning: Mid-session institutional accumulation on rising volume = highly significant. Opening gap fill on mechanical volume = less significant. News spike volume that reverses in 10 minutes = noise. The tool provides accurate volume analysis; you provide market context to interpret it correctly.</p>
-</div>
+<h3 id="very-low-timeframes">Very Low Timeframes<a class="headerlink" href="#very-low-timeframes" title="Permanent link">&para;</a></h3>
+<p>1m/3m charts generate many signals with lower quality. Works best on 5m+ timeframes.</p>
 
 <hr />
-<h2 id="frequently-asked-questions">❓ Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permanent link">&para;</a></h2>
-<h3 id="q-what-do-signal-quality-stars-mean">Q: What do signal quality stars mean?<a class="headerlink" href="#q-what-do-signal-quality-stars-mean" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> Stars indicate signal quality: ⭐⭐⭐ = 80-100% (high quality), ⭐⭐ = 60-79% (medium), ⭐ = 40-59% (lower). Higher quality means more confluence factors aligned.</p>
-<h3 id="q-what-do-regime-colors-mean">Q: What do the background colors mean?<a class="headerlink" href="#q-what-do-regime-colors-mean" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> Green = Accumulation (bullish), Red = Distribution (bearish), Gray = Neutral (no clear direction), Gold = Weakening (regime losing strength).</p>
-<h3 id="q-how-is-position-size-calculated">Q: How is position size calculated?<a class="headerlink" href="#q-how-is-position-size-calculated" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> Position Size = Risk Amount ÷ Stop Distance. Configure your Risk Amount in settings, and Volume Oracle calculates the appropriate position size for each signal.</p>
-<h3 id="q-do-signals-repaint">Q: Do signals repaint?<a class="headerlink" href="#q-do-signals-repaint" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> No. Once a signal fires and conditions confirm at bar close, it remains fixed. Does not change retroactively.</p>
-<h3 id="q-what-is-htf-confirmation">Q: What is HTF confirmation?<a class="headerlink" href="#q-what-is-htf-confirmation" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> HTF (Higher Timeframe) confirmation checks if the larger timeframe regime agrees with your signal direction. For example, a 15m BULL signal is stronger if the 4H is also in Accumulation.</p>
-<h3 id="q-which-strategy-mode-should-i-use">Q: Which strategy mode should I use?<a class="headerlink" href="#q-which-strategy-mode-should-i-use" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> Trend Following for trending markets, Mean Reversion for ranging markets, Hybrid (default) if unsure. Match the mode to current market conditions.</p>
-<h3 id="q-what-does-regime-weakening-mean">Q: What does Regime Weakening (gold) mean?<a class="headerlink" href="#q-what-does-regime-weakening-mean" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> Gold background indicates the current regime is losing strength. This is a warning that a regime change may be approaching. Consider tightening stops or taking profits.</p>
-<h3 id="q-can-i-customize-risk-levels">Q: Can I customize the risk levels?<a class="headerlink" href="#q-can-i-customize-risk-levels" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> Yes. Configure Risk Amount (dollars per trade) and R:R Ratio (for target calculation) in settings. Entry, Stop, T1, T2 are then calculated automatically.</p>
-<h3 id="q-how-do-alerts-work">Q: How do alerts work?<a class="headerlink" href="#q-how-do-alerts-work" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> 25 alerts across 6 categories: Entry (BULL/BEAR signals, high quality, blocked), Position (T1/T2 hit, stop loss, breakeven), Regime (changes, weakening), Health (momentum fading, flow deteriorating, volume drying up, multiple warnings), HTF (alignment changes), Structure (bullish/bearish confirmation, conflict/alignment). Alerts include quality score, regime strength, and trade levels.</p>
-<h3 id="q-does-volume-oracle-work-on-all-assets">Q: Does Volume Oracle work on all assets?<a class="headerlink" href="#q-does-volume-oracle-work-on-all-assets" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> Yes, on assets with real volume data (stocks, futures, crypto). For forex spot (tick volume only), regime detection is less reliable - consider using Harmonic Oscillator instead.</p>
+<h2 id="faq">❓ FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
+
+<h3 id="q-does-this-repaint">Q: Does this repaint?<a class="headerlink" href="#q-does-this-repaint" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> No. All signals fire on bar close only. Historical signals match live behavior.</p>
+
+<h3 id="q-what-timeframes-work-best">Q: What timeframes work best?<a class="headerlink" href="#q-what-timeframes-work-best" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> 5m to Daily. The indicator auto-adapts parameters to each timeframe.</p>
+
+<h3 id="q-should-i-use-htf-filter">Q: Should I use HTF filter?<a class="headerlink" href="#q-should-i-use-htf-filter" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Optional. HTF filter reduces signals but increases quality. Try both ways.</p>
+
+<h3 id="q-whats-a-good-quality-threshold">Q: What's a good quality threshold?<a class="headerlink" href="#q-whats-a-good-quality-threshold" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Start with 60%+ (⭐⭐). As you learn the indicator, you can be more selective.</p>
+
+<h3 id="q-how-do-i-know-when-to-exit">Q: How do I know when to exit?<a class="headerlink" href="#q-how-do-i-know-when-to-exit" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Watch for ⚠️ exit warnings, Status turning FADING/WEAK, or Structure conflict.</p>
 <hr />
 
 <div class="knowledge-check"
@@ -3563,138 +3090,140 @@ Size: 47 shares | Risk: $150</code></pre>
 </div>
 
 <hr />
-<h2 id="quick-reference-guide">📋 Quick Reference Guide<a class="headerlink" href="#quick-reference-guide" title="Permanent link">&para;</a></h2>
-<h3 id="system-quick-reference">System Quick Reference<a class="headerlink" href="#system-quick-reference" title="Permanent link">&para;</a></h3>
+<h2 id="quick-reference-guide">📋 Quick Reference<a class="headerlink" href="#quick-reference-guide" title="Permanent link">&para;</a></h2>
+
+<h3 id="regime-states">Regime States<a class="headerlink" href="#regime-states" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>System</th>
-<th>Visual</th>
-<th>Key Feature</th>
-<th>Typical Use Cases</th>
+<th>Regime</th>
+<th>Color</th>
+<th>Bias</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Regime Detection</strong></td>
-<td>Background colors</td>
-<td>Market phase identification</td>
-<td>Trade direction bias</td>
+<td><strong>ACCUMULATION</strong></td>
+<td>Green</td>
+<td>Bullish</td>
 </tr>
 <tr>
-<td><strong>Signal Generation</strong></td>
-<td>BULL/BEAR labels</td>
-<td>Entry signals with quality</td>
-<td>Entry timing</td>
+<td><strong>DISTRIBUTION</strong></td>
+<td>Red</td>
+<td>Bearish</td>
 </tr>
 <tr>
-<td><strong>Risk Management</strong></td>
-<td>Entry/Stop/Target lines</td>
-<td>Auto position sizing</td>
-<td>Risk control</td>
-</tr>
-<tr>
-<td><strong>HTF Confirmation</strong></td>
-<td>Alignment status</td>
-<td>Multi-timeframe check</td>
-<td>Signal validation</td>
-</tr>
-<tr>
-<td><strong>Strategy Modes</strong></td>
-<td>Mode setting</td>
-<td>Trading approach</td>
-<td>Market adaptation</td>
+<td><strong>NEUTRAL</strong></td>
+<td>Gray</td>
+<td>None</td>
 </tr>
 </tbody>
 </table>
-<h3 id="regime-color-meanings">Regime Color Meanings<a class="headerlink" href="#regime-color-meanings" title="Permanent link">&para;</a></h3>
+
+<h3 id="status-meanings">Status Meanings<a class="headerlink" href="#status-meanings" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Color</th>
-<th>Regime</th>
+<th>Status</th>
 <th>Meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Green</strong></td>
-<td>Accumulation</td>
-<td>Bullish phase - favor longs</td>
+<td><strong>STRONG ✓</strong></td>
+<td>Regime healthy</td>
 </tr>
 <tr>
-<td><strong>Red</strong></td>
-<td>Distribution</td>
-<td>Bearish phase - favor shorts</td>
+<td><strong>FADING ▼</strong></td>
+<td>Early warning</td>
 </tr>
 <tr>
-<td><strong>Gray</strong></td>
-<td>Neutral</td>
-<td>No clear direction - wait</td>
+<td><strong>WEAK ✗</strong></td>
+<td>Exit soon</td>
 </tr>
 <tr>
-<td><strong>Gold</strong></td>
-<td>Weakening</td>
-<td>Regime fading - protect profits</td>
+<td><strong>FLIP ⟲</strong></td>
+<td>Regime changing</td>
 </tr>
 </tbody>
 </table>
-<h3 id="signal-quality-ratings">Signal Quality Ratings<a class="headerlink" href="#signal-quality-ratings" title="Permanent link">&para;</a></h3>
+
+<h3 id="health-icons">Health Icons<a class="headerlink" href="#health-icons" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Rating</th>
-<th>Quality</th>
+<th>Icon</th>
+<th>Range</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>💚</td>
+<td>80-100%</td>
+<td>Excellent</td>
+</tr>
+<tr>
+<td>💛</td>
+<td>50-79%</td>
+<td>Moderate</td>
+</tr>
+<tr>
+<td>❤️</td>
+<td>0-49%</td>
+<td>Poor</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="quality-stars">Quality Stars<a class="headerlink" href="#quality-stars" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Stars</th>
+<th>Score</th>
 <th>Action</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>⭐⭐⭐</strong></td>
+<td>⭐⭐⭐</td>
 <td>80-100%</td>
-<td>Full size, high confidence</td>
+<td>Full size</td>
 </tr>
 <tr>
-<td><strong>⭐⭐</strong></td>
+<td>⭐⭐</td>
 <td>60-79%</td>
-<td>Reduced size, moderate confidence</td>
+<td>Half size</td>
 </tr>
 <tr>
-<td><strong>⭐</strong></td>
+<td>⭐</td>
 <td>40-59%</td>
-<td>Skip or small size</td>
+<td>Skip or demo</td>
 </tr>
 </tbody>
 </table>
-<h3 id="risk-level-display">Risk Level Display<a class="headerlink" href="#risk-level-display" title="Permanent link">&para;</a></h3>
+
+<h3 id="market-character">Market Character<a class="headerlink" href="#market-character" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Element</th>
-<th>Color</th>
-<th>Purpose</th>
+<th>Character</th>
+<th>Meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Entry Line</strong></td>
-<td>Blue</td>
-<td>Entry price</td>
+<td><strong>TRENDING</strong></td>
+<td>Hold winners longer</td>
 </tr>
 <tr>
-<td><strong>Stop Line</strong></td>
-<td>Red</td>
-<td>Stop loss level</td>
+<td><strong>NORMAL</strong></td>
+<td>Standard management</td>
 </tr>
 <tr>
-<td><strong>T1 Line</strong></td>
-<td>Green</td>
-<td>First target</td>
-</tr>
-<tr>
-<td><strong>T2 Line</strong></td>
-<td>Bright Green</td>
-<td>Extended target</td>
+<td><strong>CHOPPY</strong></td>
+<td>Quick profits, tight stops</td>
 </tr>
 </tbody>
 </table>
@@ -3704,11 +3233,11 @@ Size: 47 shares | Risk: $150</code></pre>
   <div class="sp-callout__title">Reflection Check</div>
   <p>Before using Volume Oracle in your trading, ask yourself:</p>
   <ul>
-    <li>Can you explain the five systems (Regime Detection, Signal Generation, Risk Management, HTF Confirmation, Strategy Modes) and how each contributes?</li>
-    <li>Do you understand what the background colors mean (green=Accumulation, red=Distribution, gray=Neutral, gold=Weakening)?</li>
-    <li>Can you interpret signal quality ratings (⭐⭐⭐ vs ⭐⭐ vs ⭐) and how they should affect your position sizing?</li>
-    <li>Have you configured your Risk Amount in settings and understand how position size is calculated (Risk ÷ Stop Distance)?</li>
-    <li>Do you know when to use each Strategy Mode (Trend Following, Mean Reversion, Hybrid) based on market conditions?</li>
+    <li>Do you understand the three regime states (ACCUMULATION, DISTRIBUTION, NEUTRAL) and what each means for your bias?</li>
+    <li>Can you read the Regime Table fields (Status, Health, Structure, Market)?</li>
+    <li>Do you know the five backend systems and how they work together?</li>
+    <li>Can you interpret signal quality ratings (⭐⭐⭐ vs ⭐⭐ vs ⭐) for position sizing?</li>
+    <li>Have you configured your Risk Amount settings?</li>
   </ul>
   <p><strong>If yes to all 5:</strong> You're ready to use Volume Oracle! Explore the <a href="../ref-workflow/">Workflow Guide</a> to learn regime-based trading strategies.<br>
   <strong>If no to any:</strong> Review the relevant section above or use the chatbot (bottom right) to ask specific questions.</p>
@@ -3743,7 +3272,7 @@ support@signalpilot.io</p>
 - <a href="../how-to-alerts/">How to Set Up Alerts</a> - Get notified on volume signals<br />
 - <a href="../ref-workflow/">Trading Workflow</a> - How volume analysis fits into complete system</p>
 <hr />
-<p><strong>Disclaimer:</strong> This indicator combines five integrated systems: Regime Detection (market phase identification), Signal Generation (BULL/BEAR entries with quality ratings), Risk Management (auto position sizing with Entry/Stop/Targets), HTF Confirmation (higher timeframe alignment), and Strategy Modes (Trend Following, Mean Reversion, Hybrid). All analyses represent historical volume data interpretation. Risk levels are calculated automatically but exclude fees, commissions, and slippage. Individual interpretation, application, and outcomes vary. Past performance does not guarantee future results. This is not financial advice.</p>
+<p><strong>Disclaimer:</strong> Volume Oracle uses a Regime State Machine (ACCUMULATION, DISTRIBUTION, NEUTRAL) powered by five backend systems: Market Structure Detection, Institutional Footprint Detection, Regime Stability Index, Confluence Scoring, and Signal Density Tracking. All analyses represent historical volume data interpretation. Risk levels are calculated automatically but exclude fees, commissions, and slippage. Individual interpretation, application, and outcomes vary. Past performance does not guarantee future results. This is not financial advice.</p>
                 
                 
                 
