@@ -2492,7 +2492,7 @@ graph TD
 <tr>
 <td>S/D Zones</td>
 <td>✓</td>
-<td>Touch alerts</td>
+<td>Break alerts</td>
 </tr>
 <tr>
 <td>Candlestick Patterns</td>
@@ -2546,6 +2546,71 @@ graph TD
 </table>
 
 <p><em>Enable additional systems progressively as you become familiar with the core set.</em></p>
+
+<h3 id="color-settings">Color Settings (Grouped by Function)<a class="headerlink" href="#color-settings" title="Permanent link">&para;</a></h3>
+<p>OmniDeck uses 9 color inputs grouped by analytical function, making it easier to recognize related signals at a glance:</p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Inputs</th>
+<th>Systems Using It</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>📈📉 Trend</strong></td>
+<td>Bull / Bear</td>
+<td>SuperTrend, EMA Stack, BMSB, Regime Background</td>
+<td>Trend-following systems that identify directional bias</td>
+</tr>
+<tr>
+<td><strong>🔄 Exhaustion</strong></td>
+<td>Bull / Bear</td>
+<td>TD Sequential, Candlestick Patterns, Liquidity Sweeps</td>
+<td>Exhaustion/reversal systems that identify potential turning points</td>
+</tr>
+<tr>
+<td><strong>🟥🟩 Structure</strong></td>
+<td>Supply / Demand</td>
+<td>S/D Zones</td>
+<td>Structure systems: Supply = potential resistance, Demand = potential support</td>
+</tr>
+<tr>
+<td><strong>🔮 Squeeze</strong></td>
+<td>Single color</td>
+<td>Squeeze Detection cloud</td>
+<td>Volatility system: BB compression inside KC</td>
+</tr>
+<tr>
+<td><strong>⚠️ Warning</strong></td>
+<td>Single color</td>
+<td>Caution/Danger markers</td>
+<td>Warning markers for momentum exhaustion</td>
+</tr>
+<tr>
+<td><strong>⚪ Neutral</strong></td>
+<td>Single color</td>
+<td>EMA lines, backgrounds, inactive states</td>
+<td>Neutral/inactive states</td>
+</tr>
+</tbody>
+</table>
+
+<div class="sp-callout sp-callout--tip" style="margin: 1.5rem 0;">
+  <div class="sp-callout__icon">💡</div>
+  <div class="sp-callout__content">
+    <h4 style="margin: 0 0 0.5rem 0;">Why Colors Are Grouped</h4>
+    <p style="margin: 0;">OmniDeck groups colors by analytical function, not just bull/bear:</p>
+    <ul style="margin: 0.5rem 0 0 0;">
+      <li><strong>Trend systems</strong> (SuperTrend, EMA, BMSB, Regime) share colors — they all identify directional bias</li>
+      <li><strong>Exhaustion systems</strong> (TD, Patterns, Sweeps) share colors — they all detect potential turning points</li>
+      <li><strong>Structure systems</strong> (S/D Zones) have their own colors — red resistance, green support is intuitive</li>
+    </ul>
+    <p style="margin: 0.5rem 0 0 0;">When multiple signals appear in the same color family, you instantly know they're related. A teal TD9 + teal Hammer + teal 💧 sweep = three exhaustion signals agreeing.</p>
+  </div>
+</div>
 
 <!-- 📸 SCREENSHOT NEEDED - Omnideck Settings Panel - 10 System Toggles
      What to show: Settings panel showing all 10 system on/off toggles
@@ -3127,8 +3192,8 @@ graph TD
 </tr>
 <tr>
 <td><strong>S/D Zones</strong></td>
-<td>Zone touch</td>
-<td>Price reaches zone boundary</td>
+<td>Zone broken</td>
+<td>Supply Broken, Demand Broken</td>
 </tr>
 <tr>
 <td><strong>Patterns (16)</strong></td>
@@ -3151,13 +3216,18 @@ graph TD
 <td>HAM, IH, BUE, BUH, R3M, 3WS, MS, TWB, HGM, SS, BEE, BEH, F3M, 3BC, ES, TWT</td>
 </tr>
 <tr>
+<td><strong>RCS Any Pattern</strong></td>
+<td>Any bullish/bearish pattern</td>
+<td>RCS_ANY_BULL, RCS_ANY_BEAR</td>
+</tr>
+<tr>
 <td><strong>Confluence</strong></td>
 <td>High Score, Low Score</td>
 <td>Confluence score thresholds crossed</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Total Alerts: 46</strong> (across all systems)</p>
+<p><strong>Total Alerts: 38</strong> (across all systems)</p>
 <p><strong>Alert Setup:</strong><br />
 - Each system has independent alert toggles<br />
 - Multiple alerts can be enabled simultaneously<br />
@@ -3321,7 +3391,7 @@ graph TD
     <li><strong>RCS Pattern Library:</strong> 16 candlestick patterns automatically detected with Dynamic Lookback that adjusts sensitivity by timeframe</li>
     <li><strong>Confluence Score Panel:</strong> At-a-glance system alignment summary in Badge or Table mode with weighted scoring</li>
     <li><strong>Hierarchical Analysis:</strong> Common evaluation order: Regime Box (bias) → EMA Trio (trend) → TD/Squeeze (timing) → Confluence check</li>
-    <li><strong>Alert Flexibility:</strong> 46 alerts across all systems including individual RCS pattern alerts and confluence thresholds</li>
+    <li><strong>Alert Flexibility:</strong> 38 alerts across all systems including individual RCS pattern alerts, RCS_ANY_BULL/RCS_ANY_BEAR, and confluence thresholds</li>
   </ul>
   <p><strong>Next Steps:</strong> Explore the <a href="../ref-workflow/">Trading Workflow Guide</a> to see how experienced traders combine Omnideck systems, or review the <a href="../how-to-alerts/">Alert Setup Guide</a> for detailed configuration.</p>
 </div>
@@ -3611,7 +3681,7 @@ graph TD
 <h3 id="q-what-is-dynamic-rcs-lookback">Q: What is Dynamic RCS Lookback?<a class="headerlink" href="#q-what-is-dynamic-rcs-lookback" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> Pattern detection automatically adjusts sensitivity by timeframe. Lower timeframes (≤5m) use 10-bar lookback for noise filtering, while higher timeframes (Daily+) use 4-bar lookback for faster pattern recognition.</p>
 <h3 id="q-how-many-alerts-does-omnideck-have">Q: How many alerts does Omnideck have?<a class="headerlink" href="#q-how-many-alerts-does-omnideck-have" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> 46 alerts total across all systems, including individual alerts for each of the 16 RCS patterns, BMSB cross alerts, Regime flip alerts, and Confluence score threshold alerts.</p>
+<p><strong>A:</strong> 38 alerts total across all systems, including individual alerts for each of the 16 RCS patterns, RCS_ANY_BULL (any bullish pattern), RCS_ANY_BEAR (any bearish pattern), BMSB cross alerts, Regime flip alerts, and Confluence score threshold alerts.</p>
 <hr />
 <h2 id="quick-reference-guide">📋 Quick Reference Guide<a class="headerlink" href="#quick-reference-guide" title="Permanent link">&para;</a></h2>
 <h3 id="system-quick-reference">System Quick Reference<a class="headerlink" href="#system-quick-reference" title="Permanent link">&para;</a></h3>
