@@ -2046,31 +2046,38 @@
 <p>The regime table is your dashboard for regime status. Available in two layouts:</p>
 
 <h3 id="vertical-layout">Vertical Layout (Default)<a class="headerlink" href="#vertical-layout" title="Permanent link">&para;</a></h3>
-<pre style="background: #1a1a2e; padding: 1rem; border-radius: 8px; font-family: monospace; font-size: 0.85rem; overflow-x: auto;">
-┌──────────┬─────────────┐
-│ 📊       │ ACCUMULATION│
-├──────────┼─────────────┤
-│ 66%      │ 32h         │
-├──────────┼─────────────┤
-│ Status   │ ✓ STRONG    │
-├──────────┼─────────────┤
-│ Health   │ 🟢 HEALTHY  │
-├──────────┼─────────────┤
-│ Struct   │ ✓ ALIGNED   │
-├──────────┼─────────────┤
-│ Market   │ TRENDING    │
-├──────────┼─────────────┤
-│ Flip     │ ✓ STABLE    │
-└──────────┴─────────────┘</pre>
+<div style="background: #1a1a2e; padding: 1rem; border-radius: 8px; display: inline-block;">
+<table style="border-collapse: collapse; font-family: monospace; font-size: 0.9rem;">
+<tr><td style="border: 1px solid #444; padding: 0.5rem;">Regime</td><td style="border: 1px solid #444; padding: 0.5rem; color: #4ade80;">ACCUMULATION</td></tr>
+<tr><td style="border: 1px solid #444; padding: 0.5rem;">Strength</td><td style="border: 1px solid #444; padding: 0.5rem;">66%</td></tr>
+<tr><td style="border: 1px solid #444; padding: 0.5rem;">Duration</td><td style="border: 1px solid #444; padding: 0.5rem;">32h</td></tr>
+<tr><td style="border: 1px solid #444; padding: 0.5rem;">Status</td><td style="border: 1px solid #444; padding: 0.5rem;">✓ STRONG</td></tr>
+<tr><td style="border: 1px solid #444; padding: 0.5rem;">Health</td><td style="border: 1px solid #444; padding: 0.5rem; color: #4ade80;">● HEALTHY</td></tr>
+<tr><td style="border: 1px solid #444; padding: 0.5rem;">Structure</td><td style="border: 1px solid #444; padding: 0.5rem;">✓ ALIGNED</td></tr>
+<tr><td style="border: 1px solid #444; padding: 0.5rem;">Market</td><td style="border: 1px solid #444; padding: 0.5rem;">TRENDING</td></tr>
+<tr><td style="border: 1px solid #444; padding: 0.5rem;">Flip</td><td style="border: 1px solid #444; padding: 0.5rem;">✓ STABLE</td></tr>
+</table>
+</div>
 
 <h3 id="horizontal-layout">Horizontal Layout<a class="headerlink" href="#horizontal-layout" title="Permanent link">&para;</a></h3>
-<pre style="background: #1a1a2e; padding: 1rem; border-radius: 8px; font-family: monospace; font-size: 0.85rem; overflow-x: auto;">
-┌────────────────┬──────┬──────┬──────────┬────┐
-│ 📊 ACCUMULATION│ 66%  │ 32h  │ STRONG ✓ │ 🟢 │
-├────────────────┼──────┼──────┼──────────┼────┤
-│ STRUCTURE ✓    │MARKET│FLIP  │ 0 flips  │    │
-│                │TREND▲│STABLE│          │    │
-└────────────────┴──────┴──────┴──────────┴────┘</pre>
+<div style="background: #1a1a2e; padding: 1rem; border-radius: 8px; display: inline-block;">
+<table style="border-collapse: collapse; font-family: monospace; font-size: 0.9rem;">
+<tr>
+<td style="border: 1px solid #444; padding: 0.5rem; color: #4ade80;">ACCUMULATION</td>
+<td style="border: 1px solid #444; padding: 0.5rem;">66%</td>
+<td style="border: 1px solid #444; padding: 0.5rem;">32h</td>
+<td style="border: 1px solid #444; padding: 0.5rem;">STRONG ✓</td>
+<td style="border: 1px solid #444; padding: 0.5rem; color: #4ade80;">●</td>
+</tr>
+<tr>
+<td style="border: 1px solid #444; padding: 0.5rem;">STRUCTURE ✓</td>
+<td style="border: 1px solid #444; padding: 0.5rem;">MARKET<br/>TREND▲</td>
+<td style="border: 1px solid #444; padding: 0.5rem;">FLIP<br/>STABLE</td>
+<td style="border: 1px solid #444; padding: 0.5rem;">0 flips</td>
+<td style="border: 1px solid #444; padding: 0.5rem;"></td>
+</tr>
+</table>
+</div>
 
 <h3 id="table-fields-explained">Table Fields Explained<a class="headerlink" href="#table-fields-explained" title="Permanent link">&para;</a></h3>
 <table>
