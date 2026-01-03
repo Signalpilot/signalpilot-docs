@@ -1934,21 +1934,20 @@
     <h4>Regime State Machine</h4>
     <p style="margin-bottom: 1rem;">Volume Oracle tracks institutional flow through three regime states:</p>
     <pre style="background: #1a1a2e; padding: 1rem; border-radius: 8px; font-family: monospace; font-size: 0.85rem; overflow-x: auto;">
-                    ┌─────────────────┐
-                    │                 │
-         ┌──────────▶   NEUTRAL      ◀──────────┐
-         │          │   (Gray)       │          │
-         │          └────────────────┘          │
-         │                 │                    │
-    Weakens           Confirms             Weakens
-         │                 │                    │
-         │          ┌──────┴──────┐             │
-         │          ▼             ▼             │
-   ┌─────────────────┐     ┌─────────────────┐
-   │  ACCUMULATION   │     │  DISTRIBUTION   │
-   │    (Green)      │◀───▶│     (Red)       │
-   │  Buying Flow    │     │  Selling Flow   │
-   └─────────────────┘     └─────────────────┘</pre>
+            ┌───────────────┐
+            │    NEUTRAL    │
+     ┌──────▶    (Gray)    ◀──────┐
+     │      └───────┬───────┘     │
+     │              │             │
+  Weakens       Confirms       Weakens
+     │              │             │
+     │       ┌──────┴──────┐      │
+     │       ▼             ▼      │
+┌─────────────┐     ┌─────────────┐
+│ ACCUMULATION│     │DISTRIBUTION │
+│   (Green)   │◀───▶│   (Red)     │
+│ Buying Flow │     │Selling Flow │
+└─────────────┘     └─────────────┘</pre>
     <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.85;">
       <strong>State Transitions:</strong> Regime changes require confirmation bars (adaptive to timeframe). Flip counter prevents whipsaws in choppy markets. Early warnings fire BEFORE regime actually flips.
     </p>
