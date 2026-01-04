@@ -2024,19 +2024,19 @@
 <tbody>
 <tr><td><strong>State</strong></td><td>Current regime</td><td>Accumulation, Distribution, Neutral</td></tr>
 <tr><td><strong>Strength</strong></td><td>How strong (0-100%)</td><td>78%</td></tr>
-<tr><td><strong>Health</strong></td><td>Early warning status</td><td>✓ STRONG, ⚠️ FADING, 🔴 CRITICAL</td></tr>
+<tr><td><strong>Health</strong></td><td>Warning count (0/1/2/3+)</td><td>🟢 HEALTHY, 🟡 WATCH, 🟠 CAUTION, 🔴 DANGER</td></tr>
 <tr><td><strong>Confirm</strong></td><td>Bars building</td><td>↑4 (4 bars)</td></tr>
 <tr><td><strong>Flow</strong></td><td>Buy/sell direction</td><td>Bullish, Bearish, Mixed</td></tr>
 <tr><td><strong>Duration</strong></td><td>How long in regime</td><td>23 bars</td></tr>
 </tbody>
 </table>
 
-<h3>Health Status (Early Warnings)</h3>
+<h3>Regime Status (Early Warnings)</h3>
 <ul>
 <li><strong>✓ STRONG:</strong> All good → Trade normally</li>
-<li><strong>⚠️ FADING:</strong> Slowing down → Tighten stops</li>
-<li><strong>🟠 WEAKENING:</strong> May flip soon → Reduce size</li>
-<li><strong>🔴 CRITICAL:</strong> About to flip → Consider exit</li>
+<li><strong>📉 FADING:</strong> Slowing down → Tighten stops</li>
+<li><strong>⚡ WEAKENING:</strong> May flip soon → Reduce size</li>
+<li><strong>⚠️ CRITICAL:</strong> About to flip → Consider exit</li>
 </ul>
 <p><strong>Warning types:</strong> Price slowing, Buyers/sellers mixed, Volume dropping</p>
 
@@ -2201,7 +2201,7 @@
 
 <p><strong>Regime Detection:</strong> Background colors showing market phase (Accumulation/Distribution/Neutral/Weakening)<br>
 <strong>Regime Meter:</strong> 6-row table (State, Strength, Health, Confirm, Flow, Duration) for complete regime info<br>
-<strong>Health Status:</strong> Leading indicators (STRONG/FADING/WEAKENING/CRITICAL) that warn before exits trigger<br>
+<strong>Regime Status:</strong> Leading indicators (STRONG/FADING/WEAKENING/CRITICAL) that warn before exits trigger<br>
 <strong>Confirmation Counter:</strong> Shows consecutive bars building toward regime change (↑4 = 4 bars confirming)<br>
 <strong>Signal Generation:</strong> BULL/BEAR entry signals with quality ratings (⭐ to ⭐⭐⭐)<br>
 <strong>Risk Management:</strong> Auto-calculated Entry, Stop, T1, T2 with position sizing<br>
