@@ -12,7 +12,7 @@
       <meta name="theme-color" content="#667eea">
       <meta name="format-detection" content="telephone=no">
       
-        <meta name="description" content="One-page cheat sheet for Augury Grid v1.0. Quick guide to multi-symbol scanner with MACD confluence scoring.">
+        <meta name="description" content="One-page cheat sheet for Augury Grid v4.1. Quick guide to multi-symbol scanner with quality scoring and multi-TF confluence.">
 
 
 
@@ -1890,7 +1890,7 @@
           
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
-<h1>Augury Grid v1.0 Quick Reference</h1>
+<h1>Augury Grid v4.1 Quick Reference</h1>
 
 <style>
 .print-pdf-button {
@@ -1922,7 +1922,7 @@
 
 <button onclick="window.print()" class="print-pdf-button">🖨️ Print to PDF</button>
 
-<p><strong>One-page cheat sheet for multi-symbol MACD screening</strong></p>
+<p><strong>One-page cheat sheet for multi-symbol signal scanning with quality ratings</strong></p>
 
 <hr />
 
@@ -1939,69 +1939,69 @@
 <tbody>
 <tr>
 <td><strong>Monitor</strong></td>
-<td>Up to 40 symbols simultaneously</td>
+<td>7 symbols × 3 timeframes = 21 scans</td>
 <td>Real-time grid display</td>
 </tr>
 <tr>
 <td><strong>Signal Type</strong></td>
-<td>MACD histogram crossovers</td>
-<td>Bullish ↑ / Bearish ↓</td>
+<td>MACD + Trend filtered signals</td>
+<td>Bull ★★★ / Bear ★★</td>
 </tr>
 <tr>
-<td><strong>Confluence</strong></td>
-<td>5 filters score each signal</td>
-<td>X/5 rating (5 = strongest)</td>
+<td><strong>Quality Score</strong></td>
+<td>0-100 point scoring system</td>
+<td>★★★ ≥95, ★★ ≥85, ★ ≥70</td>
 </tr>
 <tr>
 <td><strong>Display</strong></td>
-<td>Grid table on chart</td>
-<td>Symbol, Signal, Score, TP1, P&L</td>
+<td>Grid table with position tracking</td>
+<td>Symbol, TF, Bias, Entry, SL, TP, P&L</td>
 </tr>
 </tbody>
 </table>
 
 <hr />
 
-<h2>📊 The 5 Confluence Factors</h2>
+<h2>📊 Quality Scoring System</h2>
 
 <table>
 <thead>
 <tr>
 <th>Factor</th>
-<th>What It Checks</th>
-<th>Adds +1 Point If...</th>
+<th>Bonus</th>
+<th>Condition</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>1. ADX</strong></td>
-<td>Trend strength</td>
-<td>ADX > 25 (strong trend present)</td>
+<td><strong>ADX Trend</strong></td>
+<td>+10</td>
+<td>ADX ≥ 20 (configurable)</td>
 </tr>
 <tr>
-<td><strong>2. Higher TF</strong></td>
-<td>Alignment with higher timeframe</td>
-<td>Higher timeframe MACD agrees</td>
+<td><strong>RSI Mid-Range</strong></td>
+<td>+10</td>
+<td>RSI between 40-60 (not extreme)</td>
 </tr>
 <tr>
-<td><strong>3. OBV</strong></td>
-<td>Volume confirmation</td>
-<td>OBV supports signal direction</td>
+<td><strong>Volume Spike</strong></td>
+<td>+15</td>
+<td>Volume ≥ 1.3× 20-bar average</td>
 </tr>
 <tr>
-<td><strong>4. RSI</strong></td>
-<td>Momentum confirmation</td>
-<td>RSI confirms direction</td>
+<td><strong>Multi-TF Confluence 🔗</strong></td>
+<td>+15</td>
+<td>2 timeframes agree</td>
 </tr>
 <tr>
-<td><strong>5. MA Distance</strong></td>
-<td>Distance from moving average</td>
-<td>Price not overextended</td>
+<td><strong>Multi-TF Confluence 🔗🔗</strong></td>
+<td>+30</td>
+<td>3 timeframes agree</td>
 </tr>
 </tbody>
 </table>
 
-<p><strong>Confluence Score:</strong> 0/5 = weak, 1-2/5 = moderate, 3-4/5 = strong, 5/5 = maximum confidence</p>
+<p><strong>Star Ratings:</strong> ★★★ ≥95 pts (best), ★★ ≥85 pts (good), ★ ≥70 pts (ok), no stars &lt;70 pts (weak)</p>
 
 <hr />
 
@@ -2009,30 +2009,33 @@
 
 <h3>Grid Columns Explained</h3>
 <ul>
-<li><strong>Symbol:</strong> Ticker being monitored (e.g., BTC, SPY, AAPL)</li>
-<li><strong>Signal:</strong> ↑ (bullish MACD cross) or ↓ (bearish MACD cross)</li>
-<li><strong>Score:</strong> X/5 confluence rating (higher = more confirmations)</li>
-<li><strong>TP1:</strong> Take profit target (price level calculated from signal)</li>
-<li><strong>P&L%:</strong> Current profit/loss percentage since signal appeared</li>
-<li><strong>Gauss:</strong> Gauss Ribbon status (trend confirmation)</li>
+<li><strong>#:</strong> Row number (sorted by score)</li>
+<li><strong>Sym:</strong> Ticker being monitored (e.g., BTC, SOL, ETH)</li>
+<li><strong>TF:</strong> Timeframe (15m, 4H, D)</li>
+<li><strong>Bias:</strong> Direction + star rating (Bull ★★★ 🔗🔗, Bear ★★)</li>
+<li><strong>Age:</strong> How long signal has been active</li>
+<li><strong>Entry:</strong> Entry price when signal triggered</li>
+<li><strong>SL:</strong> Stop loss level (ATR-based)</li>
+<li><strong>TP:</strong> Take profit target (ATR-based)</li>
+<li><strong>P&L:</strong> Current profit/loss percentage</li>
 </ul>
 
 <h3>How to Use the Grid</h3>
 <ul>
-<li><strong>Step 1:</strong> Scan for 4-5/5 confluence scores (highest quality)</li>
-<li><strong>Step 2:</strong> Check signal direction (↑ bullish or ↓ bearish)</li>
-<li><strong>Step 3:</strong> Switch to that symbol's chart for detailed analysis</li>
-<li><strong>Step 4:</strong> Use Pentarch/Janus/Volume Oracle to confirm entry</li>
+<li><strong>Step 1:</strong> Look for ★★★ signals (highest quality, score ≥95)</li>
+<li><strong>Step 2:</strong> Check for 🔗 or 🔗🔗 (multi-TF confluence)</li>
+<li><strong>Step 3:</strong> Review Entry/SL/TP levels in the grid</li>
+<li><strong>Step 4:</strong> Use Pentarch/Janus/Volume Oracle to confirm</li>
 <li><strong>Step 5:</strong> Grid = filter, full chart analysis = decision</li>
 </ul>
 
-<h3>Confluence Score Priorities</h3>
+<h3>Quality Score Priorities</h3>
 <ul>
-<li><strong>5/5:</strong> All factors aligned - highest priority review</li>
-<li><strong>4/5:</strong> Strong signal - worth detailed analysis</li>
-<li><strong>3/5:</strong> Moderate signal - review if watching that symbol</li>
-<li><strong>1-2/5:</strong> Weak signal - usually skip unless perfect setup on chart</li>
-<li><strong>0/5:</strong> No confluence - ignore</li>
+<li><strong>★★★ 🔗🔗:</strong> Best setup - 3 TFs aligned, highest priority</li>
+<li><strong>★★★ 🔗:</strong> Strong - 2 TFs aligned, worth detailed analysis</li>
+<li><strong>★★★:</strong> Good signal - single TF but high score</li>
+<li><strong>★★:</strong> Moderate - review if watching that symbol</li>
+<li><strong>★ or no stars:</strong> Weak - usually skip</li>
 </ul>
 
 <hr />
@@ -2041,30 +2044,30 @@
 
 <h3>With Pentarch</h3>
 <ul>
-<li><strong>Grid shows 5/5 bull signal:</strong> Check Pentarch for TD or IGN confirmation</li>
-<li><strong>Grid shows 4-5 bear signals across sector:</strong> Look for Pentarch CAP/BDN (sector exhaustion)</li>
-<li><strong>Multiple 4/5 signals same direction:</strong> Pentarch validates broad market momentum</li>
+<li><strong>Grid shows ★★★ 🔗🔗 bull:</strong> Check Pentarch for TD or IGN confirmation</li>
+<li><strong>Multiple bear signals across sector:</strong> Look for Pentarch CAP/BDN (sector exhaustion)</li>
+<li><strong>Multiple ★★★ signals same direction:</strong> Pentarch validates broad market momentum</li>
 </ul>
 
-<p><strong>Example:</strong> Grid shows ETH 5/5 ↑ + BTC 5/5 ↑ + Pentarch TD on both = maximum confluence reversal</p>
+<p><strong>Example:</strong> Grid shows ETH ★★★ 🔗🔗 + BTC ★★★ 🔗🔗 + Pentarch TD = maximum confluence</p>
 
 <h3>With Janus Atlas</h3>
 <ul>
 <li><strong>Grid signal at Janus level:</strong> Grid filters watchlist, Janus shows exact entry price</li>
-<li><strong>5/5 signal + Daily Low:</strong> MACD + level confluence</li>
+<li><strong>★★★ signal + Daily Low:</strong> Quality signal + level confluence</li>
 <li><strong>Multiple symbols hitting same Janus level cluster:</strong> Sector-wide support/resistance test</li>
 </ul>
 
 <h3>With Volume Oracle</h3>
 <ul>
-<li><strong>Grid 5/5 + Accumulation regime:</strong> Grid confluence + institutional buying confirmation</li>
-<li><strong>Grid signal + BULL ⭐⭐⭐:</strong> Screener identifies symbol, Volume Oracle confirms high-quality signal</li>
-<li><strong>Grid signal + HTF Confirmation:</strong> Multi-timeframe alignment for higher probability</li>
+<li><strong>Grid ★★★ + Accumulation regime:</strong> Grid quality + institutional buying confirmation</li>
+<li><strong>Grid signal + Volume Oracle BULL ⭐⭐⭐:</strong> Both indicators confirm high-quality signal</li>
+<li><strong>🔗🔗 confluence + HTF volume confirmation:</strong> Multi-timeframe alignment</li>
 </ul>
 
 <h3>Workflow: Grid as First Filter</h3>
 <ul>
-<li><strong>1. Grid:</strong> Scan 30-40 symbols for 4-5/5 signals</li>
+<li><strong>1. Grid:</strong> Scan for ★★★ or ★★★ 🔗 signals</li>
 <li><strong>2. Chart:</strong> Switch to high-score symbol's chart</li>
 <li><strong>3. Pentarch:</strong> Check cycle phase (TD, IGN, WRN, CAP, BDN)</li>
 <li><strong>4. Janus:</strong> Find exact entry level (Daily/Weekly High/Low)</li>
@@ -2096,7 +2099,7 @@
 <ul>
 <li><strong>Symbols:</strong> 30-40 symbols across watchlist (broader coverage)</li>
 <li><strong>Timeframe:</strong> 1H-Daily charts</li>
-<li><strong>Focus:</strong> High-confluence 4-5/5 signals for multi-day holds</li>
+<li><strong>Focus:</strong> High-quality ★★★ signals for multi-day holds</li>
 <li>Best for: Position entries, less frequent but higher quality</li>
 </ul>
 
@@ -2113,8 +2116,8 @@
 <h2>⚠️ When NOT to Use</h2>
 
 <p>❌ As sole decision-making tool (it's a screener, not a strategy)<br>
-❌ Acting on 1-2/5 confluence signals without confirmation<br>
-❌ Monitoring 40 random unrelated symbols (create focused watchlists)<br>
+❌ Acting on ★ or no-star signals without confirmation<br>
+❌ Monitoring random unrelated symbols (create focused watchlists)<br>
 ❌ Without follow-up chart analysis (grid filters, chart confirms)</p>
 
 <hr />
@@ -2126,10 +2129,10 @@
 → Check symbol list is correct (ticker spelling matters)<br>
 → Try lower timeframe (more frequent crossovers on 5m vs Daily)</p>
 
-<p><strong>"Too many symbols showing 0/5 or 1/5"</strong><br>
-→ Market conditions not ideal for MACD strategy<br>
+<p><strong>"Too many symbols showing ★ or no stars"</strong><br>
+→ Market conditions not ideal for trending strategy<br>
 → Normal - grid filters out weak signals<br>
-→ Focus only on 3-5/5 scores (quality over quantity)</p>
+→ Focus only on ★★★ or ★★ signals (quality over quantity)</p>
 
 <p><strong>"Grid table too small / hard to read"</strong><br>
 → Adjust grid size in indicator settings<br>
@@ -2162,12 +2165,12 @@
 <tr>
 <td>15m</td>
 <td>⭐ Excellent</td>
-<td>Frequent signals, good 4-5/5 confluence rate</td>
+<td>Frequent signals, good ★★★ rate</td>
 </tr>
 <tr>
 <td>1H</td>
 <td>⭐ Excellent</td>
-<td>Moderate frequency, high-quality 4-5/5 signals</td>
+<td>Moderate frequency, high-quality ★★★ signals</td>
 </tr>
 <tr>
 <td>4H</td>
@@ -2195,8 +2198,8 @@
 
 <ol>
 <li><strong>Grid = filter, not strategy</strong> — Always confirm with full chart analysis</li>
-<li><strong>Focus on 4-5/5 scores only</strong> — Ignore weak 0-2/5 signals</li>
-<li><strong>Start with 10-15 symbols</strong> — Master workflow before expanding to 40</li>
+<li><strong>Focus on ★★★ signals</strong> — Prioritize 🔗 or 🔗🔗 confluence</li>
+<li><strong>Start with 7 symbols</strong> — Master workflow before customizing</li>
 <li><strong>Same sector watchlists work best</strong> — Easier to spot sector-wide momentum</li>
 <li><strong>Combine with Pentarch/Janus/Volume</strong> — Grid screens, other indicators confirm</li>
 </ol>
@@ -2205,16 +2208,16 @@
 
 <h2>📖 Key Concepts</h2>
 
-<p><strong>MACD Histogram Crossover:</strong> When MACD histogram crosses zero line (bullish ↑ or bearish ↓)<br>
-<strong>Confluence Score (X/5):</strong> 5 factors vote on signal strength (ADX, Higher TF, OBV, RSI, MA Distance)<br>
-<strong>Multi-Symbol Monitoring:</strong> Scan up to 40 tickers simultaneously in real-time grid table<br>
-<strong>TP1:</strong> Take Profit target calculated from signal, P&L% tracks performance since signal appeared</p>
+<p><strong>Quality Score:</strong> 0-100 point system with bonuses for ADX trend, RSI range, volume, and multi-TF confluence<br>
+<strong>Star Ratings:</strong> ★★★ (≥95 pts), ★★ (≥85), ★ (≥70), no stars (&lt;70)<br>
+<strong>Multi-TF Confluence:</strong> 🔗 = 2 TFs agree (+15 pts), 🔗🔗 = 3 TFs agree (+30 pts)<br>
+<strong>Position Tracking:</strong> Entry, SL, TP calculated automatically using ATR-based levels</p>
 
 <hr />
 
 <h2>📞 Need Help?</h2>
 
-<p><strong>Full Documentation:</strong> <a href="../augury-grid-v10/">Augury Grid v1.0 Complete Guide</a><br>
+<p><strong>Full Documentation:</strong> <a href="../augury-grid-v10/">Augury Grid v4.1 Complete Guide</a><br>
 <strong>All Cheat Sheets:</strong> <a href="../ref-cheatsheets-at-a-glance/">All Indicators At-A-Glance</a><br>
 <strong>Support:</strong> support@signalpilot.io</p>
 
