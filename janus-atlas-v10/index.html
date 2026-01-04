@@ -2922,8 +2922,22 @@
 <td>Box / Text Only</td>
 <td>Box</td>
 </tr>
+<tr>
+<td><strong>Line Dim %</strong></td>
+<td>0-50, step 5</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong>Extend Lines Right</strong></td>
+<td>On / Off</td>
+<td>On</td>
+</tr>
 </tbody>
 </table>
+
+<p><strong>Line Dim %:</strong> Dims level lines relative to labels. 0 = same brightness, 25 = lines are 25% dimmer than labels. Useful for reducing visual clutter while keeping labels prominent.</p>
+
+<p><strong>Extend Lines Right:</strong> ON = lines extend across entire chart. OFF = lines stop at label position. Disable for a cleaner look when you only need to see the price level at the label.</p>
 
 <h3 id="label-style-option">Label Style Option<a class="headerlink" href="#label-style-option" title="Permanent link">&para;</a></h3>
 <p>Controls how level labels appear on the chart:</p>
@@ -2987,6 +3001,19 @@ All level colors now default to <strong>gray</strong> for a clean, professional 
 <li>HTF ON → Shows Daily H/L + Weekly H/L (4 levels)</li>
 <li>Sessions OFF → Clean start, user opts in</li>
 <li>Market Structure ON → Compact labels</li>
+</ul>
+
+<h3 id="bug-fixes-v10">Bug Fixes (v1.0)<a class="headerlink" href="#bug-fixes-v10" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Monday levels now visible all week:</strong> Distance Table now correctly shows Monday (start of week) levels throughout the entire week, not just on Mondays</li>
+<li><strong>Text Only labels no longer overlap:</strong> When using Text Only label style, labels that are close together no longer overlap - proper spacing is maintained</li>
+</ul>
+
+<h3 id="visual-changes-v10">Visual Changes (v1.0)<a class="headerlink" href="#visual-changes-v10" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Label separator changed:</strong> Bullet point changed from <code>•</code> to <code>·</code> (lighter middle dot) for a cleaner look</li>
+<li><strong>Price separator format:</strong> Now uses colon before price - example: <code>dH · wH : 91779.7</code></li>
+<li><strong>Killzone names shortened:</strong> Removed "KZ" suffix from killzone labels for a more compact display</li>
 </ul>
 
 <h3 id="control-tooltips">Control Tooltips (Alert Info)<a class="headerlink" href="#control-tooltips" title="Permanent link">&para;</a></h3>
@@ -3515,12 +3542,18 @@ Structure: Strong uptrend characteristics
 <tr><th>Setting</th><th>Options</th><th>Default</th></tr>
 </thead>
 <tbody>
-<tr><td>Position</td><td>Top-Right, Top-Left, Bottom-Right, Bottom-Left</td><td>Top-Right</td></tr>
+<tr><td>Layout</td><td>Vertical (2 columns), Horizontal (single row), Compact (single column)</td><td>Vertical</td></tr>
+<tr><td>Position</td><td>Top-Left, Top-Center, Top-Right, Middle-Left, Middle-Center, Middle-Right, Bottom-Left, Bottom-Center, Bottom-Right</td><td>Top-Right</td></tr>
+<tr><td>Size</td><td>Tiny, Small, Normal</td><td>Normal</td></tr>
+<tr><td>Show Header</td><td>On/Off</td><td>On</td></tr>
 <tr><td>Show Distance %</td><td>On/Off</td><td>On</td></tr>
 <tr><td>Sort By</td><td>Distance, Name, Type</td><td>Distance</td></tr>
 <tr><td>Max Rows</td><td>5, 10, 15, All</td><td>10</td></tr>
 </tbody>
 </table>
+
+<p><strong>📱 Mobile Tip:</strong> Use Compact + Bottom Center + Tiny + Header Off for best mobile experience.</p>
+
 <p><strong>How to use:</strong><br />
 - Quickly identify nearest levels<br />
 - Plan entries/exits based on level proximity<br />
