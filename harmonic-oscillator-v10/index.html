@@ -2294,7 +2294,7 @@ graph TD
 <tr>
 <td><strong>Higher Timeframe Filter</strong></td>
 <td>On / Off</td>
-<td>Off</td>
+<td>On</td>
 </tr>
 <tr>
 <td><strong>HTF Timeframe</strong></td>
@@ -2303,6 +2303,82 @@ graph TD
 </tr>
 </tbody>
 </table>
+
+<h4 id="signal-mode-explained">Signal Mode Explained<a class="headerlink" href="#signal-mode-explained" title="Permanent link">&para;</a></h4>
+
+<p>Signal Mode controls how many component votes are needed for <strong>High Consensus</strong> alerts:</p>
+
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Votes Required</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Conservative</strong></td>
+<td>6/7 votes</td>
+<td>Fewer signals, higher quality. Swing traders, position traders.</td>
+</tr>
+<tr>
+<td><strong>Balanced</strong></td>
+<td>5/7 votes</td>
+<td>Default setting. Good balance of signal frequency and quality.</td>
+</tr>
+<tr>
+<td><strong>Aggressive</strong></td>
+<td>4/7 votes</td>
+<td>More signals, catches more moves. Scalpers, active day traders.</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>What it affects:</strong></p>
+<ul>
+<li>High Bull Consensus alert threshold</li>
+<li>High Bear Consensus alert threshold</li>
+</ul>
+
+<p><strong>Example:</strong> In Conservative mode, you only receive a "High Bull Consensus" alert when 6 or 7 components vote bullish. In Aggressive mode, 4 bullish votes triggers the alert.</p>
+
+<hr />
+
+<h4 id="higher-timeframe-filter-explained">Higher Timeframe Filter Explained<a class="headerlink" href="#higher-timeframe-filter-explained" title="Permanent link">&para;</a></h4>
+
+<p>When enabled, divergence signals are filtered by the higher timeframe trend direction:</p>
+
+<table>
+<thead>
+<tr>
+<th>HTF Trend</th>
+<th>Bullish Divergence</th>
+<th>Bearish Divergence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>HTF Bullish</strong> (price > HTF EMA50)</td>
+<td>✅ Shown</td>
+<td>❌ Filtered</td>
+</tr>
+<tr>
+<td><strong>HTF Bearish</strong> (price < HTF EMA50)</td>
+<td>❌ Filtered</td>
+<td>✅ Shown</td>
+</tr>
+<tr>
+<td><strong>Filter Disabled</strong></td>
+<td>✅ Shown</td>
+<td>✅ Shown</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Why use it:</strong> Filters out counter-trend divergence signals. If the 4H trend is bullish, you won't see bearish divergences that fight the larger trend. This reduces noise and helps you trade with the trend.</p>
+
+<p><strong>When to disable:</strong> If you specifically want to catch trend reversals, or if you trade very short timeframes where HTF context matters less.</p>
 
 <h3 id="display-settings">Display Settings<a class="headerlink" href="#display-settings" title="Permanent link">&para;</a></h3>
 <table>
@@ -2380,33 +2456,67 @@ graph TD
 <hr />
 <h2 id="regime-classification">🔢 Regime Classification<a class="headerlink" href="#regime-classification" title="Permanent link">&para;</a></h2>
 
-<p>Harmonic Oscillator classifies market conditions into three regimes based on composite oscillator readings and multi-factor confirmation:</p>
+<p>Harmonic Oscillator classifies market conditions into three regimes based on the <strong>composite oscillator level</strong> combined with <strong>baseline trend confirmation</strong>:</p>
+
+<table>
+<thead>
+<tr>
+<th>Regime</th>
+<th>Composite Level</th>
+<th>Additional Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TRENDING▲</strong></td>
+<td>Above 65</td>
+<td>200 EMA rising</td>
+</tr>
+<tr>
+<td><strong>TRENDING▼</strong></td>
+<td>Below 35</td>
+<td>200 EMA falling</td>
+</tr>
+<tr>
+<td><strong>BIAS▲</strong></td>
+<td>Above 55</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>BIAS▼</strong></td>
+<td>Below 45</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>RANGING</strong></td>
+<td>Between 45-55</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Important:</strong> Regime classification uses the composite oscillator value, not a direct vote count. However, high vote counts typically push the composite to extreme levels, so there's strong correlation between vote consensus and regime.</p>
+
+<p><strong>The relationship:</strong></p>
+<ul>
+<li>High consensus (6-7 votes) → Composite at extremes → Usually TRENDING</li>
+<li>Moderate consensus (4-5 votes) → Composite showing lean → Usually BIAS</li>
+<li>Low consensus (0-3 votes) → Composite near neutral → Usually RANGING</li>
+</ul>
 
 <h3 id="trending-regime">📈 TRENDING Regime<a class="headerlink" href="#trending-regime" title="Permanent link">&para;</a></h3>
 <p><strong>Status Panel Display:</strong> "TRENDING▲" (bullish) or "TRENDING▼" (bearish)</p>
-<p><strong>Conditions:</strong><br />
-- Strong directional momentum confirmed by multiple factors<br />
-- High vote consensus (typically 5+ of 7)<br />
-- Composite oscillator at directional extremes</p>
-<p><strong>Interpretation:</strong> Clear trending conditions with high-conviction directional momentum.</p>
+<p><strong>Interpretation:</strong> Clear trending conditions with high-conviction directional momentum. Composite oscillator at extremes with EMA confirmation.</p>
 <hr />
 
 <h3 id="bias-regime">📊 BIAS Regime<a class="headerlink" href="#bias-regime" title="Permanent link">&para;</a></h3>
 <p><strong>Status Panel Display:</strong> "BIAS▲" (bullish lean) or "BIAS▼" (bearish lean)</p>
-<p><strong>Conditions:</strong><br />
-- Moderate directional lean present<br />
-- Mixed vote consensus (typically 3-4 of 7)<br />
-- Composite oscillator showing lean but not at extremes</p>
 <p><strong>Interpretation:</strong> Directional lean without full trend confirmation. Early trend or weakening trend.</p>
 <hr />
 
 <h3 id="ranging-regime">↔️ RANGING Regime<a class="headerlink" href="#ranging-regime" title="Permanent link">&para;</a></h3>
 <p><strong>Status Panel Display:</strong> "RANGING—"</p>
-<p><strong>Conditions:</strong><br />
-- No clear directional consensus<br />
-- Mixed or conflicting component votes<br />
-- Composite oscillator near neutral zone</p>
-<p><strong>Interpretation:</strong> Choppy or consolidating conditions. Components disagree on direction.</p>
+<p><strong>Interpretation:</strong> Choppy or consolidating conditions. Composite oscillator in neutral zone.</p>
 
 <!-- 📸 SCREENSHOT NEEDED - Harmonic Oscillator Regime Transitions Over Time
      What to show: Oscillator showing regime progression: TRENDING → BIAS → RANGING
@@ -2575,9 +2685,43 @@ graph TD
 </table>
 
 <h3 id="consensus-levels">Consensus Levels<a class="headerlink" href="#consensus-levels" title="Permanent link">&para;</a></h3>
-<p><strong>High Consensus (5+ of 7):</strong> Strong multi-factor agreement. Typically corresponds to TRENDING regime.</p>
-<p><strong>Moderate Consensus (3-4 of 7):</strong> Partial agreement. Typically corresponds to BIAS regime.</p>
-<p><strong>Low Consensus (0-2 of 7):</strong> Components disagree. Typically corresponds to RANGING regime.</p>
+
+<p>Consensus thresholds vary based on your <strong>Signal Mode</strong> setting:</p>
+
+<table>
+<thead>
+<tr>
+<th>Consensus Level</th>
+<th>Conservative</th>
+<th>Balanced</th>
+<th>Aggressive</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>High Consensus</strong></td>
+<td>6+ votes</td>
+<td>5+ votes</td>
+<td>4+ votes</td>
+</tr>
+<tr>
+<td><strong>Moderate Consensus</strong></td>
+<td>4-5 votes</td>
+<td>3-4 votes</td>
+<td>2-3 votes</td>
+</tr>
+<tr>
+<td><strong>Low Consensus</strong></td>
+<td>0-3 votes</td>
+<td>0-2 votes</td>
+<td>0-1 votes</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>High Consensus</strong> triggers the "High Bull Consensus" and "High Bear Consensus" alerts. The threshold adapts to your chosen Signal Mode.</p>
+
+<p><strong>Default (Balanced):</strong> 5+ of 7 components voting the same direction = High Consensus alert fires.</p>
 <hr />
 <h2 id="educational-example-sp-500-futures-january-2025">📖 Educational Example: S&amp;P 500 Futures (January 2025)<a class="headerlink" href="#educational-example-sp-500-futures-january-2025" title="Permanent link">&para;</a></h2>
 <p><em>(Historical observation for educational purposes only. Not financial advice. Past performance does not indicate future results.)</em></p>
@@ -2804,12 +2948,12 @@ graph TD
 <tbody>
 <tr>
 <td><strong>High Bull Consensus</strong></td>
-<td>5+ components vote bullish (5/7, 6/7, or 7/7)</td>
+<td>Vote count reaches Signal Mode threshold (Conservative: 6+, Balanced: 5+, Aggressive: 4+)</td>
 <td>Strong bullish agreement across multiple factors</td>
 </tr>
 <tr>
 <td><strong>High Bear Consensus</strong></td>
-<td>5+ components vote bearish (5/7, 6/7, or 7/7)</td>
+<td>Vote count reaches Signal Mode threshold (Conservative: 6+, Balanced: 5+, Aggressive: 4+)</td>
 <td>Strong bearish agreement across multiple factors</td>
 </tr>
 </tbody>
@@ -3082,7 +3226,14 @@ graph TD
 <h3 id="q-can-i-see-the-composite-oscillator">Q: Can I see the composite oscillator?<a class="headerlink" href="#q-can-i-see-the-composite-oscillator" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> Yes. Enable "Show Oscillator" in display settings to see the composite oscillator, signal line, and extreme zones in a separate panel.</p>
 <h3 id="q-what-do-the-vote-counts-mean">Q: What do the vote counts (X/7) mean?<a class="headerlink" href="#q-what-do-the-vote-counts-mean" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> The vote count shows how many of the seven components agree on direction. Higher counts (6/7, 7/7) indicate stronger consensus. The count determines the regime: 6-7 = TRENDING, 4-5 = BIAS, 0-3 = RANGING.</p>
+<p><strong>A:</strong> The vote count shows how many of the seven components agree on direction. Higher counts (6/7, 7/7) indicate stronger consensus and typically correlate with TRENDING regimes. The actual regime classification is determined by the composite oscillator level, but vote count and regime are strongly correlated. High Consensus alerts use the vote count directly, with thresholds set by your Signal Mode (Conservative: 6+, Balanced: 5+, Aggressive: 4+).</p>
+
+<h3 id="q-what-does-signal-mode-change">Q: What does Signal Mode actually change?<a class="headerlink" href="#q-what-does-signal-mode-change" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Signal Mode adjusts the threshold for High Consensus alerts. Conservative requires 6/7 votes (fewer, higher-quality alerts), Balanced requires 5/7 (default), and Aggressive requires 4/7 (more frequent alerts). Choose based on your trading style: Conservative for swing/position trading, Aggressive for scalping/day trading.</p>
+
+<h3 id="q-what-does-htf-filter-do">Q: What does the HTF Filter do?<a class="headerlink" href="#q-what-does-htf-filter-do" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> When enabled, divergence signals are filtered by the higher timeframe trend. Bullish divergences only appear when the HTF trend is bullish (price above 4H EMA50), and bearish divergences only appear when HTF is bearish. This helps you avoid counter-trend signals. Disable it if you want to catch potential trend reversals.</p>
+
 <h3 id="q-how-many-regime-changes-appear-on-average">Q: How many regime changes appear on average?<a class="headerlink" href="#q-how-many-regime-changes-appear-on-average" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> Regime frequency varies by asset, timeframe, and market conditions. Volatile periods show more regime changes. Strong trending periods show stable regimes with fewer changes.</p>
 <hr />
@@ -3114,45 +3265,45 @@ graph TD
 <tr>
 <th>Regime</th>
 <th>Label</th>
-<th>Votes Required</th>
-<th>Agreement Level</th>
+<th>Composite Level</th>
+<th>Typical Vote Count</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>TRENDING▲</strong></td>
 <td>Green</td>
-<td>6-7 bullish</td>
-<td>Strong consensus</td>
+<td>>65 + EMA rising</td>
+<td>Usually 6-7 bullish</td>
 </tr>
 <tr>
 <td><strong>TRENDING▼</strong></td>
 <td>Red</td>
-<td>6-7 bearish</td>
-<td>Strong consensus</td>
+<td><35 + EMA falling</td>
+<td>Usually 6-7 bearish</td>
 </tr>
 <tr>
 <td><strong>BIAS▲</strong></td>
 <td>Light green</td>
-<td>4-5 bullish</td>
-<td>Moderate lean</td>
+<td>>55</td>
+<td>Usually 4-5 bullish</td>
 </tr>
 <tr>
 <td><strong>BIAS▼</strong></td>
 <td>Light red</td>
-<td>4-5 bearish</td>
-<td>Moderate lean</td>
+<td><45</td>
+<td>Usually 4-5 bearish</td>
 </tr>
 <tr>
 <td><strong>RANGING—</strong></td>
 <td>Gray</td>
-<td>0-3 either direction</td>
-<td>No consensus</td>
+<td>45-55</td>
+<td>Usually 0-3 either</td>
 </tr>
 </tbody>
 </table>
 
-<p><strong>Remember:</strong> TRENDING regimes (6-7 aligned components) carry significantly more weight than BIAS regimes (4-5 components). Trade TRENDING regimes at key levels for highest probability setups. RANGING indicates waiting periods—patience is profitable.</p>
+<p><strong>Note:</strong> Regime is determined by composite oscillator level, not directly by vote count. The correlation is strong but not absolute.</p>
 
 <h3 id="component-quick-reference">Component Quick Reference<a class="headerlink" href="#component-quick-reference" title="Permanent link">&para;</a></h3>
 <table>
@@ -3246,7 +3397,7 @@ support@signalpilot.io</p>
 - <a href="../how-to-alerts/">How to Set Up Alerts</a> - Get notified on consensus signals<br />
 - <a href="../ref-workflow/">Trading Workflow</a> - How momentum fits into complete trading system</p>
 <hr />
-<p><strong>Disclaimer:</strong> This indicator combines five voting components (MACD with ADX/momentum gating, RSI triple envelope, Stochastic RSI, Volume delta patterns, Divergence detection) into a consensus-based signal system. All signals represent multi-component agreement detection based on momentum and volume analysis methodologies. Individual interpretation, application, and outcomes vary. Past signal patterns do not guarantee future results. This is not financial advice.</p>
+<p><strong>Disclaimer:</strong> This indicator combines seven voting components (RSI, Stochastic RSI, MACD, EMA Trend, Momentum, Volume, Divergence Zone) into a consensus-based signal system. All signals represent multi-component agreement detection based on momentum and volume analysis methodologies. Individual interpretation, application, and outcomes vary. Past signal patterns do not guarantee future results. This is not financial advice.</p>
                 
                 
                 
