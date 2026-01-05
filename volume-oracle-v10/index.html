@@ -882,9 +882,9 @@
   </a>
 </li>
           <li class="md-nav__item">
-  <a href="#institutional-footprint-detection" class="md-nav__link">
+  <a href="#volume-footprint-detection" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Institutional Footprint Detection
+      2. Volume Footprint Detection
     </span>
   </a>
 </li>
@@ -1588,9 +1588,9 @@
   </a>
 </li>
           <li class="md-nav__item">
-  <a href="#institutional-footprint-detection" class="md-nav__link">
+  <a href="#volume-footprint-detection" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Institutional Footprint Detection
+      2. Volume Footprint Detection
     </span>
   </a>
 </li>
@@ -1863,7 +1863,7 @@
 </div>
 
 <!-- Render the page content -->
-<h1 id="volume-oracle-v10-institutional-flow-analysis">Volume Oracle v1.0 — Institutional Flow Analysis<a class="headerlink" href="#volume-oracle-v10-institutional-flow-analysis" title="Permanent link">&para;</a></h1>
+<h1 id="volume-oracle-v10-regime-detection">Volume Oracle v1.0 — Regime Detection<a class="headerlink" href="#volume-oracle-v10-regime-detection" title="Permanent link">&para;</a></h1>
 <p>Regime-based volume intelligence indicator. Detects accumulation and distribution phases through adaptive flow analysis, market structure validation, and multi-factor quality scoring.</p>
 
 <div class="sp-callout sp-callout--success" style="margin: 2rem 0; border-left: 4px solid #4caf50;">
@@ -1902,11 +1902,11 @@
         <p><strong>Regimes = The Market's Direction</strong></p>
         <p>Individual volume bars are noisy. Regimes smooth out the noise:</p>
         <ul>
-          <li><strong>Strong ACCUMULATION regime</strong> = Institutions buying over time, not just one bar</li>
+          <li><strong>Strong ACCUMULATION regime</strong> = Sustained buying pressure over time, not just one bar</li>
           <li><strong>Regime FADING</strong> = Early warning that direction may change</li>
           <li><strong>Structure CONFLICT</strong> = Price action disagrees with regime → be cautious</li>
         </ul>
-        <p>Volume Oracle helps you trade WITH institutional flow, not against it.</p>
+        <p>Volume Oracle helps you trade WITH the dominant flow, not against it.</p>
       </div>
     </details>
 
@@ -1932,7 +1932,7 @@
   <div class="sp-callout__icon">📊</div>
   <div class="sp-callout__content">
     <h4>Regime State Machine</h4>
-    <p style="margin-bottom: 1rem;">Volume Oracle tracks institutional flow through three regime states:</p>
+    <p style="margin-bottom: 1rem;">Volume Oracle tracks volume flow through three regime states:</p>
     <pre style="background: #1a1a2e; padding: 1rem; border-radius: 8px; font-family: monospace; font-size: 0.85rem; overflow-x: auto;">
             ┌───────────────┐
             │    NEUTRAL    │
@@ -1963,7 +1963,7 @@
 <li>Price trend confirmation</li>
 <li>Current regime strength</li>
 <li>Market structure agreement (HH/HL vs LH/LL patterns)</li>
-<li>Institutional footprint type</li>
+<li>Volume footprint type</li>
 <li>Multi-factor confluence</li>
 </ul>
 <p><strong>Dynamic Adjustments:</strong></p>
@@ -2085,7 +2085,7 @@
 <tr><th>Field</th><th>Values</th><th>Meaning</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>Regime</strong></td><td>ACCUMULATION / DISTRIBUTION / NEUTRAL</td><td>Current institutional flow direction</td></tr>
+<tr><td><strong>Regime</strong></td><td>ACCUMULATION / DISTRIBUTION / NEUTRAL</td><td>Current volume flow direction</td></tr>
 <tr><td><strong>Strength</strong></td><td>0-100%</td><td>How dominant is the current regime</td></tr>
 <tr><td><strong>Duration</strong></td><td>Hours (e.g., 32h)</td><td>How long regime has been active</td></tr>
 <tr><td><strong>Status</strong></td><td>STRONG ✓ / FADING ▼ / WEAK ▼ / CRIT ▼</td><td>Regime health indicator</td></tr>
@@ -2135,8 +2135,8 @@
 </table>
 <p><strong>Impact:</strong> Signals receive quality bonus when structure aligns with regime direction, penalty when conflicting.</p>
 
-<h3 id="institutional-footprint-detection">2. Institutional Footprint Detection<a class="headerlink" href="#institutional-footprint-detection" title="Permanent link">&para;</a></h3>
-<p>Classifies volume bars by their characteristics to identify potential institutional activity:</p>
+<h3 id="volume-footprint-detection">2. Volume Footprint Detection<a class="headerlink" href="#volume-footprint-detection" title="Permanent link">&para;</a></h3>
+<p>Classifies volume bars by their characteristics to identify significant volume patterns:</p>
 <table>
 <thead>
 <tr><th>Type</th><th>Characteristics</th></tr>
@@ -2338,8 +2338,8 @@
 <tr><th>Alert</th><th>Fires When</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>🏛️ Momentum Bar</strong></td><td>Institutional momentum detected</td></tr>
-<tr><td><strong>🏛️ Absorption Bar</strong></td><td>Institutional absorption detected</td></tr>
+<tr><td><strong>🔥 Momentum Footprint</strong></td><td>Strong directional momentum detected</td></tr>
+<tr><td><strong>🛡️ Absorption Footprint</strong></td><td>Supply/demand absorption detected</td></tr>
 </tbody>
 </table>
 
@@ -2461,11 +2461,11 @@ Structure: ✓ ALIGNED | Market: TRENDING</pre>
 <ol>
 <li><strong><a href="../pentarch-v10/">Pentarch</a> signal fires</strong> → TD, IGN, CAP, or WRN signal appears on chart</li>
 <li><strong>Check Volume Oracle regime</strong> → Is the regime aligned with the Pentarch signal direction?</li>
-<li><strong>Pentarch + Accumulation regime = validated bullish</strong> → Regime confirms institutional support for reversal</li>
+<li><strong>Pentarch + Accumulation regime = validated bullish</strong> → Regime confirms volume support for reversal</li>
 <li><strong>Pentarch + conflicting regime = proceed with caution</strong> → Signal without regime support may lack follow-through</li>
-<li><strong>Expected outcome:</strong> Volume Oracle regime validates which <a href="../pentarch-v10/">Pentarch</a> signals have institutional backing</li>
+<li><strong>Expected outcome:</strong> Volume Oracle regime validates which <a href="../pentarch-v10/">Pentarch</a> signals have volume confirmation</li>
 </ol>
-<p><strong>Example:</strong> <a href="../pentarch-v10/">Pentarch</a> TD buy signal fires → Volume Oracle shows Accumulation regime (green, 75%) = confirmed bullish reversal with institutional accumulation</p>
+<p><strong>Example:</strong> <a href="../pentarch-v10/">Pentarch</a> TD buy signal fires → Volume Oracle shows Accumulation regime (green, 75%) = confirmed bullish reversal with accumulation flow</p>
 
 <h3 id="volume-oracle-janus-atlas">Volume Oracle + <a href="../janus-atlas-v10/">Janus Atlas</a> (Regime at Levels)<a class="headerlink" href="#volume-oracle-janus-atlas" title="Permanent link">&para;</a></h3>
 <p><strong>Workflow:</strong></p>
@@ -2478,9 +2478,9 @@ Structure: ✓ ALIGNED | Market: TRENDING</pre>
 <li>Distribution regime + resistance level = strong rejection potential</li>
 </ul>
 </li>
-<li><strong>Expected outcome:</strong> Volume Oracle regime shows whether <a href="../janus-atlas-v10/">Janus</a> levels are being defended by institutions</li>
+<li><strong>Expected outcome:</strong> Volume Oracle regime shows whether <a href="../janus-atlas-v10/">Janus</a> levels have volume confirmation</li>
 </ol>
-<p><strong>Example:</strong> Price hits Daily Low + Weekly Low confluence → Volume Oracle shows Accumulation regime (green, 72%) → price bounces = confirmed institutional support zone</p>
+<p><strong>Example:</strong> Price hits Daily Low + Weekly Low confluence → Volume Oracle shows Accumulation regime (green, 72%) → price bounces = confirmed support zone with accumulation</p>
 
 <h3 id="volume-oracle-harmonic-oscillator">Volume Oracle + <a href="../harmonic-oscillator-v10/">Harmonic Oscillator</a> (Regime + Momentum)<a class="headerlink" href="#volume-oracle-harmonic-oscillator" title="Permanent link">&para;</a></h3>
 <p><strong>Workflow:</strong></p>
@@ -2493,7 +2493,7 @@ Structure: ✓ ALIGNED | Market: TRENDING</pre>
 <li>Bear momentum + Distribution regime = confirmed bearish momentum</li>
 </ul>
 </li>
-<li><strong>Conflicting regime = weaker signal</strong> → May lack institutional participation, reduce position size</li>
+<li><strong>Conflicting regime = weaker signal</strong> → May lack volume participation, reduce position size</li>
 </ol>
 <p><strong>Example:</strong> <a href="../harmonic-oscillator-v10/">Harmonic Oscillator</a> STRONG bull (7/7) → Volume Oracle shows Accumulation regime (green, 80%) = maximum bullish confluence (momentum + regime)</p>
 
@@ -2514,7 +2514,7 @@ Structure: ✓ ALIGNED | Market: TRENDING</pre>
 
 <div class="admonition tip">
 <p class="admonition-title">Pro Tip: The Regime Confirmation Workflow</p>
-<p>For highest-probability setups, use <strong>Volume Oracle as the regime confirmation layer</strong>. Workflow: <strong><a href="../janus-atlas-v10/">Janus Atlas</a> (identify level) → <a href="../pentarch-v10/">Pentarch</a> (timing signal) → Volume Oracle (regime confirmation)</strong>. Price at key level + timing signal + aligned regime = triple-confluence setup with institutional validation. Always ask: "Is the regime supporting this setup?"</p>
+<p>For highest-probability setups, use <strong>Volume Oracle as the regime confirmation layer</strong>. Workflow: <strong><a href="../janus-atlas-v10/">Janus Atlas</a> (identify level) → <a href="../pentarch-v10/">Pentarch</a> (timing signal) → Volume Oracle (regime confirmation)</strong>. Price at key level + timing signal + aligned regime = triple-confluence setup with volume validation. Always ask: "Is the regime supporting this setup?"</p>
 <p><strong>See also:</strong> <a href="../ref-workflow/">Complete Trading Workflow Guide</a> for detailed multi-indicator strategies.</p>
 </div>
 
@@ -2864,15 +2864,15 @@ support@signalpilot.io</p>
 <div style="display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin:1rem 0">
   <a href="https://blog.signalpilot.io/articles/accumulation-vs-distribution/" target="_blank" style="padding:1rem;background:var(--bg-secondary);border-radius:8px;text-decoration:none;border:1px solid var(--border)">
     <strong style="color:var(--accent)">Accumulation vs Distribution</strong>
-    <p style="margin:.5rem 0 0;font-size:.9rem;color:var(--text-muted)">Learn to identify institutional buying and selling phases</p>
+    <p style="margin:.5rem 0 0;font-size:.9rem;color:var(--text-muted)">Learn to identify accumulation and distribution phases</p>
   </a>
   <a href="https://blog.signalpilot.io/articles/volume-profile-basics/" target="_blank" style="padding:1rem;background:var(--bg-secondary);border-radius:8px;text-decoration:none;border:1px solid var(--border)">
     <strong style="color:var(--accent)">Volume Profile Basics</strong>
     <p style="margin:.5rem 0 0;font-size:.9rem;color:var(--text-muted)">Master the fundamentals of volume-at-price analysis</p>
   </a>
   <a href="https://blog.signalpilot.io/articles/how-smart-money-moves/" target="_blank" style="padding:1rem;background:var(--bg-secondary);border-radius:8px;text-decoration:none;border:1px solid var(--border)">
-    <strong style="color:var(--accent)">How Smart Money Moves</strong>
-    <p style="margin:.5rem 0 0;font-size:.9rem;color:var(--text-muted)">Follow institutional footprints through the market</p>
+    <strong style="color:var(--accent)">Volume Flow Analysis</strong>
+    <p style="margin:.5rem 0 0;font-size:.9rem;color:var(--text-muted)">Follow volume footprints through the market</p>
   </a>
 </div>
 <hr />
@@ -2884,7 +2884,7 @@ support@signalpilot.io</p>
 - <a href="../how-to-alerts/">How to Set Up Alerts</a> - Get notified on volume signals<br />
 - <a href="../ref-workflow/">Trading Workflow</a> - How volume analysis fits into complete system</p>
 <hr />
-<p><strong>Disclaimer:</strong> Volume Oracle uses a Regime State Machine (ACCUMULATION, DISTRIBUTION, NEUTRAL) powered by five backend systems: Market Structure Detection, Institutional Footprint Detection, Regime Stability Index, Confluence Scoring, and Signal Density Tracking. All analyses represent historical volume data interpretation. Risk levels are calculated automatically but exclude fees, commissions, and slippage. Individual interpretation, application, and outcomes vary. Past performance does not guarantee future results. This is not financial advice.</p>
+<p><strong>Disclaimer:</strong> Volume Oracle uses a Regime State Machine (ACCUMULATION, DISTRIBUTION, NEUTRAL) powered by five backend systems: Market Structure Detection, Volume Footprint Detection, Regime Stability Index, Confluence Scoring, and Signal Density Tracking. All analyses represent historical volume data interpretation. Risk levels are calculated automatically but exclude fees, commissions, and slippage. Individual interpretation, application, and outcomes vary. Past performance does not guarantee future results. This is not financial advice.</p>
                 
                 
                 
