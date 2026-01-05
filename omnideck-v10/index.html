@@ -937,9 +937,9 @@
 
 </li>
           <li class="md-nav__item">
-  <a href="#system-8-supplydemand-zones-institutional-levels" class="md-nav__link">
+  <a href="#system-8-supplydemand-zones-key-levels" class="md-nav__link">
     <span class="md-ellipsis">
-      System 8: Supply/Demand Zones — Institutional Levels
+      System 8: Supply/Demand Zones — Key Levels
     </span>
   </a>
 
@@ -1878,9 +1878,9 @@
 
 </li>
           <li class="md-nav__item">
-  <a href="#system-8-supplydemand-zones-institutional-levels" class="md-nav__link">
+  <a href="#system-8-supplydemand-zones-key-levels" class="md-nav__link">
     <span class="md-ellipsis">
-      System 8: Supply/Demand Zones — Institutional Levels
+      System 8: Supply/Demand Zones — Key Levels
     </span>
   </a>
 
@@ -2433,7 +2433,7 @@ graph TD
 5. SuperTrend - Trend ribbon (green/red)<br />
 6. BMSB - Bull Market Support Band (20 SMA + 21 EMA)<br />
 7. Regime Box - Market mood background color<br />
-8. Supply/Demand Zones - Institutional level boxes<br />
+8. Supply/Demand Zones - Key level boxes<br />
 9. Candlestick Patterns - 16 classic patterns<br />
 10. Meta Tools - System integration layer</p>
 <p><strong>Display:</strong> All enabled systems appear on single chart without performance degradation.</p>
@@ -2569,7 +2569,7 @@ graph TD
 <tr><td>Liquidity Sweeps</td><td>Stop hunt detection</td></tr>
 <tr><td>EMA Trio</td><td>Moving averages (50/100/200)</td></tr>
 <tr><td>BMSB</td><td>Bull Market Support Band</td></tr>
-<tr><td>Supply/Demand Zones</td><td>Institutional price zones</td></tr>
+<tr><td>Supply/Demand Zones</td><td>Key price zones</td></tr>
 <tr><td>Candlestick Patterns</td><td>RCS 16-pattern library</td></tr>
 <tr><td>Dynamic RCS Lookback</td><td>Timeframe-based sensitivity</td></tr>
 <tr><td>Show Alert Prefix</td><td>Alert message prefix toggle</td></tr>
@@ -2877,13 +2877,13 @@ graph TD
 </div>
 
 <hr />
-<h3 id="system-8-supplydemand-zones-institutional-levels">System 8: Supply/Demand Zones — Institutional Levels<a class="headerlink" href="#system-8-supplydemand-zones-institutional-levels" title="Permanent link">&para;</a></h3>
+<h3 id="system-8-supplydemand-zones-key-levels">System 8: Supply/Demand Zones — Key Levels<a class="headerlink" href="#system-8-supplydemand-zones-key-levels" title="Permanent link">&para;</a></h3>
 <p><strong>Visual Display:</strong><br />
 - Green boxes = Demand zones (potential support)<br />
 - Red boxes = Supply zones (potential resistance)<br />
 - Stars ⭐⭐⭐ = Quality rating (more stars = stronger zone)</p>
 <p><strong>How It Works:</strong><br />
-- Identifies areas where institutional accumulation/distribution occurred<br />
+- Identifies areas where significant accumulation/distribution occurred<br />
 - Star rating based on volume, momentum, time characteristics</p>
 <p><strong>Signal Interpretation:</strong><br />
 - ⭐⭐⭐ zones = Highest quality (strongest reaction potential)<br />
@@ -3461,10 +3461,10 @@ graph TD
 <ol>
 <li><strong>Omnideck TD Sequential fires buy/sell signal</strong> → Count completes (bar 13) signaling potential exhaustion</li>
 <li><strong>Check <a href="../volume-oracle-v10/">Volume Oracle</a> regime for confirmation</strong> → Is the regime aligned with the TD Sequential direction?</li>
-<li><strong>TD signal + aligned regime = validated exhaustion</strong> → Accumulation regime at buy countdown = institutional accumulation confirms reversal</li>
-<li><strong>Expected outcome:</strong> <a href="../volume-oracle-v10/">Volume Oracle</a> regime validates which TD Sequential signals have institutional backing</li>
+<li><strong>TD signal + aligned regime = validated exhaustion</strong> → Accumulation regime at buy countdown = volume accumulation confirms reversal</li>
+<li><strong>Expected outcome:</strong> <a href="../volume-oracle-v10/">Volume Oracle</a> regime validates which TD Sequential signals have volume support</li>
 </ol>
-<p><strong>Example:</strong> Omnideck TD Sequential completes buy countdown (bar 13) → <a href="../volume-oracle-v10/">Volume Oracle</a> shows Accumulation regime (green, 72%) = confirmed bullish reversal with institutional support</p>
+<p><strong>Example:</strong> Omnideck TD Sequential completes buy countdown (bar 13) → <a href="../volume-oracle-v10/">Volume Oracle</a> shows Accumulation regime (green, 72%) = confirmed bullish reversal with accumulation flow</p>
 
 <h3 id="omnideck-harmonic-oscillator">Omnideck + Harmonic Oscillator (Regime + Momentum)<a class="headerlink" href="#omnideck-harmonic-oscillator" title="Permanent link">&para;</a></h3>
 <p><strong>Workflow:</strong></p>

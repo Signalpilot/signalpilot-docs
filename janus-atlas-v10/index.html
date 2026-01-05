@@ -151,7 +151,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://docs.signalpilot.io/">
     <meta property="og:title" content="Janus Atlas v1.0 — Levels System">
-    <meta property="og:description" content="Comprehensive institutional levels system. 60+ automatic levels including daily/weekly/monthly highs/lows, VWAP, session levels, and market structure.">
+    <meta property="og:description" content="Comprehensive levels system with 60+ automatic levels including daily/weekly/monthly highs/lows, VWAP, session levels, and market structure.">
     <meta property="og:image" content="https://docs.signalpilot.io/assets/images/preview.png">
     <meta property="og:site_name" content="Signal Pilot Docs">
 
@@ -159,7 +159,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://docs.signalpilot.io/">
     <meta name="twitter:title" content="Janus Atlas v1.0 — Levels System">
-    <meta name="twitter:description" content="Comprehensive institutional levels system. 60+ automatic levels including daily/weekly/monthly highs/lows, VWAP, session levels, and market structure.">
+    <meta name="twitter:description" content="Comprehensive levels system with 60+ automatic levels including daily/weekly/monthly highs/lows, VWAP, session levels, and market structure.">
     <meta name="twitter:image" content="https://docs.signalpilot.io/assets/images/preview.png">
 
 
@@ -2873,7 +2873,7 @@
 <tr><td>6</td><td><strong>Quarterly Levels</strong></td><td>QH, QL, QO, QC, QMid toggles</td></tr>
 <tr><td>7</td><td><strong>Yearly Levels</strong></td><td>YH, YL, YO, YC, YMid toggles</td></tr>
 <tr><td>8</td><td><strong>Opening Range</strong></td><td>OR session, duration, levels</td></tr>
-<tr><td>9</td><td><strong>Killzones</strong></td><td>5 institutional time windows</td></tr>
+<tr><td>9</td><td><strong>Killzones</strong></td><td>5 key trading time windows</td></tr>
 <tr><td>10</td><td><strong>Gap Levels</strong></td><td>Daily/weekend gaps, fill detection</td></tr>
 <tr><td>11</td><td><strong>Session Levels</strong></td><td>Asian, London, NY sessions</td></tr>
 <tr><td>12</td><td><strong>VWAP</strong></td><td>Daily, weekly, monthly, quarterly, yearly + bands (±1σ/±2σ) + previous periods</td></tr>
@@ -3055,7 +3055,7 @@ All level colors now default to <strong>gray</strong> for a clean, professional 
 <div class="knowledge-check"
      data-quiz-id="janus-level-count"
      data-correct-answer="b"
-     data-correct-feedback="✓ Correct! Janus Atlas displays 60+ different level types across timeframes, sessions, volume analysis, and market structure. This comprehensive coverage includes daily/weekly/monthly levels, session highs/lows, VWAPs, POCs, VAHs/VALs, Opening Range, Killzones, Gap Levels, and various other institutional reference points."
+     data-correct-feedback="✓ Correct! Janus Atlas displays 60+ different level types across timeframes, sessions, volume analysis, and market structure. This comprehensive coverage includes daily/weekly/monthly levels, session highs/lows, VWAPs, POCs, VAHs/VALs, Opening Range, Killzones, Gap Levels, and various other key reference points."
      data-incorrect-feedback="Not quite. Review the 'Core Functionality' section at the top of this page. Janus Atlas is known for its comprehensive level coverage. Count includes timeframe levels, session levels, volume levels, market structure levels, Opening Range, Killzones, and Gap Levels. Try again!">
   <h4>✅ Knowledge Check</h4>
   <p><strong>Question:</strong> How many different level types does Janus Atlas display?</p>
@@ -3128,7 +3128,7 @@ All level colors now default to <strong>gray</strong> for a clean, professional 
 - Price reactions occur at these levels<br />
 - Weekly levels show stronger reactions than daily<br />
 - Monthly levels show stronger reactions than weekly<br />
-- Quarterly/Yearly levels show strongest reactions (major institutional reference points)<br />
+- Quarterly/Yearly levels show strongest reactions (major reference points)<br />
 - Clusters of multiple levels indicate zones of interest</p>
 <p><strong>Example:</strong> Bitcoin declines to Weekly Low at $65,000 → Bounce reaction observed (support characteristics).</p>
 <hr />
@@ -3159,7 +3159,7 @@ All level colors now default to <strong>gray</strong> for a clean, professional 
 - Price above VWAP = Bullish positioning<br />
 - Price below VWAP = Bearish positioning<br />
 - Price returns to VWAP (magnet effect observed)<br />
-- Institutional reference level</p>
+- Professional trading reference level</p>
 <p><strong>Example:</strong> Price spikes to $68,000, VWAP at $66,000 → Pullback to VWAP level observed.</p>
 <hr />
 <h3 id="vwap-standard-deviation-bands">📊 VWAP Standard Deviation Bands<a class="headerlink" href="#vwap-standard-deviation-bands" title="Permanent link">&para;</a></h3>
@@ -3205,7 +3205,7 @@ All level colors now default to <strong>gray</strong> for a clean, professional 
 - Same pattern for weekly (<code>w</code>), monthly (<code>m</code>), quarterly (<code>q</code>), yearly (<code>y</code>)</p>
 <p><strong>Yearly VWAP (yVWAP):</strong><br />
 - Volume-weighted average price anchored to the calendar year<br />
-- Institutional reference for long-term mean reversion<br />
+- Key reference for long-term mean reversion<br />
 - Use case: Major S/R for position traders and macro analysis</p>
 <p><strong>Example:</strong> Bitcoin trading at Daily VWAP +2σ ($69,500) while VWAP is at $67,000 → Statistically extended, mean reversion back to VWAP is probable.</p>
 <hr />
@@ -3227,7 +3227,7 @@ All level colors now default to <strong>gray</strong> for a clean, professional 
 <tr><td>Daily</td><td>dPOC, dVAH, dVAL</td><td>Day trading, intraday levels</td></tr>
 <tr><td>Weekly</td><td>wPOC, wVAH, wVAL</td><td>Swing trading, multi-day levels</td></tr>
 <tr><td>Monthly</td><td>mPOC, mVAH, mVAL</td><td>Position trading, monthly context</td></tr>
-<tr><td>Quarterly</td><td>qPOC, qVAH, qVAL</td><td>Longer-term institutional reference</td></tr>
+<tr><td>Quarterly</td><td>qPOC, qVAH, qVAL</td><td>Longer-term position trading reference</td></tr>
 <tr><td>Yearly</td><td>yPOC, yVAH, yVAL</td><td>Major S/R for macro analysis</td></tr>
 </tbody>
 </table>
@@ -3237,7 +3237,7 @@ All level colors now default to <strong>gray</strong> for a clean, professional 
 - Below VAL = Extended below fair value<br />
 - Value area contains "fair value" zone</p>
 <p><strong>Quarterly &amp; Yearly Volume Profile:</strong><br />
-Identifies where the majority of trading volume occurred over longer periods. Use case: Institutional reference for position traders and macro analysis.</p>
+Identifies where the majority of trading volume occurred over longer periods. Use case: Key reference for position traders and macro analysis.</p>
 <p><strong>Example:</strong> Price at $69,000, POC at $67,000 → Pullback to POC observed (magnet effect).</p>
 <hr />
 <h3 id="naked-poc-npoc">🧲 Naked POC (nPOC)<a class="headerlink" href="#naked-poc-npoc" title="Permanent link">&para;</a></h3>
@@ -3341,7 +3341,7 @@ Structure: Strong uptrend characteristics
 
 <hr />
 <h3 id="killzones">🕐 Killzones<a class="headerlink" href="#killzones" title="Permanent link">&para;</a></h3>
-<p><strong>What it does:</strong> Highlights institutional trading windows with visual background shading. These are time periods when major market participants are most active.</p>
+<p><strong>What it does:</strong> Highlights key trading windows with visual background shading. These are time periods when market participants are most active.</p>
 <p><strong>Available Killzones:</strong></p>
 <table>
 <thead>
@@ -3370,7 +3370,7 @@ Structure: Strong uptrend characteristics
 <div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
   <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
   <p style="margin: 0; color: #424242;"><strong>Killzone Background Shading</strong></p>
-  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">Shows semi-transparent background highlighting during institutional trading windows.</p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">Shows semi-transparent background highlighting during key trading windows.</p>
 </div>
 
 <hr />
@@ -3985,10 +3985,10 @@ Interpretation: High confluence zone, stronger reactions observed
 <ol>
 <li><strong>Price approaches major level</strong> → Watch Daily High, Weekly POC, or major Fibonacci level</li>
 <li><strong>Check <a href="../volume-oracle-v10/">Volume Oracle</a> regime at level</strong> → What is the regime showing when price tests the level?</li>
-<li><strong>Regime confirms level significance:</strong> Accumulation regime at support = institutional buying. Distribution regime at resistance = institutional selling</li>
-<li><strong>Expected outcome:</strong> Volume Oracle regime shows whether institutions are defending or breaking the level</li>
+<li><strong>Regime confirms level significance:</strong> Accumulation regime at support = buying pressure. Distribution regime at resistance = selling pressure</li>
+<li><strong>Expected outcome:</strong> Volume Oracle regime shows whether buyers or sellers are dominating at the level</li>
 </ol>
-<p><strong>Example:</strong> Price hits Daily Low → <a href="../volume-oracle-v10/">Volume Oracle</a> shows Accumulation regime (green, 70%) → price bounces = confirmed institutional support at level</p>
+<p><strong>Example:</strong> Price hits Daily Low → <a href="../volume-oracle-v10/">Volume Oracle</a> shows Accumulation regime (green, 70%) → price bounces = confirmed volume support at level</p>
 
 <h3 id="janus-atlas-harmonic-oscillator">Janus Atlas + <a href="../harmonic-oscillator-v10/">Harmonic Oscillator</a> (Momentum at Levels)<a class="headerlink" href="#janus-atlas-harmonic-oscillator" title="Permanent link">&para;</a></h3>
 <p><strong>Workflow:</strong></p>
@@ -4068,7 +4068,7 @@ Interpretation: High confluence zone, stronger reactions observed
 <ul>
 <li>Prioritize higher timeframe levels: Weekly High/Low > Daily High/Low > Intraday levels</li>
 <li>Monthly and Weekly levels are major structural zones</li>
-<li>POC (Point of Control) levels show highest volume areas = institutional interest</li>
+<li>POC (Point of Control) levels show highest volume areas = significant trading interest</li>
 <li>Fibonacci levels derived from major swings are stronger than minor swings</li>
 </ul>
 <p><strong>Remember:</strong> Higher timeframe levels = stronger reactions. Focus on Weekly/Daily for swing trades, Daily/4H for day trades.</p>
@@ -4202,7 +4202,7 @@ Interpretation: High confluence zone, stronger reactions observed
 <h3 id="levels-without-confluence-confirmation">Isolated Levels Without Confluence or Confirmation<a class="headerlink" href="#levels-without-confluence-confirmation" title="Permanent link">&para;</a></h3>
 <p><strong>The Condition:</strong> Trading every single-level touch without requiring confluence (multiple levels clustering) or confirmation (volume spike, reversal candle, momentum signal).</p>
 <p><strong>What Happens:</strong> Win rate drops significantly. Many levels get touched and immediately broken. Example: price touches Daily VWAP in isolation, no other levels nearby, no volume spike, no <a href="../pentarch-v10/">Pentarch</a> signal—just a brief touch before continuing trend. Single-level touches fail more often than confluence zones.</p>
-<p><strong>Context:</strong> Not all levels carry equal weight. A confluence zone where Daily Low + Weekly Low + 0.618 Fib + POC all cluster within 1% shows institutional interest and defense. An isolated Daily VWAP touch with no other confluence is a coin flip. Highest-probability setups occur at:</p>
+<p><strong>Context:</strong> Not all levels carry equal weight. A confluence zone where Daily Low + Weekly Low + 0.618 Fib + POC all cluster within 1% shows significant trading interest and likely defense. An isolated Daily VWAP touch with no other confluence is a coin flip. Highest-probability setups occur at:</p>
 <ul>
 <li><strong>Confluence zones:</strong> 3+ levels clustering in same price zone</li>
 <li><strong>Confirmed touches:</strong> Level touch + volume spike + reversal candle or <a href="../harmonic-oscillator-v10/">Harmonic Oscillator</a> signal</li>
@@ -4249,7 +4249,7 @@ Interpretation: High confluence zone, stronger reactions observed
 <p><strong>A:</strong> Real-time for current period levels. Historical levels fixed once period closes.</p>
 
 <h3 id="q-why-dont-killzones-have-alerts">Q: Why don't Killzones have alerts?<a class="headerlink" href="#q-why-dont-killzones-have-alerts" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> Killzones are time-based visual aids, not price levels. They highlight WHEN to trade (institutional activity windows), not WHERE. Since there's no price level to "touch," alerts don't apply.</p>
+<p><strong>A:</strong> Killzones are time-based visual aids, not price levels. They highlight WHEN to trade (high activity windows), not WHERE. Since there's no price level to "touch," alerts don't apply.</p>
 
 <h3 id="q-whats-the-difference-between-opening-range-and-session-levels">Q: What's the difference between Opening Range and Session levels?<a class="headerlink" href="#q-whats-the-difference-between-opening-range-and-session-levels" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> Opening Range captures only the first X minutes (e.g., 30 min), then freezes. Session levels track the entire session continuously. OR is for breakout direction, sessions are for full-day range.</p>
@@ -4455,7 +4455,7 @@ Interpretation: High confluence zone, stronger reactions observed
 <div class="sp-callout sp-callout--summary">
   <div class="sp-callout__title">What You've Learned</div>
   <ul>
-    <li><strong>60+ Institutional Level Types:</strong> Janus Atlas displays comprehensive level mapping including timeframe levels (daily/weekly/monthly/quarterly/yearly highs and lows), session levels (Asia, London, New York), volume levels (VWAP, POC, VAH, VAL), market structure levels (previous day opens/closes, midpoints), Opening Range, Killzones, Gap Levels, and Confluence Zones</li>
+    <li><strong>60+ Level Types:</strong> Janus Atlas displays comprehensive level mapping including timeframe levels (daily/weekly/monthly/quarterly/yearly highs and lows), session levels (Asia, London, New York), volume levels (VWAP, POC, VAH, VAL), market structure levels (previous day opens/closes, midpoints), Opening Range, Killzones, Gap Levels, and Confluence Zones</li>
     <li><strong>Level Categories:</strong> Four main categories - Timeframe Levels (dH, dL, WH, WL, MtH, MtL, QH, QL, YH, YL plus opens/closes/midpoints), Session Levels (Asia, London, NY highs/lows/opens/closes), Volume Levels (VWAP, POC, VAH, VAL with deviations), Market Structure Levels (previous periods and swing points)</li>
     <li><strong>Customization Options:</strong> Toggle individual level types on/off based on trading style, adjust colors and line styles for visual clarity, control label display to reduce chart clutter, show/hide different timeframe levels</li>
     <li><strong>Level Cluster Recognition:</strong> High-probability trade zones occur where 3+ different level types converge at same price - combining timeframe level + volume level + session level creates strong confluence for support/resistance reactions</li>
@@ -4511,8 +4511,8 @@ support@signalpilot.io</p>
     <p style="margin:.5rem 0 0;font-size:.9rem;color:var(--text-muted)">Learn how key levels form and influence price action</p>
   </a>
   <a href="https://blog.signalpilot.io/articles/how-smart-money-moves/" target="_blank" style="padding:1rem;background:var(--bg-secondary);border-radius:8px;text-decoration:none;border:1px solid var(--border)">
-    <strong style="color:var(--accent)">How Smart Money Moves</strong>
-    <p style="margin:.5rem 0 0;font-size:.9rem;color:var(--text-muted)">Follow institutional footprints through the market</p>
+    <strong style="color:var(--accent)">Volume Flow Analysis</strong>
+    <p style="margin:.5rem 0 0;font-size:.9rem;color:var(--text-muted)">Follow volume footprints through the market</p>
   </a>
   <a href="https://blog.signalpilot.io/articles/the-only-pattern-that-repeats/" target="_blank" style="padding:1rem;background:var(--bg-secondary);border-radius:8px;text-decoration:none;border:1px solid var(--border)">
     <strong style="color:var(--accent)">The Only Pattern That Repeats</strong>
