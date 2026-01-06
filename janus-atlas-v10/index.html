@@ -2733,19 +2733,7 @@
   </div>
 </div>
 
-<p>Janus Atlas displays price levels automatically on your chart. 60+ level types available, all can be toggled individually.</p>
-<p><strong>Level Categories:</strong><br />
-- <strong>Timeframe Levels:</strong> Daily, Weekly, Monthly, Quarterly, Yearly highs/lows/opens/closes<br />
-- <strong>Session Levels:</strong> Asian, European, North American ranges + Custom Sessions<br />
-- <strong>VWAP Lines:</strong> Volume-weighted average prices (D/W/M/Q/Y and previous periods)<br />
-- <strong>Volume Profile:</strong> POC, VAH, VAL (Daily, Weekly, Monthly, Quarterly, Yearly)<br />
-- <strong>Market Structure:</strong> Swing highs/lows, BOS, CHoCH labels<br />
-- <strong>Opening Range:</strong> Session high/low/mid for first X minutes<br />
-- <strong>Gap Levels:</strong> Overnight/weekend gap boundaries<br />
-- <strong>Killzones:</strong> High-probability session time windows (visual shading)<br />
-- <strong>Fibonacci Levels:</strong> Auto-drawn retracement levels from 20 anchor options (incl. Prev Year H/L)</p>
-<p><strong>Visual Display:</strong> Lines and labels on chart showing level locations and names.</p>
-<p><strong>Timeframe Compatibility:</strong> Works on all timeframes.</p>
+<p><strong>Timeframe Compatibility:</strong> Works on all timeframes. Lines and labels display level locations and names on chart.</p>
 
 <!-- 📸 SCREENSHOT NEEDED - Janus Atlas - 5 Levels vs 60+ Levels Comparison
      What to show: Side-by-side comparison OR split screen showing left=5 levels (clean), right=many levels (cluttered)
@@ -2762,12 +2750,14 @@
 <h2 id="settings">⚙️ Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h2>
 <h3 id="recommended-initial-configuration">Example Starting Configuration<a class="headerlink" href="#recommended-initial-configuration" title="Permanent link">&para;</a></h3>
 <p><strong>Example Level Selection (educational starting point to avoid visual overload):</strong></p>
-<p>Enable these 5 level types first:<br />
-- ✓ Daily High/Low (dH, dL)<br />
-- ✓ Daily VWAP<br />
-- ✓ POC/VAH/VAL<br />
-- ✓ Weekly High/Low (WH, WL)<br />
-- ✓ Market Structure</p>
+<p>Enable these 5 level types first:</p>
+<ul>
+<li>✓ Daily High/Low (dH, dL)</li>
+<li>✓ Daily VWAP</li>
+<li>✓ POC/VAH/VAL</li>
+<li>✓ Weekly High/Low (WH, WL)</li>
+<li>✓ Market Structure</li>
+</ul>
 <p>Additional levels can be enabled progressively after familiarity with these core levels.</p>
 <h3 id="all-60-level-types-available">All 60+ Level Types Available<a class="headerlink" href="#all-60-level-types-available" title="Permanent link">&para;</a></h3>
 <table>
@@ -2953,8 +2943,8 @@
 <p><strong>Location:</strong> Settings → Appearance → Label Style</p>
 
 <h3 id="visual-defaults-v10">Visual Defaults (v1.0 Changes)<a class="headerlink" href="#visual-defaults-v10" title="Permanent link">&para;</a></h3>
-<p><strong>Default Colors → Neutral Gray:</strong><br />
-All level colors now default to <strong>gray</strong> for a clean, professional look out of the box:</p>
+<p><strong>Default Colors → Neutral Gray:</strong></p>
+<p>All level colors now default to <strong>gray</strong> for a clean, professional look out of the box:</p>
 <ul>
 <li>HTF Levels, Sessions, Custom Sessions</li>
 <li>Opening Range, Gap, VWAP, Bands</li>
@@ -3114,62 +3104,86 @@ All level colors now default to <strong>gray</strong> for a clean, professional 
 <hr />
 <h2 id="level-type-descriptions">📍 Level Type Descriptions <span class="skill-badge skill-badge--intermediate" data-tooltip="Understanding all level types">Intermediate</span><a class="headerlink" href="#level-type-descriptions" title="Permanent link">&para;</a></h2>
 <h3 id="timeframe-levels-dailyweeklymonthlyquarterlyyearly">📅 Timeframe Levels (Daily/Weekly/Monthly/Quarterly/Yearly)<a class="headerlink" href="#timeframe-levels-dailyweeklymonthlyquarterlyyearly" title="Permanent link">&para;</a></h3>
-<p><strong>What Displays:</strong><br />
-- Lines labeled: dH, dL, WH, WL, MtH, MtL, QH, QL, YH, YL (plus opens, closes, midpoints)</p>
-<p><strong>Level Definitions:</strong><br />
-- <strong>Daily High/Low:</strong> Today's price range extremes<br />
-- <strong>Weekly High/Low:</strong> Current week's price range extremes<br />
-- <strong>Monthly High/Low:</strong> Current month's price range extremes<br />
-- <strong>Quarterly High/Low:</strong> Current quarter's price range extremes<br />
-- <strong>Yearly High/Low:</strong> Current year's price range extremes<br />
-- <strong>Opens:</strong> Period opening prices<br />
-- <strong>Midpoints:</strong> Calculated center of period range</p>
-<p><strong>Characteristics:</strong><br />
-- Price reactions occur at these levels<br />
-- Weekly levels show stronger reactions than daily<br />
-- Monthly levels show stronger reactions than weekly<br />
-- Quarterly/Yearly levels show strongest reactions (major reference points)<br />
-- Clusters of multiple levels indicate zones of interest</p>
+<p><strong>What Displays:</strong> Lines labeled dH, dL, WH, WL, MtH, MtL, QH, QL, YH, YL (plus opens, closes, midpoints)</p>
+<table>
+<thead>
+<tr><th>Level</th><th>Definition</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Daily High/Low</strong></td><td>Today's price range extremes</td></tr>
+<tr><td><strong>Weekly High/Low</strong></td><td>Current week's price range extremes</td></tr>
+<tr><td><strong>Monthly High/Low</strong></td><td>Current month's price range extremes</td></tr>
+<tr><td><strong>Quarterly High/Low</strong></td><td>Current quarter's price range extremes</td></tr>
+<tr><td><strong>Yearly High/Low</strong></td><td>Current year's price range extremes</td></tr>
+<tr><td><strong>Opens</strong></td><td>Period opening prices</td></tr>
+<tr><td><strong>Midpoints</strong></td><td>Calculated center of period range</td></tr>
+</tbody>
+</table>
+<p><strong>Characteristics:</strong></p>
+<ul>
+<li>Price reactions occur at these levels</li>
+<li>Weekly levels show stronger reactions than daily</li>
+<li>Monthly levels show stronger reactions than weekly</li>
+<li>Quarterly/Yearly levels show strongest reactions (major reference points)</li>
+<li>Clusters of multiple levels indicate zones of interest</li>
+</ul>
 <p><strong>Example:</strong> Bitcoin declines to Weekly Low at $65,000 → Bounce reaction observed (support characteristics).</p>
 <hr />
 <h3 id="session-levels-asianeuropeannorth-american">🕐 Session Levels (Asian/European/North American)<a class="headerlink" href="#session-levels-asianeuropeannorth-american" title="Permanent link">&para;</a></h3>
-<p><strong>What Displays:</strong><br />
-- Lines labeled: AH, AL (Asian), EH, EL (European), NAH, NAL (North American)</p>
-<p><strong>Level Definitions:</strong><br />
-- <strong>Asian Session:</strong> Tokyo trading hours range<br />
-- <strong>European Session:</strong> London trading hours range<br />
-- <strong>North American Session:</strong> New York trading hours range<br />
-- Each shows: High, Low, Open, Close</p>
-<p><strong>Characteristics:</strong><br />
-- Session highs/lows often tested during subsequent sessions<br />
-- Asian lows often swept during London open<br />
-- North American highs act as resistance levels<br />
-- Session breaks indicate liquidity characteristics</p>
+<p><strong>What Displays:</strong> Lines labeled AH, AL (Asian), EH, EL (European), NAH, NAL (North American)</p>
+<table>
+<thead>
+<tr><th>Session</th><th>Definition</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Asian Session</strong></td><td>Tokyo trading hours range</td></tr>
+<tr><td><strong>European Session</strong></td><td>London trading hours range</td></tr>
+<tr><td><strong>North American Session</strong></td><td>New York trading hours range</td></tr>
+</tbody>
+</table>
+<p>Each session shows: High, Low, Open, Close</p>
+<p><strong>Characteristics:</strong></p>
+<ul>
+<li>Session highs/lows often tested during subsequent sessions</li>
+<li>Asian lows often swept during London open</li>
+<li>North American highs act as resistance levels</li>
+<li>Session breaks indicate liquidity characteristics</li>
+</ul>
 <p><strong>Example:</strong> Price spikes above Asian High at $66,500, immediately reverses → Session high sweep pattern (liquidity grab characteristics).</p>
 <hr />
 <h3 id="vwap-lines-volume-weighted-average-price">💰 VWAP Lines (Volume-Weighted Average Price)<a class="headerlink" href="#vwap-lines-volume-weighted-average-price" title="Permanent link">&para;</a></h3>
-<p><strong>What Displays:</strong><br />
-- Lines labeled: VWAP-D (daily), VWAP-W (weekly), VWAP-M (monthly), VWAP-Q (quarterly), VWAP-Y (yearly)<br />
-- Also shows previous period VWAP: pVWAP-D, pVWAP-W, pVWAP-M, pVWAP-Q, pVWAP-Y</p>
-<p><strong>Level Definition:</strong><br />
-- VWAP = Volume-weighted average price<br />
-- Represents "true average" where most volume traded<br />
-- Calculated as cumulative (volume × price) / cumulative volume</p>
-<p><strong>Characteristics:</strong><br />
-- Price above VWAP = Bullish positioning<br />
-- Price below VWAP = Bearish positioning<br />
-- Price returns to VWAP (magnet effect observed)<br />
-- Professional trading reference level</p>
+<p><strong>What Displays:</strong></p>
+<ul>
+<li>Lines labeled: VWAP-D (daily), VWAP-W (weekly), VWAP-M (monthly), VWAP-Q (quarterly), VWAP-Y (yearly)</li>
+<li>Also shows previous period VWAP: pVWAP-D, pVWAP-W, pVWAP-M, pVWAP-Q, pVWAP-Y</li>
+</ul>
+<p><strong>Level Definition:</strong></p>
+<ul>
+<li>VWAP = Volume-weighted average price</li>
+<li>Represents "true average" where most volume traded</li>
+<li>Calculated as cumulative (volume × price) / cumulative volume</li>
+</ul>
+<p><strong>Characteristics:</strong></p>
+<ul>
+<li>Price above VWAP = Bullish positioning</li>
+<li>Price below VWAP = Bearish positioning</li>
+<li>Price returns to VWAP (magnet effect observed)</li>
+<li>Professional trading reference level</li>
+</ul>
 <p><strong>Example:</strong> Price spikes to $68,000, VWAP at $66,000 → Pullback to VWAP level observed.</p>
 <hr />
 <h3 id="vwap-standard-deviation-bands">📊 VWAP Standard Deviation Bands<a class="headerlink" href="#vwap-standard-deviation-bands" title="Permanent link">&para;</a></h3>
-<p><strong>What Displays:</strong><br />
-- Additional lines above and below each VWAP showing ±1σ and ±2σ deviation bands<br />
-- Labels: <code>d+1σ</code>, <code>d-1σ</code>, <code>d+2σ</code>, <code>d-2σ</code> (and same for w/m/q)</p>
-<p><strong>Level Definition:</strong><br />
-- Standard deviation bands around VWAP showing how far price has deviated from the volume-weighted average<br />
-- ±1σ covers ~68% of price action<br />
-- ±2σ covers ~95% of price action</p>
+<p><strong>What Displays:</strong></p>
+<ul>
+<li>Additional lines above and below each VWAP showing ±1σ and ±2σ deviation bands</li>
+<li>Labels: <code>d+1σ</code>, <code>d-1σ</code>, <code>d+2σ</code>, <code>d-2σ</code> (and same for w/m/q)</li>
+</ul>
+<p><strong>Level Definition:</strong></p>
+<ul>
+<li>Standard deviation bands around VWAP showing how far price has deviated from the volume-weighted average</li>
+<li>±1σ covers ~68% of price action</li>
+<li>±2σ covers ~95% of price action</li>
+</ul>
 <p><strong>Configuration:</strong></p>
 <table>
 <thead>
@@ -3187,37 +3201,57 @@ All level colors now default to <strong>gray</strong> for a clean, professional 
 <tr><td>Band Color</td><td>Separate color picker from main VWAP line</td></tr>
 </tbody>
 </table>
-<p><strong>Characteristics:</strong><br />
-- <strong>Price at +2σ</strong> = Overbought, mean reversion likely<br />
-- <strong>Price at -2σ</strong> = Oversold, bounce likely<br />
-- <strong>Bands act as dynamic S/R</strong> that adapt to volatility<br />
-- <strong>Tighter bands</strong> = Low volatility environment<br />
-- <strong>Wider bands</strong> = High volatility environment</p>
-<p><strong>How traders use it:</strong><br />
-- Price at upper bands (+1σ/+2σ) = Look for shorts or profit-taking<br />
-- Price at lower bands (-1σ/-2σ) = Look for longs or bounces<br />
-- Price returning to VWAP = "Fair value" / mean reversion target</p>
-<p><strong>Labels:</strong><br />
-- <code>d+1σ</code> = Daily VWAP + 1 standard deviation (upper)<br />
-- <code>d-1σ</code> = Daily VWAP - 1 standard deviation (lower)<br />
-- <code>d+2σ</code> = Daily VWAP + 2 standard deviations (upper)<br />
-- <code>d-2σ</code> = Daily VWAP - 2 standard deviations (lower)<br />
-- Same pattern for weekly (<code>w</code>), monthly (<code>m</code>), quarterly (<code>q</code>), yearly (<code>y</code>)</p>
-<p><strong>Yearly VWAP (yVWAP):</strong><br />
-- Volume-weighted average price anchored to the calendar year<br />
-- Key reference for long-term mean reversion<br />
-- Use case: Major S/R for position traders and macro analysis</p>
+<p><strong>Characteristics:</strong></p>
+<table>
+<thead>
+<tr><th>Condition</th><th>Interpretation</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Price at +2σ</strong></td><td>Overbought, mean reversion likely</td></tr>
+<tr><td><strong>Price at -2σ</strong></td><td>Oversold, bounce likely</td></tr>
+<tr><td><strong>Tighter bands</strong></td><td>Low volatility environment</td></tr>
+<tr><td><strong>Wider bands</strong></td><td>High volatility environment</td></tr>
+</tbody>
+</table>
+<p><strong>How traders use it:</strong></p>
+<ul>
+<li>Price at upper bands (+1σ/+2σ) = Look for shorts or profit-taking</li>
+<li>Price at lower bands (-1σ/-2σ) = Look for longs or bounces</li>
+<li>Price returning to VWAP = "Fair value" / mean reversion target</li>
+</ul>
+<p><strong>Labels:</strong></p>
+<table>
+<thead>
+<tr><th>Label</th><th>Meaning</th></tr>
+</thead>
+<tbody>
+<tr><td><code>d+1σ</code></td><td>Daily VWAP + 1 standard deviation (upper)</td></tr>
+<tr><td><code>d-1σ</code></td><td>Daily VWAP - 1 standard deviation (lower)</td></tr>
+<tr><td><code>d+2σ</code></td><td>Daily VWAP + 2 standard deviations (upper)</td></tr>
+<tr><td><code>d-2σ</code></td><td>Daily VWAP - 2 standard deviations (lower)</td></tr>
+</tbody>
+</table>
+<p>Same pattern for weekly (<code>w</code>), monthly (<code>m</code>), quarterly (<code>q</code>), yearly (<code>y</code>)</p>
+<p><strong>Yearly VWAP (yVWAP):</strong></p>
+<ul>
+<li>Volume-weighted average price anchored to the calendar year</li>
+<li>Key reference for long-term mean reversion</li>
+<li>Use case: Major S/R for position traders and macro analysis</li>
+</ul>
 <p><strong>Example:</strong> Bitcoin trading at Daily VWAP +2σ ($69,500) while VWAP is at $67,000 → Statistically extended, mean reversion back to VWAP is probable.</p>
 <hr />
 <h3 id="volume-profile-poc-vah-val">🎯 Volume Profile (POC, VAH, VAL)<a class="headerlink" href="#volume-profile-poc-vah-val" title="Permanent link">&para;</a></h3>
-<p><strong>What Displays:</strong><br />
-- POC (Point of Control) - Horizontal line at highest volume price<br />
-- VAH (Value Area High) - Upper boundary of value zone<br />
-- VAL (Value Area Low) - Lower boundary of value zone</p>
-<p><strong>Level Definitions:</strong><br />
-- <strong>POC:</strong> Price level with highest traded volume (strongest magnet effect)<br />
-- <strong>VAH:</strong> Top of value area (standard 70% of volume above VAL)<br />
-- <strong>VAL:</strong> Bottom of value area (standard 70% of volume below VAH)</p>
+<p><strong>What Displays:</strong></p>
+<table>
+<thead>
+<tr><th>Level</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>POC</strong> (Point of Control)</td><td>Horizontal line at highest volume price (strongest magnet effect)</td></tr>
+<tr><td><strong>VAH</strong> (Value Area High)</td><td>Upper boundary of value zone (70% of volume above VAL)</td></tr>
+<tr><td><strong>VAL</strong> (Value Area Low)</td><td>Lower boundary of value zone (70% of volume below VAH)</td></tr>
+</tbody>
+</table>
 <p><strong>Available Timeframes:</strong></p>
 <table>
 <thead>
@@ -3231,20 +3265,19 @@ All level colors now default to <strong>gray</strong> for a clean, professional 
 <tr><td>Yearly</td><td>yPOC, yVAH, yVAL</td><td>Major S/R for macro analysis</td></tr>
 </tbody>
 </table>
-<p><strong>Characteristics:</strong><br />
-- POC acts as strong magnet (repeated price returns observed)<br />
-- Above VAH = Extended above fair value<br />
-- Below VAL = Extended below fair value<br />
-- Value area contains "fair value" zone</p>
-<p><strong>Quarterly &amp; Yearly Volume Profile:</strong><br />
-Identifies where the majority of trading volume occurred over longer periods. Use case: Key reference for position traders and macro analysis.</p>
+<p><strong>Characteristics:</strong></p>
+<ul>
+<li>POC acts as strong magnet (repeated price returns observed)</li>
+<li>Above VAH = Extended above fair value</li>
+<li>Below VAL = Extended below fair value</li>
+<li>Value area contains "fair value" zone</li>
+</ul>
+<p><strong>Quarterly &amp; Yearly Volume Profile:</strong> Identifies where the majority of trading volume occurred over longer periods. Key reference for position traders and macro analysis.</p>
 <p><strong>Example:</strong> Price at $69,000, POC at $67,000 → Pullback to POC observed (magnet effect).</p>
 <hr />
 <h3 id="naked-poc-npoc">🧲 Naked POC (nPOC)<a class="headerlink" href="#naked-poc-npoc" title="Permanent link">&para;</a></h3>
-<p><strong>What Displays:</strong><br />
-Lines labeled <code>dnPOC1</code>, <code>dnPOC2</code>, <code>wnPOC1</code>, etc.</p>
-<p><strong>What it is:</strong><br />
-Previous session POC levels that price hasn't touched yet. They act as "magnets" because high-volume areas tend to attract price back.</p>
+<p><strong>What Displays:</strong> Lines labeled <code>dnPOC1</code>, <code>dnPOC2</code>, <code>wnPOC1</code>, etc.</p>
+<p><strong>What it is:</strong> Previous session POC levels that price hasn't touched yet. They act as "magnets" because high-volume areas tend to attract price back.</p>
 <p><strong>Settings:</strong></p>
 <table>
 <thead>
@@ -3258,33 +3291,47 @@ Previous session POC levels that price hasn't touched yet. They act as "magnets"
 <tr><td>nPOC Color</td><td>Gray</td><td>Color for nPOC lines</td></tr>
 </tbody>
 </table>
-<p><strong>How it works:</strong><br />
-1. When a new day/week starts, the previous session's POC is saved<br />
-2. Each saved POC is monitored for price touches<br />
-3. When price wicks through the level, the nPOC is "filled" and removed<br />
-4. Remaining nPOCs continue displaying until touched</p>
+<p><strong>How it works:</strong></p>
+<ol>
+<li>When a new day/week starts, the previous session's POC is saved</li>
+<li>Each saved POC is monitored for price touches</li>
+<li>When price wicks through the level, the nPOC is "filled" and removed</li>
+<li>Remaining nPOCs continue displaying until touched</li>
+</ol>
 <p><strong>Labels:</strong> <code>dnPOC1</code>, <code>dnPOC2</code>, etc. (most recent = 1, oldest = highest number)</p>
-<p><strong>Why it matters:</strong><br />
-- Naked POCs are unfilled magnets - price tends to return to them<br />
-- Multiple nPOCs at similar levels = stronger attraction zone<br />
-- When price fills an nPOC, it often reverses or consolidates</p>
+<p><strong>Why it matters:</strong></p>
+<ul>
+<li>Naked POCs are unfilled magnets - price tends to return to them</li>
+<li>Multiple nPOCs at similar levels = stronger attraction zone</li>
+<li>When price fills an nPOC, it often reverses or consolidates</li>
+</ul>
 <p><strong>Use Case:</strong> Trade towards unfilled nPOCs as targets, or use them as S/R zones.</p>
 <p><strong>Example:</strong> Yesterday's POC at $67,500 wasn't touched today → Shows as <code>dnPOC1</code> → Price often gravitates back to fill it.</p>
 <hr />
 <h3 id="market-structure-swing-points-breaks">📈 Market Structure (Swing Points &amp; Breaks)<a class="headerlink" href="#market-structure-swing-points-breaks" title="Permanent link">&para;</a></h3>
-<p><strong>What Displays:</strong><br />
-- <strong>Labels at swing points:</strong> HH (Higher High), HL (Higher Low), LH (Lower High), LL (Lower Low)<br />
-- <strong>Break labels:</strong> BOS (Break of Structure), CHoCH (Change of Character)</p>
-<p><strong>Structure Definitions:</strong><br />
-- <strong>HH/HL:</strong> Uptrend swing pattern (higher highs, higher lows)<br />
-- <strong>LH/LL:</strong> Downtrend swing pattern (lower highs, lower lows)<br />
-- <strong>BOS:</strong> Structure break in trend direction (continuation signal)<br />
-- <strong>CHoCH:</strong> Structure change opposite to trend (reversal warning)</p>
-<p><strong>Characteristics:</strong><br />
-- HH → HL → HH pattern = Uptrend structure<br />
-- LH → LL → LH pattern = Downtrend structure<br />
-- BOS labels indicate trend continuation<br />
-- CHoCH labels indicate potential reversal</p>
+<p><strong>What Displays:</strong></p>
+<ul>
+<li><strong>Labels at swing points:</strong> HH (Higher High), HL (Higher Low), LH (Lower High), LL (Lower Low)</li>
+<li><strong>Break labels:</strong> BOS (Break of Structure), CHoCH (Change of Character)</li>
+</ul>
+<table>
+<thead>
+<tr><th>Label</th><th>Definition</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>HH/HL</strong></td><td>Uptrend swing pattern (higher highs, higher lows)</td></tr>
+<tr><td><strong>LH/LL</strong></td><td>Downtrend swing pattern (lower highs, lower lows)</td></tr>
+<tr><td><strong>BOS</strong></td><td>Break of Structure - trend continuation signal</td></tr>
+<tr><td><strong>CHoCH</strong></td><td>Change of Character - reversal warning</td></tr>
+</tbody>
+</table>
+<p><strong>Characteristics:</strong></p>
+<ul>
+<li>HH → HL → HH pattern = Uptrend structure</li>
+<li>LH → LL → LH pattern = Downtrend structure</li>
+<li>BOS labels indicate trend continuation</li>
+<li>CHoCH labels indicate potential reversal</li>
+</ul>
 <p><strong>Example Pattern:</strong></p>
 <pre><code>Price: HL → HH → HL → HH (with BOS labels)
 Structure: Strong uptrend characteristics
@@ -3306,10 +3353,12 @@ Structure: Strong uptrend characteristics
 <hr />
 <h3 id="opening-range">⏱️ Opening Range (OR)<a class="headerlink" href="#opening-range" title="Permanent link">&para;</a></h3>
 <p><strong>What it does:</strong> Captures the high and low of the first X minutes of a trading session, creating a "launchpad" for the day.</p>
-<p><strong>What Displays:</strong><br />
-- <strong>orH</strong> - Opening Range High<br />
-- <strong>orL</strong> - Opening Range Low<br />
-- <strong>orMid</strong> - Opening Range Midpoint (optional)</p>
+<p><strong>What Displays:</strong></p>
+<ul>
+<li><strong>orH</strong> - Opening Range High</li>
+<li><strong>orL</strong> - Opening Range Low</li>
+<li><strong>orMid</strong> - Opening Range Midpoint (optional)</li>
+</ul>
 <p><strong>Configuration:</strong></p>
 <table>
 <thead>
@@ -3321,11 +3370,13 @@ Structure: Strong uptrend characteristics
 <tr><td>Show Midpoint</td><td>On/Off</td><td>Off</td></tr>
 </tbody>
 </table>
-<p><strong>How to use:</strong><br />
-- Break above orH → Bullish bias for the day<br />
-- Break below orL → Bearish bias for the day<br />
-- Price holding within range → Wait for breakout<br />
-- orMid acts as intraday pivot point</p>
+<p><strong>How to use:</strong></p>
+<ul>
+<li>Break above orH → Bullish bias for the day</li>
+<li>Break below orL → Bearish bias for the day</li>
+<li>Price holding within range → Wait for breakout</li>
+<li>orMid acts as intraday pivot point</li>
+</ul>
 <p><strong>Best for:</strong> Day traders, Opening Range Breakout (ORB) strategies</p>
 
 <!-- 📸 SCREENSHOT NEEDED - Opening Range on Chart
@@ -3356,10 +3407,12 @@ Structure: Strong uptrend characteristics
 </tbody>
 </table>
 <p><strong>Visual Display:</strong> Semi-transparent background shading during active killzone periods.</p>
-<p><strong>How to use:</strong><br />
-- Focus trading activity during killzone hours<br />
-- Look for level tests during high-activity windows<br />
-- Combine with session levels for confluence</p>
+<p><strong>How to use:</strong></p>
+<ul>
+<li>Focus trading activity during killzone hours</li>
+<li>Look for level tests during high-activity windows</li>
+<li>Combine with session levels for confluence</li>
+</ul>
 <p><strong>Note:</strong> Killzones are purely visual time-based aids. They have no alerts since there's no price level to "touch."</p>
 
 <!-- 📸 SCREENSHOT NEEDED - Killzones Background Shading
@@ -3376,9 +3429,11 @@ Structure: Strong uptrend characteristics
 <hr />
 <h3 id="custom-sessions">🎯 Custom Sessions<a class="headerlink" href="#custom-sessions" title="Permanent link">&para;</a></h3>
 <p><strong>What it does:</strong> Define your own custom time windows with automatic High/Low/Open/Close tracking.</p>
-<p><strong>What Displays:</strong><br />
-- <strong>cs1H/cs1L</strong> - Custom Session 1 High/Low<br />
-- <strong>cs2H/cs2L</strong> - Custom Session 2 High/Low</p>
+<p><strong>What Displays:</strong></p>
+<ul>
+<li><strong>cs1H/cs1L</strong> - Custom Session 1 High/Low</li>
+<li><strong>cs2H/cs2L</strong> - Custom Session 2 High/Low</li>
+</ul>
 <p><strong>Configuration per session:</strong></p>
 <ul>
 <li>Enable/Disable toggle</li>
@@ -3387,25 +3442,33 @@ Structure: Strong uptrend characteristics
 <li>End time (hour:minute)</li>
 <li>Color customization</li>
 </ul>
-<p><strong>Use cases:</strong><br />
-- Track your local market hours<br />
-- Monitor specific trading windows (e.g., futures open)<br />
-- Create custom "power hours" tracking</p>
+<p><strong>Use cases:</strong></p>
+<ul>
+<li>Track your local market hours</li>
+<li>Monitor specific trading windows (e.g., futures open)</li>
+<li>Create custom "power hours" tracking</li>
+</ul>
 
 <hr />
 <h3 id="gap-levels">📊 Gap Levels<a class="headerlink" href="#gap-levels" title="Permanent link">&para;</a></h3>
 <p><strong>What it does:</strong> Automatically detects and displays price gaps between sessions.</p>
-<p><strong>What Displays:</strong><br />
-- <strong>gapH</strong> - Gap High (top of gap)<br />
-- <strong>gapL</strong> - Gap Low (bottom of gap)</p>
-<p><strong>Gap Detection:</strong><br />
-- Daily gaps (overnight gaps)<br />
-- Weekend gaps (Friday close to Sunday open)<br />
-- Gap fill tracking (optional visual when gap fills)</p>
-<p><strong>How to use:</strong><br />
-- Gaps often act as magnets (price tends to fill gaps)<br />
-- Unfilled gaps = potential future targets<br />
-- Gap edges (gapH/gapL) act as support/resistance</p>
+<p><strong>What Displays:</strong></p>
+<ul>
+<li><strong>gapH</strong> - Gap High (top of gap)</li>
+<li><strong>gapL</strong> - Gap Low (bottom of gap)</li>
+</ul>
+<p><strong>Gap Detection:</strong></p>
+<ul>
+<li>Daily gaps (overnight gaps)</li>
+<li>Weekend gaps (Friday close to Sunday open)</li>
+<li>Gap fill tracking (optional visual when gap fills)</li>
+</ul>
+<p><strong>How to use:</strong></p>
+<ul>
+<li>Gaps often act as magnets (price tends to fill gaps)</li>
+<li>Unfilled gaps = potential future targets</li>
+<li>Gap edges (gapH/gapL) act as support/resistance</li>
+</ul>
 <p><strong>Statistics:</strong> Most gaps fill within 1-3 trading sessions (historical observation, not guaranteed).</p>
 
 <!-- 📸 SCREENSHOT NEEDED - Gap Levels on Chart
@@ -3422,14 +3485,22 @@ Structure: Strong uptrend characteristics
 <hr />
 <h3 id="fair-value-gaps-fvg">📊 Fair Value Gaps (FVG)<a class="headerlink" href="#fair-value-gaps-fvg" title="Permanent link">&para;</a></h3>
 <p><strong>What it does:</strong> Detects price imbalances where market moved so fast it left a "gap" between non-adjacent candles.</p>
-<p><strong>What Displays:</strong><br />
-- Semi-transparent boxes highlighting price imbalances<br />
-- Colors change based on position relative to current price<br />
-- Green zones = Demand (FVG below price)<br />
-- Red zones = Supply (FVG above price)</p>
-<p><strong>Detection Logic:</strong><br />
-- <strong>Bullish FVG:</strong> Gap up where candle low &gt; candle[2] high (demand zone)<br />
-- <strong>Bearish FVG:</strong> Gap down where candle high &lt; candle[2] low (supply zone)</p>
+<p><strong>What Displays:</strong></p>
+<ul>
+<li>Semi-transparent boxes highlighting price imbalances</li>
+<li>Colors change based on position relative to current price</li>
+<li>Green zones = Demand (FVG below price)</li>
+<li>Red zones = Supply (FVG above price)</li>
+</ul>
+<table>
+<thead>
+<tr><th>FVG Type</th><th>Detection Logic</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Bullish FVG</strong></td><td>Gap up where candle low &gt; candle[2] high (demand zone)</td></tr>
+<tr><td><strong>Bearish FVG</strong></td><td>Gap down where candle high &lt; candle[2] low (supply zone)</td></tr>
+</tbody>
+</table>
 <p><strong>Configuration:</strong></p>
 <table>
 <thead>
@@ -3448,10 +3519,12 @@ Structure: Strong uptrend characteristics
 </tbody>
 </table>
 <p><strong>Key Features:</strong></p>
-<p><strong>1. Position-based coloring:</strong><br />
-- FVG below current price = Green (demand/support zone)<br />
-- FVG above current price = Red (supply/resistance zone)<br />
-- Colors update dynamically as price moves</p>
+<p><strong>1. Position-based coloring:</strong></p>
+<ul>
+<li>FVG below current price = Green (demand/support zone)</li>
+<li>FVG above current price = Red (supply/resistance zone)</li>
+<li>Colors update dynamically as price moves</li>
+</ul>
 <p><strong>2. Auto lookback by timeframe:</strong></p>
 <table>
 <thead>
@@ -3466,14 +3539,18 @@ Structure: Strong uptrend characteristics
 <tr><td>Monthly</td><td>6 months</td></tr>
 </tbody>
 </table>
-<p><strong>3. Mitigation modes:</strong><br />
-- <strong>Wick</strong> = FVG mitigated when any wick touches the gap<br />
-- <strong>Close</strong> = FVG mitigated when candle closes inside the gap (stricter)</p>
-<p><strong>How to use:</strong><br />
-- FVGs are "magnets" – price tends to return to fill imbalances<br />
-- Unmitigated FVGs = potential entry zones<br />
-- Green FVG below = buy zone / demand support<br />
-- Red FVG above = sell zone / supply resistance</p>
+<p><strong>3. Mitigation modes:</strong></p>
+<ul>
+<li><strong>Wick</strong> = FVG mitigated when any wick touches the gap</li>
+<li><strong>Close</strong> = FVG mitigated when candle closes inside the gap (stricter)</li>
+</ul>
+<p><strong>How to use:</strong></p>
+<ul>
+<li>FVGs are "magnets" – price tends to return to fill imbalances</li>
+<li>Unmitigated FVGs = potential entry zones</li>
+<li>Green FVG below = buy zone / demand support</li>
+<li>Red FVG above = sell zone / supply resistance</li>
+</ul>
 <p><strong>Example:</strong> ES futures gaps up leaving a bullish FVG between 4,480-4,490. Price rallies to 4,520 then pulls back → Watch for bounce at 4,480-4,490 FVG zone (demand).</p>
 
 <!-- 📸 SCREENSHOT NEEDED - Fair Value Gaps on Chart
@@ -3490,11 +3567,13 @@ Structure: Strong uptrend characteristics
 <hr />
 <h3 id="confluence-zones">🎯 Confluence Zones<a class="headerlink" href="#confluence-zones" title="Permanent link">&para;</a></h3>
 <p><strong>What it does:</strong> Automatically detects when multiple levels cluster within a tight price range, highlighting high-probability reaction zones with a count label.</p>
-<p><strong>How it works:</strong><br />
-- Scans all enabled levels for proximity<br />
-- When 3+ levels cluster within threshold → Zone highlighted<br />
-- Visual box/shading marks the confluence area<br />
-- <strong>Count label</strong> shows how many levels are clustered (e.g., "4 levels")</p>
+<p><strong>How it works:</strong></p>
+<ul>
+<li>Scans all enabled levels for proximity</li>
+<li>When 3+ levels cluster within threshold → Zone highlighted</li>
+<li>Visual box/shading marks the confluence area</li>
+<li><strong>Count label</strong> shows how many levels are clustered (e.g., "4 levels")</li>
+</ul>
 <p><strong>Configuration:</strong></p>
 <table>
 <thead>
@@ -3508,11 +3587,13 @@ Structure: Strong uptrend characteristics
 <tr><td>Show Label</td><td>Display count label on zone</td><td>On</td></tr>
 </tbody>
 </table>
-<p><strong>Why it matters:</strong><br />
-- Single level touch = moderate probability<br />
-- 2 levels clustered = good probability<br />
-- 3+ levels clustered = high probability reaction zone<br />
-- <strong>Higher count = stronger zone</strong> (5+ levels is very significant)</p>
+<p><strong>Why it matters:</strong></p>
+<ul>
+<li>Single level touch = moderate probability</li>
+<li>2 levels clustered = good probability</li>
+<li>3+ levels clustered = high probability reaction zone</li>
+<li><strong>Higher count = stronger zone</strong> (5+ levels is very significant)</li>
+</ul>
 <p><strong>Example:</strong> Daily Low + Weekly VWAP + POC all within 0.3% = Strong confluence zone displaying "3 levels"</p>
 
 <!-- 📸 SCREENSHOT NEEDED - Confluence Zone Highlight
@@ -3554,10 +3635,12 @@ Structure: Strong uptrend characteristics
 
 <p><strong>📱 Mobile Tip:</strong> Use Compact + Bottom Center + Tiny + Header Off for best mobile experience.</p>
 
-<p><strong>How to use:</strong><br />
-- Quickly identify nearest levels<br />
-- Plan entries/exits based on level proximity<br />
-- Set alerts for levels within X% distance</p>
+<p><strong>How to use:</strong></p>
+<ul>
+<li>Quickly identify nearest levels</li>
+<li>Plan entries/exits based on level proximity</li>
+<li>Set alerts for levels within X% distance</li>
+</ul>
 
 <!-- 📸 SCREENSHOT NEEDED - Distance Table Display
      What to show: Chart with distance table overlay showing nearest levels
@@ -3613,18 +3696,22 @@ Structure: Strong uptrend characteristics
 </tbody>
 </table>
 
-<p><strong>Retracements vs Extensions:</strong><br />
-- <strong>Retracements (0.236-0.886)</strong> = INSIDE the range – used for entries on pullbacks<br />
-- <strong>Extensions (1.272, 1.618)</strong> = OUTSIDE the range – used for profit targets</p>
+<p><strong>Retracements vs Extensions:</strong></p>
+<ul>
+<li><strong>Retracements (0.236-0.886)</strong> = INSIDE the range – used for entries on pullbacks</li>
+<li><strong>Extensions (1.272, 1.618)</strong> = OUTSIDE the range – used for profit targets</li>
+</ul>
 
 <p><strong>Most Important Levels:</strong> 0.382, 0.5, 0.618 (golden ratio levels for entries), 1.618 (golden extension for targets)</p>
 
-<p><strong>How to use:</strong><br />
-- Enable Fib Set 1 with Daily H/L anchor for intraday retracement zones<br />
-- Add Fib Set 2 with Weekly H/L for multi-timeframe confluence<br />
-- Watch for price reactions at 0.382, 0.5, and 0.618 levels<br />
-- Use 1.272 and 1.618 extensions as take-profit targets after entering on a retracement<br />
-- Combine with other Janus levels for confluence</p>
+<p><strong>How to use:</strong></p>
+<ul>
+<li>Enable Fib Set 1 with Daily H/L anchor for intraday retracement zones</li>
+<li>Add Fib Set 2 with Weekly H/L for multi-timeframe confluence</li>
+<li>Watch for price reactions at 0.382, 0.5, and 0.618 levels</li>
+<li>Use 1.272 and 1.618 extensions as take-profit targets after entering on a retracement</li>
+<li>Combine with other Janus levels for confluence</li>
+</ul>
 
 <p><strong>Pro tip:</strong> Use Fib Set 1 for retracements (0.236-0.786) and Fib Set 2 for extensions (1.272, 1.618 only) with different anchors.</p>
 
@@ -3653,11 +3740,13 @@ Structure: Strong uptrend characteristics
 <h2 id="educational-example-bitcoin-november-2024">📖 Educational Example: Bitcoin (November 2024)<a class="headerlink" href="#educational-example-bitcoin-november-2024" title="Permanent link">&para;</a></h2>
 <p><em>(Historical observation for educational purposes only. Not financial advice. Past performance does not indicate future results.)</em></p>
 <p><strong>Chart: 4-Hour Timeframe</strong></p>
-<p><strong>Levels Active:</strong><br />
-- Daily VWAP: $43,200<br />
-- Weekly Low: $42,800<br />
-- POC: $43,000<br />
-- Market Structure: Showing HL pattern (uptrend)</p>
+<p><strong>Levels Active:</strong></p>
+<ul>
+<li>Daily VWAP: $43,200</li>
+<li>Weekly Low: $42,800</li>
+<li>POC: $43,000</li>
+<li>Market Structure: Showing HL pattern (uptrend)</li>
+</ul>
 <p><strong>Sequence Observed:</strong></p>
 <table>
 <thead>
@@ -3695,11 +3784,13 @@ Structure: Strong uptrend characteristics
 </tr>
 </tbody>
 </table>
-<p><strong>Pattern Analysis:</strong><br />
-- Three levels clustered: Weekly Low ($42,800) + POC ($43,000) + VWAP ($43,200)<br />
-- Price pulled back to cluster zone<br />
-- Bounce occurred, HL structure formed<br />
-- Rally of $1,900 observed (4.4% move)</p>
+<p><strong>Pattern Analysis:</strong></p>
+<ul>
+<li>Three levels clustered: Weekly Low ($42,800) + POC ($43,000) + VWAP ($43,200)</li>
+<li>Price pulled back to cluster zone</li>
+<li>Bounce occurred, HL structure formed</li>
+<li>Rally of $1,900 observed (4.4% move)</li>
+</ul>
 <p><strong>Level Interaction:</strong> Cluster created support zone where multiple levels converged. Price reaction observed at this confluence.</p>
 <p><em>This example demonstrates level clustering and structure formation. Individual interpretation and outcomes vary.</em></p>
 <hr />
@@ -3729,28 +3820,34 @@ Interpretation: High confluence zone, stronger reactions observed
 <hr />
 <h2 id="level-usage-by-trading-style">🎯 Level Usage by Trading Style<a class="headerlink" href="#level-usage-by-trading-style" title="Permanent link">&para;</a></h2>
 <h3 id="for-scalping-5m-15m-charts">For Scalping (5m-15m charts):<a class="headerlink" href="#for-scalping-5m-15m-charts" title="Permanent link">&para;</a></h3>
-<p><strong>Recommended Levels:</strong><br />
-- ✓ Session levels (Asian/Euro/NA)<br />
-- ✓ Daily VWAP<br />
-- ✓ Daily High/Low<br />
-- ✓ POC/VAH/VAL<br />
-- ✓ Market structure</p>
+<p><strong>Recommended Levels:</strong></p>
+<ul>
+<li>✓ Session levels (Asian/Euro/NA)</li>
+<li>✓ Daily VWAP</li>
+<li>✓ Daily High/Low</li>
+<li>✓ POC/VAH/VAL</li>
+<li>✓ Market structure</li>
+</ul>
 <p><strong>Rationale:</strong> Intraday levels relevant for short-term positioning.</p>
 <h3 id="for-day-trading-1h-4h-charts">For Day Trading (1H-4H charts):<a class="headerlink" href="#for-day-trading-1h-4h-charts" title="Permanent link">&para;</a></h3>
-<p><strong>Recommended Levels:</strong><br />
-- ✓ Daily + Weekly levels<br />
-- ✓ Daily + Weekly VWAP<br />
-- ✓ POC/VAH/VAL<br />
-- ✓ Market structure<br />
-- ✓ Previous day levels</p>
+<p><strong>Recommended Levels:</strong></p>
+<ul>
+<li>✓ Daily + Weekly levels</li>
+<li>✓ Daily + Weekly VWAP</li>
+<li>✓ POC/VAH/VAL</li>
+<li>✓ Market structure</li>
+<li>✓ Previous day levels</li>
+</ul>
 <p><strong>Rationale:</strong> Combination of intraday and swing levels.</p>
 <h3 id="for-swing-trading-daily-charts">For Swing Trading (Daily charts):<a class="headerlink" href="#for-swing-trading-daily-charts" title="Permanent link">&para;</a></h3>
-<p><strong>Recommended Levels:</strong><br />
-- ✓ Weekly + Monthly levels<br />
-- ✓ Weekly + Monthly VWAP<br />
-- ✓ Market structure<br />
-- ✓ Quarterly levels<br />
-- ✗ Session levels (too granular)</p>
+<p><strong>Recommended Levels:</strong></p>
+<ul>
+<li>✓ Weekly + Monthly levels</li>
+<li>✓ Weekly + Monthly VWAP</li>
+<li>✓ Market structure</li>
+<li>✓ Quarterly levels</li>
+<li>✗ Session levels (too granular)</li>
+</ul>
 <p><strong>Rationale:</strong> Higher timeframe levels match swing holding periods.</p>
 <p><em>Level selection varies based on individual trading approach and timeframe.</em></p>
 
@@ -4497,12 +4594,13 @@ Interpretation: High confluence zone, stronger reactions observed
 
 <hr />
 <h2 id="support">📞 Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
-<p><strong>Technical Questions:</strong><br />
-support@signalpilot.io</p>
-<p><strong>Additional Resources:</strong><br />
-- Signal Pilot Suite Overview<br />
-- Getting Started Guide<br />
-- Video Tutorials (if available)</p>
+<p><strong>Technical Questions:</strong> support@signalpilot.io</p>
+<p><strong>Additional Resources:</strong></p>
+<ul>
+<li>Signal Pilot Suite Overview</li>
+<li>Getting Started Guide</li>
+<li>Video Tutorials (if available)</li>
+</ul>
 <div class="section-break"><span>📚 Further Reading</span></div>
 <p>Deepen your understanding with these articles from the Signal Pilot Blog:</p>
 <div style="display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin:1rem 0">
@@ -4521,12 +4619,14 @@ support@signalpilot.io</p>
 </div>
 <hr />
 <h2 id="see-also">See Also<a class="headerlink" href="#see-also" title="Permanent link">&para;</a></h2>
-<p><strong>Related Pages:</strong><br />
-- <a href="../pentarch-v10/">Pentarch v1.0</a> - Combine structural levels with cycle timing signals<br />
-- <a href="../omnideck-v10/">OmniDeck v1.0</a> - All-in-one indicator including Janus Atlas levels<br />
-- <a href="../ref-cheatsheets-janus/">Janus Atlas Levels Guide</a> - Quick reference for all 60+ levels<br />
-- <a href="../how-to-alerts/">How to Set Up Alerts</a> - Get notified when price reaches key levels<br />
-- <a href="../ref-workflow/">Trading Workflow</a> - How Janus Atlas fits into complete trading system</p>
+<p><strong>Related Pages:</strong></p>
+<ul>
+<li><a href="../pentarch-v10/">Pentarch v1.0</a> - Combine structural levels with cycle timing signals</li>
+<li><a href="../omnideck-v10/">OmniDeck v1.0</a> - All-in-one indicator including Janus Atlas levels</li>
+<li><a href="../ref-cheatsheets-janus/">Janus Atlas Levels Guide</a> - Quick reference for all 60+ levels</li>
+<li><a href="../how-to-alerts/">How to Set Up Alerts</a> - Get notified when price reaches key levels</li>
+<li><a href="../ref-workflow/">Trading Workflow</a> - How Janus Atlas fits into complete trading system</li>
+</ul>
 <hr />
 <p><strong>Disclaimer:</strong> This indicator displays price levels based on various calculation methodologies (timeframe extremes, volume weighting, volume profile distribution, market structure analysis). All levels represent historical or current price data. Individual interpretation, application, and outcomes vary. Past level reactions do not guarantee future results. This is not financial advice.</p>
                 
