@@ -957,6 +957,14 @@
 
 </li>
           <li class="md-nav__item">
+  <a href="#cme-gaps" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 CME Gaps
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
   <a href="#fair-value-gaps-fvg" class="md-nav__link">
     <span class="md-ellipsis">
       📊 Fair Value Gaps (FVG)
@@ -1343,6 +1351,38 @@
   <a href="#q-what-does-unmitigated-fvg-mean" class="md-nav__link">
     <span class="md-ellipsis">
       Q: What does "Unmitigated" FVG mean?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-why-do-i-need-to-select-a-cme-symbol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Why do I need to select a CME symbol?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-why-did-my-cme-gap-disappear" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Why did my CME gap disappear?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-why-does-my-chart-look-compressed-cme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Why does my chart look compressed (CME)?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-do-cme-gaps-work-on-crypto-spot-perp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Do CME gaps work on spot/perp charts?
     </span>
   </a>
 
@@ -2100,6 +2140,14 @@
 
 </li>
           <li class="md-nav__item">
+  <a href="#cme-gaps" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 CME Gaps
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
   <a href="#fair-value-gaps-fvg" class="md-nav__link">
     <span class="md-ellipsis">
       📊 Fair Value Gaps (FVG)
@@ -2486,6 +2534,38 @@
   <a href="#q-what-does-unmitigated-fvg-mean" class="md-nav__link">
     <span class="md-ellipsis">
       Q: What does "Unmitigated" FVG mean?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-why-do-i-need-to-select-a-cme-symbol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Why do I need to select a CME symbol?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-why-did-my-cme-gap-disappear" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Why did my CME gap disappear?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-why-does-my-chart-look-compressed-cme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Why does my chart look compressed (CME)?
+    </span>
+  </a>
+
+</li>
+          <li class="md-nav__item">
+  <a href="#q-do-cme-gaps-work-on-crypto-spot-perp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: Do CME gaps work on spot/perp charts?
     </span>
   </a>
 
@@ -3379,6 +3459,64 @@ Structure: Strong uptrend characteristics
 </div>
 
 <hr />
+<h3 id="cme-gaps">📊 CME Gaps<a class="headerlink" href="#cme-gaps" title="Permanent link">&para;</a></h3>
+<p><strong>What it does:</strong> Tracks weekend price gaps from CME futures markets. CME closes Friday 4pm CT and reopens Sunday 5pm CT—the price difference creates a "gap" that often gets filled.</p>
+<p><strong>What Displays:</strong></p>
+<ul>
+<li><strong>Box mode:</strong> Shaded rectangle from gap low to gap high</li>
+<li><strong>Lines mode:</strong> Two dashed horizontal lines at gap boundaries</li>
+<li><strong>Label:</strong> Direction and size (e.g., "CME ↑ 240.0" or "CME ↓ 1240.0")</li>
+</ul>
+<p><strong>Configuration:</strong></p>
+<table>
+<thead>
+<tr><th>Setting</th><th>Options</th><th>Default</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>CME Gaps</td><td>On/Off</td><td>Off</td><td>Master toggle (in Controls group)</td></tr>
+<tr><td>CME Symbol</td><td>22 presets</td><td>BTC1!</td><td>Must match your chart asset</td></tr>
+<tr><td>Display Style</td><td>Box / Lines</td><td>Box</td><td>Shaded zone or dashed lines</td></tr>
+<tr><td>Max Gaps</td><td>1-50</td><td>2</td><td>How many unfilled gaps to show</td></tr>
+<tr><td>Gap Color</td><td>Color picker</td><td>Orange</td><td>Gap zone color</td></tr>
+<tr><td>Box Transparency</td><td>0-95</td><td>70</td><td>Box fill opacity</td></tr>
+</tbody>
+</table>
+<p><strong>Symbol Mapping:</strong></p>
+<table>
+<thead>
+<tr><th>Your Chart</th><th>CME Symbol</th></tr>
+</thead>
+<tbody>
+<tr><td>BTC, BTCUSDT</td><td>BTC1!</td></tr>
+<tr><td>ETH, ETHUSDT</td><td>ETH1!</td></tr>
+<tr><td>SPY, SPX, ES</td><td>ES1!</td></tr>
+<tr><td>QQQ, NDX, NQ</td><td>NQ1!</td></tr>
+<tr><td>Gold, XAUUSD</td><td>GC1!</td></tr>
+<tr><td>Oil, CL</td><td>CL1!</td></tr>
+</tbody>
+</table>
+<p><strong>Characteristics:</strong></p>
+<ul>
+<li>Gaps often act as price magnets (tend to get filled)</li>
+<li>Gap up = bullish gap (Sunday opened higher than Friday close)</li>
+<li>Gap down = bearish gap (Sunday opened lower than Friday close)</li>
+<li>Gaps auto-remove when price fills them completely</li>
+<li>Works on ALL chart timeframes (fetches CME weekly data internally)</li>
+</ul>
+<p><strong>How to use:</strong></p>
+<ul>
+<li>Unfilled gaps = potential future price targets</li>
+<li>Gap edges act as support/resistance zones</li>
+<li>Multiple unfilled gaps at similar levels = stronger magnet effect</li>
+<li>Use with other Janus levels for confluence</li>
+</ul>
+<p><strong>Example:</strong> BTC gaps up $1,400 over the weekend (Friday close $92,000 → Sunday open $93,400). Gap zone displays from $92,000-$93,400. Price rallies to $95,000 then pulls back → watch for reaction at gap zone.</p>
+<div class="admonition warning" style="border-left: 5px solid #ff9800; background: #fff3e0; padding: 1rem; margin: 1.5rem 0;">
+  <p class="admonition-title" style="font-weight: bold; color: #e65100; margin: 0 0 0.5rem 0;">⚠️ Chart Scaling Note</p>
+  <p style="margin: 0; color: #424242;">More gaps = chart squeeze. Historical gaps far from current price will auto-scale your chart. Start with 1-2 gaps, increase if needed.</p>
+</div>
+
+<hr />
 <h3 id="fair-value-gaps-fvg">📊 Fair Value Gaps (FVG)<a class="headerlink" href="#fair-value-gaps-fvg" title="Permanent link">&para;</a></h3>
 <p><strong>What it does:</strong> Detects price imbalances where market moved so fast it left a "gap" between non-adjacent candles.</p>
 <p><strong>What Displays:</strong></p>
@@ -3803,6 +3941,17 @@ Interpretation: High confluence zone, stronger reactions observed
 <tr><td><code>gapH • Gap High</code></td><td>Gap High Touched</td></tr>
 <tr><td><code>gapL • Gap Low</code></td><td>Gap Low Touched</td></tr>
 <tr><td><code>Gap Filled</code></td><td>Gap Has Been Filled</td></tr>
+</tbody>
+</table>
+
+<h4>CME Gaps (2)</h4>
+<table>
+<thead>
+<tr><th>Alert Name</th><th>Trigger</th></tr>
+</thead>
+<tbody>
+<tr><td><code>CME Gap • New</code></td><td>New CME weekend gap detected</td></tr>
+<tr><td><code>CME Gap • Filled</code></td><td>CME gap has been filled</td></tr>
 </tbody>
 </table>
 
@@ -4234,6 +4383,18 @@ Interpretation: High confluence zone, stronger reactions observed
 
 <h3 id="q-what-does-unmitigated-fvg-mean">Q: What does "Unmitigated" FVG mean?<a class="headerlink" href="#q-what-does-unmitigated-fvg-mean" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> An unmitigated FVG hasn't been touched/filled by price yet. These are the most relevant for trading as potential entry zones—price is more likely to revisit unfilled imbalances.</p>
+
+<h3 id="q-why-do-i-need-to-select-a-cme-symbol">Q: Why do I need to select a CME symbol?<a class="headerlink" href="#q-why-do-i-need-to-select-a-cme-symbol" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> CME gaps come from CME futures data, not your chart's data. If you're on BTCUSDT (Binance spot), you need to tell the indicator to fetch gap data from BTC1! (CME Bitcoin futures). Wrong symbol = wrong gap levels.</p>
+
+<h3 id="q-why-did-my-cme-gap-disappear">Q: Why did my CME gap disappear?<a class="headerlink" href="#q-why-did-my-cme-gap-disappear" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Gaps auto-remove when filled. A gap-up is filled when price drops to the gap low. A gap-down is filled when price rises to the gap high.</p>
+
+<h3 id="q-why-does-my-chart-look-compressed-cme">Q: Why does my chart look compressed (CME gaps)?<a class="headerlink" href="#q-why-does-my-chart-look-compressed-cme" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Old unfilled gaps at distant prices cause TradingView to auto-scale. Reduce "Max Gaps" to 1-2 for cleaner charts.</p>
+
+<h3 id="q-do-cme-gaps-work-on-crypto-spot-perp">Q: Do CME gaps work on crypto spot/perp charts?<a class="headerlink" href="#q-do-cme-gaps-work-on-crypto-spot-perp" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Yes. The indicator fetches CME futures data regardless of your chart symbol. You see CME gap levels overlaid on your spot/perp chart.</p>
 
 <h3 id="q-whats-the-difference-between-fib-retracements-and-extensions">Q: What's the difference between Fib retracements and extensions?<a class="headerlink" href="#q-whats-the-difference-between-fib-retracements-and-extensions" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> Retracements (0.236-0.886) are INSIDE the range—used for entries on pullbacks. Extensions (1.272, 1.618) are OUTSIDE the range—used for profit targets after price breaks the high/low.</p>
