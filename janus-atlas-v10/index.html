@@ -2750,12 +2750,14 @@
 <h2 id="settings">⚙️ Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h2>
 <h3 id="recommended-initial-configuration">Example Starting Configuration<a class="headerlink" href="#recommended-initial-configuration" title="Permanent link">&para;</a></h3>
 <p><strong>Example Level Selection (educational starting point to avoid visual overload):</strong></p>
-<p>Enable these 5 level types first:<br />
-- ✓ Daily High/Low (dH, dL)<br />
-- ✓ Daily VWAP<br />
-- ✓ POC/VAH/VAL<br />
-- ✓ Weekly High/Low (WH, WL)<br />
-- ✓ Market Structure</p>
+<p>Enable these 5 level types first:</p>
+<ul>
+<li>✓ Daily High/Low (dH, dL)</li>
+<li>✓ Daily VWAP</li>
+<li>✓ POC/VAH/VAL</li>
+<li>✓ Weekly High/Low (WH, WL)</li>
+<li>✓ Market Structure</li>
+</ul>
 <p>Additional levels can be enabled progressively after familiarity with these core levels.</p>
 <h3 id="all-60-level-types-available">All 60+ Level Types Available<a class="headerlink" href="#all-60-level-types-available" title="Permanent link">&para;</a></h3>
 <table>
@@ -3351,10 +3353,12 @@ Structure: Strong uptrend characteristics
 <hr />
 <h3 id="opening-range">⏱️ Opening Range (OR)<a class="headerlink" href="#opening-range" title="Permanent link">&para;</a></h3>
 <p><strong>What it does:</strong> Captures the high and low of the first X minutes of a trading session, creating a "launchpad" for the day.</p>
-<p><strong>What Displays:</strong><br />
-- <strong>orH</strong> - Opening Range High<br />
-- <strong>orL</strong> - Opening Range Low<br />
-- <strong>orMid</strong> - Opening Range Midpoint (optional)</p>
+<p><strong>What Displays:</strong></p>
+<ul>
+<li><strong>orH</strong> - Opening Range High</li>
+<li><strong>orL</strong> - Opening Range Low</li>
+<li><strong>orMid</strong> - Opening Range Midpoint (optional)</li>
+</ul>
 <p><strong>Configuration:</strong></p>
 <table>
 <thead>
@@ -3366,11 +3370,13 @@ Structure: Strong uptrend characteristics
 <tr><td>Show Midpoint</td><td>On/Off</td><td>Off</td></tr>
 </tbody>
 </table>
-<p><strong>How to use:</strong><br />
-- Break above orH → Bullish bias for the day<br />
-- Break below orL → Bearish bias for the day<br />
-- Price holding within range → Wait for breakout<br />
-- orMid acts as intraday pivot point</p>
+<p><strong>How to use:</strong></p>
+<ul>
+<li>Break above orH → Bullish bias for the day</li>
+<li>Break below orL → Bearish bias for the day</li>
+<li>Price holding within range → Wait for breakout</li>
+<li>orMid acts as intraday pivot point</li>
+</ul>
 <p><strong>Best for:</strong> Day traders, Opening Range Breakout (ORB) strategies</p>
 
 <!-- 📸 SCREENSHOT NEEDED - Opening Range on Chart
@@ -3440,17 +3446,23 @@ Structure: Strong uptrend characteristics
 <hr />
 <h3 id="gap-levels">📊 Gap Levels<a class="headerlink" href="#gap-levels" title="Permanent link">&para;</a></h3>
 <p><strong>What it does:</strong> Automatically detects and displays price gaps between sessions.</p>
-<p><strong>What Displays:</strong><br />
-- <strong>gapH</strong> - Gap High (top of gap)<br />
-- <strong>gapL</strong> - Gap Low (bottom of gap)</p>
-<p><strong>Gap Detection:</strong><br />
-- Daily gaps (overnight gaps)<br />
-- Weekend gaps (Friday close to Sunday open)<br />
-- Gap fill tracking (optional visual when gap fills)</p>
-<p><strong>How to use:</strong><br />
-- Gaps often act as magnets (price tends to fill gaps)<br />
-- Unfilled gaps = potential future targets<br />
-- Gap edges (gapH/gapL) act as support/resistance</p>
+<p><strong>What Displays:</strong></p>
+<ul>
+<li><strong>gapH</strong> - Gap High (top of gap)</li>
+<li><strong>gapL</strong> - Gap Low (bottom of gap)</li>
+</ul>
+<p><strong>Gap Detection:</strong></p>
+<ul>
+<li>Daily gaps (overnight gaps)</li>
+<li>Weekend gaps (Friday close to Sunday open)</li>
+<li>Gap fill tracking (optional visual when gap fills)</li>
+</ul>
+<p><strong>How to use:</strong></p>
+<ul>
+<li>Gaps often act as magnets (price tends to fill gaps)</li>
+<li>Unfilled gaps = potential future targets</li>
+<li>Gap edges (gapH/gapL) act as support/resistance</li>
+</ul>
 <p><strong>Statistics:</strong> Most gaps fill within 1-3 trading sessions (historical observation, not guaranteed).</p>
 
 <!-- 📸 SCREENSHOT NEEDED - Gap Levels on Chart
@@ -3467,14 +3479,22 @@ Structure: Strong uptrend characteristics
 <hr />
 <h3 id="fair-value-gaps-fvg">📊 Fair Value Gaps (FVG)<a class="headerlink" href="#fair-value-gaps-fvg" title="Permanent link">&para;</a></h3>
 <p><strong>What it does:</strong> Detects price imbalances where market moved so fast it left a "gap" between non-adjacent candles.</p>
-<p><strong>What Displays:</strong><br />
-- Semi-transparent boxes highlighting price imbalances<br />
-- Colors change based on position relative to current price<br />
-- Green zones = Demand (FVG below price)<br />
-- Red zones = Supply (FVG above price)</p>
-<p><strong>Detection Logic:</strong><br />
-- <strong>Bullish FVG:</strong> Gap up where candle low &gt; candle[2] high (demand zone)<br />
-- <strong>Bearish FVG:</strong> Gap down where candle high &lt; candle[2] low (supply zone)</p>
+<p><strong>What Displays:</strong></p>
+<ul>
+<li>Semi-transparent boxes highlighting price imbalances</li>
+<li>Colors change based on position relative to current price</li>
+<li>Green zones = Demand (FVG below price)</li>
+<li>Red zones = Supply (FVG above price)</li>
+</ul>
+<table>
+<thead>
+<tr><th>FVG Type</th><th>Detection Logic</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Bullish FVG</strong></td><td>Gap up where candle low &gt; candle[2] high (demand zone)</td></tr>
+<tr><td><strong>Bearish FVG</strong></td><td>Gap down where candle high &lt; candle[2] low (supply zone)</td></tr>
+</tbody>
+</table>
 <p><strong>Configuration:</strong></p>
 <table>
 <thead>
@@ -3493,10 +3513,12 @@ Structure: Strong uptrend characteristics
 </tbody>
 </table>
 <p><strong>Key Features:</strong></p>
-<p><strong>1. Position-based coloring:</strong><br />
-- FVG below current price = Green (demand/support zone)<br />
-- FVG above current price = Red (supply/resistance zone)<br />
-- Colors update dynamically as price moves</p>
+<p><strong>1. Position-based coloring:</strong></p>
+<ul>
+<li>FVG below current price = Green (demand/support zone)</li>
+<li>FVG above current price = Red (supply/resistance zone)</li>
+<li>Colors update dynamically as price moves</li>
+</ul>
 <p><strong>2. Auto lookback by timeframe:</strong></p>
 <table>
 <thead>
@@ -3511,14 +3533,18 @@ Structure: Strong uptrend characteristics
 <tr><td>Monthly</td><td>6 months</td></tr>
 </tbody>
 </table>
-<p><strong>3. Mitigation modes:</strong><br />
-- <strong>Wick</strong> = FVG mitigated when any wick touches the gap<br />
-- <strong>Close</strong> = FVG mitigated when candle closes inside the gap (stricter)</p>
-<p><strong>How to use:</strong><br />
-- FVGs are "magnets" – price tends to return to fill imbalances<br />
-- Unmitigated FVGs = potential entry zones<br />
-- Green FVG below = buy zone / demand support<br />
-- Red FVG above = sell zone / supply resistance</p>
+<p><strong>3. Mitigation modes:</strong></p>
+<ul>
+<li><strong>Wick</strong> = FVG mitigated when any wick touches the gap</li>
+<li><strong>Close</strong> = FVG mitigated when candle closes inside the gap (stricter)</li>
+</ul>
+<p><strong>How to use:</strong></p>
+<ul>
+<li>FVGs are "magnets" – price tends to return to fill imbalances</li>
+<li>Unmitigated FVGs = potential entry zones</li>
+<li>Green FVG below = buy zone / demand support</li>
+<li>Red FVG above = sell zone / supply resistance</li>
+</ul>
 <p><strong>Example:</strong> ES futures gaps up leaving a bullish FVG between 4,480-4,490. Price rallies to 4,520 then pulls back → Watch for bounce at 4,480-4,490 FVG zone (demand).</p>
 
 <!-- 📸 SCREENSHOT NEEDED - Fair Value Gaps on Chart
