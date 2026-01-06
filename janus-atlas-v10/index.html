@@ -3274,10 +3274,8 @@ All level colors now default to <strong>gray</strong> for a clean, professional 
 <p><strong>Example:</strong> Price at $69,000, POC at $67,000 → Pullback to POC observed (magnet effect).</p>
 <hr />
 <h3 id="naked-poc-npoc">🧲 Naked POC (nPOC)<a class="headerlink" href="#naked-poc-npoc" title="Permanent link">&para;</a></h3>
-<p><strong>What Displays:</strong><br />
-Lines labeled <code>dnPOC1</code>, <code>dnPOC2</code>, <code>wnPOC1</code>, etc.</p>
-<p><strong>What it is:</strong><br />
-Previous session POC levels that price hasn't touched yet. They act as "magnets" because high-volume areas tend to attract price back.</p>
+<p><strong>What Displays:</strong> Lines labeled <code>dnPOC1</code>, <code>dnPOC2</code>, <code>wnPOC1</code>, etc.</p>
+<p><strong>What it is:</strong> Previous session POC levels that price hasn't touched yet. They act as "magnets" because high-volume areas tend to attract price back.</p>
 <p><strong>Settings:</strong></p>
 <table>
 <thead>
@@ -3291,33 +3289,47 @@ Previous session POC levels that price hasn't touched yet. They act as "magnets"
 <tr><td>nPOC Color</td><td>Gray</td><td>Color for nPOC lines</td></tr>
 </tbody>
 </table>
-<p><strong>How it works:</strong><br />
-1. When a new day/week starts, the previous session's POC is saved<br />
-2. Each saved POC is monitored for price touches<br />
-3. When price wicks through the level, the nPOC is "filled" and removed<br />
-4. Remaining nPOCs continue displaying until touched</p>
+<p><strong>How it works:</strong></p>
+<ol>
+<li>When a new day/week starts, the previous session's POC is saved</li>
+<li>Each saved POC is monitored for price touches</li>
+<li>When price wicks through the level, the nPOC is "filled" and removed</li>
+<li>Remaining nPOCs continue displaying until touched</li>
+</ol>
 <p><strong>Labels:</strong> <code>dnPOC1</code>, <code>dnPOC2</code>, etc. (most recent = 1, oldest = highest number)</p>
-<p><strong>Why it matters:</strong><br />
-- Naked POCs are unfilled magnets - price tends to return to them<br />
-- Multiple nPOCs at similar levels = stronger attraction zone<br />
-- When price fills an nPOC, it often reverses or consolidates</p>
+<p><strong>Why it matters:</strong></p>
+<ul>
+<li>Naked POCs are unfilled magnets - price tends to return to them</li>
+<li>Multiple nPOCs at similar levels = stronger attraction zone</li>
+<li>When price fills an nPOC, it often reverses or consolidates</li>
+</ul>
 <p><strong>Use Case:</strong> Trade towards unfilled nPOCs as targets, or use them as S/R zones.</p>
 <p><strong>Example:</strong> Yesterday's POC at $67,500 wasn't touched today → Shows as <code>dnPOC1</code> → Price often gravitates back to fill it.</p>
 <hr />
 <h3 id="market-structure-swing-points-breaks">📈 Market Structure (Swing Points &amp; Breaks)<a class="headerlink" href="#market-structure-swing-points-breaks" title="Permanent link">&para;</a></h3>
-<p><strong>What Displays:</strong><br />
-- <strong>Labels at swing points:</strong> HH (Higher High), HL (Higher Low), LH (Lower High), LL (Lower Low)<br />
-- <strong>Break labels:</strong> BOS (Break of Structure), CHoCH (Change of Character)</p>
-<p><strong>Structure Definitions:</strong><br />
-- <strong>HH/HL:</strong> Uptrend swing pattern (higher highs, higher lows)<br />
-- <strong>LH/LL:</strong> Downtrend swing pattern (lower highs, lower lows)<br />
-- <strong>BOS:</strong> Structure break in trend direction (continuation signal)<br />
-- <strong>CHoCH:</strong> Structure change opposite to trend (reversal warning)</p>
-<p><strong>Characteristics:</strong><br />
-- HH → HL → HH pattern = Uptrend structure<br />
-- LH → LL → LH pattern = Downtrend structure<br />
-- BOS labels indicate trend continuation<br />
-- CHoCH labels indicate potential reversal</p>
+<p><strong>What Displays:</strong></p>
+<ul>
+<li><strong>Labels at swing points:</strong> HH (Higher High), HL (Higher Low), LH (Lower High), LL (Lower Low)</li>
+<li><strong>Break labels:</strong> BOS (Break of Structure), CHoCH (Change of Character)</li>
+</ul>
+<table>
+<thead>
+<tr><th>Label</th><th>Definition</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>HH/HL</strong></td><td>Uptrend swing pattern (higher highs, higher lows)</td></tr>
+<tr><td><strong>LH/LL</strong></td><td>Downtrend swing pattern (lower highs, lower lows)</td></tr>
+<tr><td><strong>BOS</strong></td><td>Break of Structure - trend continuation signal</td></tr>
+<tr><td><strong>CHoCH</strong></td><td>Change of Character - reversal warning</td></tr>
+</tbody>
+</table>
+<p><strong>Characteristics:</strong></p>
+<ul>
+<li>HH → HL → HH pattern = Uptrend structure</li>
+<li>LH → LL → LH pattern = Downtrend structure</li>
+<li>BOS labels indicate trend continuation</li>
+<li>CHoCH labels indicate potential reversal</li>
+</ul>
 <p><strong>Example Pattern:</strong></p>
 <pre><code>Price: HL → HH → HL → HH (with BOS labels)
 Structure: Strong uptrend characteristics
