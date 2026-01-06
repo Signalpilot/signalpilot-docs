@@ -77,16 +77,19 @@ assets/images/how-to/
 
 ---
 
-### 3. Settings Panel - All Level Types
+### 3. Settings Panel ⚠️ LOW PRIORITY
 | Property | Value |
 |----------|-------|
-| **Filename** | `janus-atlas-settings-all-levels.png` |
+| **Filename** | `janus-atlas-settings-panel.png` |
 | **Section** | Settings Panel Organization |
+| **Priority** | LOW - users find settings themselves |
 
 **What to capture:**
 - TradingView settings panel for Janus Atlas
-- Show all 19 groups visible (collapsed view)
-- Groups 1-19 should be readable
+- Show ONLY top portion (first 4-5 groups visible)
+- Caption will say "scroll for more options"
+
+**Note:** Settings panels scroll vertically - impossible to show all 19 groups. Just capture what fits naturally.
 
 ---
 
@@ -97,12 +100,12 @@ assets/images/how-to/
 | **Section** | Level Types Overview |
 
 **What to capture:**
-- Chart showing multiple different level types
-- Examples: dH, dL, wH, wL, POC, VAH, VAL, VWAP, session levels
+- Chart showing 5-7 different level types (don't overload)
+- Pick a mix: dH, dL, POC, VWAP, one session level
 
 **Annotations needed:**
-- Point to each level type with its code
-- Group by category (HTF, Sessions, Volume Profile, etc.)
+- Point to 4-5 key levels only
+- Keep it readable, not cluttered
 
 ---
 
@@ -263,16 +266,17 @@ assets/images/how-to/
 
 ---
 
-### 14. Settings Panel - 10 System Toggles
+### 14. Settings Panel ⚠️ LOW PRIORITY
 | Property | Value |
 |----------|-------|
 | **Filename** | `omnideck-settings-panel.png` |
 | **Section** | Settings |
+| **Priority** | LOW - users find settings themselves |
 
 **What to capture:**
 - TradingView settings panel for OmniDeck
-- Show all 10 system toggles visible
-- Master enable/disable for each system
+- Show top portion with first 4-5 system toggles
+- Don't try to fit all 10 - just what's visible without scrolling
 
 ---
 
@@ -396,33 +400,34 @@ assets/images/how-to/
 
 **Page:** `https://docs.signalpilot.io/pentarch-v10/`
 
-### 24. All 5 Signal Types on Chart
+### 24. Signal Types on Chart
 | Property | Value |
 |----------|-------|
-| **Filename** | `pentarch-5-signals-labeled.png` |
+| **Filename** | `pentarch-signals-labeled.png` |
 | **Section** | Core Functionality |
 
 **What to capture:**
-- Bitcoin or S&P 500 chart
-- All 5 signals visible: TD, IGN, WRN, CAP, BDN
-- 4H or Daily timeframe
+- Bitcoin or S&P 500 chart (4H or Daily)
+- Show 2-3 different signal types (whatever naturally appears)
+- Don't force all 5 - rare to have all 5 visible at once
 
 **Annotations needed:**
-- Arrow pointing to each signal with its name
-- Color coding: TD=purple, IGN=teal, WRN=yellow, CAP=orange, BDN=red
+- Label visible signals with their names
+- Color coding visible in the signals themselves
 
 ---
 
-### 25. Settings Panel Configuration
+### 25. Settings Panel ⚠️ LOW PRIORITY
 | Property | Value |
 |----------|-------|
 | **Filename** | `pentarch-settings-panel.png` |
 | **Section** | Settings |
+| **Priority** | LOW - users find settings themselves |
 
 **What to capture:**
 - TradingView settings panel for Pentarch
-- Show signal toggles: TD, IGN, WRN, CAP, BDN checkboxes
-- Color customization options visible
+- Focus on signal toggles section (TD, IGN, WRN, CAP, BDN)
+- Just capture what fits - don't scroll/stitch
 
 ---
 
@@ -543,16 +548,16 @@ assets/images/how-to/
 
 ---
 
-### 34. Settings Panel
+### 34. Settings Panel ⚠️ LOW PRIORITY
 | Property | Value |
 |----------|-------|
 | **Filename** | `plutus-flow-settings.png` |
 | **Section** | Settings |
+| **Priority** | LOW - users find settings themselves |
 
 **What to capture:**
 - TradingView settings for Plutus Flow
-- OBV and ribbon configuration options
-- HTF timeframe, FlipGuard, quality settings
+- Show top portion only - whatever fits without scrolling
 
 ---
 
@@ -622,16 +627,16 @@ assets/images/how-to/
 
 ---
 
-### 39. Settings Panel
+### 39. Settings Panel ⚠️ LOW PRIORITY
 | Property | Value |
 |----------|-------|
 | **Filename** | `harmonic-oscillator-settings.png` |
 | **Section** | Settings |
+| **Priority** | LOW - users find settings themselves |
 
 **What to capture:**
 - TradingView settings for Harmonic Oscillator
-- Component toggles
-- Threshold settings
+- Show top portion only - whatever fits without scrolling
 
 ---
 
@@ -771,9 +776,9 @@ assets/images/how-to/
 
 **What to capture:**
 - Augury Grid settings panel
-- Symbol Configuration section
-- 7 symbol input fields visible
-- Example tickers entered (BINANCE:BTCUSDT, etc.)
+- Symbol Configuration section visible
+- Show 3-4 symbol input fields (whatever fits without scrolling)
+- At least one example ticker entered (BINANCE:BTCUSDT)
 
 ---
 
@@ -820,11 +825,9 @@ assets/images/how-to/
 | **Section** | Step 1: Get Webhook URL |
 
 **What to capture:**
-- Discord Server Settings
-- Integrations panel
-- Webhook creation interface
-- "New Webhook" button
-- Webhook URL field
+- Discord Integrations → Webhooks panel
+- Show the webhook URL field OR the "Copy Webhook URL" button
+- Don't need to show entire Discord settings - just the webhook section
 
 ---
 
@@ -858,16 +861,30 @@ assets/images/how-to/
 
 # JANUS ATLAS SOURCE FILE (Markdown)
 
-These 9 images also need to be added to uncomment the markdown in `docs/janus-atlas-v10.md`:
+Additional images needed for `docs/janus-atlas-v10.md`:
 
-| # | Filename | Already Listed Above |
-|---|----------|---------------------|
-| 54 | `custom-session-setup.png` | Similar to #3 |
-| 55 | `settings-panel-overview.png` | Same as #3 |
-| 56 | `label-with-price.png` | NEW - Show label format `dH • 245.50` |
-| 57 | `alert-dropdown-format.png` | NEW - Alert dropdown with `code • name` |
+| # | Filename | Notes |
+|---|----------|-------|
+| 54 | `custom-session-setup.png` | Settings - show custom session section only |
+| 55 | `label-with-price.png` | Chart labels showing `dH • 245.50` format |
+| 56 | `alert-dropdown-format.png` | Alert dropdown with `code • name` format |
 
-### 54. Label with Price Format
+**Note:** `settings-panel-overview.png` SKIPPED - same problem as #3, use the same screenshot if needed.
+
+### 54. Custom Session Setup
+| Property | Value |
+|----------|-------|
+| **Filename** | `custom-session-setup.png` |
+| **Save to** | `assets/images/janus-atlas/` |
+
+**What to capture:**
+- Janus Atlas settings panel
+- Scroll to Custom Sessions section
+- Show just that section (name field, time field, toggles)
+
+---
+
+### 55. Label with Price Format
 | Property | Value |
 |----------|-------|
 | **Filename** | `label-with-price.png` |
@@ -880,7 +897,7 @@ These 9 images also need to be added to uncomment the markdown in `docs/janus-at
 
 ---
 
-### 55. Alert Dropdown Format
+### 56. Alert Dropdown Format
 | Property | Value |
 |----------|-------|
 | **Filename** | `alert-dropdown-format.png` |
@@ -888,19 +905,18 @@ These 9 images also need to be added to uncomment the markdown in `docs/janus-at
 
 **What to capture:**
 - TradingView "Create Alert" dialog
-- Condition dropdown EXPANDED
-- Alert names in format: `code • Full Name`
-- Examples: `dH • Daily High`, `CHoCH • 🟢 Bullish`
+- Condition dropdown EXPANDED for Janus Atlas
+- Show 5-6 alert options visible (don't need all 57)
+- Format visible: `code • Full Name`
 
 ---
 
 # Master Checklist
 
-## Indicators (42 screenshots)
+## HIGH PRIORITY - Chart Screenshots (Feature demos)
 
 - [ ] 1. janus-atlas-beginner-5-levels.png
 - [ ] 2. janus-atlas-5-vs-60-levels.png
-- [ ] 3. janus-atlas-settings-all-levels.png
 - [ ] 4. janus-atlas-level-types-labeled.png
 - [ ] 5. opening-range-levels.png
 - [ ] 6. killzone-background.png
@@ -911,7 +927,6 @@ These 9 images also need to be added to uncomment the markdown in `docs/janus-at
 - [ ] 11. janus-atlas-fibonacci.png
 - [ ] 12. omnideck-beginner-4-systems.png
 - [ ] 13. omnideck-all-10-systems-overload.png
-- [ ] 14. omnideck-settings-panel.png
 - [ ] 15. omnideck-liquidity-sweeps.png
 - [ ] 16. omnideck-ema-trio.png
 - [ ] 17. omnideck-supertrend.png
@@ -921,8 +936,7 @@ These 9 images also need to be added to uncomment the markdown in `docs/janus-at
 - [ ] 21. omnideck-candlestick-patterns.png
 - [ ] 22. omnideck-key-systems-example.png
 - [ ] 23. omnideck-confluence-score.png
-- [ ] 24. pentarch-5-signals-labeled.png
-- [ ] 25. pentarch-settings-panel.png
+- [ ] 24. pentarch-signals-labeled.png
 - [ ] 26. pentarch-signal-sequence.png
 - [ ] 27. pentarch-td-signal.png
 - [ ] 28. pentarch-ign-signal.png
@@ -931,22 +945,19 @@ These 9 images also need to be added to uncomment the markdown in `docs/janus-at
 - [ ] 31. pentarch-bdn-signal.png
 - [ ] 32. pentarch-pilot-line-regime.png
 - [ ] 33. plutus-flow-all-components.png
-- [ ] 34. plutus-flow-settings.png
 - [ ] 35. plutus-flow-bullish-divergence.png
 - [ ] 36. plutus-flow-cross-signals.png
 - [ ] 37. harmonic-oscillator-status-panel.png
 - [ ] 38. harmonic-oscillator-panel-location.png
-- [ ] 39. harmonic-oscillator-settings.png
 - [ ] 40. harmonic-oscillator-regime-transitions.png
 - [ ] 41. augury-grid-full-table.png
 
-## How-To Guides (12 screenshots)
+## MEDIUM PRIORITY - How-To Screenshots
 
 - [ ] 42. alerts-button-location.png
 - [ ] 43. alerts-condition-dropdown.png
-- [ ] 44. alerts-once-per-bar-close.png
+- [ ] 44. alerts-once-per-bar-close.png ⭐ IMPORTANT
 - [ ] 45. alerts-active-list.png
-- [ ] 46. alerts-mobile-settings.png
 - [ ] 47. screener-add-indicator.png
 - [ ] 48. screener-symbol-config.png
 - [ ] 49. screener-populated-grid.png
@@ -955,12 +966,22 @@ These 9 images also need to be added to uncomment the markdown in `docs/janus-at
 - [ ] 52. webhooks-tradingview-field.png
 - [ ] 53. webhooks-discord-success.png
 
-## Janus Atlas Markdown Source (2 additional)
+## LOW PRIORITY - Settings Panels (users find these themselves)
 
-- [ ] 54. label-with-price.png
-- [ ] 55. alert-dropdown-format.png
+- [ ] 3. janus-atlas-settings-panel.png
+- [ ] 14. omnideck-settings-panel.png
+- [ ] 25. pentarch-settings-panel.png
+- [ ] 34. plutus-flow-settings.png
+- [ ] 39. harmonic-oscillator-settings.png
+- [ ] 46. alerts-mobile-settings.png
+
+## Janus Atlas Markdown Source
+
+- [ ] 54. custom-session-setup.png
+- [ ] 55. label-with-price.png
+- [ ] 56. alert-dropdown-format.png
 
 ---
 
 *Generated: 2026-01-06*
-*Total: 55 unique screenshots (some overlap between HTML and markdown)*
+*Total: ~50 screenshots (settings panels marked low priority)*
