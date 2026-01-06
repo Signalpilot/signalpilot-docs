@@ -1,378 +1,966 @@
-# Screenshot Placeholder Guide
+# Complete Screenshot Placeholder Guide
 
-**Total Screenshots Needed:** 9
-**All for:** Janus Atlas v1.0 Documentation
-**Page URL:** `https://docs.signalpilot.io/janus-atlas-v10.html`
+**Total Screenshots Needed:** 54
+**Pages Affected:** 9
+
+---
+
+## Quick Summary by Page
+
+| Page | Count | Status |
+|------|-------|--------|
+| Janus Atlas v1.0 | 11 | ⬜ |
+| OmniDeck v1.0 | 12 | ⬜ |
+| Pentarch v1.0 | 9 | ⬜ |
+| Plutus Flow v1.0 | 4 | ⬜ |
+| Harmonic Oscillator v1.0 | 4 | ⬜ |
+| Augury Grid v1.0 | 1 | ⬜ |
+| How to Set Up Alerts | 5 | ⬜ |
+| How to Use Screener | 4 | ⬜ |
+| How to Set Up Webhooks | 3 | ⬜ |
+| **TOTAL** | **54** | |
 
 ---
 
 ## Directory Setup
 
-Create this folder before adding images:
+Create these folders:
 ```
 assets/images/janus-atlas/
+assets/images/indicators/
+assets/images/how-to/
 ```
 
 ---
 
-## Screenshot Checklist
-
-| # | Filename | Section | Status |
-|---|----------|---------|--------|
-| 1 | `opening-range-levels.png` | Opening Range (OR) | ⬜ |
-| 2 | `killzone-background.png` | Killzones | ⬜ |
-| 3 | `custom-session-setup.png` | Custom Sessions | ⬜ |
-| 4 | `gap-levels-fill.png` | Gap Levels | ⬜ |
-| 5 | `confluence-zone.png` | Confluence Zones | ⬜ |
-| 6 | `distance-table.png` | Distance Table | ⬜ |
-| 7 | `settings-panel-overview.png` | Settings | ⬜ |
-| 8 | `label-with-price.png` | Appearance Settings | ⬜ |
-| 9 | `alert-dropdown-format.png` | Alert Configuration | ⬜ |
+# INDICATOR PAGES
 
 ---
 
-## Detailed Screenshot Specifications
+## Janus Atlas v1.0
+
+**Page:** `https://docs.signalpilot.io/janus-atlas-v10/`
+
+### 1. Beginner 5-Level Setup
+| Property | Value |
+|----------|-------|
+| **Filename** | `janus-atlas-beginner-5-levels.png` |
+| **Section** | New to Trading? Start Here |
+
+**What to capture:**
+- Chart with ONLY 5 levels enabled
+- Show: Daily High, Daily Low, Weekly High, Weekly Low, POC
+- All other levels DISABLED
+
+**Annotations needed:**
+- Label each of the 5 levels on the chart
+- Add text: "Clean and readable"
+- Emphasize this is the beginner setup
 
 ---
 
-### 1. Opening Range Levels
+### 2. 5 Levels vs 60+ Levels Comparison
+| Property | Value |
+|----------|-------|
+| **Filename** | `janus-atlas-5-vs-60-levels.png` |
+| **Section** | Core Functionality |
 
+**What to capture:**
+- Side-by-side OR split-screen comparison
+- LEFT: 5 levels (clean chart)
+- RIGHT: Many levels enabled (cluttered chart)
+- Same symbol, same timeframe
+
+**Annotations needed:**
+- Add "❌ Too Many Levels" on cluttered chart
+- Add "✅ Perfect for Beginners" on clean chart
+
+---
+
+### 3. Settings Panel - All Level Types
+| Property | Value |
+|----------|-------|
+| **Filename** | `janus-atlas-settings-all-levels.png` |
+| **Section** | Settings Panel Organization |
+
+**What to capture:**
+- TradingView settings panel for Janus Atlas
+- Show all 19 groups visible (collapsed view)
+- Groups 1-19 should be readable
+
+---
+
+### 4. Different Level Types Labeled
+| Property | Value |
+|----------|-------|
+| **Filename** | `janus-atlas-level-types-labeled.png` |
+| **Section** | Level Types Overview |
+
+**What to capture:**
+- Chart showing multiple different level types
+- Examples: dH, dL, wH, wL, POC, VAH, VAL, VWAP, session levels
+
+**Annotations needed:**
+- Point to each level type with its code
+- Group by category (HTF, Sessions, Volume Profile, etc.)
+
+---
+
+### 5. Opening Range Levels
 | Property | Value |
 |----------|-------|
 | **Filename** | `opening-range-levels.png` |
-| **Save to** | `assets/images/janus-atlas/opening-range-levels.png` |
-| **Doc location** | Line 79 in `docs/janus-atlas-v10.md` |
-| **Section** | ⏱️ Opening Range (OR) |
+| **Save to** | `assets/images/janus-atlas/` |
+| **Section** | Opening Range (OR) |
 
-#### What to Capture
-A TradingView chart showing the Opening Range feature in action.
+**What to capture:**
+- Chart showing OR feature active
+- Clear `orH` label (Opening Range High)
+- Clear `orL` label (Opening Range Low)
+- Horizontal lines extending right
+- First 30 minutes of NY session visible
 
-#### Must Include
-- [ ] Clear `orH` label (Opening Range High)
-- [ ] Clear `orL` label (Opening Range Low)
-- [ ] Optionally `orMid` label if enabled
-- [ ] Horizontal lines extending to the right from the OR levels
-- [ ] The actual opening range time window visible (e.g., 9:30-10:00 AM)
-- [ ] Price action showing the first 30 minutes of the session
-
-#### Ideal Setup
-- **Symbol:** ES (E-mini S&P 500) or NQ futures
-- **Timeframe:** 5-minute chart
-- **Time:** Show NY session open (9:30 AM ET)
-- **Best scenario:** Price breaking above or below OR after it forms (shows the "launchpad" concept)
-
-#### Example Description
-"ES 5-min chart showing Opening Range between 9:30-10:00 AM. orH at 4520, orL at 4505, with price breaking above orH around 10:15 AM."
+**Ideal setup:**
+- Symbol: ES or NQ futures
+- Timeframe: 5-minute
+- Show price breaking above/below OR after it forms
 
 ---
 
-### 2. Killzone Background Shading
-
+### 6. Killzone Background Shading
 | Property | Value |
 |----------|-------|
 | **Filename** | `killzone-background.png` |
-| **Save to** | `assets/images/janus-atlas/killzone-background.png` |
-| **Doc location** | Line 115 in `docs/janus-atlas-v10.md` |
-| **Section** | 🕐 Killzones |
+| **Save to** | `assets/images/janus-atlas/` |
+| **Section** | Killzones |
 
-#### What to Capture
-A TradingView chart showing the killzone background shading feature.
-
-#### Must Include
-- [ ] Subtle, semi-transparent background shading behind price action
-- [ ] At least ONE killzone visible (preferably NY Open: 8:30-11:00 AM)
-- [ ] The shading should be ~90% transparent (very subtle)
-- [ ] Price candles clearly visible THROUGH the shading
-
-#### Ideal Setup
-- **Symbol:** Any liquid market (ES, NQ, BTC)
-- **Timeframe:** 15-minute or 30-minute chart
-- **Show:** Multiple killzones if possible (e.g., London Open + NY Open overlapping slightly)
-- **Color:** Use default colors or visually distinct ones
-
-#### Example Description
-"Chart showing London Open killzone (2:00-5:00 AM) with subtle blue shading, transitioning into NY Open killzone (8:30-11:00 AM) with subtle orange shading. Price candles are clearly visible through the transparent background."
+**What to capture:**
+- Subtle, semi-transparent background shading (~90% transparent)
+- At least ONE killzone visible (NY Open: 8:30-11:00 AM preferred)
+- Price candles clearly visible THROUGH the shading
+- Multiple killzones if possible
 
 ---
 
-### 3. Custom Session Setup
-
-| Property | Value |
-|----------|-------|
-| **Filename** | `custom-session-setup.png` |
-| **Save to** | `assets/images/janus-atlas/custom-session-setup.png` |
-| **Doc location** | Line 143 in `docs/janus-atlas-v10.md` |
-| **Section** | 🎯 Custom Sessions |
-
-#### What to Capture
-The TradingView settings panel showing the Custom Sessions configuration.
-
-#### Must Include
-- [ ] The settings panel/input dialog open
-- [ ] Custom Session name input field (e.g., "Globex")
-- [ ] Time window input (e.g., "0800-1400")
-- [ ] Toggle switches for O/H/L/Mid
-- [ ] Color picker visible or color selection shown
-
-#### Ideal Setup
-- **Show:** Settings Group 5 (Custom Sessions) expanded
-- **Example values:**
-  - Name: "Globex" or "London"
-  - Time: "1800-0930" or similar
-- **Toggles:** Show O, H, L enabled, Mid disabled
-
-#### Example Description
-"TradingView indicator settings showing Custom Session 1 configuration: Name field with 'Globex', Time field with '1800-0930', checkboxes for Show Open/High/Low (checked) and Mid (unchecked), with a cyan color selected."
-
----
-
-### 4. Gap Levels with Fill
-
+### 7. Gap Levels with Fill
 | Property | Value |
 |----------|-------|
 | **Filename** | `gap-levels-fill.png` |
-| **Save to** | `assets/images/janus-atlas/gap-levels-fill.png` |
-| **Doc location** | Line 185 in `docs/janus-atlas-v10.md` |
-| **Section** | 📊 Gap Levels |
+| **Save to** | `assets/images/janus-atlas/` |
+| **Section** | Gap Levels |
 
-#### What to Capture
-A chart showing gap levels AND a gap fill event.
+**What to capture:**
+- `gapH` and `gapL` labels visible
+- Gap zone between previous close and current open
+- **CRITICAL:** Show price FILLING the gap
+- Gap fill marker/label if indicator shows it
 
-#### Must Include
-- [ ] `gapH` label marking the gap high
-- [ ] `gapL` label marking the gap low
-- [ ] Visible gap zone between previous close and current open
-- [ ] **CRITICAL:** Price filling the gap (touching the opposite side)
-- [ ] "Gap Filled" marker/label if the indicator shows it
-
-#### Ideal Setup
-- **Symbol:** Stock or index with clear overnight gap
-- **Timeframe:** 15-minute or 1-hour chart
-- **Scenario:**
-  - Gap UP: Previous close at $100, open at $103, then price drops back to $100 (fills gap)
-  - Gap DOWN: Previous close at $100, open at $97, then price rises back to $100 (fills gap)
-
-#### Example Description
-"SPY 15-min chart showing a gap up. gapL at $442 (previous close), gapH at $445 (today's open). Price gaps up, trades higher, then pulls back through the gap zone and touches gapL, triggering the 'Gap Filled' marker."
+**Ideal scenario:**
+- Gap UP: Previous close $100, open $103, price drops back to $100
+- Find a real example showing the gap fill event
 
 ---
 
-### 5. Confluence Zone
+### 8. Fair Value Gaps (FVG)
+| Property | Value |
+|----------|-------|
+| **Filename** | `janus-atlas-fvg.png` |
+| **Section** | Fair Value Gaps |
 
+**What to capture:**
+- FVG boxes/zones on chart
+- Show both bullish and bearish FVGs if possible
+- FVG mitigation example (price returning to fill gap)
+
+---
+
+### 9. Confluence Zone Highlight
 | Property | Value |
 |----------|-------|
 | **Filename** | `confluence-zone.png` |
-| **Save to** | `assets/images/janus-atlas/confluence-zone.png` |
-| **Doc location** | Line 273 in `docs/janus-atlas-v10.md` |
-| **Section** | 🎯 Confluence Zones |
+| **Save to** | `assets/images/janus-atlas/` |
+| **Section** | Confluence Zones |
 
-#### What to Capture
-A chart showing the automatic confluence zone highlighting.
+**What to capture:**
+- Semi-transparent highlighted box on chart
+- At least 3 levels converging within the zone
+- Visible level labels (e.g., dH, wVWAP, pdH clustering)
+- Zone label showing count if enabled
 
-#### Must Include
-- [ ] Semi-transparent highlighted box/zone on the chart
-- [ ] At least 3 levels converging within the zone
-- [ ] Visible level labels (e.g., dH, wVWAP, pdH all near each other)
-- [ ] Zone label if enabled (showing confluence)
-
-#### Ideal Setup
-- **Symbol:** Any liquid market
-- **Timeframe:** 1-hour or 4-hour chart
-- **Scenario:** Find a spot where:
-  - Daily High + Weekly VWAP + Previous Day High cluster together
-  - OR: Weekly Low + Monthly VWAP + POC cluster together
-- **Zone color:** Yellow or distinctive color (~80% transparent)
-
-#### Example Description
-"ES 1-hour chart showing a confluence zone between 4540-4548. The semi-transparent yellow box highlights where Daily High (4542), Weekly VWAP (4545), and Previous Day High (4547) all cluster within 20 ticks. Zone label shows '3 levels'."
+**Ideal setup:**
+- Find spot where Daily High + Weekly VWAP + Previous Day High cluster
+- Yellow/distinctive color (~80% transparent)
 
 ---
 
-### 6. Distance Table
-
+### 10. Distance Table Display
 | Property | Value |
 |----------|-------|
 | **Filename** | `distance-table.png` |
-| **Save to** | `assets/images/janus-atlas/distance-table.png` |
-| **Doc location** | Line 314 in `docs/janus-atlas-v10.md` |
-| **Section** | 📋 Distance Table |
+| **Save to** | `assets/images/janus-atlas/` |
+| **Section** | Distance Table |
 
-#### What to Capture
-The on-chart distance table showing nearest levels.
-
-#### Must Include
-- [ ] The table widget visible in corner of chart (default: top right)
-- [ ] "Level" and "Dist" column headers (or similar)
-- [ ] At least 4 levels listed
-- [ ] ↑ arrows for levels ABOVE current price
-- [ ] ↓ arrows for levels BELOW current price
-- [ ] Distance values (in ticks, points, or %)
-
-#### Ideal Setup
-- **Position:** Top Right corner (default)
-- **Levels shown:** 4-6 levels
-- **Example content:**
-  ```
-  Level    Dist
-  dH       ↑ 45
-  wVWAP    ↑ 12
-  pdL      ↓ 23
-  asL      ↓ 67
-  ```
-
-#### Example Description
-"On-chart distance table in top-right corner showing 4 nearest levels: dH (↑ 45 ticks above), wVWAP (↑ 12 ticks above), pdL (↓ 23 ticks below), asL (↓ 67 ticks below). Dark semi-transparent background with white text."
+**What to capture:**
+- Table widget in corner of chart (default: top right)
+- "Level" and "Dist" columns visible
+- At least 4 levels listed
+- ↑ arrows for levels ABOVE current price
+- ↓ arrows for levels BELOW current price
+- Distance values (ticks/points/%)
 
 ---
 
-### 7. Settings Panel Overview
-
+### 11. Fibonacci Levels
 | Property | Value |
 |----------|-------|
-| **Filename** | `settings-panel-overview.png` |
-| **Save to** | `assets/images/janus-atlas/settings-panel-overview.png` |
-| **Doc location** | Line 440 in `docs/janus-atlas-v10.md` |
-| **Section** | ⚙️ Settings |
+| **Filename** | `janus-atlas-fibonacci.png` |
+| **Section** | Fibonacci Levels |
 
-#### What to Capture
-The full TradingView settings panel showing all 14 groups.
-
-#### Must Include
-- [ ] TradingView indicator settings dialog open
-- [ ] All 14 numbered groups visible (may need to scroll or show collapsed view)
-- [ ] Group names clearly readable:
-  1. Controls
-  2. Appearance
-  3. HTF Levels
-  4. Session Levels
-  5. Custom Sessions
-  6. Opening Range
-  7. Killzones
-  8. Gap Levels
-  9. VWAP Levels
-  10. Volume Profile
-  11. Previous Periods
-  12. Confluence Zones
-  13. Market Structure
-  14. Distance Table
-
-#### Ideal Setup
-- **Show:** Settings panel in "collapsed" view if possible so all groups are visible
-- **Alternatively:** Take a longer/scrolling screenshot showing all groups
-
-#### Example Description
-"TradingView settings panel for Janus Atlas v1.0 showing all 14 numbered configuration groups. Groups are collapsed showing: 1-Controls, 2-Appearance, 3-HTF Levels, 4-Session Levels... through 14-Distance Table."
+**What to capture:**
+- Fibonacci retracement levels on chart
+- Show at least 3-4 fib levels (0.382, 0.5, 0.618, etc.)
+- Labels showing fib level values
 
 ---
 
-### 8. Label with Price
+## OmniDeck v1.0
 
+**Page:** `https://docs.signalpilot.io/omnideck-v10/`
+
+### 12. Beginner 4-System Setup
+| Property | Value |
+|----------|-------|
+| **Filename** | `omnideck-beginner-4-systems.png` |
+| **Section** | New to Trading? Start Here |
+
+**What to capture:**
+- Chart with ONLY 4 systems enabled:
+  - Regime Box
+  - EMA Trio
+  - SuperTrend
+  - Supply/Demand Zones
+- Other 6 systems DISABLED
+
+**Annotations needed:**
+- Label each system on chart
+- Add text: "Start with these 4 systems"
+
+---
+
+### 13. All 10 Systems (Overload Example)
+| Property | Value |
+|----------|-------|
+| **Filename** | `omnideck-all-10-systems-overload.png` |
+| **Section** | Core Functionality |
+
+**What to capture:**
+- Chart with ALL 10 OmniDeck systems enabled
+- Show how cluttered/overwhelming it looks
+- This is a "what NOT to do" example
+
+**Annotations needed:**
+- Add warning text: "⚠️ Too Much! Don't Do This"
+
+---
+
+### 14. Settings Panel - 10 System Toggles
+| Property | Value |
+|----------|-------|
+| **Filename** | `omnideck-settings-panel.png` |
+| **Section** | Settings |
+
+**What to capture:**
+- TradingView settings panel for OmniDeck
+- Show all 10 system toggles visible
+- Master enable/disable for each system
+
+---
+
+### 15. Liquidity Sweeps
+| Property | Value |
+|----------|-------|
+| **Filename** | `omnideck-liquidity-sweeps.png` |
+| **Section** | Liquidity Sweeps |
+
+**What to capture:**
+- Chart showing liquidity sweep markers/labels
+- Show stop-hunt pattern detection
+- Price spiking above/below a level then reversing
+
+---
+
+### 16. EMA Trio
+| Property | Value |
+|----------|-------|
+| **Filename** | `omnideck-ema-trio.png` |
+| **Section** | EMA Trio |
+
+**What to capture:**
+- Three moving average lines on chart
+- Show crossover or trend alignment
+- Label the 3 EMAs
+
+---
+
+### 17. SuperTrend
+| Property | Value |
+|----------|-------|
+| **Filename** | `omnideck-supertrend.png` |
+| **Section** | SuperTrend |
+
+**What to capture:**
+- SuperTrend ribbon/line on chart
+- Show color change at trend reversal
+- Adaptive trend-following display
+
+---
+
+### 18. BMSB (Support Band)
+| Property | Value |
+|----------|-------|
+| **Filename** | `omnideck-bmsb.png` |
+| **Section** | BMSB |
+
+**What to capture:**
+- BMSB support band on chart
+- Show price interacting with the band
+- Band color changes
+
+---
+
+### 19. Regime Box
+| Property | Value |
+|----------|-------|
+| **Filename** | `omnideck-regime-box.png` |
+| **Section** | Regime Box |
+
+**What to capture:**
+- Regime Box display on chart
+- Show market mood classification (bullish/bearish/neutral)
+- Label showing current regime
+
+---
+
+### 20. Supply/Demand Zones
+| Property | Value |
+|----------|-------|
+| **Filename** | `omnideck-supply-demand.png` |
+| **Section** | Supply/Demand Zones |
+
+**What to capture:**
+- Supply and demand zones marked on chart
+- Show both supply (resistance) and demand (support) zones
+- Price reacting to zones
+
+---
+
+### 21. RCS Candlestick Patterns
+| Property | Value |
+|----------|-------|
+| **Filename** | `omnideck-candlestick-patterns.png` |
+| **Section** | Candlestick Patterns |
+
+**What to capture:**
+- Candlestick pattern labels on chart
+- Show at least 2-3 different pattern types detected
+- Label showing pattern name
+
+---
+
+### 22. Key Systems Example (Regime + TD)
+| Property | Value |
+|----------|-------|
+| **Filename** | `omnideck-key-systems-example.png` |
+| **Section** | Key Systems |
+
+**What to capture:**
+- Chart showing Regime Box + TD Sequential working together
+- Show how systems complement each other
+
+---
+
+### 23. Confluence Score Panel
+| Property | Value |
+|----------|-------|
+| **Filename** | `omnideck-confluence-score.png` |
+| **Section** | Confluence Score |
+
+**What to capture:**
+- Confluence score display/panel
+- Show score value and contributing factors
+- Multiple systems agreeing/disagreeing
+
+---
+
+## Pentarch v1.0
+
+**Page:** `https://docs.signalpilot.io/pentarch-v10/`
+
+### 24. All 5 Signal Types on Chart
+| Property | Value |
+|----------|-------|
+| **Filename** | `pentarch-5-signals-labeled.png` |
+| **Section** | Core Functionality |
+
+**What to capture:**
+- Bitcoin or S&P 500 chart
+- All 5 signals visible: TD, IGN, WRN, CAP, BDN
+- 4H or Daily timeframe
+
+**Annotations needed:**
+- Arrow pointing to each signal with its name
+- Color coding: TD=purple, IGN=teal, WRN=yellow, CAP=orange, BDN=red
+
+---
+
+### 25. Settings Panel Configuration
+| Property | Value |
+|----------|-------|
+| **Filename** | `pentarch-settings-panel.png` |
+| **Section** | Settings |
+
+**What to capture:**
+- TradingView settings panel for Pentarch
+- Show signal toggles: TD, IGN, WRN, CAP, BDN checkboxes
+- Color customization options visible
+
+---
+
+### 26. Complete Signal Sequence
+| Property | Value |
+|----------|-------|
+| **Filename** | `pentarch-signal-sequence.png` |
+| **Section** | The Five Cycle Events |
+
+**What to capture:**
+- Chart showing complete or partial signal sequence
+- TD→IGN→WRN→CAP→BDN progression (at least 3-4 signals)
+
+**Annotations needed:**
+- Number the signals: 1. TD, 2. IGN, 3. WRN, etc.
+- Draw arrow showing progression
+
+---
+
+### 27. TD Signal (Touchdown)
+| Property | Value |
+|----------|-------|
+| **Filename** | `pentarch-td-signal.png` |
+| **Section** | TD — Touchdown |
+
+**What to capture:**
+- Purple "TD" label below a candle
+- Appears at accumulation/oversold point
+- After a decline
+
+---
+
+### 28. IGN Signal (Ignition)
+| Property | Value |
+|----------|-------|
+| **Filename** | `pentarch-ign-signal.png` |
+| **Section** | IGN — Ignition |
+
+**What to capture:**
+- Teal/green "IGN" label
+- Appears at reversal starting point
+- New trend developing
+
+---
+
+### 29. WRN Signal (Warning)
+| Property | Value |
+|----------|-------|
+| **Filename** | `pentarch-wrn-signal.png` |
+| **Section** | WRN — Warning |
+
+**What to capture:**
+- Yellow "WRN" label
+- Late cycle approaching
+- Trend maturing
+
+---
+
+### 30. CAP Signal (Capitulation)
+| Property | Value |
+|----------|-------|
+| **Filename** | `pentarch-cap-signal.png` |
+| **Section** | CAP — Capitulation |
+
+**What to capture:**
+- Orange "CAP" label
+- Climax/exhaustion point
+- Trend ending
+
+---
+
+### 31. BDN Signal (Breakdown)
+| Property | Value |
+|----------|-------|
+| **Filename** | `pentarch-bdn-signal.png` |
+| **Section** | BDN — Breakdown |
+
+**What to capture:**
+- Red "BDN" label
+- Trend breakdown
+- Cycle complete
+
+---
+
+### 32. Pilot Line and Regime Bar
+| Property | Value |
+|----------|-------|
+| **Filename** | `pentarch-pilot-line-regime.png` |
+| **Section** | Pilot Line |
+
+**What to capture:**
+- Pilot Line (dynamic moving average baseline)
+- Regime bar colors
+- Price distance from Pilot Line
+
+---
+
+## Plutus Flow v1.0
+
+**Page:** `https://docs.signalpilot.io/plutus-flow-v10/`
+
+### 33. All Components (OBV + Ribbons + Divergence)
+| Property | Value |
+|----------|-------|
+| **Filename** | `plutus-flow-all-components.png` |
+| **Section** | Core Functionality |
+
+**What to capture:**
+- Full chart with Plutus Flow panel below
+- OBV line visible
+- Trend ribbons (colored bands)
+- Divergence markers/labels
+
+**Annotations needed:**
+- Point to OBV line
+- Point to trend ribbons
+- Point to divergence markers
+
+---
+
+### 34. Settings Panel
+| Property | Value |
+|----------|-------|
+| **Filename** | `plutus-flow-settings.png` |
+| **Section** | Settings |
+
+**What to capture:**
+- TradingView settings for Plutus Flow
+- OBV and ribbon configuration options
+- HTF timeframe, FlipGuard, quality settings
+
+---
+
+### 35. Bullish Divergence Example
+| Property | Value |
+|----------|-------|
+| **Filename** | `plutus-flow-bullish-divergence.png` |
+| **Section** | Divergence Detection |
+
+**What to capture:**
+- Price making lower low
+- OBV making higher low
+- "Bull Div" label visible
+- Clear divergence pattern
+
+---
+
+### 36. Cross Signals (Green/Red Dots)
+| Property | Value |
+|----------|-------|
+| **Filename** | `plutus-flow-cross-signals.png` |
+| **Section** | Cross Signals |
+
+**What to capture:**
+- Green dots (bullish cross)
+- Red dots (bearish cross)
+- Statistical band breaches (white/yellow dots)
+
+---
+
+## Harmonic Oscillator v1.0
+
+**Page:** `https://docs.signalpilot.io/harmonic-oscillator-v10/`
+
+### 37. Status Panel and Composite Oscillator
+| Property | Value |
+|----------|-------|
+| **Filename** | `harmonic-oscillator-status-panel.png` |
+| **Section** | Core Functionality |
+
+**What to capture:**
+- Oscillator panel showing composite line
+- Regime label (TRENDING/BIAS/RANGING)
+- Vote count (X/7)
+
+**Annotations needed:**
+- Label regime states
+- Point to vote count
+
+---
+
+### 38. Panel Location Below Chart
+| Property | Value |
+|----------|-------|
+| **Filename** | `harmonic-oscillator-panel-location.png` |
+| **Section** | Visual Display |
+
+**What to capture:**
+- Full chart view
+- Price candles above
+- Oscillator panel below
+- Show relationship between price and oscillator
+
+**Annotations needed:**
+- Arrow from price to oscillator
+- Label "Harmonic Oscillator Panel"
+
+---
+
+### 39. Settings Panel
+| Property | Value |
+|----------|-------|
+| **Filename** | `harmonic-oscillator-settings.png` |
+| **Section** | Settings |
+
+**What to capture:**
+- TradingView settings for Harmonic Oscillator
+- Component toggles
+- Threshold settings
+
+---
+
+### 40. Regime Transitions Over Time
+| Property | Value |
+|----------|-------|
+| **Filename** | `harmonic-oscillator-regime-transitions.png` |
+| **Section** | Regime Classification |
+
+**What to capture:**
+- Chart showing multiple regime changes
+- TRENDING → BIAS → RANGING transitions
+- Show how regime adapts to market conditions
+
+---
+
+## Augury Grid v1.0
+
+**Page:** `https://docs.signalpilot.io/augury-grid-v10/`
+
+### 41. Full Table View
+| Property | Value |
+|----------|-------|
+| **Filename** | `augury-grid-full-table.png` |
+| **Section** | Core Functionality |
+
+**What to capture:**
+- Complete Augury Grid table on chart
+- 7 symbols × 3 timeframes visible
+- Show signals, scores, prices, TP levels, age, P&L columns
+- Mix of BUY/SELL/neutral signals
+
+---
+
+# HOW-TO GUIDES
+
+---
+
+## How to Set Up Alerts
+
+**Page:** `https://docs.signalpilot.io/how-to-alerts/`
+
+### 42. Alert Button Location
+| Property | Value |
+|----------|-------|
+| **Filename** | `alerts-button-location.png` |
+| **Section** | Step 1: Open Alert Dialog |
+
+**What to capture:**
+- TradingView chart
+- Alert button location highlighted
+- Right-click context menu showing "Add alert..." option
+
+---
+
+### 43. Condition Dropdown Menu
+| Property | Value |
+|----------|-------|
+| **Filename** | `alerts-condition-dropdown.png` |
+| **Section** | Step 2-3: Select Indicator & Event |
+
+**What to capture:**
+- Alert dialog open
+- Condition dropdown expanded
+- Signal Pilot indicators visible (Pentarch, OmniDeck, Janus)
+- Event options visible
+
+---
+
+### 44. "Once Per Bar Close" Setting
+| Property | Value |
+|----------|-------|
+| **Filename** | `alerts-once-per-bar-close.png` |
+| **Section** | Step 4: Configure Options (CRITICAL) |
+
+**What to capture:**
+- Alert options panel
+- "Once Per Bar Close" setting HIGHLIGHTED
+- Notification method checkboxes visible
+- Expiration options visible
+
+**Annotations needed:**
+- Circle or highlight "Once Per Bar Close"
+- Add "⚠️ MOST IMPORTANT SETTING"
+
+---
+
+### 45. Active Alerts List
+| Property | Value |
+|----------|-------|
+| **Filename** | `alerts-active-list.png` |
+| **Section** | What Success Looks Like |
+
+**What to capture:**
+- TradingView Alerts panel open
+- List of active alerts visible
+- Status showing "Active"
+- Good alert naming examples
+
+---
+
+### 46. Mobile Notification Settings
+| Property | Value |
+|----------|-------|
+| **Filename** | `alerts-mobile-settings.png` |
+| **Section** | Mobile Notifications |
+
+**What to capture:**
+- iOS or Android notification settings
+- TradingView app permission configuration
+- Show notifications enabled
+
+---
+
+## How to Use Screener (Augury Grid)
+
+**Page:** `https://docs.signalpilot.io/how-to-screener/`
+
+### 47. Adding Augury Grid Indicator
+| Property | Value |
+|----------|-------|
+| **Filename** | `screener-add-indicator.png` |
+| **Section** | Step 1: Add Augury Grid |
+
+**What to capture:**
+- TradingView indicators search panel
+- Search for "Augury Grid"
+- Search results showing SP — Augury Grid v1.0
+
+---
+
+### 48. Symbol Configuration Settings
+| Property | Value |
+|----------|-------|
+| **Filename** | `screener-symbol-config.png` |
+| **Section** | Step 2: Configure Symbols |
+
+**What to capture:**
+- Augury Grid settings panel
+- Symbol Configuration section
+- 7 symbol input fields visible
+- Example tickers entered (BINANCE:BTCUSDT, etc.)
+
+---
+
+### 49. Fully Populated Grid
+| Property | Value |
+|----------|-------|
+| **Filename** | `screener-populated-grid.png` |
+| **Section** | Step 3 Complete |
+
+**What to capture:**
+- Complete Augury Grid with all 7 symbols
+- Multiple signals showing
+- Quality ratings (stars) visible
+- Mix of signal types and scores
+
+---
+
+### 50. Elite Signal Example (Annotated)
+| Property | Value |
+|----------|-------|
+| **Filename** | `screener-elite-signal.png` |
+| **Section** | Workflow: Finding Opportunities |
+
+**What to capture:**
+- Single row showing Elite (★★★) signal
+- Score 80+ visible
+- Fresh age (0-5 bars)
+
+**Annotations needed:**
+- Point to score: "Elite Quality (87)"
+- Point to age: "Fresh Signal (2 bars)"
+- Point to P&L: "Already Profitable"
+
+---
+
+## How to Set Up Webhooks
+
+**Page:** `https://docs.signalpilot.io/how-to-webhooks/`
+
+### 51. Discord Webhook Creation
+| Property | Value |
+|----------|-------|
+| **Filename** | `webhooks-discord-creation.png` |
+| **Section** | Step 1: Get Webhook URL |
+
+**What to capture:**
+- Discord Server Settings
+- Integrations panel
+- Webhook creation interface
+- "New Webhook" button
+- Webhook URL field
+
+---
+
+### 52. TradingView Webhook URL Field
+| Property | Value |
+|----------|-------|
+| **Filename** | `webhooks-tradingview-field.png` |
+| **Section** | Step 2: Configure Alert |
+
+**What to capture:**
+- TradingView alert dialog
+- Notifications tab open
+- "Webhook URL" checkbox and input field
+- URL pasted in field
+
+---
+
+### 53. Discord Success Message
+| Property | Value |
+|----------|-------|
+| **Filename** | `webhooks-discord-success.png` |
+| **Section** | Step 4: Test Webhook |
+
+**What to capture:**
+- Discord channel
+- Webhook message received
+- Signal Pilot alert data formatted correctly
+- Embed with ticker, price, timeframe, etc.
+
+---
+
+# JANUS ATLAS SOURCE FILE (Markdown)
+
+These 9 images also need to be added to uncomment the markdown in `docs/janus-atlas-v10.md`:
+
+| # | Filename | Already Listed Above |
+|---|----------|---------------------|
+| 54 | `custom-session-setup.png` | Similar to #3 |
+| 55 | `settings-panel-overview.png` | Same as #3 |
+| 56 | `label-with-price.png` | NEW - Show label format `dH • 245.50` |
+| 57 | `alert-dropdown-format.png` | NEW - Alert dropdown with `code • name` |
+
+### 54. Label with Price Format
 | Property | Value |
 |----------|-------|
 | **Filename** | `label-with-price.png` |
-| **Save to** | `assets/images/janus-atlas/label-with-price.png` |
-| **Doc location** | Line 456 in `docs/janus-atlas-v10.md` |
-| **Section** | Appearance Settings (Group 2) |
+| **Save to** | `assets/images/janus-atlas/` |
 
-#### What to Capture
-A chart showing level labels WITH price values displayed.
-
-#### Must Include
-- [ ] "Show Price on Labels" setting ENABLED
-- [ ] At least one label showing the format: `code • price`
-- [ ] Example: `dH • 245.50` or `wVWAP • 4521.25`
-- [ ] The bullet point separator (•) between code and price
-
-#### Ideal Setup
-- **Show:** Multiple labels with prices for variety
-- **Examples:**
-  - `dH • 4525.50`
-  - `dL • 4498.25`
-  - `wVWAP • 4512.00`
-
-#### Example Description
-"Close-up of chart labels showing 'Show Price on Labels' enabled. Labels display: 'dH • 4525.50', 'dL • 4498.25', 'wVWAP • 4512.00' with the bullet separator between the code and price value."
+**What to capture:**
+- "Show Price on Labels" setting ENABLED
+- Labels showing format: `code • price`
+- Examples: `dH • 4525.50`, `wVWAP • 4512.00`
 
 ---
 
-### 9. Alert Dropdown Format
-
+### 55. Alert Dropdown Format
 | Property | Value |
 |----------|-------|
 | **Filename** | `alert-dropdown-format.png` |
-| **Save to** | `assets/images/janus-atlas/alert-dropdown-format.png` |
-| **Doc location** | Line 523 in `docs/janus-atlas-v10.md` |
-| **Section** | Alert Configuration |
+| **Save to** | `assets/images/janus-atlas/` |
 
-#### What to Capture
-The TradingView alert creation dialog showing the alert dropdown.
-
-#### Must Include
-- [ ] TradingView "Create Alert" dialog open
-- [ ] The condition dropdown expanded (showing alert options)
-- [ ] Alert names in format: `code • Full Name`
-- [ ] Examples visible:
-  - `dH • Daily High`
-  - `wL • Weekly Low`
-  - `asH • Asian High`
-  - `CHoCH • 🟢 Bullish`
-
-#### Ideal Setup
-- **Steps to capture:**
-  1. Click alarm icon on TradingView
-  2. Add Janus Atlas as the indicator
-  3. Click the condition dropdown
-  4. Screenshot showing multiple alert options
-
-#### Example Description
-"TradingView Create Alert dialog with Janus Atlas selected. Dropdown expanded showing alerts: 'dH • Daily High', 'dL • Daily Low', 'wH • Weekly High', 'asH • Asian High', 'CHoCH • 🟢 Bullish', etc."
+**What to capture:**
+- TradingView "Create Alert" dialog
+- Condition dropdown EXPANDED
+- Alert names in format: `code • Full Name`
+- Examples: `dH • Daily High`, `CHoCH • 🟢 Bullish`
 
 ---
 
-## After Capturing Screenshots
+# Master Checklist
 
-### 1. Save Files
-Save each screenshot to:
-```
-/assets/images/janus-atlas/[filename].png
-```
+## Indicators (42 screenshots)
 
-### 2. Uncomment in Documentation
-For each screenshot, remove the HTML comment markers in `docs/janus-atlas-v10.md`:
+- [ ] 1. janus-atlas-beginner-5-levels.png
+- [ ] 2. janus-atlas-5-vs-60-levels.png
+- [ ] 3. janus-atlas-settings-all-levels.png
+- [ ] 4. janus-atlas-level-types-labeled.png
+- [ ] 5. opening-range-levels.png
+- [ ] 6. killzone-background.png
+- [ ] 7. gap-levels-fill.png
+- [ ] 8. janus-atlas-fvg.png
+- [ ] 9. confluence-zone.png
+- [ ] 10. distance-table.png
+- [ ] 11. janus-atlas-fibonacci.png
+- [ ] 12. omnideck-beginner-4-systems.png
+- [ ] 13. omnideck-all-10-systems-overload.png
+- [ ] 14. omnideck-settings-panel.png
+- [ ] 15. omnideck-liquidity-sweeps.png
+- [ ] 16. omnideck-ema-trio.png
+- [ ] 17. omnideck-supertrend.png
+- [ ] 18. omnideck-bmsb.png
+- [ ] 19. omnideck-regime-box.png
+- [ ] 20. omnideck-supply-demand.png
+- [ ] 21. omnideck-candlestick-patterns.png
+- [ ] 22. omnideck-key-systems-example.png
+- [ ] 23. omnideck-confluence-score.png
+- [ ] 24. pentarch-5-signals-labeled.png
+- [ ] 25. pentarch-settings-panel.png
+- [ ] 26. pentarch-signal-sequence.png
+- [ ] 27. pentarch-td-signal.png
+- [ ] 28. pentarch-ign-signal.png
+- [ ] 29. pentarch-wrn-signal.png
+- [ ] 30. pentarch-cap-signal.png
+- [ ] 31. pentarch-bdn-signal.png
+- [ ] 32. pentarch-pilot-line-regime.png
+- [ ] 33. plutus-flow-all-components.png
+- [ ] 34. plutus-flow-settings.png
+- [ ] 35. plutus-flow-bullish-divergence.png
+- [ ] 36. plutus-flow-cross-signals.png
+- [ ] 37. harmonic-oscillator-status-panel.png
+- [ ] 38. harmonic-oscillator-panel-location.png
+- [ ] 39. harmonic-oscillator-settings.png
+- [ ] 40. harmonic-oscillator-regime-transitions.png
+- [ ] 41. augury-grid-full-table.png
 
-**Before:**
-```html
-<!-- Screenshot: Opening Range levels on chart showing orH, orL labels -->
-<!-- ![Opening Range levels](../assets/images/janus-atlas/opening-range-levels.png) -->
-```
+## How-To Guides (12 screenshots)
 
-**After:**
-```markdown
-![Opening Range levels](../assets/images/janus-atlas/opening-range-levels.png)
-```
+- [ ] 42. alerts-button-location.png
+- [ ] 43. alerts-condition-dropdown.png
+- [ ] 44. alerts-once-per-bar-close.png
+- [ ] 45. alerts-active-list.png
+- [ ] 46. alerts-mobile-settings.png
+- [ ] 47. screener-add-indicator.png
+- [ ] 48. screener-symbol-config.png
+- [ ] 49. screener-populated-grid.png
+- [ ] 50. screener-elite-signal.png
+- [ ] 51. webhooks-discord-creation.png
+- [ ] 52. webhooks-tradingview-field.png
+- [ ] 53. webhooks-discord-success.png
 
-### 3. Image Optimization Tips
-- **Format:** PNG for UI screenshots, JPG for chart screenshots (smaller file size)
-- **Width:** 800-1200px recommended
-- **Annotation:** Consider adding arrows or highlights if helpful
-- **Dark mode:** Match your site's theme (dark mode preferred based on your CSS)
+## Janus Atlas Markdown Source (2 additional)
 
----
-
-## Quick Reference Card
-
-| # | Filename | What to Show |
-|---|----------|--------------|
-| 1 | `opening-range-levels.png` | Chart with orH/orL labels, first 30 min of session |
-| 2 | `killzone-background.png` | Subtle transparent shading during trade windows |
-| 3 | `custom-session-setup.png` | Settings panel with name, time, toggles, color |
-| 4 | `gap-levels-fill.png` | gapH/gapL labels + price filling the gap |
-| 5 | `confluence-zone.png` | Yellow box where 3+ levels cluster together |
-| 6 | `distance-table.png` | Corner table showing ↑↓ distance to nearest levels |
-| 7 | `settings-panel-overview.png` | Full settings with all 14 groups visible |
-| 8 | `label-with-price.png` | Labels showing `dH • 245.50` format |
-| 9 | `alert-dropdown-format.png` | Alert dialog with `code • name` format |
+- [ ] 54. label-with-price.png
+- [ ] 55. alert-dropdown-format.png
 
 ---
 
 *Generated: 2026-01-06*
+*Total: 55 unique screenshots (some overlap between HTML and markdown)*
