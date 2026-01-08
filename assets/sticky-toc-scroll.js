@@ -1,6 +1,7 @@
 /**
  * Sticky TOC Auto-Scroll
  * Scrolls TOC container to show active link when sidebars are sticky
+ * Updated to work with Lenis smooth scroll
  */
 (function() {
   'use strict';
@@ -9,6 +10,9 @@
     // Find the TOC container (the scrollable element)
     const tocContainer = document.querySelector('.md-sidebar--secondary .md-sidebar__scrollwrap');
     if (!tocContainer) return;
+
+    // Mark as Lenis-excluded (Lenis won't affect this container)
+    tocContainer.setAttribute('data-lenis-prevent', '');
 
     // Find the active TOC link
     const activeLink = tocContainer.querySelector('.md-nav__link--active');
@@ -24,7 +28,7 @@
     const linkCenter = linkRect.top - containerRect.top + (linkRect.height / 2);
     const scrollOffset = linkCenter - containerCenter;
 
-    // Scroll the container smoothly (NOT the page!)
+    // Scroll the container smoothly (independent of Lenis)
     tocContainer.scrollBy({
       top: scrollOffset,
       behavior: 'smooth'
