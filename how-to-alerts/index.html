@@ -2027,46 +2027,36 @@ This alert setup guide is for <strong>educational purposes only</strong>. This i
     <h4>Alert Setup Process (Step-by-Step)</h4>
     <p style="margin-bottom: 1.5rem;">Follow this simplified flow to create your first alert:</p>
     <div class="mermaid">
-graph TD
-    Start([📊 You Have Chart Open]) --> Step1[1️⃣ Right-click Indicator Name]
+flowchart TD
+    Start[Chart Open with Indicator] --> Step1[Right-click Indicator Name]
+    Step1 --> Step2[Click 'Add Alert on...']
+    Step2 --> Step3[Alert Dialog Opens]
+    Step3 --> Choice{Choose Condition}
 
-    Step1 --> Step2[2️⃣ Click 'Add Alert on...']
+    Choice --> OptA[Any alert function call]
+    Choice --> OptB[Individual Signal Selection]
+    OptA --> Step4[Name Your Alert]
+    OptB --> Step4
 
-    Step2 --> Step3[3️⃣ Alert Dialog Opens]
+    Step4 --> Step5[Set Notifications: Mobile / Email / Webhook]
+    Step5 --> Critical{CRITICAL SETTING}
+    Critical --> Step6[Set to 'Once Per Bar Close']
+    Step6 --> Done[Alert Created Successfully]
+    Done --> Active((Active))
 
-    Step3 --> Choice{Choose<br/>Condition}
-
-    Choice --> Opt1[✅ 'Any alert() function call'<br/>RECOMMENDED - Catches All Signals]
-    Choice --> Opt2['Pentarch: IGN Long'<br/>Individual Signal Selection]
-
-    Opt1 --> Step4[4️⃣ Name Your Alert<br/>Descriptive Label]
-    Opt2 --> Step4
-
-    Step4 --> Step5[5️⃣ Set Notifications<br/>Mobile / Email / Webhook]
-
-    Step5 --> Critical{⚠️ CRITICAL<br/>SETTING}
-
-    Critical --> Step6[6️⃣ Set to 'Once Per Bar Close'<br/>NOT 'Once Per Bar']
-
-    Step6 --> Done([✅ Alert Created Successfully!])
-
-    Done --> Wait[🕐 Wait for Signal...]
-    Wait --> Fire[🔔 Alert Fires When Signal Appears]
-
-    style Start fill:#37474f,stroke:#00bcd4,stroke-width:3px,color:#fff
-    style Step1 fill:#00bcd4,stroke:#00bcd4,stroke-width:2px,color:#fff
-    style Step2 fill:#00bcd4,stroke:#00bcd4,stroke-width:2px,color:#fff
-    style Step3 fill:#00bcd4,stroke:#00bcd4,stroke-width:2px,color:#fff
-    style Choice fill:#9c27b0,stroke:#9c27b0,stroke-width:3px,color:#fff
-    style Opt1 fill:#4caf50,stroke:#4caf50,stroke-width:3px,color:#fff
-    style Opt2 fill:#ff9800,stroke:#ff9800,stroke-width:2px,color:#fff
-    style Step4 fill:#00bcd4,stroke:#00bcd4,stroke-width:2px,color:#fff
-    style Step5 fill:#00bcd4,stroke:#00bcd4,stroke-width:2px,color:#fff
-    style Critical fill:#ff5722,stroke:#ff5722,stroke-width:4px,color:#fff
-    style Step6 fill:#f44336,stroke:#f44336,stroke-width:3px,color:#fff
-    style Done fill:#00bcd4,stroke:#4caf50,stroke-width:4px,color:#fff
-    style Wait fill:#9c27b0,stroke:#9c27b0,stroke-width:2px,color:#fff
-    style Fire fill:#4caf50,stroke:#4caf50,stroke-width:4px,color:#fff
+    style Start fill:#1a1a2e,stroke:#0aa1d5,color:#fff
+    style Step1 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style Step2 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style Step3 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style Choice fill:#8b5cf6,stroke:#8b5cf6,color:#fff
+    style OptA fill:#16a34a,stroke:#16a34a,color:#fff
+    style OptB fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style Step4 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style Step5 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style Critical fill:#dc2626,stroke:#dc2626,color:#fff
+    style Step6 fill:#dc2626,stroke:#dc2626,color:#fff
+    style Done fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style Active fill:#16a34a,stroke:#16a34a,color:#fff
     </div>
     <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
       <strong>How to read:</strong> Follow arrows from top to bottom. Green boxes = commonly used options. Red box = important setting for proper alert function!
@@ -2315,43 +2305,36 @@ graph TD
   <div class="sp-callout__title">🔍 Troubleshooting Flowchart</div>
   <p style="margin-bottom: 1.5rem;">Follow this diagnostic flow if your alert isn't working:</p>
   <div class="mermaid" role="img" aria-label="Alert troubleshooting decision tree">
-graph TD
-    Problem([🚨 Alert Not Firing]) --> Check1{Alert appears<br/>in active alerts<br/>list?}
+flowchart TD
+    Problem[Alert Not Firing] --> Check1{Alert in active list?}
 
-    Check1 -->|No| Fix1[❌ Alert wasn't saved<br/>Recreate the alert]
-    Check1 -->|Yes| Check2{Alert status<br/>shows Active?}
+    Check1 -->|No| Fix1[Alert not saved - Recreate it]
+    Check1 -->|Yes| Check2{Status shows Active?}
 
-    Check2 -->|No - Expired| Fix2[⏰ Alert expired<br/>Edit alert → Extend expiration]
-    Check2 -->|No - Disabled| Fix2b[🔇 Alert disabled<br/>Enable the alert]
-    Check2 -->|Yes| Check3{Using 'Once Per<br/>Bar Close'?}
+    Check2 -->|No| Fix2[Expired or disabled - Enable/extend]
+    Check2 -->|Yes| Check3{Using Once Per Bar Close?}
 
-    Check3 -->|No| Fix3[⚠️ Wrong setting<br/>Change to 'Once Per Bar Close'<br/>NOT 'Once Per Bar']
-    Check3 -->|Yes| Check4{Bar has closed<br/>since signal?}
+    Check3 -->|No| Fix3[Wrong setting - Change to Once Per Bar Close]
+    Check3 -->|Yes| Check4{Bar has closed since signal?}
 
-    Check4 -->|No| Fix4[⏳ Wait for bar close<br/>Signal must confirm at close]
-    Check4 -->|Yes| Check5{Mobile app<br/>installed?}
+    Check4 -->|No| Fix4[Signal must confirm at bar close - Wait]
+    Check4 -->|Yes| Check5{Mobile notifications enabled?}
 
-    Check5 -->|No| Fix5[📱 Install TradingView app<br/>Enable notifications in settings]
-    Check5 -->|Yes| Check6{Notifications<br/>enabled in<br/>phone settings?}
+    Check5 -->|No| Fix5[Enable notifications in phone settings]
+    Check5 -->|Yes| Support[Contact Support with details]
 
-    Check6 -->|No| Fix6[⚙️ Enable notifications<br/>Settings → TradingView → Notifications → On]
-    Check6 -->|Yes| Support[📞 Contact Support<br/>Provide: Chart symbol, indicator, screenshot]
-
-    style Problem fill:#f44336,color:#fff,stroke:#d32f2f,stroke-width:4px
-    style Check1 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
-    style Check2 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
-    style Check3 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
-    style Check4 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
-    style Check5 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
-    style Check6 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
-    style Fix1 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
-    style Fix2 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
-    style Fix2b fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
-    style Fix3 fill:#ff5722,color:#fff,stroke:#e64a19,stroke-width:3px
-    style Fix4 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
-    style Fix5 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
-    style Fix6 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
-    style Support fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
+    style Problem fill:#dc2626,stroke:#dc2626,color:#fff
+    style Check1 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style Check2 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style Check3 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style Check4 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style Check5 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style Fix1 fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style Fix2 fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style Fix3 fill:#dc2626,stroke:#dc2626,color:#fff
+    style Fix4 fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style Fix5 fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style Support fill:#16a34a,stroke:#16a34a,color:#fff
   </div>
   <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.85;">
     <strong>Pro Tip:</strong> Most alert issues are solved by checking "Once Per Bar Close" setting and waiting for bar to actually close. If troubleshooting doesn't help, see <a href="../about-support/">Support</a>.

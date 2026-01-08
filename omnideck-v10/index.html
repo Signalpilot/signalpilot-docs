@@ -2330,44 +2330,46 @@
     <h4>10 Systems in 4 Layers</h4>
     <p style="margin-bottom: 1rem;">OmniDeck integrates multiple detection systems into a unified framework:</p>
     <div class="mermaid" role="img" aria-label="Vertical flowchart showing OmniDeck's 10 systems in 4 layers flowing from top to bottom">
-graph TD
-    Start[📊 Market Data Input] --> Layer1[LAYER 1: TREND ANALYSIS]
+flowchart TD
+    Start[Market Data Input] --> Layer1[LAYER 1: TREND ANALYSIS]
 
-    Layer1 --> T1[1️⃣ EMA Trio<br/>Moving Average Crossovers]
-    Layer1 --> T2[2️⃣ SuperTrend<br/>Trend Ribbon]
-    Layer1 --> T3[3️⃣ BMSB<br/>Support Band]
+    Layer1 --> T1[EMA Trio: Moving Average Crossovers]
+    Layer1 --> T2[SuperTrend: Trend Ribbon]
+    Layer1 --> T3[BMSB: Support Band]
 
-    T1 --> Layer2[LAYER 2: PATTERN DETECTION]
-    T2 --> Layer2
-    T3 --> Layer2
+    T1 & T2 & T3 --> Layer2[LAYER 2: PATTERN DETECTION]
 
-    Layer2 --> E1[4️⃣ TD Sequential<br/>Exhaustion Counting]
-    Layer2 --> E2[5️⃣ Squeeze Detector<br/>Volatility Breakouts]
-    Layer2 --> E3[6️⃣ Candlestick Patterns<br/>16 Pattern Types]
+    Layer2 --> E1[TD Sequential: Exhaustion Counting]
+    Layer2 --> E2[Squeeze Detector: Volatility Breakouts]
+    Layer2 --> E3[Candlestick Patterns: 16 Pattern Types]
 
-    E1 --> Layer3[LAYER 3: ZONE ANALYSIS]
-    E2 --> Layer3
-    E3 --> Layer3
+    E1 & E2 & E3 --> Layer3[LAYER 3: ZONE ANALYSIS]
 
-    Layer3 --> M1[7️⃣ Regime Box<br/>Market Mood Analysis]
-    Layer3 --> M2[8️⃣ Supply/Demand<br/>Key Price Zones]
-    Layer3 --> M3[9️⃣ Liquidity Sweeps<br/>Stop Hunt Detection]
+    Layer3 --> M1[Regime Box: Market Mood]
+    Layer3 --> M2[Supply/Demand: Key Zones]
+    Layer3 --> M3[Liquidity Sweeps: Stop Hunt Detection]
 
-    M1 --> Layer4[LAYER 4: INTEGRATION]
-    M2 --> Layer4
-    M3 --> Layer4
+    M1 & M2 & M3 --> Layer4[LAYER 4: INTEGRATION]
 
-    Layer4 --> Meta[🔟 Meta Tools<br/>System Coordination]
+    Layer4 --> Meta[Meta Tools: System Coordination]
+    Meta --> Output[Combined Output: All Systems Unified]
 
-    Meta --> Output[📈 Combined Output<br/>All Systems Unified]
-
-    style Layer1 fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:3px
-    style Layer2 fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
-    style Layer3 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:3px
-    style Layer4 fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:3px
-    style Meta fill:#ff5722,color:#fff,stroke:#e64a19,stroke-width:3px
-    style Output fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:4px
-    style Start fill:#37474f,color:#fff,stroke:#263238,stroke-width:3px
+    style Start fill:#1a1a2e,stroke:#0aa1d5,color:#fff
+    style Layer1 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style Layer2 fill:#16a34a,stroke:#16a34a,color:#fff
+    style Layer3 fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style Layer4 fill:#8b5cf6,stroke:#8b5cf6,color:#fff
+    style Meta fill:#dc2626,stroke:#dc2626,color:#fff
+    style Output fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style T1 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style T2 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style T3 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style E1 fill:#16a34a,stroke:#16a34a,color:#fff
+    style E2 fill:#16a34a,stroke:#16a34a,color:#fff
+    style E3 fill:#16a34a,stroke:#16a34a,color:#fff
+    style M1 fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style M2 fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style M3 fill:#f59e0b,stroke:#f59e0b,color:#fff
     </div>
     <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
       <strong>Note:</strong> This diagram groups systems by function (architectural view). The diagram below shows the canonical 1-10 numbering used in indicator settings.
@@ -2381,36 +2383,31 @@ graph TD
     <h4>The 10 Systems Visualized</h4>
     <p style="margin-bottom: 1rem;">All 10 detection systems working together in one indicator:</p>
     <div class="mermaid" role="img" aria-label="Vertical flowchart showing all 10 OmniDeck systems flowing top to bottom">
-graph TD
-    Input[📊 Market Data Input] --> S1[1️⃣ TD Sequential<br/>Exhaustion Counting]
+flowchart TD
+    Input[Market Data Input] --> S1[1. TD Sequential: Exhaustion Counting]
+    S1 --> S2[2. Squeeze Detector: Volatility Breakouts]
+    S2 --> S3[3. Liquidity Sweeps: Stop Hunt Detection]
+    S3 --> S4[4. EMA Trio: Moving Average System]
+    S4 --> S5[5. SuperTrend: Adaptive Trend Ribbon]
+    S5 --> S6[6. BMSB: Support Band Analysis]
+    S6 --> S7[7. Regime Box: Market Mood]
+    S7 --> S8[8. Supply/Demand: Key Price Zones]
+    S8 --> S9[9. Candlestick Patterns: 16 Types]
+    S9 --> S10[10. Meta Tools: System Coordination]
+    S10 --> Output[Unified Chart Display]
 
-    S1 --> S2[2️⃣ Squeeze Detector<br/>Volatility Breakouts]
-    S2 --> S3[3️⃣ Liquidity Sweeps<br/>Stop Hunt Detection]
-
-    S3 --> S4[4️⃣ EMA Trio<br/>Moving Average System]
-    S4 --> S5[5️⃣ SuperTrend<br/>Adaptive Trend Ribbon]
-    S5 --> S6[6️⃣ BMSB<br/>Support Band Analysis]
-
-    S6 --> S7[7️⃣ Regime Box<br/>Market Mood Classification]
-    S7 --> S8[8️⃣ Supply/Demand<br/>Key Price Zones]
-    S8 --> S9[9️⃣ Candlestick Patterns<br/>16 Pattern Types]
-
-    S9 --> S10[🔟 Meta Tools<br/>System Coordination & Conflict Prevention]
-
-    S10 --> Output[📈 Unified Chart Display<br/>All 10 Systems Combined]
-
-    style Input fill:#37474f,color:#fff,stroke:#263238,stroke-width:3px
-    style S1 fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:2px
-    style S2 fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:2px
-    style S3 fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:2px
-    style S4 fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:2px
-    style S5 fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:2px
-    style S6 fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:2px
-    style S7 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
-    style S8 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
-    style S9 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
-    style S10 fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:3px
-    style Output fill:#ff5722,color:#fff,stroke:#e64a19,stroke-width:4px
+    style Input fill:#1a1a2e,stroke:#0aa1d5,color:#fff
+    style S1 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style S2 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style S3 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style S4 fill:#16a34a,stroke:#16a34a,color:#fff
+    style S5 fill:#16a34a,stroke:#16a34a,color:#fff
+    style S6 fill:#16a34a,stroke:#16a34a,color:#fff
+    style S7 fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style S8 fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style S9 fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style S10 fill:#8b5cf6,stroke:#8b5cf6,color:#fff
+    style Output fill:#dc2626,stroke:#dc2626,color:#fff
     </div>
     <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
       <strong>How to read:</strong> All 10 systems numbered 1-10. Each can be enabled/disabled independently. All active systems display on one chart.<br/>

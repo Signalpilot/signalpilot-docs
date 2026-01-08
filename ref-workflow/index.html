@@ -1785,51 +1785,41 @@
     <h4>Complete Trading Workflow</h4>
     <p style="margin-bottom: 1rem;">From bias determination to position management—here's the complete flow:</p>
     <div class="mermaid">
-graph TD
-    Start[📊 Analysis Session Begins] --> HTF[1️⃣ Higher Timeframe Assessment]
+flowchart TD
+    Start[Analysis Session Begins] --> HTF[Higher Timeframe Assessment]
 
-    HTF --> Bias{Market Regime<br/>Assessment}
-    Bias -->|Bullish Context| Green[🟢 Bullish Regime<br/>Uptrend Observed]
-    Bias -->|Bearish Context| Red[🔴 Bearish Regime<br/>Downtrend Observed]
-    Bias -->|Neutral| Wait[⏸️ Clarity Pending<br/>No Clear Trend]
+    HTF --> Bias{Market Regime Assessment}
+    Bias -->|Bullish Context| Green[Bullish Regime: Uptrend]
+    Bias -->|Bearish Context| Red[Bearish Regime: Downtrend]
+    Bias -->|Neutral| Wait[No Clear Trend: Wait]
 
-    Green --> LookUp[2️⃣ Upward Pattern Monitoring]
-    Red --> LookDown[2️⃣ Downward Pattern Monitoring]
+    Green --> LookUp[Monitor for Long Setups]
+    Red --> LookDown[Monitor for Short Setups]
 
-    LookUp --> Levels1[3️⃣ Janus Atlas Level Assessment<br/>Support/Resistance Zone Identification]
-    LookDown --> Levels2[3️⃣ Janus Atlas Level Assessment<br/>Support/Resistance Zone Identification]
+    LookUp --> Levels[Janus Atlas: Key Levels]
+    LookDown --> Levels
 
-    Levels1 --> Signal1[4️⃣ Pentarch Signal Observation<br/>Cycle Event Detection]
-    Levels2 --> Signal2[4️⃣ Pentarch Signal Observation<br/>Cycle Event Detection]
+    Levels --> Signal[Pentarch: Cycle Events]
+    Signal --> Confirm[Harmonic + Volume Confluence]
 
-    Signal1 --> Confirm1[5️⃣ Harmonic/Volume Confluence Assessment<br/>Multi-Indicator Alignment Check]
-    Signal2 --> Confirm2[5️⃣ Harmonic/Volume Confluence Assessment<br/>Multi-Indicator Alignment Check]
+    Confirm --> Action[Setup Alignment Confirmed]
+    Action --> Monitor[Active Monitoring]
+    Monitor --> Exit[Exit: Target or Opposite Signal]
 
-    Confirm1 --> Action1[6️⃣ Upward Pattern Confluence<br/>All Indicators Aligned]
-    Confirm2 --> Action2[6️⃣ Downward Pattern Confluence<br/>All Indicators Aligned]
-
-    Action1 --> Monitor[7️⃣ Active Pattern Monitoring<br/>Market Evolution Tracking]
-    Action2 --> Monitor
-
-    Monitor --> Exit[8️⃣ Analysis Cycle Conclusion<br/>Opposite Signal or Target Reached]
-
-    style Start fill:#37474f,stroke:#00bcd4,stroke-width:3px,color:#fff
-    style HTF fill:#00bcd4,stroke:#00bcd4,stroke-width:3px,color:#fff
-    style Green fill:#4caf50,stroke:#4caf50,stroke-width:3px,color:#fff
-    style Red fill:#f44336,stroke:#f44336,stroke-width:3px,color:#fff
-    style Wait fill:#ff9800,stroke:#ff9800,stroke-width:3px,color:#fff
-    style LookUp fill:#4caf50,stroke:#4caf50,stroke-width:2px,color:#fff
-    style LookDown fill:#f44336,stroke:#f44336,stroke-width:2px,color:#fff
-    style Levels1 fill:#9c27b0,stroke:#9c27b0,stroke-width:2px,color:#fff
-    style Levels2 fill:#9c27b0,stroke:#9c27b0,stroke-width:2px,color:#fff
-    style Signal1 fill:#2196f3,stroke:#2196f3,stroke-width:2px,color:#fff
-    style Signal2 fill:#2196f3,stroke:#2196f3,stroke-width:2px,color:#fff
-    style Confirm1 fill:#ff9800,stroke:#ff9800,stroke-width:2px,color:#fff
-    style Confirm2 fill:#ff9800,stroke:#ff9800,stroke-width:2px,color:#fff
-    style Action1 fill:#4caf50,stroke:#4caf50,stroke-width:3px,color:#fff
-    style Action2 fill:#f44336,stroke:#f44336,stroke-width:3px,color:#fff
-    style Monitor fill:#9c27b0,stroke:#9c27b0,stroke-width:3px,color:#fff
-    style Exit fill:#37474f,stroke:#00bcd4,stroke-width:4px,color:#fff
+    style Start fill:#1a1a2e,stroke:#0aa1d5,color:#fff
+    style HTF fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style Bias fill:#1a1a2e,stroke:#0aa1d5,color:#fff
+    style Green fill:#16a34a,stroke:#16a34a,color:#fff
+    style Red fill:#dc2626,stroke:#dc2626,color:#fff
+    style Wait fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style LookUp fill:#16a34a,stroke:#16a34a,color:#fff
+    style LookDown fill:#dc2626,stroke:#dc2626,color:#fff
+    style Levels fill:#8b5cf6,stroke:#8b5cf6,color:#fff
+    style Signal fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style Confirm fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style Action fill:#16a34a,stroke:#16a34a,color:#fff
+    style Monitor fill:#8b5cf6,stroke:#8b5cf6,color:#fff
+    style Exit fill:#1a1a2e,stroke:#0aa1d5,color:#fff
     </div>
   </div>
 </div>

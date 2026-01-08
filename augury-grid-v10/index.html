@@ -1920,32 +1920,36 @@
     <h4>Multi-Timeframe Scanning Architecture</h4>
     <p style="margin-bottom: 1rem;">Augury Grid scans 7 symbols across 3 timeframes = 21 simultaneous scans:</p>
     <div class="mermaid">
-graph TD
-    Preset[📊 Symbol Preset<br/>7 Symbols Selected] --> Scanner[AUGURY GRID SCANNER]
+flowchart TD
+    Preset[Symbol Preset: 7 Symbols Selected] --> Scanner[Augury Grid Scanner]
 
-    Scanner --> TF1[⏱️ TIMEFRAME 1<br/>e.g., 15m]
-    Scanner --> TF2[⏱️ TIMEFRAME 2<br/>e.g., 4H]
-    Scanner --> TF3[⏱️ TIMEFRAME 3<br/>e.g., Daily]
+    Scanner --> TF1[Timeframe 1: e.g. 15m]
+    Scanner --> TF2[Timeframe 2: e.g. 4H]
+    Scanner --> TF3[Timeframe 3: e.g. Daily]
 
-    TF1 --> Scan1[7 Symbols Scanned<br/>MACD + 15 Filters]
-    TF2 --> Scan2[7 Symbols Scanned<br/>MACD + 15 Filters]
-    TF3 --> Scan3[7 Symbols Scanned<br/>MACD + 15 Filters]
+    TF1 --> Scan1[7 Symbols Scanned with MACD + 15 Filters]
+    TF2 --> Scan2[7 Symbols Scanned with MACD + 15 Filters]
+    TF3 --> Scan3[7 Symbols Scanned with MACD + 15 Filters]
 
-    Scan1 --> Rank[RANKING ENGINE<br/>Score 0-100]
-    Scan2 --> Rank
-    Scan3 --> Rank
+    Scan1 & Scan2 & Scan3 --> Rank[Ranking Engine: Score 0-100]
 
-    Rank --> Table[TABLE DISPLAY<br/>Best Scores First]
+    Rank --> Table[Table Display: Best Scores First]
 
-    Table --> Active[✅ ACTIVE SIGNAL<br/>Entry/SL/TP/P&L<br/>★★★ Quality Rating]
-    Table --> Blocker[⏳ NO SIGNAL<br/>Shows Blocker Reason<br/>MACD/Trend/ADX/etc.]
+    Table --> Active[Active Signal: Entry/SL/TP with Quality Rating]
+    Table --> Blocker[No Signal: Shows Blocker Reason]
 
-    style Preset fill:#37474f,color:#fff,stroke:#263238,stroke-width:3px
-    style Scanner fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:3px
-    style Rank fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:3px
-    style Table fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:3px
-    style Active fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
-    style Blocker fill:#757575,color:#fff,stroke:#616161,stroke-width:2px
+    style Preset fill:#1a1a2e,stroke:#0aa1d5,color:#fff
+    style Scanner fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style TF1 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style TF2 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style TF3 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style Scan1 fill:#8b5cf6,stroke:#8b5cf6,color:#fff
+    style Scan2 fill:#8b5cf6,stroke:#8b5cf6,color:#fff
+    style Scan3 fill:#8b5cf6,stroke:#8b5cf6,color:#fff
+    style Rank fill:#8b5cf6,stroke:#8b5cf6,color:#fff
+    style Table fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style Active fill:#16a34a,stroke:#16a34a,color:#fff
+    style Blocker fill:#6b7280,stroke:#6b7280,color:#fff
     </div>
   </div>
 </div>
