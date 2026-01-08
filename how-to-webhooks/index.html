@@ -1544,7 +1544,7 @@
   <div class="sp-callout__title">🔍 Webhook Troubleshooting Flowchart</div>
   <p style="margin-bottom: 1.5rem;">Follow this diagnostic flow if webhooks aren't working:</p>
   <div class="mermaid" role="img" aria-label="Webhook troubleshooting decision tree">
-flowchart LR
+flowchart TD
     A[NOT SENDING] --> B{URL set?}
     B -- No --> C[Add URL]
     B -- Yes --> D{Alert fires?}

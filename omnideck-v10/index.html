@@ -2330,7 +2330,7 @@
     <h4>10 Systems in 4 Layers</h4>
     <p style="margin-bottom: 1rem;">OmniDeck integrates multiple detection systems into a unified framework:</p>
     <div class="mermaid" role="img" aria-label="OmniDeck 4-layer architecture">
-flowchart LR
+flowchart TD
     A[Data] --> B[L1: Trend]
     B --> C[EMA]
     B --> D[SuperTrend]
@@ -2365,9 +2365,18 @@ flowchart LR
     <h4>The 10 Systems Visualized</h4>
     <p style="margin-bottom: 1rem;">All 10 detection systems working together in one indicator:</p>
     <div class="mermaid" role="img" aria-label="OmniDeck 10 systems">
-flowchart LR
-    A[Data] --> B[1.TD] --> C[2.Squeeze] --> D[3.Liquidity] --> E[4.EMA] --> F[5.SuperTrend]
-    F --> G[6.BMSB] --> H[7.Regime] --> I[8.S/D] --> J[9.Candles] --> K[10.Meta] --> L[Output]
+flowchart TD
+    A[Data] --> B[1.TD]
+    B --> C[2.Squeeze]
+    C --> D[3.Liquidity]
+    D --> E[4.EMA]
+    E --> F[5.SuperTrend]
+    F --> G[6.BMSB]
+    G --> H[7.Regime]
+    H --> I[8.S/D]
+    I --> J[9.Candles]
+    J --> K[10.Meta]
+    K --> L[Output]
 
     style A fill:#1a1a2e,stroke:#0aa1d5,color:#fff
     style B fill:#0aa1d5,stroke:#0aa1d5,color:#fff

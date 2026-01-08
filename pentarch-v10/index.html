@@ -2275,7 +2275,7 @@
   <div class="sp-callout__title">📊 Visual Guide: Signal Sequence Flow</div>
   <p style="margin-bottom: 1.5rem;">How the 5 cycle events progress from early accumulation to late breakdown:</p>
   <div class="mermaid" role="img" aria-label="Pentarch signal sequence flowchart">
-flowchart LR
+flowchart TD
     A[Start] --> B[TD]
     B --> C[IGN]
     C --> D[WRN]
@@ -2660,8 +2660,8 @@ CAP → BDN → TD (Climax to accumulation)
 
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
   <div class="sp-callout__title">📊 Visual Overview: Signal Detection Process</div>
-  <div class="mermaid" role="img" aria-label="Horizontal flowchart showing Pentarch's four-layer signal detection">
-flowchart LR
+  <div class="mermaid" role="img" aria-label="Vertical flowchart showing Pentarch's four-layer signal detection">
+flowchart TD
     A[Price] --> B[L1: Regime]
     B --> C[L2: Pilot]
     C --> D[L3: NanoFlow]
