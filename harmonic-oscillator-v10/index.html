@@ -2128,43 +2128,31 @@
     <h4>Seven-Component Voting System</h4>
     <p style="margin-bottom: 1rem;">Seven independent components analyze market conditions and vote. Vote count displayed as "X/7" in status panel:</p>
     <div class="mermaid">
-flowchart TD
-    Data[Market Data: Price + Volume] --> Voters[Seven Independent Voters]
+flowchart LR
+    A[Data] --> B[7 Voters]
+    B --> C[RSI]
+    B --> D[StochRSI]
+    B --> E[MACD]
+    B --> F[EMA]
+    B --> G[Momentum]
+    B --> H[Volume]
+    B --> I[Divergence]
+    C & D & E & F & G & H & I --> J[Counter]
+    J --> K{Regime}
+    K -- 5+ --> L[Trending]
+    K -- 3-4 --> M[Bias]
+    K -- 0-2 --> N[Ranging]
 
-    Voters --> V1[RSI: Momentum-Aware]
-    Voters --> V2[Stochastic RSI: Slope Analysis]
-    Voters --> V3[MACD: Histogram Acceleration]
-    Voters --> V4[EMA Trend: Position + Slope]
-    Voters --> V5[Momentum: Rate of Change]
-    Voters --> V6[Volume: Confirmation]
-    Voters --> V7[Divergence: Zone Detection]
-
-    V1 & V2 & V3 & V4 & V5 & V6 & V7 --> Counter[Vote Counter]
-    Counter --> Composite[Composite Oscillator]
-    Composite --> Regime{Regime Classification}
-
-    Regime -->|5+ Votes| Trending[TRENDING: High Consensus]
-    Regime -->|3-4 Votes| Bias[BIAS: Moderate Consensus]
-    Regime -->|0-2 Votes| Ranging[RANGING: Low Consensus]
-
-    style Data fill:#1a1a2e,stroke:#0aa1d5,color:#fff
-    style Voters fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style V1 fill:#8b5cf6,stroke:#8b5cf6,color:#fff
-    style V2 fill:#8b5cf6,stroke:#8b5cf6,color:#fff
-    style V3 fill:#8b5cf6,stroke:#8b5cf6,color:#fff
-    style V4 fill:#8b5cf6,stroke:#8b5cf6,color:#fff
-    style V5 fill:#8b5cf6,stroke:#8b5cf6,color:#fff
-    style V6 fill:#dc2626,stroke:#dc2626,color:#fff
-    style V7 fill:#dc2626,stroke:#dc2626,color:#fff
-    style Counter fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style Composite fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style Regime fill:#1a1a2e,stroke:#0aa1d5,color:#fff
-    style Trending fill:#16a34a,stroke:#16a34a,color:#fff
-    style Bias fill:#22c55e,stroke:#22c55e,color:#fff
-    style Ranging fill:#6b7280,stroke:#6b7280,color:#fff
+    style A fill:#1a1a2e,stroke:#0aa1d5,color:#fff
+    style B fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style J fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style K fill:#1a1a2e,stroke:#0aa1d5,color:#fff
+    style L fill:#16a34a,stroke:#16a34a,color:#fff
+    style M fill:#22c55e,stroke:#22c55e,color:#fff
+    style N fill:#6b7280,stroke:#6b7280,color:#fff
     </div>
-    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
-      <strong>How to read:</strong> 7 components vote bullish/bearish/neutral. Votes feed into composite oscillator. Regime classification based on composite level and multi-factor confirmation.
+    <p style="margin-top: 0.75rem; font-size: 0.85rem;">
+      <strong>7 Voters:</strong> RSI | Stochastic RSI | MACD | EMA Trend | Momentum | Volume | Divergence → 5+ votes = Trending, 3-4 = Bias, 0-2 = Ranging
     </p>
   </div>
 </div>
@@ -2613,38 +2601,29 @@ flowchart TD
   <div class="sp-callout__title">📊 Visual Guide: 7-Component Voting System</div>
   <p style="margin-bottom: 1.5rem;">How 7 components vote together to determine regime and consensus:</p>
   <div class="mermaid" role="img" aria-label="Harmonic Oscillator voting system flowchart">
-flowchart TD
-    Input[Price and Volume Data] --> OSC1[RSI: Momentum-Aware]
-    Input --> OSC2[Stochastic RSI: Slope Analysis]
-    Input --> OSC3[MACD: Histogram Acceleration]
-    Input --> OSC4[EMA Trend: Position + Slope]
-    Input --> OSC5[Momentum: Rate of Change]
-    Input --> OSC6[Volume: Confirmation]
-    Input --> OSC7[Divergence: Zone Detection]
+flowchart LR
+    A[Data] --> B[RSI]
+    A --> C[StochRSI]
+    A --> D[MACD]
+    A --> E[EMA]
+    A --> F[Momentum]
+    A --> G[Volume]
+    A --> H[Divergence]
+    B & C & D & E & F & G & H --> I{Count}
+    I --> J{Regime}
+    J -- 5+ --> K[Trending]
+    J -- 3-4 --> L[Bias]
+    J -- 0-2 --> M[Ranging]
 
-    OSC1 & OSC2 & OSC3 & OSC4 & OSC5 & OSC6 & OSC7 --> Vote{Vote Counter}
-    Vote --> Regime{Regime Classification}
-
-    Regime -->|5+ Votes| Trending[TRENDING: High Consensus]
-    Regime -->|3-4 Votes| Bias[BIAS: Moderate Consensus]
-    Regime -->|0-2 Votes| Ranging[RANGING: Low Consensus]
-
-    style Input fill:#1a1a2e,stroke:#0aa1d5,color:#fff
-    style OSC1 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style OSC2 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style OSC3 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style OSC4 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style OSC5 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style OSC6 fill:#dc2626,stroke:#dc2626,color:#fff
-    style OSC7 fill:#dc2626,stroke:#dc2626,color:#fff
-    style Vote fill:#8b5cf6,stroke:#8b5cf6,color:#fff
-    style Regime fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style Trending fill:#16a34a,stroke:#16a34a,color:#fff
-    style Bias fill:#22c55e,stroke:#22c55e,color:#fff
-    style Ranging fill:#6b7280,stroke:#6b7280,color:#fff
+    style A fill:#1a1a2e,stroke:#0aa1d5,color:#fff
+    style I fill:#8b5cf6,stroke:#8b5cf6,color:#fff
+    style J fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style K fill:#16a34a,stroke:#16a34a,color:#fff
+    style L fill:#22c55e,stroke:#22c55e,color:#fff
+    style M fill:#6b7280,stroke:#6b7280,color:#fff
   </div>
-  <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.85;">
-    <strong>How it works:</strong> Each of the 7 components votes bullish, bearish, or neutral. Votes are tallied and combined with composite oscillator readings to determine regime classification.
+  <p style="margin-top: 0.75rem; font-size: 0.85rem;">
+    <strong>Process:</strong> 7 oscillators vote → Count tallied → Regime classified (5+ = Trending, 3-4 = Bias, 0-2 = Ranging)
   </p>
 </div>
 

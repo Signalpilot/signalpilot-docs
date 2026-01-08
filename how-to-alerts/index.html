@@ -2027,39 +2027,33 @@ This alert setup guide is for <strong>educational purposes only</strong>. This i
     <h4>Alert Setup Process (Step-by-Step)</h4>
     <p style="margin-bottom: 1.5rem;">Follow this simplified flow to create your first alert:</p>
     <div class="mermaid">
-flowchart TD
-    Start[Chart Open with Indicator] --> Step1[Right-click Indicator Name]
-    Step1 --> Step2[Click 'Add Alert on...']
-    Step2 --> Step3[Alert Dialog Opens]
-    Step3 --> Choice{Choose Condition}
+flowchart LR
+    A[Chart Ready] --> B[Right-click]
+    B --> C[Add Alert]
+    C --> D{Condition}
+    D --> E[Any alert]
+    D --> F[Specific signal]
+    E --> G[Name it]
+    F --> G
+    G --> H[Notifications]
+    H --> I{CRITICAL}
+    I --> J[Bar Close]
+    J --> K((Done))
 
-    Choice --> OptA[Any alert function call]
-    Choice --> OptB[Individual Signal Selection]
-    OptA --> Step4[Name Your Alert]
-    OptB --> Step4
-
-    Step4 --> Step5[Set Notifications: Mobile / Email / Webhook]
-    Step5 --> Critical{CRITICAL SETTING}
-    Critical --> Step6[Set to 'Once Per Bar Close']
-    Step6 --> Done[Alert Created Successfully]
-    Done --> Active((Active))
-
-    style Start fill:#1a1a2e,stroke:#0aa1d5,color:#fff
-    style Step1 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style Step2 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style Step3 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style Choice fill:#8b5cf6,stroke:#8b5cf6,color:#fff
-    style OptA fill:#16a34a,stroke:#16a34a,color:#fff
-    style OptB fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style Step4 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style Step5 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style Critical fill:#dc2626,stroke:#dc2626,color:#fff
-    style Step6 fill:#dc2626,stroke:#dc2626,color:#fff
-    style Done fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style Active fill:#16a34a,stroke:#16a34a,color:#fff
+    style A fill:#1a1a2e,stroke:#0aa1d5,color:#fff
+    style B fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style C fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style D fill:#8b5cf6,stroke:#8b5cf6,color:#fff
+    style E fill:#16a34a,stroke:#16a34a,color:#fff
+    style F fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style G fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style H fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style I fill:#dc2626,stroke:#dc2626,color:#fff
+    style J fill:#dc2626,stroke:#dc2626,color:#fff
+    style K fill:#16a34a,stroke:#16a34a,color:#fff
     </div>
-    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
-      <strong>How to read:</strong> Follow arrows from top to bottom. Green boxes = commonly used options. Red box = important setting for proper alert function!
+    <p style="margin-top: 0.75rem; font-size: 0.85rem;">
+      <strong>Steps:</strong> Right-click indicator → Add Alert → Choose condition → Name → Set notifications → <span style="color:#dc2626;font-weight:bold;">Set "Once Per Bar Close"</span> → Create
     </p>
   </div>
 </div>
@@ -2305,38 +2299,36 @@ flowchart TD
   <div class="sp-callout__title">🔍 Troubleshooting Flowchart</div>
   <p style="margin-bottom: 1.5rem;">Follow this diagnostic flow if your alert isn't working:</p>
   <div class="mermaid" role="img" aria-label="Alert troubleshooting decision tree">
-flowchart TD
-    Problem[Alert Not Firing] --> Check1{Alert in active list?}
+flowchart LR
+    A[NOT FIRING] --> B{In list?}
+    B -- No --> C[Recreate]
+    B -- Yes --> D{Active?}
+    D -- No --> E[Enable]
+    D -- Yes --> F{Bar Close?}
+    F -- No --> G[Fix setting]
+    F -- Yes --> H{Closed?}
+    H -- No --> I[Wait]
+    H -- Yes --> J{Notifs?}
+    J -- No --> K[Enable]
+    J -- Yes --> L[Support]
 
-    Check1 -->|No| Fix1[Alert not saved - Recreate it]
-    Check1 -->|Yes| Check2{Status shows Active?}
-
-    Check2 -->|No| Fix2[Expired or disabled - Enable/extend]
-    Check2 -->|Yes| Check3{Using Once Per Bar Close?}
-
-    Check3 -->|No| Fix3[Wrong setting - Change to Once Per Bar Close]
-    Check3 -->|Yes| Check4{Bar has closed since signal?}
-
-    Check4 -->|No| Fix4[Signal must confirm at bar close - Wait]
-    Check4 -->|Yes| Check5{Mobile notifications enabled?}
-
-    Check5 -->|No| Fix5[Enable notifications in phone settings]
-    Check5 -->|Yes| Support[Contact Support with details]
-
-    style Problem fill:#dc2626,stroke:#dc2626,color:#fff
-    style Check1 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style Check2 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style Check3 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style Check4 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style Check5 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style Fix1 fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style Fix2 fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style Fix3 fill:#dc2626,stroke:#dc2626,color:#fff
-    style Fix4 fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style Fix5 fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style Support fill:#16a34a,stroke:#16a34a,color:#fff
+    style A fill:#dc2626,stroke:#dc2626,color:#fff
+    style B fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style C fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style D fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style E fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style F fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style G fill:#dc2626,stroke:#dc2626,color:#fff
+    style H fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style I fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style J fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style K fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style L fill:#16a34a,stroke:#16a34a,color:#fff
   </div>
-  <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.85;">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem;">
+    <strong>Legend:</strong> In list = visible in Alerts panel | Active = status shows active | Bar Close = "Once Per Bar Close" setting | Closed = bar has closed since signal | Notifs = phone notifications
+  </p>
+  <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.85;">
     <strong>Pro Tip:</strong> Most alert issues are solved by checking "Once Per Bar Close" setting and waiting for bar to actually close. If troubleshooting doesn't help, see <a href="../about-support/">Support</a>.
   </p>
 </div>

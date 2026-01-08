@@ -2275,35 +2275,24 @@
   <div class="sp-callout__title">📊 Visual Guide: Signal Sequence Flow</div>
   <p style="margin-bottom: 1.5rem;">How the 5 cycle events progress from early accumulation to late breakdown:</p>
   <div class="mermaid" role="img" aria-label="Pentarch signal sequence flowchart">
-flowchart TD
-    Start[Market Cycle Begins]
+flowchart LR
+    A[Start] --> B[TD]
+    B --> C[IGN]
+    C --> D[WRN]
+    D --> E[CAP]
+    E --> F[BDN]
+    F -.-> A
 
-    Start --> TD[TD - Accumulation: Early Cycle]
-    TD --> IGN[IGN - Ignition: Reversal Starting]
-    IGN --> WRN[WRN - Warning: Late Cycle Approaching]
-    WRN --> CAP[CAP - Capitulation: Trend Exhaustion]
-    CAP --> BDN[BDN - Breakdown: Cycle Complete]
-
-    BDN -.->|May Reverse| Start
-
-    TD -.->|Partial Sequence| WRN
-    IGN -.->|Partial Sequence| CAP
-
-    style Start fill:#1a1a2e,stroke:#0aa1d5,color:#fff
-    style TD fill:#3b82f6,stroke:#3b82f6,color:#fff
-    style IGN fill:#16a34a,stroke:#16a34a,color:#fff
-    style WRN fill:#eab308,stroke:#eab308,color:#1a1a2e
-    style CAP fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style BDN fill:#dc2626,stroke:#dc2626,color:#fff
+    style A fill:#1a1a2e,stroke:#0aa1d5,color:#fff
+    style B fill:#3b82f6,stroke:#3b82f6,color:#fff
+    style C fill:#16a34a,stroke:#16a34a,color:#fff
+    style D fill:#eab308,stroke:#eab308,color:#1a1a2e
+    style E fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style F fill:#dc2626,stroke:#dc2626,color:#fff
   </div>
-  <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.85;">
-    <strong>Note:</strong> Complete 5-event cycles (TD→IGN→WRN→CAP→BDN) are rare. Partial sequences (TD→IGN or WRN→CAP) are more common and still valuable for trading.
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; opacity: 0.8;">
+    <strong>Legend:</strong> TD = Accumulation (early cycle) | IGN = Ignition (reversal starts) | WRN = Warning (late cycle) | CAP = Capitulation (exhaustion) | BDN = Breakdown (cycle complete) | Dotted = May restart cycle
   </p>
-  <div style="margin-top: 1rem; padding: 0.75rem; background: rgba(55, 71, 79, 0.1); border-radius: 4px; font-size: 0.85rem;">
-    <strong>📖 Legend:</strong><br/>
-    <span style="display: inline-block; margin-right: 1.5rem;">━━━ Solid arrows = Sequential progression</span>
-    <span style="display: inline-block;">- - - Dotted arrows = Common partial sequences</span>
-  </div>
 </div>
 
 <!-- 📸 SCREENSHOT NEEDED - Pentarch Complete Signal Sequence Example
@@ -2671,34 +2660,29 @@ CAP → BDN → TD (Climax to accumulation)
 
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
   <div class="sp-callout__title">📊 Visual Overview: Signal Detection Process</div>
-  <div class="mermaid" role="img" aria-label="Vertical flowchart showing Pentarch's four-layer signal detection flowing top to bottom">
-flowchart TD
-    Input[Price Data Input] --> L1[Layer 1: Regime Classification]
-    L1 --> L2[Layer 2: Pilot Line Distance]
-    L2 --> L3[Layer 3: NanoFlow Momentum]
-    L3 --> L4[Layer 4: Bar Close Confirmation]
+  <div class="mermaid" role="img" aria-label="Horizontal flowchart showing Pentarch's four-layer signal detection">
+flowchart LR
+    A[Price] --> B[L1: Regime]
+    B --> C[L2: Pilot]
+    C --> D[L3: NanoFlow]
+    D --> E[L4: Confirm]
+    E --> F{All 4?}
+    F -- Yes --> G[Signal]
+    F -- No --> H[Wait]
+    G --> I[Alert]
 
-    L4 --> Check{All 4 Layers Confirmed?}
-
-    Check -->|Yes| Signal[Signal Fires: IGN/CAP/WRN/BDN/TD]
-    Check -->|No| Wait[Wait for Next Bar]
-
-    Signal --> Alert[Alert Notification Sent]
-    Wait --> L1
-
-    style Input fill:#1a1a2e,stroke:#0aa1d5,color:#fff
-    style L1 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style L2 fill:#16a34a,stroke:#16a34a,color:#fff
-    style L3 fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style L4 fill:#8b5cf6,stroke:#8b5cf6,color:#fff
-    style Check fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style Signal fill:#16a34a,stroke:#16a34a,color:#fff
-    style Wait fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style Alert fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style A fill:#1a1a2e,stroke:#0aa1d5,color:#fff
+    style B fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style C fill:#16a34a,stroke:#16a34a,color:#fff
+    style D fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style E fill:#8b5cf6,stroke:#8b5cf6,color:#fff
+    style F fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style G fill:#16a34a,stroke:#16a34a,color:#fff
+    style H fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style I fill:#0aa1d5,stroke:#0aa1d5,color:#fff
   </div>
-  <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
-    <strong>How to read:</strong> Price data flows through four independent validation layers.
-    Only when all four layers confirm simultaneously at bar close does a signal appear.
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; opacity: 0.8;">
+    <strong>Legend:</strong> L1 = Regime classification | L2 = Pilot line distance | L3 = NanoFlow momentum | L4 = Bar close confirmation | All 4 layers must confirm for signal to fire
   </p>
   <p style="margin-top: 0.75rem; font-size: 0.9rem; padding: 0.75rem; background: rgba(0, 188, 212, 0.1); border-left: 3px solid #00bcd4; border-radius: 4px;">
     <strong>⚡ Layer Priority:</strong> Layer 1 (Regime Classification) is the <strong>most critical filter</strong>.

@@ -2308,43 +2308,26 @@
     <h4>How Plutus Flow Works</h4>
     <p style="margin-bottom: 1rem;">Four-layer analysis of On-Balance Volume:</p>
     <div class="mermaid">
-flowchart TD
-    Input[Price and Volume Data] --> OBV[Plutus Flow: OBV Analysis]
+flowchart LR
+    A[Data] --> B[OBV]
+    B --> C[L1: Line]
+    C --> D[L2: Ribbon]
+    D --> E[L3: Bands]
+    E --> F[L4: Diverg]
+    D --> G[Bull/Bear]
+    E --> H[Dots]
 
-    OBV --> Layer1[Layer 1: OBV Line - Cumulative Volume]
-    Layer1 --> Layer2[Layer 2: Flow Ribbon - OBV vs Basis]
-
-    Layer2 --> RibbonColor{Ribbon Color}
-    RibbonColor -->|OBV above Basis| Green[Green Ribbon: Bullish Flow]
-    RibbonColor -->|OBV below Basis| Red[Red Ribbon: Bearish Flow]
-
-    Layer2 --> Layer3[Layer 3: Statistical Bands - Extreme Zones]
-
-    Layer3 --> Signals{Signal Dots}
-    Signals -->|Cross| CrossDots[Cross Up/Down: OBV crossed basis]
-    Signals -->|Breach| BreachDots[White Dot: Entered extreme zone]
-    Signals -->|Exit| ExitDots[Yellow Dot: Left extreme zone]
-
-    Layer3 --> Layer4[Layer 4: Divergence Detection]
-    Layer4 --> DivLabels[Bull Div / Bear Div / Hidden Divergences]
-
-    style Input fill:#1a1a2e,stroke:#0aa1d5,color:#fff
-    style OBV fill:#dc2626,stroke:#dc2626,color:#fff
-    style Layer1 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style Layer2 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style Layer3 fill:#8b5cf6,stroke:#8b5cf6,color:#fff
-    style Layer4 fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style RibbonColor fill:#1a1a2e,stroke:#0aa1d5,color:#fff
-    style Green fill:#16a34a,stroke:#16a34a,color:#fff
-    style Red fill:#dc2626,stroke:#dc2626,color:#fff
-    style Signals fill:#1a1a2e,stroke:#0aa1d5,color:#fff
-    style CrossDots fill:#16a34a,stroke:#16a34a,color:#fff
-    style BreachDots fill:#6b7280,stroke:#6b7280,color:#fff
-    style ExitDots fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style DivLabels fill:#16a34a,stroke:#16a34a,color:#fff
+    style A fill:#1a1a2e,stroke:#0aa1d5,color:#fff
+    style B fill:#dc2626,stroke:#dc2626,color:#fff
+    style C fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style D fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style E fill:#8b5cf6,stroke:#8b5cf6,color:#fff
+    style F fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style G fill:#16a34a,stroke:#16a34a,color:#fff
+    style H fill:#6b7280,stroke:#6b7280,color:#fff
     </div>
-    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
-      <strong>How to read:</strong> Data flows through 4 layers. Ribbon shows OBV vs dynamic basis. Dots signal crossovers and extreme zone events. Labels show divergences.
+    <p style="margin-top: 0.75rem; font-size: 0.85rem; opacity: 0.8;">
+      <strong>Legend:</strong> L1 = OBV cumulative line | L2 = Flow ribbon (green=bullish, red=bearish) | L3 = Statistical bands for extremes | L4 = Divergence detection | Dots = Cross/Breach/Exit signals
     </p>
   </div>
 </div>

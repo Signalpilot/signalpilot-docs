@@ -2204,44 +2204,37 @@ This guide shows how to use the Augury Grid screener tool for <strong>educationa
   <div class="sp-callout__title">🔍 Screener Troubleshooting Flowchart</div>
   <p style="margin-bottom: 1.5rem;">Follow this diagnostic flow if Augury Grid isn't working:</p>
   <div class="mermaid" role="img" aria-label="Screener troubleshooting decision tree">
-flowchart TD
-    Problem[Grid Not Showing or Not Updating] --> Check1{Grid table visible?}
+flowchart LR
+    A[NOT WORKING] --> B{Visible?}
+    B -- No --> C[Add indicator]
+    B -- Yes --> D{Shows N/A?}
+    D -- Yes --> E[Fix ticker format]
+    D -- No --> F{Updating?}
+    F -- No --> G[Refresh]
+    F -- Yes --> H{All signals?}
+    H -- No --> I[Wait for close]
+    H -- Yes --> J{Scores OK?}
+    J -- No --> K[Reset settings]
+    J -- Yes --> L((Working))
 
-    Check1 -->|No| Fix1[Add Augury Grid from indicators menu]
-    Check1 -->|Yes| Check2{Symbols showing dashes or N/A?}
-
-    Check2 -->|Yes| Fix2[Wrong ticker format - Use EXCHANGE:SYMBOL]
-    Check2 -->|No| Check3{Grid updating with price changes?}
-
-    Check3 -->|No| Fix3[Refresh chart - Check internet connection]
-    Check3 -->|Yes| Check4{Signals showing for all symbols?}
-
-    Check4 -->|Some missing| Fix4[Wait for bar close - Signals appear on MACD cross]
-    Check4 -->|Yes| Check5{Quality scores showing 0-100?}
-
-    Check5 -->|No| Fix5[Check settings - Reset to defaults if needed]
-    Check5 -->|Yes| Check6{Your symbols configured?}
-
-    Check6 -->|No| Fix6[Add symbols in Settings]
-    Check6 -->|Yes| Working[Grid Working - Scan for quality signals]
-
-    style Problem fill:#dc2626,stroke:#dc2626,color:#fff
-    style Check1 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style Check2 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style Check3 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style Check4 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style Check5 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style Check6 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style Fix1 fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style Fix2 fill:#dc2626,stroke:#dc2626,color:#fff
-    style Fix3 fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style Fix4 fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style Fix5 fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style Fix6 fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style Working fill:#16a34a,stroke:#16a34a,color:#fff
+    style A fill:#dc2626,stroke:#dc2626,color:#fff
+    style B fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style C fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style D fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style E fill:#dc2626,stroke:#dc2626,color:#fff
+    style F fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style G fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style H fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style I fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style J fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style K fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style L fill:#16a34a,stroke:#16a34a,color:#fff
   </div>
-  <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.85;">
-    <strong>Most Common Issue:</strong> Wrong ticker format. Always use EXCHANGE:SYMBOL format (e.g., BINANCE:BTCUSDT, not just BTCUSDT). Right-click any symbol → Copy Symbol to get the correct format.
+  <p style="margin-top: 0.75rem; font-size: 0.85rem;">
+    <strong>Legend:</strong> Visible = grid table shows | N/A = dashes or N/A in cells | Updating = prices change | Scores OK = quality 0-100 showing
+  </p>
+  <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.85;">
+    <strong>Most Common Issue:</strong> Wrong ticker format. Always use EXCHANGE:SYMBOL format (e.g., BINANCE:BTCUSDT, not just BTCUSDT).
   </p>
 </div>
 
