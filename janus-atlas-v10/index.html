@@ -1358,7 +1358,7 @@
           <li class="md-nav__item">
   <a href="#q-why-do-i-need-to-select-a-cme-symbol" class="md-nav__link">
     <span class="md-ellipsis">
-      Q: Why do I need to select a CME symbol?
+      Q: Do I need to select a CME symbol manually?
     </span>
   </a>
 
@@ -2541,7 +2541,7 @@
           <li class="md-nav__item">
   <a href="#q-why-do-i-need-to-select-a-cme-symbol" class="md-nav__link">
     <span class="md-ellipsis">
-      Q: Why do I need to select a CME symbol?
+      Q: Do I need to select a CME symbol manually?
     </span>
   </a>
 
@@ -4403,8 +4403,8 @@ Interpretation: High confluence zone, stronger reactions observed
 <h3 id="q-what-does-unmitigated-fvg-mean">Q: What does "Unmitigated" FVG mean?<a class="headerlink" href="#q-what-does-unmitigated-fvg-mean" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> An unmitigated FVG hasn't been touched/filled by price yet. These are the most relevant for trading as potential entry zones—price is more likely to revisit unfilled imbalances.</p>
 
-<h3 id="q-why-do-i-need-to-select-a-cme-symbol">Q: Why do I need to select a CME symbol?<a class="headerlink" href="#q-why-do-i-need-to-select-a-cme-symbol" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> CME gaps come from CME futures data, not your chart's data. If you're on BTCUSDT (Binance spot), you need to tell the indicator to fetch gap data from BTC1! (CME Bitcoin futures). Wrong symbol = wrong gap levels.</p>
+<h3 id="q-why-do-i-need-to-select-a-cme-symbol">Q: Do I need to select a CME symbol manually?<a class="headerlink" href="#q-why-do-i-need-to-select-a-cme-symbol" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> No—Auto-Detect (ON by default) automatically matches your chart to the correct CME symbol. If you're on BTCUSDT, it fetches CME:BTC1! gaps automatically. Only disable Auto-Detect if you want to show a different product's gaps (e.g., BTC gaps on an ETH chart).</p>
 
 <h3 id="q-why-did-my-cme-gap-disappear">Q: Why did my CME gap disappear?<a class="headerlink" href="#q-why-did-my-cme-gap-disappear" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> Gaps auto-remove when filled. A gap-up is filled when price drops to the gap low. A gap-down is filled when price rises to the gap high.</p>
@@ -4413,7 +4413,7 @@ Interpretation: High confluence zone, stronger reactions observed
 <p><strong>A:</strong> Old unfilled gaps at distant prices cause TradingView to auto-scale. Reduce "Max Gaps" to 1-2 for cleaner charts.</p>
 
 <h3 id="q-do-cme-gaps-work-on-crypto-spot-perp">Q: Do CME gaps work on crypto spot/perp charts?<a class="headerlink" href="#q-do-cme-gaps-work-on-crypto-spot-perp" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> Yes. The indicator fetches CME futures data regardless of your chart symbol. You see CME gap levels overlaid on your spot/perp chart.</p>
+<p><strong>A:</strong> Yes. Auto-Detect recognizes BTC/ETH spot and perp pairs and fetches the correct CME futures data (CME:BTC1! or CME:ETH1!). You see CME gap levels overlaid on your spot/perp chart automatically.</p>
 
 <h3 id="q-whats-the-difference-between-fib-retracements-and-extensions">Q: What's the difference between Fib retracements and extensions?<a class="headerlink" href="#q-whats-the-difference-between-fib-retracements-and-extensions" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> Retracements (0.236-0.886) are INSIDE the range—used for entries on pullbacks. Extensions (1.272, 1.618) are OUTSIDE the range—used for profit targets after price breaks the high/low.</p>
