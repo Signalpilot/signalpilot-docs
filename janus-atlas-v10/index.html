@@ -3474,27 +3474,42 @@ Structure: Strong uptrend characteristics
 </thead>
 <tbody>
 <tr><td>CME Gaps</td><td>On/Off</td><td>Off</td><td>Master toggle (in Controls group)</td></tr>
-<tr><td>CME Symbol</td><td>22 presets</td><td>BTC1!</td><td>Must match your chart asset</td></tr>
+<tr><td>Auto-Detect Symbol</td><td>On/Off</td><td>On</td><td>Automatically matches chart to CME symbol</td></tr>
+<tr><td>Manual Symbol</td><td>22 presets</td><td>BTC1!</td><td>Only used when Auto-Detect is OFF</td></tr>
 <tr><td>Display Style</td><td>Box / Lines</td><td>Box</td><td>Shaded zone or dashed lines</td></tr>
 <tr><td>Max Gaps</td><td>1-50</td><td>2</td><td>How many unfilled gaps to show</td></tr>
 <tr><td>Gap Color</td><td>Color picker</td><td>Orange</td><td>Gap zone color</td></tr>
 <tr><td>Box Transparency</td><td>0-95</td><td>70</td><td>Box fill opacity</td></tr>
 </tbody>
 </table>
-<p><strong>Symbol Mapping:</strong></p>
+<p><strong>Auto-Detection Mapping:</strong></p>
+<p>When Auto-Detect is ON, the indicator automatically maps your chart to the correct CME symbol:</p>
 <table>
 <thead>
-<tr><th>Your Chart</th><th>CME Symbol</th></tr>
+<tr><th>Your Chart Contains</th><th>CME Symbol Used</th></tr>
 </thead>
 <tbody>
-<tr><td>BTC, BTCUSDT</td><td>BTC1!</td></tr>
+<tr><td>BTC, BTCUSDT, XBT</td><td>BTC1!</td></tr>
 <tr><td>ETH, ETHUSDT</td><td>ETH1!</td></tr>
-<tr><td>SPY, SPX, ES</td><td>ES1!</td></tr>
-<tr><td>QQQ, NDX, NQ</td><td>NQ1!</td></tr>
-<tr><td>Gold, XAUUSD</td><td>GC1!</td></tr>
-<tr><td>Oil, CL</td><td>CL1!</td></tr>
+<tr><td>SPY, SPX, ES, SPDR</td><td>ES1!</td></tr>
+<tr><td>QQQ, NDX, NQ, NASDAQ</td><td>NQ1!</td></tr>
+<tr><td>DIA, DJI, YM</td><td>YM1!</td></tr>
+<tr><td>IWM, RUT, RTY</td><td>RTY1!</td></tr>
+<tr><td>GOLD, XAUUSD, GLD, GC</td><td>GC1!</td></tr>
+<tr><td>SILVER, XAGUSD, SLV, SI</td><td>SI1!</td></tr>
+<tr><td>OIL, WTI, USO, CL, USOIL</td><td>CL1!</td></tr>
+<tr><td>NATGAS, UNG, NG</td><td>NG1!</td></tr>
+<tr><td>EURUSD, 6E</td><td>6E1!</td></tr>
+<tr><td>USDJPY, 6J</td><td>6J1!</td></tr>
+<tr><td>DXY, DX</td><td>DX1!</td></tr>
+<tr><td>COPPER, HG</td><td>HG1!</td></tr>
+<tr><td>CORN, ZC</td><td>ZC1!</td></tr>
+<tr><td>SOYBEAN, ZS</td><td>ZS1!</td></tr>
+<tr><td>WHEAT, ZW</td><td>ZW1!</td></tr>
 </tbody>
 </table>
+<p><strong>Behavior When No Match Found:</strong></p>
+<p>If Auto-Detect is ON and your chart symbol doesn't match any CME product (e.g., TSLA, AAPL, random altcoins), <strong>CME Gaps will not display</strong>—no boxes, no lines, no labels. This prevents showing irrelevant gaps on unrelated charts.</p>
 <p><strong>Characteristics:</strong></p>
 <ul>
 <li>Gaps often act as price magnets (tend to get filled)</li>
@@ -3511,6 +3526,10 @@ Structure: Strong uptrend characteristics
 <li>Use with other Janus levels for confluence</li>
 </ul>
 <p><strong>Example:</strong> BTC gaps up $1,400 over the weekend (Friday close $92,000 → Sunday open $93,400). Gap zone displays from $92,000-$93,400. Price rallies to $95,000 then pulls back → watch for reaction at gap zone.</p>
+<p><strong>FAQ:</strong></p>
+<ul>
+<li><strong>Why don't I see CME gaps on my chart?</strong> With Auto-Detect ON (default), CME Gaps only display when your chart matches a supported CME product. Stocks like TSLA, AAPL, or altcoins like DOGE don't have CME futures, so no gaps appear. If you want to see BTC CME gaps on an unrelated chart, turn Auto-Detect OFF and manually select BTC1!.</li>
+</ul>
 <div class="admonition warning" style="border-left: 5px solid #ff9800; background: #fff3e0; padding: 1rem; margin: 1.5rem 0;">
   <p class="admonition-title" style="font-weight: bold; color: #e65100; margin: 0 0 0.5rem 0;">⚠️ Chart Scaling Note</p>
   <p style="margin: 0; color: #424242;">More gaps = chart squeeze. Historical gaps far from current price will auto-scale your chart. Start with 1-2 gaps, increase if needed.</p>
