@@ -2204,41 +2204,41 @@ This guide shows how to use the Augury Grid screener tool for <strong>educationa
   <div class="sp-callout__title">🔍 Screener Troubleshooting Flowchart</div>
   <p style="margin-bottom: 1.5rem;">Follow this diagnostic flow if Augury Grid isn't working:</p>
   <div class="mermaid" role="img" aria-label="Screener troubleshooting decision tree">
-graph TD
-    Problem([🚨 Grid Not Showing<br/>or Not Updating]) --> Check1{Grid table<br/>visible on<br/>chart?}
+flowchart TD
+    Problem[Grid Not Showing or Not Updating] --> Check1{Grid table visible?}
 
-    Check1 -->|No| Fix1[❌ Indicator not added<br/>Add Augury Grid v1.0<br/>from indicators menu]
-    Check1 -->|Yes| Check2{Symbols showing<br/>'—' or 'N/A'?}
+    Check1 -->|No| Fix1[Add Augury Grid from indicators menu]
+    Check1 -->|Yes| Check2{Symbols showing dashes or N/A?}
 
-    Check2 -->|Yes| Fix2[📋 Wrong ticker format<br/>Use EXCHANGE:SYMBOL format<br/>Example: BINANCE:BTCUSDT]
-    Check2 -->|No| Check3{Grid updating<br/>with price<br/>changes?}
+    Check2 -->|Yes| Fix2[Wrong ticker format - Use EXCHANGE:SYMBOL]
+    Check2 -->|No| Check3{Grid updating with price changes?}
 
-    Check3 -->|No| Fix3[🔄 Refresh chart<br/>F5 or reload page<br/>Check internet connection]
-    Check3 -->|Yes| Check4{Signals showing<br/>for all symbols?}
+    Check3 -->|No| Fix3[Refresh chart - Check internet connection]
+    Check3 -->|Yes| Check4{Signals showing for all symbols?}
 
-    Check4 -->|No - Some missing| Fix4[⏳ Wait for bar close<br/>Signals appear only<br/>when MACD crosses]
-    Check4 -->|Yes| Check5{Quality scores<br/>showing 0-100?}
+    Check4 -->|Some missing| Fix4[Wait for bar close - Signals appear on MACD cross]
+    Check4 -->|Yes| Check5{Quality scores showing 0-100?}
 
-    Check5 -->|No| Fix5[⚙️ Settings issue<br/>Check indicator settings<br/>Reset to defaults if needed]
-    Check5 -->|Yes| Check6{Symbols you want<br/>configured in<br/>settings?}
+    Check5 -->|No| Fix5[Check settings - Reset to defaults if needed]
+    Check5 -->|Yes| Check6{Your symbols configured?}
 
-    Check6 -->|No| Fix6[📝 Add symbols<br/>Settings → Symbol Configuration<br/>Add your watchlist]
-    Check6 -->|Yes| Working[✅ Grid Working!<br/>Scan for ★★★ or ★★<br/>quality signals]
+    Check6 -->|No| Fix6[Add symbols in Settings]
+    Check6 -->|Yes| Working[Grid Working - Scan for quality signals]
 
-    style Problem fill:#f44336,color:#fff,stroke:#d32f2f,stroke-width:4px
-    style Check1 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
-    style Check2 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
-    style Check3 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
-    style Check4 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
-    style Check5 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
-    style Check6 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
-    style Fix1 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
-    style Fix2 fill:#ff5722,color:#fff,stroke:#e64a19,stroke-width:3px
-    style Fix3 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
-    style Fix4 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
-    style Fix5 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
-    style Fix6 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
-    style Working fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:4px
+    style Problem fill:#dc2626,stroke:#dc2626,color:#fff
+    style Check1 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style Check2 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style Check3 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style Check4 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style Check5 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style Check6 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style Fix1 fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style Fix2 fill:#dc2626,stroke:#dc2626,color:#fff
+    style Fix3 fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style Fix4 fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style Fix5 fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style Fix6 fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style Working fill:#16a34a,stroke:#16a34a,color:#fff
   </div>
   <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.85;">
     <strong>Most Common Issue:</strong> Wrong ticker format. Always use EXCHANGE:SYMBOL format (e.g., BINANCE:BTCUSDT, not just BTCUSDT). Right-click any symbol → Copy Symbol to get the correct format.

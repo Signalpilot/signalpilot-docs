@@ -1544,44 +1544,43 @@
   <div class="sp-callout__title">🔍 Webhook Troubleshooting Flowchart</div>
   <p style="margin-bottom: 1.5rem;">Follow this diagnostic flow if webhooks aren't working:</p>
   <div class="mermaid" role="img" aria-label="Webhook troubleshooting decision tree">
-graph TD
-    Problem([🚨 Webhook Not Sending]) --> Check1{Webhook URL<br/>pasted correctly<br/>in alert?}
+flowchart TD
+    Problem[Webhook Not Sending] --> Check1{Webhook URL in alert?}
 
-    Check1 -->|No| Fix1[❌ Missing webhook URL<br/>Edit alert → Paste webhook URL<br/>in Notifications tab]
-    Check1 -->|Yes| Check2{Alert actually<br/>firing?}
+    Check1 -->|No| Fix1[Paste webhook URL in Notifications tab]
+    Check1 -->|Yes| Check2{Alert actually firing?}
 
-    Check2 -->|No| Fix2[⚠️ Alert not firing<br/>See Alert Troubleshooting Guide]
-    Check2 -->|Yes| Check3{Tested webhook<br/>with webhook.site<br/>or similar?}
+    Check2 -->|No| Fix2[See Alert Troubleshooting Guide]
+    Check2 -->|Yes| Check3{Tested with webhook.site?}
 
-    Check3 -->|No| Fix3[🧪 Test webhook first<br/>Use webhook.site to verify<br/>webhook URL works]
-    Check3 -->|Yes - Works| Check4{Discord/Telegram<br/>webhook URL<br/>correct format?}
+    Check3 -->|No| Fix3[Test webhook URL with webhook.site first]
+    Check3 -->|Works| Check4{Discord/Telegram URL format correct?}
+    Check3 -->|Fails| Fix3b[Create new webhook URL]
 
-    Check3 -->|Yes - Fails| Fix3b[❌ Webhook URL broken<br/>Create NEW webhook URL<br/>in Discord/Telegram]
+    Check4 -->|No| Fix4[Check URL format for your platform]
+    Check4 -->|Yes| Check5{Valid JSON message?}
 
-    Check4 -->|No| Fix4[📋 Wrong format<br/>Discord: .../webhooks/...<br/>Telegram: bot token required]
-    Check4 -->|Yes| Check5{Message format<br/>valid JSON?}
+    Check5 -->|No| Fix5[Validate JSON - Check quotes and brackets]
+    Check5 -->|Yes| Check6{TradingView plan supports webhooks?}
 
-    Check5 -->|No| Fix5[⚠️ Invalid JSON<br/>Use JSON validator<br/>Check quotes and brackets]
-    Check5 -->|Yes| Check6{TradingView plan<br/>supports webhooks?}
+    Check6 -->|Free/Essential| Fix6[Upgrade required - Webhooks need Pro+ plan]
+    Check6 -->|Pro+/Premium| Support[Contact Support with details]
 
-    Check6 -->|No - Free/Essential| Fix6[💰 Upgrade required<br/>Webhooks need Pro+<br/>or Premium plan]
-    Check6 -->|Yes - Pro+/Premium| Support[📞 Contact Support<br/>Provide: Screenshot of alert,<br/>webhook URL, JSON message]
-
-    style Problem fill:#f44336,color:#fff,stroke:#d32f2f,stroke-width:4px
-    style Check1 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
-    style Check2 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
-    style Check3 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
-    style Check4 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
-    style Check5 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
-    style Check6 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:2px
-    style Fix1 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
-    style Fix2 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
-    style Fix3 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
-    style Fix3b fill:#ff5722,color:#fff,stroke:#e64a19,stroke-width:3px
-    style Fix4 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
-    style Fix5 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
-    style Fix6 fill:#ff5722,color:#fff,stroke:#e64a19,stroke-width:3px
-    style Support fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
+    style Problem fill:#dc2626,stroke:#dc2626,color:#fff
+    style Check1 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style Check2 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style Check3 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style Check4 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style Check5 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style Check6 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style Fix1 fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style Fix2 fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style Fix3 fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style Fix3b fill:#dc2626,stroke:#dc2626,color:#fff
+    style Fix4 fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style Fix5 fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style Fix6 fill:#dc2626,stroke:#dc2626,color:#fff
+    style Support fill:#16a34a,stroke:#16a34a,color:#fff
   </div>
   <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.85;">
     <strong>Quick Test:</strong> Always test your webhook with <a href="https://webhook.site" target="_blank" rel="noopener noreferrer">webhook.site</a> first. If it works there but not in Discord/Telegram, the issue is with your Discord/Telegram webhook setup.

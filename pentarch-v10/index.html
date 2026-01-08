@@ -2275,26 +2275,26 @@
   <div class="sp-callout__title">📊 Visual Guide: Signal Sequence Flow</div>
   <p style="margin-bottom: 1.5rem;">How the 5 cycle events progress from early accumulation to late breakdown:</p>
   <div class="mermaid" role="img" aria-label="Pentarch signal sequence flowchart">
-graph TD
-    Start([📊 Market Cycle Begins])
+flowchart TD
+    Start[Market Cycle Begins]
 
-    Start --> TD[🟦 TD - ACCUMULATION<br/>Early Cycle / Trend Exhausting]
-    TD --> IGN[🟩 IGN - IGNITION<br/>Reversal Starting / New Trend Developing]
-    IGN --> WRN[🟨 WRN - WARNING<br/>Late Cycle Approaching / Trend Maturing]
-    WRN --> CAP[🟧 CAP - CAPITULATION<br/>Climax/Exhaustion / Trend Ending]
-    CAP --> BDN[🟥 BDN - BREAKDOWN<br/>Trend Breakdown / Cycle Complete]
+    Start --> TD[TD - Accumulation: Early Cycle]
+    TD --> IGN[IGN - Ignition: Reversal Starting]
+    IGN --> WRN[WRN - Warning: Late Cycle Approaching]
+    WRN --> CAP[CAP - Capitulation: Trend Exhaustion]
+    CAP --> BDN[BDN - Breakdown: Cycle Complete]
 
-    BDN -.->|"May Reverse"| Start
+    BDN -.->|May Reverse| Start
 
-    TD -.->|"Common:<br/>Partial Sequence"| WRN
-    IGN -.->|"Common:<br/>Partial Sequence"| CAP
+    TD -.->|Partial Sequence| WRN
+    IGN -.->|Partial Sequence| CAP
 
-    style Start fill:#37474f,color:#fff,stroke:#263238,stroke-width:3px
-    style TD fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:3px
-    style IGN fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
-    style WRN fill:#ffd740,color:#333,stroke:#fbc02d,stroke-width:3px
-    style CAP fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:3px
-    style BDN fill:#f44336,color:#fff,stroke:#d32f2f,stroke-width:3px
+    style Start fill:#1a1a2e,stroke:#0aa1d5,color:#fff
+    style TD fill:#3b82f6,stroke:#3b82f6,color:#fff
+    style IGN fill:#16a34a,stroke:#16a34a,color:#fff
+    style WRN fill:#eab308,stroke:#eab308,color:#1a1a2e
+    style CAP fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style BDN fill:#dc2626,stroke:#dc2626,color:#fff
   </div>
   <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.85;">
     <strong>Note:</strong> Complete 5-event cycles (TD→IGN→WRN→CAP→BDN) are rare. Partial sequences (TD→IGN or WRN→CAP) are more common and still valuable for trading.
@@ -2672,32 +2672,29 @@ CAP → BDN → TD (Climax to accumulation)
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
   <div class="sp-callout__title">📊 Visual Overview: Signal Detection Process</div>
   <div class="mermaid" role="img" aria-label="Vertical flowchart showing Pentarch's four-layer signal detection flowing top to bottom">
-graph TD
-    Input[📊 Price Data Input] --> L1[LAYER 1: REGIME CLASSIFICATION<br/>Bullish/Bearish/Neutral Context]
+flowchart TD
+    Input[Price Data Input] --> L1[Layer 1: Regime Classification]
+    L1 --> L2[Layer 2: Pilot Line Distance]
+    L2 --> L3[Layer 3: NanoFlow Momentum]
+    L3 --> L4[Layer 4: Bar Close Confirmation]
 
-    L1 --> L2[LAYER 2: PILOT LINE DISTANCE<br/>Price Extension from Trend Line]
+    L4 --> Check{All 4 Layers Confirmed?}
 
-    L2 --> L3[LAYER 3: NANOFLOW MOMENTUM<br/>Directional Momentum Validation]
+    Check -->|Yes| Signal[Signal Fires: IGN/CAP/WRN/BDN/TD]
+    Check -->|No| Wait[Wait for Next Bar]
 
-    L3 --> L4[LAYER 4: BAR CLOSE CONFIRMATION<br/>Final Validation at Bar Close]
-
-    L4 --> Check{All 4 Layers<br/>Confirmed?}
-
-    Check -->|Yes, All Confirmed| Signal[🟢 SIGNAL FIRES<br/>IGN/CAP/WRN/BDN/TD]
-    Check -->|No, Wait| Wait[⏳ WAIT FOR NEXT BAR<br/>Recheck Conditions]
-
-    Signal --> Alert[📲 Alert Notification Sent]
+    Signal --> Alert[Alert Notification Sent]
     Wait --> L1
 
-    style Input fill:#37474f,color:#fff,stroke:#263238,stroke-width:3px
-    style L1 fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:3px
-    style L2 fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
-    style L3 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:3px
-    style L4 fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:3px
-    style Check fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:3px
-    style Signal fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:4px
-    style Wait fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:2px
-    style Alert fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:3px
+    style Input fill:#1a1a2e,stroke:#0aa1d5,color:#fff
+    style L1 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style L2 fill:#16a34a,stroke:#16a34a,color:#fff
+    style L3 fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style L4 fill:#8b5cf6,stroke:#8b5cf6,color:#fff
+    style Check fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style Signal fill:#16a34a,stroke:#16a34a,color:#fff
+    style Wait fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style Alert fill:#0aa1d5,stroke:#0aa1d5,color:#fff
   </div>
   <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
     <strong>How to read:</strong> Price data flows through four independent validation layers.

@@ -2308,35 +2308,40 @@
     <h4>How Plutus Flow Works</h4>
     <p style="margin-bottom: 1rem;">Four-layer analysis of On-Balance Volume:</p>
     <div class="mermaid">
-graph TD
-    Input[📊 Price & Volume Data] --> OBV[PLUTUS FLOW<br/>On-Balance Volume Analysis]
+flowchart TD
+    Input[Price and Volume Data] --> OBV[Plutus Flow: OBV Analysis]
 
-    OBV --> Layer1[LAYER 1: OBV LINE<br/>Cumulative Volume Tracking]
-
-    Layer1 --> Layer2[LAYER 2: FLOW RIBBON<br/>OBV vs Dynamic Basis]
+    OBV --> Layer1[Layer 1: OBV Line - Cumulative Volume]
+    Layer1 --> Layer2[Layer 2: Flow Ribbon - OBV vs Basis]
 
     Layer2 --> RibbonColor{Ribbon Color}
-    RibbonColor -->|OBV > Basis| Green[🟢 Green Ribbon<br/>Bullish Flow]
-    RibbonColor -->|OBV < Basis| Red[🔴 Red Ribbon<br/>Bearish Flow]
+    RibbonColor -->|OBV above Basis| Green[Green Ribbon: Bullish Flow]
+    RibbonColor -->|OBV below Basis| Red[Red Ribbon: Bearish Flow]
 
-    Layer2 --> Layer3[LAYER 3: STATISTICAL BANDS<br/>±2σ Extreme Zones]
+    Layer2 --> Layer3[Layer 3: Statistical Bands - Extreme Zones]
 
     Layer3 --> Signals{Signal Dots}
-    Signals -->|Cross| CrossDots[🟢 Cross Up / 🔴 Cross Down<br/>OBV crossed basis]
-    Signals -->|Breach| BreachDots[⚪ White Dot<br/>Entered extreme zone]
-    Signals -->|Exit| ExitDots[🟡 Yellow Dot<br/>Left extreme zone]
+    Signals -->|Cross| CrossDots[Cross Up/Down: OBV crossed basis]
+    Signals -->|Breach| BreachDots[White Dot: Entered extreme zone]
+    Signals -->|Exit| ExitDots[Yellow Dot: Left extreme zone]
 
-    Layer3 --> Layer4[LAYER 4: DIVERGENCE DETECTION<br/>Price vs OBV Disagreement]
+    Layer3 --> Layer4[Layer 4: Divergence Detection]
+    Layer4 --> DivLabels[Bull Div / Bear Div / Hidden Divergences]
 
-    Layer4 --> DivLabels[Bull Div / Bear Div<br/>Bull Hid / Bear Hid]
-
-    style Input fill:#37474f,color:#fff,stroke:#263238,stroke-width:3px
-    style OBV fill:#ff5722,color:#fff,stroke:#e64a19,stroke-width:3px
-    style Layer1 fill:#2196f3,color:#fff,stroke:#1976d2,stroke-width:3px
-    style Layer2 fill:#00bcd4,color:#fff,stroke:#0097a7,stroke-width:3px
-    style Layer3 fill:#9c27b0,color:#fff,stroke:#7b1fa2,stroke-width:3px
-    style Layer4 fill:#ff9800,color:#fff,stroke:#f57c00,stroke-width:3px
-    style DivLabels fill:#4caf50,color:#fff,stroke:#388e3c,stroke-width:3px
+    style Input fill:#1a1a2e,stroke:#0aa1d5,color:#fff
+    style OBV fill:#dc2626,stroke:#dc2626,color:#fff
+    style Layer1 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style Layer2 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style Layer3 fill:#8b5cf6,stroke:#8b5cf6,color:#fff
+    style Layer4 fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style RibbonColor fill:#1a1a2e,stroke:#0aa1d5,color:#fff
+    style Green fill:#16a34a,stroke:#16a34a,color:#fff
+    style Red fill:#dc2626,stroke:#dc2626,color:#fff
+    style Signals fill:#1a1a2e,stroke:#0aa1d5,color:#fff
+    style CrossDots fill:#16a34a,stroke:#16a34a,color:#fff
+    style BreachDots fill:#6b7280,stroke:#6b7280,color:#fff
+    style ExitDots fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style DivLabels fill:#16a34a,stroke:#16a34a,color:#fff
     </div>
     <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
       <strong>How to read:</strong> Data flows through 4 layers. Ribbon shows OBV vs dynamic basis. Dots signal crossovers and extreme zone events. Labels show divergences.
