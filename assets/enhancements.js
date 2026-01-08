@@ -707,16 +707,15 @@
       e.preventDefault();
       e.stopPropagation();
 
-      // Scroll to top smoothly
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-
-      // Also try the fallback for older browsers
-      if (window.scrollY > 0) {
-        document.documentElement.scrollTop = 0;
-        document.body.scrollTop = 0; // For Safari
+      // Use Lenis for butter-smooth scroll to top
+      if (typeof window.lenisScrollToTop === 'function') {
+        window.lenisScrollToTop();
+      } else {
+        // Fallback to native smooth scroll
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
       }
     }, true); // Use capture phase
 
