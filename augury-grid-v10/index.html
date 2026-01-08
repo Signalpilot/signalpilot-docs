@@ -1920,37 +1920,27 @@
     <h4>Multi-Timeframe Scanning Architecture</h4>
     <p style="margin-bottom: 1rem;">Augury Grid scans 7 symbols across 3 timeframes = 21 simultaneous scans:</p>
     <div class="mermaid">
-flowchart TD
-    Preset[Symbol Preset: 7 Symbols Selected] --> Scanner[Augury Grid Scanner]
+flowchart LR
+    A[Preset] --> B[Scanner]
+    B --> C[TF 1/2/3]
+    C --> D[MACD+Filters]
+    D --> E[Rank 0-100]
+    E --> F[Table]
+    F --> G[Signal]
+    F --> H[Blocked]
 
-    Scanner --> TF1[Timeframe 1: e.g. 15m]
-    Scanner --> TF2[Timeframe 2: e.g. 4H]
-    Scanner --> TF3[Timeframe 3: e.g. Daily]
-
-    TF1 --> Scan1[7 Symbols Scanned with MACD + 15 Filters]
-    TF2 --> Scan2[7 Symbols Scanned with MACD + 15 Filters]
-    TF3 --> Scan3[7 Symbols Scanned with MACD + 15 Filters]
-
-    Scan1 & Scan2 & Scan3 --> Rank[Ranking Engine: Score 0-100]
-
-    Rank --> Table[Table Display: Best Scores First]
-
-    Table --> Active[Active Signal: Entry/SL/TP with Quality Rating]
-    Table --> Blocker[No Signal: Shows Blocker Reason]
-
-    style Preset fill:#1a1a2e,stroke:#0aa1d5,color:#fff
-    style Scanner fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style TF1 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style TF2 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style TF3 fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style Scan1 fill:#8b5cf6,stroke:#8b5cf6,color:#fff
-    style Scan2 fill:#8b5cf6,stroke:#8b5cf6,color:#fff
-    style Scan3 fill:#8b5cf6,stroke:#8b5cf6,color:#fff
-    style Rank fill:#8b5cf6,stroke:#8b5cf6,color:#fff
-    style Table fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style Active fill:#16a34a,stroke:#16a34a,color:#fff
-    style Blocker fill:#6b7280,stroke:#6b7280,color:#fff
+    style A fill:#1a1a2e,stroke:#0aa1d5,color:#fff
+    style B fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style C fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style D fill:#8b5cf6,stroke:#8b5cf6,color:#fff
+    style E fill:#8b5cf6,stroke:#8b5cf6,color:#fff
+    style F fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style G fill:#16a34a,stroke:#16a34a,color:#fff
+    style H fill:#6b7280,stroke:#6b7280,color:#fff
     </div>
+    <p style="margin-top: 0.75rem; font-size: 0.85rem; opacity: 0.8;">
+      <strong>Legend:</strong> Preset = 7 symbols selected | TF 1/2/3 = Three timeframes (e.g., 15m, 4H, Daily) | MACD+Filters = 15 confluence filters | Rank = Quality score | Signal = Active trade | Blocked = No valid signal
+    </p>
   </div>
 </div>
 

@@ -1785,42 +1785,36 @@
     <h4>Complete Trading Workflow</h4>
     <p style="margin-bottom: 1rem;">From bias determination to position management—here's the complete flow:</p>
     <div class="mermaid">
-flowchart TD
-    Start[Analysis Session Begins] --> HTF[Higher Timeframe Assessment]
+flowchart LR
+    A[Start] --> B[HTF Check]
+    B --> C{Regime?}
+    C -- Bull --> D[Long bias]
+    C -- Bear --> E[Short bias]
+    C -- Neutral --> F[Wait]
+    D --> G[Janus levels]
+    E --> G
+    G --> H[Pentarch]
+    H --> I[Confirm]
+    I --> J[Execute]
+    J --> K[Monitor]
+    K --> L[Exit]
 
-    HTF --> Bias{Market Regime Assessment}
-    Bias -->|Bullish Context| Green[Bullish Regime: Uptrend]
-    Bias -->|Bearish Context| Red[Bearish Regime: Downtrend]
-    Bias -->|Neutral| Wait[No Clear Trend: Wait]
-
-    Green --> LookUp[Monitor for Long Setups]
-    Red --> LookDown[Monitor for Short Setups]
-
-    LookUp --> Levels[Janus Atlas: Key Levels]
-    LookDown --> Levels
-
-    Levels --> Signal[Pentarch: Cycle Events]
-    Signal --> Confirm[Harmonic + Volume Confluence]
-
-    Confirm --> Action[Setup Alignment Confirmed]
-    Action --> Monitor[Active Monitoring]
-    Monitor --> Exit[Exit: Target or Opposite Signal]
-
-    style Start fill:#1a1a2e,stroke:#0aa1d5,color:#fff
-    style HTF fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style Bias fill:#1a1a2e,stroke:#0aa1d5,color:#fff
-    style Green fill:#16a34a,stroke:#16a34a,color:#fff
-    style Red fill:#dc2626,stroke:#dc2626,color:#fff
-    style Wait fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style LookUp fill:#16a34a,stroke:#16a34a,color:#fff
-    style LookDown fill:#dc2626,stroke:#dc2626,color:#fff
-    style Levels fill:#8b5cf6,stroke:#8b5cf6,color:#fff
-    style Signal fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style Confirm fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style Action fill:#16a34a,stroke:#16a34a,color:#fff
-    style Monitor fill:#8b5cf6,stroke:#8b5cf6,color:#fff
-    style Exit fill:#1a1a2e,stroke:#0aa1d5,color:#fff
+    style A fill:#1a1a2e,stroke:#0aa1d5,color:#fff
+    style B fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style C fill:#1a1a2e,stroke:#0aa1d5,color:#fff
+    style D fill:#16a34a,stroke:#16a34a,color:#fff
+    style E fill:#dc2626,stroke:#dc2626,color:#fff
+    style F fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style G fill:#8b5cf6,stroke:#8b5cf6,color:#fff
+    style H fill:#0aa1d5,stroke:#0aa1d5,color:#fff
+    style I fill:#f59e0b,stroke:#f59e0b,color:#fff
+    style J fill:#16a34a,stroke:#16a34a,color:#fff
+    style K fill:#8b5cf6,stroke:#8b5cf6,color:#fff
+    style L fill:#1a1a2e,stroke:#0aa1d5,color:#fff
     </div>
+    <p style="margin-top: 0.75rem; font-size: 0.85rem;">
+      <strong>Flow:</strong> HTF Check = higher timeframe analysis | Regime = market direction | Janus = key levels | Pentarch = cycle events | Confirm = Harmonic + Volume
+    </p>
   </div>
 </div>
 
