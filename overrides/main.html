@@ -2,36 +2,11 @@
 
 {% block extrahead %}
   {{ super() }}
-  <!-- Lenis smooth scroll CSS -->
-  <link rel="stylesheet" href="{{ 'assets/lenis.css' | url }}">
+
 {% endblock %}
 
 {% block header %}
   {{ super() }}
   <div class="md-header__translate">
   </div>
-{% endblock %}
-
-{% block scripts %}
-  {{ super() }}
-
-  <!-- Lenis Smooth Scroll Library -->
-  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
-  <script src="{{ 'assets/lenis-init.js' | url }}"></script>
-
-  <!-- Enhancement scripts that use Lenis -->
-  <script src="{{ 'assets/wheel-diagnostic.js' | url }}"></script>
-  <script src="{{ 'assets/enhancements.js' | url }}"></script>
-  <script src="{{ 'assets/remove-tooltips.js' | url }}"></script>
-  <script src="{{ 'assets/bottom-sheet-nav.js' | url }}"></script>
-  <script src="{{ 'assets/sticky-toc-scroll.js' | url }}"></script>
-  <script src="{{ 'assets/components.js' | url }}"></script>
-
-  <!-- Signal Pilot Features -->
-  <script src="{{ 'js/feedback-system.js' | url }}"></script>
-  <script src="{{ 'js/keyboard-navigation.js' | url }}"></script>
-  <script src="{{ 'js/text-sizing.js' | url }}"></script>
-  <script src="{{ 'js/knowledge-checks.js' | url }}"></script>
-  <script src="{{ 'js/chatbot.js' | url }}"></script>
-  <script src="{{ 'assets/custom-bottom-sheet.js' | url }}?v7"></script>
 {% endblock %}
