@@ -19,3 +19,7 @@
 
 # Old configuration recipes directory path
 /ref-configuration-recipes/CONTENT.md    /ref-configuration-recipes/   301
+
+# Minimal Flow renamed to Volume Oracle
+/minimal-flow-v10/*                   /volume-oracle-v10/               301
+/minimal-flow-v10                     /volume-oracle-v10/               301
