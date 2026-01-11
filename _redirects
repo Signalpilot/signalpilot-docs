@@ -1,6 +1,37 @@
 # Signal Pilot Docs - URL Redirects
 # These redirects fix 404 errors from Google Search Console
 
+# =============================================================================
+# Language Path Redirects
+# =============================================================================
+# The docs site is English-only. These redirects handle language-prefixed URLs
+# that Google may try to access based on patterns from other signalpilot domains
+# (www, blog, education). Redirects strip the language prefix and serve the
+# English content at the canonical path.
+
+# Primary language redirect (English prefix)
+/en/*                             /:splat                           301
+
+# European languages
+/de/*                             /:splat                           301
+/es/*                             /:splat                           301
+/fr/*                             /:splat                           301
+/it/*                             /:splat                           301
+/nl/*                             /:splat                           301
+/pt/*                             /:splat                           301
+/hu/*                             /:splat                           301
+/ru/*                             /:splat                           301
+
+# Asian languages
+/ja/*                             /:splat                           301
+
+# Middle Eastern languages
+/ar/*                             /:splat                           301
+/tr/*                             /:splat                           301
+
+# =============================================================================
+# Legacy URL Redirects
+# =============================================================================
 # Old URL patterns that have been restructured or removed
 /start-quickstart/*               /start-quick/                     301
 /start-quickstart                 /start-quick/                     301
