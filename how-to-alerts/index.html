@@ -116,10 +116,6 @@
   <link rel="stylesheet" href="../css/feedback.css">
   <link rel="stylesheet" href="../css/visual-enhancements.css">
 
-  <!-- Mermaid.js for diagrams -->
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-  <script>
-    mermaid.initialize({
       startOnLoad: true,
       theme: 'dark',
       themeVariables: {
@@ -134,10 +130,6 @@
       },
       flowchart: {
         htmlLabels: true,
-        fontSize: 18
-      },
-      fontSize: 18
-    });
   </script>
   <!-- END SIGNAL PILOT ENHANCEMENTS - CSS -->
 
@@ -2024,36 +2016,9 @@ This alert setup guide is for <strong>educational purposes only</strong>. This i
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
   <div class="sp-callout__icon">📋</div>
   <div class="sp-callout__content">
-    <h4>Alert Setup Process (Step-by-Step)</h4>
-    <p style="margin-bottom: 1.5rem;">Follow this simplified flow to create your first alert:</p>
-    <div class="mermaid">
-flowchart TD
-    A[Chart Ready] --> B[Right-click]
-    B --> C[Add Alert]
-    C --> D{Condition}
-    D --> E[Any alert]
-    D --> F[Specific signal]
-    E --> G[Name it]
-    F --> G
-    G --> H[Notifications]
-    H --> I{CRITICAL}
-    I --> J[Bar Close]
-    J --> K((Done))
-
-    style A fill:#1a1a2e,stroke:#0aa1d5,color:#fff
-    style B fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style C fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style D fill:#8b5cf6,stroke:#8b5cf6,color:#fff
-    style E fill:#16a34a,stroke:#16a34a,color:#fff
-    style F fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style G fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style H fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style I fill:#dc2626,stroke:#dc2626,color:#fff
-    style J fill:#dc2626,stroke:#dc2626,color:#fff
-    style K fill:#16a34a,stroke:#16a34a,color:#fff
-    </div>
-    <p style="margin-top: 0.75rem; font-size: 0.85rem;">
-      <strong>Steps:</strong> Right-click indicator → Add Alert → Choose condition → Name → Set notifications → <span style="color:#dc2626;font-weight:bold;">Set "Once Per Bar Close"</span> → Create
+    <h4>Alert Setup Process</h4>
+    <p style="padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; font-family: monospace; text-align: center;">
+      Right-click → Add Alert → Choose condition → Name it → Set notifications → <span style="color:#dc2626;font-weight:bold;">"Once Per Bar Close"</span> → Create
     </p>
   </div>
 </div>
@@ -2296,40 +2261,16 @@ flowchart TD
 <h2 id="common-mistakes-fixes">🚨 Common Mistakes &amp; Fixes<a class="headerlink" href="#common-mistakes-fixes" title="Permanent link">&para;</a></h2>
 
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
-  <div class="sp-callout__title">🔍 Troubleshooting Flowchart</div>
-  <p style="margin-bottom: 1.5rem;">Follow this diagnostic flow if your alert isn't working:</p>
-  <div class="mermaid" role="img" aria-label="Alert troubleshooting decision tree">
-flowchart TD
-    A[NOT FIRING] --> B{In list?}
-    B -- No --> C[Recreate]
-    B -- Yes --> D{Active?}
-    D -- No --> E[Enable]
-    D -- Yes --> F{Bar Close?}
-    F -- No --> G[Fix setting]
-    F -- Yes --> H{Closed?}
-    H -- No --> I[Wait]
-    H -- Yes --> J{Notifs?}
-    J -- No --> K[Enable]
-    J -- Yes --> L[Support]
-
-    style A fill:#dc2626,stroke:#dc2626,color:#fff
-    style B fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style C fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style D fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style E fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style F fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style G fill:#dc2626,stroke:#dc2626,color:#fff
-    style H fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style I fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style J fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style K fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style L fill:#16a34a,stroke:#16a34a,color:#fff
-  </div>
-  <p style="margin-top: 0.75rem; font-size: 0.85rem;">
-    <strong>Legend:</strong> In list = visible in Alerts panel | Active = status shows active | Bar Close = "Once Per Bar Close" setting | Closed = bar has closed since signal | Notifs = phone notifications
-  </p>
-  <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.85;">
-    <strong>Pro Tip:</strong> Most alert issues are solved by checking "Once Per Bar Close" setting and waiting for bar to actually close. If troubleshooting doesn't help, see <a href="../about-support/">Support</a>.
+  <div class="sp-callout__title">🔍 Alert Not Firing? Check This:</div>
+  <ol style="margin: 1rem 0; padding-left: 1.5rem;">
+    <li><strong>Is it in the Alerts panel?</strong> → If no, recreate it</li>
+    <li><strong>Is it active (not paused)?</strong> → If no, enable it</li>
+    <li><strong>Is "Once Per Bar Close" set?</strong> → If no, fix this setting</li>
+    <li><strong>Has the bar actually closed?</strong> → If no, wait for close</li>
+    <li><strong>Are notifications enabled?</strong> → If no, enable in TradingView settings</li>
+  </ol>
+  <p style="font-size: 0.9rem; opacity: 0.85;">
+    <strong>Pro Tip:</strong> Most issues are solved by checking "Once Per Bar Close" and waiting for bar close. Still stuck? See <a href="../about-support/">Support</a>.
   </p>
 </div>
 

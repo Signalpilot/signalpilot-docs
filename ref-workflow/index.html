@@ -116,10 +116,6 @@
   <link rel="stylesheet" href="../css/feedback.css">
   <link rel="stylesheet" href="../css/visual-enhancements.css">
 
-  <!-- Mermaid.js for diagrams -->
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-  <script>
-    mermaid.initialize({
       startOnLoad: true,
       theme: 'dark',
       themeVariables: {
@@ -134,10 +130,6 @@
       },
       flowchart: {
         htmlLabels: true,
-        fontSize: 18
-      },
-      fontSize: 18
-    });
   </script>
   <!-- END SIGNAL PILOT ENHANCEMENTS - CSS -->
 
@@ -1783,37 +1775,12 @@
   <div class="sp-callout__icon">📊</div>
   <div class="sp-callout__content">
     <h4>Complete Trading Workflow</h4>
-    <p style="margin-bottom: 1rem;">From bias determination to position management—here's the complete flow:</p>
-    <div class="mermaid">
-flowchart TD
-    A[Start] --> B[HTF Check]
-    B --> C{Regime?}
-    C -- Bull --> D[Long bias]
-    C -- Bear --> E[Short bias]
-    C -- Neutral --> F[Wait]
-    D --> G[Janus levels]
-    E --> G
-    G --> H[Pentarch]
-    H --> I[Confirm]
-    I --> J[Execute]
-    J --> K[Monitor]
-    K --> L[Exit]
-
-    style A fill:#1a1a2e,stroke:#0aa1d5,color:#fff
-    style B fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style C fill:#1a1a2e,stroke:#0aa1d5,color:#fff
-    style D fill:#16a34a,stroke:#16a34a,color:#fff
-    style E fill:#dc2626,stroke:#dc2626,color:#fff
-    style F fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style G fill:#8b5cf6,stroke:#8b5cf6,color:#fff
-    style H fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style I fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style J fill:#16a34a,stroke:#16a34a,color:#fff
-    style K fill:#8b5cf6,stroke:#8b5cf6,color:#fff
-    style L fill:#1a1a2e,stroke:#0aa1d5,color:#fff
-    </div>
+    <p style="margin-bottom: 1rem;">From bias determination to position management:</p>
+    <p style="padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; text-align: center; font-family: monospace;">
+      HTF Check → Regime? → <span style="color: #16a34a;">Bull</span>/<span style="color: #dc2626;">Bear</span>/<span style="color: #f59e0b;">Wait</span> → Janus Levels → Pentarch Signal → Confirm → Execute → Monitor → Exit
+    </p>
     <p style="margin-top: 0.75rem; font-size: 0.85rem;">
-      <strong>Flow:</strong> HTF Check = higher timeframe analysis | Regime = market direction | Janus = key levels | Pentarch = cycle events | Confirm = Harmonic + Volume
+      <strong>Key:</strong> HTF = higher timeframe | Regime = market direction | Confirm = Harmonic + Volume validation
     </p>
   </div>
 </div>
