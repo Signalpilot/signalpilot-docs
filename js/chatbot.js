@@ -68,54 +68,71 @@ Choose which systems to display based on your needs.`,
 
 **Best for:** Level traders, mean reversion, support/resistance`,
 
-            augury: `**Augury Grid v1.0** is a multi-symbol screener that monitors up to 40 symbols simultaneously.
+            augury: `**Augury Grid v1.0** is a professional multi-timeframe signal scanner.
 
 📄 [Read Full Documentation](../augury-grid-v10/)
 
-**Features:**
-• Monitor 40 symbols at once
-• See which assets show signals
-• Customizable watchlists
-• Grid or list view
-• Alert on any symbol signal
+**How it works:**
+• **7 symbols × 3 timeframes = 21 simultaneous scans**
+• MACD detection + 15 confluence filters
+• Quality score 0-100 (displayed as stars: ⭐⭐⭐ Elite, ⭐⭐ Premium, ⭐ Standard)
 
-**Best for:** Multi-asset traders, finding setups across watchlists`,
+**What you see:**
+• Ranked signals with Bias (★★★/★★/★)
+• Entry, Stop Loss, Take Profit levels (ATR-based)
+• Signal age and P&L tracking
+• Position lifecycle management
 
-            oracle: `**Volume Oracle v1.0** (formerly Minimal Flow) provides 3 volume analysis systems.
+**Best for:** Multi-asset traders, finding ranked setups across symbols and timeframes`,
+
+            oracle: `**Volume Oracle v1.0** (formerly Minimal Flow) is a volume spike detector with built-in position management.
 
 📄 [Read Full Documentation](../volume-oracle-v10/)
 
-**Systems:**
-• **Volume Flow** - Buying/selling pressure bars
-• **Volume Zones** - High-volume areas
-• **Position Manager** - Track entries/exits
+**How it works:**
+• Detects volume spikes using Z-score method (statistically significant)
+• Confirms direction (volume + price must agree)
+• Checks market regime and higher timeframe alignment
 
-**Best for:** Volume traders, institutional flow analysis`,
+**Features:**
+• **BUY/SELL Signals** with Quality Scores (0-100, ⭐⭐⭐ Elite = 80+)
+• **Position Management** - Entry, stops, TP1, trailing stop, breakeven
+• **Strategy Modes** - Trend Following, Mean Reversion, or Hybrid
 
-            harmonic: `**Harmonic Oscillator v1.0** is a composite momentum indicator.
+**Best for:** Volume traders, systematic traders, risk management`,
+
+            harmonic: `**Harmonic Oscillator v1.0** is a 7-component momentum consensus system.
 
 📄 [Read Full Documentation](../harmonic-oscillator-v10/)
 
-**Components:**
-• NanoFlow momentum
-• KFlow composite
-• Enhanced RSI
+**The Seven Voters:**
+• RSI | Stochastic RSI | MACD | EMA Trend | Momentum | Volume | Divergence
+
+**Regime Classification:**
+• **TRENDING** (6-7 votes) - Maximum consensus, strong directional bias
+• **BIAS** (4-5 votes) - Moderate consensus, directional lean
+• **RANGING** (0-3 votes) - Low consensus, no clear direction
+
+**Features:**
+• Multi-component voting system
+• Regime-based market classification
 • Divergence detection
-• Overbought/oversold zones
 
-**Best for:** Momentum traders, divergence trading`,
+**Best for:** Momentum traders, regime analysis, consensus-based trading`,
 
-            plutus: `**Plutus Flow v1.0** is an advanced On-Balance Volume (OBV) indicator.
+            plutus: `**Plutus Flow v1.0** is a statistical OBV analysis indicator with trend ribbons and divergence detection.
 
 📄 [Read Full Documentation](../plutus-flow-v10/)
 
-**Layers:**
-• OBV calculation
-• Trend ribbons (3-EMA system)
-• Divergence detection
-• Volume accumulation tracking
+**What it shows:**
+• **OBV Line** - Cumulative volume showing accumulation/distribution
+• **Trend Ribbons** - Moving averages showing volume trend direction
+• **Statistical Bands (±2σ)** - Extreme zone detection (overbought/oversold)
+• **Divergence Detection** - Regular and Hidden divergences
 
-**Best for:** Volume analysts, flow confirmation`,
+**Adaptive Volume Filtering:** Caps outlier volume bars to preserve underlying trend signal
+
+**Best for:** Volume analysis, divergence trading, accumulation/distribution patterns`,
 
             quickStart: `**Quick Start (5 minutes):**
 
@@ -400,11 +417,11 @@ The SignalPilot Suite includes 7 professional indicators:
 • **Pentarch** - 5 reversal events (TD, IGN, WRN, CAP, BDN)
 • **Omnideck** - Everything indicator (10+ systems in one)
 • **Janus Atlas** - 50+ level types across timeframes
-• **Augury Grid** - Multi-symbol screener (up to 40 symbols)
+• **Augury Grid** - Multi-timeframe scanner (7 symbols × 3 timeframes)
 
 **Panel Indicators:**
-• **Volume Oracle** - Volume flow, zones, position manager
-• **Harmonic Oscillator** - Composite momentum (NanoFlow, KFlow, RSI)
+• **Volume Oracle** - 5-system volume intelligence (regime detection, signals, risk management)
+• **Harmonic Oscillator** - 7-component momentum consensus (regime classification)
 • **Plutus Flow** - Advanced OBV with divergences
 
 **Most popular combos:**
