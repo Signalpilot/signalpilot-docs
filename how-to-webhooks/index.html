@@ -116,10 +116,6 @@
   <link rel="stylesheet" href="../css/feedback.css">
   <link rel="stylesheet" href="../css/visual-enhancements.css">
 
-  <!-- Mermaid.js for diagrams -->
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-  <script>
-    mermaid.initialize({
       startOnLoad: true,
       theme: 'dark',
       themeVariables: {
@@ -134,10 +130,6 @@
       },
       flowchart: {
         htmlLabels: true,
-        fontSize: 18
-      },
-      fontSize: 18
-    });
   </script>
   <!-- END SIGNAL PILOT ENHANCEMENTS - CSS -->
 
@@ -1541,46 +1533,17 @@
 <h2 id="troubleshooting">🔍 Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
-  <div class="sp-callout__title">🔍 Webhook Troubleshooting Flowchart</div>
-  <p style="margin-bottom: 1.5rem;">Follow this diagnostic flow if webhooks aren't working:</p>
-  <div class="mermaid" role="img" aria-label="Webhook troubleshooting decision tree">
-flowchart TD
-    A[NOT SENDING] --> B{URL set?}
-    B -- No --> C[Add URL]
-    B -- Yes --> D{Alert fires?}
-    D -- No --> E[Fix alert]
-    D -- Yes --> F{Tested?}
-    F -- No --> G[Test first]
-    F -- Works --> H{Format OK?}
-    F -- Fails --> I[New URL]
-    H -- No --> J[Fix format]
-    H -- Yes --> K{Valid JSON?}
-    K -- No --> L[Fix JSON]
-    K -- Yes --> M{Pro plan?}
-    M -- No --> N[Upgrade]
-    M -- Yes --> O[Support]
-
-    style A fill:#dc2626,stroke:#dc2626,color:#fff
-    style B fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style C fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style D fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style E fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style F fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style G fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style H fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style I fill:#dc2626,stroke:#dc2626,color:#fff
-    style J fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style K fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style L fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style M fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style N fill:#dc2626,stroke:#dc2626,color:#fff
-    style O fill:#16a34a,stroke:#16a34a,color:#fff
-  </div>
-  <p style="margin-top: 0.75rem; font-size: 0.85rem;">
-    <strong>Legend:</strong> URL set = webhook URL in alert | Tested = tested with webhook.site | Format OK = correct Discord/Telegram format | Pro plan = TradingView Pro+ or Premium
-  </p>
-  <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.85;">
-    <strong>Quick Test:</strong> Always test your webhook with <a href="https://webhook.site" target="_blank" rel="noopener noreferrer">webhook.site</a> first. If it works there but not in Discord/Telegram, the issue is with your Discord/Telegram webhook setup.
+  <div class="sp-callout__title">🔍 Webhook Not Sending? Check This:</div>
+  <ol style="margin: 1rem 0; padding-left: 1.5rem;">
+    <li><strong>Is webhook URL set in alert?</strong> → If no, add the URL</li>
+    <li><strong>Does the alert fire?</strong> → If no, fix the alert first</li>
+    <li><strong>Tested with webhook.site?</strong> → If no, test there first. If fails, regenerate URL</li>
+    <li><strong>Is the format correct?</strong> → Check Discord/Telegram-specific formatting</li>
+    <li><strong>Is JSON valid?</strong> → Use a JSON validator to check syntax</li>
+    <li><strong>Do you have TradingView Pro+?</strong> → Free accounts cannot use webhooks</li>
+  </ol>
+  <p style="font-size: 0.9rem; opacity: 0.85;">
+    <strong>Quick Test:</strong> Always test with <a href="https://webhook.site" target="_blank" rel="noopener noreferrer">webhook.site</a> first. If it works there but not Discord/Telegram, the issue is your destination setup.
   </p>
 </div>
 

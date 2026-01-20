@@ -116,10 +116,6 @@
   <link rel="stylesheet" href="../css/feedback.css">
   <link rel="stylesheet" href="../css/visual-enhancements.css">
 
-  <!-- Mermaid.js for diagrams -->
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-  <script>
-    mermaid.initialize({
       startOnLoad: true,
       theme: 'dark',
       themeVariables: {
@@ -134,10 +130,6 @@
       },
       flowchart: {
         htmlLabels: true,
-        fontSize: 18
-      },
-      fontSize: 18
-    });
   </script>
   <!-- END SIGNAL PILOT ENHANCEMENTS - CSS -->
 
@@ -2127,32 +2119,9 @@
   <div class="sp-callout__content">
     <h4>Seven-Component Voting System</h4>
     <p style="margin-bottom: 1rem;">Seven independent components analyze market conditions and vote. Vote count displayed as "X/7" in status panel:</p>
-    <div class="mermaid">
-flowchart TD
-    A[Data] --> B[7 Voters]
-    B --> C[RSI]
-    B --> D[StochRSI]
-    B --> E[MACD]
-    B --> F[EMA]
-    B --> G[Momentum]
-    B --> H[Volume]
-    B --> I[Divergence]
-    C & D & E & F & G & H & I --> J[Counter]
-    J --> K{Regime}
-    K -- 5+ --> L[Trending]
-    K -- 3-4 --> M[Bias]
-    K -- 0-2 --> N[Ranging]
-
-    style A fill:#1a1a2e,stroke:#0aa1d5,color:#fff
-    style B fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style J fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style K fill:#1a1a2e,stroke:#0aa1d5,color:#fff
-    style L fill:#16a34a,stroke:#16a34a,color:#fff
-    style M fill:#22c55e,stroke:#22c55e,color:#fff
-    style N fill:#6b7280,stroke:#6b7280,color:#fff
-    </div>
-    <p style="margin-top: 0.75rem; font-size: 0.85rem;">
-      <strong>7 Voters:</strong> RSI | Stochastic RSI | MACD | EMA Trend | Momentum | Volume | Divergence → 5+ votes = Trending, 3-4 = Bias, 0-2 = Ranging
+    <p style="padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; text-align: center;">
+      <strong>7 Voters:</strong> RSI | StochRSI | MACD | EMA | Momentum | Volume | Divergence<br><br>
+      <span style="color: #16a34a;">5+ votes = Trending</span> · <span style="color: #22c55e;">3-4 votes = Bias</span> · <span style="color: #6b7280;">0-2 votes = Ranging</span>
     </p>
   </div>
 </div>
@@ -2598,32 +2567,12 @@ flowchart TD
 <h2 id="understanding-the-voting-system">📚 Understanding the Voting System <span class="skill-badge skill-badge--intermediate" data-tooltip="Understanding of multiple oscillators required">Intermediate</span><a class="headerlink" href="#understanding-the-voting-system" title="Permanent link">&para;</a></h2>
 
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
-  <div class="sp-callout__title">📊 Visual Guide: 7-Component Voting System</div>
-  <p style="margin-bottom: 1.5rem;">How 7 components vote together to determine regime and consensus:</p>
-  <div class="mermaid" role="img" aria-label="Harmonic Oscillator voting system flowchart">
-flowchart TD
-    A[Data] --> B[RSI]
-    A --> C[StochRSI]
-    A --> D[MACD]
-    A --> E[EMA]
-    A --> F[Momentum]
-    A --> G[Volume]
-    A --> H[Divergence]
-    B & C & D & E & F & G & H --> I{Count}
-    I --> J{Regime}
-    J -- 5+ --> K[Trending]
-    J -- 3-4 --> L[Bias]
-    J -- 0-2 --> M[Ranging]
-
-    style A fill:#1a1a2e,stroke:#0aa1d5,color:#fff
-    style I fill:#8b5cf6,stroke:#8b5cf6,color:#fff
-    style J fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style K fill:#16a34a,stroke:#16a34a,color:#fff
-    style L fill:#22c55e,stroke:#22c55e,color:#fff
-    style M fill:#6b7280,stroke:#6b7280,color:#fff
-  </div>
-  <p style="margin-top: 0.75rem; font-size: 0.85rem;">
-    <strong>Process:</strong> 7 oscillators vote → Count tallied → Regime classified (5+ = Trending, 3-4 = Bias, 0-2 = Ranging)
+  <div class="sp-callout__title">📊 7-Component Voting System</div>
+  <p style="padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; text-align: center; font-family: monospace;">
+    Data → [RSI, StochRSI, MACD, EMA, Momentum, Volume, Divergence] → Vote Count → Regime
+  </p>
+  <p style="margin-top: 0.75rem; font-size: 0.9rem; text-align: center;">
+    <span style="color: #16a34a;">■ 5+ votes = Trending</span> · <span style="color: #22c55e;">■ 3-4 votes = Bias</span> · <span style="color: #6b7280;">■ 0-2 votes = Ranging</span>
   </p>
 </div>
 

@@ -115,68 +115,6 @@
        ======================================== -->
   <link rel="stylesheet" href="../css/feedback.css">
   <link rel="stylesheet" href="../css/visual-enhancements.css">
-
-  <!-- Mermaid.js for diagrams -->
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: 'dark',
-      themeVariables: {
-        primaryColor: '#00bcd4',
-        primaryTextColor: '#fff',
-        primaryBorderColor: '#0097a7',
-        lineColor: '#00bcd4',
-        secondaryColor: '#ff5722',
-        tertiaryColor: '#4caf50',
-        fontSize: '25px',
-        fontFamily: 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
-      },
-      flowchart: {
-        htmlLabels: true,
-        fontSize: 25,
-        useMaxWidth: false
-      },
-      fontSize: 25
-    });
-  </script>
-
-  <!-- PAGE-SPECIFIC: Larger diagram text ONLY on this page -->
-  <style>
-    /* Force readable text in diagrams on THIS PAGE ONLY */
-    .mermaid text,
-    .mermaid .nodeLabel,
-    .mermaid .edgeLabel {
-      font-size: 25px !important;
-    }
-
-    .mermaid svg text {
-      font-size: 25px !important;
-    }
-
-    .mermaid svg .label text,
-    .mermaid svg .label foreignObject,
-    .mermaid svg g.label {
-      font-size: 25px !important;
-    }
-
-    .mermaid .node text,
-    .mermaid .nodes text,
-    .mermaid g.node text {
-      font-size: 25px !important;
-    }
-
-    .mermaid .edgeLabel text,
-    .mermaid g.edgeLabel text {
-      font-size: 25px !important;
-    }
-
-    /* Make diagram container wider to accommodate larger text */
-    .mermaid svg {
-      max-width: 100% !important;
-      height: auto !important;
-    }
-  </style>
   <!-- END SIGNAL PILOT ENHANCEMENTS - CSS -->
 
   <!-- Meta-Learning & Accessibility Enhancements -->
@@ -2294,54 +2232,15 @@
 
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
   <div class="sp-callout__title">🎯 Quick Selection Guide</div>
-  <div class="mermaid mermaid-comparison-small">
-flowchart TB
-    Start["📊 CHOOSE YOUR INDICATOR<br/>Based on Your Primary Goal"]
-
-    Start --> P1
-
-    P1["<b>1️⃣ PENTARCH v1.0</b><br/>Best for: Reversal Detection<br/>✅ Exhaustion Detection<br/>🔄 Cycle Phase Analysis<br/>📊 TD Sequential Counts"]
-
-    P1 --> P2
-
-    P2["<b>2️⃣ OMNIDECK v1.0</b><br/>Best for: Trend Following<br/>🌟 All-in-One Solution<br/>🎯 10 Integrated Systems<br/>📈 Complete Chart Display"]
-
-    P2 --> P3
-
-    P3["<b>3️⃣ VOLUME ORACLE v1.0</b><br/>Best for: Volume Analysis<br/>💰 Money Flow Analysis<br/>📍 Position Tracking<br/>📊 Volume Confirmation"]
-
-    P3 --> P4
-
-    P4["<b>4️⃣ JANUS ATLAS v1.0</b><br/>Best for: Levels & Structure<br/>🎯 60+ Level Types<br/>📐 Support/Resistance Zones<br/>🏗️ Market Structure"]
-
-    P4 --> P5
-
-    P5["<b>5️⃣ HARMONIC OSCILLATOR v1.0</b><br/>Best for: Momentum Consensus<br/>🗳️ 5-Component Voting<br/>📉 Divergence Detection<br/>✅ Consensus Signals"]
-
-    style Start fill:#37474f,stroke:#00bcd4,stroke-width:4px,color:#fff
-    style P1 fill:#9c27b0,stroke:#9c27b0,stroke-width:3px,color:#fff
-    style P2 fill:#ff5722,stroke:#ff5722,stroke-width:3px,color:#fff
-    style P3 fill:#4caf50,stroke:#4caf50,stroke-width:3px,color:#fff
-    style P4 fill:#2196f3,stroke:#2196f3,stroke-width:3px,color:#fff
-    style P5 fill:#ff9800,stroke:#ff9800,stroke-width:3px,color:#fff
-  </div>
-  <style>
-    /* Reduce font size for comparison diagram */
-    .mermaid-comparison-small svg {
-      font-size: 12px !important;
-    }
-    .mermaid-comparison-small .nodeLabel {
-      font-size: 0.85em !important;
-    }
-    @media (max-width: 768px) {
-      .mermaid-comparison-small svg {
-        font-size: 11px !important;
-      }
-    }
-  </style>
-  <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
-    <strong>How to read:</strong> This vertical guide shows all five indicators in order.
-    Pick the one that matches your primary trading goal.
+  <table style="width: 100%; font-size: 0.9rem; margin: 1rem 0; border-collapse: separate; border-spacing: 0 0.5rem;">
+    <tr><td style="padding: 0.75rem; background: rgba(156,39,176,0.2); border-radius: 4px;"><strong>Pentarch</strong></td><td style="padding: 0.75rem;">Reversal Detection — Exhaustion, Cycle Phases, TD Sequential</td></tr>
+    <tr><td style="padding: 0.75rem; background: rgba(255,87,34,0.2); border-radius: 4px;"><strong>OmniDeck</strong></td><td style="padding: 0.75rem;">Trend Following — All-in-One, 10 Integrated Systems</td></tr>
+    <tr><td style="padding: 0.75rem; background: rgba(76,175,80,0.2); border-radius: 4px;"><strong>Volume Oracle</strong></td><td style="padding: 0.75rem;">Volume Analysis — Money Flow, Position Tracking</td></tr>
+    <tr><td style="padding: 0.75rem; background: rgba(33,150,243,0.2); border-radius: 4px;"><strong>Janus Atlas</strong></td><td style="padding: 0.75rem;">Levels & Structure — 60+ Level Types, Support/Resistance</td></tr>
+    <tr><td style="padding: 0.75rem; background: rgba(255,152,0,0.2); border-radius: 4px;"><strong>Harmonic Oscillator</strong></td><td style="padding: 0.75rem;">Momentum Consensus — 7-Component Voting, Divergence</td></tr>
+  </table>
+  <p style="font-size: 0.9rem; opacity: 0.8;">
+    Pick the indicator that matches your primary trading goal.
   </p>
 </div>
 

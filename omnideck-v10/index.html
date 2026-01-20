@@ -116,10 +116,6 @@
   <link rel="stylesheet" href="../css/feedback.css">
   <link rel="stylesheet" href="../css/visual-enhancements.css">
 
-  <!-- Mermaid.js for diagrams -->
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-  <script>
-    mermaid.initialize({
       startOnLoad: true,
       theme: 'dark',
       themeVariables: {
@@ -134,10 +130,6 @@
       },
       flowchart: {
         htmlLabels: true,
-        fontSize: 18
-      },
-      fontSize: 18
-    });
   </script>
   <!-- END SIGNAL PILOT ENHANCEMENTS - CSS -->
 
@@ -2329,70 +2321,22 @@
   <div class="sp-callout__content">
     <h4>10 Systems in 4 Layers</h4>
     <p style="margin-bottom: 1rem;">OmniDeck integrates multiple detection systems into a unified framework:</p>
-    <div class="mermaid" role="img" aria-label="OmniDeck 4-layer architecture">
-flowchart TD
-    A[Data] --> B[L1: Trend]
-    B --> C[EMA]
-    B --> D[SuperTrend]
-    B --> E[BMSB]
-    C & D & E --> F[L2: Patterns]
-    F --> G[TD Seq]
-    F --> H[Squeeze]
-    F --> I[Candles]
-    G & H & I --> J[L3: Zones]
-    J --> K[Regime]
-    J --> L[S/D]
-    J --> M[Liquidity]
-    K & L & M --> N[L4: Meta]
-    N --> O[Output]
-
-    style A fill:#1a1a2e,stroke:#0aa1d5,color:#fff
-    style B fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style F fill:#16a34a,stroke:#16a34a,color:#fff
-    style J fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style N fill:#8b5cf6,stroke:#8b5cf6,color:#fff
-    style O fill:#dc2626,stroke:#dc2626,color:#fff
-    </div>
-    <p style="margin-top: 0.75rem; font-size: 0.85rem;">
-      <strong>Layers:</strong> L1 = Trend (EMA, SuperTrend, BMSB) | L2 = Patterns (TD Sequential, Squeeze, Candlesticks) | L3 = Zones (Regime, S/D, Liquidity) | L4 = Meta coordination
-    </p>
+    <table style="width: 100%; font-size: 0.9rem; margin: 1rem 0;">
+      <tr><td style="padding: 0.5rem; background: rgba(10,161,213,0.2); border-radius: 4px;"><strong>L1: Trend</strong></td><td style="padding: 0.5rem;">EMA Trio · SuperTrend · BMSB</td></tr>
+      <tr><td style="padding: 0.5rem; background: rgba(22,163,74,0.2); border-radius: 4px;"><strong>L2: Patterns</strong></td><td style="padding: 0.5rem;">TD Sequential · Squeeze · Candlesticks</td></tr>
+      <tr><td style="padding: 0.5rem; background: rgba(245,158,11,0.2); border-radius: 4px;"><strong>L3: Zones</strong></td><td style="padding: 0.5rem;">Regime Box · Supply/Demand · Liquidity</td></tr>
+      <tr><td style="padding: 0.5rem; background: rgba(139,92,246,0.2); border-radius: 4px;"><strong>L4: Meta</strong></td><td style="padding: 0.5rem;">Confluence Panel · Alert Coordination</td></tr>
+    </table>
   </div>
 </div>
 
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
   <div class="sp-callout__icon">📊</div>
   <div class="sp-callout__content">
-    <h4>The 10 Systems Visualized</h4>
-    <p style="margin-bottom: 1rem;">All 10 detection systems working together in one indicator:</p>
-    <div class="mermaid" role="img" aria-label="OmniDeck 10 systems">
-flowchart TD
-    A[Data] --> B[1.TD]
-    B --> C[2.Squeeze]
-    C --> D[3.Liquidity]
-    D --> E[4.EMA]
-    E --> F[5.SuperTrend]
-    F --> G[6.BMSB]
-    G --> H[7.Regime]
-    H --> I[8.S/D]
-    I --> J[9.Candles]
-    J --> K[10.Meta]
-    K --> L[Output]
-
-    style A fill:#1a1a2e,stroke:#0aa1d5,color:#fff
-    style B fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style C fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style D fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style E fill:#16a34a,stroke:#16a34a,color:#fff
-    style F fill:#16a34a,stroke:#16a34a,color:#fff
-    style G fill:#16a34a,stroke:#16a34a,color:#fff
-    style H fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style I fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style J fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style K fill:#8b5cf6,stroke:#8b5cf6,color:#fff
-    style L fill:#dc2626,stroke:#dc2626,color:#fff
-    </div>
-    <p style="margin-top: 0.75rem; font-size: 0.85rem;">
-      <strong>Systems 1-10:</strong> TD Sequential | Squeeze | Liquidity | EMA Trio | SuperTrend | BMSB | Regime Box | Supply/Demand | Candlesticks | Meta Tools
+    <h4>The 10 Systems</h4>
+    <p style="padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; font-family: monospace; text-align: center;">
+      1. TD Sequential → 2. Squeeze → 3. Liquidity → 4. EMA Trio → 5. SuperTrend →<br>
+      6. BMSB → 7. Regime Box → 8. Supply/Demand → 9. Candlesticks → 10. Meta Tools
     </p>
   </div>
 </div>

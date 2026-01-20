@@ -116,10 +116,6 @@
   <link rel="stylesheet" href="../css/feedback.css">
   <link rel="stylesheet" href="../css/visual-enhancements.css">
 
-  <!-- Mermaid.js for diagrams -->
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-  <script>
-    mermaid.initialize({
       startOnLoad: true,
       theme: 'dark',
       themeVariables: {
@@ -134,10 +130,6 @@
       },
       flowchart: {
         htmlLabels: true,
-        fontSize: 18
-      },
-      fontSize: 18
-    });
   </script>
   <!-- END SIGNAL PILOT ENHANCEMENTS - CSS -->
 
@@ -1919,27 +1911,8 @@
   <div class="sp-callout__content">
     <h4>Multi-Timeframe Scanning Architecture</h4>
     <p style="margin-bottom: 1rem;">Augury Grid scans 7 symbols across 3 timeframes = 21 simultaneous scans:</p>
-    <div class="mermaid">
-flowchart TD
-    A[Preset] --> B[Scanner]
-    B --> C[TF 1/2/3]
-    C --> D[MACD+Filters]
-    D --> E[Rank 0-100]
-    E --> F[Table]
-    F --> G[Signal]
-    F --> H[Blocked]
-
-    style A fill:#1a1a2e,stroke:#0aa1d5,color:#fff
-    style B fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style C fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style D fill:#8b5cf6,stroke:#8b5cf6,color:#fff
-    style E fill:#8b5cf6,stroke:#8b5cf6,color:#fff
-    style F fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style G fill:#16a34a,stroke:#16a34a,color:#fff
-    style H fill:#6b7280,stroke:#6b7280,color:#fff
-    </div>
-    <p style="margin-top: 0.75rem; font-size: 0.85rem; opacity: 0.8;">
-      <strong>Legend:</strong> Preset = 7 symbols selected | TF 1/2/3 = Three timeframes (e.g., 15m, 4H, Daily) | MACD+Filters = 15 confluence filters | Rank = Quality score | Signal = Active trade | Blocked = No valid signal
+    <p style="padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; text-align: center; font-family: monospace;">
+      Preset (7 symbols) → Scanner → 3 Timeframes → MACD + 15 Filters → Rank (0-100) → <span style="color: #16a34a;">Signal</span> or <span style="color: #6b7280;">Blocked</span>
     </p>
   </div>
 </div>

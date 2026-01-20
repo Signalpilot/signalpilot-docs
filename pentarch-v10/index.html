@@ -168,10 +168,6 @@
   <link rel="stylesheet" href="../css/feedback.css">
   <link rel="stylesheet" href="../css/visual-enhancements.css">
 
-  <!-- Mermaid.js for diagrams -->
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-  <script>
-    mermaid.initialize({
       startOnLoad: true,
       theme: 'dark',
       themeVariables: {
@@ -186,10 +182,6 @@
       },
       flowchart: {
         htmlLabels: true,
-        fontSize: 18
-      },
-      fontSize: 18
-    });
   </script>
   <!-- END SIGNAL PILOT ENHANCEMENTS - CSS -->
 
@@ -2272,24 +2264,13 @@
 <p><strong>Note on Colors:</strong> Pentarch includes multiple color palettes for the five event labels. Default palette: TD (purple), IGN (teal), WRN (yellow), CAP (orange), BDN (red). Colors can be customized in indicator settings.</p>
 
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
-  <div class="sp-callout__title">📊 Visual Guide: Signal Sequence Flow</div>
-  <p style="margin-bottom: 1.5rem;">How the 5 cycle events progress from early accumulation to late breakdown:</p>
-  <div class="mermaid" role="img" aria-label="Pentarch signal sequence flowchart" style="max-width: 300px; margin: 0 auto;">
-flowchart TD
-    A[TD] --> B[IGN]
-    B --> C[WRN]
-    C --> D[CAP]
-    D --> E[BDN]
-    E -.-> A
-
-    style A fill:#9333ea,stroke:#9333ea,color:#fff
-    style B fill:#14b8a6,stroke:#14b8a6,color:#fff
-    style C fill:#eab308,stroke:#eab308,color:#1a1a2e
-    style D fill:#f97316,stroke:#f97316,color:#fff
-    style E fill:#dc2626,stroke:#dc2626,color:#fff
-  </div>
+  <div class="sp-callout__title">📊 Signal Sequence Flow</div>
+  <p style="margin-bottom: 1rem;">How the 5 cycle events progress from early accumulation to late breakdown:</p>
+  <p style="font-size: 1.1rem; font-weight: 600; text-align: center; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; font-family: monospace;">
+    <span style="color: #9333ea;">TD</span> → <span style="color: #14b8a6;">IGN</span> → <span style="color: #eab308;">WRN</span> → <span style="color: #f97316;">CAP</span> → <span style="color: #dc2626;">BDN</span> <span style="opacity: 0.5;">↩</span>
+  </p>
   <p style="margin-top: 0.75rem; font-size: 0.85rem; opacity: 0.8;">
-    <strong>Legend:</strong> TD = Accumulation (early cycle) | IGN = Ignition (reversal starts) | WRN = Warning (late cycle) | CAP = Capitulation (exhaustion) | BDN = Breakdown (cycle complete) | Dotted = May restart cycle
+    <strong>Legend:</strong> TD = Accumulation | IGN = Ignition | WRN = Warning | CAP = Capitulation | BDN = Breakdown | ↩ = May restart cycle
   </p>
 </div>
 
@@ -2657,35 +2638,14 @@ CAP → BDN → TD (Climax to accumulation)
 <h2 id="four-layer-detection-system">🔄 Four-Layer Detection System <span class="skill-badge skill-badge--advanced" data-tooltip="Deep understanding of technical analysis required">Advanced</span><a class="headerlink" href="#four-layer-detection-system" title="Permanent link">&para;</a></h2>
 
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
-  <div class="sp-callout__title">📊 Visual Overview: Signal Detection Process</div>
-  <div class="mermaid" role="img" aria-label="Vertical flowchart showing Pentarch's four-layer signal detection" style="max-width: 350px; margin: 0 auto;">
-flowchart TD
-    A[Price] --> B[L1: Regime]
-    B --> C[L2: Pilot]
-    C --> D[L3: NanoFlow]
-    D --> E[L4: Confirm]
-    E --> F{All 4?}
-    F -- Yes --> G[Signal]
-    F -- No --> H[Wait]
-    G --> I[Alert]
-
-    style A fill:#1a1a2e,stroke:#0aa1d5,color:#fff
-    style B fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style C fill:#16a34a,stroke:#16a34a,color:#fff
-    style D fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style E fill:#8b5cf6,stroke:#8b5cf6,color:#fff
-    style F fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style G fill:#16a34a,stroke:#16a34a,color:#fff
-    style H fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style I fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-  </div>
-  <p style="margin-top: 0.75rem; font-size: 0.85rem; opacity: 0.8;">
-    <strong>Legend:</strong> L1 = Regime classification | L2 = Pilot line distance | L3 = NanoFlow momentum | L4 = Bar close confirmation | All 4 layers must confirm for signal to fire
+  <div class="sp-callout__title">📊 Signal Detection Process</div>
+  <p style="font-size: 1rem; text-align: center; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; font-family: monospace;">
+    Price → <strong>L1: Regime</strong> → <strong>L2: Pilot</strong> → <strong>L3: NanoFlow</strong> → <strong>L4: Confirm</strong> → <span style="color: #16a34a;">Signal</span> or <span style="color: #f59e0b;">Wait</span>
   </p>
   <p style="margin-top: 0.75rem; font-size: 0.9rem; padding: 0.75rem; background: rgba(0, 188, 212, 0.1); border-left: 3px solid #00bcd4; border-radius: 4px;">
     <strong>⚡ Layer Priority:</strong> Layer 1 (Regime Classification) is the <strong>most critical filter</strong>.
     If Layer 1 fails, the signal is rejected regardless of other layers.
-    Think of it as a sequential gating system: Regime → Distance → Momentum → Confirmation.
+    All 4 layers must confirm for signal to fire.
   </p>
 </div>
 

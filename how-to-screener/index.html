@@ -116,10 +116,6 @@
   <link rel="stylesheet" href="../css/feedback.css">
   <link rel="stylesheet" href="../css/visual-enhancements.css">
 
-  <!-- Mermaid.js for diagrams -->
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-  <script>
-    mermaid.initialize({
       startOnLoad: true,
       theme: 'dark',
       themeVariables: {
@@ -134,10 +130,6 @@
       },
       flowchart: {
         htmlLabels: true,
-        fontSize: 18
-      },
-      fontSize: 18
-    });
   </script>
   <!-- END SIGNAL PILOT ENHANCEMENTS - CSS -->
 
@@ -2201,39 +2193,15 @@ This guide shows how to use the Augury Grid screener tool for <strong>educationa
 <h2 id="common-mistakes-fixes">Common Mistakes &amp; Fixes<a class="headerlink" href="#common-mistakes-fixes" title="Permanent link">&para;</a></h2>
 
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
-  <div class="sp-callout__title">🔍 Screener Troubleshooting Flowchart</div>
-  <p style="margin-bottom: 1.5rem;">Follow this diagnostic flow if Augury Grid isn't working:</p>
-  <div class="mermaid" role="img" aria-label="Screener troubleshooting decision tree">
-flowchart TD
-    A[NOT WORKING] --> B{Visible?}
-    B -- No --> C[Add indicator]
-    B -- Yes --> D{Shows N/A?}
-    D -- Yes --> E[Fix ticker format]
-    D -- No --> F{Updating?}
-    F -- No --> G[Refresh]
-    F -- Yes --> H{All signals?}
-    H -- No --> I[Wait for close]
-    H -- Yes --> J{Scores OK?}
-    J -- No --> K[Reset settings]
-    J -- Yes --> L((Working))
-
-    style A fill:#dc2626,stroke:#dc2626,color:#fff
-    style B fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style C fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style D fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style E fill:#dc2626,stroke:#dc2626,color:#fff
-    style F fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style G fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style H fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style I fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style J fill:#0aa1d5,stroke:#0aa1d5,color:#fff
-    style K fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style L fill:#16a34a,stroke:#16a34a,color:#fff
-  </div>
-  <p style="margin-top: 0.75rem; font-size: 0.85rem;">
-    <strong>Legend:</strong> Visible = grid table shows | N/A = dashes or N/A in cells | Updating = prices change | Scores OK = quality 0-100 showing
-  </p>
-  <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.85;">
+  <div class="sp-callout__title">🔍 Screener Not Working? Check This:</div>
+  <ol style="margin: 1rem 0; padding-left: 1.5rem;">
+    <li><strong>Is the grid table visible?</strong> → If no, add the indicator to chart</li>
+    <li><strong>Shows N/A or dashes?</strong> → Fix ticker format (use EXCHANGE:SYMBOL)</li>
+    <li><strong>Not updating?</strong> → Refresh the page</li>
+    <li><strong>Missing signals?</strong> → Wait for bar close</li>
+    <li><strong>Scores not showing?</strong> → Reset to default settings</li>
+  </ol>
+  <p style="font-size: 0.9rem; opacity: 0.85;">
     <strong>Most Common Issue:</strong> Wrong ticker format. Always use EXCHANGE:SYMBOL format (e.g., BINANCE:BTCUSDT, not just BTCUSDT).
   </p>
 </div>
