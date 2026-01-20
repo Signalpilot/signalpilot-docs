@@ -151,10 +151,12 @@
           display: block !important;
         }
 
-        /* Force scrollwrap to have height */
+        /* Force scrollwrap to have height and scroll */
         .md-search__scrollwrap {
           height: auto !important;
           max-height: calc(100vh - 16rem) !important;
+          overflow-y: auto !important;
+          -webkit-overflow-scrolling: touch !important;
           display: block !important;
         }
 
