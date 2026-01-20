@@ -50,3 +50,10 @@ html {
 .md-sidebar--secondary .md-sidebar__scrollwrap {
   overflow-y: auto !important;
 }
+
+/* Prevent Lenis from affecting search scroll */
+.md-search__scrollwrap,
+.md-search-result,
+.md-search__output {
+  overflow-y: auto !important;
+}

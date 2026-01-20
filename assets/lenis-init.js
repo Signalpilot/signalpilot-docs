@@ -74,6 +74,14 @@
       }
     }
 
+    // Add data-lenis-prevent to elements that need native scroll
+    const preventElements = document.querySelectorAll(
+      '.md-sidebar__scrollwrap, .md-search__scrollwrap, .md-search-result, .md-search__output'
+    );
+    preventElements.forEach(el => {
+      el.setAttribute('data-lenis-prevent', '');
+    });
+
     console.log('Lenis smooth scroll initialized');
   }
 
