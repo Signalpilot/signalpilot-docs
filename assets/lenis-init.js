@@ -10,6 +10,10 @@
   let lenis = null;
 
   function initLenis() {
+    // TEMPORARILY DISABLED - testing if Lenis causes scroll issues
+    console.log('[Lenis] Disabled for testing');
+    return;
+
     // Destroy existing instance if present
     if (lenis) {
       lenis.destroy();
