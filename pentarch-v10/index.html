@@ -2274,21 +2274,19 @@
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
   <div class="sp-callout__title">📊 Visual Guide: Signal Sequence Flow</div>
   <p style="margin-bottom: 1.5rem;">How the 5 cycle events progress from early accumulation to late breakdown:</p>
-  <div class="mermaid" role="img" aria-label="Pentarch signal sequence flowchart">
+  <div class="mermaid" role="img" aria-label="Pentarch signal sequence flowchart" style="max-width: 300px; margin: 0 auto;">
 flowchart TD
-    A[Start] --> B[TD]
-    B --> C[IGN]
-    C --> D[WRN]
-    D --> E[CAP]
-    E --> F[BDN]
-    F -.-> A
+    A[TD] --> B[IGN]
+    B --> C[WRN]
+    C --> D[CAP]
+    D --> E[BDN]
+    E -.-> A
 
-    style A fill:#1a1a2e,stroke:#0aa1d5,color:#fff
-    style B fill:#3b82f6,stroke:#3b82f6,color:#fff
-    style C fill:#16a34a,stroke:#16a34a,color:#fff
-    style D fill:#eab308,stroke:#eab308,color:#1a1a2e
-    style E fill:#f59e0b,stroke:#f59e0b,color:#fff
-    style F fill:#dc2626,stroke:#dc2626,color:#fff
+    style A fill:#9333ea,stroke:#9333ea,color:#fff
+    style B fill:#14b8a6,stroke:#14b8a6,color:#fff
+    style C fill:#eab308,stroke:#eab308,color:#1a1a2e
+    style D fill:#f97316,stroke:#f97316,color:#fff
+    style E fill:#dc2626,stroke:#dc2626,color:#fff
   </div>
   <p style="margin-top: 0.75rem; font-size: 0.85rem; opacity: 0.8;">
     <strong>Legend:</strong> TD = Accumulation (early cycle) | IGN = Ignition (reversal starts) | WRN = Warning (late cycle) | CAP = Capitulation (exhaustion) | BDN = Breakdown (cycle complete) | Dotted = May restart cycle
@@ -2660,7 +2658,7 @@ CAP → BDN → TD (Climax to accumulation)
 
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
   <div class="sp-callout__title">📊 Visual Overview: Signal Detection Process</div>
-  <div class="mermaid" role="img" aria-label="Vertical flowchart showing Pentarch's four-layer signal detection">
+  <div class="mermaid" role="img" aria-label="Vertical flowchart showing Pentarch's four-layer signal detection" style="max-width: 350px; margin: 0 auto;">
 flowchart TD
     A[Price] --> B[L1: Regime]
     B --> C[L2: Pilot]
