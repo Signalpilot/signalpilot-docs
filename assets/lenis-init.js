@@ -75,11 +75,29 @@
     }
 
     // Add data-lenis-prevent to elements that need native scroll
-    const preventElements = document.querySelectorAll(
-      '.md-sidebar__scrollwrap, .md-search__scrollwrap, .md-search-result, .md-search__output'
-    );
-    preventElements.forEach(el => {
-      el.setAttribute('data-lenis-prevent', '');
+    function addLenisPrevent() {
+      const preventElements = document.querySelectorAll(
+        '.md-sidebar__scrollwrap, .md-search__scrollwrap, .md-search-result, .md-search__output, .md-search__inner'
+      );
+      preventElements.forEach(el => {
+        if (!el.hasAttribute('data-lenis-prevent')) {
+          el.setAttribute('data-lenis-prevent', '');
+        }
+      });
+    }
+    addLenisPrevent();
+
+    // Watch for search being opened and add data-lenis-prevent
+    const searchCheckbox = document.getElementById('__search');
+    if (searchCheckbox) {
+      searchCheckbox.addEventListener('change', () => {
+        setTimeout(addLenisPrevent, 50);
+      });
+    }
+
+    // Dispatch native scroll events so Material theme's TOC scroll spy works
+    lenis.on('scroll', () => {
+      window.dispatchEvent(new Event('scroll'));
     });
 
     console.log('Lenis smooth scroll initialized');
