@@ -317,23 +317,36 @@
 
 /* Mermaid Diagram Responsive Styles */
 .mermaid {
-  overflow-x: auto;
+  overflow: hidden;
   max-width: 100%;
   margin: 1rem auto;
+  text-align: center;
 }
 
-/* Constrain Mermaid SVG height to prevent absurdly tall diagrams */
+/* Constrain Mermaid SVG to prevent oversized diagrams */
 .mermaid svg {
-  max-height: 450px;
+  max-height: 350px;
+  max-width: 100% !important;
   width: auto !important;
   height: auto !important;
   display: block;
   margin: 0 auto;
 }
 
-/* Vertical flowcharts need width constraints too */
-.mermaid[style*="max-width"] svg {
-  max-height: none; /* Let inline styles take precedence */
+/* Mobile: Much smaller diagrams */
+@media screen and (max-width: 768px) {
+  .mermaid svg {
+    max-height: 220px;
+    max-width: 280px !important;
+  }
+}
+
+/* Extra small screens: Even smaller */
+@media screen and (max-width: 480px) {
+  .mermaid svg {
+    max-height: 180px;
+    max-width: 220px !important;
+  }
 }
 
 /* Extra Large Diagrams - For complex diagrams that need bigger text */
