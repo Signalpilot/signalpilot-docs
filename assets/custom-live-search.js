@@ -175,13 +175,18 @@
           z-index: 9998 !important;
         }
 
-        /* Force result items to be visible */
+        /* Force result items to be visible AND scrollable */
         .md-search-result {
           display: block !important;
+          max-height: calc(100vh - 12rem) !important;
+          overflow-y: auto !important;
+          -webkit-overflow-scrolling: touch !important;
         }
 
         .md-search-result__list {
           display: block !important;
+          max-height: none !important;
+          overflow: visible !important;
         }
 
         /* CRITICAL: Lower main content z-index when search is open */
