@@ -61,61 +61,63 @@ The SignalPilot Documentation chatbot has **comprehensive knowledge** of all doc
 ---
 
 ### **4. Augury Grid v1.0**
-**Keywords:** augury, grid, screener, multi-symbol, watchlist, 40 symbols
+**Keywords:** augury, grid, screener, multi-symbol, multi-timeframe, 7 symbols
 **Link:** `../augury-grid-v10/`
 **Covers:**
-- Multi-symbol monitoring (up to 40 symbols)
-- Live BUY/SELL signals
-- Quality scores, P&L tracking
-- Customizable watchlists
+- Multi-timeframe signal scanner (7 symbols × 3 timeframes = 21 scans)
+- MACD detection + 15 confluence filters
+- Quality scores 0-100 (⭐⭐⭐ Elite, ⭐⭐ Premium, ⭐ Standard)
+- Position lifecycle management (Entry, SL, TP, P&L tracking)
 
 **Try asking:**
 - "What is Augury Grid?"
-- "How does the screener work?"
-- "Tell me about the watchlist"
+- "How does the scanner work?"
+- "How many symbols can it monitor?"
 
 ---
 
 ### **5. Volume Oracle v1.0** (formerly Minimal Flow)
-**Keywords:** volume oracle, minimal flow, volume flow, volume zone
+**Keywords:** volume oracle, minimal flow, regime detection, volume intelligence
 **Link:** `../volume-oracle-v10/`
 **Covers:**
-- 3 volume analysis systems
-- Volume Flow (buying/selling pressure)
-- Volume Zones (high-volume areas)
-- Position Manager
+- 5-system volume intelligence
+- Regime Detection (accumulation/distribution phases)
+- Signal Generation with quality ratings (⭐⭐⭐)
+- Risk Management (Entry, SL, TP, position sizing)
+- HTF Confirmation and Strategy Modes
 
 **Try asking:**
 - "What is Volume Oracle?"
-- "Tell me about volume flow"
-- "How do volume zones work?"
+- "How does regime detection work?"
+- "Tell me about volume signals"
 
 ---
 
 ### **6. Harmonic Oscillator v1.0**
-**Keywords:** harmonic, oscillator, nanoflow, kflow, enhanced rsi
+**Keywords:** harmonic, oscillator, regime, voting, momentum, consensus
 **Link:** `../harmonic-oscillator-v10/`
 **Covers:**
-- Composite momentum indicator
-- NanoFlow, KFlow, Enhanced RSI
-- Divergence detection
-- Overbought/oversold zones
+- 7-component momentum consensus system
+- Voters: RSI, Stochastic RSI, MACD, EMA Trend, Momentum, Volume, Divergence
+- Regime Classification: TRENDING (6-7 votes), BIAS (4-5 votes), RANGING (0-3 votes)
+- Multi-component voting for market regime detection
 
 **Try asking:**
 - "What is Harmonic Oscillator?"
-- "Tell me about NanoFlow"
-- "How does divergence detection work?"
+- "How does the voting system work?"
+- "What are the regime classifications?"
 
 ---
 
 ### **7. Plutus Flow v1.0**
-**Keywords:** plutus, obv, on-balance volume, divergence
+**Keywords:** plutus, obv, on-balance volume, divergence, trend ribbons
 **Link:** `../plutus-flow-v10/`
 **Covers:**
-- Advanced OBV calculation
-- Trend ribbons (3-EMA system)
-- Divergence detection
-- Volume accumulation tracking
+- Statistical OBV analysis with adaptive volume filtering
+- OBV Line showing accumulation/distribution
+- Trend Ribbons (moving averages showing volume trend direction)
+- Statistical Bands (±2σ) for extreme zone detection
+- Divergence detection (Regular and Hidden)
 
 **Try asking:**
 - "What is Plutus Flow?"
