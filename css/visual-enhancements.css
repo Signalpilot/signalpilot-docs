@@ -319,7 +319,21 @@
 .mermaid {
   overflow-x: auto;
   max-width: 100%;
-  margin: 1rem 0;
+  margin: 1rem auto;
+}
+
+/* Constrain Mermaid SVG height to prevent absurdly tall diagrams */
+.mermaid svg {
+  max-height: 450px;
+  width: auto !important;
+  height: auto !important;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Vertical flowcharts need width constraints too */
+.mermaid[style*="max-width"] svg {
+  max-height: none; /* Let inline styles take precedence */
 }
 
 /* Extra Large Diagrams - For complex diagrams that need bigger text */
