@@ -1301,7 +1301,7 @@
         
   
   <span class="md-ellipsis">
-    Trading Workflow (Bias → Timing)
+    Analysis Workflow (Bias → Timing)
   </span>
   
 
@@ -3058,7 +3058,7 @@
 <h3 id="very-low-timeframes-5m-1m">Very Low Timeframes (5-Minute, 1-Minute)<a class="headerlink" href="#very-low-timeframes-5m-1m" title="Permanent link">&para;</a></h3>
 <p><strong>The Condition:</strong> Using Harmonic Oscillator on 1m or 5m charts, especially in crypto or highly volatile stocks.</p>
 <p><strong>What Happens:</strong> Regime changes happen every 2-4 bars. BIAS▲ → BIAS▼ → RANGING → BIAS▲ in a 20-minute span. Components react to microstructure noise (spoofing, HFT activity, bid-ask spreads) rather than meaningful momentum shifts. Impossible to trade effectively—by the time you enter on bullish regime, it's already flipping to RANGING.</p>
-<p><strong>Context:</strong> Components use various lookback periods for their calculations. On 1m charts, short lookback periods mean any price spike dramatically shifts component votes, causing premature regime changes. On 1H charts, the same lookback produces much more stable readings, less susceptible to single-candle noise. Recommended minimum timeframes: 15m for day traders, 1H for swing traders, 4H/Daily for position traders. Lower timeframes work technically but produce too many low-quality signals to be profitable.</p>
+<p><strong>Context:</strong> Components use various lookback periods for their calculations. On 1m charts, short lookback periods mean any price spike dramatically shifts component votes, causing premature regime changes. On 1H charts, the same lookback produces much more stable readings, less susceptible to single-candle noise. Recommended minimum timeframes: 15m for intraday analysis, 1H for multi-day analysis, 4H/Daily for position analysis. Lower timeframes work technically but produce too many low-quality signals to be profitable.</p>
 
 <h3 id="regime-transitions-trend-changes">Regime Transitions & Trend Changes<a class="headerlink" href="#regime-transitions-trend-changes" title="Permanent link">&para;</a></h3>
 <p><strong>The Condition:</strong> During the actual moment when trends reverse—transitioning from established bull trend to new bear trend (or vice versa).</p>
@@ -3117,7 +3117,7 @@
 <p><strong>A:</strong> The vote count shows how many of the seven components agree on direction. Higher counts (6/7, 7/7) indicate stronger consensus and typically correlate with TRENDING regimes. The actual regime classification is determined by the composite oscillator level, but vote count and regime are strongly correlated. High Consensus alerts use the vote count directly, with thresholds set by your Signal Mode (Conservative: 6+, Balanced: 5+, Aggressive: 4+).</p>
 
 <h3 id="q-what-does-signal-mode-change">Q: What does Signal Mode actually change?<a class="headerlink" href="#q-what-does-signal-mode-change" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> Signal Mode adjusts the threshold for High Consensus alerts. Conservative requires 6/7 votes (fewer, higher-quality alerts), Balanced requires 5/7 (default), and Aggressive requires 4/7 (more frequent alerts). Choose based on your trading style: Conservative for swing/position trading, Aggressive for scalping/day trading.</p>
+<p><strong>A:</strong> Signal Mode adjusts the threshold for High Consensus alerts. Conservative requires 6/7 votes (fewer, higher-quality alerts), Balanced requires 5/7 (default), and Aggressive requires 4/7 (more frequent alerts). Choose based on your analysis approach: Conservative for multi-day analysis, Aggressive for short-term/intraday analysis.</p>
 
 <h3 id="q-what-does-htf-filter-do">Q: What does the HTF Filter do?<a class="headerlink" href="#q-what-does-htf-filter-do" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> When enabled, divergence signals are filtered by the higher timeframe trend. Bullish divergences only appear when the HTF trend is bullish (price above 4H EMA50), and bearish divergences only appear when HTF is bearish. This helps you avoid counter-trend signals. Disable it if you want to catch potential trend reversals.</p>
@@ -3270,9 +3270,9 @@ Whipsaw Conditions:  Rapid BIAS▲ ↔ BIAS▼ alternation
 <ul>
 <li><a href="../janus-atlas-v10/">Janus Atlas v1.0</a> - Combine momentum signals with key structural levels</li>
 <li><a href="../omnideck-v10/">OmniDeck v1.0</a> - All-in-one indicator including Harmonic Oscillator</li>
-<li><a href="../ref-best-practices/">Best Practices & Pro Tips</a> - Advanced strategies for momentum trading</li>
+<li><a href="../ref-best-practices/">Best Practices & Pro Tips</a> - Advanced strategies for momentum analysis</li>
 <li><a href="../how-to-alerts/">How to Set Up Alerts</a> - Get notified on consensus signals</li>
-<li><a href="../ref-workflow/">Trading Workflow</a> - How momentum fits into complete trading system</li>
+<li><a href="../ref-workflow/">Analysis Workflow</a> - How momentum fits into complete analysis system</li>
 </ul>
 <hr />
 <p><strong>Disclaimer:</strong> This indicator combines seven voting components (RSI, Stochastic RSI, MACD, EMA Trend, Momentum, Volume, Divergence Zone) into a consensus-based signal system. All signals represent multi-component agreement detection based on momentum and volume analysis methodologies. Individual interpretation, application, and outcomes vary. Past signal patterns do not guarantee future results. This is not financial advice.</p>
