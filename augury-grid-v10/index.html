@@ -2297,7 +2297,7 @@
 
 <div class="admonition success">
 <p class="admonition-title">Why Confluence Matters</p>
-<p>Multi-timeframe confluence is a <strong>real trading edge</strong>. When a signal is confirmed across multiple timeframes:</p>
+<p>Multi-timeframe confluence is a <strong>real analytical edge</strong>. When an event is confirmed across multiple timeframes:</p>
 <ul>
 <li><strong>15m + 4H agree:</strong> Short-term momentum aligned with swing trend</li>
 <li><strong>15m + 4H + Daily agree:</strong> Rare but powerful — all timeframes aligned</li>
@@ -2412,7 +2412,7 @@
 
 <h3 id="signal-tuning-settings">🔧 Signal Tuning (Advanced)<a class="headerlink" href="#signal-tuning-settings" title="Permanent link">&para;</a></h3>
 
-<p>Fine-tune signal detection thresholds for different market conditions or trading styles:</p>
+<p>Fine-tune signal detection thresholds for different market conditions or analysis approaches:</p>
 
 <table>
 <thead>
@@ -2614,7 +2614,7 @@ Extension ATR: 2.5</code></pre>
 <tr><td>Emoji</td><td>🟢 or 🔴</td><td>Direction (green=bull, red=bear)</td></tr>
 <tr><td>Symbol</td><td>BTC</td><td>Which asset</td></tr>
 <tr><td>Timeframe</td><td>4H</td><td>Which timeframe triggered</td></tr>
-<tr><td>Direction</td><td>BULL</td><td>Long or short bias</td></tr>
+<tr><td>Direction</td><td>BULL</td><td>Bullish or bearish bias</td></tr>
 <tr><td>Entry</td><td>89,500</td><td>Entry price when signal fired</td></tr>
 <tr><td>SL</td><td>88,200</td><td>Stop loss level</td></tr>
 <tr><td>TP</td><td>91,100</td><td>Take profit target (TP1)</td></tr>
@@ -2666,7 +2666,7 @@ Extension ATR: 2.5</code></pre>
 
 <h3 id="webhook-integration">Webhook Integration<a class="headerlink" href="#webhook-integration" title="Permanent link">&para;</a></h3>
 
-<p>For automated trading or logging, use webhook alerts:</p>
+<p>For automated logging or external integration, use webhook alerts:</p>
 <ol>
 <li>Set up alert as above</li>
 <li>In Alert actions, enable <strong>Webhook URL</strong></li>
@@ -2690,9 +2690,9 @@ Extension ATR: 2.5</code></pre>
 
 <div class="admonition example">
 <p class="admonition-title">Alert Use Cases</p>
-<p><strong>Mobile trader:</strong> Enable push notifications. When alert fires, you see exactly what to trade without opening the app.</p>
-<p><strong>Webhook automation:</strong> Send alerts to Discord, Telegram, or trading bot. Parse the message to auto-log or auto-execute.</p>
-<p><strong>Email journal:</strong> Send alerts to email. Creates automatic trade journal of all signals with timestamps.</p>
+<p><strong>Mobile user:</strong> Enable push notifications. When alert fires, you see the complete setup details without opening the app.</p>
+<p><strong>Webhook automation:</strong> Send alerts to Discord, Telegram, or external services. Parse the message to auto-log setups for review.</p>
+<p><strong>Email journal:</strong> Send alerts to email. Creates automatic signal journal with timestamps for review.</p>
 </div>
 
 <hr />
@@ -2708,11 +2708,11 @@ Extension ATR: 2.5</code></pre>
 <ol>
 <li><strong>Grid shows ★★ or ★★★ signal</strong> → Symbol passes quality filter with high score</li>
 <li><strong>Click symbol to open individual chart</strong> → Review full chart with <a href="../pentarch-v10/">Pentarch</a> signals visible</li>
-<li><strong>Check <a href="../pentarch-v10/">Pentarch</a> signal type</strong> → TD/IGN (early cycle) = higher priority than BDN (late cycle)</li>
-<li><strong>Confirm signal freshness</strong> → Signal fired in last 1-3 bars = timely entry opportunity</li>
-<li><strong>Expected outcome:</strong> Grid filters across 21 scans → <a href="../pentarch-v10/">Pentarch</a> provides precise entry timing</li>
+<li><strong>Check <a href="../pentarch-v10/">Pentarch</a> event type</strong> → TD/IGN (early cycle) = higher priority than BDN (late cycle)</li>
+<li><strong>Confirm signal freshness</strong> → Signal fired in last 1-3 bars = timely setup opportunity</li>
+<li><strong>Expected outcome:</strong> Grid filters across 21 scans → <a href="../pentarch-v10/">Pentarch</a> provides precise timing context</li>
 </ol>
-<p><strong>Example:</strong> Augury Grid shows SOL ★★★ bullish on 4H → Open SOL chart → <a href="../pentarch-v10/">Pentarch</a> IGN signal just fired = high-probability long setup</p>
+<p><strong>Example:</strong> Augury Grid shows SOL ★★★ bullish on 4H → Open SOL chart → <a href="../pentarch-v10/">Pentarch</a> IGN event just fired = high-confluence bullish setup</p>
 
 <h3 id="augury-grid-janus-atlas">Augury Grid → <a href="../janus-atlas-v10/">Janus Atlas</a> (Level Confluence)<a class="headerlink" href="#augury-grid-janus-atlas" title="Permanent link">&para;</a></h3>
 <p><strong>Workflow:</strong></p>
@@ -2723,7 +2723,7 @@ Extension ATR: 2.5</code></pre>
 <li><strong>Grid quality + level confluence = highest probability</strong> → Multi-system + structural alignment</li>
 <li><strong>Expected outcome:</strong> Grid identifies momentum + levels provide structure = complete setup analysis</li>
 </ol>
-<p><strong>Example:</strong> Grid shows AAPL ★★ bearish on D → Open chart → Price at Daily High + Weekly resistance = strong short confluence</p>
+<p><strong>Example:</strong> Grid shows AAPL ★★ bearish on D → Open chart → Price at Daily High + Weekly resistance = strong bearish confluence</p>
 
 <h3 id="augury-grid-volume-oracle">Augury Grid → <a href="../volume-oracle-v10/">Volume Oracle</a> (Regime Confirmation)<a class="headerlink" href="#augury-grid-volume-oracle" title="Permanent link">&para;</a></h3>
 <p><strong>Workflow:</strong></p>
@@ -2745,11 +2745,11 @@ Extension ATR: 2.5</code></pre>
 <li><strong><a href="../omnideck-v10/">OmniDeck</a> conflicts with grid</strong> → Grid bullish + <a href="../omnideck-v10/">OmniDeck</a> bearish regime = counter-trend, skip or reduce size</li>
 <li><strong>Expected outcome:</strong> <a href="../omnideck-v10/">OmniDeck</a> provides broader trend context for grid-filtered opportunities</li>
 </ol>
-<p><strong>Example:</strong> Grid shows QQQ ★★ bullish on 15m → <a href="../omnideck-v10/">OmniDeck</a> shows bullish regime box = aligned long setup</p>
+<p><strong>Example:</strong> Grid shows QQQ ★★ bullish on 15m → <a href="../omnideck-v10/">OmniDeck</a> shows bullish regime box = aligned bullish setup</p>
 
 <div class="admonition tip">
 <p class="admonition-title">Pro Tip: The Multi-Timeframe Filter Workflow</p>
-<p>Use Augury Grid as your first filter: <strong>Grid (★★+ quality) → <a href="../pentarch-v10/">Pentarch</a> (timing) → <a href="../janus-atlas-v10/">Janus Atlas</a> (levels) → <a href="../volume-oracle-v10/">Volume Oracle</a> (regime confirmation)</strong>. The grid scans 21 symbol/timeframe combinations at once, ranking by quality score. Focus on ★★★ signals first, then confirm with aligned Volume Oracle regime before entering.</p>
+<p>Use Augury Grid as your first filter: <strong>Grid (★★+ quality) → <a href="../pentarch-v10/">Pentarch</a> (timing) → <a href="../janus-atlas-v10/">Janus Atlas</a> (levels) → <a href="../volume-oracle-v10/">Volume Oracle</a> (regime confirmation)</strong>. The grid scans 21 symbol/timeframe combinations at once, ranking by quality score. Focus on ★★★ signals first, then confirm with aligned Volume Oracle regime before acting.</p>
 <p><strong>See also:</strong> <a href="../ref-workflow/">Analysis Workflow Guide</a> for detailed multi-indicator approaches.</p>
 </div>
 
@@ -2770,29 +2770,29 @@ Extension ATR: 2.5</code></pre>
 <li>Use all 7 slots only when comfortable monitoring 21 scans (7×3 timeframes)</li>
 <li>Quality over quantity: fewer well-analyzed symbols is better</li>
 </ul>
-<p><strong>Remember:</strong> Successful traders focus deeply on a small watchlist. Master the 7-symbol scanner before expanding.</p>
+<p><strong>Remember:</strong> Successful users focus deeply on a small watchlist. Master the 7-symbol scanner before expanding.</p>
 
-<h3 id="mistake-2-trading-every-signal">Mistake #2: Trading Every Signal<a class="headerlink" href="#mistake-2-trading-every-signal" title="Permanent link">&para;</a></h3>
-<p><strong>The Problem:</strong> Not all quality ratings are equal. Trading ★ signals reduces win rate. Only the highest-quality setups (★★★) deserve immediate action.</p>
+<h3 id="mistake-2-trading-every-signal">Mistake #2: Acting on Every Signal<a class="headerlink" href="#mistake-2-trading-every-signal" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> Not all quality ratings are equal. Acting on ★ signals reduces effectiveness. Only the highest-quality setups (★★★) deserve immediate attention.</p>
 <p><strong>The Fix:</strong></p>
 <ul>
 <li><strong>★★★ (70-100):</strong> Premium quality → highest priority, strongest setups</li>
 <li><strong>★★ (40-69):</strong> Good quality → worth investigating with additional confirmation</li>
 <li><strong>★ (0-39):</strong> Low quality → skip these signals, wait for better opportunities</li>
-<li><strong>Blocked (⏳/💀):</strong> Filter failed or signal died → never trade these</li>
+<li><strong>Blocked (⏳/💀):</strong> Filter failed or signal died → skip these entirely</li>
 </ul>
 <p><strong>Remember:</strong> Focus on ★★★ signals. Let ★ signals pass—patience improves results.</p>
 
 <h3 id="mistake-3-skipping-individual-chart-analysis">Mistake #3: Skipping Individual Chart Analysis<a class="headerlink" href="#mistake-3-skipping-individual-chart-analysis" title="Permanent link">&para;</a></h3>
-<p><strong>The Problem:</strong> The grid is a filter, not a final trading decision. Entering trades based solely on grid confluence without reviewing the actual chart leads to poor entries and missed context.</p>
+<p><strong>The Problem:</strong> The grid is a filter, not a final decision tool. Acting based solely on grid confluence without reviewing the actual chart leads to poor analysis and missed context.</p>
 <p><strong>The Fix:</strong></p>
 <ul>
 <li>Grid highlights opportunity → ALWAYS open individual chart for detailed analysis</li>
 <li>Check price action: Is price at support/resistance? Clean breakout or choppy range?</li>
-<li>Review Pentarch signals: When did signal fire? Which signal type (IGN vs BDN)?</li>
-<li>Confirm with Janus Atlas levels and Volume Oracle before entering</li>
+<li>Review Pentarch events: When did the event fire? Which event type (IGN vs BDN)?</li>
+<li>Confirm with Janus Atlas levels and Volume Oracle before acting</li>
 </ul>
-<p><strong>Remember:</strong> Grid = screener, not strategy. Use it to filter your watchlist, then perform full chart analysis before trading.</p>
+<p><strong>Remember:</strong> Grid = screener, not strategy. Use it to filter your watchlist, then perform full chart analysis before acting.</p>
 
 <h3 id="mistake-4-ignoring-quality-ratings">Mistake #4: Ignoring the Quality Rating<a class="headerlink" href="#mistake-4-ignoring-quality-ratings" title="Permanent link">&para;</a></h3>
 <p><strong>The Problem:</strong> Treating all bullish or bearish signals equally, regardless of quality score. A ★ bullish signal is far weaker than a ★★★ bullish signal.</p>
@@ -2805,16 +2805,16 @@ Extension ATR: 2.5</code></pre>
 </ul>
 <p><strong>Remember:</strong> The stars matter more than the direction. A ★★★ signal deserves immediate attention; a ★ signal can wait.</p>
 
-<h3 id="mistake-5-wrong-timeframe-for-trading-style">Mistake #5: Using Wrong Timeframe for Your Trading Style<a class="headerlink" href="#mistake-5-wrong-timeframe-for-trading-style" title="Permanent link">&para;</a></h3>
-<p><strong>The Problem:</strong> Day traders using Daily charts on the grid, or swing traders using 5-minute charts. Timeframe mismatch leads to irrelevant signals and poor results.</p>
+<h3 id="mistake-5-wrong-timeframe-for-trading-style">Mistake #5: Using Wrong Timeframe for Your Analysis Style<a class="headerlink" href="#mistake-5-wrong-timeframe-for-trading-style" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> Intraday users applying Daily charts on the grid, or multi-day users applying 5-minute charts. Timeframe mismatch leads to irrelevant signals and poor results.</p>
 <p><strong>The Fix:</strong></p>
 <ul>
-<li><strong>Day traders:</strong> Use 5-minute, 15-minute, or 1-hour charts for intraday opportunities</li>
-<li><strong>Swing traders:</strong> Use 4-hour, Daily, or Weekly charts for multi-day holds</li>
-<li><strong>Position traders:</strong> Use Daily or Weekly charts for long-term trends</li>
+<li><strong>Intraday analysis:</strong> Use 5-minute, 15-minute, or 1-hour charts for same-day opportunities</li>
+<li><strong>Multi-day analysis:</strong> Use 4-hour, Daily, or Weekly charts for multi-day holds</li>
+<li><strong>Position analysis:</strong> Use Daily or Weekly charts for longer-term trends</li>
 <li>Remember: Grid uses the timeframe of your active chart</li>
 </ul>
-<p><strong>Remember:</strong> Match the grid's chart timeframe to your trading style. Day traders need intraday timeframes; swing traders need higher timeframes.</p>
+<p><strong>Remember:</strong> Match the grid's chart timeframe to your analysis approach. Intraday users need intraday timeframes; multi-day users need higher timeframes.</p>
 
 <h3 id="mistake-6-not-updating-watchlist">Mistake #6: Never Updating Your Watchlist<a class="headerlink" href="#mistake-6-not-updating-watchlist" title="Permanent link">&para;</a></h3>
 <p><strong>The Problem:</strong> Markets change. Symbols that were trending 2 months ago may now be dead/choppy. Static watchlists become less effective over time.</p>
@@ -2848,7 +2848,7 @@ Extension ATR: 2.5</code></pre>
     </h2>
 
     <p style="color: rgba(255,255,255,0.95); font-size: 18px; max-width: 700px; margin: 0 auto 28px auto; line-height: 1.6;">
-        <strong>Advanced Learning Guide</strong> reveals: Why SPY+QQQ+IWM+DIA isn't diversification (it's 4x leverage on one trade), how correlation kills accounts, the 15-20 symbol sweet spot, and why chasing sector rotation FOMO destroys multi-asset traders
+        <strong>Advanced Learning Guide</strong> reveals: Why SPY+QQQ+IWM+DIA isn't diversification (it's 4x leverage on one outcome), how correlation kills accounts, the 15-20 symbol sweet spot, and why chasing sector rotation FOMO undermines multi-asset portfolios
     </p>
 
     <a href="learning.html" style="
@@ -2885,9 +2885,9 @@ Extension ATR: 2.5</code></pre>
 <p><strong>What Happens:</strong> Grid shows mostly ★ and ★★ quality ratings across all symbols. Few ★★★ signals appear. Symbols that do signal often flip from Bullish to Neutral to Bearish within 5-10 bars. P&L percentages hover around ±1-2%, showing no sustained follow-through. Win rate drops because even "good" setups lack the broader market momentum to follow through.</p>
 <p><strong>Context:</strong> Augury Grid analyzes individual symbol momentum via MACD and confluence factors. But individual symbols are influenced by overall market sentiment. During broad market choppy periods (VIX elevated but direction unclear, major indices range-bound), even stocks with strong individual confluence struggle to trend. This isn't Augury failing—it's accurately showing that momentum exists but lacks supporting market context. Best practice: Check SPY/QQQ regime first using <a href="../pentarch-v10/">Pentarch</a> or <a href="../omnideck-v10/">OmniDeck</a>. If broader market shows neutral/choppy regime, treat Augury signals with higher skepticism. Trade smaller size or wait for market clarity. When overall market is trending (clear bull or bear regime), Augury signals become significantly more reliable.</p>
 
-<h3 id="low-quality-signals">Trading Low Quality Signals (★)<a class="headerlink" href="#low-quality-signals" title="Permanent link">&para;</a></h3>
+<h3 id="low-quality-signals">Acting on Low Quality Signals (★)<a class="headerlink" href="#low-quality-signals" title="Permanent link">&para;</a></h3>
 <p><strong>The Condition:</strong> Focusing on ★ (0-39) quality signals instead of waiting for ★★★ (70-100) setups.</p>
-<p><strong>What Happens:</strong> Lower win rate, more stopped-out trades (💀 SL Hit), and reduced confidence in the system.</p>
+<p><strong>What Happens:</strong> Lower success rate, more failed setups (💀 SL Hit), and reduced confidence in the system.</p>
 <p><strong>Context:</strong> Quality scores measure how many supporting factors align with the signal. Higher scores (★★★) indicate: MACD confirms, trend filter passes, no blockers active, and momentum is strong. Lower scores (★) mean several factors are weak or conflicting. A ★ signal might have the bias correct, but lacks the supporting confirmation to sustain the move. This doesn't mean ★ signals always fail, but observation shows fewer ★ signals produce sustained follow-through compared to ★★★ signals. Best practice: If capital is limited, focus exclusively on ★★★ signals. If monitoring capacity is limited, set alerts only for ★★/★★★ quality. Think of ★ signals as "educational"—they show potential, but shouldn't compete for attention with ★★★ opportunities.</p>
 
 <h3 id="whipsaw-transition-periods">Whipsaw & Transition Periods<a class="headerlink" href="#whipsaw-transition-periods" title="Permanent link">&para;</a></h3>
@@ -2895,14 +2895,14 @@ Extension ATR: 2.5</code></pre>
 <p><strong>What Happens:</strong> Grid shows signal instability: Symbol fires Bullish ★★★ → 3 bars later shows 💀 SL Hit → 5 bars later fires Bearish ★★ → then shows ⏳ Trend blocker. Quality ratings fluctuate rapidly. P&L shows +3%, -2%, +1%, -1% oscillating pattern. This happens because MACD is centered around zero crossover, and during transitions, the histogram oscillates around the zero line without committing to either direction.</p>
 <p><strong>Context:</strong> MACD-based systems (like Augury Grid) excel at identifying momentum within established trends. They struggle during regime transitions when momentum itself is unstable. During these periods, the histogram crosses zero multiple times in both directions as the market "decides" which way to trend. These whipsaws are inherent to zero-crossing methodologies. Best practice: When you see a symbol flip signals 3+ times within 20 bars, that symbol is in transition—remove it from active consideration temporarily. Revisit it after 10-15 bars to see if regime has stabilized. Or combine with <a href="../pentarch-v10/">Pentarch</a>: only trade Augury signals when Pentarch regime bars show clear color (green or red, not gray) for the same symbol. This filters out symbols in transition.</p>
 
-<h3 id="mismatched-timeframe-strategy">Mismatched Timeframe & Trading Strategy<a class="headerlink" href="#mismatched-timeframe-strategy" title="Permanent link">&para;</a></h3>
-<p><strong>The Condition:</strong> Using Augury Grid on a timeframe that doesn't match your trading style or hold duration.</p>
+<h3 id="mismatched-timeframe-strategy">Mismatched Timeframe & Analysis Approach<a class="headerlink" href="#mismatched-timeframe-strategy" title="Permanent link">&para;</a></h3>
+<p><strong>The Condition:</strong> Using Augury Grid on a timeframe that doesn't match your analysis approach or hold duration.</p>
 <p><strong>What Happens:</strong></p>
 <ul>
-<li><strong>Day trader using Daily chart grid:</strong> Signals fire once every few days. By the time signal appears, much of the intraday move has already occurred. Miss 80% of opportunities waiting for daily signals.</li>
-<li><strong>Swing trader using 5m chart grid:</strong> Signals fire constantly (10+ signals per hour across watchlist). Impossible to act on all of them. Most reverse before you can analyze and enter. Signal overload leads to paralysis or random selection.</li>
+<li><strong>Intraday user with Daily chart grid:</strong> Signals fire once every few days. By the time signal appears, much of the intraday move has already occurred. Miss 80% of opportunities waiting for daily signals.</li>
+<li><strong>Multi-day user with 5m chart grid:</strong> Signals fire constantly (10+ signals per hour across watchlist). Impossible to act on all of them. Most reverse before analysis completes. Signal overload leads to paralysis or random selection.</li>
 </ul>
-<p><strong>Context:</strong> Augury Grid's entire watchlist uses the timeframe of your active chart. This is by design—it allows rapid scanning of multiple symbols on a consistent timeframe. But it requires matching chart timeframe to trading style. Scalpers (hold minutes-hours) → 5m-15m charts. Day traders (hold hours-day) → 15m-1H charts. Swing traders (hold days-weeks) → 4H-Daily charts. Position traders (hold weeks-months) → Daily-Weekly charts. Mismatch creates either: (1) Too few signals (missing opportunities), or (2) Too many signals (overwhelming noise). Best practice: If you're a day trader, don't use Augury Grid on a Daily chart. If you're a swing trader, don't use it on 15m charts. Match the grid's timeframe to your actual hold period.</p>
+<p><strong>Context:</strong> Augury Grid's entire watchlist uses the timeframe of your active chart. This is by design—it allows rapid scanning of multiple symbols on a consistent timeframe. But it requires matching chart timeframe to analysis approach. Short-term users (hold minutes-hours) → 5m-15m charts. Intraday users (hold hours-day) → 15m-1H charts. Multi-day users (hold days-weeks) → 4H-Daily charts. Position users (hold weeks-months) → Daily-Weekly charts. Mismatch creates either: (1) Too few signals (missing opportunities), or (2) Too many signals (overwhelming noise). Best practice: If you focus on intraday analysis, don't use Augury Grid on a Daily chart. If you focus on multi-day analysis, don't use it on 15m charts. Match the grid's timeframe to your actual hold period.</p>
 
 <h3 id="highly-correlated-watchlist">Highly Correlated Watchlist (All Symbols Move Together)<a class="headerlink" href="#highly-correlated-watchlist" title="Permanent link">&para;</a></h3>
 <p><strong>The Condition:</strong> Watchlist contains symbols that are highly correlated—they all move together (e.g., all tech stocks, all crypto, all oil stocks).</p>
@@ -2915,9 +2915,9 @@ Extension ATR: 2.5</code></pre>
 <p><strong>Context:</strong> Augury Grid analyzes momentum mathematically (MACD calculations). It doesn't "know" about liquidity, bid-ask spreads, or average daily volume. A $0.50 penny stock can show ★★★ quality, but if daily volume is only 10,000 shares, entering a 5,000-share position moves the market against you. MACD-based signals work best on liquid instruments where your order doesn't materially impact price. Best practice: Pre-filter your watchlist by liquidity before adding to Augury Grid. For stocks: minimum $5M average daily volume. For crypto: minimum $50M daily volume (on the specific exchange you trade). For futures: use front-month contracts with high open interest. Grid shows technical signals; you must ensure those signals are tradeable with acceptable slippage.</p>
 
 <h3 id="ignoring-individual-chart-context">Using Grid Signals Without Individual Chart Confirmation<a class="headerlink" href="#ignoring-individual-chart-context" title="Permanent link">&para;</a></h3>
-<p><strong>The Condition:</strong> Trading directly from grid signals without pulling up individual charts to verify setup quality.</p>
-<p><strong>What Happens:</strong> Grid shows AAPL Bullish ★★★. You enter immediately. Pull up AAPL chart afterward and realize: it's at major resistance (<a href="../janus-atlas-v10/">Janus Atlas</a> Weekly High), volume is below average (<a href="../volume-oracle-v10/">Volume Oracle</a> shows this), and it just had 3 failed bullish attempts at this level. The ★★★ signal is technically valid, but context makes it low-probability. Trade fails.</p>
-<p><strong>Context:</strong> Augury Grid is a screener—its job is to surface candidates worth investigating, not to provide complete trade analysis. The grid analyzes signals across 7 symbols × 3 timeframes efficiently. But it doesn't check: support/resistance context, volume quality, recent failed attempts, news events, earnings dates, sector rotation. These require individual chart analysis. Best practice workflow: (1) Grid identifies candidates (★★★ signals), (2) Pull up individual chart for top candidates, (3) Check <a href="../janus-atlas-v10/">Janus Atlas</a> levels (are we at major support/resistance?), (4) Check <a href="../volume-oracle-v10/">Volume Oracle</a> (is volume supporting this move?), (5) Check <a href="../pentarch-v10/">Pentarch</a> (does regime support this direction?), (6) THEN decide to enter. Grid surfaces 21 scans. You narrow to 1-2 actual trades. That's the workflow.</p>
+<p><strong>The Condition:</strong> Acting directly from grid signals without pulling up individual charts to verify setup quality.</p>
+<p><strong>What Happens:</strong> Grid shows AAPL Bullish ★★★. You act immediately. Pull up AAPL chart afterward and realize: it's at major resistance (<a href="../janus-atlas-v10/">Janus Atlas</a> Weekly High), volume is below average (<a href="../volume-oracle-v10/">Volume Oracle</a> shows this), and it just had 3 failed bullish attempts at this level. The ★★★ signal is technically valid, but context makes it low-probability. Setup fails.</p>
+<p><strong>Context:</strong> Augury Grid is a screener—its job is to surface candidates worth investigating, not to provide complete analysis. The grid analyzes signals across 7 symbols × 3 timeframes efficiently. But it doesn't check: support/resistance context, volume quality, recent failed attempts, news events, earnings dates, sector rotation. These require individual chart analysis. Best practice workflow: (1) Grid identifies candidates (★★★ signals), (2) Pull up individual chart for top candidates, (3) Check <a href="../janus-atlas-v10/">Janus Atlas</a> levels (are we at major support/resistance?), (4) Check <a href="../volume-oracle-v10/">Volume Oracle</a> (is volume supporting this move?), (5) Check <a href="../pentarch-v10/">Pentarch</a> (does regime support this direction?), (6) THEN decide to act. Grid surfaces 21 scans. You narrow to 1-2 high-quality setups. That's the workflow.</p>
 
 <div class="admonition tip">
 <p class="admonition-title">Recognizing Reduced Reliability Environments</p>
@@ -2929,9 +2929,9 @@ Extension ATR: 2.5</code></pre>
 <li><strong>All symbols in watchlist fire same signal simultaneously:</strong> Watchlist too correlated—diversify</li>
 <li><strong>P&L oscillating ±1-2% without sustained moves:</strong> Choppy conditions or wrong timeframe</li>
 <li><strong>Symbol volume under $5M daily (stocks) or $50M (crypto):</strong> Liquidity concerns—remove from watchlist</li>
-<li><strong>Trading from grid without checking individual charts:</strong> Missing context—verify setups individually</li>
+<li><strong>Acting from grid without checking individual charts:</strong> Missing context—verify setups individually</li>
 </ul>
-<p><strong>Remember:</strong> Augury Grid's strength is efficiency—scanning 7 symbols × 3 timeframes (21 scans) simultaneously to find momentum shifts. Its weakness is context—it doesn't know about support/resistance, volume quality, broader market regime, or individual symbol liquidity. The grid finds candidates. You validate candidates. Best results come from combining Augury's scanning efficiency with individual chart analysis using <a href="../janus-atlas-v10/">Janus Atlas</a> (levels), <a href="../volume-oracle-v10/">Volume Oracle</a> (volume confirmation), and <a href="../pentarch-v10/">Pentarch</a> (regime context). Grid → Candidates → Validation → Trade. That's the complete workflow.</p>
+<p><strong>Remember:</strong> Augury Grid's strength is efficiency—scanning 7 symbols × 3 timeframes (21 scans) simultaneously to find momentum shifts. Its weakness is context—it doesn't know about support/resistance, volume quality, broader market regime, or individual symbol liquidity. The grid finds candidates. You validate candidates. Best results come from combining Augury's scanning efficiency with individual chart analysis using <a href="../janus-atlas-v10/">Janus Atlas</a> (levels), <a href="../volume-oracle-v10/">Volume Oracle</a> (volume confirmation), and <a href="../pentarch-v10/">Pentarch</a> (regime context). Grid → Candidates → Validation → Action. That's the complete workflow.</p>
 </div>
 
 <hr />
@@ -2947,7 +2947,7 @@ Extension ATR: 2.5</code></pre>
 <p><strong>A:</strong> ★★★ signals (95+ score) are rare but not impossible. If you see many, it means market conditions are favorable with strong trend, momentum, and volume alignment. This is a good thing! However, if literally ALL signals are ★★★, check that the Min Score filter isn't set too high.</p>
 
 <h3 id="q-can-i-change-the-3-timeframes">Q: Can I change the 3 timeframes?<a class="headerlink" href="#q-can-i-change-the-3-timeframes" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> Yes. In Settings → Timeframe Settings, you can change TF 1, TF 2, and TF 3 to any timeframe (e.g., 1m, 5m, 15m, 1H, 4H, D, W). Default is 15m/4H/D for scalp/swing/position trading coverage.</p>
+<p><strong>A:</strong> Yes. In Settings → Timeframe Settings, you can change TF 1, TF 2, and TF 3 to any timeframe (e.g., 1m, 5m, 15m, 1H, 4H, D, W). Default is 15m/4H/D for short-term/multi-day/position analysis coverage.</p>
 
 <h3 id="q-why-must-symbols-be-from-same-exchange">Q: Why must custom symbols be from the same exchange?<a class="headerlink" href="#q-why-must-symbols-be-from-same-exchange" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> TradingView memory limits. When scanning 7 symbols × 3 timeframes (21 scans), requesting data from multiple exchanges simultaneously can exceed memory allocation and cause the indicator to fail. Presets are designed to work within these limits. For custom symbols, stick to one exchange.</p>
@@ -2990,7 +2990,7 @@ Extension ATR: 2.5</code></pre>
 <ul>
 <li><strong>Too few signals:</strong> Lower ADX Minimum (15), widen RSI Range (35-65), lower Volume Spike (1.1)</li>
 <li><strong>Too many low-quality signals:</strong> Raise ADX Minimum (25), narrow RSI Range (45-55), raise Volume Spike (1.5)</li>
-<li><strong>Trading low-volume assets:</strong> Lower Volume Spike to 1.1</li>
+<li><strong>Analyzing low-volume assets:</strong> Lower Volume Spike to 1.1</li>
 <li><strong>Only want strong trends:</strong> Raise ADX Minimum to 25-30</li>
 </ul>
 
@@ -3160,7 +3160,7 @@ USD/CAD, USD/CHF, NZD/USD, EUR/GBP
   </a>
   <a href="https://blog.signalpilot.io/articles/timeframe-selection/" target="_blank" style="padding:1rem;background:var(--bg-secondary);border-radius:8px;text-decoration:none;border:1px solid var(--border)">
     <strong style="color:var(--accent)">Timeframe Selection</strong>
-    <p style="margin:.5rem 0 0;font-size:.9rem;color:var(--text-muted)">Choose the right timeframes for your trading style</p>
+    <p style="margin:.5rem 0 0;font-size:.9rem;color:var(--text-muted)">Choose the right timeframes for your analysis approach</p>
   </a>
 </div>
 <hr />
