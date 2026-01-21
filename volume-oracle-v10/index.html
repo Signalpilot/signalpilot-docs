@@ -1823,7 +1823,7 @@
 <div class="sp-callout sp-callout--success" style="margin: 2rem 0; border-left: 4px solid #4caf50;">
   <div class="sp-callout__icon">👋</div>
   <div class="sp-callout__content">
-    <h3 style="margin-top: 0;">New to Trading? Start Here</h3>
+    <h3 style="margin-top: 0;">New to Technical Analysis? Start Here</h3>
 
     <p><strong>What Is Volume Oracle?</strong></p>
     <p>Volume Oracle analyzes buying and selling pressure to identify <strong>market regimes</strong> — periods where institutions are accumulating (buying) or distributing (selling).</p>
@@ -1860,7 +1860,7 @@
           <li><strong>Regime FADING</strong> = Early warning that direction may change</li>
           <li><strong>Structure CONFLICT</strong> = Price action disagrees with regime → be cautious</li>
         </ul>
-        <p>Volume Oracle helps you trade WITH the dominant flow, not against it.</p>
+        <p>Volume Oracle helps you analyze WITH the dominant flow, not against it.</p>
       </div>
     </details>
 
@@ -1976,8 +1976,8 @@
 <h3 id="signal-generation">Signal Generation<a class="headerlink" href="#signal-generation" title="Permanent link">&para;</a></h3>
 <p><strong>Signal Types:</strong></p>
 <ul>
-<li><strong>🟢 BULL Signal (↑)</strong> — Bullish conditions confirmed, potential long entry</li>
-<li><strong>🔴 BEAR Signal (↓)</strong> — Bearish conditions confirmed, potential short entry</li>
+<li><strong>🟢 BULL Event (↑)</strong> — Bullish conditions confirmed, accumulation phase detected</li>
+<li><strong>🔴 BEAR Event (↓)</strong> — Bearish conditions confirmed, distribution phase detected</li>
 </ul>
 <p><strong>Quality Ratings (⭐):</strong> Each signal receives a 0-100% quality score displayed as stars:</p>
 <table>
@@ -2014,9 +2014,9 @@
 <tr><th>Mode</th><th>Description</th><th>Best For</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>Trend Following</strong></td><td>Signals align with regime direction</td><td>Trending markets, momentum traders</td></tr>
-<tr><td><strong>Mean Reversion</strong></td><td>Signals at regime extremes (fading)</td><td>Range-bound markets, contrarian traders</td></tr>
-<tr><td><strong>Hybrid</strong></td><td>Auto-adapts based on market conditions</td><td>Mixed conditions, flexible traders</td></tr>
+<tr><td><strong>Trend Following</strong></td><td>Events align with regime direction</td><td>Trending markets, momentum analysis</td></tr>
+<tr><td><strong>Mean Reversion</strong></td><td>Events at regime extremes (fading)</td><td>Range-bound markets, contrarian analysis</td></tr>
+<tr><td><strong>Hybrid</strong></td><td>Auto-adapts based on market conditions</td><td>Mixed conditions, flexible approach</td></tr>
 </tbody>
 </table>
 
@@ -2386,7 +2386,7 @@
 </table>
 
 <h3 id="alert-message-format">Alert Message Format<a class="headerlink" href="#alert-message-format" title="Permanent link">&para;</a></h3>
-<p>Entry signals include full trade data:</p>
+<p>Events include full analysis data:</p>
 <pre style="background: #1a1a2e; padding: 1rem; border-radius: 8px; font-family: monospace; font-size: 0.85rem; overflow-x: auto;">
 🟢 BULLISH FLOW | BTCUSD 15m
 Quality: 82% ⭐⭐⭐ | Regime: 67%
@@ -2405,8 +2405,8 @@ Structure: ✓ ALIGNED | Market: TRENDING</pre>
 <tr><th>Regime</th><th>Bias</th><th>Action</th></tr>
 </thead>
 <tbody>
-<tr><td>ACCUMULATION + STRONG</td><td>Bullish</td><td>Look for long signals</td></tr>
-<tr><td>DISTRIBUTION + STRONG</td><td>Bearish</td><td>Look for short signals</td></tr>
+<tr><td>ACCUMULATION + STRONG</td><td>Bullish</td><td>Bullish events favored</td></tr>
+<tr><td>DISTRIBUTION + STRONG</td><td>Bearish</td><td>Bearish events favored</td></tr>
 <tr><td>NEUTRAL</td><td>None</td><td>Wait for clarity</td></tr>
 <tr><td>Any + FADING/WEAK</td><td>Caution</td><td>Reduce size or wait</td></tr>
 </tbody>
@@ -2469,13 +2469,13 @@ Structure: ✓ ALIGNED | Market: TRENDING</pre>
 <h3 id="volume-oracle-pentarch">Volume Oracle + <a href="../pentarch-v10/">Pentarch</a> (Regime + Timing)<a class="headerlink" href="#volume-oracle-pentarch" title="Permanent link">&para;</a></h3>
 <p><strong>Workflow:</strong></p>
 <ol>
-<li><strong><a href="../pentarch-v10/">Pentarch</a> signal fires</strong> → TD, IGN, CAP, or WRN signal appears on chart</li>
-<li><strong>Check Volume Oracle regime</strong> → Is the regime aligned with the Pentarch signal direction?</li>
+<li><strong><a href="../pentarch-v10/">Pentarch</a> event fires</strong> → TD, IGN, CAP, or WRN event appears on chart</li>
+<li><strong>Check Volume Oracle regime</strong> → Is the regime aligned with the Pentarch event direction?</li>
 <li><strong>Pentarch + Accumulation regime = validated bullish</strong> → Regime confirms volume support for reversal</li>
 <li><strong>Pentarch + conflicting regime = proceed with caution</strong> → Signal without regime support may lack follow-through</li>
-<li><strong>Expected outcome:</strong> Volume Oracle regime validates which <a href="../pentarch-v10/">Pentarch</a> signals have volume confirmation</li>
+<li><strong>Expected outcome:</strong> Volume Oracle regime validates which <a href="../pentarch-v10/">Pentarch</a> events have volume confirmation</li>
 </ol>
-<p><strong>Example:</strong> <a href="../pentarch-v10/">Pentarch</a> TD buy signal fires → Volume Oracle shows Accumulation regime (green, 75%) = confirmed bullish reversal with accumulation flow</p>
+<p><strong>Example:</strong> <a href="../pentarch-v10/">Pentarch</a> TD event fires → Volume Oracle shows Accumulation regime (green, 75%) = confirmed bullish reversal with accumulation flow</p>
 
 <h3 id="volume-oracle-janus-atlas">Volume Oracle + <a href="../janus-atlas-v10/">Janus Atlas</a> (Regime at Levels)<a class="headerlink" href="#volume-oracle-janus-atlas" title="Permanent link">&para;</a></h3>
 <p><strong>Workflow:</strong></p>
@@ -2495,7 +2495,7 @@ Structure: ✓ ALIGNED | Market: TRENDING</pre>
 <h3 id="volume-oracle-harmonic-oscillator">Volume Oracle + <a href="../harmonic-oscillator-v10/">Harmonic Oscillator</a> (Regime + Momentum)<a class="headerlink" href="#volume-oracle-harmonic-oscillator" title="Permanent link">&para;</a></h3>
 <p><strong>Workflow:</strong></p>
 <ol>
-<li><strong><a href="../harmonic-oscillator-v10/">Harmonic Oscillator</a> shows momentum shift</strong> → Bear to Bull transition, or STRONG signal appears</li>
+<li><strong><a href="../harmonic-oscillator-v10/">Harmonic Oscillator</a> shows momentum shift</strong> → Bear to Bull transition, or STRONG event appears</li>
 <li><strong>Check Volume Oracle regime</strong> → Is the regime aligned with the momentum direction?</li>
 <li><strong>Regime + momentum alignment = high probability:</strong>
 <ul>
@@ -2503,7 +2503,7 @@ Structure: ✓ ALIGNED | Market: TRENDING</pre>
 <li>Bear momentum + Distribution regime = confirmed bearish momentum</li>
 </ul>
 </li>
-<li><strong>Conflicting regime = weaker signal</strong> → May lack volume participation, reduce position size</li>
+<li><strong>Conflicting regime = lower confluence</strong> → May lack volume participation, lower confidence</li>
 </ol>
 <p><strong>Example:</strong> <a href="../harmonic-oscillator-v10/">Harmonic Oscillator</a> STRONG bull (7/7) → Volume Oracle shows Accumulation regime (green, 80%) = maximum bullish confluence (momentum + regime)</p>
 
@@ -2524,8 +2524,8 @@ Structure: ✓ ALIGNED | Market: TRENDING</pre>
 
 <div class="admonition tip">
 <p class="admonition-title">Pro Tip: The Regime Confirmation Workflow</p>
-<p>For highest-probability setups, use <strong>Volume Oracle as the regime confirmation layer</strong>. Workflow: <strong><a href="../janus-atlas-v10/">Janus Atlas</a> (identify level) → <a href="../pentarch-v10/">Pentarch</a> (timing signal) → Volume Oracle (regime confirmation)</strong>. Price at key level + timing signal + aligned regime = triple-confluence setup with volume validation. Always ask: "Is the regime supporting this setup?"</p>
-<p><strong>See also:</strong> <a href="../ref-workflow/">Complete Trading Workflow Guide</a> for detailed multi-indicator strategies.</p>
+<p>For highest-confluence setups, use <strong>Volume Oracle as the regime confirmation layer</strong>. Workflow: <strong><a href="../janus-atlas-v10/">Janus Atlas</a> (identify level) → <a href="../pentarch-v10/">Pentarch</a> (timing event) → Volume Oracle (regime confirmation)</strong>. Price at key level + timing event + aligned regime = triple-confluence setup with volume validation. Always ask: "Is the regime supporting this setup?"</p>
+<p><strong>See also:</strong> <a href="../ref-workflow/">Analysis Workflow Guide</a> for detailed multi-indicator approaches.</p>
 </div>
 
 <hr />
@@ -2553,8 +2553,8 @@ Structure: ✓ ALIGNED | Market: TRENDING</pre>
 </tr>
 <tr>
 <td><strong>Best For</strong></td>
-<td>Day trading, entry signals with risk levels</td>
-<td>Swing trading, trend following, divergence detection</td>
+<td>Intraday analysis, event detection with risk analysis</td>
+<td>Multi-day analysis, trend following, divergence detection</td>
 </tr>
 <tr>
 <td><strong>Timeframe</strong></td>
@@ -2591,46 +2591,46 @@ Structure: ✓ ALIGNED | Market: TRENDING</pre>
 
 <h3 id="when-to-use-volume-oracle">✅ Use Volume Oracle When:</h3>
 <ul>
-<li><strong>You're day trading or scalping</strong> (holding positions for minutes/hours)</li>
-<li><strong>You want regime-based entries</strong> (trade with Accumulation/Distribution phases)</li>
-<li><strong>You need quality-rated signals</strong> (⭐⭐⭐ = high quality, ⭐ = lower quality)</li>
+<li><strong>You're doing intraday analysis</strong> (analyzing shorter timeframes)</li>
+<li><strong>You want regime-based context</strong> (align with Accumulation/Distribution phases)</li>
+<li><strong>You need quality-rated events</strong> (⭐⭐⭐ = high quality, ⭐ = lower quality)</li>
 <li><strong>You want automatic risk levels</strong> (Entry, Stop, T1, T2 calculated for you)</li>
-<li><strong>You use HTF confirmation</strong> (ensure higher timeframe agrees with entry)</li>
+<li><strong>You use HTF confirmation</strong> (ensure higher timeframe agrees)</li>
 </ul>
 
-<p><strong>Example Volume Oracle Setup:</strong> S&P 500 15-minute chart, waiting for BULL signal with ⭐⭐⭐ quality during Accumulation regime.</p>
+<p><strong>Example Volume Oracle Setup:</strong> S&P 500 15-minute chart, waiting for BULL event with ⭐⭐⭐ quality during Accumulation regime.</p>
 
 <h3 id="when-to-use-plutus-flow">✅ Use Plutus Flow When:</h3>
 <ul>
-<li><strong>You're swing trading</strong> (holding positions for days/weeks)</li>
+<li><strong>You're doing multi-day analysis</strong> (analyzing over days/weeks)</li>
 <li><strong>You want to track long-term money flow</strong> (is money flowing in or out over time?)</li>
-<li><strong>You trade divergences</strong> (price makes new low, but OBV makes higher low = accumulation)</li>
+<li><strong>You analyze divergences</strong> (price makes new low, but OBV makes higher low = accumulation)</li>
 <li><strong>You focus on higher timeframes</strong> (Daily, Weekly charts)</li>
 <li><strong>You want trend confirmation</strong> (ribbon width shows trend strength)</li>
 </ul>
 
-<p><strong>Example Plutus Flow Setup:</strong> Bitcoin Daily chart, looking for bullish OBV divergence to catch swing trade reversals.</p>
+<p><strong>Example Plutus Flow Setup:</strong> Bitcoin Daily chart, looking for bullish OBV divergence to identify potential reversals.</p>
 
 <h3 id="use-both-together">🔥 Use Both Together (Advanced)</h3>
 <p>Combine Volume Oracle (tactical) with Plutus Flow (strategic) for maximum effectiveness:</p>
 
 <ol>
 <li><strong>Plutus Flow</strong> → Identifies long-term trend direction (OBV rising = bullish bias)</li>
-<li><strong>Volume Oracle</strong> → Finds tactical entry points (BULL signal during Accumulation regime)</li>
+<li><strong>Volume Oracle</strong> → Finds tactical confluence points (BULL event during Accumulation regime)</li>
 </ol>
 
 <p><strong>Example Combined Workflow:</strong></p>
 <ul>
 <li>Check Daily Plutus Flow: OBV trending up (bullish long-term)</li>
-<li>Drop to 15m chart with Volume Oracle: Wait for BULL ⭐⭐⭐ signal during Accumulation regime</li>
-<li>Enter long when both align: Long-term bullish flow + regime-confirmed signal = high-probability entry</li>
+<li>Drop to 15m chart with Volume Oracle: Wait for BULL ⭐⭐⭐ event during Accumulation regime</li>
+<li>Both align: Long-term bullish flow + regime-confirmed event = high-confluence setup</li>
 </ul>
 
 <div class="admonition tip">
-<p class="admonition-title">💡 Pro Tip: Choose Based on Your Trading Style</p>
-<p><strong>Day traders:</strong> Volume Oracle is your primary volume tool. Add Plutus Flow optionally for daily bias.</p>
-<p><strong>Swing traders:</strong> Plutus Flow is your primary volume tool. Add Volume Oracle optionally for entry confirmation.</p>
-<p><strong>Position traders:</strong> Plutus Flow on Weekly/Monthly charts for long-term trend direction.</p>
+<p class="admonition-title">💡 Pro Tip: Choose Based on Your Analysis Style</p>
+<p><strong>Intraday analysis:</strong> Volume Oracle is your primary volume tool. Add Plutus Flow optionally for daily bias.</p>
+<p><strong>Multi-day analysis:</strong> Plutus Flow is your primary volume tool. Add Volume Oracle optionally for confirmation.</p>
+<p><strong>Position analysis:</strong> Plutus Flow on Weekly/Monthly charts for long-term trend direction.</p>
 </div>
 
 <p><strong>See also:</strong> <a href="../plutus-flow-v10/">Plutus Flow Documentation</a> for comparison from the other perspective.</p>
@@ -2638,21 +2638,21 @@ Structure: ✓ ALIGNED | Market: TRENDING</pre>
 <hr />
 <h2 id="common-mistakes">⚠️ Common Mistakes<a class="headerlink" href="#common-mistakes" title="Permanent link">&para;</a></h2>
 
-<h3 id="mistake-1-against-regime">Mistake #1: Trading Against Regime<a class="headerlink" href="#mistake-1-against-regime" title="Permanent link">&para;</a></h3>
-<p><strong>Wrong:</strong> Taking long signals in DISTRIBUTION regime</p>
-<p><strong>Right:</strong> Wait for regime flip or trade with regime direction</p>
+<h3 id="mistake-1-against-regime">Mistake #1: Acting Against Regime<a class="headerlink" href="#mistake-1-against-regime" title="Permanent link">&para;</a></h3>
+<p><strong>Wrong:</strong> Expecting bullish events in DISTRIBUTION regime</p>
+<p><strong>Right:</strong> Wait for regime flip or align with regime direction</p>
 
 <h3 id="mistake-2-ignoring-structure">Mistake #2: Ignoring Structure Conflicts<a class="headerlink" href="#mistake-2-ignoring-structure" title="Permanent link">&para;</a></h3>
 <p><strong>Wrong:</strong> Full size when Structure shows ✗ CONFLICT</p>
 <p><strong>Right:</strong> Reduce size or skip when structure disagrees</p>
 
-<h3 id="mistake-3-choppy-markets">Mistake #3: Trading in CHOPPY Markets<a class="headerlink" href="#mistake-3-choppy-markets" title="Permanent link">&para;</a></h3>
-<p><strong>Wrong:</strong> Normal size when Market shows CHOPPY</p>
-<p><strong>Right:</strong> Reduce size significantly or wait for TRENDING</p>
+<h3 id="mistake-3-choppy-markets">Mistake #3: Expecting Results in CHOPPY Markets<a class="headerlink" href="#mistake-3-choppy-markets" title="Permanent link">&para;</a></h3>
+<p><strong>Wrong:</strong> Normal expectations when Market shows CHOPPY</p>
+<p><strong>Right:</strong> Lower expectations significantly or wait for TRENDING</p>
 
-<h3 id="mistake-4-low-quality">Mistake #4: Chasing Low-Quality Signals<a class="headerlink" href="#mistake-4-low-quality" title="Permanent link">&para;</a></h3>
-<p><strong>Wrong:</strong> Trading every ⭐ signal</p>
-<p><strong>Right:</strong> Prefer ⭐⭐⭐ signals, be selective with ⭐</p>
+<h3 id="mistake-4-low-quality">Mistake #4: Chasing Low-Quality Events<a class="headerlink" href="#mistake-4-low-quality" title="Permanent link">&para;</a></h3>
+<p><strong>Wrong:</strong> Acting on every ⭐ event</p>
+<p><strong>Right:</strong> Prefer ⭐⭐⭐ events, be selective with ⭐</p>
 
 <h3 id="mistake-5-ignoring-warnings">Mistake #5: Ignoring Early Warnings<a class="headerlink" href="#mistake-5-ignoring-warnings" title="Permanent link">&para;</a></h3>
 <p><strong>Wrong:</strong> Holding full position when Status shows FADING</p>
@@ -2871,7 +2871,7 @@ Structure: ✓ ALIGNED | Market: TRENDING</pre>
 <hr />
 <div class="admonition tip">
 <p class="admonition-title">💬 Need Help?</p>
-<p>Have questions about Volume Oracle? <strong><a href="https://discord.gg/5guVbGEyj8" target="_blank" rel="noopener">Join our Discord community</a></strong> to get help from experienced traders, share setups, and discuss strategies!</p>
+<p>Have questions about Volume Oracle? <strong><a href="https://discord.gg/5guVbGEyj8" target="_blank" rel="noopener">Join our Discord community</a></strong> to get help from experienced users, share setups, and discuss approaches!</p>
 </div>
 <hr />
 <h2 id="see-also">See Also<a class="headerlink" href="#see-also" title="Permanent link">&para;</a></h2>
@@ -2890,7 +2890,7 @@ Structure: ✓ ALIGNED | Market: TRENDING</pre>
 
 <!-- Affiliate Program CTA -->
 <div style="background: linear-gradient(135deg, rgba(0,188,212,0.08) 0%, rgba(103,126,234,0.08) 100%); border: 1px solid rgba(0,188,212,0.2); border-radius: 8px; padding: 1rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
-  <span><strong>Trading educator?</strong> Earn 15–30% recurring commissions.</span>
+  <span><strong>Educator?</strong> Earn 15–30% recurring commissions.</span>
   <a href="https://signalpilot.io/affiliates.html" target="_blank" rel="noopener noreferrer" class="md-button" style="margin: 0;">Learn more →</a>
 </div>
 
