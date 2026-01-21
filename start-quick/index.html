@@ -1884,7 +1884,7 @@ This quick start guide is for <strong>educational purposes only</strong>. This i
 <li>✅ Install Pentarch on TradingView</li>
 <li>✅ Understand the 5 event types</li>
 <li>✅ Set up your first alert</li>
-<li>✅ Know how to use the signals</li>
+<li>✅ Know what each event means</li>
 </ol>
 <table>
 <tr><td><strong>Time required:</strong></td><td>5 minutes</td></tr>
@@ -1994,23 +1994,12 @@ This quick start guide is for <strong>educational purposes only</strong>. This i
 <p><strong>Starting Conditions:</strong>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Price: $35,000, declining for 2 weeks
 </span></code></pre></div></p>
-<p><strong>The Events:</strong>
-1. <strong>TD appears at $32,500</strong> 🔵
-   - What it indicates: Early-cycle conditions developing
-   - Cycle phase: Accumulation beginning</p>
+<p><strong>The Cycle:</strong></p>
 <ol>
-<li><strong>IGN fires at $33,800</strong> 🟢</li>
-<li>What it indicates: Momentum confirmation detected</li>
-<li>Cycle phase: Markup phase beginning</li>
-</ol>
-<p><strong>The Cycle Progression:</strong>
-3. <strong>WRN appears at $41,500</strong> 🟡
-   - What it indicates: Weakening momentum detected
-   - Cycle phase: Distribution warning</p>
-<ol>
-<li><strong>CAP fires at $42,800</strong> 🔴</li>
-<li>What it indicates: Exhaustion conditions detected</li>
-<li>Cycle phase: Distribution phase</li>
+<li><strong>TD appears at $32,500</strong> 🔵 — Early-cycle conditions, accumulation beginning</li>
+<li><strong>IGN fires at $33,800</strong> 🟢 — Momentum confirmed, markup phase begins</li>
+<li><strong>WRN appears at $41,500</strong> 🟡 — Weakening momentum, distribution warning</li>
+<li><strong>CAP fires at $42,800</strong> 🔴 — Exhaustion detected, distribution phase</li>
 </ol>
 <p><strong>Cycle Movement:</strong> Price moved from $32,500 to $42,800 during this cycle</p>
 <hr />
@@ -2060,14 +2049,14 @@ This quick start guide is for <strong>educational purposes only</strong>. This i
 <hr />
 <h2 id="common-mistakes">🚫 Common Mistakes<a class="headerlink" href="#common-mistakes" title="Permanent link">&para;</a></h2>
 <h3 id="mistake-1-misunderstanding-td-blue-event">Mistake #1: Misunderstanding TD (Blue Event)<a class="headerlink" href="#mistake-1-misunderstanding-td-blue-event" title="Permanent link">&para;</a></h3>
-<p><strong>❌ Misunderstanding:</strong> Treating TD as the primary event
-<strong>✅ Correct Understanding:</strong> TD is an early cycle warning - it indicates accumulation phase conditions</p>
+<p><strong>❌ Misunderstanding:</strong> Treating TD as the primary event</p>
+<p><strong>✅ Correct Understanding:</strong> TD is an early cycle warning - it indicates accumulation phase conditions</p>
 <p><strong>Context:</strong> TD indicates early-cycle conditions are developing. IGN provides momentum confirmation.</p>
 <hr />
 <h3 id="mistake-2-not-using-once-per-bar-close-for-alerts">Mistake #2: Not Using "Once Per Bar Close" for Alerts<a class="headerlink" href="#mistake-2-not-using-once-per-bar-close-for-alerts" title="Permanent link">&para;</a></h3>
 <p><span style="color: #ff6b35; font-weight: 600;">⚠️ Important Setup Consideration</span></p>
-<p><strong>❌ Common Error:</strong> Alert fires mid-bar, event disappears after bar closes
-<strong>✅ Correct Setup:</strong> Alert set to "Once Per Bar Close" - only confirmed events trigger notifications</p>
+<p><strong>❌ Common Error:</strong> Alert fires mid-bar, event disappears after bar closes</p>
+<p><strong>✅ Correct Setup:</strong> Alert set to "Once Per Bar Close" - only confirmed events trigger notifications</p>
 <p><strong>How to configure correctly:</strong></p>
 <ul>
 <li>Delete incorrectly configured alerts</li>
@@ -2075,7 +2064,7 @@ This quick start guide is for <strong>educational purposes only</strong>. This i
 <li>Review the <a href="../how-to-alerts/">Alert Setup Guide</a></li>
 </ul>
 <hr />
-<h3 id="mistake-4-ignoring-key-levels">Mistake #4: Ignoring Key Levels<a class="headerlink" href="#mistake-4-ignoring-key-levels" title="Permanent link">&para;</a></h3>
+<h3 id="mistake-3-ignoring-key-levels">Mistake #3: Ignoring Key Levels<a class="headerlink" href="#mistake-3-ignoring-key-levels" title="Permanent link">&para;</a></h3>
 <table>
 <tr><td><strong>❌ Without context:</strong></td><td>Evaluating events without level context</td></tr>
 <tr><td><strong>✅ With context:</strong></td><td>Evaluating events at key price levels</td></tr>
@@ -2090,7 +2079,7 @@ This quick start guide is for <strong>educational purposes only</strong>. This i
 - IGN at $50,000 (no level context) → Less confluence
 - IGN at major support $48,500 → More confluence</p>
 <hr />
-<h3 id="mistake-5-using-too-low-timeframe-initially">Mistake #5: Using Too Low Timeframe Initially<a class="headerlink" href="#mistake-5-using-too-low-timeframe-initially" title="Permanent link">&para;</a></h3>
+<h3 id="mistake-4-using-too-low-timeframe-initially">Mistake #4: Using Too Low Timeframe Initially<a class="headerlink" href="#mistake-4-using-too-low-timeframe-initially" title="Permanent link">&para;</a></h3>
 <table>
 <tr><td><strong>Lower timeframes:</strong></td><td>5m or 15m charts - more noise, more events</td></tr>
 <tr><td><strong>Higher timeframes:</strong></td><td>Daily or 4H charts - cleaner, clearer events</td></tr>
@@ -2105,7 +2094,7 @@ This quick start guide is for <strong>educational purposes only</strong>. This i
 3. 1H chart (moderate)
 4. 15m-30m (more experience needed)</p>
 <hr />
-<h3 id="mistake-6-emotional-decision-making">Mistake #6: Emotional Decision Making<a class="headerlink" href="#mistake-6-emotional-decision-making" title="Permanent link">&para;</a></h3>
+<h3 id="mistake-5-emotional-decision-making">Mistake #5: Emotional Decision Making<a class="headerlink" href="#mistake-5-emotional-decision-making" title="Permanent link">&para;</a></h3>
 <table>
 <tr><td><strong>❌ Emotional:</strong></td><td>Reacting to outcomes rather than analyzing patterns</td></tr>
 <tr><td><strong>✅ Analytical:</strong></td><td>Reviewing what occurred before continuing</td></tr>

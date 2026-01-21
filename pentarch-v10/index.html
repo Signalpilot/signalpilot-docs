@@ -2045,28 +2045,28 @@
       <li><strong>🔴 BDN (Breakdown)</strong> = "Downward pressure detected—decline phase"</li>
     </ul>
 
-    <p><strong>How It Works (The Simple Version):</strong> Pentarch checks 4 things before showing a signal:</p>
+    <p><strong>How It Works (The Simple Version):</strong> Pentarch checks 4 things before showing an event:</p>
     <ol>
       <li>Is the overall market mood bullish or bearish?</li>
       <li>Is price far from the average, or close to it?</li>
       <li>Is momentum building or fading?</li>
       <li>Did the price bar actually close (not just flicker during trading)?</li>
     </ol>
-    <p>Only when all 4 checks pass does a label appear. This reduces false signals.</p>
+    <p>Only when all 4 checks pass does a label appear. This reduces noise.</p>
 
-    <p><strong>Beginner Starting Point:</strong> Just watch the signals for 1-2 weeks. Notice how TD and IGN often appear during accumulation/markup phases, while WRN and CAP appear during distribution/climax phases. The patterns will start to make sense!</p>
+    <p><strong>Beginner Starting Point:</strong> Just observe the events for 1-2 weeks. Notice how TD and IGN often appear during accumulation/markup phases, while WRN and CAP appear during distribution/climax phases. The patterns will start to make sense!</p>
 
     <details style="margin-top: 1rem;">
       <summary style="cursor: pointer; font-weight: 600; color: #4caf50;">🎓 What are "market cycles"?</summary>
       <p style="margin-top: 0.5rem; padding-left: 1rem;">Markets don't move in straight lines—they move in repeating patterns called cycles. A typical cycle has 5 phases:</p>
       <ol style="padding-left: 2rem;">
-        <li><strong>Accumulation</strong>: Quiet buying after a decline (TD signal)</li>
-        <li><strong>Markup</strong>: Prices start climbing as more buyers join (IGN signal)</li>
-        <li><strong>Distribution</strong>: Selling begins near the top (WRN signal)</li>
-        <li><strong>Climax</strong>: The peak before reversal (CAP signal)</li>
-        <li><strong>Decline</strong>: Prices fall as sellers dominate (BDN signal)</li>
+        <li><strong>Accumulation</strong>: Quiet buying after a decline (TD event)</li>
+        <li><strong>Markup</strong>: Prices start climbing as more buyers join (IGN event)</li>
+        <li><strong>Distribution</strong>: Selling begins near the top (WRN event)</li>
+        <li><strong>Climax</strong>: The peak before reversal (CAP event)</li>
+        <li><strong>Decline</strong>: Prices fall as sellers dominate (BDN event)</li>
       </ol>
-      <p style="padding-left: 1rem;">Understanding which phase you're in helps you make better decisions about when to enter or exit.</p>
+      <p style="padding-left: 1rem;">Understanding which phase you're in provides context for market conditions.</p>
     </details>
   </div>
 </div>
@@ -2078,7 +2078,7 @@
 
 <hr />
 <h2 id="core-functionality">🎯 Core Functionality <span class="skill-badge skill-badge--beginner" data-tooltip="No prior experience required">Beginner Friendly</span><a class="headerlink" href="#core-functionality" title="Permanent link">&para;</a></h2>
-<p>Pentarch displays signal labels when four-layer detection conditions align at bar close. Five event types appear as colored labels on the chart:</p>
+<p>Pentarch displays event labels when four-layer detection conditions align at bar close. Five event types appear as colored labels on the chart:</p>
 <ul>
 <li><strong>TD (Touchdown)</strong> - Label below candle</li>
 <li><strong>IGN (Ignition)</strong> - Label below candle</li>
@@ -2114,7 +2114,7 @@
 </tr>
 </tbody>
 </table>
-<p>Signals appear only when all four layers align.</p>
+<p>Events appear only when all four layers align.</p>
 <p><strong>Timeframe Compatibility:</strong> Works on all timeframes.</p>
 
 <!-- 📸 SCREENSHOT NEEDED - Pentarch All 5 Signal Types on Live Chart
@@ -2225,7 +2225,7 @@
 <p><strong>Note on Colors:</strong> Pentarch includes multiple color palettes for the five event labels. Default palette: TD (purple), IGN (teal), WRN (yellow), CAP (orange), BDN (red). Colors can be customized in indicator settings.</p>
 
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
-  <div class="sp-callout__title">📊 Signal Sequence Flow</div>
+  <div class="sp-callout__title">📊 Event Sequence Flow</div>
   <p style="margin-bottom: 1rem;">How the 5 cycle events progress from early accumulation to late breakdown:</p>
   <p style="font-size: 1.1rem; font-weight: 600; text-align: center; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; font-family: monospace;">
     <span style="color: #9333ea;">TD</span> → <span style="color: #14b8a6;">IGN</span> → <span style="color: #eab308;">WRN</span> → <span style="color: #f97316;">CAP</span> → <span style="color: #dc2626;">BDN</span> <span style="opacity: 0.5;">↩</span>
@@ -2243,8 +2243,8 @@
 -->
 <div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
   <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
-  <p style="margin: 0; color: #424242;"><strong>Pentarch Complete Signal Sequence Example</strong></p>
-  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a chart example showing how signals progress through a complete cycle (TD→IGN→WRN→CAP→BDN).</p>
+  <p style="margin: 0; color: #424242;"><strong>Pentarch Complete Event Sequence Example</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">We'll add a chart example showing how events progress through a complete cycle (TD→IGN→WRN→CAP→BDN).</p>
 </div>
 
 <hr />
@@ -2261,8 +2261,8 @@
 <li>NanoFlow momentum validates</li>
 <li>All conditions confirm at bar close</li>
 </ul>
-<p><strong>Phase Indication:</strong> Accumulation phase conditions detected. Signals potential transition from decline into accumulation.</p>
-<p><strong>Example:</strong> Stock declines from $100 to $85, TD signal appears → Accumulation phase identified.</p>
+<p><strong>Phase Indication:</strong> Accumulation phase conditions detected. Indicates potential transition from decline into accumulation.</p>
+<p><strong>Example:</strong> Stock declines from $100 to $85, TD event appears → Accumulation phase identified.</p>
 
 <!-- 📸 SCREENSHOT NEEDED - Pentarch TD Signal
      What to show: Chart showing purple "TD" label below a candle at an accumulation point
@@ -2290,7 +2290,7 @@
 <li>All four detection layers aligned</li>
 <li>Bar close confirmation</li>
 </ul>
-<p><strong>Phase Indication:</strong> Markup phase beginning detected. Signals potential transition from accumulation into bullish momentum.</p>
+<p><strong>Phase Indication:</strong> Markup phase beginning detected. Indicates potential transition from accumulation into bullish momentum.</p>
 <p><strong>Example:</strong> After TD at $85, IGN appears at $87 → Markup phase identified.</p>
 
 <!-- 📸 SCREENSHOT NEEDED - Pentarch IGN Signal
@@ -2319,7 +2319,7 @@
 <li>Momentum weakening characteristics</li>
 <li>Distribution phase indicators present</li>
 </ul>
-<p><strong>Phase Indication:</strong> Distribution phase conditions detected. Signals potential transition from markup into distribution.</p>
+<p><strong>Phase Indication:</strong> Distribution phase conditions detected. Indicates potential transition from markup into distribution.</p>
 <p><strong>Example:</strong> Stock rallies to $115, WRN appears → Distribution phase identified.</p>
 
 <!-- 📸 SCREENSHOT NEEDED - Pentarch WRN Signal
@@ -2348,7 +2348,7 @@
 <li>Peak momentum characteristics</li>
 <li>Bar close confirmation</li>
 </ul>
-<p><strong>Phase Indication:</strong> Climax phase conditions detected. Signals late-cycle exhaustion characteristics.</p>
+<p><strong>Phase Indication:</strong> Climax phase conditions detected. Indicates late-cycle exhaustion characteristics.</p>
 <p><strong>Example:</strong> After WRN at $115, CAP appears at $120 → Climax phase identified.</p>
 
 <!-- 📸 SCREENSHOT NEEDED - Pentarch CAP Signal
@@ -2377,7 +2377,7 @@
 <li>Four-layer bearish alignment</li>
 <li>Bar close confirmation</li>
 </ul>
-<p><strong>Phase Indication:</strong> Decline phase initiation detected. Signals transition from climax into decline cycle.</p>
+<p><strong>Phase Indication:</strong> Decline phase initiation detected. Indicates transition from climax into decline cycle.</p>
 <p><strong>Example:</strong> After CAP at $120, BDN appears at $113 → Decline phase identified.</p>
 
 <!-- 📸 SCREENSHOT NEEDED - Pentarch BDN Signal
@@ -2397,10 +2397,10 @@
 <div class="knowledge-check"
      data-quiz-id="pentarch-five-events"
      data-correct-answer="a"
-     data-correct-feedback="✓ Correct! TD (Touchdown) and IGN (Ignition) are Early-Cycle signals. TD indicates accumulation phase conditions, while IGN signals the beginning of markup phase. These appear earlier in the cycle compared to WRN, CAP, and BDN which are late-cycle signals."
-     data-incorrect-feedback="Not quite. Early-cycle signals occur at the beginning of a potential trend cycle. Review the phase indications for each of the five events - TD marks accumulation, IGN marks markup. Try again!">
+     data-correct-feedback="✓ Correct! TD (Touchdown) and IGN (Ignition) are Early-Cycle events. TD indicates accumulation phase conditions, while IGN indicates the beginning of markup phase. These appear earlier in the cycle compared to WRN, CAP, and BDN which are late-cycle events."
+     data-incorrect-feedback="Not quite. Early-cycle events occur at the beginning of a potential trend cycle. Review the phase indications for each of the five events - TD marks accumulation, IGN marks markup. Try again!">
   <h4>✅ Knowledge Check</h4>
-  <p><strong>Question:</strong> Which Pentarch signals are considered "Early-Cycle" signals?</p>
+  <p><strong>Question:</strong> Which Pentarch events are considered "Early-Cycle" events?</p>
 
   <form class="quiz-form">
     <label><input type="radio" name="q1" value="a"> TD (Touchdown) and IGN (Ignition)</label>
@@ -2414,8 +2414,8 @@
 </div>
 
 <hr />
-<h2 id="signal-sequence-patterns">📚 Signal Sequence Patterns <span class="skill-badge skill-badge--intermediate" data-tooltip="Requires understanding of the five events">Intermediate</span><a class="headerlink" href="#signal-sequence-patterns" title="Permanent link">&para;</a></h2>
-<p>Pentarch displays various signal sequences. Some observed patterns include:</p>
+<h2 id="event-sequence-patterns">📚 Event Sequence Patterns <span class="skill-badge skill-badge--intermediate" data-tooltip="Requires understanding of the five events">Intermediate</span><a class="headerlink" href="#event-sequence-patterns" title="Permanent link">&para;</a></h2>
+<p>Pentarch displays various event sequences. Some observed patterns include:</p>
 <p><strong>Full Cycle Pattern:</strong></p>
 <pre><code>TD → IGN → WRN → CAP → BDN
 (Complete cycle: Accumulation through Decline)
@@ -2484,25 +2484,25 @@ CAP → BDN → TD (Climax to accumulation)
 </table>
 <p><strong>Observed Move:</strong> TD to CAP = +130 points, CAP to BDN = -60 points</p>
 <p><strong>Pattern Type:</strong> Complete five-event cycle observed over 6 trading days.</p>
-<p><em>This example demonstrates signal appearance sequence. Individual interpretation and subsequent actions vary.</em></p>
+<p><em>This example demonstrates event appearance sequence. Individual interpretation and subsequent actions vary.</em></p>
 <hr />
 <h2 id="the-pilot-line-trend-reference">🎯 The Pilot Line — Trend Reference <span class="skill-badge skill-badge--intermediate" data-tooltip="Understanding of trend analysis helpful">Intermediate</span><a class="headerlink" href="#the-pilot-line-trend-reference" title="Permanent link">&para;</a></h2>
 <p><strong>Visual Display:</strong> Line on chart tracking dynamic trend position</p>
 <p><strong>Functionality:</strong></p>
 <ul>
 <li>Adaptive trend line adjusts to price movement</li>
-<li>Serves as reference for signal distance calculations</li>
+<li>Serves as reference for event distance calculations</li>
 <li>Changes color based on regime classification</li>
 <li>Updates continuously with each bar</li>
 </ul>
 
 <p><strong>Distance Measurement:</strong></p>
 <ul>
-<li>TD signals: Price extended below line</li>
-<li>IGN signals: Price structure shifts bullish relative to line</li>
-<li>WRN signals: Price extended above line</li>
-<li>CAP signals: Extreme extension above line</li>
-<li>BDN signals: Price breaks below line bearishly</li>
+<li>TD events: Price extended below line</li>
+<li>IGN events: Price structure shifts bullish relative to line</li>
+<li>WRN events: Price extended above line</li>
+<li>CAP events: Extreme extension above line</li>
+<li>BDN events: Price breaks below line bearishly</li>
 </ul>
 
 <!-- 📸 SCREENSHOT NEEDED - Pentarch Pilot Line and Regime Bar Colors
@@ -2556,19 +2556,19 @@ CAP → BDN → TD (Climax to accumulation)
 <p><strong>Functionality:</strong></p>
 <ul>
 <li>Updates every bar based on regime analysis</li>
-<li>Provides visual context for signal appearance</li>
-<li>Independent of signal generation</li>
+<li>Provides visual context for event appearance</li>
+<li>Independent of event generation</li>
 </ul>
 
-<p><strong>Relationship to Signals:</strong></p>
+<p><strong>Relationship to Events:</strong></p>
 <ul>
-<li>IGN signals appear during bullish regime transitions</li>
-<li>BDN signals appear during bearish regime transitions</li>
+<li>IGN events appear during bullish regime transitions</li>
+<li>BDN events appear during bearish regime transitions</li>
 <li>TD/WRN/CAP can appear in various regimes</li>
 </ul>
 <p><em>Regime colors provide structure context. Individual interpretation varies.</em></p>
 
-<p><strong>Remember:</strong> Gray (neutral) regime bars indicate transitional periods where signal reliability decreases. TD and IGN signals during clear green/red regime bars carry more weight than signals during gray choppy periods. Wait for regime clarity for highest-confidence setups.</p>
+<p><strong>Remember:</strong> Gray (neutral) regime bars indicate transitional periods where event reliability decreases. TD and IGN events during clear green/red regime bars have more context than events during gray choppy periods. Regime clarity provides better context for analysis.</p>
 
 <hr />
 <h2 id="nanoflow-momentum-component">⚡ NanoFlow — Momentum Component <span class="skill-badge skill-badge--intermediate" data-tooltip="Understanding of momentum indicators helpful">Intermediate</span><a class="headerlink" href="#nanoflow-momentum-component" title="Permanent link">&para;</a></h2>
@@ -2581,10 +2581,10 @@ CAP → BDN → TD (Climax to accumulation)
 <li>Updates each bar</li>
 </ul>
 
-<p><strong>Signal Relationship:</strong></p>
+<p><strong>Event Relationship:</strong></p>
 <ul>
-<li>IGN signals require bullish momentum validation</li>
-<li>BDN signals require bearish momentum validation</li>
+<li>IGN events require bullish momentum validation</li>
+<li>BDN events require bearish momentum validation</li>
 <li>TD/WRN/CAP require specific momentum thresholds</li>
 </ul>
 
@@ -2599,14 +2599,14 @@ CAP → BDN → TD (Climax to accumulation)
 <h2 id="four-layer-detection-system">🔄 Four-Layer Detection System <span class="skill-badge skill-badge--advanced" data-tooltip="Deep understanding of technical analysis required">Advanced</span><a class="headerlink" href="#four-layer-detection-system" title="Permanent link">&para;</a></h2>
 
 <div class="sp-callout sp-callout--info" style="margin: 2rem 0;">
-  <div class="sp-callout__title">📊 Signal Detection Process</div>
+  <div class="sp-callout__title">📊 Event Detection Process</div>
   <p style="font-size: 1rem; text-align: center; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; font-family: monospace;">
-    Price → <strong>L1: Regime</strong> → <strong>L2: Pilot</strong> → <strong>L3: NanoFlow</strong> → <strong>L4: Confirm</strong> → <span style="color: #16a34a;">Signal</span> or <span style="color: #f59e0b;">Wait</span>
+    Price → <strong>L1: Regime</strong> → <strong>L2: Pilot</strong> → <strong>L3: NanoFlow</strong> → <strong>L4: Confirm</strong> → <span style="color: #16a34a;">Event</span> or <span style="color: #f59e0b;">Wait</span>
   </p>
   <p style="margin-top: 0.75rem; font-size: 0.9rem; padding: 0.75rem; background: rgba(0, 188, 212, 0.1); border-left: 3px solid #00bcd4; border-radius: 4px;">
     <strong>⚡ Layer Priority:</strong> Layer 1 (Regime Classification) is the <strong>most critical filter</strong>.
-    If Layer 1 fails, the signal is rejected regardless of other layers.
-    All 4 layers must confirm for signal to fire.
+    If Layer 1 fails, the event is rejected regardless of other layers.
+    All 4 layers must confirm for event to fire.
   </p>
 </div>
 
@@ -2615,7 +2615,7 @@ CAP → BDN → TD (Climax to accumulation)
 <ul>
 <li>Analyzes price structure patterns</li>
 <li>Identifies bullish, bearish, or neutral conditions</li>
-<li>Provides foundational context for signals</li>
+<li>Provides foundational context for events</li>
 </ul>
 <h3 id="layer-2-pilot-line-distance">Layer 2: Pilot Line Distance<a class="headerlink" href="#layer-2-pilot-line-distance" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2632,19 +2632,19 @@ CAP → BDN → TD (Climax to accumulation)
 <h3 id="layer-4-bar-close-confirmation">Layer 4: Bar Close Confirmation<a class="headerlink" href="#layer-4-bar-close-confirmation" title="Permanent link">&para;</a></h3>
 <ul>
 <li>All conditions must hold at bar close</li>
-<li>Prevents mid-bar false signals</li>
-<li>Ensures stability before signal display</li>
+<li>Prevents mid-bar false events</li>
+<li>Ensures stability before event display</li>
 </ul>
-<p><strong>Signal Generation:</strong> Signals appear only when all four layers confirm simultaneously at bar close. No mid-bar signals occur.</p>
+<p><strong>Event Generation:</strong> Events appear only when all four layers confirm simultaneously at bar close. No mid-bar events occur.</p>
 <hr />
 
 <div class="knowledge-check"
      data-quiz-id="pentarch-four-layers"
      data-correct-answer="c"
-     data-correct-feedback="✓ Correct! Pentarch uses a four-layer detection system to validate signals. All four layers (Regime Classification, Pilot Line Distance, NanoFlow Momentum, and Bar Close Confirmation) must align simultaneously before a signal appears. This multi-layer approach helps filter false signals and ensures signals only appear when multiple technical conditions confirm."
-     data-incorrect-feedback="Not quite. Review the Four-Layer Detection System section above. Count how many independent layers must confirm before a signal fires. Each layer serves as a separate validation checkpoint. Try again!">
+     data-correct-feedback="✓ Correct! Pentarch uses a four-layer detection system to validate events. All four layers (Regime Classification, Pilot Line Distance, NanoFlow Momentum, and Bar Close Confirmation) must align simultaneously before an event appears. This multi-layer approach helps filter noise and ensures events only appear when multiple technical conditions confirm."
+     data-incorrect-feedback="Not quite. Review the Four-Layer Detection System section above. Count how many independent layers must confirm before an event fires. Each layer serves as a separate validation checkpoint. Try again!">
   <h4>✅ Knowledge Check</h4>
-  <p><strong>Question:</strong> How many detection layers must confirm simultaneously for a Pentarch signal to appear?</p>
+  <p><strong>Question:</strong> How many detection layers must confirm simultaneously for a Pentarch event to appear?</p>
 
   <form class="quiz-form">
     <label><input type="radio" name="q2" value="a"> Two layers (Pilot Line + NanoFlow)</label>
@@ -2671,36 +2671,36 @@ CAP → BDN → TD (Climax to accumulation)
 <tbody>
 <tr>
 <td><strong>TD Alert</strong></td>
-<td>TD signal appears at bar close</td>
-<td>"Pentarch: TD signal"</td>
+<td>TD event appears at bar close</td>
+<td>"Pentarch: TD event"</td>
 </tr>
 <tr>
 <td><strong>IGN Alert</strong></td>
-<td>IGN signal appears at bar close</td>
-<td>"Pentarch: IGN signal"</td>
+<td>IGN event appears at bar close</td>
+<td>"Pentarch: IGN event"</td>
 </tr>
 <tr>
 <td><strong>WRN Alert</strong></td>
-<td>WRN signal appears at bar close</td>
-<td>"Pentarch: WRN signal"</td>
+<td>WRN event appears at bar close</td>
+<td>"Pentarch: WRN event"</td>
 </tr>
 <tr>
 <td><strong>CAP Alert</strong></td>
-<td>CAP signal appears at bar close</td>
-<td>"Pentarch: CAP signal"</td>
+<td>CAP event appears at bar close</td>
+<td>"Pentarch: CAP event"</td>
 </tr>
 <tr>
 <td><strong>BDN Alert</strong></td>
-<td>BDN signal appears at bar close</td>
-<td>"Pentarch: BDN signal"</td>
+<td>BDN event appears at bar close</td>
+<td>"Pentarch: BDN event"</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Configuration:</strong></p>
 <ul>
 <li>Each alert can be enabled/disabled individually</li>
-<li>Alerts fire once per signal appearance</li>
-<li>No duplicate alerts for same signal</li>
+<li>Alerts fire once per event appearance</li>
+<li>No duplicate alerts for same event</li>
 <li>Compatible with TradingView alert system</li>
 </ul>
 <hr />
@@ -2708,48 +2708,48 @@ CAP → BDN → TD (Climax to accumulation)
 
 <div class="sp-callout sp-callout--info">
   <div class="sp-callout__title">💡 Pentarch Works Best in Combination</div>
-  <p>While Pentarch provides powerful reversal signals on its own, combining it with other Signal Pilot indicators creates high-probability confluence setups. Here are proven integration workflows:</p>
+  <p>While Pentarch provides powerful cycle phase detection on its own, combining it with other Signal Pilot indicators creates confluence analysis. Here are common integration workflows:</p>
 </div>
 
 <h3 id="pentarch-janus-atlas">Pentarch + Janus Atlas (Levels Confluence)<a class="headerlink" href="#pentarch-janus-atlas" title="Permanent link">&para;</a></h3>
 <p><strong>Workflow:</strong></p>
 <ol>
-<li><strong>TD or IGN signal appears</strong> → Check if price is near a key <a href="../janus-atlas-v10/">Janus Atlas</a> level (Daily Low, Weekly High, POC, VWAP, etc.)</li>
-<li><strong>Level confluence = higher probability</strong> → Signal at key support/resistance level increases reliability</li>
-<li><strong>Expected outcome:</strong> Reversal signals that align with structural levels have stronger follow-through</li>
+<li><strong>TD or IGN event appears</strong> → Check if price is near a key <a href="../janus-atlas-v10/">Janus Atlas</a> level (Daily Low, Weekly High, POC, VWAP, etc.)</li>
+<li><strong>Level confluence = stronger context</strong> → Event at key support/resistance level provides additional confluence</li>
+<li><strong>Expected outcome:</strong> Reversal events that align with structural levels have more confluence</li>
 </ol>
-<p><strong>Example:</strong> TD signal fires while price touches <a href="../janus-atlas-v10/">Janus Atlas</a> Daily Low = strong support confluence for potential bullish reversal</p>
+<p><strong>Example:</strong> TD event fires while price touches <a href="../janus-atlas-v10/">Janus Atlas</a> Daily Low = support confluence detected</p>
 
 <h3 id="pentarch-volume-oracle">Pentarch + Volume Oracle (Regime Confirmation)<a class="headerlink" href="#pentarch-volume-oracle" title="Permanent link">&para;</a></h3>
 <p><strong>Workflow:</strong></p>
 <ol>
-<li><strong>TD or IGN signal appears</strong> → Check <a href="../volume-oracle-v10/">Volume Oracle</a> regime for volume confirmation</li>
-<li><strong>Regime alignment</strong> → Bullish Pentarch signal + Accumulation regime (green) = volume flow supports reversal</li>
-<li><strong>Expected outcome:</strong> Pentarch signals aligned with Volume Oracle regime have higher follow-through probability</li>
+<li><strong>TD or IGN event appears</strong> → Check <a href="../volume-oracle-v10/">Volume Oracle</a> regime for volume confirmation</li>
+<li><strong>Regime alignment</strong> → Bullish Pentarch event + Accumulation regime (green) = volume flow confirms cycle phase</li>
+<li><strong>Expected outcome:</strong> Pentarch events aligned with Volume Oracle regime have confluence</li>
 </ol>
-<p><strong>Example:</strong> IGN bullish signal fires while <a href="../volume-oracle-v10/">Volume Oracle</a> shows Accumulation regime (green, 75%) = high-probability long with volume support</p>
+<p><strong>Example:</strong> IGN event fires while <a href="../volume-oracle-v10/">Volume Oracle</a> shows Accumulation regime (green, 75%) = markup phase confluence detected</p>
 
 <h3 id="pentarch-omnideck">Pentarch + OmniDeck (Multi-System Validation)<a class="headerlink" href="#pentarch-omnideck" title="Permanent link">&para;</a></h3>
 <p><strong>Workflow:</strong></p>
 <ol>
-<li><strong>IGN signal appears</strong> → Check <a href="../omnideck-v10/">OmniDeck</a> Regime Box for trend context</li>
-<li><strong><a href="../omnideck-v10/">OmniDeck</a> shows bullish regime</strong> → IGN signal aligned with broader trend = higher probability</li>
-<li><strong><a href="../omnideck-v10/">OmniDeck</a> shows conflicting regime</strong> → Consider waiting for trend alignment or skip trade</li>
+<li><strong>IGN event appears</strong> → Check <a href="../omnideck-v10/">OmniDeck</a> Regime Box for trend context</li>
+<li><strong><a href="../omnideck-v10/">OmniDeck</a> shows bullish regime</strong> → IGN event aligned with broader trend = confluence detected</li>
+<li><strong><a href="../omnideck-v10/">OmniDeck</a> shows conflicting regime</strong> → Trend context conflict noted</li>
 </ol>
-<p><strong>Example:</strong> IGN bullish reversal signal with <a href="../omnideck-v10/">OmniDeck</a> showing bullish regime box = trend-aligned entry</p>
+<p><strong>Example:</strong> IGN reversal event with <a href="../omnideck-v10/">OmniDeck</a> showing bullish regime box = trend-aligned confluence</p>
 
 <h3 id="pentarch-harmonic-oscillator">Pentarch + Harmonic Oscillator (Momentum Confirmation)<a class="headerlink" href="#pentarch-harmonic-oscillator" title="Permanent link">&para;</a></h3>
 <p><strong>Workflow:</strong></p>
 <ol>
-<li><strong>TD or IGN signal appears</strong> → Check if <a href="../harmonic-oscillator-v10/">Harmonic Oscillator</a> shows Bull or STRONG signal</li>
-<li><strong>Momentum alignment</strong> → Pentarch reversal + momentum shift = powerful confluence</li>
-<li><strong>Expected outcome:</strong> Signal + momentum agreement increases follow-through probability</li>
+<li><strong>TD or IGN event appears</strong> → Check if <a href="../harmonic-oscillator-v10/">Harmonic Oscillator</a> shows Bull or STRONG regime</li>
+<li><strong>Momentum alignment</strong> → Pentarch reversal event + momentum shift = confluence detected</li>
+<li><strong>Expected outcome:</strong> Event + momentum agreement provides additional context</li>
 </ol>
-<p><strong>Example:</strong> IGN signal fires while Harmonic Oscillator transitions from Bear to Bull = momentum confirmed reversal</p>
+<p><strong>Example:</strong> IGN event fires while Harmonic Oscillator transitions from Bear to Bull = momentum confluence detected</p>
 
 <div class="admonition tip">
 <p class="admonition-title">Pro Tip: The Trinity Workflow</p>
-<p>For highest-probability setups, combine <strong>Pentarch (timing) + <a href="../janus-atlas-v10/">Janus Atlas</a> (levels) + <a href="../volume-oracle-v10/">Volume Oracle</a> (regime confirmation)</strong>. Look for IGN/CAP signals that occur at key levels with aligned regime (Accumulation for longs, Distribution for shorts). This triple-confluence approach filters for only the strongest opportunities.</p>
+<p>For maximum confluence, combine <strong>Pentarch (timing) + <a href="../janus-atlas-v10/">Janus Atlas</a> (levels) + <a href="../volume-oracle-v10/">Volume Oracle</a> (regime confirmation)</strong>. Look for IGN/CAP events that occur at key levels with aligned regime (Accumulation for bullish events, Distribution for bearish events). This triple-confluence approach identifies the strongest confluence zones.</p>
 <p><strong>See also:</strong> <a href="../ref-workflow/">Complete Trading Workflow Guide</a> for detailed multi-indicator strategies.</p>
 </div>
 
@@ -2761,52 +2761,52 @@ CAP → BDN → TD (Climax to accumulation)
   <p>These mistakes are frequently made by new Pentarch users. Avoid them to improve your results:</p>
 </div>
 
-<h3 id="mistake-1-trading-every-signal">Mistake #1: Trading Every Signal Without Context<a class="headerlink" href="#mistake-1-trading-every-signal" title="Permanent link">&para;</a></h3>
-<p><strong>The Problem:</strong> Not all signals have equal probability. TD/IGN signals in choppy, ranging markets often lead to whipsaws. Trading every signal without considering market context reduces win rate.</p>
+<h3 id="mistake-1-ignoring-context">Mistake #1: Ignoring Market Context<a class="headerlink" href="#mistake-1-ignoring-context" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> Not all events have equal context. TD/IGN events in choppy, ranging markets have less confluence. Analyzing events without considering market context reduces analysis quality.</p>
 <p><strong>The Fix:</strong></p>
 <ul>
 <li>Confirm trend context first (use <a href="../omnideck-v10/">OmniDeck</a> Regime Box or Pilot Line direction)</li>
-<li>Higher timeframe signals (4H, Daily) generally more reliable than 5-minute signals</li>
+<li>Higher timeframe events (4H, Daily) generally have cleaner context than 5-minute events</li>
 <li>Look for confluence with other indicators (<a href="../janus-atlas-v10/">Janus Atlas</a> levels, <a href="../volume-oracle-v10/">Volume Oracle</a> regime)</li>
-<li>Skip signals during low-volume, narrow-range conditions</li>
+<li>Events during low-volume, narrow-range conditions have less context</li>
 </ul>
-<p><strong>Remember:</strong> Quality over quantity. Wait for high-confluence setups.</p>
+<p><strong>Remember:</strong> Quality over quantity. Look for high-confluence setups.</p>
 
-<h3 id="mistake-2-ignoring-signal-sequence">Mistake #2: Ignoring Signal Sequence Position<a class="headerlink" href="#mistake-2-ignoring-signal-sequence" title="Permanent link">&para;</a></h3>
-<p><strong>The Problem:</strong> BDN signal without prior CAP/WRN signals = late-cycle signal. The best reversals occur early in cycles (TD → IGN), not late (BDN after extended move).</p>
+<h3 id="mistake-2-ignoring-event-sequence">Mistake #2: Ignoring Event Sequence Position<a class="headerlink" href="#mistake-2-ignoring-event-sequence" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> BDN event without prior CAP/WRN events = late-cycle event. Early-cycle events (TD → IGN) have different context than late-cycle events (BDN after extended move).</p>
 <p><strong>The Fix:</strong></p>
 <ul>
-<li>Prioritize TD and IGN signals (early-cycle, higher potential)</li>
-<li>Be cautious with standalone BDN signals (may indicate you're late)</li>
-<li>Complete sequences (TD → IGN → WRN → CAP → BDN) are rare but powerful</li>
-<li>Partial sequences (TD → IGN) are more common and still effective</li>
+<li>Note TD and IGN events (early-cycle indicators)</li>
+<li>Standalone BDN events indicate late-cycle conditions</li>
+<li>Complete sequences (TD → IGN → WRN → CAP → BDN) are rare but significant</li>
+<li>Partial sequences (TD → IGN) are more common</li>
 </ul>
-<p><strong>Remember:</strong> Early signals (TD/IGN) offer better risk:reward than late signals (BDN).</p>
+<p><strong>Remember:</strong> Early events (TD/IGN) indicate different cycle phase than late events (BDN).</p>
 
 <h3 id="mistake-3-using-too-low-timeframe">Mistake #3: Using Excessively Low Timeframes<a class="headerlink" href="#mistake-3-using-too-low-timeframe" title="Permanent link">&para;</a></h3>
-<p><strong>The Problem:</strong> 1-minute and 5-minute charts produce many signals, but noise increases and reliability decreases. Beginners often over-trade these timeframes.</p>
+<p><strong>The Problem:</strong> 1-minute and 5-minute charts produce many events, but noise increases and context clarity decreases.</p>
 <p><strong>The Fix:</strong></p>
 <ul>
-<li>Start with 15-minute or 1-hour timeframes to learn signal behavior</li>
-<li>4-hour and Daily timeframes provide highest signal quality</li>
-<li>If day-trading, use 15m minimum and confirm with higher timeframe context</li>
-<li>Lower timeframes require tighter risk management (wider stops often needed)</li>
+<li>Start with 15-minute or 1-hour timeframes to learn event behavior</li>
+<li>4-hour and Daily timeframes provide clearest event context</li>
+<li>Lower timeframes have more noise and less clarity</li>
+<li>Higher timeframe context helps filter lower timeframe events</li>
 </ul>
-<p><strong>Remember:</strong> Higher timeframes = cleaner signals, lower noise, better win rates.</p>
+<p><strong>Remember:</strong> Higher timeframes = cleaner events, lower noise, clearer context.</p>
 
-<h3 id="mistake-4-no-stop-loss">Mistake #4: Trading Without Stop Loss<a class="headerlink" href="#mistake-4-no-stop-loss" title="Permanent link">&para;</a></h3>
-<p><strong>The Problem:</strong> Not all Pentarch signals result in immediate reversals. Without stop losses, losing trades can spiral into large losses.</p>
+<h3 id="mistake-4-ignoring-risk-context">Mistake #4: Ignoring Risk Context<a class="headerlink" href="#mistake-4-ignoring-risk-context" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> Not all Pentarch events result in immediate reversals. Events indicate phase conditions, not guaranteed outcomes.</p>
 <p><strong>The Fix:</strong></p>
 <ul>
-<li>Place stop loss below recent swing low (for longs) or above swing high (for shorts)</li>
-<li>IGN signals: Stop below TD signal level or recent support</li>
-<li>CAP signals: Stop above recent high (for bearish setups)</li>
-<li>Use 1-2% account risk maximum per trade</li>
+<li>Janus Atlas levels provide structural reference points</li>
+<li>IGN events: Note nearby support levels for context</li>
+<li>CAP events: Note nearby resistance levels for context</li>
+<li>Risk management is essential for any analysis methodology</li>
 </ul>
-<p><strong>Remember:</strong> Signals provide timing, but risk management keeps you in the game.</p>
+<p><strong>Remember:</strong> Events provide phase identification. Risk management is separate from event detection.</p>
 
-<h3 id="mistake-5-treating-all-signals-equally">Mistake #5: Treating All Five Signals as Equally Important<a class="headerlink" href="#mistake-5-treating-all-signals-equally" title="Permanent link">&para;</a></h3>
-<p><strong>The Problem:</strong> TD and WRN are "warning" signals (watch for potential setup), while IGN and CAP are "action" signals (potential entry points). Beginners often confuse signal purpose.</p>
+<h3 id="mistake-5-treating-all-events-equally">Mistake #5: Treating All Five Events as Identical<a class="headerlink" href="#mistake-5-treating-all-events-equally" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> TD and WRN are "warning" events (early/late cycle warnings), while IGN and CAP are "confirmation" events (phase transitions). Each event serves a different purpose.</p>
 <p><strong>Understanding each event:</strong></p>
 <ul>
 <li><strong>TD (Touchdown):</strong> Early cycle warning - accumulation phase detected</li>
@@ -2817,16 +2817,16 @@ CAP → BDN → TD (Climax to accumulation)
 </ul>
 <p><strong>Note:</strong> TD and WRN are early/late cycle warnings. IGN, CAP, and BDN indicate phase transitions.</p>
 
-<h3 id="mistake-6-no-profit-target">Mistake #6: No Profit Target or Exit Plan<a class="headerlink" href="#mistake-6-no-profit-target" title="Permanent link">&para;</a></h3>
-<p><strong>The Problem:</strong> Entering on a signal without knowing when to exit leads to giving back profits or holding through reversals.</p>
+<h3 id="mistake-6-no-level-context">Mistake #6: No Level Context<a class="headerlink" href="#mistake-6-no-level-context" title="Permanent link">&para;</a></h3>
+<p><strong>The Problem:</strong> Analyzing events without knowing nearby structural levels provides incomplete context.</p>
 <p><strong>The Fix:</strong></p>
 <ul>
-<li>Use <a href="../janus-atlas-v10/">Janus Atlas</a> levels as profit targets (next resistance/support level)</li>
-<li>Exit at opposite-direction signal (IGN long → exit at WRN or CAP)</li>
-<li>Set minimum 1:2 risk:reward ratio (risk $10 to make $20+)</li>
-<li>Trail stop using Pilot Line or recent swing levels</li>
+<li>Use <a href="../janus-atlas-v10/">Janus Atlas</a> levels to identify nearby support/resistance</li>
+<li>Watch for opposite-direction events (IGN → then watch for WRN or CAP)</li>
+<li>Note cycle progression through event sequence</li>
+<li>Use Pilot Line and swing levels as structural references</li>
 </ul>
-<p><strong>Remember:</strong> Pentarch gives you entry timing, but you need an exit plan.</p>
+<p><strong>Remember:</strong> Pentarch identifies cycle phases. Level context provides structural framework.</p>
 
 <div class="admonition info">
 <p class="admonition-title">Additional Resources</p>
@@ -2878,32 +2878,32 @@ CAP → BDN → TD (Climax to accumulation)
 
 <div class="sp-callout sp-callout--warning">
   <div class="sp-callout__title">Understanding Reduced Reliability Conditions</div>
-  <p>Pentarch signals show reduced reliability in certain market conditions. Recognizing these environments helps set appropriate expectations:</p>
+  <p>Pentarch events show reduced context clarity in certain market conditions. Recognizing these environments helps set appropriate expectations:</p>
 </div>
 
 <h3 id="choppy-sideways-markets">Choppy, Sideways Markets<a class="headerlink" href="#choppy-sideways-markets" title="Permanent link">&para;</a></h3>
-<p><strong>The Condition:</strong> When price moves sideways in a tight range with no clear directional bias, signals fire more frequently but follow-through diminishes. Gray (neutral) regime bars often cluster during these periods.</p>
-<p><strong>What Happens:</strong> TD/IGN signals may fire multiple times in alternating directions without sustained moves. Signal-to-noise ratio decreases. Whipsaws become more common.</p>
-<p><strong>Context:</strong> This isn't a flaw—it reflects actual market behavior. Sideways consolidation produces ambiguous momentum patterns that generate valid but lower-probability signals.</p>
+<p><strong>The Condition:</strong> When price moves sideways in a tight range with no clear directional bias, events fire more frequently but context clarity diminishes. Gray (neutral) regime bars often cluster during these periods.</p>
+<p><strong>What Happens:</strong> TD/IGN events may fire multiple times in alternating directions without sustained moves. Event-to-noise ratio decreases.</p>
+<p><strong>Context:</strong> This isn't a flaw—it reflects actual market behavior. Sideways consolidation produces ambiguous momentum patterns that generate valid but lower-context events.</p>
 
 <h3 id="extremely-low-volume-periods">Extremely Low Volume Periods<a class="headerlink" href="#extremely-low-volume-periods" title="Permanent link">&para;</a></h3>
 <p><strong>The Condition:</strong> During holidays, overnight sessions, or illiquid trading hours, volume drops significantly below average levels.</p>
-<p><strong>What Happens:</strong> Price moves lack significant volume participation. Signals may fire on small moves that quickly reverse. Follow-through becomes unreliable.</p>
+<p><strong>What Happens:</strong> Price moves lack significant volume participation. Events may fire on small moves that quickly reverse. Context becomes less clear.</p>
 <p><strong>Context:</strong> Pentarch detects momentum shifts, but low volume means those shifts lack the "fuel" (buying/selling pressure) to sustain moves. Combine with <a href="../volume-oracle-v10/">Volume Oracle</a> to identify these conditions.</p>
 
 <h3 id="major-news-events-earnings">Major News Events & Earnings Releases<a class="headerlink" href="#major-news-events-earnings" title="Permanent link">&para;</a></h3>
 <p><strong>The Condition:</strong> During Federal Reserve announcements, earnings reports, or major geopolitical events, price action becomes driven by news rather than technical patterns.</p>
-<p><strong>What Happens:</strong> Signals may fire immediately before/after events, but price can gap or reverse violently regardless of signal. Technical patterns temporarily lose predictive value as fundamental news dominates.</p>
-<p><strong>Context:</strong> Pentarch analyzes price and momentum—it doesn't "know" about external catalysts. Signals remain technically valid but compete with stronger fundamental forces during these windows.</p>
+<p><strong>What Happens:</strong> Events may fire immediately before/after news, but price can gap or reverse violently regardless of event. Technical patterns temporarily lose relevance as fundamental news dominates.</p>
+<p><strong>Context:</strong> Pentarch analyzes price and momentum—it doesn't "know" about external catalysts. Events remain technically valid but compete with stronger fundamental forces during these windows.</p>
 
 <h3 id="very-low-timeframes">Very Low Timeframes (1-Minute, 5-Minute)<a class="headerlink" href="#very-low-timeframes" title="Permanent link">&para;</a></h3>
 <p><strong>The Condition:</strong> On 1m and 5m charts, market microstructure noise (bid-ask spreads, algos, spoofing) becomes significant relative to price moves.</p>
-<p><strong>What Happens:</strong> Signal frequency increases dramatically, but many signals represent noise rather than meaningful momentum shifts. Stop losses get hit more frequently due to volatility relative to move size.</p>
-<p><strong>Context:</strong> Pentarch works on all timeframes, but very low timeframes amplify noise faster than they amplify signal quality. Higher timeframes (15m+, 1H, 4H, Daily) filter out microstructure noise and improve signal-to-noise ratio.</p>
+<p><strong>What Happens:</strong> Event frequency increases dramatically, but many events represent noise rather than meaningful momentum shifts.</p>
+<p><strong>Context:</strong> Pentarch works on all timeframes, but very low timeframes amplify noise faster than they amplify event quality. Higher timeframes (15m+, 1H, 4H, Daily) filter out microstructure noise and improve event-to-noise ratio.</p>
 
 <h3 id="trend-exhaustion-without-catalysts">Extended Trends Without Clear Exhaustion Signals<a class="headerlink" href="#trend-exhaustion-without-catalysts" title="Permanent link">&para;</a></h3>
 <p><strong>The Condition:</strong> During strong trending markets (especially parabolic moves), counter-trend signals may fire but price continues trending without reversal.</p>
-<p><strong>What Happens:</strong> CAP or TD signals appear suggesting reversal, but momentum remains so strong that price only pauses briefly before continuing the original trend. Counter-trend signals get "run over" by persistent momentum.</p>
+<p><strong>What Happens:</strong> CAP or TD events appear indicating reversal conditions, but momentum remains so strong that price only pauses briefly before continuing the original trend. Counter-trend events may occur during persistent momentum.</p>
 <p><strong>Context:</strong> Markets can remain overbought or oversold longer than technical indicators suggest. Pentarch detects exhaustion patterns, but extraordinary trends (driven by strong narratives or momentum cascades) can persist beyond typical cycle lengths. Confirm with <a href="../omnideck-v10/">OmniDeck</a> regime strength and <a href="../volume-oracle-v10/">Volume Oracle</a> exhaustion patterns.</p>
 
 <div class="admonition tip">
@@ -2913,28 +2913,28 @@ CAP → BDN → TD (Climax to accumulation)
 <li><strong>Gray regime bars clustering:</strong> Signal of choppy conditions—wait for regime clarity</li>
 <li><strong>Volume bars consistently below average:</strong> Use <a href="../volume-oracle-v10/">Volume Oracle</a> to confirm low participation</li>
 <li><strong>Calendar awareness:</strong> Check economic calendars for major scheduled events</li>
-<li><strong>Signal frequency spiking:</strong> If you see 5+ signals in rapid succession alternating directions, you're likely in chop</li>
-<li><strong>Timeframe comparison:</strong> If 5m shows signals but 1H doesn't, the lower timeframe is likely noise</li>
+<li><strong>Event frequency spiking:</strong> If you see 5+ events in rapid succession alternating directions, you're likely in chop</li>
+<li><strong>Timeframe comparison:</strong> If 5m shows events but 1H doesn't, the lower timeframe is likely noise</li>
 </ul>
 <p><strong>Remember:</strong> Pentarch doesn't "fail" in these conditions—it accurately reflects that the market itself is ambiguous or driven by non-technical factors. Skipping low-quality environments is as important as identifying high-quality ones.</p>
 </div>
 
 <hr />
 <h2 id="frequently-asked-questions">❓ Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permanent link">&para;</a></h2>
-<h3 id="q-when-do-signals-appear">Q: When do signals appear?<a class="headerlink" href="#q-when-do-signals-appear" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> Signals appear when all four detection layers confirm simultaneously at bar close. No mid-bar signals occur.</p>
-<h3 id="q-can-signals-repaint">Q: Can signals repaint?<a class="headerlink" href="#q-can-signals-repaint" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> No. All signals confirm at bar close and do not change retroactively.</p>
-<h3 id="q-how-many-signals-appear-on-average">Q: How many signals appear on average?<a class="headerlink" href="#q-how-many-signals-appear-on-average" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> Signal frequency varies by asset, timeframe, and market conditions. Some periods show frequent signals, others show sparse signals.</p>
-<h3 id="q-do-all-five-signals-always-appear">Q: Do all five signals always appear?<a class="headerlink" href="#q-do-all-five-signals-always-appear" title="Permanent link">&para;</a></h3>
+<h3 id="q-when-do-events-appear">Q: When do events appear?<a class="headerlink" href="#q-when-do-events-appear" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Events appear when all four detection layers confirm simultaneously at bar close. No mid-bar events occur.</p>
+<h3 id="q-can-events-repaint">Q: Can events repaint?<a class="headerlink" href="#q-can-events-repaint" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> No. All events confirm at bar close and do not change retroactively.</p>
+<h3 id="q-how-many-events-appear-on-average">Q: How many events appear on average?<a class="headerlink" href="#q-how-many-events-appear-on-average" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Event frequency varies by asset, timeframe, and market conditions. Some periods show frequent events, others show sparse events.</p>
+<h3 id="q-do-all-five-events-always-appear">Q: Do all five events always appear?<a class="headerlink" href="#q-do-all-five-events-always-appear" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> No. Partial cycles occur more often than complete cycles. Complete five-event cycles appear less often than partial sequences.</p>
 <h3 id="q-what-timeframes-work">Q: What timeframes work?<a class="headerlink" href="#q-what-timeframes-work" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> All timeframes supported. Signal characteristics may vary across different timeframe selections.</p>
-<h3 id="q-can-multiple-signals-appear-on-same-bar">Q: Can multiple signals appear on same bar?<a class="headerlink" href="#q-can-multiple-signals-appear-on-same-bar" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> No. Only one signal type appears per bar close.</p>
-<h3 id="q-what-if-i-miss-a-signal">Q: What if I miss a signal?<a class="headerlink" href="#q-what-if-i-miss-a-signal" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> Signals remain on chart after appearance. Historical signals visible on past bars.</p>
+<p><strong>A:</strong> All timeframes supported. Event characteristics may vary across different timeframe selections.</p>
+<h3 id="q-can-multiple-events-appear-on-same-bar">Q: Can multiple events appear on same bar?<a class="headerlink" href="#q-can-multiple-events-appear-on-same-bar" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> No. Only one event type appears per bar close.</p>
+<h3 id="q-what-if-i-miss-an-event">Q: What if I miss an event?<a class="headerlink" href="#q-what-if-i-miss-an-event" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Events remain on chart after appearance. Historical events visible on past bars.</p>
 <h3 id="q-how-do-i-customize-colors">Q: How do I customize colors?<a class="headerlink" href="#q-how-do-i-customize-colors" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> Open indicator settings → Navigate to color section → Select from 5 preset palettes or customize individual event colors.</p>
 <h3 id="q-does-pentarch-work-on-futuresforexcrypto">Q: Does Pentarch work on futures/forex/crypto?<a class="headerlink" href="#q-does-pentarch-work-on-futuresforexcrypto" title="Permanent link">&para;</a></h3>
@@ -2943,11 +2943,11 @@ CAP → BDN → TD (Climax to accumulation)
 <p><strong>A:</strong> Yes. Pentarch can be combined with other analysis tools. Compatibility with entire Signal Pilot suite available.</p>
 <hr />
 <h2 id="quick-reference-guide">📋 Quick Reference Guide<a class="headerlink" href="#quick-reference-guide" title="Permanent link">&para;</a></h2>
-<h3 id="signal-quick-reference">Signal Quick Reference<a class="headerlink" href="#signal-quick-reference" title="Permanent link">&para;</a></h3>
+<h3 id="event-quick-reference">Event Quick Reference<a class="headerlink" href="#event-quick-reference" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Signal</th>
+<th>Event</th>
 <th>Position</th>
 <th>Default Color</th>
 <th>Phase</th>
@@ -3004,7 +3004,7 @@ CAP → BDN → TD (Climax to accumulation)
 </thead>
 <tbody>
 <tr>
-<td><strong>Signal Labels</strong></td>
+<td><strong>Event Labels</strong></td>
 <td>On chart</td>
 <td>Show cycle phase detection</td>
 </tr>
