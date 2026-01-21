@@ -1976,8 +1976,8 @@
 <h3 id="signal-generation">Signal Generation<a class="headerlink" href="#signal-generation" title="Permanent link">&para;</a></h3>
 <p><strong>Signal Types:</strong></p>
 <ul>
-<li><strong>🟢 BULL Signal (↑)</strong> — Bullish conditions confirmed, potential long entry</li>
-<li><strong>🔴 BEAR Signal (↓)</strong> — Bearish conditions confirmed, potential short entry</li>
+<li><strong>🟢 BULL Event (↑)</strong> — Bullish conditions confirmed, accumulation phase detected</li>
+<li><strong>🔴 BEAR Event (↓)</strong> — Bearish conditions confirmed, distribution phase detected</li>
 </ul>
 <p><strong>Quality Ratings (⭐):</strong> Each signal receives a 0-100% quality score displayed as stars:</p>
 <table>
@@ -2386,7 +2386,7 @@
 </table>
 
 <h3 id="alert-message-format">Alert Message Format<a class="headerlink" href="#alert-message-format" title="Permanent link">&para;</a></h3>
-<p>Entry signals include full trade data:</p>
+<p>Events include full analysis data:</p>
 <pre style="background: #1a1a2e; padding: 1rem; border-radius: 8px; font-family: monospace; font-size: 0.85rem; overflow-x: auto;">
 🟢 BULLISH FLOW | BTCUSD 15m
 Quality: 82% ⭐⭐⭐ | Regime: 67%
@@ -2405,8 +2405,8 @@ Structure: ✓ ALIGNED | Market: TRENDING</pre>
 <tr><th>Regime</th><th>Bias</th><th>Action</th></tr>
 </thead>
 <tbody>
-<tr><td>ACCUMULATION + STRONG</td><td>Bullish</td><td>Look for long signals</td></tr>
-<tr><td>DISTRIBUTION + STRONG</td><td>Bearish</td><td>Look for short signals</td></tr>
+<tr><td>ACCUMULATION + STRONG</td><td>Bullish</td><td>Bullish events favored</td></tr>
+<tr><td>DISTRIBUTION + STRONG</td><td>Bearish</td><td>Bearish events favored</td></tr>
 <tr><td>NEUTRAL</td><td>None</td><td>Wait for clarity</td></tr>
 <tr><td>Any + FADING/WEAK</td><td>Caution</td><td>Reduce size or wait</td></tr>
 </tbody>
@@ -2553,7 +2553,7 @@ Structure: ✓ ALIGNED | Market: TRENDING</pre>
 </tr>
 <tr>
 <td><strong>Best For</strong></td>
-<td>Day trading, entry signals with risk levels</td>
+<td>Day trading, event detection with risk analysis</td>
 <td>Swing trading, trend following, divergence detection</td>
 </tr>
 <tr>
@@ -2639,7 +2639,7 @@ Structure: ✓ ALIGNED | Market: TRENDING</pre>
 <h2 id="common-mistakes">⚠️ Common Mistakes<a class="headerlink" href="#common-mistakes" title="Permanent link">&para;</a></h2>
 
 <h3 id="mistake-1-against-regime">Mistake #1: Trading Against Regime<a class="headerlink" href="#mistake-1-against-regime" title="Permanent link">&para;</a></h3>
-<p><strong>Wrong:</strong> Taking long signals in DISTRIBUTION regime</p>
+<p><strong>Wrong:</strong> Expecting bullish events in DISTRIBUTION regime</p>
 <p><strong>Right:</strong> Wait for regime flip or trade with regime direction</p>
 
 <h3 id="mistake-2-ignoring-structure">Mistake #2: Ignoring Structure Conflicts<a class="headerlink" href="#mistake-2-ignoring-structure" title="Permanent link">&para;</a></h3>

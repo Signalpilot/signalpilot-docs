@@ -2289,7 +2289,7 @@
 <ul>
 <li>Upper/lower bands at ±2 standard deviations</li>
 <li>White dots = entered extreme zone (breach)</li>
-<li>Yellow dots = left extreme zone (exit signal)</li>
+<li>Yellow dots = left extreme zone (zone exit)</li>
 </ul>
 
 <p><strong>Layer 4: Divergence Detection</strong></p>
@@ -2899,9 +2899,9 @@ Result: Bearish divergence detected
 <p><strong>What they mean:</strong> The market has entered an extreme state (overbought above +2σ, oversold below -2σ).</p>
 <p><strong>Important:</strong> Breach signals are <em>warnings</em>, not immediate action triggers. Markets can remain overbought or oversold for extended periods. A breach tells you conditions are stretched—not that reversal is imminent.</p>
 
-<h3 id="exit-signals">Exit Signals (Yellow Dots)</h3>
+<h3 id="zone-exits">Zone Exits (Yellow Dots)</h3>
 <p><strong>What they mean:</strong> The extreme condition has ended. Flow has dropped back out of the overbought zone (Exit +2σ) or risen back out of the oversold zone (Exit -2σ).</p>
-<p><strong>Why they matter:</strong> Exit signals often align with actual reversal points and are more actionable than breach signals. When flow leaves an extreme zone, the stretched condition is unwinding.</p>
+<p><strong>Why they matter:</strong> Zone exits often align with actual reversal points and provide more context than breach dots. When flow leaves an extreme zone, the stretched condition is unwinding.</p>
 
 <h3 id="breach-vs-exit-workflow">Recommended Workflow</h3>
 <ol>
@@ -2910,7 +2910,7 @@ Result: Bearish divergence detected
 <li><strong>Cross signal confirms</strong> → Higher confidence trade when ribbon or divergence confirms the reversal.</li>
 </ol>
 
-<p><strong>Example:</strong> Price rallying → White dot appears (breach +2σ) → Flow remains overbought for 5 bars → Yellow dot appears (exit +2σ) → Consider short entry as overbought condition ends.</p>
+<p><strong>Example:</strong> Price rallying → White dot appears (breach +2σ) → Flow remains overbought for 5 bars → Yellow dot appears (exit +2σ) → Overbought condition has ended, reversal conditions present.</p>
 <hr />
 <h2 id="alert-configuration">🔔 Alert Configuration<a class="headerlink" href="#alert-configuration" title="Permanent link">&para;</a></h2>
 <p><strong>Available Alerts:</strong></p>
@@ -2983,11 +2983,11 @@ Result: Bearish divergence detected
 <p><strong>Workflow:</strong></p>
 <ol>
 <li><strong>Plutus Flow shows divergence</strong> → Price making higher highs while OBV making lower highs (bearish divergence) or vice versa (bullish divergence)</li>
-<li><strong>Wait for <a href="../pentarch-v10/">Pentarch</a> confirmation signal</strong> → Bearish divergence + CAP/WRN signal = high-probability reversal. Bullish divergence + TD/IGN signal = strong long setup</li>
+<li><strong>Wait for <a href="../pentarch-v10/">Pentarch</a> confirmation event</strong> → Bearish divergence + CAP/WRN event = reversal confluence. Bullish divergence + TD/IGN event = accumulation phase confluence</li>
 <li><strong>Divergence + timing signal = precise entry</strong> → Money flow weakness confirmed by reversal timing</li>
 <li><strong>Expected outcome:</strong> <a href="../pentarch-v10/">Pentarch</a> provides exact entry point when divergence pattern completes</li>
 </ol>
-<p><strong>Example:</strong> Plutus Flow shows bearish divergence (price higher, OBV lower) → <a href="../pentarch-v10/">Pentarch</a> CAP signal fires = high-probability short entry with money flow confirmation</p>
+<p><strong>Example:</strong> Plutus Flow shows bearish divergence (price higher, OBV lower) → <a href="../pentarch-v10/">Pentarch</a> CAP event fires = distribution phase confluence with money flow confirmation</p>
 
 <h3 id="plutus-flow-janus-atlas">Plutus Flow + <a href="../janus-atlas-v10/">Janus Atlas</a> (Divergence at Levels)<a class="headerlink" href="#plutus-flow-janus-atlas" title="Permanent link">&para;</a></h3>
 <p><strong>Workflow:</strong></p>
@@ -2997,7 +2997,7 @@ Result: Bearish divergence detected
 <li><strong>Level + divergence = high-probability reversal zone</strong> → Structural resistance + volume weakness = strong confluence</li>
 <li><strong>Expected outcome:</strong> Divergence at key levels filters for highest-probability reversal setups</li>
 </ol>
-<p><strong>Example:</strong> Price hits Weekly High + 1.618 Fib extension → Plutus Flow shows bearish divergence = strong short confluence (resistance + money flow exhaustion)</p>
+<p><strong>Example:</strong> Price hits Weekly High + 1.618 Fib extension → Plutus Flow shows bearish divergence = distribution phase confluence (resistance + money flow exhaustion)</p>
 
 <h3 id="plutus-flow-harmonic-oscillator">Plutus Flow + <a href="../harmonic-oscillator-v10/">Harmonic Oscillator</a> (Money Flow + Momentum)<a class="headerlink" href="#plutus-flow-harmonic-oscillator" title="Permanent link">&para;</a></h3>
 <p><strong>Workflow:</strong></p>
@@ -3202,7 +3202,7 @@ Result: Bearish divergence detected
 <li><strong>Plutus Flow (OBV):</strong> Cumulative money flow trend → Long-term accumulation/distribution analysis</li>
 <li><strong>Volume Oracle:</strong> Regime detection + signal generation → Market activity phase and trade signals with quality ratings</li>
 <li>Use Plutus for trend context and divergence analysis</li>
-<li>Use Volume Oracle for regime confirmation, entry signals, and risk management levels</li>
+<li>Use Volume Oracle for regime confirmation, event detection, and risk management levels</li>
 </ul>
 <p><strong>Remember:</strong> Plutus = cumulative flow trend. Volume Oracle = regime + signals + risk management. Different tools for different jobs—use both together.</p>
 

@@ -2087,21 +2087,21 @@
 <hr />
 <h2 id="technical-questions">🔧 Technical Questions<a class="headerlink" href="#technical-questions" title="Permanent link">&para;</a></h2>
 <h3 id="whats-the-difference-between-td-and-ign-signals">⭐ What's the difference between TD and IGN signals?<a class="headerlink" href="#whats-the-difference-between-td-and-ign-signals" title="Permanent link">&para;</a></h3>
-<p><span style="color: #0aa1d5; font-weight: 600;">Signal Understanding</span></p>
-<p><strong>TD (Touchdown)</strong> = Early warning
+<p><span style="color: #0aa1d5; font-weight: 600;">Event Understanding</span></p>
+<p><strong>TD (Touchdown)</strong> = Early Cycle Warning
 - Indicates early-cycle reversal conditions
-- Typically viewed as observation signal, not entry trigger
-- Often appears first in a reversal sequence</p>
-<p><strong>IGN (Ignition)</strong> = Momentum indication
+- Accumulation phase detection
+- Often appears first in a cycle sequence</p>
+<p><strong>IGN (Ignition)</strong> = Momentum Confirmation
 - Indicates momentum breakout conditions
-- Commonly interpreted as potential long entry signal
-- Often follows TD signals</p>
-<p><strong>Common pattern sequence:</strong>
-1. TD appears → Many traders begin observation
-2. IGN appears → Often interpreted as entry consideration
-3. Price moves up → Position monitoring phase
-4. CAP/BDN appears → Often interpreted as exit consideration</p>
-<p>The <a href="../start-quick/">Quick Start Guide</a> explains all 5 signal types.</p>
+- Markup phase detection
+- Often follows TD events</p>
+<p><strong>Common cycle sequence:</strong>
+1. TD appears → Accumulation phase detected
+2. IGN appears → Markup phase detected
+3. WRN appears → Distribution warning detected
+4. CAP/BDN appears → Distribution/markdown phase detected</p>
+<p>The <a href="../start-quick/">Quick Start Guide</a> explains all 5 event types.</p>
 <h3 id="can-i-customize-indicator-settings">🎨 Can I customize indicator settings?<a class="headerlink" href="#can-i-customize-indicator-settings" title="Permanent link">&para;</a></h3>
 <p><span style="color: #f59e0b; font-weight: 600;">Advanced Settings</span></p>
 <p><strong>Yes, but carefully.</strong></p>
@@ -2113,64 +2113,64 @@
 - <strong>Beginners</strong>: Default settings are recommended
 - <strong>Advanced</strong>: Visual preferences can be adjusted
 - <strong>Very advanced</strong>: Parameters can be experimented with on test charts first</p>
-<p><strong>Consideration:</strong> Changing core calculation parameters may affect signal quality. Default settings have been optimized through extensive testing.</p>
-<h3 id="how-often-do-signals-appear">📊 How often do signals appear?<a class="headerlink" href="#how-often-do-signals-appear" title="Permanent link">&para;</a></h3>
-<p><span style="color: #10b981; font-weight: 600;">Signal Frequency</span></p>
+<p><strong>Consideration:</strong> Changing core calculation parameters may affect event detection. Default settings have been optimized through extensive testing.</p>
+<h3 id="how-often-do-events-appear">📊 How often do events appear?<a class="headerlink" href="#how-often-do-events-appear" title="Permanent link">&para;</a></h3>
+<p><span style="color: #10b981; font-weight: 600;">Event Frequency</span></p>
 <p><strong>It depends on market conditions and timeframe.</strong></p>
 <p><strong>Typical frequency:</strong>
-- <strong>Daily chart</strong>: 1-4 signals per month per signal type
-- <strong>4H chart</strong>: 2-8 signals per month
-- <strong>1H chart</strong>: Multiple signals per week</p>
-<p><strong>More signals occur when:</strong>
+- <strong>Daily chart</strong>: 1-4 events per month per event type
+- <strong>4H chart</strong>: 2-8 events per month
+- <strong>1H chart</strong>: Multiple events per week</p>
+<p><strong>More events occur when:</strong>
 - Market is trending with pullbacks
 - Volatility is moderate to high
 - Clear support/resistance levels exist</p>
-<p><strong>Fewer signals occur when:</strong>
+<p><strong>Fewer events occur when:</strong>
 - Market is ranging/sideways
 - Very low volatility
 - No clear structure</p>
-<p>This is normal. Quality over quantity—Pentarch waits for high-probability setups.</p>
+<p>This is normal. Pentarch detects specific cycle conditions.</p>
 <h3 id="do-i-need-janus-atlas-if-i-have-omnideck">🔄 Do I need Janus Atlas if I have OmniDeck?<a class="headerlink" href="#do-i-need-janus-atlas-if-i-have-omnideck" title="Permanent link">&para;</a></h3>
 <p><span style="color: #0aa1d5; font-weight: 600;">Indicator Overlap</span></p>
 <p><strong>No, OmniDeck includes Janus Atlas levels.</strong></p>
 <p><strong>What's included in OmniDeck:</strong>
-- All Pentarch signals
+- All Pentarch events
 - All Janus Atlas levels
-- Volume Oracle volume analysis
+- Volume Oracle analysis
 - Harmonic Oscillator momentum
 - Bias indicators
 - Everything in one chart</p>
 <p><strong>When Janus might be used separately:</strong>
-- Cleaner charts are desired (just levels, no signals)
-- Only levels-based strategies are being traded
+- Cleaner charts are desired (just levels, no events)
+- Only level analysis is needed
 - A custom multi-indicator setup is being built</p>
 <p>Most users choose either OmniDeck (everything) OR individual indicators (custom setup).</p>
 <hr />
 <h2 id="common-issues">🆘 Common Issues<a class="headerlink" href="#common-issues" title="Permanent link">&para;</a></h2>
-<h3 id="signals-appearing-then-disappearing">⚠️ Signals appearing then disappearing?<a class="headerlink" href="#signals-appearing-then-disappearing" title="Permanent link">&para;</a></h3>
+<h3 id="events-appearing-then-disappearing">⚠️ Events appearing then disappearing?<a class="headerlink" href="#events-appearing-then-disappearing" title="Permanent link">&para;</a></h3>
 <p><span style="color: #dc2626; font-weight: 600;">Critical Fix Required</span></p>
 <p><strong>This means alerts are NOT set to "Once Per Bar Close".</strong></p>
 <p><strong>Fix:</strong>
-1. Existing alerts can be deleted
-2. New alert can be created
-3. Trigger can be set to <strong>"Once Per Bar Close"</strong>
-4. Alert can be saved</p>
-<p>Signals that appear mid-bar can change before close. This is normal and why close-confirmed alerts are used.</p>
+1. Delete existing alerts
+2. Create new alert
+3. Set trigger to <strong>"Once Per Bar Close"</strong>
+4. Save alert</p>
+<p>Events that appear mid-bar can change before close. This is normal and why close-confirmed alerts are used.</p>
 <h3 id="too-many-alerts">🔊 Too many alerts?<a class="headerlink" href="#too-many-alerts" title="Permanent link">&para;</a></h3>
 <p><span style="color: #f59e0b; font-weight: 600;">Alert Filtering</span></p>
 <p><strong>Solutions:</strong>
-1. <strong>Higher timeframes can be used</strong> (switch from 1H to 4H or Daily)
-2. <strong>More selectivity can be applied</strong> (focus study on IGN and CAP patterns, observe differences with other signals)
-3. <strong>Market condition filtering can be implemented</strong> (study signals during trending vs ranging conditions)
-4. <strong>Confluence can be used</strong> (observe how signals perform at key Janus levels)</p>
-<h3 id="not-enough-signals">🔇 Not enough signals?<a class="headerlink" href="#not-enough-signals" title="Permanent link">&para;</a></h3>
-<p><span style="color: #f59e0b; font-weight: 600;">Increasing Signal Frequency</span></p>
+1. <strong>Use higher timeframes</strong> (switch from 1H to 4H or Daily)
+2. <strong>Focus on specific events</strong> (IGN and CAP are commonly monitored)
+3. <strong>Filter by market conditions</strong> (study events during trending vs ranging conditions)
+4. <strong>Use confluence</strong> (observe how events appear at key Janus levels)</p>
+<h3 id="not-enough-events">🔇 Not enough events?<a class="headerlink" href="#not-enough-events" title="Permanent link">&para;</a></h3>
+<p><span style="color: #f59e0b; font-weight: 600;">Event Frequency</span></p>
 <p><strong>Things to check:</strong>
-1. <strong>Timeframe</strong>: Lower timeframes = more signals
-2. <strong>Market state</strong>: Ranging markets produce fewer reversal signals
-3. <strong>Indicator settings</strong>: Default settings can be verified
-4. <strong>Symbol</strong>: A more volatile asset can be tried</p>
-<p><strong>Important consideration:</strong> Fewer signals is often better—quality over quantity.</p>
+1. <strong>Timeframe</strong>: Lower timeframes = more events
+2. <strong>Market state</strong>: Ranging markets produce fewer cycle events
+3. <strong>Indicator settings</strong>: Verify default settings
+4. <strong>Symbol</strong>: Try a more volatile asset</p>
+<p><strong>Note:</strong> Fewer events is normal—Pentarch detects specific cycle conditions.</p>
 <h3 id="indicator-disappeared-from-tradingview">❌ Indicator disappeared from TradingView?<a class="headerlink" href="#indicator-disappeared-from-tradingview" title="Permanent link">&para;</a></h3>
 <p><span style="color: #dc2626; font-weight: 600;">Access Issue</span></p>
 <p><strong>Possible reasons:</strong></p>
