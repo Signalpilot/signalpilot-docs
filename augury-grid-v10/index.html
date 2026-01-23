@@ -2535,6 +2535,13 @@ Extension ATR: 2.5</code></pre>
 </tbody>
 </table>
 
+<div class="admonition warning">
+<p class="admonition-title">⚠️ Chart Timeframe Must Match TF 1</p>
+<p><strong>Golden Rule:</strong> Your chart timeframe must be <strong>equal to or lower</strong> than TF 1 (your lowest scanner timeframe). Otherwise, TradingView will crash with "Memory limits exceeded."</p>
+<p>Example: If TF 1 = 15m, use a 15m chart (or lower like 5m). If you're on a 4H chart, set TF 1 to 4H or higher.</p>
+<p><strong>📖 <a href="timeframe-configuration.html">Read the full Timeframe Configuration Guide →</a></strong></p>
+</div>
+
 <h3 id="symbol-preset-settings">📈 Symbol Preset<a class="headerlink" href="#symbol-preset-settings" title="Permanent link">&para;</a></h3>
 <p>Dropdown with 9 options: 8 presets + Custom (see Symbol Presets section above)</p>
 
@@ -2870,6 +2877,42 @@ Extension ATR: 2.5</code></pre>
     <div style="margin-top: 24px; color: rgba(255,255,255,0.85); font-size: 14px;">
         ⏱️ 12-15 minute read
     </div>
+</div>
+
+<div class="timeframe-config-banner" style="
+    background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+    padding: 32px;
+    border-radius: 16px;
+    margin: 40px 0;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(245, 158, 11, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.2);
+">
+    <div style="font-size: 40px; margin-bottom: 12px;">⏱️</div>
+
+    <h2 style="color: white; font-size: 26px; margin: 0 0 12px 0; font-weight: 700; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">
+        Getting Memory Crashes?
+    </h2>
+
+    <p style="color: rgba(255,255,255,0.95); font-size: 16px; max-width: 600px; margin: 0 auto 20px auto; line-height: 1.5;">
+        <strong>Your chart timeframe must be ≤ TF 1.</strong> Learn how to configure timeframes correctly to avoid TradingView memory limits, plus recommended setups for scalpers, day traders, and swing traders.
+    </p>
+
+    <a href="timeframe-configuration.html" style="
+        display: inline-block;
+        background: white;
+        color: #f59e0b;
+        padding: 14px 36px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 16px;
+        transition: all 0.2s;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        border: 2px solid transparent;
+    " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)';">
+        ⏱️ Timeframe Configuration Guide →
+    </a>
 </div>
 
 <hr />
