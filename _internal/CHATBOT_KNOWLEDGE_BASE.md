@@ -25,18 +25,22 @@ The SignalPilot Documentation chatbot has **comprehensive knowledge** of all doc
 ---
 
 ### **2. Omnideck v1.0**
-**Keywords:** omnideck, everything indicator, all-in-one
+**Keywords:** omnideck, everything indicator, all-in-one, master toggle, chart overlay
 **Link:** `../omnideck-v10/`
 **Covers:**
 - 10+ detection systems in one
 - Pentarch signals, NanoFlow, Regime bars, Pilot line
 - Fibonacci levels, pattern detection
 - Customizable system selection
+- Master Toggle (hide/show all chart overlays with one click)
+- Confluence Panel (independent toggle for minimal setup)
 
 **Try asking:**
 - "What is Omnideck?"
 - "How does the everything indicator work?"
 - "Tell me about all-in-one"
+- "How do I hide all chart overlays?"
+- "What is the Master Toggle?"
 
 ---
 
