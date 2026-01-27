@@ -1580,10 +1580,10 @@
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>indicator(&quot;Pentarch Simplified&quot;, overlay=true)
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a>
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a>// Settings
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a>tdLength = input.int(9, &quot;TD Length&quot;)  // (1)
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a>tdLength = input.int(9, &quot;EC Length&quot;)  // (1)
 </span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6"></a>showLabels = input.bool(true, &quot;Show Labels&quot;)  // (2)
 </span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7"></a>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8"></a>// TD Sequential Logic
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8"></a>// Exhaustion Counter Logic
 </span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9"></a>var int tdCount = 0  // (3)
 </span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10"></a>tdBuy = close &lt; close[4]  // (4)
 </span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11"></a>
@@ -1599,10 +1599,10 @@
 </span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21"></a>              color=color.green)
 </span></code></pre></div></td></tr></table></div>
 <ol>
-<li><strong>TD Length</strong>: Number of bars to look back for TD Sequential</li>
+<li><strong>EC Length</strong>: Number of bars to look back for Exhaustion Counter</li>
 <li><strong>Show Labels</strong>: Toggle label display on/off</li>
-<li><strong>tdCount</strong>: Persistent variable tracks consecutive TD signals</li>
-<li><strong>TD Buy Condition</strong>: Price must close below close 4 bars ago</li>
+<li><strong>tdCount</strong>: Persistent variable tracks consecutive EC signals</li>
+<li><strong>EC Buy Condition</strong>: Price must close below close 4 bars ago</li>
 <li><strong>Display Logic</strong>: Only show label when count reaches 9 and labels enabled</li>
 </ol>
 <hr />
