@@ -2924,16 +2924,27 @@
 <li>Market Structure ON → Compact labels</li>
 </ul>
 
+<h3 id="new-features-v10">New Features (v1.0)<a class="headerlink" href="#new-features-v10" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Distance Table Redesign:</strong> Complete overhaul with ▲ RESISTANCE / ▼ SUPPORT split sections. New columns: Level | Dist | Str | +. Stars show total confluence (enabled + hidden). The + column reveals hidden level names that would add confluence if enabled.</li>
+<li><strong>Hidden Confluence Discovery:</strong> Scans 45+ level types (HTF, Sessions, VWAP, Fib, Previous Periods, etc.) to show true zone strength before you enable features.</li>
+<li><strong>Combined Confluence Labels:</strong> When multiple levels cluster at the same price, they now display as a single combined label (e.g., <code>dH · wH · pdH (×3)</code>) showing exactly which systems agree.</li>
+<li><strong>Market Structure Fix:</strong> First swing is now tracked silently as a reference point. HH/HL/LH/LL labels only appear starting from the second swing, when there's a valid prior swing to compare against.</li>
+</ul>
+
 <h3 id="bug-fixes-v10">Bug Fixes (v1.0)<a class="headerlink" href="#bug-fixes-v10" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Monday levels now visible all week:</strong> Distance Table now correctly shows Monday (start of week) levels throughout the entire week, not just on Mondays</li>
 <li><strong>Text Only labels no longer overlap:</strong> When using Text Only label style, labels that are close together no longer overlap - proper spacing is maintained</li>
+<li><strong>Market Structure labeling accuracy:</strong> No more misleading HH/LL labels on the first swing—labels only appear when comparison data exists</li>
 </ul>
 
 <h3 id="visual-changes-v10">Visual Changes (v1.0)<a class="headerlink" href="#visual-changes-v10" title="Permanent link">&para;</a></h3>
 <ul>
+<li><strong>Distance Table colors:</strong> Red = resistance levels (above price), Green = support levels (below price), Yellow = ★★★+ high confluence, Orange = hidden levels in + column</li>
 <li><strong>Label separator changed:</strong> Bullet point changed from <code>•</code> to <code>·</code> (lighter middle dot) for a cleaner look</li>
 <li><strong>Price separator format:</strong> Now uses colon before price - example: <code>dH · wH : 91779.7</code></li>
+<li><strong>Confluence count format:</strong> Now shows <code>(×2)</code>, <code>(×3)</code>, <code>(×4)</code> notation to indicate how many systems agree</li>
 <li><strong>Killzone names shortened:</strong> Removed "KZ" suffix from killzone labels for a more compact display</li>
 </ul>
 
@@ -3256,6 +3267,20 @@
 <tr><td><strong>CHoCH</strong></td><td>Change of Character - reversal warning</td></tr>
 </tbody>
 </table>
+
+<p><strong>How Swing Detection Works (v1.0 Fix):</strong></p>
+<div class="admonition note" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1rem 0;">
+  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📐 Swing Labeling Logic</p>
+  <p style="margin: 0; color: #424242;">The <strong>first swing</strong> is tracked silently as a reference point — no label appears. HH/HL/LH/LL labels only appear starting from the <strong>second swing</strong>, when there's a valid prior swing to compare against.</p>
+</div>
+
+<p><strong>Why this matters:</strong></p>
+<ul>
+<li>The first swing on chart has nothing to compare to — calling it "HH" or "LL" would be meaningless</li>
+<li>Labels only appear when the indicator can make a valid comparison (higher than previous high? lower than previous low?)</li>
+<li>This prevents false/misleading labels at the start of your chart view</li>
+</ul>
+
 <p><strong>Characteristics:</strong></p>
 <ul>
 <li>HH → HL → HH pattern = Uptrend structure</li>
@@ -3264,10 +3289,24 @@
 <li>CHoCH labels indicate potential reversal</li>
 </ul>
 <p><strong>Example Pattern:</strong></p>
-<pre><code>Price: HL → HH → HL → HH (with BOS labels)
-Structure: Strong uptrend characteristics
+<pre><code>Swing 1: [silent reference - no label]
+Swing 2: HL (confirmed higher than Swing 1's low)
+Swing 3: HH (confirmed higher than Swing 1's high)
+Swing 4: HL → BOS triggers on breakout
 </code></pre>
 <p><em>Market structure provides trend context. Individual interpretation varies.</em></p>
+
+<!-- 📸 SCREENSHOT NEEDED - Market Structure HH/HL/LH/LL Labels (v1.0)
+     What to show: Chart showing swing points with HH, HL, LH, LL labels on price swings
+     Setup: Enable Market Structure, show a trending section with multiple swings
+     Key elements: Show sequence of labeled swings demonstrating the comparison logic
+     File name suggestion: janus-atlas-market-structure-v10.png
+-->
+<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
+  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
+  <p style="margin: 0; color: #424242;"><strong>Market Structure with HH/HL/LH/LL Labels</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">Shows swing point labels (HH, HL, LH, LL) appearing on valid comparison swings, with BOS/CHoCH break labels.</p>
+</div>
 
 <!-- 📸 SCREENSHOT NEEDED - Janus Atlas Different Level Types Labeled on Chart
      What to show: Chart showing multiple level types with labels (dH, dL, wH, wL, POC, VWAP, mH, mL)
@@ -3489,6 +3528,18 @@ Structure: Strong uptrend characteristics
   <p style="margin: 0; color: #424242;">More gaps = chart squeeze. Historical gaps far from current price will auto-scale your chart. Start with 1-2 gaps, increase if needed.</p>
 </div>
 
+<!-- 📸 SCREENSHOT NEEDED - CME Gap Zone Display
+     What to show: ES or NQ chart showing a weekend CME gap zone
+     Setup: Enable CME Gaps, show box style on ES1! or NQ1! chart
+     Key elements: Show gap zone between Friday close and Sunday open
+     File name suggestion: janus-atlas-cme-gap.png
+-->
+<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
+  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
+  <p style="margin: 0; color: #424242;"><strong>CME Gap Zone Display</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">Shows a CME weekend gap zone on ES or NQ futures, displaying the price gap between Friday close and Sunday open.</p>
+</div>
+
 <hr />
 <h3 id="fair-value-gaps-fvg">📊 Fair Value Gaps (FVG)<a class="headerlink" href="#fair-value-gaps-fvg" title="Permanent link">&para;</a></h3>
 <p><strong>What it does:</strong> Detects price imbalances where market moved so fast it left a "gap" between non-adjacent candles.</p>
@@ -3573,14 +3624,34 @@ Structure: Strong uptrend characteristics
 
 <hr />
 <h3 id="confluence-zones">🎯 Confluence Zones<a class="headerlink" href="#confluence-zones" title="Permanent link">&para;</a></h3>
-<p><strong>What it does:</strong> Automatically detects when multiple levels cluster within a tight price range, highlighting high-probability reaction zones with a count label.</p>
+<p><strong>What it does:</strong> Automatically detects when multiple levels cluster within a tight price range, highlighting high-probability reaction zones with combined labels showing exactly which levels agree.</p>
+
+<p><strong>Combined Label Format (v1.0):</strong></p>
+<p>When multiple levels cluster at the same price, Janus Atlas now displays them as a single combined label:</p>
+<div style="background: #1a1a2e; border-radius: 8px; padding: 1rem; margin: 1rem 0; font-family: monospace; text-align: center;">
+  <p style="color: #fff; margin: 0; font-size: 1.1em;"><code style="background: #2d2d44; padding: 0.3rem 0.6rem; border-radius: 4px;">dH · wH · pdH <span style="color: #ffd93d;">(×3)</span></code></p>
+</div>
+
+<p><strong>Label Format Explained:</strong></p>
+<ul>
+<li><strong>Level names</strong> separated by · (middle dot): <code>dH · wH · pdH</code></li>
+<li><strong>(×N)</strong> suffix shows how many systems agree on that price zone:
+  <ul>
+  <li><code>(×2)</code> = 2 levels clustered</li>
+  <li><code>(×3)</code> = 3 levels clustered</li>
+  <li><code>(×4)</code> = 4 levels clustered (very strong)</li>
+  </ul>
+</li>
+</ul>
+
 <p><strong>How it works:</strong></p>
 <ul>
 <li>Scans all enabled levels for proximity</li>
-<li>When 3+ levels cluster within threshold → Zone highlighted</li>
-<li>Visual box/shading marks the confluence area</li>
-<li><strong>Count label</strong> shows how many levels are clustered (e.g., "4 levels")</li>
+<li>When 2+ levels cluster within threshold → Combined into single label</li>
+<li>Label shows all contributing level names</li>
+<li><strong>(×N) count</strong> indicates zone strength at a glance</li>
 </ul>
+
 <p><strong>Configuration:</strong></p>
 <table>
 <thead>
@@ -3588,42 +3659,82 @@ Structure: Strong uptrend characteristics
 </thead>
 <tbody>
 <tr><td>Enable Zones</td><td>Turn feature on/off</td><td>On</td></tr>
-<tr><td>Min Levels</td><td>Minimum levels to form zone</td><td>3</td></tr>
+<tr><td>Min Levels</td><td>Minimum levels to form zone</td><td>2</td></tr>
 <tr><td>Proximity %</td><td>How close levels must be</td><td>0.5%</td></tr>
 <tr><td>Zone Color</td><td>Highlight color</td><td>Purple</td></tr>
-<tr><td>Show Label</td><td>Display count label on zone</td><td>On</td></tr>
+<tr><td>Show Label</td><td>Display combined label on zone</td><td>On</td></tr>
 </tbody>
 </table>
+
 <p><strong>Why it matters:</strong></p>
 <ul>
 <li>Single level touch = moderate probability</li>
-<li>2 levels clustered = good probability</li>
-<li>3+ levels clustered = high probability reaction zone</li>
-<li><strong>Higher count = stronger zone</strong> (5+ levels is very significant)</li>
+<li><code>(×2)</code> = good probability — two systems agree</li>
+<li><code>(×3)</code> = high probability reaction zone</li>
+<li><code>(×4+)</code> = very high probability — multiple timeframes/systems converge</li>
 </ul>
-<p><strong>Example:</strong> Daily Low + Weekly VWAP + POC all within 0.3% = Strong confluence zone displaying "3 levels"</p>
 
-<!-- 📸 SCREENSHOT NEEDED - Confluence Zone Highlight
-     What to show: Chart showing multiple levels clustering with highlighted zone
-     Setup: Enable Confluence Zones, show area where 3+ levels converge
-     File name suggestion: janus-atlas-confluence-zones.png
+<p><strong>Example:</strong> Daily High + Weekly High + Previous Day High all within 0.3% = Combined label showing <code>dH · wH · pdH (×3)</code></p>
+
+<!-- 📸 SCREENSHOT NEEDED - Confluence Zone with Combined Label (v1.0)
+     What to show: Chart showing combined confluence label like "dH · wH · pdH (×3)"
+     Setup: Enable multiple HTF levels at similar price, show combined label format
+     Key elements: Show the combined label with (×N) count notation
+     File name suggestion: janus-atlas-confluence-zone-v10.png
 -->
 <div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
   <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
-  <p style="margin: 0; color: #424242;"><strong>Confluence Zone Detection</strong></p>
-  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">Shows automatic highlighting when 3+ levels cluster within a tight price range.</p>
+  <p style="margin: 0; color: #424242;"><strong>Confluence Zone with Combined Label (v1.0)</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">Shows the new combined label format (e.g., <code>dH · wH · pdH (×3)</code>) when multiple levels cluster at the same price.</p>
 </div>
 
 <hr />
 <h3 id="distance-table">📋 Distance Table<a class="headerlink" href="#distance-table" title="Permanent link">&para;</a></h3>
-<p><strong>What it does:</strong> Displays a real-time table showing distance from current price to each enabled level.</p>
-<p><strong>Table columns:</strong></p>
+<p><strong>What it does:</strong> Displays a real-time table showing distance from current price to key levels, split into resistance (above) and support (below) sections with confluence strength indicators.</p>
+
+<p><strong>Table Structure (v1.0 Redesign):</strong></p>
+<div style="background: #1a1a2e; border-radius: 8px; padding: 1rem; margin: 1rem 0; font-family: monospace;">
+  <p style="color: #ff6b6b; margin: 0 0 0.5rem 0;"><strong>▲ RESISTANCE</strong> (levels above current price)</p>
+  <table style="width: 100%; color: #fff; font-size: 0.9em; border-collapse: collapse;">
+    <tr style="border-bottom: 1px solid #333;"><td style="color: #ff6b6b;">dH</td><td>0.3%</td><td style="color: #ffd93d;">★★★</td><td style="color: #ff9f43;">+wH, pdH</td></tr>
+    <tr style="border-bottom: 1px solid #333;"><td style="color: #ff6b6b;">wH</td><td>0.8%</td><td>★★</td><td style="color: #ff9f43;">+mH</td></tr>
+  </table>
+  <p style="color: #4ade80; margin: 1rem 0 0.5rem 0;"><strong>▼ SUPPORT</strong> (levels below current price)</p>
+  <table style="width: 100%; color: #fff; font-size: 0.9em; border-collapse: collapse;">
+    <tr style="border-bottom: 1px solid #333;"><td style="color: #4ade80;">dL</td><td>0.2%</td><td style="color: #ffd93d;">★★★★</td><td style="color: #ff9f43;">+POC, VWAP</td></tr>
+    <tr style="border-bottom: 1px solid #333;"><td style="color: #4ade80;">wL</td><td>1.1%</td><td>★</td><td></td></tr>
+  </table>
+</div>
+
+<p><strong>Table Columns:</strong></p>
+<table>
+<thead>
+<tr><th>Column</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Level</strong></td><td>Level name/abbreviation (color-coded: <span style="color: #ff6b6b;">red</span> = resistance, <span style="color: #4ade80;">green</span> = support)</td></tr>
+<tr><td><strong>Dist</strong></td><td>Distance from current price (% or points/ticks)</td></tr>
+<tr><td><strong>Str</strong></td><td>Confluence strength shown as stars (★). Stars show <em>total</em> confluence — both enabled AND hidden levels combined</td></tr>
+<tr><td><strong>+</strong></td><td>Hidden level names that would add confluence if enabled (shown in <span style="color: #ff9f43;">orange</span>)</td></tr>
+</tbody>
+</table>
+
+<p><strong>Star Rating System:</strong></p>
 <ul>
-<li><strong>Level</strong> - Level name/abbreviation</li>
-<li><strong>Price</strong> - Exact price of level</li>
-<li><strong>Distance</strong> - Points/ticks away</li>
-<li><strong>Distance %</strong> - Percentage away from current price</li>
+<li>★ = Single level (no confluence)</li>
+<li>★★ = 2 levels clustered</li>
+<li><span style="color: #ffd93d;">★★★</span> = 3+ levels clustered (highlighted in <span style="color: #ffd93d;">yellow</span>)</li>
+<li><span style="color: #ffd93d;">★★★★+</span> = High-probability zone (4+ levels)</li>
 </ul>
+
+<p><strong>Hidden Confluence Discovery:</strong></p>
+<p>The <strong>+</strong> column is a powerful feature that scans <strong>45+ level types</strong> (HTF, Sessions, VWAP, Fib, Previous Periods, etc.) and shows which disabled levels would add confluence to that zone. This lets you see the <em>true</em> zone strength before enabling additional features.</p>
+
+<div class="admonition tip" style="border-left: 5px solid #4caf50; background: #e8f5e9; padding: 1rem; margin: 1rem 0;">
+  <p class="admonition-title" style="font-weight: bold; color: #2e7d32; margin: 0 0 0.5rem 0;">💡 Key Insight</p>
+  <p style="margin: 0; color: #424242;"><strong>"Stars show true zone strength. The + column tells you what to enable."</strong></p>
+</div>
+
 <p><strong>Configuration:</strong></p>
 <table>
 <thead>
@@ -3644,20 +3755,22 @@ Structure: Strong uptrend characteristics
 
 <p><strong>Interpretation:</strong></p>
 <ul>
-<li>Quickly identify nearest levels</li>
-<li>Assess which levels are within range</li>
-<li>Set alerts for levels within X% distance</li>
+<li>Look for <span style="color: #ffd93d;">★★★+</span> zones — these are your highest-probability levels</li>
+<li>Check the <strong>+</strong> column to discover hidden confluence you might be missing</li>
+<li>Enable levels shown in <strong>+</strong> column to add visual confirmation on chart</li>
+<li>Focus on zones where multiple timeframes agree (e.g., dH + wH + mH)</li>
 </ul>
 
-<!-- 📸 SCREENSHOT NEEDED - Distance Table Display
-     What to show: Chart with distance table overlay showing nearest levels
-     Setup: Enable Distance Table, position top-right, show 10 rows
-     File name suggestion: janus-atlas-distance-table.png
+<!-- 📸 SCREENSHOT NEEDED - Distance Table Display (v1.0)
+     What to show: Chart with distance table overlay showing ▲/▼ split layout
+     Setup: Enable Distance Table with multiple levels, position top-right
+     Key elements: Show ▲ RESISTANCE / ▼ SUPPORT sections, stars (★★★), + column with hidden levels
+     File name suggestion: janus-atlas-distance-table-v10.png
 -->
 <div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
   <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
-  <p style="margin: 0; color: #424242;"><strong>Distance Table Display</strong></p>
-  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">Shows the real-time table overlay displaying distance to all enabled levels.</p>
+  <p style="margin: 0; color: #424242;"><strong>Distance Table Display (v1.0)</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">Shows the redesigned table with ▲ RESISTANCE / ▼ SUPPORT split, star ratings for confluence strength, and the + column revealing hidden confluence opportunities.</p>
 </div>
 
 <hr />
@@ -4313,10 +4426,10 @@ Interpretation: High confluence zone, stronger reactions observed
 <p><strong>A:</strong> Opening Range captures only the first X minutes (e.g., 30 min), then freezes. Session levels track the entire session continuously. OR is for breakout direction, sessions are for full-day range.</p>
 
 <h3 id="q-how-does-confluence-zone-detection-work">Q: How does Confluence Zone detection work?<a class="headerlink" href="#q-how-does-confluence-zone-detection-work" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> The indicator scans all enabled levels and groups those within a configurable proximity (default 0.5%). When 3+ levels cluster together, a confluence zone is highlighted automatically.</p>
+<p><strong>A:</strong> The indicator scans all enabled levels and groups those within a configurable proximity (default 0.5%). When 2+ levels cluster together, they're combined into a single label showing all level names (e.g., <code>dH · wH · pdH</code>) with a <code>(×N)</code> count showing how many systems agree on that price zone.</p>
 
 <h3 id="q-what-is-the-distance-table">Q: What is the Distance Table?<a class="headerlink" href="#q-what-is-the-distance-table" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> A real-time overlay showing distance from current price to each enabled level. Helps quickly identify nearest support/resistance and assess which levels are within range.</p>
+<p><strong>A:</strong> A real-time overlay split into ▲ RESISTANCE (above price) and ▼ SUPPORT (below price) sections. Each level shows: name, distance, confluence strength (★ stars), and a + column revealing hidden levels that would add confluence if enabled. Stars show <em>total</em> zone strength including both enabled and disabled levels—the + column tells you exactly what to enable for more confluence.</p>
 
 <h3 id="q-how-many-alerts-are-available">Q: How many alerts are available?<a class="headerlink" href="#q-how-many-alerts-are-available" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> 50 selectable alerts organized into Individual Alerts (36) and Grouped Alerts (14). Individual alerts fire for specific high-interest levels. Grouped alerts cover multiple related levels efficiently. All under TradingView's 64-alert limit.</p>
@@ -4376,7 +4489,7 @@ Interpretation: High confluence zone, stronger reactions observed
 <p><strong>A:</strong> After a pullback to a retracement level, extensions mark potential continuation targets. Price breaking above the high often moves toward 1.272 first, then 1.618.</p>
 
 <h3 id="q-what-does-the-confluence-zone-count-label-mean">Q: What does the confluence zone count label mean?<a class="headerlink" href="#q-what-does-the-confluence-zone-count-label-mean" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> The label (e.g., "4 levels") shows how many different levels from any source (HTF, Session, VWAP, etc.) are clustered within your proximity setting. Higher count = stronger support/resistance zone.</p>
+<p><strong>A:</strong> The <code>(×N)</code> suffix (e.g., <code>dH · wH · pdH (×3)</code>) shows how many different levels from any source (HTF, Session, VWAP, Fib, etc.) are clustered at that price. The combined label lists all contributing level names, so you know exactly which systems agree. Higher count = stronger support/resistance zone.</p>
 
 <h3 id="q-can-i-hide-the-confluence-count-label">Q: Can I hide the confluence count label?<a class="headerlink" href="#q-can-i-hide-the-confluence-count-label" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> Yes, use the "Show Label" toggle in the Confluence settings to hide it if you prefer a cleaner look.</p>
