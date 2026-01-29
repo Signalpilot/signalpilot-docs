@@ -2802,9 +2802,9 @@
 <tr><td>14</td><td><strong>Fibonacci Levels</strong></td><td>2 Fib Sets, 20 anchors (incl. Prev Year H/L), 8 levels</td></tr>
 <tr><td>15</td><td><strong>Fair Value Gaps</strong></td><td>FVG detection, mitigation, colors</td></tr>
 <tr><td>16</td><td><strong>Confluence Zones</strong></td><td>Auto-clustering settings, count label</td></tr>
-<tr><td>17</td><td><strong>Previous Periods</strong></td><td>PD, PW, PM, PQ, PY (O/H/L/Mid)</td></tr>
+<tr><td>17</td><td><strong>Previous Periods</strong></td><td>PD, PMo, PW, PM, PQ, PY (O/H/L/Mid)</td></tr>
 <tr><td>18</td><td><strong>Distance Table</strong></td><td>Table position, sorting, display</td></tr>
-<tr><td>19</td><td><strong>Alerts</strong></td><td>50 selectable alerts (36 individual + 14 grouped)</td></tr>
+<tr><td>19</td><td><strong>Alerts</strong></td><td>54 selectable alerts (40 individual + 14 grouped)</td></tr>
 </tbody>
 </table>
 
@@ -2962,7 +2962,7 @@
 <tr><td>Gap Levels</td><td>"Alerts: Individual (gapH, gapL, Gap Filled)."</td></tr>
 <tr><td>VWAP Levels</td><td>"Alerts: Individual for D/W (dVWAP, wVWAP, pdVWAP). Grouped for M/Q/Y and prev periods."</td></tr>
 <tr><td>Volume Profile</td><td>"Alerts: Individual for D/W (dPOC, dVAH, dVAL, wPOC, wVAH, wVAL). Grouped for M/Q/Y."</td></tr>
-<tr><td>Previous Periods</td><td>"Alerts: Individual for PD (pdO, pdH, pdL). Grouped for PW/PM/PQ/PY."</td></tr>
+<tr><td>Previous Periods</td><td>"Alerts: Individual for PD (pdO, pdH, pdL) and PMo (pmoO, pmoH, pmoL, pmoMid). Grouped for PW/PM/PQ/PY."</td></tr>
 <tr><td>Fibonacci Levels</td><td>"Alerts: Grouped as 'Fib Level Touched' - fires when any enabled fib is touched."</td></tr>
 <tr><td>Confluence Zones</td><td>"Alerts: 'Confluence Zone' - fires when multiple levels cluster together."</td></tr>
 <tr><td>Market Structure</td><td>"Alerts: Individual (CHoCH 🟢/🔴, BOS 🟢/🔴)."</td></tr>
@@ -3917,10 +3917,10 @@ Interpretation: High confluence zone, stronger reactions observed
 <p><strong>Remember:</strong> Match level timeframes to your analysis period—short-term analysis uses session levels, intraday analysis uses daily levels, multi-day analysis uses weekly/monthly. Using mismatched levels (daily levels on a 1-minute chart) creates noise and reduces effectiveness.</p>
 
 <hr />
-<h2 id="alert-configuration">🔔 Alert Configuration (50 Alerts)<a class="headerlink" href="#alert-configuration" title="Permanent link">&para;</a></h2>
-<p>Janus Atlas provides <strong>50 selectable alerts</strong> organized into two categories: <strong>Individual Alerts (36)</strong> for specific high-interest levels, and <strong>Grouped Alerts (14)</strong> for context levels grouped by category.</p>
+<h2 id="alert-configuration">🔔 Alert Configuration (54 Alerts)<a class="headerlink" href="#alert-configuration" title="Permanent link">&para;</a></h2>
+<p>Janus Atlas provides <strong>54 selectable alerts</strong> organized into two categories: <strong>Individual Alerts (40)</strong> for specific high-interest levels, and <strong>Grouped Alerts (14)</strong> for context levels grouped by category.</p>
 
-<h3 id="alerts-individual">Individual Alerts (36)<a class="headerlink" href="#alerts-individual" title="Permanent link">&para;</a></h3>
+<h3 id="alerts-individual">Individual Alerts (40)<a class="headerlink" href="#alerts-individual" title="Permanent link">&para;</a></h3>
 <p>Specific high-interest levels. Each fires for one exact level.</p>
 
 <h4>Previous Day (3)</h4>
@@ -3932,6 +3932,19 @@ Interpretation: High confluence zone, stronger reactions observed
 <tr><td><code>pdO • Prev Day Open</code></td><td>Previous Day Open Touched</td></tr>
 <tr><td><code>pdH • Prev Day High</code></td><td>Previous Day High Touched</td></tr>
 <tr><td><code>pdL • Prev Day Low</code></td><td>Previous Day Low Touched</td></tr>
+</tbody>
+</table>
+
+<h4>Previous Monday (4)</h4>
+<table>
+<thead>
+<tr><th>Alert Name</th><th>Trigger</th></tr>
+</thead>
+<tbody>
+<tr><td><code>pmoO • Prev Monday Open</code></td><td>Previous Monday Open Touched</td></tr>
+<tr><td><code>pmoH • Prev Monday High</code></td><td>Previous Monday High Touched</td></tr>
+<tr><td><code>pmoL • Prev Monday Low</code></td><td>Previous Monday Low Touched</td></tr>
+<tr><td><code>pmoMid • Prev Monday Mid</code></td><td>Previous Monday Mid Touched</td></tr>
 </tbody>
 </table>
 
@@ -4432,7 +4445,7 @@ Interpretation: High confluence zone, stronger reactions observed
 <p><strong>A:</strong> A real-time overlay split into ▲ RESISTANCE (above price) and ▼ SUPPORT (below price) sections. Each level shows: name, distance, confluence strength (★ stars), and a + column revealing hidden levels that would add confluence if enabled. Stars show <em>total</em> zone strength including both enabled and disabled levels—the + column tells you exactly what to enable for more confluence.</p>
 
 <h3 id="q-how-many-alerts-are-available">Q: How many alerts are available?<a class="headerlink" href="#q-how-many-alerts-are-available" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> 50 selectable alerts organized into Individual Alerts (36) and Grouped Alerts (14). Individual alerts fire for specific high-interest levels. Grouped alerts cover multiple related levels efficiently. All under TradingView's 64-alert limit.</p>
+<p><strong>A:</strong> 54 selectable alerts organized into Individual Alerts (40) and Grouped Alerts (14). Individual alerts fire for specific high-interest levels. Grouped alerts cover multiple related levels efficiently. All under TradingView's 64-alert limit.</p>
 
 <h3 id="q-why-does-my-chart-look-compressed">Q: Why does my chart look compressed when I enable Quarterly/Yearly levels?<a class="headerlink" href="#q-why-does-my-chart-look-compressed" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> Quarterly and Yearly highs/lows can be far from current price. TradingView auto-scales the chart to fit all visible levels, which compresses price action. For best results, use Quarterly/Yearly levels on 4H+ timeframe charts.</p>
@@ -4642,7 +4655,7 @@ Interpretation: High confluence zone, stronger reactions observed
 </thead>
 <tbody>
 <tr><td><strong>Plot Count</strong></td><td>50</td><td>Within TradingView's 64-plot limit per indicator</td></tr>
-<tr><td><strong>Total Alerts</strong></td><td>50</td><td>36 individual + 14 grouped alerts</td></tr>
+<tr><td><strong>Total Alerts</strong></td><td>54</td><td>40 individual + 14 grouped alerts</td></tr>
 <tr><td><strong>Total Lines</strong></td><td>~1,950</td><td>Approximate code lines</td></tr>
 <tr><td><strong>Level Types</strong></td><td>50+</td><td>Across all categories</td></tr>
 <tr><td><strong>Anchor Options</strong></td><td>20</td><td>For Fibonacci sets</td></tr>
