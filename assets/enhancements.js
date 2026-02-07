@@ -707,16 +707,10 @@
       e.preventDefault();
       e.stopPropagation();
 
-      // Use Lenis for butter-smooth scroll to top
-      if (typeof window.lenisScrollToTop === 'function') {
-        window.lenisScrollToTop();
-      } else {
-        // Fallback to native smooth scroll
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      }
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     }, true); // Use capture phase
 
     // Make sure button is visible when needed
