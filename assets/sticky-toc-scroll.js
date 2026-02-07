@@ -69,9 +69,6 @@
     tocContainer = document.querySelector('.md-sidebar--secondary .md-sidebar__scrollwrap');
     if (!tocContainer) return;
 
-    // Mark as Lenis-excluded
-    tocContainer.setAttribute('data-lenis-prevent', '');
-
     // Get all TOC links
     tocLinks = Array.from(tocContainer.querySelectorAll('.md-nav__link[href^="#"]'));
     if (tocLinks.length === 0) return;
