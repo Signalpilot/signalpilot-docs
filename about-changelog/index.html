@@ -1381,6 +1381,34 @@
 <h1 id="changelog-high-level">Changelog (High Level)<a class="headerlink" href="#changelog-high-level" title="Permanent link">&para;</a></h1>
 <p>This page tracks major version releases and updates across the <span class="signal-pilot-brand">Signal Pilot</span> Suite. For detailed technical changes and migration steps, see the individual indicator documentation pages.</p>
 <hr />
+<h2 id="janus-atlas-v11">Janus Atlas v1.1 — Anchored VWAP<a class="headerlink" href="#janus-atlas-v11" title="Permanent link">&para;</a></h2>
+<p><strong>Indicator:</strong> <a href="../janus-atlas-v10/">Janus Atlas - Multi-Timeframe Auto-Levels</a></p>
+<h4>New Feature: Anchored VWAP (16th Integrated System)</h4>
+<p>Janus Atlas now includes a full Anchored VWAP (AVWAP) system, expanding from 15 to 16 integrated systems and from 54 to 58 alerts.</p>
+<ul>
+<li><strong>Auto-Detected Anchors (4 lines):</strong> Automatically detects swing high/low pivots and draws AVWAP from each. Maintains 2 most recent bull pivots (swing lows) and 2 most recent bear pivots (swing highs) with auto-recoloring when new pivots are detected.</li>
+<li><strong>Manual Anchor Slots (4 slots):</strong> 4 independent user-defined anchor slots, each with enable/disable toggle, date/time picker (calendar UI), type selector (Swing High/Low), custom color picker, and independent alert. No drawing tools needed.</li>
+<li><strong>8 Simultaneous AVWAP Lines:</strong> 4 auto + 4 manual running concurrently for comprehensive anchored volume-weighted analysis.</li>
+<li><strong>Anchor Markers:</strong> Optional "aV" labels at each anchor point with tooltips showing pivot type, recency, and price at anchor.</li>
+<li><strong>Pivot Sensitivity:</strong> Auto-adjusts by timeframe (1m=50 bars, D=10 bars, etc.) with manual override option.</li>
+<li><strong>Non-repainting:</strong> All signals confirm on bar close.</li>
+</ul>
+<h4>New Alerts (4 added, 58 total)</h4>
+<table>
+<thead>
+<tr><th>Alert Name</th><th>Trigger</th></tr>
+</thead>
+<tbody>
+<tr><td><code>aVWAP - Manual Anchor 1</code></td><td>Price touches Manual AVWAP Anchor 1</td></tr>
+<tr><td><code>aVWAP - Manual Anchor 2</code></td><td>Price touches Manual AVWAP Anchor 2</td></tr>
+<tr><td><code>aVWAP - Manual Anchor 3</code></td><td>Price touches Manual AVWAP Anchor 3</td></tr>
+<tr><td><code>aVWAP - Manual Anchor 4</code></td><td>Price touches Manual AVWAP Anchor 4</td></tr>
+</tbody>
+</table>
+<p>Existing auto AVWAP alerts (<code>aVWAP - Swing Low</code>, <code>aVWAP - Swing High</code>) remain unchanged.</p>
+<h4>Settings</h4>
+<p>All AVWAP settings are under input group <strong>18. Anchored VWAP</strong>. Settings panel now has 20 groups (was 19). Distance Table moved to group 19, Alerts moved to group 20.</p>
+<hr />
 <h2 id="2025q1-signal-pilot-suite">2025‑Q1 - <span class="signal-pilot-brand">Signal Pilot</span> Suite<a class="headerlink" href="#2025q1-signal-pilot-suite" title="Permanent link">&para;</a></h2>
 <p>The <span class="signal-pilot-brand">Signal Pilot</span> Suite represents a complete rebrand and modernization of the <span class="signal-pilot-brand">Signal Pilot</span> indicator collection. This release brings significant improvements in performance, visual clarity, and educational compliance.</p>
 <h3 id="whats-new">What's New<a class="headerlink" href="#whats-new" title="Permanent link">&para;</a></h3>
