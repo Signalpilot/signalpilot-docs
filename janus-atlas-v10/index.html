@@ -2755,11 +2755,12 @@
     <tr><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);"><strong>⏱️ Opening Range</strong></td><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);">orH, orL, orMid (configurable 5-60 min duration)</td></tr>
     <tr><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);"><strong>📊 Gap Levels</strong></td><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);">Gap High, Gap Low (auto-clear when filled)</td></tr>
     <tr><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);"><strong>🕐 Killzones</strong></td><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);">Asia, London, NY AM, NY Lunch, NY PM (background shading)</td></tr>
-    <tr><td style="padding: 0.5rem;"><strong>📐 Fibonacci Levels</strong></td><td style="padding: 0.5rem;">8 fib levels (6 retracements + 2 extensions) from 20 anchor options, 2 independent sets</td></tr>
+    <tr><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);"><strong>📐 Fibonacci Levels</strong></td><td style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);">8 fib levels (6 retracements + 2 extensions) from 20 anchor options, 2 independent sets</td></tr>
+    <tr><td style="padding: 0.5rem;"><strong>⚓ Anchored VWAP</strong></td><td style="padding: 0.5rem;">4 auto-detected pivots + 4 manual anchor slots, 8 simultaneous AVWAP lines</td></tr>
     </tbody>
     </table>
 
-    <p style="margin-top: 1rem; font-size: 0.9em;"><strong>Plus:</strong> Confluence Zone detection, Distance Table display, 48 configurable alerts</p>
+    <p style="margin-top: 1rem; font-size: 0.9em;"><strong>Plus:</strong> Confluence Zone detection, Distance Table display, 58 configurable alerts</p>
   </div>
 </div>
 
@@ -2778,8 +2779,8 @@
 </div>
 <hr />
 <h2 id="settings">⚙️ Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h2>
-<h3 id="settings-panel-organization">Settings Panel Organization (19 Groups)<a class="headerlink" href="#settings-panel-organization" title="Permanent link">&para;</a></h3>
-<p>The settings panel is organized into 19 logical groups for easy navigation:</p>
+<h3 id="settings-panel-organization">Settings Panel Organization (20 Groups)<a class="headerlink" href="#settings-panel-organization" title="Permanent link">&para;</a></h3>
+<p>The settings panel is organized into 20 logical groups for easy navigation:</p>
 <table>
 <thead>
 <tr><th>#</th><th>Group</th><th>What it Controls</th></tr>
@@ -2802,8 +2803,9 @@
 <tr><td>15</td><td><strong>Fair Value Gaps</strong></td><td>FVG detection, mitigation, colors</td></tr>
 <tr><td>16</td><td><strong>Confluence Zones</strong></td><td>Auto-clustering settings, count label</td></tr>
 <tr><td>17</td><td><strong>Previous Periods</strong></td><td>PD, PMo, PW, PM, PQ, PY (O/H/L/Mid)</td></tr>
-<tr><td>18</td><td><strong>Distance Table</strong></td><td>Table position, sorting, display</td></tr>
-<tr><td>19</td><td><strong>Alerts</strong></td><td>54 selectable alerts (40 individual + 14 grouped)</td></tr>
+<tr><td>18</td><td><strong>Anchored VWAP</strong></td><td>Auto-detected pivots + 4 manual anchor slots, line width, anchor markers</td></tr>
+<tr><td>19</td><td><strong>Distance Table</strong></td><td>Table position, sorting, display</td></tr>
+<tr><td>20</td><td><strong>Alerts</strong></td><td>58 selectable alerts (40 individual + 14 grouped + 4 AVWAP manual)</td></tr>
 </tbody>
 </table>
 
@@ -3856,6 +3858,126 @@ Swing 4: HL → BOS triggers on breakout
 </div>
 
 <hr />
+<h3 id="anchored-vwap">⚓ Anchored VWAP (New in v1.1)<a class="headerlink" href="#anchored-vwap" title="Permanent link">&para;</a></h3>
+<p><strong>What it does:</strong> Draws Volume-Weighted Average Price lines anchored to specific pivot points or user-defined dates, providing dynamic support/resistance levels based on volume-weighted price action from key turning points.</p>
+
+<div class="admonition tip" style="background: rgba(6, 182, 212, 0.1); border-left: 4px solid #06b6d4; padding: 1rem; margin: 1.5rem 0;">
+<p class="admonition-title" style="color: #06b6d4; font-weight: 600;">📚 Why Anchored VWAP?</p>
+<p>Standard VWAP resets each session. Anchored VWAP lets you measure volume-weighted price from <em>any</em> significant point — an earnings gap, a swing low, a breakout bar. This reveals where participants who entered at that event are positioned on average, creating dynamic levels that standard VWAP cannot provide.</p>
+</div>
+
+<p><strong>Key Features:</strong></p>
+<ul>
+<li><strong>16th integrated system</strong> — Auto + manual in one system: auto handles detection, manual gives full user control</li>
+<li><strong>8 simultaneous AVWAP lines</strong> — 4 auto-detected + 4 manual anchor slots</li>
+<li><strong>Non-repainting</strong> — All signals confirm on bar close</li>
+<li><strong>6 total alerts</strong> — 2 auto (Swing Low, Swing High) + 4 manual anchor alerts</li>
+</ul>
+
+<h4 id="avwap-auto">Auto-Detected Anchors (4 lines)<a class="headerlink" href="#avwap-auto" title="Permanent link">&para;</a></h4>
+<p>Automatically detects swing high and swing low pivots and draws AVWAP from each detected pivot forward. Maintains the 2 most recent bull pivots (swing lows) and 2 most recent bear pivots (swing highs).</p>
+
+<p><strong>Auto Anchor Colors:</strong></p>
+<table>
+<thead>
+<tr><th>Anchor</th><th>Type</th><th>Color</th><th>Hex</th></tr>
+</thead>
+<tbody>
+<tr><td>Swing Low 1 (recent)</td><td>Bull pivot</td><td style="color: #26a69a;">Teal</td><td><code>#26a69a</code></td></tr>
+<tr><td>Swing Low 2 (older)</td><td>Bull pivot</td><td style="color: #42A5F5;">Blue</td><td><code>#42A5F5</code></td></tr>
+<tr><td>Swing High 1 (recent)</td><td>Bear pivot</td><td style="color: #ef5350;">Red</td><td><code>#ef5350</code></td></tr>
+<tr><td>Swing High 2 (older)</td><td>Bear pivot</td><td style="color: #FF7043;">Orange</td><td><code>#FF7043</code></td></tr>
+</tbody>
+</table>
+
+<p><strong>Auto-recoloring:</strong> When a new pivot is detected, the previous "recent" line automatically shifts to the "older" color (e.g., Swing Low 1 Teal → Swing Low 2 Blue).</p>
+
+<p><strong>Pivot sensitivity auto-adjusts by timeframe:</strong></p>
+<table>
+<thead>
+<tr><th>Timeframe</th><th>Pivot Length (bars)</th></tr>
+</thead>
+<tbody>
+<tr><td>1 minute</td><td>50</td></tr>
+<tr><td>5 minute</td><td>30</td></tr>
+<tr><td>15 minute</td><td>20</td></tr>
+<tr><td>1 hour</td><td>15</td></tr>
+<tr><td>Daily</td><td>10</td></tr>
+</tbody>
+</table>
+
+<h4 id="avwap-manual">Manual Anchor Slots (4 slots)<a class="headerlink" href="#avwap-manual" title="Permanent link">&para;</a></h4>
+<p>4 independent manual anchor slots, each with full control. No drawing tools needed — use the calendar date/time picker in TradingView settings to select your anchor point.</p>
+
+<p><strong>Each manual slot provides:</strong></p>
+<ul>
+<li>Enable/disable toggle</li>
+<li>Date/Time picker (calendar UI in TradingView settings)</li>
+<li>Type selector: "Swing High" or "Swing Low"</li>
+<li>Custom color picker</li>
+<li>Independent alert</li>
+</ul>
+
+<p><strong>Default Manual Anchor Colors:</strong></p>
+<table>
+<thead>
+<tr><th>Slot</th><th>Color</th><th>Hex</th></tr>
+</thead>
+<tbody>
+<tr><td>Slot 1</td><td style="color: #E0E0E0;">Silver</td><td><code>#E0E0E0</code></td></tr>
+<tr><td>Slot 2</td><td style="color: #AB47BC;">Purple</td><td><code>#AB47BC</code></td></tr>
+<tr><td>Slot 3</td><td style="color: #7CB342;">Lime Green</td><td><code>#7CB342</code></td></tr>
+<tr><td>Slot 4</td><td style="color: #FDD835;">Yellow</td><td><code>#FDD835</code></td></tr>
+</tbody>
+</table>
+
+<p><strong>How it works:</strong> Pick a date/time, the script finds that bar and anchors AVWAP from that exact point. Lines are drawn as polylines (single drawing object from anchor to current bar).</p>
+
+<h4 id="avwap-settings">AVWAP Settings (Input Group 18)<a class="headerlink" href="#avwap-settings" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr><th>Setting</th><th>Description</th><th>Default</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Auto AVWAP</strong></td><td>Toggle auto-detection of pivot anchors (manual slots work independently)</td><td>On</td></tr>
+<tr><td><strong>Auto Timeframe</strong></td><td>Use automatic pivot sensitivity per timeframe</td><td>On</td></tr>
+<tr><td><strong>Manual Pivot Length</strong></td><td>Override pivot sensitivity when Auto Timeframe is off</td><td>—</td></tr>
+<tr><td><strong>Show Anchor Markers</strong></td><td>Display "aV" labels at each anchor point</td><td>On</td></tr>
+<tr><td><strong>Line Width</strong></td><td>Width for all AVWAP lines (auto + manual)</td><td>2</td></tr>
+<tr><td><strong>Manual Slot 1–4</strong></td><td>Enable, Date/Time, Type (Swing High/Low), Color</td><td>Off</td></tr>
+</tbody>
+</table>
+
+<p><strong>Anchor Marker Tooltips:</strong></p>
+<ul>
+<li><strong>Auto anchors:</strong> Show pivot type and whether it's the recent or older anchor</li>
+<li><strong>Manual anchors:</strong> Show "Manual AVWAP (user-defined)" + type + price at anchor</li>
+</ul>
+
+<p><strong>Interpretation:</strong></p>
+<ul>
+<li>Use auto AVWAP to track where volume-weighted price sits relative to recent swing pivots</li>
+<li>Add manual anchors at key events: earnings gaps, major breakouts, significant lows</li>
+<li>When price approaches an AVWAP line, watch for reactions (bounce, break, or stall)</li>
+<li>Multiple AVWAP lines clustering at the same price zone create high-confluence areas</li>
+<li>Combine with other Janus Atlas levels for additional confirmation</li>
+</ul>
+
+<p><strong>Pro tip:</strong> Manual anchors work independently from the auto AVWAP toggle. You can disable auto-detection while keeping your manual anchors active, or vice versa.</p>
+
+<!-- 📸 SCREENSHOT NEEDED - Anchored VWAP on Chart
+     What to show: Chart showing auto-detected AVWAP lines from swing pivots + manual anchor
+     Setup: Enable Auto AVWAP + 1-2 manual slots, show anchor markers
+     Key elements: Show teal/blue swing low lines, red/orange swing high lines, and a manual anchor
+     File name suggestion: janus-atlas-anchored-vwap-v11.png
+-->
+<div class="admonition info" style="border-left: 5px solid #2196f3; background: #e3f2fd; padding: 1rem; margin: 1.5rem 0;">
+  <p class="admonition-title" style="font-weight: bold; color: #1976d2; margin: 0 0 0.5rem 0;">📸 Screenshot Coming Soon</p>
+  <p style="margin: 0; color: #424242;"><strong>Anchored VWAP Visualization (v1.1)</strong></p>
+  <p style="margin: 0.5rem 0 0 0; color: #616161; font-size: 0.9em;">Shows auto-detected AVWAP lines from swing pivots (4 color-coded lines) plus manual anchor slots with "aV" marker labels.</p>
+</div>
+
+<hr />
 <h2 id="level-reaction-patterns">🔄 Level Reaction Patterns<a class="headerlink" href="#level-reaction-patterns" title="Permanent link">&para;</a></h2>
 <p><strong>Common Patterns Observed:</strong></p>
 <h3 id="pattern-1-bounce-supportresistance">Pattern 1: Bounce (Support/Resistance)<a class="headerlink" href="#pattern-1-bounce-supportresistance" title="Permanent link">&para;</a></h3>
@@ -3916,8 +4038,8 @@ Interpretation: High confluence zone, stronger reactions observed
 <p><strong>Remember:</strong> Match level timeframes to your analysis period—short-term analysis uses session levels, intraday analysis uses daily levels, multi-day analysis uses weekly/monthly. Using mismatched levels (daily levels on a 1-minute chart) creates noise and reduces effectiveness.</p>
 
 <hr />
-<h2 id="alert-configuration">🔔 Alert Configuration (54 Alerts)<a class="headerlink" href="#alert-configuration" title="Permanent link">&para;</a></h2>
-<p>Janus Atlas provides <strong>54 selectable alerts</strong> organized into two categories: <strong>Individual Alerts (40)</strong> for specific high-interest levels, and <strong>Grouped Alerts (14)</strong> for context levels grouped by category.</p>
+<h2 id="alert-configuration">🔔 Alert Configuration (58 Alerts)<a class="headerlink" href="#alert-configuration" title="Permanent link">&para;</a></h2>
+<p>Janus Atlas provides <strong>58 selectable alerts</strong> organized into three categories: <strong>Individual Alerts (40)</strong> for specific high-interest levels, <strong>Grouped Alerts (14)</strong> for context levels grouped by category, and <strong>Anchored VWAP Alerts (4)</strong> for manual AVWAP anchor touches.</p>
 
 <h3 id="alerts-individual">Individual Alerts (40)<a class="headerlink" href="#alerts-individual" title="Permanent link">&para;</a></h3>
 <p>Specific high-interest levels. Each fires for one exact level.</p>
@@ -4125,6 +4247,35 @@ Interpretation: High confluence zone, stronger reactions observed
 </table>
 
 <p><strong>Note:</strong> Grouped alerts fire when ANY level in that category is touched.</p>
+
+<h3 id="alerts-avwap">Anchored VWAP Alerts (4 new in v1.1 + 2 existing auto)<a class="headerlink" href="#alerts-avwap" title="Permanent link">&para;</a></h3>
+<p>Alerts for Anchored VWAP lines. Auto alerts cover the auto-detected pivot anchors; manual alerts fire for each user-defined anchor slot independently.</p>
+
+<h4>Auto AVWAP (2 — existing, unchanged)</h4>
+<table>
+<thead>
+<tr><th>Alert Name</th><th>Trigger</th></tr>
+</thead>
+<tbody>
+<tr><td><code>aVWAP - Swing Low</code></td><td>Price touches any auto bull AVWAP anchor (2 most recent swing lows)</td></tr>
+<tr><td><code>aVWAP - Swing High</code></td><td>Price touches any auto bear AVWAP anchor (2 most recent swing highs)</td></tr>
+</tbody>
+</table>
+
+<h4>Manual AVWAP (4 — new in v1.1)</h4>
+<table>
+<thead>
+<tr><th>Alert Name</th><th>Trigger</th></tr>
+</thead>
+<tbody>
+<tr><td><code>aVWAP - Manual Anchor 1</code></td><td>Price touches Manual AVWAP Anchor 1</td></tr>
+<tr><td><code>aVWAP - Manual Anchor 2</code></td><td>Price touches Manual AVWAP Anchor 2</td></tr>
+<tr><td><code>aVWAP - Manual Anchor 3</code></td><td>Price touches Manual AVWAP Anchor 3</td></tr>
+<tr><td><code>aVWAP - Manual Anchor 4</code></td><td>Price touches Manual AVWAP Anchor 4</td></tr>
+</tbody>
+</table>
+
+<p><strong>Note:</strong> Manual anchor alerts work independently from the auto AVWAP toggle. Each manual slot has its own enable/disable toggle, so alerts only fire for enabled slots.</p>
 
 <h3 id="finding-alert-info">Finding Alert Info<a class="headerlink" href="#finding-alert-info" title="Permanent link">&para;</a></h3>
 <p>Hover over any toggle in <strong>Controls</strong> to see what alerts that feature provides via tooltip.</p>
@@ -4444,7 +4595,7 @@ Interpretation: High confluence zone, stronger reactions observed
 <p><strong>A:</strong> A real-time overlay split into ▲ RESISTANCE (above price) and ▼ SUPPORT (below price) sections. Each level shows: name, distance, confluence strength (★ stars), and a + column revealing hidden levels that would add confluence if enabled. Stars show <em>total</em> zone strength including both enabled and disabled levels—the + column tells you exactly what to enable for more confluence.</p>
 
 <h3 id="q-how-many-alerts-are-available">Q: How many alerts are available?<a class="headerlink" href="#q-how-many-alerts-are-available" title="Permanent link">&para;</a></h3>
-<p><strong>A:</strong> 54 selectable alerts organized into Individual Alerts (40) and Grouped Alerts (14). Individual alerts fire for specific high-interest levels. Grouped alerts cover multiple related levels efficiently. All under TradingView's 64-alert limit.</p>
+<p><strong>A:</strong> 58 selectable alerts organized into Individual Alerts (40), Grouped Alerts (14), and Anchored VWAP Alerts (4 manual). Individual alerts fire for specific high-interest levels. Grouped alerts cover multiple related levels efficiently. Manual AVWAP alerts fire for each user-defined anchor slot. All under TradingView's 64-alert limit.</p>
 
 <h3 id="q-why-does-my-chart-look-compressed">Q: Why does my chart look compressed when I enable Quarterly/Yearly levels?<a class="headerlink" href="#q-why-does-my-chart-look-compressed" title="Permanent link">&para;</a></h3>
 <p><strong>A:</strong> Quarterly and Yearly highs/lows can be far from current price. TradingView auto-scales the chart to fit all visible levels, which compresses price action. For best results, use Quarterly/Yearly levels on 4H+ timeframe charts.</p>
@@ -4654,7 +4805,7 @@ Interpretation: High confluence zone, stronger reactions observed
 </thead>
 <tbody>
 <tr><td><strong>Plot Count</strong></td><td>50</td><td>Within TradingView's 64-plot limit per indicator</td></tr>
-<tr><td><strong>Total Alerts</strong></td><td>54</td><td>40 individual + 14 grouped alerts</td></tr>
+<tr><td><strong>Total Alerts</strong></td><td>58</td><td>40 individual + 14 grouped + 4 AVWAP manual alerts</td></tr>
 <tr><td><strong>Total Lines</strong></td><td>~1,950</td><td>Approximate code lines</td></tr>
 <tr><td><strong>Level Types</strong></td><td>50+</td><td>Across all categories</td></tr>
 <tr><td><strong>Anchor Options</strong></td><td>20</td><td>For Fibonacci sets</td></tr>
