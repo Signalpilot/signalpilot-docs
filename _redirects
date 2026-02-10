@@ -36,9 +36,9 @@
 /start-quickstart/*               /start-quick/                     301
 /start-quickstart                 /start-quick/                     301
 
-# Nested FAQ path that was incorrectly linked
-/start-which-indicator/about-faq/*    /about-faq/                   301
-/start-which-indicator/about-faq      /about-faq/                   301
+# "Which indicator" guide - redirect to comparison page
+/start-which-indicator/*              /ref-comparison/               301
+/start-which-indicator                /ref-comparison/               301
 
 # Key levels suite - redirect to Janus Atlas (the levels indicator)
 /sp-key-levels-suite/*            /janus-atlas-v10/                 301
@@ -48,8 +48,33 @@
 /compliance-language-guide/*      /about-faq/                       301
 /compliance-language-guide        /about-faq/                       301
 
-# Old configuration recipes directory path
-/ref-configuration-recipes/CONTENT.md    /ref-configuration-recipes/   301
+# Old configuration recipes - redirect to best practices
+/ref-configuration-recipes/*         /ref-best-practices/              301
+/ref-configuration-recipes           /ref-best-practices/              301
+
+# =============================================================================
+# Removed Page Redirects
+# =============================================================================
+# Pages that were in the sitemap but no longer exist on site.
+# Redirect to the closest equivalent live page.
+
+# "Start here" guide - redirect to homepage
+/start-here/*                        /                                 301
+/start-here                          /                                 301
+
+# Suite overview moved to suite-index
+/start-suite-overview/*              /suite-index/                     301
+/start-suite-overview                /suite-index/                     301
+
+# Performance optimization content folded into best practices
+/advanced/performance-optimization/* /ref-best-practices/              301
+/advanced/performance-optimization   /ref-best-practices/              301
+/advanced/*                          /ref-best-practices/              301
+/advanced                            /ref-best-practices/              301
+
+# Community page - redirect to support (has Discord link)
+/community/*                         /about-support/                   301
+/community                           /about-support/                   301
 
 # Minimal Flow renamed to Volume Oracle
 /minimal-flow-v10/*                   /volume-oracle-v10/               301
