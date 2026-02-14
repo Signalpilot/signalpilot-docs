@@ -110,6 +110,75 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
 
+
+  <!-- Structured Data - JSON-LD for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://docs.signalpilot.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "How-To Guides",
+            "item": "https://docs.signalpilot.io/how-to-alerts/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Use Webhooks"
+          }
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "name": "Use Webhooks",
+        "description": "Non-repainting, alert-ready TradingView indicators for any market/timeframe.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Get your webhook URL",
+            "text": "Copy the webhook URL from your destination service (Discord, Telegram, or 3commas)."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Open TradingView alert settings",
+            "text": "Create or edit an alert for your Signal Pilot indicator."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Enable webhook delivery",
+            "text": "Check the Webhook URL checkbox in the alert notification settings."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Paste the webhook URL",
+            "text": "Enter your destination service webhook URL."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Configure the payload",
+            "text": "Set up the JSON payload format required by your destination service."
+          }
+        ],
+        "tool": {
+          "@type": "HowToTool",
+          "name": "TradingView"
+        },
+        "inLanguage": "en-US",
+        "totalTime": "PT10M"
+      }
+    ]
+  }
+  </script>
     <!-- ========================================
        SIGNAL PILOT ENHANCEMENTS - CSS
        To disable: comment out this entire block
@@ -126,17 +195,17 @@
     <link rel="stylesheet" href="/css/chatbot.css">
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://docs.signalpilot.io/">
-    <meta property="og:title" content="Signal Pilot Documentation">
-    <meta property="og:description" content="Professional trading indicators for TradingView. Complete guides for Pentarch, Janus Atlas, OmniDeck, and more.">
+    <meta property="og:url" content="https://docs.signalpilot.io/how-to-webhooks/">
+    <meta property="og:title" content="How to Set Up Webhooks for Discord &amp; Telegram — Signal Pilot Docs">
+    <meta property="og:description" content="Send Signal Pilot alerts to Discord, Telegram, and 3commas via TradingView webhooks. Step-by-step webhook configuration.">
     <meta property="og:image" content="https://docs.signalpilot.io/assets/images/preview.png">
     <meta property="og:site_name" content="Signal Pilot Docs">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://docs.signalpilot.io/">
-    <meta name="twitter:title" content="Signal Pilot Documentation">
-    <meta name="twitter:description" content="Professional trading indicators for TradingView. Complete guides for Pentarch, Janus Atlas, OmniDeck, and more.">
+    <meta name="twitter:url" content="https://docs.signalpilot.io/how-to-webhooks/">
+    <meta name="twitter:title" content="How to Set Up Webhooks for Discord &amp; Telegram — Signal Pilot Docs">
+    <meta name="twitter:description" content="Send Signal Pilot alerts to Discord, Telegram, and 3commas via TradingView webhooks. Step-by-step webhook configuration.">
     <meta name="twitter:image" content="https://docs.signalpilot.io/assets/images/preview.png">
 
 
@@ -1706,5 +1775,6 @@
 
   <!-- Custom Bottom Sheet Navigation Script -->
   <script src="../assets/custom-bottom-sheet.js?v7"></script>
+  <script src="../js/cross-links.js"></script>
 </body>
 </html>

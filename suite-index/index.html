@@ -110,6 +110,54 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
 
+
+  <!-- Structured Data - JSON-LD for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://docs.signalpilot.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Indicator Suite"
+          }
+        ]
+      },
+      {
+        "@type": "TechArticle",
+        "headline": "Signal Pilot Suite - Complete Indicator Collection",
+        "description": "Explore all 7 non-repainting TradingView indicators in the Signal Pilot Suite. Compare features, find your perfect match, and access comprehensive guides for each indicator.",
+        "url": "https://docs.signalpilot.io/suite-index/",
+        "datePublished": "2025-11-02",
+        "dateModified": "2026-02-14",
+        "author": {
+          "@type": "Organization",
+          "name": "Signal Pilot",
+          "url": "https://signalpilot.io/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Signal Pilot",
+          "url": "https://signalpilot.io/"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://docs.signalpilot.io/suite-index/"
+        },
+        "inLanguage": "en-US"
+      }
+    ]
+  }
+  </script>
     <!-- ========================================
        SIGNAL PILOT ENHANCEMENTS - CSS
        To disable: comment out this entire block
@@ -126,17 +174,17 @@
     <link rel="stylesheet" href="/css/chatbot.css">
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://docs.signalpilot.io/">
-    <meta property="og:title" content="Signal Pilot Documentation">
-    <meta property="og:description" content="Professional trading indicators for TradingView. Complete guides for Pentarch, Janus Atlas, OmniDeck, and more.">
+    <meta property="og:url" content="https://docs.signalpilot.io/suite-index/">
+    <meta property="og:title" content="Indicator Suite Overview — Signal Pilot Docs">
+    <meta property="og:description" content="Overview of all 7 Signal Pilot TradingView indicators. Compare features, use cases, and find the right tools.">
     <meta property="og:image" content="https://docs.signalpilot.io/assets/images/preview.png">
     <meta property="og:site_name" content="Signal Pilot Docs">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://docs.signalpilot.io/">
-    <meta name="twitter:title" content="Signal Pilot Documentation">
-    <meta name="twitter:description" content="Professional trading indicators for TradingView. Complete guides for Pentarch, Janus Atlas, OmniDeck, and more.">
+    <meta name="twitter:url" content="https://docs.signalpilot.io/suite-index/">
+    <meta name="twitter:title" content="Indicator Suite Overview — Signal Pilot Docs">
+    <meta name="twitter:description" content="Overview of all 7 Signal Pilot TradingView indicators. Compare features, use cases, and find the right tools.">
     <meta name="twitter:image" content="https://docs.signalpilot.io/assets/images/preview.png">
 
 
@@ -2803,5 +2851,6 @@
 
   <!-- Custom Bottom Sheet Navigation Script -->
   <script src="../assets/custom-bottom-sheet.js?v7"></script>
+  <script src="../js/cross-links.js"></script>
 </body>
 </html>

@@ -110,6 +110,70 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
 
+
+  <!-- Structured Data - JSON-LD for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://docs.signalpilot.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "How-To Guides",
+            "item": "https://docs.signalpilot.io/how-to-alerts/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Installation Troubleshooting"
+          }
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "name": "Installation Troubleshooting",
+        "description": "Resolve common issues when installing or loading Signal Pilot indicators. Step-by-step solutions for access, loading, and signal problems.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Check TradingView plan",
+            "text": "Verify your subscription supports the required number of indicators."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Verify indicator access",
+            "text": "Confirm your Signal Pilot license is active and linked to your TradingView username."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Clear browser cache",
+            "text": "Clear cache and reload TradingView to resolve stale data issues."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Check for conflicts",
+            "text": "Remove other indicators temporarily to rule out conflicts."
+          }
+        ],
+        "tool": {
+          "@type": "HowToTool",
+          "name": "TradingView"
+        },
+        "inLanguage": "en-US",
+        "totalTime": "PT10M"
+      }
+    ]
+  }
+  </script>
     <!-- ========================================
        SIGNAL PILOT ENHANCEMENTS - CSS
        To disable: comment out this entire block
@@ -126,7 +190,7 @@
     <link rel="stylesheet" href="/css/chatbot.css">
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://docs.signalpilot.io/">
+    <meta property="og:url" content="https://docs.signalpilot.io/troubleshooting-installation/">
     <meta property="og:title" content="Installation Troubleshooting - Signal Pilot Docs">
     <meta property="og:description" content="Resolve common issues when installing or loading Signal Pilot indicators. Step-by-step solutions for access, loading, and signal problems.">
     <meta property="og:image" content="https://docs.signalpilot.io/assets/images/preview.png">
@@ -134,7 +198,7 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://docs.signalpilot.io/">
+    <meta name="twitter:url" content="https://docs.signalpilot.io/troubleshooting-installation/">
     <meta name="twitter:title" content="Installation Troubleshooting - Signal Pilot Docs">
     <meta name="twitter:description" content="Resolve common issues when installing or loading Signal Pilot indicators. Step-by-step solutions for access, loading, and signal problems.">
     <meta name="twitter:image" content="https://docs.signalpilot.io/assets/images/preview.png">
@@ -2480,5 +2544,6 @@ Augury Grid: Use same timeframe as monitored symbols</code></pre></p>
 
   <!-- Custom Bottom Sheet Navigation Script -->
   <script src="../assets/custom-bottom-sheet.js?v7"></script>
+  <script src="../js/cross-links.js"></script>
 </body>
 </html>

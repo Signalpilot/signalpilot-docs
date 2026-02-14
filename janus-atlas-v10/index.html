@@ -110,6 +110,80 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
 
+
+  <!-- Structured Data - JSON-LD for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://docs.signalpilot.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Indicator Suite",
+            "item": "https://docs.signalpilot.io/suite-index/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Janus Atlas - Multi-Timeframe Auto-Levels"
+          }
+        ]
+      },
+      {
+        "@type": "TechArticle",
+        "headline": "Janus Atlas - Multi-Timeframe Auto-Levels",
+        "description": "Non-repainting, alert-ready TradingView indicators for any market/timeframe.",
+        "url": "https://docs.signalpilot.io/janus-atlas-v10/",
+        "datePublished": "2025-11-02",
+        "dateModified": "2026-02-14",
+        "author": {
+          "@type": "Organization",
+          "name": "Signal Pilot",
+          "url": "https://signalpilot.io/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Signal Pilot",
+          "url": "https://signalpilot.io/"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://docs.signalpilot.io/janus-atlas-v10/"
+        },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Janus Atlas v1.0",
+        "description": "Auto-levels system with 60+ level types for TradingView including VWAP, Fibonacci, session levels, and market structure.",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web (TradingView)",
+        "softwareVersion": "1.0",
+        "offers": {
+          "@type": "Offer",
+          "url": "https://signalpilot.io/",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/OnlineOnly"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "Signal Pilot",
+          "url": "https://signalpilot.io/"
+        },
+        "url": "https://docs.signalpilot.io/janus-atlas-v10/"
+      }
+    ]
+  }
+  </script>
     <!-- ========================================
        SIGNAL PILOT ENHANCEMENTS - CSS
        To disable: comment out this entire block
@@ -126,7 +200,7 @@
     <link rel="stylesheet" href="/css/chatbot.css">
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://docs.signalpilot.io/">
+    <meta property="og:url" content="https://docs.signalpilot.io/janus-atlas-v10/">
     <meta property="og:title" content="Janus Atlas - Multi-Timeframe Auto-Levels">
     <meta property="og:description" content="Comprehensive levels system with 60+ automatic levels including daily/weekly/monthly highs/lows, VWAP, session levels, and market structure.">
     <meta property="og:image" content="https://docs.signalpilot.io/assets/images/preview.png">
@@ -134,7 +208,7 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://docs.signalpilot.io/">
+    <meta name="twitter:url" content="https://docs.signalpilot.io/janus-atlas-v10/">
     <meta name="twitter:title" content="Janus Atlas - Multi-Timeframe Auto-Levels">
     <meta name="twitter:description" content="Comprehensive levels system with 60+ automatic levels including daily/weekly/monthly highs/lows, VWAP, session levels, and market structure.">
     <meta name="twitter:image" content="https://docs.signalpilot.io/assets/images/preview.png">
@@ -5007,5 +5081,6 @@ Interpretation: High confluence zone, stronger reactions observed
 
   <!-- Custom Bottom Sheet Navigation Script -->
   <script src="../assets/custom-bottom-sheet.js?v7"></script>
+  <script src="../js/cross-links.js"></script>
 </body>
 </html>
