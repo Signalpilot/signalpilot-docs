@@ -1,0 +1,57 @@
+# Signal Pilot Docs
+
+> Official documentation for Signal Pilot's 7 non-repainting TradingView indicators: Pentarch, OmniDeck, Janus Atlas, Augury Grid, Plutus Flow, Harmonic Oscillator, and Volume Oracle.
+
+Signal Pilot is a suite of TradingView indicators designed for technical analysis. All indicators are guaranteed non-repainting. The documentation covers setup, configuration, alert creation, webhook integrations, and a 4-phase trading workflow (Bias, Timing, Execution, Management).
+
+## Getting Started
+
+- [Quick Start](https://docs.signalpilot.io/start-quick/): 5-minute setup guide to install and configure your first indicator
+- [Prerequisites & Requirements](https://docs.signalpilot.io/start-prerequisites/): TradingView plan requirements and system prerequisites
+- [7-Day Onboarding Checklist](https://docs.signalpilot.io/start-onboarding/): Structured onboarding plan for new users
+- [Learning Path](https://docs.signalpilot.io/start-learning-path/): Progressive learning guide from beginner to advanced
+- [Configuration Wizard](https://docs.signalpilot.io/configuration-wizard/): Interactive tool for configuring indicator settings
+
+## Indicator Guides
+
+- [Pentarch v1.0](https://docs.signalpilot.io/pentarch-v10/): 5-cycle exhaustion and reversal detection system
+- [OmniDeck v1.0](https://docs.signalpilot.io/omnideck-v10/): All-in-one indicator with 10+ detection systems
+- [Janus Atlas v1.0](https://docs.signalpilot.io/janus-atlas-v10/): 50+ level types including VWAP, Fibonacci, Anchored VWAP, and session levels
+- [Augury Grid v1.0](https://docs.signalpilot.io/augury-grid-v10/): Multi-timeframe screener monitoring 7 symbols across 3 timeframes
+- [Plutus Flow v1.0](https://docs.signalpilot.io/plutus-flow-v10/): On-Balance Volume analysis with divergence detection
+- [Harmonic Oscillator v1.0](https://docs.signalpilot.io/harmonic-oscillator-v10/): 7-component momentum consensus system
+- [Volume Oracle v1.0](https://docs.signalpilot.io/volume-oracle-v10/): Volume intelligence and regime detection
+- [Suite Overview](https://docs.signalpilot.io/suite-index/): Overview and comparison of all 7 indicators
+
+## How-To Guides
+
+- [Setting Up Alerts](https://docs.signalpilot.io/how-to-alerts/): Configure TradingView alerts with Once Per Bar Close
+- [Using Webhooks](https://docs.signalpilot.io/how-to-webhooks/): Send alerts to Discord, Telegram, and 3commas
+- [Using the Screener](https://docs.signalpilot.io/how-to-screener/): Multi-symbol monitoring with Augury Grid
+
+## Reference
+
+- [Cheatsheets At a Glance](https://docs.signalpilot.io/ref-cheatsheets-at-a-glance/): Quick-reference cards for all indicators
+- [Indicator Comparison](https://docs.signalpilot.io/ref-comparison/): Side-by-side comparison matrix of all 7 indicators
+- [Trading Workflow](https://docs.signalpilot.io/ref-workflow/): 4-phase trading process (Bias, Timing, Execution, Management)
+- [Glossary](https://docs.signalpilot.io/ref-glossary/): Definitions for terms like TD, IGN, WRN, CAP, BDN, POC, VAH, VAL
+- [Best Practices](https://docs.signalpilot.io/ref-best-practices/): Tips for getting the most out of the indicator suite
+- [Non-Repainting Policy](https://docs.signalpilot.io/ref-non-repaint/): Guarantee and technical explanation of non-repainting behavior
+- [Troubleshooting](https://docs.signalpilot.io/ref-troubleshooting/): Common issues and solutions
+- [FAQ](https://docs.signalpilot.io/about-faq/): Frequently asked questions
+
+## Optional
+
+- [Pentarch Cheatsheet](https://docs.signalpilot.io/ref-cheatsheets-pentarch/): Quick-reference for Pentarch
+- [OmniDeck Cheatsheet](https://docs.signalpilot.io/ref-cheatsheets-omnideck/): Quick-reference for OmniDeck
+- [Janus Atlas Cheatsheet](https://docs.signalpilot.io/ref-cheatsheets-janus/): Quick-reference for Janus Atlas
+- [Augury Grid Cheatsheet](https://docs.signalpilot.io/ref-cheatsheets-augury-grid/): Quick-reference for Augury Grid
+- [Plutus Flow Cheatsheet](https://docs.signalpilot.io/ref-cheatsheets-plutus/): Quick-reference for Plutus Flow
+- [Harmonic Oscillator Cheatsheet](https://docs.signalpilot.io/ref-cheatsheets-harmonic/): Quick-reference for Harmonic Oscillator
+- [Volume Oracle Cheatsheet](https://docs.signalpilot.io/ref-cheatsheets-volume-oracle/): Quick-reference for Volume Oracle
+- [Augury Grid Timeframe Configuration](https://docs.signalpilot.io/augury-grid-v10/timeframe-configuration.html): Detailed timeframe setup for the screener
+- [Installation Troubleshooting](https://docs.signalpilot.io/troubleshooting-installation/): Resolving installation-specific issues
+- [System Requirements](https://docs.signalpilot.io/about-system-requirements/): Browser and TradingView plan requirements
+- [Changelog](https://docs.signalpilot.io/about-changelog/): Version history and release notes
+- [Support & Contact](https://docs.signalpilot.io/about-support/): How to reach the Signal Pilot team
+- [Search Guide](https://docs.signalpilot.io/search-guide/): How to use the documentation search
