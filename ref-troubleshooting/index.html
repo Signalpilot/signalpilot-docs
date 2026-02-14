@@ -110,6 +110,60 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
 
+
+  <!-- Structured Data - JSON-LD for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://docs.signalpilot.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Reference",
+            "item": "https://docs.signalpilot.io/ref-cheatsheets-at-a-glance/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Troubleshooting Guide"
+          }
+        ]
+      },
+      {
+        "@type": "TechArticle",
+        "headline": "Troubleshooting Guide",
+        "description": "Non-repainting, alert-ready TradingView indicators for any market/timeframe.",
+        "url": "https://docs.signalpilot.io/ref-troubleshooting/",
+        "datePublished": "2025-11-02",
+        "dateModified": "2026-02-14",
+        "author": {
+          "@type": "Organization",
+          "name": "Signal Pilot",
+          "url": "https://signalpilot.io/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Signal Pilot",
+          "url": "https://signalpilot.io/"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://docs.signalpilot.io/ref-troubleshooting/"
+        },
+        "inLanguage": "en-US"
+      }
+    ]
+  }
+  </script>
     <!-- ========================================
        SIGNAL PILOT ENHANCEMENTS - CSS
        To disable: comment out this entire block
@@ -126,17 +180,17 @@
     <link rel="stylesheet" href="/css/chatbot.css">
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://docs.signalpilot.io/">
-    <meta property="og:title" content="Signal Pilot Documentation">
-    <meta property="og:description" content="Professional trading indicators for TradingView. Complete guides for Pentarch, Janus Atlas, OmniDeck, and more.">
+    <meta property="og:url" content="https://docs.signalpilot.io/ref-troubleshooting/">
+    <meta property="og:title" content="Troubleshooting — Signal Pilot Docs">
+    <meta property="og:description" content="Common issues and solutions for Signal Pilot indicators. Fix loading errors, missing signals, and alert problems.">
     <meta property="og:image" content="https://docs.signalpilot.io/assets/images/preview.png">
     <meta property="og:site_name" content="Signal Pilot Docs">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://docs.signalpilot.io/">
-    <meta name="twitter:title" content="Signal Pilot Documentation">
-    <meta name="twitter:description" content="Professional trading indicators for TradingView. Complete guides for Pentarch, Janus Atlas, OmniDeck, and more.">
+    <meta name="twitter:url" content="https://docs.signalpilot.io/ref-troubleshooting/">
+    <meta name="twitter:title" content="Troubleshooting — Signal Pilot Docs">
+    <meta name="twitter:description" content="Common issues and solutions for Signal Pilot indicators. Fix loading errors, missing signals, and alert problems.">
     <meta name="twitter:image" content="https://docs.signalpilot.io/assets/images/preview.png">
 
 
@@ -3250,5 +3304,6 @@
 
   <!-- Custom Bottom Sheet Navigation Script -->
   <script src="../assets/custom-bottom-sheet.js?v7"></script>
+  <script src="../js/cross-links.js"></script>
 </body>
 </html>

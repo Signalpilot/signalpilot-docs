@@ -208,6 +208,66 @@
             transform: translateX(-4px);
         }
     </style>
+
+  <!-- Structured Data - JSON-LD for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://docs.signalpilot.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Indicator Suite",
+            "item": "https://docs.signalpilot.io/suite-index/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Plutus Flow v1.0",
+            "item": "https://docs.signalpilot.io/plutus-flow-v10/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Learning Guide"
+          }
+        ]
+      },
+      {
+        "@type": "TechArticle",
+        "headline": "Plutus Flow v1.0 - Advanced Learning Guide",
+        "description": "Master OBV divergence, accumulation/distribution patterns, volume flow psychology, and avoid premature divergence traps. Complete learning guide for Plutus Flow.",
+        "url": "https://docs.signalpilot.io/plutus-flow-v10/learning.html",
+        "datePublished": "2025-11-02",
+        "dateModified": "2026-02-14",
+        "author": {
+          "@type": "Organization",
+          "name": "Signal Pilot",
+          "url": "https://signalpilot.io/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Signal Pilot",
+          "url": "https://signalpilot.io/"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://docs.signalpilot.io/plutus-flow-v10/learning.html"
+        },
+        "inLanguage": "en-US"
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan">
@@ -777,6 +837,7 @@
             </div>
         </div>
     </div>
+  <script src="../js/cross-links.js"></script>
 </body>
 </html>
                 </div>

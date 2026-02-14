@@ -110,6 +110,70 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
 
+
+  <!-- Structured Data - JSON-LD for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://docs.signalpilot.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "How-To Guides",
+            "item": "https://docs.signalpilot.io/how-to-alerts/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Use the Multi-Symbol Screener"
+          }
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "name": "Use the Multi-Symbol Screener",
+        "description": "Non-repainting, alert-ready TradingView indicators for any market/timeframe.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Add Augury Grid to chart",
+            "text": "Search for Augury Grid in TradingView indicators and add it to your chart."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Configure symbols",
+            "text": "Open settings and enter up to 7 symbols to monitor."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Set timeframes",
+            "text": "Configure 3 scanning timeframes \u2014 chart timeframe must equal or be lower than your lowest scanner timeframe."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Read the scanner grid",
+            "text": "Interpret signal states, quality ratings, and confluence levels across all scanned symbols."
+          }
+        ],
+        "tool": {
+          "@type": "HowToTool",
+          "name": "TradingView"
+        },
+        "inLanguage": "en-US",
+        "totalTime": "PT10M"
+      }
+    ]
+  }
+  </script>
     <!-- ========================================
        SIGNAL PILOT ENHANCEMENTS - CSS
        To disable: comment out this entire block
@@ -126,17 +190,17 @@
     <link rel="stylesheet" href="/css/chatbot.css">
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://docs.signalpilot.io/">
-    <meta property="og:title" content="Signal Pilot Documentation">
-    <meta property="og:description" content="Professional trading indicators for TradingView. Complete guides for Pentarch, Janus Atlas, OmniDeck, and more.">
+    <meta property="og:url" content="https://docs.signalpilot.io/how-to-screener/">
+    <meta property="og:title" content="How to Use the Multi-Symbol Screener — Signal Pilot Docs">
+    <meta property="og:description" content="Set up multi-symbol monitoring with Augury Grid. Scan 7 symbols across 3 timeframes with quality scoring.">
     <meta property="og:image" content="https://docs.signalpilot.io/assets/images/preview.png">
     <meta property="og:site_name" content="Signal Pilot Docs">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://docs.signalpilot.io/">
-    <meta name="twitter:title" content="Signal Pilot Documentation">
-    <meta name="twitter:description" content="Professional trading indicators for TradingView. Complete guides for Pentarch, Janus Atlas, OmniDeck, and more.">
+    <meta name="twitter:url" content="https://docs.signalpilot.io/how-to-screener/">
+    <meta name="twitter:title" content="How to Use the Multi-Symbol Screener — Signal Pilot Docs">
+    <meta name="twitter:description" content="Set up multi-symbol monitoring with Augury Grid. Scan 7 symbols across 3 timeframes with quality scoring.">
     <meta name="twitter:image" content="https://docs.signalpilot.io/assets/images/preview.png">
 
 
@@ -2448,5 +2512,6 @@ This guide shows how to use the Augury Grid screener tool for <strong>educationa
 
   <!-- Custom Bottom Sheet Navigation Script -->
   <script src="../assets/custom-bottom-sheet.js?v7"></script>
+  <script src="../js/cross-links.js"></script>
 </body>
 </html>

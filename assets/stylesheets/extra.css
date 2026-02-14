@@ -4413,3 +4413,37 @@ a {
     padding-right: 0.5rem !important;
   }
 }
+
+/* ========================================
+   CROSS-LINKS FOOTER NAV
+   ======================================== */
+.sp-cross-links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 0;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  flex-wrap: wrap;
+  font-size: 0.75rem;
+}
+.sp-cross-links__label {
+  color: var(--md-footer-fg-color--lighter, rgba(255,255,255,0.5));
+  font-weight: 600;
+}
+.sp-cross-links__link {
+  color: var(--md-footer-fg-color--light, rgba(255,255,255,0.7));
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.sp-cross-links__link:hover {
+  color: var(--md-footer-fg-color, #fff);
+  text-decoration: underline;
+}
+.sp-cross-links__link--current {
+  color: var(--md-accent-fg-color, #667eea);
+  font-weight: 600;
+}
+.sp-cross-links__sep {
+  color: var(--md-footer-fg-color--lighter, rgba(255,255,255,0.3));
+}

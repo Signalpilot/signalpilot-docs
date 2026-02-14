@@ -110,6 +110,60 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
 
+
+  <!-- Structured Data - JSON-LD for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://docs.signalpilot.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Reference",
+            "item": "https://docs.signalpilot.io/ref-cheatsheets-at-a-glance/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "OmniDeck Quick Reference"
+          }
+        ]
+      },
+      {
+        "@type": "TechArticle",
+        "headline": "OmniDeck Quick Reference",
+        "description": "One-page cheat sheet for OmniDeck v1.0. Quick guide to the 10 systems all-in-one indicator with system combinations.",
+        "url": "https://docs.signalpilot.io/ref-cheatsheets-omnideck/",
+        "datePublished": "2025-11-02",
+        "dateModified": "2026-02-14",
+        "author": {
+          "@type": "Organization",
+          "name": "Signal Pilot",
+          "url": "https://signalpilot.io/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Signal Pilot",
+          "url": "https://signalpilot.io/"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://docs.signalpilot.io/ref-cheatsheets-omnideck/"
+        },
+        "inLanguage": "en-US"
+      }
+    ]
+  }
+  </script>
     <!-- ========================================
        SIGNAL PILOT ENHANCEMENTS - CSS
        To disable: comment out this entire block
@@ -126,7 +180,7 @@
     <link rel="stylesheet" href="/css/chatbot.css">
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://docs.signalpilot.io/">
+    <meta property="og:url" content="https://docs.signalpilot.io/ref-cheatsheets-omnideck/">
     <meta property="og:title" content="OmniDeck Quick Reference - Signal Pilot Docs">
     <meta property="og:description" content="One-page cheat sheet for OmniDeck v1.0. Quick guide to the 10 systems all-in-one indicator with system combinations.">
     <meta property="og:image" content="https://docs.signalpilot.io/assets/images/preview.png">
@@ -134,7 +188,7 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://docs.signalpilot.io/">
+    <meta name="twitter:url" content="https://docs.signalpilot.io/ref-cheatsheets-omnideck/">
     <meta name="twitter:title" content="OmniDeck Quick Reference - Signal Pilot Docs">
     <meta name="twitter:description" content="One-page cheat sheet for OmniDeck v1.0. Quick guide to the 10 systems all-in-one indicator with system combinations.">
     <meta name="twitter:image" content="https://docs.signalpilot.io/assets/images/preview.png">
@@ -1909,5 +1963,6 @@
 
   <!-- Custom Bottom Sheet Navigation Script -->
   <script src="../assets/custom-bottom-sheet.js?v7"></script>
+  <script src="../js/cross-links.js"></script>
 </body>
 </html>

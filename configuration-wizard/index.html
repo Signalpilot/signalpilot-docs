@@ -110,6 +110,60 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
 
+
+  <!-- Structured Data - JSON-LD for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://docs.signalpilot.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Getting Started",
+            "item": "https://docs.signalpilot.io/start-quick/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Configuration Wizard"
+          }
+        ]
+      },
+      {
+        "@type": "TechArticle",
+        "headline": "Configuration Wizard",
+        "description": "Interactive guide to configure Signal Pilot indicators based on your trading style, asset type, and experience level.",
+        "url": "https://docs.signalpilot.io/configuration-wizard/",
+        "datePublished": "2025-11-02",
+        "dateModified": "2026-02-14",
+        "author": {
+          "@type": "Organization",
+          "name": "Signal Pilot",
+          "url": "https://signalpilot.io/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Signal Pilot",
+          "url": "https://signalpilot.io/"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://docs.signalpilot.io/configuration-wizard/"
+        },
+        "inLanguage": "en-US"
+      }
+    ]
+  }
+  </script>
     <!-- ========================================
        SIGNAL PILOT ENHANCEMENTS - CSS
        To disable: comment out this entire block
@@ -126,7 +180,7 @@
     <link rel="stylesheet" href="/css/chatbot.css">
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://docs.signalpilot.io/">
+    <meta property="og:url" content="https://docs.signalpilot.io/configuration-wizard/">
     <meta property="og:title" content="Configuration Wizard - Signal Pilot Docs">
     <meta property="og:description" content="Interactive guide to configure Signal Pilot indicators based on your trading style, asset type, and experience level.">
     <meta property="og:image" content="https://docs.signalpilot.io/assets/images/preview.png">
@@ -134,7 +188,7 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://docs.signalpilot.io/">
+    <meta name="twitter:url" content="https://docs.signalpilot.io/configuration-wizard/">
     <meta name="twitter:title" content="Configuration Wizard - Signal Pilot Docs">
     <meta name="twitter:description" content="Interactive guide to configure Signal Pilot indicators based on your trading style, asset type, and experience level.">
     <meta name="twitter:image" content="https://docs.signalpilot.io/assets/images/preview.png">
@@ -3846,5 +3900,6 @@ Time in trade: 2h 20min</code></pre></p>
 
   <!-- Custom Bottom Sheet Navigation Script -->
   <script src="../assets/custom-bottom-sheet.js?v7"></script>
+  <script src="../js/cross-links.js"></script>
 </body>
 </html>

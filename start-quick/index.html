@@ -110,6 +110,60 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
 
+
+  <!-- Structured Data - JSON-LD for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://docs.signalpilot.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Getting Started",
+            "item": "https://docs.signalpilot.io/start-quick/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Quick Start - See Your First Event in 5 Minutes"
+          }
+        ]
+      },
+      {
+        "@type": "TechArticle",
+        "headline": "Quick Start - See Your First Event in 5 Minutes",
+        "description": "Install Pentarch v1.0 and see your first cycle event in 5 minutes. Step-by-step guide to installing and using Signal Pilot indicators on TradingView.",
+        "url": "https://docs.signalpilot.io/start-quick/",
+        "datePublished": "2025-11-02",
+        "dateModified": "2026-02-14",
+        "author": {
+          "@type": "Organization",
+          "name": "Signal Pilot",
+          "url": "https://signalpilot.io/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Signal Pilot",
+          "url": "https://signalpilot.io/"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://docs.signalpilot.io/start-quick/"
+        },
+        "inLanguage": "en-US"
+      }
+    ]
+  }
+  </script>
     <!-- ========================================
        SIGNAL PILOT ENHANCEMENTS - CSS
        To disable: comment out this entire block
@@ -126,17 +180,17 @@
     <link rel="stylesheet" href="/css/chatbot.css">
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://docs.signalpilot.io/">
-    <meta property="og:title" content="Signal Pilot Documentation">
-    <meta property="og:description" content="Professional trading indicators for TradingView. Complete guides for Pentarch, Janus Atlas, OmniDeck, and more.">
+    <meta property="og:url" content="https://docs.signalpilot.io/start-quick/">
+    <meta property="og:title" content="Quick Start — Install Signal Pilot in 5 Minutes — Signal Pilot Docs">
+    <meta property="og:description" content="Install Pentarch v1.0 and see your first cycle event in 5 minutes. Quick setup for Signal Pilot TradingView indicators.">
     <meta property="og:image" content="https://docs.signalpilot.io/assets/images/preview.png">
     <meta property="og:site_name" content="Signal Pilot Docs">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://docs.signalpilot.io/">
-    <meta name="twitter:title" content="Signal Pilot Documentation">
-    <meta name="twitter:description" content="Professional trading indicators for TradingView. Complete guides for Pentarch, Janus Atlas, OmniDeck, and more.">
+    <meta name="twitter:url" content="https://docs.signalpilot.io/start-quick/">
+    <meta name="twitter:title" content="Quick Start — Install Signal Pilot in 5 Minutes — Signal Pilot Docs">
+    <meta name="twitter:description" content="Install Pentarch v1.0 and see your first cycle event in 5 minutes. Quick setup for Signal Pilot TradingView indicators.">
     <meta name="twitter:image" content="https://docs.signalpilot.io/assets/images/preview.png">
 
 
@@ -2276,5 +2330,6 @@ This quick start guide is for <strong>educational purposes only</strong>. This i
 
   <!-- Custom Bottom Sheet Navigation Script -->
   <script src="../assets/custom-bottom-sheet.js?v7"></script>
+  <script src="../js/cross-links.js"></script>
 </body>
 </html>
