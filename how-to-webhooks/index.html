@@ -177,6 +177,30 @@
         "totalTime": "PT10M"
       },
       {
+        "@type": "CodeSample",
+        "name": "Basic TradingView Webhook Payload",
+        "description": "A simple webhook payload format for sending Signal Pilot alerts with ticker, price, and timeframe data.",
+        "programmingLanguage": "JSON",
+        "codeRepository": "https://docs.signalpilot.io/how-to-webhooks/",
+        "text": "{\\n  \\\"indicator\\\": \\\"{{ticker}}\\\",\\n  \\\"price\\\": \\\"{{close}}\\\",\\n  \\\"time\\\": \\\"{{time}}\\\",\\n  \\\"signal\\\": \\\"Pentarch Reversal Detected\\\",\\n  \\\"timeframe\\\": \\\"{{interval}}\\\"\\n}"
+      },
+      {
+        "@type": "CodeSample",
+        "name": "Discord-Formatted Webhook Message",
+        "description": "Webhook payload with Discord embed formatting for rich, visually formatted alert notifications with color-coded fields.",
+        "programmingLanguage": "JSON",
+        "codeRepository": "https://docs.signalpilot.io/how-to-webhooks/",
+        "text": "{\\n  \\\"content\\\": \\\"🔔 **Signal Pilot Alert**\\\",\\n  \\\"embeds\\\": [{\\n    \\\"title\\\": \\\"Pentarch Reversal\\\",\\n    \\\"description\\\": \\\"Reversal pattern detected on {{ticker}}\\\",\\n    \\\"color\\\": 65280,\\n    \\\"fields\\\": [\\n      {\\\"name\\\": \\\"Price\\\", \\\"value\\\": \\\"{{close}}\\\", \\\"inline\\\": true},\\n      {\\\"name\\\": \\\"Timeframe\\\", \\\"value\\\": \\\"{{interval}}\\\", \\\"inline\\\": true},\\n      {\\\"name\\\": \\\"Time\\\", \\\"value\\\": \\\"{{time}}\\\", \\\"inline\\\": false}\\n    ]\\n  }]\\n}"
+      },
+      {
+        "@type": "CodeSample",
+        "name": "Structured JSON for Custom API",
+        "description": "Webhook payload designed for custom API endpoints with structured alert type, indicator identification, and trading metadata.",
+        "programmingLanguage": "JSON",
+        "codeRepository": "https://docs.signalpilot.io/how-to-webhooks/",
+        "text": "{\\n  \\\"alert_type\\\": \\\"signal_pilot\\\",\\n  \\\"indicator\\\": \\\"janus_atlas\\\",\\n  \\\"symbol\\\": \\\"{{ticker}}\\\",\\n  \\\"exchange\\\": \\\"{{exchange}}\\\",\\n  \\\"timeframe\\\": \\\"{{interval}}\\\",\\n  \\\"price\\\": \\\"{{close}}\\\",\\n  \\\"timestamp\\\": \\\"{{time}}\\\",\\n  \\\"condition\\\": \\\"Level Break Alert\\\"\\n}"
+      },
+      {
         "@type": "WebPage",
         "potentialAction": {
           "@type": "SearchAction",

@@ -177,6 +177,22 @@
         "totalTime": "PT10M"
       },
       {
+        "@type": "CodeSample",
+        "name": "Simple Alert Message with Placeholders",
+        "description": "Basic alert message format using TradingView placeholders for ticker, interval, timestamp, and price.",
+        "programmingLanguage": "Text",
+        "codeRepository": "https://docs.signalpilot.io/how-to-alerts/",
+        "text": "Pentarch IGN signal fired on {{ ticker }} {{ interval }}\\nTime: {{ timenow }}\\nPrice: {{ close }}"
+      },
+      {
+        "@type": "CodeSample",
+        "name": "JSON Alert Payload with Market Data",
+        "description": "JSON-formatted alert message for webhook/automation integration with ticker, interval, timestamp, event name, and OHLC price data.",
+        "programmingLanguage": "JSON",
+        "codeRepository": "https://docs.signalpilot.io/how-to-alerts/",
+        "text": "{\\n  \\\"ticker\\\": \\\"{{ ticker }}\\\",\\n  \\\"interval\\\": \\\"{{ interval }}\\\",\\n  \\\"time\\\": \\\"{{ timenow }}\\\",\\n  \\\"event\\\": \\\"{{ alert_name }}\\\",\\n  \\\"price\\\": {{ close }},\\n  \\\"high\\\": {{ high }},\\n  \\\"low\\\": {{ low }}\\n}"
+      },
+      {
         "@type": "WebPage",
         "potentialAction": {
           "@type": "SearchAction",
