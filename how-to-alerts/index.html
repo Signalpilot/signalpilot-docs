@@ -175,6 +175,30 @@
         },
         "inLanguage": "en-US",
         "totalTime": "PT10M"
+      },
+      {
+        "@type": "CodeSample",
+        "name": "Simple Alert Message with Placeholders",
+        "description": "Basic alert message format using TradingView placeholders for ticker, interval, timestamp, and price.",
+        "programmingLanguage": "Text",
+        "codeRepository": "https://docs.signalpilot.io/how-to-alerts/",
+        "text": "Pentarch IGN signal fired on {{ ticker }} {{ interval }}\\nTime: {{ timenow }}\\nPrice: {{ close }}"
+      },
+      {
+        "@type": "CodeSample",
+        "name": "JSON Alert Payload with Market Data",
+        "description": "JSON-formatted alert message for webhook/automation integration with ticker, interval, timestamp, event name, and OHLC price data.",
+        "programmingLanguage": "JSON",
+        "codeRepository": "https://docs.signalpilot.io/how-to-alerts/",
+        "text": "{\\n  \\\"ticker\\\": \\\"{{ ticker }}\\\",\\n  \\\"interval\\\": \\\"{{ interval }}\\\",\\n  \\\"time\\\": \\\"{{ timenow }}\\\",\\n  \\\"event\\\": \\\"{{ alert_name }}\\\",\\n  \\\"price\\\": {{ close }},\\n  \\\"high\\\": {{ high }},\\n  \\\"low\\\": {{ low }}\\n}"
+      },
+      {
+        "@type": "WebPage",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://docs.signalpilot.io/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
       }
     ]
   }
@@ -2467,7 +2491,18 @@ This alert setup guide is for <strong>educational purposes only</strong>. This i
 </ol>
 <hr />
 <p><strong>Alerts enable automated signal reception.</strong> Begin the setup process now.</p>
-                
+
+<!-- Product Navigation & CTAs -->
+<div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+  <a href="https://signalpilot.io" style="color: inherit; text-decoration: none; opacity: 0.9; transition: opacity 0.2s;" title="Return to Signal Pilot main website">
+    <span style="font-size: 0.95rem;">← Back to Product</span>
+  </a>
+  <a href="https://signalpilot.io/#pricing" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 0.75rem 1.5rem; border-radius: 0.5rem; text-decoration: none; font-weight: 500; transition: transform 0.2s, box-shadow 0.2s;" title="Get access to Signal Pilot indicators">
+    Get Access →
+  </a>
+</div>
+<!-- End Product Navigation & CTAs -->
+
               </article>
             </div>
           

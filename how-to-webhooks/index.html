@@ -175,6 +175,38 @@
         },
         "inLanguage": "en-US",
         "totalTime": "PT10M"
+      },
+      {
+        "@type": "CodeSample",
+        "name": "Basic TradingView Webhook Payload",
+        "description": "A simple webhook payload format for sending Signal Pilot alerts with ticker, price, and timeframe data.",
+        "programmingLanguage": "JSON",
+        "codeRepository": "https://docs.signalpilot.io/how-to-webhooks/",
+        "text": "{\\n  \\\"indicator\\\": \\\"{{ticker}}\\\",\\n  \\\"price\\\": \\\"{{close}}\\\",\\n  \\\"time\\\": \\\"{{time}}\\\",\\n  \\\"signal\\\": \\\"Pentarch Reversal Detected\\\",\\n  \\\"timeframe\\\": \\\"{{interval}}\\\"\\n}"
+      },
+      {
+        "@type": "CodeSample",
+        "name": "Discord-Formatted Webhook Message",
+        "description": "Webhook payload with Discord embed formatting for rich, visually formatted alert notifications with color-coded fields.",
+        "programmingLanguage": "JSON",
+        "codeRepository": "https://docs.signalpilot.io/how-to-webhooks/",
+        "text": "{\\n  \\\"content\\\": \\\"🔔 **Signal Pilot Alert**\\\",\\n  \\\"embeds\\\": [{\\n    \\\"title\\\": \\\"Pentarch Reversal\\\",\\n    \\\"description\\\": \\\"Reversal pattern detected on {{ticker}}\\\",\\n    \\\"color\\\": 65280,\\n    \\\"fields\\\": [\\n      {\\\"name\\\": \\\"Price\\\", \\\"value\\\": \\\"{{close}}\\\", \\\"inline\\\": true},\\n      {\\\"name\\\": \\\"Timeframe\\\", \\\"value\\\": \\\"{{interval}}\\\", \\\"inline\\\": true},\\n      {\\\"name\\\": \\\"Time\\\", \\\"value\\\": \\\"{{time}}\\\", \\\"inline\\\": false}\\n    ]\\n  }]\\n}"
+      },
+      {
+        "@type": "CodeSample",
+        "name": "Structured JSON for Custom API",
+        "description": "Webhook payload designed for custom API endpoints with structured alert type, indicator identification, and trading metadata.",
+        "programmingLanguage": "JSON",
+        "codeRepository": "https://docs.signalpilot.io/how-to-webhooks/",
+        "text": "{\\n  \\\"alert_type\\\": \\\"signal_pilot\\\",\\n  \\\"indicator\\\": \\\"janus_atlas\\\",\\n  \\\"symbol\\\": \\\"{{ticker}}\\\",\\n  \\\"exchange\\\": \\\"{{exchange}}\\\",\\n  \\\"timeframe\\\": \\\"{{interval}}\\\",\\n  \\\"price\\\": \\\"{{close}}\\\",\\n  \\\"timestamp\\\": \\\"{{time}}\\\",\\n  \\\"condition\\\": \\\"Level Break Alert\\\"\\n}"
+      },
+      {
+        "@type": "WebPage",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://docs.signalpilot.io/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
       }
     ]
   }
@@ -1627,7 +1659,18 @@
 </ol>
 
 <p><em>(Historical workflow example for educational purposes only. Not financial advice. Individual results may vary.)</em></p>
-                
+
+<!-- Product Navigation & CTAs -->
+<div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+  <a href="https://signalpilot.io" style="color: inherit; text-decoration: none; opacity: 0.9; transition: opacity 0.2s;" title="Return to Signal Pilot main website">
+    <span style="font-size: 0.95rem;">← Back to Product</span>
+  </a>
+  <a href="https://signalpilot.io/#pricing" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 0.75rem 1.5rem; border-radius: 0.5rem; text-decoration: none; font-weight: 500; transition: transform 0.2s, box-shadow 0.2s;" title="Get access to Signal Pilot indicators">
+    Get Access →
+  </a>
+</div>
+<!-- End Product Navigation & CTAs -->
+
               </article>
             </div>
           
